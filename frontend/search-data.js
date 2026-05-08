@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 291,
+    "url": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "title": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "content": "NOS Nieuws•vandaag, 09:10•Aangepast vandaag, 10:27 Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027 Deel dit artikel Premier Jetten noemt het gooien van een vuurwerkbom door de brievenbus van het D66-partijkantoor \"een kansloze actie\". \"Vrij kansloos als je denkt dat je met dit soort acties politici kunt intimideren. We laten ons echt niet het zwijgen opleggen.\" Jetten sprak met de pers voor de start van de ministerraad: 0:49 Minister-president Rob Jetten (D66) reageert op vuurwerkbom: \u0027Het is een kansloze actie\u0027 Jetten zei voor aanvang van de ministerraad dat er veel schade is, en dat de mensen die bij een sprekersavond van de Jonge Democraten aanwezig waren erg geschrokken zijn. \"Gelukkig is iedereen ongedeerd\", aldus de D66-leider. Kort na de aanslag werd een verdachte aangehouden. Het gaat om een 37-jarige man zonder vaste woon- of verblijfplaats, meldt de politie vanochtend. Hij zit nog vast. Vaker intimidatie Het was de tweede keer in negen maanden tijd dat het D66-bureau doelwit was van een actie. Rond het asielprotest op het Malieveld, in september, werd het bekogeld met stenen. Jetten wijst erop dat het niet alleen om D66 gaat, maar dat er \"elke week wel\" pogingen worden gedaan om bijvoorbeeld gemeenteraadsleden, burgemeesters, politie- of ambulancemensen te intimideren. \"Maar je zag gisteravond gelukkig ook dat de meeste Nederlanders heel duidelijk maken dat we dit in ons land absoluut niet accepteren en dat dit niet een land is waar je met geweld je zin kan krijgen. Dit past absoluut niet bij de Nederlandse normen en waarden.\" In september sprak Jetten, die toen nog geen premier was, over \"politiek geweld\". Die woorden wil hij nu niet gebruiken, omdat het motief achter de vuurwerkbom nog niet duidelijk is. Dat wordt nog onderzocht door de politie. \u0027Doelbewust naar D66\u0027 Het ging toen om een ander soort incident, zegt Jetten. \"Er stonden mensen met vlaggen voor het partijkantoor en er werd gefilmd terwijl de ruiten werden ingegooid\", dus het was meteen duidelijk wat de bedoeling was. Hij denkt overigens wel dat de dader doelbewust naar het pand van D66 is gelopen om juist daar een vuurwerkbom naar binnen te gooien. Maar op de exacte reden voor die actie wil hij niet vooruit lopen. \u0027Aanslag op democratie\u0027 VVD-leider Yesilgöz vindt het \"echt vreselijk\" wat er is gebeurd. \"Dit is bedoeld om mensen monddood te maken\" en dat kan wat haar betreft echt niet. \"Je gaat gewoon niet naar geweldsmiddelen grijpen.\" \"Je blijft met je poten van anderen af\", zegt Yesilgöz. \"Als je het ergens niet mee eens bent, ga stemmen, ga het debat aan. Er zijn een miljoen manieren in een democratie om je stem te laten horen.\" Ook andere bewindspersonen veroordelen de actie. CDA-minister Heerma spreekt van \"een aanslag op de democratie\". Hij ziet dat de drempel om te intimideren en geweld te gebruiken, lager lijkt te worden. \u0027Geschokt en verdrietig\u0027 Minister Van Weel van Justitie en Veiligheid vindt het \"schandalig dat een politieke partij wordt aangevallen in ons land\". Hij stelt dat de temperatuur in het politieke debat \"ontzettend hoog\" is. \"Dit is de bijl aan de wortel van de democratie.\" De Jonge Democraten, die gisteravond een bijeenkomst met ruim dertig mensen hadden in het D66-kantoor, zijn \"geschokt, woedend en verdrietig\". Zij spreken van \"een aanslag\"(opent in nieuw venster). \"Dit raakt niet alleen D66 of de JD, maar onze democratie. Wij laten ons niet intimideren.\" Nog geen motief bekend voor gooien vuurwerkbom partijkantoor D66, verdachte zit vast Vuurwerkbom door brievenbus D66-kantoor in Den Haag, verdachte aangehouden Opnieuw drie veroordelingen voor rellen bij asielprotest op Haagse Malieveld Politiek Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? vrijdag 13 maart, 11:22 Vier verdachten opgepakt voor brandstichting synagoge Rotterdam vrijdag 13 maart, 17:18 Boosheid en angst na brandstichting Rotterdamse synagoge maandag 16 maart, 13:35 Jetten: aanslagen op Joodse gemeenschap onacceptabel, link met Iran onderzocht maandag 16 maart, 18:35 Jetten en Merz eensgezind: nu geen Hormuz-missie en zorgen om antisemitisme Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:36:44.954275"
+  },
+  {
+    "id": 290,
+    "url": "https://nos.nl/video/2613365-een-jaar-na-een-natuurbrand-kan-een-gebied-zelf-herstellen",
+    "title": "Een jaar na een natuurbrand: kan een gebied zelf herstellen?",
+    "content": "Aan het laden NOS Nieuws•woensdag, 17:13 Een jaar na een natuurbrand: kan een gebied zelf herstellen? Een jaar na een grote natuurbrand in Ede, zijn de gevolgen voor dieren en planten goed zichtbaar. De vlammen verdwijnen relatief snel, maar laten in de natuur hun sporen nog jaren na.",
+    "scrapedAt": "2026-05-09 00:36:43.881059"
+  },
+  {
+    "id": 289,
+    "url": "https://nos.nl/op3",
+    "title": "NOS op 3",
+    "content": "Nieuws om te delen Je vindt ons hier en de hele dag op 3FM en FunX Je vindt ons hier en de hele dag op 3FM en FunX Onze verhalen Dit is NOS op 3, nieuws om te delen Vergelijkbaar misdrijf, andere straf: wat er allemaal meespeelt in de rechtbank Geen regels voor damp uit vapes: \u0027Totaal geen zicht op wat je binnenkrijgt\u0027 Onder de 30 en geen kinderwens: klinieken zien vraag naar sterilisatie toenemen Specials Spanning op het stroomnet Even voorstellen: Oranje Blik op slavernijexcuses Middellandze Zee en migratie Waarom is de oceaan beschermen zo moeilijk? De Democrachine Uit watersnood geboren 8 miljard mensen, op dat hele kleine stukje aarde Wie ben ik? | NOS op 3-eindejaarsgame Kies zelf hoe diep je erin duikt Vorige slide Volgende slide Achter de schermen Over NOS op 3 Wie zijn we en wat doen we?",
+    "scrapedAt": "2026-05-09 00:36:42.788819"
+  },
+  {
+    "id": 288,
+    "url": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor",
+    "title": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "content": "Pro Shots NOS Sport•vandaag, 16:42 Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor Deel dit artikel De Formule 1-teams hebben een principeakkoord bereikt over het verder veranderen van de motorreglementen. Voor het seizoen van 2027 lijkt de koningsklasse van de autosport af te stappen van de 50/50-verdeling tussen vermogen uit de verbrandingsmotor en de elektrische aandrijving. In de nieuwe situatie gaat de verhouding richting de 60/40. In een online-bijeenkomst tussen de organisatie en de teams werden eerder doorgevoerde wijzigingen richting de Grand Prix van Miami geëvalueerd en besloten om de regels voor volgend jaar verder aan te passen. De elektrische motor zou vanaf 2027 50 kilowatt minder energie leveren, en de verbrandingsmotor wordt met dezelfde hoeveelheid krachtiger gemaakt. Ook kunnen er in het huidige seizoen nog extra wijzigingen worden gedaan. Kritiek In de eerste maanden van het huidige seizoen was er veel te doen om de nieuw ingevoerde reglementen. Sinds dit jaar is de elektrische motor belangrijker dan ooit. De helft van het vermogen komt uit deze motor, waardoor het beheren van de batterij een grote taak werd voor de coureurs. Het leidde tot situaties waarin rijders, zelfs in kwalificaties, moesten vertragen op het rechte stuk om energie te besparen. Bovendien bleken de grote snelheidsverschillen tussen auto\u0027s op vol vermogen en bolides zonder stroom voor gevaarlijke situaties te zorgen. Onder anderen Max Verstappen uitte veel kritiek op het reglement. Door de nieuwe regels kunnen auto\u0027s niet langer de hele ronde vol gas rijden. Voor de Grand Prix van Miami, die afgelopen weekend gewonnen werd door Kimi Antonelli, werden de regels al gewijzigd. Coureurs konden in de kwalificatie minder energie sparen en de \u0027boostknop\u0027, goed voor extra vermogen, werd iets minder krachtig. Verstappen in slotmeters naar vijfde plaats Miami na spin bij start, Antonelli wint Verstappen hoopvol na vijfde plek in Miami: \u0027Hebben snelheid gevonden\u0027 Autosport Formule 1 Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? vrijdag 1 mei, 12:10 F1 keert terug na gedwongen pauze: nieuwe regels, vernieuwde auto\u0027s en een sprintweekend zaterdag 28 maart, 11:00 Verstappen is boosheid voorbij na nieuwe deceptie: \u0027Hebben heel veel problemen\u0027 dinsdag 21 april, 14:31 \u0027F1-regelwijzigingen gaan er niet voor zorgen dat Verstappen weer vooraan rijdt\u0027 maandag 20 april, 19:09 Formule 1 wijzigt regels: vaker vol gas in kwalificatie en minder snelheidsverschil Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-09 00:36:41.718157"
+  },
+  {
+    "id": 287,
+    "url": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat",
+    "title": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "content": "ANP Het gerechtshof in Amsterdam, met de lege stoel van Ali B NOS Nieuws•gisteren, 16:42•Aangepast gisteren, 18:07 Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat? Deel dit artikel In 2024 werd er drie jaar cel geëist tegen Ali B en kreeg hij er twee. Nu, in hoger beroep, eiste het Openbaar Ministerie (OM) twee en een half jaar, maar heeft het gerechtshof hem drie jaar onvoorwaardelijke gevangenisstraf gegeven. Wat is er nu anders? De zaak tegen Ali B draait om vier strafbare feiten: twee aanrandingen en twee verkrachtingen, bij drie vrouwen. Hij werd in 2024 door de rechtbank in Haarlem vrijgesproken van de twee aanrandingen. Voor één van de verkrachtingen werd hij wel veroordeeld, maar de tweede beoordeelde de rechtbank destijds als poging tot verkrachting. Die laatste betrof zangeres Ellen ten Damme. Ali B heeft steeds gezegd aan alles onschuldig te zijn en ging in hoger beroep. Vandaag deed het hof uitspraak en veroordeelde hem dus tot drie jaar cel. Een hogere celstraf, ondanks een lagere eis van het OM. Dit keer was de eis van het OM een half jaar lager dan de vorige keer omdat de aanklagers wilden dat het hof rekening zou houden met de grote media-aandacht voor de zaak, die Ali B als erg zwaar had ervaren. Ook vindt het OM dat meeweegt dat hij nog geen strafblad heeft. Verder had het OM nu bij een van de aanrandingen om vrijspraak gevraagd. De tweede verkrachting Ali B is nu veroordeeld voor beide verkrachtingen. Het Hof oordeelt dat er bij Ellen ten Damme wel degelijk sprake was van verkrachting, en niet alleen een poging daartoe. De rechtbank was tot die conclusie gekomen omdat ze zich hevig had verzet en B uiteindelijk de kamer had uitgekregen, zei de voorzitter van het hof vandaag. Maar haar verklaringen dat B \"een beetje\" bij haar zou zijn binnengedrongen, is voor het hof juridisch gezien een voltooide verkrachting. Binnendringen is binnendringen kortom, ook terwijl ze zich hevig verzette. Bovendien zag het gerechtshof voldoende steunbewijs. Kort na de verkrachting vertelde Ten Damme haar manager dat B te ver was gegaan en over haar grens was gegaan. Ook zag de manager daarna de effecten bij haar. De zangeres gedroeg zich ineens timide, \"wezenloos en leeg\". Wat is verkrachting? Verkrachting is het ongewenst seksueel binnendringen van het lichaam (vagina, anus of mond), met een penis, vinger of voorwerp, waarbij toestemming ontbreekt. Tot enkele jaren geleden moest hierbij ook nog sprake zijn van dwang of geweld, maar dat is niet meer zo. Als er geen toestemming is, is dat doorslaggevend voor strafbaarheid. Wel houdt de rechter bij het opleggen van een straf vaak rekening met de mate waarin er sprake was van dwang. Ook als er eerst wel toestemming is, kan er sprake zijn van verkrachting als die toestemming later wordt ingetrokken. Deze definitie geldt ook binnen een huwelijk. Iemand dwingen om een ander te penetreren is ook verkrachting. Onder aanranding vallen alle andere gedwongen seksuele handelingen, zonder binnendringen van het lichaam. De andere verkrachting acht het hof, net als de rechtbank eerder, bewezen. Ook over de twee aanrandingen oordeelt het hof hetzelfde als de rechtbank. De verklaringen van beide vrouwen zijn wel geloofwaardig, maar er was niet genoeg steunbewijs om de aanrandingen wettig te bewijzen. In één geval was dat omdat het slachtoffer pas veel later iemand over het voorval had verteld. Zelf de publiciteit gezocht Voor het bepalen van de strafmaat wordt vaak gekeken naar soortgelijke zaken. Voor een verkrachting met \"beperkte mate van dwang\", zoals hier het geval was, wordt meestal een celstraf van twee jaar gegeven. Dat zou op vier jaar komen. Maar het hof heeft beide verkrachtingen apart beoordeeld. De ene was \"heftig, maar kort\". De tweede noemt het hof een \"langer durende aanval, waarbij ondanks hevig verzet toch is binnengedrongen\". De grote media-aandacht is voor het hof geen reden geweest om een lagere straf te geven. Ali B had kunnen weten dat deze delicten negatieve aandacht zouden kunnen opleveren, en heeft dat dus aan zichzelf te wijten, aldus het hof. Bovendien heeft hij zelf de publiciteit opgezocht. Zo is het gerechtshof tot een gevangenisstraf van drie jaar gekomen. De advocaat van Ali B heeft al laten weten dat hij in cassatie gaat, wat de laatste mogelijkheid is om de uitspraak aan te vechten. De zaak wordt dan niet opnieuw inhoudelijk behandeld; de Hoge Raad beoordeelt alleen of het recht op de goede manier is toegepast. In de video zie je hoe de rechter het vonnis tegen Ali B uitspreekt en motiveert: 1:43 Rechter spreekt vonnis Ali B uit: \u0027Verkrachting van zowel Ellen als Naomi bewezen\u0027 Zwaardere straf voor Ali B in hoger beroep: drie jaar cel voor twee verkrachtingen Ali B gaat naar Hoge Raad, mag procedure afwachten in vrijheid Binnenland Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venste",
+    "scrapedAt": "2026-05-09 00:36:40.648223"
+  },
+  {
     "id": 286,
     "url": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie",
     "title": "Op je 82ste nog hongerig: Rolling Stones lanceren nieuwe album vol energie",
@@ -1998,26 +2033,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 287,
-    "url": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
-  },
-  {
-    "id": 288,
-    "url": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
-  },
-  {
-    "id": 289,
-    "url": "https://nos.nl/op3"
-  },
-  {
-    "id": 290,
-    "url": "https://nos.nl/video/2613365-een-jaar-na-een-natuurbrand-kan-een-gebied-zelf-herstellen"
-  },
-  {
-    "id": 291,
-    "url": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
   },
   {
     "id": 292,
@@ -46194,10 +46209,374 @@ window.searchData = [
     "id": 18959,
     "url": "https://nos.nl/artikel/2613243-rolling-stones-komen-met-nieuw-studioalbum",
     "parentUrl": "https://nos.nl/artikel/2613281-op-je-82ste-nog-hongerig-rolling-stones-lanceren-nieuwe-album-vol-energie"
+  },
+  {
+    "id": 18960,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18961,
+    "url": "https://nos.nl/artikel/2528585-ali-b-krijgt-twee-jaar-cel-voor-verkrachting-en-poging-tot-verkrachting",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18963,
+    "url": "https://twitter.com/intent/tweet?text\u003dLagere+eis%2C+hogere+straf+in+hoger+beroep+Ali+B%3A+hoe+zit+dat%3F\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18966,
+    "url": "https://api.whatsapp.com/send?text\u003dLagere+eis%2C+hogere+straf+in+hoger+beroep+Ali+B%3A+hoe+zit+dat%3F+https%3A%2F%2Fnos.nl%2Fartikel%2F2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat",
+    "parentUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "id": 18968,
+    "url": "https://twitter.com/intent/tweet?text\u003dMeer+Formule+1-wijzigingen+op+komst%3A+akkoord+over+minder+energie+uit+elektrische+motor\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18969,
+    "url": "https://nos.nl/artikel/2612968-verstappen-hoopvol-na-vijfde-plek-in-miami-hebben-snelheid-gevonden",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18970,
+    "url": "https://nos.nl/sport/autosport",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18971,
+    "url": "https://nos.nl/sport/formule-1",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18972,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18973,
+    "url": "https://nos.nl/artikel/2612961-verstappen-in-slotmeters-naar-vijfde-plaats-miami-na-spin-bij-start-antonelli-wint",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18974,
+    "url": "https://nos.nl/artikel/2608170-verstappen-is-boosheid-voorbij-na-nieuwe-deceptie-hebben-heel-veel-problemen",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18975,
+    "url": "https://api.whatsapp.com/send?text\u003dMeer+Formule+1-wijzigingen+op+komst%3A+akkoord+over+minder+energie+uit+elektrische+motor+https%3A%2F%2Fnos.nl%2Fartikel%2F2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18976,
+    "url": "https://nos.nl/artikel/2611341-formule-1-wijzigt-regels-vaker-vol-gas-in-kwalificatie-en-minder-snelheidsverschil",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18977,
+    "url": "https://nos.nl/artikel/2611435-f1-regelwijzigingen-gaan-er-niet-voor-zorgen-dat-verstappen-weer-vooraan-rijdt",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18979,
+    "url": "https://nos.nl/artikel/2612630-f1-keert-terug-na-gedwongen-pauze-nieuwe-regels-vernieuwde-auto-s-en-een-sprintweekend",
+    "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 18980,
+    "url": "https://www.youtube.com/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18981,
+    "url": "https://nos.nl/artikel/2531123-geen-regels-voor-damp-uit-vapes-totaal-geen-zicht-op-wat-je-binnenkrijgt",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18982,
+    "url": "https://nos.nl/op3/over-ons",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18983,
+    "url": "https://app.nos.nl/op3/stroomnet/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18984,
+    "url": "https://app.nos.nl/op3/8-miljard-mensen/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18985,
+    "url": "https://www.youtube.com/watch?v\u003dFL7ZO3B1PMQ",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18986,
+    "url": "https://nos.nl/artikel/2516323-onder-de-30-en-geen-kinderwens-klinieken-zien-vraag-naar-sterilisatie-toenemen",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18987,
+    "url": "https://app.nos.nl/op3/deltawerken",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18988,
+    "url": "https://www.twitch.tv/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18989,
+    "url": "https://app.nos.nl/op3/stikstof-uitgelegd/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18990,
+    "url": "https://www.instagram.com/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18991,
+    "url": "https://app.nos.nl/op3/verkiezingen-uitgelegd/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18992,
+    "url": "https://www.tiktok.com/@nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18993,
+    "url": "https://app.nos.nl/op3/wk-2023/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18994,
+    "url": "https://app.nos.nl/op3/slavernijverleden/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18995,
+    "url": "https://app.nos.nl/op3/wie-ben-ik/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18996,
+    "url": "https://nos.nl/artikel/2540117-vergelijkbaar-misdrijf-andere-straf-wat-er-allemaal-meespeelt-in-de-rechtbank",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18997,
+    "url": "https://app.nos.nl/op3/centraal-europese-route/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 18998,
+    "url": "https://app.nos.nl/op3/oceaan-uitgediept/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 19000,
+    "url": "https://nos.nl/artikel/2606580-jetten-aanslagen-op-joodse-gemeenschap-onacceptabel-link-met-iran-onderzocht",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19001,
+    "url": "https://twitter.com/intent/tweet?text\u003dJetten+na+aanslag+op+D66-kantoor%3A+%27We+laten+ons+niet+intimideren%27\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19003,
+    "url": "https://nos.nl/artikel/2606211-boosheid-en-angst-na-brandstichting-rotterdamse-synagoge",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19004,
+    "url": "https://nos.nl/nieuws/politiek",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19005,
+    "url": "https://nos.nl/artikel/2606609-jetten-en-merz-eensgezind-nu-geen-hormuz-missie-en-zorgen-om-antisemitisme",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19007,
+    "url": "https://nos.nl/artikel/2611577-opnieuw-drie-veroordelingen-voor-rellen-bij-asielprotest-op-haagse-malieveld",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19008,
+    "url": "https://x.com/JongeDemocraten/status/2052650346288459950",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19009,
+    "url": "https://api.whatsapp.com/send?text\u003dJetten+na+aanslag+op+D66-kantoor%3A+%27We+laten+ons+niet+intimideren%27+https%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19010,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 19011,
+    "url": "https://nos.nl/artikel/2606153-vier-verdachten-opgepakt-voor-brandstichting-synagoge-rotterdam",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://images.cdn.nos.nl/1/H/k/Q/N/S/Zm1853cHue1WqwyrY1YWBW1aiwkZRnURW61VMZU/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/B/7/X/q/S/oyJUZ7DtUDSNTRrVxhzSaCHuKZ9Z3mM2uf3Uez1/207x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/3/Z/w/H/Q/fHXFoKkb8C3R7Xv6wmkpQWi8CqvVkQ5Zkgy4Fvn/219x0x3540x2655-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/7/h/d/L/e/1LWSqXno3Zw5U9iWZHGb2Q7Zgc9jrHgCNNhD83g/84x0x2132x1599-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/A/E/Y/8/r/JTpKRWzszmaBeKMeVjBNxFqjq3txYuxv3E1R6CV/61x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/H/m/v/c/J/F74wYj2sJzZbP6nyRoC6Xmb43znDnTQp4qQhDCn/683x168x2976x2232-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/C/b/1/R/g/EPwzfZ8mCXmsVjCoF3phb4xPy3LPzZMAEjtEF1Z/288x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/U/D/8/f/y/jLKysT44W71EgDcDzRzX7dyhzauKGxCKjYR4JR/181x0x2356x1767-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://static.nos.nl/img/op3/op3-youtube.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/10/10/1145430/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/07/31/1116430/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/04/11/1071273/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://static.nos.nl/img/op3/op3-team.jpg",
+    "alt": "Afbeelding van het maken van een video",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/6/M/j/J/f/hDPF3oJoij1reUTPCi8dwySgMtTxrXUqKfg2ShW/0x307x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/D/m/4/y/6/aB3ZDwcgKF3UMCcYLNycLtSJXF2siC5iD25qWzk/402x1163x2004x1503-768x576.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/7/N/r/4/u/fhz8FzrWYXR9yoTEjigxLm42kwTB2esYc8uznKi/1325x194x1568x1176-576x432.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/D/G/V/K/F/ATH9Sfxt19N95VzWLAmkWACLDUq6pT8bGWZGFC8/1x24x1940x1455-96x72.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/2/z/Q/K/o/ZeU4JEdaN6is1YHeoUiFD1PNhHQqNpjy83LDMys/1036x260x2032x1524-768x576.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/A/E/y/k/6/Lww6CMipH7ciDEmESqm8k9Cq8R7syn8gNji5VS3/442x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/4/q/p/P/p/Gm8RovohDYg8knfs2HUqaAeGaujmtrjANE4CCe8/542x375x2940x2205-96x72.webp",
+    "alt": "",
+    "pageTitle": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
+    "pageUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/C/C/w/m/P/YE89U4LSHRSwr1HgNgWrzvmP29NvX2UsG2udQ8x/5x562x3984x2241-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "pageUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/B/3/C/z/b/UgGVFeSqLvMexeAGrFqmdaiyR1AcPCE1qLnBeLu/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "pageUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/7/p/c/X/G/ppD3Pm7bYMYAUpHcpMGobJjjQhfsxf3vT7hj8f3/715x207x3280x2460-768x576.webp",
+    "alt": "",
+    "pageTitle": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "pageUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/7/B/U/k/s/enj6tCMTdumST4Zezw8uMdLtnArYXvKeqsmUkqc/66x0x3508x2631-768x576.webp",
+    "alt": "",
+    "pageTitle": "Lagere eis, hogere straf in hoger beroep Ali B: hoe zit dat?",
+    "pageUrl": "https://nos.nl/artikel/2613474-lagere-eis-hogere-straf-in-hoger-beroep-ali-b-hoe-zit-dat"
+  },
   {
     "src": "https://images.cdn.nos.nl/5/H/U/H/z/y/1VbNbkdZshf11q73NpQrPdVyxKBC5ewHbboE2R2/0x214x4000x2250-1024x576.webp",
     "alt": "",
