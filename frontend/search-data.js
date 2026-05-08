@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1532,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK",
+    "title": "difflib — Helpers for computing deltas — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Text Processing Services » difflib — Helpers for computing deltas | Theme Auto Light Dark | difflib — Helpers for computing deltas¶ Source code: Lib/difflib.py This module provides classes and functions for comparing sequences. It can be used for example, for comparing files, and can produce information about file differences in various formats, including HTML and context and unified diffs. For comparing directories and files, see also, the filecmp module. class difflib.SequenceMatcher This is a flexible class for comparing pairs of sequences of any type, so long as the sequence elements are hashable. The basic algorithm predates, and is a little fancier than, an algorithm published in the late 1980’s by Ratcliff and Obershelp under the hyperbolic name “gestalt pattern matching.” The idea is to find the longest contiguous matching subsequence that contains no “junk” elements; these “junk” elements are ones that are uninteresting in some sense, such as blank lines or whitespace. (Handling junk is an extension to the Ratcliff and Obershelp algorithm.) The same idea is then applied recursively to the pieces of the sequences to the left and to the right of the matching subsequence. This does not yield minimal edit sequences, but does tend to yield matches that “look right” to people. Timing: The basic Ratcliff-Obershelp algorithm is cubic time in the worst case and quadratic time in the expected case. SequenceMatcher is quadratic time for the worst case and has expected-case behavior dependent in a complicated way on how many elements the sequences have in common; best case time is linear. Automatic junk heuristic: SequenceMatcher supports a heuristic that automatically treats certain sequence items as junk. The heuristic counts how many times each individual item appears in the sequence. If an item’s duplicates (after the first one) account for more than 1% of the sequence and the sequence is at least 200 items long, this item is marked as “popular” and is treated as junk for the purpose of sequence matching. This heuristic can be turned off by setting the autojunk argument to False when creating the SequenceMatcher. Changed in version 3.2: Added the autojunk parameter. class difflib.Differ¶ This is a class for comparing sequences of lines of text, and producing human-readable differences or deltas. Differ uses SequenceMatcher both to compare sequences of lines, and to compare sequences of characters within similar (near-matching) lines. Each line of a Differ delta begins with a two-letter code: Code Meaning \u0027- \u0027 line unique to sequence 1 \u0027+ \u0027 line unique to sequence 2 \u0027 \u0027 line common to both sequences \u0027? \u0027 line not present in either input sequence Lines beginning with ‘?’ attempt to guide the eye to intraline differences, and were not present in either input sequence. These lines can be confusing if the sequences contain whitespace characters, such as spaces, tabs or line breaks. class difflib.HtmlDiff¶ This class can be used to create an HTML table (or a complete HTML file containing the table) showing a side by side, line by line comparison of text with inter-line and intra-line change highlights. The table can be generated in either full or contextual difference mode. The constructor for this class is: __init__(tabsize\u003d8, wrapcolumn\u003dNone, linejunk\u003dNone, charjunk\u003dIS_CHARACTER_JUNK)¶ Initializes instance of HtmlDiff. tabsize is an optional keyword argument to specify tab stop spacing and defaults to 8. wrapcolumn is an optional keyword to specify column number where lines are broken and wrapped, defaults to None where lines are not wrapped. linejunk and charjunk are optional keyword arguments passed into ndiff() (used by HtmlDiff to generate the side by side HTML differences). See ndiff() documentation for argument default values and descriptions. The following methods are public: make_file(fromlines, tolines, fromdesc\u003d\u0027\u0027, todesc\u003d\u0027\u0027, context\u003dFalse, numlines\u003d5, *, charset\u003d\u0027utf-8\u0027)¶ Compares fromlines and tolines (lists of strings) and returns a string which is a complete HTML file containing a table showing line by line differences with inter-line and intra-line changes highlighted. fromdesc and todesc are optional keyword arguments to specify from/to file column header strings (both default to an empty string). context and numlines are both optional keyword arguments. Set context to True when contextual differences are to be shown, else the default is False to show the full files. numlines defaults to 5. When context is True numlines controls the number of context lines which surround the difference highlights. When context is False numlines controls the number of lines which are shown before a difference highlight when using the “next” hyperlinks (setting to zero would cause the “next” hyperlinks to place the next difference highlight at the top of the browser without any leading context). Note from",
+    "scrapedAt": "2026-05-09 01:23:34.13407"
+  },
+  {
+    "id": 1531,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.name",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-09 01:23:32.811314"
+  },
+  {
+    "id": 1530,
+    "url": "https://peps.python.org/pep-0684/",
+    "title": "PEP 684 – A Per-Interpreter GIL | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 684 – A Per-Interpreter GIL PEP 684 – A Per-Interpreter GIL Author: Eric Snow \u003cericsnowcurrently at gmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Requires: 683 Created: 08-Mar-2022 Python-Version: 3.12 Post-History: 08-Mar-2022, 29-Sep-2022, 28-Oct-2022 Resolution: Discourse message Table of Contents Abstract High-Level Summary The GIL CPython Runtime State Other Isolation Considerations Depending on Immortal Objects Motivation Indirect Benefits Existing Use of Multiple Interpreters PEP 554 (Multiple Interpreters in the Stdlib) Rationale Specification Per-Interpreter State Memory Allocators C-API PyInterpreterConfig.own_gil PyInterpreterConfig.strict_extensions_compat Restricting Extension Modules Extension Module Compatibility Extension Module Thread Safety Documentation Impact Backwards Compatibility Extension Modules Extension Module Maintainers Alternate Python Implementations Security Implications Maintainability Performance How to Teach This Reference Implementation Open Issues Deferred Functionality Rejected Ideas Extra Context Sharing Global Objects Objects Exposed in the C-API Consolidating Runtime Global State Benefits to Consolidation Scale of Work State To Be Moved Already Completed Work Tooling Global Objects References Copyright Abstract Since Python 1.5 (1997), CPython users can run multiple interpreters in the same process. However, interpreters in the same process have always shared a significant amount of global state. This is a source of bugs, with a growing impact as more and more people use the feature. Furthermore, sufficient isolation would facilitate true multi-core parallelism, where interpreters no longer share the GIL. The changes outlined in this proposal will result in that level of interpreter isolation. High-Level Summary At a high level, this proposal changes CPython in the following ways: stops sharing the GIL between interpreters, given sufficient isolation adds several new interpreter config options for isolation settings keeps incompatible extensions from causing problems The GIL The GIL protects concurrent access to most of CPython’s runtime state. So all that GIL-protected global state must move to each interpreter before the GIL can. (In a handful of cases, other mechanisms can be used to ensure thread-safe sharing instead, such as locks or “immortal” objects.) CPython Runtime State Properly isolating interpreters requires that most of CPython’s runtime state be stored in the PyInterpreterState struct. Currently, only a portion of it is; the rest is found either in C global variables or in _PyRuntimeState. Most of that will have to be moved. This directly coincides with an ongoing effort (of many years) to greatly reduce internal use of global variables and consolidate the runtime state into _PyRuntimeState and PyInterpreterState. (See Consolidating Runtime Global State below.) That project has significant merit on its own and has faced little controversy. So, while a per-interpreter GIL relies on the completion of that effort, that project should not be considered a part of this proposal–only a dependency. Other Isolation Considerations CPython’s interpreters must be strictly isolated from each other, with few exceptions. To a large extent they already are. Each interpreter has its own copy of all modules, classes, functions, and variables. The CPython C-API docs explain further. However, aside from what has already been mentioned (e.g. the GIL), there are a couple of ways in which interpreters still share some state. First of all, some process-global resources (e.g. memory, file descriptors, environment variables) are shared. There are no plans to change this. Second, some isolation is faulty due to bugs or implementations that did not take multiple interpreters into account. This includes CPython’s runtime and the stdlib, as well as extension modules that rely on global variables. Bugs should be opened in these cases, as some already have been. Depending on Immortal Objects PEP 683 introduces immortal objects as a CPython-internal feature. With immortal objects, we can share any otherwise immutable global objects between all interpreters. Consequently, this PEP does not need to address how to deal with the various objects exposed in the public C-API. It also simplifies the question of what to do about the builtin static types. (See Global Objects below.) Both issues have alternate solutions, but everything is simpler with immortal objects. If PEP 683 is not accepted then this one will be updated with the alternatives. This lets us reduce noise in this proposal. Motivation The fundamental problem we’re solving here is a lack of true multi-core parallelism (for Python code) in the CPython runtime. The GIL is the cause. While it usually isn’t a problem in practice, at the very least it makes Python’s multi-core story murky, which makes the GIL a",
+    "scrapedAt": "2026-05-09 01:23:31.565658"
+  },
+  {
+    "id": 1529,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection",
+    "title": "Thread states and the global interpreter lock — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread states and the global interpreter lock | Theme Auto Light Dark | Thread states and the global interpreter lock¶ Unless on a free-threaded build of CPython, the Python interpreter is generally not thread-safe. In order to support multi-threaded Python programs, there’s a global lock, called the global interpreter lock or GIL, that must be held by a thread before accessing Python objects. Without the lock, even the simplest operations could cause problems in a multi-threaded program: for example, when two threads simultaneously increment the reference count of the same object, the reference count could end up being incremented only once instead of twice. As such, only a thread that holds the GIL may operate on Python objects or invoke Python’s C API. In order to emulate concurrency, the interpreter regularly tries to switch threads between bytecode instructions (see sys.setswitchinterval()). This is why locks are also necessary for thread-safety in pure-Python code. Additionally, the global interpreter lock is released around blocking I/O operations, such as reading or writing to a file. From the C API, this is done by detaching the thread state. The Python interpreter keeps some thread-local information inside a data structure called PyThreadState, known as a thread state. Each thread has a thread-local pointer to a PyThreadState; a thread state referenced by this pointer is considered to be attached. A thread can only have one attached thread state at a time. An attached thread state is typically analogous with holding the GIL, except on free-threaded builds. On builds with the GIL enabled, attaching a thread state will block until the GIL can be acquired. However, even on builds with the GIL disabled, it is still required to have an attached thread state, as the interpreter needs to keep track of which threads may access Python objects. Note Even on the free-threaded build, attaching a thread state may block, as the GIL can be re-enabled or threads might be temporarily suspended (such as during a garbage collection). Generally, there will always be an attached thread state when using Python’s C API, including during embedding and when implementing methods, so it’s uncommon to need to set up a thread state on your own. Only in some specific cases, such as in a Py_BEGIN_ALLOW_THREADS block or in a fresh thread, will the thread not have an attached thread state. If uncertain, check if PyThreadState_GetUnchecked() returns NULL. If it turns out that you do need to create a thread state, call PyThreadState_New() followed by PyThreadState_Swap(), or use the dangerous PyGILState_Ensure() function. Detaching the thread state from extension code¶ Most extension code manipulating the thread state has the following simple structure: Save the thread state in a local variable.\n... Do some blocking I/O operation ...\nRestore the thread state from the local variable.\n This is so common that a pair of macros exists to simplify it: Py_BEGIN_ALLOW_THREADS\n... Do some blocking I/O operation ...\nPy_END_ALLOW_THREADS\n The Py_BEGIN_ALLOW_THREADS macro opens a new block and declares a hidden local variable; the Py_END_ALLOW_THREADS macro closes the block. The block above expands to the following code: PyThreadState *_save;\n\n_save \u003d PyEval_SaveThread();\n... Do some blocking I/O operation ...\nPyEval_RestoreThread(_save);\n Here is how these functions work: The attached thread state implies that the GIL is held for the interpreter. To detach it, PyEval_SaveThread() is called and the result is stored in a local variable. By detaching the thread state, the GIL is released, which allows other threads to attach to the interpreter and execute while the current thread performs blocking I/O. When the I/O operation is complete, the old thread state is reattached by calling PyEval_RestoreThread(), which will wait until the GIL can be acquired. Note Performing blocking I/O is the most common use case for detaching the thread state, but it is also useful to call it over long-running native code that doesn’t need access to Python objects or Python’s C API. For example, the standard zlib and hashlib modules detach the thread state when compressing or hashing data. On a free-threaded build, the GIL is usually out of the question, but detaching the thread state is still required, because the interpreter periodically needs to block all threads to get a consistent view of Python objects without the risk of race conditions. For example, CPython currently suspends all threads for a short period of time while running the garbage collector. Warning Detaching the thread state can lead to unexpected behavior during interpreter finalization. See Cautions regarding runtime finalization for more details. APIs¶ The following macros are normally used without a trailing semicolon; look for example usage in the Python source distribution. Note The",
+    "scrapedAt": "2026-05-09 01:23:30.178454"
+  },
+  {
+    "id": 1528,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle",
+    "title": "imaplib — IMAP4 protocol client — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » imaplib — IMAP4 protocol client | Theme Auto Light Dark | imaplib — IMAP4 protocol client¶ Source code: Lib/imaplib.py This module defines three classes, IMAP4, IMAP4_SSL and IMAP4_stream, which encapsulate a connection to an IMAP4 server and implement a large subset of the IMAP4rev1 client protocol as defined in RFC 2060. It is backward compatible with IMAP4 (RFC 1730) servers, but note that the STATUS command is not supported in IMAP4. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Three classes are provided by the imaplib module, IMAP4 is the base class: class imaplib.IMAP4(host\u003d\u0027\u0027, port\u003dIMAP4_PORT, timeout\u003dNone)¶ This class implements the actual IMAP4 protocol. The connection is created and protocol version (IMAP4 or IMAP4rev1) is determined when the instance is initialized. If host is not specified, \u0027\u0027 (the local host) is used. If port is omitted, the standard IMAP4 port (143) is used. The optional timeout parameter specifies a timeout in seconds for the connection attempt. If timeout is not given or is None, the global default socket timeout is used. The IMAP4 class supports the with statement. When used like this, the IMAP4 LOGOUT command is issued automatically when the with statement exits. E.g.: \u003e\u003e\u003e from imaplib import IMAP4\n\u003e\u003e\u003e with IMAP4(\"domain.org\") as M:\n...     M.noop()\n...\n(\u0027OK\u0027, [b\u0027Nothing Accomplished. d25if65hy903weo.87\u0027])\n Changed in version 3.5: Support for the with statement was added. Changed in version 3.9: The optional timeout parameter was added. Three exceptions are defined as attributes of the IMAP4 class: exception IMAP4.error¶ Exception raised on any errors. The reason for the exception is passed to the constructor as a string. exception IMAP4.abort¶ IMAP4 server errors cause this exception to be raised. This is a sub-class of IMAP4.error. Note that closing the instance and instantiating a new one will usually allow recovery from this exception. exception IMAP4.readonly¶ This exception is raised when a writable mailbox has its status changed by the server. This is a sub-class of IMAP4.error. Some other client now has write permission, and the mailbox will need to be re-opened to re-obtain write permission. There’s also a subclass for secure connections: class imaplib.IMAP4_SSL(host\u003d\u0027\u0027, port\u003dIMAP4_SSL_PORT, *, ssl_context\u003dNone, timeout\u003dNone)¶ This is a subclass derived from IMAP4 that connects over an SSL encrypted socket (to use this class you need a socket module that was compiled with SSL support). If host is not specified, \u0027\u0027 (the local host) is used. If port is omitted, the standard IMAP4-over-SSL port (993) is used. ssl_context is a ssl.SSLContext object which allows bundling SSL configuration options, certificates and private keys into a single (potentially long-lived) structure. Please read Security considerations for best practices. The optional timeout parameter specifies a timeout in seconds for the connection attempt. If timeout is not given or is None, the global default socket timeout is used. Changed in version 3.3: ssl_context parameter was added. Changed in version 3.4: The class now supports hostname check with ssl.SSLContext.check_hostname and Server Name Indication (see ssl.HAS_SNI). Changed in version 3.9: The optional timeout parameter was added. Changed in version 3.12: The deprecated keyfile and certfile parameters have been removed. The second subclass allows for connections created by a child process: class imaplib.IMAP4_stream(command)¶ This is a subclass derived from IMAP4 that connects to the stdin/stdout file descriptors created by passing command to subprocess.Popen(). The following utility functions are defined: imaplib.Internaldate2tuple(datestr)¶ Parse an IMAP4 INTERNALDATE string and return corresponding local time. The return value is a time.struct_time tuple or None if the string has wrong format. imaplib.Int2AP(num)¶ Converts an integer into a bytes representation using characters from the set [A .. P]. imaplib.ParseFlags(flagstr)¶ Converts an IMAP4 FLAGS response to a tuple of individual flags. imaplib.Time2Internaldate(date_time)¶ Convert date_time to an IMAP4 INTERNALDATE representation. The return value is a string in the form: \"DD-Mmm-YYYY HH:MM:SS +HHMM\" (including double-quotes). The date_time argument can be a number (int or float) representing seconds since epoch (as returned by time.time()), a 9-tuple representing local time an instance of time.struct_time (as returned by time.localtime()), an aware instance of datetime.datetime, or a double-quoted string. In the last case, it is assumed to already be in the correct format. Note that IMAP4 message numbers change as the mailbox changes; in particular, after an EXPUNGE command performs deletions the remaining messages are renumbered. So it is highly advisab",
+    "scrapedAt": "2026-05-09 01:23:28.931655"
+  },
+  {
     "id": 1527,
     "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-experimental-jit",
     "title": "3. Configure Python — Python 3.14.5rc1 documentation",
@@ -10288,26 +10323,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1528,
-    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
-  },
-  {
-    "id": 1529,
-    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection"
-  },
-  {
-    "id": 1530,
-    "url": "https://peps.python.org/pep-0684/"
-  },
-  {
-    "id": 1531,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.name"
-  },
-  {
-    "id": 1532,
-    "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
   },
   {
     "id": 1533,
@@ -237750,10 +237765,903 @@ window.searchData = [
     "id": 327620,
     "url": "https://datatracker.ietf.org/wg/fax/about/",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 329967,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.Idler.burst",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329969,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.setacl",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329972,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.socket",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329974,
+    "url": "https://github.com/uw-imap/imap",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329975,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.Int2AP",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329976,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.enable",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329979,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.rename",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329980,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getacl",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329981,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.xatom",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329982,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.ParseFlags",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329983,
+    "url": "https://docs.python.org/3/library/imaplib.html#",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329984,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.setannotation",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329986,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.fetch",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329987,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.send",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329988,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.unsubscribe",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329989,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.response",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329991,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.logout",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329993,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.read",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329994,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.recent",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329995,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.sort",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329996,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.list",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 329997,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.search",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330000,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.readonly",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330001,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.starttls",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330003,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.close",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330005,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2060.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330006,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.namespace",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330007,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getannotation",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330008,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.error",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330009,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.login",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330011,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.subscribe",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330013,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.check",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330014,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.abort",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330015,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.partial",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330016,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.unselect",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330019,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.Internaldate2tuple",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330022,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.setquota",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330024,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.myrights",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330025,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getquota",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330027,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.create",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330028,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.uid",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330030,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.deleteacl",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330031,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330035,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.proxyauth",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330037,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/imaplib.py",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330038,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.Time2Internaldate",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330039,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4_SSL",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330040,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.delete",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330041,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3501.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330043,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.debug",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330046,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.readline",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330047,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.store",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330048,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.login_cram_md5",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330050,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.authenticate",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330051,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5161.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330052,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getquotaroot",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330053,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.status",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330055,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6855.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330056,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2342.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330059,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.PROTOCOL_VERSION",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330060,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.append",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330062,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330063,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1730.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330064,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.select",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330065,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/imaplib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330066,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.open",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330068,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4_stream",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330069,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.utf8_enabled",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330071,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.copy",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330073,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.lsub",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330075,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.expunge",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330076,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.thread",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330077,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.noop",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 330189,
+    "url": "https://peps.python.org/pep-0684/#memory-allocators",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330190,
+    "url": "https://peps.python.org/pep-0684/#depending-on-immortal-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330191,
+    "url": "https://peps.python.org/pep-0684/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330192,
+    "url": "https://instagram-engineering.com/copy-on-write-friendly-python-garbage-collection-ad6ed5233ddf",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330193,
+    "url": "https://peps.python.org/pep-0684/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330194,
+    "url": "https://peps.python.org/pep-0684/#capi-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330195,
+    "url": "https://peps.python.org/pep-0684/#already-completed-work",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330196,
+    "url": "https://github.com/GrahamDumpleton/mod_wsgi",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330197,
+    "url": "https://peps.python.org/pep-0684/#pyinterpreterconfig-strict-extensions-compat",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330198,
+    "url": "https://peps.python.org/pep-0684/#extra-context",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330199,
+    "url": "https://discuss.python.org/t/pep-684-a-per-interpreter-gil/19583/19/",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330200,
+    "url": "https://github.com/ceph/ceph/pull/14971",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330201,
+    "url": "https://peps.python.org/pep-0684/#indirect-benefits",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330202,
+    "url": "https://peps.python.org/pep-0684/#performance",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330203,
+    "url": "https://peps.python.org/pep-0684/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330204,
+    "url": "https://peps.python.org/pep-0684/#per-interpreter-state",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330206,
+    "url": "https://peps.python.org/pep-0445/#gil-free-pymem-malloc",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330207,
+    "url": "https://peps.python.org/pep-0684/#scale-of-work",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330209,
+    "url": "https://github.com/pyca/cryptography/issues/2299",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330210,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/CF7B7FMACFYDAHU6NPBEVEY6TOSGICXU/",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330211,
+    "url": "https://docs.python.org/3/c-api/init.html#sub-interpreter-support",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330212,
+    "url": "https://peps.python.org/pep-0684/#pyinterpreterconfig-own-gil",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330213,
+    "url": "https://peps.python.org/pep-0684/#state-to-be-moved",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330214,
+    "url": "https://github.com/faster-cpython/ideas",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330215,
+    "url": "https://peps.python.org/pep-0684/#benefits-to-consolidation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330216,
+    "url": "https://peps.python.org/pep-0684/#tooling",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330217,
+    "url": "https://peps.python.org/pep-0684/#deferred-functionality",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330218,
+    "url": "https://peps.python.org/pep-0684/#consolidating-runtime-global-state",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330219,
+    "url": "https://peps.python.org/pep-0684/#documentation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330220,
+    "url": "https://peps.python.org/pep-0684/#extension-modules",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330221,
+    "url": "https://github.com/ninia/jep",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330222,
+    "url": "https://github.com/xbmc/xbmc",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330223,
+    "url": "https://peps.python.org/pep-0684/#pep-554-multiple-interpreters-in-the-stdlib",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330224,
+    "url": "https://peps.python.org/pep-0684/#global-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330225,
+    "url": "https://peps.python.org/pep-0684/#high-level-summary",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330226,
+    "url": "https://peps.python.org/pep-0684/#maintainability",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330227,
+    "url": "https://peps.python.org/pep-0684/#extension-module-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330228,
+    "url": "https://peps.python.org/pep-0684/#sharing-global-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330229,
+    "url": "https://peps.python.org/pep-0684/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330230,
+    "url": "https://peps.python.org/pep-0684/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330231,
+    "url": "https://peps.python.org/pep-0684/ConsolidatingRuntimeGlobalState",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330232,
+    "url": "https://peps.python.org/pep-0684/#restricting-extension-modules",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330233,
+    "url": "https://peps.python.org/pep-0684/#references",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330234,
+    "url": "https://peps.python.org/pep-0684/#the-gil",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330235,
+    "url": "https://peps.python.org/pep-0684/#proposed-capi",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330236,
+    "url": "https://discuss.python.org/t/pep-684-a-per-interpreter-gil/19583",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330237,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0684.rst",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330238,
+    "url": "https://github.com/ericsnowcurrently/cpython/tree/try-per-interpreter-alloc",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330241,
+    "url": "https://peps.python.org/pep-0684/#impact",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330243,
+    "url": "https://peps.python.org/pep-0684/#extension-module-maintainers",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330244,
+    "url": "https://peps.python.org/pep-0684/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330245,
+    "url": "https://discuss.python.org/t/19583/42",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330246,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0684.rst",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330247,
+    "url": "https://peps.python.org/pep-0684/#specification",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330248,
+    "url": "https://peps.python.org/pep-0684/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330249,
+    "url": "https://peps.python.org/pep-0684/#existing-use-of-multiple-interpreters",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330250,
+    "url": "https://peps.python.org/pep-0684/#c-api",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330252,
+    "url": "https://peps.python.org/pep-0684/#objects-exposed-in-the-c-api",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330255,
+    "url": "https://peps.python.org/pep-0684/#extension-module-thread-safety",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330256,
+    "url": "https://peps.python.org/pep-0684/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330258,
+    "url": "https://peps.python.org/pep-0684/#alternate-python-implementations",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330259,
+    "url": "https://peps.python.org/pep-0684/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330260,
+    "url": "https://peps.python.org/pep-0684/#cpython-runtime-state",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330261,
+    "url": "https://peps.python.org/pep-0684/#other-isolation-considerations",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330262,
+    "url": "https://peps.python.org/pep-0684/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 330396,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.ratio",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330399,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.ndiff",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330400,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.context_diff",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330401,
+    "url": "https://docs.python.org/3/library/filecmp.html#module-filecmp",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330407,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.unified_diff",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330409,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.HtmlDiff.make_file",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330410,
+    "url": "https://docs.python.org/3/library/difflib.html#",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330411,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.HtmlDiff.__init__",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330414,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_CHARACTER_JUNK",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330415,
+    "url": "https://jacobfilipp.com/DrDobbs/articles/DDJ/1988/8807/8807c/8807c.htm",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330416,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.set_seqs",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330420,
+    "url": "https://docs.python.org/3/library/difflib.html#module-difflib",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330421,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.diff_bytes",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330422,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.quick_ratio",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330425,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.find_longest_match",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330426,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/difflib.py",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330427,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.HtmlDiff.make_table",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330428,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.get_close_matches",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330429,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.real_quick_ratio",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330431,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.get_grouped_opcodes",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330432,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.get_opcodes",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330433,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.get_matching_blocks",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330434,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.Differ.compare",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330438,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.Differ",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330439,
+    "url": "https://code.activestate.com/recipes/576729-simple-version-control/",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330448,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.restore",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330449,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330450,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib-interface",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330451,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/difflib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330452,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.set_seq2",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 330453,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.set_seq1",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "difflib — Helpers for computing deltas — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "difflib — Helpers for computing deltas — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.name"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.name"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "imaplib — IMAP4 protocol client — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "imaplib — IMAP4 protocol client — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
