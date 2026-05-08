@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 954,
+    "url": "https://github.com/python/cpython/issues/91048",
+    "title": "Async Call-Stack Reconstruction · Issue #91048 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Async Call-Stack Reconstruction #91048 New issue Copy link New issue Copy link Closed Closed Async Call-Stack Reconstruction#91048 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-asynciotype-featureA feature request or enhancementA feature request or enhancement Description mpage mannequin opened on Mar 1, 2022 Issue body actions BPO 46892 Nosy @gvanrossum, @DinoV, @asvetlov, @1st1, @kumaraditya303, @itamaro, @mpage Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-03-01.22:13:38.844\u003e\nlabels \u003d [\u0027interpreter-core\u0027, \u00273.11\u0027, \u0027type-feature\u0027, \u0027expert-asyncio\u0027]\ntitle \u003d \u0027Async Call-Stack Reconstruction\u0027\nupdated_at \u003d \u003cDate 2022-03-12.09:30:23.838\u003e\nuser \u003d \u0027https://github.com/mpage\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-03-12.09:30:23.838\u003e\nactor \u003d \u0027asvetlov\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Interpreter Core\u0027, \u0027asyncio\u0027]\ncreation \u003d \u003cDate 2022-03-01.22:13:38.844\u003e\ncreator \u003d \u0027mpage\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 46892\nkeywords \u003d []\nmessage_count \u003d 5.0\nmessages \u003d [\u0027414301\u0027, \u0027414884\u0027, \u0027414930\u0027, \u0027414948\u0027, \u0027414985\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027gvanrossum\u0027, \u0027dino.viehland\u0027, \u0027asvetlov\u0027, \u0027yselivanov\u0027, \u0027kumaraditya\u0027, \u0027itamaro\u0027, \u0027mpage\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue46892\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-91048: Add support for reconstructing async call stacks #103976 GH-91048: Add utils for capturing async call stack for asyncio programs and enable profiling #124640 GH-91048: Don\u0027t attempt to run on FreeBSD #129189 gh-91048: Also clear and set ts-\u003easyncio_running_task with eager tasks #129197 gh-91048: Improve example in asyncio-graph.rst doc #129224 gh-91048: fix thread safety for asyncio stack introspection APIs #129399 GH-91048: Correct error path in testexternalinspection #129557 gh-91048: fix _asyncio.future_discard_from_awaited_by #129731 gh-91048: Add ability to list all pending asyncio tasks in a process remotely #132807 gh-91048: Refactor _testexternalinspection and add Windows support #132852 gh-91048: Fix _testexternalinspection.c on FreeBSD #132945 gh-91048: Prevent optimizing away the asyncio debug offsets structure on Windows #132963 gh-91048: Chain some exceptions in _testexternalinspection.c #132970 GH-91048: Add utils for printing the call stack for asyncio tasks #133284 gh-133141: Relax test_async_global_awaited_by to fix flakyness #133368 gh-91048: Add filename and line number to external inspection routines #133385 GH-91048: Minor fixes for _remotedebugging \u0026 rename to _remote_debugging #133398 gh-91048: Add filename:line_no information to asyncio pstree #133478 gh-91048: Fix error path result in _remote_debugging_module #134347 [3.14] gh-91048: Fix error path result in _remote_debugging_module (GH-134347) #134399 gh-91048: Refactor and optimize remote debugging module #134652 [3.14] gh-91048: Refactor and optimize remote debugging module (#134652) #134673 gh-91048: Add better error messages for remote debugging for CI builds #134682 gh-91048: Guard against TARGET_OS_OSX for compat with simulators in remote_debug.h #134711 gh-91048: Correct Apple platform includes for iOS #134712 [3.14] gh-91048: Correct Apple platform includes for iOS. (GH-134712) #134714 [3.14] gh-91048: Add better error messages for remote debugging for CI builds (GH-134682) #134719 gh-91048: Reorder result tuple of parse_code_object #134898 [3.14] gh-91048: Reorder result tuple of parse_code_object (GH-134898) #134956 gh-91048: Reorder result tuple in asyncio/tools.py #134957 gh-91048: Fix external inspection multi-threaded performance #136005 [3.14] gh-91048: Fix external inspection multi-threaded performance (GH-136005) #136080 gh-91048: Revert the memory cache removal for remote debugging #136440 [3.14] gh-91048: Revert the memory cache removal for remote debugging (GH-136440) #136443 gh-91048: Refactor common data into context object in Modukes/_remote_debugging #142879 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-asynciotype-featureA feature request or enhancementA feature request or enhancement Pro",
+    "scrapedAt": "2026-05-09 01:00:11.42631"
+  },
+  {
+    "id": 953,
+    "url": "https://docs.python.org/3/library/venv.html#venv-def",
+    "title": "venv — Creation of virtual environments — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Software Packaging and Distribution » venv — Creation of virtual environments | Theme Auto Light Dark | venv — Creation of virtual environments¶ Added in version 3.3. Source code: Lib/venv/ The venv module supports creating lightweight “virtual environments”, each with their own independent set of Python packages installed in their site directories. A virtual environment is created on top of an existing Python installation, known as the virtual environment’s “base” Python, and by default is isolated from the packages in the base environment, so that only those explicitly installed in the virtual environment are available. See Virtual Environments and site’s virtual environments documentation for more information. When used from within a virtual environment, common installation tools such as pip will install Python packages into a virtual environment without needing to be told to do so explicitly. A virtual environment is (amongst other things): Used to contain a specific Python interpreter and software libraries and binaries which are needed to support a project (library or application). These are by default isolated from software in other virtual environments and Python interpreters and libraries installed in the operating system. Contained in a directory, conventionally named .venv or venv in the project directory, or under a container directory for lots of virtual environments, such as ~/.virtualenvs. Not checked into source control systems such as Git. Considered as disposable – it should be simple to delete and recreate it from scratch. You don’t place any project code in the environment. Not considered as movable or copyable – you just recreate the same environment in the target location. See PEP 405 for more background on Python virtual environments. See also Python Packaging User Guide: Creating and using virtual environments Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Creating virtual environments¶ Virtual environments are created by executing the venv module: python -m venv /path/to/new/virtual/environment\n This creates the target directory (including parent directories as needed) and places a pyvenv.cfg file in it with a home key pointing to the Python installation from which the command was run. It also creates a bin (or Scripts on Windows) subdirectory containing a copy or symlink of the Python executable (as appropriate for the platform or arguments used at environment creation time). It also creates a lib/pythonX.Y/site-packages subdirectory (on Windows, this is Lib\\site-packages). If an existing directory is specified, it will be re-used. Changed in version 3.5: The use of venv is now recommended for creating virtual environments. Deprecated since version 3.6, removed in version 3.8: pyvenv was the recommended tool for creating virtual environments for Python 3.3 and 3.4, and replaced in 3.5 by executing venv directly. On Windows, invoke the venv command as follows: PS\u003e python -m venv C:\\path\\to\\new\\virtual\\environment\n The command, if run with -h, will show the available options: usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear]\n            [--upgrade] [--without-pip] [--prompt PROMPT] [--upgrade-deps]\n            [--without-scm-ignore-files]\n            ENV_DIR [ENV_DIR ...]\n\nCreates virtual Python environments in one or more target directories.\n\nOnce an environment has been created, you may wish to activate it, e.g. by\nsourcing an activate script in its bin directory.\n ENV_DIR¶ A required argument specifying the directory to create the environment in. --system-site-packages¶ Give the virtual environment access to the system site-packages directory. --symlinks¶ Try to use symlinks rather than copies, when symlinks are not the default for the platform. --copies¶ Try to use copies rather than symlinks, even when symlinks are the default for the platform. --clear¶ Delete the contents of the environment directory if it already exists, before environment creation. --upgrade¶ Upgrade the environment directory to use this version of Python, assuming Python has been upgraded in-place. --without-pip¶ Skips installing or upgrading pip in the virtual environment (pip is bootstrapped by default). --prompt \u003cPROMPT\u003e¶ Provides an alternative prompt prefix for this environment. --upgrade-deps¶ Upgrade core dependencies (pip) to the latest version in PyPI. --without-scm-ignore-files¶ Skips adding SCM ignore files to the environment directory (Git is supported by default). Changed in version 3.4: Installs pip by default, added the --without-pip and --copies options. Changed in version 3.4: In earlier versions, if the target directory already existed, an error was raised, unless the --clear or --upgrade option was provided. Changed in version 3.9: Add --upgrade-deps option to upgrade pip + setuptool",
+    "scrapedAt": "2026-05-09 01:00:08.577384"
+  },
+  {
+    "id": 952,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#garbage-collection",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:00:07.406223"
+  },
+  {
+    "id": 951,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partialmethod",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than lru_cache() with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to property(), with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of cached_property() are somewhat different from property(). A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to cached_property() can also be achieved by stacking property() on top of lru_cache(). See How do I cache method calls? for more details on how this differs from cached_property(). Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key fun",
+    "scrapedAt": "2026-05-09 01:00:06.177989"
+  },
+  {
+    "id": 950,
+    "url": "https://docs.python.org/3/library/functions.html#breakpoint",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-09 01:00:04.922868"
+  },
+  {
     "id": 949,
     "url": "https://docs.python.org/3/library/threading.html#threading.Thread.start",
     "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
@@ -6333,26 +6368,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 950,
-    "url": "https://docs.python.org/3/library/functions.html#breakpoint"
-  },
-  {
-    "id": 951,
-    "url": "https://docs.python.org/3/library/functools.html#functools.partialmethod"
-  },
-  {
-    "id": 952,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#garbage-collection"
-  },
-  {
-    "id": 953,
-    "url": "https://docs.python.org/3/library/venv.html#venv-def"
-  },
-  {
-    "id": 954,
-    "url": "https://github.com/python/cpython/issues/91048"
   },
   {
     "id": 955,
@@ -160620,10 +160635,465 @@ window.searchData = [
     "id": 140374,
     "url": "https://github.com/python/cpython/blob/main/Doc/c-api/iter.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/c-api/iter.html#c.PyIter_Next"
+  },
+  {
+    "id": 142133,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.setup_python",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142134,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.create_configuration",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142138,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-upgrade",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142141,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142142,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.upgrade_dependencies",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142144,
+    "url": "https://go.microsoft.com/fwlink/?LinkID\u003d135170",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142147,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/venv.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142148,
+    "url": "https://gist.github.com/vsajip/4673395",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142149,
+    "url": "https://docs.python.org/3/library/site.html#site-virtual-environments-configuration",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142153,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-symlinks",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142154,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.ensure_directories",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142155,
+    "url": "https://pypi.org/project/pip/",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142157,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-upgrade-deps",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142158,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-prompt",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142159,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.create",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142162,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.create_git_ignore_file",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142164,
+    "url": "https://pypi.org/project/setuptools/",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142165,
+    "url": "https://docs.python.org/3/library/venv.html#",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142166,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-without-scm-ignore-files",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142167,
+    "url": "https://peps.python.org/pep-0405/",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142168,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-copies",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142172,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-system-site-packages",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142173,
+    "url": "https://docs.python.org/3/library/venv.html#venv.create",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142174,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.post_setup",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142175,
+    "url": "https://docs.python.org/3/library/venv.html#how-venvs-work",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142176,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-clear",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142178,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.install_scripts",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142180,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-arg-ENV_DIR",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142181,
+    "url": "https://docs.python.org/3/library/venv.html#an-example-of-extending-envbuilder",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142182,
+    "url": "https://docs.python.org/3/library/venv.html#creating-virtual-environments",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142188,
+    "url": "https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142189,
+    "url": "https://docs.python.org/3/library/venv.html#venv.EnvBuilder.setup_scripts",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142192,
+    "url": "https://docs.python.org/3/library/venv.html#cmdoption-venv-without-pip",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142193,
+    "url": "https://docs.python.org/3/library/ensurepip.html#module-ensurepip",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142196,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/venv/",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142197,
+    "url": "https://docs.python.org/3/library/venv.html#api",
+    "parentUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "id": 142200,
+    "url": "https://github.com/python/cpython/pull/129399",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142201,
+    "url": "https://github.com/python/cpython/issues/91048#issue-1199076234",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142202,
+    "url": "https://github.com/python/cpython/pull/129197",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142203,
+    "url": "https://github.com/python/cpython/pull/136443",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142204,
+    "url": "https://github.com/python/cpython/pull/132963",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142205,
+    "url": "https://github.com/python/cpython/pull/134347",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142206,
+    "url": "https://github.com/python/cpython/pull/136005",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142207,
+    "url": "https://github.com/python/cpython/pull/136440",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142208,
+    "url": "https://github.com/python/cpython/pull/136080",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142210,
+    "url": "https://github.com/python/cpython/pull/129557",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142211,
+    "url": "https://github.com/python/cpython/pull/129224",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142212,
+    "url": "https://github.com/python/cpython/pull/129189",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142213,
+    "url": "https://github.com/python/cpython/pull/103976",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142214,
+    "url": "https://github.com/python/cpython/pull/134652",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142215,
+    "url": "https://github.com/python/cpython/pull/134898",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142216,
+    "url": "https://github.com/python/cpython/pull/133368",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142217,
+    "url": "https://github.com/python/cpython/issues/91048#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142219,
+    "url": "https://github.com/mpage",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142220,
+    "url": "https://github.com/python/cpython/pull/133284",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142221,
+    "url": "https://github.com/gvanrossum",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142222,
+    "url": "https://bugs.python.org/issue46892",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142224,
+    "url": "https://github.com/python/cpython/pull/129731",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142225,
+    "url": "https://github.com/python/cpython/pull/132945",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142227,
+    "url": "https://github.com/python/cpython/pull/133398",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142229,
+    "url": "https://github.com/python/cpython/pull/133478",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142232,
+    "url": "https://github.com/python/cpython/issues/91048#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142233,
+    "url": "https://github.com/python/cpython/pull/134682",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142234,
+    "url": "https://github.com/python/cpython/pull/142879",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142235,
+    "url": "https://github.com/itamaro",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142236,
+    "url": "https://github.com/python/cpython/pull/124640",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142237,
+    "url": "https://github.com/python/cpython/pull/134957",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142238,
+    "url": "https://github.com/python/cpython/pull/134714",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142239,
+    "url": "https://github.com/python/cpython/pull/134956",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142241,
+    "url": "https://github.com/python/cpython/pull/134719",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142242,
+    "url": "https://github.com/DinoV",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142244,
+    "url": "https://github.com/python/cpython/pull/132970",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142245,
+    "url": "https://github.com/python/cpython/pull/134399",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142246,
+    "url": "https://github.com/python/cpython/pull/134673",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142247,
+    "url": "https://github.com/python/cpython/pull/133385",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142248,
+    "url": "https://github.com/python/cpython/pull/132852",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142249,
+    "url": "https://github.com/python/cpython/pull/134712",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142250,
+    "url": "https://github.com/python/cpython/pull/134711",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "id": 142251,
+    "url": "https://github.com/python/cpython/pull/132807",
+    "parentUrl": "https://github.com/python/cpython/issues/91048"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/101755541?v\u003d4\u0026size\u003d80",
+    "alt": "@mpage",
+    "pageTitle": "Async Call-Stack Reconstruction · Issue #91048 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101755541?v\u003d4\u0026size\u003d48",
+    "alt": "@mpage",
+    "pageTitle": "Async Call-Stack Reconstruction · Issue #91048 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91048"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "venv — Creation of virtual environments — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "venv — Creation of virtual environments — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/venv.html#venv-def"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#garbage-collection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#garbage-collection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.partialmethod"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.partialmethod"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#breakpoint"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#breakpoint"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
