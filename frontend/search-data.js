@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1477,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move_into",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty, the current directory is assumed: \u003e\u003e\u003e PurePath()\nPurePosixPath(\u0027.\u0027)\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Users/Ximénez\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027//server/share/file\u0027)\nPureWindow",
+    "scrapedAt": "2026-05-09 01:21:28.903153"
+  },
+  {
+    "id": 1476,
+    "url": "https://docs.python.org/3/library/fcntl.html#module-fcntl",
+    "title": "fcntl — The fcntl and ioctl system calls — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Unix-specific services » fcntl — The fcntl and ioctl system calls | Theme Auto Light Dark | fcntl — The fcntl and ioctl system calls¶ This module performs file and I/O control on file descriptors. It is an interface to the fcntl() and ioctl() Unix routines. See the fcntl(2) and ioctl(2) Unix manual pages for full details. Availability: Unix, not WASI. All functions in this module take a file descriptor fd as their first argument. This can be an integer file descriptor, such as returned by sys.stdin.fileno(), or an io.IOBase object, such as sys.stdin itself, which provides a fileno() that returns a genuine file descriptor. Changed in version 3.3: Operations in this module used to raise an IOError where they now raise an OSError. Changed in version 3.8: The fcntl module now contains F_ADD_SEALS, F_GET_SEALS, and F_SEAL_* constants for sealing of os.memfd_create() file descriptors. Changed in version 3.9: On macOS, the fcntl module exposes the F_GETPATH constant, which obtains the path of a file from a file descriptor. On Linux(\u003e\u003d3.15), the fcntl module exposes the F_OFD_GETLK, F_OFD_SETLK and F_OFD_SETLKW constants, which are used when working with open file description locks. Changed in version 3.10: On Linux \u003e\u003d 2.6.11, the fcntl module exposes the F_GETPIPE_SZ and F_SETPIPE_SZ constants, which allow to check and modify a pipe’s size respectively. Changed in version 3.11: On FreeBSD, the fcntl module exposes the F_DUP2FD and F_DUP2FD_CLOEXEC constants, which allow to duplicate a file descriptor, the latter setting FD_CLOEXEC flag in addition. Changed in version 3.12: On Linux \u003e\u003d 4.5, the fcntl module exposes the FICLONE and FICLONERANGE constants, which allow to share some data of one file with another file by reflinking on some filesystems (e.g., btrfs, OCFS2, and XFS). This behavior is commonly referred to as “copy-on-write”. Changed in version 3.13: On Linux \u003e\u003d 2.6.32, the fcntl module exposes the F_GETOWN_EX, F_SETOWN_EX, F_OWNER_TID, F_OWNER_PID, F_OWNER_PGRP constants, which allow to direct I/O availability signals to a specific thread, process, or process group. On Linux \u003e\u003d 4.13, the fcntl module exposes the F_GET_RW_HINT, F_SET_RW_HINT, F_GET_FILE_RW_HINT, F_SET_FILE_RW_HINT, and RWH_WRITE_LIFE_* constants, which allow to inform the kernel about the relative expected lifetime of writes on a given inode or via a particular open file description. On Linux \u003e\u003d 5.1 and NetBSD, the fcntl module exposes the F_SEAL_FUTURE_WRITE constant for use with F_ADD_SEALS and F_GET_SEALS operations. On FreeBSD, the fcntl module exposes the F_READAHEAD, F_ISUNIONSTACK, and F_KINFO constants. On macOS and FreeBSD, the fcntl module exposes the F_RDAHEAD constant. On NetBSD and AIX, the fcntl module exposes the F_CLOSEM constant. On NetBSD, the fcntl module exposes the F_MAXFD constant. On macOS and NetBSD, the fcntl module exposes the F_GETNOSIGPIPE and F_SETNOSIGPIPE constant. Changed in version 3.14: On Linux \u003e\u003d 6.1, the fcntl module exposes the F_DUPFD_QUERY to query a file descriptor pointing to the same file. The module defines the following functions: fcntl.fcntl(fd, cmd, arg\u003d0, /)¶ Perform the operation cmd on file descriptor fd (file objects providing a fileno() method are accepted as well). The values used for cmd are operating system dependent, and are available as constants in the fcntl module, using the same names as used in the relevant C header files. The argument arg can either be an integer value, a bytes-like object, or a string. The type and size of arg must match the type and size of the argument of the operation as specified in the relevant C documentation. When arg is an integer, the function returns the integer return value of the C fcntl() call. When the argument is bytes-like object, it represents a binary structure, for example, created by struct.pack(). A string value is encoded to binary using the UTF-8 encoding. The binary data is copied to a buffer whose address is passed to the C fcntl() call. The return value after a successful call is the contents of the buffer, converted to a bytes object. The length of the returned object will be the same as the length of the arg argument. This is limited to 1024 bytes. If the fcntl() call fails, an OSError is raised. Note If the type or the size of arg does not match the type or size of the argument of the operation (for example, if an integer is passed when a pointer is expected, or the information returned in the buffer by the operating system is larger than 1024 bytes), this is most likely to result in a segmentation violation or a more subtle data corruption. Raises an auditing event fcntl.fcntl with arguments fd, cmd, arg. Changed in version 3.14: Add support of arbitrary bytes-like objects, not only bytes. fcntl.ioctl(fd, request, arg\u003d0, mutate_flag\u003dTrue, /)¶ This function is identical to the fcntl() function, except that the argument handl",
+    "scrapedAt": "2026-05-09 01:21:27.650197"
+  },
+  {
+    "id": 1475,
+    "url": "https://github.com/python/cpython/issues/127949",
+    "title": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate asyncio policy system #127949 New issue Copy link New issue Copy link Closed Closed Deprecate asyncio policy system#127949 Copy link Assignees Labels topic-asynciotype-featureA feature request or enhancementA feature request or enhancement Description kumaraditya303 opened on Dec 14, 2024 Issue body actions asyncio\u0027s policy system deprecation asyncio\u0027s policy system1 has been a source of confusion and problems in asyncio for a very long time. The policies no longer serve a real purpose. Loops are always per thread, there is no need to have a \"current loop\" when no loop is currently running. This issue discusses the changes to deprecate it in Python 3.14 and schedule its removal in 3.16 or later. The usual user applications would use the runner APIs (see flowchart) while those who want more control like Jupyter project can create an event loop and manage it themselves, the difference would be that instead of them first getting the policy then event loop then can directly create it like loop \u003d MyCustomEventLoop()\nloop.run_until_complete(task) rather than currently asyncio.set_event_loop_policy(MyPolicy())\npolicy \u003d asyncio.get_event_loop_policy()\nloop \u003d policy.new_event_loop()\nloop.run_until_complete(task) See these discussions for more background: Deprecate get_event_loop() #83710 (comment) Finish deprecation in asyncio.get_event_loop() #93453 (comment) deprecate the asyncio child watchers system #94597 (comment) deprecate the asyncio child watchers system #94597 Functions and classes to be deprecated and later removed asyncio.get_event_loop_policy asyncio.set_event_loop_policy asyncio.AbstractEventLoopPolicy asyncio.DefaultEventLoopPolicy asyncio.WindowsSelectorEventLoopPolicy asyncio.WindowsProactorEventLoopPolicy asyncio.set_event_loop Functions to be modified asyncio.get_event_loop - In 3.16 or later this will become an alias to get_running_loop. asyncio.new_event_loop - In 3.16 or later this will ignore custom policies and will be an alias to asyncio.EventLoop asyncio.run \u0026 asyncio.Runner - In 3.16 or later this will be modified to not use policy system as that will be gone and rely solely on loop_factory. The Grand Plan To minimize changes, all the deprecated functions will be underscored i.e. set_event_loop -\u003e _set_event_loop and set_event_loop will emit the warning then call _set_event_loop as its underlying implementation. This way internally asyncio can still call these functions until they are removed without need of many ignore warnings and the tests too can easily be adapted. The deprecated classes will emit warnings when they are subclassed as it was done for child watchers. The runner APIs will be remain unmodified but making sure that correct warnings are emitted internally when policy system is used. The Future ---\ntitle: Flowchart for asyncio.run\n---\nflowchart TD\n    A[\"asyncio.run(coro, loop_factory\u003d...)\"] --\u003e B{loop_factory}\n    B --\u003e|loop_factory is None| D{platform}\n    B --\u003e|loop_factory is not None| E[\"loop \u003d loop_factory()\"]\n    D --\u003e |Unix| F[\"loop \u003d SelectorEventLoop()\"]\n    D --\u003e |Windows| G[\"loop \u003d ProactorEventLoop()\"]\n    E --\u003e H\n    F --\u003e H\n    G --\u003e H \n    H[\"loop.run_until_complete(coro)\"]\n Loading Linked PRs gh-127949: deprecate asyncio.set_event_loop_policy #128024 gh-127949: deprecate asyncio.get_event_loop_policy #128053 gh-127949: fix resource warnings in test_tasks.py due to avoiding a call to get_event_loop() #128172 gh-127949: fix DeprecationWarning in test_inspect.py #128215 gh-127949: deprecate asyncio policy classes #128216 gh-127949: deprecate asyncio.set_event_loop #128218 gh-127949: add docs for asyncio policy deprecation #128269 gh-127949: make deprecation of policy system more prominent #128290 [3.13] gh-127949: fix resource warnings in test_tasks.py (GH-128172) #131805 [3.12] gh-127949: fix resource warnings in test_tasks.py (GH-128172) #131806 Footnotes https://docs.python.org/3.14/library/asyncio-policy.html ↩ Reactions are currently unavailable Metadata Metadata Assignees kumaraditya303 Labels topic-asynciotype-featureA feature request or enhancementA feature request or enhancement Projects asyncio Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:21:26.321442"
+  },
+  {
+    "id": 1474,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith",
+    "title": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » unittest — Unit testing framework | Theme Auto Light Dark | unittest — Unit testing framework¶ Source code: Lib/unittest/__init__.py (If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods.) The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework. To achieve this, unittest supports some important concepts in an object-oriented way: test fixture A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process. test case A test case is the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases. test suite A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. test runner A test runner is a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests. See also Module doctest Another test-support module with a very different flavor. Simple Smalltalk Testing: With Patterns Kent Beck’s original paper on testing frameworks using the pattern shared by unittest. pytest Third-party unittest framework with a lighter-weight syntax for writing tests. For example, assert func(10) \u003d\u003d 42. The Python Testing Tools Taxonomy An extensive list of Python testing tools including functional testing frameworks and mock object libraries. Testing in Python Mailing List A special-interest-group for discussion of testing, and testing tools, in Python. The script Tools/unittestgui/unittestgui.py in the Python source distribution is a GUI tool for test discovery and execution. This is intended largely for ease of use for those new to unit testing. For production environments it is recommended that tests be driven by a continuous integration system such as Buildbot, Jenkins, GitHub Actions, or AppVeyor. Basic example¶ The unittest module provides a rich set of tools for constructing and running tests. This section demonstrates that a small subset of the tools suffice to meet the needs of most users. Here is a short script to test three string methods: import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual(\u0027foo\u0027.upper(), \u0027FOO\u0027)\n\n    def test_isupper(self):\n        self.assertTrue(\u0027FOO\u0027.isupper())\n        self.assertFalse(\u0027Foo\u0027.isupper())\n\n    def test_split(self):\n        s \u003d \u0027hello world\u0027\n        self.assertEqual(s.split(), [\u0027hello\u0027, \u0027world\u0027])\n        # check that s.split fails when the separator is not a string\n        with self.assertRaises(TypeError):\n            s.split(2)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    unittest.main()\n A test case is created by subclassing unittest.TestCase. The three individual tests are defined with methods whose names start with the letters test. This naming convention informs the test runner about which methods represent tests. The crux of each test is a call to assertEqual() to check for an expected result; assertTrue() or assertFalse() to verify a condition; or assertRaises() to verify that a specific exception gets raised. These methods are used instead of the assert statement so the test runner can accumulate all test results and produce a report. The setUp() and tearDown() methods allow you to define instructions that will be executed before and after each test method. They are covered in more detail in the section Organizing test code. The final block shows a simple way to run the tests. unittest.main() provides a command-line interface to the test script. When run from the command line, the above script produces an output that looks like this: ...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n Passing the -v option to your test script will instruct unittest.main() to enable a higher level of verbosity, and produce the following output: test_isupper (__main__.TestStringMethods.test_isupper) ... ok\ntest_split (__main__.TestStringMethods.test_split) ... ok\ntest_upper (__main__.TestStringMethods.test_upper) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n The above examples show the most commonly used unittest features which are sufficient to meet many everyday testing needs. The rem",
+    "scrapedAt": "2026-05-09 01:21:24.110516"
+  },
+  {
+    "id": 1473,
+    "url": "https://github.com/python/cpython/issues/127945",
+    "title": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k ctypes thread safety auditing (and fixing) #127945 New issue Copy link New issue Copy link Closed #134332 Closed ctypes thread safety auditing (and fixing)#127945 #134332 Copy link Assignees Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-free-threadingtype-featureA feature request or enhancementA feature request or enhancement Description ZeroIntensity opened on Dec 14, 2024 Issue body actions Feature or enhancement This is a tracking issue for all thread safety problems related to ctypes. I\u0027ll be working on this, but others can feel free to give me some help. First of all, we need to find where the thread safety problems are. ### Auditing\n- [x] Audit `_ctypes.c`\n- [ ] Audit `_ctypes_test.c` (and probably the generated file too)\n- [ ] Audit `callbacks.c`\n- [ ] Audit `callproc.c`\n- [ ] Audit `cfield.c`\n- [x] Audit `malloc_closure.c`\n- [ ] Audit `stgdict.c`\n I\u0027ll be tracking the issues that get found when auditing here. The plan is to just create a new issue and link to it for each new problem instead of flooding this issue with PRs. Generally, the workflow for fixes should follow most of the rules from #116738, but I suspect we\u0027ll need recursive mutexes for quite a few things related to callbacks, because it\u0027s difficult to tell what might be re-entrant, and we can\u0027t use critical sections for arbitrary function pointers. ### Known Issues\n- [ ] https://github.com/python/cpython/issues/127946\n- [ ] https://github.com/python/cpython/issues/128182\n- [ ] https://github.com/python/cpython/issues/128485\n- [ ] https://github.com/python/cpython/issues/128567\n- [ ] https://github.com/python/cpython/issues/128570\n- [ ] https://github.com/python/cpython/issues/131974\n cc @encukou, as the ctypes genius, and @colesbury as the free-threading mastermind. Linked PRs gh-127945: add locking to malloc closure in free-threading #131662 gh-127945: fix thread safety of ctypes state #131710 gh-127945: fix thread safety of creating instances of ctypes structures #131716 gh-127945: make initialization of error_object_name thread safe #131896 gh-127945: acquire critical section around PyCFuncPtr_call #131898 gh-127945: mark TestLocalization as thread unsafe in ctypes #131899 gh-127945: fix thread safety and add lock held assertions to paramfunc in ctypes #132473 gh-127945: move initialization of field desc to module exec in ctypes #132552 gh-127945: change _ctypes_test static globals to thread local #132575 gh-127945: fix critical sections around ctypes array #132646 gh-127945: skip more tests in ctypes when using parallel threads #132682 gh-127945: add lock held assertions in ctypes arrays #132720 gh-127945: add test_ctypes to free-threading TSAN CI #132727 gh-127945: Update What\u0027s New in Python 3.14 for free-threaded ctypes #134332 [3.14] gh-127945: Update What\u0027s New in Python 3.14 for free-threaded ctypes (GH-134332) #134364 Reactions are currently unavailable Metadata Metadata Assignees kumaraditya303 Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-free-threadingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:21:22.806716"
+  },
+  {
     "id": 1472,
     "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy",
     "title": "Policies — Python 3.14.5rc1 documentation",
@@ -9903,26 +9938,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1473,
-    "url": "https://github.com/python/cpython/issues/127945"
-  },
-  {
-    "id": 1474,
-    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith"
-  },
-  {
-    "id": 1475,
-    "url": "https://github.com/python/cpython/issues/127949"
-  },
-  {
-    "id": 1476,
-    "url": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
-  },
-  {
-    "id": 1477,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move_into"
   },
   {
     "id": 1478,
@@ -234685,10 +234700,335 @@ window.searchData = [
     "id": 308381,
     "url": "https://github.com/python/cpython/issues/125714#issuecomment-2423259145",
     "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 308429,
+    "url": "https://github.com/python/cpython/pull/131899",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308431,
+    "url": "https://github.com/python/cpython/pull/131710",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308432,
+    "url": "https://github.com/python/cpython/pull/131898",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308433,
+    "url": "https://github.com/python/cpython/pull/132646",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308434,
+    "url": "https://github.com/python/cpython/issues/127945#issue-2739960980",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308435,
+    "url": "https://github.com/python/cpython/pull/131716",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308436,
+    "url": "https://github.com/python/cpython/pull/132727",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308439,
+    "url": "https://github.com/python/cpython/pull/132682",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308440,
+    "url": "https://github.com/python/cpython/pull/134364",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308442,
+    "url": "https://github.com/python/cpython/pull/132720",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308443,
+    "url": "https://github.com/python/cpython/pull/131896",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308445,
+    "url": "https://github.com/python/cpython/issues/127945#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308450,
+    "url": "https://github.com/python/cpython/pull/132552",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308451,
+    "url": "https://github.com/python/cpython/pull/134332",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308452,
+    "url": "https://github.com/python/cpython/pull/132473",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308453,
+    "url": "https://github.com/python/cpython/pull/131662",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308454,
+    "url": "https://github.com/python/cpython/pull/132575",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308458,
+    "url": "https://github.com/python/cpython/issues/127945#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 308709,
+    "url": "https://github.com/python/cpython/pull/128269",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308711,
+    "url": "https://github.com/python/cpython/pull/128024",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308712,
+    "url": "https://github.com/python/cpython/issues/127949#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308717,
+    "url": "https://github.com/python/cpython/issues/83710#issuecomment-1093855411",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308718,
+    "url": "https://github.com/python/cpython/pull/131806",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308719,
+    "url": "https://docs.python.org/3.14/library/asyncio-policy.html",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308722,
+    "url": "https://github.com/python/cpython/issues/93453#issue-1259542498",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308723,
+    "url": "https://github.com/python/cpython/pull/131805",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308724,
+    "url": "https://github.com/python/cpython/issues/127949#user-content-fnref-1-4944aa3c17ea20f3c9df8303d8596844",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308725,
+    "url": "https://github.com/python/cpython/pull/128053",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308726,
+    "url": "https://github.com/python/cpython/issues/127949#issue-2739981235",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308727,
+    "url": "https://github.com/python/cpython/pull/128172",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308728,
+    "url": "https://github.com/python/cpython/pull/128290",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308730,
+    "url": "https://github.com/python/cpython/issues/127949#user-content-fn-1-4944aa3c17ea20f3c9df8303d8596844",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308731,
+    "url": "https://github.com/python/cpython/issues/127949#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308733,
+    "url": "https://github.com/python/cpython/issues/94597#issuecomment-1270840197",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308734,
+    "url": "https://github.com/python/cpython/pull/128218",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308735,
+    "url": "https://github.com/python/cpython/pull/128216",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308736,
+    "url": "https://github.com/python/cpython/pull/128215",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 308738,
+    "url": "https://manpages.debian.org/flock(2)",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308744,
+    "url": "https://manpages.debian.org/ioctl(2)",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308753,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.flock",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308759,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_SH",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308770,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_NB",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308771,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_EX",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308777,
+    "url": "https://manpages.debian.org/fcntl(2)",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308783,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_UN",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308785,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.lockf",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 308786,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/fcntl.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move_into"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move_into"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move_into"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fcntl — The fcntl and ioctl system calls — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fcntl — The fcntl and ioctl system calls — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
