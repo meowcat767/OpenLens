@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 709,
+    "url": "https://peps.python.org/pep-0659/",
+    "title": "PEP 659 – Specializing Adaptive Interpreter | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 659 – Specializing Adaptive Interpreter PEP 659 – Specializing Adaptive Interpreter Author: Mark Shannon \u003cmark at hotpy.org\u003e Status: Final Type: Informational Created: 13-Apr-2021 Post-History: 11-May-2021 Table of Contents Abstract Motivation Rationale Performance Implementation Overview Quickening Adaptive instructions Specialization Ancillary data Example families of instructions LOAD_ATTR LOAD_GLOBAL Compatibility Costs Memory use Comparing memory use to 3.10 Security Implications Rejected Ideas Storing data caches before the bytecode. References Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Specializing Adaptive Interpreter. × See PEP 1 for how to propose changes. Abstract In order to perform well, virtual machines for dynamic languages must specialize the code that they execute to the types and values in the program being run. This specialization is often associated with “JIT” compilers, but is beneficial even without machine code generation. A specializing, adaptive interpreter is one that speculatively specializes on the types or values it is currently operating on, and adapts to changes in those types and values. Specialization gives us improved performance, and adaptation allows the interpreter to rapidly change when the pattern of usage in a program alters, limiting the amount of additional work caused by mis-specialization. This PEP proposes using a specializing, adaptive interpreter that specializes code aggressively, but over a very small region, and is able to adjust to mis-specialization rapidly and at low cost. Adding a specializing, adaptive interpreter to CPython will bring significant performance improvements. It is hard to come up with meaningful numbers, as it depends very much on the benchmarks and on work that has not yet happened. Extensive experimentation suggests speedups of up to 50%. Even if the speedup were only 25%, this would still be a worthwhile enhancement. Motivation Python is widely acknowledged as slow. Whilst Python will never attain the performance of low-level languages like C, Fortran, or even Java, we would like it to be competitive with fast implementations of scripting languages, like V8 for Javascript or luajit for lua. Specifically, we want to achieve these performance goals with CPython to benefit all users of Python including those unable to use PyPy or other alternative virtual machines. Achieving these performance goals is a long way off, and will require a lot of engineering effort, but we can make a significant step towards those goals by speeding up the interpreter. Both academic research and practical implementations have shown that a fast interpreter is a key part of a fast virtual machine. Typical optimizations for virtual machines are expensive, so a long “warm up” time is required to gain confidence that the cost of optimization is justified. In order to get speed-ups rapidly, without noticeable warmup times, the VM should speculate that specialization is justified even after a few executions of a function. To do that effectively, the interpreter must be able to optimize and de-optimize continually and very cheaply. By using adaptive and speculative specialization at the granularity of individual virtual machine instructions, we get a faster interpreter that also generates profiling information for more sophisticated optimizations in the future. Rationale There are many practical ways to speed-up a virtual machine for a dynamic language. However, specialization is the most important, both in itself and as an enabler of other optimizations. Therefore it makes sense to focus our efforts on specialization first, if we want to improve the performance of CPython. Specialization is typically done in the context of a JIT compiler, but research shows specialization in an interpreter can boost performance significantly, even outperforming a naive compiler [1]. There have been several ways of doing this proposed in the academic literature, but most attempt to optimize regions larger than a single bytecode [1] [2]. Using larger regions than a single instruction requires code to handle de-optimization in the middle of a region. Specialization at the level of individual bytecodes makes de-optimization trivial, as it cannot occur in the middle of a region. By speculatively specializing individual bytecodes, we can gain significant performance improvements without anything but the most local, and trivial to implement, de-optimizations. The closest approach to this PEP in the literature is “Inline Caching meets Quickening” [3]. This PEP has the advantages of inline caching, but adds the ability to quickly de-optimize making the performance more robust in cases where specialization fails or is not stable. Performance The speedup from specialization is hard to determine, as many specializations depend on othe",
+    "scrapedAt": "2026-05-09 00:50:24.297163"
+  },
+  {
+    "id": 708,
+    "url": "https://github.com/python/cpython/issues/59705",
+    "title": "Python should support exporting thread names to the OS · Issue #59705 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Python should support exporting thread names to the OS #59705 New issue Copy link New issue Copy link Closed Closed Python should support exporting thread names to the OS#59705 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description bra mannequin opened on Jul 30, 2012 Issue body actions BPO 15500 Nosy @jcea, @pitrou, @vstinner, @tiran, @bitdancer, @asvetlov, @florentx, @socketpair, @eryksun, @ZackerySpytz, @arhadthedev PRs gh-59705: Export threading.Thread() names to the OS #14578 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2012-07-30.12:19:30.305\u003e\nlabels \u003d [\u0027type-feature\u0027, \u0027library\u0027, \u00273.10\u0027, \u00273.11\u0027]\ntitle \u003d \u0027Python should support exporting thread names to the OS\u0027\nupdated_at \u003d \u003cDate 2022-01-18.21:32:45.293\u003e\nuser \u003d \u0027https://bugs.python.org/bra\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-01-18.21:32:45.293\u003e\nactor \u003d \u0027pitrou\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2012-07-30.12:19:30.305\u003e\ncreator \u003d \u0027bra\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 15500\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 10.0\nmessages \u003d [\u0027166890\u0027, \u0027167166\u0027, \u0027167459\u0027, \u0027167552\u0027, \u0027167560\u0027, \u0027230736\u0027, \u0027377332\u0027, \u0027406336\u0027, \u0027410896\u0027, \u0027410898\u0027]\nnosy_count \u003d 14.0\nnosy_names \u003d [\u0027jcea\u0027, \u0027pitrou\u0027, \u0027vstinner\u0027, \u0027christian.heimes\u0027, \u0027Arfrever\u0027, \u0027r.david.murray\u0027, \u0027asvetlov\u0027, \u0027flox\u0027, \u0027bra\u0027, \u0027kovid\u0027, \u0027socketpair\u0027, \u0027eryksun\u0027, \u0027ZackerySpytz\u0027, \u0027arhadthedev\u0027]\npr_nums \u003d [\u002714578\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue15500\u0027\nversions \u003d [\u0027Python 3.10\u0027, \u0027Python 3.11\u0027] Linked PRs gh-59705: Add _thread.set_name() function #127338 gh-59705: Set OS thread name when Thread.name is changed #127702 gh-59705: Implement _thread.set_name() on Windows #128675 gh-59705: Document OS thread name change #128800 gh-59705: Make PYTHREAD_NAME_MAXLEN macro private #128945 gh-59705: Fix solaris detection in test_set_name #132012 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Threading issues 🧵 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:50:23.041906"
+  },
+  {
+    "id": 707,
+    "url": "https://peps.python.org/pep-0768/",
+    "title": "PEP 768 – Safe external debugger interface for CPython | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 768 – Safe external debugger interface for CPython PEP 768 – Safe external debugger interface for CPython Author: Pablo Galindo Salgado \u003cpablogsal at python.org\u003e, Matt Wozniski \u003cgodlygeek at gmail.com\u003e, Ivona Stojanovic \u003cstojanovic.i at hotmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 25-Nov-2024 Python-Version: 3.14 Post-History: 11-Dec-2024 Resolution: 17-Mar-2025 Table of Contents Abstract Motivation Rationale Specification Runtime State Extensions Debug Offsets Table Attachment Protocol Interpreter Integration Python API Configuration API Multi-threading Considerations Backwards Compatibility Security Implications Security scenarios How to Teach This Reference Implementation Rejected Ideas Writing Python code into the buffer Using a Single Runtime Buffer Thanks Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Remote debugging attachment protocol. × See PEP 1 for how to propose changes. Abstract This PEP proposes adding a zero-overhead debugging interface to CPython that allows debuggers and profilers to safely attach to running Python processes. The interface provides safe execution points for attaching debugger code without modifying the interpreter’s normal execution path or adding runtime overhead. A key application of this interface will be enabling pdb to attach to live processes by process ID, similar to gdb -p, allowing developers to inspect and debug Python applications interactively in real-time without stopping or restarting them. Motivation Debugging Python processes in production and live environments presents unique challenges. Developers often need to analyze application behavior without stopping or restarting services, which is especially crucial for high-availability systems. Common scenarios include diagnosing deadlocks, inspecting memory usage, or investigating unexpected behavior in real-time. Very few Python tools can attach to running processes, primarily because doing so requires deep expertise in both operating system debugging interfaces and CPython internals. While C/C++ debuggers like GDB and LLDB can attach to processes using well-understood techniques, Python tools must implement all of these low-level mechanisms plus handle additional complexity. For example, when GDB needs to execute code in a target process, it: Uses ptrace to allocate a small chunk of executable memory (easier said than done) Writes a small sequence of machine code - typically a function prologue, the desired instructions, and code to restore registers Saves all the target thread’s registers Changes the instruction pointer to the injected code Lets the process run until it hits a breakpoint at the end of the injected code Restores the original registers and continues execution Python tools face this same challenge of code injection, but with an additional layer of complexity. Not only do they need to implement the above mechanism, they must also understand and safely interact with CPython’s runtime state, including the interpreter loop, garbage collector, thread state, and reference counting system. This combination of low-level system manipulation and deep domain specific interpreter knowledge makes implementing Python debugging tools exceptionally difficult. The few tools (see for example DebugPy and Memray) that do attempt this resort to suboptimal and unsafe methods, using system debuggers like GDB and LLDB to forcefully inject code. This approach is fundamentally unsafe because the injected code can execute at any point during the interpreter’s execution cycle - even during critical operations like memory allocation, garbage collection, or thread state management. When this happens, the results are catastrophic: attempting to allocate memory while already inside malloc() causes crashes, modifying objects during garbage collection corrupts the interpreter’s state, and touching thread state at the wrong time leads to deadlocks. Various tools attempt to minimize these risks through complex workarounds, such as spawning separate threads for injected code or carefully timing their operations or trying to select some good points to stop the process. However, these mitigations cannot fully solve the underlying problem: without cooperation from the interpreter, there’s no way to know if it’s safe to execute code at any given moment. Even carefully implemented tools can crash the interpreter because they’re fundamentally working against it rather than with it. Rationale Rather than forcing tools to work around interpreter limitations with unsafe code injection, we can extend CPython with a proper debugging interface that guarantees safe execution. By adding a few thread state fields and integrating with the interpreter’s existing evaluation loop, we can ensure debugging operations only occur at well-defined safe ",
+    "scrapedAt": "2026-05-09 00:50:20.758341"
+  },
+  {
+    "id": 706,
+    "url": "https://github.com/python/cpython/issues/139653",
+    "title": "Python 3.14 stack overflow detection is incompatible with C++ Boost make_fcontext() coroutines · Issue #139653 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Python 3.14 stack overflow detection is incompatible with C++ Boost make_fcontext() coroutines #139653 New issue Copy link New issue Copy link Open Open Python 3.14 stack overflow detection is incompatible with C++ Boost make_fcontext() coroutines#139653 Copy link Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Description vstinner opened on Oct 6, 2025 Issue body actions Python 3.14 introduced a new stack overflow detection mecanism: InternalDocs/stack_protection.md (#130396). The KiCad application uses C++ Boost make_fcontext() coroutines which runs coroutine in their own stack. Code example from fcontext doc: // context-function\nvoid f(intptr);\n\n// creates a new stack\nstd::size_t size \u003d 8192;\nvoid* sp(std::malloc(size));\n\n// context fc uses f() as context function\n// fcontext_t is placed on top of context stack\n// a pointer to fcontext_t is returned\nfcontext_t fc(make_fcontext(sp,size,f)); _Py_InitializeRecursionLimits() is called in the main thread, whereas _Py_CheckRecursiveCall() is called for the first time in a coroutine (make_fcontext()). Problem: Python detects a stack overflow because it\u0027s not aware that the stack base address and size changed when make_fcontext() was called. pthread functions such as pthread_attr_getguardsize() are incompatible with make_fcontext(). cc @markshannon Linked PRs gh-139653: If platform API doesn\u0027t give the current stack, use generic fallback #139667 gh-139653: Add PyUnstable_ThreadState_SetStackProtection() #139668 gh-139653: Remove assertions in _Py_InitializeRecursionLimits() #141551 [3.14] gh-139653: Add PyUnstable_ThreadState_SetStackProtection() (GH-139668) #141661 GH-139653: Only raise an exception (or fatal error) when the stack pointer is about to overflow the stack. #141711 [3.14] GH-139653: Only raise an exception (or fatal error) when the stack pointer is about to overflow the stack. (GH-141711) #141892 [3.14] GH-139653: Only raise an exception (or fatal error) when the stack pointer is about to overflow the stack. (GH-141711) #141944 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Projects Release and Deferred blockers 🚫 Status In Progress Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 00:50:19.474783"
+  },
+  {
+    "id": 705,
+    "url": "https://docs.python.org/3/reference/expressions.html#or",
+    "title": "6. Expressions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations",
+    "scrapedAt": "2026-05-09 00:50:17.173998"
+  },
+  {
     "id": 704,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#itertools",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -4648,26 +4683,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 705,
-    "url": "https://docs.python.org/3/reference/expressions.html#or"
-  },
-  {
-    "id": 706,
-    "url": "https://github.com/python/cpython/issues/139653"
-  },
-  {
-    "id": 707,
-    "url": "https://peps.python.org/pep-0768/"
-  },
-  {
-    "id": 708,
-    "url": "https://github.com/python/cpython/issues/59705"
-  },
-  {
-    "id": 709,
-    "url": "https://peps.python.org/pep-0659/"
   },
   {
     "id": 710,
@@ -115634,10 +115649,1781 @@ window.searchData = [
     "id": 78890,
     "url": "https://github.com/pulkin",
     "parentUrl": "https://github.com/python/cpython/issues/131913"
+  },
+  {
+    "id": 80126,
+    "url": "https://docs.python.org/3/library/exceptions.html#GeneratorExit",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80127,
+    "url": "https://docs.python.org/3/reference/expressions.html#formal-subscription-grammar",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80129,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-positional_item",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80130,
+    "url": "https://docs.python.org/3/reference/expressions.html#id23",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80131,
+    "url": "https://docs.python.org/3/reference/expressions.html#id22",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80133,
+    "url": "https://docs.python.org/3/reference/expressions.html#id21",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80134,
+    "url": "https://docs.python.org/3/reference/expressions.html#generator.__next__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80135,
+    "url": "https://docs.python.org/3/reference/expressions.html#id20",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80137,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rrshift__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80138,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__matmul__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80139,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rlshift__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80140,
+    "url": "https://docs.python.org/3/library/functions.html#ord",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80144,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__getattribute__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80146,
+    "url": "https://docs.python.org/3/reference/expressions.html#id19",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80147,
+    "url": "https://docs.python.org/3/reference/expressions.html#id18",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80148,
+    "url": "https://docs.python.org/3/reference/expressions.html#id17",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80149,
+    "url": "https://docs.python.org/3/glossary.html#term-parameter",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80151,
+    "url": "https://docs.python.org/3/reference/expressions.html#id16",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80152,
+    "url": "https://docs.python.org/3/reference/expressions.html#id13",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80153,
+    "url": "https://docs.python.org/3/glossary.html#term-asynchronous-generator",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80154,
+    "url": "https://docs.python.org/3/reference/expressions.html#id12",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80156,
+    "url": "https://docs.python.org/3/reference/expressions.html#id10",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80157,
+    "url": "https://docs.python.org/3/reference/expressions.html#parenthesized-forms",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80158,
+    "url": "https://peps.python.org/pep-0572/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80159,
+    "url": "https://peps.python.org/pep-0342/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80160,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-yield_expression",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80161,
+    "url": "https://docs.python.org/3/reference/expressions.html#is-not",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80163,
+    "url": "https://docs.python.org/3/glossary.html#term-awaitable",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80164,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-starred_expression_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80169,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-identity-with-is",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80171,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#grammar-token-python-grammar-NUMBER",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80172,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/base_events.py",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80173,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__pos__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80174,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-positional_arguments",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80175,
+    "url": "https://docs.python.org/3/library/stdtypes.html#definition.__name__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80176,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__invert__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80177,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-yield_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80179,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typesnumeric",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80180,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-comp_iter",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80181,
+    "url": "https://peps.python.org/pep-0308/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80184,
+    "url": "https://docs.python.org/3/reference/expressions.html#literals",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80185,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#grammar-token-python-grammar-target_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80186,
+    "url": "https://docs.python.org/3/library/functions.html#slice.step",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80189,
+    "url": "https://docs.python.org/3/library/stdtypes.html#stdtypes-mixed-arithmetic",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80191,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-comp_operator",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80192,
+    "url": "https://docs.python.org/3/library/functions.html#hash",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80194,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-lambda_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80195,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-enclosure",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80196,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__call__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80197,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__add__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80201,
+    "url": "https://docs.python.org/3/reference/expressions.html#string-concatenation",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80202,
+    "url": "https://docs.python.org/3/reference/expressions.html#slicings",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80203,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__neg__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80204,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rfloordiv__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80205,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#raise",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80207,
+    "url": "https://docs.python.org/3/reference/expressions.html#subscriptions-and-slicings",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80208,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rsub__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80209,
+    "url": "https://docs.python.org/3/library/constants.html#Ellipsis",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80210,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__setitem__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80211,
+    "url": "https://peps.python.org/pep-0255/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80212,
+    "url": "https://docs.python.org/3/glossary.html#term-index",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80213,
+    "url": "https://docs.python.org/3/reference/expressions.html#yield-expressions",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80214,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-subscript",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80215,
+    "url": "https://docs.python.org/3/reference/expressions.html#generator-expressions",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80216,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-strings",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80218,
+    "url": "https://docs.python.org/3/library/functions.html#abs",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80219,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-literal",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80221,
+    "url": "https://docs.python.org/3/glossary.html#term-iterable",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80222,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__getattr__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80223,
+    "url": "https://docs.python.org/3/library/functions.html#next",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80225,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-comprehension",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80228,
+    "url": "https://docs.python.org/3/library/functions.html#id",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80229,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#grammar-token-python-grammar-fstring",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80230,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__xor__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80231,
+    "url": "https://docs.python.org/3/reference/expressions.html#set-displays",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80232,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#try",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80233,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-await_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80234,
+    "url": "https://docs.python.org/3/library/exceptions.html#StopIteration.value",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80235,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#grammar-token-python-grammar-STRING",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80237,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__lt__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80238,
+    "url": "https://docs.python.org/3/library/functions.html#min",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80239,
+    "url": "https://docs.python.org/3/reference/expressions.html#agen.asend",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80241,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-set_display",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80242,
+    "url": "https://peps.python.org/pep-0525/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80244,
+    "url": "https://docs.python.org/3/library/exceptions.html#ZeroDivisionError",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80245,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-starred_and_keywords",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80247,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#t-strings",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80248,
+    "url": "https://docs.python.org/3/reference/expressions.html#calls",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80249,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-u_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80251,
+    "url": "https://docs.python.org/3/reference/expressions.html#dictionary-displays",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80253,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-shift_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80255,
+    "url": "https://docs.python.org/3/reference/expressions.html#expressions",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80256,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-call",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80259,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__truediv__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80260,
+    "url": "https://docs.python.org/3/reference/expressions.html#unary",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80261,
+    "url": "https://docs.python.org/3/glossary.html#term-slice",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80262,
+    "url": "https://docs.python.org/3/library/stdtypes.html#old-string-formatting",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80263,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__or__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80264,
+    "url": "https://docs.python.org/3/library/exceptions.html#BaseException.__traceback__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80266,
+    "url": "https://docs.python.org/3/library/exceptions.html#IndexError",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80267,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-keyword_item",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80268,
+    "url": "https://docs.python.org/3/library/functions.html#built-in-funcs",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80269,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__iter__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80270,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-and_test",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80271,
+    "url": "https://peps.python.org/pep-0492/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80272,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#keywords",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80273,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#assignment",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80278,
+    "url": "https://docs.python.org/3/library/stdtypes.html#range",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80279,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-yield_atom",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80280,
+    "url": "https://docs.python.org/3/library/functions.html#slice.start",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80281,
+    "url": "https://docs.python.org/3/reference/expressions.html#generator.send",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80282,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#grammar-token-python-grammar-tstring",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80284,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rshift__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80286,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#numbers",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80287,
+    "url": "https://docs.python.org/3/glossary.html#term-asynchronous-iterator",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80288,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rxor__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80290,
+    "url": "https://docs.python.org/3/library/constants.html#built-in-consts",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80291,
+    "url": "https://docs.python.org/3/glossary.html#term-function",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80292,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-attributeref",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80293,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__lshift__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80294,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-keywords_arguments",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80296,
+    "url": "https://docs.python.org/3/reference/datamodel.html#customization",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80297,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-list_display",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80302,
+    "url": "https://docs.python.org/3/reference/expressions.html#binary",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80303,
+    "url": "https://docs.python.org/3/glossary.html#term-special-method",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80304,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ror__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80305,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rmatmul__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80306,
+    "url": "https://peps.python.org/pep-0448/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80307,
+    "url": "https://docs.python.org/3/library/functions.html#slice.stop",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80308,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__bool__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80309,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#grammar-token-python-grammar-parameter_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80310,
+    "url": "https://docs.python.org/3/library/functions.html#divmod",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80311,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80312,
+    "url": "https://docs.python.org/3/reference/expressions.html#",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80314,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-dict_item",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80315,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-tuple_subscript",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80316,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-argument_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80317,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-or_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80318,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-single_subscript",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80319,
+    "url": "https://docs.python.org/3/reference/expressions.html#comma-separated-subscripts",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80320,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rand__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80321,
+    "url": "https://docs.python.org/3/library/math.html#math.fmod",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80322,
+    "url": "https://docs.python.org/3/library/sys.html#sys.set_asyncgen_hooks",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80323,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-yield_from",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80324,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#grammar-token-python-grammar-identifier",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80325,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__pow__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80326,
+    "url": "https://docs.python.org/3/whatsnew/3.3.html#pep-380",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80328,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__class_getitem__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80329,
+    "url": "https://docs.python.org/3/reference/expressions.html#agen.aclose",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80330,
+    "url": "https://docs.python.org/3/reference/expressions.html#built-in-constants",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80332,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-expression_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80333,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-or_test",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80334,
+    "url": "https://docs.python.org/3/reference/datamodel.html#datamodel-sequences",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80335,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__and__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80336,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rmul__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80337,
+    "url": "https://docs.python.org/3/library/functions.html#sorted",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80339,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#yield",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80340,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-subscription",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80341,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-xor_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80342,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-power",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80344,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-and_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80348,
+    "url": "https://docs.python.org/3/reference/datamodel.html#async-iterators",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80349,
+    "url": "https://docs.python.org/3/reference/expressions.html#literals-and-object-identity",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80352,
+    "url": "https://docs.python.org/3/reference/expressions.html#not",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80353,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__mod__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80354,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__contains__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80355,
+    "url": "https://docs.python.org/3/reference/datamodel.html#classgetitem-versus-getitem",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80356,
+    "url": "https://peps.python.org/pep-0530/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80357,
+    "url": "https://docs.python.org/3/reference/expressions.html#agen.athrow",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80358,
+    "url": "https://docs.python.org/3/glossary.html#term-mapping",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80359,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__radd__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80360,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-conditional_expression",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80361,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-parenth_form",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80362,
+    "url": "https://peps.python.org/pep-0380/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80364,
+    "url": "https://docs.python.org/3/reference/expressions.html#starred-subscriptions",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80366,
+    "url": "https://docs.python.org/3/reference/expressions.html#examples",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80367,
+    "url": "https://docs.python.org/3/reference/expressions.html#list-displays",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80368,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-primary",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80369,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-flexible_expression_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80370,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__sub__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80371,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rmod__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80373,
+    "url": "https://github.com/python/cpython/blob/main/Doc/reference/expressions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80374,
+    "url": "https://docs.python.org/3/reference/expressions.html#asynchronous-generator-iterator-methods",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80375,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-comp_for",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80376,
+    "url": "https://docs.python.org/3/glossary.html#term-coroutine-function",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80378,
+    "url": "https://docs.python.org/3/reference/expressions.html#not-in",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80381,
+    "url": "https://docs.python.org/3/library/functools.html#functools.total_ordering",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80382,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-assignment_expression",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80384,
+    "url": "https://docs.python.org/3/library/functions.html#max",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80385,
+    "url": "https://docs.python.org/3/glossary.html#term-key",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80386,
+    "url": "https://docs.python.org/3/reference/expressions.html#string-literal-concatenation",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80388,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-generator_expression",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80389,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#function",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80391,
+    "url": "https://peps.python.org/pep-0008/",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80392,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-atom",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80393,
+    "url": "https://docs.python.org/3/reference/expressions.html#membership-test-operations",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80394,
+    "url": "https://docs.python.org/3/library/unicodedata.html#unicodedata.normalize",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80397,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__mul__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80398,
+    "url": "https://docs.python.org/3/reference/datamodel.html#sequence-types",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80399,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-proper_slice",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80400,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__delitem__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80401,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-not_test",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80402,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-a_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80403,
+    "url": "https://docs.python.org/3/reference/expressions.html#atom-identifiers",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80404,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#async-def",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80406,
+    "url": "https://docs.python.org/3/library/constants.html#None",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80408,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-m_expr",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80409,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-dict_display",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80410,
+    "url": "https://docs.python.org/3/reference/expressions.html#index-5",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80411,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-starred_expression",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80412,
+    "url": "https://docs.python.org/3/reference/expressions.html#generator-iterator-methods",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80413,
+    "url": "https://docs.python.org/3/reference/expressions.html#asynchronous-generator-functions",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80414,
+    "url": "https://docs.python.org/3/reference/expressions.html#value-comparisons",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80415,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#naming",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80416,
+    "url": "https://docs.python.org/3/reference/expressions.html#id9",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80417,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rtruediv__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80418,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-comparison",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80421,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__floordiv__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80423,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-comp_if",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80425,
+    "url": "https://docs.python.org/3/reference/expressions.html#attribute-references",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80427,
+    "url": "https://docs.python.org/3/reference/datamodel.html#types",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80428,
+    "url": "https://docs.python.org/3/reference/expressions.html#agen.__anext__",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80429,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-dict_comprehension",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80432,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-flexible_expression",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80436,
+    "url": "https://docs.python.org/3/reference/datamodel.html#objects",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80437,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-dict_item_list",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80438,
+    "url": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80439,
+    "url": "https://docs.python.org/3/glossary.html#term-argument",
+    "parentUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "id": 80444,
+    "url": "https://github.com/python/cpython/issues/139653#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80446,
+    "url": "https://www.boost.org/doc/libs/1_59_0/libs/context/doc/html/context/context.html",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80447,
+    "url": "https://github.com/python/cpython/issues/139653#issue-3487057605",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80450,
+    "url": "https://github.com/python/cpython/pull/139667",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80451,
+    "url": "https://github.com/vstinner",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80452,
+    "url": "https://github.com/python/cpython/pull/139668",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80453,
+    "url": "https://github.com/markshannon",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80454,
+    "url": "https://github.com/python/cpython/issues/139653#top",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80455,
+    "url": "https://github.com/python/cpython/pull/141711",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80456,
+    "url": "https://github.com/orgs/python/projects/2",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80457,
+    "url": "https://github.com/python/cpython/pull/141944",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80458,
+    "url": "https://github.com/python/cpython/blob/main/InternalDocs/stack_protection.md",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80459,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22interpreter-core%22",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80460,
+    "url": "https://github.com/python/cpython/pull/141551",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80461,
+    "url": "https://github.com/python/cpython/pull/141661",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80462,
+    "url": "https://github.com/python/cpython/pull/141892",
+    "parentUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "id": 80463,
+    "url": "https://man7.org/linux/man-pages/man2/ptrace.2.html",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80464,
+    "url": "https://peps.python.org/pep-0768/#writing-python-code-into-the-buffer",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80465,
+    "url": "https://peps.python.org/pep-0768/#runtime-state-extensions",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80466,
+    "url": "https://peps.python.org/pep-0768/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80467,
+    "url": "https://github.com/microsoft/debugpy/blob/43f41029eabce338becbd1fa1a09727b3cfb1140/src/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/attach.cpp#L4",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80468,
+    "url": "https://github.com/pypy/pypy/pull/5135",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80469,
+    "url": "https://peps.python.org/pep-0768/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80470,
+    "url": "https://man7.org/linux/man-pages/man2/process_vm_readv.2.html",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80471,
+    "url": "https://peps.python.org/pep-0768/#python-api",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80472,
+    "url": "https://developer.apple.com/documentation/kernel/1402127-mach_vm_read_overwrite",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80473,
+    "url": "https://peps.python.org/pep-0768/#interpreter-integration",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80474,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80475,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0768.rst",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80476,
+    "url": "https://en.wikipedia.org/wiki/Address_space_layout_randomization",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80477,
+    "url": "https://peps.python.org/pep-0768/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80478,
+    "url": "https://github.com/bloomberg/memray/blob/main/src/memray/_memray/inject.cpp",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80479,
+    "url": "https://discuss.python.org/t/pep-768-safe-external-debugger-interface-for-cpython/73969/57",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80480,
+    "url": "https://www.kernel.org/doc/Documentation/security/Yama.txt",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80481,
+    "url": "https://peps.python.org/pep-0768/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80482,
+    "url": "https://peps.python.org/pep-0768/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80483,
+    "url": "https://peps.python.org/pep-0768/#security-scenarios",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80485,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80486,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0768.rst",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80487,
+    "url": "https://docs.python.org/3.14/howto/remote_debugging.html#remote-debugging",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80488,
+    "url": "https://man7.org/linux/man-pages/man2/process_vm_writev.2.html",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80489,
+    "url": "https://peps.python.org/pep-0768/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80490,
+    "url": "https://peps.python.org/pep-0768/#configuration-api",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80491,
+    "url": "https://github.com/pablogsal/cpython/compare/60ff67d010078eca15a74b1429caf779ac4f9c74...remote_pdb",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80492,
+    "url": "https://peps.python.org/pep-0001/",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80493,
+    "url": "https://man7.org/linux/man-pages/man7/capabilities.7.html",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80494,
+    "url": "https://developer.apple.com/documentation/kernel/1402070-mach_vm_write",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80495,
+    "url": "https://peps.python.org/pep-0768/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80496,
+    "url": "https://peps.python.org/pep-0768/#using-a-single-runtime-buffer",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80497,
+    "url": "https://discuss.python.org/t/pep-768-safe-external-debugger-interface-for-cpython/73969",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80498,
+    "url": "https://peps.python.org/pep-0768/#specification",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80499,
+    "url": "https://peps.python.org/pep-0768/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80500,
+    "url": "https://peps.python.org/pep-0768/#multi-threading-considerations",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80501,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80502,
+    "url": "https://peps.python.org/pep-0768/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80503,
+    "url": "https://peps.python.org/pep-0768/#thanks",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80504,
+    "url": "https://peps.python.org/pep-0768/#debug-offsets-table",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80505,
+    "url": "https://peps.python.org/pep-0768/#attachment-protocol",
+    "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80507,
+    "url": "https://github.com/arhadthedev",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80509,
+    "url": "https://github.com/asvetlov",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80511,
+    "url": "https://github.com/jcea",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80512,
+    "url": "https://github.com/socketpair",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80513,
+    "url": "https://github.com/ZackerySpytz",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80514,
+    "url": "https://github.com/python/cpython/pull/14578",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80515,
+    "url": "https://github.com/python/cpython/issues/59705#issue-1198886247",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80516,
+    "url": "https://github.com/python/cpython/issues/59705#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80517,
+    "url": "https://github.com/python/cpython/pull/128945",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80518,
+    "url": "https://github.com/python/cpython/pull/127338",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80519,
+    "url": "https://github.com/python/cpython/pull/128800",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80520,
+    "url": "https://github.com/python/cpython/pull/128675",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80522,
+    "url": "https://github.com/pitrou",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80523,
+    "url": "https://github.com/tiran",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80524,
+    "url": "https://github.com/python/cpython/pull/132012",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80525,
+    "url": "https://github.com/orgs/python/projects/12",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80526,
+    "url": "https://github.com/python/cpython/issues/59705#top",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80527,
+    "url": "https://bugs.python.org/issue15500",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80531,
+    "url": "https://github.com/bitdancer",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80532,
+    "url": "https://github.com/eryksun",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80533,
+    "url": "https://github.com/python/cpython/pull/127702",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80534,
+    "url": "https://github.com/florentx",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80535,
+    "url": "https://peps.python.org/pep-0659/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80536,
+    "url": "https://peps.python.org/pep-0659/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80537,
+    "url": "https://peps.python.org/pep-0659/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80538,
+    "url": "https://peps.python.org/pep-0659/#specialization",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80539,
+    "url": "https://peps.python.org/pep-0659/#ancillary-data",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80540,
+    "url": "https://peps.python.org/pep-0659/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80541,
+    "url": "https://peps.python.org/pep-0659/#memory-use",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80542,
+    "url": "https://peps.python.org/pep-0659/#comparing-memory-use-to-3-10",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80543,
+    "url": "https://peps.python.org/pep-0659/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80544,
+    "url": "https://peps.python.org/pep-0659/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80545,
+    "url": "https://peps.python.org/pep-0659/#overview",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80546,
+    "url": "https://peps.python.org/pep-0659/#id6",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80547,
+    "url": "https://peps.python.org/pep-0659/#id5",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80548,
+    "url": "https://peps.python.org/pep-0659/#id8",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80549,
+    "url": "https://peps.python.org/pep-0659/#id7",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80550,
+    "url": "https://peps.python.org/pep-0659/#id2",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80551,
+    "url": "https://peps.python.org/pep-0659/#id1",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80552,
+    "url": "https://peps.python.org/pep-0659/#id4",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80553,
+    "url": "https://peps.python.org/pep-0659/#references",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80554,
+    "url": "https://peps.python.org/pep-0659/#id3",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80555,
+    "url": "https://peps.python.org/pep-0659/#id9",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80556,
+    "url": "https://peps.python.org/pep-0659/#load-attr",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80557,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0659.rst",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80558,
+    "url": "https://peps.python.org/pep-0659/#compatibility",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80559,
+    "url": "https://peps.python.org/pep-0659/#quickening",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80560,
+    "url": "https://www.unibw.de/ucsrl/pubs/ecoop10.pdf/view",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80561,
+    "url": "https://peps.python.org/pep-0659/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80562,
+    "url": "https://peps.python.org/pep-0659/#performance",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80563,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-pep659",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80564,
+    "url": "https://theses.gla.ac.uk/2975/1/2011shannonphd.pdf",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80566,
+    "url": "https://peps.python.org/pep-0659/#adaptive-instructions",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80567,
+    "url": "https://peps.python.org/pep-0659/#costs",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80568,
+    "url": "https://www.scss.tcd.ie/publications/tech-reports/reports.09/TCD-CS-2009-37.pdf",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80569,
+    "url": "https://github.com/python/cpython/blob/main/Python/specialize.c",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80570,
+    "url": "https://peps.python.org/pep-0659/#storing-data-caches-before-the-bytecode",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80571,
+    "url": "https://peps.python.org/pep-0659/#example-families-of-instructions",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80572,
+    "url": "https://github.com/python/cpython/blob/main/Python/ceval.c",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80573,
+    "url": "https://peps.python.org/pep-0659/#load-global",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80574,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0659.rst",
+    "parentUrl": "https://peps.python.org/pep-0659/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/101771427?v\u003d4\u0026size\u003d80",
+    "alt": "@bra",
+    "pageTitle": "Python should support exporting thread names to the OS · Issue #59705 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101771427?v\u003d4\u0026size\u003d48",
+    "alt": "@bra",
+    "pageTitle": "Python should support exporting thread names to the OS · Issue #59705 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "Python 3.14 stack overflow detection is incompatible with C++ Boost make_fcontext() coroutines · Issue #139653 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "Python 3.14 stack overflow detection is incompatible with C++ Boost make_fcontext() coroutines · Issue #139653 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/139653"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#or"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
