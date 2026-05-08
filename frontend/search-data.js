@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1482,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html",
+    "title": "RFC 8081 - The \"font\" Top-Level Media Type",
+    "content": "Light Dark Auto Internet Engineering Task Force (IETF)                         C. Lilley\nRequest for Comments: 8081                                           W3C\nCategory: Standards Track                                  February 2017\nISSN: 2070-1721\n\n\n                    The \"font\" Top-Level Media Type\n\nAbstract\n\n   This memo serves to register and document the \"font\" top-level media\n   type, under which subtypes for representation formats for fonts may\n   be registered.  This document also serves as a registration\n   application for a set of intended subtypes, which are representative\n   of some existing subtypes already in use, and currently registered\n   under the \"application\" tree by their separate registrations.\n\nStatus of This Memo\n\n   This is an Internet Standards Track document.\n\n   This document is a product of the Internet Engineering Task Force\n   (IETF).  It represents the consensus of the IETF community.  It has\n   received public review and has been approved for publication by the\n   Internet Engineering Steering Group (IESG).  Further information on\n   Internet Standards is available in Section 2 of RFC 7841.\n\n   Information about the current status of this document, any errata,\n   and how to provide feedback on it may be obtained at\n   http://www.rfc-editor.org/info/rfc8081.\n\nCopyright Notice\n\n   Copyright (c) 2017 IETF Trust and the persons identified as the\n   document authors.  All rights reserved.\n\n   This document is subject to BCP 78 and the IETF Trust\u0027s Legal\n   Provisions Relating to IETF Documents\n   (http://trustee.ietf.org/license-info) in effect on the date of\n   publication of this document.  Please review these documents\n   carefully, as they describe your rights and restrictions with respect\n   to this document.  Code Components extracted from this document must\n   include Simplified BSD License text as described in Section 4.e of\n   the Trust Legal Provisions and are provided without warranty as\n   described in the Simplified BSD License.\n\n\n\n\n\n\nLilley                       Standards Track                    [Page 1] \nRFC 8081                The \u0027font\u0027 Top-Level Type          February 2017\n\n\nTable of Contents\n\n   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2\n   2.  Background and Justification  . . . . . . . . . . . . . . . .   3\n   3.  Security Considerations . . . . . . . . . . . . . . . . . . .   4\n   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5\n     4.1.  Definition and Encoding . . . . . . . . . . . . . . . . .   5\n     4.2.  Fragment Identifiers for Font Collections . . . . . . . .   5\n     4.3.  Registration Procedure  . . . . . . . . . . . . . . . . .   6\n     4.4.  Subtype Registrations . . . . . . . . . . . . . . . . . .   6\n       4.4.1.  Generic SFNT Font Type  . . . . . . . . . . . . . . .   6\n       4.4.2.  TTF Font Type . . . . . . . . . . . . . . . . . . . .   9\n       4.4.3.  OpenType Layout (OTF) Font Type . . . . . . . . . . .  10\n       4.4.4.  Collection Font Type  . . . . . . . . . . . . . . . .  12\n       4.4.5.  WOFF 1.0  . . . . . . . . . . . . . . . . . . . . . .  14\n       4.4.6.  WOFF 2.0  . . . . . . . . . . . . . . . . . . . . . .  15\n   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  16\n     5.1.  Normative References  . . . . . . . . . . . . . . . . . .  16\n     5.2.  Informative References  . . . . . . . . . . . . . . . . .  17\n   Author\u0027s Address  . . . . . . . . . . . . . . . . . . . . . . . .  18\n\n1.  Introduction\n\n   The process of setting type in computer systems and other forms of\n   text presentation systems uses fonts in order to provide visual\n   representations of the glyphs.  Just as with images, for example,\n   there are a number of ways to represent the visual information of the\n   glyphs.  Early font formats often used bitmaps, as these could have\n   been carefully tuned for maximum readability at a given size on low-\n   resolution displays.  More recently, scalable vector outline fonts\n   have come into widespread use.  In these fonts, the outlines of the\n   glyphs are described, and the presentation system renders the outline\n   in the desired position and size.\n\n   Over time, a number of standard formats for recording font\n   descriptions have evolved.  Internet Media Types [RFC6838] are used\n   to label content carried over Internet protocols.  This document\n   defines a new top-level type \"font\" according to Section 4.2.7 of\n   [RFC6838].  This top-level type indicates that the content specifies\n   font data.  Under this top-level type, different representation\n   formats of fonts may be registered.\n\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in RFC 2119 [RFC2119].\n\n\n\n\n\n\nLilley                       Standards Track                    [Page 2] \nRFC 8081                The \u0027font\u0027 Top-Level Type          February 20",
+    "scrapedAt": "2026-05-09 01:21:40.406142"
+  },
+  {
+    "id": 1481,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.quiet",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-09 01:21:38.845468"
+  },
+  {
+    "id": 1480,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.set",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-09 01:21:37.585887"
+  },
+  {
+    "id": 1479,
+    "url": "https://github.com/python/cpython/issues/123599",
+    "title": "`Path.from_uri()` doesn\u0027t work if the URI contains host component · Issue #123599 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Path.from_uri() doesn\u0027t work if the URI contains host component #123599 New issue Copy link New issue Copy link Closed Closed Path.from_uri() doesn\u0027t work if the URI contains host component#123599 Copy link Labels 3.13bugs and security fixesbugs and security fixes3.14bugs and security fixesbugs and security fixestopic-pathlibtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description pekkaklarck opened on Sep 2, 2024 Issue body actions Bug report Bug description: Path.from_uri() introduced in Python 3.13 doesn\u0027t work properly if the URI contains a host component other than localhost. Following examples are run with Python 3.13 rc 1 on Linux with a machine having host name kone: \u003e\u003e\u003e print(Path().from_uri(\u0027file:///home/peke/test\u0027))\n/home/peke/test\n\u003e\u003e\u003e print(Path().from_uri(\u0027file://localhost/home/peke/test\u0027))\n/home/peke/test\n\u003e\u003e\u003e print(Path().from_uri(f\u0027file://{socket.getfqdn()}/home/peke/test\u0027))\n//kone/home/peke/test According to RFC 8089 including the host component as a fully qualified name is fine so this looks like a bug to me. CPython versions tested on: 3.13 Operating systems tested on: Linux Linked PRs GH-123599: Reject non-local authority in pathlib.Path.from_uri() on POSIX #123650 GH-123599: url2pathname(): handle authority section in file URL #126844 GH-123599: Remove duplicate url2pathname() implementation #127237 GH-123599: Deprecate duplicate pathname2url() implementation #127380 GH-123599: Match file: URL hostname against machine hostname in urllib #132523 GH-123599: url2pathname(): don\u0027t call gethostbyname() by default #132610 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.13bugs and security fixesbugs and security fixes3.14bugs and security fixesbugs and security fixestopic-pathlibtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:21:36.30965"
+  },
+  {
+    "id": 1478,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.FEBRUARY",
+    "title": "calendar — General calendar-related functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » calendar — General calendar-related functions | Theme Auto Light Dark | calendar — General calendar-related functions¶ Source code: Lib/calendar.py This module allows you to output calendars like the Unix cal program, and provides additional useful functions related to the calendar. By default, these calendars have Monday as the first day of the week, and Sunday as the last (the European convention). Use setfirstweekday() to set the first day of the week to Sunday (6) or to any other weekday. Parameters that specify dates are given as integers. For related functionality, see also the datetime and time modules. The functions and classes defined in this module use an idealized calendar, the current Gregorian calendar extended indefinitely in both directions. This matches the definition of the “proleptic Gregorian” calendar in Dershowitz and Reingold’s book “Calendrical Calculations”, where it’s the base calendar for all computations. Zero and negative years are interpreted as prescribed by the ISO 8601 standard. Year 0 is 1 BC, year -1 is 2 BC, and so on. class calendar.Calendar(firstweekday\u003d0)¶ Creates a Calendar object. firstweekday is an integer specifying the first day of the week. MONDAY is 0 (the default), SUNDAY is 6. A Calendar object provides several methods that can be used for preparing the calendar data for formatting. This class doesn’t do any formatting itself. This is the job of subclasses. Calendar instances have the following methods and attributes: firstweekday¶ The first weekday as an integer (0–6). This property can also be set and read using setfirstweekday() and getfirstweekday() respectively. getfirstweekday()¶ Return an int for the current first weekday (0–6). Identical to reading the firstweekday property. setfirstweekday(firstweekday)¶ Set the first weekday to firstweekday, passed as an int (0–6). Identical to setting the firstweekday property. iterweekdays()¶ Return an iterator for the weekday numbers that will be used for one week. The first value from the iterator will be the same as the value of the firstweekday property. itermonthdates(year, month)¶ Return an iterator for the month month (1–12) in the year year. This iterator will return all days (as datetime.date objects) for the month and all days before the start of the month or after the end of the month that are required to get a complete week. itermonthdays(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will simply be day of the month numbers. For the days outside of the specified month, the day number is 0. itermonthdays2(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a day of the month number and a weekday number. itermonthdays3(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a year, a month and a day of the month numbers. Added in version 3.7. itermonthdays4(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a year, a month, a day of the month, and a day of the week numbers. Added in version 3.7. monthdatescalendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven datetime.date objects. monthdays2calendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven tuples of day numbers and weekday numbers. monthdayscalendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven day numbers. yeardatescalendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting. The return value is a list of month rows. Each month row contains up to width months (defaulting to 3). Each month contains between 4 and 6 weeks and each week contains 1–7 days. Days are datetime.date objects. yeardays2calendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting (similar to yeardatescalendar()). Entries in the week lists are tuples of day numbers and weekday numbers. Day numbers outside this month are zero. yeardayscalendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting (similar to yeardatescalendar()). Entries in the week lists are day numbers. Day numbers outside this month are zero. class calendar.TextCalendar(firstweekday\u003d0)¶ This class can be used to generate plain text calendars. TextCalendar instances have the following methods: formatday(theday, weekd",
+    "scrapedAt": "2026-05-09 01:21:33.979804"
+  },
+  {
     "id": 1477,
     "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move_into",
     "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
@@ -9938,26 +9973,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1478,
-    "url": "https://docs.python.org/3/library/calendar.html#calendar.FEBRUARY"
-  },
-  {
-    "id": 1479,
-    "url": "https://github.com/python/cpython/issues/123599"
-  },
-  {
-    "id": 1480,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.set"
-  },
-  {
-    "id": 1481,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.quiet"
-  },
-  {
-    "id": 1482,
-    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html"
   },
   {
     "id": 1483,
@@ -234935,10 +234950,505 @@ window.searchData = [
     "id": 308786,
     "url": "https://github.com/python/cpython/blob/main/Doc/library/fcntl.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 309115,
+    "url": "https://github.com/python/cpython/issues/123599#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309116,
+    "url": "https://github.com/python/cpython/issues/123599#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309117,
+    "url": "https://github.com/pekkaklarck",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309120,
+    "url": "https://github.com/python/cpython/pull/127380",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309123,
+    "url": "https://github.com/python/cpython/pull/132610",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309125,
+    "url": "https://github.com/python/cpython/pull/132523",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309129,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8089",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309130,
+    "url": "https://github.com/python/cpython/pull/126844",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309131,
+    "url": "https://github.com/python/cpython/issues/123599#issue-2500631135",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309132,
+    "url": "https://github.com/python/cpython/pull/123650",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309133,
+    "url": "https://github.com/python/cpython/pull/127237",
+    "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 309749,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-06",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309750,
+    "url": "https://www.w3.org/Fonts/WG/track/actions/164",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309751,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-04",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309752,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-W3C.CR-WOFF2-20150414",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309754,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-05",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309755,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-02",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309756,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-03",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309757,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309758,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309759,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309760,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309761,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309762,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309763,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309764,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-W3C.REC-WOFF-20121213",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309765,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309766,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309767,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309768,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-ISO.14496-22.2015",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309769,
+    "url": "http://www.w3.org/TR/2013/CR-css-fonts-3-20131003",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309770,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309771,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309773,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-W3C.CR-css-fonts-3-20131003",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309774,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dScalable_Vector_Graphics\u0026oldid\u003d763136508",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309775,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-truetype-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309776,
+    "url": "http://httparchive.org/trends",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309777,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc8081.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309779,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-Font-Media-Type-Analysis",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309780,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309781,
+    "url": "http://www.rfc-editor.org/info/rfc8081",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309782,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-5.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309784,
+    "url": "http://standards.iso.org/ittf/PubliclyAvailableStandards/c066391_ISO_IEC_14496-22_2015.zip",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309785,
+    "url": "http://www.w3.org/TR/2012/REC-WOFF-20121213",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309786,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-Media-Type-Registration",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309787,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-svg-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309788,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-opentype-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309789,
+    "url": "https://www.w3.org/TR/2016/CR-WOFF2-20160315/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309791,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-5.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309792,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-WG-tlt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309793,
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-justfont-toplevel/06/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309794,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-HTTP-Archive-Trends",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309795,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7841#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309796,
+    "url": "https://datatracker.ietf.org/person/chris@w3.org",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309797,
+    "url": "http://www.rfc-editor.org/info/rfc6838",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309799,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309800,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6838#section-4.2.7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309802,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309803,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309804,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309805,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309806,
+    "url": "https://goo.gl/zbDhUN",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309807,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTrueType\u0026oldid\u003d759367886",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309811,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6838",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309812,
+    "url": "https://www.rfc-editor.org/rfc/rfc8081.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309813,
+    "url": "https://datatracker.ietf.org/doc/rfc8081/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309814,
+    "url": "https://mailarchive.ietf.org/arch/browse/justfont/?q\u003drfc8081 OR %22draft-ietf-justfont-toplevel%22",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309815,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309816,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dPostScript_fonts\u0026oldid\u003d747740863",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309817,
+    "url": "https://datatracker.ietf.org/doc/rfc8081/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309818,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309819,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309820,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309821,
+    "url": "https://datatracker.ietf.org/wg/justfont/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309822,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-12",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309823,
+    "url": "http://www.iana.org/form/media-types",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309824,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309825,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dOpenType\u0026oldid\u003d763528773",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309826,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-16",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309827,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-17",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309828,
+    "url": "https://www.rfc-editor.org/rfc/rfc8081.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309829,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-14",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309830,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-15",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309831,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-cff-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309832,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309833,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-18",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309834,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 8081 - The \"font\" Top-Level Media Type",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 8081 - The \"font\" Top-Level Media Type",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.quiet"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.quiet"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.set"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.set"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/114985?v\u003d4\u0026size\u003d80",
+    "alt": "@pekkaklarck",
+    "pageTitle": "`Path.from_uri()` doesn\u0027t work if the URI contains host component · Issue #123599 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/114985?v\u003d4\u0026size\u003d48",
+    "alt": "@pekkaklarck",
+    "pageTitle": "`Path.from_uri()` doesn\u0027t work if the URI contains host component · Issue #123599 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "calendar — General calendar-related functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/calendar.html#calendar.FEBRUARY"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "calendar — General calendar-related functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/calendar.html#calendar.FEBRUARY"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
