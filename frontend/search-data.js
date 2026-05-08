@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1143,
+    "url": "https://github.com/python/cpython/issues/80958",
+    "title": "unittest discover throws TypeError on namespace packages · Issue #80958 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k unittest discover throws TypeError on namespace packages #80958 New issue Copy link New issue Copy link Closed Closed unittest discover throws TypeError on namespace packages#80958 Copy link Labels 3.7 (EOL)end of lifeend of life3.8 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description tirkarthi opened on May 2, 2019 Issue body actions BPO 36777 Nosy @warsaw, @brettcannon, @ericvsmith, @rbtcollins, @ezio-melotti, @voidspace, @methane, @augustogoulart, @tirkarthi PRs bpo-36777: unittest discover should not throw TypeError on empty packages #13259 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2019-05-02.16:47:03.266\u003e\nlabels \u003d [\u00273.7\u0027, \u00273.8\u0027, \u0027type-bug\u0027, \u0027library\u0027]\ntitle \u003d \u0027unittest discover throws TypeError on namespace packages\u0027\nupdated_at \u003d \u003cDate 2020-07-20.03:33:05.899\u003e\nuser \u003d \u0027https://github.com/tirkarthi\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-07-20.03:33:05.899\u003e\nactor \u003d \u0027methane\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2019-05-02.16:47:03.266\u003e\ncreator \u003d \u0027xtreak\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 36777\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 5.0\nmessages \u003d [\u0027341285\u0027, \u0027341339\u0027, \u0027341530\u0027, \u0027373941\u0027, \u0027373980\u0027]\nnosy_count \u003d 9.0\nnosy_names \u003d [\u0027barry\u0027, \u0027brett.cannon\u0027, \u0027eric.smith\u0027, \u0027rbcollins\u0027, \u0027ezio.melotti\u0027, \u0027michael.foord\u0027, \u0027methane\u0027, \u0027augustogoulart\u0027, \u0027xtreak\u0027]\npr_nums \u003d [\u002713259\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue36777\u0027\nversions \u003d [\u0027Python 3.7\u0027, \u0027Python 3.8\u0027] Linked PRs gh-80958: Restore unittest discovery support for namespace packages as start directory #123820 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.7 (EOL)end of lifeend of life3.8 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Unittest \u0026 doctest issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:07:50.399198"
+  },
+  {
+    "id": 1142,
+    "url": "https://github.com/python/cpython/issues/99108",
+    "title": "Replace built-in hashlib with verified implementations from HACL* · Issue #99108 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Replace built-in hashlib with verified implementations from HACL* #99108 New issue Copy link New issue Copy link Closed Closed Replace built-in hashlib with verified implementations from HACL*#99108 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-SSLtype-featureA feature request or enhancementA feature request or enhancement Description msprotz opened on Nov 4, 2022 Issue body actions Feature or enhancement We propose to replace the non-OpenSSL cryptographic primitives in hashlib with high-assurance, verified versions from the HACL* project. Pitch As evidenced by the recent SHA3 buffer overflow, cryptographic primitives are tricky to implement correctly. There might be issues with memory management, exceeding lengths, incorrect buffer management, or worse, incorrect implementations in corner cases. The HACL* project https://github.com/hacl-star/hacl-star provides verified implementations of cryptographic primitives. These implementations are mathematically shown to be: memory safe (no buffer overflows, no use-after-free) functionally correct (they always compute the right result) side-channel resistant (the most egregious variants of side-channels, such as memory and timing leaks, are ruled out by construction). See https://hacl-star.github.io/Overview.html#what-is-verified-software for a longer description of how formal methods can help write high-assurance software and rule out entire classes of bugs. The performance of HACL* is competitive with, and sometimes exceeds, that of OpenSSL. HACL* is distributed as pure C, and therefore is portable. Parts of HACL* have been adopted in Mozilla, Linux, the Tezos blockchain, and many more, thereby demonstrating that formally verified code is ready for production-time. Previous discussion Tagging @alex with whom I\u0027ve informally discussed this. PR: gh-99108: Import SHA2-224 and SHA2-256 from HACL* #99109 PR: gh-99108: Import SHA2-384/512 from HACL* #101707 PR: gh-99108: Build the hashlib HACL* code as a static library. (fix wasm builds) #101917 PR: gh-99108: Refactor _sha256 \u0026 _sha512 into _sha2. #101924 PR: gh-99108: Import MD5 and SHA1 from HACL* #102089 PR: gh-99108: Followup fix for Modules/Setup #102183 PR: gh-99108: Add missing md5/sha1 defines to Modules/Setup #102308 PR: gh-99108: Initial import of HACL-SHA3 into Python #103597 PR: gh-99108: fix typo in Modules/Setup #104293 PR: gh-99108: Refresh HACL* from upstream #104401 PR: gh-99108: Release the GIL around hashlib built-in computation #104675 PR: [3.12] gh-99108: Release the GIL around hashlib built-in computation (GH-104675) #104776 PR: gh-99108: Refresh HACL* #104808 PR: [3.12] gh-99108: Refresh HACL* (GH-104808) #104893 PR: gh-99108: Mention HACL\\* in the hashlib docs. #105634 PR: [3.12] gh-99108: Mention HACL\\* in the hashlib docs. (GH-105634) #105635 PR: gh-99108: Refresh HACL*; update modules accordingly; fix namespacing #117237 PR: [3.12] gh-99108: Refresh HACL*; update modules accordingly; fix namespacing (GH-117237) #117243 PR: gh-99108: Update and check HACL* version information #117295 PR: [3.12] gh-99108: Update and check HACL* version information (GH-117295) #117302 PR: gh-99108: Add HACL* Blake2 implementation to hashlib #119316 PR: gh-99108: Inform HACL when explicit_bzero is unavailable #123027 PR: GH-99108: Fix Setup in addition to Setup.stdlib.in #123146 PR: gh-99108: Disable HACL SIMD code on older versions of Android #124304 PR: GH-99108: Make vectorized versions of Blake2 available on x86, too #125244 PR: gh-99108: Cleanup references to inexisting Modules/_blake2. #126270 PR: gh-99108: add HACL*-based 1-shot HMAC implementation #126359 PR: gh-99108: Implement HACL* HMAC #130157 PR: gh-99108: add support for SIMD-accelerated HMAC-BLAKE2 #132120 Reactions are currently unavailable Metadata Metadata Assignees gpshead Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-SSLtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:07:47.989082"
+  },
+  {
+    "id": 1141,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_IMMUTABLETYPE",
+    "title": "Type Object Structures — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Object Implementation Support » Type Object Structures | Theme Auto Light Dark | Type Object Structures¶ Perhaps one of the most important structures of the Python object system is the structure that defines a new type: the PyTypeObject structure. Type objects can be handled using any of the PyObject_* or PyType_* functions, but do not offer much that’s interesting to most Python applications. These objects are fundamental to how objects behave, so they are very important to the interpreter itself and to any extension module that implements new types. Type objects are fairly large compared to most of the standard types. The reason for the size is that each type object stores a large number of values, mostly C function pointers, each of which implements a small part of the type’s functionality. The fields of the type object are examined in detail in this section. The fields will be described in the order in which they occur in the structure. In addition to the following quick reference, the Examples section provides at-a-glance insight into the meaning and use of PyTypeObject. Quick Reference¶ “tp slots”¶ PyTypeObject Slot [1] Type special methods/attrs Info [2] O T D I \u003cR\u003e tp_name const char * __name__ X X tp_basicsize Py_ssize_t X X X tp_itemsize Py_ssize_t X X tp_dealloc destructor X X X tp_vectorcall_offset Py_ssize_t X X (tp_getattr) getattrfunc __getattribute__, __getattr__ G (tp_setattr) setattrfunc __setattr__, __delattr__ G tp_as_async PyAsyncMethods * sub-slots % tp_repr reprfunc __repr__ X X X tp_as_number PyNumberMethods * sub-slots % tp_as_sequence PySequenceMethods * sub-slots % tp_as_mapping PyMappingMethods * sub-slots % tp_hash hashfunc __hash__ X G tp_call ternaryfunc __call__ X X tp_str reprfunc __str__ X X tp_getattro getattrofunc __getattribute__, __getattr__ X X G tp_setattro setattrofunc __setattr__, __delattr__ X X G tp_as_buffer PyBufferProcs * sub-slots % tp_flags unsigned long X X ? tp_doc const char * __doc__ X X tp_traverse traverseproc X G tp_clear inquiry X G tp_richcompare richcmpfunc __lt__, __le__, __eq__, __ne__, __gt__, __ge__ X G (tp_weaklistoffset) Py_ssize_t X ? tp_iter getiterfunc __iter__ X tp_iternext iternextfunc __next__ X tp_methods PyMethodDef [] X X tp_members PyMemberDef [] X tp_getset PyGetSetDef [] X X tp_base PyTypeObject * __base__ X tp_dict PyObject * __dict__ ? tp_descr_get descrgetfunc __get__ X tp_descr_set descrsetfunc __set__, __delete__ X (tp_dictoffset) Py_ssize_t X ? tp_init initproc __init__ X X X tp_alloc allocfunc X ? ? tp_new newfunc __new__ X X ? ? tp_free freefunc X X ? ? tp_is_gc inquiry X X \u003ctp_bases\u003e PyObject * __bases__ ~ \u003ctp_mro\u003e PyObject * __mro__ ~ [tp_cache] PyObject * [tp_subclasses] void * __subclasses__ [tp_weaklist] PyObject * (tp_del) destructor [tp_version_tag] unsigned int tp_finalize destructor __del__ X tp_vectorcall vectorcallfunc [tp_watched] unsigned char [1] (): A slot name in parentheses indicates it is (effectively) deprecated. \u003c\u003e: Names in angle brackets should be initially set to NULL and treated as read-only. []: Names in square brackets are for internal use only. \u003cR\u003e (as a prefix) means the field is required (must be non-NULL). [2] Columns: “O”: set on PyBaseObject_Type “T”: set on PyType_Type “D”: default (if slot is set to NULL) X - PyType_Ready sets this value if it is NULL\n~ - PyType_Ready always sets this value (it should be NULL)\n? - PyType_Ready may set this value depending on other slots\n\nAlso see the inheritance column (\"I\").\n “I”: inheritance X - type slot is inherited via *PyType_Ready* if defined with a *NULL* value\n% - the slots of the sub-struct are inherited individually\nG - inherited, but only in combination with other slots; see the slot\u0027s description\n? - it\u0027s complicated; see the slot\u0027s description\n Note that some slots are effectively inherited through the normal attribute lookup chain. sub-slots¶ Slot Type special methods am_await unaryfunc __await__ am_aiter unaryfunc __aiter__ am_anext unaryfunc __anext__ am_send sendfunc nb_add binaryfunc __add__ __radd__ nb_inplace_add binaryfunc __iadd__ nb_subtract binaryfunc __sub__ __rsub__ nb_inplace_subtract binaryfunc __isub__ nb_multiply binaryfunc __mul__ __rmul__ nb_inplace_multiply binaryfunc __imul__ nb_remainder binaryfunc __mod__ __rmod__ nb_inplace_remainder binaryfunc __imod__ nb_divmod binaryfunc __divmod__ __rdivmod__ nb_power ternaryfunc __pow__ __rpow__ nb_inplace_power ternaryfunc __ipow__ nb_negative unaryfunc __neg__ nb_positive unaryfunc __pos__ nb_absolute unaryfunc __abs__ nb_bool inquiry __bool__ nb_invert unaryfunc __invert__ nb_lshift binaryfunc __lshift__ __rlshift__ nb_inplace_lshift binaryfunc __ilshift__ nb_rshift binaryfunc __rshift__ __rrshift__ nb_inplace_rshift binaryfunc __irshift__ nb_and binaryfunc __and__ __rand__ nb_inplace_and binaryfunc __iand__ nb_xor binaryfunc __xor__ __rxor__ nb_inplace_xor binaryfunc ",
+    "scrapedAt": "2026-05-09 01:07:45.467529"
+  },
+  {
+    "id": 1140,
+    "url": "https://github.com/python/cpython/issues/131747",
+    "title": "Silent ctypes.struct layout change from native to Windows when bitfields are used · Issue #131747 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Silent ctypes.struct layout change from native to Windows when bitfields are used #131747 New issue Copy link New issue Copy link Open Open Silent ctypes.struct layout change from native to Windows when bitfields are used#131747 Copy link Labels 3.14bugs and security fixesbugs and security fixestopic-ctypestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description BCSharp opened on Mar 25, 2025 Issue body actions Bug report Bug description: Python 3.14 implements a special field _layout_ in ctypes.Structure that allows the programmer to explicitly choose the layout rules for bitfields used by either GCC/Clang or MSVC. The default layout is appropiate for the OS platform (MSVC on Windows, GCC otherwise) which is expected behaviour. It is also possible to use field _pack_ to change the layout to match the compiler. This is currently only implemented for the MSVC layout, not for GCC. The problem is that using _pack_ on non-Windows systems silently switches the layout rules from GCC to MSVC, which is an unexpected layout by default on non-Windows systems. I propose that this case be handled as an error (NotImplementedError) rather than the silent layout switch. The error message may contain a hint that if the MSVC layout is indeed what is intended, one need to select it explicitly by setting field _layout_. From the Zen of Python: Explicit is better than implicit. Readability counts. Special cases aren\u0027t special enough to break the rules. Errors should never pass silently. Tested on 3.14a6 CPython versions tested on: 3.14 Operating systems tested on: macOS Linked PRs gh-131747: ctypes: Deprecate _pack_ implicitly setting _layout_ \u003d \u0027ms\u0027 #133205 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestopic-ctypestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:07:44.222518"
+  },
+  {
+    "id": 1139,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#fractions",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-09 01:07:41.745765"
+  },
+  {
     "id": 1138,
     "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_float_complex",
     "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
@@ -7628,26 +7663,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1139,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#fractions"
-  },
-  {
-    "id": 1140,
-    "url": "https://github.com/python/cpython/issues/131747"
-  },
-  {
-    "id": 1141,
-    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_IMMUTABLETYPE"
-  },
-  {
-    "id": 1142,
-    "url": "https://github.com/python/cpython/issues/99108"
-  },
-  {
-    "id": 1143,
-    "url": "https://github.com/python/cpython/issues/80958"
   },
   {
     "id": 1144,
@@ -194320,10 +194335,347 @@ window.searchData = [
     "id": 198633,
     "url": "http://pitch.nist.gov/nics/",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 201646,
+    "url": "https://github.com/BCSharp",
+    "parentUrl": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "id": 201647,
+    "url": "https://github.com/python/cpython/issues/131747#issue-2947933711",
+    "parentUrl": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "id": 201650,
+    "url": "https://github.com/python/cpython/issues/131747#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "id": 201652,
+    "url": "https://github.com/python/cpython/issues/131747#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "id": 201655,
+    "url": "https://github.com/python/cpython/pull/133205",
+    "parentUrl": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "id": 202039,
+    "url": "https://github.com/python/cpython/pull/104675",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202041,
+    "url": "https://github.com/msprotz",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202042,
+    "url": "https://github.com/python/cpython/pull/104776",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202043,
+    "url": "https://github.com/python/cpython/pull/117295",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202044,
+    "url": "https://github.com/python/cpython/pull/101924",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202045,
+    "url": "https://github.com/python/cpython/pull/132120",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202047,
+    "url": "https://github.com/python/cpython/pull/101707",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202048,
+    "url": "https://github.com/python/cpython/pull/99109",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202049,
+    "url": "https://github.com/python/cpython/pull/117237",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202051,
+    "url": "https://github.com/python/cpython/pull/119316",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202052,
+    "url": "https://github.com/python/cpython/pull/124304",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202053,
+    "url": "https://github.com/python/cpython/pull/104293",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202054,
+    "url": "https://github.com/python/cpython/pull/104893",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202055,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-SSL%22",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202056,
+    "url": "https://github.com/python/cpython/pull/103597",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202057,
+    "url": "https://github.com/python/cpython/pull/104401",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202059,
+    "url": "https://github.com/python/cpython/pull/105635",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202060,
+    "url": "https://github.com/python/cpython/pull/125244",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202062,
+    "url": "https://github.com/python/cpython/pull/105634",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202063,
+    "url": "https://github.com/alex",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202064,
+    "url": "https://github.com/python/cpython/pull/102308",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202065,
+    "url": "https://github.com/python/cpython/pull/126270",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202066,
+    "url": "https://github.com/python/cpython/issues/99108#issue-1436673526",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202067,
+    "url": "https://github.com/python/cpython/pull/117243",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202069,
+    "url": "https://github.com/python/cpython/pull/104808",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202070,
+    "url": "https://hacl-star.github.io/Overview.html#what-is-verified-software",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202071,
+    "url": "https://github.com/python/cpython/pull/101917",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202072,
+    "url": "https://github.com/python/cpython/pull/117302",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202073,
+    "url": "https://github.com/python/cpython/pull/130157",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202075,
+    "url": "https://github.com/python/cpython/issues/99108#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202076,
+    "url": "https://github.com/python/cpython/issues/99108#top",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202077,
+    "url": "https://github.com/python/cpython/pull/123027",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202078,
+    "url": "https://github.com/python/cpython/pull/102183",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202079,
+    "url": "https://github.com/python/cpython/pull/126359",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202080,
+    "url": "https://github.com/python/cpython/pull/102089",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202081,
+    "url": "https://github.com/python/cpython/pull/123146",
+    "parentUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "id": 202084,
+    "url": "https://bugs.python.org/issue36777",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202085,
+    "url": "https://github.com/voidspace",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202086,
+    "url": "https://github.com/tirkarthi",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202088,
+    "url": "https://github.com/ezio-melotti",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202089,
+    "url": "https://github.com/python/cpython/issues/80958#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202094,
+    "url": "https://github.com/orgs/python/projects/16",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202096,
+    "url": "https://github.com/python/cpython/pull/13259",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202098,
+    "url": "https://github.com/python/cpython/issues/80958#issue-1199011079",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202100,
+    "url": "https://github.com/python/cpython/issues/80958#top",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202103,
+    "url": "https://github.com/augustogoulart",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202104,
+    "url": "https://github.com/python/cpython/pull/123820",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "id": 202105,
+    "url": "https://github.com/rbtcollins",
+    "parentUrl": "https://github.com/python/cpython/issues/80958"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/3972343?u\u003d68f36ba339adf3784e2d288e2be4442bea8e9004\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@tirkarthi",
+    "pageTitle": "unittest discover throws TypeError on namespace packages · Issue #80958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3972343?u\u003d68f36ba339adf3784e2d288e2be4442bea8e9004\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@tirkarthi",
+    "pageTitle": "unittest discover throws TypeError on namespace packages · Issue #80958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/80958"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "Replace built-in hashlib with verified implementations from HACL* · Issue #99108 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10673049?u\u003d37141de567e94106c6c35cf88aab9b8027e6288b\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@msprotz",
+    "pageTitle": "Replace built-in hashlib with verified implementations from HACL* · Issue #99108 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10673049?u\u003d37141de567e94106c6c35cf88aab9b8027e6288b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@msprotz",
+    "pageTitle": "Replace built-in hashlib with verified implementations from HACL* · Issue #99108 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "Replace built-in hashlib with verified implementations from HACL* · Issue #99108 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/99108"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Object Structures — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_IMMUTABLETYPE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Object Structures — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_IMMUTABLETYPE"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2866972?v\u003d4\u0026size\u003d80",
+    "alt": "@BCSharp",
+    "pageTitle": "Silent ctypes.struct layout change from native to Windows when bitfields are used · Issue #131747 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2866972?v\u003d4\u0026size\u003d48",
+    "alt": "@BCSharp",
+    "pageTitle": "Silent ctypes.struct layout change from native to Windows when bitfields are used · Issue #131747 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131747"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#fractions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#fractions"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
