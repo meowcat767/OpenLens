@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1118,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.realpath",
+    "title": "os.path — Common pathname manipulations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » os.path — Common pathname manipulations | Theme Auto Light Dark | os.path — Common pathname manipulations¶ Source code: Lib/genericpath.py, Lib/posixpath.py (for POSIX) and Lib/ntpath.py (for Windows). This module implements some useful functions on pathnames. To read or write files see open(), and for accessing the filesystem see the os module. The path parameters can be passed as strings, or bytes, or any object implementing the os.PathLike protocol. Unlike a Unix shell, Python does not do any automatic path expansions. Functions such as expanduser() and expandvars() can be invoked explicitly when an application desires shell-like path expansion. (See also the glob module.) See also The pathlib module offers high-level path objects. Note All of these functions accept either only bytes or only string objects as their parameters. The result is an object of the same type, if a path or file name is returned. Note Since different operating systems have different path name conventions, there are several versions of this module in the standard library. The os.path module is always the path module suitable for the operating system Python is running on, and therefore usable for local paths. However, you can also import and use the individual modules if you want to manipulate a path that is always in one of the different formats. They all have the same interface: posixpath for UNIX-style paths ntpath for Windows paths Changed in version 3.8: exists(), lexists(), isdir(), isfile(), islink(), and ismount() now return False instead of raising an exception for paths that contain characters or bytes unrepresentable at the OS level. os.path.abspath(path)¶ Return a normalized absolutized version of the pathname path. On most platforms, this is equivalent to calling normpath(join(os.getcwd(), path)). See also os.path.join() and os.path.normpath(). Changed in version 3.6: Accepts a path-like object. os.path.basename(path, /)¶ Return the base name of pathname path. This is the second element of the pair returned by passing path to the function split(). Note that the result of this function is different from the Unix basename program; where basename for \u0027/foo/bar/\u0027 returns \u0027bar\u0027, the basename() function returns an empty string (\u0027\u0027). Changed in version 3.6: Accepts a path-like object. os.path.commonpath(paths)¶ Return the longest common sub-path of each pathname in the iterable paths. Raise ValueError if paths contain both absolute and relative pathnames, if paths are on different drives, or if paths is empty. Unlike commonprefix(), this returns a valid path. Added in version 3.5. Changed in version 3.6: Accepts a sequence of path-like objects. Changed in version 3.13: Any iterable can now be passed, rather than just sequences. os.path.commonprefix(list, /)¶ Return the longest string prefix (taken character-by-character) that is a prefix of all strings in list. If list is empty, return the empty string (\u0027\u0027). Warning This function may return invalid paths because it works a character at a time. If you need a common path prefix, then the algorithm implemented in this function is not secure. Use commonpath() for finding a common path prefix. \u003e\u003e\u003e os.path.commonprefix([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr/l\u0027\n\n\u003e\u003e\u003e os.path.commonpath([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr\u0027\n Changed in version 3.6: Accepts a path-like object. os.path.dirname(path, /)¶ Return the directory name of pathname path. This is the first element of the pair returned by passing path to the function split(). Changed in version 3.6: Accepts a path-like object. os.path.exists(path)¶ Return True if path refers to an existing path or an open file descriptor. Returns False for broken symbolic links. On some platforms, this function may return False if permission is not granted to execute os.stat() on the requested file, even if the path physically exists. Changed in version 3.3: path can now be an integer: True is returned if it is an open file descriptor, False otherwise. Changed in version 3.6: Accepts a path-like object. os.path.lexists(path)¶ Return True if path refers to an existing path, including broken symbolic links. Equivalent to exists() on platforms lacking os.lstat(). Changed in version 3.6: Accepts a path-like object. os.path.expanduser(path)¶ On Unix and Windows, return the argument with an initial component of ~ or ~user replaced by that user’s home directory. On Unix, an initial ~ is replaced by the environment variable HOME if it is set; otherwise the current user’s home directory is looked up in the password directory through the built-in module pwd. An initial ~user is looked up directly in the password directory. On Windows, USERPROFILE will be used if set, otherwise a combination of HOMEPATH and HOMEDRIVE will be used. An initial ~user is handled by checking that the last directory component of the current user",
+    "scrapedAt": "2026-05-09 01:06:46.113442"
+  },
+  {
+    "id": 1117,
+    "url": "https://github.com/python/cpython/issues/133367",
+    "title": "Improve `ast` CLI with new options: `--feature-version`, `--optimize`, and `--show-empty` · Issue #133367 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve ast CLI with new options: --feature-version, --optimize, and --show-empty #133367 New issue Copy link New issue Copy link Closed Closed Improve ast CLI with new options: --feature-version, --optimize, and --show-empty#133367 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on May 4, 2025 Issue body actions Feature or enhancement Current options: » ./python.exe -m ast --help\nusage: python.exe -m ast [-h] [-m {exec,single,eval,func_type}] [--no-type-comments] [-a]\n                         [-i INDENT]\n                         [infile]\n\npositional arguments:\n  infile                the file to parse; defaults to stdin\n\noptions:\n  -h, --help            show this help message and exit\n  -m, --mode {exec,single,eval,func_type}\n                        specify what kind of code must be parsed\n  --no-type-comments    don\u0027t add information about type comments\n  -a, --include-attributes\n                        include attributes such as line numbers and column offsets\n  -i, --indent INDENT   indentation of nodes (number of spaces)\n                     \n Basically, our CLI is an interface to ast.dump + ast.parse, ast.parse. But, ast.parse has several important options that are missing right now. I propose to add them: --feature-version and --optimize from parse --show-empty from dump Docs: https://docs.python.org/3/library/ast.html#ast.parse https://docs.python.org/3/library/ast.html#ast.dump cc @donbarbos, will you be interested in working on this issue? If not, please, tell me about that - I want to have this in 3.14 and the feature freeze is in several days. Linked PRs gh-133367: Add missing options to ast CLI #133369 Reactions are currently unavailable Metadata Metadata Assignees donbarbos Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:06:44.903546"
+  },
+  {
+    "id": 1116,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli",
+    "title": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » mimetypes — Map filenames to MIME types | Theme Auto Light Dark | mimetypes — Map filenames to MIME types¶ Source code: Lib/mimetypes.py The mimetypes module converts between a filename or URL and the MIME type associated with the filename extension. Conversions are provided from filename to MIME type and from MIME type to filename extension; encodings are not supported for the latter conversion. The module provides one class and a number of convenience functions. The functions are the normal interface to this module, but some applications may be interested in the class as well. The functions described below provide the primary interface for this module. If the module has not been initialized, they will call init() if they rely on the information init() sets up. mimetypes.guess_type(url, strict\u003dTrue)¶ Guess the type of a file based on its filename, path or URL, given by url. URL can be a string or a path-like object. The return value is a tuple (type, encoding) where type is None if the type can’t be guessed (missing or unknown suffix) or a string of the form \u0027type/subtype\u0027, usable for a MIME content-type header. encoding is None for no encoding or the name of the program used to encode (e.g. compress or gzip). The encoding is suitable for use as a Content-Encoding header, not as a Content-Transfer-Encoding header. The mappings are table driven. Encoding suffixes are case sensitive; type suffixes are first tried case sensitively, then case insensitively. The optional strict argument is a flag specifying whether the list of known MIME types is limited to only the official types registered with IANA. However, the behavior of this module also depends on the underlying operating system. Only file types recognized by the OS or explicitly registered with Python’s internal database can be identified. When strict is True (the default), only the IANA types are supported; when strict is False, some additional non-standard but commonly used MIME types are also recognized. Changed in version 3.8: Added support for url being a path-like object. Soft deprecated since version 3.13: Passing a file path instead of URL is soft deprecated. Use guess_file_type() for this. mimetypes.guess_file_type(path, *, strict\u003dTrue)¶ Guess the type of a file based on its path, given by path. Similar to the guess_type() function, but accepts a path instead of URL. Path can be a string, a bytes object or a path-like object. Added in version 3.13. mimetypes.guess_all_extensions(type, strict\u003dTrue)¶ Guess the extensions for a file based on its MIME type, given by type. The return value is a list of strings giving all possible filename extensions, including the leading dot (\u0027.\u0027). The extensions are not guaranteed to have been associated with any particular data stream, but would be mapped to the MIME type type by guess_type() and guess_file_type(). The optional strict argument has the same meaning as with the guess_type() function. mimetypes.guess_extension(type, strict\u003dTrue)¶ Guess the extension for a file based on its MIME type, given by type. The return value is a string giving a filename extension, including the leading dot (\u0027.\u0027). The extension is not guaranteed to have been associated with any particular data stream, but would be mapped to the MIME type type by guess_type() and guess_file_type(). If no extension can be guessed for type, None is returned. The optional strict argument has the same meaning as with the guess_type() function. Some additional functions and data items are available for controlling the behavior of the module. mimetypes.init(files\u003dNone)¶ Initialize the internal data structures. If given, files must be a sequence of file names which should be used to augment the default type map. If omitted, the file names to use are taken from knownfiles; on Windows, the current registry settings are loaded. Each file named in files or knownfiles takes precedence over those named before it. Calling init() repeatedly is allowed. Specifying an empty list for files will prevent the system defaults from being applied: only the well-known values will be present from a built-in list. If files is None the internal data structure is completely rebuilt to its initial default value. This is a stable operation and will produce the same results when called multiple times. Changed in version 3.2: Previously, Windows registry settings were ignored. mimetypes.read_mime_types(filename)¶ Load the type map given in the file filename, if it exists. The type map is returned as a dictionary mapping filename extensions, including the leading dot (\u0027.\u0027), to strings of the form \u0027type/subtype\u0027. If the file filename does not exist or cannot be read, None is returned. mimetypes.add_type(type, ext, strict\u003dTrue)¶ Add a mapping from the MIME type type to the extension ext. When the extension is already known, the new type will repl",
+    "scrapedAt": "2026-05-09 01:06:42.726858"
+  },
+  {
+    "id": 1115,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-commands",
+    "title": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debug",
+    "scrapedAt": "2026-05-09 01:06:41.432527"
+  },
+  {
+    "id": 1114,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#pass",
+    "title": "7. Simple statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 7. Simple statements | Theme Auto Light Dark | 7. Simple statements¶ A simple statement is comprised within a single logical line. Several simple statements may occur on a single line separated by semicolons. The syntax for simple statements is: simple_stmt: expression_stmt\n             | assert_stmt\n             | assignment_stmt\n             | augmented_assignment_stmt\n             | annotated_assignment_stmt\n             | pass_stmt\n             | del_stmt\n             | return_stmt\n             | yield_stmt\n             | raise_stmt\n             | break_stmt\n             | continue_stmt\n             | import_stmt\n             | future_stmt\n             | global_stmt\n             | nonlocal_stmt\n             | type_stmt\n 7.1. Expression statements¶ Expression statements are used (mostly interactively) to compute and write a value, or (usually) to call a procedure (a function that returns no meaningful result; in Python, procedures return the value None). Other uses of expression statements are allowed and occasionally useful. The syntax for an expression statement is: expression_stmt: starred_expression\n An expression statement evaluates the expression list (which may be a single expression). In interactive mode, if the value is not None, it is converted to a string using the built-in repr() function and the resulting string is written to standard output on a line by itself (except if the result is None, so that procedure calls do not cause any output.) 7.2. Assignment statements¶ Assignment statements are used to (re)bind names to values and to modify attributes or items of mutable objects: assignment_stmt: (target_list \"\u003d\")+ (starred_expression | yield_expression)\ntarget_list:     target (\",\" target)* [\",\"]\ntarget:          identifier\n                 | \"(\" [target_list] \")\"\n                 | \"[\" [target_list] \"]\"\n                 | attributeref\n                 | subscription\n                 | \"*\" target\n (See section Primaries for the syntax definitions for attributeref and subscription.) An assignment statement evaluates the expression list (remember that this can be a single expression or a comma-separated list, the latter yielding a tuple) and assigns the single resulting object to each of the target lists, from left to right. Assignment is defined recursively depending on the form of the target (list). When a target is part of a mutable object (an attribute reference or subscription), the mutable object must ultimately perform the assignment and decide about its validity, and may raise an exception if the assignment is unacceptable. The rules observed by various types and the exceptions raised are given with the definition of the object types (see section The standard type hierarchy). Assignment of an object to a target list, optionally enclosed in parentheses or square brackets, is recursively defined as follows. If the target list is a single target with no trailing comma, optionally in parentheses, the object is assigned to that target. Else: If the target list contains one target prefixed with an asterisk, called a “starred” target: The object must be an iterable with at least as many items as there are targets in the target list, minus one. The first items of the iterable are assigned, from left to right, to the targets before the starred target. The final items of the iterable are assigned to the targets after the starred target. A list of the remaining items in the iterable is then assigned to the starred target (the list can be empty). Else: The object must be an iterable with the same number of items as there are targets in the target list, and the items are assigned, from left to right, to the corresponding targets. Assignment of an object to a single target is recursively defined as follows. If the target is an identifier (name): If the name does not occur in a global or nonlocal statement in the current code block: the name is bound to the object in the current local namespace. Otherwise: the name is bound to the object in the global namespace or the outer namespace determined by nonlocal, respectively. The name is rebound if it was already bound. This may cause the reference count for the object previously bound to the name to reach zero, causing the object to be deallocated and its destructor (if it has one) to be called. If the target is an attribute reference: The primary expression in the reference is evaluated. It should yield an object with assignable attributes; if this is not the case, TypeError is raised. That object is then asked to assign the assigned object to the given attribute; if it cannot perform the assignment, it raises an exception (usually but not necessarily AttributeError). Note: If the object is a class instance and the attribute reference occurs on both sides of the assignment operator, the right-hand side expression, a.x can access either an inst",
+    "scrapedAt": "2026-05-09 01:06:40.220067"
+  },
+  {
     "id": 1113,
     "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_VERSION_HEX",
     "title": "API and ABI Versioning — Python 3.14.5rc1 documentation",
@@ -7453,26 +7488,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1114,
-    "url": "https://docs.python.org/3/reference/simple_stmts.html#pass"
-  },
-  {
-    "id": 1115,
-    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-commands"
-  },
-  {
-    "id": 1116,
-    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
-  },
-  {
-    "id": 1117,
-    "url": "https://github.com/python/cpython/issues/133367"
-  },
-  {
-    "id": 1118,
-    "url": "https://docs.python.org/3/library/os.path.html#os.path.realpath"
   },
   {
     "id": 1119,
@@ -193155,10 +193170,277 @@ window.searchData = [
     "id": 195536,
     "url": "https://docs.python.org/3/library/gzip.html#gzip.GzipFile.name",
     "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 195825,
+    "url": "https://docs.python.org/3/library/mimetypes.html#cmdoption-mimetypes-h",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195828,
+    "url": "https://docs.python.org/3/library/mimetypes.html#cmdoption-mimetypes-e",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195831,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/mimetypes.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195833,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.add_type",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195834,
+    "url": "https://docs.python.org/3/library/mimetypes.html#cmdoption-mimetypes-lenient",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195836,
+    "url": "https://docs.python.org/3/library/mimetypes.html#cmdoption-mimetypes-help",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195837,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.init",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195838,
+    "url": "https://docs.python.org/3/library/mimetypes.html#cmdoption-mimetypes-extension",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195840,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.read",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195841,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.types_map_inv",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195842,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.guess_type",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195843,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.common_types",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195844,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.guess_all_extensions",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195845,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.read_windows_registry",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195847,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.guess_extension",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195848,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.guess_extension",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195852,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.knownfiles",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195853,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.readfp",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195854,
+    "url": "https://www.iana.org/assignments/media-types/media-types.xhtml",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195856,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.guess_file_type",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195857,
+    "url": "https://docs.python.org/3/library/mimetypes.html#cmdoption-mimetypes-l",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195858,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.suffix_map",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195859,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.read_mime_types",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195863,
+    "url": "https://docs.python.org/3/library/mimetypes.html#",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195866,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.suffix_map",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195867,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.guess_file_type",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195868,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.guess_type",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195869,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.types_map",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195870,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes.encodings_map",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195872,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.MimeTypes",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195874,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/mimetypes.py",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195877,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.types_map",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195881,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.guess_all_extensions",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195882,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.encodings_map",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195883,
+    "url": "https://docs.python.org/3/library/mimetypes.html#mimetypes.inited",
+    "parentUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "id": 195884,
+    "url": "https://github.com/python/cpython/issues/133367#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "id": 195893,
+    "url": "https://github.com/python/cpython/pull/133369",
+    "parentUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "id": 195894,
+    "url": "https://github.com/python/cpython/issues/133367#issue-3037839806",
+    "parentUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "id": 195896,
+    "url": "https://github.com/python/cpython/issues/133367#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133367"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.realpath"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.realpath"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d64\u0026u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4",
+    "alt": "donbarbos",
+    "pageTitle": "Improve `ast` CLI with new options: `--feature-version`, `--optimize`, and `--show-empty` · Issue #133367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `ast` CLI with new options: `--feature-version`, `--optimize`, and `--show-empty` · Issue #133367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `ast` CLI with new options: `--feature-version`, `--optimize`, and `--show-empty` · Issue #133367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d64\u0026u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4",
+    "alt": "@donbarbos",
+    "pageTitle": "Improve `ast` CLI with new options: `--feature-version`, `--optimize`, and `--show-empty` · Issue #133367 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mimetypes — Map filenames to MIME types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mimetypes.html#mimetypes-cli"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-commands"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-commands"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#pass"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#pass"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
