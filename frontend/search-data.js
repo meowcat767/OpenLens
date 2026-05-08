@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1604,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-09 01:26:23.093762"
+  },
+  {
+    "id": 1603,
+    "url": "https://github.com/python/cpython/issues/130139",
+    "title": "ast.parse() without optimize\u003dTrue doesn\u0027t error on invalid AST type · Issue #130139 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k ast.parse() without optimize\u003dTrue doesn\u0027t error on invalid AST type #130139 New issue Copy link New issue Copy link Closed Closed ast.parse() without optimize\u003dTrue doesn\u0027t error on invalid AST type#130139 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description iritkatriel opened on Feb 15, 2025 Issue body actions \u003e\u003e\u003e ast.parse(ast.Constant(42))\nConstant(value\u003d42, kind\u003dNone)\n\n\n\u003e\u003e\u003e ast.parse(ast.Constant(42), optimize\u003dTrue)\nTraceback (most recent call last):\n  File \"\u003cpython-input-4\u003e\", line 1, in \u003cmodule\u003e\n    ast.parse(ast.Constant(42), optimize\u003dTrue)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.14/ast.py\", line 53, in parse\n    return compile(source, filename, mode, flags,\n                   _feature_version\u003dfeature_version, optimize\u003doptimize)\nTypeError: expected Module node, got Constant\n (This came up while implementing PEP 765 #130080). Linked PRs gh-130139: always check ast node type in ast.parse() with ast input #130140 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:26:21.850749"
+  },
+  {
+    "id": 1602,
+    "url": "https://docs.python.org/3/library/argparse.html#module-argparse",
+    "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Command-line interface libraries » argparse — Parser for command-line options, arguments and subcommands | Theme Auto Light Dark | argparse — Parser for command-line options, arguments and subcommands¶ Added in version 3.2. Source code: Lib/argparse.py Note While argparse is the default recommended standard library module for implementing basic command line applications, authors with more exacting requirements for exactly how their command line applications behave may find it doesn’t provide the necessary level of control. Refer to Choosing an argument parsing library for alternatives to consider when argparse doesn’t support behaviors that the application requires (such as entirely disabling support for interspersed options and positional arguments, or accepting option parameter values that start with - even when they correspond to another defined option). Tutorial This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The argparse module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments. The argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser. It is a container for argument specifications and has options that apply to the parser as whole: parser \u003d argparse.ArgumentParser(\n                    prog\u003d\u0027ProgramName\u0027,\n                    description\u003d\u0027What the program does\u0027,\n                    epilog\u003d\u0027Text at the bottom of help\u0027)\n The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept values, and on/off flags: parser.add_argument(\u0027filename\u0027)           # positional argument\nparser.add_argument(\u0027-c\u0027, \u0027--count\u0027)      # option that takes a value\nparser.add_argument(\u0027-v\u0027, \u0027--verbose\u0027,\n                    action\u003d\u0027store_true\u0027)  # on/off flag\n The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object: args \u003d parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n Note If you’re looking for a guide about how to upgrade optparse code to argparse, see Upgrading Optparse Code. ArgumentParser objects¶ class argparse.ArgumentParser(prog\u003dNone, usage\u003dNone, description\u003dNone, epilog\u003dNone, parents\u003d[], formatter_class\u003dargparse.HelpFormatter, prefix_chars\u003d\u0027-\u0027, fromfile_prefix_chars\u003dNone, argument_default\u003dNone, conflict_handler\u003d\u0027error\u0027, add_help\u003dTrue, allow_abbrev\u003dTrue, exit_on_error\u003dTrue, *, suggest_on_error\u003dFalse, color\u003dTrue)¶ Create a new ArgumentParser object. All parameters should be passed as keyword arguments. Each parameter has its own more detailed description below, but in short they are: prog - The name of the program (default: generated from the __main__ module attributes and sys.argv[0]) usage - The string describing the program usage (default: generated from arguments added to parser) description - Text to display before the argument help (by default, no text) epilog - Text to display after the argument help (by default, no text) parents - A list of ArgumentParser objects whose arguments should also be included formatter_class - A class for customizing the help output prefix_chars - The set of characters that prefix optional arguments (default: ‘-‘) fromfile_prefix_chars - The set of characters that prefix files from which additional arguments should be read (default: None) argument_default - The global default value for arguments (default: None) conflict_handler - The strategy for resolving conflicting optionals (usually unnecessary) add_help - Add a -h/--help option to the parser (default: True) allow_abbrev - Allows long options to be abbreviated if the abbreviation is unambiguous (default: True) exit_on_error - Determines whether or not ArgumentParser exits with error info when an error occurs. (default: True) suggest_on_error - Enables suggestions for mistyped argument choices and subparser names (default: False) color - Allow color output (default: True) Changed in version 3.5: allow_abbrev parameter was added. Changed in version 3.8: In previous versions, allow_abbrev also disabled grouping of short flags such as -vv to mean -v -v. Changed in version 3.9: exit_on_error parameter was added. Changed in version 3.14: suggest_on_error and color parameters were added. The following sections describe how each of these are used. prog¶ By default, ArgumentParser calculates the name of the program to display in help messages depending on the way the Python interpreter was run: The base name of sys.argv[0] if a file was passe",
+    "scrapedAt": "2026-05-09 01:26:19.815099"
+  },
+  {
+    "id": 1601,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-incomplete-types",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-09 01:26:18.525117"
+  },
+  {
+    "id": 1600,
+    "url": "https://docs.python.org/3/c-api/hash.html#c.Py_HashPointer",
+    "title": "PyHash API — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » PyHash API | Theme Auto Light Dark | PyHash API¶ See also the PyTypeObject.tp_hash member and Hashing of numeric types. type Py_hash_t¶ Hash value type: signed integer. Added in version 3.2. type Py_uhash_t¶ Hash value type: unsigned integer. Added in version 3.2. Py_HASH_ALGORITHM¶ A numerical value indicating the algorithm for hashing of str, bytes, and memoryview. The algorithm name is exposed by sys.hash_info.algorithm. Added in version 3.4. Py_HASH_FNV¶ Py_HASH_SIPHASH24¶ Py_HASH_SIPHASH13¶ Numerical values to compare to Py_HASH_ALGORITHM to determine which algorithm is used for hashing. The hash algorithm can be configured via the configure --with-hash-algorithm option. Added in version 3.4: Add Py_HASH_FNV and Py_HASH_SIPHASH24. Added in version 3.11: Add Py_HASH_SIPHASH13. Py_HASH_CUTOFF¶ Buffers of length in range [1, Py_HASH_CUTOFF) are hashed using DJBX33A instead of the algorithm described by Py_HASH_ALGORITHM. A Py_HASH_CUTOFF of 0 disables the optimization. Py_HASH_CUTOFF must be non-negative and less or equal than 7. 32-bit platforms should use a cutoff smaller than 64-bit platforms because it is easier to create colliding strings. A cutoff of 7 on 64-bit platforms and 5 on 32-bit platforms should provide a decent safety margin. This corresponds to the sys.hash_info.cutoff constant. Added in version 3.4. PyHASH_MODULUS¶ The Mersenne prime P \u003d 2**n -1, used for numeric hash scheme. This corresponds to the sys.hash_info.modulus constant. Added in version 3.13. PyHASH_BITS¶ The exponent n of P in PyHASH_MODULUS. Added in version 3.13. PyHASH_MULTIPLIER¶ Prime multiplier used in string and various other hashes. Added in version 3.13. PyHASH_INF¶ The hash value returned for a positive infinity. This corresponds to the sys.hash_info.inf constant. Added in version 3.13. PyHASH_IMAG¶ The multiplier used for the imaginary part of a complex number. This corresponds to the sys.hash_info.imag constant. Added in version 3.13. type PyHash_FuncDef¶ Hash function definition used by PyHash_GetFuncDef(). Py_hash_t (*const hash)(const void*, Py_ssize_t)¶ Hash function. const char *name¶ Hash function name (UTF-8 encoded string). This corresponds to the sys.hash_info.algorithm constant. const int hash_bits¶ Internal size of the hash value in bits. This corresponds to the sys.hash_info.hash_bits constant. const int seed_bits¶ Size of seed input in bits. This corresponds to the sys.hash_info.seed_bits constant. Added in version 3.4. PyHash_FuncDef *PyHash_GetFuncDef(void)¶ Get the hash function definition. See also PEP 456 “Secure and interchangeable hash algorithm”. Added in version 3.4. Py_hash_t Py_HashPointer(const void *ptr)¶ Hash a pointer value: process the pointer value as an integer (cast it to uintptr_t internally). The pointer is not dereferenced. The function cannot fail: it cannot return -1. Added in version 3.13. Py_hash_t Py_HashBuffer(const void *ptr, Py_ssize_t len)¶ Compute and return the hash value of a buffer of len bytes starting at address ptr. The hash is guaranteed to match that of bytes, memoryview, and other built-in objects that implement the buffer protocol. Use this function to implement hashing for immutable objects whose tp_richcompare function compares to another object’s buffer. len must be greater than or equal to 0. This function always succeeds. Added in version 3.14. Py_hash_t PyObject_GenericHash(PyObject *obj)¶ Generic hashing function that is meant to be put into a type object’s tp_hash slot. Its result only depends on the object’s identity. CPython implementation detail: In CPython, it is equivalent to Py_HashPointer(). Added in version 3.13. Previous topic String conversion and formatting Next topic Reflection This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Utilities » PyHash API | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 08, 2026 (11:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-09 01:26:17.184115"
+  },
+  {
     "id": 1599,
     "url": "https://docs.python.org/3/c-api/object.html#c.PyUnstable_Object_IsUniquelyReferenced",
     "title": "Object Protocol — Python 3.14.5rc1 documentation",
@@ -10778,26 +10813,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1600,
-    "url": "https://docs.python.org/3/c-api/hash.html#c.Py_HashPointer"
-  },
-  {
-    "id": 1601,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-incomplete-types"
-  },
-  {
-    "id": 1602,
-    "url": "https://docs.python.org/3/library/argparse.html#module-argparse"
-  },
-  {
-    "id": 1603,
-    "url": "https://github.com/python/cpython/issues/130139"
-  },
-  {
-    "id": 1604,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW"
   },
   {
     "id": 1605,
@@ -240860,10 +240875,90 @@ window.searchData = [
     "id": 347384,
     "url": "https://discuss.python.org/t/a-ctypes-function-to-list-all-loaded-shared-libraries/36370",
     "parentUrl": "https://github.com/python/cpython/issues/119349"
+  },
+  {
+    "id": 349355,
+    "url": "https://github.com/python/cpython/issues/130139#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130139"
+  },
+  {
+    "id": 349356,
+    "url": "https://github.com/python/cpython/issues/130139#issue-2855014825",
+    "parentUrl": "https://github.com/python/cpython/issues/130139"
+  },
+  {
+    "id": 349357,
+    "url": "https://github.com/python/cpython/pull/130140",
+    "parentUrl": "https://github.com/python/cpython/issues/130139"
+  },
+  {
+    "id": 349360,
+    "url": "https://github.com/python/cpython/issues/130139#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130139"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@iritkatriel",
+    "pageTitle": "ast.parse() without optimize\u003dTrue doesn\u0027t error on invalid AST type · Issue #130139 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130139"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "ast.parse() without optimize\u003dTrue doesn\u0027t error on invalid AST type · Issue #130139 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130139"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#module-argparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#module-argparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes-incomplete-types"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes-incomplete-types"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "PyHash API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/hash.html#c.Py_HashPointer"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "PyHash API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/hash.html#c.Py_HashPointer"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
