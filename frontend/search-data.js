@@ -1,5 +1,19 @@
 window.searchData = [
   {
+    "id": 99,
+    "url": "https://www.bbc.co.uk/sounds/play/m001ng37",
+    "title": "Soul Music - Fast Car - BBC Sounds",
+    "content": "Close menu Use BBC.com or the new BBC App to listen to BBC podcasts, Radio 4 and the World Service outside the UK. Find out how to listen to other BBC stations Episode details Radio 4,·01 Jul 2023,·28 mins Fast Car Soul Music Play BookmarkBookmark SubscribeSubscribe Available for over a year \u0027Fast Car\u0027 is one of Tracy Chapman\u0027s biggest hits, with listeners from around the world finding striking connections with their own lives in the song\u0027s story. It was released in April 1988, and that summer, the American singer-songwriter performed it to a global audience of 600 million at Nelson Mandela\u0027s 70th Birthday Tribute. This broadcast catapulted Tracy and the song to super-stardom, as it became a top ten hit on both sides of the Atlantic and received three Grammy nominations. Ever since, \u0027Fast Car\u0027 has resonated with people around the world. The lyrics describe a working woman trying to escape a cycle of poverty, dreaming of a plan to leave in a \"fast car\". She speaks of wanting to get out of the life she finds herself in, living in a shelter, and driving towards the city to find something better. This episode features the personal stories of Fitzroy Samuels in Kingston, Jamaica; Priscilla Munson in Indiana, U.S; Gemma Brown in Gateshead, UK and Dev Cuny in California, U.S. We also hear from Alister Wright in Sydney, Australia whose band, Vlossom, covered Fast Car; and Nigel Williamson, music journalist who has met and interviewed Tracy Chapman many times. Produced by Eliza Lomas, BBC Audio Bristol Programme Website Show less More episodes Cymraeg Gaeilge Gàidhlig BBC Sounds Help Contacts, Privacy and Information Help with Signing In Newsletter Explore the BBC",
+    "scrapedAt": "2026-05-08 22:39:39.742741"
+  },
+  {
+    "id": 98,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366",
+    "title": "The Little Drummer Girl - BBC iPlayer",
+    "content": "Close menu Home The Little Drummer Girl Drama The Little Drummer Girl Seduction, betrayal and spies. A fiery actress meets a mysterious stranger, and is caught up in a deadly espionage sting. With Florence Pugh and Alexander Skarsgard. Series 1: Episode 1 (56 mins) Start watching Episode 1 A fiery and brilliant actress is drawn into a dangerous international espionage operation. 56 mins Episode 2 Charlie is recruited to infiltrate a revolutionary cell by Becker and Kurtz. 55 mins Episode 3 Kurtz and Becker race to save Charlie from a fatal mistake. 57 mins Episode 4 Charlie is tortured by feelings for Becker as she is drawn deeper into Michel\u0027s network. 58 mins Episode 5 Charlie is trained by militia in Lebanon and earns the trust of Fatmeh, Khalil\u0027s sister. 58 mins Episode 6 Charlie prepares for her part in Khalil\u0027s next strike, but has she really switched sides? 58 mins Explore the BBC",
+    "scrapedAt": "2026-05-08 22:39:38.610176"
+  },
+  {
     "id": 97,
     "url": "https://www.bbc.co.uk/news/articles/cpvp4zjvkedo",
     "title": "Weasley stars reunite for Harry Potter at Leavesden studios - BBC News",
@@ -677,14 +691,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-08 22:14:32.985064"
-  },
-  {
-    "id": 98,
-    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
-  },
-  {
-    "id": 99,
-    "url": "https://www.bbc.co.uk/sounds/play/m001ng37"
   },
   {
     "id": 100,
@@ -9933,10 +9939,74 @@ window.searchData = [
   {
     "id": 14156,
     "url": "https://www.bbc.co.uk/news/articles/c1jwznl8d45o"
+  },
+  {
+    "id": 14159,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bqr4f6/the-little-drummer-girl-series-1-episode-1"
+  },
+  {
+    "id": 14160,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366/the-little-drummer-girl#"
+  },
+  {
+    "id": 14161,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bt8t5j/the-little-drummer-girl-series-1-episode-5"
+  },
+  {
+    "id": 14162,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0brgchg/the-little-drummer-girl-series-1-episode-2"
+  },
+  {
+    "id": 14163,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bs494y/the-little-drummer-girl-series-1-episode-3"
+  },
+  {
+    "id": 14164,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bsrc4w/the-little-drummer-girl-series-1-episode-4"
+  },
+  {
+    "id": 14166,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bv1fmv/the-little-drummer-girl-series-1-episode-6"
+  },
+  {
+    "id": 14172,
+    "url": "https://www.bbc.co.uk/sounds/brand/b008mj7p"
+  },
+  {
+    "id": 14174,
+    "url": "https://www.bbc.co.uk/sounds/play/m001ng37#"
+  },
+  {
+    "id": 14176,
+    "url": "https://www.bbc.co.uk/programmes/m001ng37"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dunknown\u0026x1\u003d[]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[sounds]\u0026x12\u003d[]",
+    "alt": "",
+    "pageTitle": "Soul Music - Fast Car - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/m001ng37"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x400/p0fxbpnd.jpg",
+    "alt": "",
+    "pageTitle": "Soul Music - Fast Car - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/m001ng37"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_one::iplayer.tv.tleo.the_little_drummer_girl.b0bqs366.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-tleo]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_one]",
+    "alt": "",
+    "pageTitle": "The Little Drummer Girl - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "The Little Drummer Girl - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
   {
     "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/ca14/live/acffe9a0-4950-11f1-b55d-0f258dce1735.jpg",
     "alt": "Four actors recreating a scene from Harry Potter as they each hold a small sword in front of them as they stand in a line next to each other. There are three men wearing jackets and one woman who is wearing a large yellow shirt.",
