@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 161,
+    "url": "https://dev.java/learn/getting-started",
+    "title": "Getting Started with Java - Dev.java",
+    "content": "Tutorials Watch \u0026 Listen FAQ Oracle University Home \u003e Tutorials \u003e Getting Started with Java Getting Started with Java Elements of a Java Application If you are really, really impatient to run your first Java code, then you can just try the Java Playground available on this site. You can try out almost any snippets of code in it. For example, you can print Hello World!, which is, of course, the first thing you want to try. You don\u0027t need to install anything, just type some Java code, hit run, and off you go! You can try more of those statements below. I understand that you are eager to type some code in your editor and run it to see your first Java application in action! Do not worry, your expectation will be fulfilled by the end of this tutorial. But before we move on, I would like to go through several elements that you need to know to fully understand what you are doing. Even if you are familiar with some other programming language, know about compilation, know what an executable file is you may be interested in the following because Java works in a way that differs from C or C++. The Compilation and Execution Cycle in Java There are several steps that you need to follow to create a Java application. This tutorial shows you how to create a very simple Java program. If you need to create an enterprise application, the creation process is more complex but at its core you will find these simple steps. The first of these steps is to write some Java code in a text editor. Then this code has to be transformed to another format, which can be executed by your computer. This transformation is conducted by a special piece of software called a compiler. Some languages do not have a compiler; Java does. Every compiler is specific to a language. The file produced by a compiler is often called a binary file or an executable file. Whereas you can read a source code and understand it, binary or executable files are not meant to be read by a human person. Only your computer can make sense of it. This compiled Java code contains special binary codes called byte code. This is a technical term that you may come across. The precise description of what is this byte code is beyond the scope of this tutorial. Compiling some code may fail; your code has to be correct for the compiler to produce an executable version of it. Do not worry, this page gives you the code you are going to compile. All you need to do is copy it and paste it in your text editor. Once the compiler produced the binary file that you need, you can execute this binary file. Running this binary file runs your program. These two steps: compilation and execution require two specific pieces of software that are part of the Java Development Kit, also known as the JDK. You will see how to download the JDK for free and how to install it later in this tutorial. Note that starting with Java SE 11 you can also merge these two steps into one, by executing a .java file directly. Starting with Java SE 22, your program can even be distributed among several files. Creating a First Java Program The first step you need to know is that the Java code you are writing is saved in plain text files. In this tutorial, your application will be written in a single text file. Larger applications may require thousands of such files. So the first step actually consists in creating a file, and to give a name. In the following, we will assume that this name is MyFirstJavaApp.java, but you can give it any name, as long as you keep the .java extension. There are also restrictions on the first character of this file. To keep things simple, you can just use a letter as a first character. There is a convention in Java: the name of a Java file should start with a capital letter. This is not mandatory but all Java developers follow this convention. When you become a seasoned Java developer, seeing a class that does not follow this convention will look weird to you. You can now open this file in a text editor. Just a word of warning: you should be using a plain text editor to create and save this file. Using a word processor will not work. One you have opened the MyFirstJavaApp.java file, you can just copy and paste the following code in it. As you may know, there is a long-standing tradition in computer science, which is to write a program that prints \"Hello, World!\" on the console of your application. So let us do that! Preparing the Execution of Your First Program The compilation and the execution of simple programs are just a single step that follows the creation of your first program. So far the only tool you have been using is a plain text editor. Executing this program requires another tool; something you may not have on your computer. Fortunately, you can download this compiler and use it for free. Let me guide you through this process. As of now, downloading \"Java\" means downloading the Java Development Kit, also known as the JDK. The JDK contains many tools and among them are the ones you",
+    "scrapedAt": "2026-05-08 23:05:07.859019"
+  },
+  {
+    "id": 160,
+    "url": "https://www.youtube.com/watch?v\u003dux1IpWo3oXA",
+    "title": "The JDK Client Desktop : 2026 and Still Swinging - YouTube",
+    "content": "OverPersAuteursrechtContactCreatorsAdverterenOntwikkelaarsVoorwaardenPrivacyBeleid en veiligheidZo werkt YouTubeNieuwe functies testen © 2026 Google LLC YouTube, een bedrijf van Google",
+    "scrapedAt": "2026-05-08 23:05:06.516411"
+  },
+  {
+    "id": 159,
+    "url": "https://dev.java/learn/watchlisten/",
+    "title": "Watch \u0026 Listen - Dev.java",
+    "content": "Tutorials Watch \u0026 Listen FAQ Oracle University Watch \u0026 Listen Inside Java Podcast The Inside Java Podcast is an audio-only, interview-style podcast that discusses a range of topics from the Java language, the JVM, OpenJDK, platform security, innovation projects like Loom and Panama, and everything in between. Each episode is about 30 minutes. Visit the Podcast Inside Java Newscast The Inside Java Newscast covers recent developments in the OpenJDK community. In just a few minutes, it presents new Java releases, new language features and APIs, coding tips and tricks, or insights into OpenJDK development. Head to the Studio JEP Café Join José at the JEP Café where he brews up in-depth explainers on new and upcoming Java features. Visit the Café Cracking the Java Coding Interview Learn how to ace the Java interview with José in 1-minute segments covering all the important features of the Java language. Crack the Interview",
+    "scrapedAt": "2026-05-08 23:05:04.637162"
+  },
+  {
+    "id": 158,
+    "url": "https://www.oracle.com/javadownload",
+    "title": "Java Downloads | Oracle",
+    "content": "Java Technical Details Java Downloads Watch the JavaOne 2026 keynotes and select sessions Watch JavaOne Looking for other Java downloads? OpenJDK Early Access Builds JRE for Consumers Java 26, Java 25, Java 21, and earlier versions available now Learn about Java SE Subscription JDK 26 is the latest release of the Java SE Platform. JDK 25 is the latest Long-Term Support (LTS) release of the Java SE Platform. JDK 21 is the previous Long-Term Support (LTS) release of the Java SE Platform. Earlier JDK versions are available below. JDK 26 JDK 25 JDK 21 Java SE Development Kit 26.0.1 downloads JDK 26 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JDK 26 will receive updates under these terms, until September 2026, when it will be superseded by JDK 27. Linux macOS Windows Product/file description File size Download ARM64 Compressed Archive 208.96 MB https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz (sha256) ARM64 RPM Package 208.53 MB https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm (sha256) (OL 9 GPG Key) x64 Compressed Archive 211.05 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz (sha256) x64 Debian Package 180.82 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb (sha256) x64 RPM Package 210.58 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm (sha256) (OL 9 GPG Key) Product/file description File size Download ARM64 Compressed Archive 203.74 MB https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz (sha256) ARM64 DMG Installer 203.19 MB https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg (sha256) x64 Compressed Archive 206.01 MB https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz (sha256) x64 DMG Installer 205.44 MB https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg (sha256) Product/file description File size Download x64 Compressed Archive 210.50 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip (sha256) x64 Installer 188.65 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe (sha256) x64 MSI Installer 187.42 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi (sha256) Documentation Download Release information Online Documentation Installation Instructions Release Notes Documentation License JDK 26 Licensing Information User Manual (includes third-party licenses) Certified System Configurations Readme Java Value Engineering Java SE Development Kit 25.0.3 downloads JDK 25 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JDK 25 will receive updates under the NFTC, until September 2028, a year after the release of the next LTS. Subsequent JDK 25 updates will be licensed under the Java SE OTN License (OTN) and production use beyond the limited free grants of the OTN license will require a fee. Linux macOS Windows Product/file description File size Download ARM64 Compressed Archive 204.68 MB https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz (sha256) ARM64 RPM Package 204.28 MB https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm (sha256) (OL 9 GPG Key) x64 Compressed Archive 206.82 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz (sha256) x64 Debian Package 177.31 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb (sha256) x64 RPM Package 206.38 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm (sha256) (OL 9 GPG Key) Product/file description File size Download ARM64 Compressed Archive 199.60 MB https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz (sha256) ARM64 DMG Installer 199.11 MB https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg (sha256) x64 Compressed Archive 201.79 MB https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz (sha256) x64 DMG Installer 201.26 MB https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg (sha256) Product/file description File size Download x64 Compressed Archive 205.71 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip (sha256) x64 Installer 184.51 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe (sha256) x64 MSI Installer 183.28 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi (sha256) Documentation Download Release information Online Documentation Installation Instructions Release Notes Documentation License JDK 25 Licensing Information User Manual (includes third-party licenses) Certified System Configurations Readme Java Value Engineering Java SE Development Kit 21.0.11 downloads JDK 21 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JD",
+    "scrapedAt": "2026-05-08 23:05:03.222076"
+  },
+  {
+    "id": 157,
+    "url": "https://www.oracle.com/java/",
+    "title": "Java Software | Oracle",
+    "content": "Java Oracle Java is the #1 programming language and development platform. It helps reduce costs, shorten development timeframes, drive innovation, and improve application services. With millions of developers running more than 73 billion Java Virtual Machines worldwide, Java continues to be the development platform of choice for enterprises and developers. Download Java Watch the JavaOne 2026 keynotes and select sessions Java 26 is now available JDK 26 introduces improved performance, enhanced security, and new AI-ready features—empowering developers to boost productivity and helping organizations scale innovation with greater speed and reliability. Read the JDK 26 blog Java in the Era of AI \u0026 Cloud Native Innovation According to a recent VDC Research study, Java is the #1 language for cloud native development. Java remains the trusted foundation for enterprises and the go-to language for developers building the next generation of innovative solutions. Access the VDC Research report Announcing Java Verified Portfolio and commercial support for JavaFX Oracle Java Verified Portfolio (JVP) delivers enterprise-backed Java tools and libraries, now including commercial support for JavaFX, Helidon, and Java Platform Extension for Visual Studio Code. Read the JVP blog Are you a Java developer? Get tutorials, news, and videos from Java experts. Learn more about Java Unlock powerful insights with JMS Analyze Applications The new Java Management Service (JMS) feature enables instant, actionable insights on Java applications without the need for setting up JMS fleets or installing agents. Learn more Watch Georges Saab on Java 25 (JDK 25) LTS for AI and cloud See what’s new in the latest long-term supported Java release—Java 25 (JDK 25). Learn how Java helps teams modernize enterprise apps, go cloud native and multicloud, and build and run AI-driven workloads with confidence. Watch the video (9:10) Case study: Oracle Java EPP for Oracle Fusion Find out why Java SE Subscription Enterprise Performance Pack (EPP) helps Oracle Fusion Applications improve application response times by 40% and decrease CPU utilization by 25%. Read the case study (PDF) Java SE Java on OCI Oracle WebLogic Server Java Card Java Management Service The world’s most popular modern development platform The world’s most popular modern development platform, Java SE is the programming language of choice for enterprise applications. Java SE reduces costs, shortens development time, drives innovation, and improves application services. Protect your Java investment with Oracle Java SE Universal Subscription, which now includes Java SE Subscription Enterprise Performance Pack (EPP) and Java Management Service. Download Java now Explore Java SE Universal Subscription Products Oracle Java SE Universal Subscription Oracle JDK Oracle OpenJDK Oracle Java SE Platform Oracle Java Verified Portfolio (JVP) The best cloud platform for developing and deploying Java Oracle Cloud Infrastructure (OCI) enhances the versatility, power, and stability of Java. As the steward and leading contributor to the Java platform, Oracle continues to drive the evolution of Java in response to the demands of enterprises and to provide unparalleled expertise to support developers. OCI SDK for Java: The Oracle Cloud Infrastructure SDK for Java enables you to write code to manage OCI resources. Simplified Java Management Service gives you insights into all your Java deployments, on OCI and on-premises. Expert Java support from the stewards of Java to optimize Java apps whenever it makes sense. Exclusive access to patches and updates, even beyond the end of public updates. Benefits of Java SE on OCI at no additional cost. The world’s leading platform for developing and running enterprise Java applications Oracle WebLogic Server offers a robust, mature, and scalable implementation of Oracle Java Enterprise Edition (EE) and Jakarta EE to run enterprise Java applications in the cloud or on-premises. Explore Oracle WebLogic Server Products Oracle WebLogic Server Oracle Coherence Oracle WebLogic Server for Oracle Cloud Infrastructure Helidon Improves security for Internet of Things (IoT) edge devices Java Card enables secure elements, such as smart cards and other tamper-resistant security chips, to host applications based on Java technology. Store and update multiple applications on a single, resource-constrained device. Explore Java Card Documentation Features Interoperable Secure execution environment Multiapplication, multitenant Extensible and updatable Java Management Service Enterprises often run multiple versions of Java across desktops, laptops, servers, and cloud environments, making it challenging to maintain security and compliance. Outdated Java versions can expose organizations to vulnerabilities. Java Management Service (JMS) is an Oracle Cloud Infrastructure (OCI) service that provides centralized, real-time monitoring and management of Java environments both on-premises and in ",
+    "scrapedAt": "2026-05-08 23:05:01.758526"
+  },
+  {
     "id": 156,
     "url": "https://www.java.com/en/download/help/index.html",
     "title": "Java Help Center",
@@ -1090,26 +1125,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-08 22:14:32.985064"
-  },
-  {
-    "id": 157,
-    "url": "https://www.oracle.com/java/"
-  },
-  {
-    "id": 158,
-    "url": "https://www.oracle.com/javadownload"
-  },
-  {
-    "id": 159,
-    "url": "https://dev.java/learn/watchlisten/"
-  },
-  {
-    "id": 160,
-    "url": "https://www.youtube.com/watch?v\u003dux1IpWo3oXA"
-  },
-  {
-    "id": 161,
-    "url": "https://dev.java/learn/getting-started"
   },
   {
     "id": 162,
@@ -14866,10 +14881,1080 @@ window.searchData = [
   {
     "id": 41178,
     "url": "https://www.java.com/en/download/help/sitelist_disabled.html"
+  },
+  {
+    "id": 55549,
+    "url": "https://docs.oracle.com/en/java/javase/index.html"
+  },
+  {
+    "id": 55550,
+    "url": "https://www.oracle.com/java/?ytid\u003da1aro8bq30o"
+  },
+  {
+    "id": 55551,
+    "url": "https://dev.java/community/affinity/"
+  },
+  {
+    "id": 55552,
+    "url": "https://www.oracle.com/a/tech/docs/javase-subscription-datasheet.pdf"
+  },
+  {
+    "id": 55554,
+    "url": "https://dev.java/community/"
+  },
+  {
+    "id": 55555,
+    "url": "https://go.oracle.com/LP\u003d150255?elqCampaignId\u003d644147"
+  },
+  {
+    "id": 55556,
+    "url": "https://go.oracle.com/LP\u003d136406?elqCampaignId\u003d427886"
+  },
+  {
+    "id": 55557,
+    "url": "http://jdk.java.net/"
+  },
+  {
+    "id": 55558,
+    "url": "https://mylearn.oracle.com/ou/story/40805"
+  },
+  {
+    "id": 55560,
+    "url": "https://education.oracle.com/oracle-certification-path/pfamily_48"
+  },
+  {
+    "id": 55561,
+    "url": "https://openjdk.org/"
+  },
+  {
+    "id": 55562,
+    "url": "https://dev.java/playground/"
+  },
+  {
+    "id": 55563,
+    "url": "https://newsroom.collegeboard.org/advanced-placement-program-collaborates-oracle-computer-science-updates"
+  },
+  {
+    "id": 55564,
+    "url": "https://blogs.oracle.com/java/post/detaching-graalvm-from-the-java-ecosystem-train"
+  },
+  {
+    "id": 55565,
+    "url": "https://www.oracle.com/java/technologies/java-se-glance.html"
+  },
+  {
+    "id": 55566,
+    "url": "https://www.oracle.com/java/java-se-subscription/value-engineering/"
+  },
+  {
+    "id": 55567,
+    "url": "https://www.oracle.com/java/technologies/java-card/javacard-technology-getstarted.html"
+  },
+  {
+    "id": 55568,
+    "url": "https://www.oracle.com/java/weblogic/weblogic-for-oracle-cloud-infrastructure/"
+  },
+  {
+    "id": 55569,
+    "url": "https://www.youtube.com/java"
+  },
+  {
+    "id": 55570,
+    "url": "https://www.oracle.com/events/java-graalvm-webcasts/"
+  },
+  {
+    "id": 55571,
+    "url": "https://www.oracle.com/java/duke/"
+  },
+  {
+    "id": 55572,
+    "url": "https://www.oracle.com/java/technologies/java-se-support-roadmap.html"
+  },
+  {
+    "id": 55573,
+    "url": "https://www.oracle.com/a/ocom/docs/java-erp-fusion-case-study.pdf"
+  },
+  {
+    "id": 55574,
+    "url": "https://www.oracle.com/java/coherence/"
+  },
+  {
+    "id": 55575,
+    "url": "https://helidon.io/"
+  },
+  {
+    "id": 55576,
+    "url": "https://learn.java/"
+  },
+  {
+    "id": 55577,
+    "url": "https://blogs.oracle.com/java/"
+  },
+  {
+    "id": 55578,
+    "url": "https://blogs.oracle.com/java/the-arrival-of-java-26"
+  },
+  {
+    "id": 55579,
+    "url": "https://inside.java/"
+  },
+  {
+    "id": 55580,
+    "url": "https://www.oracle.com/java/weblogic/"
+  },
+  {
+    "id": 55581,
+    "url": "https://blogs.oracle.com/java/analyze-applications-and-other-enhancements"
+  },
+  {
+    "id": 55582,
+    "url": "http://docs.oracle.com/javacomponents"
+  },
+  {
+    "id": 55583,
+    "url": "https://www.oracle.com/java/technologies/downloads/"
+  },
+  {
+    "id": 55584,
+    "url": "https://www.oracle.com/a/ocom/docs/java-licensing-logo-guidelines-1908204.pdf"
+  },
+  {
+    "id": 55585,
+    "url": "https://www.oracle.com/education/training/java/"
+  },
+  {
+    "id": 55586,
+    "url": "https://x.com/openjdk"
+  },
+  {
+    "id": 55587,
+    "url": "https://academy.oracle.com/en/solutions-curriculum-java.html"
+  },
+  {
+    "id": 55588,
+    "url": "https://www.oracle.com/java/contact-form.html"
+  },
+  {
+    "id": 55589,
+    "url": "https://www.oracle.com/java/jms/"
+  },
+  {
+    "id": 55590,
+    "url": "https://ops.java/"
+  },
+  {
+    "id": 55591,
+    "url": "https://www.oracle.com/java/technologies/downloads/jvp/"
+  },
+  {
+    "id": 55592,
+    "url": "https://www.oracle.com/support/policies.html"
+  },
+  {
+    "id": 55593,
+    "url": "https://www.oracle.com/java/java-card/"
+  },
+  {
+    "id": 55594,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk-relnotes-index.html"
+  },
+  {
+    "id": 55595,
+    "url": "https://www.oracle.com/java/java-se-subscription/"
+  },
+  {
+    "id": 55596,
+    "url": "https://blogs.oracle.com/java/announcing-jvp"
+  },
+  {
+    "id": 55597,
+    "url": "https://www.oracle.com/cloud/free/"
+  },
+  {
+    "id": 55599,
+    "url": "https://education.oracle.com/java-programming-learning-subscription/ls_40805"
+  },
+  {
+    "id": 55600,
+    "url": "https://shop.oracle.com/apex/f?p\u003dDSTORE:2:::NO:RIR,RP,2:PROD_HIER_ID:123775488249871532594385"
+  },
+  {
+    "id": 55601,
+    "url": "https://www.oracle.com/java/technologies/jvp-support-roadmap.html"
+  },
+  {
+    "id": 55602,
+    "url": "https://www.oracle.com/java/technologies/"
+  },
+  {
+    "id": 55603,
+    "url": "https://go.oracle.com/LP\u003d25600?elqCampaignId\u003d109966\u0026bn\u003djava"
+  },
+  {
+    "id": 55604,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi.sha256"
+  },
+  {
+    "id": 55605,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz"
+  },
+  {
+    "id": 55606,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-linux"
+  },
+  {
+    "id": 55607,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55608,
+    "url": "https://docs.oracle.com/en/java/javase/21/"
+  },
+  {
+    "id": 55609,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb.sha256"
+  },
+  {
+    "id": 55610,
+    "url": "https://www.oracle.com/a/tech/docs/jdk25-lium.pdf"
+  },
+  {
+    "id": 55611,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg.sha256"
+  },
+  {
+    "id": 55612,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb.sha256"
+  },
+  {
+    "id": 55613,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-linux"
+  },
+  {
+    "id": 55614,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe.sha256"
+  },
+  {
+    "id": 55615,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55616,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg.sha256"
+  },
+  {
+    "id": 55617,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg.sha256"
+  },
+  {
+    "id": 55618,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe.sha256"
+  },
+  {
+    "id": 55619,
+    "url": "https://docs.oracle.com/en/java/java-components/enterprise-performance-pack/epp-user-guide/overview.html#GUID-4085FEE6-0685-4C9B-B981-3E742DE91094"
+  },
+  {
+    "id": 55620,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-mac"
+  },
+  {
+    "id": 55621,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk25-doc-downloads.html"
+  },
+  {
+    "id": 55622,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi"
+  },
+  {
+    "id": 55623,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17"
+  },
+  {
+    "id": 55624,
+    "url": "https://www.oracle.com/java/technologies/javase/jre8-readme.html"
+  },
+  {
+    "id": 55625,
+    "url": "https://linux.oracle.com/security/gpg/"
+  },
+  {
+    "id": 55626,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk21-doc-downloads.html"
+  },
+  {
+    "id": 55627,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11"
+  },
+  {
+    "id": 55628,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb.sha256"
+  },
+  {
+    "id": 55629,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi"
+  },
+  {
+    "id": 55630,
+    "url": "https://docs.oracle.com/en/java/javase/17/"
+  },
+  {
+    "id": 55631,
+    "url": "https://docs.oracle.com/en/java/javase/26/install/overview-jdk-installation.html"
+  },
+  {
+    "id": 55632,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi.sha256"
+  },
+  {
+    "id": 55633,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55634,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-windows"
+  },
+  {
+    "id": 55635,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-windows"
+  },
+  {
+    "id": 55636,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk25certconfig.html"
+  },
+  {
+    "id": 55638,
+    "url": "https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html"
+  },
+  {
+    "id": 55639,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi"
+  },
+  {
+    "id": 55640,
+    "url": "https://www.oracle.com/java/javase/terms/license/java21speclicense.html"
+  },
+  {
+    "id": 55641,
+    "url": "https://www.java.com/otnlicense"
+  },
+  {
+    "id": 55642,
+    "url": "https://www.oracle.com/a/tech/docs/8u491checksum.html"
+  },
+  {
+    "id": 55644,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk11-doc-downloads.html"
+  },
+  {
+    "id": 55645,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-solaris"
+  },
+  {
+    "id": 55646,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55647,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-linux"
+  },
+  {
+    "id": 55648,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk21-readme-downloads.html"
+  },
+  {
+    "id": 55649,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-macos"
+  },
+  {
+    "id": 55650,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg.sha256"
+  },
+  {
+    "id": 55651,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-mac"
+  },
+  {
+    "id": 55652,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm.sha256"
+  },
+  {
+    "id": 55653,
+    "url": "https://support.oracle.com/epmos/faces/DocContentDisplay?id\u003d1439822.2"
+  },
+  {
+    "id": 55655,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-mac"
+  },
+  {
+    "id": 55656,
+    "url": "https://blogs.oracle.com/java-platform-group/understanding-the-server-jre"
+  },
+  {
+    "id": 55657,
+    "url": "https://docs.oracle.com/en/java/javase/11/"
+  },
+  {
+    "id": 55658,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55659,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-linux"
+  },
+  {
+    "id": 55660,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg"
+  },
+  {
+    "id": 55661,
+    "url": "https://www.oracle.com/java/technologies/javase/11u-relnotes.html"
+  },
+  {
+    "id": 55662,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk25-readme-downloads.html"
+  },
+  {
+    "id": 55663,
+    "url": "https://blogs.oracle.com/java/post/introducing-the-java-se-subscription-enterprise-performance-pack"
+  },
+  {
+    "id": 55664,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg.sha256"
+  },
+  {
+    "id": 55665,
+    "url": "https://docs.oracle.com/en/java/javase/21/install/overview-jdk-installation.html"
+  },
+  {
+    "id": 55666,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm"
+  },
+  {
+    "id": 55667,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip"
+  },
+  {
+    "id": 55668,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg"
+  },
+  {
+    "id": 55669,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html"
+  },
+  {
+    "id": 55670,
+    "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html"
+  },
+  {
+    "id": 55671,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.tar.gz"
+  },
+  {
+    "id": 55672,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8"
+  },
+  {
+    "id": 55673,
+    "url": "https://www.oracle.com/a/tech/docs/jdk26-lium.pdf"
+  },
+  {
+    "id": 55674,
+    "url": "https://docs.oracle.com/en/java/javase/25/install/overview-jdk-installation.html"
+  },
+  {
+    "id": 55675,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-solaris"
+  },
+  {
+    "id": 55676,
+    "url": "https://www.oracle.com/java/technologies/java-archive-misc-downloads.html#jdk8demos"
+  },
+  {
+    "id": 55677,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip.sha256"
+  },
+  {
+    "id": 55678,
+    "url": "https://www.oracle.com/a/tech/docs/jdk17-lium.pdf"
+  },
+  {
+    "id": 55679,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz"
+  },
+  {
+    "id": 55680,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm.sha256"
+  },
+  {
+    "id": 55681,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm.sha256"
+  },
+  {
+    "id": 55682,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz"
+  },
+  {
+    "id": 55683,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jepp-linux"
+  },
+  {
+    "id": 55684,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb"
+  },
+  {
+    "id": 55685,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-windows"
+  },
+  {
+    "id": 55687,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55690,
+    "url": "https://www.oracle.com/a/tech/docs/jdk21-lium.pdf"
+  },
+  {
+    "id": 55691,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz"
+  },
+  {
+    "id": 55692,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-mac"
+  },
+  {
+    "id": 55693,
+    "url": "https://docs.oracle.com/javase/8/"
+  },
+  {
+    "id": 55694,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk8-jre8-certconfig.html"
+  },
+  {
+    "id": 55696,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java25"
+  },
+  {
+    "id": 55697,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm.sha256"
+  },
+  {
+    "id": 55698,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java26"
+  },
+  {
+    "id": 55699,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-solaris"
+  },
+  {
+    "id": 55700,
+    "url": "https://www.oracle.com/java/technologies/jdk-script-friendly-urls/"
+  },
+  {
+    "id": 55701,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java21"
+  },
+  {
+    "id": 55702,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip"
+  },
+  {
+    "id": 55703,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm"
+  },
+  {
+    "id": 55704,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz"
+  },
+  {
+    "id": 55705,
+    "url": "https://www.oracle.com/downloads/licenses/javase-license1.html"
+  },
+  {
+    "id": 55706,
+    "url": "https://docs.oracle.com/en/java/javase/25/"
+  },
+  {
+    "id": 55707,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz"
+  },
+  {
+    "id": 55708,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk17-doc-downloads.html"
+  },
+  {
+    "id": 55709,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-mac"
+  },
+  {
+    "id": 55710,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe"
+  },
+  {
+    "id": 55711,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg"
+  },
+  {
+    "id": 55713,
+    "url": "https://www.java.com"
+  },
+  {
+    "id": 55714,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-windows"
+  },
+  {
+    "id": 55715,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe"
+  },
+  {
+    "id": 55716,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk17-readme-downloads.html"
+  },
+  {
+    "id": 55717,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55718,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-windows"
+  },
+  {
+    "id": 55719,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz"
+  },
+  {
+    "id": 55720,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk11certconfig.html"
+  },
+  {
+    "id": 55721,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-solaris"
+  },
+  {
+    "id": 55722,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm"
+  },
+  {
+    "id": 55723,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg"
+  },
+  {
+    "id": 55724,
+    "url": "https://www.oracle.com/java/javase/terms/license/java25speclicense.html"
+  },
+  {
+    "id": 55725,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk26certconfig.html"
+  },
+  {
+    "id": 55726,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55727,
+    "url": "https://www.oracle.com/java/technologies/javase/26u-relnotes.html"
+  },
+  {
+    "id": 55728,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb"
+  },
+  {
+    "id": 55729,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-windows"
+  },
+  {
+    "id": 55730,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-linux"
+  },
+  {
+    "id": 55731,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm"
+  },
+  {
+    "id": 55732,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55733,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-linux"
+  },
+  {
+    "id": 55734,
+    "url": "https://www.oracle.com/java/technologies/javase/25u-relnotes.html"
+  },
+  {
+    "id": 55735,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-linux"
+  },
+  {
+    "id": 55736,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi.sha256"
+  },
+  {
+    "id": 55737,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm"
+  },
+  {
+    "id": 55738,
+    "url": "https://docs.oracle.com/en/java/javase/17/install/overview-jdk-installation.html"
+  },
+  {
+    "id": 55739,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb"
+  },
+  {
+    "id": 55740,
+    "url": "https://www.oracle.com/downloads/javase-software-license-agreement.html#license-lightbox"
+  },
+  {
+    "id": 55741,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-solaris"
+  },
+  {
+    "id": 55742,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe"
+  },
+  {
+    "id": 55743,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm.sha256"
+  },
+  {
+    "id": 55744,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz"
+  },
+  {
+    "id": 55745,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm.sha256"
+  },
+  {
+    "id": 55746,
+    "url": "https://www.oracle.com/a/tech/docs/jdk11-lium.pdf"
+  },
+  {
+    "id": 55748,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg"
+  },
+  {
+    "id": 55749,
+    "url": "https://download.oracle.com/otndocs/jcp/java_se-11-final-spec/license.html"
+  },
+  {
+    "id": 55750,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-windows"
+  },
+  {
+    "id": 55751,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.tar.gz"
+  },
+  {
+    "id": 55752,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk11-readme.html"
+  },
+  {
+    "id": 55753,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz"
+  },
+  {
+    "id": 55754,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip.sha256"
+  },
+  {
+    "id": 55755,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-windows"
+  },
+  {
+    "id": 55756,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk26-doc-downloads.html"
+  },
+  {
+    "id": 55757,
+    "url": "https://www.oracle.com/java/technologies/javase/8u-relnotes.html"
+  },
+  {
+    "id": 55758,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe.sha256"
+  },
+  {
+    "id": 55759,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-linux"
+  },
+  {
+    "id": 55760,
+    "url": "https://www.oracle.com/a/tech/docs/jdk8-lium.pdf"
+  },
+  {
+    "id": 55761,
+    "url": "https://docs.oracle.com/en/java/javase/26/"
+  },
+  {
+    "id": 55762,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk21certconfig.html"
+  },
+  {
+    "id": 55764,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk8-readme.html"
+  },
+  {
+    "id": 55765,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg.sha256"
+  },
+  {
+    "id": 55766,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55767,
+    "url": "https://www.oracle.com/java/javase/terms/license/java26speclicense.html"
+  },
+  {
+    "id": 55768,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz"
+  },
+  {
+    "id": 55769,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jepp"
+  },
+  {
+    "id": 55770,
+    "url": "https://www.oracle.com/a/tech/docs/17-0-19-checksum.html"
+  },
+  {
+    "id": 55771,
+    "url": "https://www.oracle.com/a/tech/docs/11-0-31-checksum.html"
+  },
+  {
+    "id": 55772,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip.sha256"
+  },
+  {
+    "id": 55773,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm"
+  },
+  {
+    "id": 55774,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg"
+  },
+  {
+    "id": 55775,
+    "url": "https://www.java.com/freeuselicense"
+  },
+  {
+    "id": 55776,
+    "url": "https://www.oracle.com/downloads/licenses/javase-license1.html#grants"
+  },
+  {
+    "id": 55777,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55778,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk17certconfig.html"
+  },
+  {
+    "id": 55779,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk26-readme-downloads.html"
+  },
+  {
+    "id": 55780,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-mac"
+  },
+  {
+    "id": 55781,
+    "url": "https://www.oracle.com/java/technologies/javase/21u-relnotes.html"
+  },
+  {
+    "id": 55782,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip"
+  },
+  {
+    "id": 55783,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz.sha256"
+  },
+  {
+    "id": 55784,
+    "url": "https://www.oracle.com/java/technologies/javase/17u-relnotes.html"
+  },
+  {
+    "id": 55785,
+    "url": "https://www.oracle.com/java/javase/terms/license/java17speclicense.html"
+  },
+  {
+    "id": 55786,
+    "url": "https://docs.oracle.com/en/java/java-components/enterprise-performance-pack/"
+  },
+  {
+    "id": 55787,
+    "url": "https://dev.java/learn/"
+  },
+  {
+    "id": 55788,
+    "url": "https://inside.java/newscast"
+  },
+  {
+    "id": 55789,
+    "url": "https://inside.java/jepcafe"
+  },
+  {
+    "id": 55790,
+    "url": "https://inside.java/podcast/"
+  },
+  {
+    "id": 55791,
+    "url": "https://dev.java/learn/faq/"
+  },
+  {
+    "id": 55792,
+    "url": "https://www.youtube.com/playlist?list\u003dPLX8CzqL3ArzX0zXLKycnQslZaF6viV0oQ"
+  },
+  {
+    "id": 55794,
+    "url": "https://dev.java/learn/ou/"
+  },
+  {
+    "id": 55795,
+    "url": "https://www.youtube.com/howyoutubeworks?utm_campaign\u003dytgen\u0026utm_source\u003dythp\u0026utm_medium\u003dLeftNav\u0026utm_content\u003dtxt\u0026u\u003dhttps%3A%2F%2Fwww.youtube.com%2Fhowyoutubeworks%3Futm_source%3Dythp%26utm_medium%3DLeftNav%26utm_campaign%3Dytgen"
+  },
+  {
+    "id": 55796,
+    "url": "https://www.youtube.com/ads/"
+  },
+  {
+    "id": 55797,
+    "url": "https://www.youtube.com/creators/"
+  },
+  {
+    "id": 55798,
+    "url": "https://www.youtube.com/new"
+  },
+  {
+    "id": 55799,
+    "url": "https://www.youtube.com/t/contact_us/"
+  },
+  {
+    "id": 55800,
+    "url": "https://developers.google.com/youtube"
+  },
+  {
+    "id": 55801,
+    "url": "https://www.youtube.com/about/copyright/"
+  },
+  {
+    "id": 55802,
+    "url": "https://www.youtube.com/about/press/"
+  },
+  {
+    "id": 55803,
+    "url": "https://www.youtube.com/t/terms"
+  },
+  {
+    "id": 55804,
+    "url": "https://www.youtube.com/about/"
+  },
+  {
+    "id": 55805,
+    "url": "https://www.youtube.com/"
+  },
+  {
+    "id": 55806,
+    "url": "https://www.youtube.com/about/policies/"
+  },
+  {
+    "id": 55807,
+    "url": "https://www.youtube.com/t/privacy"
+  },
+  {
+    "id": 55809,
+    "url": "https://dev.java/learn"
+  },
+  {
+    "id": 55810,
+    "url": "https://dev.java/learn/getting-started/#compiling-executing-cycle"
+  },
+  {
+    "id": 55812,
+    "url": "https://dev.java/learn/getting-started/#first-program"
+  },
+  {
+    "id": 55813,
+    "url": "https://dev.java/learn/getting-started/#more-learning"
+  },
+  {
+    "id": 55814,
+    "url": "https://docs.oracle.com/en/java/javase/26/docs/specs/man/javac.html"
+  },
+  {
+    "id": 55815,
+    "url": "https://www.jetbrains.com/idea/"
+  },
+  {
+    "id": 55817,
+    "url": "https://dev.java/learn/getting-started/#common-problems"
+  },
+  {
+    "id": 55821,
+    "url": "https://dev.java/learn/getting-started/#setting-up-jdk"
+  },
+  {
+    "id": 55822,
+    "url": "https://dev.java/learn/getting-started/#interactive"
+  },
+  {
+    "id": 55823,
+    "url": "https://netbeans.apache.org/"
+  },
+  {
+    "id": 55824,
+    "url": "https://dev.java/learn/getting-started/#going-further"
+  },
+  {
+    "id": 55825,
+    "url": "https://dev.java/learn/getting-started/#first-execution"
+  },
+  {
+    "id": 55826,
+    "url": "https://dev.java/learn/getting-started/#first-app"
+  },
+  {
+    "id": 55827,
+    "url": "https://www.eclipseide.org/"
+  },
+  {
+    "id": 55828,
+    "url": "https://dev.java/learn/getting-started/#compiling-running"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://dev.java/assets/images/watchlisten/podcast-3.jpg",
+    "alt": "Podcast Image",
+    "pageTitle": "Watch \u0026 Listen - Dev.java",
+    "pageUrl": "https://dev.java/learn/watchlisten/"
+  },
+  {
+    "src": "https://dev.java/assets/images/watchlisten/newscast-100.jpg",
+    "alt": "Newscast Image",
+    "pageTitle": "Watch \u0026 Listen - Dev.java",
+    "pageUrl": "https://dev.java/learn/watchlisten/"
+  },
+  {
+    "src": "https://dev.java/assets/images/watchlisten/cafe-2.jpg",
+    "alt": "Cafe Image",
+    "pageTitle": "Watch \u0026 Listen - Dev.java",
+    "pageUrl": "https://dev.java/learn/watchlisten/"
+  },
+  {
+    "src": "https://dev.java/assets/images/watchlisten/code-interview.jpg",
+    "alt": "Cracking the Java Coding Interview",
+    "pageTitle": "Watch \u0026 Listen - Dev.java",
+    "pageUrl": "https://dev.java/learn/watchlisten/"
+  },
+  {
+    "src": "https://www.oracle.com/a/ocom/img/rh03-java.webp",
+    "alt": "",
+    "pageTitle": "Java Software | Oracle",
+    "pageUrl": "https://www.oracle.com/java/"
+  },
   {
     "src": "https://www.java.com/jcom/images/windows_media_logo_trans.gif",
     "alt": "",
