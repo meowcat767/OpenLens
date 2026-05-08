@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1188,
+    "url": "https://github.com/python/cpython/issues/74028",
+    "title": "Make Executor.map work with infinite/large inputs correctly · Issue #74028 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Make Executor.map work with infinite/large inputs correctly #74028 New issue Copy link New issue Copy link Closed Closed Make Executor.map work with infinite/large inputs correctly#74028 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Description MojoVampire mannequin opened on Mar 18, 2017 Issue body actions BPO 29842 Nosy @brianquinlan, @ezio-melotti, @pkch, @MojoVampire, @dlukes, @leezu PRs bpo-29842: Make Executor.map less eager so it handles large/unbounded… #707 bpo-29842: Make Executor.map less eager so it handles large/unbounded… #18566 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2017-03-18.01:32:56.383\u003e\nlabels \u003d [\u00273.8\u0027, \u0027library\u0027]\ntitle \u003d \u0027Make Executor.map work with infinite/large inputs correctly\u0027\nupdated_at \u003d \u003cDate 2021-05-05.00:42:51.731\u003e\nuser \u003d \u0027https://github.com/MojoVampire\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-05-05.00:42:51.731\u003e\nactor \u003d \u0027leezu\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2017-03-18.01:32:56.383\u003e\ncreator \u003d \u0027josh.r\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 29842\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 8.0\nmessages \u003d [\u0027289789\u0027, \u0027289790\u0027, \u0027293677\u0027, \u0027293708\u0027, \u0027322390\u0027, \u0027322391\u0027, \u0027341565\u0027, \u0027385067\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027bquinlan\u0027, \u0027ezio.melotti\u0027, \u0027max\u0027, \u0027josh.r\u0027, \u0027dlukes\u0027, \u0027Klamann\u0027, \u0027leezu\u0027]\npr_nums \u003d [\u0027707\u0027, \u002718566\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue29842\u0027\nversions \u003d [\u0027Python 3.8\u0027] Linked PRs gh-74028: Introduce a prefetch parameter to Executor.map to handle large iterators #114975 gh-74028: concurrent.futures.Executor.map: introduce buffersize param for lazier behavior #125663 gh-74028: update whatsnew/3.14.rst post gh-125663 #131214 gh-74028: concurrent.futures.Executor.map: avoid reference cycles when an exception is raised #131701 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Projects Multiprocessing issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-09 01:09:38.839429"
+  },
+  {
+    "id": 1187,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task",
+    "title": "Event loop — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Event loop | Theme Auto Light Dark | Event loop¶ Source code: Lib/asyncio/events.py, Lib/asyncio/base_events.py Preface The event loop is the core of every asyncio application. Event loops run asynchronous tasks and callbacks, perform network IO operations, and run subprocesses. Application developers should typically use the high-level asyncio functions, such as asyncio.run(), and should rarely need to reference the loop object or call its methods. This section is intended mostly for authors of lower-level code, libraries, and frameworks, who need finer control over the event loop behavior. Obtaining the Event Loop The following low-level functions can be used to get, set, or create an event loop: asyncio.get_running_loop()¶ Return the running event loop in the current OS thread. Raise a RuntimeError if there is no running event loop. This function can only be called from a coroutine or a callback. Added in version 3.7. asyncio.get_event_loop()¶ Get the current event loop. When called from a coroutine or a callback (e.g. scheduled with call_soon or similar API), this function will always return the running event loop. If there is no running event loop set, the function will return the result of the get_event_loop_policy().get_event_loop() call. Because this function has rather complex behavior (especially when custom event loop policies are in use), using the get_running_loop() function is preferred to get_event_loop() in coroutines and callbacks. As noted above, consider using the higher-level asyncio.run() function, instead of using these lower level functions to manually create and close an event loop. Changed in version 3.14: Raises a RuntimeError if there is no current event loop. Note The asyncio policy system is deprecated and will be removed in Python 3.16; from there on, this function will return the current running event loop if present else it will return the loop set by set_event_loop(). asyncio.set_event_loop(loop)¶ Set loop as the current event loop for the current OS thread. asyncio.new_event_loop()¶ Create and return a new event loop object. Note that the behaviour of get_event_loop(), set_event_loop(), and new_event_loop() functions can be altered by setting a custom event loop policy. Contents This documentation page contains the following sections: The Event Loop Methods section is the reference documentation of the event loop APIs; The Callback Handles section documents the Handle and TimerHandle instances which are returned from scheduling methods such as loop.call_soon() and loop.call_later(); The Server Objects section documents types returned from event loop methods like loop.create_server(); The Event Loop Implementations section documents the SelectorEventLoop and ProactorEventLoop classes; The Examples section showcases how to work with some event loop APIs. Event loop methods¶ Event loops have low-level APIs for the following: Running and stopping the loop¶ loop.run_until_complete(future)¶ Run until the future (an instance of Future) has completed. If the argument is a coroutine object it is implicitly scheduled to run as a asyncio.Task. Return the Future’s result or raise its exception. loop.run_forever()¶ Run the event loop until stop() is called. If stop() is called before run_forever() is called, the loop will poll the I/O selector once with a timeout of zero, run all callbacks scheduled in response to I/O events (and those that were already scheduled), and then exit. If stop() is called while run_forever() is running, the loop will run the current batch of callbacks and then exit. Note that new callbacks scheduled by callbacks will not run in this case; instead, they will run the next time run_forever() or run_until_complete() is called. loop.stop()¶ Stop the event loop. loop.is_running()¶ Return True if the event loop is currently running. loop.is_closed()¶ Return True if the event loop was closed. loop.close()¶ Close the event loop. The loop must not be running when this function is called. Any pending callbacks will be discarded. This method clears all queues and shuts down the executor, but does not wait for the executor to finish. This method is idempotent and irreversible. No other methods should be called after the event loop is closed. async loop.shutdown_asyncgens()¶ Schedule all currently open asynchronous generator objects to close with an aclose() call. After calling this method, the event loop will issue a warning if a new asynchronous generator is iterated. This should be used to reliably finalize all scheduled asynchronous generators. Note that there is no need to call this function when asyncio.run() is used. Example: try:\n    loop.run_forever()\nfinally:\n    loop.run_until_complete(loop.shutdown_asyncgens())\n    loop.close()\n Added in version 3.6. async loop.shutdown_default_exe",
+    "scrapedAt": "2026-05-09 01:09:36.523548"
+  },
+  {
+    "id": 1186,
+    "url": "https://docs.python.org/3/library/index.html#library-index",
+    "title": "The Python Standard Library — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library | Theme Auto Light Dark | The Python Standard Library¶ While The Python Language Reference describes the exact syntax and semantics of the Python language, this library reference manual describes the standard library that is distributed with Python. It also describes some of the optional components that are commonly included in Python distributions. Python’s standard library is very extensive, offering a wide range of facilities as indicated by the long table of contents listed below. The library contains built-in modules (written in C) that provide access to system functionality such as file I/O that would otherwise be inaccessible to Python programmers, as well as modules written in Python that provide standardized solutions for many problems that occur in everyday programming. Some of these modules are explicitly designed to encourage and enhance the portability of Python programs by abstracting away platform-specifics into platform-neutral APIs. The Python installers for the Windows platform usually include the entire standard library and often also include many additional components. For Unix-like operating systems Python is normally provided as a collection of packages, so it may be necessary to use the packaging tools provided with the operating system to obtain some or all of the optional components. In addition to the standard library, there is an active collection of hundreds of thousands of components (from individual programs and modules to packages and entire application development frameworks), available from the Python Package Index. Introduction Notes on availability Built-in Functions Built-in Constants Constants added by the site module Built-in Types Truth Value Testing Boolean Operations — and, or, not Comparisons Numeric Types — int, float, complex Boolean Type - bool Iterator Types Sequence Types — list, tuple, range Text and Binary Sequence Type Methods Summary Text Sequence Type — str Binary Sequence Types — bytes, bytearray, memoryview Set Types — set, frozenset Mapping Types — dict Context Manager Types Type Annotation Types — Generic Alias, Union Other Built-in Types Special Attributes Integer string conversion length limitation Built-in Exceptions Exception context Inheriting from built-in exceptions Base classes Concrete exceptions Warnings Exception groups Exception hierarchy Thread Safety Guarantees Thread safety levels Thread safety for list objects Thread safety for dict objects Thread safety for set objects Thread safety for bytearray objects Thread safety for memoryview objects Text Processing Services string — Common string operations string.templatelib — Support for template string literals re — Regular expression operations difflib — Helpers for computing deltas textwrap — Text wrapping and filling unicodedata — Unicode Database stringprep — Internet String Preparation readline — GNU readline interface rlcompleter — Completion function for GNU readline Binary Data Services struct — Interpret bytes as packed binary data codecs — Codec registry and base classes Data Types datetime — Basic date and time types zoneinfo — IANA time zone support calendar — General calendar-related functions collections — Container datatypes collections.abc — Abstract Base Classes for Containers heapq — Heap queue algorithm bisect — Array bisection algorithm array — Efficient arrays of numeric values weakref — Weak references types — Dynamic type creation and names for built-in types copy — Shallow and deep copy operations pprint — Data pretty printer reprlib — Alternate repr() implementation enum — Support for enumerations graphlib — Functionality to operate with graph-like structures Numeric and Mathematical Modules numbers — Numeric abstract base classes math — Mathematical functions cmath — Mathematical functions for complex numbers decimal — Decimal fixed-point and floating-point arithmetic fractions — Rational numbers random — Generate pseudo-random numbers statistics — Mathematical statistics functions Functional Programming Modules itertools — Functions creating iterators for efficient looping functools — Higher-order functions and operations on callable objects operator — Standard operators as functions File and Directory Access pathlib — Object-oriented filesystem paths os.path — Common pathname manipulations stat — Interpreting stat() results filecmp — File and Directory Comparisons tempfile — Generate temporary files and directories glob — Unix style pathname pattern expansion fnmatch — Unix filename pattern matching linecache — Random access to text lines shutil — High-level file operations Data Persistence pickle — Python object serialization copyreg — Register pickle support functions shelve — Python object persistence marshal — Internal Python object serialization dbm — Interfaces to Unix “databases” sqlite3 — DB-API 2.0 interface for SQLite databases Data Compression and",
+    "scrapedAt": "2026-05-09 01:09:35.300385"
+  },
+  {
+    "id": 1185,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isreserved",
+    "title": "os.path — Common pathname manipulations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » os.path — Common pathname manipulations | Theme Auto Light Dark | os.path — Common pathname manipulations¶ Source code: Lib/genericpath.py, Lib/posixpath.py (for POSIX) and Lib/ntpath.py (for Windows). This module implements some useful functions on pathnames. To read or write files see open(), and for accessing the filesystem see the os module. The path parameters can be passed as strings, or bytes, or any object implementing the os.PathLike protocol. Unlike a Unix shell, Python does not do any automatic path expansions. Functions such as expanduser() and expandvars() can be invoked explicitly when an application desires shell-like path expansion. (See also the glob module.) See also The pathlib module offers high-level path objects. Note All of these functions accept either only bytes or only string objects as their parameters. The result is an object of the same type, if a path or file name is returned. Note Since different operating systems have different path name conventions, there are several versions of this module in the standard library. The os.path module is always the path module suitable for the operating system Python is running on, and therefore usable for local paths. However, you can also import and use the individual modules if you want to manipulate a path that is always in one of the different formats. They all have the same interface: posixpath for UNIX-style paths ntpath for Windows paths Changed in version 3.8: exists(), lexists(), isdir(), isfile(), islink(), and ismount() now return False instead of raising an exception for paths that contain characters or bytes unrepresentable at the OS level. os.path.abspath(path)¶ Return a normalized absolutized version of the pathname path. On most platforms, this is equivalent to calling normpath(join(os.getcwd(), path)). See also os.path.join() and os.path.normpath(). Changed in version 3.6: Accepts a path-like object. os.path.basename(path, /)¶ Return the base name of pathname path. This is the second element of the pair returned by passing path to the function split(). Note that the result of this function is different from the Unix basename program; where basename for \u0027/foo/bar/\u0027 returns \u0027bar\u0027, the basename() function returns an empty string (\u0027\u0027). Changed in version 3.6: Accepts a path-like object. os.path.commonpath(paths)¶ Return the longest common sub-path of each pathname in the iterable paths. Raise ValueError if paths contain both absolute and relative pathnames, if paths are on different drives, or if paths is empty. Unlike commonprefix(), this returns a valid path. Added in version 3.5. Changed in version 3.6: Accepts a sequence of path-like objects. Changed in version 3.13: Any iterable can now be passed, rather than just sequences. os.path.commonprefix(list, /)¶ Return the longest string prefix (taken character-by-character) that is a prefix of all strings in list. If list is empty, return the empty string (\u0027\u0027). Warning This function may return invalid paths because it works a character at a time. If you need a common path prefix, then the algorithm implemented in this function is not secure. Use commonpath() for finding a common path prefix. \u003e\u003e\u003e os.path.commonprefix([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr/l\u0027\n\n\u003e\u003e\u003e os.path.commonpath([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr\u0027\n Changed in version 3.6: Accepts a path-like object. os.path.dirname(path, /)¶ Return the directory name of pathname path. This is the first element of the pair returned by passing path to the function split(). Changed in version 3.6: Accepts a path-like object. os.path.exists(path)¶ Return True if path refers to an existing path or an open file descriptor. Returns False for broken symbolic links. On some platforms, this function may return False if permission is not granted to execute os.stat() on the requested file, even if the path physically exists. Changed in version 3.3: path can now be an integer: True is returned if it is an open file descriptor, False otherwise. Changed in version 3.6: Accepts a path-like object. os.path.lexists(path)¶ Return True if path refers to an existing path, including broken symbolic links. Equivalent to exists() on platforms lacking os.lstat(). Changed in version 3.6: Accepts a path-like object. os.path.expanduser(path)¶ On Unix and Windows, return the argument with an initial component of ~ or ~user replaced by that user’s home directory. On Unix, an initial ~ is replaced by the environment variable HOME if it is set; otherwise the current user’s home directory is looked up in the password directory through the built-in module pwd. An initial ~user is looked up directly in the password directory. On Windows, USERPROFILE will be used if set, otherwise a combination of HOMEPATH and HOMEDRIVE will be used. An initial ~user is handled by checking that the last directory component of the current user",
+    "scrapedAt": "2026-05-09 01:09:34.071653"
+  },
+  {
+    "id": 1184,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FreeExport",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-09 01:09:32.85982"
+  },
+  {
     "id": 1183,
     "url": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen",
     "title": "Operating System Utilities — Python 3.14.5rc1 documentation",
@@ -7943,26 +7978,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 1184,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FreeExport"
-  },
-  {
-    "id": 1185,
-    "url": "https://docs.python.org/3/library/os.path.html#os.path.isreserved"
-  },
-  {
-    "id": 1186,
-    "url": "https://docs.python.org/3/library/index.html#library-index"
-  },
-  {
-    "id": 1187,
-    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task"
-  },
-  {
-    "id": 1188,
-    "url": "https://github.com/python/cpython/issues/74028"
   },
   {
     "id": 1189,
@@ -215580,10 +215595,140 @@ window.searchData = [
     "id": 225972,
     "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_GetXOptions",
     "parentUrl": "https://docs.python.org/3/c-api/sys.html#c.Py_fopen"
+  },
+  {
+    "id": 226209,
+    "url": "https://docs.python.org/3/library/index.html#the-python-standard-library",
+    "parentUrl": "https://docs.python.org/3/library/index.html#library-index"
+  },
+  {
+    "id": 226741,
+    "url": "https://github.com/python/cpython/pull/131701",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226745,
+    "url": "https://github.com/python/cpython/issues/74028#issue-1198970238",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226747,
+    "url": "https://github.com/dlukes",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226749,
+    "url": "https://github.com/python/cpython/pull/18566",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226752,
+    "url": "https://github.com/python/cpython/pull/114975",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226755,
+    "url": "https://github.com/python/cpython/pull/131214",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226756,
+    "url": "https://github.com/leezu",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226759,
+    "url": "https://github.com/python/cpython/pull/707",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226760,
+    "url": "https://github.com/python/cpython/issues/74028#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226761,
+    "url": "https://github.com/python/cpython/issues/74028#top",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226762,
+    "url": "https://bugs.python.org/issue29842",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226763,
+    "url": "https://github.com/pkch",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "id": 226764,
+    "url": "https://github.com/python/cpython/pull/125663",
+    "parentUrl": "https://github.com/python/cpython/issues/74028"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/92820050?v\u003d4\u0026size\u003d80",
+    "alt": "@MojoVampire",
+    "pageTitle": "Make Executor.map work with infinite/large inputs correctly · Issue #74028 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/92820050?v\u003d4\u0026size\u003d48",
+    "alt": "@MojoVampire",
+    "pageTitle": "Make Executor.map work with infinite/large inputs correctly · Issue #74028 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/74028"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Event loop — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Event loop — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Standard Library — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/index.html#library-index"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Standard Library — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/index.html#library-index"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.isreserved"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.isreserved"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FreeExport"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FreeExport"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
