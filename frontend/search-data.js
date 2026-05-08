@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 562,
+    "url": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/",
+    "title": "Building a Dependency Graph of Our Python Codebase | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Building a Dependency Graph of Our Python Codebase Written by George Farcasiu, Noah Kim, Jacon Brugh, Jiahao Li, Hudson River Trading Introduction In keeping with our roots in high frequency trading, Hudson River Trading (HRT) moves fast. As is the case with any metric in engineering, speed has its tradeoffs. Over the last half-decade, HRT saw exponential growth in the size and interconnectedness of its research-oriented Python codebase, owing to a combination of a scrappy engineering culture that generally prizes \"good enough\" over \"perfect,\" our collaborative working environment that encourages code sharing between teams, and a period of accelerated growth. As our Python codebase grew to millions of lines, import times increased by an order of magnitude, code changes became more expensive to test, and lint times increased far outside the range of usefulness--we were experiencing the effects of code \"tangle.\" Tangling Code \"tangling\" is a concept HRTers borrowed from descriptions of the same issue in Dropbox publications about their own Python codebase. We call code \"tangled\" when its dependency graph has many overlapping cycles, and unrelated portions of the codebase are coupled through indirect and unintuitive import paths. Tangling can be a problem in any large codebase (including in other languages)! In our experience, tangling affects performance of both runtime imports and static analysis (e.g. mypy), and causes tight coupling which can reduce reliability. Of these issues, our users find runtime import overhead to be the biggest problem, since it slows down the development iteration loop and wastes CPU time in the datacenter. This is likely more problematic for HRT than most other Python shops, as short-lived Python processes make up a considerable fraction of our computational workload. The negative effects of tangling can increase quickly--a few misplaced imports and suddenly hundreds of modules are coupled together. The effects of import overhead are magnified by tangling because importing any module in a cycle ends up transitively importing all modules in that cycle (and their dependencies). While some imports are very fast, there are many cases that incur significant overhead. One common way overhead sneaks in is through filesystem access--for example, the now deprecated pkg_resources module crawls the filesystem to locate resources. This process becomes particularly problematic when operating over our Network File System. A further source of computational overhead is the loading of bulky, monolithic C extensions by packages such as pandas and NumPy--and even proprietary extensions. Additionally, some of our pure-Python modules incur a range of costly static initialization steps like detecting environmental features or handling dynamic registration of classes or callbacks. In isolation, each of these introduces a manageable import workload; however, in the most tangled portions of our codebase, the compounding effect can amount to over 30 seconds of import time for most programs. This overhead slows down the development iteration loop, and wastes CPU time in our distributed compute environment. Dependency Management At a high level, our approach to untangling is to establish and maintain a layered architecture where modules in lower layers don\u0027t import from modules in higher layers. Establishing proper layering helps callers to only import what they need. Ideally, our dependency graph should resemble a directed acyclic graph, where modules are topologically ordered by their assigned layers. However, in practice, some cycles are acceptable so long as they are relatively small and contained to one (sub)package. Transitioning to a better dependency management paradigm requires identifying the current causes of tangling, refactoring the codebase to restructure dependencies, and putting in place dependency validation to avoid future regressions. And all of this work has to be done without pausing development in the codebase! Tangle Tools: Understanding the Tangle Once we understood that tangling underlies many of our developer experience problems, we set out to build a toolkit for analyzing the dependency graph of our codebase--Tangle Tools. Tangle Tools analyzes Python source code to generate a dependency graph of the entire codebase (nodes correspond to modules and edges to imports). Our users can then utilize the command line and browser interfaces to discover, navigate, and refactor dependencies. A typical untangling workflow involves: Finding an unwanted transitive dependency Tracing import paths from a source to the unwanted dependency Computes a flow network between the source and dependency Identifies which edges would reduce flow if removed Refactoring imports to disconnect the source from the dependency Utilizes code transforma",
+    "scrapedAt": "2026-05-09 00:45:59.570182"
+  },
+  {
+    "id": 561,
+    "url": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/",
+    "title": "Python for Financial Machine Learning at Union Investment | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Financial Machine Learning at Union Investment Written by Dr. Christian Mandery and Nikolas Gerlich, Union Investment Introduction Union Investment is one of Germany’s largest asset managers, managing a total of over US$ 350 billion for its customers in Germany and other European countries. As an active fundamental asset manager, we are always working on further improving our investment process. Employing novel data sources and information for our investment process in a world where more and more data is created and made available each day is key contributor to success in our business. Machine Learning with Python A promising way to integrate novel data in asset management is machine learning (ML), which allows to uncover patterns found within financial time series data and leverage these patterns for making even better investment decisions. Machine learning allows us to: Identify possible return drivers, either on the level of individual stocks or for a whole asset class such as the stock or the bond market, Predict key performance indicators, such as revenue, on a company level and Determine whether we can benefit from a specific data set and derive a value from it for our investment process. In order to create machine learning models for these tasks, we have developed our own machine learning platform MALINA – MAchine Learning for INvestment Applications – which is a tailor-made solution to create interpretable machine learning models for financial time series data. MALINA is developed solely using Python and consists of more than 30k lines of Python code. Within our MALINA framework, we created four decoupled modules: a machine learning module which allows us to define and benchmark models for financial time series data using different ML algorithms, a back testing module, which allows us to run back tests for trading strategies based on the developed ML models, a model interpretation module, which integrates our own interpretation methods for some of the machine learning algorithms available in the ML module and a web-based user interface that allows the user to define and benchmark models without the necessity of actually writing code. Especially module 3, the development of novel approaches for interpreting our machine learning models, is key to us. This module allows us to open the black box of machine learning and to understand our models and their predictions, which further helps us to uncover the patterns these models have learnt. Figure : Screenshot of our web-based user interface powered by Python and the Django framework. Python’s Outstanding Ecosystem In addition to the Python language itself, using Python allows us to rely heavily on proven open source libraries from the Python ecosystem such as Pandas, which provides a robust and powerful framework for managing and analyzing data, Scikit-Learn, which is the \"go-to\" package for machine learning in Python and by many considered to be the industry standard for machine learning at all, statsmodels and XGBoost, which extend the feature set of scikit-learn to provide advanced statistical models and gradient boosting, Django, an excellent and comprehensive framework to develop web applications which we built upon to create the web-based user interface and Sphinx, which is an excellent package to create documentation from Python DocStrings and allows us to automatically keep our documentation up with the development of our code. All these packages have the advantage of being well-known and widely established, which means that extensive amounts of documentation and discussion can be found online for each of them. In addition, each of these packages being available as open source software means that we can easily dive into the existing code. For, e.g., the machine learning algorithms provided by Scikit-Learn that means that we are able to develop our own extensions, such as custom-tailored interpretation methods – something that would not be possible when using a proprietary machine learning framework. In addition, many of the smaller packages available within Python ecosystem features have been very useful and saved us a lot of time when developing MALINA. One particular example here might be joblib, which makes it extremely easy to parallelize computations in a platform-agnostic manner without hassling about the details of the underlying OS. Finally, the cross-platform capabilities mean that we can easily port MALINA to a different platform. So, while for development we can stick to the Windows machines that are commonly used in our company, we can readily switch to a Linux system for using our MALINA framework in a production environment. Conclusion Machine learning offers exciting new possibilities in analyzing and predicting financial time series. Due to the nature of fin",
+    "scrapedAt": "2026-05-09 00:45:58.362773"
+  },
+  {
+    "id": 560,
+    "url": "https://www.python.org/success-stories/create/",
+    "title": "Sign In to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Sign In Login: Password: Forgot your password? Remember Me: Forgot Password? Sign In Register Don\u0027t have a Python.org account yet? Create new account",
+    "scrapedAt": "2026-05-09 00:45:57.159818"
+  },
+  {
+    "id": 559,
+    "url": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/",
+    "title": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Lincoln Loop: Building a sustainable business inspired by Python’s ethos Written by Peter Baumgartner, Lincoln Loop When our agency began in 2007, using Python on the web was still a rarity, but some new projects in the space were starting to pop up. TurboGears had gained popularity with its MVC approach, but it was another Python web framework, Django, that piqued my interest. I had worked previously with WordPress and Ruby on Rails, but neither felt like a long-term match. Trying to customize WordPress to build custom applications was like putting a square peg in a round hole, and Rails, the hot framework at the time, felt too magical and lacked sufficient documentation for me to really wrap my head around it. Django (and Python) clicked with me immediately. They were well documented, and because of Django\u0027s newsroom roots, I could build content platforms as well as rich web applications. Thanks largely to those technologies, Lincoln Loop has grown from a one-person local operation to a full-service global web agency with over 15 years of success. Why Python Is the Best Choice for Lincoln Loop We came to Python through Django but stuck with the programming language largely because of its philosophy. The language principles espoused by the Zen of Python not only describe how we should write code, but some became tenets of how we run our business. Ideas like “Practicality beats purity” and “Explicit is better than implicit” work far beyond the terminal. Following Python\u0027s ideals of practicality and explicitness not only makes our code better but also the end products we deliver to our clients. Another reason Python has worked out so well for our client projects is the rich ecosystem of open-source libraries available on PyPI. They let us focus on our client\u0027s unique business logic, and for everything else, we can leverage open-source libraries. The breadth of tooling available is staggering. We pull API clients, content management systems, image manipulation libraries, and even machine learning or data science toolkits from PyPI. We\u0027re excited to start seeing packages built in Rust show up on PyPI. Its recent adoption for performance-critical code paths means we get high-performance memory-safe code that can be accessed with a friendly Python API. It feels like we\u0027re getting to have our cake and eat it too! It\u0027s no wonder Python ranks as one of the most popular languages in developer surveys year after year. It’s a proven technology, and the “batteries included” approach gives us the building blocks we need to solve our clients\u0027 problems quickly and efficiently. Django Has Powered Development for Lincoln Loop Since 2007 Our agency was among the early adopters of Django. But since those early days, we’ve seen massive growth in the ecosystem. Once considered bleeding-edge technology, Django is now a stable, mature framework. Plus, it’s flexible enough to accommodate the needs of the wide variety of organizations we work with as partners. Python and Django have allowed us to create content management systems for large-scale publishers with tens of millions of daily page views as well as immersive educational experiences for prestigious universities. We’ve seen our client base transition from bootstrapped startups to enterprise organizations with billions of dollars in revenue. Python has been our foundation every step of the way. Unlike most of the tech world that jumps from framework to framework, embracing whatever is the hot new technology, Lincoln Loop has stayed focused on Python and Django. Consequently, we have an incredibly deep understanding of how to use them to solve our clients’ problems. The longevity of our tooling also means the solutions we build are sustainable. We have clients who have run the same technology stack (with upgrades along the way) for more than ten years. Python’s Core Advantage Comes Down to Community Open source software relies on its community for its success. Without a healthy community, the open-source ecosystem will eventually fizzle and fade. For us, the Python community may be its greatest advantage compared to other programming languages. If you go to a Python conference, you’ll find specialists with very diverse backgrounds. In addition to the web, you\u0027ll meet folks in research, data science, machine learning, and system operations. Most of the open source Python code from those different groups ends up in PyPI. Whatever your organization needs to do, it is likely that someone in the Python community has already written the code that will deliver the functionality you need. Since the language is so widely used, you have a lot of online resources available when you want to find help. Whether it is a blog post describing how to solve a specific problem, a deep-dive conference talk on a specific topic, or som",
+    "scrapedAt": "2026-05-09 00:45:55.748255"
+  },
+  {
+    "id": 558,
+    "url": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/",
+    "title": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python with Gretel.ai to Generate Synthetic Location Data Written by Alex Watson, co-founder and CPO, Gretel.ai, Gretel.ai Header Photo Credit: sylv1rob1 via ShutterStock* How Gretel.ai trained a FastCUT GAN using Python to generate realistic synthetic location data for any city in the world. Introduction At Gretel.ai, our mission is to make it fast and easy for developers and data scientists to create production-grade synthetic data. To achieve this, we’ve designed a series of APIs that allow anyone to get up and running within minutes so they can identify, transform and generate the data necessary to fuel the testing of modern software applications and AI/ML models. Python is the engine that powers much of Gretel’s research, development, and deployment of our APIs and toolkit. From a user experience perspective, Python’s extensive libraries and frameworks (e.g., Scikit-learn and TensorFlow for machine learning, Spacy for text processing, and Numpy for data exploration), its ability to handle complex data structures, and its turnkey integrations help us ensure Gretel’s platform is easy to use and extensible to any workflow or project. In this post, we highlight how–with the support of Python–we created a GAN location generator that can use map images and geolocation data to create new synthetic training data that can help the model predict where a human (or an e-bike in this case) might be, for any location in the world, with a high degree of statistical accuracy. This proof of concept for making better predictions by combining and contextualizing different types of data has applications across industries – such as improving medical diagnosis and financial market forecasts and even building realistic simulations in the metaverse. If you want to try this experiment yourself, all the tools, code, and data are open-sourced and available on GitHub. An Overview of the Process Generating realistic location data for users for testing or modeling simulations is a hard problem. Current approaches just create random locations inside a box, placing users in waterways or on top of buildings. This inability to make accurate, synthetic location data stifles a lot of innovative projects that require diverse and complex datasets to fuel their work. Gretel’s approach is to model this problem by encoding e-bike location data as pixels in an image, and then training that data as an image translation task similar to CycleGAN, Pix2pix, and StyleGAN. For this study, we used the newer contrastive unpaired translation (FastCUT) model that was created by the authors of pix2pix and CycleGAN as it’s memory-efficient, fast for training (i.e., useful for higher-res locations), and generalizes well with minimal parameter tuning. The Approach For this case study, we wanted to test if we could accurately predict the locations of scooters in one city based on training a GAN model using publicly available e-bike data from other cities. To do this, we first fed our model image data of different city maps, including DC, Denver, and San Diego, then separately trained the model on tabular data of e-bike locations throughout those cities, which included time-series data that captured the flow of e-bike traffic, too. Here is an example of what the raw data looks like before and after it was combined: Creating contextual learning by combining time-series and image data Three-Step Process There were three essential steps for training our model. First, we created the training data. To do this, we created a Domain A from a corpus of precise e-bike locations on a map, and a Domain B from the same maps, but without locations. Next, we trained our FastCUT model on our new training data (which includes both the labeled and unlabeled map images). This was accomplished by training the model on translating Domain B → Domain A. Lastly, once our initial model was trained, we generated our synthetic dataset, which we then used to further test and optimize the model’s predictions for realistic user locations for a new city map. This generative process required downloading new maps for a target location (Domain C), then running inference on the FastCUT model to predict scooter locations (in other words, translating Domain C → Domain A), and finally processing those images using OpenCV-Python to find e-bike locations and then convert them to geolocation (i.e., latitudinal/longitudinal) data points. With this information, we built our synthetic location dataset and we’re ready for testing. The Results: San Diego → San Francisco → Tokyo With our model trained on real-world San Diego e-bike data, we then repeated the same initial process of training our model with image data from various U.S. cities but then asked our model to predict the missing e-bike location data. The output was predictions t",
+    "scrapedAt": "2026-05-09 00:45:54.544147"
+  },
+  {
     "id": 557,
     "url": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/",
     "title": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
@@ -3843,26 +3878,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 558,
-    "url": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
-  },
-  {
-    "id": 559,
-    "url": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
-  },
-  {
-    "id": 560,
-    "url": "https://www.python.org/success-stories/create/"
-  },
-  {
-    "id": 561,
-    "url": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
-  },
-  {
-    "id": 562,
-    "url": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
   },
   {
     "id": 563,
@@ -96509,10 +96524,128 @@ window.searchData = [
     "id": 68669,
     "url": "https://www.zama.ai/post/build-an-end-to-end-encrypted-23andme-genetic-testing-application-using-concrete-ml-fully-homomorphic-encryption",
     "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 68678,
+    "url": "https://gretel.ai/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68680,
+    "url": "https://github.com/gretelai/GAN-location-generator.git",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68681,
+    "url": "https://imgur.com/kUq1ITA",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68683,
+    "url": "https://imgur.com/tGWSqTL",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 68690,
+    "url": "https://peps.python.org/pep-0020/#the-zen-of-python",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 68695,
+    "url": "https://survey.stackoverflow.co/2022/",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 68698,
+    "url": "https://lincolnloop.com",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 68703,
+    "url": "https://www.python.org/accounts/password/reset/",
+    "parentUrl": "https://www.python.org/success-stories/create/"
+  },
+  {
+    "id": 68704,
+    "url": "https://www.python.org/accounts/signup/",
+    "parentUrl": "https://www.python.org/success-stories/create/"
+  },
+  {
+    "id": 68708,
+    "url": "https://union-investment.com/home.html",
+    "parentUrl": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
+  },
+  {
+    "id": 68716,
+    "url": "https://www.hudsonrivertrading.com/hrtbeat/dependency-graph-python-codebase/",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 68717,
+    "url": "https://dropbox.tech/application/our-journey-to-type-checking-4-million-lines-of-python",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 68722,
+    "url": "https://www.hudsonrivertrading.com/hrtbeat/",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 68728,
+    "url": "https://en.wikipedia.org/wiki/Coupling_(computer_programming)",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/HRT_Building_a_Dependency_Graph_of_our_Python_Codebase.png",
+    "alt": "Building a Dependency Graph of Our Python Codebase",
+    "pageTitle": "Building a Dependency Graph of Our Python Codebase | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "src": "https://i.imgur.com/3MdTTlo.jpg",
+    "alt": "Rendered Summary Graph",
+    "pageTitle": "Building a Dependency Graph of Our Python Codebase | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Success_Story_Screenshot_dv24mLv.png",
+    "alt": "Screenshot of our web-based user interface powered by Python and the Django framework.",
+    "pageTitle": "Python for Financial Machine Learning at Union Investment | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/lincoln_loop.jpg",
+    "alt": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos",
+    "pageTitle": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Header_Image_FEpYWhD.jpg",
+    "alt": "Using Python with Gretel.ai to Generate Synthetic Location Data",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/9C4n5BG.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/tGWSqTL.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/kUq1ITA.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/1.png",
     "alt": "image1",
