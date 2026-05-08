@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 488,
+    "url": "http://docs.python.org/library/ftplib.html",
+    "title": "ftplib — FTP protocol client — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » ftplib — FTP protocol client | Theme Auto Light Dark | ftplib — FTP protocol client¶ Source code: Lib/ftplib.py This module defines the class FTP and a few related items. The FTP class implements the client side of the FTP protocol. You can use this to write Python programs that perform a variety of automated FTP jobs, such as mirroring other FTP servers. It is also used by the module urllib.request to handle URLs that use FTP. For more information on FTP (File Transfer Protocol), see internet RFC 959. The default encoding is UTF-8, following RFC 2640. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Here’s a sample session using the ftplib module: \u003e\u003e\u003e from ftplib import FTP\n\u003e\u003e\u003e ftp \u003d FTP(\u0027ftp.us.debian.org\u0027)  # connect to host, default port\n\u003e\u003e\u003e ftp.login()                     # user anonymous, passwd anonymous@\n\u0027230 Login successful.\u0027\n\u003e\u003e\u003e ftp.cwd(\u0027debian\u0027)               # change into \"debian\" directory\n\u0027250 Directory successfully changed.\u0027\n\u003e\u003e\u003e ftp.retrlines(\u0027LIST\u0027)           # list directory contents\n-rw-rw-r--    1 1176     1176         1063 Jun 15 10:18 README\n...\ndrwxr-sr-x    5 1176     1176         4096 Dec 19  2000 pool\ndrwxr-sr-x    4 1176     1176         4096 Nov 17  2008 project\ndrwxr-xr-x    3 1176     1176         4096 Oct 10  2012 tools\n\u0027226 Directory send OK.\u0027\n\u003e\u003e\u003e with open(\u0027README\u0027, \u0027wb\u0027) as fp:\n\u003e\u003e\u003e     ftp.retrbinary(\u0027RETR README\u0027, fp.write)\n\u0027226 Transfer complete.\u0027\n\u003e\u003e\u003e ftp.quit()\n\u0027221 Goodbye.\u0027\n Reference¶ FTP objects¶ class ftplib.FTP(host\u003d\u0027\u0027, user\u003d\u0027\u0027, passwd\u003d\u0027\u0027, acct\u003d\u0027\u0027, timeout\u003dNone, source_address\u003dNone, *, encoding\u003d\u0027utf-8\u0027)¶ Return a new instance of the FTP class. Parameters: host (str) – The hostname to connect to. If given, connect(host) is implicitly called by the constructor. user (str) – The username to log in with (default: \u0027anonymous\u0027). If given, login(host, passwd, acct) is implicitly called by the constructor. passwd (str) – The password to use when logging in. If not given, and if passwd is the empty string or \"-\", a password will be automatically generated. acct (str) – Account information to be used for the ACCT FTP command. Few systems implement this. See RFC-959 for more details. timeout (float | None) – A timeout in seconds for blocking operations like connect() (default: the global default timeout setting). source_address (tuple | None) – A 2-tuple (host, port) for the socket to bind to as its source address before connecting. encoding (str) – The encoding for directories and filenames (default: \u0027utf-8\u0027). The FTP class supports the with statement, e.g.: \u003e\u003e\u003e from ftplib import FTP\n\u003e\u003e\u003e with FTP(\"ftp1.at.proftpd.org\") as ftp:\n...     ftp.login()\n...     ftp.dir()\n...\n\u0027230 Anonymous login ok, restrictions apply.\u0027\ndr-xr-xr-x   9 ftp      ftp           154 May  6 10:43 .\ndr-xr-xr-x   9 ftp      ftp           154 May  6 10:43 ..\ndr-xr-xr-x   5 ftp      ftp          4096 May  6 10:43 CentOS\ndr-xr-xr-x   3 ftp      ftp            18 Jul 10  2008 Fedora\n\u003e\u003e\u003e\n Changed in version 3.2: Support for the with statement was added. Changed in version 3.3: source_address parameter was added. Changed in version 3.9: If the timeout parameter is set to be zero, it will raise a ValueError to prevent the creation of a non-blocking socket. The encoding parameter was added, and the default was changed from Latin-1 to UTF-8 to follow RFC 2640. Several FTP methods are available in two flavors: one for handling text files and another for binary files. The methods are named for the command which is used followed by lines for the text version or binary for the binary version. FTP instances have the following methods: set_debuglevel(level)¶ Set the instance’s debugging level as an int. This controls the amount of debugging output printed. The debug levels are: 0 (default): No debug output. 1: Produce a moderate amount of debug output, generally a single line per request. 2 or higher: Produce the maximum amount of debugging output, logging each line sent and received on the control connection. connect(host\u003d\u0027\u0027, port\u003d0, timeout\u003dNone, source_address\u003dNone)¶ Connect to the given host and port. This function should be called only once for each instance; it should not be called if a host argument was given when the FTP instance was created. All other FTP methods can only be called after a connection has successfully been made. Parameters: host (str) – The host to connect to. port (int) – The TCP port to connect to (default: 21, as specified by the FTP protocol specification). It is rarely needed to specify a different port number. timeout (float | None) – A timeout in seconds for the connection attempt (default: the global default timeout setting). source_address (tuple | None) – A 2-tuple (host, port) for the socket to bind to as its source address before connecting. Raises an auditing",
+    "scrapedAt": "2026-05-09 00:43:26.415974"
+  },
+  {
+    "id": 487,
+    "url": "http://bottlepy.org/",
+    "title": "Bottle: Python Web Framework — Bottle 0.14-dev documentation",
+    "content": "Bottle: Python Web Framework¶ Bottle is a fast, simple and lightweight WSGI micro web-framework for Python. It is distributed as a single file module and has no dependencies other than the Python Standard Library. Routing: Requests to function-call mapping with support for clean and dynamic URLs. Templates: Fast and pythonic built-in template engine and support for mako, jinja2 and cheetah templates. Utilities: Convenient access to form data, file uploads, cookies, headers and other HTTP features. Server: Built-in HTTP development server and support for a wide range of WSGI capable HTTP server (e.g. gunicorn, paste or cheroot). Example: “Hello World” in a bottle from bottle import route, run, template\n\n@route(\u0027/hello/\u003cname\u003e\u0027)\ndef index(name):\n    return template(\u0027\u003cb\u003eHello {{name}}\u003c/b\u003e!\u0027, name\u003dname)\n\nrun(host\u003d\u0027localhost\u0027, port\u003d8080)\n Run this script or paste it into a Python console, then point your browser to http://localhost:8080/hello/world. That’s it. Download and Install¶ Install the latest stable release with pip install bottle or download bottle.py (unstable) into your project directory. There are no hard [1] dependencies other than the Python standard library. Dead Snakes¶ Bottle up to version 0.12 supported an absurd range of Python versions, some of which reached their end-of-life well over a decade ago. Starting with Bottle 0.13 we ensure backwards compatibility with maintained versions of Python only. Outdated Python versions may still work, but are no longer tested for compatibility. If you are in the unfortunate position to have to rely on “dead snakes” for production, just stick with Bottle 0.12 (LTS) or whichever release of Bottle still supports it. Everyone else should upgrade regularly to benefit from new features and improvements. Python Support Matrix¶ Bottle Release Python 2 Python 3 0.12 2.5 - 2.7 3.2 - 3.12 0.13 2.7 \u003e\u003d3.8 [2] 0.14 (planned) dropped \u003e\u003d3.9 [2] Documentation¶ Getting Started User’s Guide Installation Hello World! The Application Object Debug Mode Command Line Interface Request Routing Serving Assets Generating content Error handling Request Data Templates Structuring Applications Glossary API Reference Global functions Global decorators Request Context Helper Functions Exceptions The Bottle Class The Request Object The Response Object Data Structures Request routing Templating HTTP utilities Misc utilities Release Notes Release 0.14 (in development) Release 0.13 Release 0.12 Release 0.11 Release 0.10 Release 0.9 Release 0.8 F.A.Q. General questions Common errors and pitfalls Recipes for common tasks Advanced Topics Request Routing Rule Syntax Wildcard Filters Legacy Syntax Explicit routing configuration Configuration Configuration Basics Naming Convention Load configuration from a File Load configuration from a python module Loading configuration from a dict Listening to configuration changes Filters and other Meta Data API Documentation SimpleTemplate SimpleTemplate Syntax Template Functions SimpleTemplate API Deployment Scaling for Production Asynchronous Applications The Limits of Synchronous WSGI Greenlets to the rescue Event Callbacks Finally: WebSockets Plugins Using Plugins Plugin Basics Managing Plugins Configuring Plugins Writing Plugins Plugin API The Route Context Runtime optimizations Common patterns Plugin Example: SQLitePlugin 3rd Party Plugins Additional Notes ToDo Application Example Goals Prior to Starting … Writing a Web-Based ToDo Application with Bottle Deployment Final Words Complete Example Listing Development Developer Notes Get involved Get the Sources Releases and Updates Repository Structure Submitting Patches Contributors License¶ Code and documentation are available according to the MIT License: Copyright (c) 2009-2025, Marcel Hellkamp.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n The Bottle logo however is NOT covered by that license. It is allowed to use the logo as a link to the bottle homepage or in direct context with the unmodified library. In all other cases please ask first. ",
+    "scrapedAt": "2026-05-09 00:43:25.210877"
+  },
+  {
+    "id": 486,
+    "url": "http://www.riverbankcomputing.co.uk/software/pyqt/intro",
+    "title": "Riverbank Computing | Introduction",
+    "content": "What is PyQt? PyQt is a set of Python bindings for The Qt Company\u0027s Qt application framework. The bindings are implemented as a set of Python modules and contain over 1,000 classes. PyQt6 supports Qt6 and runs on Windows (Intel and ARM), macOS (Intel and Apple Silicon) and Linux (Intel and ARM). PyQt5 supports Qt5 and runs on Windows (Intel), macOS (Intel and Apple Silicon), Android, iOS and Linux (Intel). PyQt4 supports Qt v4 but both are no longer supported and no new releases will be made. License PyQt is dual licensed on all supported platforms under the GNU GPL v3 and the Riverbank Commercial License. Unlike Qt, PyQt is not available under the LGPL. You can purchase the commercial version of PyQt here. More information about licensing can be found in the License FAQ. PyQt does not include a copy of Qt. You must obtain a correctly licensed copy of Qt yourself. However, binary wheels of the GPL version of PyQt6 and PyQt5 are provided and these include a copy of the corresponding LGPL version of Qt. PyQt Components A description of the components of PyQt5 can be found in the PyQt5 Reference Guide. A description of the components of PyQt4 can be found in the PyQt4 Reference Guide. Why PyQt? PyQt brings together the Qt C++ cross-platform application framework and the cross-platform interpreted language Python. Qt is more than a GUI toolkit. It includes abstractions of network sockets, threads, Unicode, regular expressions, SQL databases, SVG, OpenGL, XML, a fully functional web browser, a help system, a multimedia framework, as well as a rich collection of GUI widgets. Qt classes employ a signal/slot mechanism for communicating between objects that is type safe but loosely coupled making it easy to create re-usable software components. Qt also includes Qt Designer, a graphical user interface designer. PyQt is able to generate Python code from Qt Designer. It is also possible to add new GUI controls written in Python to Qt Designer. Python is a simple but powerful object-orientated language. Its simplicity makes it easy to learn, but its power means that large and complex applications can be created. Its interpreted nature means that Python programmers are very productive because there is no edit/compile/link/run development cycle. Much of Python\u0027s power comes from its comprehensive set of extension modules providing a wide variety of functions including HTTP servers, XML parsers, database access, data compression tools and, of course, graphical user interfaces. Extension modules are usually implemented in either Python, C or C++. Using tools such as SIP it is relatively straight forward to create an extension module that encapsulates an existing C or C++ library. Used in this way, Python can then become the glue to create new applications from established libraries. PyQt combines all the advantages of Qt and Python. A programmer has all the power of Qt, but is able to exploit it with the simplicity of Python. Recent News PyQt v6.11.0 Released SIP v6.15.3 Released SIP v6.15.2 Released PyQt v6.10.2 Released SIP v6.15.1 Released Downloads PyQt PyQt-3D PyQt-Charts PyQt-DataVisualization PyQt-Graphs PyQt-NetworkAuth PyQt-Purchasing PyQt-WebEngine SIP MetaSIP PyQt-builder pyqtdeploy QScintilla Documentation PyQt6 PyQt5 SIP MetaSIP PyQt-builder pyqtdeploy QScintilla PyQt4",
+    "scrapedAt": "2026-05-09 00:43:23.724797"
+  },
+  {
+    "id": 485,
+    "url": "https://www.odoo.com/",
+    "title": "Open Source ERP and CRM | Odoo",
+    "content": "Skip to Content All your business on one platform. Simple, efficient, yet affordable! 19.90 € / month for ALL apps Start now - It\u0027s free Meet an advisor Microbedrijf (\u003c 5 werknemers) Kleinbedrijf (6-50 werknemers) Middenbedrijf (51-250 medewerkers) Groot bedrijf (\u003e250 medewerkers) Accounting Knowledge Sign CRM Studio Subscriptions AI Point of Sale Discuss Documents Project Timesheets Field Service Planning Helpdesk eCommerce Website Email Marketing Purchase Inventory Manufacturing Sales HR Dashboard Imagine without odoo View all Apps Imagine a vast collection of business apps at your disposal. Got something to improve? There is an app for that. No complexity, no cost, just a one-click install. Each app simplifies a process and empowers more people. Imagine the impact when everyone gets the right tool for the job, tailored with native AI. If you simplify everything, you can do anything! - Bill McDermott, former CEO of SAP Level up your quality of work Optimized for productivity Experience true speed, reduced data entry, smart AI, and a fast UI. All operations are done in less than 90ms - faster than a blink. Compare with SAP Native AI across all your business Automate work, tailor features, perform deep research, and scale without limits. Enterprise software done right. Open source Behind the technology is a community of 100k+ developers collaborating worldwide. We\u0027re united by the spirit of open source, and a common vision: \"to transform companies, empower employees\". Odoo is available in two editions: • Community: Open Source, 100% free. • Enterprise: extra apps, infrastructure and professional services. Compare Editions Open Source + AI \u003d ❤️ Use Odoo.sh to develop or vibe-code tailored modules. As we are open source, LLMs are already trained on our source code. 40k+ community apps Thanks to its open source development model, Odoo became the world\u0027s largest business apps store. Imagine getting an app for every business needs. Browse Community Apps No corporate bullsh*t \"With most systems, you get 70% of what you hoped. With Odoo, you get more than what you expected. You, guys, will transform the market.\" - Anonymous competitor No vendor lock-in No proprietary data format, just PostgreSQL: you own your data. No software lock-in: you get the source code, GitHub access, and the flexibility to host on our infrastructure, or on premise. Follow us on GitHub Fair pricing No usage-based pricing, no feature upselling, no long term contracts, no hosting limits, no surprises... just a single price per user - all inclusive. View Pricing A unique value proposition Join 15 million happy users who grow their business with Odoo The processing time for accounting documents has been noticeably reduced, in certain cases even from 2 days to only 5 hours. As a result we can now focus on what matters: reporting and advising the client. Harry Van Donink CEO KPMG Belgium Unleash your growth potential Start now - It\u0027s free No credit card required Instant access Odoo Experience on YouTube 1. Use the live chat to ask your questions. 2. The operator answers within a few minutes. Watch now",
+    "scrapedAt": "2026-05-09 00:43:22.233413"
+  },
+  {
+    "id": 484,
+    "url": "https://www.python.org/",
+    "title": "Welcome to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! Get Started Whether you\u0027re new to programming or an experienced developer, it\u0027s easy to learn and use Python. Start with our Beginner’s Guide Download Python source code and installers are available for download for all versions! Latest: Python 3.14.4 Docs Documentation for Python\u0027s standard library, along with tutorials and guides, are available online. docs.python.org Jobs Looking for work or have a Python related position that you\u0027re trying to hire for? Our relaunched community-run job board is the place to go. jobs.python.org Latest News More 2026-05-07 Python 3.15.0 beta 1 is here! 2026-05-04 Python 3.14.5 release candidate 2026-04-23 Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉 2026-04-14 PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation 2026-04-13 Reflecting on Five Years as the PSF’s First CPython Developer in Residence Upcoming Events More 2026-05-13 PyCon US 2026 2026-05-27 PyCon Italia 2026 2026-06-03 Python Meeting Düsseldorf 2026-06-08 GeoPython 2026 2026-06-18 Python for (Almost) Everything Success Stories More When an Open Data standard is created and promoted, it’s important to think why - what change is this trying to drive? What will people do with this data that they couldn’t do before? Saving the world with Open Data and Python by James Baster Use Python for… More Web Development: Django, Pyramid, Bottle, Tornado, Flask, Litestar, FastAPI GUI Development: tkInter, PyGObject, PyQt, PySide, Kivy, wxPython, DearPyGui AI and Machine Learning: PyTorch, TensorFlow, scikit-learn, Transformers, Anthropic, LangChain Scientific and Numeric: SciPy, Pandas, IPython Software Development: Buildbot, Trac, Roundup System Administration: Ansible, Salt, OpenStack, xonsh \u003e\u003e\u003e Python Software Foundation The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Learn more Become a Member Donate to the PSF",
+    "scrapedAt": "2026-05-09 00:43:20.825011"
+  },
+  {
     "id": 483,
     "url": "http://www.plone.org/",
     "title": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
@@ -3363,26 +3398,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-09 00:27:19.568931"
-  },
-  {
-    "id": 484,
-    "url": "https://www.python.org/"
-  },
-  {
-    "id": 485,
-    "url": "https://www.odoo.com/"
-  },
-  {
-    "id": 486,
-    "url": "http://www.riverbankcomputing.co.uk/software/pyqt/intro"
-  },
-  {
-    "id": 487,
-    "url": "http://bottlepy.org/"
-  },
-  {
-    "id": 488,
-    "url": "http://docs.python.org/library/ftplib.html"
   },
   {
     "id": 489,
@@ -88059,10 +88074,839 @@ window.searchData = [
     "id": 65892,
     "url": "https://plone.org/foundation/board",
     "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 65946,
+    "url": "https://www.odoo.com/app/discuss",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65947,
+    "url": "https://www.odoo.com/app/subscriptions",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65948,
+    "url": "https://www.odoo.com/app/point-of-sale-shop",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65949,
+    "url": "https://www.odoo.com/page/editions",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65950,
+    "url": "https://www.odoo.com/app/project",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65951,
+    "url": "https://www.odoo.com/app/knowledge",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65952,
+    "url": "https://www.odoo.com/app/employees",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65953,
+    "url": "https://www.odoo.com/page/all-apps",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65954,
+    "url": "https://www.odoo.com/app/studio",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65955,
+    "url": "https://www.odoo.com/appointment/5295",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65956,
+    "url": "https://www.odoo.com/app/purchase",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65957,
+    "url": "https://www.odoo.com/#",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65958,
+    "url": "https://www.odoo.com/app/documents",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65959,
+    "url": "https://www.odoo.com/app/field-service",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65960,
+    "url": "https://www.odoo.com/fr_FR/event/odoo-experience-2025-6601/track",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65961,
+    "url": "https://www.odoo.com/app/accounting",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65962,
+    "url": "https://www.odoo.com/app/sign",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65963,
+    "url": "https://www.odoo.com/app/inventory",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65964,
+    "url": "https://www.odoo.com/app/email-marketing",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65965,
+    "url": "https://www.odoo.com/trial",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65966,
+    "url": "https://apps.odoo.com/apps",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65967,
+    "url": "https://www.odoo.com/app/planning",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65968,
+    "url": "https://www.odoo.com/app/timesheet",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65969,
+    "url": "https://www.odoo.com/app/website",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65970,
+    "url": "https://www.odoo.com/app/ecommerce",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65971,
+    "url": "https://github.com/odoo",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65972,
+    "url": "https://www.odoo.com/pricing",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65973,
+    "url": "https://www.odoo.com/appointment/10551",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65974,
+    "url": "https://www.odoo.com/#wrap",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65975,
+    "url": "https://www.odoo.com/appointment/6693",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65976,
+    "url": "https://www.odoo.com/appointment/6694",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65977,
+    "url": "https://www.odoo.com/app/helpdesk",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65978,
+    "url": "https://www.odoo.com/app/manufacturing",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65979,
+    "url": "https://www.odoo.com/app/spreadsheet",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65980,
+    "url": "https://www.odoo.com/app/crm",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65981,
+    "url": "https://www.odoo.com/app/sales",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 65982,
+    "url": "https://www.odoo.sh",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 66141,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.size",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66144,
+    "url": "https://docs.python.org/3/glossary.html#term-callable",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66145,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stdout",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66147,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_reply",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66148,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_temp",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66150,
+    "url": "https://docs.python.org/3/library/internet.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66151,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/ftplib.py",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66152,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.storbinary",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66153,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.retrbinary",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66154,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_perm",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66155,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.cwd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66156,
+    "url": "https://docs.python.org/3/library/ftplib.html#reference",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66157,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.ssl_version",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66159,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.delete",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66160,
+    "url": "https://docs.python.org/3/library/stdtypes.html#tuple",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66161,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.abort",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66162,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66163,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftp-objects",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66164,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.readline",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66165,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.all_errors",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66166,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.close",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66167,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.set_debuglevel",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66169,
+    "url": "https://docs.python.org/3/library/intro.html#wasm-availability",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66171,
+    "url": "https://docs.python.org/3/library/poplib.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66172,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.getwelcome",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66173,
+    "url": "https://docs.python.org/3/library/http.client.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66174,
+    "url": "https://docs.python.org/3/library/ftplib.html#module-ftplib",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66175,
+    "url": "https://docs.python.org/3/library/sys.html#auditing",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66176,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.login",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66177,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.transfercmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66179,
+    "url": "https://docs.python.org/3/library/exceptions.html#EOFError",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66180,
+    "url": "https://docs.python.org/3/library/ftplib.html#",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66181,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/ftplib.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66182,
+    "url": "https://docs.python.org/3/library/ftplib.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66183,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.storlines",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66184,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3659.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66185,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.pwd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66186,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4217.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66190,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.voidcmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66191,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl-security",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66192,
+    "url": "https://docs.python.org/3/library/ftplib.html#module-variables",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66193,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.quit",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66194,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.ntransfercmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66196,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66197,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.check_hostname",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66198,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_SSLv23",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66199,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.sendcmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66200,
+    "url": "https://docs.python.org/3/library/io.html#io.RawIOBase.read",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66201,
+    "url": "https://docs.python.org/3/library/intro.html#availability",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66202,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.nlst",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66203,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_proto",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66204,
+    "url": "https://datatracker.ietf.org/doc/html/rfc959.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66205,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.prot_c",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66206,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.rename",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66210,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.prot_p",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66211,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2640.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66216,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.retrlines",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66217,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.set_pasv",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66218,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.mlsd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66219,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66220,
+    "url": "https://docs.python.org/3/glossary.html#term-file-object",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66221,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.dir",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66222,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_SNI",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66223,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.connect",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66224,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.rmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66225,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftp-tls-objects",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66226,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.ccc",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66227,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.mkd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66228,
+    "url": "https://docs.python.org/3/library/netrc.html#module-netrc",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66230,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.auth",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ftplib — FTP protocol client — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ftplib — FTP protocol client — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "src": "https://bottlepy.org/docs/dev/_static/logo_nav.png",
+    "alt": "Logo of Bottle",
+    "pageTitle": "Bottle: Python Web Framework — Bottle 0.14-dev documentation",
+    "pageUrl": "http://bottlepy.org/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_doodle_1.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/apps_switched.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/accountant/static/description/icon.svg",
+    "alt": "Odoo Accounting icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/knowledge/static/description/icon.svg",
+    "alt": "Odoo Knowledge icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/sign/static/description/icon.svg",
+    "alt": "Odoo Sign icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/crm/static/description/icon.svg",
+    "alt": "Odoo CRM icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/web_studio/static/description/icon.svg",
+    "alt": "Odoo Studio icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/sale_subscription/static/description/icon.svg",
+    "alt": "Odoo Subscriptions icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/ai_app/static/description/icon.svg",
+    "alt": "Odoo Unknown icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/point_of_sale/static/description/icon.svg",
+    "alt": "Odoo Point of Sale icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/mail/static/description/icon.svg",
+    "alt": "Odoo Discuss icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/documents/static/description/icon.svg",
+    "alt": "Odoo Documents icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/project/static/description/icon.svg",
+    "alt": "Odoo Project icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/hr_timesheet/static/description/icon.svg",
+    "alt": "Odoo Timesheet icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/industry_fsm/static/description/icon.svg",
+    "alt": "Odoo Field Service icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/planning/static/description/icon.svg",
+    "alt": "Odoo Planning icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/helpdesk/static/description/icon.svg",
+    "alt": "Odoo Helpdesk icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/website_sale/static/description/icon.svg",
+    "alt": "Odoo eCommerce icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/website/static/description/icon.svg",
+    "alt": "Odoo Website icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/mass_mailing/static/description/icon.svg",
+    "alt": "Odoo Email Marketing icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/purchase/static/description/icon.svg",
+    "alt": "Odoo Purchase icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/stock/static/description/icon.svg",
+    "alt": "Odoo Inventory icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/mrp/static/description/icon.svg",
+    "alt": "Odoo Manufacturing icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/sale/static/description/icon.svg",
+    "alt": "Odoo Sales icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/hr/static/description/icon.svg",
+    "alt": "Odoo Employees icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/spreadsheet_dashboard/static/description/icon.svg",
+    "alt": "Odoo Spreadsheet dashboard icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/arrows/secondary_arrow_sm_03.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_persona/bg_yellow.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_persona/bill.png",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/speed_1.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/ctrl-k-630.gif",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/speed_3.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/speed_4.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/mobile_productivity.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_doodle_3.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/youtube.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/claude.webp",
+    "alt": "Odoo Sh AI",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/unique-value-2024.svg",
+    "alt": "Unique value",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_doodle_4.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_circular_down_left.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/arrows/grey_arrow_loop_02.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_testimonials/quote.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_testimonials/avatar/van_donink.webp",
+    "alt": "Harry Van Donink picture",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_testimonials/logo/kpmg_logo.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/arrows/secondary_arrow_sm_01.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/2016/live-support/info.gif",
+    "alt": "Live support on Youtube",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
   {
     "src": "https://plone.org/static/media/logo.cab945d8.svg",
     "alt": "Plone.org logo",
