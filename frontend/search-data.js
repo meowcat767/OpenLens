@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 177,
+    "url": "https://www.python.org/events/python-events/2036/",
+    "title": "PyCon Italia 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon Italia 2026 Bologna, Italy From 27 May through 30 May, 2026 PyCon Italia 2026 ← Previous Python Leiden User Group in Leiden, The Netherlands Next → PyCon DE 2027 in Heidelberg, Germany Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Bologna, Italy PyCon Italia 2026 PyCon Italia 2025",
+    "scrapedAt": "2026-05-10 03:46:28.676536"
+  },
+  {
+    "id": 176,
+    "url": "https://www.python.org/about/apps",
+    "title": "Applications for Python | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e About\u003e\u003e\u003e Applications Python is used in many application domains. Here\u0027s a sampling. The Python Package Index lists thousands of third party modules for Python. Web and Internet Development Python offers many choices for web development: Frameworks such as Django and Pyramid. Micro-frameworks such as Flask and Bottle. Advanced content management systems such as Plone and django CMS. Python\u0027s standard library supports many Internet protocols: HTML and XML JSON E-mail processing. Support for FTP, IMAP, and other Internet protocols. Easy-to-use socket interface. And the Package Index has yet more libraries: Requests, a powerful HTTP client library. Beautiful Soup, an HTML parser that can handle all sorts of oddball HTML. Feedparser for parsing RSS/Atom feeds. Paramiko, implementing the SSH2 protocol. Twisted Python, a framework for asynchronous network programming. Scientific and Numeric Python is widely used in scientific and numeric computing: SciPy is a collection of packages for mathematics, science, and engineering. Pandas is a data analysis and modeling library. IPython is a powerful interactive shell that features easy editing and recording of a work session, and supports visualizations and parallel computing. The Software Carpentry Course teaches basic skills for scientific computing, running bootcamps and providing open-access teaching materials. Education Python is a superb language for teaching programming, both at the introductory level and in more advanced courses. Books such as How to Think Like a Computer Scientist, Python Programming: An Introduction to Computer Science, and Practical Programming. The Education Special Interest Group is a good place to discuss teaching issues. Desktop GUIs The Tk GUI library is included with most binary distributions of Python. Some toolkits that are usable on several platforms are available separately: wxWidgets Kivy, for writing multitouch applications. Qt via pyqt or pyside Platform-specific toolkits are also available: GTK+ Microsoft Foundation Classes through the win32 extensions Software Development Python is often used as a support language for software developers, for build control and management, testing, and in many other ways. SCons for build control. Buildbot and Apache Gump for automated continuous compilation and testing. Roundup or Trac for bug tracking and project management. Business Applications Python is also used to build ERP and e-commerce systems: Odoo is an all-in-one management software that offers a range of business applications that form a complete suite of enterprise management applications. Tryton is a three-tier high-level general purpose application platform. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 03:46:25.581402"
+  },
+  {
+    "id": 175,
+    "url": "https://www.python.org/events/python-user-group/2104/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 03 June from 4pm UTC to 7pm UTC, 2026 Python Meeting Düsseldorf ← Previous PyLadies Amsterdam: Scalable Data Harvesting for AI in Amsterdam, The Netherlands and Online Next → Django Girls Sogakope 2026 in Sogakope, Ghana Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-10 03:46:23.1301"
+  },
+  {
+    "id": 174,
+    "url": "https://www.wxpython.org/",
+    "title": "Welcome to wxPython! | wxPython",
+    "content": "Skip to main content This website is all about wxPython, the cross-platform GUI toolkit for the Python language. With wxPython software developers can create truly native user interfaces for their Python applications, that run with little or no modifications on Windows, Macs and Linux or other unix-like systems. Learn more Latest News wxPython 4.2.4 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.8.1 release tag. The only exception is that libtiff and pcre2 bundled with wxWidgets are updated to the versions from the wxWidgets master branch (libtiff 4.7.0 and pcre2 10.44). Fix using setuptools.build_meta backend (#2732) Fix EOL style in wx.py.editwindow.py (#2741) Replace imp with types in wx.py.editor.py (#2745) Fix floatcanvas Text.ShiftFunDict: convert float to int (#2749) Fix up/down option not working on the initial search in wx.py.frame (#2747) Fix floatcanvas Arrow, Point, Bitmap drawings (#2750) Officially support and build wheels for Python 3.14 and Windows 11 ARM Fix crash when calling wx.SystemSettings.GetAppearance() without App (#2771) Enable whole word search in wx.py.editwindow (#2769) Add MaxSize limit to ScaledBitmap drawing in FloatCanvas (#2768) Fix more OGL float/int conversion issues (#2739) Major speedups and bug fixes to CustomTreeCtrl and HyperTreeList (#2088) Fix duplicated string constants in wx.propgrid (#2790) Add non-zero width and height to default tab size to avoid wxWidgets warning in wx.lib.agw.aui.auibook (#2788) Fix SetHeaderHeight in UltimateListCtrl (#2239) Add ScrollLeft and ScrollDown to PlotCanvas (#2795) Add sample of PlotCanvas usage (#2794) Fix a linker issue with GCC 16+ and wxHelpControllerBase (#2807) wxPython 4.2.3 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.7 release tag. The only exception is that libtiff and pcre2 bundled with wxWidgets are updated to the versions from the wxWidgets master branch (libtiff 4.7.0 and pcre2 10.44). Fix test issues with wx.lib.introspect (#2717) Add support for building on Windows ARM64 (#2521) Incorporate many improvements to type stubs (#2665) Fix building documentation with latest sphinx (#2672) Build smaller architecture-specific wheels on macOS instead of large universal2 wheels Calculate scroll based on child\u0027s relative position to scrolledpanel in wx.lib.scrolledpanel Fix float -\u003e int conversion issues in wx.lib.fancytext (#2703) Replace deprecated NumPy type aliases Use wx.StaticText in wx.lib.agw.hyperlink (#2686) Implement partial support for pyproject.toml and other build process improvements Remove use of six and most Python 2 compatibility code Fix wxWidgets build on OpenSUSE (#558, #1067, #2422, #2532) Fix more int conversions in wx.lib.agw.flatnotebook Make build output reproducible Enable overridding wx.Sizer.InformFirstDirection() (#2452) Implement iter for wxList iterator classes (fixes Python 3.13.1 issue) Fix wx.lib.mixins.rubberband not clearing DC on redraw Support implementing CreateBitmapBundle for custom ArtProvider Fix float/int conversion issues in wx.lib.ogl Include usage of wxMemoryFSHandler in webview demo Fix crash when accessing wx.stc.StyledTextCtrl.DropTarget.Data (#2043) Fix AuiManager pane minimizing issue Add range field to wx.lib.agw.pygauge.PyGauge format string (#2583) Fix pickling of wx.RealPoint (#2644) Avoid calling FlatMenu Destroy() in a finally block (#2630) Update wxApp.IsDisplayAvailable to work on Wayland Fix InspectionTool crashes due to bad perspective string errors Drop support for Python 3.8 (EOL) Add CreateAccessible for Windows only Added check condition to AuiManager LoadPerspective() Fix RecursionError in platebtn bitmap getters Add Python implementation of GetPaths (#1944) Support Wayland GTK backend in Window.GetHandle Refactor python only pdfviewer to support displaying pdf files where not all pages have the same size Improve support when specifying a pre-existing toolbar as the target for the restore icon when minimizing a pane in agw.aui Multiple bugfixes in pure python aui pdfviewer: Add support for pymupdf renaming wxPython 4.2.2 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.6 release tag. This is the first release built using GitHub infrastructure instead of the buildbots. Please report any problems with the wheels. Fix some Python 3.12 compatibility issues (segfault on exit) by upgrading sip \u0026 waf Fix more float/int conversion issues in wx.lib classes (#2415, #2417, #2429, #2470, #2528, #2542) Add initialValue argument to wx.lib.DirBrowseButton (#2430) Fix wxImage.Clear() (#2433) Fix blurry text in AuiNotebook tab (#2360) Add support for frozen rows and columns to GridWithLabelRenderersMixin (#2436) demo: ShortcutEditor: Fix broken call GetMenuBar() (#2412) Add proper support for DataViewCheckIcon",
+    "scrapedAt": "2026-05-10 03:46:20.376337"
+  },
+  {
+    "id": 173,
+    "url": "https://www.python.org/downloads/release/python-3144/",
+    "title": "Python Release Python 3.14.4 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Note: Python 3.14.4 has been superseded by Python 3.14.5rc1. Release date: April 7, 2026 This is fourth maintenance release of Python 3.14 Python 3.14.4 is the fourth maintenance release of 3.14, containing around 337 bugfixes, build improvements and documentation changes since 3.14.3. Major new features of the 3.14 series, compared to 3.13 Some of the major new features and changes in Python 3.14 are: New features PEP 779: Free-threaded Python is officially supported PEP 649: The evaluation of annotations is now deferred, improving the semantics of using annotations. PEP 750: Template string literals (t-strings) for custom string processing, using the familiar syntax of f-strings. PEP 734: Multiple interpreters in the stdlib. PEP 784: A new module compression.zstd providing support for the Zstandard compression algorithm. PEP 758: except and except* expressions may now omit the brackets. Syntax highlighting in PyREPL, and support for color in unittest, argparse, json and calendar CLIs. PEP 768: A zero-overhead external debugger interface for CPython. UUID versions 6-8 are now supported by the uuid module, and generation of versions 3-5 are up to 40% faster. PEP 765: Disallow return/break/continue that exit a finally block. PEP 741: An improved C API for configuring Python. A new type of interpreter. For certain newer compilers, this interpreter provides significantly better performance. Opt-in for now, requires building from source. Improved error messages. Builtin implementation of HMAC with formally verified code from the HACL* project. A new command-line interface to inspect running Python processes using asynchronous tasks. The pdb module now supports remote attaching to a running Python process. For more details on the changes to Python 3.14, see What’s new in Python 3.14. Build changes PEP 761: Python 3.14 and onwards no longer provides PGP signatures for release artifacts. Instead, Sigstore is recommended for verifiers. Official macOS and Windows release binaries include an experimental JIT compiler. Official Android binary releases are now available. Incompatible changes, removals and new deprecations Incompatible changes Python removals and deprecations C API removals and deprecations Overview of all pending deprecations Python install manager The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases. More resources Online documentation PEP 745, 3.14 Release Schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors) and support the Python community And now for something completely different On 4th April, 3.14 months of the year had elapsed. Enjoy the new release Thanks to all of the many volunteers who help make Python Development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation. Full Changelog macOS Download macOS installer Windows Download Python install manager Source release Download XZ compressed source tarball Version Operating system Description File size Sigstore SBOM SHA-256 checksum Gzipped source tarball Source release 29.7 MB .sigstore SPDX b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b XZ compressed source tarball Source release 22.8 MB .sigstore SPDX d923c51303e38e249136fc1bdf3568d56ecb03214efdef48516176d3d7faaef8 Android embeddable package (aarch64) Android 20.4 MB .sigstore 410fff96f47d818136f91f79c8f83202e1364aeaab2022d00fa70e53007ebde1 Android embeddable package (x86_64) Android 20.8 MB .sigstore 389bff0b28ddf49651abcc150db21ba617fca3e6ad15cc05544ef1b5b23b9ac1 macOS installer macOS for macOS 10.15 and later 72.4 MB .sigstore 1c5a9b1d0a3f14cf3c38f033232b7ff45efd2eddde5940169f20ef84ec7235b5 Windows installer (64-bit) Windows Recommended 28.9 MB .sigstore SPDX b571567bd11ea98fd7a2cf85791d2c8557a63b1e04e9d1dae665a275cac87f1b Windows installer (32-bit) Windows 27.5 MB .sigstore SPDX 67bef323d951363d06aa73cbbb8a372303c96912b512778ce48fbf9a521cbbfe Windows installer (ARM64) Windows Experimental 28.2 MB .sigstore SPDX c1aee4dfe56ef32a0c5ebf58f6fb1c97dcf037683d659ee16ee5b8641204766a Windows embeddable package (64-bit) Windows 11.5 MB .sigstore SPDX cda80a9b1e75c0f1b4f9872ca1b417f0d19bce32facc811aea9180e70fad5fb9 Windows embeddable package (32-bit) Windows 10.1 MB .sigstore SPDX 30e96fbe2a92c24296dd76201dbf793fb877721060e834",
+    "scrapedAt": "2026-05-10 03:46:14.867133"
+  },
+  {
     "id": 172,
     "url": "https://www.oracle.com/javadownload",
     "title": "Java Downloads | Oracle",
@@ -1202,26 +1237,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 173,
-    "url": "https://www.python.org/downloads/release/python-3144/"
-  },
-  {
-    "id": 174,
-    "url": "https://www.wxpython.org/"
-  },
-  {
-    "id": 175,
-    "url": "https://www.python.org/events/python-user-group/2104/"
-  },
-  {
-    "id": 176,
-    "url": "https://www.python.org/about/apps"
-  },
-  {
-    "id": 177,
-    "url": "https://www.python.org/events/python-events/2036/"
   },
   {
     "id": 178,
@@ -32849,10 +32864,131 @@ window.searchData = [
     "id": 18186,
     "url": "https://docs.oracle.com/en/java/java-components/enterprise-performance-pack/",
     "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18263,
+    "url": "https://wiki.wxpython.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18264,
+    "url": "https://wxwidgets.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18265,
+    "url": "https://www.wxwidgets.org/blog/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18266,
+    "url": "https://www.wxpython.org/news/rss.xml",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18267,
+    "url": "https://pypi.org/project/wxPython/4.2.2",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18268,
+    "url": "https://pypi.org/project/wxPython/4.2.3",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18269,
+    "url": "https://pypi.org/project/wxPython/4.2.4",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18270,
+    "url": "https://github.com/wxWidgets/Phoenix/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18271,
+    "url": "https://www.findmyelectric.com/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18272,
+    "url": "https://www.wxpython.org/pages/overview",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18273,
+    "url": "http://wxglade.sourceforge.net/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18274,
+    "url": "https://www.wxpython.org/archive.html",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18275,
+    "url": "https://extras.wxpython.org/wxPython4/extras/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18276,
+    "url": "https://discuss.wxpython.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18277,
+    "url": "https://www.wxpython.org/pages/overview/#hello-world",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18278,
+    "url": "https://www.wxpython.org/#content",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18279,
+    "url": "https://www.wxpython.org/news",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18280,
+    "url": "https://www.wxpython.org/blog/rss.xml",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18281,
+    "url": "https://www.wxpython.org/categories/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18282,
+    "url": "http://docs.wxpython.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18283,
+    "url": "https://github.com/wxFormBuilder/wxFormBuilder",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18284,
+    "url": "http://www.blog.pythonlibrary.org/",
+    "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18285,
+    "url": "https://github.com/wxWidgets/Phoenix/issues",
+    "parentUrl": "https://www.wxpython.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://hugovk.dev/python-3.14.png",
+    "alt": "Two snakes enjoying a pie with 3.14 on the top and π crimping",
+    "pageTitle": "Python Release Python 3.14.4 | Python.org",
+    "pageUrl": "https://www.python.org/downloads/release/python-3144/"
+  },
   {
     "src": "https://www.oracle.com/a/ocom/img/rh03-java.webp",
     "alt": "",
