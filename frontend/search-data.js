@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 681,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-c",
+    "title": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located on the Python module path and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Search sys.path for the named module and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, the first element of sys",
+    "scrapedAt": "2026-05-10 04:34:41.929219"
+  },
+  {
+    "id": 680,
+    "url": "https://github.com/python/cpython/issues/127648",
+    "title": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Contributor srittau commented Dec 5, 2024 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. Issue: Add simple Reader and Writer protocols #127647 📚 Documentation preview 📚: https://cpython-previews--127648.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Add typing.Reader and Writer protocols b45fec0 srittau requested review from AlexWaygood and JelleZijlstra as code owners December 5, 2024 18:55 bedevere-app Bot mentioned this pull request Dec 5, 2024 Add simple Reader and Writer protocols #127647 Closed bedevere-app Bot added the awaiting review label Dec 5, 2024 Copy link Copy Markdown Contributor Author srittau commented Dec 5, 2024 A few design considerations: I used the names Reader and Writer to match existing ABC names in typing/collections.abc. Alternatives are Readable and Writable, but I think they are used more rarely for these kind of (pseudo-)protocols. SupportsX would work for Writer, but not for Reader, since the latter supports multiple methods. (Any we maybe want to use SupportsRead etc. at some point for tighter protocols.) I would prefer these protocols to be in io, where they fit better thematically, but that would require importing typing with unforseeable (performance) implications for such a foundational module. I deliberated using tighter protocols, but for ease of use reasons – and since they are mostly an alternative to using IO et al. – I went with larger protocols for now. Seekable (with methods seek and tell) would be an interesting addition as well, but I think this should wait for easy protocol composition. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. srittau added 4 commits December 5, 2024 20:02 Add a note about Iterable 1525e05 Fix docs formatting 7867ec1 Small wording improvements 6a22a02 Simplify the docs/improve formatting 5d632a3 Copy link Copy Markdown Contributor Author srittau commented Dec 5, 2024 https://cpython-previews--127648.org.readthedocs.build/en/127648/library/typing.html#abcs-and-protocols-for-working-with-i-o All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. sobolevn reviewed Dec 5, 2024 View reviewed changes Comment thread Lib/typing.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. picnixz reviewed Dec 5, 2024 View reviewed changes Copy link Copy Markdown Member picnixz left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I\u0027m a bit sad that we can\u0027t use covariance and contravariance in the protocols since a subclass could use it with an invariant type. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Lib/typing.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/typing.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/typing.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Explicitly document the methods … 4d50c2e Small improvements to the docstrings and signature JelleZijlstra reviewed Dec 5, 2024 View reviewed changes Comment thread Doc/library/typing.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/typing.rst Outdated Protocol for reading from a file or other input stream. .. method:: read(size\u003d...) Copy link Copy Markdown Member JelleZijlstra Dec 5, 2024 There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Suggested change .. method:: read(size\u003d...) .. method:: read(size\u003d..., /) (Same for other methods) Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown Contributor Author srittau Dec 6, 2024 There was a ",
+    "scrapedAt": "2026-05-10 04:34:38.766153"
+  },
+  {
+    "id": 679,
+    "url": "https://docs.python.org/3/bugs.html",
+    "title": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Dealing with Bugs | Theme Auto Light Dark | Dealing with Bugs¶ Python is a mature programming language which has established a reputation for stability. In order to maintain this reputation, the developers would like to know of any deficiencies you find in Python. It can be sometimes faster to fix bugs yourself and contribute patches to Python as it streamlines the process and involves fewer people. Learn how to contribute. Documentation bugs¶ If you find a bug in this documentation or would like to propose an improvement, please submit a bug report on the issue tracker. If you have a suggestion on how to fix it, include that as well. You can also open a discussion item on our Documentation Discourse forum. If you find a bug in the theme (HTML / CSS / JavaScript) of the documentation, please submit a bug report on the python-doc-theme issue tracker. See also Documentation bugs A list of documentation bugs that have been submitted to the Python issue tracker. Issue Tracking Overview of the process involved in reporting an improvement on the tracker. Helping with Documentation Comprehensive guide for individuals that are interested in contributing to Python documentation. Documentation Translations A list of GitHub pages for documentation translation and their primary contacts. Using the Python issue tracker¶ Issue reports for Python itself should be submitted via the GitHub issues tracker (https://github.com/python/cpython/issues). The GitHub issues tracker offers a web form which allows pertinent information to be entered and submitted to the developers. The first step in filing a report is to determine whether the problem has already been reported. The advantage in doing so, aside from saving the developers’ time, is that you learn what has been done to fix it; it may be that the problem has already been fixed for the next release, or additional information is needed (in which case you are welcome to provide it if you can!). To do this, search the tracker using the search box at the top of the page. If the problem you’re reporting is not already in the list, log in to GitHub. If you don’t already have a GitHub account, create a new account using the “Sign up” link. It is not possible to submit a bug report anonymously. Being now logged in, you can submit an issue. Click on the “New issue” button in the top bar to report a new issue. The submission form has two fields, “Title” and “Comment”. For the “Title” field, enter a very short description of the problem; fewer than ten words is good. In the “Comment” field, describe the problem in detail, including what you expected to happen and what did happen. Be sure to include whether any extension modules were involved, and what hardware and software platform you were using (including version information as appropriate). Each issue report will be reviewed by a developer who will determine what needs to be done to correct the problem. You will receive an update each time an action is taken on the issue. See also How to Report Bugs Effectively Article which goes into some detail about how to create a useful bug report. This describes what kind of information is useful and why it is useful. Bug Writing Guidelines Information about writing a good bug report. Some of this is specific to the Mozilla project, but describes general good practices. Getting started contributing to Python yourself¶ Beyond just reporting bugs that you find, you are also welcome to submit patches to fix them. You can find more information on how to get started patching Python in the Python Developer’s Guide. If you have questions, the core-mentorship mailing list is a friendly place to get answers to any and all questions pertaining to the process of fixing issues in Python. Table of Contents Dealing with Bugs Documentation bugs Using the Python issue tracker Getting started contributing to Python yourself Previous topic About this documentation Next topic Copyright This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Dealing with Bugs | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 09, 2026 (15:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-10 04:34:30.383363"
+  },
+  {
+    "id": 678,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:34:26.393843"
+  },
+  {
+    "id": 677,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-X",
+    "title": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located on the Python module path and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Search sys.path for the named module and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, the first element of sys",
+    "scrapedAt": "2026-05-10 04:34:19.514458"
+  },
+  {
     "id": 676,
     "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32",
     "title": "Integer Objects — Python 3.14.5rc1 documentation",
@@ -4452,26 +4487,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 677,
-    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
-  },
-  {
-    "id": 678,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning"
-  },
-  {
-    "id": 679,
-    "url": "https://docs.python.org/3/bugs.html"
-  },
-  {
-    "id": 680,
-    "url": "https://github.com/python/cpython/issues/127648"
-  },
-  {
-    "id": 681,
-    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-c"
   },
   {
     "id": 682,
@@ -108750,10 +108765,2087 @@ window.searchData = [
     "id": 76650,
     "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromNativeBytes",
     "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76653,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-W",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76654,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-V",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76655,
+    "url": "https://docs.python.org/3/using/cmdline.html#miscellaneous-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76660,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPROFILEIMPORTTIME",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76661,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PYMEM_DOMAIN_MEM",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76662,
+    "url": "https://docs.python.org/3/library/readline.html#module-readline",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76663,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-d",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76665,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-b",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76666,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-i",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76667,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-h",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76668,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGABRT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76670,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONNODEBUGRANGES",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76671,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-q",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76672,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#import",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76673,
+    "url": "https://docs.python.org/3/using/cmdline.html#debug-mode-variables",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76674,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-u",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76675,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-s",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76676,
+    "url": "https://docs.python.org/3/library/runpy.html#runpy.run_path",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76677,
+    "url": "https://docs.python.org/3/reference/introduction.html#implementations",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76678,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#tut-invoking",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76679,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-E",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76680,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONMALLOCSTATS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76682,
+    "url": "https://docs.python.org/3/using/cmdline.html#command-line",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76683,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-B",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76684,
+    "url": "https://docs.python.org/3/library/sysconfig.html#sysconfig-user-scheme",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76685,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONASYNCIODEBUG",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76686,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-I",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76687,
+    "url": "https://docs.python.org/3/using/cmdline.html#",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76688,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#tut-interac",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76689,
+    "url": "https://docs.python.org/3/library/faulthandler.html#module-faulthandler",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76690,
+    "url": "https://docs.python.org/3/c-api/memory.html#pymalloc",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76691,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-P",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76693,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-S",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76694,
+    "url": "https://docs.python.org/3/glossary.html#term-REPL",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76696,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-R",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76697,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__interactivehook__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76698,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDUMPREFS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76700,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-version",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76701,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_FROZEN_MODULES",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76702,
+    "url": "https://peps.python.org/pep-0538/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76704,
+    "url": "https://docs.python.org/3/using/cmdline.html#generic-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76705,
+    "url": "https://docs.python.org/3/glossary.html#term-bytecode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76706,
+    "url": "https://docs.python.org/3/using/configure.html#debug-build",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76707,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONNOUSERSITE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76708,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#module-tracemalloc",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76709,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-0",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76711,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONWARNINGS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76712,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONCASEOK",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76713,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_PERF_JIT_SUPPORT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76716,
+    "url": "https://force-color.org/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76718,
+    "url": "https://ocert.org/advisories/ocert-2011-003.html",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76719,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGFPE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76720,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPERFSUPPORT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76721,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONBREAKPOINT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76722,
+    "url": "https://docs.python.org/3/c-api/memory.html#mimalloc",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76723,
+    "url": "https://docs.python.org/3/using/cmdline.html#command-line-and-environment",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76724,
+    "url": "https://docs.python.org/3/library/sys.html#sys.platlibdir",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76725,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONIOENCODING",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76726,
+    "url": "https://docs.python.org/3/library/exceptions.html#EncodingWarning",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76727,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUSERBASE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76728,
+    "url": "https://docs.python.org/3/using/cmdline.html#controlling-color",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76729,
+    "url": "https://docs.python.org/3/library/io.html#io-encoding-warning",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76730,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDEVMODE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76732,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONINSPECT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76733,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__hash__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76734,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-trace-refs",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76735,
+    "url": "https://docs.python.org/3/library/sys.html#sys.ps1",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76736,
+    "url": "https://docs.python.org/3/library/runpy.html#runpy.run_module",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76737,
+    "url": "https://docs.python.org/3/using/cmdline.html#environment-variables",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76738,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONTRACEMALLOC",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76739,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_COLORS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76740,
+    "url": "https://docs.python.org/3/library/site.html#site.USER_SITE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76742,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help-env",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76744,
+    "url": "https://docs.python.org/3/using/unix.html",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76746,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONVERBOSE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76749,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGBUS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76751,
+    "url": "https://docs.python.org/3/library/sys.html#sys.ps2",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76752,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PYMEM_DOMAIN_OBJ",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76753,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDUMPREFSFILE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76754,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stderr",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76758,
+    "url": "https://docs.python.org/3/howto/perf_profiling.html#perf-profiling",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76759,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHASHSEED",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76760,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONWARNDEFAULTENCODING",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76761,
+    "url": "https://docs.python.org/3/library/__main__.html#module-__main__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76762,
+    "url": "https://docs.python.org/3/reference/import.html#pyc-invalidation",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76763,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#asyncio-debug-mode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76765,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPYCACHEPREFIX",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76766,
+    "url": "https://docs.python.org/3/c-api/memory.html#pymem-debug-hooks",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76767,
+    "url": "https://peps.python.org/pep-0338/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76769,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76771,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.cpu_count",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76772,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONEXECUTABLE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76773,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-OO",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76774,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.encode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76776,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUNBUFFERED",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76777,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_PRESITE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76778,
+    "url": "https://no-color.org/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76779,
+    "url": "https://docs.python.org/3/library/os.html#os.process_cpu_count",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76780,
+    "url": "https://docs.python.org/3/library/sys.html#sys.argv",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76781,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_TLBC",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76782,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-pydebug",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76783,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONMALLOC",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76784,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help-xoptions",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76785,
+    "url": "https://docs.python.org/3/library/site.html#site.USER_BASE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76786,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_HISTORY",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76787,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDEBUG",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76788,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_GIL",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76790,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONOPTIMIZE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76791,
+    "url": "https://peps.python.org/pep-0370/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76792,
+    "url": "https://docs.python.org/3/c-api/memory.html#default-memory-allocators",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76793,
+    "url": "https://docs.python.org/3/library/site.html#site.main",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76794,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_THREAD_INHERIT_CONTEXT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76795,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPLATLIBDIR",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76796,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONLEGACYWINDOWSSTDIO",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76798,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76800,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-help-all",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76802,
+    "url": "https://docs.python.org/3/library/sys.html#sys.breakpointhook",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76803,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONFAULTHANDLER",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76804,
+    "url": "https://docs.python.org/3/library/os.html#os.cpu_count",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76805,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-interface-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76807,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGILL",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76808,
+    "url": "https://docs.python.org/3/library/site.html#rlcompleter-config",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76809,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGSEGV",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76811,
+    "url": "https://docs.python.org/3/using/cmdline.html#interface-options",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76812,
+    "url": "https://docs.python.org/3/library/os.html#os.pathsep",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76814,
+    "url": "https://docs.python.org/3/library/timeit.html#module-timeit",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76818,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONCOERCECLOCALE",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76819,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PYMEM_DOMAIN_RAW",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76820,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-disable-gil",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76822,
+    "url": "https://docs.python.org/3/library/sys.html#sys._xoptions",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76825,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_CPU_COUNT",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76827,
+    "url": "https://docs.python.org/3/library/constants.html#debug__",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76829,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.filterwarnings",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76830,
+    "url": "https://docs.python.org/3/library/devmode.html#devmode",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76831,
+    "url": "https://github.com/python/cpython/blob/main/Doc/using/cmdline.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76832,
+    "url": "https://peps.python.org/pep-0488/",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76834,
+    "url": "https://docs.python.org/3/library/warnings.html#describing-warning-filters",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76837,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-x",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76838,
+    "url": "https://docs.python.org/3/library/contextvars.html#contextvars.ContextVar",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76839,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-v",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76842,
+    "url": "https://docs.python.org/3/using/cmdline.html#cmdoption-check-hash-based-pycs",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76844,
+    "url": "https://docs.python.org/3/library/codecs.html#error-handlers",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76845,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHON_CONTEXT_AWARE_WARNINGS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76847,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONINTMAXSTRDIGITS",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76848,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONSAFEPATH",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76849,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-free-threaded-cpython",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 76851,
+    "url": "https://docs.python.org/3/library/tracemalloc.html#tracemalloc.start",
+    "parentUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "id": 78092,
+    "url": "https://devguide.python.org/documentation/translating/",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78095,
+    "url": "https://github.com/python/cpython/issues?q\u003dis%3Aissue+is%3Aopen+label%3Adocs",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78096,
+    "url": "https://bugzilla.mozilla.org/page.cgi?id\u003dbug-writing.html",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78098,
+    "url": "https://docs.python.org/3/bugs.html#getting-started-contributing-to-python-yourself",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78099,
+    "url": "https://docs.python.org/3/bugs.html#dealing-with-bugs",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78100,
+    "url": "https://docs.python.org/3/bugs.html#documentation-bugs",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78103,
+    "url": "https://devguide.python.org/tracker/",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78105,
+    "url": "https://docs.python.org/3/bugs.html#contributing-to-python",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78106,
+    "url": "https://docs.python.org/3/bugs.html#using-the-python-issue-tracker",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78107,
+    "url": "https://www.chiark.greenend.org.uk/~sgtatham/bugs.html",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78110,
+    "url": "https://discuss.python.org/c/documentation/26",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78111,
+    "url": "https://devguide.python.org/docquality/#helping-with-documentation",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78112,
+    "url": "https://mail.python.org/mailman3/lists/core-mentorship.python.org/",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78113,
+    "url": "https://github.com/python/cpython/blob/main/Doc/bugs.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78114,
+    "url": "https://docs.python.org/3/bugs.html#using-the-tracker",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78115,
+    "url": "https://docs.python.org/3/bugs.html#",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78116,
+    "url": "https://github.com/python/python-docs-theme",
+    "parentUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "id": 78118,
+    "url": "https://github.com/sobolevn",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78119,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-3244461361",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78120,
+    "url": "https://github.com/python/cpython/pull/127648/commits/f2c331b2103f014b72bcce386383ba19e901b581",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78121,
+    "url": "https://github.com/python/cpython/pull/127648#event-15548871544",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78122,
+    "url": "https://github.com/python/cpython/pull/127648/files/76003a85474409d0939c21b814663b1fbaeee650#diff-ccf558cb765d6938e25439f8a40c032f00672f675c8ddc6a5b2be6aef53a0cda",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78123,
+    "url": "https://github.com/python/cpython/pull/127648/files/4d50c2eda68c54044a45215d0cae873dd91d7458",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78124,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1973627294",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78125,
+    "url": "https://typing.readthedocs.io/en/latest/spec/protocol.html#defining-a-protocol",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78126,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22awaiting%20merge%22",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78127,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1973563818",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78128,
+    "url": "https://github.com/python/cpython/pull/127648/files/bfab2fd77b44359046f40a9751ddde22940b7dac",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78129,
+    "url": "https://github.com/python/cpython/pull/127648/files/4d50c2eda68c54044a45215d0cae873dd91d7458#diff-ddb987fca5f5df0c9a2f5521ed687919d70bb3d64eaeb8021f98833a2a716887",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78130,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1973586773",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78131,
+    "url": "https://github.com/cmaloney",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78132,
+    "url": "https://github.com/mdboom",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78133,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.read",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78134,
+    "url": "https://github.com/python/cpython/pull/127648#ref-pullrequest-3165088739",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78135,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-3246125270",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78136,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2522957920",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78137,
+    "url": "https://github.com/python/cpython/commit/a2ba0a7552580f616f74091f8976410f8a310313",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78138,
+    "url": "https://github.com/python/cpython/pull/127648/commits/3b5975ec03b89481afe724d0b647f34e208225cb",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78139,
+    "url": "https://github.com/python/cpython/commit/a083633fa046386b8cdaae0c87fef25289dde9a1",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78140,
+    "url": "https://github.com/python/cpython/pull/127648/commits/c6447708e1fa92988f63e624e493c692cc880291",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78141,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2482677992",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78142,
+    "url": "https://github.com/AlexWaygood",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78143,
+    "url": "https://github.com/python/cpython/blob/d958d9f4a1b71c6d30960bf6c53c41046ea94590/.github/CODEOWNERS#L233",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78144,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-3243576643",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78145,
+    "url": "https://github.com/python/cpython/blob/023b7d2141467017abc27de864f3f44677768cb3/Lib/typing.py#L1940-L1948",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78146,
+    "url": "https://github.com/python/cpython/pull/127648#ref-commit-9fc1238",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78147,
+    "url": "https://github.com/python/cpython/pull/127648#issue-2721174017",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78148,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2651985281",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78149,
+    "url": "https://github.com/apps/bedevere-app",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78150,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedReader.read",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78151,
+    "url": "https://github.com/python/cpython/pull/127648#event-16496385909",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78152,
+    "url": "https://github.com/python/typing_extensions/pull/582",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78153,
+    "url": "https://github.com/python/cpython/pull/127648",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78154,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2522923889",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78155,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2705203585",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78156,
+    "url": "https://github.com/python/cpython/pull/127648/commits/43e23f005a83fde5366a772506cc7653b897d109",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78157,
+    "url": "https://github.com/python/cpython/pull/127648/commits/1e1ea4154471a98d0d6582c554f432f5fc7a373d",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78158,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2523068182",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78160,
+    "url": "https://github.com/JelleZijlstra",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78161,
+    "url": "https://github.com/python/cpython/pull/138369",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78162,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.read",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78163,
+    "url": "https://docs.github.com/articles/managing-disruptive-comments/#hiding-a-comment",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78164,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2687893228",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78165,
+    "url": "https://github.com/python/cpython/pull/138366",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78166,
+    "url": "https://github.com/python/cpython/pull/127648/commits/96080fed8c1b37d659c77df8435b75fa4f635871",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78167,
+    "url": "https://cpython-previews--127648.org.readthedocs.build/en/127648/library/typing.html#abcs-and-protocols-for-working-with-i-o",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78168,
+    "url": "https://github.com/python/cpython/issues/127678",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78169,
+    "url": "https://github.com/python/cpython/issues/127677",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78170,
+    "url": "https://github.com/python/cpython/commit/c6dd2348ca61436fc1444ecc0343cb24932f6fa7",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78171,
+    "url": "https://github.com/join?source\u003dcomment-repo",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78172,
+    "url": "https://github.co/hiddenchars",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78173,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1973663926",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78174,
+    "url": "https://cpython-previews--127648.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78175,
+    "url": "https://github.com/python/cpython/pull/127648/commits/b86073dcc1c9956e1925c3661d875da7edbbc71b",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78176,
+    "url": "https://github.com/python/cpython/pull/127648/files/76003a85474409d0939c21b814663b1fbaeee650#diff-8a0f115fde6769c122b771b6d0eca184c4580f7b5fabe2f0b0579c679424364f",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78177,
+    "url": "https://github.com/mdboom/cpython/commit/9fc1238a9771b8e864010f8291cfc3113cf166a2",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78178,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22awaiting%20review%22",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78179,
+    "url": "https://github.com/python/cpython/pull/127648/files/76003a85474409d0939c21b814663b1fbaeee650",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78180,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2521182746",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78181,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1973634931",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78182,
+    "url": "https://github.com/python/cpython/pull/127648/files/ca72c1948f5bb9205beac4c3ad98bc5b3b8384eb#diff-8a0f115fde6769c122b771b6d0eca184c4580f7b5fabe2f0b0579c679424364f",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78183,
+    "url": "https://github.com/python/cpython/pull/127648#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78184,
+    "url": "https://github.com/python/cpython/pull/127648#event-16619708654",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78185,
+    "url": "https://github.com/python/cpython/commit/023b7d2141467017abc27de864f3f44677768cb3",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78186,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2522963909",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78187,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1872043315",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78188,
+    "url": "https://github.com/python/cpython/pull/127648/files/ca72c1948f5bb9205beac4c3ad98bc5b3b8384eb",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78189,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2712101108",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78190,
+    "url": "https://github.com/python/cpython/pull/127648/commits/5d632a34a6825e4d0071f8c42b4a76dd4ae52a30",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78191,
+    "url": "https://github.com/python/cpython/blob/a083633fa046386b8cdaae0c87fef25289dde9a1/Lib/test/test_typing.py#L4260-L4262",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78192,
+    "url": "https://github.com/python/cpython/pull/127648/files/4d50c2eda68c54044a45215d0cae873dd91d7458#diff-8a0f115fde6769c122b771b6d0eca184c4580f7b5fabe2f0b0579c679424364f",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78194,
+    "url": "https://github.com/python/typeshed/commit/f554f54673122a9ac45625f26805458c9cac2e3a",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78195,
+    "url": "https://github.com/python/cpython/pull/127648#commits-pushed-1525e05",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78196,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1976137096",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78197,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2482681145",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78198,
+    "url": "https://github.com/python/cpython/pull/127648/files/c6447708e1fa92988f63e624e493c692cc880291#diff-2828caacf5c85c7bd6023ea0e4a381cc5c65179a9822398534c5e9ad9ccbd90d",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78199,
+    "url": "https://github.com/python/cpython/pull/127648#event-16619306582",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78200,
+    "url": "https://github.com/python/cpython/pull/127648#ref-pullrequest-2982432880",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78201,
+    "url": "https://github.com/python/cpython/pull/127648#ref-issue-2721172311",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78202,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F127648",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78203,
+    "url": "https://github.com/python/cpython/pull/127648#commits-pushed-3723370",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78204,
+    "url": "https://github.com/python/cpython/pull/127648/commits/7867ec18015ed813493feb67677bd51beb32d839",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78205,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2703328013",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78206,
+    "url": "https://github.com/python/cpython/blob/a083633fa046386b8cdaae0c87fef25289dde9a1/Lib/test/test_typing.py#L4274-L4303",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78207,
+    "url": "https://github.com/bluetech",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78208,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2708871525",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78209,
+    "url": "https://github.com/srittau",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78210,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2482813515",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78211,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1973602741",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78212,
+    "url": "https://github.com/python/cpython/pull/127648/files/c6447708e1fa92988f63e624e493c692cc880291",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78213,
+    "url": "https://github.com/python/cpython/pull/127648/commits/6a22a024d8b2d38e8351fa602e1998656b53312b",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78214,
+    "url": "https://github.com/python/cpython/pull/127648/commits/6764b6ae573d65c654ba0ee1140f99c4329b7358",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78215,
+    "url": "https://github.com/python/cpython/pull/127648/commits/56a38a013315294a9b8cbddd0446f8c8c4114379",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78216,
+    "url": "https://github.com/python/cpython/pull/127648/commits/b45fec0277709c72fe42903425963a156b152067",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78217,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2522946495",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78218,
+    "url": "https://github.com/python/cpython/pull/127648/commits/4d50c2eda68c54044a45215d0cae873dd91d7458",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78219,
+    "url": "https://github.com/python/cpython/pull/127648/commits/bfab2fd77b44359046f40a9751ddde22940b7dac",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78220,
+    "url": "https://github.com/python/cpython/pull/127648/files/5d632a34a6825e4d0071f8c42b4a76dd4ae52a30#diff-8a0f115fde6769c122b771b6d0eca184c4580f7b5fabe2f0b0579c679424364f",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78221,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Sized",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78222,
+    "url": "https://github.com/yashwanthatla/typing_extensions/pull/4",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78223,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2521221088",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78224,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2708876422",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78225,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2647678737",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78226,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1873070554",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78227,
+    "url": "https://github.com/python/cpython/blob/023b7d2141467017abc27de864f3f44677768cb3/Lib/contextlib.py#L34-L38",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78228,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2647546574",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78229,
+    "url": "https://github.com/python/cpython/pull/127648#event-15548872659",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78230,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2647750168",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78231,
+    "url": "https://github.com/srittau/typing_extensions/commit/dad6e79cd3575211d6a039b38cf96e0fd31682bf",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78232,
+    "url": "https://github.com/AA-Turner",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78233,
+    "url": "https://github.com/yashwanthatla",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78234,
+    "url": "https://github.com/python/cpython/pull/127648#pullrequestreview-2647628905",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78235,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2522906101",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78236,
+    "url": "https://github.com/python/cpython/pull/127648#issuecomment-2522930782",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78237,
+    "url": "https://github.com/python/cpython/pull/127648#commits-pushed-3b5975e",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78238,
+    "url": "https://github.com/python/cpython/pull/127648#discussion_r1973574736",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78239,
+    "url": "https://github.com/picnixz",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78240,
+    "url": "https://github.com/python/cpython/pull/127648/commits/022acaa9a4fc2a67ee6fe8f754b305904504bb92",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78241,
+    "url": "https://github.com/loic-simon",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78242,
+    "url": "https://github.com/python/cpython/pull/127648/commits/1525e05c5490a1f3dcb9a26abbd7ff4554ad2e18",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78244,
+    "url": "https://github.com/python/cpython/pull/127648/files/5d632a34a6825e4d0071f8c42b4a76dd4ae52a30",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78245,
+    "url": "https://github.com/python/cpython/blob/023b7d2141467017abc27de864f3f44677768cb3/Lib/collections/__init__.py#L32-L33",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78246,
+    "url": "https://github.com/python/cpython/pull/{{ revealButtonHref }}",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78248,
+    "url": "https://github.com/python/cpython/pull/127648/commits/37233706faae5d4f76a1a105553d151560e60fca",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78249,
+    "url": "https://github.com/python/cpython/blob/a2ba0a7552580f616f74091f8976410f8a310313/Lib/test/test_io/test_general.py#L5041-L5051",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78250,
+    "url": "https://github.com/python/cpython/pull/127648/files/5d632a34a6825e4d0071f8c42b4a76dd4ae52a30#diff-ddb987fca5f5df0c9a2f5521ed687919d70bb3d64eaeb8021f98833a2a716887",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78251,
+    "url": "https://github.com/python/cpython/pull/127648/files/96080fed8c1b37d659c77df8435b75fa4f635871",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78252,
+    "url": "https://github.com/python/cpython/pull/127648#commits-pushed-56a38a0",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78253,
+    "url": "https://github.com/python/cpython/pull/127648#event-16619305642",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78255,
+    "url": "https://github.com/python/cpython/pull/127648/files/76003a85474409d0939c21b814663b1fbaeee650#diff-2828caacf5c85c7bd6023ea0e4a381cc5c65179a9822398534c5e9ad9ccbd90d",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78256,
+    "url": "https://github.com/python/cpython/pull/127648/commits/76003a85474409d0939c21b814663b1fbaeee650",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "id": 78257,
+    "url": "https://github.com/python/cpython/pull/127648#ref-commit-dad6e79",
+    "parentUrl": "https://github.com/python/cpython/issues/127648"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-c"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-c"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d48\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d60\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d60\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d48\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d48\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d80\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d80\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d80\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d80\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d60\u0026v\u003d4",
+    "alt": "AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d48\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d60\u0026v\u003d4",
+    "alt": "AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d48\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d40\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d80\u0026u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d48\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d48\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d48\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d48\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d48\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d48\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d48\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d48\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d60\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1223550?s\u003d80\u0026v\u003d4",
+    "alt": "@bluetech",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1223550?s\u003d80\u0026v\u003d4",
+    "alt": "@bluetech",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/38294?s\u003d40\u0026u\u003dc0552a385b2a7cae5ddca4f41a4db7cbea54b0e8\u0026v\u003d4",
+    "alt": "@mdboom",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/106528900?s\u003d40\u0026v\u003d4",
+    "alt": "@yashwanthatla",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/751088?s\u003d80\u0026u\u003d8ed8e97d49d6a9a76ea95ff26adc2d6c51b247dc\u0026v\u003d4",
+    "alt": "@cmaloney",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d80\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/751088?s\u003d80\u0026u\u003d8ed8e97d49d6a9a76ea95ff26adc2d6c51b247dc\u0026v\u003d4",
+    "alt": "@cmaloney",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d40\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d40\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/62268282?s\u003d40\u0026v\u003d4",
+    "alt": "@loic-simon",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d52\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?s\u003d52\u0026v\u003d4",
+    "alt": "@AlexWaygood",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1223550?s\u003d52\u0026v\u003d4",
+    "alt": "@bluetech",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/751088?s\u003d52\u0026v\u003d4",
+    "alt": "@cmaloney",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d52\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d52\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d52\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/62268282?s\u003d52\u0026v\u003d4",
+    "alt": "@loic-simon",
+    "pageTitle": "gh-127647: Add typing.Reader and Writer protocols by srittau · Pull Request #127648 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127648"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dealing with Bugs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/bugs.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-finally-syntaxwarning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#cmdoption-X"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
