@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 496,
+    "url": "http://gump.apache.org/",
+    "title": "Apache Gump™",
+    "content": "Apache \u003e Gump Home Object Model Python Gump Apache Gump Home Status Source Metadata FAQ License Results Nightly Community Mailing Lists Source Wiki Issues Get Involved Reporting Security Issues Who We Are Project Bylaws Privacy Policy Sponsorship Donate Thanks Apache Gump™ What is Apache Gump™? How does Gump work? Where is Gump? When does Gump run? Who is Gump? Why was Gump written? Trademarks What is Apache Gump™? The Apache Gump continuous integration tool was the first one developed at the Apache Software Foundation. It is written in Python and fully supports Apache Ant, Apache Maven (1.x to 3.x) and other build tools. Gump is unique in that it builds and compiles software against the latest development versions of those projects. This allows Gump to detect potentially incompatible changes to that software just a few hours after those changes are checked into the version control system. Notifications are sent to the project team as soon as such a change is detected, referencing more detailed reports available online. You can set up and run Gump on your own machine and run it on your own projects, however it is currently most famous for building many of Apache\u0027s projects and their dependencies. For this purpose, the Gump project maintains its own dedicated server. How does Gump work? With Gump, project definitions are mapped from XML into in memory objects for processing. Scripts execute SCM update commands for every module which contains a project being built, and invoke builds for each project in an order that ensures that dependencies are satisfied. Build outputs are processed and, if successful, dependent projects are then built on these outputs. The commands use the actual build.xml/Makefile/pom.xml files from the projects, but in general do not use the scripts or jar files checked into CVS/SVN. Instead, Gump tries to play several tricks in order to ensure that Gump\u0027s versions of files are used. In order to really build against the latest versions of everything, Gump will need support from the build process, the build tool or has to find its way around the build tool. The Apache HTTPd builds are an example for a build process that supports Gump. HTTPd needs APR and Gump can provide the path to the freshly built APR files as command line options to the buildconf and/or configure scripts. For builds using Apache Ant, Gump sets build.sysclasspath property of Ant to only and manages the system classpath: To quote Ant manual: Only the system classpath is used and classpaths specified in build files, etc are ignored. This situation could be considered as the person running the build file knows more about the environment than the person writing the build file. Note that Gump uses the lastest version of Ant (from tip of master branch in their Git repository) when building Ant projects. For Apache Maven 1.x builds, Gump runs Maven with the --offline switch and uses jar overrides. Sometimes the artifact ids expected by maven and Gump\u0027s names of the jars don\u0027t match, in which case \u003cproperty\u003e elements have to be used to get the correct artifact ids. So far Gump\u0027s support for Apache Maven 2.x and later uses the most complex approach, using a proxy server. For the full story see the section on the mvn2 builder. Support for Gradle hooks into the approach taken for Maven and uses the same local repositories and repository proxy. The net effect is that every project is built every day with the latest version of every dependency - including the latest Ant, latest JUnit, latest XML parser. The results are captured into html pages. An extensive amount of hypertext links are added to allow quick and easy navigation, and failures are color coded on the main build page. The \"official\" Gump run on vmgump will optionally send e-mails to various newsgroups upon build failures. Where is Gump? Source When does Gump run? Site JVM Comments Apache (vmgump - Ubuntu Linux 18.04) OpenJDK 11 up to 4 times daily Who is Gump? Gump was named after Forrest Gump, the title character in a movie. The process for building was to do a \"Generate\", followed by cvs \"Updates\", followed by a \"Build All\". This was repetitive, so a command was created to combine these operations - and it was named \"guba\". This sound this made when spoken reminded me of \"Bubba Gump\". This seemed oddly appropriate as much of the motivation for Gump derived from the frustrations building Cocoon. The FAQ for that project indicate that the project was named after a movie that the creator of that project was particularly fond of, so it seemed fitting that this effort would be named after a movie. A number of other fortunate coincidences proved this was the right choice for a name. From the role of the feather in the opening and closing scenes (something adapted to the Apache feature for the original Gump icon), to the catch phase of \"Stupid is as Stupid does\" - something that captures the spirit of a large number of build errors caught by this process. And most significant",
+    "scrapedAt": "2026-05-10 04:19:12.229585"
+  },
+  {
+    "id": 495,
+    "url": "http://ipython.org/",
+    "title": "Home | IPython",
+    "content": "Productive Interactive Computing IPython provides a rich architecture for interactive computing with a powerful shell, Jupyter kernel support, and flexible tools for parallel and distributed computing. Install IPython Get Started $ ipython Powerful Features Smart Tab Completion Context-aware completion powered by Jedi. Complete attributes, methods, and filenames with intelligent suggestions. Magic Commands Built-in commands for profiling, debugging, timing, and running external code. %timeit, %debug, %run, and many more. Object Introspection Explore objects with ? and ?? to view docstrings, signatures, and source code instantly. Rich History Powerful command history system with search, scrollback, and persistence across sessions. System Integration Execute shell commands directly with !, access system information, and manipulate the environment seamlessly. Jupyter Kernel Powers the Jupyter Notebook and JupyterLab, enabling interactive computing in web-based environments. Who Uses IPython? 📊 Data Scientists Explore datasets, prototype algorithms, and share findings with rich visualizations. 👨‍💻 Developers Debug code, test ideas interactively, and rapidly develop Python applications. 🎓 Educators Teach programming and data analysis interactively with immediate feedback and visualization. 🔧 System Admins Automate tasks, monitor systems, and manage infrastructure with Python scripts. Ready to Get Started? Install IPython today and boost your interactive computing experience. Install Now",
+    "scrapedAt": "2026-05-10 04:19:08.771428"
+  },
+  {
+    "id": 494,
+    "url": "https://www.python.org/about/",
+    "title": "About Python™ | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Getting Started Python can be easy to pick up whether you\u0027re a first time programmer or you\u0027re experienced with other languages. The following pages are a useful first step to get on your way writing programs with Python! Beginner\u0027s Guide, Programmers Beginner\u0027s Guide, Non-Programmers Beginner\u0027s Guide, Download \u0026 Installation Code sample and snippets for Beginners Friendly \u0026 Easy to Learn The community hosts conferences and meetups, collaborates on code, and much more. Python\u0027s documentation will help you along the way, and the mailing lists will keep you in touch. Conferences and Workshops Python Documentation Mailing Lists and IRC channels Applications The Python Package Index (PyPI) hosts thousands of third-party modules for Python. Both Python\u0027s standard library and the community-contributed modules allow for endless possibilities. Web and Internet Development Database Access Desktop GUIs Scientific \u0026 Numeric Education Network Programming Software \u0026 Game Development Open-source Python is developed under an OSI-approved open source license, making it freely usable and distributable, even for commercial use. Python\u0027s license is administered by the Python Software Foundation. Learn more about the license Python license on OSI Learn more about the Foundation Can’t find what you’re looking for? Try our comprehensive Help section Latest News More 2026-05-07 Python 3.15.0 beta 1 is here! 2026-05-04 Python 3.14.5 release candidate 2026-04-23 Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉 2026-04-14 PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation 2026-04-13 Reflecting on Five Years as the PSF’s First CPython Developer in Residence Upcoming Events More 2026-05-13 PyCon US 2026 2026-05-27 PyCon Italia 2026 2026-05-28 PyLadies Amsterdam: Scalable Data Harvesting for AI 2026-05-28 Python Leiden User Group 2026-06-03 Python Meeting Düsseldorf \u003e\u003e\u003e Python Software Foundation The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Learn more Become a Member Donate to the PSF",
+    "scrapedAt": "2026-05-10 04:19:05.129432"
+  },
+  {
+    "id": 493,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/",
+    "title": "How to Think Like a Computer Scientist — How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation",
+    "content": "Navigation index next | How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation » How to Think Like a Computer Scientist¶ Learning with Python¶ 2nd Edition (Using Python 2.x) by Jeffrey Elkner, Allen B. Downey, and Chris Meyers Last Updated: 21 April 2012 Copyright Notice Foreword Preface Contributor List Chapter 1 The way of the program Chapter 2 Variables, expressions, and statements Chapter 3 Functions Chapter 4 Conditionals Chapter 5 Fruitful functions Chapter 6 Iteration Chapter 7 Strings Chapter 8 Case Study: Catch Chapter 9 Lists Chapter 10 Modules and files Chapter 11 Recursion and exceptions Chapter 12 Dictionaries Chapter 13 Classes and objects Chapter 14 Classes and functions Chapter 15 Classes and methods Chapter 16 Sets of Objects Chapter 17 Inheritance Chapter 18 Linked Lists Chapter 19 Stacks Chapter 20 Queues Chapter 21 Trees Appendix A Debugging Appendix B GASP Appendix c Configuring Ubuntu for Python Development Appendix D Customizing and Contributing to the Book GNU Free Document License Search Page Navigation index next | How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation » © Copyright 2010, Jeffrey Elkner, Allen B. Downey and Chris Meyers. Created using Sphinx 1.2.2.",
+    "scrapedAt": "2026-05-10 04:19:02.839035"
+  },
+  {
+    "id": 492,
+    "url": "http://docs.python.org/library/json.html",
+    "title": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » json — JSON encoder and decoder | Theme Auto Light Dark | json — JSON encoder and decoder¶ Source code: Lib/json/__init__.py JSON (JavaScript Object Notation), specified by RFC 7159 (which obsoletes RFC 4627) and by ECMA-404, is a lightweight data interchange format inspired by JavaScript object literal syntax (although it is not a strict subset of JavaScript [1] ). Note The term “object” in the context of JSON processing in Python can be ambiguous. All values in Python are objects. In JSON, an object refers to any data wrapped in curly braces, similar to a Python dictionary. Warning Be cautious when parsing JSON data from untrusted sources. A malicious JSON string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended. This module exposes an API familiar to users of the standard library marshal and pickle modules. Encoding basic Python object hierarchies: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([\u0027foo\u0027, {\u0027bar\u0027: (\u0027baz\u0027, None, 1.0, 2)}])\n\u0027[\"foo\", {\"bar\": [\"baz\", null, 1.0, 2]}]\u0027\n\u003e\u003e\u003e print(json.dumps(\"\\\"foo\\bar\"))\n\"\\\"foo\\bar\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\u1234\u0027))\n\"\\u1234\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\\\\u0027))\n\"\\\\\"\n\u003e\u003e\u003e print(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys\u003dTrue))\n{\"a\": 0, \"b\": 0, \"c\": 0}\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO()\n\u003e\u003e\u003e json.dump([\u0027streaming API\u0027], io)\n\u003e\u003e\u003e io.getvalue()\n\u0027[\"streaming API\"]\u0027\n Compact encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([1, 2, 3, {\u00274\u0027: 5, \u00276\u0027: 7}], separators\u003d(\u0027,\u0027, \u0027:\u0027))\n\u0027[1,2,3,{\"4\":5,\"6\":7}]\u0027\n Pretty printing: \u003e\u003e\u003e import json\n\u003e\u003e\u003e print(json.dumps({\u00276\u0027: 7, \u00274\u0027: 5}, sort_keys\u003dTrue, indent\u003d4))\n{\n    \"4\": 5,\n    \"6\": 7\n}\n Customizing JSON object encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def custom_json(obj):\n...     if isinstance(obj, complex):\n...         return {\u0027__complex__\u0027: True, \u0027real\u0027: obj.real, \u0027imag\u0027: obj.imag}\n...     raise TypeError(f\u0027Cannot serialize object of {type(obj)}\u0027)\n...\n\u003e\u003e\u003e json.dumps(1 + 2j, default\u003dcustom_json)\n\u0027{\"__complex__\": true, \"real\": 1.0, \"imag\": 2.0}\u0027\n Decoding JSON: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.loads(\u0027[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]\u0027)\n[\u0027foo\u0027, {\u0027bar\u0027: [\u0027baz\u0027, None, 1.0, 2]}]\n\u003e\u003e\u003e json.loads(\u0027\"\\\\\"foo\\\\bar\"\u0027)\n\u0027\"foo\\x08ar\u0027\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO(\u0027[\"streaming API\"]\u0027)\n\u003e\u003e\u003e json.load(io)\n[\u0027streaming API\u0027]\n Customizing JSON object decoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def as_complex(dct):\n...     if \u0027__complex__\u0027 in dct:\n...         return complex(dct[\u0027real\u0027], dct[\u0027imag\u0027])\n...     return dct\n...\n\u003e\u003e\u003e json.loads(\u0027{\"__complex__\": true, \"real\": 1, \"imag\": 2}\u0027,\n...     object_hook\u003das_complex)\n(1+2j)\n\u003e\u003e\u003e import decimal\n\u003e\u003e\u003e json.loads(\u00271.1\u0027, parse_float\u003ddecimal.Decimal)\nDecimal(\u00271.1\u0027)\n Extending JSONEncoder: \u003e\u003e\u003e import json\n\u003e\u003e\u003e class ComplexEncoder(json.JSONEncoder):\n...     def default(self, obj):\n...         if isinstance(obj, complex):\n...             return [obj.real, obj.imag]\n...         # Let the base class default method raise the TypeError\n...         return super().default(obj)\n...\n\u003e\u003e\u003e json.dumps(2 + 1j, cls\u003dComplexEncoder)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e ComplexEncoder().encode(2 + 1j)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e list(ComplexEncoder().iterencode(2 + 1j))\n[\u0027[2.0\u0027, \u0027, 1.0\u0027, \u0027]\u0027]\n Using json from the shell to validate and pretty-print: $ echo \u0027{\"json\":\"obj\"}\u0027 | python -m json\n{\n    \"json\": \"obj\"\n}\n$ echo \u0027{1.2:3.4}\u0027 | python -m json\nExpecting property name enclosed in double quotes: line 1 column 2 (char 1)\n See Command-line interface for detailed documentation. Note JSON is a subset of YAML 1.2. The JSON produced by this module’s default settings (in particular, the default separators value) is also a subset of YAML 1.0 and 1.1. This module can thus also be used as a YAML serializer. Note This module’s encoders and decoders preserve input and output order by default. Order is only lost if the underlying containers are unordered. Basic Usage¶ json.dump(obj, fp, *, skipkeys\u003dFalse, ensure_ascii\u003dTrue, check_circular\u003dTrue, allow_nan\u003dTrue, cls\u003dNone, indent\u003dNone, separators\u003dNone, default\u003dNone, sort_keys\u003dFalse, **kw)¶ Serialize obj as a JSON formatted stream to fp (a .write()-supporting file-like object) using this Python-to-JSON conversion table. Note Unlike pickle and marshal, JSON is not a framed protocol, so trying to serialize multiple objects with repeated calls to dump() using the same fp will result in an invalid JSON file. Parameters: obj (object) – The Python object to be serialized. fp (file-like object) – The file-like object obj will be serialized to. The json module always produces str objects, not bytes objects, therefore fp.write() must support str input. skipkeys (bool) – If True, keys that are not of a basic type (str, int, float, bool, None) will be skipped instead of raising a TypeError. Default False. ensure_ascii (bool) – If True (the default), the output is guaranteed to have all incoming non-ASCII and non-printable characters escaped. If False, all characters will",
+    "scrapedAt": "2026-05-10 04:18:59.130057"
+  },
+  {
+    "id": 491,
+    "url": "http://buildbot.sourceforge.net/",
+    "scrapedAt": "2026-05-10 04:18:57.08241"
+  },
+  {
     "id": 490,
     "url": "http://www.wxpython.org/",
     "title": "Welcome to wxPython! | wxPython",
@@ -3412,30 +3452,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 491,
-    "url": "http://buildbot.sourceforge.net/"
-  },
-  {
-    "id": 492,
-    "url": "http://docs.python.org/library/json.html"
-  },
-  {
-    "id": 493,
-    "url": "http://www.openbookproject.net/thinkcs/python/english2e/"
-  },
-  {
-    "id": 494,
-    "url": "https://www.python.org/about/"
-  },
-  {
-    "id": 495,
-    "url": "http://ipython.org/"
-  },
-  {
-    "id": 496,
-    "url": "http://gump.apache.org/"
   },
   {
     "id": 497,
@@ -89700,10 +89716,859 @@ window.searchData = [
     "id": 69510,
     "url": "http://www.python.org/pipermail/edu-sig",
     "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 69535,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder.raw_decode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69537,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-no-ensure-ascii",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69542,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.default",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69544,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69546,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-h",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69547,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.msg",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69548,
+    "url": "https://docs.python.org/3/library/json.html#rfc-errata",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69550,
+    "url": "https://docs.python.org/3/library/exceptions.html#RecursionError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69552,
+    "url": "https://docs.python.org/3/library/json.html#basic-usage",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69554,
+    "url": "https://yaml.org/",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69555,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.pos",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69556,
+    "url": "https://docs.python.org/3/library/exceptions.html#UnicodeDecodeError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69557,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-404/",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69559,
+    "url": "https://docs.python.org/3/glossary.html#term-file-like-object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69560,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.lineno",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69561,
+    "url": "https://docs.python.org/3/library/json.html#module-json.tool",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69562,
+    "url": "https://docs.python.org/3/library/marshal.html#module-marshal",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69563,
+    "url": "https://docs.python.org/3/library/json.html#encoders-and-decoders",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69564,
+    "url": "https://docs.python.org/3/library/netdata.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69565,
+    "url": "https://docs.python.org/3/library/json.html#standard-compliance-and-interoperability",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69566,
+    "url": "https://docs.python.org/3/library/json.html#json.loads",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69568,
+    "url": "https://docs.python.org/3/library/json.html#json.load",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69569,
+    "url": "https://docs.python.org/3/library/json.html#exceptions",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69571,
+    "url": "https://docs.python.org/3/library/json.html#character-encodings",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69572,
+    "url": "https://docs.python.org/3/library/json.html#json.dump",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69573,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/json.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69575,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7159.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69577,
+    "url": "https://docs.python.org/3/library/json.html#",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69578,
+    "url": "https://docs.python.org/3/library/json.html#id1",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69581,
+    "url": "https://docs.python.org/3/glossary.html#term-binary-file",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69585,
+    "url": "https://docs.python.org/3/library/mailbox.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69587,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/json/__init__.py",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69588,
+    "url": "https://www.jsonrpc.org",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69589,
+    "url": "https://docs.python.org/3/library/json.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69590,
+    "url": "https://json.org",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69592,
+    "url": "https://docs.python.org/3/glossary.html#keyword-only-parameter",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69593,
+    "url": "https://docs.python.org/3/library/json.html#implementation-limitations",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69594,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-arg-infile",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69595,
+    "url": "https://docs.python.org/3/library/json.html#py-to-json-table",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69596,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int-max-str-digits",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69597,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/json/tool.py",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69598,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-json-lines",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69599,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.colno",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69600,
+    "url": "https://docs.python.org/3/library/json.html#top-level-non-object-non-array-values",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69601,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-sort-keys",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69602,
+    "url": "https://docs.python.org/3/library/json.html#repeated-names-within-an-object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69603,
+    "url": "https://docs.python.org/3/library/json.html#command-line-options",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69605,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.doc",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69606,
+    "url": "https://docs.python.org/3/library/json.html#json-to-py-table",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69610,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4627.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69611,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69614,
+    "url": "https://docs.python.org/3/library/functions.html#object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69615,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stdin",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69617,
+    "url": "https://docs.python.org/3/library/email.iterators.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69618,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-arg-outfile",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69619,
+    "url": "https://docs.python.org/3/glossary.html#term-text-file",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69620,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-indent",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69621,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder.decode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69622,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.iterencode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69623,
+    "url": "https://www.rfc-editor.org/errata_search.php?rfc\u003d7159",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69624,
+    "url": "https://docs.python.org/3/library/json.html#json.dumps",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69625,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.encode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69626,
+    "url": "https://docs.python.org/3/library/json.html#infinite-and-nan-number-values",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69627,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 69629,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/genindex.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69630,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_c.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69631,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch07.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69632,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/preface.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69633,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch16.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69634,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch18.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69635,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch10.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69636,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/copyright.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69637,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/foreword.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69638,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch21.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69639,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch05.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69640,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch13.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69641,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/fdl-1.3.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69642,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/search.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69643,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#how-to-think-like-a-computer-scientist",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69644,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch02.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69645,
+    "url": "http://sphinx-doc.org/",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69646,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/contrib.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69647,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_d.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69648,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch06.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69649,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_a.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69650,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch09.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69651,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch17.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69652,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch14.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69653,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch03.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69654,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch11.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69655,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch08.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69656,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch12.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69657,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch20.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69658,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch19.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69659,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_b.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69660,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69661,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch15.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69662,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch01.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69663,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch04.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69664,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#learning-with-python",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 69668,
+    "url": "https://www.python.org/about/apps/#desktop-guis",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69670,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Examples",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69672,
+    "url": "https://opensource.org/license/pythonsoftfoundation-php/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69676,
+    "url": "https://www.python.org/about/apps/#education",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69677,
+    "url": "https://www.python.org/psf",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69678,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/NonProgrammers",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69680,
+    "url": "https://pypi.python.org",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69681,
+    "url": "https://www.python.org/community/irc/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69682,
+    "url": "https://www.python.org/about/apps/#database-access",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69684,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Programmers",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69685,
+    "url": "https://www.python.org/community/workshops/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69691,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Download",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69693,
+    "url": "https://www.python.org/about/help/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69696,
+    "url": "https://www.python.org/about/apps/#scientific-and-numeric",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69697,
+    "url": "https://www.python.org/about/apps/#network-programming",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69698,
+    "url": "https://www.python.org/about/apps/#web-and-internet-development",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69699,
+    "url": "https://www.python.org/community/lists",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69700,
+    "url": "https://www.python.org/about/apps/#software-development",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 69703,
+    "url": "https://www.apache.org/foundation/sponsorship.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69704,
+    "url": "http://vmgump.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69705,
+    "url": "https://gump.apache.org/metadata/builder.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69706,
+    "url": "http://vmgump.apache.org/apache-httpd/apache-httpd-buildconf/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69707,
+    "url": "https://svn.apache.org/repos/asf/gump/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69708,
+    "url": "https://ant.apache.org/manual/sysclasspath.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69709,
+    "url": "https://www.apache.org/foundation/thanks.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69710,
+    "url": "https://gump.apache.org/metadata/builder.html#mvn2",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69711,
+    "url": "https://issues.apache.org/jira/browse/GUMP/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69712,
+    "url": "https://gump.apache.org/whoweare.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69713,
+    "url": "https://gump.apache.org/#Who+is+Gump%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69714,
+    "url": "https://gump.apache.org/metadata/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69715,
+    "url": "https://www.apache.org/security/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69716,
+    "url": "https://gump.apache.org/python/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69717,
+    "url": "https://www.apache.org/events/current-event.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69718,
+    "url": "https://gump.apache.org/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69719,
+    "url": "https://www.apache.org/licenses/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69720,
+    "url": "https://gump.apache.org/index.html#Where+is+Gump%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69721,
+    "url": "https://www.apache.org/foundation/getinvolved.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69722,
+    "url": "https://svn.apache.org/viewcvs/gump/metadata/project",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69723,
+    "url": "https://forrest.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69724,
+    "url": "https://www.google.com/search?q\u003dForrest+Gump",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69725,
+    "url": "https://cwiki.apache.org/confluence/display/GUMP/FrequentlyAskedQuestions",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69726,
+    "url": "https://gump.apache.org/#What+is+Apache+Gump%E2%84%A2%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69727,
+    "url": "https://www.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69728,
+    "url": "https://svn.apache.org/repos/asf/gump/metadata",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69729,
+    "url": "https://gump.apache.org/mail.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69730,
+    "url": "https://gump.apache.org/#Why+was+Gump+written%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69731,
+    "url": "https://gump.apache.org/#How+does+Gump+work%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69732,
+    "url": "https://gump.apache.org/#Trademarks",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69733,
+    "url": "https://svn.apache.org/repos/asf/gump/live",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69734,
+    "url": "https://gump.apache.org/#When+does+Gump+run%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69735,
+    "url": "https://gump.apache.org/bylaws.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69736,
+    "url": "https://gump.apache.org/why.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69737,
+    "url": "http://validator.w3.org/check/referer",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69738,
+    "url": "http://jigsaw.w3.org/css-validator/check/referer",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69739,
+    "url": "https://privacy.apache.org/policies/privacy-policy-public.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69740,
+    "url": "https://gump.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69741,
+    "url": "https://gump.apache.org/#Where+is+Gump%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69742,
+    "url": "https://cwiki.apache.org/confluence/display/GUMP",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 69743,
+    "url": "https://gump.apache.org/status.html",
+    "parentUrl": "http://gump.apache.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://gump.apache.org/images/gump-logo-tm.png",
+    "alt": "Apache Gump™",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/skin/images/rc-b-l-15-1body-2menu-3menu.png",
+    "alt": "",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://www.apache.org/events/current-event-125x125.png",
+    "alt": "ApacheCon - logo",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/skin/images/valid-html401.png",
+    "alt": "Valid HTML 4.01!",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/skin/images/vcss.png",
+    "alt": "Valid CSS!",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/images/built-with-forrest-button.png",
+    "alt": "Built with Apache Forrest - logo",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "http://www.openbookproject.net/thinkcs/python/english2e/_images/gasp_lessons.png",
+    "alt": "GASP Logo",
+    "pageTitle": "How to Think Like a Computer Scientist — How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation",
+    "pageUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/json.html"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
