@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 772,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#calendar",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:44:21.328001"
+  },
+  {
+    "id": 771,
+    "url": "https://docs.python.org/3/library/termios.html#module-termios",
+    "title": "termios — POSIX style tty control — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Unix-specific services » termios — POSIX style tty control | Theme Auto Light Dark | termios — POSIX style tty control¶ This module provides an interface to the POSIX calls for tty I/O control. For a complete description of these calls, see termios(3) Unix manual page. It is only available for those Unix versions that support POSIX termios style tty I/O control configured during installation. Availability: Unix. All functions in this module take a file descriptor fd as their first argument. This can be an integer file descriptor, such as returned by sys.stdin.fileno(), or a file object, such as sys.stdin itself. This module also defines all the constants needed to work with the functions provided here; these have the same name as their counterparts in C. Please refer to your system documentation for more information on using these terminal control interfaces. The module defines the following functions: termios.tcgetattr(fd)¶ Return a list containing the tty attributes for file descriptor fd, as follows: [iflag, oflag, cflag, lflag, ispeed, ospeed, cc] where cc is a list of the tty special characters (each a string of length 1, except the items with indices VMIN and VTIME, which are integers when these fields are defined). The interpretation of the flags and the speeds as well as the indexing in the cc array must be done using the symbolic constants defined in the termios module. termios.tcsetattr(fd, when, attributes)¶ Set the tty attributes for file descriptor fd from the attributes, which is a list like the one returned by tcgetattr(). The when argument determines when the attributes are changed: termios.TCSANOW¶ Change attributes immediately. termios.TCSADRAIN¶ Change attributes after transmitting all queued output. termios.TCSAFLUSH¶ Change attributes after transmitting all queued output and discarding all queued input. termios.tcsendbreak(fd, duration)¶ Send a break on file descriptor fd. A zero duration sends a break for 0.25–0.5 seconds; a nonzero duration has a system dependent meaning. termios.tcdrain(fd)¶ Wait until all output written to file descriptor fd has been transmitted. termios.tcflush(fd, queue)¶ Discard queued data on file descriptor fd. The queue selector specifies which queue: TCIFLUSH for the input queue, TCOFLUSH for the output queue, or TCIOFLUSH for both queues. termios.tcflow(fd, action)¶ Suspend or resume input or output on file descriptor fd. The action argument can be TCOOFF to suspend output, TCOON to restart output, TCIOFF to suspend input, or TCION to restart input. termios.tcgetwinsize(fd)¶ Return a tuple (ws_row, ws_col) containing the tty window size for file descriptor fd. Requires termios.TIOCGWINSZ or termios.TIOCGSIZE. Added in version 3.11. termios.tcsetwinsize(fd, winsize)¶ Set the tty window size for file descriptor fd from winsize, which is a two-item tuple (ws_row, ws_col) like the one returned by tcgetwinsize(). Requires at least one of the pairs (termios.TIOCGWINSZ, termios.TIOCSWINSZ); (termios.TIOCGSIZE, termios.TIOCSSIZE) to be defined. Added in version 3.11. See also Module tty Convenience functions for common terminal control operations. Example¶ Here’s a function that prompts for a password with echoing turned off. Note the technique using a separate tcgetattr() call and a try … finally statement to ensure that the old tty attributes are restored exactly no matter what happens: def getpass(prompt\u003d\"Password: \"):\n    import termios, sys\n    fd \u003d sys.stdin.fileno()\n    old \u003d termios.tcgetattr(fd)\n    new \u003d termios.tcgetattr(fd)\n    new[3] \u003d new[3] \u0026 ~termios.ECHO          # lflags\n    try:\n        termios.tcsetattr(fd, termios.TCSADRAIN, new)\n        passwd \u003d input(prompt)\n    finally:\n        termios.tcsetattr(fd, termios.TCSADRAIN, old)\n    return passwd\n Table of Contents termios — POSIX style tty control Example Previous topic grp — The group database Next topic tty — Terminal control functions This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Unix-specific services » termios — POSIX style tty control | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 09, 2026 (15:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-10 04:44:17.273886"
+  },
+  {
+    "id": 770,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib",
+    "title": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Importing Modules » importlib — The implementation of import | Theme Auto Light Dark | importlib — The implementation of import¶ Added in version 3.1. Source code: Lib/importlib/__init__.py Introduction¶ The purpose of the importlib package is three-fold. One is to provide the implementation of the import statement (and thus, by extension, the __import__() function) in Python source code. This provides an implementation of import which is portable to any Python interpreter. This also provides an implementation which is easier to comprehend than one implemented in a programming language other than Python. Two, the components to implement import are exposed in this package, making it easier for users to create their own custom objects (known generically as an importer) to participate in the import process. Three, the package contains modules exposing additional functionality for managing aspects of Python packages: importlib.metadata presents access to metadata from third-party distributions. importlib.resources provides routines for accessing non-code “resources” from Python packages. See also The import statement The language reference for the import statement. Packages specification Original specification of packages. Some semantics have changed since the writing of this document (e.g. redirecting based on None in sys.modules). The __import__() function The import statement is syntactic sugar for this function. The initialization of the sys.path module search path The initialization of sys.path. PEP 235 Import on Case-Insensitive Platforms PEP 263 Defining Python Source Code Encodings PEP 302 New Import Hooks PEP 328 Imports: Multi-Line and Absolute/Relative PEP 366 Main module explicit relative imports PEP 420 Implicit namespace packages PEP 451 A ModuleSpec Type for the Import System PEP 488 Elimination of PYO files PEP 489 Multi-phase extension module initialization PEP 552 Deterministic pycs PEP 3120 Using UTF-8 as the Default Source Encoding PEP 3147 PYC Repository Directories Functions¶ importlib.__import__(name, globals\u003dNone, locals\u003dNone, fromlist\u003d(), level\u003d0)¶ An implementation of the built-in __import__() function. Note Programmatic importing of modules should use import_module() instead of this function. importlib.import_module(name, package\u003dNone)¶ Import a module. The name argument specifies what module to import in absolute or relative terms (e.g. either pkg.mod or ..mod). If the name is specified in relative terms, then the package argument must be set to the name of the package which is to act as the anchor for resolving the package name (e.g. import_module(\u0027..mod\u0027, \u0027pkg.subpkg\u0027) will import pkg.mod). The import_module() function acts as a simplifying wrapper around importlib.__import__(). This means all semantics of the function are derived from importlib.__import__(). The most important difference between these two functions is that import_module() returns the specified package or module (e.g. pkg.mod), while __import__() returns the top-level package or module (e.g. pkg). If you are dynamically importing a module that was created since the interpreter began execution (e.g., created a Python source file), you may need to call invalidate_caches() in order for the new module to be noticed by the import system. Changed in version 3.3: Parent packages are automatically imported. importlib.invalidate_caches()¶ Invalidate the internal caches of finders stored at sys.meta_path. If a finder implements invalidate_caches() then it will be called to perform the invalidation. This function should be called if any modules are created/installed while your program is running to guarantee all finders will notice the new module’s existence. Added in version 3.3. Changed in version 3.10: Namespace packages created/installed in a different sys.path location after the same namespace was already imported are noticed. importlib.reload(module)¶ Reload a previously imported module. The argument must be a module object, so it must have been successfully imported before. This is useful if you have edited the module source file using an external editor and want to try out the new version without leaving the Python interpreter. The return value is the module object (which can be different if re-importing causes a different object to be placed in sys.modules). When reload() is executed: Python module’s code is recompiled and the module-level code re-executed, defining a new set of objects which are bound to names in the module’s dictionary by reusing the loader which originally loaded the module. The init function of extension modules is not called a second time. As with all other objects in Python the old objects are only reclaimed after their reference counts drop to zero. The names in the module namespace are updated to point to any new or changed objects. Other references to the old objects (such as names e",
+    "scrapedAt": "2026-05-10 04:44:14.248563"
+  },
+  {
+    "id": 769,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-10 04:44:07.830214"
+  },
+  {
+    "id": 768,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-10 04:44:00.559183"
+  },
+  {
     "id": 767,
     "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event",
     "title": "Synchronization Primitives — Python 3.14.5rc1 documentation",
@@ -5082,26 +5117,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 768,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
-  },
-  {
-    "id": 769,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv"
-  },
-  {
-    "id": 770,
-    "url": "https://docs.python.org/3/library/importlib.html#module-importlib"
-  },
-  {
-    "id": 771,
-    "url": "https://docs.python.org/3/library/termios.html#module-termios"
-  },
-  {
-    "id": 772,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#calendar"
   },
   {
     "id": 773,
@@ -132375,10 +132390,150 @@ window.searchData = [
     "id": 97357,
     "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.acquire",
     "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97991,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcsetwinsize",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 97992,
+    "url": "https://docs.python.org/3/library/termios.html#termios.TCSANOW",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 97996,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/termios.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 97998,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcgetwinsize",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98004,
+    "url": "https://docs.python.org/3/library/termios.html#termios.TCSAFLUSH",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98005,
+    "url": "https://docs.python.org/3/library/termios.html#",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98006,
+    "url": "https://docs.python.org/3/library/tty.html#module-tty",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98007,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcsendbreak",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98009,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcflush",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98010,
+    "url": "https://docs.python.org/3/library/termios.html#termios.TCSADRAIN",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98014,
+    "url": "https://manpages.debian.org/termios(3)",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98015,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcsetattr",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98018,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcflow",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98020,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcdrain",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98023,
+    "url": "https://docs.python.org/3/library/termios.html#example",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "id": 98024,
+    "url": "https://docs.python.org/3/library/termios.html#termios.tcgetattr",
+    "parentUrl": "https://docs.python.org/3/library/termios.html#module-termios"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#calendar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#calendar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "termios — POSIX style tty control — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "termios — POSIX style tty control — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/termios.html#module-termios"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.argv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
