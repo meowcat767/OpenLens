@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 520,
+    "url": "http://docs.python.org/library/email",
+    "title": "email — An email and MIME handling package — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Data Handling » email — An email and MIME handling package | Theme Auto Light Dark | email — An email and MIME handling package¶ Source code: Lib/email/__init__.py The email package is a library for managing email messages. It is specifically not designed to do any sending of email messages to SMTP (RFC 2821), NNTP, or other servers; those are functions of modules such as smtplib. The email package attempts to be as RFC-compliant as possible, supporting RFC 5322 and RFC 6532, as well as such MIME-related RFCs as RFC 2045, RFC 2046, RFC 2047, RFC 2183, and RFC 2231. The overall structure of the email package can be divided into three major components, plus a fourth component that controls the behavior of the other components. The central component of the package is an “object model” that represents email messages. An application interacts with the package primarily through the object model interface defined in the message sub-module. The application can use this API to ask questions about an existing email, to construct a new email, or to add or remove email subcomponents that themselves use the same object model interface. That is, following the nature of email messages and their MIME subcomponents, the email object model is a tree structure of objects that all provide the EmailMessage API. The other two major components of the package are the parser and the generator. The parser takes the serialized version of an email message (a stream of bytes) and converts it into a tree of EmailMessage objects. The generator takes an EmailMessage and turns it back into a serialized byte stream. (The parser and generator also handle streams of text characters, but this usage is discouraged as it is too easy to end up with messages that are not valid in one way or another.) The control component is the policy module. Every EmailMessage, every generator, and every parser has an associated policy object that controls its behavior. Usually an application only needs to specify the policy when an EmailMessage is created, either by directly instantiating an EmailMessage to create a new email, or by parsing an input stream using a parser. But the policy can be changed when the message is serialized using a generator. This allows, for example, a generic email message to be parsed from disk, but to serialize it using standard SMTP settings when sending it to an email server. The email package does its best to hide the details of the various governing RFCs from the application. Conceptually the application should be able to treat the email message as a structured tree of unicode text and binary attachments, without having to worry about how these are represented when serialized. In practice, however, it is often necessary to be aware of at least some of the rules governing MIME messages and their structure, specifically the names and nature of the MIME “content types” and how they identify multipart documents. For the most part this knowledge should only be required for more complex applications, and even then it should only be the high level structure in question, and not the details of how those structures are represented. Since MIME content types are used widely in modern internet software (not just email), this will be a familiar concept to many programmers. The following sections describe the functionality of the email package. We start with the message object model, which is the primary interface an application will use, and follow that with the parser and generator components. Then we cover the policy controls, which completes the treatment of the main components of the library. The next three sections cover the exceptions the package may raise and the defects (non-compliance with the RFCs) that the parser may detect. Then we cover the headerregistry and the contentmanager sub-components, which provide tools for doing more detailed manipulation of headers and payloads, respectively. Both of these components contain features relevant to consuming and producing non-trivial messages, but also document their extensibility APIs, which will be of interest to advanced applications. Following those is a set of examples of using the fundamental parts of the APIs covered in the preceding sections. The foregoing represent the modern (unicode friendly) API of the email package. The remaining sections, starting with the Message class, cover the legacy compat32 API that deals much more directly with the details of how email messages are represented. The compat32 API does not hide the details of the RFCs from the application, but for applications that need to operate at that level, they can be useful tools. This documentation is also relevant for applications that are still using the compat32 API for backward compatibility reasons. Changed in version 3.6: Docs reorganized and rewritten to promote the new EmailMessage/Emai",
+    "scrapedAt": "2026-05-10 04:21:35.803398"
+  },
+  {
+    "id": 519,
+    "url": "http://www.pylonsproject.org/",
+    "title": "Welcome to the Pylons Project",
+    "content": "Pylons Project We build Web Technologies for the Python community Our Projects AcidFS Filesystem interaction using transactions with ACID semantics. package • source • docs Deform An HTML form library. package • source • docs Pyramid The Start Small, Finish Big, Stay Finished Web Framework. package • source • docs • website SubstanceD An application server based on Pyramid. package • source • docs • website translationstring An internationalization library. package • source • docs Waitress WSGI server for Python 2/3 that runs on UNIX and Windows. package • source • docs Webob WSGI request/response library. package • source • docs • website WebTest Test a WSGI application without starting up an HTTP server. package • source • docs More Projects Pyramid The Start Small, Finish Big Stay Finished Web Framework Visit trypyramid.com to learn more about the Pyramid web framework, our most featured project. Pylons Project The Pylons Project is composed of a disparate group of project leaders with experience going back to the very start of Python web frameworks. Collectively, we have experience and humility gained by making (and surviving) every stupid decision that could be imagined. We aim to bring fresh ideas to classic web development problems. Rather than focusing on a single web framework, the Pylons Project develops a collection of related technologies. The first package from the Pylons Project was the Pyramid web framework. Other packages have been added to the collection over time, including higher-level components and applications. The project has become an ecosystem of well-tested, well-documented components which interoperate easily.",
+    "scrapedAt": "2026-05-10 04:21:31.826557"
+  },
+  {
+    "id": 518,
+    "url": "http://www.tryton.org/",
+    "title": "Tryton - Modularity, scalability \u0026 security for your business",
+    "content": "TRYTON® is business software, ideal for companies of any size, easy to use, complete and 100% Open Source. Start with Tryton All you need to run your business TRYTON® includes all these features fully integrated account_balance Financial Accounting Record all transactions in your chart of accounts. store_mall_directory Sales Follow orders from quotation to customer satisfaction. local_convenience_store Inventory \u0026 Stock Track goods in your warehouses from receipt to delivery. account_balance_wallet Analytic Accounting Break down your expenses and revenues by category. person CRM Convert your leads and opportunities into sales. shopping_cart Purchasing Follow your requests for quotation and reduce costs by grouping orders. equalizer Supply Chain Fill your warehouses just in time. build Manufacturing Transform raw materials into finished products with bill of materials and routing. local_shipping Shipping Package shipments for your carriers. work Project Management Check the profitability of projects and never forget to invoice customers. repeat Subscription Management Create recurring invoices for your customer contracts. group_work Third Party Integration Automate your communication with banks, carriers, websites etc. News Tryton News May 2026 Fri, 01 May 2026 During the last month we focused on fixing bugs, improving the behaviour of things, speeding-up performance issues - building on the changes from our last LTS release 8.0. We added some new features which we would like to introduce to... Moreon \"Tryton News May 2026\" Tryton Release 8.0 Tue, 21 Apr 2026 We are proud to announce the 8.0 LTS release of Tryton. This release provides many bug fixes, performance improvements and some fine tuning. You can give it a try on the demo server, use the docker image or download it here. As usual... Moreon \"Tryton Release 8.0\" Tryton News April 2026 Wed, 01 Apr 2026 During the last month we focused on fixing bugs, improving the behaviour of things, speeding-up performance issues - building on the changes from our last release. We also added some new features which we would like to introduce to you... Moreon \"Tryton News April 2026\" event Events If you are organizing an event around Tryton and want to be listed here, please send us a message. Send Next Events: 2027-12-31 Renew Foundation Board Add to calendar More events",
+    "scrapedAt": "2026-05-10 04:21:24.800118"
+  },
+  {
+    "id": 517,
+    "url": "http://flask.pocoo.org/",
+    "title": "Welcome to Flask — Flask Documentation (3.1.x)",
+    "content": "Navigation index modules | next | Flask Documentation (3.1.x) » Welcome to Flask Welcome to Flask¶ Welcome to Flask’s documentation. Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. Get started with Installation and then get an overview with the Quickstart. There is also a more detailed Tutorial that shows how to create a small but complete application with Flask. Common patterns are described in the Patterns for Flask section. The rest of the docs describe each component of Flask in detail, with a full reference in the API section. Flask depends on the Werkzeug WSGI toolkit, the Jinja template engine, and the Click CLI toolkit. Be sure to check their documentation as well as Flask’s when looking for information. User’s Guide¶ Flask provides configuration and conventions, with sensible defaults, to get started. This section of the documentation explains the different parts of the Flask framework and how they can be used, customized, and extended. Beyond Flask itself, look for community-maintained extensions to add even more functionality. Installation Python Version Dependencies Virtual environments Install Flask Quickstart A Minimal Application Debug Mode HTML Escaping Routing Static Files Rendering Templates Accessing Request Data Redirects and Errors About Responses Sessions Message Flashing Logging Hooking in WSGI Middleware Using Flask Extensions Deploying to a Web Server Tutorial Project Layout Application Setup Define and Access the Database Blueprints and Views Templates Static Files Blog Blueprint Make the Project Installable Test Coverage Deploy to Production Keep Developing! Templates Jinja Setup Standard Context Controlling Autoescaping Registering Filters Context Processors Streaming Testing Flask Applications Identifying Tests Fixtures Sending Requests with the Test Client Following Redirects Accessing and Modifying the Session Running Commands with the CLI Runner Tests that depend on an Active Context Handling Application Errors Error Logging Tools Error Handlers Custom Error Pages Blueprint Error Handlers Returning API Errors as JSON Logging Debugging Debugging Application Errors In Production The Built-In Debugger External Debuggers Logging Basic Configuration Email Errors to Admins Injecting Request Information Other Libraries Configuration Handling Configuration Basics Debug Mode Builtin Configuration Values Configuring from Python Files Configuring from Data Files Configuring from Environment Variables Configuration Best Practices Development / Production Instance Folders Signals Core Signals Subscribing to Signals Creating Signals Sending Signals Signals and Flask’s Request Context Decorator Based Signal Subscriptions Class-based Views Basic Reusable View URL Variables View Lifetime and self View Decorators Method Hints Method Dispatching and APIs Application Structure and Lifecycle Application Setup Serving the Application How a Request is Handled The Application Context Purpose of the Context Lifetime of the Context Manually Push a Context Storing Data Events and Signals The Request Context Purpose of the Context Lifetime of the Context Manually Push a Context How the Context Works Callbacks and Errors Notes On Proxies Modular Applications with Blueprints Why Blueprints? The Concept of Blueprints My First Blueprint Registering Blueprints Nesting Blueprints Blueprint Resources Building URLs Blueprint Error Handlers Extensions Finding Extensions Using Extensions Building Extensions Command Line Interface Application Discovery Run the Development Server Open a Shell Environment Variables From dotenv Environment Variables From virtualenv Custom Commands Plugins Custom Scripts PyCharm Integration Development Server Command Line In Code Working with the Shell Command Line Interface Creating a Request Context Firing Before/After Request Further Improving the Shell Experience Patterns for Flask Large Applications as Packages Application Factories Application Dispatching Using URL Processors Using SQLite 3 with Flask SQLAlchemy in Flask Uploading Files Caching View Decorators Form Validation with WTForms Template Inheritance Message Flashing JavaScript, fetch, and JSON Lazily Loading Views MongoDB with MongoEngine Adding a favicon Streaming Contents Deferred Request Callbacks Adding HTTP Method Overrides Request Content Checksums Background Tasks with Celery Subclassing Flask Single-Page Applications Security Considerations Resource Use Cross-Site Scripting (XSS) Cross-Site Request Forgery (CSRF) JSON Security Security Headers Host Header Validation Copy/Paste to Terminal Deploying to Production Self-Hosted Options Hosting Platforms Async with Gevent Enabling gevent Combining with async/await Using async and await Performance Background tasks When to use Quart instead Extensions Other event loops API Reference¶ If you are looking for information on a specific function, class or me",
+    "scrapedAt": "2026-05-10 04:21:18.623054"
+  },
+  {
+    "id": 516,
+    "url": "https://pypi.org/project/feedparser/",
+    "title": "feedparser · PyPI",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Search PyPI Search feedparser 6.0.12 pip install feedparser Copy PIP instructions Latest version Released: Sep 10, 2025 Universal feed parser, handles RSS 0.9x, RSS 1.0, RSS 2.0, CDF, Atom 0.3, and Atom 1.0 feeds Navigation Verified details These details have been verified by PyPI Maintainers kurtmckee Unverified details These details have not been verified by PyPI Project links Homepage Download Meta License: BSD License (BSD-2-Clause) Author: Kurt McKee Tags atom , cdf , feed , parser , rdf , rss Requires: Python \u003e\u003d3.6 Classifiers Development Status 5 - Production/Stable Intended Audience Developers License OSI Approved :: BSD License Operating System OS Independent Programming Language Python Python :: 3.6 Python :: 3.7 Python :: 3.8 Python :: 3.9 Topic Software Development :: Libraries :: Python Modules Text Processing :: Markup :: XML Report project as malware Project description Parse Atom and RSS feeds in Python. Installation feedparser can be installed by running pip: $ pip install feedparser Documentation The feedparser documentation is available on the web at: https://feedparser.readthedocs.io/en/latest/ It is also included in its source format, ReST, in the docs/ directory. To build the documentation you’ll need the Sphinx package, which is available at: https://www.sphinx-doc.org/ You can then build HTML pages using a command similar to: $ sphinx-build -b html docs/ fpdocs This will produce HTML documentation in the fpdocs/ directory. Testing Feedparser has an extensive test suite, powered by tox. To run it, type this: $ python -m venv venv\n$ source venv/bin/activate  # or \"venv\\bin\\activate.ps1\" on Windows\n(venv) $ pip install -r requirements-dev.txt\n(venv) $ tox This will spawn an HTTP server that will listen on port 8097. The tests will fail if that port is in use. Project details Verified details These details have been verified by PyPI Maintainers kurtmckee Unverified details These details have not been verified by PyPI Project links Homepage Download Meta License: BSD License (BSD-2-Clause) Author: Kurt McKee Tags atom , cdf , feed , parser , rdf , rss Requires: Python \u003e\u003d3.6 Classifiers Development Status 5 - Production/Stable Intended Audience Developers License OSI Approved :: BSD License Operating System OS Independent Programming Language Python Python :: 3.6 Python :: 3.7 Python :: 3.8 Python :: 3.9 Topic Software Development :: Libraries :: Python Modules Text Processing :: Markup :: XML Release history Release notifications | RSS feed This version 6.0.12 Sep 10, 2025 6.0.11 Dec 10, 2023 6.0.10 May 21, 2022 6.0.9 May 19, 2022 6.0.8 Jun 22, 2021 6.0.7 Jun 22, 2021 6.0.6 Jun 15, 2021 6.0.5 Jun 14, 2021 6.0.4 Jun 13, 2021 6.0.3 Jun 13, 2021 6.0.2 Oct 25, 2020 6.0.1 yanked Sep 15, 2020 Reason this release was yanked: Wheels allow py2 installation despite being unsupported 6.0.0 yanked Sep 12, 2020 Reason this release was yanked: Missing python_requires in setup.py, allowing unsupported Python versions to try installing. 6.0.0b3 pre-release Feb 25, 2020 6.0.0b2 pre-release Feb 23, 2020 6.0.0b1 pre-release Oct 2, 2019 5.2.1 Jul 24, 2015 5.2.0 Apr 16, 2015 5.1.3 Dec 9, 2012 5.1.2 May 3, 2012 5.1.1 Mar 20, 2012 5.1 Dec 3, 2011 5.0.1 Feb 20, 2011 5.0 Jan 28, 2011 4.1 Jun 15, 2007 Download files Download the file for your platform. If you\u0027re not sure which to choose, learn more about installing packages. Source Distribution feedparser-6.0.12.tar.gz (286.6 kB view details) Uploaded Sep 10, 2025 Source Built Distribution Filter files by name, interpreter, ABI, and platform. If you\u0027re not sure about the file name format, learn more about wheel file names. The dropdown lists show the available interpreters, ABIs, and platforms. Enable javascript to be able to filter the list of wheel files. Copy a direct link to the current filters Copy File name Interpreter Interpreter py3 ABI ABI none Platform Platform any feedparser-6.0.12-py3-none-any.whl (81.5 kB view details) Uploaded Sep 10, 2025 Python 3 File details Details for the file feedparser-6.0.12.tar.gz. File metadata Download URL: feedparser-6.0.12.tar.gz Upload date: Sep 10, 2025 Size: 286.6 kB Tags: Source Uploaded using Trusted Publishing? No Uploaded via: twine/6.2.0 CPython/3.13.7 File hashes Hashes for feedparser-6.0.12.tar.gz Algorithm Hash digest SHA256 64f76ce90ae3e8ef5d1ede0f8d3b50ce26bcce71dd8ae5e82b1cd2d4a5f94228 Copy MD5 5f3c26e0f17ce73c31f875cdb4324b66 Copy BLAKE2b-256 dc79db7edb5e77d6dfbc54d7d9df72828be4318275b2e580549ff45a962f6461 Copy See more details on using hashes here. File details Details for the file feedparser-6.0.12-py3-none-any.whl. File metadata Download URL: feedparser-6.0.12-py3-none-any.whl Upload date: Sep 10, 2025 Size: 81.5 kB Tags: Python 3 Uploaded using Trusted Publishing? No Uploaded via: twine/6.2.0 CPython/3.13.7 File hashes Hashes for feedparser-6.0.12-py3-no",
+    "scrapedAt": "2026-05-10 04:21:06.624317"
+  },
+  {
     "id": 515,
     "url": "http://docs.python.org/library/internet",
     "title": "Internet Protocols and Support — Python 3.14.5rc1 documentation",
@@ -3577,26 +3612,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 516,
-    "url": "https://pypi.org/project/feedparser/"
-  },
-  {
-    "id": 517,
-    "url": "http://flask.pocoo.org/"
-  },
-  {
-    "id": 518,
-    "url": "http://www.tryton.org/"
-  },
-  {
-    "id": 519,
-    "url": "http://www.pylonsproject.org/"
-  },
-  {
-    "id": 520,
-    "url": "http://docs.python.org/library/email"
   },
   {
     "id": 522,
@@ -93835,10 +93850,848 @@ window.searchData = [
     "id": 70542,
     "url": "https://docs.python.org/3/library/ipaddress.html#conversion-to-strings-and-integers",
     "parentUrl": "http://docs.python.org/library/internet"
+  },
+  {
+    "id": 70544,
+    "url": "https://pypi.org/project/feedparser/6.0.4/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70545,
+    "url": "https://pypi.org/project/feedparser/#content",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70547,
+    "url": "https://pypi.org/project/feedparser/6.0.8/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70548,
+    "url": "https://pypi.org/rss/project/feedparser/releases.xml",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70549,
+    "url": "https://pypi.org/project/feedparser/6.0.0/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70550,
+    "url": "https://pypi.org/project/feedparser/submit-malware-report/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70551,
+    "url": "https://pypi.org/project/feedparser/5.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70552,
+    "url": "https://pypi.python.org/pypi/feedparser",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70553,
+    "url": "https://pypi.org/project/feedparser/5.2.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70554,
+    "url": "https://pypi.org/project/feedparser/6.0.5/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70555,
+    "url": "https://pypi.org/project/feedparser/6.0.9/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70556,
+    "url": "https://pypi.org/project/feedparser/6.0.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70557,
+    "url": "https://files.pythonhosted.org/packages/4e/eb/c96d64137e29ae17d83ad2552470bafe3a7a915e85434d9942077d7fd011/feedparser-6.0.12-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70558,
+    "url": "https://pypi.org/project/feedparser/6.0.10/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70559,
+    "url": "https://pypi.org/project/feedparser/4.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70560,
+    "url": "https://pypi.org/project/feedparser/6.0.0b3/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70561,
+    "url": "https://pypi.org/project/feedparser/5.1.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70564,
+    "url": "https://pypi.org/project/feedparser/#feedparser-6.0.12.tar.gz",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70565,
+    "url": "https://pypi.org/project/feedparser/#files",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70567,
+    "url": "https://pypi.org/project/feedparser/6.0.2/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70569,
+    "url": "https://pypi.org/project/feedparser/5.0.1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70570,
+    "url": "https://github.com/kurtmckee/feedparser",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70571,
+    "url": "https://pypi.org/project/feedparser/6.0.6/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70572,
+    "url": "https://files.pythonhosted.org/packages/dc/79/db7edb5e77d6dfbc54d7d9df72828be4318275b2e580549ff45a962f6461/feedparser-6.0.12.tar.gz",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70573,
+    "url": "https://pypi.org/project/feedparser/6.0.11/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70574,
+    "url": "https://pypi.org/search/?c\u003dTopic+%3A%3A+Text+Processing+%3A%3A+Markup+%3A%3A+XML",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70576,
+    "url": "https://pypi.org/project/feedparser/6.0.0b2/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70577,
+    "url": "https://pypi.org/project/feedparser/5.1.2/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70578,
+    "url": "https://pypi.org/search/?c\u003dLicense+%3A%3A+OSI+Approved+%3A%3A+BSD+License",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70581,
+    "url": "https://pypi.org/user/kurtmckee/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70582,
+    "url": "https://pypi.org/project/feedparser/6.0.3/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70583,
+    "url": "https://pypi.org/project/feedparser/6.0.7/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70584,
+    "url": "https://feedparser.readthedocs.io/en/latest/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70590,
+    "url": "https://pypi.org/project/feedparser/6.0.12/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70591,
+    "url": "https://pypi.org/project/feedparser/#feedparser-6.0.12-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70592,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.6",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70595,
+    "url": "https://pypi.org/search/?c\u003dTopic+%3A%3A+Software+Development+%3A%3A+Libraries+%3A%3A+Python+Modules",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70596,
+    "url": "https://pypi.org/project/feedparser/6.0.0b1/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70598,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.8",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70599,
+    "url": "https://pypi.org/project/feedparser/5.1.3/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70600,
+    "url": "https://pypi.org/project/feedparser/5.0/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70601,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.7",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70603,
+    "url": "https://pypi.org/project/feedparser/5.2.0/",
+    "parentUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "id": 70908,
+    "url": "http://www.tryton.org/download",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70909,
+    "url": "https://discuss.tryton.org/t/renew-foundation-board-2027/5804/1",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70910,
+    "url": "https://discuss.tryton.org/new-message?groupname\u003dfoundation",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70911,
+    "url": "https://discuss.tryton.org/t/tryton-news-april-2026/9179",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70912,
+    "url": "http://www.tryton.org/events",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70913,
+    "url": "http://www.tryton.org/news",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70914,
+    "url": "http://www.tryton.org/foundation#trademark",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70915,
+    "url": "https://discuss.tryton.org/t/tryton-news-may-2026/9214",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70916,
+    "url": "https://discuss.tryton.org/t/tryton-release-8-0/9208",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70917,
+    "url": "http://www.tryton.org/events.ics",
+    "parentUrl": "http://www.tryton.org/"
+  },
+  {
+    "id": 70918,
+    "url": "https://github.com/Pylons/waitress",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70919,
+    "url": "https://github.com/Pylons/webtest",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70920,
+    "url": "https://github.com/Pylons/substanced",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70921,
+    "url": "https://docs.pylonsproject.org/projects/deform/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70922,
+    "url": "https://docs.pylonsproject.org/projects/pyramid/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70923,
+    "url": "https://pypi.org/project/webob",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70924,
+    "url": "https://pypi.org/project/WebTest",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70925,
+    "url": "https://docs.pylonsproject.org/projects/translationstring/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70926,
+    "url": "https://trypyramid.com",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70927,
+    "url": "https://docs.pylonsproject.org/projects/webtest/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70928,
+    "url": "https://github.com/Pylons/webob",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70929,
+    "url": "https://pypi.org/project/translationstring",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70931,
+    "url": "https://webob.org/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70932,
+    "url": "https://docs.pylonsproject.org/projects/substanced/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70933,
+    "url": "http://www.substanced.net/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70934,
+    "url": "https://pypi.org/project/waitress",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70935,
+    "url": "https://github.com/Pylons/acidfs",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70936,
+    "url": "https://docs.pylonsproject.org/projects/webob/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70937,
+    "url": "https://pylonsproject.org/projects.html",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70938,
+    "url": "https://acidfs.readthedocs.io/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70939,
+    "url": "https://github.com/Pylons/deform",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70940,
+    "url": "https://pypi.org/project/pyramid",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70941,
+    "url": "https://pypi.org/project/substanced",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70942,
+    "url": "https://pypi.org/project/deform",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70943,
+    "url": "https://github.com/Pylons/translationstring",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70944,
+    "url": "https://github.com/Pylons/pyramid",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70945,
+    "url": "https://docs.pylonsproject.org/projects/waitress/en/latest/",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70946,
+    "url": "https://pypi.org/project/acidfs",
+    "parentUrl": "http://www.pylonsproject.org/"
+  },
+  {
+    "id": 70951,
+    "url": "https://docs.python.org/3/library/imaplib.html#module-imaplib",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70952,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2045.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70954,
+    "url": "https://docs.python.org/3/library/email.headerregistry.html#module-email.headerregistry",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70955,
+    "url": "https://docs.python.org/3/library/email.generator.html#module-email.generator",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70957,
+    "url": "https://docs.python.org/3/library/email.compat32-message.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70958,
+    "url": "https://docs.python.org/3/library/email.parser.html#module-email.parser",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70959,
+    "url": "https://docs.python.org/3/library/email.contentmanager.html#content-manager-instances",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70960,
+    "url": "https://docs.python.org/3/library/email.policy.html#email.policy.EmailPolicy",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70961,
+    "url": "https://docs.python.org/3/library/email.policy.html#module-email.policy",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70962,
+    "url": "https://docs.python.org/3/library/email.generator.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70963,
+    "url": "https://docs.python.org/3/library/email.message.html#email.message.EmailMessage",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70964,
+    "url": "https://docs.python.org/3/library/email.policy.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70966,
+    "url": "https://docs.python.org/3/library/email.errors.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70968,
+    "url": "https://docs.python.org/3/library/smtplib.html#module-smtplib",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70969,
+    "url": "https://docs.python.org/3/library/email.examples.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70970,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/email/__init__.py",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70972,
+    "url": "https://docs.python.org/3/library/poplib.html#module-poplib",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70973,
+    "url": "https://docs.python.org/3/library/email.header.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70974,
+    "url": "https://docs.python.org/3/library/email.encoders.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70975,
+    "url": "https://docs.python.org/3/library/email.parser.html#additional-notes",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70976,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5322.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70977,
+    "url": "https://docs.python.org/3/library/email.message.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70978,
+    "url": "https://docs.python.org/3/library/email.policy.html#email.policy.compat32",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70981,
+    "url": "https://docs.python.org/3/library/email.charset.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70982,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/email.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70983,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6532.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70984,
+    "url": "https://docs.python.org/3/library/email.parser.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70985,
+    "url": "https://docs.python.org/3/library/email.headerregistry.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70986,
+    "url": "https://docs.python.org/3/library/email.compat32-message.html#email.message.Message",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70987,
+    "url": "https://docs.python.org/3/library/email.parser.html#feedparser-api",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70988,
+    "url": "https://docs.python.org/3/library/email.parser.html#parser-api",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70989,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2183.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70990,
+    "url": "https://docs.python.org/3/library/email.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70993,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2821.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70994,
+    "url": "https://docs.python.org/3/library/email.contentmanager.html#module-email.contentmanager",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 70997,
+    "url": "https://docs.python.org/3/library/email.message.html#module-email.message",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 71000,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2046.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 71001,
+    "url": "https://docs.python.org/3/library/email.contentmanager.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 71002,
+    "url": "https://docs.python.org/3/library/email.mime.html",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 71003,
+    "url": "https://docs.python.org/3/library/email.html#module-email",
+    "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 71004,
+    "url": "https://docs.python.org/3/library/email.utils.html",
+    "parentUrl": "http://docs.python.org/library/email"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "email — An email and MIME handling package — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "email — An email and MIME handling package — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "src": "https://flask.palletsprojects.com/en/stable/_images/flask-name.svg",
+    "alt": "_images/flask-name.svg",
+    "pageTitle": "Welcome to Flask — Flask Documentation (3.1.x)",
+    "pageUrl": "http://flask.pocoo.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/23255a4de1d6c1478daa6040634301e2cefde5b1/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f30353134353031313138636234653831383839613564366233626261666234313f73697a653d3530",
+    "alt": "Avatar for kurtmckee from gravatar.com",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/23255a4de1d6c1478daa6040634301e2cefde5b1/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f30353134353031313138636234653831383839613564366233626261666234313f73697a653d3530",
+    "alt": "Avatar for kurtmckee from gravatar.com",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/blue-cube.572a5bfb.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "feedparser · PyPI",
+    "pageUrl": "https://pypi.org/project/feedparser/"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
