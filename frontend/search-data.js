@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 197,
+    "url": "https://www.tornadoweb.org/",
+    "title": "Tornado Web Server — Tornado 6.5.5 documentation",
+    "content": "Tornado Web Server View page source ¶ Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user. Quick links¶ Current version: 6.5.5 (download from PyPI, release notes) Source (GitHub) Mailing lists: discussion and announcements Stack Overflow Wiki Hello, world¶ Here is a simple “Hello, world” example web app for Tornado: import asyncio\nimport tornado\n\nclass MainHandler(tornado.web.RequestHandler):\n    def get(self):\n        self.write(\"Hello, world\")\n\ndef make_app():\n    return tornado.web.Application([\n        (r\"/\", MainHandler),\n    ])\n\nasync def main():\n    app \u003d make_app()\n    app.listen(8888)\n    await asyncio.Event().wait()\n\nif __name__ \u003d\u003d \"__main__\":\n    asyncio.run(main())\n This example does not use any of Tornado’s asynchronous features; for that see this simple chat room. Threads and WSGI¶ Tornado is different from most Python web frameworks. It is not based on WSGI, and it is typically run with only one thread per process. See the User’s guide for more on Tornado’s approach to asynchronous programming. While some support of WSGI is available in the tornado.wsgi module, it is not a focus of development and most applications should be written to use Tornado’s own interfaces (such as tornado.web) directly instead of using WSGI. In general, Tornado code is not thread-safe. The only method in Tornado that is safe to call from other threads is IOLoop.add_callback. You can also use IOLoop.run_in_executor to asynchronously run a blocking function on another thread, but note that the function passed to run_in_executor should avoid referencing any Tornado objects. run_in_executor is the recommended way to interact with blocking code. asyncio Integration¶ Tornado is integrated with the standard library asyncio module and shares the same event loop (by default since Tornado 5.0). In general, libraries designed for use with asyncio can be mixed freely with Tornado. Installation¶ pip install tornado\n Tornado is listed in PyPI and can be installed with pip. Note that the source distribution includes demo applications that are not present when Tornado is installed in this way, so you may wish to download a copy of the source tarball or clone the git repository as well. Prerequisites: Tornado 6.3 requires Python 3.9 or newer. The following optional packages may be useful: pycurl is used by the optional tornado.curl_httpclient. Libcurl version 7.22 or higher is required. pycares is an alternative non-blocking DNS resolver that can be used when threads are not appropriate. Platforms: Tornado is designed for Unix-like platforms, with best performance and scalability on systems supporting epoll (Linux), kqueue (BSD/macOS), or /dev/poll (Solaris). Tornado will also run on Windows, although this configuration is not officially supported or recommended for production use. Some features are missing on Windows (including multi-process mode) and scalability is limited (Even though Tornado is built on asyncio, which supports Windows, Tornado does not use the APIs that are necessary for scalable networking on Windows). Documentation¶ This documentation is also available in PDF and Epub formats. User’s guide Introduction Asynchronous and non-Blocking I/O Coroutines Queue example - a concurrent web spider Structure of a Tornado web application Templates and UI Authentication and security Running and deploying Web framework tornado.web — RequestHandler and Application classes tornado.template — Flexible output generation tornado.routing — Basic routing implementation tornado.escape — Escaping and string manipulation tornado.locale — Internationalization support tornado.websocket — Bidirectional communication to the browser HTTP servers and clients tornado.httpserver — Non-blocking HTTP server tornado.httpclient — Asynchronous HTTP client tornado.httputil — Manipulate HTTP headers and URLs tornado.http1connection – HTTP/1.x client/server implementation Asynchronous networking tornado.ioloop — Main event loop tornado.iostream — Convenient wrappers for non-blocking sockets tornado.netutil — Miscellaneous network utilities tornado.tcpclient — IOStream connection factory tornado.tcpserver — Basic IOStream-based TCP server Coroutines and concurrency tornado.gen — Generator-based coroutines tornado.locks – Synchronization primitives tornado.queues – Queues for coroutines tornado.process — Utilities for multiple processes Integration with other services tornado.auth — Third-party login with OpenID and OAuth tornado.wsgi — Interoperability with other Python frameworks and servers tornado.platform.caresresolver — Asynchronous DNS Resolver using C-Ares tornado.platform.twisted — Bridges between Twisted and Tornado tornado.platform.asyncio — Bridge between asyncio and Tornado Uti",
+    "scrapedAt": "2026-05-10 03:48:28.425145"
+  },
+  {
+    "id": 196,
+    "url": "https://pytorch.org/",
+    "title": "PyTorch",
+    "content": "Search Close Search JOIN US PyTorch Conference North America October 20-21, 2026 San Jose, CA #PyTorchCon SUBMIT TO SPEAKSPONSOR Get Started: Install PyTorch Locally or Launch Instantly on Supported Cloud Platforms Get started May 5, 2026 in Blog In-Kernel Broadcast Optimization: Co-Designing Kernels for RecSys Inference TL;DR: Traditional RecSys inference explicitly replicates shared user embeddings/sequences for every candidate. In-Kernel Broadcast Optimization (IKBO) eliminates this overhead via a kernel-model-system co-design that fuses broadcast logic directly into user-candidate… Read More April 30, 2026 in Blog SMG: The Case for Disaggregating CPU from GPU in LLM Serving How It Started: Hitting the GIL Wall at Scale We\u0027ve been running production model serving for many years. When we first started building Shepherd Model Gateway, the goal was modest:… Read More April 29, 2026 in Blog Introducing AutoSP ¹ SSAIL Lab, University of Illinois Urbana-Champaign, ² Anyscale, ³ Snowflake TL;DR: AutoSP automatically converts standard transformer training code into sequence-parallel code for long-context LLM training across multiple GPUs. Integrated… Read More Join PyTorch Foundation As a member of the PyTorch Foundation, you’ll have access to resources that allow you to be stewards of stable, secure, and long-lasting codebases. You can collaborate on training, local and regional events, open-source developer tooling, academic research, and guides to help new users and contributors have a productive experience. EXPLORE BENEFITS Key Features \u0026 Capabilities Production Ready Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe. Distributed Training Scalable distributed training and performance optimization in research and production is enabled by the torch.distributed backend. Robust Ecosystem A rich ecosystem of tools and libraries extends PyTorch and supports development in computer vision, NLP and more. Cloud Support PyTorch is well supported on major cloud platforms, providing frictionless development and easy scaling. Install PyTorch Select your preferences and run the install command. Stable represents the most currently tested and supported version of PyTorch. This should be suitable for many users. Preview is available if you want the latest, not fully tested and supported, builds that are generated nightly. Please ensure that you have met the prerequisites below (e.g., numpy), depending on your package manager. You can also install previous versions of PyTorch. Note that LibTorch is only available for C++. NOTE: Latest Stable PyTorch requires Python 3.10 or later. PyTorch Build Your OS Package Language Compute Platform Run this Command: PyTorch Build Stable (2.7.0) Preview (Nightly) Your OS Linux Mac Windows Package Pip LibTorch Source Language Python C++ / Java Compute Platform CUDA 11.8 CUDA 12.6 CUDA 12.8 ROCm 6.3 CPU Run this Command: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 Previous versions of PyTorch Quick Start With Cloud Partners Get up and running with PyTorch quickly through popular cloud platforms and machine learning services. Amazon Web Services PyTorch on AWS Amazon SageMaker AWS Deep Learning Containers AWS Deep Learning AMIs Google Cloud Platform Cloud Deep Learning VM Image Deep Learning Containers Microsoft Azure PyTorch on Azure Azure Machine Learning Azure Functions Lightning Studios lightning.ai Ecosystem BROWSE PROJECTS Featured Projects Explore a rich ecosystem of libraries, tools, and more to support development. Captum Captum (“comprehension” in Latin) is an open source, extensible library for model interpretability built on PyTorch. PyTorch Geometric PyTorch Geometric is a library for deep learning on irregular input data such as graphs, point clouds, and manifolds. skorch skorch is a high-level library for PyTorch that provides full scikit-learn compatibility. Companies \u0026 Universities Using PyTorch Amazon Advertising Reduce inference costs by 71% and scale out using PyTorch, TorchServe, and AWS Inferentia. READ CASE STUDIES Salesforce Pushing the state of the art in NLP and Multi-task learning. Stanford University Using PyTorch’s flexibility to efficiently research new algorithmic approaches. Docs Access comprehensive developer documentation for PyTorch View Docs › Tutorials Get in-depth tutorials for beginners and advanced developers View Tutorials › Resources Find development resources and get your questions answered View Resources › Stay in touch for updates, event info, and the latest news By submitting this form, I consent to receive marketing emails from the LF and its projects regarding their events, training, research, developments, and related announcements. I understand that I can unsubscribe at any time using the links in the footers of the emails I receive. Privacy Policy. x-twitter facebook linkedin youtube github slack discord © 2026 PyTorch. C",
+    "scrapedAt": "2026-05-10 03:48:25.685623"
+  },
+  {
+    "id": 195,
+    "url": "https://pandas.pydata.org/",
+    "title": "pandas - Python Data Analysis Library",
+    "content": "pandas pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language. Install pandas now! Getting started Install pandas Getting started Try pandas online Documentation User guide API reference Contributing to pandas Release notes Community About pandas Ask a question Ecosystem With the support of: The full list of companies supporting pandas is available in the sponsors page. Latest version: 3.0.1 What\u0027s new in 3.0.1 Release date: Feb 17, 2026 Documentation (web) Download source code Follow us Recommended books Previous versions 2.3.3 (Sep 29, 2025) changelog | docs | code 2.2.3 (Sep 20, 2024) changelog | docs | code 2.1.4 (Dec 08, 2023) changelog | docs | code 2.0.3 (Jun 28, 2023) changelog | docs | code Show more 1.5.3 (Jan 19, 2023) changelog | docs | code",
+    "scrapedAt": "2026-05-10 03:48:23.334229"
+  },
+  {
+    "id": 194,
+    "url": "https://us.pycon.org/2026/attend/information/",
+    "title": "Registration Information - PyCon US 2026",
+    "content": "Translations available: español Registration Information You can access the registration page by logging into your PyCon US 2026 account and heading to your dashboard to register or view your existing registration. You can return and add events or book your hotel if you choose not to do so during your initial registration. Register for PyCon US Today! PyCon US trusts you to self-select a fair registration rate: Corporate Rate — If your company is paying for you to attend PyCon US, register at the corporate rate. You will help keep the conference affordable for everyone, especially students and those requiring a travel grant. Government employees should also register at the corporate rate. Individual Rate — If you are paying for yourself to attend PyCon US, feel free to come as an individual. Employees of non-profits might also choose to register at the individual rate. Student/Academic Rate — This rate is for full-time students and academics. If you are employed in a school or university, you qualify for this rate. However, if the funds available will allow for the Individual or Corporate rates, please select accordingly. Please review the Health and Safety Guidelines before registering to attend PyCon US. Registration prices Corporate: $899 USD Individual: $469 USD Student: $139 USD Note: Tutorial registration is not included in regular conference registration prices. Tutorial registration is now open, and the tutorial schedule can be found here. The cost is $150 USD per tutorial per person. Note: Children are welcome to attend with a legal guardian. Both people should be registered for the conference and have badges. The legal guardian should be with the child at all times and the child should never be left alone at the conference. What does my registration payment go towards? Your registration payments help us keep PyCon US registration tickets reasonably priced. Registration costs go towards offsetting costs for catering, audio visual, recording, internet, and other costs. By offsetting those costs, we can offer attendees reasonable registration rates and offer a travel grant program to those that need it. Furthermore, the revenue that PyCon US generates is used to run the Python Software Foundation. The Python Software Foundation runs PyCon US, gives out over $300k in grants per year to Python groups around the world, houses critical community infrastructure such as PyPI and python.org, and launches programs like the CPython Developers in Residence. To read more about what the PSF does and its finances, check out the 2024 Annual Impact Report. What’s included in my registration? Summits and Sponsor Presentations - May 14 \u0026 May 15, 2026 Coffee and refreshments will be served Sponsor Presentations are sessions provided by our sponsors. The schedule for these sessions can be found here. Many summits are held during PyCon US; some are closed attendance and some are available to register for on the PyCon US 2026 registration system. Opening Reception - May 14, 2026 Refreshments will be served You will receive one drink ticket upon entry The Opening Reception is the official opening of the PyCon US Expo Hall where our sponsors will be available to meet at their booths. Main Conference - May 15 - 17, 2026 Coffee, refreshments, and lunch are served each day General Sessions - enjoy our Keynote Speakers during these sessions Talk tracks - over 90 sessions to choose from (no additional registration is required to attend these sessions) Expo Hall Posters Open Spaces Lightning Talks Job Fair \u0026 Community Showcase - May 17, 2026 Lunch is served Visit with companies that have employment opportunities to offer and Open Source community organizations to find out what they\u0027ve been up to and how you can get involved Running alongside the Job Fair, the Community Showcase is a self-organizing opportunity for community groups to meet and mingle. If you host a regional PyCon, local meet up, or other community group or open source project, we invite you to come participate. There will be cards and table flags available to indicate where you’re group is sitting (on a first-come/first-served, self-organizing basis). This is a chance to talk with the community about what your group has been up to and to seek out interested new participants. To participate, just show up! Sprints - May 18 \u0026 May 19, 2026 Coffee, power, and wifi will be provided each day Sprint project submissions are available here. Not included: Tutorials - May 13 \u0026 14, 2026 The first 2 days of the conference offer a schedule packed with 3-hour tutorials to help both beginners and experienced developers learn new technologies and increase their skills. Registration and additional payment of $150 USD per tutorial per person are required for these tutorials via the PyCon US 2026 registration system. The tutorial schedule can be found here. Not included: PyLadies Auction - May 16, 2026 Information about the PyLadies Auction can be found here. Registration and additio",
+    "scrapedAt": "2026-05-10 03:48:17.832435"
+  },
+  {
+    "id": 193,
+    "url": "https://pygobject.gnome.org/",
+    "title": "Overview — PyGObject",
+    "content": "Skip to main content Back to top Ctrl+K PyGObject is a Python package which provides bindings for GObject based libraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more. It supports Linux, Windows, and macOS and works with Python 3.9+ and PyPy3. PyGObject, including this documentation, is licensed under the LGPLv2.1+. If you want to write a Python application for GNOME or a Python GUI application using GTK, then PyGObject is the way to go. To get started, check out the “GNOME Developer Documentation”. For more information on specific libraries, check out the GNOME Python API documentation. import gi\n\ngi.require_version(\"Gtk\", \"4.0\")\nfrom gi.repository import GLib, Gtk\n\n\nclass MyApplication(Gtk.Application):\n    def __init__(self):\n        super().__init__(application_id\u003d\"com.example.MyGtkApplication\")\n        GLib.set_application_name(\"My Gtk Application\")\n\n    def do_activate(self):\n        window \u003d Gtk.ApplicationWindow(application\u003dself, title\u003d\"Hello World\")\n        window.present()\n\n\napp \u003d MyApplication()\napp.run()\n How does it work?# PyGObject uses GLib, GObject, GIRepository, libffi and other libraries to access the C library (libgtk-4.so) in combination with the additional metadata from the accompanying typelib file (Gtk-4.0.typelib) and dynamically provides a Python interface based on that information. Who Is Using PyGObject?# Anaconda - an installation program used by Fedora, RHEL and others Apostrophe - a Markdown editor Blanket - listen to different sounds BleachBit - delete unnecessary files from the system Bottles - run Windows software on Linux Cambalache - a user interface maker for GTK Cozy - the audiobook app for Linux D-Feet - an easy to use D-Bus debugger Deluge - a BitTorrent client Dialect - a translation app Drawing - a drawing application Feeds - an RSS/Atom feed reader Gajim - a fully-featured XMPP client Gameeky - a learning tool for making games and learning experiences Gaphor - a simple modeling tool Getting Things GNOME! - a personal task organizer Girens - a Plex client for playing movies, TV shows and music from your Plex library GNOME Music - a music player for GNOME GNOME Tweaks - a tool to customize advanced GNOME options GNOME Video Player - a GNOME video player Gramps - a genealogy program Iotas - simple note taking Komikku - a manga reader Lollypop - a modern music player Lutris - a video game manager Meld - a visual diff and merge tool Metadata Cleaner - an application to view and clean metadata in files MyPaint - a nimble, distraction-free, and easy tool for digital painters Nicotine+ - a graphical client for the Soulseek peer-to-peer network Orca - a flexible and extensible screen reader Paperwork - a personal document manager Pithos - a Pandora Radio client Pitivi - a free and open source video editor Plots - a graph plotting app Pulp - a minimal take on RSS reading Quod Libet - a music library manager / player Secrets - a password manager Setzer - a LaTeX editor Terminator - The Robot Future of Terminals Wike - a Wikipedia reader The following applications or libraries use PyGObject for optional features, such as plugins or as optional backends: beets - a music library manager and MusicBrainz tagger gedit - a GNOME text editor matplotlib - a python 2D plotting library Totem - a video player for GNOME Further Resources# GNOME Developer Documentation Tutorials for creating a GNOME application using PyGObject, GTK 4, and Libadwaita. GNOME Python API documentation Auto generated API documentation for many libraries accessible through PyGObject. On this page Show Source",
+    "scrapedAt": "2026-05-10 03:48:09.853507"
+  },
+  {
     "id": 192,
     "url": "https://jobs.python.org",
     "title": "Python Job Board | Python.org",
@@ -1342,26 +1377,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 193,
-    "url": "https://pygobject.gnome.org/"
-  },
-  {
-    "id": 194,
-    "url": "https://us.pycon.org/2026/attend/information/"
-  },
-  {
-    "id": 195,
-    "url": "https://pandas.pydata.org/"
-  },
-  {
-    "id": 196,
-    "url": "https://pytorch.org/"
-  },
-  {
-    "id": 197,
-    "url": "https://www.tornadoweb.org/"
   },
   {
     "id": 198,
@@ -34714,10 +34729,1787 @@ window.searchData = [
     "id": 18755,
     "url": "https://www.python.org/jobs/type/back-end/",
     "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18756,
+    "url": "https://gitlab.gnome.org/jpu/cambalache",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18757,
+    "url": "https://wiki.gnome.org/Apps/Lollypop",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18758,
+    "url": "https://pygobject.gnome.org/_images/overview-dark.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18759,
+    "url": "https://www.gtk.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18760,
+    "url": "https://pygobject.gnome.org/_sources/index.rst.txt",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18761,
+    "url": "https://matplotlib.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18762,
+    "url": "https://docs.gtk.org/gobject/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18763,
+    "url": "https://github.com/tchx84/gameeky",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18764,
+    "url": "https://sourceware.org/libffi/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18765,
+    "url": "https://meldmerge.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18766,
+    "url": "https://www.bleachbit.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18767,
+    "url": "https://mypaint.app/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18768,
+    "url": "https://api.pygobject.gnome.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18769,
+    "url": "https://gitlab.gnome.org/GNOME/showtime/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18770,
+    "url": "https://docs.gtk.org/gio/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18771,
+    "url": "https://wiki.gnome.org/Apps/Tweaks",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18772,
+    "url": "https://www.cvfosammmm.org/setzer/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18773,
+    "url": "https://wiki.gnome.org/Apps/GTG",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18774,
+    "url": "https://openpaper.work/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18775,
+    "url": "https://beets.io/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18776,
+    "url": "https://pygobject.gnome.org/_images/pygobject.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18777,
+    "url": "https://gajim.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18778,
+    "url": "https://fedoraproject.org/wiki/Anaconda",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18779,
+    "url": "https://nicotine-plus.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18780,
+    "url": "https://wiki.gnome.org/Apps/Gedit",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18781,
+    "url": "https://wiki.gnome.org/Apps/Videos",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18782,
+    "url": "https://apps.gnome.org/Dialect/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18783,
+    "url": "https://gitlab.gnome.org/tijder/girens",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18784,
+    "url": "https://apps.gnome.org/MetadataCleaner/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18785,
+    "url": "https://developer.gnome.org/documentation/tutorials/beginners.html",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18786,
+    "url": "https://usebottles.com/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18787,
+    "url": "https://www.gnome.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18788,
+    "url": "https://pygobject.gnome.org/#who-is-using-pygobject",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18789,
+    "url": "https://apps.gnome.org/Apostrophe/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18790,
+    "url": "https://gaphor.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18791,
+    "url": "https://hugolabe.github.io/Wike/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18792,
+    "url": "https://wiki.gnome.org/Projects/Orca",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18793,
+    "url": "https://pygobject.gnome.org/_images/overview.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18794,
+    "url": "https://apps.gnome.org/Komikku/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18795,
+    "url": "https://apps.gnome.org/Blanket/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18796,
+    "url": "https://gfeeds.gabmus.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18797,
+    "url": "https://wiki.gnome.org/action/show/Apps/DFeet",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18798,
+    "url": "https://pygobject.gnome.org/_images/pygobject-dark.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18799,
+    "url": "https://www.pitivi.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18800,
+    "url": "https://deluge-torrent.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18801,
+    "url": "https://pygobject.gnome.org/#main-content",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18802,
+    "url": "https://apps.gnome.org/Secrets/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18803,
+    "url": "https://quodlibet.readthedocs.io/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18804,
+    "url": "https://maoschanz.github.io/drawing/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18805,
+    "url": "https://pygobject.gnome.org/#how-does-it-work",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18806,
+    "url": "https://github.com/alexhuntley/Plots/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18807,
+    "url": "https://pygobject.gnome.org/#further-resources",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18808,
+    "url": "https://gramps-project.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18809,
+    "url": "https://apps.gnome.org/Iotas/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18810,
+    "url": "https://gstreamer.freedesktop.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18811,
+    "url": "https://gitlab.gnome.org/cheywood/Pulp/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18812,
+    "url": "https://apps.gnome.org/Music/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18813,
+    "url": "https://lutris.net/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18814,
+    "url": "https://webkitgtk.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18815,
+    "url": "https://gnome-terminator.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18816,
+    "url": "https://docs.gtk.org/glib/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18817,
+    "url": "https://docs.gtk.org/girepository/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18818,
+    "url": "https://github.com/geigi/cozy",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18819,
+    "url": "https://pithos.github.io/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 18820,
+    "url": "https://us.pycon.org/2026/schedule/sponsor-presentations/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18821,
+    "url": "https://www.marriott.com/en-us/hotels/lgbmc-marriott-long-beach-downtown/overview/?scid\u003df2ae0541-1279-4f24-b197-a979c79310b0",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18822,
+    "url": "https://www.marriott.com/en-us/hotels/lgbwi-the-westin-long-beach/overview/?scid\u003df2ae0541-1279-4f24-b197-a979c79310b0",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18823,
+    "url": "https://us.pycon.org/es/2026/attend/information/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18824,
+    "url": "https://us.pycon.org/2026/accounts/login/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18825,
+    "url": "https://us.pycon.org/2026/events/pyladies-auction/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18826,
+    "url": "https://us.pycon.org/2026/events/opening-reception/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18827,
+    "url": "https://us.pycon.org/2026/accounts/dashboard/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18828,
+    "url": "http://python.org/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18829,
+    "url": "https://us.pycon.org/2026/about/keynote-speakers/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18830,
+    "url": "https://us.pycon.org/2026/attend/travel-grants/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18831,
+    "url": "https://us.pycon.org/2026/venue/hotels/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18832,
+    "url": "https://www.hyatt.com/hyatt-regency/en-US/lgbrl-hyatt-regency-long-beach?src\u003dcorp_lclb_google_seo_lgbrl\u0026utm_source\u003dgoogle\u0026utm_medium\u003dorganic\u0026utm_campaign\u003dlmr",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18833,
+    "url": "https://us.pycon.org/2026/about/health-safety-guidelines/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18834,
+    "url": "https://us.pycon.org/2026/registration/letters/request",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18835,
+    "url": "https://us.pycon.org/2026/schedule/tutorials/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18836,
+    "url": "https://pypi.python.org/pypi",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18837,
+    "url": "https://www.marriott.com/en-us/hotels/lgbcy-courtyard-long-beach-downtown/overview/?scid\u003df2ae0541-1279-4f24-b197-a979c79310b0",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18838,
+    "url": "https://python.org/psf/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18839,
+    "url": "https://www.python.org/psf/annual-report/2024/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18840,
+    "url": "https://us.pycon.org/2026/events/dev-sprints/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 18841,
+    "url": "https://t.me/s/pandas_dev",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18842,
+    "url": "https://fosstodon.org/@pandas_dev",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18844,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.3.3/pandas-2.3.3.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18845,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v3.0.1/pandas-3.0.1.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18846,
+    "url": "https://pandas.pydata.org/getting_started.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18847,
+    "url": "https://pandas.pydata.org/docs/reference/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18848,
+    "url": "https://pandas.pydata.org/about/sponsors.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18849,
+    "url": "https://stackoverflow.com/questions/tagged/pandas",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18850,
+    "url": "https://pandas.pydata.org/try.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18851,
+    "url": "https://pandas.pydata.org/pandas-docs/stable/whatsnew/v2.3.3.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18852,
+    "url": "https://pandas.pydata.org/pandas-docs/stable/whatsnew/v2.2.3.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18853,
+    "url": "https://pandas.pydata.org/pandas-docs/stable/whatsnew/v2.0.3.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18854,
+    "url": "https://numfocus.org/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18855,
+    "url": "https://www.nvidia.com",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18856,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.3.3/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18857,
+    "url": "https://pandas.pydata.org/about/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18858,
+    "url": "https://pandas.pydata.org/docs/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18859,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.2.3/pandas-2.2.3.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18860,
+    "url": "https://www.bodo.ai/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18861,
+    "url": "https://pandas.pydata.org/docs/whatsnew/v3.0.1.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18862,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.1.4/pandas-2.1.4.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18863,
+    "url": "https://store.metasnake.com/effective-pandas-book/lhte7",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18864,
+    "url": "https://x.com/pandas_dev",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18865,
+    "url": "https://pandas.pydata.org/docs/user_guide/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18866,
+    "url": "https://tidelift.com",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18867,
+    "url": "https://pandas.pydata.org/docs/development/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18868,
+    "url": "https://pandas.pydata.org/docs/getting_started/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18869,
+    "url": "https://pandas.pydata.org/#show-more-releases",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18870,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v1.5.3/pandas-1.5.3.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18871,
+    "url": "https://pandas.pydata.org/docs/whatsnew/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18872,
+    "url": "https://www.packtpub.com/en-us/product/pandas-cookbook-9781836205876?utm_medium\u003daffiliate\u0026utm_campaign\u003dd6d8585f-f475-a1ee-3989-67f3faf1238a\u0026utm_term\u003d5b056f65-afab-5c56-1f0a-5fd88167b4b5\u0026utm_content\u003dB31091",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18873,
+    "url": "https://pandas.pydata.org/pandas-docs/version/1.5.3/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18874,
+    "url": "https://amzn.to/3DyLaJc",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18875,
+    "url": "https://pandas.pydata.org/community/ecosystem.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18876,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.2.3/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18877,
+    "url": "https://pandas.pydata.org/pandas-docs/stable/whatsnew/v2.1.4.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18878,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.1.4/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18879,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.0.3/pandas-2.0.3.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18880,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.0.3/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18881,
+    "url": "https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.5.3.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 18882,
+    "url": "https://discord.com/invite/eNSRmh92XT",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18883,
+    "url": "https://pytorch.org/projects/safetensors/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18884,
+    "url": "https://docs.aws.amazon.com/deep-learning-containers/latest/devguide/deep-learning-containers-ec2-tutorials-training.html#deep-learning-containers-ec2-tutorials-training-pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18885,
+    "url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18886,
+    "url": "https://aws.amazon.com/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18887,
+    "url": "https://aws.amazon.com/sagemaker",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18888,
+    "url": "https://www.linuxfoundation.org/legal/policies",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18889,
+    "url": "https://pytorch.org/projects/host-your-project/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18890,
+    "url": "https://pytorch.org/blog/category/blog/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18891,
+    "url": "https://www.linkedin.com/company/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18892,
+    "url": "https://pytorch.org/get-started/locally/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18893,
+    "url": "https://pytorch.org/blog/in-kernel-broadcast-optimization-co-designing-kernels-for-recsys-inference/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18894,
+    "url": "https://docs.pytorch.org/tutorials/recipes_index.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18895,
+    "url": "https://pytorch.org/programs/ambassadors/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18896,
+    "url": "https://pytorch.org/members",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18897,
+    "url": "https://pytorch.org/get-started/previous-versions",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18898,
+    "url": "https://azure.microsoft.com/en-us/develop/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18899,
+    "url": "https://pytorch.org/join",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18900,
+    "url": "https://pytorch.org/projects/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18901,
+    "url": "https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18902,
+    "url": "https://pytorch.org/webinars/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18903,
+    "url": "https://pytorch.org/#",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18904,
+    "url": "https://pytorch.org/contact/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18905,
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/sponsor/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18906,
+    "url": "https://pytorch.org/projects/helion/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18907,
+    "url": "https://pytorch.org/community-hub/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18908,
+    "url": "https://pytorch.org/projects/deepspeed/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18909,
+    "url": "https://pytorch.org/wp-content/uploads/2025/09/pytorch_brand_guide_091925a.pdf",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18910,
+    "url": "https://pytorch.org/docs/stable/index.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18911,
+    "url": "https://pytorch.org/projects/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18912,
+    "url": "https://docs.aws.amazon.com/dlami/latest/devguide/tutorial-pytorch.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18913,
+    "url": "https://discuss.pytorch.org/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18914,
+    "url": "https://pytorch.org/blog/introducing-autosp/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18915,
+    "url": "https://twitter.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18916,
+    "url": "https://www.facebook.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18917,
+    "url": "https://www.youtube.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18918,
+    "url": "https://lightning.ai",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18919,
+    "url": "https://github.com/pytorch/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18920,
+    "url": "https://pytorch.org/join/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18921,
+    "url": "https://pytorch.org/governing-board/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18922,
+    "url": "https://pytorch.org/contributor-awards/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18923,
+    "url": "https://pytorch.org/announcements",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18924,
+    "url": "https://cloud.google.com/deep-learning-vm/docs/pytorch_start_instance",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18925,
+    "url": "https://pytorch.org/tutorials",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18926,
+    "url": "https://pytorch.org/meeting-calendar/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18927,
+    "url": "https://pytorch.org/foundation/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18928,
+    "url": "https://pytorch.org/docs",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18929,
+    "url": "https://www.linuxfoundation.org/trademark-usage",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18930,
+    "url": "https://cloud.google.com/ai-platform/deep-learning-containers/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18931,
+    "url": "https://pytorch.org/get-started/previous-versions/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18932,
+    "url": "https://pytorch.org/newsletter/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18933,
+    "url": "https://pytorch.org/tac/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18934,
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/program/cfp/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18935,
+    "url": "https://pytorch.org/projects/ray/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18936,
+    "url": "https://pytorch.org/domains/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18937,
+    "url": "https://pytorch.org/case-studies/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18938,
+    "url": "https://join.slack.com/t/pytorch/shared_invite/zt-2j2la612p-miUinTTaxXczKOJw48poHA",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18939,
+    "url": "https://pytorch.org/resources",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18940,
+    "url": "https://pytorch.org/resources/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18941,
+    "url": "https://pytorch.org/events/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18942,
+    "url": "https://pytorch.org/projects/vllm/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18943,
+    "url": "https://www.linuxfoundation.org/privacy/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18944,
+    "url": "https://pytorch.org/credits/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18945,
+    "url": "https://landscape.pytorch.org/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18946,
+    "url": "https://pytorch.org/staff/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18947,
+    "url": "https://pytorch.org/tutorials/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18948,
+    "url": "https://docs.microsoft.com/en-us/azure/azure-functions/machine-learning-pytorch?tabs\u003dbash",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18949,
+    "url": "https://pytorch.org/blog/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18950,
+    "url": "https://pytorch.org/tutorials/beginner/introyt.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18951,
+    "url": "https://pytorch.org/blog/lightseek-smg/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18952,
+    "url": "http://www.linuxfoundation.org/privacy",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18953,
+    "url": "https://pytorch.org/join-ecosystem",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 18954,
+    "url": "https://www.tornadoweb.org/en/stable/releases.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18955,
+    "url": "https://www.tornadoweb.org/en/stable/locale.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18956,
+    "url": "https://www.tornadoweb.org/en/stable/tcpclient.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18957,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18958,
+    "url": "https://www.tornadoweb.org/en/stable/process.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18959,
+    "url": "https://wsgi.readthedocs.io/en/latest/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18960,
+    "url": "https://pypi.python.org/pypi/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18961,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18962,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18963,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18964,
+    "url": "https://www.tornadoweb.org/en/stable/twisted.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18965,
+    "url": "https://www.tornadoweb.org/en/stable/httputil.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18966,
+    "url": "https://github.com/tornadoweb/tornado/tree/stable/demos/chat",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18967,
+    "url": "https://www.tornadoweb.org/en/stable/#threads-and-wsgi",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18968,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18969,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18970,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18971,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18972,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18973,
+    "url": "https://www.tornadoweb.org/en/stable/#quick-links",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18974,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18975,
+    "url": "https://www.tornadoweb.org/en/stable/caresresolver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18976,
+    "url": "https://github.com/tornadoweb/tornado/wiki/Links",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18977,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18978,
+    "url": "https://www.tornadoweb.org/en/stable/_sources/index.rst.txt",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18979,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18980,
+    "url": "https://www.tornadoweb.org/en/stable/utilities.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18981,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html#tornado.ioloop.IOLoop.add_callback",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18982,
+    "url": "https://www.tornadoweb.org/en/stable/#documentation",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18983,
+    "url": "https://www.tornadoweb.org/en/stable/guide/coroutines.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18984,
+    "url": "https://www.tornadoweb.org/en/stable/networking.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18985,
+    "url": "https://www.tornadoweb.org/en/stable/asyncio.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18986,
+    "url": "https://www.tornadoweb.org/en/stable/ioloop.html#tornado.ioloop.IOLoop.run_in_executor",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18987,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18988,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18989,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v5.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18990,
+    "url": "https://www.tornadoweb.org/en/stable/auth.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18991,
+    "url": "https://www.tornadoweb.org/en/stable/util.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18992,
+    "url": "https://www.tornadoweb.org/en/stable/locks.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18993,
+    "url": "https://www.tornadoweb.org/en/stable/webframework.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18994,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18995,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18996,
+    "url": "https://groups.google.com/forum/#!forum/python-tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18997,
+    "url": "https://www.tornadoweb.org/en/stable/guide/intro.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18998,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 18999,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19000,
+    "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19001,
+    "url": "https://www.tornadoweb.org/en/stable/#hello-world",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19002,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19003,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19004,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19005,
+    "url": "https://www.tornadoweb.org/en/stable/wsgi.html#module-tornado.wsgi",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19006,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19008,
+    "url": "https://www.tornadoweb.org/en/stable/guide/async.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19009,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19010,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19011,
+    "url": "https://www.tornadoweb.org/en/stable/integration.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19012,
+    "url": "https://www.tornadoweb.org/en/stable/options.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19013,
+    "url": "https://stackoverflow.com/questions/tagged/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19014,
+    "url": "https://github.com/tornadoweb/tornado",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19015,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19016,
+    "url": "https://www.tornadoweb.org/en/stable/httpclient.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19017,
+    "url": "https://www.tornadoweb.org/en/stable/iostream.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19018,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19019,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19020,
+    "url": "https://www.tornadoweb.org/en/stable/#asyncio-integration",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19021,
+    "url": "https://www.tornadoweb.org/en/stable/web.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19022,
+    "url": "https://www.tornadoweb.org/en/stable/#discussion-and-support",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19023,
+    "url": "https://www.tornadoweb.org/en/stable/guide/queues.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19024,
+    "url": "https://pypi.org/project/tornado/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19025,
+    "url": "https://pypi.org/project/pycares/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19026,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19027,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19028,
+    "url": "https://www.tornadoweb.org/en/stable/http1connection.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19029,
+    "url": "https://www.tornadoweb.org/en/stable/search.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19030,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19031,
+    "url": "https://www.tornadoweb.org/en/stable/genindex.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19032,
+    "url": "https://www.tornadoweb.org/en/stable/py-modindex.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19033,
+    "url": "https://www.tornadoweb.org/en/stable/gen.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19034,
+    "url": "https://www.tornadoweb.org/en/stable/httpserver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19035,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19036,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19037,
+    "url": "https://www.tornadoweb.org/en/stable/guide/templates.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19038,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.4.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19039,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.4.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19040,
+    "url": "https://www.tornadoweb.org",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19041,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.5.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19042,
+    "url": "http://pycurl.io/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19043,
+    "url": "https://www.tornadoweb.org/en/stable/web.html#module-tornado.web",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19044,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19045,
+    "url": "https://github.com/tornadoweb/tornado/issues",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19046,
+    "url": "https://www.tornadoweb.org/en/stable/routing.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19047,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19048,
+    "url": "https://www.tornadoweb.org/en/stable/guide/structure.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19049,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.3.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19050,
+    "url": "https://readthedocs.org/projects/tornado/downloads/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19051,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19052,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19053,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19054,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19055,
+    "url": "https://www.tornadoweb.org/en/stable/#",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19056,
+    "url": "https://www.tornadoweb.org/en/stable/guide.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19057,
+    "url": "https://www.tornadoweb.org/en/stable/websocket.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19058,
+    "url": "https://en.wikipedia.org/wiki/FriendFeed",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19059,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19060,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19061,
+    "url": "https://www.tornadoweb.org/en/stable/tcpserver.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19062,
+    "url": "https://www.tornadoweb.org/en/stable/coroutine.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19063,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19064,
+    "url": "https://www.tornadoweb.org/en/stable/log.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19065,
+    "url": "https://www.tornadoweb.org/en/stable/guide/running.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19066,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v2.4.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19067,
+    "url": "https://www.tornadoweb.org/en/stable/testing.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19068,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19069,
+    "url": "https://www.tornadoweb.org/en/stable/concurrent.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19070,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.5.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19071,
+    "url": "https://www.tornadoweb.org/en/stable/#installation",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19072,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19073,
+    "url": "https://www.tornadoweb.org/en/stable/wsgi.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19074,
+    "url": "https://www.tornadoweb.org/en/stable/#tornado-web-server",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19075,
+    "url": "https://www.tornadoweb.org/en/stable/escape.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19076,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19077,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19078,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.1.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19079,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.2.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19080,
+    "url": "https://www.tornadoweb.org/en/stable/template.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19081,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19082,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v3.0.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19083,
+    "url": "https://en.wikipedia.org/wiki/Push_technology#Long_polling",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19084,
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19085,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.3.2.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19086,
+    "url": "https://www.tornadoweb.org/en/stable/netutil.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19088,
+    "url": "https://www.tornadoweb.org/en/stable/http.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19089,
+    "url": "https://www.tornadoweb.org/en/stable/autoreload.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19090,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.4.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19091,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.2.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19092,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v1.1.1.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19093,
+    "url": "https://www.tornadoweb.org/en/stable/faq.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19094,
+    "url": "https://www.tornadoweb.org/en/stable/guide/security.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19095,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v4.5.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19096,
+    "url": "https://www.tornadoweb.org/en/stable/queues.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19097,
+    "url": "https://groups.google.com/forum/#!forum/python-tornado-announce",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19098,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.0.html",
+    "parentUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "id": 19099,
+    "url": "https://www.tornadoweb.org/en/stable/releases/v6.0.3.html",
+    "parentUrl": "https://www.tornadoweb.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.tornadoweb.org/en/stable/_images/tornado.png",
+    "alt": "Tornado Web Server",
+    "pageTitle": "Tornado Web Server — Tornado 6.5.5 documentation",
+    "pageUrl": "https://www.tornadoweb.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/numfocus.svg",
+    "alt": "NumFOCUS",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/nvidia.svg",
+    "alt": "Nvidia",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/tidelift.svg",
+    "alt": "Tidelift",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/bodo.svg",
+    "alt": "Bodo",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/books/pydata_book.gif",
+    "alt": "Python for Data Analysis",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/books/pandas_cookbook_3.gif",
+    "alt": "Pandas Cookbook, Third Edition",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/books/effective_pandas_2.gif",
+    "alt": "Effective pandas 2",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/pygobject.svg",
+    "alt": "_images/pygobject.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/pygobject-dark.svg",
+    "alt": "_images/pygobject-dark.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/overview.svg",
+    "alt": "_images/overview.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/overview-dark.svg",
+    "alt": "_images/overview-dark.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/22/75/2275de1505c105c6352e3613fee51762.png",
     "alt": "NVIDIA logo",
