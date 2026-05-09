@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 797,
+    "url": "https://docs.python.org/3/library/codecs.html#module-codecs",
+    "title": "codecs — Codec registry and base classes — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Binary Data Services » codecs — Codec registry and base classes | Theme Auto Light Dark | codecs — Codec registry and base classes¶ Source code: Lib/codecs.py This module defines base classes for standard Python codecs (encoders and decoders) and provides access to the internal Python codec registry, which manages the codec and error handling lookup process. Most standard codecs are text encodings, which encode text to bytes (and decode bytes to text), but there are also codecs provided that encode text to text, and bytes to bytes. Custom codecs may encode and decode between arbitrary types, but some module features are restricted to be used specifically with text encodings or with codecs that encode to bytes. The module defines the following functions for encoding and decoding with any codec: codecs.encode(obj, encoding\u003d\u0027utf-8\u0027, errors\u003d\u0027strict\u0027)¶ Encodes obj using the codec registered for encoding. Errors may be given to set the desired error handling scheme. The default error handler is \u0027strict\u0027 meaning that encoding errors raise ValueError (or a more codec specific subclass, such as UnicodeEncodeError). Refer to Codec Base Classes for more information on codec error handling. codecs.decode(obj, encoding\u003d\u0027utf-8\u0027, errors\u003d\u0027strict\u0027)¶ Decodes obj using the codec registered for encoding. Errors may be given to set the desired error handling scheme. The default error handler is \u0027strict\u0027 meaning that decoding errors raise ValueError (or a more codec specific subclass, such as UnicodeDecodeError). Refer to Codec Base Classes for more information on codec error handling. codecs.charmap_build(string)¶ Return a mapping suitable for encoding with a custom single-byte encoding. Given a str string of up to 256 characters representing a decoding table, returns either a compact internal mapping object EncodingMap or a dictionary mapping character ordinals to byte values. Raises a TypeError on invalid input. The full details for each codec can also be looked up directly: codecs.lookup(encoding, /)¶ Looks up the codec info in the Python codec registry and returns a CodecInfo object as defined below. Encodings are first looked up in the registry’s cache. If not found, the list of registered search functions is scanned. If no CodecInfo object is found, a LookupError is raised. Otherwise, the CodecInfo object is stored in the cache and returned to the caller. class codecs.CodecInfo(encode, decode, streamreader\u003dNone, streamwriter\u003dNone, incrementalencoder\u003dNone, incrementaldecoder\u003dNone, name\u003dNone)¶ Codec details when looking up the codec registry. The constructor arguments are stored in attributes of the same name: name¶ The name of the encoding. encode¶ decode¶ The stateless encoding and decoding functions. These must be functions or methods which have the same interface as the encode() and decode() methods of Codec instances (see Codec Interface). The functions or methods are expected to work in a stateless mode. incrementalencoder¶ incrementaldecoder¶ Incremental encoder and decoder classes or factory functions. These have to provide the interface defined by the base classes IncrementalEncoder and IncrementalDecoder, respectively. Incremental codecs can maintain state. streamwriter¶ streamreader¶ Stream writer and reader classes or factory functions. These have to provide the interface defined by the base classes StreamWriter and StreamReader, respectively. Stream codecs can maintain state. To simplify access to the various codec components, the module provides these additional functions which use lookup() for the codec lookup: codecs.getencoder(encoding)¶ Look up the codec for the given encoding and return its encoder function. Raises a LookupError in case the encoding cannot be found. codecs.getdecoder(encoding)¶ Look up the codec for the given encoding and return its decoder function. Raises a LookupError in case the encoding cannot be found. codecs.getincrementalencoder(encoding)¶ Look up the codec for the given encoding and return its incremental encoder class or factory function. Raises a LookupError in case the encoding cannot be found or the codec doesn’t support an incremental encoder. codecs.getincrementaldecoder(encoding)¶ Look up the codec for the given encoding and return its incremental decoder class or factory function. Raises a LookupError in case the encoding cannot be found or the codec doesn’t support an incremental decoder. codecs.getreader(encoding)¶ Look up the codec for the given encoding and return its StreamReader class or factory function. Raises a LookupError in case the encoding cannot be found. codecs.getwriter(encoding)¶ Look up the codec for the given encoding and return its StreamWriter class or factory function. Raises a LookupError in case the encoding cannot be found. Custom codecs are made available by registering a suitable codec search function: codecs.register(search_function, /)",
+    "scrapedAt": "2026-05-10 04:47:15.042944"
+  },
+  {
+    "id": 796,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-10 04:47:11.214081"
+  },
+  {
+    "id": 795,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable",
+    "title": "faulthandler — Dump the Python traceback — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » faulthandler — Dump the Python traceback | Theme Auto Light Dark | faulthandler — Dump the Python traceback¶ Added in version 3.3. This module contains functions to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Call faulthandler.enable() to install fault handlers for the SIGSEGV, SIGFPE, SIGABRT, SIGBUS, and SIGILL signals. You can also enable them at startup by setting the PYTHONFAULTHANDLER environment variable or by using the -X faulthandler command line option. The fault handler is compatible with system fault handlers like Apport or the Windows fault handler. The module uses an alternative stack for signal handlers if the sigaltstack() function is available. This allows it to dump the traceback even on a stack overflow. The fault handler is called on catastrophic cases and therefore can only use signal-safe functions (e.g. it cannot allocate memory on the heap). Because of this limitation traceback dumping is minimal compared to normal Python tracebacks: Only ASCII is supported. The backslashreplace error handler is used on encoding. Each string is limited to 500 characters. Only the filename, the function name and the line number are displayed. (no source code) It is limited to 100 frames and 100 threads. The order is reversed: the most recent call is shown first. By default, the Python traceback is written to sys.stderr. To see tracebacks, applications must be run in the terminal. A log file can alternatively be passed to faulthandler.enable(). The module is implemented in C, so tracebacks can be dumped on a crash or when Python is deadlocked. The Python Development Mode calls faulthandler.enable() at Python startup. See also Module pdb Interactive source code debugger for Python programs. Module traceback Standard interface to extract, format and print stack traces of Python programs. Dumping the traceback¶ faulthandler.dump_traceback(file\u003dsys.stderr, all_threads\u003dTrue)¶ Dump the tracebacks of all threads into file. If all_threads is False, dump only the current thread. See also traceback.print_tb(), which can be used to print a traceback object. Changed in version 3.5: Added support for passing file descriptor to this function. Dumping the C stack¶ Added in version 3.14. faulthandler.dump_c_stack(file\u003dsys.stderr)¶ Dump the C stack trace of the current thread into file. If the Python build does not support it or the operating system does not provide a stack trace, then this prints an error in place of a dumped C stack. C Stack Compatibility¶ If the system does not support the C-level backtrace(3) or dladdr1(3), then C stack dumps will not work. An error will be printed instead of the stack. Additionally, some compilers do not support CPython’s implementation of C stack dumps. As a result, a different error may be printed instead of the stack, even if the operating system supports dumping stacks. Note Dumping C stacks can be arbitrarily slow, depending on the DWARF level of the binaries in the call stack. Fault handler state¶ faulthandler.enable(file\u003dsys.stderr, all_threads\u003dTrue, c_stack\u003dTrue)¶ Enable the fault handler: install handlers for the SIGSEGV, SIGFPE, SIGABRT, SIGBUS and SIGILL signals to dump the Python traceback. If all_threads is True, produce tracebacks for every running thread. Otherwise, dump only the current thread. The file must be kept open until the fault handler is disabled: see issue with file descriptors. If c_stack is True, then the C stack trace is printed after the Python traceback, unless the system does not support it. See dump_c_stack() for more information on compatibility. Changed in version 3.5: Added support for passing file descriptor to this function. Changed in version 3.6: On Windows, a handler for Windows exception is also installed. Changed in version 3.10: The dump now mentions if a garbage collector collection is running if all_threads is true. Changed in version 3.14: Only the current thread is dumped if the GIL is disabled to prevent the risk of data races. Changed in version 3.14: The dump now displays the C stack trace if c_stack is true. faulthandler.disable()¶ Disable the fault handler: uninstall the signal handlers installed by enable(). faulthandler.is_enabled()¶ Check if the fault handler is enabled. Dumping the tracebacks after a timeout¶ faulthandler.dump_traceback_later(timeout, repeat\u003dFalse, file\u003dsys.stderr, exit\u003dFalse)¶ Dump the tracebacks of all threads, after a timeout of timeout seconds, or every timeout seconds if repeat is True. If exit is True, call _exit() with status\u003d1 after dumping the tracebacks. (Note _exit() exits the process immediately, which means it doesn’t do any cleanup like flushing file buffers.) If the function is called twice, the new call replaces previous parameters and resets the timeout. The timer has a sub-second resolution. The file must be kept op",
+    "scrapedAt": "2026-05-10 04:47:06.804509"
+  },
+  {
+    "id": 794,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pickle",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:47:02.904226"
+  },
+  {
+    "id": 793,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait",
+    "scrapedAt": "2026-05-10 04:46:56.444335"
+  },
+  {
     "id": 792,
     "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref",
     "title": "wsgiref — WSGI Utilities and Reference Implementation — Python 3.14.5rc1 documentation",
@@ -5257,26 +5292,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 793,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
-  },
-  {
-    "id": 794,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pickle"
-  },
-  {
-    "id": 795,
-    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
-  },
-  {
-    "id": 796,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag"
-  },
-  {
-    "id": 797,
-    "url": "https://docs.python.org/3/library/codecs.html#module-codecs"
   },
   {
     "id": 798,
@@ -135155,10 +135170,980 @@ window.searchData = [
     "id": 103707,
     "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.StartResponse",
     "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103708,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.TimeoutError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103710,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.thread.BrokenThreadPool",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103711,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.add_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103714,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.cancel",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103715,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#interpreterpoolexecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103718,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103720,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.process.BrokenProcessPool",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103721,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.set_result",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103723,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#exception-classes",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103724,
+    "url": "https://docs.python.org/3/library/os.html#os.pipe",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103730,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103732,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ALL_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103736,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#future-objects",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103737,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor-example",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103738,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.wait",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103742,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.ExecutionFailed",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103743,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.exception",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103744,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.submit",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103745,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.cancelled",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103749,
+    "url": "https://github.com/python/cpython/issues/115634",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103752,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.interpreter.BrokenInterpreterPool",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103754,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.done",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103755,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/futures/process.py",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103756,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#executor-objects",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103757,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#processpoolexecutor-example",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103761,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.set_exception",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103763,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#processpoolexecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103767,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.CancelledError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103769,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103770,
+    "url": "https://peps.python.org/pep-3148/",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103771,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.set_running_or_notify_cancel",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103772,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.BrokenExecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103774,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.FIRST_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103775,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/futures/thread.py",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103778,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.InvalidStateError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103779,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.FIRST_EXCEPTION",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103787,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103788,
+    "url": "https://docs.python.org/3/library/asyncio-future.html",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103789,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.terminate",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103790,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.result",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103792,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.as_completed",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103793,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/concurrent.futures.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103797,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#module-functions",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103798,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/futures/interpreter.py",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103799,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.running",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103803,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 103805,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.kill",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 105045,
+    "url": "https://docs.python.org/3/library/faulthandler.html#issue-with-file-descriptors",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105046,
+    "url": "https://docs.python.org/3/library/os.html#os.dup2",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105051,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.unregister",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105054,
+    "url": "https://docs.python.org/3/library/faulthandler.html#fault-handler-state",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105055,
+    "url": "https://manpages.debian.org/backtrace(3)",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105056,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.cancel_dump_traceback_later",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105062,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.register",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105064,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.disable",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105065,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.dump_traceback",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105066,
+    "url": "https://docs.python.org/3/library/faulthandler.html#example",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105068,
+    "url": "https://docs.python.org/3/library/faulthandler.html#dumping-the-tracebacks-after-a-timeout",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105070,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.print_tb",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105071,
+    "url": "https://docs.python.org/3/library/faulthandler.html#dumping-the-traceback-on-a-user-signal",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105074,
+    "url": "https://docs.python.org/3/library/faulthandler.html#",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105076,
+    "url": "https://manpages.debian.org/dladdr1(3)",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105078,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.is_enabled",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105080,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler.dump_traceback_later",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105083,
+    "url": "https://docs.python.org/3/library/faulthandler.html#dumping-the-traceback",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105086,
+    "url": "https://docs.python.org/3/library/faulthandler.html#faulthandler-fd",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105087,
+    "url": "https://docs.python.org/3/library/faulthandler.html#dumping-the-c-stack",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105093,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/faulthandler.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "id": 105283,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_LE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105284,
+    "url": "https://docs.python.org/3/library/codecs.html#python-specific-encodings",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105286,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getincrementalencoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105287,
+    "url": "https://docs.python.org/3/library/codecs.html#standalone-codec-functions",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105288,
+    "url": "https://docs.python.org/3/library/codecs.html#stateless-encoding-and-decoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105290,
+    "url": "https://docs.python.org/3/library/codecs.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105293,
+    "url": "https://docs.python.org/3/library/codecs.html#incrementalencoder-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105294,
+    "url": "https://docs.python.org/3/library/codecs.html#streamreader-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105296,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3490.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105297,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.incrementalencoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105299,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF16",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105300,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.lookup_error",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105301,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF16_LE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105303,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.charmap_build",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105305,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105307,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105308,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.readline",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105310,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.backslashreplace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105312,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105313,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.setstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105314,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter.write",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105315,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105316,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.getstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105317,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105318,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105320,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF32_BE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105321,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105322,
+    "url": "https://docs.python.org/3/library/codecs.html#b64",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105323,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5895.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105324,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_BE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105325,
+    "url": "https://docs.python.org/3/library/base64.html#base64.decodebytes",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105326,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.Codec",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105327,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3492.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105329,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.getstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105331,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getdecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105332,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.readlines",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105334,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getwriter",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105337,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/encodings/aliases.py",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105338,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.search_function",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105339,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.Codec.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105340,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.register",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105342,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.xmlcharrefreplace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105343,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.codecs.escape_encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105344,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getreader",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105346,
+    "url": "https://docs.python.org/3/library/codecs.html#streamrecoder-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105347,
+    "url": "https://docs.python.org/3/library/codecs.html#text-transforms",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105349,
+    "url": "https://docs.python.org/3/library/codecs.html#",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105351,
+    "url": "https://docs.python.org/3/library/codecs.html#streamwriter-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105353,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3490.html#section-3.1",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105354,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105355,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.CodecRegistryError",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105357,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter.writelines",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105361,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.readbuffer_encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105363,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.reset",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105364,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/codecs.py",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105365,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader.read",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105366,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.b2a_hex",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105367,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.normalize_encoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105372,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.unregister",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105374,
+    "url": "https://pypi.org/project/idna/",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105375,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.idna.ToASCII",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105376,
+    "url": "https://docs.python.org/3/library/codecs.html#codec-base-classes",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105377,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.ignore_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105378,
+    "url": "https://docs.python.org/3/library/quopri.html#quopri.decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105379,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.win32_code_page_search_function",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105380,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.strict_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105381,
+    "url": "https://docs.python.org/3/library/codecs.html#binary-transforms",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105382,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings.utf_8_sig",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105386,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReaderWriter",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105387,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.replace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105388,
+    "url": "https://docs.python.org/3/library/binascii.html#binascii.a2b_hex",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105389,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.idna.ToUnicode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105390,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.compress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105391,
+    "url": "https://docs.python.org/3/library/codecs.html#incremental-encoding-and-decoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105392,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.incrementaldecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105393,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF8",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105394,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getencoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105396,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105398,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.getincrementaldecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105399,
+    "url": "https://docs.python.org/3/library/codecs.html#text-encodings",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105400,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.compress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105401,
+    "url": "https://docs.python.org/3/library/quopri.html#quopri.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105403,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.decompress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105404,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.name",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105405,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings.mbcs",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105407,
+    "url": "https://docs.python.org/3/library/http.client.html#module-http.client",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105408,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.setstate",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105409,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamRecoder",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105410,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF16_BE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105411,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.codecs.escape_decode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105412,
+    "url": "https://docs.python.org/3/library/stringprep.html#module-stringprep",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105414,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.streamreader",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105415,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings-and-unicode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105417,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.iterdecode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105419,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.iterencode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105421,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.decompress",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105423,
+    "url": "https://docs.python.org/3/library/codecs.html#streamreaderwriter-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105424,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/codecs.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105425,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105427,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF32",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105429,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.namereplace_errors",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105430,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105431,
+    "url": "https://docs.python.org/3/library/codecs.html#encodings.idna.nameprep",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105432,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.Codec.encode",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105433,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.EncodedFile",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105435,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105436,
+    "url": "https://docs.python.org/3/library/base64.html#base64.encodebytes",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105438,
+    "url": "https://docs.python.org/3/library/codecs.html#codec-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105440,
+    "url": "https://docs.python.org/3/library/codecs.html#incrementaldecoder-objects",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105442,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5891.html",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105443,
+    "url": "https://docs.python.org/3/library/codecs.html#stream-encoding-and-decoding",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105444,
+    "url": "https://docs.python.org/3/library/codecs.html#module-encodings.idna",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105445,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.CodecInfo.streamwriter",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "id": 105447,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.BOM_UTF32_LE",
+    "parentUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "codecs — Codec registry and base classes — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "codecs — Codec registry and base classes — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/codecs.html#module-codecs"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsFSEncodingFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "faulthandler — Dump the Python traceback — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "faulthandler — Dump the Python traceback — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/faulthandler.html#faulthandler.enable"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pickle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pickle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
