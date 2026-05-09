@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 217,
+    "url": "https://www.python.org/psf/donations/",
+    "title": "Support the PSF with a Donation or by becoming a Supporting Member! | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! PSF\u003e\u003e\u003e Donate\u003e\u003e\u003e Donate to the PSF Donate Become a Supporting Member What does the Python Software Foundation do? The Python Software Foundation: Awards grants and provides resources for furthering the development and adoption of Python. Organizes and hosts the annual PyCon US conference. 2019 brought together 3,393 attendees from 55 countries, a new record for PyCon US! Our sponsors’ support enabled us to award $137,200 USD to 143 attendees. Pays for hardware and other costs for hosting the python.org servers. Hosts the Python Packaging Index. Supports CPython directly through the CPython Developer in Residence Holds and defends the copyright and other intellectual property rights for the Python programming language. Provides infrastructure and operations support to 13 regional conferences, meetups, and Python projects as a fiscal sponsor. Recognizes individuals who have contributed to the Python community with Community Awards. To learn about recent PSF activities, visit the Python Software Foundation\u0027s blog or check out our latest Annual Impact Report. The PSF is a public charity under section 501(c)(3) of the United States Internal Revenue Code. For more information, see the PSF IRS Determination Letter for details. Please consult your tax adviser to determine the tax deductibility of your gift to the PSF. How can I donate? We welcome contributions of any amount. You can support the PSF with a one-time donation, monthly donation, or annual donation to support all of our great initiatives. See below for more information and contact psf-donations@python.org with any questions. Donate by credit card or PayPal Please use the button above or this link to donate using a credit card or your PayPal account. You don\u0027t need a PayPal account to use the donation button. Check or Money Order You may donate to the PSF using a check or money order. Please address checks in USD to the PSF headquarters. Please include your email address and your home address with your check so that we may provide you a donation acknowledgment letter. Zelle, ACH, Transferwise, and Wire Transfers The PSF may receive donations by Zelle or ACH from US Domestic accounts, Transferwise from either US Domestic or International accounts, or Wire Transfers from International accounts. If you are interested in donating to the PSF using one of these methods, please contact psf-donations@python.org.. Other Ways to Give Your employer may offer a matching donation program. Please see the PSF Matching Gifts page for more information or let psf-donations@python.org know if you have questions. If you have questions about donations, please contact psf-donations@python.org. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 03:50:39.681451"
+  },
+  {
+    "id": 216,
+    "url": "https://kivy.org/",
+    "title": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "content": "Kivy: The Open Source Python App Development Framework. Build and distribute beautiful Python cross-platform GUI apps with ease. Kivy runs on Android, iOS, Linux, macOS and Windows. MIT License 17.0K Stars Get started! Kivy has been built to be easy to use, cross-platform and fast. With a single codebase, you will be able to deploy apps on Windows, Linux, macOS, iOS and Android. Business Friendly Kivy is released under the MIT License, is 100% free to use, and is professionally developed, backed and maintained. Companies and individuals are using Kivy for their projects every day. Kivy is kept open source thanks to its contributors and backers. {{organizations.length}} organizations are supporting Kivy: {{ organization.account.name }} {{organization.tier.name}} ${{organization.totalDonations.value}} Amount contributed See all the {{organizations.length}} organizations supporting Kivy on OpenCollective {{individuals.length}} individuals are supporting Kivy See all the {{individuals.length}} individuals supporting Kivy on OpenCollective Start supporting Kivy from $5 Kivy is a free and open source software and is maintained by the community. Sometimes, a small contribution, could help to keep the wheel spinning flawlessly. Support Kivy as a Backer (Starts from $5/mo) Support Kivy as a Sponsor (Starts from $100/mo) Need help? The Kivy community will love ❤️ to help. Join us on Discord Join us on kivy-users group Source code hosted on Github Contact us",
+    "scrapedAt": "2026-05-10 03:50:32.006865"
+  },
+  {
+    "id": 215,
+    "url": "https://www.python.org/success-stories/saving-the-world-with-open-data-and-python/",
+    "title": "Saving the world with Open Data and Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Saving the world with Open Data and Python Written by James Baster, Open Data Services Co-op The policy side While it may seem to some developers that Open Data has been around forever and we probably don’t need to talk about it anymore, it’s important to remember why Open Data is something that people keenly push for. When an Open Data standard is created and promoted, it’s important to think why - what change is this trying to drive? What will people do with this data that they couldn’t do before? For instance, the Open Contracting Data Standard makes open the details of governments contracting out services and projects to private companies. It makes the data useable and tries to help people actually use it. By doing so, the aim is to root out corruption, open up the process to more bidders and drive efficiency, and save governments money. At Open Data Services we work on many standards - for instance, the Beneficial Ownership Data Standard opens data on people who ultimately own, control or benefit from companies around the world. As more and more countries try and cut down on tax avoidance, this data really helps. And that’s part of what we do - we work with our clients on their policy goals, and make sure that the Open Data standard they produce matches and builds on their policy goals. That’s how we can claim that our work saves the world - it’s great when we see people like ProZorro in Ukraine using Open Contracting Data to fight corruption and save their Goverment £1.2 billion. The Python Side We use Python as our tool of choice; from analysis in Jupyter with Google Colab notebooks to full Sphinx websites and the spreadsheets. Wait, the spreadsheets? Yup - spend any time in the world of Open Data and you’ll soon find that people love their spreadsheets. And while some developers will be rolling their eyes right now, it’s important to remember that for some people spreadsheets are a very powerful tool that enable them to do great data work they wouldn’t be able to do otherwise. So we have to embrace that, and this lead to one of the Python tools we have released as Open Source - Flatten Tool. Flatten Tool takes a JSON data file, and produces a spreadsheet of it’s contents. Of course a JSON data file may not be a flat structure and may have lists within lists and so on - we handle that by producing multiple sheets in an Excel file or multiple CSV files. Flatten Tool also takes a set of spreadsheets and produces a JSON file of your data. If you have a JSON Schema file describing your standard that helps. Also finally, we can take a JSON Schema file and produce a set of spreadsheet templates. This makes it easy for people to work with their favourite tools - spreadsheets - and for us to still be able to easily work with the data, both in terms of sending them data and dealing with data from them. Thanks to Python’s PyPi and pip, we include this as a library in other projects we do. We produce websites for the data standards we work on where people can upload some data - in it’s official JSON standard form, or as a spreadsheet - and we’ll take the data, analyse it and highlight problems and statistics with the data. We also offer conversion - so you can upload a spreadsheet and if it’s good, you can download a JSON file in the correct format. Thanks Python! At Open Data Services some of our members* are developers and some analysts - but even our analysts are very technical and are able to dive into the nitty gritty of issues with our developers. We don’t doubt that the welcoming Python language and ecosystem help with that - Thanks Python! Members? We are also a workers co-op - but that’s a story for another day! Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 03:50:26.448017"
+  },
+  {
+    "id": 214,
+    "url": "https://langchain.com/",
+    "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "content": "Join us May 13th \u0026 May 14th at Interrupt, the Agent Conference by LangChain Buy tickets Try LangSmith Get a demo Ship agents that workwow Observe, evaluate, and deploy agents with LangSmith, the agent engineering platform. Start building Get a demo Build Observe Evaluate Deploy LangSmith powers top AI teams, from startups to global enterprises LangSmith Agent Engineering Platform Improve agent performance across the development lifecycle. Trace your preferred framework or integrate LangSmith with any agent stack using our Python, TypeScript, Go, or Java SDKs. Observability Evaluation Deployment Fleet Observability Understand exactly what your agent is doing Agents can be hard to debug and understand. Long context, branching logic, and many tools make it difficult to pinpoint where things went wrong. Tracing breaks each run into a structured timeline of steps so you can see exactly what happened, in what order, and why. Native tracing for popular agent frameworks and OpenTelemetry SDKs for Python, TypeScript, Go, and Java Message threading for multi-turn chat interactions Analytics and AI-driven insights to uncover patterns across traces LangSmith Observability Evaluation Use real-world usage for iterative improvement Capture production traces, turn them into test cases, and score agents with a mix of human review and automated evals. Each iteration makes your agent measurably better. Reusable LLM-as-judge and multi-turn evals Eval calibration with human feedback Human feedback annotations Online and offline scoring LangSmith Evaluation Deployment Ship and scale agents in production Unlike traditional web apps, agents work for long durations and need to handle async collaboration with humans and other agents. The agent server provides memory, conversational threads, and durable checkpointing out of the box - on infrastructure that’s fault-tolerant and scales to handle any workload. Supports human-in-the-loop interactions, input concurrency, and background agents Type-safe streaming of messages, UI components, and custom events Scalable, distributed runtime to handle agent swarms Native protocol support for A2A \u0026 MCP LangSmith Deployment Fleet Agents for the whole company Routine tasks like research, follow-ups, and status checks eat up your day. Describe what you need in plain language, and Fleet takes action on it across your daily tools. Turn any question or task into a recurring agent that improves with feedback and acts autonomously. Designed with enterprise security and admin in mind. Bring your own models Use first-party integrations or extend with any MCP server Export agent files for pro-code development Integrated LangSmith tracing Agents improve with user feedback LangSmith Fleet Build with our open source frameworks Build agents fast with any model provider. Choose the right framework for the job from batteries included to low-level control. deepagents Build intelligent agents for open-ended work For highly autonomous, long-running agents Explore deepagents langchain Quick start agents with any model provider For building agents fast with templates Explore langchain langgraph Build reliable agents with low-level control For production agents that require some determinism Explore langgraph Learn from teams running agents in production More customer stories Klarna’s AI assistant reduced case resolution time by 80% with LangSmith Read Use Case Monday Service achieved 8.7x faster feedback loops for evals with LangSmith Read Use Case Podium reduced engineering escalations by 90% with LangSmith Read Use Case C.H. Robinson automated 5,500 orders per day, saving 600+ hours daily with LangSmith Read Use Case ServiceNow orchestrates agents across 8 customer stages using LangSmith Read Use Case More use cases Trusted by the largest builder community in AI 100M+ Monthly open source downloads 6K+ Active LangSmith customers 5 Of the Fortune 10 are LangSmith customers Get started with LangSmith Start building Get a demo Use LangSmith, the agent engineering platform, to improve every step of the agent development lifecycle.",
+    "scrapedAt": "2026-05-10 03:50:23.410777"
+  },
+  {
+    "id": 213,
+    "url": "https://blog.python.org/2026/05/python-3145rc1/",
+    "title": "Python 3.14.5 release candidate | Python Insider",
+    "content": "Python 3.14.5rc1 is a release candidate for the fifth maintenance release of 3.14, containing around 113 bugfixes, build improvements and documentation changes since 3.14.4. https://www.python.org/downloads/release/python-3145rc1/ Garbage collector Notably, the garbage collector (GC) has changed in Python 3.14.5rc1. The incremental garbage collector shipped in Python 3.14.0-3.14.4 has been reverted back to the generational garbage collector from 3.13, due to a number of reports of significant memory pressure in production environments. See What’s New and discuss.python.org for details. Call to action We strongly encourage testing of this release candidate, ahead of the planned 3.14.5 final on Friday 2026-05-08. As always, report any issues to the Python bug tracker. Please keep in mind that this is a preview release and its use is not recommended for production environments. Major new features of the 3.14 series, compared to 3.13 Some of the major new features and changes in Python 3.14 are: New features PEP 779 : Free-threaded Python is officially supported PEP 649 : The evaluation of annotations is now deferred, improving the semantics of using annotations. PEP 750 : Template string literals (t-strings) for custom string processing, using the familiar syntax of f-strings. PEP 734 : Multiple interpreters in the stdlib. PEP 784 : A new module compression.zstd providing support for the Zstandard compression algorithm. PEP 758 : except and except* expressions may now omit the brackets. Syntax highlighting in PyREPL , and support for color in unittest , argparse , json and calendar CLIs. PEP 768 : A zero-overhead external debugger interface for CPython. UUID versions 6-8 are now supported by the uuid module, and generation of versions 3-5 are up to 40% faster. PEP 765 : Disallow return/break/continue that exit a finally block. PEP 741 : An improved C API for configuring Python. A new type of interpreter . For certain newer compilers, this interpreter provides significantly better performance. Opt-in for now, requires building from source. Improved error messages. Builtin implementation of HMAC with formally verified code from the HACL* project. A new command-line interface to inspect running Python processes using asynchronous tasks. The pdb module now supports remote attaching to a running Python process . For more details on the changes to Python 3.14, see What’s new in Python 3.14 . Build changes PEP 761 : Python 3.14 and onwards no longer provides PGP signatures for release artifacts. Instead, Sigstore is recommended for verifiers. Official macOS and Windows release binaries include an experimental JIT compiler . Official Android binary releases are now available. Incompatible changes, removals and new deprecations Incompatible changes Python removals and deprecations C API removals and deprecations Overview of all pending deprecations Python install manager The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases. More resources Online documentation PEP 745 , 3.14 Release Schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors ) and support the Python community And now for something completely different I asked Rodrigo Girão Serrão for a fun π fact: Euler’s identity says that eiπ + 1 \u003d 0 and is often cited as an equality of profound mathematical elegance, since it relates five of the most fundamental mathematical constants: 0, 1, π, e, and i. A mathematics professor at Stanford University has said “like a Shakespearean sonnet that captures the very essence of love, or a painting that brings out the beauty of the human form that is far more than just skin deep, Euler’s equation reaches down into the very depths of existence”. Source Enjoy the new release Thanks to all of the many volunteers who help make Python Development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation. Regards from a cherry-blossoming Helsinki, Your release team, Hugo van Kemenade Ned Deily Steve Dower Łukasz Langa References 37 PEPs PEP 779 PEP 649 PEP 750 PEP 734 PEP 784 PEP 758 PEP 768 PEP 765 PEP 741 PEP 761 PEP 745 Documentation What’s New Syntax highlighting in PyREPL unittest argparse json calendar UUID versions 6-8 new type of interpreter Improved error messages. Builtin implementation of HMAC new command-line interface remote attaching to a running Python process What’s new in Python 3.14 experimental JIT compiler Android binary releases In",
+    "scrapedAt": "2026-05-10 03:50:18.306466"
+  },
+  {
     "id": 212,
     "url": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html",
     "title": "Python Software Foundation News: Reflecting on Five Years as the PSF’s First CPython Developer in Residence",
@@ -1482,26 +1517,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 213,
-    "url": "https://blog.python.org/2026/05/python-3145rc1/"
-  },
-  {
-    "id": 214,
-    "url": "https://langchain.com/"
-  },
-  {
-    "id": 215,
-    "url": "https://www.python.org/success-stories/saving-the-world-with-open-data-and-python/"
-  },
-  {
-    "id": 216,
-    "url": "https://kivy.org/"
-  },
-  {
-    "id": 217,
-    "url": "https://www.python.org/psf/donations/"
   },
   {
     "id": 218,
@@ -39939,10 +39954,715 @@ window.searchData = [
     "id": 20387,
     "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d6125338349276685201\u0026from\u003dpencil",
     "parentUrl": "https://pyfound.blogspot.com/2026/04/reflecting-on-five-years-as-psfs-first.html"
+  },
+  {
+    "id": 20432,
+    "url": "https://discuss.python.org/t/reverting-the-incremental-gc-in-python-3-14-and-3-15/107014",
+    "parentUrl": "https://blog.python.org/2026/05/python-3145rc1/"
+  },
+  {
+    "id": 20438,
+    "url": "https://en.wikipedia.org/wiki/Euler\u0027s_identity",
+    "parentUrl": "https://blog.python.org/2026/05/python-3145rc1/"
+  },
+  {
+    "id": 20449,
+    "url": "https://mathspp.com/",
+    "parentUrl": "https://blog.python.org/2026/05/python-3145rc1/"
+  },
+  {
+    "id": 20457,
+    "url": "https://www.langchain.com/#evaluation",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20458,
+    "url": "https://www.langchain.com/#fleet",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20459,
+    "url": "https://smith.langchain.com/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20460,
+    "url": "https://www.langchain.com/customers",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20461,
+    "url": "https://www.langchain.com/langsmith/deployment",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20462,
+    "url": "https://www.langchain.com/langgraph",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20463,
+    "url": "https://blog.langchain.com/customers-servicenow/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20464,
+    "url": "https://www.langchain.com/deep-agents",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20465,
+    "url": "https://blog.langchain.com/customers-chrobinson/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20466,
+    "url": "https://www.langchain.com/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20467,
+    "url": "https://www.langchain.com/contact-sales",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20468,
+    "url": "https://blog.langchain.com/customers-klarna/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20469,
+    "url": "https://blog.langchain.com/customers-podium/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20470,
+    "url": "https://www.langchain.com/#deployment",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20471,
+    "url": "https://blog.langchain.com/customers-monday/",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20472,
+    "url": "https://www.langchain.com/#observability",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20473,
+    "url": "https://www.langchain.com/langsmith/fleet",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20474,
+    "url": "https://www.langchain.com/langchain",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20475,
+    "url": "https://interrupt.langchain.com",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20476,
+    "url": "https://www.langchain.com/langsmith/observability",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20477,
+    "url": "https://www.langchain.com/langsmith/evaluation",
+    "parentUrl": "https://langchain.com/"
+  },
+  {
+    "id": 20493,
+    "url": "https://opencollective.com/kivy",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20494,
+    "url": "https://opencollective.com/kivy/contribute/sponsor-6730/checkout",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20495,
+    "url": "https://m.do.co/c/bba66856dc94",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20496,
+    "url": "https://opencollective.com/kivy/contribute/backer-6729/checkout",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20497,
+    "url": "https://www.kivy.org/docs/contact.html",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20498,
+    "url": "https://github.com/kivy",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20499,
+    "url": "https://chat.kivy.org",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20500,
+    "url": "https://kivy.org/doc/stable/gettingstarted/intro.html",
+    "parentUrl": "https://kivy.org/"
+  },
+  {
+    "id": 20501,
+    "url": "https://groups.google.com/g/kivy-users",
+    "parentUrl": "https://kivy.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://kivy.org/static/images/icons/scale-balanced.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/star.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/kivy-colorwheel-examples.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-fast.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-company.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/contribute_coffee.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/help.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/discord.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/github.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/DO_Badge.png",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "https://kivy.org/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698dcf651e8e04cce00f9739_ae60ffcdd4838b256bffd9f86b1a4c70_Langchain-Hero%20%281%29%201.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af5f2d20a12424370edee_logo_klarna.svg",
+    "alt": "Klarna",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af60a3595f5918eb55b2f_logo_klarna-1.svg",
+    "alt": "Vanta",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698b4a3d4480f4fa53c3b0b8_logo_Gitlab.svg",
+    "alt": "clay",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af613b1e439fab3cbda6d_logo_klarna-2.svg",
+    "alt": "RIPPLING",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af61c4871f1baed6eb36d_logo_klarna-3.svg",
+    "alt": "lyft",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69e875112d41e3859e3fc2b2_Gong%20logo%2056.svg",
+    "alt": "Gong",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af648fc78763596e95934_logo_klarna-4.svg",
+    "alt": "Harvey",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8dd819b1b50d87a87a7e_logo_gitlab.svg",
+    "alt": "ABRIDGE",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ab2d1048c0f7047a83f_cloudfire.svg",
+    "alt": "Cloudflare",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af694f5a8b61a81e61651_The_Home_Depot-Logo.wine%201.svg",
+    "alt": "THE HOME DEPOT",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03aa35f131c951040c55f_workday.svg",
+    "alt": "workday",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6ae78d3de70d5c3fd10_logo_Rakuten.svg",
+    "alt": "CISCO",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b07847c18efb637c5e1_mercor.svg",
+    "alt": "Mercor",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8e487c686f8fc51fd9b0_nu.svg",
+    "alt": "NU",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ace58968e58f476ce24_monday.svg",
+    "alt": "monday.com",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69f07e27d6b85b9690276be2_Nvidia%20logo.svg",
+    "alt": "Nvidia",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b15e423c55ca7219fec_bridgewater.svg",
+    "alt": "BRIDGEWATER",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af738793838e9c6945cc0_logo_linkedin.svg",
+    "alt": "LinkedIn",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6a5bce126b2dc318630_logo_rakuten-1.svg",
+    "alt": "coinbase",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af5f2d20a12424370edee_logo_klarna.svg",
+    "alt": "Klarna",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af60a3595f5918eb55b2f_logo_klarna-1.svg",
+    "alt": "Vanta",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698b4a3d4480f4fa53c3b0b8_logo_Gitlab.svg",
+    "alt": "clay",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af613b1e439fab3cbda6d_logo_klarna-2.svg",
+    "alt": "RIPPLING",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af61c4871f1baed6eb36d_logo_klarna-3.svg",
+    "alt": "lyft",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69e875112d41e3859e3fc2b2_Gong%20logo%2056.svg",
+    "alt": "Gong",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af648fc78763596e95934_logo_klarna-4.svg",
+    "alt": "Harvey",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8dd819b1b50d87a87a7e_logo_gitlab.svg",
+    "alt": "ABRIDGE",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ab2d1048c0f7047a83f_cloudfire.svg",
+    "alt": "Cloudflare",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af5f2d20a12424370edee_logo_klarna.svg",
+    "alt": "Klarna",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af60a3595f5918eb55b2f_logo_klarna-1.svg",
+    "alt": "Vanta",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698b4a3d4480f4fa53c3b0b8_logo_Gitlab.svg",
+    "alt": "clay",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af613b1e439fab3cbda6d_logo_klarna-2.svg",
+    "alt": "RIPPLING",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af61c4871f1baed6eb36d_logo_klarna-3.svg",
+    "alt": "lyft",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69e875112d41e3859e3fc2b2_Gong%20logo%2056.svg",
+    "alt": "Gong",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af648fc78763596e95934_logo_klarna-4.svg",
+    "alt": "Harvey",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8dd819b1b50d87a87a7e_logo_gitlab.svg",
+    "alt": "ABRIDGE",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ab2d1048c0f7047a83f_cloudfire.svg",
+    "alt": "Cloudflare",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af694f5a8b61a81e61651_The_Home_Depot-Logo.wine%201.svg",
+    "alt": "THE HOME DEPOT",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03aa35f131c951040c55f_workday.svg",
+    "alt": "workday",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6ae78d3de70d5c3fd10_logo_Rakuten.svg",
+    "alt": "CISCO",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b07847c18efb637c5e1_mercor.svg",
+    "alt": "Mercor",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8e487c686f8fc51fd9b0_nu.svg",
+    "alt": "NU",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ace58968e58f476ce24_monday.svg",
+    "alt": "monday.com",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69f07e27d6b85b9690276be2_Nvidia%20logo.svg",
+    "alt": "Nvidia",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b15e423c55ca7219fec_bridgewater.svg",
+    "alt": "BRIDGEWATER",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af738793838e9c6945cc0_logo_linkedin.svg",
+    "alt": "LinkedIn",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6a5bce126b2dc318630_logo_rakuten-1.svg",
+    "alt": "coinbase",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af694f5a8b61a81e61651_The_Home_Depot-Logo.wine%201.svg",
+    "alt": "THE HOME DEPOT",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03aa35f131c951040c55f_workday.svg",
+    "alt": "workday",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6ae78d3de70d5c3fd10_logo_Rakuten.svg",
+    "alt": "CISCO",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b07847c18efb637c5e1_mercor.svg",
+    "alt": "Mercor",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/699d8e487c686f8fc51fd9b0_nu.svg",
+    "alt": "NU",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03ace58968e58f476ce24_monday.svg",
+    "alt": "monday.com",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69f07e27d6b85b9690276be2_Nvidia%20logo.svg",
+    "alt": "Nvidia",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69a03b15e423c55ca7219fec_bridgewater.svg",
+    "alt": "BRIDGEWATER",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af738793838e9c6945cc0_logo_linkedin.svg",
+    "alt": "LinkedIn",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/698af6a5bce126b2dc318630_logo_rakuten-1.svg",
+    "alt": "coinbase",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698afeb61612bb3b1af6e9ee_Frame%202147254707.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/699327eef63609b183692f16_observ_default.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698afeb8f6d6d95dc67c49c2_Frame%202147254707-1.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/699327eece4d056fbcc070cd_eval_default.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698afeb61aa4c669a370f8ca_updated.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/699327ee468c01d51d25917e_deploy_default.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69bae20e727b24b507666efe_LangSmith%20Fleet_icon_dark%20mode%202.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69c17b7fa8fdfabb326f8150_agent-fleet.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2ab3a27435f0af4607ce_83408050bc46f6f7d309df03d6155be9_graph-2.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2b2641d117b53e025af6_Frame%202147255016.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2ab36ec04bd906a45a47_04a211ab00b30e07dc51edffebd9aff2_graph.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2b26acc19233c104b1cd_logo.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2ab3357e0836fe4cdcac_70f00ac3114760cac8e792a9375a4814_graph-1.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2b268612e91affecd414_Frame%202147254720.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03fbd88f7622a14049a2b_logo_klarna.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8bf31109c9aa556568_logo_rakuten.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8b008adda0b0b309fb_podium.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8b7bec6d94a146a30f_servicenow-1.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/69a03b8b8dc42ed899d1fcaf_servicenow.svg",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
+  {
+    "src": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/698b2d053d82a375e355b0ab_Group%202147239175.avif",
+    "alt": "",
+    "pageTitle": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
+    "pageUrl": "https://langchain.com/"
+  },
   {
     "src": "https://blogger.googleusercontent.com/img/a/AVvXsEhtUayHgoeMYEyB6XwbVMZscpChzV4510xMgphpi29hahrGN-rmUW3GzIfn892orljnqRI7_P_EXA04oGyJWP1hm5uM9O233mYug1i8rEFbrb_aiHjKBNNRhL19cP1IL7ypxT099EbUjxsXkH7Q8lIlbJWPcoEfFU5so7svOtUvs0ABF75NeQ\u003dw400-h400",
     "alt": "",
