@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 538,
+    "url": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/",
+    "title": "Elementary school education: Is it love or just Python? | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Elementary school education: Is it love or just Python? Written by Ivana Vezjak, Elementary School August Šenoa Osijek Author: Ivana Vezjak (ICT teacher at Elementary school August Šenoa Osijek, Croatia) Date: May 2020 Python is the main programming language we use in our school to teach students basic programming concepts and algorithms. Our students love Python - with Python they can create their own apps, websites, quizzes, solve different problems and much more. Students use different modules like Pygame, Matplotlib, Numpy, Tkinter etc. to turn their ideas into reality and develop skills like computational thinking, creativity and problem solving. Last year (October, 2019) approx. 90 students from our school (Elementary School August Šenoa, Osijek, Croatia), grades 5-8, participated in the EU Code Week. Students made their own chatbots and love calculators in the programming language Python, created virtual worlds which they experienced themselves later, and explored them with VR glasses etc. 8th grade students have developed an application in Python, which we called the Love Calculator. It is something you should definitely try out. The application allows the entry of a male or female name and clicking the button the “love percentage” is written on the screen. Students first created their own backgrounds and pictures for the application. There are a lot of drawing tools available online, such as https://sketch.io/sketchpad. Making their own graphic materials is much more interesting to students than just downloading finished drawings from the internet. After creating the drawings, students have learnt how to use Python’s module Tkinter to create the basic graphic window. This was in a way the design - they had to determine the background picture or colour, set the fields for entry of text and buttons, choose colours and fonts for their application etc. When they were satisfied with the visual look of the application, they started the coding. The main part of the programme was comprised of writing two programming functions - one which generated a random number (the so-called love percentage) and another, which checked the entry of the user into the field for text and written out the love percentage to the screen. This was somewhat a more demanding part. Students are expected to think about the way in which the programme functions, to create a good algorithm and write it all down in Python. We can find plenty of these kinds of programmes online, in the form of calculators or quizzes which actually only return a random number, text or percentage. Students have seen themselves various programmes on the internet which function in a similar way, and by creating such a programme they realised how they actually function. Through this project they learnt that online love calculators have nothing to do with love, but that behind them there exists a good algorithm in a certain programme language, and that the love percentage is nothing else but a randomly generated number! The students had great fun working on this project, but also learnt that you should not trust everything you see online. This activity has also motivated them to actively create digital content, develop computer and logical thinking and learn the ways in which technology functions, and not just to be passive users of technology. This simple project is intended to students who already have a basic experience in programming. The whole project can be seen on this link: https://repl.it/join/rirepnnq-ivanav For the design of the project students can use some of the online Python editors which support work with Tkinter module (such as https://repl.it/) or they can work locally on their computers. Tkinter module is a part of a standard Python library and it is not necessary to separately install it if Python is already installed on your computer. Few images: https://carnet-my.sharepoint.com/:f:/g/personal/ivana_duranic_skole_hr/ElktGdXhmRJMp0O1xrK21rAB1VfjDFlrliJS9r742PAHww?e\u003dlmE7Bm Happy Pythoning! Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:23:42.63934"
+  },
+  {
+    "id": 537,
+    "url": "https://www.python.org/success-stories/category/business/",
+    "title": "Business | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Business Business Using Python to build a solution for instant tokenized real estate redemptions Lincoln Loop: Building a sustainable business inspired by Python’s ethos Using Python for commercial cloud backup Using Python to make unstable APIs reliable Python for Financial Machine Learning at Union Investment Python in a classic enterprise setting - hand-rolled microservices for supply chain / ERP Making our new website and admin work together using Python Using Python scripts to analyse SEO and broken links on your site Python to Control CD/DVD Packaging Hardware Carmanah Lights the Way with Python Python On Guard Python Powers Journyx Timesheet Python is Rackspace\u0027s CORE Technology WordStream Uses Python as Their Platform of Choice D-Link Australia Uses Python to Control Firmware Updates Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:23:39.46754"
+  },
+  {
+    "id": 536,
+    "url": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/",
+    "title": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python to Automate Tedious Tasks Written by Nat Dunn, Webucator We began using Python at Webucator in 2015. As most of our larger programming projects have to do with building web-based applications and we had long ago decided on our web stack, we haven\u0027t needed Python for any large scale projects. However, we use it regularly to quickly solve problems and to automate manual tasks. In this article, I\u0027ll describe how we used Python to automate a problem that occurred infrequently, but was a huge nuisance when it did occur. As an IT training company, we write a lot of courseware with many code examples, which are both included in the class files and embedded in the course manual. To avoid having to maintain the code both in the file and the manual, our build system, which is XML-based, reads the class files into the manual. To make that work, we have to mark up each class file with XML before committing it. Here is a sample of a marked-up courseware file: The XML here is simple. It includes a root element (cw:File) and a few emphasis elements (cw:Em). The build parses this XML and, using XSL:FO, pulls it into the manual to create this: When this works as expected, it works beautifully. But sometimes an author will commit a file that isn\u0027t well-formed XML, which breaks the build. The person building the courseware is often not the same person as the person writing the courseware, so there can be a lag between the time the error occurs and the time it gets fixed. Furthermore, our home-grown build system doesn\u0027t handle the error well. Rather than reporting it, it spins and spins. (We need to fix that eventually, but for reasons not relevant to this article, that\u0027s not going to happen any time soon.) The person building the courseware then has to let the author know that one of the XML files is poorly formed, but she doesn\u0027t know which one. The author then has to check each XML file until he finds the one that is poorly formed. Done one file at a time with a tool like XMLSPY, this is a laborious process. Enter Python! The last time I had to go through this process, I realized that Python could solve this problem very quickly. The Python program simply has to loop through the directories finding all the files that need checking, based on their locations and extensions, check whether the file begins with \"\u003ccw:\" as not all files are marked up as XML, and use lxml.etree to attempt to parse the file. On failure, it should report the file name. This program took less than 15 minutes to write and saved more than that the first time I used it. I\u0027ve copied it below to show how simple it is: This is just one of many examples in which we use Python at Webucator to quickly and easily automate time-intensive, manual tasks. Webucator provides live online and customized onsite Python training. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:23:31.514601"
+  },
+  {
+    "id": 535,
+    "url": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/",
+    "title": "Building Robust Codebases with Python\u0027s Type Annotations | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Building Robust Codebases with Python\u0027s Type Annotations Written by John Lekberg, Hudson River Trading Hudson River Trading\u0027s (HRT\u0027s) Python codebase is large and constantly evolving. Millions of lines of Python reflect the work of hundreds of developers over the last decade. We trade in over 200 markets worldwide — including nearly all of the world\u0027s electronic markets — so we need to regularly update our code to handle changing rules and regulations. Our codebase provides command-line interface (CLI) tools, graphical user interfaces (GUIs), and event-triggered processes that assist our traders, engineers, and operations personnel. This outer layer of our codebase is supported by an inner layer of shared business logic. Business logic is often more complicated than it appears: even a simple question like \"what is the next business day for NASDAQ?\" involves querying a database of market calendars (a database that requires regular maintenance). So, by centralizing this business logic into a single source of truth, we ensure that all the different systems in our codebase behave coherently. Even a small change to shared business logic can affect many systems, and we need to check that these systems won\u0027t have issues with our change. It\u0027s inefficient and error-prone for a human to manually verify that nothing is broken. Python\u0027s type annotations have significantly improved how quickly we can update and verify changes to shared business logic. Type annotations allow you to describe the type of data handled by your code. \"Type checkers\" are tools that reconcile your descriptions against how the code is actually being used. When we update shared business logic, we update the type annotations and use a type checker to identify any downstream systems that are affected. We also thoroughly document and test our codebase. But written documentation is not automatically synchronized with the underlying code, so maintaining documentation requires a high level of vigilance and is subject to human error. Additionally, automated testing is limited to the scenarios that we test for, which means that novel uses of our shared business logic will be unverified until we add new tests. Let\u0027s look at an example of type annotations to see how they can be used to describe the shape of data. Here\u0027s some type annotated Python code that computes the checksum digit of a CUSIP: def cusip_checksum(cusip8: str) -\u003e int:\n    assert len(cusip8) \u003d\u003d 8\n    chars: str \u003d \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*@#\"\n    charmap: dict[str, int] \u003d {\n        char: value\n        for value, char in enumerate(chars, start\u003d0)\n    }\n    total: int  \u003d 0\n    for idx, char in enumerate(cusip8, start\u003d0):\n        value: int \u003d charmap[char]\n        if (idx % 2) \u003d\u003d 1:\n            value *\u003d 2\n        total +\u003d (value // 10) + (value % 10)\n    return (10 - total % 10) % 10\n Here\u0027s what the type annotations tell us: cusip_checksum() is a function that takes a string as input and returns an integer as output. chars is a string. charmap is a dictionary with string keys and integer values. total and value are integers. HRT uses mypy to analyze our Python type annotations. Mypy works by analyzing the type annotations in one or more Python files and determining if there are any issues or inconsistencies. Most of the time, mypy is good at type inference, so it’s better to focus on annotating the parameters and return values of a function rather than the internal variables used in a function. Here\u0027s a new function, validate_cusip(), that relies on the cusip_checksum() function from earlier: def cusip_checksum(cusip8: str) -\u003e int:\n    ...\n\ndef validate_cusip(cusip: str) -\u003e str | None:\n    checksum: int\n    if len(cusip) \u003d\u003d 9:\n        checksum \u003d cusip_checksum(cusip[:8])\n        if str(checksum) \u003d\u003d cusip[8]:\n            return cusip\n        else:\n            return None\n    elif len(cusip) \u003d\u003d 8:\n        checksum \u003d cusip_checksum(cusip)\n        return f\"{cusip}{checksum}\"\n    else:\n        return None\n Mypy is happy with this code: Success: no issues found in 1 source file\n Now, let\u0027s say that we decide we should update cusip_checksum() to return None if it detects that the CUSIP is not valid: def cusip_checksum(cusip8: str) -\u003e int | None:\n    if len(cusip8) !\u003d 8:\n        return None\n    chars: str \u003d \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*@#\"\n    charmap: dict[str, int] \u003d {\n        char: value\n        for value, char in enumerate(chars, start\u003d0)\n    }\n    total: int  \u003d 0\n    for idx, char in enumerate(cusip8, start\u003d0):\n        try:\n            value: int \u003d charmap[char]\n        except KeyError:\n            return None\n        if (idx % 2) \u003d\u003d 1:\n            value *\u003d 2\n        total +\u003d (value // 10) + (value % 10)\n    return (10 - total % 10) % 10\n Mypy automatically detects issues in how validate_cusip() is using cusip_c",
+    "scrapedAt": "2026-05-10 04:23:17.036234"
+  },
+  {
+    "id": 534,
+    "url": "https://www.python.org/success-stories/category/data-science/",
+    "title": "Data Science | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Data Science How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python Reimagining data science with Python-based operators in Einblick’s visual canvas Using Python with Gretel.ai to Generate Synthetic Location Data Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:23:10.789363"
+  },
+  {
     "id": 533,
     "url": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/",
     "title": "Using Python to make unstable APIs reliable | Our Success Stories | Python.org",
@@ -3682,26 +3717,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 534,
-    "url": "https://www.python.org/success-stories/category/data-science/"
-  },
-  {
-    "id": 535,
-    "url": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
-  },
-  {
-    "id": 536,
-    "url": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
-  },
-  {
-    "id": 537,
-    "url": "https://www.python.org/success-stories/category/business/"
-  },
-  {
-    "id": 538,
-    "url": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
   },
   {
     "id": 539,
@@ -96510,10 +96525,134 @@ window.searchData = [
     "id": 71491,
     "url": "https://www.prijsvergelijken.nl/",
     "parentUrl": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/"
+  },
+  {
+    "id": 71509,
+    "url": "https://www.hudsonrivertrading.com/",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 71511,
+    "url": "https://en.wikipedia.org/wiki/CUSIP",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 71514,
+    "url": "https://www.mypy-lang.org/",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 71517,
+    "url": "https://www.hudsonrivertrading.com/hrtbeat/building-robust-codebases-with-pythons-type-annotations/",
+    "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 71525,
+    "url": "https://www.webucator.com/programming-training/python-training.cfm",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "id": 71535,
+    "url": "https://www.python.org/success-stories/d-link-australia/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71536,
+    "url": "https://www.python.org/success-stories/making-our-new-website-and-admin-work-together-using-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71540,
+    "url": "https://www.python.org/success-stories/python-is-rackspaces-core-technology/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71543,
+    "url": "https://www.python.org/success-stories/carmanah-lights-the-way-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71544,
+    "url": "https://www.python.org/success-stories/python-seo-link-analyzer/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71549,
+    "url": "https://www.python.org/success-stories/wordstream-uses-python-as-their-platform-of-choice/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71550,
+    "url": "https://www.python.org/success-stories/python-on-guard/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71551,
+    "url": "https://www.python.org/success-stories/python-in-a-classic-enterprise-setting-hand-rolled-microservices-for-supply-chain-erp/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71553,
+    "url": "https://www.python.org/success-stories/python-to-control-cddvd-packaging-hardware/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71556,
+    "url": "https://www.python.org/success-stories/python-powers-journyx-timesheet/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 71560,
+    "url": "https://carnet-my.sharepoint.com/:f:/g/personal/ivana_duranic_skole_hr/ElktGdXhmRJMp0O1xrK21rAB1VfjDFlrliJS9r742PAHww?e\u003dlmE7Bm",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 71562,
+    "url": "http://os-asenoa-os.skole.hr/",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 71564,
+    "url": "https://sketch.io/sketchpad",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 71565,
+    "url": "https://repl.it/",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 71569,
+    "url": "https://repl.it/join/rirepnnq-ivanav",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/code-sample-class-file.png",
+    "alt": "Code Sample - Class File",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/code-sample-pdf.png",
+    "alt": "",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/check-xml.png",
+    "alt": "Check XML Python Program",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Mypy_example.png",
+    "alt": "Mypy examples",
+    "pageTitle": "Building Robust Codebases with Python\u0027s Type Annotations | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
   {
     "src": "https://cdn.pycon.it/files/participant_avatar/6dc1cb80-e5b2-4531-a080-7ccb44aa7aca.jpg",
     "alt": "Speaker",
