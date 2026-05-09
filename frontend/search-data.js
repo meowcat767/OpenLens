@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 182,
+    "url": "https://saltproject.io/",
+    "title": "Saltproject.io",
+    "content": "Welcome to Salt Project Salty Content Scroll through Salt videos to learn more and expand your knowledge of the platform. What is Salt? It\u0027s automation, infrastructure management. It\u0027s data-driven orchestration and remote execution. It\u0027s configuration management. It\u0027s so much more. Understand Salt in 10 minutes. Get Started Learn Salt Get hands on with Salt with nothing to install and step-by-step instructions using the Salt User Guide. Dive into the details with Salt Documentation or Salt Project YouTube Channel. Learn to automate and secure IT with Salt. Salt Workshop Discord Server GitHub Channel Mailing List Security Updates Recent Blogs Salt 3008 RC2 is now available May 6, 2026 The Salt Project has just released RC2 (release candidate 2) of the Salt 3008 LTS. Read More Salt 3007.14 STS is available Apr 29, 2026 The Salt Project has just released the 3007.14 STS bugfix release! Read More Salt 3006.24 LTS is available Apr 23, 2026 The Salt Project has just released the 3006.24 LTS bugfix of Salt 3006. Read More View All Posts ` Looking for Enterprise-ready Salt? Good news! Salt is now fully integrated into Tanzu Salt. Learn more about how Salt powers VMware’s leading automation platform and how you can harness the power of Salt across the enterprise. Learn More",
+    "scrapedAt": "2026-05-10 03:46:56.485434"
+  },
+  {
+    "id": 181,
+    "url": "https://blog.python.org",
+    "title": "Python Insider",
+    "content": "News \u0026 updates from the Python core team 314 posts / 26 authors / since 2011 RSS Latest Python 3.15.0 beta 1 is here! Hugo van Kemenade · May 7, 2026 The propreantepenultimate 3.15 beta is out! releases Recent All posts Python 3.14.5 release candidate Hugo van Kemenade · May 4, 2026 A special release candidate with a new (old) garbage collector. Rust for CPython Progress Update April 2026 Emma Smith · April 8, 2026 Rust for CPython project status update April 2026 Python 3.15.0a8, 3.14.4 and 3.13.13 are out! Hugo van Kemenade · April 7, 2026 A final alpha and two bug fixes are awaiting your upgrade. Python 3.15\u0027s JIT is now back on track Ken Jin · March 23, 2026 A look at Python\u0027s JIT in 3.15a7. Python 3.15.0 alpha 7 Hugo van Kemenade · March 10, 2026 The penultimate 3.15 alpha is out! CPython: 36 Years of Source Code Stan Ulbrych · March 8, 2026 An analysis of the growth of CPython\u0027s codebase from its first commits to the present day Python 3.12.13, 3.11.15 and 3.10.20 are now available! Thomas Wouters · March 3, 2026 Python Releases For Your Security! New security releases for 3.10, 3.11 and 3.12 are now available. The Python Insider Blog Has Moved! Jacob Coffee · March 3, 2026 Python Insider now lives at blog.python.org, backed by a Git repository. All 307 posts from the Blogger era have been migrated, and old URLs redirect automatically. Browse all 314 posts ?",
+    "scrapedAt": "2026-05-10 03:46:51.799146"
+  },
+  {
+    "id": 180,
+    "url": "https://scipy.org/",
+    "title": "SciPy",
+    "content": "SciPy Fundamental algorithms for scientific computing in Python Get started SciPy 1.17.1 released! 2026-02-22 Fundamental algorithms SciPy provides algorithms for optimization, integration, interpolation, eigenvalue problems, algebraic equations, differential equations, statistics and many other classes of problems. Broadly applicable The algorithms and data structures provided by SciPy are broadly applicable across domains. Foundational Extends NumPy providing additional tools for array computing and provides specialized data structures, such as sparse matrices and k-dimensional trees. Performant SciPy wraps highly-optimized implementations written in low-level languages like Fortran, C, and C++. Enjoy the flexibility of Python with the speed of compiled code. Easy to use SciPy’s high level syntax makes it accessible and productive for programmers from any background or experience level. Open source Distributed under a liberal BSD license, SciPy is developed and maintained publicly on GitHub by a vibrant, responsive, and diverse community.",
+    "scrapedAt": "2026-05-10 03:46:48.719669"
+  },
+  {
+    "id": 179,
+    "url": "https://riverbankcomputing.com/software/pyqt/intro",
+    "title": "Riverbank Computing | Introduction",
+    "content": "What is PyQt? PyQt is a set of Python bindings for The Qt Company\u0027s Qt application framework. The bindings are implemented as a set of Python modules and contain over 1,000 classes. PyQt6 supports Qt6 and runs on Windows (Intel and ARM), macOS (Intel and Apple Silicon) and Linux (Intel and ARM). PyQt5 supports Qt5 and runs on Windows (Intel), macOS (Intel and Apple Silicon), Android, iOS and Linux (Intel). PyQt4 supports Qt v4 but both are no longer supported and no new releases will be made. License PyQt is dual licensed on all supported platforms under the GNU GPL v3 and the Riverbank Commercial License. Unlike Qt, PyQt is not available under the LGPL. You can purchase the commercial version of PyQt here. More information about licensing can be found in the License FAQ. PyQt does not include a copy of Qt. You must obtain a correctly licensed copy of Qt yourself. However, binary wheels of the GPL version of PyQt6 and PyQt5 are provided and these include a copy of the corresponding LGPL version of Qt. PyQt Components A description of the components of PyQt5 can be found in the PyQt5 Reference Guide. A description of the components of PyQt4 can be found in the PyQt4 Reference Guide. Why PyQt? PyQt brings together the Qt C++ cross-platform application framework and the cross-platform interpreted language Python. Qt is more than a GUI toolkit. It includes abstractions of network sockets, threads, Unicode, regular expressions, SQL databases, SVG, OpenGL, XML, a fully functional web browser, a help system, a multimedia framework, as well as a rich collection of GUI widgets. Qt classes employ a signal/slot mechanism for communicating between objects that is type safe but loosely coupled making it easy to create re-usable software components. Qt also includes Qt Designer, a graphical user interface designer. PyQt is able to generate Python code from Qt Designer. It is also possible to add new GUI controls written in Python to Qt Designer. Python is a simple but powerful object-orientated language. Its simplicity makes it easy to learn, but its power means that large and complex applications can be created. Its interpreted nature means that Python programmers are very productive because there is no edit/compile/link/run development cycle. Much of Python\u0027s power comes from its comprehensive set of extension modules providing a wide variety of functions including HTTP servers, XML parsers, database access, data compression tools and, of course, graphical user interfaces. Extension modules are usually implemented in either Python, C or C++. Using tools such as SIP it is relatively straight forward to create an extension module that encapsulates an existing C or C++ library. Used in this way, Python can then become the glue to create new applications from established libraries. PyQt combines all the advantages of Qt and Python. A programmer has all the power of Qt, but is able to exploit it with the simplicity of Python. Recent News PyQt v6.11.0 Released SIP v6.15.3 Released SIP v6.15.2 Released PyQt v6.10.2 Released SIP v6.15.1 Released Downloads PyQt PyQt-3D PyQt-Charts PyQt-DataVisualization PyQt-Graphs PyQt-NetworkAuth PyQt-Purchasing PyQt-WebEngine SIP MetaSIP PyQt-builder pyqtdeploy QScintilla Documentation PyQt6 PyQt5 SIP MetaSIP PyQt-builder pyqtdeploy QScintilla PyQt4",
+    "scrapedAt": "2026-05-10 03:46:43.88443"
+  },
+  {
+    "id": 178,
+    "url": "https://buildbot.net/",
+    "title": "Buildbot",
+    "content": "Fork me on GitHub! Buildbot Basics Buildbot is an open-source framework for automating software build, test, and release processes. Learn more Automated Build, Test, and Release Buildbot can automate all aspects of the software development cycle: Continuous Integration, Continuous Deployment, Release Management ..and any other process you can imagine. Learn more A Framework with Batteries Included Buildbot is a framework in which you implement a system that matches your workflow and grows with your organization. Learn more Discord We have started a new Discord server for users and developers: Invite Link. Buildbot Basics Buildbot supports distributed, parallel execution of jobs across multiple platforms, flexible integration with version-control systems, extensive status reporting, and more. Buildbot in Action At its core, Buildbot is a job scheduling system: it queues jobs, executes the jobs when the required resources are available, and reports the results. Your Buildbot installation has one or more masters and a collection of workers. The masters monitor source-code repositories for changes, coordinate the activities of the workers, and report results to users and developers. Workers run on a variety of operating systems. You configure Buildbot by providing a Python configuration script to the master. This script can be very simple, configuring built-in components, but the full expressive power of Python is available. This allows dynamic generation of configuration, customized components, and anything else you can devise. The framework itself is implemented in Twisted Python, and compatible with all major operating systems. Learn More See the Buildbot Tutorial for a gentle introduction to running and configuring Buildbot. Automated Build, Test, and Release Buildbot supports not just continuous-integration testing, but automation of complex build systems, application deployment, and management of sophisticated software-release processes. Benefits of Automation When software development processes are automated, they are repeatable, reliable and can be run as frequently as available computing resources allow. Automating the build and test process gives developers immediate feedback on their work. Tests can run on multiple platforms, ensuring that code changes made on one platform do not cause failures on other platforms. Once a project is ready for use by users, it is either deployed (for hosted applications, such as web sites) or released (for packaged software such as desktop applications). Automating deployment makes the process predictable and lowers the risk involved with each push. Changes can be deployed to a staging environment first, then deployed to production using exactly the same procedure, eliminating failures due to human error. Deployments can occur many times every day, with only small changes between each deployment. Releasing packaged software, too, benefits from automation. The process can involve compiling and packaging on multiple platforms, signing builds, localizing strings, quality-assurance checks, and so on. When automated with a tool like Buildbot, all of this occurs repeatably and efficiently. A Framework with Batteries Included Just as web frameworks such as Django or Rails provide the structure and components to build websites, Buildbot provides the structure and components to automate your build, test, and release processes. Many CI tools, such as CruiseControl or Jenkins, are structured as ready-to-use applications. Users fill in specific details, such as version control information and build process, but the fundamental design is fixed and options are limited to those envisioned by the authors. This arrangement suits the common cases quite well: there are cookie-cutter tools to automatically build and test Java applications, Ruby gems, and so on. Such tools embody assumptions about the structure of the project and its processes. They are not well-suited to more complex cases, such as mixed-language applications or complex release tasks, where those assumptions are violated. Buildbot\u0027s design allows your installation to grow with your requirements, beginning with simple processes and growing to meet your unique needs. This flexibility has led to its use in a number of high-profile open-source projects, including WebKit, Python, and Twisted.",
+    "scrapedAt": "2026-05-10 03:46:38.833947"
+  },
+  {
     "id": 177,
     "url": "https://www.python.org/events/python-events/2036/",
     "title": "PyCon Italia 2026 | Python.org",
@@ -1237,26 +1272,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 178,
-    "url": "https://buildbot.net/"
-  },
-  {
-    "id": 179,
-    "url": "https://riverbankcomputing.com/software/pyqt/intro"
-  },
-  {
-    "id": 180,
-    "url": "https://scipy.org/"
-  },
-  {
-    "id": 181,
-    "url": "https://blog.python.org"
-  },
-  {
-    "id": 182,
-    "url": "https://saltproject.io/"
   },
   {
     "id": 183,
@@ -32979,10 +32994,515 @@ window.searchData = [
     "id": 18285,
     "url": "https://github.com/wxWidgets/Phoenix/issues",
     "parentUrl": "https://www.wxpython.org/"
+  },
+  {
+    "id": 18369,
+    "url": "https://github.com/buildbot/buildbot",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18370,
+    "url": "https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18371,
+    "url": "https://buildbot.net/#automation",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18372,
+    "url": "https://discord.gg/AMXBDUBTZV",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18373,
+    "url": "https://docs.buildbot.net/current/tutorial/",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18374,
+    "url": "https://buildbot.net/#framework",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18375,
+    "url": "https://buildbot.net/#basics",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18376,
+    "url": "https://cruisecontrol.sourceforge.net/gettingstarted.html",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18377,
+    "url": "https://github.com/buildbot/buildbot/wiki/SuccessStories",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 18378,
+    "url": "https://metasip.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18379,
+    "url": "https://riverbankcomputing.com/software/pyqtchart/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18380,
+    "url": "https://pypi.org/project/pyqtdeploy/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18381,
+    "url": "https://www.python.org",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18382,
+    "url": "https://riverbankcomputing.com/software/pyqtnetworkauth/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18383,
+    "url": "https://riverbankcomputing.com/software/pyqtpurchasing/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18384,
+    "url": "https://riverbankcomputing.com/software/qscintilla/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18385,
+    "url": "https://riverbankcomputing.com/news/PyQt_v6.11.0_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18386,
+    "url": "https://python-sip.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18387,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.15.1_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18388,
+    "url": "https://pypi.org/project/sip/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18389,
+    "url": "https://riverbankcomputing.com/news/PyQt_v6.10.2_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18390,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt4/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18391,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt6/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18392,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt5/introduction.html#pyqt5-components",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18393,
+    "url": "https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18394,
+    "url": "https://www.riverbankcomputing.com/static/Docs/QScintilla/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18395,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.15.3_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18396,
+    "url": "https://riverbankcomputing.com/software/pyqt3d/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18397,
+    "url": "https://www.qt.io",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18398,
+    "url": "https://pypi.org/project/PyQt-builder/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18399,
+    "url": "https://riverbankcomputing.com/commercial/license-faq",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18400,
+    "url": "https://riverbankcomputing.com/software/pyqtdatavisualization/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18401,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt4/introduction.html#pyqt4-components",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18402,
+    "url": "https://riverbankcomputing.com/software/pyqtgraphs/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18403,
+    "url": "https://riverbankcomputing.com/software/pyqt/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18404,
+    "url": "https://github.com/Python-SIP/sip",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18405,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.15.2_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18406,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt5/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18407,
+    "url": "https://riverbankcomputing.com/commercial/buy",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18408,
+    "url": "https://PyQt-builder.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18409,
+    "url": "https://riverbankcomputing.com/software/pyqtwebengine/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18410,
+    "url": "https://pypi.org/project/metasip/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 18411,
+    "url": "https://github.com/scipy/scipy",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 18412,
+    "url": "https://scipy.org/install",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 18413,
+    "url": "https://scipy.org/news",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 18414,
+    "url": "https://scipy.org/community/",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 18415,
+    "url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 18416,
+    "url": "https://scipy.org/#",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 18417,
+    "url": "https://blog.python.org/2026/03/python-3150-alpha-7",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18418,
+    "url": "https://discuss.python.org/t/python-3-12-13-3-11-15-and-3-10-20-are-now-available/106363",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18419,
+    "url": "https://blog.python.org/2026/05/python-3150-beta-1",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18420,
+    "url": "https://blog.python.org/blog",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18421,
+    "url": "https://blog.python.org/2026/03/the-python-insider-blog-has-moved",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18422,
+    "url": "https://blog.python.org/2026/03/jit-on-track",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18423,
+    "url": "https://blog.python.org/2026/04/rust-for-cpython-2026-04",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18424,
+    "url": "https://blog.python.org/2026/04/python-3150a8-3144-31313",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18425,
+    "url": "https://blog.python.org/2026/05/python-3145rc1",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18426,
+    "url": "https://blog.python.org/2026/03/cpython-codebase-growth",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18427,
+    "url": "https://blog.python.org/tags/releases",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18428,
+    "url": "https://blog.python.org/rss.xml",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18429,
+    "url": "https://blog.python.org/2026/03/python-31213-31115-31020",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 18430,
+    "url": "https://groups.google.com/forum/#!forum/salt-users",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18431,
+    "url": "https://docs.saltproject.io/en/master/topics/tutorials/walkthrough.html#salt-in-10-minutes/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18432,
+    "url": "https://github.com/saltstack",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18433,
+    "url": "https://www.youtube.com/watch?v\u003dG4CExfRn5rs",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18434,
+    "url": "https://www.youtube.com/watch?v\u003dYBgW--PDeic",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18435,
+    "url": "https://www.youtube.com/watch?v\u003dTj2QHLW5UwQ",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18436,
+    "url": "https://docs.saltproject.io/en/latest/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18437,
+    "url": "https://www.youtube.com/?gl\u003dUS\u0026tab\u003dk1/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18438,
+    "url": "https://docs.saltproject.io/salt/user-guide/en/latest/index.html",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18439,
+    "url": "https://www.youtube.com/watch?v\u003dnfYHEhKLqHg",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18440,
+    "url": "https://saltproject.io/blog",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18441,
+    "url": "https://saltproject.io/security-announcements/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18442,
+    "url": "https://discord.gg/J7b7EscrAs",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18443,
+    "url": "https://saltproject.io/blog/salt-3008-rc2-available",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18444,
+    "url": "https://docs.saltproject.io/salt/install-guide/en/latest/",
+    "parentUrl": "https://saltproject.io/"
+  },
+  {
+    "id": 18446,
+    "url": "https://tanzu.vmware.com/salt",
+    "parentUrl": "https://saltproject.io/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://saltproject.io/images/blog-banner-e1666724181870.jpg",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/img1.jpg",
+    "alt": "Video additional",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/img1.jpg",
+    "alt": "Video additional",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/img1.jpg",
+    "alt": "Video additional",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/what-is-salt.png",
+    "alt": "What is Salt",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/learn-salt.png",
+    "alt": "Learn Salt",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/discord.png",
+    "alt": "Discord Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/github.png",
+    "alt": "GitHub Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/mail.png",
+    "alt": "Mail Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/security.png",
+    "alt": "Security Icon",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/blog/new-update.png",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/blog/new-release.png",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://saltproject.io/images/blog/new-release.png",
+    "alt": "",
+    "pageTitle": "Saltproject.io",
+    "pageUrl": "https://saltproject.io/"
+  },
+  {
+    "src": "https://scipy.org/images/logo.svg",
+    "alt": "SciPy logo. A blue circle with a snake in the shape of the letter \u0027S\u0027.",
+    "pageTitle": "SciPy",
+    "pageUrl": "https://scipy.org/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot1.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot2.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot3.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/overview.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/arrows_3_circular_interlocking.svg",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/nut.svg",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
   {
     "src": "https://hugovk.dev/python-3.14.png",
     "alt": "Two snakes enjoying a pie with 3.14 on the top and π crimping",
