@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 638,
+    "url": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement",
+    "title": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "content": "Skip to main content Save StorySave this story Save StorySave this story At the gate of Mezhyhirya, the estate Viktor Yanukovych built with the money he stole from the people of Ukraine, a stall is selling rolls of toilet paper printed with the face of Vladimir Putin. Beside them are three large, flat, plastic loaves of bread, painted gold. Viktor Nestulia, director of innovation projects at Transparency International Ukraine, taps one with his finger. “When they came here after the revolution of dignity, they found a loaf made of solid gold, so this is a copy,” he says. “That’s what it is here. You will see.” He’s not wrong. Inside Mezhyhirya, we pass a yacht pier, a shooting range, a boxing gym, an ostrich farm, a petting zoo, a man-made lake, a greenhouse complex, a helicopter pad, several fountains, at least five guest houses and a mansion where every surface drips with decorative gold (although minus the two-kilo ornamental bloomer, which was stolen in 2015). In the echoing concrete garage where Yanukovych kept his vintage cars and jeeps, I count 36. Yet what makes the scene truly sickening is the fact that, until the former President – who rented the 140-hectare estate for 314 hryvnia, or roughly £10, an acre – fled to Russia on February 22, 2014, no-one knew any of this was here. There were rumours, of course. Journalists interviewed staff and flew drones over the site. (To refute the claims, Yanukovych took friendly reporters into one of the guest houses and told them it was where he lived.) But nothing was ever confirmed, so when, after months of anti-corruption protests, Ukrainians finally saw Mezhyhirya for themselves, they were astonished. Crowds took the half-hour drive from Kiev to gawp at the luxuries their taxes had bought – although Yanukovych continued to deny this was what he had done. Interviewed by the BBC in 2015, he dismissed the idea as “political technology”. The ostriches, he claimed, “just lived there.” Four years later, Ukraine is not cured of corruption. Bribery remains a way of life. The President, the eleventh-richest man in the country, talks regularly to Putin on the phone. But from the outburst of modernising zeal sprung a radical reform to one of the most vital functions of the state. A multi-award-winning digital system hailed as the best of its kind in the world. “It’s the gold standard,” says Henri Verdier, chief technology officer of France. Called ProZorro, after the Ukrainian word for transparency, the volunteer-built system radically restructures public procurement. Its motto? “Everyone sees everything.” Public procurement isn’t big business; it’s the biggest business of all. In Europe, it accounts for an average 16 per cent of GDP, according to the European Commission, dwarfing the contributions of finance (5.1 per cent), say, or agriculture (1.5 per cent). There are regional variations – the Netherlands is highest, at 20.2 per cent; Belgium lowest, at 14 per cent – but, across the board, two statements hold true. Governments spend a lot of money buying everything from pens to motorways to architectural blueprints. And, on the whole, they do it very badly. To see this in action, you only have to look at the news, which, on any given day, will almost certainly feature the confusions and inefficiencies of public procurement. On the sunny May morning I visited Mezhyhirya, for instance, three stories were making headlines in the UK, where public procurement is 14 per cent of GDP and 32 per cent of government spending. One concerned the Home Office’s decision to award the £490m contract to make the new “Brexit blue” passports to a French-Dutch firm rather than British manufacturer De La Rue. Another related to the 600 million disposable cups bought by English hospitals in the last five years, a figure roundly condemned as unacceptable. Yet no single story exposed the chronic procurement crisis as nakedly as the implosion of uber-supplier Carillion – which four months on, was still far from a resolution. The reason for the delay, perhaps even the crisis itself? Until Carillion issued a huge profit warning in July 2017, almost no-one knew its problems existed. The ignorance was so pervasive it resembled a form of psychological repression. In March 2017, directors boasted of Carillion’s “substantial liquidity”, and auditors and shareholders waved through its accounts. A parliamentary investigation found “the government was not aware of Carillion’s financial distress”, despite “clear and compelling problems with the business.” Even then, government departments continued to award major contracts to Carillion, which persuaded its 30,000 subcontractors – for it was effectively outsourcing the government’s outsourcing, acting as a middleman for everyone from cleaners to engineers to catering staff – to continue to work with it. Suppliers, who will now get back less than 1p for £1 they are owed, could not make their own checks. The parliamentary public accounts committee describ",
+    "scrapedAt": "2026-05-10 04:30:51.261086"
+  },
+  {
+    "id": 633,
+    "url": "http://opendataservices.coop/",
+    "title": "Open Data Services",
+    "content": "Open Data Services We help mission-driven organisations build data initiatives that can tackle global challenges. We work with governments, multilaterals, charities, researchers, social innovators, and others who share our commitment to meaningful impact through data. Our team partners closely with each organisation to design and deliver data initiatives that meet real needs, enable better decisions, and drive change in communities worldwide. Case studies Scroll left United Nations Development Programme Making sense of what development and humanitarian data enables in practice Energy Sector Management Assistance Program | World Bank Designing data governance frameworks that open up access to electricity CoST: the Infrastructure Transparency Initiative Tracking the sustainability of infrastructure projects Global Facility for Disaster Reduction and Recovery | World Bank Making it easier to find and use climate and disaster risk data with open standards Open Ownership Shining a light on corporate ownership and control World Bank | Mozilla | International Telecommunications Union | Community Broadband Network Mapping high speed internet networks in Sub Saharan Africa Sport England Developing data strategies that can get people moving Open Ownership Designing the Beneficial Ownership Data Standard to represent complex corporate networks 360Giving Making data about charitable donations easier to publish and use Scroll right Our mission Tackling today\u0027s complex challenges demands better use of data. From climate change and public health to social inequality and economic disparity, our world faces urgent, interconnected problems. At the same time, rapid advances in data and technology are creating new opportunities to understand and respond to these challenges. Our mission is to help governments, multilaterals, charities, researchers, and social innovators use data ethically and effectively to address their most pressing questions. We work to equip decision-makers with the information, tools, and technologies they need to drive real, sustainable change. Insights and tools Frameworks, reflections and resources shaped by real-world practice. Responsible Data Sharing Frameworks A practical approach for building trust and coordination when data is shared across organisations. Sustainability Canvas A conversation guide for data initiatives working towards long-term impact. Standards Lab Handbook A practical guide to designing, building and maintaining open data standards. Open Source Tools and Documentation Technical guides and references for open, adaptable data tools.",
+    "scrapedAt": "2026-05-10 04:30:46.619656"
+  },
+  {
+    "id": 631,
+    "url": "https://flatten-tool.readthedocs.io/en/latest/",
+    "title": "Flatten Tool documentation",
+    "content": "Contents Menu Expand Light mode Dark mode Auto light/dark, in light mode Auto light/dark, in dark mode Skip to content Flatten Tool documentation Introduction Examples Getting Started Spreadsheet Designer’s Guide Creating Templates Flattening Developer Guide Flatten Tool for OCDS Flatten Tool for 360Giving Flatten Tool for IATI Flatten Tool for BODS Back to top View this page Welcome to Flatten Tool’s documentation!¶ Flatten Tool is a Python library and command line interface for converting single or multi-sheet spreadsheets to a JSON document and back again. In Flatten Tool terminology flattening is the process of converting a JSON document to spreadsheet sheets, and unflattening is the process of converting spreadsheet sheets to a JSON document. Flatten Tool can make use of a JSON Schema during the flattening and unflattening processes to make sure different types are handled correctly, to support more human-friendly column headings and to give hints about the spreadsheet structure you would like. Flatten Tool’s main use case is to allow people to enter data into a spreadsheet so that it can be converted to a JSON document and validated against a JSON Schema. To support this use case it is very forgiving in what it accepts and prefers to output as much of the input spreadsheet data as it can to be validated by a JSON Schema later, rather than raise errors itself. Contents: Introduction Why How Examples Simple example One to many relationships (JSON arrays) Arrays within arrays Getting Started Prerequisites Installation Usage Library Python Version Support Spreadsheet Designer’s Guide Command Line API Root List Path The root is a list Writing output to a file Base JSON All unflatten options Understanding JSON Pointer and how Flatten Tool uses it Index behaviour Multiple rows Multiple columns Multiple sheets Objects Lists of Objects (without IDs) Index behaviour Plain Lists (Unsupported) Typed fields Using spreadsheet cell formatting Using a JSON Schema with types Human-friendly headings using a JSON Schema with titles Optional array indexes Relationships using Identifiers ID-based object merge behaviour ID-based object merge in a single sheet ID-based object merge in multiple sheets Parent-child relationships (arrays of objects) Index behaviour Grandchild relationships Arbitrary-depth in a single table Missing IDs Relationships with JSON Schema Sheet Shapes Separate sheet for each object Combining objects Table per row Cafe per row All in one table Metadata Tab Example Usage Options Configuration properties: skip and header rows Example usage List of configuration features Source maps Cell source map Heading source map XML Comment Creating Templates Generating a spreadsheet template from a JSON Schema Rolling up Empty objects Disable local refs Deprecated Fields All create-template options Flattening Generating a spreadsheet from a JSON document Sheet Prefix Filter Remove Empty Schema Columns Preserve Fields Rollup Rollup via schema Rollup via direct input Rollup via file input Selective rollup All flatten options Developer Guide Helper libraries Running the tests Testing coverage of documentation examples Versioning and CHANGELOG PyPi What’s coming up Three layer design Explicit float support Stdin support More documentation Naming Flatten Tool for OCDS Templates Web interface Command Line Usage Converting a JSON file to a spreadsheet Converting a populated spreadsheet to JSON Creating spreadsheet templates Flatten Tool for 360Giving Flatten Tool for IATI Convert a spreadsheet to XML Example Flatten Tool for BODS BODS 0.4 flatten and unflatten BODS 0.3 and previous flatten and unflatten flatten unflatten Schema Order is important create-template Get started by reading the Spreadsheet Designer’s Guide to understand the core concepts, how to use the flatten-tool command and how to structure your own data as spreadsheet sheets. The Developer Guide (work in progress) will go into more detail about how Flatten Tool works internally, how you can use it as a library and how you can generate source maps that locate each value in a JSON document back to the sheet and cell it came from in a source spreadsheet. Source maps are handy for notifying users where they can go in their source spreadsheet to correct any errors. Indices and tables¶ Index Module Index Search Page",
+    "scrapedAt": "2026-05-10 04:30:43.343185"
+  },
+  {
+    "id": 630,
+    "url": "https://openownership.org/",
+    "title": "Open Ownership | openownership.org",
+    "content": "Menu Open Ownership drives the global shift towards transparency and accountability in corporate ownership and control ⟴ We enable accurate and complete beneficial ownership disclosures ⟴ We support governments to make high-quality data shareable, and educate others on how to use it ⟴ This reduces corruption and tax evasion, gives fair development opportunities and builds societal trust What is beneficial ownership transparency? Beneficial ownership transparency reveals how companies and other legal entities or arrangements are owned and controlled by their beneficial owners Published: 03 March 2022 Open Ownership map: Worldwide action on beneficial ownership transparency Discover which countries have planned or are implementing beneficial ownership transparency reforms, which countries have launched live central registers, and visit country or regional profile pages Guidance Guide to drafting effective legislation for beneficial ownership transparency This guide supports those involved in drafting and reviewing laws to understand the elements that constitute effective legislation for implementing beneficial ownership transparency reforms, laying the groundwork for establishing a beneficial ownership register Written by Favour Ime , Tymon Kiepe Published: 28 August 2024 Blog post Access matters: Designing user-centered and responsible beneficial ownership disclosure regimes This blog post highlights key considerations from Open Ownership\u0027s recent policy briefing on designing access regimes effectively and maximising impact Written by Open Ownership Published: 06 May 2026 Blog post From reform to results: Introducing BEAM, a new programme to measure impact in beneficial ownership transparency Open Ownership has launched the Beneficial Ownership Transparency Evidence and Measurement (BEAM) Programme: an initiative to expand the evidence base for the impact of beneficial ownership transparency through collaboration, resources, and country programming. This blog post introduces the programme’s background, approach, and objectives. Written by Alanna Markle Published: 29 April 2026 News article Beneficial ownership and business register reform in Zambia: Announcing our new partnership with PACRA In this blog post, Miranda Evans introduces our recent partnership with Zambia\u0027s Patents and Companies Registration Agency and the German Agency for International Cooperation in Zambia to overhaul how PACRA collects data on the real owners of corporate entities Written by Miranda Evans Published: 06 March 2026 Publication Enhancing beneficial ownership data collection and use in Nigeria This report provides a comprehensive assessment of Nigeria’s beneficial ownership transparency implementation. It identifies strategic opportunities for enhancement, and offers actionable recommendations to institutionalise current gains, strengthen data integrity, and maximise the register’s impact on anti-corruption and governance efforts. Written by Stanley Achonu, Favour Ime Published: 30 April 2026 Publication Research Symposium Synthesis Report: Evidence and impact of beneficial ownership transparency In February 2026, Open Ownership, the World Bank Group’s Beneficial Ownership Transparency Working Group, and the Centre for the Study of Corruption at the University of Sussex hosted a Research Symposium entitled “Evidence and Impact of Beneficial Ownership Transparency” in the UK and online. This synthesis report summarises the key points from this Symposium. Written by Peter Low , Alanna Markle Published: 29 April 2026 Publication Leveraging shareholder data for beneficial ownership transparency This working paper examines how shareholder information can be leveraged to strengthen beneficial ownership transparency and improve understanding corporate structures or networks. Written by Maria Jofre , Tymon Kiepe Published: 28 April 2026",
+    "scrapedAt": "2026-05-10 04:30:39.104244"
+  },
+  {
+    "id": 626,
+    "url": "https://www.open-contracting.org/",
+    "title": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "content": "Better procurement for people and the planet. Imagine a world where the trillions of dollars spent on public contracts better serve people and protect our planet. We want to enable one billion people to live in more equitable, prosperous and sustainable communities by 2030 by improving US$2 trillion in public procurement spending. Find out how we scale our work in our Strategy 2024-2030. READ OUR 2025 ANNUAL REPORT What’s new Our latest blogs and stories. View all. Featured Our Annual Report 2025: Reimagining public procurement Blog Transforming Africa’s procurement: Locally owned, data-driven. A case study from Tanzania Issues: Inclusion and Equity, Open Data Open Contracting 12 Mar 2026 Blog From pledges to projects to procurement: How to build a digital platform to manage climate finance Issues: Sustainability Kristen Robinson 14 Apr 2026 Blog Is your government ready to buy AI? Issues: AI Kaye Sklar 1 Apr 2026 Resource Buying AI: Tips and tools for public procurement Issues: AI Open Contracting Partnership Key Issues How open contracting can help tackle challenges in key areas of public policy. Anti-corruption Beneficial Ownership E-procurement Extractives Gender Health Inclusion \u0026 equity Infrastructure Sustainability Become one of our subscribers today Join the growing community of open contracting champions and innovators and stay on top of what’s happening happening around the world, exciting tools and latest research. Worldwide Africa Asia Pacific Europe Latin America USA Subscribe Thank you for signing up to our newsletter Check out some of our relevant content below. Blog Our 2030 vision: Better procurement for people and planet Issues: Public Procurement Open Contracting 6 Mar 2024 Blog Wheelie good procurement: How Mexico City halved costs and improved its bike share scheme Issues: Sustainability Georg Neumann 7 Nov 2024 Blog The impact of AI on public procurement: Introducing a new series Issues: AI Georg Neumann 5 Aug 2024 Where we work Africa Asia Pacific Central Asia Europe Latin America Ukraine USA Our community “Institutionalizing ethics through recruitment practices, compensation, and progression decisions is the first thing that we need to change.” “Setting up open contracting practices takes time so be patient. Reach out whenever you feel stuck, the global community is just a ping away.” “Had there been public scrutiny of budget spending on Kazakhstan’s public procurement website in 2020, many human losses would’ve been avoided.” “Above making procurement data accessible should be grassroots citizen participation in deciding which infrastructural development is a priority” “It’s not about the fascinating things you could do with more complex datasets; it’s about what ordinary people could do with simple data-based information.” “Open data and government accountability can’t be sacrificed, even when radical and urgent steps are needed.” “When you don’t know what to do, you must do the right thing. What was good for the country was that there be open data.” “When we went to the field with information provided by the procuring entity, a lot of projects were very different to what was on paper. The utility of having standards came to the fore.” “Changing the status quo means real action in creating an open, transparent, fair, effective, and sustainable electronic public procurement system.” “There are no trade secrets in public contracts. Winning business through an open contracting process is not altruism, it’s good business.” “Public procurement reform is like marathon running. It takes a lot of discipline, training, and planning. It is a life-changing accomplishment.” “With the Open Contracting Data Standard it was like asking me to dig an Olympic pool and giving me an excavator instead of a teaspoon.” “Our small businesses need contract and capital readiness support to ensure they can successfully bid on and win any public contract.” “Change is coming in healthcare so that regardless of the type of insurance you have or your social class, you can get quality medications when you need them.” “Institutionalizing ethics through recruitment practices, compensation, and progression decisions is the first thing that we need to change.” “Setting up open contracting practices takes time so be patient. Reach out whenever you feel stuck, the global community is just a ping away.” “Had there been public scrutiny of budget spending on Kazakhstan’s public procurement website in 2020, many human losses would’ve been avoided.” “Above making procurement data accessible should be grassroots citizen participation in deciding which infrastructural development is a priority” “It’s not about the fascinating things you could do with more complex datasets; it’s about what ordinary people could do with simple data-based information.” “Open data and government accountability can’t be sacrificed, even when radical and urgent steps are needed.” “When you don’t know what to do, you must do the right thing. What wa",
+    "scrapedAt": "2026-05-10 04:30:30.967908"
+  },
+  {
     "id": 625,
     "url": "https://www.python.org/events/python-user-group/locations/1681/",
     "title": "Our Events | Python.org",
@@ -4207,26 +4242,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 626,
-    "url": "https://www.open-contracting.org/"
-  },
-  {
-    "id": 630,
-    "url": "https://openownership.org/"
-  },
-  {
-    "id": 631,
-    "url": "https://flatten-tool.readthedocs.io/en/latest/"
-  },
-  {
-    "id": 633,
-    "url": "http://opendataservices.coop/"
-  },
-  {
-    "id": 638,
-    "url": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
   },
   {
     "id": 641,
@@ -99150,10 +99165,1692 @@ window.searchData = [
     "id": 74134,
     "url": "https://www.meetup.com/pydata-st-louis/",
     "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 74143,
+    "url": "https://www.open-contracting.org/what-is-open-contracting/beneficial-ownership/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74144,
+    "url": "https://www.open-contracting.org/issue/public-procurement/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74145,
+    "url": "https://www.open-contracting.org/2023/12/23/paraguays-procurement-is-open-for-small-business/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74146,
+    "url": "https://www1.folha.uol.com.br/poder/2020/04/estados-mais-afetados-como-sp-e-rj-sao-menos-transparentes-em-gastos-com-pandemia.shtml",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74147,
+    "url": "https://www.open-contracting.org/issue/sustainability/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74148,
+    "url": "https://apolitical.co/solution_article/lets-think-different-about-procurement",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74149,
+    "url": "https://www.open-contracting.org/2026/03/12/transforming-africas-procurement-locally-owned-data-driven-a-case-study-from-tanzania/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74150,
+    "url": "https://www.open-contracting.org/anticorruption/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74151,
+    "url": "https://www.theguardian.com/public-leaders-network/2018/jan/03/8p-banana-open-public-procurement-bogota-colombia",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74152,
+    "url": "https://www.lanacion.com.ar/politica/por-el-g-20-se-alza-el-reclamo-para-que-haya-transparencia-en-las-contrataciones-publicas-nid2110639",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74153,
+    "url": "https://www.open-contracting.org/2021/11/04/2021-open-contracting-champion-professor-sope-williams-elegbe/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74154,
+    "url": "https://www.open-contracting.org/worldwide/usa/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74155,
+    "url": "http://www3.weforum.org/docs/WEF_GFC_on_Transparency_and_AC_Agenda_for_Business_Integrity_pillar_3_2020.pdf",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74156,
+    "url": "https://www.gov.uk/government/publications/g7-interior-and-security-ministers-meeting-september-2021/annex-3-statement-against-corruption-and-kleptocracies-accessible-version",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74157,
+    "url": "https://www.open-contracting.org/latest-news/community/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74158,
+    "url": "https://www.open-contracting.org/what-is-open-contracting/extractives/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74159,
+    "url": "https://www.open-contracting.org/resources/buying-ai-tips-and-tools-for-public-procurement/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74160,
+    "url": "https://www.open-contracting.org/2021/11/24/2021-open-contracting-champion-nurida-baizakova/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74161,
+    "url": "https://www.americasquarterly.org/content/fighting-corruption-what-workswhat-doesnt",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74162,
+    "url": "https://www.economist.com/letters/2018/02/03/letters-to-the-editor",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74163,
+    "url": "https://www.open-contracting.org/issue/open-data/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74164,
+    "url": "https://www.open-contracting.org/2021/12/06/2021-open-contracting-champion-elias-garces-valdes/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74165,
+    "url": "https://www.open-contracting.org/2023/07/21/what-were-getting-wrong-about-accountability-and-citizen-empowerment/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74166,
+    "url": "https://www.open-contracting.org/2020/12/20/how-covid-19-and-collective-intelligence-transformed-procurement-risks-into-opportunities-for-transparency-in-ecuador/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74167,
+    "url": "https://www.open-contracting.org/strategy-2024-2030/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74168,
+    "url": "https://www.open-contracting.org/what-is-open-contracting/health/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74169,
+    "url": "https://www.open-contracting.org/worldwide/latam/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74170,
+    "url": "https://www.open-contracting.org/what-is-open-contracting/gender/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74171,
+    "url": "https://www.open-contracting.org/issue/inclusion/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74173,
+    "url": "https://www.open-contracting.org/2022/02/23/no-filter-on-public-spending-how-a-kazakhstani-journalist-got-80000-instagrammers-interested-in-procurement/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74174,
+    "url": "https://www.open-contracting.org/2026/04/14/from-pledges-to-projects-to-procurement-how-to-build-a-digital-platform-to-manage-climate-finance/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74175,
+    "url": "https://www.open-contracting.org/2024/11/07/wheelie-good-procurement-how-mexico-city-halved-costs-and-improved-its-bike-share-scheme/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74176,
+    "url": "https://www.open-contracting.org/latest-news/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74177,
+    "url": "https://www.open-contracting.org/2019/11/18/how-social-care-procurement-in-the-uk-is-putting-vulnerable-children-at-risk/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74178,
+    "url": "https://www.open-contracting.org/worldwide/africa/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74179,
+    "url": "https://www.open-contracting.org/about/annual-report-2025/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74180,
+    "url": "https://www.open-contracting.org/worldwide/open-contracting-in-ukraine/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74181,
+    "url": "https://www.open-contracting.org/2020/04/16/how-open-contracting-approaches-help-ukraine-to-tackle-covid-19/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74182,
+    "url": "https://www.open-contracting.org/worldwide/europe/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74183,
+    "url": "https://www.open-contracting.org/what-is-open-contracting/sustainability/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74184,
+    "url": "https://www.open-contracting.org/what-is-open-contracting/inclusion-and-equity/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74185,
+    "url": "https://www.open-contracting.org/2026/04/01/is-your-government-ready-to-buy-ai/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74186,
+    "url": "https://www.theafricareport.com/in-depth/pushing-for-public-procurement-in-africa/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74187,
+    "url": "https://www.devex.com/news/donors-must-match-speed-with-transparency-in-coronavirus-funding-advocates-say-97294",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74188,
+    "url": "https://www.open-contracting.org/2021/11/30/2021-open-contracting-champion-beth-blauer/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74189,
+    "url": "https://www.open-contracting.org/2021/03/02/how-emergency-covid-19-spending-rallied-open-data-activists-in-nigeria-to-push-for-reforms/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74190,
+    "url": "https://www.open-contracting.org/issue/ai/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74191,
+    "url": "https://www.open-contracting.org/2024/03/06/our-2030-vision-better-procurement-for-people-and-planet/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74192,
+    "url": "https://www.open-contracting.org/about/infrastructure/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74193,
+    "url": "https://www.open-contracting.org/2024/08/05/the-impact-of-ai-on-public-procurement-introducing-a-new-series/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74194,
+    "url": "https://www.open-contracting.org/worldwide/eeca/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74195,
+    "url": "https://www.open-contracting.org/worldwide/asia-pacific/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74196,
+    "url": "https://www.ft.com/content/ffc5ea03-cdbe-4d20-b61f-3a10f2b6b986",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74197,
+    "url": "https://www.open-contracting.org/2022/06/21/all-eyes-on-the-data-how-nigerias-dataphyte-monitored-120-million-worth-of-government-projects-using-an-open-contracting-approach/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74198,
+    "url": "https://www.open-contracting.org/our-impact/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74199,
+    "url": "https://www.lemonde.fr/idees/article/2021/06/12/l-absence-de-transparence-sur-la-commande-publique-de-masques-et-de-vaccins-ebranle-la-confiance-envers-les-gouvernements_6083900_3232.html",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74200,
+    "url": "https://www.open-contracting.org/2023/09/28/improving-climate-resilience-in-flood-prone-assam-india/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74201,
+    "url": "https://www.open-contracting.org/what-is-open-contracting/e-procurement/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74202,
+    "url": "https://www.open-contracting.org/2021/11/17/2021-open-contracting-champion-nia-richardson/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74203,
+    "url": "https://www.open-contracting.org/implement/our-services/",
+    "parentUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "id": 74204,
+    "url": "https://www.openownership.org/en/about/team/miranda-evans/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74205,
+    "url": "https://www.openownership.org/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74206,
+    "url": "https://www.openownership.org/en/publications/enhancing-beneficial-ownership-data-collection-and-use-in-nigeria/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74207,
+    "url": "https://www.openownership.org/en/about/team/maria-jofre/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74208,
+    "url": "https://www.openownership.org/en/map/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74209,
+    "url": "https://www.openownership.org/en/blog/from-reform-to-results-introducing-beam-a-new-programme-to-measure-impact-in-beneficial-ownership-transparency/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74210,
+    "url": "https://www.openownership.org/en/blog/beneficial-ownership-and-business-register-reform-in-zambia-announcing-our-new-partnership-with-pacra/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74211,
+    "url": "https://www.openownership.org/en/news/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74212,
+    "url": "https://www.openownership.org/en/about/what-is-beneficial-ownership-transparency/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74213,
+    "url": "https://www.openownership.org/en/blog/access-matters-designing-user-centered-and-responsible-beneficial-ownership-disclosure-regimes/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74214,
+    "url": "https://www.openownership.org/en/publications/httpswwwopenownershiporgenpublicationsresearch-symposium-synthesis-report/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74215,
+    "url": "https://www.openownership.org/en/about/team/alanna-markle/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74216,
+    "url": "https://www.openownership.org/en/publications/leveraging-shareholder-data-for-beneficial-ownership-transparency/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74217,
+    "url": "https://www.openownership.org/en/publications/guide-to-drafting-effective-legislation-for-beneficial-ownership-transparency/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74218,
+    "url": "https://www.openownership.org/en/about/team/favour-ime/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74219,
+    "url": "https://www.openownership.org/en/about/team/peter-low/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74220,
+    "url": "https://www.openownership.org/en/publication-categories/guidance/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74221,
+    "url": "https://www.openownership.org/en/blog/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74222,
+    "url": "https://www.openownership.org/en/about/team/tymon-kiepe/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74223,
+    "url": "https://www.openownership.org/en/publications/",
+    "parentUrl": "https://openownership.org/"
+  },
+  {
+    "id": 74224,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#flatten-and-unflatten",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74225,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/create-template/#all-create-template-options",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74226,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-ocds/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74227,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#three-layer-design",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74228,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#multiple-sheets",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74229,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#remove-empty-schema-columns",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74230,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#options",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74231,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#arbitrary-depth-in-a-single-table",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74232,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#explicit-float-support",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74233,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/_sources/index.rst.txt",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74234,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/examples/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74235,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/getting-started/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74236,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#cell-source-map",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74237,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-ocds/#templates",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74238,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/getting-started/#installation",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74239,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#stdin-support",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74240,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#id-based-object-merge-in-a-single-sheet",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74241,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#multiple-columns",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74242,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-ocds/#command-line-usage",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74243,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#all-in-one-table",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74244,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#understanding-json-pointer-and-how-flatten-tool-uses-it",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74245,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/examples/#arrays-within-arrays",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74246,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#order-is-important",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74247,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-ocds/#converting-a-json-file-to-a-spreadsheet",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74248,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#the-root-is-a-list",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74249,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74250,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/create-template/#empty-objects",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74251,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#rollup-via-schema",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74252,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#separate-sheet-for-each-object",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74253,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-iati/#example",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74254,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#bods-0-4",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74255,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#grandchild-relationships",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74256,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-ocds/#web-interface",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74257,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#optional-array-indexes",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74258,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#id1",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74259,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#human-friendly-headings-using-a-json-schema-with-titles",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74260,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#versioning-and-changelog",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74261,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#source-maps",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74262,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#writing-output-to-a-file",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74263,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#example-usage",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74264,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/create-template/#disable-local-refs",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74265,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#rollup",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74266,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#testing-coverage-of-documentation-examples",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74267,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#id-based-object-merge-in-multiple-sheets",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74268,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#sheet-shapes",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74269,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/#welcome-to-flatten-tool-s-documentation",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74270,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#filter",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74271,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#combining-objects",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74272,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#table-per-row",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74273,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#preserve-fields",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74274,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/examples/#simple-example",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74275,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/#furo-main-content",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74276,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/getting-started/#python-version-support",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74277,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/#indices-and-tables",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74278,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/introduction/#how",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74279,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#relationships-with-json-schema",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74280,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#bods-0-3-and-previous",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74281,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#using-a-json-schema-with-types",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74282,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/getting-started/#prerequisites",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74283,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/getting-started/#usage",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74284,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/search/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74285,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#rollup-via-direct-input",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74286,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#pypi",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74287,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#missing-ids",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74288,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#naming",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74289,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#command-line-api",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74290,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#relationships-using-identifiers",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74291,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/py-modindex/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74292,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#unflatten",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74293,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#base-json",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74294,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/create-template/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74295,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#configuration-properties-skip-and-header-rows",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74296,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#create-template",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74297,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#plain-lists-unsupported",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74298,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#all-unflatten-options",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74299,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#rollup-via-file-input",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74300,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#flatten",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74301,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#xml-comment",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74302,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#more-documentation",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74303,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#running-the-tests",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74304,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-360/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74305,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74306,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#all-flatten-options",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74307,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74308,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#id-based-object-merge-behaviour",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74309,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/create-template/#generating-a-spreadsheet-template-from-a-json-schema",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74310,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/examples/#one-to-many-relationships-json-arrays",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74311,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#parent-child-relationships-arrays-of-objects",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74312,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#lists-of-objects-without-ids",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74313,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#using-spreadsheet-cell-formatting",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74314,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-iati/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74315,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/#",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74316,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-ocds/#creating-spreadsheet-templates",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74317,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#root-list-path",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74318,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#index-behaviour",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74319,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#what-s-coming-up",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74320,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/introduction/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74321,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#generating-a-spreadsheet-from-a-json-document",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74322,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#metadata-tab",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74323,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#cafe-per-row",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74324,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#multiple-rows",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74325,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/getting-started/#library",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74326,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#typed-fields",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74327,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/introduction/#why",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74328,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#id1",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74329,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#id2",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74330,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#id3",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74331,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-bods/#schema",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74332,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#selective-rollup",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74333,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#objects",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74334,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/create-template/#rolling-up",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74335,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/developerguide/#helper-libraries",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74336,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#list-of-configuration-features",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74337,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74338,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/create-template/#deprecated-fields",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74339,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/unflatten/#heading-source-map",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74340,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-ocds/#converting-a-populated-spreadsheet-to-json",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74341,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/flatten/#sheet-prefix",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74342,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/genindex/",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74343,
+    "url": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/usage-iati/#convert-a-spreadsheet-to-xml",
+    "parentUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 74344,
+    "url": "https://opendataservices.coop:443/case-studies",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74345,
+    "url": "https://opendataservices.coop:443/insights/standards-lab-handbook/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74346,
+    "url": "https://opendataservices.coop:443/insights",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74347,
+    "url": "https://opendataservices.coop:443/case-studies/charitable-donations-data-publishing/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74348,
+    "url": "https://opendataservices.coop:443/case-studies/sport-england-data-strategy/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74349,
+    "url": "https://opendataservices.coop:443/case-studies/data-governance-frameworks-distributed-renewable-energy/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74350,
+    "url": "https://opendataservices.coop:443/case-studies/mapping-high-speed-internet/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74351,
+    "url": "https://opendataservices.coop:443/case-studies/making-sense-of-what-development-and-humanitarian-data-enables-in-practice/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74352,
+    "url": "https://opendataservices.coop:443/case-studies/beneficial-ownership-standard-corporate-networks/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74353,
+    "url": "https://opendataservices.coop:443/insights/open-source-tools-and-documentation/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74354,
+    "url": "https://opendataservices.coop:443/insights/responsible-data-sharing-frameworks/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74355,
+    "url": "https://opendataservices.coop:443/case-studies/climate-disaster-risk-open-standard/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74356,
+    "url": "https://opendataservices.coop:443/case-studies/tracking-infrastructure-sustainability/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74357,
+    "url": "https://opendataservices.coop:443/case-studies/beneficial-ownership-data-standard/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74358,
+    "url": "https://opendataservices.coop:443/insights/sustainability-canvas/",
+    "parentUrl": "http://opendataservices.coop/"
+  },
+  {
+    "id": 74359,
+    "url": "https://www.wired.com/tag/politics/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74360,
+    "url": "https://www.wired.com/tag/magazine/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74361,
+    "url": "https://www.wired.com/story/the-uk-launches-its-dollar675-million-sovereign-ai-fund/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74362,
+    "url": "https://www.wired.com/story/where-the-doge-operatives-are-now/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74363,
+    "url": "https://www.wired.com/story/europes-online-age-verification-app-is-here/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74364,
+    "url": "https://www.wired.com/tag/long-read/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74365,
+    "url": "https://www.wired.com/story/ukraine-revolution-government-procurement/#main-content",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74366,
+    "url": "https://www.wired.com/story/kathleen-fisher-jacques-carolan-aria-wired-health/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74367,
+    "url": "https://www.wired.com/story/telegram-is-still-hosting-a-sanctioned-21-billion-crypto-scammer-black-market/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74368,
+    "url": "https://www.wired.com/story/heres-how-much-san-francisco-tech-companies-are-paying-for-police-protection/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74369,
+    "url": "https://www.wired.com/story/book-excerpt-lucky-devils-1993-chess-mystery-solved/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74370,
+    "url": "https://www.wired.com/story/us-special-forces-soldier-allegedly-profited-off-of-maduro-capture-on-polymarket/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74371,
+    "url": "https://www.wired.com/story/a-federal-worker-was-fired-for-filming-doge-now-shes-running-for-congress/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74372,
+    "url": "https://www.wired.com/story/crosswalk-city-hack-cybersecurity-lessons/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74373,
+    "url": "https://www.wired.com/tag/september-october-2018-issue/",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74374,
+    "url": "https://www.wired.com/story/usaid-whistleblower-says-it-was-even-worse-than-people-knew/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "id": 74375,
+    "url": "https://www.wired.com/story/madison-square-garden-jim-dolan-surveillance-machine/#intcid\u003d_wired-article-bottom-recirc_2e875272-fe2e-48b2-b9de-261eb70fb484_roberta-similarity1",
+    "parentUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://media.wired.com/photos/69dffe96100f73b2d7f78ec6/16:9/w_640%2Cc_limit/undefined",
+    "alt": "Where the DOGE Operatives Are Now",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69dd706b82626796181b9a93/16:9/w_640%2Cc_limit/undefined",
+    "alt": "Telegram Is Still Hosting a Sanctioned $21 Billion Crypto Scammer Black Market",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69dd573d3001957d4f673a2b/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The Gamblers Behind One of the Weirdest Cheating Mysteries in Chess Have Been Unmasked",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69e8011875c782c19df35a8a/16:9/w_640%2Cc_limit/undefined",
+    "alt": "USAID Whistleblower Says It Was Even Worse Than People Knew",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69dff76f67d3fd19de3c134e/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The UK Launches Its $675 Million Sovereign AI Fund",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69ea98d61e4e27233017ac08/16:9/w_640%2Cc_limit/undefined",
+    "alt": "US Special Forces Soldier Arrested for Polymarket Bets on Maduro Raid",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69ebb9925339d71f32f9873a/16:9/w_640%2Cc_limit/undefined",
+    "alt": "Here’s How Much San Francisco Tech Companies Pay for Police Protection",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69d440dbc4071a92611c33d5/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The Dumbest Hack of the Year Exposed a Very Real Problem",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69ef9664ce67ed64909ae92c/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The UK’s Answer to Darpa Wants to Rewire the Human Brain",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69f26f2b7af1530ce0577337/16:9/w_640%2Cc_limit/undefined",
+    "alt": "A Federal Worker Was Fired for Filming DOGE. Now She’s Running for Congress",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69e21ced5bbca1ee221c2418/16:9/w_640%2Cc_limit/undefined",
+    "alt": "The Shocking Secrets of Madison Square Garden’s Surveillance Machine",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://media.wired.com/photos/69e11b880fc350c244991bd5/16:9/w_640%2Cc_limit/undefined",
+    "alt": "Europe’s Online Age Verification App Is Here",
+    "pageTitle": "From the fires of revolution, Ukraine is reinventing government | WIRED",
+    "pageUrl": "https://www.wired.co.uk/article/ukraine-revolution-government-procurement"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/chevron.zUKO04Go_ZE4rF9.svg",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/making-sense-development-humanitarian-data.CP4fQyPh_Z1Uc3hd.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/data-governance-frameworks-distributed-renewable-energy.C3q1ViZz_Z2laSPk.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/tracking-infrastructure-sustainability.Df86w8BY_1YVCQe.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/climate-disaster-risk-open-standard.BMIJTS4P_1yzqeI.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/beneficial-ownership-data-standard.wxo8X-Nn_1zjQ9F.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/mapping-high-speed-internet.CwSHkreC_Z2ikO9b.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/sport-england-data-strategy.fA7Rtapo_17bMR6.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/beneficial-ownership-standard-corporate-networks.BWDu6Zz-_Z14m4uh.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/charitable-donations-data-publishing.C6SwDFo8_Z1W1ou4.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/chevron.zUKO04Go_ZE4rF9.svg",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/responsible-data-sharing-frameworks.BtYsVhl0_1A1wzO.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/sustainability-canvas.dwfCLLhR_1T34zQ.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/standards-lab-handbook.C93Us228_Z14P9P.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://opendataservices.coop:443/_astro/open-source-tools-and-documentation.BtV0HJNy_i3BcW.webp",
+    "alt": "",
+    "pageTitle": "Open Data Services",
+    "pageUrl": "http://opendataservices.coop/"
+  },
+  {
+    "src": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/_static/ods_logo_dark.svg",
+    "alt": "Light Logo",
+    "pageTitle": "Flatten Tool documentation",
+    "pageUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "src": "https://docs.opendataservices.coop/projects/flatten-tool/en/latest/_static/ods_logo_light.svg",
+    "alt": "Dark Logo",
+    "pageTitle": "Flatten Tool documentation",
+    "pageUrl": "https://flatten-tool.readthedocs.io/en/latest/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/Ownership_complexity_Credit_Photo_.2e16d0ba.fill-415x300_9wMsess.jpg",
+    "alt": "Ownership_complexity_Credit Photo by Omar Flores on Unsplash",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/image_YI4xehT.2e16d0ba.fill-415x300.png",
+    "alt": "Open Ownership Map - screengrab taken on 17 October 2024",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/Guide_to_drafting_effective_legisl.2711c2f6.fill-415x300.png",
+    "alt": "Guide to drafting effective legislation for beneficial ownership transparency cover image",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/szabo-viktor-Qq0XGArKpHY-unsplash.8f638e9f.fill-415x300.jpg",
+    "alt": "szabo-viktor-Qq0XGArKpHY-unsplash",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/20260226_121657_.2e16d0ba.fill-415x300.jpg",
+    "alt": "2026 symposium header photo",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/DOD_49.2e16d0ba.fill-415x300.jpg",
+    "alt": "DOD 49",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/abdulsamad-rabo-Azlaa87wMi0-unspla.222b3a2e.fill-415x300.jpg",
+    "alt": "abdulsamad-rabo-Azlaa87wMi0-unsplash",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/IMG_0266__1.2e16d0ba.fill-415x300.jpg",
+    "alt": "2026 symposium group",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://oo.hacdn.io/media/images/nicholas-cappello-Wb63zqJ5gnE-unsp.2e16d0ba.fill-415x300.jpg",
+    "alt": "nicholas-cappello-Wb63zqJ5gnE-unsplash",
+    "pageTitle": "Open Ownership | openownership.org",
+    "pageUrl": "https://openownership.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/03/Header-earth-scaled.jpg?ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003db1b4bac01a4c48a1f009be9ca41f242e",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2026/04/Header_Option-1-scaled.jpg?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d7e59297332cb113930663a8ceb0e5a7a",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2026/03/2-Tanzania-story.png?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d399c5bc099860de9a8ed6d9d64415915",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2026/04/Climate-finance-blog.jpg?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003de13604dcae6f221f85bce613d24d159f",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2026/04/AI-cover-2026.png?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d1d73071c97bd777c9827b5f1e495510f",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2025/11/Banner-resource.png?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d5e58c608c2fea78a1d0540d8168469ee",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/anti-corruption.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/beneficial-ownership.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/e-procurement.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/extractives.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/gender.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/health.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/inclusivity.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/infrastructure.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://www.open-contracting.org/wp-content/uploads/2024/12/sustainability.png",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2018/10/IODC-OCP-prevent.jpg?blur\u003d20\u0026ixlib\u003dphp-4.1.0\u0026q\u003d60\u0026w\u003d512\u0026s\u003dd3448a644cdeee280c5874f1fe2936f1",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/03/Strategy-blog.png?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d34d2524901b3ced7d865f08d24a33349",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/11/CDMX-cover-image.jpg?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003dfdaf06fb10ac2871ac4be076c47d1819",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/07/AI_cover.png?fit\u003dcrop\u0026h\u003d288\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d087b8b41c4d6362f7f68717c5b8baaf7",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/SOPE-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d8697930432acf716a2996a49835b62db",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/GAURAV-WEB-QUOTE-1.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003dfe57212146bc19ce588228b70bdcddd3",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/DZHAMILYA-PROTENGE-WEB-QUOTE-1.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d15c990ae89cf6f720f5af6c49a54911b",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/JOSHUA-DATAPHYTE-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003ddf682a8e959c7d4e5a0090b6544d3729",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/DAVID-REACCION-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d382462bf99ff5a2b56b796292c28453e",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/VASYL-PROZORRO-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003dd481ae01c31163503c9d1086c79b4ee7",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/SILVANA-SERCOP-WEB-QUOTE-1.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d9b79a9f0e6270e0f8c6ff3936e402326",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/GIFT-MAXWELL-PPDC-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d36fc85eba89c248d5a72552cd13d965d",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/NURIDA-KYRGYZ-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d52eeb7f0edef23d47459f1875e3a9654",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/MO-IBRAHIM-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d237096e95d33f88b23eb3d7fd120652e",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/BETH-BLAUER-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d38575e04e2ca9dd2358695c82d29107a",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/JUAN-PANE-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003ddd104aafea9704d42c77f7fb6a59ac16",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/NIA-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003d974351a4d5ed383e97e0f03e9c0ce2db",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2024/12/Elias-Garces-Valdes-WEB-QUOTE.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d512\u0026s\u003ded7f5a2ee14c5d915c509b0f942fcbcf",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2023/05/Group.png?ixlib\u003dphp-4.1.0\u0026s\u003d8085977ba5904e15f6f79cece3a17b95",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2021/11/Africa-Report-icon.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d24059f280bfca117630e8fb2acf6bf3a",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2021/06/lemonde.gif?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d98aad326398f42ac4b4bd54172f57c38",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2021/11/G7-icon.jpg?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003ddea2ae32dce46247614d310864bee606",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/Artboard-1.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003dc27e6e90d61c2051354c5ca4441ede5f",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/FT-icon.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d4192895dbbabbd863a11308a36e61d6c",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/Guardian-icon.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003ddb44e1db7f3c112c53a017aa08a9a945",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/icon-economist.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003daec58f17fd3fa46c539dedcc8cb512d9",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/AQ-icon.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d683748d21069d7a544b0b5a2a5f0c096",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/icon-lanacion.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d825cae53138dc9c4e50c4326d03ca5ea",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/05/wef-logo.jpg?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003df6f4941d9c7e76634581169f423f9d87",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/Wired-icon.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d23048dd2f74a7ed3f2fdeb7a97864576",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/01/apolitical.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d912970c0558879fc998983f11e07835b",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/05/Devex-icon.png?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d4883bb9538c04cfd83663b5688e8303c",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2020/04/Folha-SP_logo.jpg?fit\u003dcrop\u0026h\u003d256\u0026ixlib\u003dphp-4.1.0\u0026w\u003d256\u0026s\u003d8abc5e8b2ba54ab3fcac36cdd286c999",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
+  {
+    "src": "https://ocp-website-production-2fo5ied6.imgix.net/uploads/2026/04/thumbs-up-icon.png?crop\u003dfaces\u0026fit\u003dcrop\u0026h\u003d128\u0026ixlib\u003dphp-4.1.0\u0026w\u003d128\u0026s\u003d5e3bc8ccd5dafed8430fb89ebef84741",
+    "alt": "",
+    "pageTitle": "Open Contracting Partnership: open, fair \u0026 efficient public contracting",
+    "pageUrl": "https://www.open-contracting.org/"
+  },
   {
     "src": "https://www.facebook.com/tr?id\u003d792405807634160\u0026ev\u003dPageView\u0026noscript\u003d1",
     "alt": "",
