@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 617,
+    "url": "https://www.python.org/events/python-events/748/",
+    "title": "GeoPython 2019 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2019 Basel, Switzerland From 24 June through 26 June, 2019 GeoPython 2019 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-10 04:29:44.878488"
+  },
+  {
+    "id": 615,
+    "url": "https://www.python.org/events/python-events/796/",
+    "title": "EuroPython 2019 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. EuroPython 2019 Basel, Switzerland From 08 July through 14 July, 2019 EuroPython 2019 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-10 04:29:42.164306"
+  },
+  {
+    "id": 614,
+    "url": "https://www.python.org/events/python-events/1553/",
+    "title": "EuroSciPy 2023 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. EuroSciPy 2023 Basel, Switzerland From 14 Aug. through 18 Aug., 2023 EuroSciPy 2023 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-10 04:29:39.417558"
+  },
+  {
+    "id": 613,
+    "url": "https://www.python.org/events/python-events/463/",
+    "title": "GeoPython 2017 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2017 Basel, Switzerland From 08 May through 10 May, 2017 GeoPython 2017 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-10 04:29:36.248247"
+  },
+  {
+    "id": 610,
+    "url": "https://www.python.org/events/python-events/locations/613/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events GeoPython 2026 08 June 2026 – 10 June 2026 Basel, Switzerland Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-05-10 04:29:29.276183"
+  },
+  {
     "id": 609,
     "url": "https://www.python.org/events/python-events/1391/",
     "title": "GeoPython 2023 | Python.org",
@@ -4137,26 +4172,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 610,
-    "url": "https://www.python.org/events/python-events/locations/613/"
-  },
-  {
-    "id": 613,
-    "url": "https://www.python.org/events/python-events/463/"
-  },
-  {
-    "id": 614,
-    "url": "https://www.python.org/events/python-events/1553/"
-  },
-  {
-    "id": 615,
-    "url": "https://www.python.org/events/python-events/796/"
-  },
-  {
-    "id": 617,
-    "url": "https://www.python.org/events/python-events/748/"
   },
   {
     "id": 618,
@@ -99035,6 +99050,26 @@ window.searchData = [
     "id": 74030,
     "url": "https://2023.geopython.net/",
     "parentUrl": "https://www.python.org/events/python-events/1391/"
+  },
+  {
+    "id": 74043,
+    "url": "http://2017.geopython.net/",
+    "parentUrl": "https://www.python.org/events/python-events/463/"
+  },
+  {
+    "id": 74063,
+    "url": "https://www.euroscipy.org/2023/",
+    "parentUrl": "https://www.python.org/events/python-events/1553/"
+  },
+  {
+    "id": 74070,
+    "url": "https://www.europython.eu",
+    "parentUrl": "https://www.python.org/events/python-events/796/"
+  },
+  {
+    "id": 74084,
+    "url": "http://2019.geopython.net",
+    "parentUrl": "https://www.python.org/events/python-events/748/"
   }
 ];
 
