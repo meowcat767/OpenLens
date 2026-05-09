@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 757,
+    "url": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB",
+    "title": "5. Building C and C++ Extensions on Windows — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Extending and Embedding the Python Interpreter » 5. Building C and C++ Extensions on Windows | Theme Auto Light Dark | 5. Building C and C++ Extensions on Windows¶ This chapter briefly explains how to create a Windows extension module for Python using Microsoft Visual C++, and follows with more detailed background information on how it works. The explanatory material is useful for both the Windows programmer learning to build Python extensions and the Unix programmer interested in producing software which can be successfully built on both Unix and Windows. Module authors are encouraged to use the distutils approach for building extension modules, instead of the one described in this section. You will still need the C compiler that was used to build Python; typically Microsoft Visual C++. Note This chapter mentions a number of filenames that include an encoded Python version number. These filenames are represented with the version number shown as XY; in practice, \u0027X\u0027 will be the major version number and \u0027Y\u0027 will be the minor version number of the Python release you’re working with. For example, if you are using Python 2.2.1, XY will actually be 22. 5.1. A Cookbook Approach¶ There are two approaches to building extension modules on Windows, just as there are on Unix: use the setuptools package to control the build process, or do things manually. The setuptools approach works well for most extensions; documentation on using setuptools to build and package extension modules is available in Building C and C++ Extensions with setuptools. If you find you really need to do things manually, it may be instructive to study the project file for the winsound standard library module. 5.2. Differences Between Unix and Windows¶ Unix and Windows use completely different paradigms for run-time loading of code. Before you try to build a module that can be dynamically loaded, be aware of how your system works. In Unix, a shared object (.so) file contains code to be used by the program, and also the names of functions and data that it expects to find in the program. When the file is joined to the program, all references to those functions and data in the file’s code are changed to point to the actual locations in the program where the functions and data are placed in memory. This is basically a link operation. In Windows, a dynamic-link library (.dll) file has no dangling references. Instead, an access to functions or data goes through a lookup table. So the DLL code does not have to be fixed up at runtime to refer to the program’s memory; instead, the code already uses the DLL’s lookup table, and the lookup table is modified at runtime to point to the functions and data. In Unix, there is only one type of library file (.a) which contains code from several object files (.o). During the link step to create a shared object file (.so), the linker may find that it doesn’t know where an identifier is defined. The linker will look for it in the object files in the libraries; if it finds it, it will include all the code from that object file. In Windows, there are two types of library, a static library and an import library (both called .lib). A static library is like a Unix .a file; it contains code to be included as necessary. An import library is basically used only to reassure the linker that a certain identifier is legal, and will be present in the program when the DLL is loaded. So the linker uses the information from the import library to build the lookup table for using identifiers that are not included in the DLL. When an application or a DLL is linked, an import library may be generated, which will need to be used for all future DLLs that depend on the symbols in the application or DLL. Suppose you are building two dynamic-load modules, B and C, which should share another block of code A. On Unix, you would not pass A.a to the linker for B.so and C.so; that would cause it to be included twice, so that B and C would each have their own copy. In Windows, building A.dll will also build A.lib. You do pass A.lib to the linker for B and C. A.lib does not contain code; it just contains information which will be used at runtime to access A’s code. In Windows, using an import library is sort of like using import spam; it gives you access to spam’s names, but does not create a separate copy. On Unix, linking with a library is more like from spam import *; it does create a separate copy. Py_NO_LINK_LIB¶ Turn off the implicit, #pragma-based linkage with the Python library, performed inside CPython header files. Added in version 3.14. 5.3. Using DLLs in Practice¶ Windows Python is built in Microsoft Visual C++; using other compilers may or may not work. The rest of this section is MSVC++ specific. When creating DLLs in Windows, you can use the CPython library in two ways: By default, inclusion of PC/pyconfig.h directly or via Python.h triggers an implicit, co",
+    "scrapedAt": "2026-05-10 04:42:41.078254"
+  },
+  {
+    "id": 756,
+    "url": "https://github.com/python/cpython/issues/128307",
+    "title": "add eager_start parameter to loop.create_task · Issue #128307 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k add eager_start parameter to loop.create_task #128307 New issue Copy link New issue Copy link Closed Closed add eager_start parameter to loop.create_task#128307 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-asynciotype-featureA feature request or enhancementA feature request or enhancement Description graingert opened on Dec 28, 2024 Issue body actions Feature or enhancement Proposal: We want to be able to opt in and opt out of eager tasks anywhere in the asyncio call stack, eg in some asyncio library, and not rely on some other asyncio framework setting the default. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: https://discuss.python.org/t/make-asyncio-eager-task-factory-default/75164/10 Linked PRs gh-128307: support eager_start kwarg in create_eager_task_factory, and pass kwargs from asyncio.create_task and TaskGroup.create_task #128306 gh-128307: Update docs for asyncio.create_task, TaskGroup.create_task, asyncio.create_task #134202 gh-128307: Update what\u0027s new in 3.13 and 3.14 with create_task changes #134304 [3.14] gh-128307: Update what\u0027s new in 3.13 and 3.14 with create_task changes of asyncio (GH-134304) #134319 [3.13] gh-128307: Update what\u0027s new in 3.13 with create_task changes of asyncio (#134304) #134335 [3.14] gh-128307: Update docs for asyncio.create_task, TaskGroup.create_task, asyncio.create_task (GH-134202) #134553 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-asynciotype-featureA feature request or enhancementA feature request or enhancement Projects asyncio Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:42:36.498619"
+  },
+  {
+    "id": 755,
+    "url": "https://docs.python.org/3/library/gc.html#gc.collect",
+    "title": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » gc — Garbage Collector interface | Theme Auto Light Dark | gc — Garbage Collector interface¶ This module provides an interface to the optional garbage collector. It provides the ability to disable the collector, tune the collection frequency, and set debugging options. It also provides access to unreachable objects that the collector found but cannot free. Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles. Automatic collection can be disabled by calling gc.disable(). To debug a leaking program call gc.set_debug(gc.DEBUG_LEAK). Notice that this includes gc.DEBUG_SAVEALL, causing garbage-collected objects to be saved in gc.garbage for inspection. The gc module provides the following functions: gc.enable()¶ Enable automatic garbage collection. gc.disable()¶ Disable automatic garbage collection. gc.isenabled()¶ Return True if automatic collection is enabled. gc.collect(generation\u003d2)¶ With no arguments, run a full collection. The optional argument generation may be an integer specifying which generation to collect (from 0 to 2). A ValueError is raised if the generation number is invalid. The sum of collected objects and uncollectable objects is returned. The free lists maintained for a number of built-in types are cleared whenever a full collection or collection of the highest generation (2) is run. Not all items in some free lists may be freed due to the particular implementation, in particular float. The effect of calling gc.collect() while the interpreter is already performing a collection is undefined. Changed in version 3.14: generation\u003d1 performs an increment of collection. Changed in version 3.14.5: generation\u003d1 performs collection of the middle generation. gc.set_debug(flags)¶ Set the garbage collection debugging flags. Debugging information will be written to sys.stderr. See below for a list of debugging flags which can be combined using bit operations to control debugging. gc.get_debug()¶ Return the debugging flags currently set. gc.get_objects(generation\u003dNone)¶ Returns a list of all objects tracked by the collector, excluding the list returned. If generation is not None, return only the objects tracked by the collector that are in that generation. Changed in version 3.8: New generation parameter. Changed in version 3.14: Generation 1 is removed Changed in version 3.14.5: Generation 1 is reintroduced to maintain GC behavior from 3.13. Raises an auditing event gc.get_objects with argument generation. gc.get_stats()¶ Return a list of three per-generation dictionaries containing collection statistics since interpreter start. The number of keys may change in the future, but currently each dictionary will contain the following items: collections is the number of times this generation was collected; collected is the total number of objects collected inside this generation; uncollectable is the total number of objects which were found to be uncollectable (and were therefore moved to the garbage list) inside this generation. Added in version 3.4. gc.set_threshold(threshold0[, threshold1[, threshold2]])¶ Set the garbage collection thresholds (the collection frequency). Setting threshold0 to zero disables collection. The GC classifies objects into three generations depending on how many collection sweeps they have survived. New objects are placed in the youngest generation (generation 0). If an object survives a collection it is moved into the next older generation. Since generation 2 is the oldest generation, objects in that generation remain there after a collection. In order to decide when to run, the collector keeps track of the number object allocations and deallocations since the last collection. When the number of allocations minus the number of deallocations exceeds threshold0, collection starts. Initially only generation 0 is examined. If generation 0 has been examined more than threshold1 times since generation 1 has been examined, then generation 1 is examined as well. With the third generation, things are a bit more complicated, see Collecting the oldest generation for more information. In the free-threaded build, the increase in process memory usage is also checked before running the collector. If the memory usage has not increased by 10% since the last collection and the net number of object allocations has not exceeded 40 times threshold0, the collection is not run. See Garbage collector design for more information. Changed in version 3.14: threshold2 is ignored Changed in version 3.14.5: threshold2 is restored to match Python 3.13 behavior. gc.get_count()¶ Return the current collection counts as a tuple of (count0, count1, count2). gc.get_threshold()¶ Return the current collection thresholds as a tuple of (threshold0, threshold1, threshold2). g",
+    "scrapedAt": "2026-05-10 04:42:31.578111"
+  },
+  {
+    "id": 754,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#symtable",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:42:28.606028"
+  },
+  {
+    "id": 753,
+    "url": "https://github.com/python/cpython/issues/91417",
+    "title": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k RFC: Clarify usage of macros for PySequence_Fast within the Limited C API #91417 New issue Copy link New issue Copy link Closed Closed RFC: Clarify usage of macros for PySequence_Fast within the Limited C API#91417 Copy link Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtopic-C-API Description HaoZeke mannequin opened on Apr 8, 2022 Issue body actions BPO 47261 Nosy @HaoZeke Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-04-08.15:14:46.053\u003e\nlabels \u003d [\u0027expert-C-API\u0027, \u0027docs\u0027]\ntitle \u003d \u0027RFC: Clarify usage of macros for PySequence_Fast within the Limited C API\u0027\nupdated_at \u003d \u003cDate 2022-04-08.15:19:49.541\u003e\nuser \u003d \u0027https://github.com/HaoZeke\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-04-08.15:19:49.541\u003e\nactor \u003d \u0027rgoswami\u0027\nassignee \u003d \u0027docs@python\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Documentation\u0027, \u0027C API\u0027]\ncreation \u003d \u003cDate 2022-04-08.15:14:46.053\u003e\ncreator \u003d \u0027rgoswami\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 47261\nkeywords \u003d []\nmessage_count \u003d 2.0\nmessages \u003d [\u0027416989\u0027, \u0027416990\u0027]\nnosy_count \u003d 2.0\nnosy_names \u003d [\u0027docs@python\u0027, \u0027rgoswami\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue47261\u0027\nversions \u003d [] Linked PRs gh-91417: Remove PySequence_Fast() from the limited C API #129398 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtopic-C-API Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:42:20.403473"
+  },
+  {
     "id": 752,
     "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag",
     "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
@@ -4977,26 +5012,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 753,
-    "url": "https://github.com/python/cpython/issues/91417"
-  },
-  {
-    "id": 754,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#symtable"
-  },
-  {
-    "id": 755,
-    "url": "https://docs.python.org/3/library/gc.html#gc.collect"
-  },
-  {
-    "id": 756,
-    "url": "https://github.com/python/cpython/issues/128307"
-  },
-  {
-    "id": 757,
-    "url": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
   },
   {
     "id": 758,
@@ -130210,10 +130225,325 @@ window.searchData = [
     "id": 95060,
     "url": "https://docs.python.org/3/library/os.html#os.scandir",
     "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 95250,
+    "url": "https://github.com/python/cpython/issues/91417#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 95251,
+    "url": "https://github.com/python/cpython/issues/91417#issue-1199078444",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 95254,
+    "url": "https://bugs.python.org/issue47261",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 95255,
+    "url": "https://github.com/python/cpython/pull/129398",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 95257,
+    "url": "https://github.com/python/cpython/issues/91417#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 95258,
+    "url": "https://github.com/HaoZeke",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 96497,
+    "url": "https://github.com/python/cpython/blob/ff0ef0a54bef26fc507fbf9b7a6009eb7d3f17f5/InternalDocs/garbage_collector.md#collecting-the-oldest-generation",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96500,
+    "url": "https://docs.python.org/3/library/gc.html#gc.enable",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96502,
+    "url": "https://docs.python.org/3/library/gc.html#gc.garbage",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96504,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_objects",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96505,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_UNCOLLECTABLE",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96506,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_COLLECTABLE",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96508,
+    "url": "https://docs.python.org/3/library/gc.html#gc.set_debug",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96510,
+    "url": "https://peps.python.org/pep-0442/",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96512,
+    "url": "https://github.com/python/cpython/blob/3.14/InternalDocs/garbage_collector.md",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96514,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_referents",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96515,
+    "url": "https://docs.python.org/3/library/gc.html#gc.is_finalized",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96516,
+    "url": "https://docs.python.org/3/library/gc.html#gc.unfreeze",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96517,
+    "url": "https://docs.python.org/3/library/gc.html#gc.is_tracked",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96520,
+    "url": "https://docs.python.org/3/library/gc.html#gc.isenabled",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96526,
+    "url": "https://docs.python.org/3/library/gc.html#gc.callbacks",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96527,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_LEAK",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96529,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_debug",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96531,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_SAVEALL",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96533,
+    "url": "https://docs.python.org/3/library/gc.html#gc.DEBUG_STATS",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96534,
+    "url": "https://docs.python.org/3/library/gc.html#gc.disable",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96535,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/gc.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96538,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_referrers",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96546,
+    "url": "https://docs.python.org/3/library/gc.html#gc.freeze",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96547,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_freeze_count",
+    "parentUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "id": 96548,
+    "url": "https://github.com/python/cpython/issues/128307#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96549,
+    "url": "https://github.com/python/cpython/pull/134319",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96553,
+    "url": "https://github.com/python/cpython/pull/134202",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96554,
+    "url": "https://github.com/python/cpython/pull/134553",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96555,
+    "url": "https://github.com/python/cpython/issues/128307#issue-2761671419",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96558,
+    "url": "https://github.com/python/cpython/pull/134304",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96560,
+    "url": "https://github.com/python/cpython/pull/134335",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96563,
+    "url": "https://discuss.python.org/t/make-asyncio-eager-task-factory-default/75164/10",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96564,
+    "url": "https://github.com/python/cpython/issues/128307#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96565,
+    "url": "https://github.com/python/cpython/pull/128306",
+    "parentUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "id": 96567,
+    "url": "https://docs.python.org/3/extending/windows.html#a-cookbook-approach",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96574,
+    "url": "https://docs.python.org/3/extending/windows.html#building-c-and-c-extensions-on-windows",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96577,
+    "url": "https://docs.python.org/3/extending/building.html",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96578,
+    "url": "https://github.com/python/cpython/tree/3.14/PCbuild/winsound.vcxproj",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96579,
+    "url": "https://github.com/python/cpython/blob/main/Doc/extending/windows.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96580,
+    "url": "https://docs.python.org/3/c-api/stable.html#stable-application-binary-interface",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96581,
+    "url": "https://docs.python.org/3/extending/windows.html#",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96584,
+    "url": "https://docs.python.org/3/extending/windows.html#differences-between-unix-and-windows",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96588,
+    "url": "https://docs.python.org/3/extending/embedding.html",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96590,
+    "url": "https://docs.python.org/3/extending/windows.html#using-dlls-in-practice",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "id": 96592,
+    "url": "https://docs.python.org/3/extending/building.html#setuptools-index",
+    "parentUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "5. Building C and C++ Extensions on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "5. Building C and C++ Extensions on Windows — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/extending/windows.html#c.Py_NO_LINK_LIB"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?v\u003d4\u0026size\u003d80",
+    "alt": "@graingert",
+    "pageTitle": "add eager_start parameter to loop.create_task · Issue #128307 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/413772?v\u003d4\u0026size\u003d48",
+    "alt": "@graingert",
+    "pageTitle": "add eager_start parameter to loop.create_task · Issue #128307 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128307"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.collect"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#symtable"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#symtable"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/103280611?v\u003d4\u0026size\u003d80",
+    "alt": "@HaoZeke",
+    "pageTitle": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/103280611?v\u003d4\u0026size\u003d48",
+    "alt": "@HaoZeke",
+    "pageTitle": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91417"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
