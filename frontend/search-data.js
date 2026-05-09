@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 767,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event",
+    "title": "Synchronization Primitives — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Synchronization Primitives | Theme Auto Light Dark | Synchronization Primitives¶ Source code: Lib/asyncio/locks.py asyncio synchronization primitives are designed to be similar to those of the threading module with two important caveats: asyncio primitives are not thread-safe, therefore they should not be used for OS thread synchronization (use threading for that); methods of these synchronization primitives do not accept the timeout argument; use the asyncio.wait_for() function to perform operations with timeouts. asyncio has the following basic synchronization primitives: Lock Event Condition Semaphore BoundedSemaphore Barrier Lock¶ class asyncio.Lock¶ Implements a mutex lock for asyncio tasks. Not thread-safe. An asyncio lock can be used to guarantee exclusive access to a shared resource. The preferred way to use a Lock is an async with statement: lock \u003d asyncio.Lock()\n\n# ... later\nasync with lock:\n    # access shared state\n which is equivalent to: lock \u003d asyncio.Lock()\n\n# ... later\nawait lock.acquire()\ntry:\n    # access shared state\nfinally:\n    lock.release()\n Changed in version 3.10: Removed the loop parameter. async acquire()¶ Acquire the lock. This method waits until the lock is unlocked, sets it to locked and returns True. When more than one coroutine is blocked in acquire() waiting for the lock to be unlocked, only one coroutine eventually proceeds. Acquiring a lock is fair: the coroutine that proceeds will be the first coroutine that started waiting on the lock. release()¶ Release the lock. When the lock is locked, reset it to unlocked and return. If the lock is unlocked, a RuntimeError is raised. locked()¶ Return True if the lock is locked. Event¶ class asyncio.Event¶ An event object. Not thread-safe. An asyncio event can be used to notify multiple asyncio tasks that some event has happened. An Event object manages an internal flag that can be set to true with the set() method and reset to false with the clear() method. The wait() method blocks until the flag is set to true. The flag is set to false initially. Changed in version 3.10: Removed the loop parameter. Example: async def waiter(event):\n    print(\u0027waiting for it ...\u0027)\n    await event.wait()\n    print(\u0027... got it!\u0027)\n\nasync def main():\n    # Create an Event object.\n    event \u003d asyncio.Event()\n\n    # Spawn a Task to wait until \u0027event\u0027 is set.\n    waiter_task \u003d asyncio.create_task(waiter(event))\n\n    # Sleep for 1 second and set the event.\n    await asyncio.sleep(1)\n    event.set()\n\n    # Wait until the waiter task is finished.\n    await waiter_task\n\nasyncio.run(main())\n async wait()¶ Wait until the event is set. If the event is set, return True immediately. Otherwise block until another task calls set(). set()¶ Set the event. All tasks waiting for event to be set will be immediately awakened. clear()¶ Clear (unset) the event. Subsequent tasks awaiting on wait() will now block until the set() method is called again. is_set()¶ Return True if the event is set. Condition¶ class asyncio.Condition(lock\u003dNone)¶ A Condition object. Not thread-safe. An asyncio condition primitive can be used by a task to wait for some event to happen and then get exclusive access to a shared resource. In essence, a Condition object combines the functionality of an Event and a Lock. It is possible to have multiple Condition objects share one Lock, which allows coordinating exclusive access to a shared resource between different tasks interested in particular states of that shared resource. The optional lock argument must be a Lock object or None. In the latter case a new Lock object is created automatically. Changed in version 3.10: Removed the loop parameter. The preferred way to use a Condition is an async with statement: cond \u003d asyncio.Condition()\n\n# ... later\nasync with cond:\n    await cond.wait()\n which is equivalent to: cond \u003d asyncio.Condition()\n\n# ... later\nawait cond.acquire()\ntry:\n    await cond.wait()\nfinally:\n    cond.release()\n async acquire()¶ Acquire the underlying lock. This method waits until the underlying lock is unlocked, sets it to locked and returns True. notify(n\u003d1)¶ Wake up n tasks (1 by default) waiting on this condition. If fewer than n tasks are waiting they are all awakened. The lock must be acquired before this method is called and released shortly after. If called with an unlocked lock a RuntimeError error is raised. locked()¶ Return True if the underlying lock is acquired. notify_all()¶ Wake up all tasks waiting on this condition. This method acts like notify(), but wakes up all waiting tasks. The lock must be acquired before this method is called and released shortly after. If called with an unlocked lock a RuntimeError error is raised. release()¶ Release the underlying lock. When invoked on an unlocked lock, a RuntimeError is raised. async wait()¶ Wait un",
+    "scrapedAt": "2026-05-10 04:43:46.776057"
+  },
+  {
+    "id": 766,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max",
+    "title": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » heapq — Heap queue algorithm | Theme Auto Light Dark | heapq — Heap queue algorithm¶ Source code: Lib/heapq.py This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Min-heaps are binary trees for which every parent node has a value less than or equal to any of its children. We refer to this condition as the heap invariant. For min-heaps, this implementation uses lists for which heap[k] \u003c\u003d heap[2*k+1] and heap[k] \u003c\u003d heap[2*k+2] for all k for which the compared elements exist. Elements are counted from zero. The interesting property of a min-heap is that its smallest element is always the root, heap[0]. Max-heaps satisfy the reverse invariant: every parent node has a value greater than any of its children. These are implemented as lists for which maxheap[2*k+1] \u003c\u003d maxheap[k] and maxheap[2*k+2] \u003c\u003d maxheap[k] for all k for which the compared elements exist. The root, maxheap[0], contains the largest element; heap.sort(reverse\u003dTrue) maintains the max-heap invariant. The heapq API differs from textbook heap algorithms in two aspects: (a) We use zero-based indexing. This makes the relationship between the index for a node and the indexes for its children slightly less obvious, but is more suitable since Python uses zero-based indexing. (b) Textbooks often focus on max-heaps, due to their suitability for in-place sorting. Our implementation favors min-heaps as they better correspond to Python lists. These two aspects make it possible to view the heap as a regular Python list without surprises: heap[0] is the smallest item, and heap.sort() maintains the heap invariant! Like list.sort(), this implementation uses only the \u003c operator for comparisons, for both min-heaps and max-heaps. In the API below, and in this documentation, the unqualified term heap generally refers to a min-heap. The API for max-heaps is named using a _max suffix. To create a heap, use a list initialized as [], or transform an existing list into a min-heap or max-heap using the heapify() or heapify_max() functions, respectively. The following functions are provided for min-heaps: heapq.heapify(x)¶ Transform list x into a min-heap, in-place, in linear time. heapq.heappush(heap, item)¶ Push the value item onto the heap, maintaining the min-heap invariant. heapq.heappop(heap)¶ Pop and return the smallest item from the heap, maintaining the min-heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0]. heapq.heappushpop(heap, item)¶ Push item on the heap, then pop and return the smallest item from the heap. The combined action runs more efficiently than heappush() followed by a separate call to heappop(). heapq.heapreplace(heap, item)¶ Pop and return the smallest item from the heap, and also push the new item. The heap size doesn’t change. If the heap is empty, IndexError is raised. This one step operation is more efficient than a heappop() followed by heappush() and can be more appropriate when using a fixed-size heap. The pop/push combination always returns an element from the heap and replaces it with item. The value returned may be larger than the item added. If that isn’t desired, consider using heappushpop() instead. Its push/pop combination returns the smaller of the two values, leaving the larger value on the heap. For max-heaps, the following functions are provided: heapq.heapify_max(x)¶ Transform list x into a max-heap, in-place, in linear time. Added in version 3.14. heapq.heappush_max(heap, item)¶ Push the value item onto the max-heap heap, maintaining the max-heap invariant. Added in version 3.14. heapq.heappop_max(heap)¶ Pop and return the largest item from the max-heap heap, maintaining the max-heap invariant. If the max-heap is empty, IndexError is raised. To access the largest item without popping it, use maxheap[0]. Added in version 3.14. heapq.heappushpop_max(heap, item)¶ Push item on the max-heap heap, then pop and return the largest item from heap. The combined action runs more efficiently than heappush_max() followed by a separate call to heappop_max(). Added in version 3.14. heapq.heapreplace_max(heap, item)¶ Pop and return the largest item from the max-heap heap and also push the new item. The max-heap size doesn’t change. If the max-heap is empty, IndexError is raised. The value returned may be smaller than the item added. Refer to the analogous function heapreplace() for detailed usage notes. Added in version 3.14. The module also offers three general purpose functions based on heaps. heapq.merge(*iterables, key\u003dNone, reverse\u003dFalse)¶ Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values. Similar to sorted(itertools.chain(*iterables)) but returns an iterable, does not pull the d",
+    "scrapedAt": "2026-05-10 04:43:43.892044"
+  },
+  {
+    "id": 765,
+    "url": "https://github.com/python/cpython/issues/127691",
+    "title": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Check for type consistency for PyUnicodeError API #127691 New issue Copy link New issue Copy link Closed Closed Check for type consistency for PyUnicodeError API#127691 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description picnixz opened on Dec 6, 2024 Issue body actions Feature or enhancement Proposal: This is a follow-up to #123380 (comment). The idea is to add assertion type-checks when calling helper functions on unicode objects:     assert(PyObject_TypeCheck(exc, (PyTypeObject*)\u0026PyExc_UnicodeError)); Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-127691: add type checks when using PyUnicodeError objects #127694 Reactions are currently unavailable Metadata Metadata Assignees picnixz Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:43:40.242121"
+  },
+  {
+    "id": 764,
+    "url": "https://docs.python.org/3/library/types.html#types.UnionType",
+    "title": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Types » types — Dynamic type creation and names for built-in types | Theme Auto Light Dark | types — Dynamic type creation and names for built-in types¶ Source code: Lib/types.py This module defines utility functions to assist in dynamic creation of new types. It also defines names for some object types that are used by the standard Python interpreter, but not exposed as builtins like int or str are. Finally, it provides some additional type-related utility classes and functions that are not fundamental enough to be builtins. Dynamic Type Creation¶ types.new_class(name, bases\u003d(), kwds\u003dNone, exec_body\u003dNone)¶ Creates a class object dynamically using the appropriate metaclass. The first three arguments are the components that make up a class definition header: the class name, the base classes (in order), the keyword arguments (such as metaclass). The exec_body argument is a callback that is used to populate the freshly created class namespace. It should accept the class namespace as its sole argument and update the namespace directly with the class contents. If no callback is provided, it has the same effect as passing in lambda ns: None. Added in version 3.3. types.prepare_class(name, bases\u003d(), kwds\u003dNone)¶ Calculates the appropriate metaclass and creates the class namespace. The arguments are the components that make up a class definition header: the class name, the base classes (in order) and the keyword arguments (such as metaclass). The return value is a 3-tuple: metaclass, namespace, kwds metaclass is the appropriate metaclass, namespace is the prepared class namespace and kwds is an updated copy of the passed in kwds argument with any \u0027metaclass\u0027 entry removed. If no kwds argument is passed in, this will be an empty dict. Added in version 3.3. Changed in version 3.6: The default value for the namespace element of the returned tuple has changed. Now an insertion-order-preserving mapping is used when the metaclass does not have a __prepare__ method. See also Metaclasses Full details of the class creation process supported by these functions PEP 3115 - Metaclasses in Python 3000 Introduced the __prepare__ namespace hook types.resolve_bases(bases)¶ Resolve MRO entries dynamically as specified by PEP 560. This function looks for items in bases that are not instances of type, and returns a tuple where each such object that has an __mro_entries__() method is replaced with an unpacked result of calling this method. If a bases item is an instance of type, or it doesn’t have an __mro_entries__() method, then it is included in the return tuple unchanged. Added in version 3.7. types.get_original_bases(cls, /)¶ Return the tuple of objects originally given as the bases of cls before the __mro_entries__() method has been called on any bases (following the mechanisms laid out in PEP 560). This is useful for introspecting Generics. For classes that have an __orig_bases__ attribute, this function returns the value of cls.__orig_bases__. For classes without the __orig_bases__ attribute, cls.__bases__ is returned. Examples: from typing import TypeVar, Generic, NamedTuple, TypedDict\n\nT \u003d TypeVar(\"T\")\nclass Foo(Generic[T]): ...\nclass Bar(Foo[int], float): ...\nclass Baz(list[str]): ...\nEggs \u003d NamedTuple(\"Eggs\", [(\"a\", int), (\"b\", str)])\nSpam \u003d TypedDict(\"Spam\", {\"a\": int, \"b\": str})\n\nassert Bar.__bases__ \u003d\u003d (Foo, float)\nassert get_original_bases(Bar) \u003d\u003d (Foo[int], float)\n\nassert Baz.__bases__ \u003d\u003d (list,)\nassert get_original_bases(Baz) \u003d\u003d (list[str],)\n\nassert Eggs.__bases__ \u003d\u003d (tuple,)\nassert get_original_bases(Eggs) \u003d\u003d (NamedTuple,)\n\nassert Spam.__bases__ \u003d\u003d (dict,)\nassert get_original_bases(Spam) \u003d\u003d (TypedDict,)\n\nassert int.__bases__ \u003d\u003d (object,)\nassert get_original_bases(int) \u003d\u003d (object,)\n Added in version 3.12. See also PEP 560 - Core support for typing module and generic types Standard Interpreter Types¶ This module provides names for many of the types that are required to implement a Python interpreter. It deliberately avoids including some of the types that arise only incidentally during processing such as the listiterator type. Typical use of these names is for isinstance() or issubclass() checks. If you instantiate any of these types, note that signatures may vary between Python versions. Standard names are defined for the following types: types.NoneType¶ The type of None. Added in version 3.10. types.FunctionType¶ types.LambdaType¶ The type of user-defined functions and functions created by lambda expressions. Raises an auditing event function.__new__ with argument code. The audit event only occurs for direct instantiation of function objects, and is not raised for normal compilation. types.GeneratorType¶ The type of generator-iterator objects, created by generator functions. types.CoroutineType¶ The type of coroutine objects, created by async def functions. Added in version 3.5. types.AsyncGeneratorType¶ ",
+    "scrapedAt": "2026-05-10 04:43:35.046487"
+  },
+  {
+    "id": 763,
+    "url": "https://peps.python.org/pep-0741/",
+    "title": "PEP 741 – Python Configuration C API | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 741 – Python Configuration C API PEP 741 – Python Configuration C API Author: Victor Stinner \u003cvstinner at python.org\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 18-Jan-2024 Python-Version: 3.14 Post-History: 19-Jan-2024, 08-Feb-2024 Resolution: Discourse message Table of Contents Abstract Rationale Get the runtime configuration Security fix Redundancy between PyPreConfig and PyConfig Embedding Python Applications embedding Python Libraries embedding Python Utilities creating standalone applications Set the runtime configuration Specification PyInitConfig structure Configuration Options Public configuration options Read-only configuration options Create Config Get Options Set Options Initialize Python Error Handling Get and Set the Runtime Configuration Stability Interaction with the PyPreConfig and PyConfig APIs Examples Initialize Python Increase initialization bytes_warning option Get the runtime verbose option Implementation Backwards Compatibility Rejected Ideas Configuration as text Refer to an option with an integer Multi-phase initialization (similar to PEP 432) Locale encoding and wide strings Discussions Copyright Abstract Add a C API to configure the Python initialization without relying on C structures and the ability to make ABI-compatible changes in the future. Complete PEP 587 API by adding PyInitConfig_AddModule() which can be used to add a built-in extension module; feature previously referred to as the “inittab”. Add PyConfig_Get() and PyConfig_Set() functions to get and set the current runtime configuration. PEP 587 “Python Initialization Configuration” unified all the ways to configure the Python initialization. This PEP unifies also the configuration of the Python preinitialization and the Python initialization in a single API. Moreover, this PEP only provides a single choice to embed Python, instead of having two “Python” and “Isolated” choices (PEP 587), to simplify the API further. The lower level PEP 587 PyConfig API remains available for use cases with an intentionally higher level of coupling to CPython implementation details (such as emulating the full functionality of CPython’s CLI, including its configuration mechanisms). Rationale Get the runtime configuration PEP 587 has no API to get the current runtime configuration, only to configure the Python initialization. For example, the global configuration variable Py_UnbufferedStdioFlag was deprecated in Python 3.12 and using PyConfig.buffered_stdio is recommended instead. It only works to configure Python, there is no public API to get PyConfig.buffered_stdio. Users of the limited C API are asking for a public API to get the current runtime configuration. Cython needs to get the optimization_level configuration option: issue. When global configuration variables were deprecated in 2022, Marc-André Lemburg requested a C API to access these configuration variables at runtime (not only during Python initialization). Security fix To fix CVE-2020-10735, a denial-of-service when converting a very large string to an integer (in base 10), it was discussed to add a new PyConfig member to stable branches which affects the ABI. Gregory P. Smith proposed a different API using text based configuration file to not be limited by PyConfig members: FR: Allow private runtime config to enable extending without breaking the PyConfig ABI (August 2022). In the end, it was decided to not add a new PyConfig member to stable branches, but only add a new PyConfig.int_max_str_digits member to the development branch (which became Python 3.12). A dedicated private global variable (unrelated to PyConfig) is used in stable branches. Redundancy between PyPreConfig and PyConfig The Python preinitialization uses the PyPreConfig structure and the Python initialization uses the PyConfig structure. Both structures have four duplicated members: dev_mode, parse_argv, isolated and use_environment. The redundancy is caused by the fact that the two structures are separated, whereas some PyConfig members are needed by the preinitialization. Embedding Python Applications embedding Python Examples: Blender 3D graphics. fontforge font editor. Gimp. LibreOffice. OBS Studio. Tiled. vim text editor. On Linux, FreeBSD and macOS, applications are usually either statically linked to a libpython, or load dynamically a libpython . The libpython shared library is versioned, example: libpython3.12.so for Python 3.12 on Linux. The vim project can target the stable ABI. Usually, the “system Python” version is used. It’s not currently possible to select which Python version to use. Users would like the ability to select a newer Python on demand. On Linux, another approach to deploy an application embedding Python, such as GIMP, is to include Python in Flatpack, AppImage or Snap “container”. In this case, the application brings its own copy of Python version with th",
+    "scrapedAt": "2026-05-10 04:43:27.212175"
+  },
+  {
     "id": 762,
     "url": "https://peps.python.org/pep-0765/",
     "title": "PEP 765 – Disallow return/break/continue that exit a finally block | peps.python.org",
@@ -5047,26 +5082,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 763,
-    "url": "https://peps.python.org/pep-0741/"
-  },
-  {
-    "id": 764,
-    "url": "https://docs.python.org/3/library/types.html#types.UnionType"
-  },
-  {
-    "id": 765,
-    "url": "https://github.com/python/cpython/issues/127691"
-  },
-  {
-    "id": 766,
-    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
-  },
-  {
-    "id": 767,
-    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
   },
   {
     "id": 768,
@@ -131685,10 +131700,745 @@ window.searchData = [
     "id": 97039,
     "url": "https://docs.python.org/3/tutorial/errors.html#tut-cleanup",
     "parentUrl": "https://peps.python.org/pep-0765/"
+  },
+  {
+    "id": 97040,
+    "url": "https://www.blender.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97041,
+    "url": "https://modwsgi.readthedocs.io/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97042,
+    "url": "https://peps.python.org/pep-0741/#security-fix",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97043,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api-second-version/45403/27",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97044,
+    "url": "https://peps.python.org/pep-0741/#error-handling",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97045,
+    "url": "https://peps.python.org/pep-0741/#set-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97046,
+    "url": "https://www.gimp.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97047,
+    "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name\u003dCVE-2020-10735",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97048,
+    "url": "https://docs.python.org/dev/c-api/init_config.html#pyconfig",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97050,
+    "url": "https://peps.python.org/pep-0741/#specification",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97051,
+    "url": "https://github.com/indygreg/PyOxidizer",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97052,
+    "url": "https://peps.python.org/pep-0741/#get-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97053,
+    "url": "https://py2app.readthedocs.io/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97054,
+    "url": "https://peps.python.org/pep-0741/#configuration-as-text",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97055,
+    "url": "https://peps.python.org/pep-0741/#create-config",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97056,
+    "url": "https://www.libreoffice.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97057,
+    "url": "http://www.py2exe.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97058,
+    "url": "https://peps.python.org/pep-0741/#get-the-runtime-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97059,
+    "url": "https://www.mapeditor.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97060,
+    "url": "https://peps.python.org/pep-0741/#id1",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97062,
+    "url": "https://peps.python.org/pep-0741/#libraries-embedding-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97063,
+    "url": "https://github.com/PyO3/pyo3",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97064,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0741.rst",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97065,
+    "url": "https://peps.python.org/pep-0741/#refer-to-an-option-with-an-integer",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97066,
+    "url": "https://peps.python.org/pep-0741/#locale-encoding-and-wide-strings",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97067,
+    "url": "https://peps.python.org/pep-0741/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97068,
+    "url": "https://fontforge.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97069,
+    "url": "https://github.com/python/cpython/issues/99872",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97070,
+    "url": "https://peps.python.org/pep-0741/#redundancy-between-pypreconfig-and-pyconfig",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97071,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api/43637",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97072,
+    "url": "https://docs.python.org/dev/c-api/init_config.html#isolated-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97073,
+    "url": "https://peps.python.org/pep-0741/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97074,
+    "url": "https://peps.python.org/pep-0741/#get-and-set-the-runtime-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97075,
+    "url": "https://peps.python.org/pep-0741/#public-configuration-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97076,
+    "url": "https://obsproject.com/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97077,
+    "url": "https://github.com/python/cpython/pull/123472",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97078,
+    "url": "https://docs.python.org/dev/c-api/init_config.html#pypreconfig",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97079,
+    "url": "https://peps.python.org/pep-0741/#stability",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97080,
+    "url": "https://discuss.python.org/t/fr-allow-private-runtime-config-to-enable-extending-without-breaking-the-pyconfig-abi/18004/34",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97081,
+    "url": "https://peps.python.org/pep-0741/#configuration-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97082,
+    "url": "https://peps.python.org/pep-0741/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97083,
+    "url": "https://peps.python.org/pep-0741/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97084,
+    "url": "https://github.com/python/cpython/issues/93103#issuecomment-1136462708",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97085,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api-second-version/45403/88",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97086,
+    "url": "https://www.vim.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97087,
+    "url": "https://peps.python.org/pep-0741/#get-the-runtime-verbose-option",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97088,
+    "url": "https://peps.python.org/pep-0432/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97089,
+    "url": "https://peps.python.org/pep-0741/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97091,
+    "url": "https://peps.python.org/pep-0741/#increase-initialization-bytes-warning-option",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97092,
+    "url": "https://peps.python.org/pep-0741/#pyinitconfig-structure",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97093,
+    "url": "https://peps.python.org/pep-0741/#examples",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97094,
+    "url": "https://discuss.python.org/t/fr-allow-private-runtime-config-to-enable-extending-without-breaking-the-pyconfig-abi/18004",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97095,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0741.rst",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97096,
+    "url": "https://peps.python.org/pep-0741/#interaction-with-the-pypreconfig-and-pyconfig-apis",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97097,
+    "url": "https://pyinstaller.org/",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97098,
+    "url": "https://github.com/yglukhov/nimpy",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97099,
+    "url": "https://peps.python.org/pep-0741/#discussions",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97100,
+    "url": "https://peps.python.org/pep-0741/#embedding-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97101,
+    "url": "https://github.com/GrahamDumpleton/mod_wsgi/blob/f54eadd6da8e3da0faccd497d4165de435b97242/src/server/wsgi_interp.c#L2367-L2404",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97102,
+    "url": "https://peps.python.org/pep-0741/#utilities-creating-standalone-applications",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97103,
+    "url": "https://peps.python.org/pep-0741/#read-only-configuration-options",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97104,
+    "url": "https://peps.python.org/pep-0741/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97105,
+    "url": "https://peps.python.org/pep-0741/#initialize-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97106,
+    "url": "https://peps.python.org/pep-0741/#applications-embedding-python",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97107,
+    "url": "https://github.com/python/cpython/pull/123502",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97108,
+    "url": "https://peps.python.org/pep-0741/#multi-phase-initialization-similar-to-pep-432",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97109,
+    "url": "https://peps.python.org/pep-0741/#set-the-runtime-configuration",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97110,
+    "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api-second-version/45403",
+    "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 97233,
+    "url": "https://github.com/python/cpython/pull/127694",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 97236,
+    "url": "https://github.com/python/cpython/issues/127691#issue-2723135260",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 97237,
+    "url": "https://github.com/python/cpython/issues/127691#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 97240,
+    "url": "https://github.com/python/cpython/issues/127691#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 97241,
+    "url": "https://github.com/python/cpython/pull/123380#discussion_r1865910020",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 97250,
+    "url": "https://en.wikipedia.org/wiki/Heapsort",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97251,
+    "url": "https://docs.python.org/3/library/heapq.html#",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97252,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappush",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97254,
+    "url": "https://en.wikipedia.org/wiki/Priority_queue",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97255,
+    "url": "https://docs.python.org/3/library/heapq.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97256,
+    "url": "https://docs.python.org/3/library/heapq.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97260,
+    "url": "https://docs.python.org/3/library/heapq.html#priority-queue-implementation-notes",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97262,
+    "url": "https://docs.python.org/3/library/heapq.html#other-applications",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97265,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapify",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97269,
+    "url": "https://en.wikipedia.org/wiki/Online_algorithm",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97271,
+    "url": "https://docs.python.org/3/library/heapq.html#theory",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97277,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97279,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/heapq.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97281,
+    "url": "https://docs.python.org/3/library/heapq.html#module-heapq",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97287,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappop",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97289,
+    "url": "https://en.wikipedia.org/wiki/Median",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97290,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97292,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/heapq.py",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97293,
+    "url": "https://docs.python.org/3/library/heapq.html#basic-examples",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 97295,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97296,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97297,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97299,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97300,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#barrier",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97301,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97302,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97304,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.abort",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97307,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97308,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.notify",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97310,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.wait_for",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97311,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97312,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97313,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#condition",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97315,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.BrokenBarrierError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97316,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio-sync.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97320,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#synchronization-primitives",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97321,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97323,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.n_waiting",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97324,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97325,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97326,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#lock",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97328,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#boundedsemaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97331,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#event",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97332,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#semaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97334,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97336,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.parties",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97337,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97338,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.clear",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97339,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.BoundedSemaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97340,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.wait_for",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97341,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97342,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/locks.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97343,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.is_set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97344,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97345,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97346,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97347,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.reset",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97348,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.notify_all",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97350,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.broken",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97352,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97355,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 97357,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Synchronization Primitives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Synchronization Primitives — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d80",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d48",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.UnionType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.UnionType"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
