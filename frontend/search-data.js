@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 792,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref",
+    "title": "wsgiref — WSGI Utilities and Reference Implementation — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internet Protocols and Support » wsgiref — WSGI Utilities and Reference Implementation | Theme Auto Light Dark | wsgiref — WSGI Utilities and Reference Implementation¶ Source code: Lib/wsgiref Warning wsgiref is a reference implementation and is not recommended for production. The module only implements basic security checks. The Web Server Gateway Interface (WSGI) is a standard interface between web server software and web applications written in Python. Having a standard interface makes it easy to use an application that supports WSGI with a number of different web servers. Only authors of web servers and programming frameworks need to know every detail and corner case of the WSGI design. You don’t need to understand every detail of WSGI just to install a WSGI application or to write a web application using an existing framework. wsgiref is a reference implementation of the WSGI specification that can be used to add WSGI support to a web server or framework. It provides utilities for manipulating WSGI environment variables and response headers, base classes for implementing WSGI servers, a demo HTTP server that serves WSGI applications, types for static type checking, and a validation tool that checks WSGI servers and applications for conformance to the WSGI specification (PEP 3333). See wsgi.readthedocs.io for more information about WSGI, and links to tutorials and other resources. wsgiref.util – WSGI environment utilities¶ This module provides a variety of utility functions for working with WSGI environments. A WSGI environment is a dictionary containing HTTP request variables as described in PEP 3333. All of the functions taking an environ parameter expect a WSGI-compliant dictionary to be supplied; please see PEP 3333 for a detailed specification and WSGIEnvironment for a type alias that can be used in type annotations. wsgiref.util.guess_scheme(environ)¶ Return a guess for whether wsgi.url_scheme should be “http” or “https”, by checking for a HTTPS environment variable in the environ dictionary. The return value is a string. This function is useful when creating a gateway that wraps CGI or a CGI-like protocol such as FastCGI. Typically, servers providing such protocols will include a HTTPS variable with a value of “1”, “yes”, or “on” when a request is received via SSL. So, this function returns “https” if such a value is found, and “http” otherwise. wsgiref.util.request_uri(environ, include_query\u003dTrue)¶ Return the full request URI, optionally including the query string, using the algorithm found in the “URL Reconstruction” section of PEP 3333. If include_query is false, the query string is not included in the resulting URI. wsgiref.util.application_uri(environ)¶ Similar to request_uri(), except that the PATH_INFO and QUERY_STRING variables are ignored. The result is the base URI of the application object addressed by the request. wsgiref.util.shift_path_info(environ)¶ Shift a single name from PATH_INFO to SCRIPT_NAME and return the name. The environ dictionary is modified in-place; use a copy if you need to keep the original PATH_INFO or SCRIPT_NAME intact. If there are no remaining path segments in PATH_INFO, None is returned. Typically, this routine is used to process each portion of a request URI path, for example to treat the path as a series of dictionary keys. This routine modifies the passed-in environment to make it suitable for invoking another WSGI application that is located at the target URI. For example, if there is a WSGI application at /foo, and the request URI path is /foo/bar/baz, and the WSGI application at /foo calls shift_path_info(), it will receive the string “bar”, and the environment will be updated to be suitable for passing to a WSGI application at /foo/bar. That is, SCRIPT_NAME will change from /foo to /foo/bar, and PATH_INFO will change from /bar/baz to /baz. When PATH_INFO is just a “/”, this routine returns an empty string and appends a trailing slash to SCRIPT_NAME, even though empty path segments are normally ignored, and SCRIPT_NAME doesn’t normally end in a slash. This is intentional behavior, to ensure that an application can tell the difference between URIs ending in /x from ones ending in /x/ when using this routine to do object traversal. wsgiref.util.setup_testing_defaults(environ)¶ Update environ with trivial defaults for testing purposes. This routine adds various parameters required for WSGI, including HTTP_HOST, SERVER_NAME, SERVER_PORT, REQUEST_METHOD, SCRIPT_NAME, PATH_INFO, and all of the PEP 3333-defined wsgi.* variables. It only supplies default values, and does not replace any existing settings for these variables. This routine is intended to make it easier for unit tests of WSGI servers and applications to set up dummy environments. It should NOT be used by actual WSGI servers or applications, since the data is fake! Example usage (see also de",
+    "scrapedAt": "2026-05-10 04:46:46.102735"
+  },
+  {
+    "id": 791,
+    "url": "https://github.com/python/cpython/issues/90102",
+    "title": "Avoid calling isatty() for most open() calls · Issue #90102 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Avoid calling isatty() for most open() calls #90102 New issue Copy link New issue Copy link Closed Closed Avoid calling isatty() for most open() calls#90102 Copy link Labels 3.13bugs and security fixesbugs and security fixesperformancePerformance or resource usagePerformance or resource usagetopic-IO Description collinanderson mannequin opened on Dec 1, 2021 Issue body actions BPO 45944 Nosy @pitrou, @benjaminp, @serhiy-storchaka, @eryksun, @collinanderson PRs bpo-45944: Avoid calling isatty() for most open() calls #29870 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2021-12-01.05:08:15.763\u003e\nlabels \u003d [\u00273.11\u0027, \u0027expert-IO\u0027, \u0027performance\u0027]\ntitle \u003d \u0027Avoid calling isatty() for most open() calls\u0027\nupdated_at \u003d \u003cDate 2021-12-01.11:53:13.388\u003e\nuser \u003d \u0027https://github.com/collinanderson\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-12-01.11:53:13.388\u003e\nactor \u003d \u0027eryksun\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027IO\u0027]\ncreation \u003d \u003cDate 2021-12-01.05:08:15.763\u003e\ncreator \u003d \u0027collinanderson\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 45944\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 3.0\nmessages \u003d [\u0027407427\u0027, \u0027407434\u0027, \u0027407444\u0027]\nnosy_count \u003d 6.0\nnosy_names \u003d [\u0027pitrou\u0027, \u0027benjamin.peterson\u0027, \u0027stutzbach\u0027, \u0027serhiy.storchaka\u0027, \u0027eryksun\u0027, \u0027collinanderson\u0027]\npr_nums \u003d [\u002729870\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027performance\u0027\nurl \u003d \u0027https://bugs.python.org/issue45944\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-90102: Optimize io.FileIO.isatty() #112495 gh-90102: Remove isatty call during regular open #124922 gh-90102: Fix pyio return value #125089 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.13bugs and security fixesbugs and security fixesperformancePerformance or resource usagePerformance or resource usagetopic-IO Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:46:42.476951"
+  },
+  {
+    "id": 790,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME",
+    "title": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located on the Python module path and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Search sys.path for the named module and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, the first element of sys",
+    "scrapedAt": "2026-05-10 04:46:37.998612"
+  },
+  {
+    "id": 789,
+    "url": "https://docs.python.org/3/library/functools.html#functools.reduce",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than lru_cache() with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to property(), with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of cached_property() are somewhat different from property(). A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to cached_property() can also be achieved by stacking property() on top of lru_cache(). See How do I cache method calls? for more details on how this differs from cached_property(). Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key fun",
+    "scrapedAt": "2026-05-10 04:46:33.535763"
+  },
+  {
+    "id": 788,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree",
+    "title": "xml.etree.ElementTree — The ElementTree XML API — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Structured Markup Processing Tools » xml.etree.ElementTree — The ElementTree XML API | Theme Auto Light Dark | xml.etree.ElementTree — The ElementTree XML API¶ Source code: Lib/xml/etree/ElementTree.py The xml.etree.ElementTree module implements a simple and efficient API for parsing and creating XML data. Changed in version 3.3: This module will use a fast implementation whenever available. Deprecated since version 3.3: The xml.etree.cElementTree module is deprecated. Note If you need to parse untrusted or unauthenticated data, see XML security. Tutorial¶ This is a short tutorial for using xml.etree.ElementTree (ET in short). The goal is to demonstrate some of the building blocks and basic concepts of the module. XML tree and elements¶ XML is an inherently hierarchical data format, and the most natural way to represent it is with a tree. ET has two classes for this purpose - ElementTree represents the whole XML document as a tree, and Element represents a single node in this tree. Interactions with the whole document (reading and writing to/from files) are usually done on the ElementTree level. Interactions with a single XML element and its sub-elements are done on the Element level. Parsing XML¶ We’ll be using the fictive country_data.xml XML document as the sample data for this section: \u003c?xml version\u003d\"1.0\"?\u003e\n\u003cdata\u003e\n    \u003ccountry name\u003d\"Liechtenstein\"\u003e\n        \u003crank\u003e1\u003c/rank\u003e\n        \u003cyear\u003e2008\u003c/year\u003e\n        \u003cgdppc\u003e141100\u003c/gdppc\u003e\n        \u003cneighbor name\u003d\"Austria\" direction\u003d\"E\"/\u003e\n        \u003cneighbor name\u003d\"Switzerland\" direction\u003d\"W\"/\u003e\n    \u003c/country\u003e\n    \u003ccountry name\u003d\"Singapore\"\u003e\n        \u003crank\u003e4\u003c/rank\u003e\n        \u003cyear\u003e2011\u003c/year\u003e\n        \u003cgdppc\u003e59900\u003c/gdppc\u003e\n        \u003cneighbor name\u003d\"Malaysia\" direction\u003d\"N\"/\u003e\n    \u003c/country\u003e\n    \u003ccountry name\u003d\"Panama\"\u003e\n        \u003crank\u003e68\u003c/rank\u003e\n        \u003cyear\u003e2011\u003c/year\u003e\n        \u003cgdppc\u003e13600\u003c/gdppc\u003e\n        \u003cneighbor name\u003d\"Costa Rica\" direction\u003d\"W\"/\u003e\n        \u003cneighbor name\u003d\"Colombia\" direction\u003d\"E\"/\u003e\n    \u003c/country\u003e\n\u003c/data\u003e\n We can import this data by reading from a file: import xml.etree.ElementTree as ET\ntree \u003d ET.parse(\u0027country_data.xml\u0027)\nroot \u003d tree.getroot()\n Or directly from a string: root \u003d ET.fromstring(country_data_as_string)\n fromstring() parses XML from a string directly into an Element, which is the root element of the parsed tree. Other parsing functions may create an ElementTree. Check the documentation to be sure. As an Element, root has a tag and a dictionary of attributes: \u003e\u003e\u003e root.tag\n\u0027data\u0027\n\u003e\u003e\u003e root.attrib\n{}\n It also has children nodes over which we can iterate: \u003e\u003e\u003e for child in root:\n...     print(child.tag, child.attrib)\n...\ncountry {\u0027name\u0027: \u0027Liechtenstein\u0027}\ncountry {\u0027name\u0027: \u0027Singapore\u0027}\ncountry {\u0027name\u0027: \u0027Panama\u0027}\n Children are nested, and we can access specific child nodes by index: \u003e\u003e\u003e root[0][1].text\n\u00272008\u0027\n Note Not all elements of the XML input will end up as elements of the parsed tree. Currently, this module skips over any XML comments, processing instructions, and document type declarations in the input. Nevertheless, trees built using this module’s API rather than parsing from XML text can have comments and processing instructions in them; they will be included when generating XML output. A document type declaration may be accessed by passing a custom TreeBuilder instance to the XMLParser constructor. Pull API for non-blocking parsing¶ Most parsing functions provided by this module require the whole document to be read at once before returning any result. It is possible to use an XMLParser and feed data into it incrementally, but it is a push API that calls methods on a callback target, which is too low-level and inconvenient for most needs. Sometimes what the user really wants is to be able to parse XML incrementally, without blocking operations, while enjoying the convenience of fully constructed Element objects. The most powerful tool for doing this is XMLPullParser. It does not require a blocking read to obtain the XML data, and is instead fed with data incrementally with XMLPullParser.feed() calls. To get the parsed XML elements, call XMLPullParser.read_events(). Here is an example: \u003e\u003e\u003e parser \u003d ET.XMLPullParser([\u0027start\u0027, \u0027end\u0027])\n\u003e\u003e\u003e parser.feed(\u0027\u003cmytag\u003esometext\u0027)\n\u003e\u003e\u003e list(parser.read_events())\n[(\u0027start\u0027, \u003cElement \u0027mytag\u0027 at 0x7fa66db2be58\u003e)]\n\u003e\u003e\u003e parser.feed(\u0027 more text\u003c/mytag\u003e\u0027)\n\u003e\u003e\u003e for event, elem in parser.read_events():\n...     print(event)\n...     print(elem.tag, \u0027text\u003d\u0027, elem.text)\n...\nend\nmytag text\u003d sometext more text\n The obvious use case is applications that operate in a non-blocking fashion where the XML data is being received from a socket or read incrementally from some storage device. In such cases, blocking reads are unacceptable. Because it’s so flexible, XMLPullParser can be inconvenient to use for simpler use-cases. If you don’t mind your application blocking on reading XML data but would still like to have incremental parsing ",
+    "scrapedAt": "2026-05-10 04:46:29.676478"
+  },
+  {
     "id": 787,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#imaplib",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -5222,26 +5257,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 788,
-    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
-  },
-  {
-    "id": 789,
-    "url": "https://docs.python.org/3/library/functools.html#functools.reduce"
-  },
-  {
-    "id": 790,
-    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
-  },
-  {
-    "id": 791,
-    "url": "https://github.com/python/cpython/issues/90102"
-  },
-  {
-    "id": 792,
-    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
   },
   {
     "id": 793,
@@ -134175,10 +134190,1035 @@ window.searchData = [
     "id": 101909,
     "url": "https://github.com/python/cpython/issues/127221#top",
     "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 103145,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.find",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103146,
+    "url": "https://docs.python.org/3/library/xml.html#xml-security",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103147,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementInclude",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103151,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103153,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.start",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103154,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.tostring",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103155,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.parse",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103157,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLID",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103160,
+    "url": "https://www.w3.org/TR/xml-infoset/",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103161,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103162,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.items",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103165,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.clear",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103166,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ParseError.code",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103168,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.canonicalize",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103169,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.iselement",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103170,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.extend",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103172,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/xml/etree/ElementTree.py",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103174,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Comment",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103175,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.fromstringlist",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103176,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.getroot",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103177,
+    "url": "https://www.w3.org/TR/xml-c14n2/",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103179,
+    "url": "https://www.iana.org/assignments/character-sets/character-sets.xhtml",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103183,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.parse",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103184,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.flush",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103185,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.end",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103186,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.keys",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103187,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.tag",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103189,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.fromstring",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103190,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103192,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.register_namespace",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103195,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementtree-parsing-xml",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103196,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.findtext",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103197,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementInclude.default_loader",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103199,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103200,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103201,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.tostringlist",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103203,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.itertext",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103204,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103206,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103207,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103209,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser.feed",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103210,
+    "url": "https://docs.python.org/3/library/pyexpat.html#xml.parsers.expat.xmlparser.SetReparseDeferralEnabled",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103211,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.makeelement",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103212,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.iter",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103214,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.findall",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103215,
+    "url": "https://www.w3.org/TR/2006/REC-xml11-20060816/#NT-EncodingDecl",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103218,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.pi",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103219,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.feed",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103220,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XML",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103224,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.insert",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103225,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.get",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103226,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.QName",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103227,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.write",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103228,
+    "url": "https://en.wikipedia.org/wiki/XML_namespace",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103231,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser.close",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103235,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.indent",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103236,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.tail",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103237,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree._setroot",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103239,
+    "url": "https://docs.python.org/3/library/pyexpat.html#module-xml.parsers.expat",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103241,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.iterparse",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103242,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.remove",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103243,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/xml.etree.elementtree.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103244,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.doctype",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103245,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.findall",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103246,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.start_ns",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103249,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.comment",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103250,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.text",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103251,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.iter",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103252,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103253,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.set",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103254,
+    "url": "https://www.w3.org/TR/xinclude/",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103255,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementInclude.include",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103258,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.close",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103260,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.iterfind",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103261,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.iterfind",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103262,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.read_events",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103263,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.findtext",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103264,
+    "url": "https://www.w3.org/TR/xpath",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103265,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementtree-xpath",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103266,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.dump",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103268,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ParseError.position",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103272,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ElementTree.find",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103274,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser.flush",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103275,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.end_ns",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103276,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.C14NWriterTarget",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103277,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.close",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103278,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.attrib",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103280,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element.append",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103281,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103285,
+    "url": "https://www.w3.org/TR/xml-names/#defaulting",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103286,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.TreeBuilder.data",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103288,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.SubElement",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103290,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ProcessingInstruction",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103292,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ParseError",
+    "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 103305,
+    "url": "https://en.wikipedia.org/wiki/Fibonacci_number",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103306,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.args",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103307,
+    "url": "https://docs.python.org/3/library/functools.html#",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103308,
+    "url": "https://docs.python.org/3/library/functools.html#functools.cached_property",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103309,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.accumulate",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103312,
+    "url": "https://en.wikipedia.org/wiki/Memoization",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103313,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.func",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103320,
+    "url": "https://en.wikipedia.org/wiki/Dynamic_programming",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103325,
+    "url": "https://docs.python.org/3/library/abc.html#abc.abstractmethod",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103326,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/functools.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103327,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.keywords",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103332,
+    "url": "https://docs.python.org/3/library/functools.html#functools.singledispatch.register",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103334,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-cache-method-calls",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103341,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/functools.py",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103353,
+    "url": "https://peps.python.org/pep-0412/",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103364,
+    "url": "https://docs.python.org/3/library/functools.html#functools.wraps",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103366,
+    "url": "https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_(LRU)",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103368,
+    "url": "https://docs.python.org/3/library/functools.html#functools.lru_cache",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103371,
+    "url": "https://docs.python.org/3/library/functools.html#functools.singledispatchmethod",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103375,
+    "url": "https://docs.python.org/3/library/functools.html#functools.cache",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103376,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d17482",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 103584,
+    "url": "https://github.com/python/cpython/pull/125089",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103586,
+    "url": "https://github.com/python/cpython/issues/90102#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103590,
+    "url": "https://github.com/python/cpython/issues/90102#top",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103591,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.13%22",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103592,
+    "url": "https://github.com/python/cpython/pull/112495",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103593,
+    "url": "https://github.com/python/cpython/issues/90102#issue-1199070274",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103595,
+    "url": "https://bugs.python.org/issue45944",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103596,
+    "url": "https://github.com/benjaminp",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103598,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-IO%22",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103599,
+    "url": "https://github.com/collinanderson",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103600,
+    "url": "https://github.com/python/cpython/pull/124922",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103601,
+    "url": "https://github.com/python/cpython/pull/29870",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 103603,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.headers.Headers.add_header",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103605,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.validate.validator",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103606,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.traceback_limit",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103607,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.application_uri",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103609,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.HTTPServer",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103610,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.IISCGIHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103611,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.get_scheme",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103612,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_file_wrapper",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103613,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.read_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103614,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.setup_testing_defaults",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103615,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.make_server",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103617,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.add_cgi_vars",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103618,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.http_version",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103619,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler._flush",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103621,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIServer.get_app",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103622,
+    "url": "https://docs.python.org/3/library/wsgiref.html#",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103624,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler.get_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103625,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.WSGIEnvironment",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103626,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.WSGIApplication",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103628,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.get_stdin",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103630,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.headers.Headers",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103631,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.guess_scheme",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103632,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103633,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.request_uri",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103635,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_headers",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103640,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.server_software",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103641,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_status",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103642,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler.get_stderr",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103644,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.setup_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103645,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103646,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.get_stderr",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103647,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.os_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103648,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler._write",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103652,
+    "url": "https://peps.python.org/pep-3333/#optional-platform-specific-file-handling",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103653,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/wsgiref",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103658,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_output",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103659,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/wsgiref.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103664,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.SimpleHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103667,
+    "url": "https://peps.python.org/pep-3333/#input-and-error-streams",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103668,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIServer",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103669,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.FileWrapper",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103670,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.InputStream",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103672,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_run_once",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103673,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.log_exception",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103674,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.run",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103675,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_multithread",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103676,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseCGIHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103677,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.FileWrapper",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103679,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_multiprocess",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103681,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103682,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.origin_server",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103683,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_body",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103684,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.sendfile",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103685,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.CGIHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103686,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.headers.Headers.get_all",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103688,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.is_hop_by_hop",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103689,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIServer.set_app",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103692,
+    "url": "https://peps.python.org/pep-3333/#the-start-response-callable",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103696,
+    "url": "https://wsgi.readthedocs.io/",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103697,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.shift_path_info",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103699,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2616.html",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103702,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.ErrorStream",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103703,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.demo_app",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103704,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler.handle",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103706,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict.get",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 103707,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.StartResponse",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wsgiref — WSGI Utilities and Reference Implementation — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wsgiref — WSGI Utilities and Reference Implementation — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/96538200?v\u003d4\u0026size\u003d80",
+    "alt": "@collinanderson",
+    "pageTitle": "Avoid calling isatty() for most open() calls · Issue #90102 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/96538200?v\u003d4\u0026size\u003d48",
+    "alt": "@collinanderson",
+    "pageTitle": "Avoid calling isatty() for most open() calls · Issue #90102 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "xml.etree.ElementTree — The ElementTree XML API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "xml.etree.ElementTree — The ElementTree XML API — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
