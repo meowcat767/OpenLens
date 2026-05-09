@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 353,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/",
+    "title": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "content": "Ga naar hoofdinhoud Homepage Auto Volkswagen Volkswagen Toon aanbod 1 / 11 btnLabelPrevbtnLabelNext Toon aanbod Toon aanbod Volkswagen is een Duitse autofabrikant waarvan het hoofdkwartier gevestigd is in Wolfsburg. Het merk bestaat sinds 1937 en is inmiddels uitgegroeid tot een van de grootste autofabrikanten van de wereld. Lees verder. Meer tonen Volkswagen Vind het model dat bij je past Coupé Sedan Cabrio VW Caddy Volkswagen Amarok Volkswagen Arteon Volkswagen Bora Volkswagen Corrado Volkswagen Crafter Volkswagen e-Golf Volkswagen Eos Alles weergeven Volkswagen aanbiedingen Volkswagen Scirocco1.4 TSI € 5.995 10/2008 218.399 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3291 CNStrijen Volkswagen Touran2.0-16V FSI Highline Clima Bj:2005 NAP! € 1.250 01/2005 294.371 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8304 AWEmmeloord Volkswagen Golf1.2 TSI CUP Edition NAVI | STOELVERWARMING € 10.999 04/2014 99.887 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7602 PWAlmelo Volkswagen Golf Sportsvan1.4 TSI 125PK DSG R-Line•ACC•Camera € 16.995 10/2017 63.307 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7021 BZZelhem Volkswagen Golf1.2 TSI Comfortline | Navigatie | Cruise | Climate € 3.885 10/2011 282.002 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7711 EPNieuwleusen Volkswagen Golf GTI2.0TSI 300PK Clubsport Pano HUD iQ-Light H\u0026K 19-i € 47.6491 07/2023 26.735 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8444 DCHeerenveen Volkswagen Golf2.0 TDI R-Line Business AUT. PANO TREKHAAK ACC PDC € 31.995 09/2023 55.778 km Diesel - (l/100 km) 2,8 Autobedrijf NL 3135 GMVlaardingen Volkswagen Tiguan1.5 TSI R-LINE BUSINESS+ I AUTOMAAT I TREKHAAK I P € 35.945 06/2022 46.541 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3443 TJWoerden Volkswagen Tiguan Allspace2.0 TSI 4Motion Highline Business R 7p.R-Line/Leer € 27.900 06/2019 153.551 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4131 NNVianen Volkswagen Golf Cabriolet1.4 TSI, leder, airco, lmv 17 inch € 7.995 06/2012 155.858 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5025 VJTilburg Volkswagen Golf1.2 TSI 110pk 5-drs Highline € 13.835 09/2015 112.344 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6343 AEKlimmen Volkswagen Golf2.0 TSI R 4Motion 20 Jahre Ed. 333PK | Akra | Pano € 49.980 06/2023 32.841 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5015 BMTilburg Volkswagen Tiguan1.4 TSI Connect Series | Navigatie | Adapt. Cruise € 15.940 08/2016 143.681 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9403 APAssen Volkswagen up!Airco|Elek.ramen|5-deurs|NAP € 6.250 01/2016 139.200 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3882 TMPutten Volkswagen Tiguan1.5 TSI ACT Highline Business R |PANO|MASSAGE|CARP € 24.995 07/2020 135.652 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2952 AXAlblasserdam Volkswagen Tiguan1.4 TSI eHybrid R-Line Black Style | Leer | Camera € 33.9501 10/2022 94.932 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7951 SHStaphorst Volkswagen Golf1.0 TSI Comfortline | LED | CarPlay | Adaptive Cru € 12.885 03/2018 138.841 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7711 EPNieuwleusen Volkswagen up!1.0 CUP-editie|PANO|AIRCO|STOELVERWARMING|APK|4/5- € 7.450 06/2014 114.481 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7545 MVEnschede Volkswagen Golf Sportsvan1.0 TSI Comfortline Navigatie /Airco / Carplay / C € 11.450 06/2017 80.820 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2408 AMAlphen Aan Den Rijn Volkswagen Polo1.4-16V Highline/Climate/Cruise/Pdc/Elek.Ramen/Lmv € 6.999 12/2011 157.939 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2288 JARijswijk Bekijk alle Volkswagen aanbiedingen Bijzonderheden van het automerk Volkswagen Twee modellen van Volkswagen, Kever en Golf, in de top vijf best verkochte auto’s ooit Bekend van auto’s voor het volk: betaalbaar, praktisch en van hoge kwaliteit Volkswagen Group overkoepelende organisatie met onder meer Lamborghini, Porsche, Audi en Bentley Historie Volkswagen Volkswagen werd opgericht in 1937 toen de Duitse regering het bedrijf opdracht gaf een auto te bouwen die betaalbaar was voor de gemiddelde Duitse burger. Zo ontstond de VW Kever. De komst van de Kever is een belangrijke mijlpaal in de autogeschiedenis. Niet alleen bereikbaar voor veel mensen, hij maakte ook de wereld een stuk mobieler en gaf vrijheid. Tijdens de Tweede Wereldoorlog werden veel Kevers gemaakt voor werknemers en organisaties van de Duitse overheid. Niet lang na de oorlog was de Kever ook beschikbaar voor particulieren. Dat werd zo’n succes dat in 1955 al de miljoenste Kever van de band rolde. De Kever werd intern ‘Type 1’ genoemd. In 1950 werkte Volkswagen aan de ‘Type 2’. Dit is de inmiddels iconische Transporter T1. De bus genoot immense populariteit. Van hippies en kampeerders tot aan bedrijven die hem inzette als werkbus of ijscowagen, de bus was ontzettend veelzijdig. Het volgende succesnummer is de Volkswagen Golf, die in 1974 voor het eerst van de band rolde. De hatchback was de opvolger van de Kever en veroverde vele harten. Niet alleen vanwege zijn betaalbaarheid en inzetbaarheid, maar ook",
+    "scrapedAt": "2026-05-10 04:04:01.685851"
+  },
+  {
+    "id": 352,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/",
+    "title": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "content": "Ga naar hoofdinhoud Homepage Nederland Zuid-Holland Rotterdam Occasions vinden in Rotterdam Aanbod in jouw omgeving Toon meer Tweedehands auto’s in Rotterdam Renault Clio Estate 0.9 TCe Night\u0026Day Sensor|Navi|Trekhaak! € 4.250,- 168.884 km 12/2014 66 kW (90 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 104 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3214 VP ZUIDLAND Subaru Forester 2.0 X Comfort|GARANTIE|AUTOMAAT|TREKHAAK|NAVI|APK0 € 14.799,- 82.941 km 04/2013 110 kW (150 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 174 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2984 AT RIDDERKERK Hyundai KONA 1.6 TGDI Style 4WD € 14.549,- 123.636 km 02/2018 130 kW (177 PK) Gebruikt 2 vorige eigenaren Automatisch Benzine 6,7 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 153 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3316 BE DORDRECHT MINI Cooper Mini 1.6 CHAMPAGNE (GOED ONDERHOUDEN, NIEUWE APK, € 2.495,- 198.081 km 02/2007 88 kW (120 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 139 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-4879 AH ETTEN-LEUR Volkswagen Scirocco 1.4 TSI Highline CLIMA NAVI GOED ONDERHOUDEN APK 1 € 4.895,- 207.299 km 12/2009 118 kW (160 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine 6,6 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 154 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3076 JA ROTTERDAM MINI Cooper Clubman Mini 1.5 Business Edition 1e-Eig \u0026 Dealer-Onderh. € 24.900,- 47.117 km 08/2022 100 kW (136 PK) Gebruikt 1 vorige eigenaar Automatisch Benzine - (l/100 km) 137 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2394 CG HAZERSWOUDE RIJNDIJK BMW 330 3-serie Touring 330e|M-sportPro|Trekhaak|Cam|HUD|A € 41.950,- 47.000 km 03/2023 215 kW (292 PK) Gebruikt - (Vorige eigenaren) Automatisch Elektro/Benzine - (l/100 km) - (g/km) Bedrijf, NL-4879 AK ETTEN-LEUR BMW 320 3-serie 320i Executive, Apple Carplay, Android Aut € 22.950,- 102.980 km 09/2019 135 kW (184 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 126 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3417 XS MONTFOORT Volkswagen Touran 1.4 TSI Highline/Pano/Carplay/Climate/St.verw/Pdc/ € 8.499,- 145.924 km 07/2012 103 kW (140 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 159 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2288 JA RIJSWIJK Renault Clio Estate 0.9 TCe Night\u0026Day Sensor|Navi|Trekhaak! € 4.250,- 168.884 km 12/2014 66 kW (90 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 104 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3214 VP ZUIDLAND Subaru Forester 2.0 X Comfort|GARANTIE|AUTOMAAT|TREKHAAK|NAVI|APK0 € 14.799,- 82.941 km 04/2013 110 kW (150 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 174 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2984 AT RIDDERKERK Hyundai KONA 1.6 TGDI Style 4WD € 14.549,- 123.636 km 02/2018 130 kW (177 PK) Gebruikt 2 vorige eigenaren Automatisch Benzine 6,7 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 153 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3316 BE DORDRECHT MINI Cooper Mini 1.6 CHAMPAGNE (GOED ONDERHOUDEN, NIEUWE APK, € 2.495,- 198.",
+    "scrapedAt": "2026-05-10 04:03:59.622306"
+  },
+  {
+    "id": 351,
+    "url": "https://www.autoscout24.nl/lst/c/suv-pick-up",
+    "title": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud SUV \u0026 pick-up occasion kopen Filteren Alles reset Merk en model Carroserievorm SUV/Off-Road/Pick-Up Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Zoeken op trefwoord Filteren2 Nederland SUV/Off-Road/Pick-Up Zoekopdracht opslaan Aston Martin DBX 4.0 V8 707 | Minotaur Green - Nieuwstaat! Bewaar 50 € 314.9501 Zeer populair 09/2025 4.354 km Benzine 521 kW (708 PK) Koster \u0026 Hogeslag AutomotiveNL-8281 JK GENEMUIDEN + Meer voertuigen Peugeot 5008 1.2 PureTech Crossway Avantage 1e-Eig. \u0026 Keurig-On Bewaar 45 € 19.4001 01/2021 100.016 km Benzine 96 kW (131 PK) Panorama dak, Garantie, Automatische klimaatregeling, Getinte ramen, Parkeerhulp met camera, Keyless Entry, Lendensteun, Parkeerhulp voor Autobedrijf van SchieNL-2394 CG HAZERSWOUDE RIJNDIJK + Meer voertuigen Suzuki S-Cross 1.0 Boosterjet Exclusive, Stoelverwarming,Navigati Bewaar 26 € 15.950 06/2017 51.890 km Benzine 82 kW (111 PK) Trekhaak, LED verlichting, Lichtmetalen velgen, Airbag bestuurder, Keyless Entry, Stoelverwarming, Navigatiesysteem, Getinte ramen Autobedrijf van BurkenNL-3927 BG RENSWOUDE + Meer voertuigen Toyota Yaris Cross 1.5 Hybrid Active grijs Bewaar 35 € 26.4951 04/2024 18.507 km Elektro/Benzine 85 kW (116 PK) Lichtmetalen velgen, Alarm, Regensensor, Parkeerhulp met camera, Startonderbreker, Grootlichtassistent, Dakrails, Adaptieve Cruise Control Hamstra \u0026 HerbersNL-7903 AS HOOGEVEEN + Meer voertuigen Jaguar I-Pace EV400 BusinessSE 90 kWh 400pk SOH 90% Panoramadak/ Bewaar 30 € 16.950 11/2019 196.192 km Elektrisch 294 kW (400 PK) Alarm, Lichtmetalen velgen, Stoelverwarming, Nieuwe APK, Parkeerhulp met camera, Elektrische achterklep, Airbag bestuurder, Adaptieve Cruise Control Elegance Car SelectionNL-1689 AR ZWAAG + Meer voertuigen Porsche Macan 3.0 GTS Pano Leder Camera Luchtvering Stoel/Stoelv Bewaar 35 € 49.950 12/2017 83.316 km Benzine 266 kW (362 PK) Luchtvering, Alarm, Sportstoelen, Cruise control, 360° camera, Airbag bestuurder, Bluetooth, Grootlichtassistent Van Essen Auto\u0027sNL-8071 GD NUNSPEET + Meer voertuigen Renault Symbioz 1.8 E-TECH FULL HYBRID 160PK ESPRIT ALPINE | Panor Bewaar 50 € 32.9001 08/2025 18.417 km Elektro/Benzine 118 kW (160 PK) Panorama dak, Elektrische achterklep, Stuurwielverwarming, 360° camera, Elektrische stoelverstelling, Elektrische ramen, Garantie, Alarm HVAuto\u0027sNL-9207 GL DRACHTEN + Meer voertuigen Mitsubishi Eclipse Cross 2.4 PHEV 188pk Intense+ Navigatie | Achteruitrijca Bewaar 41 € 20.7501 01/2023 122.497 km Elektro/Benzine 138 kW (188 PK) Alarm, Elektrische stoelverstelling, Garantie, Nieuwe APK, 4x4, Stoelverwarming, Grootlichtassistent, Mistlampen Autobedrijf Okken GietenNL-9461 VA GIETEN + Meer voertuigen Toyota Yaris Cross 1.5 Hybrid Dynamic | Navi | Camera | Cruise Bewaar 22 € 23.7501 11/2022 40.444 km Elektro/Benzine 68 kW (92 PK) Getinte ramen, Alarm, Parkeerhulp met camera, Mistlampen, Lichtmetalen velgen, Automatische klimaatregeling, Verkeersbordherkenning, Grootlichtassistent Autobedrijf Bockhoudt B.V.NL-9723 HM GRONINGEN + Meer voertuigen Audi Q2 1.0 TFSI DESIGN ELEK-KLEP/CRUISE/STOELVERW/CLIMA/D Bewaar 26 € 18.950 11/2018 81.088 km Benzine 85 kW (116 PK) Regensensor, Garantie, Elektrische achterklep, Stuurbekrachtiging, Nieuwe APK, Armsteun, Cruise control, Automatische klimaatregeling Vortkamp EnschedeNL-7532 SW ENSCHEDE + Meer voertuigen Kia Niro 1.6 GDi PHEV ExecutiveLine / Stoel/stuurverwr. / A Bewaar 39 € 23.745 07/2020 65.687 km Elektro/Benzine -/- V\u0026L Car Service Autoverkoop B.V.NL-5348 PV OSS + Meer voertuigen Jeep Compass 1.5T e-Hybrid Altitude Key less/360 Camera/Stoel e Bewaar 41 € 29.9001 07/2024 35.478 km Elektro/Benzine -/- Autobedrijf Den Hartog B.V.NL-3222 AD HELLEVOETSLUIS + Meer voertuigen Opel Crossland X 1.2 T. INNOVATION l CLIMA l LMV l NAVI l CRUISE l Bewaar 50 € 11.995 11/2018 80.246 km Benzine 81 kW (110 PK) Stuurbekrachtiging, Lichtmetalen velgen, Startonderbreker, Niet-rokers auto, Cruise control, Apple CarPlay, USB, Regensensor SK Auto\u0027sNL-7821 AP EMMEN + Meer voertuigen Opel Mokka 1.2 Turbo GS Bewaar 34 € 20.649 09/2023 20.795 km Benzine 96 kW (131 PK) 21 dagen geld-terug-garantie, inclusief 1 jaar garantie Autohero NederlandNL-1101 CL AMSTERDAM + Meer voertuigen Volvo XC40 1.5 T5 Recharge R-Design Black Edition | Trekhaak Bewaar 33 € 26.950 11/2020 129.896 km Elektro/Benzine 120 kW (163 PK) Sportonderstel, Geheel digitaal combi-instrument, Trekhaak, Sfeerverlichting, Elektrische achterklep, Elektrische ramen, Apple CarPlay, Getinte ramen Van der Linden Auto\u0027s B.V.NL-7905 SE HOOGEVEEN + Meer voertuigen Toyota C-HR 1.8 Hybrid Dynamic * Origineel nederlands * Naviga Bewaar 41 € 15.900 03/2017 154.735 km Elektro/Benzine 72 kW (98 PK) Met onderhoudshistorie, Getinte ramen, Lichtmetalen velgen, Parkeerhulp met camera, Adaptieve Cruise Control, Elektrische ramen, Mistlampen, La",
+    "scrapedAt": "2026-05-10 04:03:54.01714"
+  },
+  {
+    "id": 350,
+    "url": "https://www.autoscout24.nl/auto/ford/",
+    "title": "Alle informatie over het automerk Ford bij AutoScout24",
+    "content": "Ga naar hoofdinhoud Homepage Auto Ford Ford Toon aanbod 1 / 12 btnLabelPrevbtnLabelNext Toon aanbod Toon aanbod Ford – officieel Ford Motor Company – is een Amerikaanse autofabrikant. Eind jaren zestig ontstond Ford of Europe door de samenvoeging van de Duitse en de Britse activiteiten van Ford. Verreweg de meeste auto’s die Ford in Nederland verkoopt, zijn dan ook in Europa ontworpen en geproduceerd. Lees meer Meer tonen Ford Vind het model dat bij je past Sedan Coupé Cabrio Ford Mondeo Ford B-Max Ford Bronco Ford C-Max Ford Capri Ford Cougar Ford Ecosport Ford Edge Alles weergeven Ford aanbiedingen Ford Focus1.0 EcoBoost 126PK Titanium Business | Navigatie | € 13.4501 03/2020 70.657 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7905 SEHoogeveen Ford Fiesta1.0 Style Ultimate |CRUISE|AIRCO|CARPLAY|PDC|LM VE € 4.950 10/2016 177.419 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9403 AJAssen Ford Puma1.0 EcoBoost ST-Line V € 16.749 05/2021 90.593 km Benzine 5,0 l/100 km (gem.) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Ford Focus1.0 EcoBoost 126PK ST Line Business | Bang \u0026 Olufs € 15.9501 09/2021 83.579 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7905 SEHoogeveen Ford FocusWagon 1.0-125pk EcoBoost ST-Line X. Geweldig mooie € 28.8801 09/2023 12.020 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8914 BGLeeuwarden Ford FocusWagon 1.0-155pk EcoBoost Mild-Hybrid Active AUTOMA € 32.7501 01/2024 6.606 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 8914 BGLeeuwarden Ford Fiesta1.0 EcoBoost ST-Line 100PK Winterpack Adaptieve Cr € 13.750 06/2020 64.363 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2681 RVMonster Ford MustangFastback Restomod - Performance Mustang - High Com € 125.000 03/1965 117.218 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1411 ANNaarden Ford FocusST-2 2.0 250pk |Bull-X|RS-bumper \u0026 spoiler|Eibach € 20.995 08/2015 157.297 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5626 DKEindhoven Ford FocusWagon 1.0 EcoBoost Hybrid ST Line X 155PK Automaat € 27.9501 12/2024 34.735 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 2681 RVMonster Ford FocusWagon 1.6-16V Trend € 1.050 11/2003 288.974 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6604 BVWijchen Ford Fiesta1.0 EcoBoost Titanium X | Navi | Cruise | Half lee € 7.950 02/2015 91.566 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2032 ZGHaarlem Ford Mustang5.0 V8 GT Performance Carbon Pack € 64.9001 06/2021 15.349 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1101 AEAmsterdam Ford EcoSport1.0 EcoBoost Trend Ultimate, NL, CarPlay, PDC € 11.9501 11/2019 81.394 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5301 LWZaltbommel Ford Fiesta1.0 Hybrid ST-Line 1e Eigenaar | Volledig Onderh | € 15.5501 07/2023 75.782 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 6662 PTElst Ford Kuga2.5 PHEV 225 pk Titanium Garantie 5-27\u0027/ Stoelverw € 20.9441 04/2022 74.970 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5706 LDHelmond Ford Kuga2.5 PHEV 264pk Vignale B\u0026O HUD Leer Stoel/Stuurver € 19.9001 € 20.899,- 08/2020 141.680 km Elektro/Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 9231 HSSurhuisterveen Ford Puma1.0 EcoBoost ST-Line X CAMERA NAVI CARPLAY ECC CRU € 19.000 07/2020 66.260 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9502 EZStadskanaal Ford C-Max1.0 Edition Plus NAVI CRUISE TREKHAAK LM ECC. € 5.500 04/2015 217.578 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7876 AWValthermond Ford Puma1.0 EcoBoost Mild-Hybrid ST-Line Design € 17.249 08/2021 58.082 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Bekijk alle Ford aanbiedingen Bijzonderheden van het automerk Ford Praktische maar ook sportieve versies van veel modellen Opvallend en stijlvol vormgegeven modellengamma Ford is aanwezig in de populairste segmenten Historie Ford Vóór de vorming van Ford of Europe brengen de Britse en de Duitse takken in principe geen modellen uit in het thuisland van de ander. In andere Europese landen concurreren ze wél met elkaar. Als het Verenigd Koninkrijk in 1973 toetreedt tot de toenmalige EEG, vervallen de hoge invoertarieven voor goederen uit het VK naar de EEG en andersom. Mede daardoor standaardiseert Ford of Europe het modellengamma. Een mooi voorbeeld is de eerste Fiesta, die in de eerste helft van de jaren zeventig tegelijk door Ford in Dagenham (Engeland), Keulen (Duitsland) en Valencia (Spanje) wordt ontwikkeld. De Escort is het eerste model van Ford of Europe. De kleine gezinsauto verschijnt in 1968 en is een groot succes. Ford produceert het model zowel in Engeland als in Duitsland. De Engelse Ford Cortina en de Duitse Ford Taunus delen vanaf 1970 hun platform, maar hebben ieder hun eigen carrosserie-ontwerp en motoren uit eigen land. De al genoemde Engels-Duits-Spaanse coproductie Fiesta verschijnt in 1976; Ford bouwt hem in een nieuwe fabriek in Valencia. Ford is in de jaren zeventig en tachtig succesvol met de Escort, Taunus en Fiesta – de modellen doorlopen meerdere generaties. De Escort krijgt uiteindelijk voorwielaandrijving. De zeer aerodynamische Sierra vervangt i",
+    "scrapedAt": "2026-05-10 04:03:50.668446"
+  },
+  {
+    "id": 349,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/",
+    "title": "Alle informatie over de kleine auto bij AutoScout24",
+    "content": "Ga naar hoofdinhoud Homepage Auto Autos per Carrosserie Kleine Auto Kleine Auto 1 / 6 btnLabelPrevbtnLabelNext Sterke punten Compacte afmetingen Laag verbruik Lage onderhoudskosten Zwakke punten Beperkte bagageruimte Minder comfortabel op de snelweg Hoge aanschafprijs elektrische modellen Toon aanbod Toon aanbod Alle informatie over de kleine auto De kleine auto heeft in Nederland een vaste plaats veroverd. Van de dwergauto van vroeger is hij uitgegroeid tot het moderne A- en B-segment. Kleine auto’s zijn populair om hun compacte formaat en zuinigheid. Lees over de geschiedenis, populaire modellen en de verschillen tussen het A- en B-segment. Lees meer. Overzicht van de populairste hatchback Deze modellen zijn ver vooruit Volkswagen Polo Ford Fiesta Audi A3 Renault Clio Volkswagen Golf Fiat 500 Ford Focus Opel Corsa Toyota Aygo Audi A1 Kleine Auto aanbiedingen Abarth 595Custom 1.4 T-Jet 16V Klimaautomatik € 13.343 05/2016 56.572 km Benzine - (l/100 km) 2,8 Autobedrijf DE 14770Brandenburg Fiat 5001.2 Pop/AIRCO/LM.VELG/APK/NAP € 1.999 03/2009 277.727 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4264 KMVeen Volkswagen PoloLife 1.0 TSI DSG LED*Klima*App-Conn.*SHZ*PDC* € 18.9691 12/2023 25.038 km Benzine - (l/100 km) 2,8 Autobedrijf DE 48291Telgte Fiat PandaMild Hybrid City Paket Cinema Schwarz € 12.2901 10/2024 9.900 km Benzine - (l/100 km) 2,8 Autobedrijf DE 52078Aachen Renault MeganeLimited Blue dCi 95 € 12.990 09/2020 116.766 km Diesel 0,0 l/100 km (gem.) 2,8 Autobedrijf AT 8940Liezen Suzuki Ignis1.2 Select AUTOMAAT CVT Airco / Trekhaak Smart Hyb € 21.950 09/2021 33.998 km Benzine 0,0 l/100 km (gem.) 2,8 Autobedrijf NL 7324 AAApeldoorn MINI CooperCooper € 14.349 07/2017 64.452 km Benzine 4,7 l/100 km (gem.) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Volkswagen PoloLife+BVM+IQ-Drive+LED € 20.4901 07/2025 14.246 km Benzine - (l/100 km) 2,8 Autobedrijf LU 4328Esch-sur-alzette Hyundai Getz1.3i GLS Airco 5d Nieuwe Apk € 1.495 01/2004 194.369 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2941 CGLekkerkerk Volkswagen PoloTrendline *GARANTIE**FINANZIERUNG* € 8.900 08/2018 96.000 km Benzine 4,7 l/100 km (gem.) 2,8 Autobedrijf AT 5700Zell Am See Opel CorsaF GS 1.2 Turbo 100PS Automatik Keyless LED Navi € 18.8901 04/2025 10.450 km Benzine - (l/100 km) 2,8 Autobedrijf DE 52078Aachen Skoda Fabia1.0 MPI Selection € 18.9001 09/2025 5.490 km Benzine - (l/100 km) 2,8 Autobedrijf DE 26129Oldenburg Dacia SanderoStepway 1.0 TCe 100 ECO-G Expression|Camera|1ste e € 19.9501 03/2025 21.312 km LPG - (l/100 km) 2,8 Autobedrijf NL 1504 AKZaandam Peugeot 107Petit Filou € 2.490 01/2011 84.700 km Benzine - (l/100 km) 2,8 Autobedrijf DE 14979Großbeeren Peugeot 1081.0 e-VTi Active Airco 1e eig. LED Bleutooth All-s € 6.9001 12/2020 136.419 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7051 DXVarsseveld Ford Ka/Ka+1.2 Titanium X start/stop stoelverwarm. nw apk € 4.450 08/2013 115.478 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7321 BAApeldoorn Opel CorsaGS-Line +ALLWETTER+WINTER-PAKET+PDC KAMERA € 17.4001 11/2024 16.000 km Benzine - (l/100 km) 2,8 Autobedrijf DE 53340Meckenheim Toyota Aygo XToyota Aygo X 1.0 VVT-i 72 CV 5 porte Lounge € 15.9351 - 0 km Benzine 4,1 l/100 km (gem.) 2,8 Autobedrijf IT 20027Rescaldina - Milano Peugeot 3081.2 PureTech Active|LM|Airco|Cruise|Carplay|Navi| € 6.950 05/2018 172.478 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7963 ADRuinen Opel CorsaF GS | Navi | Kamera | PDC | Winterp € 18.7901 11/2024 32.231 km Benzine - (l/100 km) 2,8 Autobedrijf DE 77815Bühl Bekijk alle Kleine Auto aanbiedingen Kenmerken van kleine auto De kleinste auto’s worden ook wel stadsautootjes genoemd. Hét kenmerk is dus het formaat van de auto. Daarmee hangt de beperkte interieurruimte samen én het lage gebruik. Met de kleinste auto’s – de ‘A-segmenters’ – onderneem je echter geen lange reizen over de snelweg, je blijft het liefst in de buurt van je thuisadres en de supermarkt. Ook in het A-segment hebben de auto’s een hatchback. Denk maar aan de Fiat 500, de Renault Twingo, de Volkswagen Up!, de Hyundai-i10 en de Peugeot 108. Iets grotere modellen, met een ruimer interieur, meer bagageruimte en krachtigere motoren – maar kleiner dan bijvoorbeeld de Opel Astra, de Volkswagen Golf en de Peugeot 308, modellen in het C-segment – vormen het B-segment. B-segmenters zijn minder stadsauto en beter geschikt voor langere afstanden. Terwijl ze nog steeds zuinig in gebruik zijn. De bekendste modellen in het B-segment zijn de Volkswagen Polo, de Renault Clio en de Opel Corsa. De populairste kleine auto’s De populairste kleine auto’s in het A-segment: Kia Picanto – een van de bestverkochte modellen in Nederland en biedt een praktische indeling, moderne technologie en een lage prijs Toyota Aygo – deze Japanse stadsauto was jaren een drielingbroertje van de Citroën C1 en de Peugeot 108; de nieuwe Aygo X is een soort crossover, met een verhoogde rijpositie en een gedurfd design Volkswagen Up! – drielingbroertje van de Skoda Citigo en de Seat Mii – biedt een ",
+    "scrapedAt": "2026-05-10 04:03:43.614586"
+  },
+  {
     "id": 348,
     "url": "https://www.autoscout24.nl/auto/audi/",
     "title": "Alle informatie over het automerk Audi bij AutoScout24.",
@@ -2432,26 +2467,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 349,
-    "url": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
-  },
-  {
-    "id": 350,
-    "url": "https://www.autoscout24.nl/auto/ford/"
-  },
-  {
-    "id": 351,
-    "url": "https://www.autoscout24.nl/lst/c/suv-pick-up"
-  },
-  {
-    "id": 352,
-    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
-  },
-  {
-    "id": 353,
-    "url": "https://www.autoscout24.nl/auto/volkswagen/"
   },
   {
     "id": 354,
@@ -56045,10 +56060,1824 @@ window.searchData = [
     "id": 24929,
     "url": "https://www.autoscout24.nl/auto/audi/#make-info",
     "parentUrl": "https://www.autoscout24.nl/auto/audi/"
+  },
+  {
+    "id": 24930,
+    "url": "https://www.autoscout24.nl/auto/dacia/dacia-spring/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24938,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-citigo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24939,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-clio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24940,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-twingo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24949,
+    "url": "https://www.autoscout24.nl/auto/citroen/citroen-c3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24950,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24951,
+    "url": "https://www.autoscout24.nl/auto/citroen/citroen-c1/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24952,
+    "url": "https://www.autoscout24.nl/auto/seat/seat-mii/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24953,
+    "url": "https://www.autoscout24.nl/auto/hyundai/hyundai-i10/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24954,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-108/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24955,
+    "url": "https://www.autoscout24.nl/auto/smart/smart-fortwo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24956,
+    "url": "https://www.autoscout24.nl/auto/suzuki/suzuki-alto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24957,
+    "url": "https://www.autoscout24.nl/auto/toyota/toyota-aygo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24964,
+    "url": "https://www.autoscout24.nl/auto/daihatsu/daihatsu-cuore/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24965,
+    "url": "https://www.autoscout24.nl/autobedrijven/little-budget-cars-tilburg",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24967,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "id": 24968,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-serie-f/ford-f-150/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24970,
+    "url": "https://www.autoscout24.nl/auto/ford/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24971,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-courier/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24972,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-puma/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24973,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-capri-ev/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24974,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-puma-gen-e/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24976,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-focus/ford-focus-st/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24977,
+    "url": "https://www.autoscout24.nl/auto/ford/bestelbus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24980,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-capri/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24982,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-consul/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24984,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-c-max/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24985,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-explorer-ev/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24986,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-gt/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24987,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-streetka/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24988,
+    "url": "https://www.autoscout24.nl/auto/ford/v8/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24989,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-probe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24991,
+    "url": "https://www.autoscout24.nl/auto/ford/hybride/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24993,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-bronco/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24994,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-elektrisch/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24995,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-maverick/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24997,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-explorer/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24998,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-focus/ford-focus-c-max/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 24999,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-transit-connect/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25001,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-s-max/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25003,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-ranger/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25004,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-edge/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25005,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-tourneo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25006,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-expedition/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25007,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-escort/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25008,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-scorpio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25009,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-falcon/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25011,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-b-max/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25013,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-econoline/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25014,
+    "url": "https://www.autoscout24.nl/auto/ford/busje/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25016,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-mondeo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25017,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-sierra/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25018,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-transit/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25019,
+    "url": "https://www.autoscout24.nl/lst/ford/focus/ve_st-line",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25020,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-granada/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25021,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-thunderbird/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25022,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-ecosport/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25023,
+    "url": "https://www.autoscout24.nl/auto/ford/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25024,
+    "url": "https://www.autoscout24.nl/auto/ford/ez-2000/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25025,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-windstar/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25027,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-galaxy/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25028,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-kuga-hybrid/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25029,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-orion/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25030,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-focus/ford-focus-rs/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25031,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-mustang/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25032,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-escape/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25033,
+    "url": "https://www.autoscout24.nl/auto/ford/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25034,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-serie-f/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25035,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-ka/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25036,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-cougar/",
+    "parentUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "id": 25040,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-okken-gieten-gieten",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25041,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-den-hartog-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25042,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-a-p-j-scheerders-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25043,
+    "url": "https://www.autoscout24.nl/autobedrijven/van-essen-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25044,
+    "url": "https://www.autoscout24.nl/autobedrijven/elegance-car-selection",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25045,
+    "url": "https://www.autoscout24.nl/autobedrijven/hvauto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25046,
+    "url": "https://www.autoscout24.nl/autobedrijven/automotive-center-oudewater",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25050,
+    "url": "https://www.autoscout24.nl/autobedrijven/van-der-linden-auto-s-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25053,
+    "url": "https://www.autoscout24.nl/autobedrijven/sk-auto-s-emmen",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25056,
+    "url": "https://www.autoscout24.nl/lst/c/suv-pick-up#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "id": 25059,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/polo/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25062,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/pernis/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25063,
+    "url": "https://www.autoscout24.nl/lst/audi/a3/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25064,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/vlaardingen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25065,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/maasland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25066,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/spijkenisse/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25067,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/nieuw-beijerland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25069,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25070,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/nissewaard/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25071,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25072,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up!/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25073,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/albrandswaard/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25074,
+    "url": "https://www.autoscout24.nl/lst/bmw/3-serie-(alle)/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25075,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/schiedam/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25076,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rozenburg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25077,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/brielle/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25078,
+    "url": "https://www.autoscout24.nl/lst/audi/a1/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25080,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf-(alle)/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25081,
+    "url": "https://www.autoscout24.nl/lst/audi/a4/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25082,
+    "url": "https://www.autoscout24.nl/lst/nissan/qashqai/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25083,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/maassluis/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "id": 25084,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-cc/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25085,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-bora/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25086,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/busje/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25089,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-corrado/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25090,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-taro/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25094,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-caravelle/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25097,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25100,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-vento/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25101,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-buggy/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25104,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/gti/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25108,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-gti/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25112,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25113,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-7/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25114,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-california/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25115,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-multivan/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25117,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-amarok/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25119,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-transporter-t6/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25120,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-karmann-ghia/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25121,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-new-beetle/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25124,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-scirocco/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25129,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id6/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25131,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-sharan/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25134,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-taigo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25135,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-fox/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25136,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-kever/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25137,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-lt/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25142,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-lupo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25144,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-elektrisch/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "id": 25146,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5gttPBtJT8ey6HO50djbIm/53f502de9bee214333b49671c2cc5c9e/vw-id6-overview.jpeg?w\u003d1100",
+    "alt": "vw-id6-overview",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5gttPBtJT8ey6HO50djbIm/53f502de9bee214333b49671c2cc5c9e/vw-id6-overview.jpeg?w\u003d1100",
+    "alt": "vw-id6-overview",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5TLf1qPROJBKLWb9QwEIpJ/42d40bfea0b1a354fbee27346093cadc/vw-t-roc-cabriolet-banner.jpg?w\u003d1100",
+    "alt": "vw-t-roc-cabriolet-banner",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rCy2bp85zS666F7pf0RYf/d4fdc447e8a8fea32c5b8362e5a72203/AS24-volkswagen_banner.jpg?w\u003d1100",
+    "alt": "Volkswagen ID",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4Fnk8QLKrcnKBGu6pSYCjZ/e2d47a4fb118e88d8029386585680133/AS24-volkswagen_banner.jpg?w\u003d1100",
+    "alt": "AS24 Volkswagen ID",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4p1HpYJDBHA5zuSPEcqJ8B/443593b591a6b8ed5ba0a5512d46a456/AS24-volkswagen_banner.jpg?w\u003d1100",
+    "alt": "Volkswagen Golf (2023) banner",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/25jMS8qrQNGUp2McYxIMhS/cab4d0703a7bc662399e1d6e93943375/AS24-vw_banner.jpg?w\u003d1100",
+    "alt": "Volkswagen ID",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3kuJmbL9sv8CfSyHQrfsMK/5c29161edf2bdbbe9ba7c619f1c04602/AS24-amarok_banner.jpg?w\u003d1100",
+    "alt": "Volkswagen Amarok (2022) banner",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5Mel7emdsF30xL02qVhqH3/0e85343b1342ba1e715d72dc5a235a3d/AS24-volkswagen_banner.jpg?w\u003d1100",
+    "alt": "Volkswagen Polo GTI (2022) banner",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5KrWtY29tpm8qBBkwkCDhP/37cd25ea81f9f7867731e2f5655322bb/AS24-taigo_banner.jpg?w\u003d1100",
+    "alt": "AS24 Volkswagen Taigo 2021 banner",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3sz3vX593YetBwp2YYlLPb/40e6451e94cb31329d5953a9ae603d65/AS24-golf_banner.jpg?w\u003d1100",
+    "alt": "AS24 Volkswagen Golf 2021 banner",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7KaRFnXDA4IppyT5b836hs/ca1ae3d6847652834bb882d5bafb7dcf/AS24-volkswagen_01.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1N9heQY3Hvg6gwq2vnWJ04/63fe41887d319e83c511cf334e1ccca9/AS24-caddy_01.jpeg?w\u003d1100",
+    "alt": " VW Caddy",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/34DhWS4S46b9ALVkusro3l/3739f5850202e4cbf636b796f53606c2/vw-amarok-nl-front.jpg?w\u003d1100",
+    "alt": "Volkswagen Amarok",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2CNHLNVhs0Ly8vzCKJcS9R/de4338a62ca10fd24473a18791fde570/DB2021AU00148_medium.jpg?w\u003d1100",
+    "alt": "Volkswagen Arteon",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/zXgOfmwK1XxRHhZHQTlOD/5d2c26b4ac79a19d6416bd8f06da9534/vw-bora-l-01.jpg?w\u003d1100",
+    "alt": "Volkswagen Bora",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2rPUHkEpElskeI9M2ZQxc/956c77ad80d32ca03b93358daee97780/vw-corrado-l-01.jpg?w\u003d1100",
+    "alt": "Volkswagen Corrado",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1DL6ATMDTUrVjdQzcBVvmi/a680e4cb0737a675ed2177c0b42ec8d4/vw-crafter-front.jpg?w\u003d1100",
+    "alt": "Volkswagen Crafter",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5Pa6Y8pHgBl8kVK6eRIuWo/463ce31d773c166be606321614841794/vw-e-golf-front.jpeg?w\u003d1100",
+    "alt": "Volkswagen e-Golf",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/26nRMyQRax46VmX46G7SJt/13782487da5481dcce0e1f267ca05a53/vw-eos-front.jpg?w\u003d1100",
+    "alt": "Volkswagen Eos",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9f12af4d-4195-4d51-b8cc-26256d24870f_f12e15e8-8828-4afc-9f88-b85990f60640.jpg/360x270.jpg",
+    "alt": "1.4 TSI",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/be64aa6c-31a6-476e-9bf0-767e8b39ff1e_f4d3e759-c801-4398-b5b9-dd0c52d5372b.jpg/360x270.jpg",
+    "alt": "2.0-16V FSI Highline Clima Bj:2005 NAP!",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2c71fb36-d269-4dc1-9167-2211e309d5bc_94edb520-0d7b-4f8d-9f75-30f580ac2af3.jpg/360x270.jpg",
+    "alt": "1.2 TSI CUP Edition NAVI | STOELVERWARMING",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/44053089-10e0-453c-b129-ea766a392cd5_1ed07c96-c605-456a-9571-6c2f5cb35040.jpg/360x270.jpg",
+    "alt": "1.4 TSI 125PK DSG R-Line•ACC•Camera",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b2ef6d84-4b8f-4e1e-be63-365989e067fa_c7a35e02-9216-42fb-9e6e-3dbaa52f91e1.jpg/360x270.jpg",
+    "alt": "1.2 TSI Comfortline | Navigatie | Cruise | Climate",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9cbdc609-4254-43fd-8482-c31d0944af76_e60d8afe-5140-4e0a-b56d-dda2da152fe4.jpg/360x270.jpg",
+    "alt": "2.0TSI 300PK Clubsport Pano HUD iQ-Light  H\u0026K 19-i",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/435346e6-36e8-4396-9e15-b771ef991a4e_e3ebb011-b263-4b53-b36a-b80e44e24e75.jpg/360x270.jpg",
+    "alt": "2.0 TDI R-Line Business AUT. PANO TREKHAAK ACC PDC",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f07f9138-b1ce-41cc-81cb-a7c8cd3b755b_98ea8f44-e5d5-4a54-8181-8b71fe032732.jpg/360x270.jpg",
+    "alt": "1.5 TSI R-LINE BUSINESS+ I AUTOMAAT I TREKHAAK I P",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/09cb8df3-0265-4455-86be-4b672a0e08e5_ead7938f-1d4f-4f52-89a6-8a5571aa40d9.jpg/360x270.jpg",
+    "alt": "2.0 TSI 4Motion Highline Business R 7p.R-Line/Leer",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9c9605ce-4b23-4569-aca0-a97472700ac5_b75d64aa-1dc9-4c1a-b7a7-51211b951686.jpg/360x270.jpg",
+    "alt": "1.4 TSI, leder, airco, lmv 17 inch",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3ae550c4-aa55-4004-8270-e923f68b2f74_7b646cae-7b56-4952-9a70-09e16099ae2f.jpg/360x270.jpg",
+    "alt": "1.2 TSI 110pk 5-drs Highline",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0cc9e83a-14df-4db3-9ce8-8f919b6031e4_80af2153-4188-4809-89ae-0126a731fadb.jpg/360x270.jpg",
+    "alt": "2.0 TSI R 4Motion 20 Jahre Ed. 333PK | Akra | Pano",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6cc0f863-0d20-4527-b233-e86066678ff4_98e53470-18ba-4c76-bd0a-30d30eb22ecd.jpg/360x270.jpg",
+    "alt": "1.4 TSI Connect Series | Navigatie | Adapt. Cruise",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c8f0313e-5e75-4c71-8f81-d026cddce435_4aee576e-2434-488c-b416-bb34c13595ab.jpg/360x270.jpg",
+    "alt": "Airco|Elek.ramen|5-deurs|NAP",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/705acacb-6440-4cc2-810a-e49fc3530fc3_3d0ea36e-2a19-4fff-86f7-4e24a3daeea1.jpg/360x270.jpg",
+    "alt": "1.5 TSI ACT Highline Business R |PANO|MASSAGE|CARP",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e549c3cf-74c0-4206-900e-f70707cebb21_7e59ad6f-a9f2-4b6a-915e-80a38812241d.jpg/360x270.jpg",
+    "alt": "1.4 TSI eHybrid R-Line Black Style | Leer | Camera",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/278ff362-f816-4625-86c4-cc6fa1885335_e6edda4f-3a67-4bfe-afe0-03ce2fdd724a.jpg/360x270.jpg",
+    "alt": "1.0 TSI Comfortline | LED | CarPlay | Adaptive Cru",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b5116a36-bf39-4095-ab6c-a5570c8c6695_dcbadfca-9c2b-4977-8f9b-68e27b01de19.jpg/360x270.jpg",
+    "alt": "1.0 CUP-editie|PANO|AIRCO|STOELVERWARMING|APK|4/5-",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ede9e420-8c6c-464b-bc9a-f60818495ed7_548d1ad1-2ea0-4894-b50a-520c72b1a4a1.jpg/360x270.jpg",
+    "alt": "1.0 TSI Comfortline Navigatie /Airco / Carplay / C",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/897ee448-3667-4fab-8f38-a5bbbac2f1ee_7ca39bc1-5036-4230-925b-94c06fe9ef3b.jpg/360x270.jpg",
+    "alt": "1.4-16V Highline/Climate/Cruise/Pdc/Elek.Ramen/Lmv",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6bAUEqocLRJnsRfWE7qnB3/421e740583b987cc2b29a0323f6dbc80/vw-t1-transporter-overview.jpeg?w\u003d1100",
+    "alt": "vw-t1-transporter-overview",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5dvk73PfuvzdivpmOVRk85/48451a6b02bcf3156b06e0d46d0b2cbc/vw-tiguan-overview.jpg?w\u003d1100",
+    "alt": "vw-tiguan-overview",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Volkswagen bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/84bb5eee-4189-4d6d-a408-ce7e4e6cbe0d_a07a4780-3b7f-4e8f-a7e4-c2427381bfa2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5c7e600e-bea5-4204-87a8-807b7d3ca4f5_91894fd4-edf3-4dec-855c-b9a018e7ccf1.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0c09b32f-9df8-418d-be9e-b387f73860c7_b4025952-3202-499a-a874-800a5bd97698.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fc7cbb6a-8f36-4e6a-938b-32651d073450_9db938ba-3216-4e8c-8ad3-fcf6f858e2d6.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9bdb5959-1c8f-4fd6-a31e-00b0513f41a2_bbf9ec8f-8bbf-4b09-9e7d-9fc53676d1a2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8f74824b-953c-44b5-9b6d-c12c07ce6f13_ff8c121d-6646-4083-b634-6a69098dfc75.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e6fae778-d578-43e4-bc54-1f98bec649c2_4ca8fd5a-ee9f-4b40-a73c-df11e93acf9d.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/60067f94-0c10-4b66-ba77-ea1d6a593008_b1e34eda-26f3-466a-aaf6-e6b44adcb244.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/67e4565b-818f-4ee3-9da9-276dbe01656c_bfab4d1e-5f66-4ae9-b690-5daa57038211.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/84bb5eee-4189-4d6d-a408-ce7e4e6cbe0d_a07a4780-3b7f-4e8f-a7e4-c2427381bfa2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5c7e600e-bea5-4204-87a8-807b7d3ca4f5_91894fd4-edf3-4dec-855c-b9a018e7ccf1.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0c09b32f-9df8-418d-be9e-b387f73860c7_b4025952-3202-499a-a874-800a5bd97698.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fc7cbb6a-8f36-4e6a-938b-32651d073450_9db938ba-3216-4e8c-8ad3-fcf6f858e2d6.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9bdb5959-1c8f-4fd6-a31e-00b0513f41a2_bbf9ec8f-8bbf-4b09-9e7d-9fc53676d1a2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8f74824b-953c-44b5-9b6d-c12c07ce6f13_ff8c121d-6646-4083-b634-6a69098dfc75.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e6fae778-d578-43e4-bc54-1f98bec649c2_4ca8fd5a-ee9f-4b40-a73c-df11e93acf9d.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/60067f94-0c10-4b66-ba77-ea1d6a593008_b1e34eda-26f3-466a-aaf6-e6b44adcb244.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/67e4565b-818f-4ee3-9da9-276dbe01656c_bfab4d1e-5f66-4ae9-b690-5daa57038211.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Occasions Rotterdam: tweedehands auto kopen in Rotterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rotterdam/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/28ccb3ec-eec0-4e5e-b674-61e04586fbc1_1a5e3f63-cbbf-4b32-9a93-88bef99eee56.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15036567-original-da232dcb-d989-4412-9572-c05b0a8ade60.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/27483daf-e223-4f6f-828a-e15a1658454e_288a36e7-a120-400a-bd7d-82c6d62c0ab3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/9193-original-677021fd-089b-4e32-a499-3054894ccec4.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d0b5ead6-9269-4d4c-9122-915f0293d788_0d6096dc-2900-4894-a26e-f8daba59c1d5.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f698f3bc-8a8b-41d1-9168-516a7a48ecb7_9c112d56-17a4-47e5-af8a-714409cbe628.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/60071391-original-66fc8154-ad55-4d5c-8a66-e4f153af9a17.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bf490436-2b06-4cf0-90cc-86ce25833293_f017da84-d025-43a9-8b9f-012b896efaaa.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/39546944-original-a659e76f-6461-4da3-ad42-ceb46125057b.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f2fc8d39-9c53-4505-b158-1bf939e5a911_a82c9b22-d659-4171-85a8-3cc85eb812be.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/19800964-original-54ac5315-7fec-43b2-8c28-ff46121ef2d0.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bd7b2edd-d0b3-4fdb-b531-021c5a1f21ce_6712b10c-09ae-4ec7-b6f9-02e0aaf1c07b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9a9f4b17-d5d2-4b60-a9eb-346e5982cc26_82db86f6-1f84-4570-b9aa-4f3c099f43bc.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c55f2464-2612-4deb-bcd2-064f584214b3_6fae452d-b221-4671-b49b-caabfcbad7cc.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bd6309e4-ec0d-4820-b8ee-34b5cd0db9a6_c569ff05-1f99-4286-aae0-48c550996ec4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/25619956-original-636cd035-8493-4f10-9e94-4f87d585b9aa.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/53d4fda1-dfd0-4d1e-aa80-38e8442758b8_27a7e2e7-e555-4fb2-b54f-d29e51d9be76.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/89/XGZ5pqUYCtfNBS4IW3qCpuANWdVaaEnz/7EIXX9UsoQj68K8XhADPcqGKi1OolLIo.jpg",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1b737b31-6acb-40d7-bee4-4bb64882e3eb_8a94aa3a-27c7-499c-abf5-eebc0810e2c0.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/89/XGZ5pqUYCtfNBS4IW3qCpuANWdVaaEnz/7EIXX9UsoQj68K8XhADPcqGKi1OolLIo.jpg",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5f72bf2f-5dc2-4952-bf9c-bbcb6a9481e9_25427942-0a18-413c-b366-a091505ec08e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/18bc844e-d463-43d5-9f7e-01414ae132ec_dccea33a-ff8d-46f0-88fa-d77865d1e8e0.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/18279953-original-ae825904-4032-41fe-861f-c399266bf159.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/13f8f31a-af24-447b-9231-52434daabd51_1515fd10-a587-4069-9479-d52a22477a2b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47428031-original-b8da39bb-b055-430c-9a28-8e2934aadae8.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bd100299-1310-4ffc-9a60-566efe990190_5c8e678e-2cec-4a52-8763-20f05d3a69bc.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/13617182-original-35e05051-0b07-461f-90f0-e07c58feb6f2.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/740d7812-c5b8-481e-a9f2-8fae4d393fdc_66b95ea2-23ab-4a7a-8ffc-f2afcb2797aa.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/21140000-original-1cb24ded-35b2-4cac-b393-879bbacc2ab1.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c517a091-5f4d-49a8-a0c0-f26d49b9e690_aa00d854-adf2-41bb-ba79-c772fab5be08.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/20284081-original-c3bc5459-fc6b-4d50-93d1-5d70267a17d2.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1aa5064d-7dd4-46f9-b0a4-e963dca511f2_803395c7-21fa-4f8a-ae44-25213ab0d30c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0c54152d-05c3-49a5-ac77-f192769fe505_d439dda4-9443-4b83-b3af-48fa42c489c1.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "SUV \u0026 pick-up occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/suv-pick-up"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7rlEof6mLYVNQ23VR8NWOQ/80b4e31f57ff8a5ffd53857912b55f62/ford-focus-turnier-banner.jpeg?w\u003d1100",
+    "alt": "ford-focus-turnier-banner",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7rlEof6mLYVNQ23VR8NWOQ/80b4e31f57ff8a5ffd53857912b55f62/ford-focus-turnier-banner.jpeg?w\u003d1100",
+    "alt": "ford-focus-turnier-banner",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3MnZlfStMnmJ3A9jqs7OwM/c58122732fb33b2ea9a219a53a2f9010/AS24-mustang_banner.jpg?w\u003d1100",
+    "alt": "Ford Mustang CS (2022) banner",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1WvuWp1Z8MaNwCm8ZIYNFL/fbfcbfa26f6070ad99711ae25e24806e/AS24-explorer_banner.jpg?w\u003d1100",
+    "alt": "Ford Explorer (2023) banner",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7mNdZpmVqBUblOxKlnumsV/bc5d89ad95f2104d0ccfe507e81bd656/ford-mustang-mach-e-gt-front.jpeg?w\u003d1100",
+    "alt": "ford-mustang-mach-e-gt-front",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/ir8EejHabsCpb1sY0hihb/ca568ffcc4f1b878b32c0b35e654c45c/ford-fiesta-front.jpg?w\u003d1100",
+    "alt": "ford-fiesta-front",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3eWRacyQXujvwJG9Iav2HY/47d3855959a018b030125ead5fa2c2f8/prueba-ford-puma-28.jpg?w\u003d1100",
+    "alt": "prueba-ford-puma-28",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Q9j2xT0RR91AU6su0xIcr/fcb3bf8e6812bdfb70535eddcd3f7a09/ford-fiesta-side.jpg?w\u003d1100",
+    "alt": "ford-fiesta-side",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3nPUgLL0uKysQbvLMJlHpA/b966698b1641551ae01b0ef883951813/AS24-ford_01.jpg?w\u003d1100",
+    "alt": "Ford Puma ST Powershift (2023) rijdend, vooraanzicht",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3xEMT5dIcNEUJG6wGEck8i/177c1336823143d67702e4966878c680/ford-puma-st-2020-52-1.jpg?w\u003d1100",
+    "alt": "Review: Ford Puma ST (2020) is lekker giftig en groen",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/44pPmLVVxUgIskwrp0KIQp/a2245079457db6ab069a354b5b340b68/ford-focus-front.jpeg?w\u003d1100",
+    "alt": "ford-focus-front",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5hthQOnf7BhUdARJDSYBIp/e2e2e5ff5339f91969fa8b49111b2f67/ford-focus-turnier-st.jpeg?w\u003d1100",
+    "alt": "ford-focus-turnier-st",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6WubIyJe9aHh7ubGC1YrB8/131d34da6a5950c2ac56947c2dec41ae/ford-kuga-hybrid-side.jpeg?w\u003d1100",
+    "alt": "ford-kuga-hybrid-side",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/WcSSsCZyTm5cPlP4PSCeU/3d7f9eccfc89b76651158c351538daa3/ford-mondeo-turnier-front.jpeg?w\u003d1100",
+    "alt": " Ford Mondeo",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4eCQUiFQt1wtfy7O1kSVvq/73d769293817a4023f0db925959ca085/Ford-B-MAX-2013-1280-07.jpg?w\u003d1100",
+    "alt": "Ford B-Max",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/40DRXKdNzgLNE8wx67hk8O/c9fcfa4f771cd09b115624244c38de96/ford_bronco_4-door_badlands_29.jpg?w\u003d1100",
+    "alt": "Ford Bronco",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3WY9ZeUDxkfsWr4AdNIIzp/436f0d8922e3e49553d0fdb85a8d4929/ford-c-max-front.jpg?w\u003d1100",
+    "alt": "Ford C-Max",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6mbIuaVGKYIc8BDyNVpBjx/157906d0a76203a6278b619918b66ed1/ford-capri-3-pluspunten-en-3-minpunten-die-je-niet-direct-ziet-en-toch-moet-weten-2024-01.jpg?w\u003d1100",
+    "alt": "Ford Capri",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6x5K9Bh4fAA1Bq9ABPvFmx/6f9b5052f2b62775081e63343b8839bb/Ford-Cougar-2000-1280-06.jpg?w\u003d1100",
+    "alt": "Ford Cougar",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/gRMIHAZKwNQ1OyMHOm4dw/3b32953a8821a6466c17665fefc057f5/ford-ecosport-l-01.jpg?w\u003d1100",
+    "alt": "Ford Ecosport",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4kr7hjBNaLEqvmP27bI0KS/be3a65149bd345b0bce0965d6728abce/ford-edge-l-01.jpg?w\u003d1100",
+    "alt": "Ford Edge",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f196c257-f329-463a-a7e2-d7b60b8e02e1_17348d53-3c5b-4da0-857e-7a880805b34f.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost 126PK Titanium Business | Navigatie |",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/896c653f-06b9-4715-a013-7b31ab31c87b_05abfeb8-b334-46f2-9806-ae2b78471102.jpg/360x270.jpg",
+    "alt": "1.0 Style Ultimate |CRUISE|AIRCO|CARPLAY|PDC|LM VE",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2a07880b-6b24-4540-809c-34f24bd50907_6900525d-e24a-42e1-9434-2ed7ff257644.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost ST-Line V",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e253fa00-7f0c-4f5e-881a-557400742a2a_59378936-495c-45a7-a131-66f0dc5065c2.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost 126PK ST Line Business | Bang \u0026 Olufs",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f8c3ea93-6494-4915-8fe1-33fb9248a1f8_f5176c45-961c-4ff6-a657-c08a1d61882e.jpg/360x270.jpg",
+    "alt": "Wagon 1.0-125pk EcoBoost ST-Line X. Geweldig mooie",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0bf8bdd7-100a-4de5-a67c-348e54bd38c4_909c81ed-580b-4756-ae06-89c9478f24ab.jpg/360x270.jpg",
+    "alt": "Wagon 1.0-155pk EcoBoost Mild-Hybrid Active AUTOMA",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3d29a022-84ad-483e-9764-6aec65ad2f3c_1bb267b5-5f52-4675-87f5-04874ebe86d5.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost ST-Line 100PK Winterpack Adaptieve Cr",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8aaab748-0149-4177-8c26-7795b0972566_371c8560-bb56-4f51-bf3f-038f46a249bc.jpg/360x270.jpg",
+    "alt": "Fastback Restomod - Performance Mustang - High Com",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7e77167e-e433-4b38-b19a-3b346ebd87d5_afa06fbc-e262-47d3-aaa7-7ac7358559c9.jpg/360x270.jpg",
+    "alt": "ST-2 2.0 250pk |Bull-X|RS-bumper \u0026 spoiler|Eibach",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b72cd597-d0ce-4da9-a606-f1aa077be044_c39ba8dc-7205-4691-b332-7d145399c813.jpg/360x270.jpg",
+    "alt": "Wagon 1.0 EcoBoost Hybrid ST Line X 155PK Automaat",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d85317ec-f18f-4337-831b-3f78177976d1_81236d60-b70b-4aa3-9b99-0720b14b2817.jpg/360x270.jpg",
+    "alt": "Wagon 1.6-16V Trend",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6d612fd5-f05d-4a8b-8407-f934b65fe212_dd9cc316-f671-4d7d-8cdc-e5e911aae7d3.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost Titanium X | Navi | Cruise | Half lee",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/de234ef8-734b-48f7-b153-463299d0d07d_aa27090e-0f30-4761-9628-29799e1d5c90.jpg/360x270.jpg",
+    "alt": "5.0 V8 GT Performance Carbon Pack",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7ec39567-381b-4f18-a44d-44c5466ea9ce_b34fdb19-0b9b-4d3f-822b-1a18de7e86b8.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost Trend Ultimate, NL, CarPlay, PDC",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/726ac82d-d605-4d24-9594-74bd90fa3ec0_cbe8043c-1bf6-40aa-afe0-11dd212a2475.jpg/360x270.jpg",
+    "alt": "1.0 Hybrid ST-Line 1e Eigenaar | Volledig Onderh |",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4947bd0a-fa6f-43b5-a600-fd1e8a79b079_6449a254-3f15-43ee-9e21-b0f6ba39ab3f.jpg/360x270.jpg",
+    "alt": "2.5 PHEV 225 pk Titanium Garantie 5-27\u0027/ Stoelverw",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e11c7831-70ec-40e3-8df1-6566e584a522_e5208f10-8c7b-4a4a-b0d1-d3896c105a24.jpg/360x270.jpg",
+    "alt": "2.5 PHEV 264pk Vignale B\u0026O HUD Leer Stoel/Stuurver",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c94caee2-d401-4c9d-8dc2-1234747e1922_6a170e22-ab38-4e71-a1ca-299ceca40201.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost ST-Line X CAMERA NAVI CARPLAY ECC CRU",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/16ffe182-6f42-459e-9903-30288b5def9c_c682512f-42af-46f0-9699-35bbeaa3306f.jpg/360x270.jpg",
+    "alt": "1.0 Edition Plus NAVI CRUISE TREKHAAK LM ECC.",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4da8dc58-61c1-44d1-9dd9-5f33348efc45_62eb3069-1f78-4cb1-aada-14cb08805446.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost Mild-Hybrid ST-Line Design",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4JhSzYFsgHkKh3g1uSZYS2/e6d551a14353bb76475f0ac67f520e86/Ford-Mustang_Mach-E-2021.jpg?w\u003d1100",
+    "alt": "Ford Mustang Mach-E 2021",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4jqEemYltKW04IMDJbD27U/9648bd8c1ae3dcc3eb8a3387cc862f1e/AS24-explorer_02.jpg?w\u003d1100",
+    "alt": "Ford Explorer",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Ford bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/ford/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2SKgNSF5V417wvBHyNraHz/4cc535bc22b216a1069df9029b560735/mini_classic_mini_hatch_21.jpeg?w\u003d1100",
+    "alt": "mini_classic_mini_hatch_21",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2SKgNSF5V417wvBHyNraHz/4cc535bc22b216a1069df9029b560735/mini_classic_mini_hatch_21.jpeg?w\u003d1100",
+    "alt": "mini_classic_mini_hatch_21",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6YWZyT6I0XHlymcUz623C4/3512a8afd6a8fdaf8c0fbc90fa9e59f6/mini-cooper_6.jpeg?w\u003d1100",
+    "alt": "mini-cooper_6",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6VaB77hAiGPa4KAVdIQdMz/136cde1a20978ab6d2474f0020bf58b6/citroen_2cv_spot_9.jpeg?w\u003d1100",
+    "alt": "citroen_2cv_spot_9",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4d4uyllIamGFsrUbK73wnk/d6373dbafd7b150cb945ea360a813514/dacia_spring_5.jpeg?w\u003d1100",
+    "alt": "dacia_spring_5",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1Ew6tRbdBbDbzhdxMpTlqP/aca042681d9c131058e9ed1219142db1/fiat_500_la_prima_-_italia_cabrio_4.jpeg?w\u003d1100",
+    "alt": "fiat_500_la_prima_-_italia_cabrio_4",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1wPoVqeN5sgyFfOCeCmyng/3e74df791e2027a0dcf37ecfad1d9a9b/hyundai_i10_n_line_414.jpeg?w\u003d1100",
+    "alt": "hyundai_i10_n_line_414",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7fG636B7E4Qhy51LUhof7w/d741c680b4095a40da1e2a4440bde807/vw-polo-xs-02.jpg?w\u003d480",
+    "alt": "Volkswagen Polo",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/fCHbMTa0qJvR6Vrbd5BNX/ea92053e55587c6d4eee0fd907ba56a6/ford-fiesta-xs.jpg?w\u003d480",
+    "alt": "Ford Fiesta",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5ksjyGc2NX0qgtl7MssYOx/a6ec10f5176891d575d776a5c386991c/audi-a3-xs-02.jpg?w\u003d480",
+    "alt": "Audi A3",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5Mcrl3F2MSnbANdYDV2tuS/02e6e3d8a0993529d4d6fe45fa4879f9/renault-clio-xs-02.jpg?w\u003d480",
+    "alt": "Renault Clio",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2zglr7JkkeG8ct6QyfLcTF/98dc3192f24fea4225c8a5cf7b4abc35/vw-golf-limousine-xs.jpg?w\u003d480",
+    "alt": "Volkswagen Golf",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/32XYckAcINixrTSXPMsRb7/850793711c3f15cd1edc43ecb92da746/fiat-500-xs-02.jpg?w\u003d480",
+    "alt": "Fiat 500",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4x570IF32G6uAGvmKdvrYU/c0fcc1bc101e6dc5a2d699fd6705a3dc/ford-focus-xs-02.jpg?w\u003d480",
+    "alt": "Ford Focus",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/UzMKhaJRfjmYyamffLTW3/a29c253b31621ad7dcaec4b2e2b168bd/opel-corsa-xs-02.jpg?w\u003d480",
+    "alt": "Opel Corsa",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7fMq0w8IIyjNBkQKT0FpRz/ac69391861fc926782b381c68f577ec6/toyota-aygo-xs-02.jpg?w\u003d480",
+    "alt": "Toyota Aygo",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3FRH7xm2eMCOv7xyblTtED/c3dcd6b43b6413b5a91ab075b7e428a0/audi-a1-xs-02.jpg?w\u003d480",
+    "alt": "Audi A1",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/17062c93-69c9-4763-aa03-e51791f7fb3e_4c0cc4af-d6f9-4fed-90a1-26311016add5.jpg/360x270.jpg",
+    "alt": "Custom 1.4 T-Jet 16V Klimaautomatik",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ce48965e-7efa-4eee-b3e5-8585ecb243ee_1295c844-0b12-4c72-a17c-13a88e50659c.jpg/360x270.jpg",
+    "alt": "1.2 Pop/AIRCO/LM.VELG/APK/NAP",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e657eb8e-e98e-426a-ae35-2dd0661f3d43_5f6a3fd2-c740-42b0-95fb-d03945d9b45b.jpg/360x270.jpg",
+    "alt": "Life 1.0 TSI DSG LED*Klima*App-Conn.*SHZ*PDC*",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e6d8d117-443e-42c2-9fc6-2c27a0bbee9e_546a0a9a-e9f8-4af9-9998-b535d3aefee6.jpg/360x270.jpg",
+    "alt": "Mild Hybrid City Paket  Cinema Schwarz",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d2cec53d-360b-49cd-9662-de0d3822aa5f_b7654840-af27-441a-adc2-67236f41ec28.jpg/360x270.jpg",
+    "alt": "Limited Blue dCi 95",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/605d750f-8cdd-4d5a-aceb-02b29c45607f_4a2765bd-446d-4ab1-9908-4dfa4e333d99.jpg/360x270.jpg",
+    "alt": "1.2 Select AUTOMAAT CVT Airco / Trekhaak Smart Hyb",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/626814af-2b32-40a8-a9e9-a9059b8e37ca_8399f559-5cf9-4f7e-96a7-4bfc4a3abefe.jpg/360x270.jpg",
+    "alt": "Cooper",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/84e67248-681f-4eff-9e7b-e456009f8bca_390c4822-caaf-4554-830b-a23ebb11e79b.jpg/360x270.jpg",
+    "alt": "Life+BVM+IQ-Drive+LED",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f51d14fd-6d61-44e2-a246-b35a0c6d1e67_d7e03eee-64f7-41d0-b439-fa2fda2aa257.jpg/360x270.jpg",
+    "alt": "1.3i GLS Airco 5d Nieuwe Apk",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/060a8ee7-ac19-4ea5-bfb3-b66ec7461e5c_b294d1ae-30df-4310-822f-a262f124b73b.jpg/360x270.jpg",
+    "alt": "Trendline *GARANTIE**FINANZIERUNG*",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/df41fb9e-e6c2-4eea-9160-613a204a7b64_2af45275-9bce-4318-93d8-41f37d75a821.jpg/360x270.jpg",
+    "alt": "F GS 1.2 Turbo 100PS Automatik Keyless LED Navi",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f2626332-1efb-438f-8f39-cf2778791c57_1799dd65-5d7e-4164-8273-5a29bd46930b.jpg/360x270.jpg",
+    "alt": "1.0 MPI Selection",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a05be38b-dfce-4a85-93d5-27ff7c39842c_c99d8bef-fe19-46c0-81c1-844df99b08ab.jpg/360x270.jpg",
+    "alt": "Stepway 1.0 TCe 100 ECO-G Expression|Camera|1ste e",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a9edbe73-f621-48ef-95f4-e77ff8afb071_2634d4dd-bd39-4de0-9d4e-020fd6b69e5b.jpg/360x270.jpg",
+    "alt": "Petit Filou",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9b008722-5581-41cc-b5d4-7bdf341d9cf0_aac7ea22-b97b-4122-ad12-9acf72bbfb72.jpg/360x270.jpg",
+    "alt": "1.0 e-VTi Active Airco 1e eig. LED Bleutooth All-s",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/548ee628-d81e-4fdc-b892-c9fbf34e221b_ab359e54-3eb2-4ace-a0a5-972d978e0074.jpg/360x270.jpg",
+    "alt": "1.2 Titanium X start/stop stoelverwarm. nw apk",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/abeb2408-d19f-440e-bcec-057a4ff79749_19d2ff6d-649d-4892-8137-045a8d5b887a.jpg/360x270.jpg",
+    "alt": "GS-Line +ALLWETTER+WINTER-PAKET+PDC KAMERA",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5115725d-f021-42d9-b9f3-636fddb577c3_a9ab6701-6960-43f6-b982-49f358466bbc.jpg/360x270.jpg",
+    "alt": "Toyota Aygo X 1.0 VVT-i 72 CV 5 porte Lounge",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cafc1016-de75-498c-a767-2ca28963800b_5fea32a5-fa38-4616-99c4-961b15a27078.jpg/360x270.jpg",
+    "alt": "1.2 PureTech Active|LM|Airco|Cruise|Carplay|Navi|",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ce530832-f114-40cd-a4c0-9c21cf9db0b6_b003fff8-be14-4203-9f5d-10f70fef4638.jpg/360x270.jpg",
+    "alt": "F GS | Navi | Kamera | PDC | Winterp",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over de kleine auto bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/kleine-auto/"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
