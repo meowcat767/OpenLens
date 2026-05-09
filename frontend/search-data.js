@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 884,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack",
+    "title": "Slice Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Slice Objects | Theme Auto Light Dark | Slice Objects¶ PyTypeObject PySlice_Type¶ Part of the Stable ABI. The type object for slice objects. This is the same as slice in the Python layer. int PySlice_Check(PyObject *ob)¶ Return true if ob is a slice object; ob must not be NULL. This function always succeeds. PyObject *PySlice_New(PyObject *start, PyObject *stop, PyObject *step)¶ Return value: New reference. Part of the Stable ABI. Return a new slice object with the given values. The start, stop, and step parameters are used as the values of the slice object attributes of the same names. Any of the values may be NULL, in which case the None will be used for the corresponding attribute. Return NULL with an exception set if the new object could not be allocated. int PySlice_GetIndices(PyObject *slice, Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)¶ Part of the Stable ABI. Retrieve the start, stop and step indices from the slice object slice, assuming a sequence of length length. Treats indices greater than length as errors. Returns 0 on success and -1 on error with no exception set (unless one of the indices was not None and failed to be converted to an integer, in which case -1 is returned with an exception set). You probably do not want to use this function. Changed in version 3.2: The parameter type for the slice parameter was PySliceObject* before. int PySlice_GetIndicesEx(PyObject *slice, Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step, Py_ssize_t *slicelength)¶ Part of the Stable ABI. Usable replacement for PySlice_GetIndices(). Retrieve the start, stop, and step indices from the slice object slice assuming a sequence of length length, and store the length of the slice in slicelength. Out of bounds indices are clipped in a manner consistent with the handling of normal slices. Return 0 on success and -1 on error with an exception set. Note This function is considered not safe for resizable sequences. Its invocation should be replaced by a combination of PySlice_Unpack() and PySlice_AdjustIndices() where if (PySlice_GetIndicesEx(slice, length, \u0026start, \u0026stop, \u0026step, \u0026slicelength) \u003c 0) {\n    // return error\n}\n is replaced by if (PySlice_Unpack(slice, \u0026start, \u0026stop, \u0026step) \u003c 0) {\n    // return error\n}\nslicelength \u003d PySlice_AdjustIndices(length, \u0026start, \u0026stop, step);\n Changed in version 3.2: The parameter type for the slice parameter was PySliceObject* before. Changed in version 3.6.1: If Py_LIMITED_API is not set or set to the value between 0x03050400 and 0x03060000 (not including) or 0x03060100 or higher PySlice_GetIndicesEx() is implemented as a macro using PySlice_Unpack() and PySlice_AdjustIndices(). Arguments start, stop and step are evaluated more than once. Deprecated since version 3.6.1: If Py_LIMITED_API is set to the value less than 0x03050400 or between 0x03060000 and 0x03060100 (not including) PySlice_GetIndicesEx() is a deprecated function. int PySlice_Unpack(PyObject *slice, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)¶ Part of the Stable ABI since version 3.7. Extract the start, stop and step data members from a slice object as C integers. Silently reduce values larger than PY_SSIZE_T_MAX to PY_SSIZE_T_MAX, silently boost the start and stop values less than PY_SSIZE_T_MIN to PY_SSIZE_T_MIN, and silently boost the step values less than -PY_SSIZE_T_MAX to -PY_SSIZE_T_MAX. Return -1 with an exception set on error, 0 on success. Added in version 3.6.1. Py_ssize_t PySlice_AdjustIndices(Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t step)¶ Part of the Stable ABI since version 3.7. Adjust start/end slice indices assuming a sequence of the specified length. Out of bounds indices are clipped in a manner consistent with the handling of normal slices. Return the length of the slice. Always successful. Doesn’t call Python code. Added in version 3.6.1. Ellipsis Object¶ PyTypeObject PyEllipsis_Type¶ Part of the Stable ABI. The type of Python Ellipsis object. Same as types.EllipsisType in the Python layer. PyObject *Py_Ellipsis¶ The Python Ellipsis object. This object has no methods. Like Py_None, it is an immortal singleton object. Changed in version 3.12: Py_Ellipsis is immortal. Table of Contents Slice Objects Ellipsis Object Previous topic Descriptor Objects Next topic MemoryView objects This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Slice Objects | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more informat",
+    "scrapedAt": "2026-05-10 04:56:54.926025"
+  },
+  {
+    "id": 883,
+    "url": "https://github.com/python/cpython/issues/116560",
+    "title": "Consider adding public PyLong_GetSign() function · Issue #116560 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Consider adding public PyLong_GetSign() function #116560 New issue Copy link New issue Copy link Closed Closed Consider adding public PyLong_GetSign() function#116560 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description skirpichev opened on Mar 10, 2024 Issue body actions Feature or enhancement Proposal: Currently there is no way to determine the sign of the PyLongObject value and CPython extensions use private macroses like _PyLong_IsNegative(): https://github.com/aleaxit/gmpy/blob/eb8dfcbd84abcfcb36b4adcb0d5c6d050731dd75/src/gmpy2_convert_gmp.c#L56 PyLong_Sign() will offer GMP-like API to do this. This was suggested before: #102471 (comment) Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-116560: Add PyLong_GetSign() public function #116561 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:56:51.250147"
+  },
+  {
+    "id": 882,
+    "url": "https://docs.python.org/3/library/pty.html#pty.openpty",
+    "title": "pty — Pseudo-terminal utilities — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Unix-specific services » pty — Pseudo-terminal utilities | Theme Auto Light Dark | pty — Pseudo-terminal utilities¶ Source code: Lib/pty.py The pty module defines operations for handling the pseudo-terminal concept: starting another process and being able to write to and read from its controlling terminal programmatically. Availability: Unix. Pseudo-terminal handling is highly platform dependent. This code is mainly tested on Linux, FreeBSD, and macOS (it is supposed to work on other POSIX platforms but it’s not been thoroughly tested). The pty module defines the following functions: pty.fork()¶ Fork. Connect the child’s controlling terminal to a pseudo-terminal. Return value is (pid, fd). Note that the child gets pid 0, and the fd is invalid. The parent’s return value is the pid of the child, and fd is a file descriptor connected to the child’s controlling terminal (and also to the child’s standard input and output). Warning On macOS the use of this function is unsafe when mixed with using higher-level system APIs, and that includes using urllib.request. pty.openpty()¶ Open a new pseudo-terminal pair, using os.openpty() if possible, or emulation code for generic Unix systems. Return a pair of file descriptors (master, slave), for the master and the slave end, respectively. pty.spawn(argv[, master_read[, stdin_read]])¶ Spawn a process, and connect its controlling terminal with the current process’s standard io. This is often used to baffle programs which insist on reading from the controlling terminal. It is expected that the process spawned behind the pty will eventually terminate, and when it does spawn will return. A loop copies STDIN of the current process to the child and data received from the child to STDOUT of the current process. It is not signaled to the child if STDIN of the current process closes down. The functions master_read and stdin_read are passed a file descriptor which they should read from, and they should always return a byte string. In order to force spawn to return before the child process exits an empty byte array should be returned to signal end of file. The default implementation for both functions will read and return up to 1024 bytes each time the function is called. The master_read callback is passed the pseudoterminal’s master file descriptor to read output from the child process, and stdin_read is passed file descriptor 0, to read from the parent process’s standard input. Returning an empty byte string from either callback is interpreted as an end-of-file (EOF) condition, and that callback will not be called after that. If stdin_read signals EOF the controlling terminal can no longer communicate with the parent process OR the child process. Unless the child process will quit without any input, spawn will then loop forever. If master_read signals EOF the same behavior results (on linux at least). Return the exit status value from os.waitpid() on the child process. os.waitstatus_to_exitcode() can be used to convert the exit status into an exit code. Raises an auditing event pty.spawn with argument argv. Changed in version 3.4: spawn() now returns the status value from os.waitpid() on the child process. Example¶ The following program acts like the Unix command script(1), using a pseudo-terminal to record all input and output of a terminal session in a “typescript”. import argparse\nimport os\nimport pty\nimport sys\nimport time\n\nparser \u003d argparse.ArgumentParser()\nparser.add_argument(\u0027-a\u0027, dest\u003d\u0027append\u0027, action\u003d\u0027store_true\u0027)\nparser.add_argument(\u0027-p\u0027, dest\u003d\u0027use_python\u0027, action\u003d\u0027store_true\u0027)\nparser.add_argument(\u0027filename\u0027, nargs\u003d\u0027?\u0027, default\u003d\u0027typescript\u0027)\noptions \u003d parser.parse_args()\n\nshell \u003d sys.executable if options.use_python else os.environ.get(\u0027SHELL\u0027, \u0027sh\u0027)\nfilename \u003d options.filename\nmode \u003d \u0027ab\u0027 if options.append else \u0027wb\u0027\n\nwith open(filename, mode) as script:\n    def read(fd):\n        data \u003d os.read(fd, 1024)\n        script.write(data)\n        return data\n\n    print(\u0027Script started, file is\u0027, filename)\n    script.write((\u0027Script started on %s\\n\u0027 % time.asctime()).encode())\n\n    pty.spawn(shell, read)\n\n    script.write((\u0027Script done on %s\\n\u0027 % time.asctime()).encode())\n    print(\u0027Script done, file is\u0027, filename)\n Table of Contents pty — Pseudo-terminal utilities Example Previous topic tty — Terminal control functions Next topic fcntl — The fcntl and ioctl system calls This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Unix-specific services » pty — Pseudo-terminal utilities | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License f",
+    "scrapedAt": "2026-05-10 04:56:46.377909"
+  },
+  {
+    "id": 881,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-10 04:56:43.816174"
+  },
+  {
+    "id": 880,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#ast",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:56:37.380016"
+  },
+  {
+    "id": 879,
+    "url": "https://www.w3.org/TR/epub-33/#app-media-type",
+    "scrapedAt": "2026-05-10 04:56:33.381448"
+  },
+  {
     "id": 878,
     "url": "https://github.com/python/cpython/issues/84978",
     "title": "Expose PyFloat_AsDouble at Python level: operator.as_float? · Issue #84978 · python/cpython · GitHub",
@@ -5852,30 +5892,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 879,
-    "url": "https://www.w3.org/TR/epub-33/#app-media-type"
-  },
-  {
-    "id": 880,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#ast"
-  },
-  {
-    "id": 881,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon"
-  },
-  {
-    "id": 882,
-    "url": "https://docs.python.org/3/library/pty.html#pty.openpty"
-  },
-  {
-    "id": 883,
-    "url": "https://github.com/python/cpython/issues/116560"
-  },
-  {
-    "id": 884,
-    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
   },
   {
     "id": 885,
@@ -150885,10 +150901,220 @@ window.searchData = [
     "id": 128776,
     "url": "https://github.com/python/cpython/pull/20481",
     "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 130143,
+    "url": "https://docs.python.org/3/library/pty.html#pty.spawn",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130145,
+    "url": "https://docs.python.org/3/library/pty.html#",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130148,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pty.py",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130151,
+    "url": "https://manpages.debian.org/script(1)",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130155,
+    "url": "https://docs.python.org/3/library/pty.html#pty.fork",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130156,
+    "url": "https://docs.python.org/3/library/os.html#os.waitpid",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130162,
+    "url": "https://docs.python.org/3/library/os.html#os.openpty",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130165,
+    "url": "https://docs.python.org/3/library/pty.html#module-pty",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130166,
+    "url": "https://docs.python.org/3/library/pty.html#example",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130167,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/pty.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130168,
+    "url": "https://docs.python.org/3/library/os.html#os.waitstatus_to_exitcode",
+    "parentUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "id": 130173,
+    "url": "https://github.com/python/cpython/issues/116560#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 130176,
+    "url": "https://github.com/python/cpython/pull/116561",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 130178,
+    "url": "https://github.com/aleaxit/gmpy/blob/eb8dfcbd84abcfcb36b4adcb0d5c6d050731dd75/src/gmpy2_convert_gmp.c#L56",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 130180,
+    "url": "https://github.com/python/cpython/issues/116560#top",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 130181,
+    "url": "https://github.com/python/cpython/issues/102471#issuecomment-1620284985",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 130183,
+    "url": "https://github.com/python/cpython/issues/116560#issue-2177679096",
+    "parentUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "id": 130184,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_GetIndices",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130188,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/slice.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130190,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130199,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PyEllipsis_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130201,
+    "url": "https://docs.python.org/3/c-api/none.html#c.Py_None",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130202,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130204,
+    "url": "https://docs.python.org/3/c-api/slice.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130213,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.Py_Ellipsis",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130214,
+    "url": "https://docs.python.org/3/c-api/slice.html#slice-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130215,
+    "url": "https://docs.python.org/3/c-api/descriptor.html",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130217,
+    "url": "https://docs.python.org/3/c-api/slice.html#ellipsis-object",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130218,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_New",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "id": 130221,
+    "url": "https://docs.python.org/3/c-api/memoryview.html",
+    "parentUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Slice Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Slice Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_Unpack"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@skirpichev",
+    "pageTitle": "Consider adding public PyLong_GetSign() function · Issue #116560 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Consider adding public PyLong_GetSign() function · Issue #116560 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/116560"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pty — Pseudo-terminal utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pty — Pseudo-terminal utilities — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pty.html#pty.openpty"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.daemon"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#ast"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#ast"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/662003?v\u003d4\u0026size\u003d80",
     "alt": "@mdickinson",
