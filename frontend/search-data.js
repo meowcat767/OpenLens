@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 207,
+    "url": "https://www.python.org/events/python-user-group/2170/",
+    "title": "Python for (Almost) Everything | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for (Almost) Everything St. Louis, Missouri, United States From 18 June at 9pm UTC through 19 June at 12am UTC, 2026 Python for (Almost) Everything ← Previous Python Meeting Düsseldorf in Düsseldorf, Germany Next → Django Girls Sogakope 2026 in Sogakope, Ghana Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at St. Louis, Missouri, United States Python for (Almost) Everything",
+    "scrapedAt": "2026-05-10 03:49:24.645994"
+  },
+  {
+    "id": 206,
+    "url": "https://xon.sh/",
+    "title": "Xonsh — Python-powered shell for Linux, macOS, Windows",
+    "content": "XONSH is a Python-powered shell Xonsh (sounds like \"consh\") is a full-featured and cross-platform Python-based shell. The language is a superset of Python 3 with seamless integration of shell functionality and commands. It works on all major platforms, including Linux, macOS, Windows, BSD, Jupyter, Android and Raspberry Pi. Install Docs Code Sponsor What is Xonsh? Xonsh (sounds like \"consh\") is a Python-based shell that seamlessly extends Python with powerful command-line functionality and integration with the operating system. Xonsh is the Shell The xonsh language provides the shell primitives commonly found in traditional Unix shells, including interaction with standard utilities, pipelines, and input/output streams. Read more → \ncd $HOME\n\nid $(whoami) \u003e ~/id.txt\n\ncat /etc/passwd | grep root\n\n$PROMPT \u003d \u0027@ \u0027\n Xonsh is Python The xonsh language is a superset of Python 3, allowing you to execute Python code directly, install and use third-party libraries, import modules, and take advantage of the broader Python ecosystem and tooling. \n2 + 2\n\nvar \u003d \"hello\".upper()\n\nimport json; json.loads(\u0027{\"a\":1}\u0027)\n\n[i for i in range(0,10)]\n Xonsh is the Shell in Python Xonsh provides a unified environment where shell functionality and Python code work together naturally. \nlen($(curl -L https://xon.sh))\n\n$PATH.append(\u0027/tmp\u0027)\n\np\u0027/etc/passwd\u0027.read_text().find(\u0027usr\u0027)\n\nid \u003d $(@json podman ps --format json)[\u0027ID\u0027]\ncfg \u003d $(@yaml cat config.yaml)\n\n@.imp.pathlib.Path(\u0027~/bin\u0027).exists()\n Xonsh is Python in the Shell Xonsh shell session builtins allow xonsh to function as a fully featured shell, tightly integrated with the operating system and its environment. \nname \u003d \u0027snail\u0027\necho @(name) \u003e /tmp/@(name)\n\nwith p\u0027/tmp/dir\u0027.mkdir().cd():\n    touch @(input(\u0027Create file: \u0027))\n\naliases[\u0027e\u0027] \u003d \u0027echo @(2+2)\u0027\naliases[\u0027a\u0027] \u003d lambda args: print(args)\n Xonsh is a Meta-Shell Xonsh can orchestrate and unify other shells and tools, allowing you to combine external programs into a single programmable environment. \nxontrib load sh \\\n             fish_completer\n\ndef nudf(cmd):\n    return @.imp.pandas.DataFrame(\n      @.imp.json.loads(\n          $(nu -c @(cmd + \u0027| to json\u0027))))\n\nnudf!(ls -la)\n\naliases[\u0027ai\u0027] \u003d \u0027ollama run llama3\u0027\nai! command to remove images from podman\n Xonsh is an Ecosystem Xonsh extends beyond a shell through xontribs — community-driven plugins that integrate frameworks, developer tools, AI assistants, themes, and system features into a cohesive ecosystem. \nxontrib load term_integration \\\n             prompt_starship  \\\n             powerline        \\\n             dracula          \\\n             chatgpt          \\\n             django           \\\n             jupyter          \\\n             1password        \\\n             github_copilot   \\\n             history_encrypt\n Xonsh is Everywhere Xonsh is designed to adapt seamlessly to any platform, enabling the same workflows to run seamlessly across macOS, Linux, Windows, so scripts, aliases, and tools behave consistently across different environments and package managers. \n$PATH\n[\u0027/bin\u0027, \u0027/sbin\u0027]            # Linux\n[\u0027/homebrew/bin\u0027]            # macOS\n[\u0027/usr/local/bin\u0027]           # FreeBSD\n[\u0027/mnt/c/Windows/System32\u0027]  # WSL\n[r\u0027c:\\Windows\\System32\u0027]     # Windows\n[\u0027/nix/store/0_-python/bin\u0027] # Nix\n[\u0027/data/com.termux/usr/bin\u0027] # Termux\n[\u0027/tmp/.mount_x/usr/bin\u0027]    # AppImage\n[\u0027/app/bin\u0027]                 # Flatpak\n$PATH \u003d [\u0027/my/own/path\u0027]\n Learn more → Extensions Extensions in the Xonsh ecosystem are called xontribs (short for “contributions”) — a set of tools and conventions for extending the functionality of xonsh. pipeliner Let your pipe lines from the standard output flow thru the Python code in the xonsh shell. output-search Get identifiers, paths, URLs and words from the previous command output and use them for the next command in the xonsh shell. back2dir Return to the most recently used directory when starting the xonsh shell. argcomplete Argcomplete support to tab completion of python and xonsh scripts in the xonsh shell. More xontribs →",
+    "scrapedAt": "2026-05-10 03:49:21.841784"
+  },
+  {
+    "id": 205,
+    "url": "https://fastapi.tiangolo.com/",
+    "title": "FastAPI",
+    "content": "Skip to content Join the FastAPI Cloud waiting list 🚀 FastAPI Conf \u002726 — Oct 28, 2026, Amsterdam 🎤 Follow @fastapi on X (Twitter) to stay updated Follow FastAPI on LinkedIn to stay updated Subscribe to the FastAPI and friends newsletter 🎉 sponsor sponsor sponsor sponsor sponsor sponsor sponsor sponsor sponsor sponsor FastAPI¶ FastAPI framework, high performance, easy to learn, fast to code, ready for production Documentation: https://fastapi.tiangolo.com Source Code: https://github.com/fastapi/fastapi FastAPI is a modern, fast (high-performance), web framework for building APIs with Python based on standard Python type hints. The key features are: Fast: Very high performance, on par with NodeJS and Go (thanks to Starlette and Pydantic). One of the fastest Python frameworks available. Fast to code: Increase the speed to develop features by about 200% to 300%. * Fewer bugs: Reduce about 40% of human (developer) induced errors. * Intuitive: Great editor support. Completion everywhere. Less time debugging. Easy: Designed to be easy to use and learn. Less time reading docs. Short: Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs. Robust: Get production-ready code. With automatic interactive documentation. Standards-based: Based on (and fully compatible with) the open standards for APIs: OpenAPI (previously known as Swagger) and JSON Schema. * estimation based on tests conducted by an internal development team, building production applications. Sponsors¶ Keystone Sponsor¶ Gold Sponsors¶ Silver Sponsors¶ Other sponsors Opinions¶ \"I\u0027m using FastAPI a ton these days. I\u0027m actually planning to use it for all of my team\u0027s ML services at Microsoft. Some of them are getting integrated into the core Windows product and some Office products.\" — Kabir Khan, Microsoft (ref) \"We adopted the FastAPI library to spawn a REST server that can be queried to obtain predictions.\" [for Ludwig] — Piero Molino, Yaroslav Dudin, Sai Sumanth Miryala, Uber (ref) \"Netflix is pleased to announce the open-source release of our crisis management orchestration framework: Dispatch!\" [built with FastAPI] — Kevin Glisson, Marc Vilanova, Forest Monsen, Netflix (ref) \"If anyone is looking to build a production Python API, I would highly recommend FastAPI. It is beautifully designed, simple to use and highly scalable — it has become a key component in our API-first development strategy.\" — Deon Pillsbury, Cisco (ref) \"[...] I\u0027m using FastAPI a ton these days. [...] I\u0027m actually planning to use it for all of my team\u0027s ML services at Microsoft. Some of them are getting integrated into the core Windows product and some Office products.\" Kabir Khan - Microsoft (ref) \"We adopted the FastAPI library to spawn a REST server that can be queried to obtain predictions. [for Ludwig]\" Piero Molino, Yaroslav Dudin, and Sai Sumanth Miryala - Uber (ref) \"Netflix is pleased to announce the open-source release of our crisis management orchestration framework: Dispatch! [built with FastAPI]\" Kevin Glisson, Marc Vilanova, Forest Monsen - Netflix (ref) \"If anyone is looking to build a production Python API, I would highly recommend FastAPI. It is beautifully designed, simple to use and highly scalable, it has become a key component in our API first development strategy and is driving many automations and services such as our Virtual TAC Engineer.\" Deon Pillsbury - Cisco (ref) FastAPI Conf¶ FastAPI Conf \u002726 is happening on October 28, 2026 in Amsterdam, NL. All about FastAPI, right from the source. 🎤 FastAPI mini documentary¶ There\u0027s a FastAPI mini documentary released at the end of 2025, you can watch it online: Typer, the FastAPI of CLIs¶ If you are building a CLI app to be used in the terminal instead of a web API, check out Typer. Typer is FastAPI\u0027s little sibling. And it\u0027s intended to be the FastAPI of CLIs. ⌨️ 🚀 Requirements¶ FastAPI stands on the shoulders of giants: Starlette for the web parts. Pydantic for the data parts. Installation¶ Create and activate a virtual environment and then install FastAPI: $ pip install \"fastapi[standard]\"\n\n---\u003e 100%\n Note: Make sure you put \"fastapi[standard]\" in quotes to ensure it works in all terminals. Example¶ Create it¶ Create a file main.py with: from fastapi import FastAPI\n\napp \u003d FastAPI()\n\n\n@app.get(\"/\")\ndef read_root():\n    return {\"Hello\": \"World\"}\n\n\n@app.get(\"/items/{item_id}\")\ndef read_item(item_id: int, q: str | None \u003d None):\n    return {\"item_id\": item_id, \"q\": q}\n Or use async def... If your code uses async / await, use async def: from fastapi import FastAPI\n\napp \u003d FastAPI()\n\n\n@app.get(\"/\")\nasync def read_root():\n    return {\"Hello\": \"World\"}\n\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int, q: str | None \u003d None):\n    return {\"item_id\": item_id, \"q\": q}\n Note: If you don\u0027t know, check the \"In a hurry?\" section about async and await in the docs. Run it¶ Run the server with: $ fastapi dev\n\n ╭────────── FastAPI CLI - Development mode ───────────╮\n │             ",
+    "scrapedAt": "2026-05-10 03:49:19.117812"
+  },
+  {
+    "id": 204,
+    "url": "https://www.python.org/events/python-events/2147/",
+    "title": "GeoPython 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2026 Basel, Switzerland From 08 June through 10 June, 2026 GeoPython 2026 ← Previous Python Leiden User Group in Leiden, The Netherlands Next → PyCon DE 2027 in Heidelberg, Germany Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-10 03:49:13.213939"
+  },
+  {
+    "id": 203,
+    "url": "https://www.python.org/events/python-events/2131/",
+    "title": "PyCon US 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon US 2026 Long Beach, CA, USA From 13 May through 19 May, 2026 PyCon US 2026 ← Previous North Bay Python 2026 in Petaluma, California, USA Next → PyCon DE 2027 in Heidelberg, Germany Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Long Beach, CA, USA PyCon US 2026",
+    "scrapedAt": "2026-05-10 03:49:07.410297"
+  },
+  {
     "id": 202,
     "url": "https://www.python.org/psf/",
     "title": "Python Software Foundation",
@@ -1412,26 +1447,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 203,
-    "url": "https://www.python.org/events/python-events/2131/"
-  },
-  {
-    "id": 204,
-    "url": "https://www.python.org/events/python-events/2147/"
-  },
-  {
-    "id": 205,
-    "url": "https://fastapi.tiangolo.com/"
-  },
-  {
-    "id": 206,
-    "url": "https://xon.sh/"
-  },
-  {
-    "id": 207,
-    "url": "https://www.python.org/events/python-user-group/2170/"
   },
   {
     "id": 208,
@@ -38169,10 +38184,807 @@ window.searchData = [
     "id": 19466,
     "url": "https://pyfound.blogspot.com/2008/12/",
     "parentUrl": "https://pyfound.blogspot.com/2026/04/announcing-python-software-foundation.html"
+  },
+  {
+    "id": 19507,
+    "url": "https://fastapi.tiangolo.com/#performance",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19508,
+    "url": "https://fastapi.tiangolo.com/#gold-sponsors",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19509,
+    "url": "https://www.techempower.com/benchmarks/#section\u003dtest\u0026runid\u003d7464e520-0dc2-473d-bd34-dbdfd7e85911\u0026hw\u003dph\u0026test\u003dquery\u0026l\u003dzijzen-7",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19510,
+    "url": "https://x.com/fastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19511,
+    "url": "http://127.0.0.1:8000/docs",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19512,
+    "url": "https://fastapi.tiangolo.com/#without-fastapi-cloud-cli",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19513,
+    "url": "https://fastapi.tiangolo.com/virtual-environments/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19514,
+    "url": "https://docs.railway.com/guides/fastapi?utm_medium\u003dintegration\u0026utm_source\u003ddocs\u0026utm_campaign\u003dfastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19515,
+    "url": "https://www.greptile.com/?utm_source\u003dfastapi\u0026utm_medium\u003dsponsorship\u0026utm_campaign\u003dfastapi_sponsor_page",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19516,
+    "url": "https://fastapi.tiangolo.com/#requirements",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19517,
+    "url": "https://eng.uber.com/ludwig-v0-2/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19518,
+    "url": "https://fastapi.tiangolo.com/#create-it",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19519,
+    "url": "https://fastapi.tiangolo.com/async/#in-a-hurry",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19520,
+    "url": "https://www.interviewpal.com/?utm_source\u003dfastapi\u0026utm_medium\u003dopen-source\u0026utm_campaign\u003ddev-hiring",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19521,
+    "url": "https://fastapi.tiangolo.com/#interactive-api-docs-upgrade",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19522,
+    "url": "https://github.com/JoshData/python-email-validator",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19523,
+    "url": "https://github.com/scalar/scalar/?utm_source\u003dfastapi\u0026utm_medium\u003dwebsite\u0026utm_campaign\u003dmain-badge",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19524,
+    "url": "https://fastapi.tiangolo.com/tutorial/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19525,
+    "url": "https://github.com/fastapi/fastapi/pull/26",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19526,
+    "url": "https://fastapi.tiangolo.com/#fastapi-mini-documentary",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19527,
+    "url": "https://www.coderabbit.ai/?utm_source\u003dfastapi\u0026utm_medium\u003dbadge\u0026utm_campaign\u003dfastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19528,
+    "url": "https://fastapiconf.com",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19529,
+    "url": "https://fastapi.tiangolo.com/#example-upgrade",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19530,
+    "url": "https://fastapi.tiangolo.com/#installation",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19531,
+    "url": "https://docs.pydantic.dev/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19532,
+    "url": "https://fastapi.tiangolo.com/#recap",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19533,
+    "url": "https://github.com/fastapi/fastapi/actions?query\u003dworkflow%3ATest+event%3Apush+branch%3Amaster",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19534,
+    "url": "https://fastapi.tiangolo.com/#without-standard-dependencies",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19535,
+    "url": "https://www.svix.com/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19536,
+    "url": "https://github.com/Kludex/python-multipart",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19537,
+    "url": "https://docs.pydantic.dev/latest/usage/pydantic_settings/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19538,
+    "url": "https://blockbee.io?ref\u003dfastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19539,
+    "url": "https://fastapi.tiangolo.com/#additional-optional-dependencies",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19540,
+    "url": "https://www.linkedin.com/posts/deonpillsbury_cisco-cx-python-activity-6963242628536487936-trAp/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19541,
+    "url": "https://dribia.com/en/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19542,
+    "url": "https://www.propelauth.com/?utm_source\u003dfastapi\u0026utm_campaign\u003d1223\u0026utm_medium\u003dmainbadge",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19543,
+    "url": "https://fastapicloud.com",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19544,
+    "url": "https://fastapi.tiangolo.com/#fastapi-conf",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19545,
+    "url": "https://fastapi.tiangolo.com/#keystone-sponsor",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19546,
+    "url": "https://github.com/OAI/OpenAPI-Specification",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19547,
+    "url": "https://fastapi.tiangolo.com/#dependencies",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19548,
+    "url": "https://github.com/esnme/ultrajson",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19549,
+    "url": "https://www.linkedin.com/company/fastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19550,
+    "url": "https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/fastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19551,
+    "url": "https://fastapi.tiangolo.com/#interactive-api-docs",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19552,
+    "url": "https://fastapi.tiangolo.com/fastapi-people/#sponsors",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19553,
+    "url": "https://fastapi.tiangolo.com/newsletter/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19554,
+    "url": "https://fastapi.tiangolo.com",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19555,
+    "url": "https://fastapi.tiangolo.com/#sponsors",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19556,
+    "url": "https://fastapi.tiangolo.com/#check-it",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19557,
+    "url": "https://fastapi.tiangolo.com/fastapi-cli/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19558,
+    "url": "https://fastapi.tiangolo.com/#standard-dependencies",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19559,
+    "url": "https://github.com/scalar/scalar/?utm_source\u003dfastapi\u0026utm_medium\u003dwebsite\u0026utm_campaign\u003dtop-banner",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19560,
+    "url": "https://fastapi.tiangolo.com/#silver-sponsors",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19561,
+    "url": "https://github.com/fastapi/fastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19562,
+    "url": "https://fastapi.tiangolo.com/#license",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19563,
+    "url": "http://127.0.0.1:8000/items/5?q\u003dsomequery",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19564,
+    "url": "https://fastapi.tiangolo.com/#opinions",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19565,
+    "url": "https://fastapi.tiangolo.com/benchmarks/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19566,
+    "url": "https://databento.com/?utm_source\u003dfastapi\u0026utm_medium\u003dsponsor\u0026utm_content\u003ddisplay",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19567,
+    "url": "https://github.com/swagger-api/swagger-ui",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19568,
+    "url": "http://127.0.0.1:8000/redoc",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19569,
+    "url": "https://docs.render.com/deploy-fastapi?utm_source\u003ddeploydoc\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dfastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19570,
+    "url": "https://jinja.palletsprojects.com",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19571,
+    "url": "https://pypi.org/project/fastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19572,
+    "url": "https://fastapi.tiangolo.com/#about-fastapi-cloud",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19573,
+    "url": "https://fastapi.tiangolo.com/#typer-the-fastapi-of-clis",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19574,
+    "url": "https://github.com/Rebilly/ReDoc",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19575,
+    "url": "https://typer.tiangolo.com/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19576,
+    "url": "https://www.starlette.dev/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19577,
+    "url": "https://docs.pydantic.dev/latest/usage/types/extra_types/extra_types/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19578,
+    "url": "https://www.permit.io/blog/implement-authorization-in-fastapi?utm_source\u003dgithub\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dfastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19579,
+    "url": "https://www.uvicorn.dev",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19580,
+    "url": "https://fastapi.tiangolo.com/#alternative-api-docs-upgrade",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19581,
+    "url": "https://fastapi.tiangolo.com/#deploy-your-app-optional",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19582,
+    "url": "https://serpapi.com/?utm_source\u003dfastapi_website",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19583,
+    "url": "https://subtotal.com/?utm_source\u003dfastapi\u0026utm_medium\u003dsponsorship\u0026utm_campaign\u003dopen-source",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19584,
+    "url": "https://typer.tiangolo.com",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19585,
+    "url": "https://liblab.com?utm_source\u003dfastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19586,
+    "url": "https://www.propelauth.com/?utm_source\u003dfastapi\u0026utm_campaign\u003d1223\u0026utm_medium\u003dtopbanner",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19587,
+    "url": "https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19588,
+    "url": "https://fastapi.tiangolo.com/#alternative-api-docs",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19589,
+    "url": "https://github.com/ijl/orjson",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19590,
+    "url": "https://fastapi.tiangolo.com/#deploy-to-other-cloud-providers",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19591,
+    "url": "https://www.coderabbit.ai/?utm_source\u003dfastapi\u0026utm_medium\u003dbanner\u0026utm_campaign\u003dfastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19592,
+    "url": "https://www.stainlessapi.com/?utm_source\u003dfastapi\u0026utm_medium\u003dreferral",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19593,
+    "url": "https://fastapi.tiangolo.com/#example",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19594,
+    "url": "https://strawberry.rocks",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19595,
+    "url": "https://fastapi.tiangolo.com/#run-it",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19596,
+    "url": "https://www.python-httpx.org",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19597,
+    "url": "https://fastapi.tiangolo.com/#fastapi",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19598,
+    "url": "https://json-schema.org/",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19599,
+    "url": "https://www.youtube.com/watch?v\u003dmpR8ngthqiE",
+    "parentUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "id": 19600,
+    "url": "https://github.com/anki-code/xontrib-pipeliner",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19601,
+    "url": "https://xon.sh/tutorial.html",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19602,
+    "url": "https://github.com/topics/xontrib",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19603,
+    "url": "https://github.com/anki-code/xontrib-output-search",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19604,
+    "url": "https://xon.sh/contents.html",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19605,
+    "url": "https://github.com/anki-code/xontrib-argcomplete",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19606,
+    "url": "https://github.com/sponsors/xonsh",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19607,
+    "url": "https://github.com/anki-code/xontrib-back2dir",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19608,
+    "url": "https://xon.sh/install.html",
+    "parentUrl": "https://xon.sh/"
+  },
+  {
+    "id": 19609,
+    "url": "https://github.com/xonsh/xonsh",
+    "parentUrl": "https://xon.sh/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://xon.sh/_static/landing2/images/conch_ascii_with_icon.gif",
+    "alt": "",
+    "pageTitle": "Xonsh — Python-powered shell for Linux, macOS, Windows",
+    "pageUrl": "https://xon.sh/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/blockbee-banner.png",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/scalar-banner.svg",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/propelauth-banner.png",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/liblab-banner.png",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/render-banner.svg",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/coderabbit-banner.png",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/subtotal-banner.svg",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/railway-banner.png",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/serpapi-banner.png",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/greptile-banner.png",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
+    "alt": "FastAPI",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://github.com/fastapi/fastapi/actions/workflows/test.yml/badge.svg?event\u003dpush\u0026branch\u003dmaster",
+    "alt": "Test",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://coverage-badge.samuelcolvin.workers.dev/fastapi/fastapi.svg",
+    "alt": "Coverage",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://img.shields.io/pypi/v/fastapi?color\u003d%2334D058\u0026label\u003dpypi%20package",
+    "alt": "Package version",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://img.shields.io/pypi/pyversions/fastapi.svg?color\u003d%2334D058",
+    "alt": "Supported Python versions",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/fastapicloud.png",
+    "alt": "FastAPI Cloud. By the same team behind FastAPI. You code. We Cloud.",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/blockbee.png",
+    "alt": "BlockBee Cryptocurrency Payment Gateway",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/scalar.svg",
+    "alt": "Scalar: Beautiful Open-Source API References from Swagger/OpenAPI files",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/propelauth.png",
+    "alt": "Auth, user management and more for your B2B product",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/liblab.png",
+    "alt": "liblab - Generate SDKs from FastAPI",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/render.svg",
+    "alt": "Deploy \u0026 scale any full-stack web app on Render. Focus on building apps, not infra.",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/coderabbit.png",
+    "alt": "Cut Code Review Time \u0026 Bugs in Half with CodeRabbit",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/subtotal.svg",
+    "alt": "The Gold Standard in Retail Account Linking",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/railway.png",
+    "alt": "Deploy enterprise applications at startup speed",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/serpapi.png",
+    "alt": "SerpApi: Web Search API",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/greptile.png",
+    "alt": "Greptile: The AI Code Reviewer",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/databento.svg",
+    "alt": "Pay as you go for market data",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/svix.svg",
+    "alt": "Svix - Webhooks as a service",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/stainless.png",
+    "alt": "Stainless | Generate best-in-class SDKs",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/permit.png",
+    "alt": "Fine-Grained Authorization for FastAPI",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/interviewpal.png",
+    "alt": "InterviewPal - AI Interview Coach for Engineers and Devs",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/sponsors/dribia.png",
+    "alt": "Dribia - Data Science within your reach",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/logos/microsoft.svg",
+    "alt": "Microsoft",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/logos/uber.svg",
+    "alt": "Uber",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/logos/netflix.svg",
+    "alt": "Netflix",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/logos/cisco.svg",
+    "alt": "Cisco",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/fastapi-conf.jpeg",
+    "alt": "FastAPI Conf \u002726 - October 28, 2026 - Amsterdam, NL",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/fastapi-documentary.jpg",
+    "alt": "FastAPI Mini Documentary",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://typer.tiangolo.com/img/logo-margin/logo-margin-vector.svg",
+    "alt": "",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png",
+    "alt": "Swagger UI",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/index/index-02-redoc-simple.png",
+    "alt": "ReDoc",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/index/index-03-swagger-02.png",
+    "alt": "Swagger UI",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/index/index-04-swagger-03.png",
+    "alt": "Swagger UI interaction",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/index/index-05-swagger-04.png",
+    "alt": "Swagger UI interaction",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png",
+    "alt": "ReDoc",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
+  {
+    "src": "https://fastapi.tiangolo.com/img/vscode-completion.png",
+    "alt": "editor support",
+    "pageTitle": "FastAPI",
+    "pageUrl": "https://fastapi.tiangolo.com/"
+  },
   {
     "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
     "alt": "",
