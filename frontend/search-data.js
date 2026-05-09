@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 878,
+    "url": "https://github.com/python/cpython/issues/84978",
+    "title": "Expose PyFloat_AsDouble at Python level: operator.as_float? · Issue #84978 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Expose PyFloat_AsDouble at Python level: operator.as_float? #84978 New issue Copy link New issue Copy link Closed Closed Expose PyFloat_AsDouble at Python level: operator.as_float?#84978 Copy link Labels 3.11only security fixesonly security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description mdickinson opened on May 28, 2020 Issue body actions BPO 40801 Nosy @mdickinson, @zware, @serhiy-storchaka PRs bpo-40801: Add operator.as_float #20481 gh-84978: Add float.from_number() and complex.from_number() #26827 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-05-28.09:23:06.760\u003e\nlabels \u003d [\u0027type-feature\u0027, \u00273.11\u0027]\ntitle \u003d \u0027Expose PyFloat_AsDouble at Python level: operator.as_float?\u0027\nupdated_at \u003d \u003cDate 2021-06-21.12:00:00.034\u003e\nuser \u003d \u0027https://github.com/mdickinson\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-06-21.12:00:00.034\u003e\nactor \u003d \u0027serhiy.storchaka\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d []\ncreation \u003d \u003cDate 2020-05-28.09:23:06.760\u003e\ncreator \u003d \u0027mark.dickinson\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 40801\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 11.0\nmessages \u003d [\u0027370181\u0027, \u0027370189\u0027, \u0027370233\u0027, \u0027370244\u0027, \u0027370247\u0027, \u0027370253\u0027, \u0027370255\u0027, \u0027370258\u0027, \u0027370259\u0027, \u0027370286\u0027, \u0027396234\u0027]\nnosy_count \u003d 3.0\nnosy_names \u003d [\u0027mark.dickinson\u0027, \u0027zach.ware\u0027, \u0027serhiy.storchaka\u0027]\npr_nums \u003d [\u002720481\u0027, \u002726827\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue40801\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-84978: expose __float__ dunder method as as_float #110460 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.11only security fixesonly security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:56:19.974329"
+  },
+  {
+    "id": 877,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:56:16.024998"
+  },
+  {
+    "id": 876,
+    "url": "https://github.com/python/cpython/issues/105201",
+    "title": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k PyIter_Next has ambiguous return value #105201 New issue Copy link New issue Copy link Closed Closed PyIter_Next has ambiguous return value #105201 Copy link Assignees Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description iritkatriel opened on Jun 1, 2023 Issue body actions As discussed in capi-workgroup/problems#1, we have some C API functions that have ambiguous return values, requiring the caller to query PyErr_Occurred() to find out whether there was an error. We will try to move away from those APIs to alternative ones whose return values non-ambiguously indicate whether there has been an error, without requiring the user to call PyErr_Occurred(). In this issue we will discuss the iterator API. PyIter_Next return NULL for both error and for the iterator being exhausted. PyErr_Occurred() distinguishes between the cases. Linked PRs gh-105201: Add PyIter_NextItem to replace PyIter_Next which has an ambiguous output #105202 gh-105201: Add PyIter_NextItem() #122331 Reactions are currently unavailable Metadata Metadata Assignees erlend-aasland Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:56:11.962167"
+  },
+  {
+    "id": 875,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty, the current directory is assumed: \u003e\u003e\u003e PurePath()\nPurePosixPath(\u0027.\u0027)\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Users/Ximénez\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027//server/share/file\u0027)\nPureWindow",
+    "scrapedAt": "2026-05-10 04:56:07.850855"
+  },
+  {
+    "id": 874,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:56:01.123175"
+  },
+  {
     "id": 873,
     "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext",
     "title": "ssl — TLS/SSL wrapper for socket objects — Python 3.14.5rc1 documentation",
@@ -5817,26 +5852,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 874,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14"
-  },
-  {
-    "id": 875,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
-  },
-  {
-    "id": 876,
-    "url": "https://github.com/python/cpython/issues/105201"
-  },
-  {
-    "id": 877,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749"
-  },
-  {
-    "id": 878,
-    "url": "https://github.com/python/cpython/issues/84978"
   },
   {
     "id": 879,
@@ -150785,10 +150800,173 @@ window.searchData = [
     "id": 126075,
     "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.selected_alpn_protocol",
     "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 127512,
+    "url": "https://github.com/python/cpython/issues/105201#top",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 127513,
+    "url": "https://github.com/iritkatriel",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 127518,
+    "url": "https://github.com/python/cpython/issues/105201#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 127520,
+    "url": "https://github.com/capi-workgroup/problems/issues/1",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 127521,
+    "url": "https://github.com/python/cpython/issues/105201#issue-1736834171",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 127524,
+    "url": "https://github.com/python/cpython/pull/122331",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 127525,
+    "url": "https://github.com/python/cpython/pull/105202",
+    "parentUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "id": 128762,
+    "url": "https://bugs.python.org/issue40801",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128763,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.11%22",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128764,
+    "url": "https://github.com/python/cpython/pull/26827",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128765,
+    "url": "https://github.com/python/cpython/issues/84978#issue-1199037483",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128768,
+    "url": "https://github.com/python/cpython/issues/84978#top",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128769,
+    "url": "https://github.com/zware",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128771,
+    "url": "https://github.com/python/cpython/pull/110460",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128772,
+    "url": "https://github.com/python/cpython/issues/84978#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128773,
+    "url": "https://github.com/mdickinson",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "id": 128776,
+    "url": "https://github.com/python/cpython/pull/20481",
+    "parentUrl": "https://github.com/python/cpython/issues/84978"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?v\u003d4\u0026size\u003d80",
+    "alt": "@mdickinson",
+    "pageTitle": "Expose PyFloat_AsDouble at Python level: operator.as_float? · Issue #84978 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?v\u003d4\u0026size\u003d48",
+    "alt": "@mdickinson",
+    "pageTitle": "Expose PyFloat_AsDouble at Python level: operator.as_float? · Issue #84978 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84978"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#changes-in-annotations-pep-649-and-pep-749"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "erlend-aasland",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@iritkatriel",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "PyIter_Next has ambiguous return value · Issue #105201 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105201"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
