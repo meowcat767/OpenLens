@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 654,
+    "url": "https://www.python.org/psf/annual-report/",
+    "title": "2024 PSF Annual Impact Report | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e About\u003e\u003e\u003e Annual Impact Report The Python Software Foundation 2024 Annual Impact Report In 2024, the Python community and language continued to grow! The PSF celebrated a year of remarkable growth, with Python becoming the most popular language on GitHub and worldwide community engagement at an all-time high. We expanded our impact by welcoming our inaugural PyPI Support Specialist, Maria Ashna, the revival of the User Success and Education and Outreach Workgroups, and continued investment in grants, infrastructure, and accessibility. We’d love for you to take a look at the 2024 Annual Impact Report that we put together to share more highlights from the year, financial reporting, and some previews of what’s to come in the next year. Download and read the report today! Thank you to Robb Design Co. for the beautiful design! The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 04:32:10.259877"
+  },
+  {
+    "id": 653,
+    "url": "https://www.python.org/m/files/irs_determination.pdf",
+    "title": "https://www.python.org/m/files/irs_determination.pdf",
+    "content": "\n",
+    "scrapedAt": "2026-05-10 04:32:07.154961"
+  },
+  {
+    "id": 650,
+    "url": "http://pyfound.blogspot.com/",
+    "title": "Python Software Foundation News",
+    "content": "Thursday, April 23, 2026 Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉 The PSF is pleased to announce its first batch of PSF Fellows for 2026. Let us welcome the new PSF Fellows for Q1! The following people continue to do amazing things for the Python community: Bill Deegan Website, LinkedIn, GitHub, X El-karece Asiedu LinkedIn (James) Kanin Kearpimy Linktree Jonas Obrist Kristen McIntyre Lucie Anglade Website Phebe Polk Philippe Gagnon Sarah Kuchinsky Mastodon, Bluesky Simon Charette LinkedIn, GitHub Sony Valdez Website, GitHub Stan Ulbrych GitHub, Mastodon Steve Yonkeu Website, GitHub Thank you for your continued contributions. We have added you to our Fellows Roster. The above members help support the Python ecosystem by being phenomenal leaders, sustaining the growth of the Python scientific community, maintaining virtual Python communities, maintaining Python libraries, creating educational material, organizing Python events and conferences, starting Python communities in local regions, and overall being great mentors in our community. Each of them continues to help make Python more accessible around the world. To learn more about the new Fellow members, check out their links above. Let\u0027s continue recognizing Pythonistas all over the world for their impact on our community. The criteria for Fellow members is available on our PSF Fellow Membership page. If you would like to nominate someone to be a PSF Fellow, please send a description of their Python accomplishments and their email address to psf-fellow at python.org. We are accepting nominations for Quarter 2 of 2026 through May 20th, 2026. Are you a PSF Fellow and want to help the Work Group review nominations? Contact us at psf-fellow at python.org. Posted by Marie Nordin at 4/23/2026 07:07:00 AM Tuesday, April 14, 2026 PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation The PyCon US 2026 team has already covered some of the fun, unexpected, and meaningful reasons you’ll want to stay in the PyCon US hotel block. The PSF wants to use our blog to give a different angle, to keep being transparent with you, and share a little bit of real talk on the economics of holding a conference in the US at this moment in time. The short version is, if you’re joining us in Long Beach, please book the official PyCon US hotels through your PyCon US 2026 dashboard, because bookings in our hotel block are critical to the economic viability of the event. Context on hotel bookings \u0026 PyCon US For many years, PyCon US has relied on hotel booking commissions to help pay for our conference space. This helps us keep the event tickets affordable and to continue offering Travel Grants to community members who might not otherwise be able to attend PyCon US. Once your event outgrows academic spaces, donated conference rooms, or theatre spaces, working with the hotels is the industry’s standard way to pay for a professional convention center space. You commit to a certain number of hotel nights blocked off at nearby hotels, based on your event’s numbers from previous years, and in return, you get a reduced rental charge at the convention center. If you sell enough rooms, you additionally earn a small percentage of the revenue from those rooms, i.e. a commission. If, on the other hand, you don’t sell enough rooms, you owe damages to the hotels–essentially paying the full rate for the rooms they reserved for your event but didn’t sell. This system has worked well for the PSF and PyCon US until this year. At the height of the pre-pandemic years, we brought in over $200,000 in hotel commissions. Even last year in Pittsburgh, we fully sold out one hotel and our total commission in 2025 was a healthy $95,909. Unfortunately, this year our hotel bookings are far behind the level they need to avoid damages, let alone earn any commission. We attribute this largely to the sad but understandable decline in willingness of international attendees, as well as some vulnerable domestic attendees, to travel to PyCon US, given the current environment. The bottom line is, if PyCon US hotel booking trends continue at their current pace, the PSF is on track to owe over $200,000 in damages under our hotel contracts. We are not alone in this. The travel industry has been talking about the slump in foreign visitors to the US for months. The decline in foreign tourism revenue is also making the hotels less interested in being generous with our rates, contracts, and deadlines, since most hotels have seen declines in their bookings all year, not just during our event. Everyone is feeling the squeeze. Where we’re at now PyCon US ticket sales are only lagging by a bit. Local attendees buy their tickets later, which is something we anticipate, but this year’s hotel bookings are lagging by a lot compared to last year: PyCon US Ticket sales as of April 10, 2025: 1,565 PyCon US Ticket sales as of April 12, 2026: 1,333 Hotel nights sold as of April 10th, 2025: 3,155 Hote",
+    "scrapedAt": "2026-05-10 04:31:59.782354"
+  },
+  {
+    "id": 649,
+    "url": "https://www.python.org/psf/donations/matching-gifts/",
+    "title": "Matching Donations | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! Did you know many companies offer a matching gift program to encourage philanthropy among their employees? And that some companies will even match gifts made by family members and retirees? By completing a matching gift form (online or paper), you may be able to double, or even triple, the impact of your gift. Contributions of any amount help us award grants and provide resources for furthering the development of a diverse and international community of Python programmers. Your employer may receive a tax deduction for contributions to the Python Software Foundation (PSF) (EIN 04-3594598) , which is a public charity classified as exempt under section 501(c)(3) of the Internal Revenue Code. How to donate and have your company match In a few simple steps, you can see if your company offers a matching gift program. Make a contribution to the PSF here. Check with your company\u0027s Human Resources or Accounting department about matching gift programs for 501(c)(3) nonprofits like the Python Software Foundation. Your company\u0027s Human Resources or Accounting Department will let you know about submission deadlines or related forms. Please contact us at psf-donations@python.org with any questions. Your employer will determine whether the PSF fits into their matching gift program requirements. The PSF receives the matching donation! The PSF appreciates each donation and act of support you make. Thank you to our participating partners! Microsoft Google employees can make a matched donation easily here Twilio employees can make a matched donation easily here The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 04:31:53.672668"
+  },
+  {
+    "id": 648,
+    "url": "https://www.python.org/community/awards/psf-awards/",
+    "title": "PSF Community Service Awards | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Contents Introduction Expiration August 2025 April 2025 November 2024 October 2024 June 2024 March 2024 December 2022 June 2022 March 2022 December 2021 June 2021 March 2021 January 2021 December 2020 October 2020 June 2020 March 2020 December 2019 August 2019 June 2019 March 2019 December 2018 September 2018 June 2018 March 2018 December 2017 September 2017 June 2017 March 2017 December 2016 October 2016 June 2016 March 2016 December 2015 August 2015 July 2015 May 2015 December 2014 October 2014 March 2014 December 2013 November 2013 June 2013 April 2013 December 2012 October 2012 June 2012 February 2012 December 2011 September 2011 April 2011 January 2011 December 2010 October 2010 July 2010 March 2010 December 2009 October 2009 June 2009 March 2009 August 2008 March 2008 Introduction The Python Software Foundation relies on volunteer efforts to achieve many of its goals. The PSF Community Service Awards are a formal way for the PSF Board of Directors to offer recognition of work which, in its opinion, significantly improves the Foundation\u0027s fulfillment of its mission and benefits the broader Python community. The intention of these awards is to demonstrate that service to the Python community does lead to recognition and reward, rather than to provide a direct incentive to contributors. Awards will be made periodically, normally every three months, although the Board may choose to consider awards at other times. Any PSF member is entitled to propose an award at any time, stating the reasons for which the award is merited. Proposals should be made confidentially to the Board by sending an email to psf@python.org. The minutes of award considerations will not name the individuals concerned unless an award is made. The Board will contact proposers to keep them informed of the status of their proposals (such as when the proposal will receive Board consideration). If more than one award is proposed in a given period, the Board may elect to hold over a proposal. Awards will be considered in the order in which they are received. While it would be unusual for a single individual to receive multiple awards, repeated awards will be appropriate to acknowledge ongoing contributions. Recipients need not be Foundation members (though receiving an award may be an indication that consideration for membership is appropriate). Recognition will take the form of an award certificate plus both of the following: A cash award of $599. (Non-US based recipients will be subject to Federal US tax withholding of 30% unless all requirements are met, according to our Vendor Policies page. Contact accounting@python.org with any questions.) Free registration at all future PyCon US events, and the opportunity to apply for a travel grant for the recipient\u0027s travel and accommodation expenses. (Receipts will be required for all reimbursements.) The Board should consider awards at any quarterly meeting where a member award proposal has been received since the last award consideration. At each such meeting where no proposal has been received within the preceding three months the Board may, at its discretion, make an award to an individual nominated by the Board. Expiration If a Community Service Award recipient has not accepted their award within 6 months of written notification, the award expires. August 2025 Q2 2025 Community Service Award was given to Rodrigo Girão Serrão for contribution to the international Python community through leadership of PyCons in Portugal, speaking regularly at PyCons throughout the world, and contributing to the leadership of the Python community in Europe. Q2 2025 Community Service Award was given to Katie McLaughlin for contributions to the Australian and International Python Communities through leading PyCon AU and leading efforts to recognise Open Source contributions of all forms. Q2 2025 Community Service Award was given to Sarah Kuchinsky for contributions to the international Python community through continued leadership of the PyCon US tutorials, and in regional PyCon organizing. April 2025 Q1 2025 Community Service Award was given to Jay Miller for his service to the global Python community in improving the community’s diversity, inclusion, and equity through founding and sustaining Black Python Devs. Q1 2025 Community Service Award was given to Matt Lebrun \u0026 Micaela Reyes for building, growing and sustaining the Python community in the Philippines, including through organising conferences, meetups, and volunteer training programs. November 2024 Q4 2024 Community Service Award was given to Artur Czepiel for his exceptional contributions to the EuroPython Society, and for playing a key role in organizing Python Pizza in the Czech Republic and PyData and Pykonik meetups in Krakow. The Q4 Community Service Award was given to Iqbal Abdullah f",
+    "scrapedAt": "2026-05-10 04:31:46.471944"
+  },
+  {
     "id": 647,
     "url": "https://www.python.org/psf/fiscal-sponsorees/",
     "title": "Fiscal Sponsorees | Python Software Foundation",
@@ -4277,26 +4312,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 648,
-    "url": "https://www.python.org/community/awards/psf-awards/"
-  },
-  {
-    "id": 649,
-    "url": "https://www.python.org/psf/donations/matching-gifts/"
-  },
-  {
-    "id": 650,
-    "url": "http://pyfound.blogspot.com/"
-  },
-  {
-    "id": 653,
-    "url": "https://www.python.org/m/files/irs_determination.pdf"
-  },
-  {
-    "id": 654,
-    "url": "https://www.python.org/psf/annual-report/"
   },
   {
     "id": 655,
@@ -100595,10 +100610,916 @@ window.searchData = [
     "id": 74461,
     "url": "https://www.chipy.org/",
     "parentUrl": "https://www.python.org/psf/fiscal-sponsorees/"
+  },
+  {
+    "id": 74462,
+    "url": "https://www.python.org/community/awards/psf-awards/#august-2025",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74463,
+    "url": "https://www.python.org/community/awards/psf-awards/#october-2014",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74464,
+    "url": "https://www.python.org/community/awards/psf-awards/#october-2012",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74465,
+    "url": "https://www.python.org/community/awards/psf-awards/#october-2010",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74466,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-26",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74467,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-27",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74468,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-28",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74469,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-29",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74470,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-22",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74471,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-23",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74472,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-24",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74473,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-25",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74474,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-20",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74475,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-21",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74476,
+    "url": "https://twitter.com/europython",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74477,
+    "url": "http://pythonology.com",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74478,
+    "url": "https://www.python.org/community/awards/psf-awards/#october-2009",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74479,
+    "url": "https://twitter.com/pyjamasConf",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74480,
+    "url": "https://www.python.org/community/awards/psf-awards/#august-2019",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74481,
+    "url": "http://pyfound.blogspot.com/2012/10/kenneth-gonsalves-posthumously-awarded.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74482,
+    "url": "https://www.python.org/community/awards/psf-awards/#october-2024",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74483,
+    "url": "https://www.python.org/community/awards/psf-awards/#october-2020",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74484,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-37",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74485,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-38",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74486,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-39",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74487,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-33",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74488,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-34",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74489,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-35",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74490,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-36",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74491,
+    "url": "https://www.python.org/community/awards/psf-awards/#july-2015",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74492,
+    "url": "http://pyfound.blogspot.com/2010/11/third-quarter-community-service-awards.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74493,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-30",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74494,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-31",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74495,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-32",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74496,
+    "url": "https://www.python.org/community/awards/psf-awards/#july-2010",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74497,
+    "url": "http://www.lightningtalkman.com/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74498,
+    "url": "https://www.python.org/community/awards/psf-awards/#october-2016",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74499,
+    "url": "http://pyfound.blogspot.com/2010/03/final-2009-community-service-awards.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74500,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2019",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74501,
+    "url": "https://www.python.org/community/awards/psf-awards/#november-2024",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74502,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2018",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74503,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-48",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74504,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-49",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74505,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-44",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74506,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-45",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74507,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-46",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74508,
+    "url": "https://www.python.org/community/awards/psf-awards/#top",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74509,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-47",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74510,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-40",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74511,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-41",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74512,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-42",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74513,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-43",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74514,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2020",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74515,
+    "url": "http://docs.python.org/dev/whatsnew/index.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74516,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2024",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74517,
+    "url": "https://www.python.org/community/awards/psf-awards/#april-2013",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74518,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2022",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74519,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2021",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74520,
+    "url": "https://www.python.org/community/awards/psf-awards/#april-2011",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74521,
+    "url": "http://www.doughellmann.com/PyMOTW/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74522,
+    "url": "https://www.python.org/community/awards/psf-awards/#introduction",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74523,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2009",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74524,
+    "url": "https://www.python.org/community/awards/psf-awards/#august-2015",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74525,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-59",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74526,
+    "url": "http://us.pycon.org/2008/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74527,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-55",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74528,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-56",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74529,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-57",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74530,
+    "url": "http://pyfound.blogspot.com/2011/10/arc-riley-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74531,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-58",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74532,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-51",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74533,
+    "url": "http://pyfound.blogspot.com/2009/10/third-quarter-community-service-awards.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74534,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-52",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74535,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-53",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74536,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-54",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74537,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-50",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74538,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2013",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74539,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2012",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74540,
+    "url": "https://www.python.org/community/awards/psf-awards/#february-2012",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74541,
+    "url": "https://www.python.org/community/awards/psf-awards/#august-2008",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74542,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2017",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74543,
+    "url": "https://www.python.org/community/awards/psf-awards/#june-2016",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74544,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-8",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74545,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-9",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74546,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2019",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74547,
+    "url": "https://twitter.com/pythonireland.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74548,
+    "url": "http://pyfound.blogspot.com/2011/10/nick-coghlan-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74549,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-1",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74550,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-2",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74551,
+    "url": "http://pyfound.blogspot.com/2008/08/georg-brandl-and-brett-cannon-to.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74552,
+    "url": "http://www.python.org/dev/intro/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74553,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-3",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74554,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-4",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74555,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-5",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74556,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-6",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74557,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-7",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74558,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-62",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74559,
+    "url": "http://mail.python.org/mailman/listinfo/python-help",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74560,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-63",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74561,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2020",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74562,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-64",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74563,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2021",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74564,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2010",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74565,
+    "url": "http://pyfound.blogspot.com/2010/10/john-pinner-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74566,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2011",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74567,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-60",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74568,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2012",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74569,
+    "url": "http://pyfound.blogspot.com/2011/10/laura-creighton-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74570,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-61",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74571,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2013",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74572,
+    "url": "http://wingware.com/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74573,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2014",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74574,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2015",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74575,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2016",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74576,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2022",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74577,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2017",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74578,
+    "url": "http://pyfound.blogspot.com/2012/01/armin-rigo-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74579,
+    "url": "http://pyfound.blogspot.com/2008/03/psf-community-awards.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74580,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2018",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74581,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2024",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74582,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2019",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74583,
+    "url": "https://www.python.org/community/awards/psf-awards/#november-2013",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74584,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2008",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74585,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2009",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74586,
+    "url": "http://pyfound.blogspot.com/2009/04/psf-community-awards-march-2009.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74587,
+    "url": "http://tummy.com/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74588,
+    "url": "http://pyfound.blogspot.com/2009/06/second-quarter-community-service-awards.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74589,
+    "url": "https://www.python.org/community/awards/psf-awards/#expiration",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74590,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2010",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74591,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2020",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74592,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2021",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74593,
+    "url": "https://www.python.org/community/awards/psf-awards/#april-2025",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74594,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2022",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74595,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2016",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74596,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2017",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74597,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2018",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74599,
+    "url": "https://www.python.org/community/awards/psf-awards/#march-2014",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74600,
+    "url": "http://pyfound.blogspot.com/2012/01/mike-muller-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74602,
+    "url": "http://docs.python.org/dev/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74603,
+    "url": "https://pypi.org/project/Cython/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74604,
+    "url": "https://www.python.org/community/awards/psf-awards/#january-2011",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74606,
+    "url": "http://www.europython.eu/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74607,
+    "url": "https://www.python.org/community/jobs/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74608,
+    "url": "http://bugs.python.org/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74609,
+    "url": "https://github.com/python/pythondotorg/graphs/contributors",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74610,
+    "url": "http://pyfound.blogspot.com/2012/05/2012-q1-community-service-awards.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74611,
+    "url": "http://pyfound.blogspot.com/2011/09/benjamin-peterson-receives-psf.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74612,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-19",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74613,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-15",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74614,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-16",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74615,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-17",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74616,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-18",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74617,
+    "url": "http://pyfound.blogspot.com/2011/10/tarek-ziade-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74618,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-11",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74619,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-12",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74620,
+    "url": "https://www.python.org/community/awards/psf-awards/#september-2018",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74621,
+    "url": "https://www.python.org/community/awards/psf-awards/#may-2015",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74622,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-13",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74623,
+    "url": "http://pyfound.blogspot.com/2010/03/2010-q1-community-service-awards.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74624,
+    "url": "https://www.python.org/community/awards/psf-awards/#september-2017",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74625,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-14",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74626,
+    "url": "https://www.python.org/community/awards/psf-awards/#january-2021",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74627,
+    "url": "https://www.python.org/community/awards/psf-awards/#toc-entry-10",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74628,
+    "url": "https://www.python.org/community/awards/psf-awards/#september-2011",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74629,
+    "url": "https://pypi.org/project/lxml/",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74630,
+    "url": "http://pyfound.blogspot.com/2012/10/simon-cross-awarded-community-service.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74631,
+    "url": "http://pyfound.blogspot.com/2011/09/van-lindberg-receives-psf-community.html",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74632,
+    "url": "https://www.python.org/community/awards/psf-awards/#december-2009",
+    "parentUrl": "https://www.python.org/community/awards/psf-awards/"
+  },
+  {
+    "id": 74633,
+    "url": "https://causes.benevity.org/causes/840-043594598",
+    "parentUrl": "https://www.python.org/psf/donations/matching-gifts/"
+  },
+  {
+    "id": 74636,
+    "url": "https://google.benevity.org/cause/840-043594598",
+    "parentUrl": "https://www.python.org/psf/donations/matching-gifts/"
+  },
+  {
+    "id": 74639,
+    "url": "https://pyfound.blogspot.com/search?updated-max\u003d2026-04-14T10:13:00-04:00\u0026max-results\u003d2",
+    "parentUrl": "http://pyfound.blogspot.com/"
+  },
+  {
+    "id": 74688,
+    "url": "https://pyfound.blogspot.com/feeds/posts/default",
+    "parentUrl": "http://pyfound.blogspot.com/"
+  },
+  {
+    "id": 74922,
+    "url": "https://robbdesign.co/",
+    "parentUrl": "https://www.python.org/psf/annual-report/"
+  },
+  {
+    "id": 74923,
+    "url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/2024_PSF_Annual_Impact_Report.pdf",
+    "parentUrl": "https://www.python.org/psf/annual-report/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News",
+    "pageUrl": "http://pyfound.blogspot.com/"
+  },
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News",
+    "pageUrl": "http://pyfound.blogspot.com/"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News",
+    "pageUrl": "http://pyfound.blogspot.com/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/psf/sponsorship/sponsors/microsoft.png",
+    "alt": "Microsoft logo",
+    "pageTitle": "Matching Donations | Python Software Foundation",
+    "pageUrl": "https://www.python.org/psf/donations/matching-gifts/"
+  },
+  {
+    "src": "https://www.python.org/m/psf/sponsorship/sponsors/Google_2015_logo.png",
+    "alt": "Google logo",
+    "pageTitle": "Matching Donations | Python Software Foundation",
+    "pageUrl": "https://www.python.org/psf/donations/matching-gifts/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/psf/sponsorship/sponsors/twilio-logo-red.png",
+    "alt": "Twilio logo",
+    "pageTitle": "Matching Donations | Python Software Foundation",
+    "pageUrl": "https://www.python.org/psf/donations/matching-gifts/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/psf/fiscal-sponsorees/fiscalsponsoreechart.png",
     "alt": "Alt text",
