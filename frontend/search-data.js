@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 25,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo",
+    "title": "Election results at a glance - BBC News",
+    "content": "England (active) Scotland Wales England council results Number of councillors 136 of 136 councils Counting complete Reform UK REF 1,453 1,451 (Reform UK 1,453 councillors 1,451 councillors gained) Labour LAB 1,068 1,496 (Labour 1,068 councillors 1,496 councillors lost) Liberal Democrat LD 844 155 (Liberal Democrat 844 councillors 155 councillors gained) Conservative CON 801 563 (Conservative 801 councillors 563 councillors lost) Green GRN 587 441 (Green 587 councillors 441 councillors gained) Independent IND 212 34 (Independent 212 councillors 34 councillors gained) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Scottish Parliament results 65 seats for majority 129 of 129 seats Scottish National Party SNP 58 6 (Scottish National Party 58 seats 6 seats lost) Labour LAB 17 4 (Labour 17 seats 4 seats lost) Reform UK REF 17 17 (Reform UK 17 seats 17 seats gained) Scottish Green SGR 15 6 (Scottish Green 15 seats 6 seats gained) Conservative CON 12 19 (Conservative 12 seats 19 seats lost) Liberal Democrat LD 10 6 (Liberal Democrat 10 seats 6 seats gained) Change since 2021 How this election works The Scottish Parliament has 129 members, known as MSPs. There are 73 constituency MSPs and 56 regional MSPs. A party needs 65 seats to secure a majority. Counting will begin on Friday morning. Live. updates Get the full results Welsh Parliament results No party has a majority No party has a majority 49 seats for majority 96 of 96 seats Plaid Cymru PC 43 20 (Plaid Cymru 43 seats 20 seats gained) Reform UK REF 34 34 (Reform UK 34 seats 34 seats gained) Labour LAB 9 35 (Labour 9 seats 35 seats lost) Conservative CON 7 22 (Conservative 7 seats 22 seats lost) Green GRN 2 2 (Green 2 seats 2 seats gained) Liberal Democrat LD 1 1 (Liberal Democrat 1 seat 1 seat gained) Change since 2021 How this election works Wales is split into 16 new constituencies, each electing six members, known as MSs. Voters choose one party or independent candidate. The 96 seats are allocated by share of the votes and a party needs 49 for a majority. Counting will begin on Friday morning. Live. updates Get the full results Back to nation selection Image source, PA Media ByPaul Seddon, Political reporter, Becky Morton, Political reporter and Jennifer McKiernan, Political reporter Published 8 May 2026 Updated 31 minutes ago Reform UK has made big gains at the expense of Labour and the Conservatives in English council elections. Labour has suffered a historic defeat in the Welsh Senedd and the SNP has held onto power for an unprecedented fifth time in the Scottish Parliament. The elections across Scotland, Wales and 136 English local authorities are the biggest set of polls since the 2024 general election, and widely seen as a crucial test of Sir Keir Starmer\u0027s premiership. After the results of the final councils to declare were announced on Saturday, here are the key takeaways. Follow live updates and reaction What\u0027s the result in my area? Published 20 minutes ago Reform UK wins big (again) Image source, Getty Images Reform UK has picked up more than 1,450 council seats, continuing the party\u0027s success after its breakthrough in town halls last year. Nigel Farage\u0027s party has won big in former Labour heartlands, including in Sunderland and Barnsley, where it took control of the councils after half a century of Labour leadership. Reform has also made gains at the expense of the Conservatives, seizing control of Newcastle-under-Lyme, Suffolk, and Essex, which hosts the parliamentary seats of half a dozen shadow ministers. Reform also won control of Havering, which borders Essex, delivering the party its first-ever win in a London borough. The party was in its infancy the last time these councils were up for election, meaning it was only possible for the party to win majority control in areas where all seats were being contested. Labour wiped out in Wales Plaid Cymru has emerged victorious in Wales, winning 43 seats in the Senedd but finishing short of a majority in the newly-expanded 96-seat Senedd. Reform is in second place with 34 seats, in what marks a breakthrough set of elections for the party in Wales. And Labour was pushed into third place in the Senedd, with its leader Eluned Morgan, Labour first minister since 2024, losing her seat as well. The Conservatives have sustained heavy losses too, with their 22 members slashed by two-thirds, leaving a rump of seven. The Greens have won two seats, marking their first representation in the Senedd since its creation in 1999, and the Liberal Democrats failed to improve on their single seat. And sees painful losses in England Labour has lost more than 1,460 seats across the country, although its losses in London were not as bad as in some of the party\u0027s other traditional heartland",
+    "scrapedAt": "2026-05-10 02:28:54.556501"
+  },
+  {
+    "id": 24,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv",
+    "title": "Him \u0026 Her - BBC iPlayer",
+    "content": "Close menu Home Him \u0026 Her Comedy Him \u0026 Her An intimate anti-romantic comedy about real-life love in its lazy, messy, everyday glory. Series 1: 1. The Toast (28 mins) Start watching 1. The Toast Steve and Becky\u0027s plans to stay in bed are scuppered when her sister Laura arrives. 28 mins 2. The Birthday It\u0027s Steve\u0027s birthday, and everyone wants to go out and get plastered - except Steve. 28 mins 3. The Fancy Dress Party Paul\u0027s son Luke is having a fancy dress party, and Steve and Becky are supposed to attend. 28 mins 4. The Football Everyone tries to watch the match between two local teams - except Steve, Laura and Paul. 28 mins 5. The Parents Becky\u0027s parents are coming round to fix the fridge and Steve is terrified of meeting them. 28 mins 6. The Argument Steve and Becky have a drunken argument, and Becky gets locked in the bathroom. 29 mins Explore the BBC",
+    "scrapedAt": "2026-05-10 02:28:52.781068"
+  },
+  {
+    "id": 23,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t",
+    "title": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "content": "Plaid Cymru leader says he\u0027ll seek a minority government after party\u0027s historic election win 9 May 2026 Summary Plaid Cymru leader Rhun ap Iorwerth has given a speech on the steps of the Senedd to a crowd of hundreds in Cardiff Bay, vowing to \"make Wales the best it possibly can be\" Plaid is now the largest party in Wales after winning 43 of the 96 seats in the Senedd - six short of a majority and Ap Iorwerth confirms he will be seeking a minority government Labour suffered an historic collapse and First Minister Eluned Morgan is quitting as leader of Welsh Labour after losing her seat, with Ken Skates, taking the role on an interim basis Reform came second with 34 seats - leader Dan Thomas said he was disappointed they didn\u0027t win but called them a \"professional, disciplined, well-run party\" The Conservatives won seven seats, the Greens picked up their first two seats and the Liberal Democrats have one Elections also took place in England and Scotland, where the SNP won its fifth election but fell short of majority. Keep across the wider UK picture through our live coverage Scroll to previous item Scroll to next item 0:51Ap Iorwerth gives speech on the Senedd steps. 00:00:51, play videoAp Iorwerth gives speech on the Senedd steps 0:43How do you pronounce Rhun ap Iorwerth\u0027s name? 00:00:43, play videoHow do you pronounce Rhun ap Iorwerth\u0027s name? 0:59Get to know Plaid Cymru\u0027s leader a little better. 00:00:59, play videoGet to know Plaid Cymru\u0027s leader a little better 0:45Analysis: A historic election in Wales. 00:00:45, play videoAnalysis: A historic election in Wales 0:59Plaid \u0027ready to form next government\u0027 - ap Iorwerth. 00:00:59, play videoPlaid \u0027ready to form next government\u0027 - ap Iorwerth 1:20First minister loses seat and resigns as Welsh Labour leader. 00:01:20, play videoFirst minister loses seat and resigns as Welsh Labour leader 1:27Plaid the biggest party as Labour collapses. 00:01:27, play videoPlaid the biggest party as Labour collapses 0:40Rhun ap Iorwerth: \u0027Wales has demanded new leadership\u0027 00:00:40, play videoRhun ap Iorwerth: \u0027Wales has demanded new leadership\u0027 0:27Green Party\u0027s first MS: \u0027A historic breakthrough\u0027 00:00:27, play videoGreen Party\u0027s first MS: \u0027A historic breakthrough\u0027 0:24The first ever result in the new-look Senedd. 00:00:24, play videoThe first ever result in the new-look Senedd 0:54Reform Wales leader\u0027s speech after winning seat. 00:00:54, play videoReform Wales leader\u0027s speech after winning seat 0:32Labour won\u0027t form next Welsh government, says deputy FM. 00:00:32, play videoLabour won\u0027t form next Welsh government, says deputy FM 0:46First result of Senedd election declared. 00:00:46, play videoFirst result of Senedd election declared 1:01A quick look at the new Senedd voting system. 00:01:01, play videoA quick look at the new Senedd voting system 1:27Can you pronounce your constituency? 00:01:27, play videoCan you pronounce your constituency? 0:57The 6,000 votes that changed Wales forever 00:00:57, play videoThe 6,000 votes that changed Wales forever Live Reporting Edited by Adam Hale and Chris Wood Image source, PA Media Plaid Cymru\u0027s 43 new Senedd members have been celebrating their historic election results with supporters outside Wales\u0027 parliament today. Leader Rhun ap Iorwerth is poised to be the first non-Labour Welsh first minister, as he looks ahead to his plans to form a minority government in the coming week. Today also saw: Ap Iorwerth tell the supporters the result was \"history made by the people of Wales\" as he promised his party will represent everyone He chose to take his oath at the Senedd in private, as did the Conservatives\u0027 Darren Miller - while the cameras were allowed to capture Reform\u0027s Dan Thomas taking his. He later said his party would be professional and disciplined in the Senedd Congratulations came pouring in for Plaid - including from Northern Ireland\u0027s first minister Michelle O\u0027Neill, of Sinn Féin, and Scotland\u0027s SNP first minister John Swinney Meanwhile, Labour met to reflect on their catastrophic loss of seats and plan for the future following the resignation of leader Eluned Morgan This led to Ken Skates being announced as the party\u0027s interim leader Former Welsh Labour leader Vaughan Gething said he would have \"done things differently\" to avoid disaster for the party - but Lord Kinnock said Morgan was not to blame for the result We are bringing our live coverage to an end, but you can read more about how today unfolded here. Share close panel Share page Copy link About sharing David Deans Wales political reporter I got some time to speak to some of Plaid\u0027s new MSs on the steps of the institution that they\u0027ll now call home about their plans - and how they\u0027re feeling. Zaynub Akbar, 28, a newly elected Plaid MS for Caerdydd Fynnon Taf, said she was \"overwhelmed, it\u0027s definitely slowly sinking in\". Akbar, who has worked in journalism and for Sport Wales, she competed a gymnast for Wales and Team GB. A profile by Walesonline, external detailed h",
+    "scrapedAt": "2026-05-10 02:28:50.749346"
+  },
+  {
+    "id": 22,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments",
+    "title": "At a glance: Election results so far - BBC News",
+    "content": "England (active) Scotland Wales England council results Number of councillors 136 of 136 councils Counting complete Reform UK REF 1,453 1,451 (Reform UK 1,453 councillors 1,451 councillors gained) Labour LAB 1,063 1,489 (Labour 1,063 councillors 1,489 councillors lost) Liberal Democrat LD 844 155 (Liberal Democrat 844 councillors 155 councillors gained) Conservative CON 801 563 (Conservative 801 councillors 563 councillors lost) Green GRN 580 434 (Green 580 councillors 434 councillors gained) Independent IND 212 34 (Independent 212 councillors 34 councillors gained) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Scottish Parliament results 65 seats for majority 129 of 129 seats Scottish National Party SNP 58 6 (Scottish National Party 58 seats 6 seats lost) Labour LAB 17 4 (Labour 17 seats 4 seats lost) Reform UK REF 17 17 (Reform UK 17 seats 17 seats gained) Scottish Green SGR 15 6 (Scottish Green 15 seats 6 seats gained) Conservative CON 12 19 (Conservative 12 seats 19 seats lost) Liberal Democrat LD 10 6 (Liberal Democrat 10 seats 6 seats gained) Change since 2021 How this election works The Scottish Parliament has 129 members, known as MSPs. There are 73 constituency MSPs and 56 regional MSPs. A party needs 65 seats to secure a majority. Counting will begin on Friday morning. Live. updates Get the full results Welsh Parliament results No party has a majority No party has a majority 49 seats for majority 96 of 96 seats Plaid Cymru PC 43 20 (Plaid Cymru 43 seats 20 seats gained) Reform UK REF 34 34 (Reform UK 34 seats 34 seats gained) Labour LAB 9 35 (Labour 9 seats 35 seats lost) Conservative CON 7 22 (Conservative 7 seats 22 seats lost) Green GRN 2 2 (Green 2 seats 2 seats gained) Liberal Democrat LD 1 1 (Liberal Democrat 1 seat 1 seat gained) Change since 2021 How this election works Wales is split into 16 new constituencies, each electing six members, known as MSs. Voters choose one party or independent candidate. The 96 seats are allocated by share of the votes and a party needs 49 for a majority. Counting will begin on Friday morning. Live. updates Get the full results Back to nation selection Image source, PA Media ByPaul Seddon, Political reporter, Becky Morton, Political reporter and Jennifer McKiernan, Political reporter Published 8 May 2026 Updated 6 hours ago Reform UK has made big gains at the expense of Labour and the Conservatives in English council elections, with a handful of councils still to declare. Labour has suffered a historic defeat in the Welsh Senedd and the SNP has held onto power for an unprecedented fifth time in the Scottish Parliament. The elections across Scotland, Wales and 136 English local authorities are the biggest set of polls since the 2024 general election, and widely seen as a crucial test of Sir Keir Starmer\u0027s premiership. Here are the key developments so far - and what\u0027s still to come. Follow live updates and reaction What\u0027s the result in my area? Published 17 hours ago Reform UK wins big (again) Image source, Getty Images Reform UK has picked up more than 1,440 council seats so far, continuing the party\u0027s success after its breakthrough in town halls last year. Nigel Farage\u0027s party has won big in former Labour heartlands, including in Sunderland and Barnsley, where it took control of the councils after half a century of Labour leadership. Reform has also made gains at the expense of the Conservatives, seizing control of Newcastle-under-Lyme, Suffolk, and Essex, which hosts the parliamentary seats of half a dozen shadow ministers. Reform also won control of Havering, which borders Essex, delivering the party its first-ever win in a London borough. The party was in its infancy the last time these councils were up for election, meaning it is only possible for the party to win majority control in areas where all seats are being contested. Labour wiped out in Wales Plaid Cymru has emerged victorious in Wales, winning 43 seats in the Senedd but finishing short of a majority in the newly-expanded 96-seat Senedd. Reform is in second place with 34 seats, in what marks a breakthrough set of elections for the party in Wales. And Labour was pushed into third place in the Senedd, with its leader Eluned Morgan, Labour first minister since 2024, losing her seat as well. The Conservatives have sustained heavy losses too, with their 22 members slashed by two-thirds, leaving a rump of seven. The Greens have won two seats, marking their first representation in the Senedd since its creation in 1999, and the Liberal Democrats failed to improve on their single seat. And sees painful losses in England Labour has lost more than 1,400 seats across the country, although its losses in London were not as bad as in some of the party\u0027s other traditional heartl",
+    "scrapedAt": "2026-05-10 02:28:48.825348"
+  },
+  {
+    "id": 21,
+    "url": "https://meowcat.site/posts",
+    "title": "",
+    "content": "Posts Write something about your posts. Or don\u0027t! 30 Apr 2026 — Why Wordpress didn\u0027t work. 16 Dec 2025 — How I accidentally deleted my bin folder 15 Dec 2025 — opening",
+    "scrapedAt": "2026-05-10 02:28:46.347222"
+  },
+  {
     "id": 20,
     "url": "https://meowcat.site/posts/How I accidentally deleted my bin folder/",
     "title": "",
@@ -138,26 +173,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 21,
-    "url": "https://meowcat.site/posts"
-  },
-  {
-    "id": 22,
-    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
-  },
-  {
-    "id": 23,
-    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
-  },
-  {
-    "id": 24,
-    "url": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
-  },
-  {
-    "id": 25,
-    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
   },
   {
     "id": 26,
@@ -18713,10 +18728,745 @@ window.searchData = [
     "id": 5842,
     "url": "https://en.wikipedia.org/wiki/Finalizer",
     "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 5851,
+    "url": "https://www.bbc.co.uk/news/articles/cdjpdm9v7gno",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5852,
+    "url": "https://www.bbc.co.uk/news/articles/cgrpgp91rwwo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5853,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nh7wc4?at_mid\u003dK6YnOB7Lho\u0026at_campaign\u003dGangster_Presents_The_Story_of_Ronnie_Biggs\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003dsounds\u0026at_brand\u003dp09dj358\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dGangster_Presents_The_Story_of_Ronnie_Biggs\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5855,
+    "url": "https://www.bbc.co.uk/news/topics/cr45k7vqw1pt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5858,
+    "url": "https://www.bbc.co.uk/news/articles/c5y95782wyko",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5862,
+    "url": "https://www.bbc.co.uk/newsletters/z7hc239",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5864,
+    "url": "https://www.bbc.co.uk/news/articles/c62nq678nyzo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5865,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#election-wales",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5866,
+    "url": "https://www.bbc.co.uk/sounds/play/m002w5m1?at_mid\u003dDDrHqFHbLS\u0026at_campaign\u003dThe_Martin_Lewis_Podcast_7_May_2026\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003dsounds\u0026at_brand\u003dp02pc9xt\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dThe_Martin_Lewis_Podcast_7_May_2026\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5870,
+    "url": "https://www.bbc.co.uk/news/articles/c4g57vdy7wqo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5871,
+    "url": "https://www.bbc.co.uk/news/articles/cd6j8e38p79o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5874,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#tab-election-england",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5875,
+    "url": "https://www.bbc.co.uk/news/topics/c93w7yyex7pt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5876,
+    "url": "https://www.bbc.co.uk/news/articles/cgjpv9pdnpwo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5877,
+    "url": "https://www.bbc.co.uk/news/articles/c9v3yk7127yo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5879,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002qkrz?at_mid\u003dzHeQVrIBtI\u0026at_campaign\u003dAmandaland_S2\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm0024pyy\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dAmandaland_S2\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5880,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002t58s?at_mid\u003dHCrcMkiipa\u0026at_campaign\u003dBeyond_Paradise_S4_E1\u0026at_medium\u003ddisplay_ad\u0026at_campaign_type\u003downed\u0026at_nation\u003dNET\u0026at_audience_id\u003dSS\u0026at_product\u003diplayer\u0026at_brand\u003dm001jg5h\u0026at_ptr_name\u003dbbc\u0026at_ptr_type\u003dmedia\u0026at_format\u003dimage\u0026at_objective\u003dconsumption\u0026at_link_title\u003dBeyond_Paradise_S4_E1\u0026at_bbc_team\u003dBBC",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5881,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#election-scotland",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5885,
+    "url": "https://www.bbc.co.uk/news/articles/cwy2e2w7y46o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5886,
+    "url": "https://www.bbc.co.uk/news/topics/c14mlzpdgjnt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5887,
+    "url": "https://www.bbc.co.uk/news/topics/c7vj3650rrvt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5888,
+    "url": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#election-england",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5889,
+    "url": "https://www.bbc.co.uk/send/u237190912",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5890,
+    "url": "https://www.electoralcommission.org.uk/i-am-a/voter/your-election-information",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "id": 5892,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A459d1579-1ada-41af-9a7e-5921ad8584a0#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5893,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A132dd20f-9d4a-47b9-b73e-84f2016d4f5e#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5894,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3Ac670a148-648e-4b45-96e3-f7e94bbe0c9f#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5895,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A0ccb3ad7-e312-4bc7-8a26-8f341cd54226#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5896,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A4e9c4a3c-d415-4406-b12e-1ccc17b6035e#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5897,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A1b57f1b3-8c1f-4d03-a65d-f742f128899b#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5898,
+    "url": "https://www.bbc.co.uk/news/articles/c136p444y87o",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5899,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3Ad5bc87c7-09ac-47d3-9453-2f50203218c1#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5900,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A363c79fc-57e6-427b-95fa-57456aa19876#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5901,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3Ae19b395b-ea4a-452e-aa18-448158eb4759#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5902,
+    "url": "https://www.bbc.co.uk/usingthebbc/terms/can-i-share-things-from-the-bbc",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5904,
+    "url": "https://www.walesonline.co.uk/news/politics/team-gb-athlete-who-spent-33887110",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5905,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A64a25040-f364-4b96-bf2e-a0c839ad9046#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5907,
+    "url": "https://www.bbc.co.uk/sounds/play/live/bbc_radio_wales_fm",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5908,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A0fffbf7e-d48a-41aa-9228-d6aabf27d6bb#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5909,
+    "url": "https://www.bbc.co.uk/news/articles/cx21559k7geo",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5910,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3Ad1d2253f-9bcf-4c3e-a89b-f6d4ab22bd4f#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5912,
+    "url": "https://www.bbc.co.uk/news/live/c1l2gp47693t?post\u003dasset%3A14d5eee4-1d30-4e47-ac93-53d33dc8ef76#post",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5913,
+    "url": "https://www.bbc.co.uk/news/articles/czj2900en73o",
+    "parentUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "id": 5914,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00v4lml/him-her-series-1-5-the-parents",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 5915,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00tqr6j/him-her-series-1-2-the-birthday",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 5916,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv/him-her#",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 5917,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00tp680/him-her-series-1-1-the-toast",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 5918,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00twwyj/him-her-series-1-3-the-fancy-dress-party",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 5919,
+    "url": "https://www.bbc.co.uk/iplayer",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 5920,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00tz284/him-her-series-1-4-the-football",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "id": 5921,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b00v8xck/him-her-series-1-6-the-argument",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/leaders/hung.png",
+    "alt": "",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/2f4e/live/b2f259a0-4a8c-11f1-8cc6-3107ba12e291.jpg",
+    "alt": "People sitting across a long table count ballot papers in Westminster, central London.\n",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1280/cpsprodpb/e17d/live/98ea43f0-4ae2-11f1-8c8d-458160734f59.png",
+    "alt": "Nigel Farage holds his arms out, celebrating with Reform UK activists holding blue signs reading \"Britain voted Reform\", in front of Havering Town Hall. ",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1577/live/dd40d040-4ae3-11f1-8c8d-458160734f59.png",
+    "alt": "Green leader Zack Polanski celebrates with Zoë Garbett in Hackney",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/81fc/live/7b12bde0-4ac3-11f1-bd52-e755d604ece4.png",
+    "alt": "Banner with the words: More on election 2026",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/6133/live/2bce6ee0-0b00-11f0-97d3-37df2b293ed1.png",
+    "alt": "Thin, red banner promoting the Politics Essential newsletter with text saying, “Top political analysis in your inbox every day”. There is also an image of the Houses of Parliament.",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
+    "alt": "Eboni a woman in her 30s with curly brown hair standing above The Minack Theatre which is carved into the cliff face in Cornwall and covered in luscious green gardens with a view across turquoise sea",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/1df6/live/5bfd3b00-4a1f-11f1-ac78-2112837ce2aa.png",
+    "alt": "A montage of Eurovision hopefuls Cosmó, Felicia, Boy George, Antigoni and Lion Ceccah, against the official colours of the 2026 contest",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/53a9/live/e2069670-4b77-11f1-afc3-cfcf15dbebde.jpg",
+    "alt": "A woman with long brown hair in a grey coat smiles at the camera as she holds up a brown drink in a plastic cup with a straw. She is sat in front of a plain grey painted wall with a wooden plank.",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b857/live/074b0f30-4abd-11f1-aa18-a5969e596c8c.jpg",
+    "alt": "Krista Scelza is wearing a white cropped top, which reads \"Extreme babysitting\",  to show her pregnant belly. To left is a sign on the wall which reads \"Let\u0027 cook with love\" and a baking tray with flour with the words \"Half-baked\". ",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/d77e/live/5155c6a0-4960-11f1-8cde-350b393d70a2.jpg",
+    "alt": "Large curved bronze sculpture by Henry Moore on a plinth, surrounded by open grass and trees in bright sunlight",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/39dc/live/2b3a9040-4947-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A young woman in a black hat and sunglasses is leaning on a shelf inside a bird hide. She has a set of binoculars hanging around her neck. There is moorland visible in the background. ",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Election results at a glance - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_three::iplayer.tv.tleo.him_her.p00kqnzv.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-tleo]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_three]",
+    "alt": "",
+    "pageTitle": "Him \u0026 Her - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Him \u0026 Her - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/p00kqnzv"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/57d9/live/41ca12a0-4bb2-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Rhun ap Iorwerth",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk9z1m.jpg",
+    "alt": "Rhup ap Iorwerth, the leader of Plaid Cymru gives speech Plaid Cymru\u0027s future",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk9j35.jpg",
+    "alt": "Journalist Megan Davies explains how to pronounce Rhun ap Iorwerth",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0ngqm12.jpg",
+    "alt": "Rhun ap Iorwerth",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk6zvk.jpg",
+    "alt": "Gareth reel",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk76bn.jpg",
+    "alt": "Rhun",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk63q2.jpg",
+    "alt": "Eluned",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/eee5/live/582e4080-4b02-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Teleri Glyn Jones in front of the Senedd",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk5p8k.jpg",
+    "alt": "Rhun ap Iorwerth says Wales has demanded new leadership in a speech after winning seat",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk5jhc.jpg",
+    "alt": "Anthony Slaughter",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk4xmd.jpg",
+    "alt": "Reporter",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/fbbe/live/5c394370-4aec-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Dan Thomas in a suit and a rosette",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9f62/live/50d9b350-4ad5-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Huw Irranca-Davies",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400xn/p0nk4t6d.jpg",
+    "alt": "Reform and Plaid Cymru win two seats apiece in the first result of the Senedd election",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e98b/live/0b018330-27ad-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "A designed image of a young woman walking her dog next to a polling station sign in English and Welsh.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4e8b/live/93bddc20-46be-11f1-bd52-e755d604ece4.jpg",
+    "alt": "Teleri Glyn-Jones in a red and white striped shirt looking at the camera. She has brown hair cut into a bob, and she holds her hands in front of her.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/896e/live/31c540f0-4496-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "girl smiling outside the Senedd building, wearing a plaid blue jacket.\n",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/432ec88a-f3bf-4588-ab21-14bce3f60a2d.jpg.webp",
+    "alt": "A middle aged man, wearng a navy suit, blue shirt and black and white polka dot tie. He is standing outside the Senedd and speaking into a cluster of microphones. People are gathered both in front and behind him.The red-brick Pierhead building is visible ",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/030e1c74-e26e-4430-8508-5cf4a1da8405.jpg.webp",
+    "alt": "A smiling woman looking at the camera.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/c5300ef1-8a11-4ff1-a649-ab8cd42bfe22.jpg.webp",
+    "alt": "Three women smiling",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/9316d3ac-a410-43e6-921f-e77f16ec457b.jpg.webp",
+    "alt": "Sir Keir Starmer",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/9d3c4bf7-52cd-497e-a41f-11402ef66b61.jpg.webp",
+    "alt": "The image shows a man wearing a hat, sunglasses and a bright blue t shirt. He\u0027s stood in a green space.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/54c934f0-2eda-4c07-a972-d13862f00eea.jpg.webp",
+    "alt": "A woman with short fair hair wearing a grey t shirt and light blue denim jacket with a colourful bucket hat shaped pin badge on it. She is smiling and looking at the camera. She is stood on a street with buildings and parked cars behind her.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/88df05bc-92df-4011-9923-c71fe9b8bbe8.png.webp",
+    "alt": "An older woman with curly grey hair, wearing a turquoise shirt. She is looking at the camera and stood on a footbridge with greenery on one side of her and other people walking behind her.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/6277eb36-33f8-4498-9c68-3d32f8f93df3.jpg.webp",
+    "alt": "Ken Skates looks to the left, he has dark brown hair and is wearing a grey suit jacket and a red tie.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/2947dd83-dcd6-4e79-8431-939438da97cf.jpg.webp",
+    "alt": "Vaughan Gething with his hands in front of him. He wears a navy suit and blue tie.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/608e69b3-6010-4771-ae00-16bf236e1440.jpg.webp",
+    "alt": "Dan Thomas",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/f4c8ff47-6966-4fb7-be72-c7d83805181f.jpg.webp",
+    "alt": "Neil Kinnock sits in a garden wearing a blue suit and glasses. He has balding white hair and a short white beard.",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/939e4589-385c-4f17-b40d-5ec88ec9246f.jpg.webp",
+    "alt": "Safa Elhassan and Gwyn Williams looking at the camera",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/f6a208e6-4b46-4020-a91a-60e4ae88077e.jpg.webp",
+    "alt": "Michelle O\u0027Neill",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/9/1267c35a-5946-4748-868c-223e2ff6a302.png.webp",
+    "alt": "A Reform candidate",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Wales election 2026: Plaid Cymru\u0027s Rhun ap Iorweth wants minority government - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/live/c1l2gp47693t"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/leaders/hung.png",
+    "alt": "",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/2f4e/live/b2f259a0-4a8c-11f1-8cc6-3107ba12e291.jpg",
+    "alt": "People sitting across a long table count ballot papers in Westminster, central London.\n",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1280/cpsprodpb/e17d/live/98ea43f0-4ae2-11f1-8c8d-458160734f59.png",
+    "alt": "Nigel Farage holds his arms out, celebrating with Reform UK activists holding blue signs reading \"Britain voted Reform\", in front of Havering Town Hall. ",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://news.files.bbci.co.uk/include/newsspec/41045-uk-local-elections-2026/assets/app-project-assets/img/warning.svg",
+    "alt": "",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1577/live/dd40d040-4ae3-11f1-8c8d-458160734f59.png",
+    "alt": "Green leader Zack Polanski celebrates with Zoë Garbett in Hackney",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/81fc/live/7b12bde0-4ac3-11f1-bd52-e755d604ece4.png",
+    "alt": "Banner with the words: More on election 2026",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/6133/live/2bce6ee0-0b00-11f0-97d3-37df2b293ed1.png",
+    "alt": "Thin, red banner promoting the Politics Essential newsletter with text saying, “Top political analysis in your inbox every day”. There is also an image of the Houses of Parliament.",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
+    "alt": "Eboni a woman in her 30s with curly brown hair standing above The Minack Theatre which is carved into the cliff face in Cornwall and covered in luscious green gardens with a view across turquoise sea",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/1df6/live/5bfd3b00-4a1f-11f1-ac78-2112837ce2aa.png",
+    "alt": "A montage of Eurovision hopefuls Cosmó, Felicia, Boy George, Antigoni and Lion Ceccah, against the official colours of the 2026 contest",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/53a9/live/e2069670-4b77-11f1-afc3-cfcf15dbebde.jpg",
+    "alt": "A woman with long brown hair in a grey coat smiles at the camera as she holds up a brown drink in a plastic cup with a straw. She is sat in front of a plain grey painted wall with a wooden plank.",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b857/live/074b0f30-4abd-11f1-aa18-a5969e596c8c.jpg",
+    "alt": "Krista Scelza is wearing a white cropped top, which reads \"Extreme babysitting\",  to show her pregnant belly. To left is a sign on the wall which reads \"Let\u0027 cook with love\" and a baking tray with flour with the words \"Half-baked\". ",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/d77e/live/5155c6a0-4960-11f1-8cde-350b393d70a2.jpg",
+    "alt": "Large curved bronze sculpture by Henry Moore on a plinth, surrounded by open grass and trees in bright sunlight",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/39dc/live/2b3a9040-4947-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A young woman in a black hat and sunglasses is leaning on a shelf inside a bird hide. She has a set of binoculars hanging around her neck. There is moorland visible in the background. ",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "At a glance: Election results so far - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cvgz155y9exo#comments"
+  },
   {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/UML_abstract_methods.svg/330px-UML_abstract_methods.svg.png",
     "alt": "",
