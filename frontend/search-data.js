@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 863,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task",
+    "title": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Coroutines and tasks | Theme Auto Light Dark | Coroutines and tasks¶ This section outlines high-level asyncio APIs to work with coroutines and Tasks. Coroutines¶ Source code: Lib/asyncio/coroutines.py Coroutines declared with the async/await syntax is the preferred way of writing asyncio applications. For example, the following snippet of code prints “hello”, waits 1 second, and then prints “world”: \u003e\u003e\u003e import asyncio\n\n\u003e\u003e\u003e async def main():\n...     print(\u0027hello\u0027)\n...     await asyncio.sleep(1)\n...     print(\u0027world\u0027)\n\n\u003e\u003e\u003e asyncio.run(main())\nhello\nworld\n Note that simply calling a coroutine will not schedule it to be executed: \u003e\u003e\u003e main()\n\u003ccoroutine object main at 0x1053bb7c8\u003e\n To actually run a coroutine, asyncio provides the following mechanisms: The asyncio.run() function to run the top-level entry point “main()” function (see the above example.) Awaiting on a coroutine. The following snippet of code will print “hello” after waiting for 1 second, and then print “world” after waiting for another 2 seconds: import asyncio\nimport time\n\nasync def say_after(delay, what):\n    await asyncio.sleep(delay)\n    print(what)\n\nasync def main():\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    await say_after(1, \u0027hello\u0027)\n    await say_after(2, \u0027world\u0027)\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n\nasyncio.run(main())\n Expected output: started at 17:13:52\nhello\nworld\nfinished at 17:13:55\n The asyncio.create_task() function to run coroutines concurrently as asyncio Tasks. Let’s modify the above example and run two say_after coroutines concurrently: async def main():\n    task1 \u003d asyncio.create_task(\n        say_after(1, \u0027hello\u0027))\n\n    task2 \u003d asyncio.create_task(\n        say_after(2, \u0027world\u0027))\n\n    print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # Wait until both tasks are completed (should take\n    # around 2 seconds.)\n    await task1\n    await task2\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n Note that expected output now shows that the snippet runs 1 second faster than before: started at 17:14:32\nhello\nworld\nfinished at 17:14:34\n The asyncio.TaskGroup class provides a more modern alternative to create_task(). Using this API, the last example becomes: async def main():\n    async with asyncio.TaskGroup() as tg:\n        task1 \u003d tg.create_task(\n            say_after(1, \u0027hello\u0027))\n\n        task2 \u003d tg.create_task(\n            say_after(2, \u0027world\u0027))\n\n        print(f\"started at {time.strftime(\u0027%X\u0027)}\")\n\n    # The await is implicit when the context manager exits.\n\n    print(f\"finished at {time.strftime(\u0027%X\u0027)}\")\n The timing and output should be the same as for the previous version. Added in version 3.11: asyncio.TaskGroup. Awaitables¶ We say that an object is an awaitable object if it can be used in an await expression. Many asyncio APIs are designed to accept awaitables. There are three main types of awaitable objects: coroutines, Tasks, and Futures. Coroutines Python coroutines are awaitables and therefore can be awaited from other coroutines: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Nothing happens if we just call \"nested()\".\n    # A coroutine object is created but not awaited,\n    # so it *won\u0027t run at all*.\n    nested()  # will raise a \"RuntimeWarning\".\n\n    # Let\u0027s do it differently now and await it:\n    print(await nested())  # will print \"42\".\n\nasyncio.run(main())\n Important In this documentation the term “coroutine” can be used for two closely related concepts: a coroutine function: an async def function; a coroutine object: an object returned by calling a coroutine function. Tasks Tasks are used to schedule coroutines concurrently. When a coroutine is wrapped into a Task with functions like asyncio.create_task() the coroutine is automatically scheduled to run soon: import asyncio\n\nasync def nested():\n    return 42\n\nasync def main():\n    # Schedule nested() to run soon concurrently\n    # with \"main()\".\n    task \u003d asyncio.create_task(nested())\n\n    # \"task\" can now be used to cancel \"nested()\", or\n    # can simply be awaited to wait until it is complete:\n    await task\n\nasyncio.run(main())\n Futures A Future is a special low-level awaitable object that represents an eventual result of an asynchronous operation. When a Future object is awaited it means that the coroutine will wait until the Future is resolved in some other place. Future objects in asyncio are needed to allow callback-based code to be used with async/await. Normally there is no need to create Future objects at the application level code. Future objects, sometimes exposed by libraries and some asyncio APIs, can be awaited: async def main():\n    await function_that_returns_a_future_object()\n\n    # this is also valid:\n    await asyncio.gather(\n        function_that_returns_a_future_object(),\n        some_python_coroutine()\n    )\n A good e",
+    "scrapedAt": "2026-05-10 04:54:32.48803"
+  },
+  {
+    "id": 862,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError",
+    "title": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current ",
+    "scrapedAt": "2026-05-10 04:54:29.570025"
+  },
+  {
+    "id": 861,
+    "url": "https://github.com/python/cpython/issues/97850",
+    "title": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Meta issue for cleaning up import system cruft #97850 New issue Copy link New issue Copy link Open Open Meta issue for cleaning up import system cruft#97850 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-importlib Description warsaw opened on Oct 4, 2022 Issue body actions This is a meta issue tracking all the things that need to be cleaned up in the import system. From removing long deprecated APIs to migrating internal access to __spec__, we\u0027ll have several task lists for each related set of clean ups. @brettcannon @ericsnowcurrently for visibility. Removing deprecated APIs Over in What\u0027s New for Python 3.11 there\u0027s a long list of things that have been deprecated long enough that they can be removed in Python 3.12. Here\u0027s that task list for tracking purposes. Watch for linked PRs (maybe one big one or many small ones -- we\u0027ll see!). @brettcannon @ericsnowcurrently for visibility. importlib.find_loader() importlib.util.module_for_loader() importlib.util.set_loader_wrapper() importlib.util.set_package_wrapper() importlib.abc.Loader.module_repr() (3.12: gh-97850: Remove all known instances of module_repr() #97876) importlib.abc.MetaPathFinder.find_module() importlib.abc.MetaPathFinder.find_module() importlib.abc.PathEntryFinder.find_loader() importlib.abc.PathEntryFinder.find_module() importlib.machinery.BuiltinImporter.find_module() importlib.machinery.BuiltinLoader.module_repr() (3.12: gh-97850: Remove all known instances of module_repr() #97876) importlib.machinery.FileFinder.find_loader() importlib.machinery.FileFinder.find_module() importlib.machinery.FrozenImporter.find_module() importlib.machinery.FrozenLoader.module_repr() (3.12: gh-97850: Remove all known instances of module_repr() #97876) importlib.machinery.PathFinder.find_module() importlib.machinery.WindowsRegistryFinder.find_module() Remove pkgutil.ImpImporter (3.12: already deprecated) Remove pkgutil.ImpLoader Remove the imp module (3.12: Remove more deprecated importlib APIs from Python 3.12 #98040) importlib.abc.Finder Update docs Make sure examples and details from PEP 302 are covered in the importlib docs (/cc @Yhg1s ) Remove https://docs.python.org/3/reference/import.html#open-issues (PR) It would be really nice to have a diagram. (import_machinery.rst) how about a section devoted just to the attributes of modules and packages, perhaps expanding upon or supplanting the related entries in the data model reference page? runpy, pkgutil, et al in the library manual should all get “See Also” links at the top pointing to the new import system section. Add more explanation regarding the different ways in which __main__ is initialized? Add more info on __main__ quirks/pitfalls (i.e. copy from PEP 395). Missing deprecations Here\u0027s a list of related APIs that have not yet been deprecated, but should be. We\u0027ll deprecate them in 3.12 and remove them in 3.14. pkgutil.find_loader() pkgutil.get_loader() (or it needs to be reimplemented to not use find_loader()) Other: Do we need to define importlib.abc.PathEntryFinder.find_spec() #103999 PR: gh-97850: Deprecate find_loader and get_loader in pkgutil #98520 PR: GH-97850: Suppress cross-references to the removed module_repr method #104133 PR: GH-97850: Suppress cross-references to removed importlib.util functions #104134 PR: gh-97850: Note in py312 whatsnew that importlib.util.set_loader and importlib.util.module_for_loader have been removed #108719 PR: [3.12] gh-97850: Note in py312 whatsnew that importlib.util.set_loader and importlib.util.module_for_loader have been removed (GH-108719) #108723 PR: gh-97850: remove find_loader and get_loader from pkgutil #119656 PR: gh-97850: Suggest TraversableResources as the alternative for ResourceLoader. #128601 PR: gh-97850: Remove the mention of removal from ResourceReader docs #128602 PR: [3.13] gh-97850: Remove the mention of removal from ResourceReader docs (GH-128602) #128654 PR: [3.12] gh-97850: Remove the mention of removal from ResourceReader docs (GH-128602) #128655 PR: [3.13] gh-97850: Suggest TraversableResources as the alternative for ResourceLoader (GH-128601) #128895 PR: [3.12] gh-97850: Suggest TraversableResources as the alternative for ResourceLoader (GH-128601) #128896 PR: gh-97850: Update the deprecation warning of importlib.abc.Loader.load_module #129855 PR: [3.13] gh-97850: Update the deprecation warning of importlib.abc.Loader.load_module (GH-129855) #130013 PR: [3.12] gh-97850: Update the deprecation war",
+    "scrapedAt": "2026-05-10 04:54:26.318203"
+  },
+  {
+    "id": 860,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring",
+    "title": "sys.monitoring — Execution event monitoring — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys.monitoring — Execution event monitoring | Theme Auto Light Dark | sys.monitoring — Execution event monitoring¶ Added in version 3.12. Note sys.monitoring is a namespace within the sys module, not an independent module, and import sys.monitoring would fail with a ModuleNotFoundError. Instead, simply import sys and then use sys.monitoring. This namespace provides access to the functions and constants necessary to activate and control event monitoring. As programs execute, events occur that might be of interest to tools that monitor execution. The sys.monitoring namespace provides means to receive callbacks when events of interest occur. The monitoring API consists of three components: Tool identifiers Events Callbacks Tool identifiers¶ A tool identifier is an integer and the associated name. Tool identifiers are used to discourage tools from interfering with each other and to allow multiple tools to operate at the same time. Currently tools are completely independent and cannot be used to monitor each other. This restriction may be lifted in the future. Before registering or activating events, a tool should choose an identifier. Identifiers are integers in the range 0 to 5 inclusive. Registering and using tools¶ sys.monitoring.use_tool_id(tool_id: int, name: str, /) → None¶ Must be called before tool_id can be used. tool_id must be in the range 0 to 5 inclusive. Raises a ValueError if tool_id is in use. sys.monitoring.clear_tool_id(tool_id: int, /) → None¶ Unregister all events and callback functions associated with tool_id. sys.monitoring.free_tool_id(tool_id: int, /) → None¶ Should be called once a tool no longer requires tool_id. Will call clear_tool_id() before releasing tool_id. sys.monitoring.get_tool(tool_id: int, /) → str | None¶ Returns the name of the tool if tool_id is in use, otherwise it returns None. tool_id must be in the range 0 to 5 inclusive. All IDs are treated the same by the VM with regard to events, but the following IDs are pre-defined to make co-operation of tools easier: sys.monitoring.DEBUGGER_ID \u003d 0\nsys.monitoring.COVERAGE_ID \u003d 1\nsys.monitoring.PROFILER_ID \u003d 2\nsys.monitoring.OPTIMIZER_ID \u003d 5\n Events¶ The following events are supported: sys.monitoring.events.BRANCH_LEFT¶ A conditional branch goes left. It is up to the tool to determine how to present “left” and “right” branches. There is no guarantee which branch is “left” and which is “right”, except that it will be consistent for the duration of the program. sys.monitoring.events.BRANCH_RIGHT¶ A conditional branch goes right. sys.monitoring.events.CALL¶ A call in Python code (event occurs before the call). sys.monitoring.events.C_RAISE¶ An exception raised from any callable, except for Python functions (event occurs after the exit). sys.monitoring.events.C_RETURN¶ Return from any callable, except for Python functions (event occurs after the return). sys.monitoring.events.EXCEPTION_HANDLED¶ An exception is handled. sys.monitoring.events.INSTRUCTION¶ A VM instruction is about to be executed. sys.monitoring.events.JUMP¶ An unconditional jump in the control flow graph is made. sys.monitoring.events.LINE¶ An instruction is about to be executed that has a different line number from the preceding instruction. sys.monitoring.events.PY_RESUME¶ Resumption of a Python function (for generator and coroutine functions), except for throw() calls. sys.monitoring.events.PY_RETURN¶ Return from a Python function (occurs immediately before the return, the callee’s frame will be on the stack). sys.monitoring.events.PY_START¶ Start of a Python function (occurs immediately after the call, the callee’s frame will be on the stack) sys.monitoring.events.PY_THROW¶ A Python function is resumed by a throw() call. sys.monitoring.events.PY_UNWIND¶ Exit from a Python function during exception unwinding. This includes exceptions raised directly within the function and that are allowed to continue to propagate. sys.monitoring.events.PY_YIELD¶ Yield from a Python function (occurs immediately before the yield, the callee’s frame will be on the stack). sys.monitoring.events.RAISE¶ An exception is raised, except those that cause a STOP_ITERATION event. sys.monitoring.events.RERAISE¶ An exception is re-raised, for example at the end of a finally block. sys.monitoring.events.STOP_ITERATION¶ An artificial StopIteration is raised; see the STOP_ITERATION event. More events may be added in the future. These events are attributes of the sys.monitoring.events namespace. Each event is represented as a power-of-2 integer constant. To define a set of events, simply bitwise OR the individual events together. For example, to specify both PY_RETURN and PY_START events, use the expression PY_RETURN | PY_START. sys.monitoring.events.NO_EVENTS¶ An alias for 0 so users can do explicit comparisons like: if get_events(DEBUGGER_ID) \u003d\u003d NO_EVENTS:\n    ..",
+    "scrapedAt": "2026-05-10 04:54:19.936731"
+  },
+  {
+    "id": 859,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html",
+    "title": "RFC 5334 - Ogg Media Types",
+    "content": "Light Dark Auto Network Working Group                                       I. Goncalves\nRequest for Comments: 5334                                   S. Pfeiffer\nObsoletes: 3534                                            C. Montgomery\nCategory: Standards Track                                           Xiph\n                                                          September 2008\n\n\n                            Ogg Media Types\n\nStatus of This Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\nAbstract\n\n   This document describes the registration of media types for the Ogg\n   container format and conformance requirements for implementations of\n   these types.  This document obsoletes RFC 3534.\n\nTable of Contents\n\n   1.     Introduction  . . . . . . . . . . . . . . . . . . . . . . .  2\n   2.     Changes Since RFC 3534  . . . . . . . . . . . . . . . . . .  2\n   3.     Conformance and Document Conventions  . . . . . . . . . . .  3\n   4.     Deployed Media Types and Compatibility  . . . . . . . . . .  3\n   5.     Relation between the Media Types  . . . . . . . . . . . . .  5\n   6.     Encoding Considerations . . . . . . . . . . . . . . . . . .  5\n   7.     Security Considerations . . . . . . . . . . . . . . . . . .  6\n   8.     Interoperability Considerations . . . . . . . . . . . . . .  7\n   9.     IANA Considerations . . . . . . . . . . . . . . . . . . . .  7\n   10.    Ogg Media Types . . . . . . . . . . . . . . . . . . . . . .  7\n   10.1.  application/ogg . . . . . . . . . . . . . . . . . . . . . .  7\n   10.2.  video/ogg . . . . . . . . . . . . . . . . . . . . . . . . .  8\n   10.3.  audio/ogg . . . . . . . . . . . . . . . . . . . . . . . . .  9\n   11.    Acknowledgements  . . . . . . . . . . . . . . . . . . . . . 10\n   12.    Copying Conditions  . . . . . . . . . . . . . . . . . . . . 10\n   13.    References  . . . . . . . . . . . . . . . . . . . . . . . . 11\n   13.1.  Normative References  . . . . . . . . . . . . . . . . . . . 11\n   13.2.  Informative References  . . . . . . . . . . . . . . . . . . 11\n\n\n\n\n\n\n\n\nGoncalves, et al.           Standards Track                     [Page 1] \nRFC 5334                    Ogg Media Types               September 2008\n\n\n1.  Introduction\n\n   This document describes media types for Ogg, a data encapsulation\n   format defined by the Xiph.Org Foundation for public use.  Refer to\n   \"Introduction\" in [RFC3533] and \"Overview\" in [Ogg] for background\n   information on this container format.\n\n   Binary data contained in Ogg, such as Vorbis and Theora, has\n   historically been interchanged using the application/ogg media type\n   as defined by [RFC3534].  This document obsoletes [RFC3534] and\n   defines three media types for different types of content in Ogg to\n   reflect this usage in the IANA media type registry, to foster\n   interoperability by defining underspecified aspects, and to provide\n   general security considerations.\n\n   The Ogg container format is known to contain [Theora] or [Dirac]\n   video, [Speex] (narrow-band and wide-band) speech, [Vorbis] or [FLAC]\n   audio, and [CMML] timed text/metadata.  As Ogg encapsulates binary\n   data, it is possible to include any other type of video, audio,\n   image, text, or, generally speaking, any time-continuously sampled\n   data.\n\n   While raw packets from these data sources may be used directly by\n   transport mechanisms that provide their own framing and packet-\n   separation mechanisms (such as UDP datagrams or RTP), Ogg is a\n   solution for stream based storage (such as files) and transport (such\n   as TCP streams or pipes).  The media types defined in this document\n   are needed to correctly identify such content when it is served over\n   HTTP, included in multi-part documents, or used in other places where\n   media types [RFC2045] are used.\n\n2.  Changes Since RFC 3534\n\n   o  The type \"application/ogg\" is redefined.\n\n   o  The types \"video/ogg\" and \"audio/ogg\" are defined.\n\n   o  New file extensions are defined.\n\n   o  New Macintosh file type codes are defined.\n\n   o  The codecs parameter is defined for optional use.\n\n   o  The Ogg Skeleton extension becomes a recommended addition for\n      content served under the new types.\n\n\n\n\n\n\nGoncalves, et al.           Standards Track                     [Page 2] \nRFC 5334                    Ogg Media Types               September 2008\n\n\n3.  Conformance and Document Conventions\n\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in BCP 14, [RFC2119] and\n   indicate requirement levels for compliant implementations.\n   Requirements apply to all implemen",
+    "scrapedAt": "2026-05-10 04:54:13.787309"
+  },
+  {
     "id": 858,
     "url": "https://github.com/python/cpython/issues/128911",
     "title": "[C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function · Issue #128911 · python/cpython · GitHub",
@@ -5712,26 +5747,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 859,
-    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html"
-  },
-  {
-    "id": 860,
-    "url": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
-  },
-  {
-    "id": 861,
-    "url": "https://github.com/python/cpython/issues/97850"
-  },
-  {
-    "id": 862,
-    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxError"
-  },
-  {
-    "id": 863,
-    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
   },
   {
     "id": 864,
@@ -146975,10 +146990,1374 @@ window.searchData = [
     "id": 121347,
     "url": "https://github.com/python/cpython/pull/129657",
     "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121348,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5215",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121349,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-12",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121350,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121351,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4288",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121352,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-13",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121353,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3552",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121354,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121355,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Skeleton",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121356,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Codecs",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121357,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121358,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121359,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4281",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121360,
+    "url": "https://datatracker.ietf.org/doc/html/bcp79",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121361,
+    "url": "https://datatracker.ietf.org/person/Silvia.Pfeiffer@csiro.au",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121362,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121363,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Vorbis",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121364,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-11",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121365,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-FLAC",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121366,
+    "url": "https://www.rfc-editor.org/rfc/rfc5334.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121367,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-13.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121368,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-13.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121369,
+    "url": "https://datatracker.ietf.org/doc/html/bcp78",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121370,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-ThRTP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121371,
+    "url": "https://datatracker.ietf.org/doc/html/bcp72",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121373,
+    "url": "http://xiph.org",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121374,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Speex",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121375,
+    "url": "http://theora.org/doc/Theora.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121376,
+    "url": "https://datatracker.ietf.org/doc/html/draft-goncalves-rfc3534bis-07",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121377,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Theora",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121378,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-SpRTP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121379,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4648",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121380,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-libogg",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121381,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Ogg",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121382,
+    "url": "http://wiki.xiph.org/index.php/MIMETypesCodecs",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121383,
+    "url": "http://speex.org/docs/manual/speex-manual",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121384,
+    "url": "http://flac.sourceforge.net/format.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121385,
+    "url": "http://www.ietf.org/ipr",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121386,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2045",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121387,
+    "url": "http://xiph.org/vorbis/doc/Vorbis_I_spec.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121388,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc5334.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121389,
+    "url": "http://xiph.org/ogg/doc/libogg",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121390,
+    "url": "https://datatracker.ietf.org/doc/draft-goncalves-rfc3534bis/07/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121391,
+    "url": "http://xiph.org/ogg/doc",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121393,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121394,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-11",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121395,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121396,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121397,
+    "url": "https://datatracker.ietf.org/doc/html/bcp13",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121398,
+    "url": "https://datatracker.ietf.org/doc/html/bcp14",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121399,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2119",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121400,
+    "url": "https://datatracker.ietf.org/doc/rfc5334/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121401,
+    "url": "http://annodex.net/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121402,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121403,
+    "url": "https://www.rfc-editor.org/rfc/rfc5334.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121404,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7845",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121405,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121406,
+    "url": "https://datatracker.ietf.org/person/monty@xiph.org",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121407,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121408,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121409,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121410,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121411,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121412,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121413,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121414,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121415,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121416,
+    "url": "http://xiph.org/ogg/doc/skeleton.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121417,
+    "url": "https://datatracker.ietf.org/doc/rfc5334/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121418,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-CMML",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121419,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121420,
+    "url": "http://diracvideo.org/specifications/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121421,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121422,
+    "url": "https://datatracker.ietf.org/person/justivo@gmail.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121423,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121424,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121425,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Dirac",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121426,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121427,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3533",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121428,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3534",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121429,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 121432,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121435,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-CALL",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121436,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#ancillary-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121439,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#registering-and-using-tools",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121440,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#registering-callback-functions",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121441,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.MISSING",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121444,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-LINE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121445,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.clear_tool_id",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121446,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c-api-monitoring",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121447,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-INSTRUCTION",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121449,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.free_tool_id",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121450,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_THROW",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121451,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121452,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/sys.monitoring.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121453,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#tool-identifiers",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121455,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_START",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121456,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#the-stop-iteration-event",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121458,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.get_tool",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121459,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#per-code-object-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121460,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-C_RAISE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121462,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#local-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121464,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#callbacks",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121465,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.DISABLE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121466,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-EXCEPTION_HANDLED",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121468,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-local",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121470,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.get_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121472,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.get_local_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121474,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.use_tool_id",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121475,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#other-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121476,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-RAISE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121481,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-JUMP",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121483,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_YIELD",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121484,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-STOP_ITERATION",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121485,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-NO_EVENTS",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121486,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.set_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121487,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#turning-events-on-and-off",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121488,
+    "url": "https://peps.python.org/pep-0380/#use-of-stopiteration-to-return-values",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121489,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-RERAISE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121490,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_UNWIND",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121493,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.set_local_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121497,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#deprecated-event",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121498,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.restart_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121499,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#disabling-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121501,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.register_callback",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121502,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_RETURN",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121503,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#callback-function-arguments",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121504,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_RESUME",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121505,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-C_RETURN",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121506,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-global",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121507,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#setting-events-globally",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 121510,
+    "url": "https://docs.python.org/3.11/whatsnew/3.11.html#pending-removal-in-python-3-12",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121513,
+    "url": "https://www.python.org/dev/peps/pep-0395",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121514,
+    "url": "https://github.com/python/cpython/pull/108719",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121516,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.find_loader",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121520,
+    "url": "https://github.com/python/cpython/issues/103999",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121521,
+    "url": "https://github.com/python/cpython/pull/119656",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121522,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.abc.PathEntryFinder.find_module",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121523,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.abc.MetaPathFinder.find_module",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121524,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.abc.Loader.module_repr",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121525,
+    "url": "https://github.com/Yhg1s",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121526,
+    "url": "https://github.com/python/cpython/issues/97850#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121527,
+    "url": "https://github.com/python/cpython/pull/104133",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121528,
+    "url": "https://github.com/python/cpython/pull/128602",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121529,
+    "url": "https://github.com/python/cpython/pull/128601",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121530,
+    "url": "https://github.com/python/cpython/pull/129855",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121531,
+    "url": "https://github.com/python/cpython/issues/97850#issue-1396901464",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121532,
+    "url": "https://github.com/python/cpython/pull/104134",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121533,
+    "url": "https://docs.python.org/3/reference/import.html#open-issues",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121534,
+    "url": "https://github.com/python/cpython/pull/128654",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121535,
+    "url": "https://github.com/python/cpython/pull/128896",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121536,
+    "url": "https://github.com/python/cpython/pull/130017",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121537,
+    "url": "https://github.com/python/cpython/pull/128895",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121538,
+    "url": "https://github.com/python/cpython/pull/131149",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121540,
+    "url": "https://github.com/python/cpython/pull/108723",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121541,
+    "url": "https://github.com/python/cpython/pull/98520",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121542,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.util.module_for_loader",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121543,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.machinery.FileFinder.find_loader",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121544,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.machinery.PathFinder.find_module",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121545,
+    "url": "https://github.com/python/cpython/pull/97935",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121547,
+    "url": "https://github.com/python/cpython/pull/130013",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121548,
+    "url": "https://github.com/python/cpython/pull/97876",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121549,
+    "url": "https://docs.python.org/3.11/library/importlib.html#importlib.abc.PathEntryFinder.find_loader",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121550,
+    "url": "https://github.com/python/cpython/pull/142205",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121551,
+    "url": "https://github.com/python/cpython/issues/97850#top",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121554,
+    "url": "https://github.com/python/cpython/issues/98040",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121555,
+    "url": "https://github.com/python/cpython/pull/128655",
+    "parentUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "id": 121779,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121786,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121788,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id12",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121790,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id11",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121791,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121796,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_exception",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121797,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#terminating-a-task-group",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121799,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#awaitables",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121801,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout.expired",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121802,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id14",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121803,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id13",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121804,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id16",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121805,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#task-groups",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121806,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id15",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121807,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.remove_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121809,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#eager-task-factory",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121810,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.create_eager_task_factory",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121814,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121815,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#running-tasks-concurrently",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121816,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121818,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121819,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121821,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_coro",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121822,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_context",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121823,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121824,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#scheduling-from-other-threads",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121825,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.all_tasks",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121826,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121827,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121829,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancel",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121830,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#shielding-from-cancellation",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121831,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121832,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#introspection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121833,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.to_thread",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121834,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.eager_task_factory",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121835,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.iscoroutine",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121837,
+    "url": "https://docs.python.org/3/reference/datamodel.html#async-context-managers",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121838,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#coroutines",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121840,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancelled",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121842,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#task-object",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121844,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.print_stack",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121845,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout.reschedule",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121846,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.exception",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121847,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#timeouts",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121848,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#running-in-threads",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121849,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.FIRST_EXCEPTION",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121851,
+    "url": "https://docs.python.org/3/library/math.html#math.nan",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121852,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.gather",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121853,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.FIRST_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121854,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.cancel",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121855,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/tasks.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121858,
+    "url": "https://docs.python.org/3/library/contextvars.html#module-contextvars",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121860,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#sleeping",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121861,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.run_coroutine_threadsafe",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121862,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#creating-tasks",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121863,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.add_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121865,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121866,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_stack",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121867,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio-task.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121869,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.set_result",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121872,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.result",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121873,
+    "url": "https://docs.python.org/3/library/asyncio-dev.html#asyncio-multithreading",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121876,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.shield",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121878,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121879,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Timeout.when",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121881,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.set_name",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121882,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/coroutines.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121883,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.sleep",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121884,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.get_name",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121885,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121886,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.uncancel",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121887,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.as_completed",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121888,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.remove_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121890,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.ALL_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121891,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121892,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future.add_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121894,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.current_task",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121895,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#waiting-primitives",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121899,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.cancelling",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121900,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#coroutines-and-tasks",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121901,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.ensure_future",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121904,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#task-cancellation",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121908,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.Task.done",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121910,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121911,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.timeout_at",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121913,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_running_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121914,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#taskgroups",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121916,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.InvalidStateError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121917,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio-awaitables",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 121918,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.TimeoutError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Coroutines and tasks — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxError"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d64\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "brettcannon",
+    "pageTitle": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d64\u0026u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4",
+    "alt": "warsaw",
+    "pageTitle": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@warsaw",
+    "pageTitle": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@warsaw",
+    "pageTitle": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d64\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d64\u0026u\u003de30815e4dd7e4b5d2683263b7bf7c39edb5fbd7f\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "Meta issue for cleaning up import system cruft · Issue #97850 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97850"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys.monitoring — Execution event monitoring — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys.monitoring — Execution event monitoring — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 5334 - Ogg Media Types",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 5334 - Ogg Media Types",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
     "alt": "@vstinner",
