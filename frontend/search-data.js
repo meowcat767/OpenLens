@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 506,
+    "url": "http://www.crummy.com/software/BeautifulSoup/",
+    "title": "Beautiful Soup: We called him Tortoise because he taught us.",
+    "content": "[ Download | Documentation | Hall of Fame | For enterprise | Source | Changelog | Discussion group | Zine ] Beautiful Soup You didn\u0027t write that awful page. You\u0027re just trying to get some data out of it. Beautiful Soup is here to help. Since 2004, it\u0027s been saving programmers hours or days of work on quick-turnaround screen scraping projects. Beautiful Soup is a Python library designed for quick turnaround projects like screen-scraping. Three features make it powerful: Beautiful Soup provides a few simple methods and Pythonic idioms for navigating, searching, and modifying a parse tree: a toolkit for dissecting a document and extracting what you need. It doesn\u0027t take much code to write an application Beautiful Soup automatically converts incoming documents to Unicode and outgoing documents to UTF-8. You don\u0027t have to think about encodings, unless the document doesn\u0027t specify an encoding and Beautiful Soup can\u0027t detect one. Then you just have to specify the original encoding. Beautiful Soup sits on top of popular Python parsers like lxml and html5lib, allowing you to try out different parsing strategies or trade speed for flexibility. Beautiful Soup parses anything you give it, and does the tree traversal stuff for you. You can tell it \"Find all the links\", or \"Find all the links of class externalLink\", or \"Find all the links whose urls match \"foo.com\", or \"Find the table heading that\u0027s got bold text, then give me that text.\" Valuable data that was once locked up in poorly-designed websites is now within your reach. Projects that would have taken hours take only minutes with Beautiful Soup. Interested? Read more. Getting and giving support Beautiful Soup for enterprise available via Tidelift If you have questions, send them to the discussion group. If you find a bug, file it on Launchpad. If it\u0027s a security vulnerability, report it confidentially through Tidelift. If you use Beautiful Soup as part of your work, please consider a Tidelift subscription. This will support many of the free software projects your organization depends on, not just Beautiful Soup. If Beautiful Soup is useful to you on a personal level, you might like to read Tool Safety, a short zine I wrote about what I learned about software development from working on Beautiful Soup. Thanks! Download Beautiful Soup The current release is Beautiful Soup 4.14.3 (November 30, 2025). You can install Beautiful Soup 4 with pip install beautifulsoup4. In Debian and Ubuntu, Beautiful Soup is available as the python3-bs4 package. In Fedora it\u0027s available as the python3-beautifulsoup4 package. Beautiful Soup is licensed under the MIT license, so you can also download the tarball, drop the bs4/ directory into almost any Python application (or into your library path) and start using it immediately. Beautiful Soup 4 is supported on Python versions 3.7 and greater. Support for Python 2 was discontinued on January 1, 2021—one year after the Python 2 sunsetting date. Beautiful Soup 3 Beautiful Soup 3 was the official release line of Beautiful Soup from May 2006 to March 2012. It does not support Python 3 and was discontinued or January 1, 2021—one year after the Python 2 sunsetting date. If you have any active projects using Beautiful Soup 3, you should migrate to Beautiful Soup 4 as part of your Python 3 conversion. Soon, the beautifulsoup PyPI package name will be reclaimed by a more recent version of Beautiful Soup. When that happens, all Python 2 code still using Beautiful Soup 3 will break. Here\u0027s the Beautiful Soup 3 documentation. The current and hopefully final release of Beautiful Soup 3 is 3.2.2 (October 5, 2019). It\u0027s the BeautifulSoup package on pip. It\u0027s also available as python-beautifulsoup in Debian and Ubuntu, and as python-BeautifulSoup in Fedora. Beautiful Soup 3, like Beautiful Soup 4, is supported through Tidelift. Hall of Fame Over the years, Beautiful Soup has been used in hundreds of different projects. There\u0027s no way I can list them all, but I want to highlight a few high-profile projects. Beautiful Soup isn\u0027t what makes these projects interesting, but it did make their completion easier: \"Movable Type\", a work of digital art on display in the lobby of the New York Times building, uses Beautiful Soup to scrape news feeds. Jiabao Lin\u0027s DXY-COVID-19-Crawler uses Beautiful Soup to scrape a Chinese medical site for information about COVID-19, making it easier for researchers to track the spread of the virus. (Source: \"How open source software is fighting COVID-19\") Reddit uses Beautiful Soup to parse a page that\u0027s been linked to and find a representative image. Alexander Harrowell uses Beautiful Soup to track the business activities of an arms merchant. The developers of Python itself used Beautiful Soup to migrate the Python bug tracker from Sourceforge to Roundup. The Lawrence Journal-World uses Beautiful Soup to gather statewide election results. The NOAA\u0027s Forecast Applications Branch uses Beautiful Soup in TopoGrabber, a script for dow",
+    "scrapedAt": "2026-05-10 04:20:16.648453"
+  },
+  {
+    "id": 505,
+    "url": "http://pandas.pydata.org/",
+    "title": "pandas - Python Data Analysis Library",
+    "content": "pandas pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language. Install pandas now! Getting started Install pandas Getting started Try pandas online Documentation User guide API reference Contributing to pandas Release notes Community About pandas Ask a question Ecosystem With the support of: The full list of companies supporting pandas is available in the sponsors page. Latest version: 3.0.1 What\u0027s new in 3.0.1 Release date: Feb 17, 2026 Documentation (web) Download source code Follow us Recommended books Previous versions 2.3.3 (Sep 29, 2025) changelog | docs | code 2.2.3 (Sep 20, 2024) changelog | docs | code 2.1.4 (Dec 08, 2023) changelog | docs | code 2.0.3 (Jun 28, 2023) changelog | docs | code Show more 1.5.3 (Jan 19, 2023) changelog | docs | code",
+    "scrapedAt": "2026-05-10 04:20:05.255155"
+  },
+  {
+    "id": 504,
+    "url": "http://pypi.org",
+    "title": "PyPI · The Python Package Index",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Find, install and publish Python packages with the Python Package Index Search PyPI Search Or browse projects 805,433 projects 8,648,722 releases 18,784,163 files 1,054,094 users The Python Package Index (PyPI) is a repository of software for the Python programming language. PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI. English español français 日本語 português (Brasil) українська Ελληνικά Deutsch 中文 (简体) 中文 (繁體) русский עברית Esperanto 한국어 Supported by AWS Cloud computing and Security Sponsor Datadog Monitoring Depot Continuous Integration Fastly CDN Google Download Analytics Pingdom Monitoring Sentry Error logging StatusPage Status page",
+    "scrapedAt": "2026-05-10 04:20:02.111567"
+  },
+  {
+    "id": 503,
+    "url": "http://kivy.org/",
+    "title": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "content": "Kivy: The Open Source Python App Development Framework. Build and distribute beautiful Python cross-platform GUI apps with ease. Kivy runs on Android, iOS, Linux, macOS and Windows. MIT License 17.0K Stars Get started! Kivy has been built to be easy to use, cross-platform and fast. With a single codebase, you will be able to deploy apps on Windows, Linux, macOS, iOS and Android. Business Friendly Kivy is released under the MIT License, is 100% free to use, and is professionally developed, backed and maintained. Companies and individuals are using Kivy for their projects every day. Kivy is kept open source thanks to its contributors and backers. {{organizations.length}} organizations are supporting Kivy: {{ organization.account.name }} {{organization.tier.name}} ${{organization.totalDonations.value}} Amount contributed See all the {{organizations.length}} organizations supporting Kivy on OpenCollective {{individuals.length}} individuals are supporting Kivy See all the {{individuals.length}} individuals supporting Kivy on OpenCollective Start supporting Kivy from $5 Kivy is a free and open source software and is maintained by the community. Sometimes, a small contribution, could help to keep the wheel spinning flawlessly. Support Kivy as a Backer (Starts from $5/mo) Support Kivy as a Sponsor (Starts from $100/mo) Need help? The Kivy community will love ❤️ to help. Join us on Discord Join us on kivy-users group Source code hosted on Github Contact us",
+    "scrapedAt": "2026-05-10 04:19:57.867776"
+  },
+  {
+    "id": 502,
+    "url": "http://docs.python.org/howto/sockets.html",
+    "title": "Socket Programming HOWTO — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python HOWTOs » Socket Programming HOWTO | Theme Auto Light Dark | Socket Programming HOWTO¶ Author: Gordon McMillan Abstract Sockets are used nearly everywhere, but are one of the most severely misunderstood technologies around. This is a 10,000 foot overview of sockets. It’s not really a tutorial - you’ll still have work to do in getting things operational. It doesn’t cover the fine points (and there are a lot of them), but I hope it will give you enough background to begin using them decently. Sockets¶ I’m only going to talk about INET (i.e. IPv4) sockets, but they account for at least 99% of the sockets in use. And I’ll only talk about STREAM (i.e. TCP) sockets - unless you really know what you’re doing (in which case this HOWTO isn’t for you!), you’ll get better behavior and performance from a STREAM socket than anything else. I will try to clear up the mystery of what a socket is, as well as some hints on how to work with blocking and non-blocking sockets. But I’ll start by talking about blocking sockets. You’ll need to know how they work before dealing with non-blocking sockets. Part of the trouble with understanding these things is that “socket” can mean a number of subtly different things, depending on context. So first, let’s make a distinction between a “client” socket - an endpoint of a conversation, and a “server” socket, which is more like a switchboard operator. The client application (your browser, for example) uses “client” sockets exclusively; the web server it’s talking to uses both “server” sockets and “client” sockets. History¶ Of the various forms of IPC, sockets are by far the most popular. On any given platform, there are likely to be other forms of IPC that are faster, but for cross-platform communication, sockets are about the only game in town. They were invented in Berkeley as part of the BSD flavor of Unix. They spread like wildfire with the internet. With good reason — the combination of sockets with INET makes talking to arbitrary machines around the world unbelievably easy (at least compared to other schemes). Creating a Socket¶ Roughly speaking, when you clicked on the link that brought you to this page, your browser did something like the following: # create an INET, STREAMing socket\ns \u003d socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# now connect to the web server on port 80 - the normal http port\ns.connect((\"www.python.org\", 80))\n When the connect completes, the socket s can be used to send in a request for the text of the page. The same socket will read the reply, and then be destroyed. That’s right, destroyed. Client sockets are normally only used for one exchange (or a small set of sequential exchanges). What happens in the web server is a bit more complex. First, the web server creates a “server socket”: # create an INET, STREAMing socket\nserversocket \u003d socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# bind the socket to a public host, and a well-known port\nserversocket.bind((socket.gethostname(), 80))\n# become a server socket\nserversocket.listen(5)\n A couple things to notice: we used socket.gethostname() so that the socket would be visible to the outside world. If we had used s.bind((\u0027localhost\u0027, 80)) or s.bind((\u0027127.0.0.1\u0027, 80)) we would still have a “server” socket, but one that was only visible within the same machine. s.bind((\u0027\u0027, 80)) specifies that the socket is reachable by any address the machine happens to have. A second thing to note: low number ports are usually reserved for “well known” services (HTTP, SNMP etc). If you’re playing around, use a nice high number (4 digits). Finally, the argument to listen tells the socket library that we want it to queue up as many as 5 connect requests (the normal max) before refusing outside connections. If the rest of the code is written properly, that should be plenty. Now that we have a “server” socket, listening on port 80, we can enter the mainloop of the web server: while True:\n    # accept connections from outside\n    (clientsocket, address) \u003d serversocket.accept()\n    # now do something with the clientsocket\n    # in this case, we\u0027ll pretend this is a threaded server\n    ct \u003d make_client_thread(clientsocket)\n    ct.start()\n There’s actually 3 general ways in which this loop could work - dispatching a thread to handle clientsocket, create a new process to handle clientsocket, or restructure this app to use non-blocking sockets, and multiplex between our “server” socket and any active clientsockets using select. More about that later. The important thing to understand now is this: this is all a “server” socket does. It doesn’t send any data. It doesn’t receive any data. It just produces “client” sockets. Each clientsocket is created in response to some other “client” socket doing a connect() to the host and port we’re bound to. As soon as we’ve created that clientsocket, we go back to listening for more connections. The two “clients",
+    "scrapedAt": "2026-05-10 04:19:50.586363"
+  },
+  {
     "id": 501,
     "url": "http://wiki.python.org/moin/WebProgramming",
     "title": "WebProgramming",
@@ -3487,26 +3522,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 502,
-    "url": "http://docs.python.org/howto/sockets.html"
-  },
-  {
-    "id": 503,
-    "url": "http://kivy.org/"
-  },
-  {
-    "id": 504,
-    "url": "http://pypi.org"
-  },
-  {
-    "id": 505,
-    "url": "http://pandas.pydata.org/"
-  },
-  {
-    "id": 506,
-    "url": "http://www.crummy.com/software/BeautifulSoup/"
   },
   {
     "id": 507,
@@ -91631,10 +91646,587 @@ window.searchData = [
     "id": 69972,
     "url": "https://wiki.python.org/moin/ContentManagementSystems.html",
     "parentUrl": "http://wiki.python.org/moin/WebProgramming"
+  },
+  {
+    "id": 69973,
+    "url": "https://docs.python.org/3/howto/sockets.html#non-blocking-sockets",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69975,
+    "url": "https://docs.python.org/3/howto/sockets.html#creating-a-socket",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69976,
+    "url": "https://docs.python.org/3/howto/sockets.html#when-sockets-die",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69978,
+    "url": "https://docs.python.org/3/howto/sockets.html#ipc",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69981,
+    "url": "https://docs.python.org/3/howto/sockets.html#sockets",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69982,
+    "url": "https://docs.python.org/3/howto/sockets.html#history",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69987,
+    "url": "https://en.wikipedia.org/wiki/Endianness#Networking",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69988,
+    "url": "https://docs.python.org/3/howto/sockets.html#binary-data",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69991,
+    "url": "https://docs.python.org/3/howto/sockets.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69994,
+    "url": "https://docs.python.org/3/howto/sockets.html#using-a-socket",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69995,
+    "url": "https://docs.python.org/3/howto/sockets.html#",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69997,
+    "url": "https://github.com/python/cpython/blob/main/Doc/howto/sockets.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69998,
+    "url": "https://docs.python.org/3/howto/sockets.html#disconnecting",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 69999,
+    "url": "https://docs.python.org/3/howto/regex.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 70000,
+    "url": "https://docs.python.org/3/howto/sockets.html#socket-programming-howto",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 70001,
+    "url": "https://docs.python.org/3/howto/sorting.html",
+    "parentUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "id": 70012,
+    "url": "https://aws.amazon.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70013,
+    "url": "https://www.pingdom.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70014,
+    "url": "https://pypi.org/search/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70015,
+    "url": "https://www.datadoghq.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70016,
+    "url": "https://statuspage.io",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70017,
+    "url": "https://packaging.python.org/tutorials/installing-packages/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70018,
+    "url": "https://sentry.io/for/python/?utm_source\u003dpypi\u0026utm_medium\u003dpaid-community\u0026utm_campaign\u003dpython-na-evergreen\u0026utm_content\u003dstatic-ad-pypi-sponsor-learnmore",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70019,
+    "url": "https://www.fastly.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70020,
+    "url": "https://pypi.org/#content",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70021,
+    "url": "https://packaging.python.org/tutorials/packaging-projects/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70022,
+    "url": "https://depot.dev",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70023,
+    "url": "https://careers.google.com/",
+    "parentUrl": "http://pypi.org"
+  },
+  {
+    "id": 70024,
+    "url": "http://pandas.pydata.org/try.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70028,
+    "url": "http://pandas.pydata.org/docs/whatsnew/v3.0.1.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70029,
+    "url": "http://pandas.pydata.org/#show-more-releases",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70031,
+    "url": "http://pandas.pydata.org/about/index.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70040,
+    "url": "http://pandas.pydata.org/docs/whatsnew/index.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70041,
+    "url": "http://pandas.pydata.org/docs/getting_started/index.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70045,
+    "url": "http://pandas.pydata.org/about/sponsors.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70047,
+    "url": "http://pandas.pydata.org/getting_started.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70048,
+    "url": "http://pandas.pydata.org/docs/development/index.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70049,
+    "url": "http://pandas.pydata.org/community/ecosystem.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70050,
+    "url": "http://pandas.pydata.org/docs/user_guide/index.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70052,
+    "url": "http://pandas.pydata.org/docs/reference/index.html",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70053,
+    "url": "http://pandas.pydata.org/docs/",
+    "parentUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "id": 70065,
+    "url": "https://www.crummy.com/software/BeautifulSoup/#HallOfFame",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70066,
+    "url": "https://git.launchpad.net/beautifulsoup/tree/CHANGELOG",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70067,
+    "url": "http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70068,
+    "url": "https://code.launchpad.net/beautifulsoup/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70069,
+    "url": "https://www.crummy.com/software/BeautifulSoup/enterprise.html",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70070,
+    "url": "https://tidelift.com/subscription/pkg/pypi-beautifulsoup4?utm_source\u003dpypi-beautifulsoup4\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dwebsite",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70071,
+    "url": "https://www.crummy.com/self/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70072,
+    "url": "http://www.nytimes.com/2007/10/25/arts/design/25vide.html",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70073,
+    "url": "http://www2.ljworld.com/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70074,
+    "url": "https://bugs.launchpad.net/beautifulsoup/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70075,
+    "url": "https://www.crummy.com/self/contact.html",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70076,
+    "url": "https://github.com/BlankerL/DXY-COVID-19-Crawler",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70077,
+    "url": "https://launchpad.net/beautifulsoup",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70078,
+    "url": "https://code.launchpad.net/beautifulsoup",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70079,
+    "url": "http://lxml.de/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70080,
+    "url": "http://www.crummy.com/software/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70081,
+    "url": "https://www.crummy.com/software/BeautifulSoup/download/3.x/BeautifulSoup-3.2.2.tar.gz",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70082,
+    "url": "http://groups.google.com/group/beautifulsoup/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70083,
+    "url": "http://laps.noaa.gov/topograbber/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70084,
+    "url": "https://tidelift.com/security",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70085,
+    "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70086,
+    "url": "http://svn.python.org/view/tracker/importer/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70087,
+    "url": "https://blog.tidelift.com/how-open-source-software-is-fighting-covid-19",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70088,
+    "url": "https://tidelift.com/subscription/pkg/pypi-beautifulsoup4?utm_source\u003dpypi-beautifulsoup4\u0026utm_medium\u003dreferral\u0026utm_campaign\u003denterprise",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70089,
+    "url": "https://tidelift.com/subscription/pkg/pypi-beautifulsoup?utm_source\u003dpypi-beautifulsoup\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dwebsite",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70091,
+    "url": "https://www.crummy.com/software/BeautifulSoup/zine/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70092,
+    "url": "http://www.harrowell.org.uk/viktormap.html",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70093,
+    "url": "https://www.crummy.com/software/BeautifulSoup/#Download",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70094,
+    "url": "https://github.com/reddit/reddit/blob/85f9cff3e2ab9bb8f19b96acd8da4ebacc079f04/r2/r2/lib/media.py",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70095,
+    "url": "https://groups.google.com/forum/?fromgroups#!forum/beautifulsoup",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70096,
+    "url": "http://www.crummy.com/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70097,
+    "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70098,
+    "url": "https://www.crummy.com/software/BeautifulSoup/bs4/download/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70099,
+    "url": "http://code.google.com/p/html5lib/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70100,
+    "url": "http://www.b-list.org/weblog/2010/nov/02/news-done-broke/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "id": 70101,
+    "url": "http://esrl.noaa.gov/gsd/fab/",
+    "parentUrl": "http://www.crummy.com/software/BeautifulSoup/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.crummy.com/software/BeautifulSoup/10.1.jpg",
+    "alt": "",
+    "pageTitle": "Beautiful Soup: We called him Tortoise because he taught us.",
+    "pageUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "src": "https://www.crummy.com/nb//resources/img/somerights20.jpg",
+    "alt": "",
+    "pageTitle": "Beautiful Soup: We called him Tortoise because he taught us.",
+    "pageUrl": "http://www.crummy.com/software/BeautifulSoup/"
+  },
+  {
+    "src": "http://pandas.pydata.org/static/img/partners/numfocus.svg",
+    "alt": "NumFOCUS",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "src": "http://pandas.pydata.org/static/img/partners/nvidia.svg",
+    "alt": "Nvidia",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "src": "http://pandas.pydata.org/static/img/partners/tidelift.svg",
+    "alt": "Tidelift",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "src": "http://pandas.pydata.org/static/img/partners/bodo.svg",
+    "alt": "Bodo",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "src": "http://pandas.pydata.org/static/img/books/pydata_book.gif",
+    "alt": "Python for Data Analysis",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "src": "http://pandas.pydata.org/static/img/books/pandas_cookbook_3.gif",
+    "alt": "Pandas Cookbook, Third Edition",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "src": "http://pandas.pydata.org/static/img/books/effective_pandas_2.gif",
+    "alt": "Effective pandas 2",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "http://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pypi.org/static/images/logo-large.516e776d.svg",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.org"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/scale-balanced.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/star.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/kivy-colorwheel-examples.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-fast.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/homepage-company.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/contribute_coffee.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/help.jpg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/discord.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/github.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/icons/envelope.svg",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://kivy.org/static/images/DO_Badge.png",
+    "alt": "",
+    "pageTitle": "Kivy: Cross-platform Python Framework for GUI apps Development",
+    "pageUrl": "http://kivy.org/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Socket Programming HOWTO — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/howto/sockets.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Socket Programming HOWTO — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/howto/sockets.html"
+  },
   {
     "src": "https://wiki.python.org/moin/logo.png",
     "alt": "",
