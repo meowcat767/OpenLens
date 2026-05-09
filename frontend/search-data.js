@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 549,
+    "url": "https://www.python.org/success-stories/category/government/",
+    "title": "Government | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Government Government Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association Saving the world with Open Data and Python Frequentis TAPtools® - Python in Air Traffic Control Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:24:45.237135"
+  },
+  {
+    "id": 548,
+    "url": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/",
+    "title": "Python for Collaborative Drug Discovery | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Collaborative Drug Discovery Written by Scott Boyer, Andrew Dalke, and Pierre Bruneau, AstraZeneca Introduction AstraZeneca is one of the world\u0027s leading pharmaceutical companies. With over 54,000 employees world-wide, it provides innovative, effective medicines designed to fight cancer, provide pain control, heal infection, and fight diseases of the cardiovascular, central nervous, gastrointestinal, and respiratory systems. Finding a new drug often takes over a decade and more than $800 million. A big problem early in the process is identifying those candidates more likely to be good drugs from the vast universe of possible molecules. Computational chemists have developed many techniques to predict molecular properties. These can be used to evaluate the likelihood that a molecule will be stable in the stomach (for pills that are swallowed), and that it can travel through the blood stream, cross the cell membrane, and eventually be broken down and eliminated, all without being too toxic to the body. If these computational techniques were good enough there would be no need to do actual experiments. But today\u0027s computer models cannot fully characterize a molecule\u0027s behavior in the body, nor replace the intuition of a skilled pharmaceutical chemist. Real molecules must still be tested in the laboratory to see how they react. To save time and money on laboratory work, experimental chemists use computational models to narrow the field of good drug candidates, while also verifying that the candidates to be tested are not simple variations of each other\u0027s basic chemical structure. Process Improvements Needed Much of the work on drug identification actually takes place through collaboration between many research groups scattered around the world. As part of this process, experimental chemists send a list of compounds to the computational chemist, who works on the data set and sends back the results. Historically, experimental chemists were forced to rely on computational chemists and other staff to run computer predictions. Each prediction technique required running a separate program, some commercial and others developed in-house by different groups around the company, and each program had its own set of inputs, options, configurations, and failure behaviors. An experimental chemist usually didn\u0027t have the training to work with them, which meant that the computational chemists were forced to take time out of their work on developing new techniques to run routine models. In 2000, AstraZeneca wanted to improve this process so that experimental chemists could make better computational predictions on their own, and so that the research of the computational chemists could progress at a faster rate, and make its way into the lab more quickly. Pierre Bruneau, a Principal Scientist at AstraZeneca, had worked on this problem while at Zeneca, which merged to form AstraZeneca. He developed a web-based interface called H2X, named after the allied navigation systems used during the second world war. H2X was based on an in-house molecular property calculator called Drone. This system used a Perl script which computed some of the simpler molecular properties by calling the appropriate prediction program, usually through a wrapper written in Perl, csh, or a domain specific control language. Python Chosen H2X using Drone was a successful experiment and it was used by many people. In 2001 AstraZeneca decided to develop it further and brought in Andrew Dalke as a consultant, to improve the back-end code by making it more robust, extensible, and maintainable. Andrew, a well-known advocate for Python in computational chemistry and biology, convinced the group that Python was the appropriate language for the next generation back-end, which was named PyDrone. Python was chosen for this work because it is one of the best languages available for physical scientists, that is, for people who do not have a computer science background. Many other powerful and expressive high level languages exist, including Perl, Lisp, Scheme, Ruby, CAML, and Haskell. Of all these, Python is one of the few that is based on research into usability and the factors that make a programming language easy to learn and use. Yet Python was also designed to solve real-world problems faced by an expert programmer. The result is a language that scales well from small scripts written by a chemist to large packages written by a software developer. Python\u0027s Error Handling Improves Robustness The first iteration of PyDrone refactored the existing Perl code into more appropriate functions, classes, and modules while translating the code base into Python. Refactoring the Perl code without moving to Python would have produced comparable architectural results, but Python\u0027s explicit error handling and str",
+    "scrapedAt": "2026-05-10 04:24:42.761215"
+  },
+  {
+    "id": 546,
+    "url": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/",
+    "title": "Why Python Matters for the VR Community | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Why Python Matters for the VR Community Written by Andrew Beall, WorldViz Why Python Matters for the VR Community Andrew Beall, Chief Scientist, WorldViz Believe it or not, Python was first released 30 years ago and for nearly that long we\u0027ve made it the cornerstone of our Vizard virtual reality (VR) development platform. You may also be surprised to know that VR has been around for nearly twice that long! How we came to choose Python so long ago is a story in itself, but what is remarkable is that even after so many years Python has only continued to become more and more valuable to us and our customers. For us, Python has shaped our product development lifecycle, and we firmly believe it’s the world’s most accessible and powerful scripting language. You can\u0027t help but embrace the rapid application development paradigm, which has enabled us to overcome challenges such as quickly building hardware drivers for a rapidly evolving VR industry. We cater to a scientifically inclined customer base, and Python\u0027s rich community with shared libraries provides ready-built functionality that is beyond compare. As it said by others, we build in Python whenever we can and only use C++ when we must. For our customers, Python plays a central role in their daily experience with our product. One of the core values we provide is wrapping up all the complexity of a sophisticated 3D render engine capable of low-level graphics control needed by researchers all into a friendly Python interface. The fact that Python was purposely designed to be an enjoyable language shows how quickly novice programmers across the board can begin coding projects of their own. Unlike Java and C++, Python is inherently obvious in how to do things, and that single characteristic has led our customers to feel self-empowered and confident enough to explore projects and make discoveries that they would otherwise have felt was beyond their programming expertise. Three reasons capture why Python is so great for scientists: 1) Python is easy to learn We think this is the most important reason why Python is a great choice for scientific research. We\u0027ve seen hundreds of researchers with no Python experience gain fluency in a matter of one or two months and successfully build virtual reality experiments. For our customers, the world of 3D graphics and real-time virtual reality environments is suddenly cracked up and ready to be used for research. It gets even more exciting when our customers see how easy Python makes it to collect data from the sensors, save it to files, and then use Python libraries like numpy and matplotlib to add a data analysis and visualization pipeline. 2) Python is easy to read Unless you\u0027ve worked with collections of code before this point may not fully resonate but trust us when we say this is critical. We\u0027ve heard countless claims by customers who say they are relieved to now feel that they can read, understand, and even tweak projects built by others in the lab. Alex Martelli, a Fellow at the Python Software Foundation writes that \"To describe something as \u0027clever\u0027 is not considered a compliment in the Python culture. Clever programming is often unreadable by anyone except an expert. Python is meant to be easily readable and immediately useful. 3) Python has a huge scientific community It\u0027s no joke when we say you can almost always find a useful library by googling \"python\" plus your target keyword. There are simply thousands of libraries available for scientific research, nearly all being open-source and freely shared amongst an amazing community. Scientists across numerous domains have adopted Python as the goto language for analysis, so it\u0027s easy to lean on the accomplishments of others when beginning new projects. Try a similar search in other languages and you\u0027ll see a huge difference. Or, compare the effort it takes to incorporate external libraries into Python compared to other languages and you\u0027ll be amazed. What about the performance penalty for using Python? We get this question sometimes and it\u0027s usually a red herring. Sure, Python and C compiled code are in different categories and if you pick the right computing problem, you can show C/C++ to be much faster. However, time to crunch numbers or similar isn\u0027t what most of our users care about. GPUs and CPUs are so fast today that it\u0027s rare that Python\u0027s efficiency is an issue. Not rare, though, is how often projects can be completed faster in Python. Identify what matters most to you and measure speed accordingly. In conclusion, whether you\u0027re developing code to immerse a person in a tightly controlled virtual world to study their reactions to stimuli, or you\u0027re using machine learning to model the spread of COVID-19, you owe it to yourself to try Python. You won\u0027t regret it. Success stories home Arts Business",
+    "scrapedAt": "2026-05-10 04:24:38.437548"
+  },
+  {
+    "id": 545,
+    "url": "https://www.python.org/success-stories/category/arts/",
+    "title": "Arts | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Arts Arts Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:24:28.765006"
+  },
+  {
+    "id": 544,
+    "url": "https://www.python.org/success-stories/python-on-arm-2025-update/",
+    "title": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python on Arm: 2025 Update Written by Diego Russo, Arm Ltd Why Python Matters to Arm Python is one of the most widely used programming languages today, powering applications across Machine Learning (ML), automation, data science, DevOps, web development and developer tooling. At Arm, we see Python not just as a language to support, but as a strategic priority to enable a wide and growing community of developers. Over the past several years, we have worked closely with the Python community to make Arm a first-class platform for Python development. Thanks to consistent upstream collaboration, targeted engineering, and ecosystem investment, it is now practical to develop, test, and deploy Python workloads on Arm across Linux, Windows, and the cloud. In 2024, we shared how Arm had increased its engagement with the Python ecosystem. One year later, we are seeing the results of that investment, with new infrastructure, improved performance, and a growing number of real-world projects running on Arm. This post highlights the key developments from the past year and what is ahead. What\u0027s new in 2025 Easier development: Linux and Windows GitHub-hosted runners for Arm As part of our collaboration with GitHub, Arm helped enable GitHub-hosted CI runners for Arm-based platforms. These runners are now available for: Linux on Arm (GA) Windows on Arm, currently in beta Arm sponsored the underlying infrastructure and provided engineering support during the beta rollout. These runners offer open-source projects a fast, reliable way to run native CI workflows without emulation or self-hosting. The CPython project was the first open-source user of the Windows on Arm runners and continues to use them in daily CI pipelines. This helps ensure first-class support for the platform. Performance improvements Python 3.13 introduced an experimental Just-in-Time (JIT) compiler, developed by the CPython team to improve performance in real-world applications. Arm has contributed directly to this effort by testing, tuning, and extending the JIT on Arm platforms, particularly for the AArch64 architecture (see section below). Our work includes fixing architecture specific issues, validating generated machine code, and improving the overall quality of JIT output on Arm. These efforts have resulted in: Up to 4% speedup on Linux 17% reduction in generated header file size Smarter jump handling and more efficient code generation Lower memory overhead through trampoline reuse and targeted optimizations The result is a faster, more reliable JIT experience for Python workloads running on Arm. Better Windows on Arm ecosystem support Python support for Windows on Arm continues to mature. CPython itself, along with many essential packages, now builds and runs cleanly on the platform. This is thanks to upstream fixes, improved build systems, and expanded CI coverage. We are working closely with Microsoft to improve the overall Python experience on Windows on Arm devices. This includes: Enabling compatibility for popular libraries Refining build and packaging workflows Supporting key AI and ML tools One area of major progress is PyTorch, where the collaboration between Arm and Microsoft has delivered native builds and improved acceleration support. With the release of PyTorch 2.7 for Windows on Arm, developers can now access Arm-native builds for Windows, available for Python 3.12. This enables ML workflows to run natively on Arm64 Windows devices, including Copilot+ PCs, with full access to hardware capabilities. These improvements support a wide range of ML use cases. From generative models like Stable Diffusion, to natural language processing, to traditional regression and classification. Windows on Arm is now a production-ready platform for modern AI development. Arm\u0027s commitment to the Python community We continue to support the Python community not only through code, but with infrastructure, funding, and time through: Hosting the CPython Core Dev Sprint 2025 in our Cambridge office Sponsoring EuroPython 2022, 2023, and 2025 Providing a dedicated benchmarking server integrated with speed.python.org Funding a full-time CPython developer, now a core committer Arm is committed to supporting the Python ecosystem through sustained upstream contributions and community investment. Over the past year, we have expanded our efforts to support the community both technically and organizationally. CPython Core Dev Sprint 2025 We are proud to host and sponsor the upcoming CPython Core Dev Sprint 2025 this September at our Cambridge office. On track to be the largest sprint ever held, the event will bring together more than 55 core developers and contributors flying in from across Europe, the United States, South Korea, Singapore, and Australia. These sprints are vital to Python’s evolution, enabling ",
+    "scrapedAt": "2026-05-10 04:24:19.687665"
+  },
+  {
     "id": 543,
     "url": "https://www.python.org/success-stories/using-python-for-commercial-cloud-backup/",
     "title": "Using Python for commercial cloud backup | Our Success Stories | Python.org",
@@ -3752,26 +3787,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 544,
-    "url": "https://www.python.org/success-stories/python-on-arm-2025-update/"
-  },
-  {
-    "id": 545,
-    "url": "https://www.python.org/success-stories/category/arts/"
-  },
-  {
-    "id": 546,
-    "url": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/"
-  },
-  {
-    "id": 548,
-    "url": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
-  },
-  {
-    "id": 549,
-    "url": "https://www.python.org/success-stories/category/government/"
   },
   {
     "id": 550,
@@ -96835,10 +96850,167 @@ window.searchData = [
     "id": 71652,
     "url": "https://www.acuworkflow.com/smartbackup.html",
     "parentUrl": "https://www.python.org/success-stories/using-python-for-commercial-cloud-backup/"
+  },
+  {
+    "id": 71662,
+    "url": "https://www.arm.com",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71663,
+    "url": "https://newsroom.arm.com/blog/windows-arm64-runners-git-hub-actions",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71665,
+    "url": "https://blogs.windows.com/windowsdeveloper/2025/04/23/pytorch-arm-native-builds-now-available-for-windows/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71666,
+    "url": "https://ep2025.europython.eu/sponsors/\"%20\\l%20\"sponsor-arm",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71668,
+    "url": "https://developer.arm.com/arm-developer-program",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71669,
+    "url": "https://speed.python.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71670,
+    "url": "https://ep2025.europython.eu/session/exploring-the-cpython-jit",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71672,
+    "url": "https://github.com/python/cpython/pull/123872",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71674,
+    "url": "https://github.com/python/cpython/pull/120250",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71676,
+    "url": "https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/python-on-arm",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71677,
+    "url": "https://discuss.python.org/t/vote-to-promote-diego-russo/90492",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71679,
+    "url": "https://github.com/python/cpython/pull/131042",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71680,
+    "url": "https://www.arm.com/company/success-library/made-possible/github",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71681,
+    "url": "https://newsroom.arm.com/blog/arm-sme2-android-mobile-apps",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71682,
+    "url": "https://discuss.python.org/t/2025-core-dev-sprint-15th-19th-september-at-arm-ltd-in-cambridge-uk/71909",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71684,
+    "url": "https://github.blog/changelog/2025-04-14-windows-arm64-hosted-runners-now-available-in-public-preview/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71685,
+    "url": "https://speed.python.org/timeline/#/?exe\u003d12\u0026ben\u003dgrid\u0026env\u003d6\u0026revs\u003d50\u0026equid\u003doff\u0026quarts\u003don\u0026extr\u003don",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71686,
+    "url": "https://github.blog/changelog/2025-01-16-linux-arm64-hosted-runners-now-available-for-free-in-public-repositories-public-preview/",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71687,
+    "url": "https://github.com/python/cpython/pull/131041",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71691,
+    "url": "https://github.com/python/cpython/pull/121001",
+    "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 71706,
+    "url": "https://worldviz.com",
+    "parentUrl": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/"
+  },
+  {
+    "id": 71714,
+    "url": "http://www.astrazeneca.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
+  {
+    "id": 71724,
+    "url": "https://www.python.org/m/about/success/astra/property_manager.jpg",
+    "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.python.org/m/about/success/astra/property_manager_web.gif",
+    "alt": "Architecture of the Property Manager",
+    "pageTitle": "Python for Collaborative Drug Discovery | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-sponsor-1.png",
+    "alt": "EuroPython Arm Sponsor",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-sponsor-2.png",
+    "alt": "EuroPython Arm Booth",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-jit-talk-3.png",
+    "alt": "EuroPython JIT talk",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-jit-talk-1.png",
+    "alt": "EuroPython JIT talk",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-jit-talk-2.png",
+    "alt": "EuroPython JIT talk",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/benchmarks.png",
+    "alt": "Arm benchmarks",
+    "pageTitle": "Python on Arm: 2025 Update | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
   {
     "src": "https://www.python.org/m/about/success/forecastwatch/screenshot-web.png",
     "alt": "Screenshot of ForecastWatch.com",
