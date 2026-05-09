@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 228,
+    "url": "https://android.com/ai/",
+    "title": "AI op Android: functies, apps en je AI-assistent | Android",
+    "content": "Maak dagelijkse taken makkelijker. Of je nu decoratieadvies wilt voor het thema van een evenement of hulp nodig hebt om een recept na te maken, AI-ondersteuning is nu veelzijdiger dan ooit. Gemini ontdekken Zoek meteen alles op. Van shoppen tot vertalen: de nieuwe zoekfunctie werkt sneller en intuïtiever.1 Nu proberen Meer functies, meer mogelijkheden. Creëer, verbind en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies ontdekken Shop de nieuwste Android-telefoons. We verleggen de grenzen van hardware met superdunne apparaten, \u2028 zoals opvouwbare apparaten van de nieuwste generatie. ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ... ..... .... .... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... ..... ...... ... Telefoons kopen Telefoons kopen Circle to Search* Omcirkel het. Zoek het. Altijd en overal. Zonder tussen apps te wisselen. Vind het allerbeste. Laat je door niemand tegenhouden en koop precies wat je wilt. Wil je iets uitproberen? Omcirkel het, zoek het op en ga ervoor. Vertaal van alles op je telefoon zonder van app te wisselen. Beschikbaar op bepaalde Galaxy- en Pixel-apparaten. Galaxy S24 Ultra Nu kopen Pixel 9 Pro Fold Nu kopen Pixel 9 Pro Nu kopen Pixel Fold Galaxy Z Flip5 Galaxy Z Fold5 Galaxy S23 Ultra Pixel 9 Nu kopen Beschikbaar op bepaalde apparaten. Een internetverbinding is vereist. Werkt op compatibele apps en platforms. De resultaten kunnen verschillen afhankelijk van visuele overeenkomsten en zijn alleen ter illustratie. Reeksen zijn ingekort. Fotomoji* De perfecte emoji bestaat niet Van filmrol naar aangepaste emoji. Omdat elk moment een persoonlijke reactie verdient. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Magisch opstellen* Maak de uitnodiging net zo gedenkwaardig als de afspraak Ontdek je innerlijke Shakespeare en laat een blijvende indruk achter. Als je een frisse blik nodig hebt, of gewoon wat opties om uit te kiezen. Beschikbaar op de Galaxy S24- serie en de Google Pixel 9 Telefoons kopen De beschikbaarheid van functies kan per markt en apparaat verschillen. Je moet je misschien aanmelden voor bètatests en een data-abonnement hebben. Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Ontdek het beste op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Samsung Galaxy S24-serie Van een unieke klasse. Google Pixel 9 Ontdek het beste met Google en Android. Alleen op Android Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Galaxy S24 Ultra Nu kopen Galaxy S24+ Nu kopen Galaxy S24 Nu kopen Pixel Fold Nu kopen Galaxy S23 Ultra Nu kopen Galaxy Z Fold5 Nu kopen Galaxy Z Flip5 Nu kopen Assistent met Auto Houd je ogen op de weg en je oren in de groepschat Volg veiliger lange groepschats met snelle samenvattingen. Met slimme antwoorden zet je het gesprek met één tik voort. Compatibiliteit checken Sommige functies zijn misschien niet beschikbaar in alle landen en kunnen per auto- en/of apparaatfabrikant verschillen. Je hebt misschien een internetverbinding nodig. Gebruik de functies alleen als dit veilig kan. Reeksen zijn misschien ingekort of gesimuleerd. ......... Nu kopen Thanks for visiting. We\u0027d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. Questionof Which of the following smartphones are you excited about? Android Phones (Samsung, Pixel) Apple Phones (iPhone) None of the above Questionof Which of the following smartphones would you consider buying? Android Phones (Samsung, Pixel) Apple Phones (iPhone) None of the above Questionof Which of the following smartphones would you be proud to own? Android Phones (Samsung, Pixel) Apple Phones (iPhone) None of the above Thanks for your feedback. Done Please select an answer.",
+    "scrapedAt": "2026-05-10 03:51:50.226544"
+  },
+  {
+    "id": 227,
+    "url": "https://android.com/ai/gemini/",
+    "title": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "content": "Gemini Jouw AI-assistent van Google. Maak kennis met Gemini, je persoonlijke AI-assistent die altijd klaarstaat om je te helpen met schrijven, creëren, plannen, leren en nog veel meer.1 Gemini proberen Ontdek een wereld aan mogelijkheden met de nieuwe functies voor camera en scherm delen in Gemini Live-gesprekken.2 Nu proberen Google AI Pro Doe meer in minder tijd. Nu proberen Video\u0027s genereren Krijg prioriteitstoegang tot ons krachtigste model voor videogeneratie tot nu toe. Lang contextvenster Duik in hele boeken, lange rapporten en 30.000 regels aan coderepository\u0027s. Houd het simpel Vereenvoudig je taken met toegang tot Gemini in Gmail, Documenten en andere producten. Gemini in actie. Laat je inspireren door leuke en handige manieren om Gemini te gebruiken. Wil je realtime aanbevelingen en antwoorden van Gemini Live? \u2028Richt gewoon je camera en chat. Vind de antwoorden die je nodig hebt. Hoe gebruik ik Gemini op Android? Op sommige Android-apparaten wordt Gemini als de primaire assistent geleverd. Als je Gemini op deze apparaten wilt gaan gebruiken, open je de Gemini-app of activeer je Gemini via aanraking (bijvoorbeeld door de aan/uit-knop lang in te drukken). Op andere Android-apparaten kun je ook de Gemini-app downloaden via de Google Play Store of ervoor kiezen om over te stappen naar Gemini als je primaire assistent op je mobiel. Hoe verwerkt de Gemini-app mijn gegevens? Als Gemini Apps-activiteit aanstaat, slaat Google je Gemini Apps-activiteit (zoals je prompts, reacties en feedback) op in je Google-account. Ook als de Gemini Apps-activiteit uitstaat, worden je gesprekken maximaal 72 uur opgeslagen in je account, zodat Google de service kan leveren en feedback kan verwerken. Heeft Gemini gebruikslimieten? Gemini heeft gebruikslimieten, ontwikkeld voor een optimale functionaliteit voor iedereen. Dit betekent dat we het aantal prompts dat je binnen een bepaald tijdsbestek kunt invoeren mogelijk beperken. Hetzelfde geldt voor het aantal gesprekken dat je kunt voeren. Je limiet wordt regelmatig vernieuwd, zodat je weer snel kunt chatten met Gemini. Hoeveel prompts je kunt gebruiken voordat je de limiet bereikt, hangt af van verschillende factoren, zoals de lengte en complexiteit van je prompts, de grootte en het aantal bestanden die je uploadt, en de duur van je gesprekken met Gemini. We sturen je ook een waarschuwing wanneer je bijna je chatcapaciteit hebt bereikt voor een bepaalde periode. Ontdek meer over AI van Google op Android. Zoek meteen alles op. Van shoppen tot vertalen: de nieuwe zoekfunctie werkt sneller en intuïtiever. Ontdek Circle to Search Meer functies, meer mogelijkheden. Creëer, verbind en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies ontdekken Thanks for visiting. We’d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. Questionof What is your primary reason for visiting Android.com? Learn about Android Safety Learn how to switch to Android Get help finding a new smartphone Get help finding a new tablet Learn about a new Operating System release Learn about Google Apps and Android features Get help with using Android Learn about multi-device experiences Other Questionof Which of the following best describes where you are in the shopping process for a new smartphone? Initial gathering of information about what smartphones are available Narrowing down to a short list of smartphones Decided on the smartphone and ready to purchase Not currently shopping for a new smartphone Questionof How safe and secure do you think Android is? Extremely safe and secure Very safe and secure Somewhat safe and secure Not so safe and secure Not at all safe and secure Questionof How easy or hard was it to find what you were looking for on Android.com? Extremely easy Somewhat easy Neither easy nor hard Somewhat hard Extremely hard Questionof Overall, how satisfied are you with Android.com? Very Satisfied Somewhat Satisfied Neutral Somewhat Dissatisfied Very Dissatisfied Questionof How easy do you believe it will be to switch (e.g. transfer photos, contacts, apps, etc) your primary device to Android? Very easy Somewhat easy Neither easy nor hard Somewhat hard Very hard Questionof To what extent did Android.com impact your likelihood to consider purchasing an Android device for your next smartphone? Very Significantly Significantly Moderately A little bit Not at all Questionof To what extent do you agree or disagree that Android has innovative products and features? Strongly agree Somewhat agree Neither agree nor disagree Somewhat disagree Strongly disagree Thanks for your feedback. Done Please select an answer. Thanks for visiting. We\u0027d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. Questionof What is your primary reason for visiting Android.com? Learn how to switch to a new Android device Learn how to keep your Android device safe Get help fi",
+    "scrapedAt": "2026-05-10 03:51:43.621288"
+  },
+  {
+    "id": 226,
+    "url": "https://www.android.com/better-together/",
+    "title": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "content": "Samen werkt alles beter Met Android kun je kiezen uit een hele wereld van apparaten die samen beter werken.1 Aan de slag Samen werkt alles beter Met Android kun je kiezen uit een hele wereld van apparaten die samen beter werken.1 Aan de slag Quick Share Deel makkelijk bestanden tussen Android-apparaten Deel bijvoorbeeld foto\u0027s, documenten, video\u0027s en links met Android-apparaten, Chromebooks of Windows-pc\u0027s in de buurt, ongeacht het merk.2 Het is snel, beter beveiligd en gebruiksvriendelijk. Kijken hoe het werkt Quick Share Deel makkelijk bestanden tussen Android-apparaten Deel bijvoorbeeld foto\u0027s, documenten, video\u0027s en links met Android-apparaten, Chromebooks of Windows-pc\u0027s in de buurt, ongeacht het merk.2 Het is snel, beter beveiligd en gebruiksvriendelijk. Kijken hoe het werkt Google Cast Ga van het kleine scherm naar het grote scherm Cast bijvoorbeeld films, muziek en tv-series van je telefoon naar je tv met Google Cast. Met meer dan 3000 apps die met Google Cast werken, zoals Netflix, Spotify en TikTok, kun je eindeloos entertainment afspelen.3 Kijken hoe het werkt Google Cast Ga van het kleine scherm naar het grote scherm Cast bijvoorbeeld films, muziek en tv-series van je telefoon naar je tv met Google Cast. Met meer dan 3000 apps die met Google Cast werken, zoals Netflix, Spotify en TikTok, kun je eindeloos entertainment afspelen.3 Kijken hoe het werkt Snel koppelen Koppel je apparaten met één tik aan elkaar Koppel met Snel koppelen je koptelefoon, speakers en zelfs een compatibele auto met één tik aan je Android-apparaten.4 *Reeksen ingekort en gesimuleerd ter illustratie. Kijken hoe het werkt Snel koppelen Koppel je apparaten met één tik aan elkaar Koppel met Snel koppelen je koptelefoon, speakers en zelfs een compatibele auto met één tik aan je Android-apparaten.4 *Reeksen ingekort en gesimuleerd ter illustratie. Kijken hoe het werkt Krijg nog meer informatie Ontdek meer functies en het laatste Android-nieuws. Nieuws Android breidt LE Audio uit naar hoortoestellen van Oticon en GN Artikel lezen Wear OS Maak betere selfies vanaf je pols Meer informatie Telefoonhub Reageer via je Chromebook op tekstberichten Meer informatie Waarschuwingen voor onbekende trackers Bescherm jezelf onderweg Meer informatie Digitale autosleutel Haal met je telefoon je auto van het slot Meer informatie Alle functies bekijken Android-ecosysteem Ontdek een wereld aan apparaten Telefoons Nu winkelen Koptelefoons Nu winkelen Tablets Nu winkelen Chromebook Nu winkelen Android Auto Compatibiliteit checken Wearables Nu winkelen Smarthome Nu winkelen Tv Nu winkelen Trackers Nu winkelen Telefoons Nu winkelen Koptelefoons Nu winkelen Tablets Nu winkelen Chromebook Nu winkelen Android Auto Compatibiliteit checken Wearables Nu winkelen Smarthome Nu winkelen Tv Shoppen voor tv Trackers Nu winkelen Quick Share: naadloos delen tussen miljarden apparaten1 Deel met enkele tikken bijvoorbeeld foto\u0027s met hoge resolutie, video\u0027s, bestanden en wifi-inloggegevens met ondersteunde Android- en ChromeOS-apparaten en Windows-pc\u0027s in de buurt. Het is snel, beter beveiligd en gebruiksvriendelijk. Ook kun je met iedereen Quick Share gebruiken op ondersteunde ChromeOS-apparaten en Windows-pc\u0027s.2 ¹Gebaseerd op miljarden Android-apparaten wereldwijd. ²Apparaten moeten binnen bluetooth-bereik voor delen zijn en wifi moet erop aanstaan. Werkt met compatibele apparaten. Quick Share: naadloos delen tussen miljarden apparaten1 Deel met enkele tikken bijvoorbeeld foto\u0027s met hoge resolutie, video\u0027s, bestanden en wifi-inloggegevens met ondersteunde Android- en ChromeOS-apparaten en Windows-pc\u0027s in de buurt. Het is snel, beter beveiligd en gebruiksvriendelijk. Ook kun je met iedereen Quick Share gebruiken op ondersteunde ChromeOS-apparaten en Windows-pc\u0027s.2 ¹Gebaseerd op miljarden Android-apparaten wereldwijd. ²Apparaten moeten binnen bluetooth-bereik voor delen zijn en wifi moet erop aanstaan. Werkt met compatibele apparaten. Delen via een QR-code Scan een QR-code en deel bestanden in een handomdraai Content delen met apparaten in de buurt is snel en makkelijk. Selecteer de content, genereer een QR-code en laat de ontvanger die scannen vanaf je scherm. Klaar. *Beschikbaar op mobiele apparaten en tablets. Apparaten moeten dichtbij genoeg zijn om via bluetooth te delen en wifi moet aanstaan. Meer informatie Delen via een QR-code Scan een QR-code en deel bestanden in een handomdraai Content delen met apparaten in de buurt is snel en makkelijk. Selecteer de content, genereer een QR-code en laat de ontvanger die scannen vanaf je scherm. Klaar. *Beschikbaar op mobiele apparaten en tablets. Apparaten moeten dichtbij genoeg zijn om via bluetooth te delen en wifi moet aanstaan. Meer informatie Delen met anderen Als je hele vriendengroep die ene foto wil zien, en wel meteen Deel met Quick Share epische momenten in de hoogste kwaliteit tussen Android-apparaten, precies zoals je ze hoort te zien. Het werkt zelfs als je offline bent. *Reeksen ingekort en gesimuleerd ter i",
+    "scrapedAt": "2026-05-10 03:51:37.199551"
+  },
+  {
+    "id": 225,
+    "url": "https://trac.edgewall.org/",
+    "scrapedAt": "2026-05-10 03:51:33.571669"
+  },
+  {
+    "id": 224,
+    "url": "https://huggingface.co/docs/transformers/",
+    "title": "Transformers · Hugging Face",
+    "content": "Transformers documentation Transformers Transformers 🏡 View all docsAWS Trainium \u0026 InferentiaAccelerateArgillaAutoTrainBitsandbytesCLIChat UIDataset viewerDatasetsDeploying on AWSDiffusersDistilabelEvaluateGoogle CloudGoogle TPUsGradioHubHub Python LibraryHuggingface.jsInference Endpoints (dedicated)Inference ProvidersKernelsLeRobotLeaderboardsLightevalMicrosoft AzureOptimumPEFTReachy MiniSafetensorsSentence TransformersTRLTasksText Embeddings InferenceText Generation InferenceTokenizersTrackioTransformersTransformers.jsXetsmolagentstimm Search documentation mainv5.8.0v5.7.0v5.6.2v5.5.4v5.4.0v5.3.0v5.2.0v5.1.0v5.0.0v4.57.6v4.56.2v4.55.4v4.53.3v4.52.3v4.51.3v4.50.0v4.49.0v4.48.2v4.47.1v4.46.3v4.45.2v4.44.2v4.43.4v4.42.4v4.41.2v4.40.2v4.39.3v4.38.2v4.37.2v4.36.1v4.35.2v4.34.1v4.33.3v4.32.1v4.31.0v4.30.0v4.29.1v4.28.1v4.27.2v4.26.1v4.25.1v4.24.0v4.23.1v4.22.2v4.21.3v4.20.1v4.19.4v4.18.0v4.17.0v4.16.2v4.15.0v4.14.1v4.13.0v4.12.5v4.11.3v4.10.1v4.9.2v4.8.2v4.7.0v4.6.0v4.5.1v4.4.2v4.3.3v4.2.2v4.1.1v4.0.1v3.5.1v3.4.0v3.3.1v3.2.0v3.1.0v3.0.2v2.11.0v2.10.0v2.9.1v2.8.0v2.7.0v2.6.0v2.5.1v2.4.1v2.3.0v2.2.2v2.1.1v2.0.0v1.2.0v1.1.0v1.0.0doc-builder-html ARDEENESFRHIITJAKOPTTRZH Join the Hugging Face community and get access to the augmented documentation experience Collaborate on models, datasets and Spaces Faster examples with accelerated inference Switch between documentation themes Sign Up to get started Copy page Transformers Transformers acts as the model-definition framework for state-of-the-art machine learning models in text, computer vision, audio, video, and multimodal models, for both inference and training. It centralizes the model definition so that this definition is agreed upon across the ecosystem. transformers is the pivot across frameworks: if a model definition is supported, it will be compatible with the majority of training frameworks (Axolotl, Unsloth, DeepSpeed, FSDP, PyTorch-Lightning, …), inference engines (vLLM, SGLang, TGI, …), and adjacent modeling libraries (llama.cpp, mlx, …) which leverage the model definition from transformers. We pledge to help support new state-of-the-art models and democratize their usage by having their model definition be simple, customizable, and efficient. There are over 1M+ Transformers model checkpoints on the Hugging Face Hub you can use. Explore the Hub today to find a model and use Transformers to help you get started right away. Explore the Models Timeline to discover the latest text, vision, audio and multimodal model architectures in Transformers. Features Transformers provides everything you need for inference or training with state-of-the-art pretrained models. Some of the main features include: Pipeline: Simple and optimized inference class for many machine learning tasks like text generation, image segmentation, automatic speech recognition, document question answering, and more. Trainer: A comprehensive trainer that supports features such as mixed precision, torch.compile, and FlashAttention for training and distributed training for PyTorch models. generate: Fast text generation with large language models (LLMs) and vision language models (VLMs), including support for streaming and multiple decoding strategies. Design Read our Philosophy to learn more about Transformers’ design principles. Transformers is designed for developers and machine learning engineers and researchers. Its main design principles are: Fast and easy to use: Every model is implemented from only three main classes (configuration, model, and preprocessor) and can be quickly used for inference or training with Pipeline or Trainer. Pretrained models: Reduce your carbon footprint, compute cost and time by using a pretrained model instead of training an entirely new one. Each pretrained model is reproduced as closely as possible to the original model and offers state-of-the-art performance. Learn If you’re new to Transformers or want to learn more about transformer models, we recommend starting with the LLM course. This comprehensive course covers everything from the fundamentals of how transformer models work to practical applications across various tasks. You’ll learn the complete workflow, from curating high-quality datasets to fine-tuning large language models and implementing reasoning capabilities. The course contains both theoretical and hands-on exercises to build a solid foundational knowledge of transformer models as you learn. Update on GitHub Installation→",
+    "scrapedAt": "2026-05-10 03:51:25.033954"
+  },
+  {
+    "id": 223,
+    "url": "https://www.python.org/about/gettingstarted/",
+    "title": "Python For Beginners | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e About\u003e\u003e\u003e Getting Started Welcome! Are you completely new to programming? If not then we presume you will be looking for information about why and how to get started with Python. Fortunately an experienced programmer in any programming language (whatever it may be) can pick up Python very quickly. It\u0027s also easy for beginners to use and learn, so jump in! Installing Installing Python is generally easy, and nowadays many Linux and UNIX distributions include a recent Python. Even some Windows computers (notably those from HP) now come with Python already installed. If you do need to install Python and aren\u0027t confident about the task you can find a few notes on the BeginnersGuide/Download wiki page, but installation is unremarkable on most platforms. Learning Before getting started, you may want to find out which IDEs and text editors are tailored to make Python editing easy, browse the list of introductory books, or look at code samples that you might find helpful. There is a list of tutorials suitable for experienced programmers on the BeginnersGuide/Tutorials page. There is also a list of resources in other languages which might be useful if English is not your first language. The online documentation is your first port of call for definitive information. There is a fairly brief tutorial that gives you basic information about the language and gets you started. You can follow this by looking at the library reference for a full description of Python\u0027s many libraries and the language reference for a complete (though somewhat dry) explanation of Python\u0027s syntax. If you are looking for common Python recipes and patterns, you can browse the ActiveState Python Cookbook Looking for Something Specific? If you want to know whether a particular application, or a library with particular functionality, is available in Python there are a number of possible sources of information. The Python web site provides a Python Package Index (also known as the Cheese Shop, a reference to the Monty Python script of that name). There is also a search page for a number of sources of Python-related information. Failing that, just Google for a phrase including the word \u0027\u0027python\u0027\u0027 and you may well get the result you need. If all else fails, ask on the python newsgroup and there\u0027s a good chance someone will put you on the right track. Frequently Asked Questions If you have a question, it\u0027s a good idea to try the FAQ, which answers the most commonly asked questions about Python. Looking to Help? If you want to help to develop Python, take a look at the developer area for further information. Please note that you don\u0027t have to be an expert programmer to help. The documentation is just as important as the compiler, and still needs plenty of work! The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 03:51:20.237444"
+  },
+  {
     "id": 222,
     "url": "https://wiki.qt.io/Qt_for_Python",
     "title": "Qt for Python - Qt Wiki",
@@ -1552,30 +1592,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 223,
-    "url": "https://www.python.org/about/gettingstarted/"
-  },
-  {
-    "id": 224,
-    "url": "https://huggingface.co/docs/transformers/"
-  },
-  {
-    "id": 225,
-    "url": "https://trac.edgewall.org/"
-  },
-  {
-    "id": 226,
-    "url": "https://www.android.com/better-together/"
-  },
-  {
-    "id": 227,
-    "url": "https://android.com/ai/gemini/"
-  },
-  {
-    "id": 228,
-    "url": "https://android.com/ai/"
   },
   {
     "id": 229,
@@ -42229,10 +42245,932 @@ window.searchData = [
     "id": 20937,
     "url": "https://wiki.qt.io/Qt_for_Python/Shiboken",
     "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 20958,
+    "url": "https://huggingface.co/docs/transformers/pipeline_tutorial",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20959,
+    "url": "https://huggingface.co/support",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20960,
+    "url": "https://github.com/huggingface/transformers/blob/main/docs/source/en/index.md",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20961,
+    "url": "https://github.com/huggingface/transformers",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20962,
+    "url": "https://huggingface.co/docs/transformers/models_timeline",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20963,
+    "url": "https://huggingface.co/docs/transformers/v5.8.0/en/main_classes/trainer#transformers.Trainer",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20964,
+    "url": "https://huggingface.co/docs/transformers/philosophy",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20965,
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1?fw\u003dpt",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20966,
+    "url": "https://huggingface.co/join",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20967,
+    "url": "https://huggingface.co/docs/transformers/index#design",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20968,
+    "url": "https://huggingface.co/docs/transformers/v5.8.0/en/main_classes/pipelines#transformers.Pipeline",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20969,
+    "url": "https://huggingface.co/docs/transformers/installation",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20970,
+    "url": "https://huggingface.co/docs/transformers/index#transformers",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20971,
+    "url": "https://huggingface.com/models",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20972,
+    "url": "https://huggingface.com/",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20973,
+    "url": "https://huggingface.co/docs/transformers/trainer",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20974,
+    "url": "https://huggingface.co/models?library\u003dtransformers\u0026sort\u003dtrending",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20975,
+    "url": "https://huggingface.co/docs/transformers/llm_tutorial",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20976,
+    "url": "https://huggingface.co/docs/transformers/index#features",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20977,
+    "url": "https://huggingface.co/docs/transformers/index#learn",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 20978,
+    "url": "https://support.google.com/android/answer/12768500#:~:text\u003dOn%20your%20Android%20device%2C%20the,Bluetooth%20devices",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20979,
+    "url": "https://www.android.com/intl/nl_nl/tablets/#explore-tablets",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20980,
+    "url": "https://support.google.com/android/answer/9075925#zippy\u003d%2Coption-use-notifications-fast-pair-accessories-only",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20981,
+    "url": "https://support.google.com/chromecastbuiltin/answer/3006709?ref_topic\u003d6104971\u0026sjid\u003d17425662081833250879-NA",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20982,
+    "url": "https://www.android.com/intl/nl_nl/tablets/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20983,
+    "url": "https://wearos.google.com/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20984,
+    "url": "https://www.android.com/intl/nl_nl/phones/help-me-choose/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20985,
+    "url": "https://www.google.com/chromebook/discover/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20986,
+    "url": "https://www.android.com/intl/nl_nl/better-together/quick-share-app/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20987,
+    "url": "https://www.android.com/intl/nl_nl/learn-find-my-device/#fmd-ecosystem-heading",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20988,
+    "url": "https://www.android.com/intl/nl_nl/auto/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20989,
+    "url": "https://support.google.com/chromebook/answer/10480029?",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20990,
+    "url": "https://store.google.com/category/earbuds?utm_source\u003dandroid\u0026utm_medium\u003dgoogle_oo\u0026utm_campaign\u003dGS107529\u0026utm_content\u003dweb\u0026utm_term\u003d4",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20991,
+    "url": "https://support.google.com/android/answer/9286773",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20992,
+    "url": "https://store.google.com/us/product/chromecast_google_tv?hl\u003dnl",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20993,
+    "url": "https://support.google.com/chromebook/answer/10751738",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20994,
+    "url": "https://tv.google/products/#smarttv",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20995,
+    "url": "https://support.google.com/chromecast/answer/7022492?hl\u003den#:~:text\u003dAll%20Chromecast%20devices%20require%20a,port%20that%20supports%20HDCP%202.2",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20996,
+    "url": "https://support.google.com/android/answer/13658562",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20997,
+    "url": "https://support.google.com/chromecast/answer/14632555",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20998,
+    "url": "https://www.android.com/better-together/quick-share-app/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 20999,
+    "url": "https://support.google.com/android/answer/9075925#use_fast_pair\u0026zippy\u003d%2Coption-use-notifications-fast-pair-accessories-only",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21000,
+    "url": "https://support.google.com/android/answer/12375846",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21001,
+    "url": "https://support.google.com/chromecastbuiltin/answer/6102923?ref_topic\u003d6102922\u0026sjid\u003d11400172199102039559-NA",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21002,
+    "url": "https://store.google.com/category/connected_home?utm_source\u003dandroid\u0026utm_medium\u003dgoogle_oo\u0026utm_campaign\u003dGS107529\u0026utm_content\u003dweb\u0026utm_term\u003d4",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21003,
+    "url": "https://blog.google/feed/samsung-unpacked-hearing-aid-talkback-updates/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21004,
+    "url": "https://www.android.com/intl/nl_nl/phones/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21005,
+    "url": "https://support.google.com/wearos/answer/11532572#:~:text\u003dWhen%20you%20download%20the%20Google,OS%20Wear%202%20and%20above.",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21006,
+    "url": "https://www.android.com/better-together/#quick-share",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21007,
+    "url": "https://support.google.com/android/#topic\u003d7313011",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21008,
+    "url": "https://support.google.com/android/#topic\u003d7313011/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21009,
+    "url": "https://store.google.com/us/product/chromecast_google_tv?hl\u003den-US",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21010,
+    "url": "https://support.google.com/android/answer/9286773?hl\u003den#zippy\u003d%2Cshare-content-with-someone:~:text\u003dShare%20%26%20receive%20content%20on%20your%20Android%20device",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21011,
+    "url": "https://www.android.com/intl/nl_nl/new-features-on-android/?category\u003dconnectivity/#gms-filter",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21012,
+    "url": "https://support.google.com/android/answer/12060041",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 21013,
+    "url": "https://www.android.com/intl/nl_nl/ai/circle-to-search/",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 21014,
+    "url": "https://gemini.google/advanced/",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 21015,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.bard",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 21016,
+    "url": "https://support.google.com/gemini/answer/14554984?sjid\u003d7227518821100474866-NA#back_to_gemini",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 21018,
+    "url": "https://www.android.com/intl/nl_nl/ai/more/",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 21021,
+    "url": "https://www.android.com/auto/compatibility/",
+    "parentUrl": "https://android.com/ai/"
+  },
+  {
+    "id": 21022,
+    "url": "https://www.android.com/intl/nl_nl/ai/gemini/",
+    "parentUrl": "https://android.com/ai/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
+    "alt": "Een tijdelijke afbeelding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/7Y0qzOvT-dYrlAX5pPJfiZjtbXRUgS18bxWuk-p_axxj3N94_dwaCPKgiSwYL7uWvFdkwLVKlbubqg0s8-C9kAXW2YNoxKgTkoE9Ky8B7fYWBh_ULPo",
+    "alt": "Een tijdelijke aanduiding",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pKgRV36gWXIFgFibX8NFqDzAjzmHdTSvq-pRcwIgoQjVtVPxjU4xkryQejkUPmfAd0WRTNUXcSfu5zDvfWNYogAXmKuP4fuzb2DXC9HO0W5tNmWjGw",
+    "alt": "Google Pixel 9 Pro Fold",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/nh3xrkYCZQOkOX7MybEgOANu8_2XgsQmO9nuYzAYZDqPPiash-XrEVY_EBcSwOd1bOgIfZilMYU6aPFqwHwv9IX7oufDmenJRmUKANbtJ7YA2J9jWT8s",
+    "alt": "Google Pixel 9 Pro",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/eJYQ2UvtFv7IYgwsvbiAHI1qlip8XwZgyi_0oDwxBSfDgVlUCe5bYjH62jqZdtN_ib4wnZUgre51WR9RJCw7zHnXBwO-AxVd-pgi_wQKzEOY0j5bhP0",
+    "alt": "Google Pixel Fold",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/p2ztmI4FRm-VOv2R9ZzKrSE1uf-5zhpfjihlggXXGrCbxkHDmmvI7RA6kWS89JflwQusRaWk6wYbOQXs94AGMOBMfeJ54AhEVv021_-UWxcOG7CrMQk",
+    "alt": "Samsung Galaxy Z Flip5",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JdV0OtOBIycAWaj57-SFnmorA7yZjN-SDr-4aEUKWkE5F_ffyXOI32-y-KOBk5VxWFfdBpXkkAvoJBGgH94UVKGNqWqgbRZ4WcdTXJ_zrvG3vKtA4MM",
+    "alt": "Samsung Galaxy Z Fold5",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/CcyifUM5W2xM_VrU42oq0Hic2wpgBHAgCEwZ2i7nMCYBxJ7dRJbph8qNhekakpbpWv5E6OT6yJC7dtaFiYp5UtPBKeaL_VC-d6YBcfOHT4gnB8_k5Q",
+    "alt": "Samsung Galaxy S23 Ultra-apparaat",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/yVueoz3rM339cNnz1l6XQV8DfwdPwcPYSAfVmyHzXN6W03pbxnpvpUA3MIw4OW5kOygpvqypwECVz4_CPcvzRGQBhr_bhNSWPQwQszzqZO6KObb8HiM",
+    "alt": "Google Pixel 9",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/SVcRDl98876b6fB4vgGrniRsL23iZVEvoFEl1RYpPwf2JCum-DdVD8LeXcHcx4ZNxh4m_zO-k3jFhYn_Pz2TyUY6YUyK6VIIm0vu0h8IbgmXknYkQG4",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/pNJhcHXuOU3dJr8-mzqRhYMx5-IzQ3F4YCLtkbNfNt6GgCc7xKNc441fgaygA7NlFuLnqDcfRrIQg3boxgx_VLSi0HBsu4ijoklp6aejXus2FPluzEg",
+    "alt": "De achterkant van de Samsung Galaxy S24 Ultra in het grijs tegen een lichtgrijze achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/vrHvIHmzjOuOENGb4zb7eT9W72NtPPW4XUoXrFaYdxxBhmOknxjtqLEjG2VpclczPVSMSierLF6cATNMTvFOYbSzV-jxvLl-YF8jpfB_CFGGpPRyw6w",
+    "alt": "De achterkant van de Samsung Galaxy S24+ in het kobaltpaars tegen een lichtpaarse achtergrond. De focus ligt op de camera\u0027s. Deze telefoon is te bestellen.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/b0rkBWx-NeYIpHUqqeDnK5tXmD-WB06B_8t5lCKDMVw2VoeK5PBA39NGWjnUMYw0kXoiwQlivn_p3uZcG0Qov4NiYnEOHSwBbtQQyHlOqpw90YRIcGY",
+    "alt": "De achterkant van de Samsung Galaxy S24 in het ambergeel tegen een lichtgele achtergrond. De camera\u0027s zijn de belangrijkste functie die wordt uitgelicht. Deze telefoon kan nu besteld worden.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/z0giIx5WB0IwZ3756-9N5e1muR-YsYurcYNJFh6EaHRb-tHpHyl09B_qkfAJDhoCH3BiFLToKjVdSKZ1bMzDwyv9VFNArmy0Lz-fokVAMKeYKko7QXCV",
+    "alt": "Een half omlaag geklapte Samsung Galaxy Z Flip5 met een levendig scherm.",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/L8MoImv47B8ALxLSDtiIhTK8RCfBvLxvRWB2G5gf4zGv8aEJ18CoLL5yXCeggYT_sUrVDi4y9Q92j6RL7aNEBLqeFoSWHwrauxDOjL2LCB-YYVnhRgo",
+    "alt": "Een kustlandschap met de oceaan en rotsachtige kliffen. Het Gemini-videoicoon staat erboven en onder de afbeelding staan pilvormige lijnen.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/1x1YbGTTzmvR38DFY2s0RJaIzfW4V_R-yNESeNHhVC3GuH-hbpa6pXNqOUCfr3uiQtfrnpmEetnTKGy8z6fExv_swNQQBT5m_zhz-BF2_yT3vYKwet94",
+    "alt": "Een Gemini-promptbalk in de vorm van een pil met een rand in blauwe en paarse tinten. Daarachter staan een paar staafjes in de vorm van een pil.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/TUOgmeq4xtM2gwuhq7Voq_1shJ0x7qbPMQJaptkv2s_wZ421RzWvSQ8MRV6PCJBaFqjNxhME0yDE6ESvBt_e8wkP2OtU6ecyl2_ejgBt35zBoJIiqpQ",
+    "alt": "Het Gemini-sterlogo wordt omringd door de iconen van Google Documenten, Gmail en Presentaties.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/-HjIm9cgyKxAVZbkicRQKGc4QStur7rikYKdLtjED7KwLvQWVnFH4EIUYx3DXMiCHchTsVMqQU02FcjBFuNaNjmmheP5GSvg8Z7bX3sECfQKkvvcISZH",
+    "alt": "Een afbeelding van een rode tas wordt gebruikt als voorbeeld voor hoe Circle to Search werkt.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/A2KjvRazk95pA3i7lTQ8VK4-ky6FDYEK-9On2kbgruJT_YVNzRGhSstaAXsLSuNRLKMPQ9OvetWAdUIcubADchLd0lBKjvZgNAP5sxIEAwDIdkKV9Q8",
+    "alt": "Een vinger drukt op het icoon van Magische editor.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/jBjDIjc-v2MghNQ3csBR7fsU5whtoPUt3GA_xsqBA3xq_vEiy5-SkW-vPqTvXA8_BiJ9FyESsPqXQyy6pdg1nF02Y57o1EUckBGBINuBCHjBLElPfQ",
+    "alt": "Android-telefooninstellingen met bedieningselementen voor hoortoestellen, waaronder aanpasbare voorinstellingen voor buitensituaties en het laadniveau van het linker- en rechtertoestel.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/aYF7ADQEt8VUiRkCnC4frrzO5h4zKUxNZ5vhJ1SH7a3AFjDKS-e5zG1EwccljlM_HlVRo85TWkPNficV76QeliSNajT1GVlzZphkzSbBlmMfVYDlmQ",
+    "alt": "Een smartwatch met een afbeelding van 3 glimlachende vrienden op het scherm, plus een cameraknop en zoomopties.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Pnw3maX6PWaTBjOnNtWS6VTyB44Zdc9XbNJUXOLxNqcX_BYmSqCGV9Ioooo4VoG-zx5kahezIuLUJzW5qcydvMnL90MvkIzhLrvJKi5CmEa0vgDeCRg",
+    "alt": "Een Chromebook en een telefoon staan naast elkaar en tonen beide een melding van een tekstbericht van \u0027Rachel\u0027.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/rdW7eVKpTCl0hcDwtD0qVDyDdNk2_sF_kztAJhk7u2R9T9dMz_OBa-H861jyBlU42o8OwZBdlSKorvyWoHtb3_h0gYpUUtt1tgEMU57QGgb8QBGqFwA",
+    "alt": "Op het vergrendelscherm van een telefoon staat het bericht dat een tracker met de gebruiker meereist.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/2HJ6BsJ7lOoLCpehkC_krfp4FEFaprc2luv5RjlBs3MxgPilUPUTq4RBqBQkLXNFaRJRLLyfEtpKDChPRP9wdaPaqchJJBv2dytl_8t7SEV91A_vL4kZ",
+    "alt": "Een telefoon toont de interface om een auto te bedienen. Bovenaan geeft een indicator aan dat de auto vergrendeld is en staat er een tekening van een sleutel.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JCaL5VrHkmsFr5s-0pWrxPZ97oxfwz1hPZ6Vk_ruIz7sW8cK45hCnf7kMt2wBhRU9nZ4vL3zOmHycQgBEkJZL2ZwDP2iFeJzsMn5DAC0XOJ--qHtA28R",
+    "alt": "Een Android-telefoon met een abstract blauw scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/hf3Ythyg1IqBMDbx8GgcukVIXV4wRKLWNziyfU-SSR9bOVOsYM82LXBC4Wjxq7eOWaSC6TqA-fC1NjiIrx2AkgiDl90A-iHlrtdgeTofsLV659rMfEg",
+    "alt": "Een paar oordopjes waarvan er één uit de geopende case steekt.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/u2xbodgQsmSlg5BGwmfZgkaG8uJzRgepXb0OiVR3fZtYoB0JZ-D84E_C3gLvg-ZtJIWmzs5y1FTI0W0BU7shdKLlcjWNIDqYvqBUIIXKWO6wLvzxww",
+    "alt": "Een zwarte tablet met erbovenop een pen. Op het scherm staat een kleurrijke abstracte afbeelding.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/hWKMV6Fv3fD8bpsQXm_Iqc1xlBCF-8l38ueq2h3I5HQYC1uYqRYAJVlCslcP7aBe1AgX_GDqq98guSDB-I0NM8xz-2rZGX4mFAQrGSG2eqTwTTTFOKs",
+    "alt": "Een geopende Chromebook met een abstracte rood met blauwe afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/BfSycapL-0BKuDD4bQzrokjqL1Bg1SmT3zSBgohWfwqJ6k94XfoKZDOzykwLtAUio24AeotVU-zZGJvHGqC6SvY2UJDMzLQB6d5N9NAbwJwpPamPHHA",
+    "alt": "Een vooraanzicht van een witte auto.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/xpSNJ8wT4HvVSpnfKBbClkn_hf5U3QeH5DRD07MBBSC0ScNXhkGgq17bp89c3U2M9n6iqRDsn6rbKSaRjs0k09cYrkLR-10ObRJzIb-AZ0fKlSsR-18",
+    "alt": "Een smartwatch met een lichtgroen bandje en de tijd prominent aangegeven op de wijzerplaat.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/xiwVXXP4u-1SgXyuVfBlt5V2F-zHJWw6D6UQL4dUeJ1eZqfhUvCxpCToPdVssUsdVWNESL1s2O6zb-tgUpvtq567uwPhHIp3q6ltrUyBemwqlr1UE3Q",
+    "alt": "Een langwerpige witte Nest Doorbell met een cameralens.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Pz8mCnb9dnj-kT-LpMclao6K0aRvJFMeYZhf8S_sAIh2RDYkOzK70QlnoTG7OwdKjrBQmjqge3NrLZLy9R5zBuyhKeSmP8ROS97X0YHbCQsyDca5Ag",
+    "alt": "Een tv met een kleurrijke abstracte afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/I3EWBB8joTjfnqtz32CkXwA41vS2jVzzoVXeMNYX71Ez8woDhX9f4XxTcCK1KRLKf5CdxIq7kcj_yQRCdOwq8sJQF39b6hFzgrfN68fOx56_k_X8YM4",
+    "alt": "Een ronde, zwarte tracker.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JCaL5VrHkmsFr5s-0pWrxPZ97oxfwz1hPZ6Vk_ruIz7sW8cK45hCnf7kMt2wBhRU9nZ4vL3zOmHycQgBEkJZL2ZwDP2iFeJzsMn5DAC0XOJ--qHtA28R",
+    "alt": "Een Android-telefoon met een abstract blauw scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/hf3Ythyg1IqBMDbx8GgcukVIXV4wRKLWNziyfU-SSR9bOVOsYM82LXBC4Wjxq7eOWaSC6TqA-fC1NjiIrx2AkgiDl90A-iHlrtdgeTofsLV659rMfEg",
+    "alt": "Een paar oordopjes waarvan er één uit de geopende case steekt.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/u2xbodgQsmSlg5BGwmfZgkaG8uJzRgepXb0OiVR3fZtYoB0JZ-D84E_C3gLvg-ZtJIWmzs5y1FTI0W0BU7shdKLlcjWNIDqYvqBUIIXKWO6wLvzxww",
+    "alt": "Een zwarte tablet met erbovenop een pen. Op het scherm staat een kleurrijke abstracte afbeelding.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/hWKMV6Fv3fD8bpsQXm_Iqc1xlBCF-8l38ueq2h3I5HQYC1uYqRYAJVlCslcP7aBe1AgX_GDqq98guSDB-I0NM8xz-2rZGX4mFAQrGSG2eqTwTTTFOKs",
+    "alt": "Een geopende Chromebook met een abstracte rood met blauwe afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/BfSycapL-0BKuDD4bQzrokjqL1Bg1SmT3zSBgohWfwqJ6k94XfoKZDOzykwLtAUio24AeotVU-zZGJvHGqC6SvY2UJDMzLQB6d5N9NAbwJwpPamPHHA",
+    "alt": "Een vooraanzicht van een witte auto.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/xpSNJ8wT4HvVSpnfKBbClkn_hf5U3QeH5DRD07MBBSC0ScNXhkGgq17bp89c3U2M9n6iqRDsn6rbKSaRjs0k09cYrkLR-10ObRJzIb-AZ0fKlSsR-18",
+    "alt": "Een smartwatch met een lichtgroen bandje en de tijd prominent aangegeven op de wijzerplaat.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/xiwVXXP4u-1SgXyuVfBlt5V2F-zHJWw6D6UQL4dUeJ1eZqfhUvCxpCToPdVssUsdVWNESL1s2O6zb-tgUpvtq567uwPhHIp3q6ltrUyBemwqlr1UE3Q",
+    "alt": "Een langwerpige witte Nest Doorbell met een cameralens.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Pz8mCnb9dnj-kT-LpMclao6K0aRvJFMeYZhf8S_sAIh2RDYkOzK70QlnoTG7OwdKjrBQmjqge3NrLZLy9R5zBuyhKeSmP8ROS97X0YHbCQsyDca5Ag",
+    "alt": "Een tv met een kleurrijke abstracte afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/I3EWBB8joTjfnqtz32CkXwA41vS2jVzzoVXeMNYX71Ez8woDhX9f4XxTcCK1KRLKf5CdxIq7kcj_yQRCdOwq8sJQF39b6hFzgrfN68fOx56_k_X8YM4",
+    "alt": "Een ronde, zwarte tracker.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/FqZkztCiqVB3LHcgglvXLLvVrfOocP4Ygsye-xdEbO_1AHdWU6EuoISxW3L86RZ37-Nylbq6WH5eWeD4FUZrB1_4FvYAWDI34vDXjZkiVFIRpuviZA",
+    "alt": "Een laptop waarop een bericht staat om snel en beveiligd bestanden te delen, is via een stippellijn verbonden met een telefoon waarop hetzelfde bericht wordt weergegeven. Zwevende documenticonen geven aan dat bestanden worden gedeeld.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/FqZkztCiqVB3LHcgglvXLLvVrfOocP4Ygsye-xdEbO_1AHdWU6EuoISxW3L86RZ37-Nylbq6WH5eWeD4FUZrB1_4FvYAWDI34vDXjZkiVFIRpuviZA",
+    "alt": "Een laptop waarop een bericht staat om snel en beveiligd bestanden te delen, is via een stippellijn verbonden met een telefoon waarop hetzelfde bericht wordt weergegeven. Zwevende documenticonen geven aan dat bestanden worden gedeeld.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/5KueQCmVyA4QcRfrgw1xD3DWYtwETZMK_JkZuGXy4ffxLbnq5ZkDmfne13uSJRKyhpeWUAqlUbxtvL4gn8tTulAx2Hqmm-6xHyq46ieERy9FpIFTiHCG",
+    "alt": "Een tablet in een oplaaddock speelt een YouTube-video met de naam \u0027How To Knead Dough\u0027 af.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/5KueQCmVyA4QcRfrgw1xD3DWYtwETZMK_JkZuGXy4ffxLbnq5ZkDmfne13uSJRKyhpeWUAqlUbxtvL4gn8tTulAx2Hqmm-6xHyq46ieERy9FpIFTiHCG",
+    "alt": "Een tablet in een oplaaddock speelt een YouTube-video met de naam \u0027How To Knead Dough\u0027 af.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/f9cdKNe9RWO9zuzN9FuBArF1i_D0Ij4sAKZG37lOx0GD_YmzD_WOqFJ5oWfs7-c6evvdRvF6c_Wk1Z_J-NQcyo0SFHavMQQeIoJUtcEiFosWv0RDSA",
+    "alt": "2 telefoons staan naast elkaar. De ene stuurt een afbeelding met Quick Share en de andere toont de gekregen afbeelding.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/6XpY3vRuNKI0mLQlmRiRHkR_hOPLPH3XmFpX3mY4Qh3IDY4_JPHKks6BnETOOA1nDahuPBP0BwAluJZ63BkzQ5QYI_q9Glru9X2-btLS7v09KCEa1Q",
+    "alt": "Een telefoon en laptop staan naast elkaar. De laptop toont een bericht dat iets wordt verstuurd en de telefoon toont het bericht dat een overgezette afbeelding is aangekomen.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/aYDkTykGSpUzoshs8JAww6fmEt3ZIhuxPJyQjVA5et_rcJC0UEYqK1BlwZU6HtOv1CIeTsq07iADbmcNbMc_p-wL-gKqbLxhwzCrN5ar5FUR1hYvtw",
+    "alt": "Een Chromebook vraagt om een afbeelding te delen. Op een telefoonscherm ernaast staat de gekregen afbeelding.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/8EE4-TIun8O_PBQ2yDPVtES-Iq0r94daS2lCfNebN8RTVy0c2Daf0Wrr8kre1B06NHc9rudm_YK_2Oexy8A8WSq2-dI7Ufok8TXCVM2rfiCBiULckg",
+    "alt": "3 typen Android-telefoons naast elkaar.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Vrye_DH4zFf8qTp6Jteux1ThFAUfXQYXn4hBYOAIfk05_lUCxUSRyoH3ce3MPfMnralIrmW3M6lSSrkc2NadyZd031KwCgK1UbCoTmmseDenypSahWg",
+    "alt": "Een tablet is aangesloten op een oplaaddock.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/wNnjQQ3ykUI-k8PVHMQtXNXohLdEi4bRBF9oxFF74NkscDnI47TmOdEzG7kM9h9IF7h56MImvAvHwE2oRFuUtSMOlmEsmngwTO-l9nn5G8ZMoN70GhQ",
+    "alt": "Een Chromebook toont een abstracte, kunstzinnige groene screensaver.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/W6e2zT52erXIwdsCxgTrnChPGWX_Lmv8qpXgqs3HBQ1w74btQLsYN3cq_7ecEWst0s63UtVs4LTvwZ1c04DKXj8w8JKqiaU8HgXzJVWQOsLj4-CLL-M",
+    "alt": "Een groene Android-robot in een bruin shirt draagt een koptelefoon. Eromheen cirkelt een Quick Share-icoon op een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/W6e2zT52erXIwdsCxgTrnChPGWX_Lmv8qpXgqs3HBQ1w74btQLsYN3cq_7ecEWst0s63UtVs4LTvwZ1c04DKXj8w8JKqiaU8HgXzJVWQOsLj4-CLL-M",
+    "alt": "Een groene Android-robot in een bruin shirt draagt een koptelefoon. Eromheen cirkelt een Quick Share-icoon op een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/8XPr8JnAbT-_vuJQ78K9vemIeU--iUNVJZF72x5jqpO2ncA3cn_JhzOw7bBl6vAir6T6wmD7NT9k81n2bJAsk4b0siG7I_XPeOQdEsB72u4PZuyouQ",
+    "alt": "Een tv-scherm toont de Google TV-interface en een Cast-icoon in de hoek. Eronder staat een smartphone met het bericht \u0027Connect to: LG OLED evo G3\u0027, over verbinding maken met een gekoppeld apparaat.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/8XPr8JnAbT-_vuJQ78K9vemIeU--iUNVJZF72x5jqpO2ncA3cn_JhzOw7bBl6vAir6T6wmD7NT9k81n2bJAsk4b0siG7I_XPeOQdEsB72u4PZuyouQ",
+    "alt": "Een tv-scherm toont de Google TV-interface en een Cast-icoon in de hoek. Eronder staat een smartphone met het bericht \u0027Connect to: LG OLED evo G3\u0027, over verbinding maken met een gekoppeld apparaat.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WWQLHZsq6Izohiox2-a4wsnatDj79YYYSUxCuKKkcIOvHT_hhGxfZsrIcbZZOAnIa_goXiie7-2pmI7aknipDaZjRMvZToP4TXc8-5ylVpRgzNlMsKg",
+    "alt": "2 verschillende Android-telefoons naast elkaar.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/sk9JHL4D_2A8K9bPuYKhHpo1mRYWu48HQipsSQ_Q1E44MEMRm9SHAKTDgb7OAnUIS0MscY2ZwwoyPciTDuUCTHp-obq3OemvUBpDQOdy_hVH_i9H8pnm",
+    "alt": "Een witte tablet op een oplaaddock met een snoer. Op het scherm staat een abstracte vogelafbeelding, plus meerdere interface-iconen.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/KKtLBKn7Hyo-vDWaG4Z9SVSA3Q3kmXIi84wlUhbUbicDXmVUkNW4WZUWSc_d7LnHR_T8JxwGUvDtlE81hs_Df-ksmkESYbEJQk1gcDPWxfxM6pQpGA",
+    "alt": "Een vooraanzicht van een witte auto.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/hrbyxY9L6xO-uQG8mN7Gs-j0wTpBEZ8CGYv29TMqCuHYh2XFnupGRNyF1ZeZWgrEeuWbtB09YyTTMTM8-x4KZpBThLVmVgcggfYB4PqSvM3sxcKOqQ",
+    "alt": "Een wit Chromecast-apparaat.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/adOuTymkNt-OfccAUrcgpfO44OLjagS7jlkv46Iqx4MO6Rf1AtDPKMGJHrineA4OCK0aBoMQG1jZfzd1u1g11eoj8T8TUsMXJOS75ZXQg0bAjkwieR8",
+    "alt": "Een tv met een kleurrijke abstracte afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/v5iWJmPheDId24gUGXff3jJL4TZEJBfSERm3xFbdOfFb2LatmygWrL9MybiWWL8L3nqQXhuCOVcbNAZ2rC0LJ1O8Ic3nvJlTp40GcoAs_q9raorNTg",
+    "alt": "Een paarse Android-robot met een hartje op de borst draagt een koptelefoon. Eromheen cirkelt een Cast-icoon op een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/v5iWJmPheDId24gUGXff3jJL4TZEJBfSERm3xFbdOfFb2LatmygWrL9MybiWWL8L3nqQXhuCOVcbNAZ2rC0LJ1O8Ic3nvJlTp40GcoAs_q9raorNTg",
+    "alt": "Een paarse Android-robot met een hartje op de borst draagt een koptelefoon. Eromheen cirkelt een Cast-icoon op een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_zEVMVjkB3fN3-k2Vqv726ERVEawyMzF2Uq0wAziJOpgQ2zOluiaC53COXHcax_Vu05y1wyWhUatQx1iDOMfwmEhT2c7E9WcLE-RumlJAFvEVH0vS6s",
+    "alt": "Een man houdt een smartphone vast en staat samen met 2 andere mensen in een woonkamer. Ze lachen allemaal met elkaar.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_zEVMVjkB3fN3-k2Vqv726ERVEawyMzF2Uq0wAziJOpgQ2zOluiaC53COXHcax_Vu05y1wyWhUatQx1iDOMfwmEhT2c7E9WcLE-RumlJAFvEVH0vS6s",
+    "alt": "Een man houdt een smartphone vast en staat samen met 2 andere mensen in een woonkamer. Ze lachen allemaal met elkaar.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Jd3uY_Ezmm2WutRs1vsioKn4ypj78ISm5AML2pTcUzpqtcTRp1ucEXYQLpRCzH4eXPd9BoyhzrNDDTe_A1s87XljwNAy1UxIz0EUSKyeAgdNsebOHEcv",
+    "alt": "2 handen houden een telefoon voor een tablet die op het dashboard van een auto is bevestigd. Op het scherm staat een verbindingsknop en het BMW-logo. Rondom zijn het BMW-logo en een auto-icoon verbonden via een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Jd3uY_Ezmm2WutRs1vsioKn4ypj78ISm5AML2pTcUzpqtcTRp1ucEXYQLpRCzH4eXPd9BoyhzrNDDTe_A1s87XljwNAy1UxIz0EUSKyeAgdNsebOHEcv",
+    "alt": "2 handen houden een telefoon voor een tablet die op het dashboard van een auto is bevestigd. Op het scherm staat een verbindingsknop en het BMW-logo. Rondom zijn het BMW-logo en een auto-icoon verbonden via een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/KsWPWjBm5YnwCrK0BM1DYTcTTzB_mckgqxwkdlFg86CUNNa2dCa47diLzxI0LTkW_8jS24467g_MJtvz8vXkmJBRu7fMGVK6rnMmdfBX7rihbDfkphI",
+    "alt": "2 verschillende Android-telefoons naast elkaar.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/UUGAQGK8K-RUgKEodxMORIEFhUH4uxj1_CExg0Eq8nU21R473jvEowDQuU3Dnf7wqhS4k7Bqyu5-S0lvFFnEl_sVV2WHXWFcDCLzGmsj581iwPPvXg",
+    "alt": "Een lichtgrijze smartspeaker met voorop indicatorlampjes, verbonden met een netsnoer.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/LNMFxfqok8RKQuGKB9-AFypEao9vGLkJgVO7cfKvx6gPTcRcvf_BmAtAiWDzBFZJ8lxI_gQiqdZQoatj5hMZBwvQvuZPY1GlvG_K7PYOlVKVqa1r1nsR",
+    "alt": "Een zwarte tablet met erbovenop een pen. Op het scherm staat een kleurrijke abstracte afbeelding.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/6TsX6sfrRxZcKMn2QCjtNyLdg4_MApKumIYbTlSdweNshPPY1ppc2WLk3fsLeET5vr2FC0JC64tYbgS8m1W9EKFuXqP6Xbl192CQWdjIFp_vgWP7UA",
+    "alt": "Een tv met een kleurrijke abstracte afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/RDwvguFiLPhfr363_TC29Hld0WpGulNPTiLsJ32lElXmHwaNI-6sjo2_zg5qzW1mgRSBN59skbydndCnJNcS0JgqrTaqss-IJmIhVz1KT1pfzy1m93M",
+    "alt": "Een blauwe Android-robot in een grijs shirt draagt een koptelefoon. Eromheen cirkelt een koppelingsicoon op een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/RDwvguFiLPhfr363_TC29Hld0WpGulNPTiLsJ32lElXmHwaNI-6sjo2_zg5qzW1mgRSBN59skbydndCnJNcS0JgqrTaqss-IJmIhVz1KT1pfzy1m93M",
+    "alt": "Een blauwe Android-robot in een grijs shirt draagt een koptelefoon. Eromheen cirkelt een koppelingsicoon op een stippellijn.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/MNNVRXXMATzYCJPTr02JF_BC4W0AfziBhMnn2fBTECKTAp3bKf3T_07Y8RMVnWl_iHWzU4vUS3fz64UZR-YQt2D6l6a5RnEtNcrKazFSmHtT4kBGxGGt",
+    "alt": "Een smartwatch met een afbeelding van 3 glimlachende vrienden op het scherm, plus een cameraknop en zoomopties.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JpTp7jHV8LCk-PPw8gxd7q2bpA0NB6ULbJqJnIg44PgeHAQ3X5o1sltUQ3zNyCcZK3IFGNpAr48VOD2VrdY8zZVpSUv_AqvuPHCdHw66cxKSFcey4kyx",
+    "alt": "Een telefoon staat boven een tekening van een auto. De telefoon komt via animatie dichter bij de voordeur van de auto. Hierbij verschijnt er een hangslot dat samen met de autodeur wordt ontgrendeld.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "alt": "Hugging Face\u0027s logo",
+    "pageTitle": "Transformers · Hugging Face",
+    "pageUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "src": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png",
+    "alt": "",
+    "pageTitle": "Transformers · Hugging Face",
+    "pageUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "src": "https://hf.co/datasets/huggingface/documentation-images/resolve/81d7d9201fd4ceb537fc4cebc22c29c37a2ed216/transformers/transformers-index.png",
+    "alt": "HuggingFace Expert Acceleration Program",
+    "pageTitle": "Transformers · Hugging Face",
+    "pageUrl": "https://huggingface.co/docs/transformers/"
+  },
   {
     "src": "https://qt-wiki-uploads.s3.amazonaws.com/images/e/ed/Qtforpython2023.png",
     "alt": "",
