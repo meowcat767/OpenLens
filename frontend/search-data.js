@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 588,
+    "url": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html",
+    "title": "Python Software Foundation News: Departing the Python Software Foundation (Staff)",
+    "content": "Wednesday, January 21, 2026 Departing the Python Software Foundation (Staff) This week will be my last as the Director of Infrastructure at the Python Software Foundation and my last week as a staff member. Supporting the mission of this organization with my labor has been unbelievable in retrospect and I am filled with gratitude to every member of this community, volunteer, sponsor, board member, and staff member of this organization who have worked alongside me and entrusted me with root@python.org for all this time. But, it is time for me to do something new. I don’t believe there would ever be a perfect time for this transition, but I do believe that now is one of the best. The PSF has built out a team that shares the responsibilities I carried across our technical infrastructure, the maintenance and support of PyPI, relationships with our in-kind sponsors, and the facilitation of PyCon US. I’m also not “burnt-out” or worse, I knew that one day I would move on “dead or alive” and it is so good to feel alive in this decision, literally and figuratively. “The PSF and the Python community are very lucky to have had Ee at the helm for so many years. Ee’s approach to our technical needs has been responsive and resilient as Python, PyPI, PSF staff and the community have all grown, and their dedication to the community has been unmatched and unwavering. Ee is leaving the PSF in fantastic shape, and I know I join the rest of the staff in wishing them all the best as they move on to their next endeavor.” - Deb Nicholson, Executive Director The health and wellbeing of the PSF and the Python community is of utmost importance to me, and was paramount as I made decisions around this transition. Given that, I am grateful to be able to commit 20% of my time over the next six months to the PSF to provide support and continuity. Over the past few weeks we’ve been working internally to set things up for success, and I look forward to meeting the new staff and what they accomplish with the team at the PSF! My participation in the Python community and contributions to the infrastructure began long before my role as a staff member. As I transition out of participating as PSF staff I look forward to continuing to participate in and contribute to this community as a volunteer, as long as I am lucky enough to have the chance. Posted by Ee Durbin at 1/21/2026 03:00:00 PM Newer Post Older Post Home Mission The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Python Software Foundation Grants Program Membership Awards Meeting Minutes PSF Sponsors A big thank you to the above PSF sponsors for supporting our mission! Blog Archive ▼ 2026 (11) ► April (3) ► March (1) ► February (3) ▼ January (4) Your Python. Your Voice. Join the Python Developer... Departing the Python Software Foundation (Staff) Announcing Python Software Foundation Fellow Membe... Anthropic invests $1.5 million in the Python Softw... ► 2025 (50) ► December (1) ► November (4) ► October (7) ► September (3) ► August (6) ► July (4) ► June (14) ► May (3) ► April (2) ► March (4) ► February (1) ► January (1) ► 2024 (58) ► December (6) ► November (5) ► October (3) ► September (2) ► August (4) ► July (7) ► June (16) ► May (4) ► April (2) ► March (2) ► February (3) ► January (4) ► 2023 (37) ► December (1) ► November (3) ► October (3) ► September (2) ► August (3) ► June (5) ► May (12) ► April (2) ► March (1) ► February (3) ► January (2) ► 2022 (35) ► December (2) ► November (3) ► October (2) ► July (3) ► June (6) ► May (12) ► April (2) ► March (3) ► February (1) ► January (1) ► 2021 (42) ► December (3) ► November (4) ► October (3) ► September (2) ► August (1) ► July (2) ► June (4) ► May (12) ► April (5) ► March (1) ► February (4) ► January (1) ► 2020 (51) ► December (8) ► November (3) ► October (3) ► September (4) ► July (4) ► June (2) ► May (10) ► April (11) ► March (4) ► January (2) ► 2019 (45) ► December (3) ► November (3) ► October (3) ► September (4) ► August (3) ► July (3) ► June (5) ► May (11) ► April (1) ► March (2) ► February (5) ► January (2) ► 2018 (31) ► December (5) ► November (1) ► October (4) ► September (1) ► August (2) ► July (3) ► June (3) ► May (5) ► April (2) ► March (2) ► February (1) ► January (2) ► 2017 (32) ► December (3) ► November (2) ► October (4) ► September (6) ► August (2) ► July (2) ► May (2) ► April (3) ► March (2) ► February (2) ► January (4) ► 2016 (27) ► December (2) ► October (2) ► August (4) ► July (1) ► June (3) ► May (6) ► April (4) ► March (2) ► January (3) ► 2015 (67) ► December (2) ► November (4) ► October (4) ► September (1) ► August (2) ► July (4) ► June (6) ► May (4) ► April (13) ► March (14) ► February (9) ► January (4) ► 2014 (14) ► October (1) ► September (1) ► August (2) ► July (1) ► May (1) ► April (1) ► March (2) ► February (3) ► January (2) ► 2013 (18) ► Novemb",
+    "scrapedAt": "2026-05-10 04:27:43.591184"
+  },
+  {
+    "id": 587,
+    "url": "https://www.python.org/psf/membership-faq",
+    "title": "PSF Membership Types \u0026 FAQ | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of the international community of Python programmers. —from the Mission Statement page What does it mean to be a member of the PSF? What membership classes are there? Who is allowed to vote? Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? How does a person become a PSF Fellow? What does the PSF do? How can I ask other questions? What does it mean to be a member of the PSF? Being part of the PSF means being part of the Python community. In 2014, we changed the bylaws to make the PSF an open membership organization, so that everyone who uses and supports Python can join. For those who wish to participate more, we have classes of membership that include voting rights for those who contribute time, work, and money to the foundation. What membership classes are there? There are four classes of members: Basic Members, Supporting Members, Contributing Members and Fellows. Basic Members Basic members are individuals or entities who are part of the Python language community and who have decided to declare their support for Python and agree to the community Code of Conduct. There is no cost to be a Basic Member. You can sign up as a basic member right here on the site. Supporting Members Supporting Members make a specific annual donation to the PSF to sustain the Foundation and support the Python community. Supporting Members are eligible to vote. You may combine Supporting Membership with any other Membership - i.e. you may sign up for Supporting Membership and also be a Basic Member, Contributing Member, or a Fellow. You can sign up as a Supporting Member here. Contributing Members Contributing Members are people who dedicate at least five hours per month volunteering on projects that advance the mission of the PSF, where the work relates to the creation or maintenance of open source software available to the public at no charge, or by organizing Python events, running infrastructure, participating in one of the PSF\u0027s working groups, etc. Contributing Members are eligible to vote. There is no cost to be a Contributing Member. For details on signing up as a Contributing Member, refer to this form. Fellows Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Fellows are nominated from the broader community and elevated by a vote of the members. Fellow members are eligible to vote. More info on the nomination process is available here. Who is allowed to vote? Who is eligible: Supporting Members, Contributing Members, and Fellows are eligible for voting privileges. To vote you must be 1) eligible to vote, and then 2) affirm each year you would like to exercise your voting privileges. More information on affirming your voting status is here. Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? Your Basic Membership information is managed here on https://www.python.org/users/membership/edit/. To manage your Supporting and Contributing Memberships, visit https://psfmember.org/user-information/. This site, https://www.python.org , will list you as a Basic Member even if you are a Supporting, Contribution, or Fellowship member because the voting tiers of membership are managed on the separate, https://www.psfmember.org website. To verify your PSF Voting Eligibility you will need to use https://www.psfmember.org. If you believe you are a Supporting, Contributing, or Fellow Member but do not have an account on psfmember.org, please create an account and verify your email, then email psf-donations@python.org to get your account linked to your membership. How does a person become a PSF Fellow? To nominate someone to be a PSF Fellow member, please send your nomination to psf-fellow@python.org. More info on the nomination process is available here. The criteria for becoming a PSF Fellow are as follows: For those who have served the Python community by creating and/or maintaining various creative contributions, the following statement should be true: \"[Nominated Person] has served the Python community by making available code, tests, documentation, or design, either in a Python implementation or in a Python ecosystem project, that 1) shows technical excellence, 2) is an example of software engineering principles and best practices, and 3) has achieved widespread usage or acclaim.\" For those who have served the Python community by coordinating, organizing, teaching, writing, and evangelizing, the following statement should b",
+    "scrapedAt": "2026-05-10 04:27:40.04602"
+  },
+  {
+    "id": 586,
+    "url": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html",
+    "title": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "content": "Thursday, February 12, 2026 Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group We are living in a moment where diversity and inclusion work is being actively undermined. From policy changes to corporate rollbacks, the gains we’ve fought for are being questioned and dismantled. Having lived in different countries and been part of many diverse communities, I’ve seen firsthand what happens when people feel excluded from spaces they want to be part of. As the chair of the Python Software Foundation’s Diversity \u0026 Inclusion Work Group for the past two years, I want to share what we’ve been doing, why it matters, and the incredible people making it happen. When I took on this role, I realized how much work the workgroup has already invested in that nobody knew about. This article is a reflection on our journey, the challenges we face, and where we’re heading. I want to share our story because I believe it matters. Why This Matters You might be asking yourself: Why invest so much energy in diversity and inclusion work, especially now when it’s being questioned and de-prioritized? But we all know the truth: barriers exist everywhere. A meetup announcement only in English. Documentation that assumes reliable internet. Examples that reference things unfamiliar to most of the world. Code of conduct violations without clear guidance for organizers. Communities wanting to start but not knowing where to begin. Because the Python community is global, and it should feel that way. When someone discovers Python in Nigeria, Brazil, India, or anywhere else in the world, they should see a community that welcomes them. They should find resources in their language, examples that reflect their context, and people who understand their challenges. Diversity isn’t just about representation. It’s about making Python better. More approachable. More accessible. Different perspectives lead to better solutions, more creative problem-solving, and software that works for more people. When we only hear from one type of voice, we miss opportunities to improve. Right now, when diversity and inclusion efforts are being rolled back in many places, it’s tempting to stay quiet. But that’s exactly why we need to speak up about the work we’re doing. The Python Software Foundation made a commitment: to support a diverse and international community of Python programmers. The D\u0026I Work Group exists to make that commitment real, tangible, and actionable. How The Diversity and Inclusion Workgroup Started The PSF Board created the Diversity \u0026 Inclusion Work Group in 2020 with a clear purpose: to amplify the Python Software Foundation’s mission of supporting a diverse and international community. It was a good idea. People wanted to join. Members came from different regions around the world, excited to be part of the group and looking forward to creating an impact because all of us, in one way or another, felt something was missing: the need to amplify and embrace diversity through more inclusion. Most discussions related to diversity and how we could spread awareness. The chats on our Slack channel were active with people sharing different opinions and resources. PyConUS D\u0026I Panel Discussions We held interesting annual D\u0026I panels where we discussed important topics which are often set aside. In 2022 and 2023 at PyCon US, we spoke about the lack of representation on the board, why the board lacked global representation, the lack of representation from core developers in other parts of the world apart from the US and Europe despite the huge representation of Pythonistas around the world, and how people could contribute to changing that representation. PyConUS 2022 D\u0026I Panel Discussion Participating D\u0026I Workgroup members: Georgi Ker, Reuven Lerner, Anthony Shaw, Lorena Mesa PyConUS 2023 D\u0026I Panel Discussion Participating D\u0026I Workgroup members: Marlene Mhangami, Débora Azevedo, Iqbal Abdullah, Georgi Ker PyConUS 2024 D\u0026I Panel Discussion In 2024, we invited different Python community leaders: Abigail Mesrenyame Dogbe, Dima Dinama,Jules Juliano Barros Lima, Jessica Greene, and Mason Egger, who shared about their work, their involvement, and their challenges as community leaders. Participating D\u0026I Workgroup members: Débora Azevedo, Georgi Ker PyConUS 2025 D\u0026I Panel Discussion In 2025, due to political changes happening around the world, we invited Cristián Maureira-Fredes, Jay Miller, and Naomi Ceder to the D\u0026I Workgroup panel to talk about “The Work Still Matters: Inclusion, Access, and Community in 2025.” Participating D\u0026I Workgroup members: Alla Barbalat, Keanya Phelps The panels were great. The discussions in our workgroup were great. But something was still not going right. Building a Global Work Group In 2024, when I took on the role of chair, the D\u0026I Work Group was at a crossroads. The PSF Board had created it to amplify the Foundation’s mission, and there was genuine interest from the community, but without a clear direction or structure, momentum ha",
+    "scrapedAt": "2026-05-10 04:27:37.205496"
+  },
+  {
+    "id": 582,
+    "url": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html",
+    "title": "Python Software Foundation News: Introducing the PSF Community Partner Program",
+    "content": "Tuesday, February 10, 2026 Introducing the PSF Community Partner Program The Python Software Foundation (PSF) is excited to announce the introduction of the PSF Community Partner Program. This new program is designed as an “in-kind” way for us to support Python events and initiatives with non-financial assistance through the use of the PSF logo and name, as well as promotional support via sharing qualified posts on PSF official social media accounts. The PSF looks forward to supporting Python community events and initiatives through this new program! The introduction of the PSF Community Partner Program grew out of our desire to find alternative ways to support the community during the pause of our Grants Program (read more about the resulting process below). Even so, we intend to continue offering this in-kind support program after the Grants Program reopens. Our big picture hope is that, over the long term, some community events and initiatives will continue to partner with the PSF while being financially dependent on sponsors and individual donors alone. The PSF is also working on the future of our Grants Program, including when and how we can reopen it in a way that ensures the program’s long-term sustainability while balancing the needs of the Python community. In light of the truly staggering outpouring of support from our community during the 2025 year-end fundraiser, we are now in a stronger position to reopen the Grants Program and are eager to give back in a thoughtful and sustainable way. More updates to come! As with the rollout of any new program, we anticipate small adjustments will need to be made for processes to flow smoothly and to ensure the program serves the Python community well. The PSF welcomes your comments, feedback, and suggestions regarding the new Community Partner Program on the corresponding Discuss thread. We also invite you to join our upcoming PSF Board or Grants Program Office Hour sessions to talk with the PSF Board and Staff synchronously. If you wish to send your feedback privately, please email grants@python.org. How the program will work The PSF Board delegated authority to the Grants Work Group (GWG) to review, approve, and deny applications for the Community Partner Program. Similar to the PSF Grants Program, the PSF must ensure that applicants meet certain criteria before being approved as a Community Partner. To qualify, an event or initiative must: Demonstrate a positive impact on the Python community Be Python-specific or primarily Python-related Have an established web presence, such as a dedicated website, Meetup page, or Luma page Have an enforceable Code of Conduct with clear reporting mechanisms in place Acknowledge and agree to the defined bounds of the Community Partner title as outlined in the application form The PSF Community Partner application process begins with a one-page form designed to collect the information needed for review by the GWG. The form gathers: Basic applicant details Information about the event or initiative Required acknowledgements related to trademark usage and an enforceable Code of Conduct A couple questions to better understand the event or initiative, support evaluation, or help the PSF gather relevant metrics Applicants are asked to submit their application at least six weeks before their event or initiative, with first-time applicants encouraged to apply eight weeks in advance. Applications may be submitted up to six months ahead of time, allowing the PSF to plan and provide timely promotional support. Once submitted, applications undergo an initial pre-review by PSF staff, who may follow up with clarifying questions as needed. The application will then be reviewed by the GWG, with consultation from the PSF Board in some cases and additional follow-up questions when necessary. Decisions will be communicated via the email address provided in the application. Accepted Community Partners will receive guidance on PSF logo usage, social media re-sharing, and an invitation to provide an optional report. How the program took shape Upon the pause of the PSF Grants Program, the PSF Board and Staff set out to understand how we can continue to support Python events and initiatives for the duration of the program\u0027s pause. We dedicated Board and Grants Office Hour sessions, gathered input on a Discuss thread, tracked our social media replies to the pause announcement, and talked with community members one-on-one to get a picture of the various needs of our community. From there, PSF Staff compiled the feedback to identify the common threads to weave them together into action. One of the most common themes uncovered is that while the financial assistance offered by our grants is incredibly valuable, the use of the PSF name that comes with grants also provides a strong signal of community trust–an official “stamp of approval”. This stamp of approval empowers Python events and initiatives to approach potential sponsors and is useful as a p",
+    "scrapedAt": "2026-05-10 04:27:31.818307"
+  },
+  {
+    "id": 581,
+    "url": "https://www.python.org/psf/volunteer",
+    "title": "Volunteer | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! PSF\u003e\u003e\u003e Volunteer\u003e\u003e\u003e Volunteer for the PSF The Python Software Foundation needs your help building infrastructure for the PSF and PyCon US, helping with fundraising and advocacy, and running important parts of the Python community (mailing lists, website, job board, etc). Example Tasks Help find donors and sponsors Act as a PSF representative at a conference Do a mini-presentation on the PSF at your local users group Help with other initiatives, such as grants Participate in planning and organizing PyCon US Python Software Foundation Working Groups We also have PSF working groups comprised of volunteers. See the list of active working groups here. Please note that not all working groups are currently accepting new volunteers. Volunteer for PyCon US You can also volunteer for PyCon US. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 04:27:23.231287"
+  },
+  {
     "id": 580,
     "url": "https://www.python.org/events/python-events/",
     "title": "Our Events | Python.org",
@@ -3997,26 +4032,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 581,
-    "url": "https://www.python.org/psf/volunteer"
-  },
-  {
-    "id": 582,
-    "url": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
-  },
-  {
-    "id": 586,
-    "url": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
-  },
-  {
-    "id": 587,
-    "url": "https://www.python.org/psf/membership-faq"
-  },
-  {
-    "id": 588,
-    "url": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
   },
   {
     "id": 589,
@@ -97795,10 +97810,421 @@ window.searchData = [
     "id": 72136,
     "url": "https://www.python.org/events/python-events/2173/",
     "parentUrl": "https://www.python.org/events/python-events/"
+  },
+  {
+    "id": 72144,
+    "url": "https://www.python.org/psf/volunteer/",
+    "parentUrl": "https://www.python.org/psf/volunteer"
+  },
+  {
+    "id": 72145,
+    "url": "https://www.python.org/psf/volunteer/pycon/",
+    "parentUrl": "https://www.python.org/psf/volunteer"
+  },
+  {
+    "id": 72146,
+    "url": "https://www.python.org/psf/workgroups/",
+    "parentUrl": "https://www.python.org/psf/volunteer"
+  },
+  {
+    "id": 72151,
+    "url": "https://pyfound.blogspot.com/2025/08/the-psf-has-paused-our-grants-program.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72170,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d6515804499381184590\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72191,
+    "url": "https://forms.gle/6HyvLDpHEtGSpfK97",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72215,
+    "url": "https://www.python.org/sponsors/application/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72237,
+    "url": "http://donate.python.org",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72274,
+    "url": "https://discuss.python.org/t/introducing-the-psf-community-partner-program-for-python-events-initiatives/106095",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72279,
+    "url": "https://pyfound.blogspot.com/2024/02/introducing-psf-grants-office-hours.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72322,
+    "url": "https://www.python.org/psf/community-partners/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72378,
+    "url": "https://pyfound.blogspot.com/2025/10/a-new-psf-board-another-year-of-psf.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "id": 72425,
+    "url": "https://www.linkedin.com/in/abhijeet-mote/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72432,
+    "url": "https://ffy00.github.io/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72436,
+    "url": "https://maureira.dev/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72444,
+    "url": "https://github.com/tavallaie",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72449,
+    "url": "https://dinama.id/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72450,
+    "url": "https://lorenamesa.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72460,
+    "url": "https://github.com/mesrenyamedogbe/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72468,
+    "url": "https://www.linkedin.com/in/emmanuel-ugwu-b58b80223",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72474,
+    "url": "https://www.linkedin.com/in/keanyaphelps/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72477,
+    "url": "https://www.linkedin.com/in/mariecnordin/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72486,
+    "url": "https://seyramtheresa.medium.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72490,
+    "url": "https://www.getmanfred.com/perfil/jimena",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72502,
+    "url": "https://github.com/sleepypioneer/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72503,
+    "url": "https://github.com/Nathan-Bransby-NMT",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72519,
+    "url": "https://github.com/guel-codes",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72525,
+    "url": "https://blogger.googleusercontent.com/img/a/AVvXsEjkhgqUDZF7BIsaWJIMrfgV07w_awVOFJdKoIwf2gcrjinWZidBj0W4qNvYDyskySUTJzqGXYkH8gRDhVcyIWzBhJWicGPXxNQg_6NJMzi7QnSUtEF8Z8ZEjUW7uAk2sMChj8wXro1BWmEvMtqJJSqSPuWIZfQU24JroQwb_ng56s0zw_Vr2Q",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72531,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d3030027024067679199\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72538,
+    "url": "https://www.linkedin.com/in/karobotco/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72548,
+    "url": "https://allabarbalat.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72557,
+    "url": "https://www.blogger.com/profile/15574586138304471937",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72564,
+    "url": "https://www.mannieyoung.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72565,
+    "url": "https://georgiker.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72578,
+    "url": "https://github.com/sayantikabanik",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72589,
+    "url": "https://marlenemhangami.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72596,
+    "url": "https://lerner.co.il/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72603,
+    "url": "https://juliobs.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72610,
+    "url": "https://github.com/deboraazevedo",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72618,
+    "url": "https://bento.me/julesbrlm/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72623,
+    "url": "https://www.linkedin.com/in/itskpflow/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72632,
+    "url": "https://deboraazevedo.github.io/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72633,
+    "url": "https://tonybaloney.github.io/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72647,
+    "url": "https://iqbalabdullah.net/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72664,
+    "url": "https://bento.me/julesbrlm",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72682,
+    "url": "https://www.naomiceder.tech/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72683,
+    "url": "https://kjaymiller.com/",
+    "parentUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "id": 72742,
+    "url": "https://pyfound.blogspot.com/2026/01/announcing-python-software-foundation.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 72879,
+    "url": "https://pyfound.blogspot.com/2025/12/anthropic-invests-in-python.html",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 72919,
+    "url": "https://www.blogger.com/profile/13577459520968677064",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "id": 72930,
+    "url": "https://www.blogger.com/post-edit.g?blogID\u003d8520\u0026postID\u003d4397362145900791438\u0026from\u003dpencil",
+    "parentUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Departing the Python Software Foundation (Staff)",
+    "pageUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Departing the Python Software Foundation (Staff)",
+    "pageUrl": "https://pyfound.blogspot.com/2026/01/ee-departing-the-psf-staff.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEjkhgqUDZF7BIsaWJIMrfgV07w_awVOFJdKoIwf2gcrjinWZidBj0W4qNvYDyskySUTJzqGXYkH8gRDhVcyIWzBhJWicGPXxNQg_6NJMzi7QnSUtEF8Z8ZEjUW7uAk2sMChj8wXro1BWmEvMtqJJSqSPuWIZfQU24JroQwb_ng56s0zw_Vr2Q\u003dw510-h230",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/debra.png",
+    "alt": "Débora Azevedo",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/jules.png",
+    "alt": "Juliana Barros Lima",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Karo.png",
+    "alt": "Karolina Ladino Puerto",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/keanya.png",
+    "alt": "Keanya Phelps",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/alla.png",
+    "alt": "Alla Barbalat",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/marie.png",
+    "alt": "Marie Nordin",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/abhijeet.png",
+    "alt": "Abhijeet Mote",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/saya.png",
+    "alt": "Sayantika Banik",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/georgi.png",
+    "alt": "Georgi Ker",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Kalyan1.png",
+    "alt": "Kalyan Prasad",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Jimena.png",
+    "alt": "Jimena Escobar Bermúdez",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Filipe.png",
+    "alt": "Filipe Laíns",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Julio.png",
+    "alt": "Julio Batista Silva",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/reuven.png",
+    "alt": "Reuven Lerner",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Ali.png",
+    "alt": "Ali Tavallaie",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Mannie.png",
+    "alt": "Mannie Young",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Theresa.png",
+    "alt": "Theresa Seyram Agbenyega",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/Emmanuel.png",
+    "alt": "Emmanuel Ugwu",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://georgiker.com/images/blog/nathan.png",
+    "alt": "Nathan Bransby",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Python is for Everyone: Inside the PSF\u0027s D\u0026I Work Group",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/python-is-for-everyone-inside-psfs-d.html"
+  },
+  {
+    "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
+    "alt": "",
+    "pageTitle": "Python Software Foundation News: Introducing the PSF Community Partner Program",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
+  {
+    "src": "https://blogger.googleusercontent.com/img/a/AVvXsEiagchpTRkriKoEe2Cqh2Bd5mX7Un4EYG-fq2Gdwx-Jx5scs09-0bmLVT89ewlhrQsiaJVE6nUU1Z0UkZFu0KUM2f82CiXXGsY_mg0JRq8iUtt_Rob_rcWX9meUjM2ql0XMoYFwO7dtt8T3cHO5oGfxo3HPk-9Lz358AlCHMDRAo5fgBXTuEuo\u003ds302",
+    "alt": "PSF Sponsors",
+    "pageTitle": "Python Software Foundation News: Introducing the PSF Community Partner Program",
+    "pageUrl": "https://pyfound.blogspot.com/2026/02/introducing-psf-community-partner.html"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Snowflake_Partner_Hyper.jpeg",
     "alt": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python",
