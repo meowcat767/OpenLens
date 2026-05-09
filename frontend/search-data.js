@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 172,
+    "url": "https://www.oracle.com/javadownload",
+    "title": "Java Downloads | Oracle",
+    "content": "Java Technical Details Java Downloads Watch the JavaOne 2026 keynotes and select sessions Watch JavaOne Looking for other Java downloads? OpenJDK Early Access Builds JRE for Consumers Java 26, Java 25, Java 21, and earlier versions available now Learn about Java SE Subscription JDK 26 is the latest release of the Java SE Platform. JDK 25 is the latest Long-Term Support (LTS) release of the Java SE Platform. JDK 21 is the previous Long-Term Support (LTS) release of the Java SE Platform. Earlier JDK versions are available below. JDK 26 JDK 25 JDK 21 Java SE Development Kit 26.0.1 downloads JDK 26 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JDK 26 will receive updates under these terms, until September 2026, when it will be superseded by JDK 27. Linux macOS Windows Product/file description File size Download ARM64 Compressed Archive 208.96 MB https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz (sha256) ARM64 RPM Package 208.53 MB https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm (sha256) (OL 9 GPG Key) x64 Compressed Archive 211.05 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz (sha256) x64 Debian Package 180.82 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb (sha256) x64 RPM Package 210.58 MB https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm (sha256) (OL 9 GPG Key) Product/file description File size Download ARM64 Compressed Archive 203.74 MB https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz (sha256) ARM64 DMG Installer 203.19 MB https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg (sha256) x64 Compressed Archive 206.01 MB https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz (sha256) x64 DMG Installer 205.44 MB https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg (sha256) Product/file description File size Download x64 Compressed Archive 210.50 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip (sha256) x64 Installer 188.65 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe (sha256) x64 MSI Installer 187.42 MB https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi (sha256) Documentation Download Release information Online Documentation Installation Instructions Release Notes Documentation License JDK 26 Licensing Information User Manual (includes third-party licenses) Certified System Configurations Readme Java Value Engineering Java SE Development Kit 25.0.3 downloads JDK 25 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JDK 25 will receive updates under the NFTC, until September 2028, a year after the release of the next LTS. Subsequent JDK 25 updates will be licensed under the Java SE OTN License (OTN) and production use beyond the limited free grants of the OTN license will require a fee. Linux macOS Windows Product/file description File size Download ARM64 Compressed Archive 204.68 MB https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz (sha256) ARM64 RPM Package 204.28 MB https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm (sha256) (OL 9 GPG Key) x64 Compressed Archive 206.82 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz (sha256) x64 Debian Package 177.31 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb (sha256) x64 RPM Package 206.38 MB https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm (sha256) (OL 9 GPG Key) Product/file description File size Download ARM64 Compressed Archive 199.60 MB https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz (sha256) ARM64 DMG Installer 199.11 MB https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg (sha256) x64 Compressed Archive 201.79 MB https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz (sha256) x64 DMG Installer 201.26 MB https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg (sha256) Product/file description File size Download x64 Compressed Archive 205.71 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip (sha256) x64 Installer 184.51 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe (sha256) x64 MSI Installer 183.28 MB https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi (sha256) Documentation Download Release information Online Documentation Installation Instructions Release Notes Documentation License JDK 25 Licensing Information User Manual (includes third-party licenses) Certified System Configurations Readme Java Value Engineering Java SE Development Kit 21.0.11 downloads JDK 21 binaries are free to use in production and free to redistribute, at no cost, under the Oracle No-Fee Terms and Conditions (NFTC). JD",
+    "scrapedAt": "2026-05-10 03:46:05.331193"
+  },
+  {
+    "id": 171,
+    "url": "https://www.oracle.com/java/",
+    "title": "Java Software | Oracle",
+    "content": "Java Oracle Java is the #1 programming language and development platform. It helps reduce costs, shorten development timeframes, drive innovation, and improve application services. With millions of developers running more than 73 billion Java Virtual Machines worldwide, Java continues to be the development platform of choice for enterprises and developers. Download Java Watch the JavaOne 2026 keynotes and select sessions Java 26 is now available JDK 26 introduces improved performance, enhanced security, and new AI-ready features—empowering developers to boost productivity and helping organizations scale innovation with greater speed and reliability. Read the JDK 26 blog Java in the Era of AI \u0026 Cloud Native Innovation According to a recent VDC Research study, Java is the #1 language for cloud native development. Java remains the trusted foundation for enterprises and the go-to language for developers building the next generation of innovative solutions. Access the VDC Research report Announcing Java Verified Portfolio and commercial support for JavaFX Oracle Java Verified Portfolio (JVP) delivers enterprise-backed Java tools and libraries, now including commercial support for JavaFX, Helidon, and Java Platform Extension for Visual Studio Code. Read the JVP blog Are you a Java developer? Get tutorials, news, and videos from Java experts. Learn more about Java Unlock powerful insights with JMS Analyze Applications The new Java Management Service (JMS) feature enables instant, actionable insights on Java applications without the need for setting up JMS fleets or installing agents. Learn more Watch Georges Saab on Java 25 (JDK 25) LTS for AI and cloud See what’s new in the latest long-term supported Java release—Java 25 (JDK 25). Learn how Java helps teams modernize enterprise apps, go cloud native and multicloud, and build and run AI-driven workloads with confidence. Watch the video (9:10) Case study: Oracle Java EPP for Oracle Fusion Find out why Java SE Subscription Enterprise Performance Pack (EPP) helps Oracle Fusion Applications improve application response times by 40% and decrease CPU utilization by 25%. Read the case study (PDF) Java SE Java on OCI Oracle WebLogic Server Java Card Java Management Service The world’s most popular modern development platform The world’s most popular modern development platform, Java SE is the programming language of choice for enterprise applications. Java SE reduces costs, shortens development time, drives innovation, and improves application services. Protect your Java investment with Oracle Java SE Universal Subscription, which now includes Java SE Subscription Enterprise Performance Pack (EPP) and Java Management Service. Download Java now Explore Java SE Universal Subscription Products Oracle Java SE Universal Subscription Oracle JDK Oracle OpenJDK Oracle Java SE Platform Oracle Java Verified Portfolio (JVP) The best cloud platform for developing and deploying Java Oracle Cloud Infrastructure (OCI) enhances the versatility, power, and stability of Java. As the steward and leading contributor to the Java platform, Oracle continues to drive the evolution of Java in response to the demands of enterprises and to provide unparalleled expertise to support developers. OCI SDK for Java: The Oracle Cloud Infrastructure SDK for Java enables you to write code to manage OCI resources. Simplified Java Management Service gives you insights into all your Java deployments, on OCI and on-premises. Expert Java support from the stewards of Java to optimize Java apps whenever it makes sense. Exclusive access to patches and updates, even beyond the end of public updates. Benefits of Java SE on OCI at no additional cost. The world’s leading platform for developing and running enterprise Java applications Oracle WebLogic Server offers a robust, mature, and scalable implementation of Oracle Java Enterprise Edition (EE) and Jakarta EE to run enterprise Java applications in the cloud or on-premises. Explore Oracle WebLogic Server Products Oracle WebLogic Server Oracle Coherence Oracle WebLogic Server for Oracle Cloud Infrastructure Helidon Improves security for Internet of Things (IoT) edge devices Java Card enables secure elements, such as smart cards and other tamper-resistant security chips, to host applications based on Java technology. Store and update multiple applications on a single, resource-constrained device. Explore Java Card Documentation Features Interoperable Secure execution environment Multiapplication, multitenant Extensible and updatable Java Management Service Enterprises often run multiple versions of Java across desktops, laptops, servers, and cloud environments, making it challenging to maintain security and compliance. Outdated Java versions can expose organizations to vulnerabilities. Java Management Service (JMS) is an Oracle Cloud Infrastructure (OCI) service that provides centralized, real-time monitoring and management of Java environments both on-premises and in ",
+    "scrapedAt": "2026-05-10 03:46:03.206269"
+  },
+  {
+    "id": 170,
+    "url": "https://www.java.com/en/download/help/index.html",
+    "title": "Java Help Center",
+    "content": "Help Resources Installing Java Remove older versions Disable Java Using Java General questions Security Support options Support Handbook Java Help Center Welcome to the Java.com Help Center where we describe solutions for issues you might encounter when downloading and using Java on your computer. We track the most frequently reported issues and error codes and provide answers for them in this section. Top Developer - Java Security Manifest Changes in the Browser Why is the Add button on the Exception Site List grayed out? Error message: Java Platform SE Binary has stopped working Java Plug-in in IE mode on Microsoft Edge Browser Why am I asked to install Java even after installing the latest Java version, after upgrading OS X version? Why do I see the Java Update Needed message: Java is out of date? Troubleshooting tips for running Java Download errors: Corrupt MSI, File corrupt, Error 1606 Running Java on macOS Sierra 10.12 Why should I uninstall older versions of Java from my system? Which Java download should I choose for my 64-bit Windows operating system? Tips for using Java on Windows 8 Installing and using Oracle Java on macOS Why are Java applications blocked by your security settings? How do I disable Java in my web browser? » View all Terminology: Java is the general term used to denote the software and its components, which include \u0027Java Runtime Environment\u0027 (JRE), \u0027Java Virtual Machine\u0027 (JVM) and also \u0027Plug-in\u0027. When error messages specifically include terms such as JRE, JVM and Plug-in, we retain them. Versions: Version refers to the Java family and the Update number. Examples: On the website or under Windows programs, version appears as Java 8 Update 25. The Help section contains information on the following versions of Java. Current Version Name Replaces Old Name Other Legacy Formats Java 8 Java 8 Update x JRE 8.0 JRE 1.8 1.8.0_0x",
+    "scrapedAt": "2026-05-10 03:45:59.48923"
+  },
+  {
+    "id": 169,
+    "url": "https://www.java.com/en/download/help/whatis_java.html",
+    "title": "What is Java and why do I need it?",
+    "content": "Help Resources Installing Java Remove older versions Disable Java Using Java General questions Security Support options Support Handbook What is Java technology and why do I need it? Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today’s digital world, by providing the reliable platform upon which many services and applications are built. New, innovative products and digital services designed for the future continue to rely on Java, as well. While most modern Java applications combine the Java runtime and application together, there are still many applications and even some websites that will not function unless you have a desktop Java installed. Java.com, this website, is intended for consumers who may still require Java for their desktop applications – specifically applications targeting Java 8. Developers as well as users that would like to learn Java programming should visit the dev.java website instead and business users should visit oracle.com/java for more information. Is Java free to download? Yes, Java is free to download for personal use. Java is also free for development: developers can find all the development kits and other useful tools at https://www.oracle.com/javadownload/. Why should I upgrade to the latest Java patch each quarter when prompted? The latest Java patches contain important enhancements to improve performance, stability and security of the Java applications that run on your machine. Installing these updates will ensure that your Java applications continue to run with the most up-to-date version. MORE TECHNICAL INFORMATION What will I get when I download Java software from java.com? The Java Runtime Environment (JRE) version 8 is what you get when you download Java software from java.com. The JRE consists of the Java Virtual Machine (JVM), Java platform core classes, and supporting Java platform libraries. The JRE is the runtime portion of Java software, which is all you need to run Java WebStart applications from a supported web browser. It doesn’t come with development tools, though – these tools are part of the Java Development Kit (JDK). What is Java Plug-in software? The Java Plug-in software is a component of the Java Runtime Environment (JRE). The JRE allows some applications written in the Java programming language to launch via some browsers. The Java Plug-in software is not a standalone program and cannot be installed separately. I have heard the terms Java Virtual Machine and JVM. Is this Java software? The Java Virtual Machine is only one part of Java software that is involved in running an application. The Java Virtual Machine is built right into your Java software download, part of the JRE and helps run Java applications.",
+    "scrapedAt": "2026-05-10 03:45:53.467161"
+  },
+  {
+    "id": 168,
+    "url": "https://www.java.com/download/",
+    "title": "Download Java",
+    "content": "Download Java Help Resources » Why is Java 8 recommended » What is Java » Remove older versions » Windows FAQ » Security » Support » Other help This download is for end users who need Java for running applications on desktops or laptops. Java 8 integrates with your operating system to run separately installed Java applications. If you were asked to install Java to run a desktop application, it\u0027s most likely you need this version. Developers are encouraged to download the latest Java Development Kit from OTN downloads. Enterprise users with access to My Oracle Support or Oracle Software Delivery Cloud should download through those services. Version 8 Update 491 Release date: April 21, 2026 filesize: 69.00 MB Download Java for Desktops By downloading Java you acknowledge that you have read and accepted the terms of the Oracle Technology Network License Agreement for Oracle Java SE. Important Oracle Java License Information. Important Oracle Java License Information The Oracle Java License changed for releases starting April 16, 2019. The Oracle Technology Network License Agreement for Oracle Java SE is substantially different from prior Oracle Java licenses. This license permits certain uses, such as personal use and development use, at no cost -- but other uses authorized under prior Oracle Java licenses may no longer be available. Please review the terms carefully before downloading and using this product. An FAQ is available here. Commercial license and support is available with a low cost Java SE Subscription. When your Java installation completes, if you are using webstart, you may need to restart your browser (close all browser windows and re-open). » FAQ about 64-bit Java for Windows » System Requirements Not the right operating system? See all Java 8 Downloads for Desktop users.",
+    "scrapedAt": "2026-05-10 03:45:47.199827"
+  },
+  {
     "id": 167,
     "url": "https://dev.java/",
     "title": "Dev.java: The Destination for Java Developers",
@@ -1167,26 +1202,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 168,
-    "url": "https://www.java.com/download/"
-  },
-  {
-    "id": 169,
-    "url": "https://www.java.com/en/download/help/whatis_java.html"
-  },
-  {
-    "id": 170,
-    "url": "https://www.java.com/en/download/help/index.html"
-  },
-  {
-    "id": 171,
-    "url": "https://www.oracle.com/java/"
-  },
-  {
-    "id": 172,
-    "url": "https://www.oracle.com/javadownload"
   },
   {
     "id": 173,
@@ -31534,10 +31549,1316 @@ window.searchData = [
     "id": 17894,
     "url": "https://dev.java/learn/api/streams",
     "parentUrl": "https://dev.java/"
+  },
+  {
+    "id": 17895,
+    "url": "https://www.java.com/otnlicense/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17896,
+    "url": "https://www.java.com/en/download/manual.jsp",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17897,
+    "url": "https://www.oracle.com/java/java-se-subscription.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17898,
+    "url": "https://www.java.com/en/download/help/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17899,
+    "url": "https://support.oracle.com/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17900,
+    "url": "https://www.java.com/en/download/support.jsp",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17901,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk-faqs.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17902,
+    "url": "https://www.java.com/en/download/help/java_win64bit.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17904,
+    "url": "https://www.java.com/en/download/help/remove_olderversions.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17907,
+    "url": "https://edelivery.oracle.com/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17908,
+    "url": "https://www.java.com/en/download/why-java-8-recommended.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17909,
+    "url": "https://www.java.com/en/security/",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17910,
+    "url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId\u003d253195_f7fe8e644f724108bdb54139381e29a7",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17911,
+    "url": "https://www.java.com/en/download/help/java_windows.html",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17912,
+    "url": "https://www.java.com/en/download/#lightboxContent",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17913,
+    "url": "https://www.java.com/en/download/win_sysreq-sm.jsp",
+    "parentUrl": "https://www.java.com/download/"
+  },
+  {
+    "id": 17914,
+    "url": "https://www.java.com/en/download/help/remove_olderversions.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 17916,
+    "url": "https://www.oracle.com/javadownload/",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 17917,
+    "url": "https://www.java.com/en/download/faq/index_general.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 17918,
+    "url": "https://ops.java/supporthandbook/",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 17919,
+    "url": "https://www.java.com/en/download/help/index_installing.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 17920,
+    "url": "https://www.java.com/en/download/help/disable_browser.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 17923,
+    "url": "https://www.java.com/en/download/help/index_using.xml",
+    "parentUrl": "https://www.java.com/en/download/help/whatis_java.html"
+  },
+  {
+    "id": 17925,
+    "url": "https://www.java.com/en/download/help/sierra_java.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17926,
+    "url": "https://www.java.com/en/download/help/java_plugin_ie_mode.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17927,
+    "url": "https://www.java.com/en/download/help/java_blocked.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17932,
+    "url": "https://www.java.com/en/download/help/java_crash_video_driver.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17934,
+    "url": "https://www.java.com/en/download/help/error_installshield.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17935,
+    "url": "https://www.java.com/en/download/help/disable_browser.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17937,
+    "url": "https://www.java.com/en/download/help/win8_faq.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17939,
+    "url": "https://www.java.com/en/download/help/signed_code.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17940,
+    "url": "https://www.java.com/en/download/faq/top_issues.xml",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17942,
+    "url": "https://www.java.com/en/download/help/expire_date.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17944,
+    "url": "https://www.java.com/en/download/help/java_mac.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17945,
+    "url": "https://www.java.com/en/download/help/yosemite_java.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17947,
+    "url": "https://www.java.com/en/download/help/troubleshoot_java.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17948,
+    "url": "https://www.java.com/en/download/help/sitelist_disabled.html",
+    "parentUrl": "https://www.java.com/en/download/help/index.html"
+  },
+  {
+    "id": 17949,
+    "url": "https://docs.oracle.com/en/java/javase/index.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17950,
+    "url": "https://www.oracle.com/java/?ytid\u003da1aro8bq30o",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17951,
+    "url": "https://dev.java/community/affinity/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17952,
+    "url": "https://www.oracle.com/a/tech/docs/javase-subscription-datasheet.pdf",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17954,
+    "url": "https://dev.java/community/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17955,
+    "url": "https://go.oracle.com/LP\u003d150255?elqCampaignId\u003d644147",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17956,
+    "url": "https://go.oracle.com/LP\u003d136406?elqCampaignId\u003d427886",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17957,
+    "url": "http://jdk.java.net/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17958,
+    "url": "https://mylearn.oracle.com/ou/story/40805",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17960,
+    "url": "https://education.oracle.com/oracle-certification-path/pfamily_48",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17961,
+    "url": "https://openjdk.org/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17962,
+    "url": "https://dev.java/playground/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17963,
+    "url": "https://newsroom.collegeboard.org/advanced-placement-program-collaborates-oracle-computer-science-updates",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17964,
+    "url": "https://blogs.oracle.com/java/post/detaching-graalvm-from-the-java-ecosystem-train",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17965,
+    "url": "https://www.oracle.com/java/technologies/java-se-glance.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17966,
+    "url": "https://www.oracle.com/java/java-se-subscription/value-engineering/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17967,
+    "url": "https://www.oracle.com/java/technologies/java-card/javacard-technology-getstarted.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17968,
+    "url": "https://www.oracle.com/java/weblogic/weblogic-for-oracle-cloud-infrastructure/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17969,
+    "url": "https://www.youtube.com/java",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17970,
+    "url": "https://www.oracle.com/events/java-graalvm-webcasts/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17971,
+    "url": "https://www.oracle.com/java/duke/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17973,
+    "url": "https://www.oracle.com/a/ocom/docs/java-erp-fusion-case-study.pdf",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17974,
+    "url": "https://www.oracle.com/java/coherence/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17975,
+    "url": "https://helidon.io/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17976,
+    "url": "https://learn.java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17977,
+    "url": "https://blogs.oracle.com/java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17978,
+    "url": "https://blogs.oracle.com/java/the-arrival-of-java-26",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17980,
+    "url": "https://www.oracle.com/java/weblogic/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17981,
+    "url": "https://blogs.oracle.com/java/analyze-applications-and-other-enhancements",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17982,
+    "url": "http://docs.oracle.com/javacomponents",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17983,
+    "url": "https://www.oracle.com/java/technologies/downloads/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17984,
+    "url": "https://www.oracle.com/a/ocom/docs/java-licensing-logo-guidelines-1908204.pdf",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17985,
+    "url": "https://www.oracle.com/education/training/java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17986,
+    "url": "https://x.com/openjdk",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17987,
+    "url": "https://academy.oracle.com/en/solutions-curriculum-java.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17988,
+    "url": "https://www.oracle.com/java/contact-form.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17989,
+    "url": "https://www.oracle.com/java/jms/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17990,
+    "url": "https://ops.java/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17991,
+    "url": "https://www.oracle.com/java/technologies/downloads/jvp/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17992,
+    "url": "https://www.oracle.com/support/policies.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17993,
+    "url": "https://www.oracle.com/java/java-card/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17994,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk-relnotes-index.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17995,
+    "url": "https://www.oracle.com/java/java-se-subscription/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17996,
+    "url": "https://blogs.oracle.com/java/announcing-jvp",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17997,
+    "url": "https://www.oracle.com/cloud/free/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 17999,
+    "url": "https://education.oracle.com/java-programming-learning-subscription/ls_40805",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 18000,
+    "url": "https://shop.oracle.com/apex/f?p\u003dDSTORE:2:::NO:RIR,RP,2:PROD_HIER_ID:123775488249871532594385",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 18001,
+    "url": "https://www.oracle.com/java/technologies/jvp-support-roadmap.html",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 18002,
+    "url": "https://www.oracle.com/java/technologies/",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 18003,
+    "url": "https://go.oracle.com/LP\u003d25600?elqCampaignId\u003d109966\u0026bn\u003djava",
+    "parentUrl": "https://www.oracle.com/java/"
+  },
+  {
+    "id": 18004,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18005,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18006,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18007,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18008,
+    "url": "https://docs.oracle.com/en/java/javase/21/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18009,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18010,
+    "url": "https://www.oracle.com/a/tech/docs/jdk25-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18011,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18012,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18013,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18014,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18015,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18016,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18017,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18018,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18019,
+    "url": "https://docs.oracle.com/en/java/java-components/enterprise-performance-pack/epp-user-guide/overview.html#GUID-4085FEE6-0685-4C9B-B981-3E742DE91094",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18020,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18021,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk25-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18022,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18023,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18024,
+    "url": "https://www.oracle.com/java/technologies/javase/jre8-readme.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18025,
+    "url": "https://linux.oracle.com/security/gpg/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18026,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk21-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18027,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18028,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18029,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18030,
+    "url": "https://docs.oracle.com/en/java/javase/17/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18031,
+    "url": "https://docs.oracle.com/en/java/javase/26/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18032,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18033,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18034,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18035,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18036,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk25certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18038,
+    "url": "https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18039,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.msi",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18040,
+    "url": "https://www.oracle.com/java/javase/terms/license/java21speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18041,
+    "url": "https://www.java.com/otnlicense",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18042,
+    "url": "https://www.oracle.com/a/tech/docs/8u491checksum.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18044,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk11-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18045,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18046,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18047,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18048,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk21-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18049,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-macos",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18050,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18051,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18052,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18053,
+    "url": "https://support.oracle.com/epmos/faces/DocContentDisplay?id\u003d1439822.2",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18055,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18056,
+    "url": "https://blogs.oracle.com/java-platform-group/understanding-the-server-jre",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18057,
+    "url": "https://docs.oracle.com/en/java/javase/11/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18058,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18059,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18060,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18061,
+    "url": "https://www.oracle.com/java/technologies/javase/11u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18062,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk25-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18063,
+    "url": "https://blogs.oracle.com/java/post/introducing-the-java-se-subscription-enterprise-performance-pack",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18064,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18065,
+    "url": "https://docs.oracle.com/en/java/javase/21/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18066,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18067,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18068,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18069,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk8-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18070,
+    "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18071,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18072,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18073,
+    "url": "https://www.oracle.com/a/tech/docs/jdk26-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18074,
+    "url": "https://docs.oracle.com/en/java/javase/25/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18075,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java17-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18076,
+    "url": "https://www.oracle.com/java/technologies/java-archive-misc-downloads.html#jdk8demos",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18077,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18078,
+    "url": "https://www.oracle.com/a/tech/docs/jdk17-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18079,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18080,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18081,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18082,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18083,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jepp-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18084,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.deb",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18085,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18087,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18090,
+    "url": "https://www.oracle.com/a/tech/docs/jdk21-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18091,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18092,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18093,
+    "url": "https://docs.oracle.com/javase/8/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18094,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk8-jre8-certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18096,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java25",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18097,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-aarch64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18098,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java26",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18099,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18100,
+    "url": "https://www.oracle.com/java/technologies/jdk-script-friendly-urls/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18101,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java21",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18102,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18103,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18104,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18105,
+    "url": "https://www.oracle.com/downloads/licenses/javase-license1.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18106,
+    "url": "https://docs.oracle.com/en/java/javase/25/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18107,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18108,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk17-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18109,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk21-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18110,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18111,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18113,
+    "url": "https://www.java.com",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18114,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk26-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18115,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18116,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk17-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18117,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18118,
+    "url": "https://www.oracle.com/java/technologies/downloads/#sjre8-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18119,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18120,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk11certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18121,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18122,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18123,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18124,
+    "url": "https://www.oracle.com/java/javase/terms/license/java25speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18125,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk26certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18126,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18127,
+    "url": "https://www.oracle.com/java/technologies/javase/26u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18128,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.deb",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18129,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18130,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18131,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18132,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18133,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java8-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18134,
+    "url": "https://www.oracle.com/java/technologies/javase/25u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18135,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jre8-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18136,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.msi.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18137,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18138,
+    "url": "https://docs.oracle.com/en/java/javase/17/install/overview-jdk-installation.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18139,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18140,
+    "url": "https://www.oracle.com/downloads/javase-software-license-agreement.html#license-lightbox",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18141,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-solaris",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18142,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18143,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18144,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_linux-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18145,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.rpm.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18146,
+    "url": "https://www.oracle.com/a/tech/docs/jdk11-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18148,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_macos-aarch64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18149,
+    "url": "https://download.oracle.com/otndocs/jcp/java_se-11-final-spec/license.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18150,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18151,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18152,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk11-readme.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18153,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18154,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18155,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-windows",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18156,
+    "url": "https://www.oracle.com/java/technologies/javase-jdk26-doc-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18157,
+    "url": "https://www.oracle.com/java/technologies/javase/8u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18158,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.exe.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18159,
+    "url": "https://www.oracle.com/java/technologies/downloads/#java11-linux",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18160,
+    "url": "https://www.oracle.com/a/tech/docs/jdk8-lium.pdf",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18161,
+    "url": "https://docs.oracle.com/en/java/javase/26/",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18162,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk21certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18164,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk8-readme.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18165,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.dmg.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18166,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18167,
+    "url": "https://www.oracle.com/java/javase/terms/license/java26speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18168,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18169,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jepp",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18170,
+    "url": "https://www.oracle.com/a/tech/docs/17-0-19-checksum.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18171,
+    "url": "https://www.oracle.com/a/tech/docs/11-0-31-checksum.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18172,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18173,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_linux-aarch64_bin.rpm",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18174,
+    "url": "https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18175,
+    "url": "https://www.java.com/freeuselicense",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18176,
+    "url": "https://www.oracle.com/downloads/licenses/javase-license1.html#grants",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18177,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-x64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18178,
+    "url": "https://www.oracle.com/java/technologies/javase/products-doc-jdk17certconfig.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18179,
+    "url": "https://www.oracle.com/java/technologies/javase/jdk26-readme-downloads.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18180,
+    "url": "https://www.oracle.com/java/technologies/downloads/#jdk25-mac",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18181,
+    "url": "https://www.oracle.com/java/technologies/javase/21u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18182,
+    "url": "https://download.oracle.com/java/26/latest/jdk-26_windows-x64_bin.zip",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18183,
+    "url": "https://download.oracle.com/java/25/latest/jdk-25_macos-aarch64_bin.tar.gz.sha256",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18184,
+    "url": "https://www.oracle.com/java/technologies/javase/17u-relnotes.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18185,
+    "url": "https://www.oracle.com/java/javase/terms/license/java17speclicense.html",
+    "parentUrl": "https://www.oracle.com/javadownload"
+  },
+  {
+    "id": 18186,
+    "url": "https://docs.oracle.com/en/java/java-components/enterprise-performance-pack/",
+    "parentUrl": "https://www.oracle.com/javadownload"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.oracle.com/a/ocom/img/rh03-java.webp",
+    "alt": "",
+    "pageTitle": "Java Software | Oracle",
+    "pageUrl": "https://www.oracle.com/java/"
+  },
   {
     "src": "https://dev.java/assets/images/javaone/cbgmd-javaone26-hero.webp",
     "alt": "JavaOne logo",
