@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 843,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.isolated",
+    "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded st",
+    "scrapedAt": "2026-05-10 04:52:11.254953"
+  },
+  {
+    "id": 842,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray",
+    "title": "Built-in Types — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer li",
+    "scrapedAt": "2026-05-10 04:52:07.312491"
+  },
+  {
+    "id": 841,
+    "url": "https://peps.python.org/pep-0761/",
+    "title": "PEP 761 – Deprecating PGP signatures for CPython artifacts | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 761 – Deprecating PGP signatures for CPython artifacts PEP 761 – Deprecating PGP signatures for CPython artifacts Author: Seth Michael Larson \u003cseth at python.org\u003e Sponsor: Hugo van Kemenade Discussions-To: Discourse thread Status: Active Type: Process Created: 08-Oct-2024 Python-Version: 3.14 Post-History: 25-Sep-2024, 09-Oct-2024 Resolution: 06-Nov-2024 Table of Contents Abstract Motivation Rationale Preserve expectations across a Python release Release managers, not releases Gordian knot of signing methods and verifiers Specification Deprecation and discontinuation of PGP signatures Delaying discontinuation of PGP signatures Backwards Compatibility Security Implications How to Teach This Rejected Ideas Continue publishing PGP signatures indefinitely Removing previous PGP signatures Appendix Support for offline verification Support for a pre-compiled executable for verification Copyright Abstract Since Python 3.11.0, CPython has provided two verifiable digital signatures for all CPython artifacts: PGP and Sigstore. PGP’s design requires the maintenance and protection of long-lived private keys by trusted parties. PGP’s security and ergonomics have been criticized by security practitioners for many years now, with the biggest issue being that there were few alternatives for “artifact signing” being proposed or adopted. Sigstore’s design philosophy has focused on the ergonomics of signing and verifying and uses short-lived keys with strongly-bound human-readable identities via OpenID Connect. Sigstore has both development and adoption momentum, seeing adoption by PyPI, NPM, Homebrew, and GitHub, among other ecosystems. This PEP proposes to move CPython to using Sigstore exclusively for signing artifacts through a deprecation and eventual discontinuance of providing PGP signatures with new release managers. Motivation CPython’s releases are release-manager-centric, where a single person maintains multiple CPython releases from pre-release to end-of-life over the course of many years. Requiring release managers to maintain and protect PGP private keys for seven or more years is an unnecessary burden in the new age of ergonomic and ephemeral signing keys. Comparatively, Sigstore only requires release managers to click a button during the release process to OAuth sign-on to their identity provider. Maintaining the integrity of accounts on identity providers like GitHub is already an expectation of being a Python release manager or core team member, such as through multi-factor authentication and strong unique passwords. Rationale Preserve expectations across a Python release To avoid breaking downstream verifiers, the expectations for verification materials availability SHOULD NOT be changed during a feature release’s lifecycle. Release managers, not releases The discontinuation of PGP signatures doesn’t necessarily have to happen on a “release manager boundary”; a new Python release could be a potential boundary. Because the primary motivation for deprecating PGP is ergonomics, deciding to drop PGP for one release while a release manager still has obligations to provide PGP signatures for other releases for multiple years isn’t much savings of effort. A new release manager also represents a new PGP public key that downstream verifiers need to adopt. By choosing to make the change during this period, this minimizes the breakage to a place in downstream maintenance where a change will already be necessary. Gordian knot of signing methods and verifiers CPython providing both PGP and Sigstore signatures concurrently creates a “Gordian knot” where verifiers are disincentivized to migrate to a new signature method due to the continued and expected availability of an existing signature method, thus propagating the apparent demand for maintaining the existing signature method. This situation slows down the adoption of new signature methods like Sigstore for both signature-producing projects and signature-verifying ecosystems by not creating a “need” to automate and integrate the signature method into verifier tooling. By changing the expectation of what future signature methods will be available, the incentive-knot can be broken by spurring the adoption of the new signature method in downstream tooling. This change to verifier tooling also makes other upstream projects able to migrate to publishing only Sigstore signatures, resulting in a positive feedback loop of adoption. Specification Because PGP keys are tied to a release manager identity, the change to availability of PGP signatures will be tied to release managers instead of individual releases (3.13, 3.14, etc). This PEP both deprecates and proposes a discontinuation timeline for PGP signatures. Deprecation and discontinuation of PGP signatures This PEP deprecates PGP signatures for future CPython releases and recommends verifiers to adopt Sigstore to verify CPython artif",
+    "scrapedAt": "2026-05-10 04:52:03.487956"
+  },
+  {
+    "id": 840,
+    "url": "https://docs.python.org/3/reference/expressions.html#is",
+    "title": "6. Expressions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations",
+    "scrapedAt": "2026-05-10 04:51:58.602808"
+  },
+  {
+    "id": 839,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() ",
+    "scrapedAt": "2026-05-10 04:51:49.255879"
+  },
+  {
     "id": 838,
     "url": "https://github.com/python/cpython/issues/125634",
     "title": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
@@ -5572,26 +5607,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 839,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations"
-  },
-  {
-    "id": 840,
-    "url": "https://docs.python.org/3/reference/expressions.html#is"
-  },
-  {
-    "id": 841,
-    "url": "https://peps.python.org/pep-0761/"
-  },
-  {
-    "id": 842,
-    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray"
-  },
-  {
-    "id": 843,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.isolated"
   },
   {
     "id": 844,
@@ -142960,10 +142975,1663 @@ window.searchData = [
     "id": 115734,
     "url": "https://github.com/python/cpython/pull/125634/files/95ac2c6febeef52bf6c7eb5fef81be453d8d1587",
     "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 116174,
+    "url": "https://discuss.python.org/t/pre-pep-discussion-stop-providing-gpg-signatures-for-cpython-artifacts/65058/9",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116175,
+    "url": "https://www.latacora.com/blog/2019/07/16/the-pgp-problem/",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116176,
+    "url": "https://discuss.python.org/t/pep-761-deprecating-pgp-signatures-for-cpython-artifacts/67180/39",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116178,
+    "url": "https://github.com/sigstore/sigstore-go",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116179,
+    "url": "https://peps.python.org/pep-0761/#preserve-expectations-across-a-python-release",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116180,
+    "url": "https://words.filippo.io/giving-up-on-long-term-pgp/",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116181,
+    "url": "https://github.com/python/peps/commits/main/peps/pep-0761.rst",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116182,
+    "url": "https://peps.python.org/pep-0761/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116183,
+    "url": "https://en.wikipedia.org/wiki/Gordian_Knot",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116184,
+    "url": "https://peps.python.org/pep-0761/#support-for-offline-verification",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116185,
+    "url": "https://peps.python.org/pep-0761/#release-managers-not-releases",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116186,
+    "url": "https://peps.python.org/pep-0761/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116187,
+    "url": "https://peps.python.org/pep-0761/#support-for-a-pre-compiled-executable-for-verification",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116188,
+    "url": "https://peps.python.org/pep-0761/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116189,
+    "url": "https://peps.python.org/pep-0761/#continue-publishing-pgp-signatures-indefinitely",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116190,
+    "url": "https://lists.debian.org/debian-devel/2024/10/msg00025.html",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116191,
+    "url": "https://docs.sigstore.dev/about/security/",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116192,
+    "url": "https://github.com/sigstore/cosign/",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116193,
+    "url": "https://discuss.python.org/t/pre-pep-discussion-stop-providing-gpg-signatures-for-cpython-artifacts/65058",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116194,
+    "url": "https://peps.python.org/pep-0761/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116195,
+    "url": "https://peps.python.org/pep-0761/#removing-previous-pgp-signatures",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116197,
+    "url": "https://peps.python.org/pep-0761/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116198,
+    "url": "https://peps.python.org/pep-0761/#specification",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116199,
+    "url": "https://peps.python.org/pep-0761/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116200,
+    "url": "https://peps.python.org/pep-0761/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116201,
+    "url": "https://docs.sigstore.dev/#how-sigstore-works",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116202,
+    "url": "https://peps.python.org/pep-0761/#appendix",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116203,
+    "url": "https://peps.python.org/pep-0761/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116204,
+    "url": "https://peps.python.org/pep-0761/#gordian-knot-of-signing-methods-and-verifiers",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116205,
+    "url": "https://peps.python.org/pep-0761/#deprecation-and-discontinuation-of-pgp-signatures",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116206,
+    "url": "https://peps.python.org/pep-0761/#delaying-discontinuation-of-pgp-signatures",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116207,
+    "url": "https://github.com/python/peps/blob/main/peps/pep-0761.rst",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116208,
+    "url": "https://discuss.python.org/t/pep-761-deprecating-pgp-signatures-for-cpython-artifacts/67180",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116209,
+    "url": "https://github.com/sigstore/sigstore-python/",
+    "parentUrl": "https://peps.python.org/pep-0761/"
+  },
+  {
+    "id": 116211,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes-objects",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116218,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.index",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116220,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int.to_bytes",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116222,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.startswith",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116226,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.__eq__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116228,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int.from_bytes",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116229,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.rsplit",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116230,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.rstrip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116232,
+    "url": "https://docs.python.org/3/library/stdtypes.html#",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116237,
+    "url": "https://docs.python.org/3/library/stdtypes.html#modules",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116238,
+    "url": "https://docs.python.org/3/library/stdtypes.html#format-specifier",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116240,
+    "url": "https://docs.python.org/3/library/stdtypes.html#union-type",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116242,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int.as_integer_ratio",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116244,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.removesuffix",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116247,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.swapcase",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116255,
+    "url": "https://docs.python.org/3/library/stdtypes.html#genericalias.__origin__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116256,
+    "url": "https://docs.python.org/3/library/threadsafety.html#thread-safety-bytearray",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116259,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.title",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116261,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.ljust",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116262,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.isspace",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116264,
+    "url": "https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-3/#G33992",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116265,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.strip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116268,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.swapcase",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116270,
+    "url": "https://docs.python.org/3/library/stdtypes.html#classes-and-class-instances",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116272,
+    "url": "https://docs.python.org/3/library/stdtypes.html#float.fromhex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116273,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.count",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116274,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.issuperset",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116275,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.hex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116276,
+    "url": "https://docs.python.org/3/library/shelve.html#shelve.DbfilenameShelf",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116279,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.split",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116280,
+    "url": "https://docs.python.org/3/library/unicodedata.html#module-unicodedata",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116282,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.replace",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116284,
+    "url": "https://docs.python.org/3/library/stdtypes.html#conversion-specifier",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116286,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dictionary-view-objects",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116287,
+    "url": "https://docs.python.org/3/library/stdtypes.html#the-ellipsis-object",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116288,
+    "url": "https://docs.python.org/3/library/shelve.html#shelve.Shelf",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116289,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.find",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116290,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.rjust",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116291,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.format_map",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116297,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.issuperset",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116298,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.maketrans",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116300,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.rstrip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116301,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes-formatting",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116302,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.intersection",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116303,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.symmetric_difference",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116305,
+    "url": "https://docs.python.org/3/library/stdtypes.html#float.as_integer_ratio",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116306,
+    "url": "https://docs.python.org/3/library/stdtypes.html#built-in-types",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116310,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.isdisjoint",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116311,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.resize",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116313,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.islower",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116315,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.remove",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116316,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.isalpha",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116321,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.update",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116324,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.f_contiguous",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116326,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.union",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116328,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.istitle",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116329,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.removesuffix",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116332,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.removesuffix",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116334,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.itemsize",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116335,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.difference_update",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116337,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.removeprefix",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116340,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.lower",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116343,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.expandtabs",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116344,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes-and-bytearray-operations",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116345,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.union",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116346,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.replace",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116348,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.count",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116349,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.suboffsets",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116350,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.ndim",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116353,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.discard",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116354,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_iter",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116357,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.rjust",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116369,
+    "url": "https://docs.python.org/3/library/stdtypes.html#additional-methods-on-complex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116370,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.isdigit",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116371,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.rfind",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116372,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.isalpha",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116381,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.lstrip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116385,
+    "url": "https://docs.python.org/3/library/stdtypes.html#definition.__module__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116387,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-multidimensional-list",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116388,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.index",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116390,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.isdigit",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116391,
+    "url": "https://docs.python.org/3/library/queue.html#queue.Queue",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116393,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.release",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116396,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.swapcase",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116398,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.lstrip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116399,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memory-views",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116400,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.zfill",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116401,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.join",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116402,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.maketrans",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116404,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.decode",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116409,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.tolist",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116410,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.WeakMethod",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116414,
+    "url": "https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-4/#G91002",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116415,
+    "url": "https://docs.python.org/3/library/stdtypes.html#contextmanager.__enter__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116420,
+    "url": "https://docs.python.org/3/library/doctest.html#doctest.ELLIPSIS",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116421,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.translate",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116422,
+    "url": "https://docs.python.org/3/library/stdtypes.html#list.append",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116426,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_iternext",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116428,
+    "url": "https://docs.python.org/3/library/stdtypes.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116432,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.intersection_update",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116436,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.rfind",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116437,
+    "url": "https://docs.python.org/3/library/queue.html#queue.PriorityQueue",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116439,
+    "url": "https://docs.python.org/3/library/text.html#stringservices",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116440,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.difference",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116442,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.strides",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116444,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.symmetric_difference",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116446,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int.bit_length",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116447,
+    "url": "https://docs.python.org/3/library/stdtypes.html#stdtypes-fstrings",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116448,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.WeakValueDictionary",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116449,
+    "url": "https://docs.python.org/3/library/stdtypes.html#additional-methods-on-float",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116450,
+    "url": "https://docs.python.org/3/library/stdtypes.html#range.step",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116451,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.upper",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116453,
+    "url": "https://peps.python.org/pep-0237/",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116455,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.expandtabs",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116456,
+    "url": "https://docs.python.org/3/library/stdtypes.html#affected-apis",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116461,
+    "url": "https://docs.python.org/3/library/queue.html#queue.LifoQueue",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116465,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.rindex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116467,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.islower",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116469,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.find",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116471,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.isupper",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116472,
+    "url": "https://docs.python.org/3/library/shelve.html#shelve.BsdDbShelf",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116473,
+    "url": "https://docs.python.org/3/library/stdtypes.html#recommended-configuration",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116474,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.istitle",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116475,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.c_contiguous",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116476,
+    "url": "https://docs.python.org/3/library/stdtypes.html#range.start",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116478,
+    "url": "https://docs.python.org/3/library/stdtypes.html#common-sequence-operations",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116483,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.partition",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116494,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.upper",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116495,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int.bit_count",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116496,
+    "url": "https://docs.python.org/3/library/stdtypes.html#additional-methods-on-integer-types",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116500,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.find",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116503,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.endswith",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116505,
+    "url": "https://docs.python.org/3/library/stdtypes.html#contextmanager.__exit__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116506,
+    "url": "https://docs.python.org/3/library/stdtypes.html#standard-generic-classes",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116507,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.readonly",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116514,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.pop",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116516,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/stdtypes.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116520,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.count",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116522,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.index",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116524,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.issubset",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116525,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.obj",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116526,
+    "url": "https://docs.python.org/3/library/stdtypes.html#template-string-literals-t-strings",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116528,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.isnumeric",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116532,
+    "url": "https://docs.python.org/3/library/stdtypes.html#genericalias.__unpacked__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116538,
+    "url": "https://docs.python.org/3/library/stdtypes.html#special-attributes-of-genericalias-objects",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116546,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.capitalize",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116547,
+    "url": "https://docs.python.org/3/library/stdtypes.html#genericalias.__args__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116548,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.capitalize",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116549,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.rsplit",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116550,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.rstrip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116554,
+    "url": "https://docs.python.org/3/library/stdtypes.html#sequence.copy",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116555,
+    "url": "https://docs.python.org/3/library/stdtypes.html#the-notimplemented-object",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116556,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray-objects",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116558,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.isdisjoint",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116560,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.shape",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116562,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.rjust",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116565,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.maketrans",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116567,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.rfind",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116569,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.isspace",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116570,
+    "url": "https://peps.python.org/pep-0461/",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116571,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.intersection",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116573,
+    "url": "https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116576,
+    "url": "https://docs.python.org/3/library/stdtypes.html#hashing-of-numeric-types",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116579,
+    "url": "https://docs.python.org/3/library/stdtypes.html#tuples",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116581,
+    "url": "https://docs.python.org/3/library/threadsafety.html#thread-safety-list",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116583,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.count",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116585,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.title",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116590,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.index",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116592,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#tut-pass",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116597,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.zfill",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116600,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.join",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116601,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict.copy",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116604,
+    "url": "https://docs.python.org/3/library/stdtypes.html#internal-objects",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116605,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.isupper",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116607,
+    "url": "https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116609,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.endswith",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116610,
+    "url": "https://docs.python.org/3/library/stdtypes.html#genericalias.__parameters__",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116613,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.lstrip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116616,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.expandtabs",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116618,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.nbytes",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116619,
+    "url": "https://docs.python.org/3/library/stdtypes.html#generic-alias-type",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116623,
+    "url": "https://docs.python.org/3/library/stdtypes.html#int.is_integer",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116626,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.endswith",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116630,
+    "url": "https://docs.python.org/3/library/stdtypes.html#range.stop",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116632,
+    "url": "https://docs.python.org/3/library/threadsafety.html#thread-safety-set",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116635,
+    "url": "https://docs.python.org/3/library/stdtypes.html#float.is_integer",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116636,
+    "url": "https://peps.python.org/pep-3118/",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116638,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id11",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116639,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id12",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116640,
+    "url": "https://docs.python.org/3/library/text.html#textservices",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116641,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id13",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116642,
+    "url": "https://docs.python.org/3/library/stdtypes.html#boolean",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116643,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.removeprefix",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116644,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id14",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116645,
+    "url": "https://docs.python.org/3/library/stdtypes.html#lists",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116646,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.format",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116647,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict.clear",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116648,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116649,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.isalnum",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116651,
+    "url": "https://docs.python.org/3/library/abc.html#abc.ABC",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116653,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id15",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116655,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.WeakSet",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116657,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id16",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116661,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.splitlines",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116664,
+    "url": "https://docs.python.org/3/library/stdtypes.html#code-objects",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116665,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.Field",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116666,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.split",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116667,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.translate",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116668,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.strip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116669,
+    "url": "https://docs.python.org/3/library/stdtypes.html#the-null-object",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116670,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2020-10735",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116673,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.upper",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116676,
+    "url": "https://docs.python.org/3/library/stdtypes.html#printf-style-bytes-formatting",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116678,
+    "url": "https://docs.python.org/3/reference/datamodel.html#builtin-methods",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116680,
+    "url": "https://docs.python.org/3/library/queue.html#queue.SimpleQueue",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116681,
+    "url": "https://docs.python.org/3/library/stdtypes.html#configuring-the-limit",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116682,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116683,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.startswith",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116685,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116686,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116687,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116688,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116689,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.translate",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116691,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.title",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116692,
+    "url": "https://code.activestate.com/recipes/579000-equally-spaced-numbers-linspace/",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116693,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.cast",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116694,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.isascii",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116695,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.isascii",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116696,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.symmetric_difference_update",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116699,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.isdigit",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116701,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.removeprefix",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116703,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.center",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116704,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.copy",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116705,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116706,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.zfill",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116707,
+    "url": "https://docs.python.org/3/library/stdtypes.html#debug-specifier",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116708,
+    "url": "https://docs.python.org/3/library/stdtypes.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116709,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.center",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116711,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.istitle",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116712,
+    "url": "https://docs.python.org/3/library/string.html#string-formatting",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116715,
+    "url": "https://docs.python.org/3/library/keyword.html#keyword.iskeyword",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116721,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.tobytes",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116722,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.contiguous",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116724,
+    "url": "https://unicode.org/Public/UNIDATA/extracted/DerivedNumericType.txt",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116727,
+    "url": "https://docs.python.org/3/library/stdtypes.html#generator-types",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116731,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.center",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116733,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.rindex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116735,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.clear",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116737,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.splitlines",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116738,
+    "url": "https://numpy.org/doc/stable/user/basics.indexing.html#slicing-and-striding",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116741,
+    "url": "https://docs.python.org/3/library/stdtypes.html#type-objects",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116742,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.hex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116746,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bitwise-operations-on-integer-types",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116748,
+    "url": "https://docs.python.org/3/reference/expressions.html#operator-summary",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116750,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.rindex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116753,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.rpartition",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116754,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.lower",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116755,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict.popitem",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116758,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.startswith",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116759,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set.difference",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116761,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.replace",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116762,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.toreadonly",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116763,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.issubset",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116764,
+    "url": "https://docs.python.org/3/library/threadsafety.html#thread-safety-dict",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116765,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.ljust",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116766,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.partition",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116769,
+    "url": "https://docs.python.org/3/library/stdtypes.html#dict.update",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116773,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.WeakKeyDictionary",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116776,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.isupper",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116779,
+    "url": "https://docs.python.org/3/library/stdtypes.html#frozenset.copy",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116780,
+    "url": "https://docs.python.org/3/library/stdtypes.html#formatted-string-literals-f-strings",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116784,
+    "url": "https://docs.python.org/3/library/stdtypes.html#methods",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116785,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.strip",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116786,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.isalnum",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116790,
+    "url": "https://docs.python.org/3/howto/unicode.html#unicode-properties",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116793,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.isalpha",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116795,
+    "url": "https://docs.python.org/3/library/stdtypes.html#immutable-sequence-types",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116798,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview.hex",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116799,
+    "url": "https://docs.python.org/3/library/string.templatelib.html#string.templatelib.Interpolation.conversion",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116801,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.lower",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116804,
+    "url": "https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116806,
+    "url": "https://peps.python.org/pep-0604/",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116807,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.rpartition",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116812,
+    "url": "https://docs.python.org/3/library/stdtypes.html#ranges",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116816,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.ljust",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116817,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytearray.islower",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 116818,
+    "url": "https://docs.python.org/3/library/stdtypes.html#str.isidentifier",
+    "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.isolated"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.isolated"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#is"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#is"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d80\u0026v\u003d4",
     "alt": "@Xiaokang2022",
