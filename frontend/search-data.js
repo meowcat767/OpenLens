@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 253,
+    "url": "https://source.android.com/docs/setup/start",
+    "title": "Try Android development | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Getting Started Try Android development Stay organized with collections Save and categorize content based on your preferences. This tutorial lets you try Android operating system development for the first time. Set up for Android development Before you download and build the android-latest-release manifest branch of the Android source, ensure that your hardware meets the necessary requirements and that required software is properly installed. You should also be familiar with the following terms: Git Git is a free and open source distributed version control system. Android uses Git for local operations such as branching, commits, diffs, and edits. For help learning Git, refer to the Git documentation. Repo Repo is a Python wrapper around Git that simplifies performing complex operations across multiple Git repositories. Repo doesn\u0027t replace Git for all version control operations, it only makes complex Git operations easier to accomplish. Repo uses manifest files to aggregate Git projects into the Android superproject. manifest file A manifest file is an XML file specifying where the various Git projects in the Android source are placed within an AOSP source tree. Note: All commands on this page are preceded by a dollar sign ($) to differentiate them from output or entries within files. To copy a command to the clipboard, click the Copy code sample icon in the top right of each command box. Meet hardware requirements Your development workstation should meet or exceed these hardware requirements: A 64-bit x86 system. Note: You can compile AOSP versions previous to 2.3.x on 32-bit systems. At least 400 GB of free disk space to check out and build the code (250 GB to check out + 150 GB to build). Note: If you\u0027re checking out a mirror, you need more space because the full Android Open Source Project (AOSP) mirrors contain all Git repositories that have ever been used. A minimum of 64 GB of RAM. Google uses 72-core machines with 64 GB of RAM to build Android. With this hardware configuration, it takes approximately 40 minutes for a full build of Android and only a few minutes for incremental build of Android. By contrast, it takes approximately 6 hours for a full build with a 6-core machine with 64 GB of RAM. Meet operating system requirements Your development workstation must run any 64-bit Linux distribution with GNU C Library (glibc) 2.17 or later. Install required packages To install required packages for Ubuntu 18.04 or later, run the following command: sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig Install required software Before you can work with AOSP, you must have installations of OpenJDK, Make, Python 3, and Repo. The latest release branch of Android comes with prebuilt versions of OpenJDK, Make, and Python 3, so additional installation steps aren\u0027t required. The following section explains how to install Repo. Install Repo Follow these steps to install Repo: Download the current package information: sudo apt-get update Run the following command to install the Repo launcher: sudo apt-get install repo The Repo launcher provides a Python script that initializes a checkout and downloads the full Repo tool. If successful, skip to step 4. (optional) Manually install Repo using the following series of commands: export REPO\u003d$(mktemp /tmp/repo.XXXXXXXXX)\ncurl -o ${REPO} https://storage.googleapis.com/git-repo-downloads/repo\ngpg --recv-keys 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65\ncurl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - ${REPO} \u0026\u0026 install -m 755 ${REPO} ~/bin/repo The first three commands set up a temp file, download Repo to the file, and verify that the key provided matches the required key. If these commands are successful, the final command installs the Repo launcher. Verify the Repo launcher version: repo version The output should indicate a version of 2.4 or higher, for example: repo launcher version 2.45 Download the Android source The Android source is located in a collection of Git repositories hosted by Google. Each Git repository includes the entire history of the Android source, including changes to the source and when the changes were made. To download the Andr",
+    "scrapedAt": "2026-05-10 03:54:26.89956"
+  },
+  {
+    "id": 252,
+    "url": "https://source.android.com/docs/security/bulletin",
+    "title": "Android Security and Update Bulletins | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Security Stay organized with collections Save and categorize content based on your preferences. Android Security Bulletins This Section contains the available Android Security Bulletins, which provide fixes for possible issues affecting Android devices. Bulletins Overview Android Security Bulletin The Android Security Bulletin provide fixes for possible issues affecting devices running Android. android Android platform fixes inbox_customize Upstream Linux kernel fixes memory Fixes from SOC manufacturers Latest Bulletins Android Automotive OS Update Bulletin The Android Automotive OS Update Bulletin provides fixes for possible issues affecting devices running Android Automotive OS Read Android Wear Bulletin The Android Wear Bulletin provides fixes for possible issues affecting devices running Android Wear OS Read Pixel Update Bulletins Security patches and functional improvements on supported Google Pixel and Nexus devices (Google devices) Read Chromecast Security Bulletin Security patches, providing fixes for possible issues affecting Chromecast devices. View Pixel Watch Security Bulletins Security patches, providing fixes for possible issues affecting Pixel watches. Read Android XR Security Bulletins Security patches, providing fixes for possible issues affecting Android XR devices. Read Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2026-01-15 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2026-01-15 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:54:23.520063"
+  },
+  {
+    "id": 251,
+    "url": "https://source.android.com/docs/security",
+    "title": "Android Security | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Security Stay organized with collections Save and categorize content based on your preferences. Secure Android devices Android incorporates industry-leading security features to keep the Android platform and ecosystem safe. Learn more about Android\u0027s robust security model and rigorous security program. Security overview The Android OS has robust security right out of the box. Learn more about each of the underlying security features built into the Android platform. Go to security overview Security features Android offers a variety of on-device security features you can implement to build the most secure devices possible. Go to security features Security bulletins See fixes for possible issues affecting devices running Android, including details from specific device manufacturers. Go to security bulletins Testing In addition to general platform testing, run tests specifically designed to detect and diagnose security vulnerabilities. Learn more about security testing Best practices Follow best practices covering everything from organizational and operational security to user privacy and the entirety of the Android ecosystem. Go to security best practices Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2024-12-12 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2024-12-12 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:54:18.259639"
+  },
+  {
+    "id": 250,
+    "url": "https://source.android.com/",
+    "title": "Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Android Open Source Project Use the Android operating system to power your device. / Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Stay organized with collections Save and categorize content based on your preferences. Featured Android 16 QPR2 is available! Learn about the features added in Android 16 QPR2 and how to implement them on your devices. Read more Featured Feature launch flags Android feature launch flags ensure that the AOSP development branch is stable for everyone. Contributors to AOSP can use feature launch flags to make sure only tested code is executed. Read more Getting started Setup Learn how to set up your environment, download the AOSP source, build Android, and make contributions. Security Security Find out how Android incorporates industry-leading security features to keep the Android platform and ecosystem safe. Core topics Android fundamentals From the basic building blocks of an Android device to the more intricate advanced features, learn about all the ways you can customize the Android OS. Compatibility Compatibility Ensure your users have a coherent experience as they use your device alongside other Android devices in the ecosystem. Automotive Automotive Learn how to develop and customize the Android Automotive platform, which runs directly on in-vehicle hardware. Devices Android devices Read about creating configurable virtual Android devices, managing devices on a corporate network, and delivering live content to devices through Android TV. Security bulletins Help protect your device by checking the latest Android Security Bulletins. Also see the Android Automotive, Chromecast, Wear OS, Pixel, and Pixel Watch bulletins. Android development Learn how to set up your environment, download the source, and start contributing to AOSP through this tutorial. Architecture Learn how the pieces fit together, from the kernel to the HALs to updatable system components. Connectivity Make sure your devices work together and are connected through Bluetooth, NFC, Wi-Fi, and telephony. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[],[],[]]",
+    "scrapedAt": "2026-05-10 03:54:13.01053"
+  },
+  {
+    "id": 249,
+    "url": "https://source.android.com/docs/setup",
+    "title": "Get Started | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Getting Started Stay organized with collections Save and categorize content based on your preferences. Get started with Android Development Android is an open source software stack created for a wide array of devices with different form factors. Learn more about building and contributing to the platform. About Explore the Android OS stack Learn more about Android\u0027s history and the platform\u0027s structure. Start Set up your environment Kick-start development and get your environment properly set up. Download Get the Android source Learn more about source control tools and download the complete Android OS source code. Build Build the Android OS Follow step-by-step instructions to build the Android OS locally. Test Test your code Test your customizations to the Android OS. Create Customize and compile Android Create and compile your own customizations to the Android OS. Contribute Submit feedback and fixes Submit your own contributions to the Android Open Source Project. Community Interact with others Interact with, and get help from, the Android community. Tools, build, and related reference Examine all your options Examine command options, builds, unique file formats, and device lists. Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2025-01-22 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2025-01-22 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:54:07.905501"
+  },
+  {
     "id": 248,
     "url": "https://source.android.com/docs/automotive",
     "title": "Automotive | Android Open Source Project",
@@ -1732,26 +1767,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 249,
-    "url": "https://source.android.com/docs/setup"
-  },
-  {
-    "id": 250,
-    "url": "https://source.android.com/"
-  },
-  {
-    "id": 251,
-    "url": "https://source.android.com/docs/security"
-  },
-  {
-    "id": 252,
-    "url": "https://source.android.com/docs/security/bulletin"
-  },
-  {
-    "id": 253,
-    "url": "https://source.android.com/docs/setup/start"
   },
   {
     "id": 254,
@@ -44000,10 +44015,317 @@ window.searchData = [
     "id": 21410,
     "url": "https://source.android.com/docs/automotive/guidelines",
     "parentUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "id": 21412,
+    "url": "https://source.android.com/docs/setup/create/coding-tasks",
+    "parentUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "id": 21413,
+    "url": "https://source.android.com/docs/setup/community",
+    "parentUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "id": 21415,
+    "url": "https://source.android.com/docs/setup/about",
+    "parentUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "id": 21417,
+    "url": "https://source.android.com/docs/setup/test",
+    "parentUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "id": 21420,
+    "url": "https://source.android.com/docs/setup#main-content",
+    "parentUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "id": 21423,
+    "url": "https://source.android.com/docs/setup/download",
+    "parentUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "id": 21425,
+    "url": "https://source.android.com/docs/setup/contribute",
+    "parentUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "id": 21443,
+    "url": "https://source.android.com/docs/security/overview",
+    "parentUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "id": 21444,
+    "url": "https://source.android.com/docs/security/features",
+    "parentUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "id": 21445,
+    "url": "https://source.android.com/docs/security#main-content",
+    "parentUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "id": 21449,
+    "url": "https://source.android.com/docs/security/test/fuzz-sanitize",
+    "parentUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "id": 21452,
+    "url": "https://source.android.com/docs/security/bulletin#main-content",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21453,
+    "url": "https://source.android.com/docs/security/bulletin/wear",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21454,
+    "url": "https://source.android.com/docs/security/bulletin/pixel",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21455,
+    "url": "https://source.android.com/docs/security/bulletin/pixel-watch",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21459,
+    "url": "https://source.android.com/docs/security/bulletin/aaos",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21460,
+    "url": "https://support.google.com/pixelphone/answer/4457705#pixel_phones\u0026nexus_devices",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21462,
+    "url": "https://source.android.com/docs/security/bulletin/asb-overview",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21465,
+    "url": "https://source.android.com/docs/security/bulletin/chromecast",
+    "parentUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "id": 21466,
+    "url": "https://gerrit-review.googlesource.com/Documentation/",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21467,
+    "url": "https://source.android.com/docs/setup/start#install-software",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21468,
+    "url": "https://android-review.googlesource.com/c/platform/frameworks/native/+/1181350",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21469,
+    "url": "https://git-scm.com/doc",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21470,
+    "url": "https://groups.google.com/forum/?fromgroups#!forum/android-building",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21473,
+    "url": "https://source.android.com/docs/core/tests/development/atest",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21474,
+    "url": "https://source.android.com/docs/setup/download/troubleshoot-sync",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21476,
+    "url": "https://source.android.com/docs/setup/start#main-content",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21478,
+    "url": "https://source.android.com/docs/setup/start#hardware-requirements",
+    "parentUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "id": 21479,
+    "url": "https://issuetracker.google.com/issues/new?component\u003d191476",
+    "parentUrl": "https://source.android.com/docs/setup/start"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Try Android development | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "src": "https://source.android.com/static/docs/setup/images/device-after-color-transform-matrix-change.png",
+    "alt": "Example of a successful color\nchange",
+    "pageTitle": "Try Android development | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/setup/start"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/identity/identity-hero.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/developer-preview.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/car.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/watch.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/tools-update.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/cast.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/wear-os-development.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://developer.android.com/static/images/picto-icons/xr.svg",
+    "alt": "",
+    "pageTitle": "Android Security and Update Bulletins | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security/bulletin"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android Security | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/personal-16-9.svg",
+    "alt": "",
+    "pageTitle": "Android Security | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/lock.svg",
+    "alt": "",
+    "pageTitle": "Android Security | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/happy-developers.svg",
+    "alt": "",
+    "pageTitle": "Android Security | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/bell.svg",
+    "alt": "",
+    "pageTitle": "Android Security | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/test-tube.svg",
+    "alt": "",
+    "pageTitle": "Android Security | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/badge.svg",
+    "alt": "",
+    "pageTitle": "Android Security | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/security"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/"
+  },
+  {
+    "src": "https://developer.android.com/about/versions/16/images/android-16-logo.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/flag.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/security-2.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/learn.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/platform.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/sync.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Get Started | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/setup"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/academy-for-app-success-16-9.svg",
+    "alt": "",
+    "pageTitle": "Get Started | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/setup"
+  },
   {
     "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
     "alt": "Android Open Source Project",
