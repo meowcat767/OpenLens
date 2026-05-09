@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 609,
+    "url": "https://www.python.org/events/python-events/1391/",
+    "title": "GeoPython 2023 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2023 Basel, Switzerland From 06 March through 08 March, 2023 GeoPython 2023 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-10 04:29:16.089977"
+  },
+  {
+    "id": 608,
+    "url": "https://www.python.org/events/python-events/1728/",
+    "title": "GeoPython 2024 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2024 Basel, Switzerland From 27 May through 28 May, 2024 GeoPython 2024 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-05-10 04:29:13.838094"
+  },
+  {
+    "id": 607,
+    "url": "https://2026.geopython.net/",
+    "title": "Home",
+    "content": "",
+    "scrapedAt": "2026-05-10 04:29:10.704241"
+  },
+  {
+    "id": 605,
+    "url": "https://www.python.org/events/python-events/2166/",
+    "title": "North Bay Python 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. North Bay Python 2026 Petaluma, California, USA From 25 April through 26 April, 2026 North Bay Python 2026 Explore events -- Change your date range More events at Petaluma, California, USA North Bay Python 2026 North Bay Python North Bay Python 2018 North Bay Python 2017",
+    "scrapedAt": "2026-05-10 04:29:05.543536"
+  },
+  {
+    "id": 604,
+    "url": "https://us.pycon.org/",
+    "title": "PyCon US 2026 - PyCon US 2026",
+    "content": "Translations available: español Presenting PyCon US 2026 May 13 - May 19, 2026 Long Beach, California Countdown to PyCon US 2026 Days Hours Minutes Seconds Registration - Now Open! Find more information and register today via the Registration Information page. Register Today! Where? Long Beach Convention Center 300 East Ocean Boulevard Long Beach, CA 90802 Conference breakdown: Tutorials: May 13 - 14, 2026 Sponsor Presentations: May 14 - May 15, 2026 Main Conference: May 15 - 17, 2026 Job Fair \u0026 Community Showcase: May 17, 2026 Sprints: May 18 - May 19, 2026 We are so excited to welcome our community to our new host city of Long Beach, California, for PyCon US 2026! Mark your calendars and be sure to read the About PyCon US page for more details. We can’t wait to see you all at the Long Beach Convention and Entertainment Center! The PyCon US Schedule is now live! Start planning your talks, meet the keynote speakers, and register for tutorials, summits \u0026 events! Head to the schedule page to see this year\u0027s stellar lineup. Please note: PyCon US 2026 will take place fully in-person in Long Beach, California with no live streaming of the main conference days. PyCon US will record all Talk tracks, Keynotes and Lightning Talks on the main days of the conference (Friday - Sunday) and publish them to the PyCon US YouTube Channel. PyCon US continues to keep the safety of our community as our top priority and wants PyCon US to be an event that everyone feels safe attending. With that in mind, PyCon US 2026 will have Health and Safety Guidelines in place again this year. For full details, read the PyCon US 2026 Health \u0026 Safety Guidelines here. To stay informed on details and announcements be sure to create an account here on this website and opt-in to receive PyCon US News. Also, follow us on Bluesky, X, and Mastodon, and subscribe to the PyCon US Blog. Tutorials May 13 - 14, 2026 Sponsor Presentations May 14 - 15, 2026 Main Conference May 15 - 17, 2026 Job Fair \u0026 Community Showcase May 17, 2026 Sprints May 18 - May 19, 2026 Search Search Search ESC",
+    "scrapedAt": "2026-05-10 04:28:54.715604"
+  },
+  {
     "id": 602,
     "url": "https://www.python.org/events/python-events/locations/1667/",
     "title": "Our Events | Python.org",
@@ -4102,26 +4137,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 604,
-    "url": "https://us.pycon.org/"
-  },
-  {
-    "id": 605,
-    "url": "https://www.python.org/events/python-events/2166/"
-  },
-  {
-    "id": 607,
-    "url": "https://2026.geopython.net/"
-  },
-  {
-    "id": 608,
-    "url": "https://www.python.org/events/python-events/1728/"
-  },
-  {
-    "id": 609,
-    "url": "https://www.python.org/events/python-events/1391/"
   },
   {
     "id": 610,
@@ -98985,10 +99000,57 @@ window.searchData = [
     "id": 73955,
     "url": "https://github.com/python/steering-council",
     "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 74003,
+    "url": "https://www.python.org/events/python-events/556/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 74004,
+    "url": "http://2026.northbaypython.org/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 74005,
+    "url": "https://www.python.org/events/python-events/657/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 74006,
+    "url": "https://www.python.org/events/python-events/locations/694/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 74008,
+    "url": "https://www.python.org/events/python-events/1504/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 74011,
+    "url": "https://2024.geopython.net/",
+    "parentUrl": "https://www.python.org/events/python-events/1728/"
+  },
+  {
+    "id": 74030,
+    "url": "https://2023.geopython.net/",
+    "parentUrl": "https://www.python.org/events/python-events/1391/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://2026.geopython.net/public/brochure.jpg",
+    "alt": "",
+    "pageTitle": "Home",
+    "pageUrl": "https://2026.geopython.net/"
+  },
+  {
+    "src": "https://us.pycon.org/2026/static/images/theme/logo.25d1b5ccb097.svg",
+    "alt": "PyCon US 2026",
+    "pageTitle": "PyCon US 2026 - PyCon US 2026",
+    "pageUrl": "https://us.pycon.org/"
+  },
   {
     "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
     "alt": "",
