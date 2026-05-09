@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 192,
+    "url": "https://jobs.python.org",
+    "title": "Python Job Board | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. New Founding Engineer MyDataValue London, UK Back end, Big Data, Cloud, Database, Front end, Machine Learning, Web Posted: 06 May 2026 Developer / Engineer New Senior Back-End Python Engineer - FULLY REMOTE-WORLDWIDE ActivePrime, Inc. REMOTE, REMOTE Back end Posted: 30 April 2026 Developer / Engineer New Senior BE Python Engineer for DevOps-FULLY REMOTE, U.S., CANADA, EUROPE based only ActivePrime, Inc. REMOTE, REMOTE Back end, Cloud, DevOps Posted: 30 April 2026 Developer / Engineer New Senior Fullstack Software Engineer Autodesk London, United Kingdom Back end, Front end Posted: 30 April 2026 Developer / Engineer New Developer - Fully Remote mySociety Fully Remote ›, United Kingdom Back end, Integration, Web Posted: 29 April 2026 Developer / Engineer New Python Back-end Developer Initialize Remote, Remote, UK Back end Posted: 28 April 2026 Developer / Engineer New Associate Principal AI Scientist AstraZeneca Durham, North Carolina, USA Cloud, Image Processing, Machine Learning Posted: 24 April 2026 Developer / Engineer New Junior DevOps Engineer Patrick J. McGovern Foundation Remote, United States Back end, Cloud, Front end Posted: 23 April 2026 Developer / Engineer New Research Advocate and Support Engineer Redivis, Inc. Oakland, CA, United States Big Data, Cloud, Database, Evangelism, Integration Posted: 22 April 2026 Other New Senior Python Core Engineer Chime Remote, United States Back end, Evangelism Posted: 20 April 2026 Developer / Engineer New Lead Python Backend Engineer Reef Technologies Warsaw (fully remote), Poland Back end Posted: 16 April 2026 Developer / Engineer New Senior Python Backend Engineer Reef Technologies Warsaw (fully remote), Poland Back end Posted: 16 April 2026 Developer / Engineer New Senior Python Engineer Fulfil Toronto, ON, Canada Back end Posted: 15 April 2026 Developer / Engineer New Python Developer Ktek Resourcing Columbus, Ohio, United States Back end, Front end, Onsite Posted: 13 April 2026 Developer / Engineer Software Engineer - Python RouteOne Farmington Hills, MI, United States Back end, Database, Finance, Front end Posted: 09 April 2026 Developer / Engineer Python Research Software Consultant (Competitive Pay, Short-Term, Remote) Texas Southern University Houston, TX, USA Image Processing, Integration, Management, Numeric processing, Systems, Research software, social science computing, reproducibility, Bayesian modeling Posted: 08 April 2026 Researcher / Scientist GenAI \u0026 Python Specialist Deloitte Toronto, Ontario, Canada Back end, Cloud, Machine Learning, Text Processing, Senior Python Developer Posted: 07 April 2026 Developer / Engineer Machine Learning Engineer Rebel Space Technologies Long Beach, Hybrid, California, USA Back end, Big Data, Cloud, Machine Learning, Full-time Remote Posted: 01 April 2026 Developer / Engineer Software Engineer (Python/Data) Nava PBC Remote, United States Back end, Database, Front end Posted: 31 March 2026 Developer / Engineer DevOps Engineer-FULLY REMOTE-US, CANADA, EUROPE based only ActivePrime, Inc. REMOTE, REMOTE Cloud, Systems, DevOps Posted: 26 March 2026 Developer / Engineer Senior Back-End Python Engineer - FULLY REMOTE-WORLDWIDE ActivePrime, Inc. REMOTE, REMOTE Back end Posted: 26 March 2026 Developer / Engineer Senior Python Developer - full stack Trusted Carrier Logistik GmbH Remote (EU), Overijsel, Remote (EU) Back end, Big Data, Cloud, Database, Machine Learning, Numeric processing, Operations, Systems, Testing Posted: 17 March 2026 Developer / Engineer Senior Research Software Engineer (Multiphoton Microscopy) Sainsbury Wellcome Centre London, United Kingdom Big Data, Image Processing Posted: 17 March 2026 Developer / Engineer Senior Research Software Engineer (Neural and Behavioural Data) Sainsbury Wellcome Centre London, United Kingdom Big Data, Database, Image Processing, Numeric processing Posted: 17 March 2026 Developer / Engineer Python Software Engineer HypothesisBase Remote, Remote, USA Back end, Integration, Systems, Testing, Web Posted: 17 March 2026 Developer / Engineer Prev 1 2 Next Submit a Job Have a job that our community would be interested in? Please check our job submission how-to for details on how to file a job posting. After you have reviewed our how-to document, please login and use this form to create a new job posting If you have submitted jobs previously under your login, you can view them by logging in now. In case of questions, please contact the PSF Python Job Board team. Thank you. Stay up-to-date Subscribe via RSS Follow The PSF via Twitter Job Board Sponsors",
+    "scrapedAt": "2026-05-10 03:47:55.34331"
+  },
+  {
+    "id": 191,
+    "url": "https://www.python.org/psf/membership/",
+    "title": "Become a Member of the PSF | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! By becoming a member, you tell us and the world that you are a part of the PSF and support our work, and as one of the classes of voting members, you add your voice to the future direction of the Foundation. We\u0027re so happy to have you! Voting Memberships As core stakeholders of the Python Software Foundation community, Supporting Members, Contributing Members, and PSF Fellows are all eligible to vote in PSF Board Elections. 1. Sign up as a Supporting Member here! Supporting Members donate an annual membership fee of $99 to the PSF to sustain the Foundation and support the Python community. We have also introduced a sliding scale rate for Supporting Membership, which you can sign up for here. Your support is crucial to the PSF\u0027s ability to do our work making Python available and supporting our community. More details are available on our Supporting Membership page. 2. Self-Certify as a Contributing Member here! Contributing Members qualify because of their work for the Python community and ecosystem. Fill out the short form linked above to sign up! You qualify as a Contributing Member if you dedicate at least five hours per month volunteering on projects which advance the mission of the PSF by creating or maintaining open source software available to the public at no charge, organizing Python events, participating in one of the PSF\u0027s working groups, etc. 3. Fellows Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Visit this page to nominate a Fellow or learn more about the process. Basic Membership Sign up as a Basic Member here! Signing up as a Basic Member is free, and simply declares that you are part of the Python language community and agree to the community Code of Conduct. Thank you for being with us! Questions? Check out our Membership FAQ page. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 03:47:52.532981"
+  },
+  {
+    "id": 190,
+    "url": "https://scikit-learn.org/",
+    "title": "scikit-learn: machine learning in Python — scikit-learn 0.16.1 documentation",
+    "content": "",
+    "scrapedAt": "2026-05-10 03:47:49.544311"
+  },
+  {
+    "id": 189,
+    "url": "https://www.roundup-tracker.org/",
+    "title": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "content": "Skip to main content Roundup Issue Tracker Download: Build Status: Roundup is an issue-tracking system that boasts a user-friendly interface and easy installation process. It offers a range of interfaces, including command-line, web, REST, XML-RPC, and e-mail, making it a versatile solution for issue tracking. The system is based on the award-winning design by Ka-Ping Yee, which emerged victorious in the Software Carpentry “Track” design competition. Roundup is highly customizable, allowing users to tailor the system to their specific needs and preferences. The latest stable version of Roundup is 2.5.0, which includes bug fixes and additional features compared to the previous 2.4.0 release. Roundup is compatible with Python 3.7+. Python 2 Support Python 2 support ends with release 2.4.0 (July 2024). Several Continuous Integration (CI) services are discontinuing their resources for testing with Python 2. Use Python 3 for the deployment of new trackers. Existing trackers should be upgraded to use Python 3. Release Highlights Some improvements from the 2.4.0 release are: XSS vulnerability with devel and responsive templates fixed Just before release an XSS security issue with trackers based on the devel or responsive templates was discovered. The updating directions include instructions on fixing this issue with the html templates from earlier releases. (CVE-2025-53865) The property/field advanced search expression feature has been enhanced and documented. Search expressions are usually built using the expression editor on the search page. They can be built manually by modifying the search URL but the RPN search expression format was undocumented. Errors in expressions could return results that didn’t match the user’s intent. This release documents the RPN expression syntax, adds basic expression error detection, and improves error reporting. The default hash method for password storage is more secure. We use PBKDF2 with SHA512 (was SHA1). With this change you can lower the value of password_pbkdf2_default_rounds in your tracker’s config.ini. Check the upgrading documentation for more info. (Note this may cause longer authentication times, the upgrade doc describes how to downgrade the hash method if required.) Roundup’s session token is now prefixed with the magic ``__Secure__`` tag when using HTTPS. This adds another layer of protection in addition to the existing Secure property that comes with the session cookie. Data authorization can be done at the database level speeding up display of index pages. Roundup verifies the user’s authorization for the data fetched from the database after retrieving data from the database. A new optional filter argument has been added to Permission objects. When the administrator supplies a filter function, it can boost performance with SQL server databases by pushing selection criteria to the database. By offloading some permission checks to the database, less data is retrieved from the database. This leads to quicker display of index pages with reduced CPU and network traffic. The REST endpoint can supply binary data (images, pdf, …) to its clients. Requesting binary data from a REST endpoint has been a hassle. Since JSON can’t handle binary data, images (and other binary data) need to be encoded. This makes them significantly larger. The workaround was to use a non-REST endpoint for fetching non-text attachments. This update lets the REST endpoint return raw message or file content data. You can utilize the binary_content endpoint along with an appropriate Accept header (e.g. image/jpeg) in your request. Extract translatable strings from your tracker easily. The roundup-gettext tool has been enhanced to extract translatable strings from detectors and extensions. This will simplify the process of translating your trackers. More info on the 42 changes can be found in the change notes. Roundup Use Cases For more information on Roundup see the features list, design overview, and all the other documentation. Roundup has been deployed for: bug tracking and TODO list management (the classic installation) customer help desk support (with a wizard for the phone answerers, linking to networking, system and development issue trackers) issue management for IETF working groups sales lead tracking conference paper submission and double-blind referee management weblogging (well, almost :) thing management using the GTD methodology. …and so on. It’s been designed with flexibility in mind - it’s not merely another bug tracker. Try It Out Roundup ships with a demo tracker to play with - you don’t need to install Roundup. After you’ve unpacked the source, just run “python demo.py” and load up the URL it prints out! Follow the source gratification mode with these steps (change the -2.4.0 version identifier to match your downloaded file). python3 -m pip download roundup tar -xzvf roundup-2.4.0.tar.gz if you don’t have a tar command (e.g windows), use: python -c \"import tarfile, sys; tarfile.op",
+    "scrapedAt": "2026-05-10 03:47:45.478403"
+  },
+  {
+    "id": 188,
+    "url": "https://ipython.org/",
+    "title": "Home | IPython",
+    "content": "Productive Interactive Computing IPython provides a rich architecture for interactive computing with a powerful shell, Jupyter kernel support, and flexible tools for parallel and distributed computing. Install IPython Get Started $ ipython Powerful Features Smart Tab Completion Context-aware completion powered by Jedi. Complete attributes, methods, and filenames with intelligent suggestions. Magic Commands Built-in commands for profiling, debugging, timing, and running external code. %timeit, %debug, %run, and many more. Object Introspection Explore objects with ? and ?? to view docstrings, signatures, and source code instantly. Rich History Powerful command history system with search, scrollback, and persistence across sessions. System Integration Execute shell commands directly with !, access system information, and manipulate the environment seamlessly. Jupyter Kernel Powers the Jupyter Notebook and JupyterLab, enabling interactive computing in web-based environments. Who Uses IPython? 📊 Data Scientists Explore datasets, prototype algorithms, and share findings with rich visualizations. 👨‍💻 Developers Debug code, test ideas interactively, and rapidly develop Python applications. 🎓 Educators Teach programming and data analysis interactively with immediate feedback and visualization. 🔧 System Admins Automate tasks, monitor systems, and manage infrastructure with Python scripts. Ready to Get Started? Install IPython today and boost your interactive computing experience. Install Now",
+    "scrapedAt": "2026-05-10 03:47:40.969081"
+  },
+  {
     "id": 187,
     "url": "https://litestar.dev/",
     "title": "Litestar | Effortlessly Build Performant APIs",
@@ -1307,26 +1342,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 188,
-    "url": "https://ipython.org/"
-  },
-  {
-    "id": 189,
-    "url": "https://www.roundup-tracker.org/"
-  },
-  {
-    "id": 190,
-    "url": "https://scikit-learn.org/"
-  },
-  {
-    "id": 191,
-    "url": "https://www.python.org/psf/membership/"
-  },
-  {
-    "id": 192,
-    "url": "https://jobs.python.org"
   },
   {
     "id": 193,
@@ -34269,10 +34284,572 @@ window.searchData = [
     "id": 18659,
     "url": "https://docs.litestar.dev/2/usage/routing/handlers.html",
     "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 18660,
+    "url": "https://ipython.org/ipython.github.com/get-started",
+    "parentUrl": "https://ipython.org/"
+  },
+  {
+    "id": 18661,
+    "url": "https://ipython.org/ipython.github.com/install",
+    "parentUrl": "https://ipython.org/"
+  },
+  {
+    "id": 18662,
+    "url": "https://www.roundup-tracker.org/docs/upgrading.html#python-3-support-info",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18663,
+    "url": "https://www.roundup-tracker.org/docs/upgrading.html#cve-2025-53865",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18664,
+    "url": "https://gettingthingsdone.com/",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18665,
+    "url": "https://pypistats.org/packages/roundup",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18666,
+    "url": "https://www.roundup-tracker.org/#main",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18667,
+    "url": "https://hub.docker.com/r/rounduptracker/roundup",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18668,
+    "url": "https://www.roundup-tracker.org/docs/customizing.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18669,
+    "url": "https://www.roundup-tracker.org/docs/design.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18670,
+    "url": "https://github.com/roundup-tracker/roundup/actions?query\u003dworkflow%3Aroundup-ci++",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18671,
+    "url": "https://sourceforge.net/p/roundup/code/ci/tip/tree/CHANGES.txt",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18672,
+    "url": "https://www.roundup-tracker.org/docs/installation.html#docker-support",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18673,
+    "url": "https://pypi.org/project/roundup/#files",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18674,
+    "url": "https://www.roundup-tracker.org/docs/features.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18675,
+    "url": "https://www.roundup-tracker.org/docs.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 18686,
+    "url": "https://www.python.org/jobs/type/machine-learning/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18687,
+    "url": "https://www.python.org/jobs/location/columbus-ohio-united-states/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18688,
+    "url": "https://www.python.org/accounts/login/?next\u003d/jobs/mine/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18689,
+    "url": "https://www.python.org/jobs/location/remote-remote-usa/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18690,
+    "url": "https://www.python.org/jobs/location/long-beach-hybrid-california-usa/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18691,
+    "url": "https://www.python.org/jobs/location/durham-north-carolina-usa/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18692,
+    "url": "https://www.python.org/jobs/location/oakland-ca-united-states/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18693,
+    "url": "https://www.python.org/jobs/8068/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18694,
+    "url": "https://twitter.com/ThePSF",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18695,
+    "url": "https://www.python.org/jobs/type/operations/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18696,
+    "url": "https://www.python.org/jobs/8076/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18697,
+    "url": "https://www.python.org/jobs/8056/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18698,
+    "url": "https://www.python.org/jobs/type/web/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18699,
+    "url": "https://www.python.org/jobs/location/remote-remote-uk/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18700,
+    "url": "https://www.python.org/jobs/8072/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18701,
+    "url": "https://www.python.org/jobs/location/london-uk/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18702,
+    "url": "https://www.python.org/jobs/type/image-processing/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18703,
+    "url": "https://www.python.org/jobs/8080/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18704,
+    "url": "https://www.python.org/jobs/type/testing/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18705,
+    "url": "https://www.python.org/jobs/location/fully-remote-united-kingdom/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18706,
+    "url": "https://www.python.org/jobs/type/systems/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18707,
+    "url": "https://www.python.org/jobs/type/big-data/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18708,
+    "url": "https://www.python.org/jobs/8057/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18709,
+    "url": "https://www.python.org/jobs/8069/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18710,
+    "url": "https://www.python.org/jobs/8065/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18711,
+    "url": "https://www.python.org/jobs/category/developer-engineer/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18712,
+    "url": "https://www.python.org/jobs/8077/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18713,
+    "url": "https://www.python.org/jobs/location/toronto-ontario-canada/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18714,
+    "url": "https://www.python.org/jobs/8061/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18715,
+    "url": "https://www.python.org/jobs/8073/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18716,
+    "url": "https://www.python.org/jobs/?page\u003d2",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18717,
+    "url": "https://www.python.org/jobs/8081/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18718,
+    "url": "https://www.python.org/jobs/?page\u003d1",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18719,
+    "url": "https://www.python.org/jobs/type/integration/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18720,
+    "url": "https://www.python.org/jobs/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18721,
+    "url": "https://www.python.org/jobs/feed/rss/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18722,
+    "url": "https://www.python.org/jobs/type/text-processing/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18723,
+    "url": "https://www.python.org/accounts/login/?next\u003d/jobs/create/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18724,
+    "url": "https://www.python.org/jobs/type/front-end/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18725,
+    "url": "https://www.python.org/jobs/category/researcher-scientist/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18726,
+    "url": "https://www.python.org/jobs/type/numeric-processing/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18727,
+    "url": "https://www.python.org/jobs/8054/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18728,
+    "url": "https://www.python.org/jobs/8066/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18729,
+    "url": "https://www.python.org/jobs/8078/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18730,
+    "url": "https://www.python.org/jobs/8082/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18731,
+    "url": "https://www.python.org/jobs/location/farmington-hills-mi-united-states/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18732,
+    "url": "https://www.python.org/jobs/8062/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18733,
+    "url": "https://www.python.org/jobs/8074/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18734,
+    "url": "https://www.python.org/jobs/type/cloud/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18735,
+    "url": "https://www.python.org/jobs/8070/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18736,
+    "url": "https://www.python.org/jobs/location/london-united-kingdom/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18737,
+    "url": "https://www.python.org/jobs/type/evangelism/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18738,
+    "url": "https://www.python.org/jobs/type/finance/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18739,
+    "url": "https://www.python.org/jobs/location/remote-remote/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18740,
+    "url": "https://www.python.org/jobs/category/other/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18741,
+    "url": "https://www.python.org/jobs/type/database/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18742,
+    "url": "https://www.python.org/jobs/location/remote-united-states/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18743,
+    "url": "https://www.python.org/jobs/8079/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18744,
+    "url": "https://www.python.org/jobs/location/remote-eu-overijsel-remote-eu/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18745,
+    "url": "https://www.python.org/jobs/8059/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18746,
+    "url": "https://www.python.org/jobs/8075/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18747,
+    "url": "https://www.python.org/jobs/location/toronto-on-canada/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18748,
+    "url": "https://www.python.org/jobs/8055/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18749,
+    "url": "https://www.python.org/jobs/8067/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18750,
+    "url": "https://www.python.org/jobs/8071/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18751,
+    "url": "https://www.python.org/jobs/type/management/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18752,
+    "url": "https://www.python.org/jobs/location/warsaw-fully-remote-poland/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18753,
+    "url": "https://www.python.org/jobs/location/houston-tx-usa/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18754,
+    "url": "https://www.python.org/community/jobs/howto/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 18755,
+    "url": "https://www.python.org/jobs/type/back-end/",
+    "parentUrl": "https://jobs.python.org"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/22/75/2275de1505c105c6352e3613fee51762.png",
+    "alt": "NVIDIA logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/00/fa/00fa78e78eb497fc81bfd7a43fd0d30a.png",
+    "alt": "Bloomberg logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/75/34/753482df4f306e21917f303789cd6eed.png",
+    "alt": "Hudson River Trading logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/c4/ff/c4ff20bac4d6c853cc142131caac5d31.png",
+    "alt": "Fastly logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/1d/d1/1dd13761fb075b424b2c4900766c9766.png",
+    "alt": "Google logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/d3/68/d36834df21aeeb79fbd2f6497cb7bba6.png",
+    "alt": "Anthropic, PBC logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/02/e2/02e2b3fe6073ea810225a8db6f1f3bcd.png",
+    "alt": "Meta logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/f3/3b/f33b88acf98fc182c5032a00540eceb8.png",
+    "alt": "Microsoft logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/87/be/87be9d019970e28e278442d055e38766.png",
+    "alt": "SerpApi logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/ab/01/ab011d15984cda205774818d1e50e7b0.png",
+    "alt": "Capital One logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/b4/a2/b4a25d8c7f163c5ad0b72bdd2ba435b3.png",
+    "alt": "Red Hat logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/b9/55/b955b7d75968a92d3dd6955c173ea7ef.png",
+    "alt": "Vercel logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/f8/9b/f89b26baba43df5849497932003d5809.png",
+    "alt": "Anaconda, Inc logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/e8/db/e8dba0907b99bf394f68ac3374ca3a60.png",
+    "alt": "AWS logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/96/39/9639a91eacbfc97749d3a85b419906a6.png",
+    "alt": "OpenEDG Python Institute logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/38/8a/388a4db1fc2ee7ca8b20f54f4b81707c.png",
+    "alt": "Snowflake logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/13/c9/13c99fc096274b79fbecd4f95d2dc51c.png",
+    "alt": "JetBrains logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/cf/84/cf8496fca0b75874033b48269e122a01.png",
+    "alt": "Cubist Systematic Strategies logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://img.shields.io/pypi/v/roundup?color\u003dblue\u0026label\u003dCurrent%20Version\u0026cacheSeconds\u003d86400",
+    "alt": "Display current version of Roundup on PyPI.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://img.shields.io/badge/dynamic/json?color\u003dblue\u0026label\u003dDownloads%2FMonth\u0026cacheSeconds\u003d86400\u0026query\u003ddata.last_month\u0026url\u003dhttps%3A%2F%2Fpypistats.org%2Fapi%2Fpackages%2Froundup%2Frecent",
+    "alt": "Badge displaying number of downloads per month.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://img.shields.io/docker/image-size/rounduptracker/roundup?label\u003dDocker%20Size",
+    "alt": "Graphic displaying size of newest docker image on hub.docker.com.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://github.com/roundup-tracker/roundup/actions/workflows/ci-test.yml/badge.svg",
+    "alt": "Status of primary regression test job on github.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.5.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
   {
     "src": "https://litestar.dev/_static/logo.svg",
     "alt": "Litestar Logo",
