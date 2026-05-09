@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 569,
+    "url": "https://www.python.org/psf/membership-faq/",
+    "title": "PSF Membership Types \u0026 FAQ | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of the international community of Python programmers. —from the Mission Statement page What does it mean to be a member of the PSF? What membership classes are there? Who is allowed to vote? Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? How does a person become a PSF Fellow? What does the PSF do? How can I ask other questions? What does it mean to be a member of the PSF? Being part of the PSF means being part of the Python community. In 2014, we changed the bylaws to make the PSF an open membership organization, so that everyone who uses and supports Python can join. For those who wish to participate more, we have classes of membership that include voting rights for those who contribute time, work, and money to the foundation. What membership classes are there? There are four classes of members: Basic Members, Supporting Members, Contributing Members and Fellows. Basic Members Basic members are individuals or entities who are part of the Python language community and who have decided to declare their support for Python and agree to the community Code of Conduct. There is no cost to be a Basic Member. You can sign up as a basic member right here on the site. Supporting Members Supporting Members make a specific annual donation to the PSF to sustain the Foundation and support the Python community. Supporting Members are eligible to vote. You may combine Supporting Membership with any other Membership - i.e. you may sign up for Supporting Membership and also be a Basic Member, Contributing Member, or a Fellow. You can sign up as a Supporting Member here. Contributing Members Contributing Members are people who dedicate at least five hours per month volunteering on projects that advance the mission of the PSF, where the work relates to the creation or maintenance of open source software available to the public at no charge, or by organizing Python events, running infrastructure, participating in one of the PSF\u0027s working groups, etc. Contributing Members are eligible to vote. There is no cost to be a Contributing Member. For details on signing up as a Contributing Member, refer to this form. Fellows Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Fellows are nominated from the broader community and elevated by a vote of the members. Fellow members are eligible to vote. More info on the nomination process is available here. Who is allowed to vote? Who is eligible: Supporting Members, Contributing Members, and Fellows are eligible for voting privileges. To vote you must be 1) eligible to vote, and then 2) affirm each year you would like to exercise your voting privileges. More information on affirming your voting status is here. Why am I a Basic Member even though I’m a Supporting/Contributing/Fellow Member? Your Basic Membership information is managed here on https://www.python.org/users/membership/edit/. To manage your Supporting and Contributing Memberships, visit https://psfmember.org/user-information/. This site, https://www.python.org , will list you as a Basic Member even if you are a Supporting, Contribution, or Fellowship member because the voting tiers of membership are managed on the separate, https://www.psfmember.org website. To verify your PSF Voting Eligibility you will need to use https://www.psfmember.org. If you believe you are a Supporting, Contributing, or Fellow Member but do not have an account on psfmember.org, please create an account and verify your email, then email psf-donations@python.org to get your account linked to your membership. How does a person become a PSF Fellow? To nominate someone to be a PSF Fellow member, please send your nomination to psf-fellow@python.org. More info on the nomination process is available here. The criteria for becoming a PSF Fellow are as follows: For those who have served the Python community by creating and/or maintaining various creative contributions, the following statement should be true: \"[Nominated Person] has served the Python community by making available code, tests, documentation, or design, either in a Python implementation or in a Python ecosystem project, that 1) shows technical excellence, 2) is an example of software engineering principles and best practices, and 3) has achieved widespread usage or acclaim.\" For those who have served the Python community by coordinating, organizing, teaching, writing, and evangelizing, the following statement should b",
+    "scrapedAt": "2026-05-10 04:26:23.806486"
+  },
+  {
+    "id": 568,
+    "url": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/",
+    "title": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python Written by Jim Gradwell, HyperFinity \u0026 Snowflake HyperFinity is a decision science SaaS platform. Through machine learning and AI, embedded analytics, and data visualization, HyperFinity enables nontechnical users to make data-led decisions and create simple outputs to power downstream systems, such as CRM, ERP, or content management systems. This enables organizations to quickly make ML-powered decisions across multiple areas, from smarter supply chain to optimized pricing. Snowflake sits at the core of HyperFinity’s data-intensive platform. In addition to the extensive data type support such as variant data type for semi-structured data, other features such as Snowflake REST API and Zero-Copy Cloning serve as valuable tools in the platform’s serverless architecture. Snowflake’s Secure Data Sharing also streamlines the ELT processes and simplifies the integration of the HyperFinity platform and its outputs with our customers who are already using Snowflake. Challenge: Separate infrastructure for separate programming languages While HyperFinity’s platform is built for nontechnical users to easily apply machine learning and AI at the click of a button, all of the functionality for the data processing that is needed is developed by a data science-focused team, whose primary coding languages are SQL and Python. Snowflake handled all of our SQL development and processing, but in order to construct a serverless compute engine for our Python code, our team had to set up a new set of cloud infrastructure on AWS, which entailed stitching together multiple compute services such as Amazon EC2 and AWS Lambda. This had several downsides such as having to move the data outside of Snowflake’s governance boundary for processing, maintaining additional infrastructure, and writing additional code to handle the data structures changing between services. When we saw Python support for Snowpark announced, we got very excited about the possibilities it would enable for us, and we were very lucky to take part in the private preview. Streamlining our architecture with Snowpark for Python One of the benefits of Python is its rich ecosystem of open source packages and libraries, which we use extensively. For example, a core part of the platform is creating “Customer Needstates” for groups of products. This uses a technique called hierarchical clustering to create a customer decision tree, which represents the choices an individual makes to arrive at the product they purchase. Computing these Needstates requires matrix and array multiplication, which our team leverages in Snowpark using the Python libraries numpy and scipy. This type of calculation is much simpler to develop and implement in Snowflake through the use of Snowpark. Previous cloud infrastructure for Python processing replaced by simple Snowpark code Because the Snowpark for Python environment comes with 1,000+ pre-installed libraries through Snowflake’s partnership with Anaconda, we could easily move existing functions with minimal effort. Having the most popular libraries available removes another layer of administration from the development process, and with the integrated conda package manager there is no need to worry about dependency management. In case we need a custom library, Snowflake supports the ability to upload and import custom Python code. We’re also able to blend SQL and Python logic together in a way that would previously have involved sending data back and forth between multiple tools, and our team has also been able to gain increased performance through parallelizing our processing. Using this blend of SQL and Python we can run logic written in Python on multiple rows of SQL concurrently, turning what was previously a looping operation into a parallel process. For example, running our clustering solutions at five different depths takes the same time as running at one depth. “Snowpark enables us to accelerate development while reducing costs associated with data movement and running separate environments for SQL and Python.” Running a Python function as part of a SQL statement in Snowflake, including parallel processing Moving our Python processes to Snowpark has removed unnecessary complexity from our architecture and simplified our development by removing all the extra code that handled data structures changing between services. Now our team can develop, test, and deploy their Python code within the same environment the data is stored, leveraging the power of the Snowflake platform, and in their preferred development language. HyperFinity is software designed to make decision-making simple, using powerful data science and advanced analytics techniques. Snowflake, and now Snowpark, are major ",
+    "scrapedAt": "2026-05-10 04:26:20.796231"
+  },
+  {
+    "id": 567,
+    "url": "https://www.python.org/success-stories/category/scientific/",
+    "title": "Scientific | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Scientific Scientific Why Python Matters for the VR Community Python for Collaborative Drug Discovery Python To Help Meteorologists Python for Scientific Data Visualization Simulating Biomolecules with Python Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:26:17.586252"
+  },
+  {
+    "id": 566,
+    "url": "https://www.python.org/success-stories/category/education/",
+    "title": "Education | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Education Education Elementary school education: Is it love or just Python? Using Python to Automate Tedious Tasks Python in the Blind Audio Tactile Mapping System Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:26:15.023036"
+  },
+  {
+    "id": 565,
+    "url": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/",
+    "title": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Bleeding Edge Dependency Testing Using Python Written by Faisal Dosani and Akshay Gupta, Capital One Dependency management in any language can be a challenge and Python is no exception. Tools like pip and conda use dependency resolvers to try and honor the requirements given to them, but oftentimes version conflicts prevent installation; this problem became more apparent when pip introduced a new resolver in October 2020. New versions of an upstream package can break your code, and tracking down the culprit can be even more challenging if you have a long list of transient dependencies. edgetest is an open source plugin-based Python package designed to help developers test their code against new versions of their existing dependencies. edgetest helps alleviate some of the burden of dependency management by: - creating a virtual environment; - installing your local package into the environment; - upgrading specified dependency package(s); and - running your test command (e.g. pytest). Maintenance cost and environment management has become a part of “running the engine” with the pip resolver. Now, edgetest can help reduce the maintenance cost of packages by automating bleeding edge dependency testing. For example, if you depend on pandas\u003e\u003d0.25.1,\u003c\u003d1.0.0, edgetest will test your project against the most current pandas version (1.4.1 as of writing). With an effective test suite, you will know whether you can safely upgrade to pandas\u003e\u003d0.25.1,\u003c\u003d1.4.1 or not. edgetest will report whether or not it is safe to upgrade based on the test results. It will do this for each dependency individually before upgrading all upstream packages to identify any potential interactions. Why We Built edgetest After pip introduced a dependency resolver in October 2020, we decided to take a more prescriptive approach to dependency pinning for internal projects at Capital One. Specifically, this involved adding both lower and upper pins to any direct dependencies for all packages. However, this decision added a new form of maintenance cost: updating the pins. We needed an automated way to help remediate security vulnerabilities identified in packages and continue to support the latest version of dependencies in a way that scaled. edgetest was a solution to this problem given the number of Python packages our team supported during that time. Machine learning packages can often have complex dependency structures and experimentation with new features is critical. While implementations of models should always pin packages to ensure deterministic behavior and auditability, we don\u0027t want the tools themselves to be unnecessarily restrictive, but to allow for some flexibility in their implementation. We can now have scheduled CI/CD jobs which automatically run edgetest against many internal libraries to run unit tests and bump dependency pins, ensuring some level of trust in the latest versions. We should note that having robust unit testing is really critical to getting the most out of edgetest. Is This Different from GitHub’s Dependabot? edgetest is not tied to a particular version control system like GitHub. It also prevents accidental updates by only upgrading package dependencies when unit tests are passing. Finally, some users want to focus on a subset of their dependency tree for updates. Sometimes these are dependencies that release often (e.g. boto3), and sometimes these packages are core to their library’s functionality. edgetest offers multiple configuration options to help users create a test and upgrade a system that is functional for their use case. edgetest in Action For example, let’s imagine a simple toy_package like so: To configure edgetest we can include the following within our setup.cfg: And run with the following command line statement: edgetest -c setup.cfg This will tell edgetest to use Python 3.9 and also to install the tests extra into each conda environment. edgetest will create three environments: pandas, numpy, and all-requirements. In the first two, it will only upgrade the respective packages with those names, and the all-requirements will upgrade both pandas and numpy. Next, the test command (pytest is the default) is run in each environment and the results are reported back to the user: Alternatively you can also provide the –export flag to write the changes to setup.cfg for you if you wish. Using a Plugin Architecture One of the goals for edgetest was to ensure easy extensibility, which led us to use pluggy. Pluggy enables the extension or modification of the core package enabling the Python community to build custom plugins to interact with edgetest. Currently there are three plugins: conda, pip-tools, and hub. With pluggy we mapped out several hookspecs: edgetest.hookspecs.addoption() This hook allows the user to add global or environment-level h",
+    "scrapedAt": "2026-05-10 04:26:10.408561"
+  },
+  {
     "id": 564,
     "url": "https://www.python.org/success-stories/category/software-development/",
     "title": "Software Development | Our Success Stories | Python.org",
@@ -3892,26 +3927,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 565,
-    "url": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
-  },
-  {
-    "id": 566,
-    "url": "https://www.python.org/success-stories/category/education/"
-  },
-  {
-    "id": 567,
-    "url": "https://www.python.org/success-stories/category/scientific/"
-  },
-  {
-    "id": 568,
-    "url": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
-  },
-  {
-    "id": 569,
-    "url": "https://www.python.org/psf/membership-faq/"
   },
   {
     "id": 570,
@@ -97350,10 +97365,289 @@ window.searchData = [
     "id": 71957,
     "url": "https://www.python.org/success-stories/a-startup-healthcare-tech-firm-is-now-poised-for-the-future/",
     "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71962,
+    "url": "https://imgur.com/x5jxee3",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71965,
+    "url": "http://www.capitalone.com/tech",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71966,
+    "url": "https://github.com/marketplace/actions/run-edgetest",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71967,
+    "url": "https://imgur.com/UYiAPGs",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71968,
+    "url": "https://imgur.com/tuk5NQ0",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71969,
+    "url": "https://github.com/fdosani/run-edgetest-action/blob/dev/README.md",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71972,
+    "url": "https://capitalone.github.io/edgetest/api/edgetest.html#edgetest.hookspecs.addoption",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71975,
+    "url": "https://capitalone.github.io/edgetest/api/edgetest.html#edgetest.hookspecs.create_environment",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71976,
+    "url": "https://imgur.com/AMW0U1h",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71978,
+    "url": "https://www.capitalone.com/tech/open-source/",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71979,
+    "url": "https://github.com/capitalone/edgetest",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71980,
+    "url": "https://imgur.com/atWfy53",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71982,
+    "url": "https://capitalone.github.io/edgetest/api/edgetest.html#edgetest.hookspecs.path_to_python",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71985,
+    "url": "https://github.com/fdosani/run-edgetest-action",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 71986,
+    "url": "https://sdtimes.com/data/data-profiler-capital-ones-open-source-machine-learning-technology-for-data-monitoring/",
+    "parentUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "id": 72017,
+    "url": "http://hyperfinity.ai/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72019,
+    "url": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/(https://www.snowflake.com/snowpark/)",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72021,
+    "url": "https://www.snowflake.com/blog/snowflake-partners-with-and-invests-in-anaconda-to-bring-enterprise-grade-open-source-python-innovation-to-the-data-cloud/?utm_cta\u003dAnaconda-press-release-9-29",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72023,
+    "url": "https://resources.snowflake.com/webinars-office-hours/show-me-your-architecture-a-technical-deep-dive-of-hyperfinity-s-ai-platform-for-retailers-2",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72024,
+    "url": "https://www.snowflake.com/snowpark-for-python/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72025,
+    "url": "https://www.snowflake.com/blog/snowpark-python-feature-engineering-machine-learning/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72027,
+    "url": "https://www.snowflake.com/blog/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowpark-for-python/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72028,
+    "url": "https://www.snowflake.com/snowpark/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72029,
+    "url": "https://medium.com/snowflake/deploying-custom-python-packages-from-github-to-snowflake-f0bb396480c7",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72032,
+    "url": "https://repo.anaconda.com/pkgs/snowflake/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72033,
+    "url": "https://www.snowflake.com/en/data-cloud/snowpark/",
+    "parentUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "id": 72038,
+    "url": "https://www.python.org/psf/membership-faq/#how-can-i-ask-other-questions",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72041,
+    "url": "https://www.python.org/users/membership/edit/",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72042,
+    "url": "https://www.python.org/psf/membership-faq/#what-membership-classes-are-there",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72043,
+    "url": "https://www.python.org/psf/membership-faq/#who-is-allowed-to-vote",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72045,
+    "url": "https://www.psfmember.org",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72046,
+    "url": "https://www.python.org/psf/membership-faq/#why-am-i-a-basic-member-even-though-im-a-supporting-contributing-fellow-member",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72047,
+    "url": "https://psfmember.org/user-information/",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72048,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-6",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72049,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-7",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72050,
+    "url": "https://www.python.org/psf/membership-faq/#what-does-the-psf-do",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72051,
+    "url": "https://www.python.org/psf/membership-faq/#what-does-it-mean-to-be-a-member-of-the-psf",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72053,
+    "url": "https://www.python.org/psf/mission",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72054,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-1",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72055,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-2",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72056,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-3",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72057,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-4",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72058,
+    "url": "https://www.python.org/psf/membership-faq/#toc-entry-5",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72062,
+    "url": "https://www.python.org/psf/membership-faq/#how-does-a-person-become-a-psf-fellow",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
+  },
+  {
+    "id": 72064,
+    "url": "https://pyfound.blogspot.com/2023/06/affirming-your-psf-membership-voting.html",
+    "parentUrl": "https://www.python.org/psf/membership-faq/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Snowflake_Partner_Hyper.jpeg",
+    "alt": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/4LOKGFj1kPxwsiHa43qIDZVqRZWYeCVRh98Xw-vPj-oKYXpHYHmSEHwt8UWZag9xdhXfsDWgxh9BfeLDmVbvqkQ3Sf6T_mrajjTatEFAUXydcnntSjy4WmH4BK1G-jN8gCjyrgxn-S_2MKHG1g",
+    "alt": "enter image description here",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "src": "https://lh4.googleusercontent.com/hBxzAakSq_N2J7QH5GUKgK5vgo4UGOLMdLKKxmqYI-gWc9w764WK5xrOmoH3RyEcrYSLUgtZqeWTzA5gglnuPXMNfiaQRsxaXR-T3fuqqk2KC7ee6qQkPOt6QATdWRn9XJxFTIF09bISXhyZgg",
+    "alt": "enter image description here",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "src": "https://lh4.googleusercontent.com/5hOOqdGrGcRbzHrXd_xr1JBBo0zxm2OGha5IeLHMSVzBeKZBQhTyON1EPBiuNgrSBwye9BeY4vEo5GaiLfgWqDfeM5lRtVx_kk7Z8VASswlngZVi5lFEFsJRUZtjkT6OjFiq8tJNrLGZUc6DvA",
+    "alt": "enter image description here",
+    "pageTitle": "How HyperFinity Is Streamlining Its Serverless Architecture with Snowflake\u0027s Snowpark for Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/how-hyperfinity-is-streamlining-its-serverless-architecture-with-snowflakes-snowpark-for-python/"
+  },
+  {
+    "src": "https://i.imgur.com/tuk5NQ0.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/atWfy53.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/UYiAPGs.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/AMW0U1h.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
+  {
+    "src": "https://i.imgur.com/x5jxee3.png",
+    "alt": "",
+    "pageTitle": "Bleeding Edge Dependency Testing Using Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/bleeding-edge-dependency-testing-using-python/"
+  },
   {
     "src": "https://www.python.org/m/about/success/frequentis/main-web.png",
     "alt": "Runway Control Screen",
