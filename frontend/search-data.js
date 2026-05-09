@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 243,
+    "url": "https://source.android.com/#main-content",
+    "title": "Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Android Open Source Project Use the Android operating system to power your device. / Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Stay organized with collections Save and categorize content based on your preferences. Featured Android 16 QPR2 is available! Learn about the features added in Android 16 QPR2 and how to implement them on your devices. Read more Featured Feature launch flags Android feature launch flags ensure that the AOSP development branch is stable for everyone. Contributors to AOSP can use feature launch flags to make sure only tested code is executed. Read more Getting started Setup Learn how to set up your environment, download the AOSP source, build Android, and make contributions. Security Security Find out how Android incorporates industry-leading security features to keep the Android platform and ecosystem safe. Core topics Android fundamentals From the basic building blocks of an Android device to the more intricate advanced features, learn about all the ways you can customize the Android OS. Compatibility Compatibility Ensure your users have a coherent experience as they use your device alongside other Android devices in the ecosystem. Automotive Automotive Learn how to develop and customize the Android Automotive platform, which runs directly on in-vehicle hardware. Devices Android devices Read about creating configurable virtual Android devices, managing devices on a corporate network, and delivering live content to devices through Android TV. Security bulletins Help protect your device by checking the latest Android Security Bulletins. Also see the Android Automotive, Chromecast, Wear OS, Pixel, and Pixel Watch bulletins. Android development Learn how to set up your environment, download the source, and start contributing to AOSP through this tutorial. Architecture Learn how the pieces fit together, from the kernel to the HALs to updatable system components. Connectivity Make sure your devices work together and are connected through Bluetooth, NFC, Wi-Fi, and telephony. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[],[],[]]",
+    "scrapedAt": "2026-05-10 03:53:21.227401"
+  },
+  {
+    "id": 242,
+    "url": "https://source.android.com/docs/compatibility",
+    "title": "Build a Compatible Android Device | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Compatibility Stay organized with collections Save and categorize content based on your preferences. Android Compatibility Program To provide your Android users with a coherent experience as they use your device alongside other Android devices in the ecosystem, apply these established standards to your Android implementation. Program Overview Build for compatibility To fulfill the compatibility requirements for Android\u0027s core specification, see the Android Compatibility Definition Document. See the requirements Use the Compatibility Test Suite The Compatibility Test Suite is a set of free tests you can use to help reveal compatibility issues early on in your development process. Get started Architecture Review the principles of Android development outlined in Architecture. Go to Architecture Security Follow security best practices to keep your users and devices safe. Go to Security Settings Follow the Settings guidelines to build a usable, compatible settings interface. Go to Settings Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2024-12-12 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2024-12-12 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:53:14.69323"
+  },
+  {
+    "id": 241,
+    "url": "https://source.android.com/docs/core/architecture",
+    "title": "Architecture overview | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Core Topics Architecture overview Stay organized with collections Save and categorize content based on your preferences. The Android Open Source Project (AOSP) is publicly available and modifiable Android source code. Anyone can download and modify AOSP for their device. AOSP provides a complete and fully functional implementation of the Android mobile platform. Note: AOSP can\u0027t provide support for apps that require backend services, such as a cloud messaging or advanced location services app. AOSP also doesn\u0027t include a full set of end-user apps that might be needed for particular types of devices. There are two levels of compatibility for devices implementing AOSP: AOSP compatibility and Android compatibility. An AOSP-compatible device must conform to the list of requirements in the Compatibility Definition Document (CDD). An Android-compatible device must conform to the list of requirements in the CDD and Vendor Software Requirements (VSR) and tests such as those in the Vendor Test Suite (VTS) and Compatibility Test Suite (CTS). For further information on Android compatibility, refer to the Android compatibility program. AOSP architecture The software stack for AOSP contains the following layers: Figure 1. AOSP software stack architecture. Following is a list of definitions for terms used in Figure 1: Android app An app created solely using the Android API. Google Play Store is widely used to find and download Android apps, though there are many other alternatives. In some cases, a device manufacturer might want to preinstall an Android app to support the core functionality of the device. If you\u0027re interested in developing Android apps, refer to developers.android.com. Privileged app An app created using a combination of the Android and system APIs. These apps must be preinstalled as privileged apps on a device. Device manufacturer app An app created using a combination of the Android API, system API, and direct access to the Android framework implementation. Because a device manufacturer might directly access unstable APIs within the Android framework, these apps must be preinstalled on the device and can be updated only when the device\u0027s system software is updated. System API The System API represents Android APIs available only to partners and OEMs for inclusion in bundled applications. These APIs are marked as @SystemApi in the source code. Android API The Android API is the publicly available API for third-party Android app developers. For information on the Android API, refer to Android API reference. Android framework A group of Java classes, interfaces, and other precompiled code upon which apps are built. Portions of the framework are publicly accessible through the use of the Android API. Other portions of the framework are available only to OEMs through the use of the system APIs. Android framework code runs inside an app\u0027s process. System services System services are modular, focused components such as system_server, SurfaceFlinger, and MediaService. Functionality exposed by Android framework API communicates with system services to access the underlying hardware. Android runtime (ART) A Java runtime environment provided by AOSP. ART performs the translation of the app\u0027s bytecode into processor-specific instructions that are executed by the device\u0027s runtime environment. Hardware abstraction layer (HAL) A HAL is an abstraction layer with a standard interface for hardware vendors to implement. HALs allow Android to be agnostic about lower-level driver implementations. Using a HAL lets you implement functionality without affecting or modifying the higher level system. For further information, see the HAL overview. Native daemons and libraries Native daemons in this layer include init, healthd, logd, and storaged. These daemons interact directly with the kernel or other interfaces and don\u0027t depend on a userspace-based HAL implementation. Native libraries in this layer include libc, liblog, libutils, libbinder, and libselinux. These Native libraries interact directly with the kernel or other interfaces and don\u0027t depend on a userspace-based HAL implementation. Kernel The kernel is the central part of any operating system and talks to the underlying hardware on a device. Where possible, the AOSP kernel is split into hardware-agnostic modules and v",
+    "scrapedAt": "2026-05-10 03:53:04.483342"
+  },
+  {
+    "id": 240,
+    "url": "https://source.android.com/docs/whatsnew/android-16-release",
+    "title": "Android 16, Android 16 QPR1, and Android 16 QPR2 release notes | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs What\u0027s New? Android 16, Android 16 QPR1, and Android 16 QPR2 release notes Stay organized with collections Save and categorize content based on your preferences. This page summarizes the major features in the Android 16, Android 16 QPR1, and Android 16 QPR2 releases and provides links to additional information. These feature summaries are organized according to the feature\u0027s documentation location on this site. Audio Configurable Audio Policy support HIDL HAL let Android vendors use an alternative approach for specifying rules for audio routing called Configurable Audio Policy (CAP), which is more flexible than the default engine used for phones. When migrating to AIDL HAL, support for CAP wasn\u0027t implemented in Android 14 and 15 due to lack of resources. We fixed this in Android 16 by providing missing AIDL definitions and changing the mechanism for loading of CAP configuration by the framework. See Configurable Audio Policy support in AIDL HAL for more information. We converted the Cuttlefish Auto target to take advantage of the CAP AIDL implementation to help partners with migration of their products. Architecture Generic Bootloader (GBL) Android 16 introduces support for a new Generic Bootloader (GBL), a standardized, updatable bootloader designed to streamline the Android boot process. For more information on GBL, see Generic Bootloader (GBL) overview. 16 KB page size In Android 16, memory optimization has been implemented for thread-local storage (TLS). The buffers for the basename() and dirname() functions are now isolated from the main TLS region into dedicated memory pages that are allocated only upon first use. This change yields significant memory savings, particularly on systems with a 16 KB page size, as it frees up approximately 8 KB within the initial thread memory page. This optimization not only reduces overall memory consumption, but provides more space for the stack to grow before requiring a new page, helping to decrease page faults from stack expansion. Systems using a 4 KB page size also see some memory savings. For further information on 16 KB page size, see 16 KB page size. Compatibility Camera ITS updates Android 16 contains updates to the Camera Image Test Suite (ITS). For more details, see: Android 16 Camera ITS release notes Android 16 Camera ITS tests Compatibility Definition Document (CDD) The Android 16 Compatibility Definition Document (CDD) is released with Android 16 QPR2 updates. CTS Verifier Bluetooth MIDI test updates To simplify the testing procedure and reduce potential errors, Android 16 lets you run CTS-V Bluetooth MIDI loopback tests without a USB MIDI peripheral. For the documentation specific to this change, see CTS Verifier Bluetooth MIDI tests updates. CTS Verifier barometer test updates To support Android location features, Android 16 includes a new set of CTS-V barometer measurement tests. For the documentation specific to this change, see CTS Verifier barometer measurement tests. CTS Verifier multidevice test updates To support Android connectivity features, Android 16 includes a new set of CTS-V tests. For the documentation specific to this change, see Run CTS Verifier multidevice tests. Run Wi-Fi AP connection tests To support Android Better Together connectivity features, Android 16 QPR2 includes a new set of Wi-Fi AP connection tests. For the documentation specific to this change, see Set up Wi-Fi AP connection tests. Connectivity Android OS identification In Android 16 and higher, the Android framework includes a Generic Attribute (GATT) service called Android information service (AIS), which lets Bluetooth devices read the Android API level as a GATT characteristic of the service. This service lets Bluetooth device manufacturers know whether a Bluetooth peripheral is pairing with a central device that is running the Android OS, and manage specialized logic based on the API level. For more information, see Android OS identification. Emergency callback mode Android 16 introduces the EmergencyCallbackModeListener system API that lets the IMS module get the emergency callback mode state through a callback when the device enters or exits emergency callback mode for SMS or calls. Device manufacturers can use this API to implement IMS registration management to meet carrier and 3GPP requirements. For example,",
+    "scrapedAt": "2026-05-10 03:52:59.245146"
+  },
+  {
+    "id": 239,
+    "url": "https://source.android.com/docs/devices",
+    "title": "Android devices | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Android Devices Stay organized with collections Save and categorize content based on your preferences. Android devices Beyond phones and tablets, the Android OS serves as a platform for a diverse array of hardware and technology, including unified corporate networks and entertainment devices. Cuttlefish Create configurable virtual Android devices that can run both remotely and locally. Enterprise Set up and manage devices running Android 5.0 and higher on a corporate network or enterprise environment. TV The Android TV Input Framework (TIF) simplifies delivery of live content to Android TV. Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2024-12-12 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2024-12-12 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:52:50.433602"
+  },
+  {
     "id": 238,
     "url": "https://android.com/ai/circle-to-search/",
     "title": "Zoek naar alles op je scherm met Circle to Search | Android",
@@ -1662,26 +1697,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 239,
-    "url": "https://source.android.com/docs/devices"
-  },
-  {
-    "id": 240,
-    "url": "https://source.android.com/docs/whatsnew/android-16-release"
-  },
-  {
-    "id": 241,
-    "url": "https://source.android.com/docs/core/architecture"
-  },
-  {
-    "id": 242,
-    "url": "https://source.android.com/docs/compatibility"
-  },
-  {
-    "id": 243,
-    "url": "https://source.android.com/#main-content"
   },
   {
     "id": 244,
@@ -42910,10 +42925,507 @@ window.searchData = [
     "id": 21105,
     "url": "https://www.android.com/intl/nl_nl/articles/how-to-use-circle-to-search/",
     "parentUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "id": 21117,
+    "url": "https://source.android.com/docs/devices/cuttlefish",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 21118,
+    "url": "https://source.android.com/license",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 21119,
+    "url": "https://source.android.com/docs/devices/tv",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 21120,
+    "url": "https://source.android.com/docs/devices#main-content",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 21122,
+    "url": "https://source.android.com/docs/devices/admin",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 21123,
+    "url": "https://source.android.com/docs",
+    "parentUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "id": 21124,
+    "url": "https://source.android.com/docs/compatibility/cts/its-release-notes-16",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21125,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20List%3CUri%3E%20getImsPublicUserIdentities%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21126,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/SmsMessage.java?q\u003d%22public%20String%20getRecipientAddress%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21127,
+    "url": "https://source.android.com/docs/security/features/cellular-security/toggle-2g",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21128,
+    "url": "https://source.android.com/docs/whatsnew",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21129,
+    "url": "https://source.android.com/docs/core/interaction/haptics/haptics-pwle",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21130,
+    "url": "https://source.android.com/docs/compatibility/cts/camera-its-tests",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21131,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20triggerEpsFallback%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21132,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:packages/modules/Wifi/framework/java/android/net/wifi/WifiManager.java?q\u003d%22void%20onClientsDisconnected%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21133,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java?q\u003d%22public%20void%20callSessionTransferred%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21134,
+    "url": "https://source.android.com/docs/compatibility/16/android-16-cdd",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21135,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:packages/apps/Car/Settings/src/com/android/car/settings/wifi/WifiTetheringHandler.java?q\u003d%22WifiManager.SoftApCallback%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21136,
+    "url": "https://source.android.com/docs/compatibility/cts/cts-barometer",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21137,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20void%20getSimServiceTable%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21138,
+    "url": "https://developer.android.com/media/media3/exoplayer",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21139,
+    "url": "https://source.android.com/docs/core/interaction/sensors/sensor-types#heart_rate",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21140,
+    "url": "https://source.android.com/docs/security/safety-center/overview",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21141,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20List%3CString%3E%20getImsPcscfAddresses%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21142,
+    "url": "https://source.android.com/docs/compatibility/cts/cts-midi",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21143,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/TelephonyManager.java?q\u003d%22public%20String%20getImsPrivateUserIdentity%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21144,
+    "url": "https://source.android.com/docs/core/architecture/bootloader/generic-bootloader",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21145,
+    "url": "https://source.android.com/docs/core/connect/ranging-oob-spec",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21147,
+    "url": "https://source.android.com/docs/core/audio/aidl-cap",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21148,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20modifyImsTrafficSession%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21149,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/ConnectionFailureInfo.java?q\u003d%22public%20final%20class%20ConnectionFailureInfo%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21150,
+    "url": "https://source.android.com/docs/compatibility/cts/ctsv-multidevice-bt#setup-wifi",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21151,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22interface%20EpsFallbackReason%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21152,
+    "url": "https://source.android.com/docs/security/features/keystore/attestation",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21153,
+    "url": "https://source.android.com/docs/core/permissions/android-roles",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21154,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/ImsTrafficSessionCallback.java?q\u003d%22public%20interface%20ImsTrafficSessionCallback%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21155,
+    "url": "https://source.android.com/docs/security/features/cellular-security/mobile-network-security",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21156,
+    "url": "https://source.android.com/docs/security/features/gpu-syscall-filtering",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21157,
+    "url": "https://source.android.com/docs/security/features/private-space#moving-content",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21158,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20stopImsTrafficSession%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21159,
+    "url": "https://source.android.com/docs/core/display/quick-settings-tile",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21160,
+    "url": "https://source.android.com/docs/core/perf/trade-in-mode",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21161,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/core/java/android/telephony/TelephonyCallback.java?q\u003d%22interface%20EmergencyCallbackModeListener%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21162,
+    "url": "https://source.android.com/docs/core/display/device-state-based-auto-rotate-setting",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21163,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22interface%20ImsTrafficType%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21164,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java?q\u003d%22public%20final%20void%20callSessionSendAnbrQuery%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21165,
+    "url": "https://source.android.com/docs/core/virtualization",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21166,
+    "url": "https://source.android.com/docs/whatsnew/android-16-release#main-content",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21167,
+    "url": "https://source.android.com/docs/core/graphics/hdr-screenshots",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21168,
+    "url": "https://source.android.com/docs/core/connect/wifi-softap#source",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21169,
+    "url": "https://developer.android.com/training/data-storage/shared/photopicker",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21170,
+    "url": "https://developer.android.com/develop/connectivity/ranging",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21171,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/ImsCallSessionListener.java?q\u003d%22public%20void%20callSessionTransferFailed%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21173,
+    "url": "https://source.android.com/docs/core/display/multi-window",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21174,
+    "url": "https://source.android.com/docs/compatibility/cts/ctsv-multidevice-bt",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21175,
+    "url": "https://developer.android.com/develop/ui/views/quicksettings-tiles",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21177,
+    "url": "https://source.android.com/docs/core/architecture/16kb-page-size/16kb",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21178,
+    "url": "https://source.android.com/docs/compatibility/cts/camera-its",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21180,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22interface%20ImsTrafficDirection%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21181,
+    "url": "https://cs.android.com/android/platform/superproject/+/android-latest-release:frameworks/base/telephony/java/android/telephony/ims/feature/MmTelFeature.java?q\u003d%22public%20final%20void%20startImsTrafficSession%22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21182,
+    "url": "https://source.android.com/docs/core/connect/bluetooth/os-identification",
+    "parentUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "id": 21183,
+    "url": "https://source.android.com/docs/core/architecture#main-content",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21185,
+    "url": "https://developer.android.com/reference",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21186,
+    "url": "https://source.android.com/docs/core/architecture/hal",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21187,
+    "url": "https://source.android.com/docs/compatibility/cdd",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21188,
+    "url": "https://source.android.com/docs/core/architecture/kernel",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21189,
+    "url": "https://source.android.com/docs/compatibility/cts",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21193,
+    "url": "https://developer.android.com/",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21195,
+    "url": "https://source.android.com/docs/core/tests/vts",
+    "parentUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "id": 21198,
+    "url": "https://source.android.com/docs/compatibility#main-content",
+    "parentUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "id": 21200,
+    "url": "https://source.android.com/docs/core/settings/settings-guidelines",
+    "parentUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "id": 21204,
+    "url": "https://source.android.com/docs/compatibility/overview",
+    "parentUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "id": 21209,
+    "url": "https://source.android.com/docs/security/best-practices",
+    "parentUrl": "https://source.android.com/docs/compatibility"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/#main-content"
+  },
+  {
+    "src": "https://developer.android.com/about/versions/16/images/android-16-logo.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/#main-content"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/flag.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/#main-content"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/security-2.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/#main-content"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/learn.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/#main-content"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/platform.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/#main-content"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/sync.svg",
+    "alt": "",
+    "pageTitle": "Android Open Source Project",
+    "pageUrl": "https://source.android.com/#main-content"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Build a Compatible Android Device | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/success-guide-16-9.svg",
+    "alt": "",
+    "pageTitle": "Build a Compatible Android Device | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/android-badge.svg",
+    "alt": "",
+    "pageTitle": "Build a Compatible Android Device | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/test-tube.svg",
+    "alt": "",
+    "pageTitle": "Build a Compatible Android Device | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/design.svg",
+    "alt": "",
+    "pageTitle": "Build a Compatible Android Device | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/lock.svg",
+    "alt": "",
+    "pageTitle": "Build a Compatible Android Device | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/happy-developers.svg",
+    "alt": "",
+    "pageTitle": "Build a Compatible Android Device | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Architecture overview | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "src": "https://source.android.com/static/images/android-stack.png",
+    "alt": "AOSP software stack architecture.",
+    "pageTitle": "Architecture overview | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/core/architecture"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android 16, Android 16 QPR1, and Android 16 QPR2 release notes | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/whatsnew/android-16-release"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/android-development-kit-16-9.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/app-quality.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/interface.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/tv.svg",
+    "alt": "",
+    "pageTitle": "Android devices | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/devices"
+  },
   {
     "src": "https://lh3.googleusercontent.com/_O35_SDzJTuayo05pm7IyulNXU25ENdPP3xWfRgId6vbcSnzCC_zd3rfXLwX4G9vDd4-n7bYcD-eeM9EI6KmjxOvnXfhjxS5m2VlEkACsPoFRv6Tjg",
     "alt": "Een rode tas wordt gebruikt als voorbeeld om te tonen hoe Circle to Search werkt.",
