@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 580,
+    "url": "https://www.python.org/events/python-events/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events More PyCon US 2026 13 May 2026 – 19 May 2026 Long Beach, CA, USA PyCon Italia 2026 27 May 2026 – 30 May 2026 Bologna, Italy Python Leiden User Group 28 May 2026 2026 5:15pm UTC – 8pm UTC Leiden, The Netherlands GeoPython 2026 08 June 2026 – 10 June 2026 Basel, Switzerland PyCon Singapore 2026 19 June 2026 – 21 June 2026 Singapore, Singapore EuroPython 2026 13 July 2026 – 19 July 2026 Kraków, Poland Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-05-10 04:27:14.156911"
+  },
+  {
+    "id": 579,
+    "url": "https://www.python.org/events/python-user-group/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events PyLadies Amsterdam: Scalable Data Harvesting for AI 28 May 2026 2026 4pm UTC – 7pm UTC Amsterdam, The Netherlands and Online Python Meeting Düsseldorf 03 June 2026 2026 4pm UTC – 7pm UTC Düsseldorf, Germany Python for (Almost) Everything 18 June 2026 – 19 June 2026 St. Louis, Missouri, United States DjangoGirls Tamale 2026 17 July 2026 – 18 July 2026 Tamale, Northern Region, Ghana Django Girls Ho 2026 22 Oct. 2026 – 23 Oct. 2026 Ho, Ghana Django Girls Sogakope 2026 20 Nov. 2026 – 21 Nov. 2026 Sogakope, Ghana Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-05-10 04:27:11.084311"
+  },
+  {
+    "id": 578,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32",
+    "title": "PSF Contributing Membership Self-Certification – Python Software Foundation",
+    "content": "Skip to content Please fill in all fields below to self-certify and apply as a PSF Contributing Member. You must be a basic member before you apply to be a contributing member. You can become a basic member here: https://www.python.org/users/membership/. PSF Contributing Members are people who dedicate at least five hours per month volunteering on Python-related projects that advance the mission of the PSF. Python-related projects can be open-source software projects using Python that you contribute to, Python user groups / conferences you organize, etc. As a PSF Contributing Member you have voting rights in the PSF. You can choose not to make use of your voting rights. The name, affiliation, Working Group and Project associations of PSF Contributing Members will be published to the PSF membership once a suitable mechanism for doing so has been determined. The Board of Directors of the Python Software Foundation reserves the right to decline an application should it be determined that the self-certification was made in bad faith. Please check our bylaws for details on the terms used in this form: https://www.python.org/psf/bylaws/ Membership Category Membership * Contributing Total Amount Email Address * Account Please enter a Username to create an account. If you already have an account please login before completing this form. Username * Check Availability Punctuation is not allowed in a Username with the exception of periods, hyphens and underscores. Self-Certification Are you currently a PSF Basic Member? If not, please go to https://www.python.org/users/membership/ first, and register there. Current Basic Member * Yes No List your given name(s) here First Name * Please state your surname here. Last Name * Please provide the name of any relevant employers, or companies in which you have a financial interest. You may optionally list any other nonprofits, user groups, conferences, or other organizations that are relevant to your PSF membership. Use \"None\" in case you are not affiliated with any company. Affiliations * Please use the same address you used when registering as PSF Basic Member. PSF Basic Member Email Address * You must give a postal contact address for these membership categories according to PSF Bylaws Street Address City State or Province - select State/Province - Alabama Alaska American Samoa Arizona Arkansas Armed Forces Americas Armed Forces Europe Armed Forces Pacific California Colorado Connecticut Delaware District of Columbia Florida Georgia Guam Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Northern Mariana Islands Ohio Oklahoma Oregon Pennsylvania Puerto Rico Rhode Island South Carolina South Dakota Tennessee Texas United States Minor Outlying Islands Utah Vermont Virgin Islands Virginia Washington West Virginia Wisconsin Wyoming Postal Code Country * - select Country - United States Afghanistan Åland Islands Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua and Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Saint Eustatius and Saba Bosnia and Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei Darussalam Bulgaria Burkina Faso Burundi Cabo Verde Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo, Republic Of The Congo, The Democratic Republic of the Cook Islands Costa Rica Côte d’Ivoire Croatia Cuba Curaçao Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Eswatini Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guernsey Guinea Guinea-Bissau Guyana Haiti Heard Island and McDonald Islands Holy See (Vatican City State) Honduras Hong Kong Hungary Iceland India Indonesia Iran, Islamic Republic of Iraq Ireland Isle of Man Israel Italy Jamaica Japan Jersey Jordan Kazakhstan Kenya Kiribati Korea, Democratic People\u0027s Republic of Korea, Republic of Kosovo Kuwait Kyrgyzstan Lao People\u0027s Democratic Republic Latvia Lebanon Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia (Federated States of) Micronesia, Federated States of Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island North Macedonia Northern Mariana Islands Norway Oman Pakistan Palau Pales",
+    "scrapedAt": "2026-05-10 04:27:07.473124"
+  },
+  {
+    "id": 577,
+    "url": "https://www.python.org/psf/fellows/",
+    "title": "PSF Fellow Membership | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! The deadline to nominate someone for Quarter 2 consideration is 11:59 p.m. UTC, May 20, 2026. Please send your nomination to: psf-fellow@python.org Your nomination should include: The name of the person you are nominating. Why you think they meet the Fellow criteria, i.e. how they have served the Python community. Please also include an email address for the person you are nominating. Example nomination: I, Marcia Nominator, propose that Marvin Pythonista be recognized as a Fellow of the Python Software Foundation, due to their significant contributions to the Python community as a co-founder of the PyCon Foobar regional conference, a lead organizer for the 2016 and 2017 editions of the Martian Python community\u0027s flagship Python conference, MarsPython and as a long-term contributor to international collaborative efforts amongst the Martian Python community. The PSF Fellow Work Group has decided to review nominations on a quarterly basis and we also established a criteria for handling the nominations. Here are the nominations timeline and criteria: Timeline: First quarter: January to the end of March (01/01 - 31/03) Cut-off for nominations will be February 20. New fellows will be announced before March 31. Second quarter: April to the end of June (01/04 - 30/06) Cut-off for quarter two will be May 20. New fellows will be announced before June 30. Third quarter: July to the end of September (01/07 - 30/09) Cut-off for quarter three will be August 20. New fellows will be announced before end of September. Fourth quarter: October to the end of December (01/10 - 31/12) Cut-off for quarter four will be November 20. New fellows will be announced before December 31. Criteria: Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Fellows are nominated from the broader community and elevated by a vote of the members. Fellows are eligible to vote in PSF elections. You can see the full list of Fellows at the PSF Fellows Roster page. For those who have served the Python community by creating and/or maintaining various engineering/design contributions, the following statement should be true: Nominated Person has served the Python community by making available code, tests, documentation, or design, either in a Python implementation or in a Python ecosystem project, that 1) shows technical excellence, 2) is an example of software engineering principles and best practices, and 3) has achieved widespread usage or acclaim. For those who have served the Python community by coordinating, organizing, teaching, writing, and evangelizing, the following statement should be true: Nominated Person has served the Python community through extraordinary efforts in organizing Python events, publicly promoting Python, and teaching and coordinating others. Nominated Person\u0027s efforts have shown leadership and resulted in long-lasting and substantial gains in the number and quality of Python users, and have been widely recognized as being above and beyond normal volunteering. If someone is not accepted to be a fellow in the quarter they were nominated for, they will remain an active nominee for 1 year for future consideration. It is suggested/recommended that the nominee have wide Python community involvement. Examples would be (not a complete list - just examples): Someone who has received a Community Service Award or Distinguished Service Award A developer that writes (more than one) documentation/books/tutorials for wider audience Someone that helps translate (more than one) documentation/books/tutorials for better inclusivity An instructor that teaches Python related tutorials in various regions Someone that helps organize local meet ups and also helps organize a regional conference Nominees should be aware of the Python community’s Code of Conduct and should have a record of fostering the community. Sitting members of the PSF Board of Directors can be nominated if they meet the above criteria. In all that this person does, Nominated Person is an example of what we aspire to be in the Python community. Welcome 2026 Q1 Fellow Members! Bill Deegan, El-Karece Asiedu, James Kanin Kearpimy, Jonas Obrist, Kristen McIntyre, Lucie Anglade, Phebe Polk, Philippe Gagnon, Sarah Kuchinsky, Simon Charette, Sony Valdez, Stan Ulbrych, Steve Yonkeu Welcome 2025 Q4 Fellow Members! Chris Brousseau, Dave Forgac, Inessa Pawson, James Abel, Karen Dalton, Mia Bajić, Tatiana Andrea Delgadillo Garzofino Welcome 2025 Q3 Fellow Members! Abhijeet Mote, Abigail Afi Gbadago, Becky Smith, Christopher Bailey, Dawn Wages, Leah Wasser, Maaya Ishida, Mason Egger, Miguel Grinberg",
+    "scrapedAt": "2026-05-10 04:27:01.788369"
+  },
+  {
+    "id": 576,
+    "url": "https://www.python.org/psf/membership/supporting/",
+    "title": "Supporting Membership | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! Become a Supporting Member of the PSF! Sign up as a Supporting Member What does it mean to be a Supporting Member of the PSF? Supporting Members make an annual membership donation to the PSF to fund our work for the Python language and the Python community. Supporting Members have voting rights in annual PSF Board Elections and bylaw votes. Supporting Members provide an important share of the PSF’s annual revenue every year. Income from Supporting Memberships is independent of particular corporate interests, and helps hold us accountable to our most important stakeholders: our community members. Supporting Members are key to ensuring we can continue the work that is most important to the Python community, including hosting the Python Packaging Index, PyCon US, the CPython Developer in Residence, and our Grants program. A standard Supporting Membership is $99 per year, and you can sign up or renew here on our psfmember.org site. You will be asked to create a psfmember.org account if you do not already have one. Become a Supporting Member of the PSF - Sliding Scale Rate (NEW)! Sign Up as a PSF Supporting Member - Sliding Scale Rate What is the Supporting Membership Sliding Scale Rate? Supporting Members make an annual membership donation to the PSF to fund our work for the Python language and the Python community. Supporting Members have voting rights in annual PSF Board Elections and bylaw votes. Examples of why you might select a sliding scale Supporting Membership: You work in a country with lower average incomes than the US or Western Europe. You are a student. You are currently un- or underemployed. (These are just illustrative examples to help you select a rate! We won\u0027t ask for any information about the reason for your selection.) Your Supporting Membership will make you eligible to vote for candidates for the PSF Board of Directors, changes in the PSF bylaws, and other matters related to the infrastructure of the foundation. We value the participation of each member of the Python community and do not want financial barriers to keep individuals from participating as a member of the PSF. Please choose the amount that best fits your personal situation. Whatever donation is right for you, we are grateful for your support! We do ask that you be mindful that this membership option is available to promote accessibility and contribute to the PSF’s mission to support and facilitate the growth of a diverse and international community. We welcome everyone who wants to contribute, as we aspire to an environment where anyone can participate, and everyone can make a difference. Please note that Basic Membership is always free, and if you are eligible for the Contributing or Maintaining membership category, you can also receive voting membership at no cost by self-certifying here. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 04:26:56.760372"
+  },
+  {
     "id": 574,
     "url": "https://www.python.org/psf/mission/",
     "title": "Mission | Python Software Foundation",
@@ -3962,26 +3997,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 576,
-    "url": "https://www.python.org/psf/membership/supporting/"
-  },
-  {
-    "id": 577,
-    "url": "https://www.python.org/psf/fellows/"
-  },
-  {
-    "id": 578,
-    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
-  },
-  {
-    "id": 579,
-    "url": "https://www.python.org/events/python-user-group/"
-  },
-  {
-    "id": 580,
-    "url": "https://www.python.org/events/python-events/"
   },
   {
     "id": 581,
@@ -97705,6 +97720,81 @@ window.searchData = [
     "id": 72094,
     "url": "https://www.python.org/psf/about/",
     "parentUrl": "https://www.python.org/psf/mission/"
+  },
+  {
+    "id": 72095,
+    "url": "https://www.python.org/psf/membership/supporting/us.pycon.org",
+    "parentUrl": "https://www.python.org/psf/membership/supporting/"
+  },
+  {
+    "id": 72099,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d1",
+    "parentUrl": "https://www.python.org/psf/membership/supporting/"
+  },
+  {
+    "id": 72102,
+    "url": "https://www.python.org/psf/membership/supporting/pypi.org",
+    "parentUrl": "https://www.python.org/psf/membership/supporting/"
+  },
+  {
+    "id": 72103,
+    "url": "https://www.python.org/psf/fellows/#criteria",
+    "parentUrl": "https://www.python.org/psf/fellows/"
+  },
+  {
+    "id": 72106,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32#content",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 72107,
+    "url": "https://psfmember.org/wp-login.php?action\u003dlostpassword",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 72108,
+    "url": "https://psfmember.org/wp-login.php",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 72110,
+    "url": "https://www.google.com/url?q\u003dhttps://www.python.org/psf/bylaws/\u0026sa\u003dD\u0026source\u003deditors\u0026ust\u003d1617395614724000\u0026usg\u003dAFQjCNHpatTHxCzqoDeLb7D-a3JhhQFpbA",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 72111,
+    "url": "https://psfmember.org/wp-login.php?redirect_to\u003dhttps%3A%2F%2Fpsfmember.org%2Fcivicrm%2Fcontribute%2Ftransact%2F%3Freset%3D1%26amp%3Bid%3D32",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 72112,
+    "url": "https://www.google.com/url?q\u003dhttps://www.python.org/users/membership/\u0026sa\u003dD\u0026source\u003deditors\u0026ust\u003d1617395614724000\u0026usg\u003dAFQjCNE_u_gEG2CIDcvDboVGq57gppd8QA",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 72113,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32#",
+    "parentUrl": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d32"
+  },
+  {
+    "id": 72119,
+    "url": "https://www.python.org/events/python-user-group/2143/",
+    "parentUrl": "https://www.python.org/events/python-user-group/"
+  },
+  {
+    "id": 72131,
+    "url": "https://www.python.org/events/python-events/2141/",
+    "parentUrl": "https://www.python.org/events/python-events/"
+  },
+  {
+    "id": 72132,
+    "url": "https://www.python.org/events/python-events/?page\u003d2",
+    "parentUrl": "https://www.python.org/events/python-events/"
+  },
+  {
+    "id": 72136,
+    "url": "https://www.python.org/events/python-events/2173/",
+    "parentUrl": "https://www.python.org/events/python-events/"
   }
 ];
 
