@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 485,
+    "url": "https://www.odoo.com/",
+    "title": "Open Source ERP and CRM | Odoo",
+    "content": "Skip to Content All your business on one platform. Simple, efficient, yet affordable! 19.90 € / month for ALL apps Start now - It\u0027s free Meet an advisor Microbedrijf (\u003c 5 werknemers) Kleinbedrijf (6-50 werknemers) Middenbedrijf (51-250 medewerkers) Groot bedrijf (\u003e250 medewerkers) Accounting Knowledge Sign CRM Studio Subscriptions AI Point of Sale Discuss Documents Project Timesheets Field Service Planning Helpdesk eCommerce Website Email Marketing Purchase Inventory Manufacturing Sales HR Dashboard Imagine without odoo View all Apps Imagine a vast collection of business apps at your disposal. Got something to improve? There is an app for that. No complexity, no cost, just a one-click install. Each app simplifies a process and empowers more people. Imagine the impact when everyone gets the right tool for the job, tailored with native AI. If you simplify everything, you can do anything! - Bill McDermott, former CEO of SAP Level up your quality of work Optimized for productivity Experience true speed, reduced data entry, smart AI, and a fast UI. All operations are done in less than 90ms - faster than a blink. Compare with SAP Native AI across all your business Automate work, tailor features, perform deep research, and scale without limits. Enterprise software done right. Open source Behind the technology is a community of 100k+ developers collaborating worldwide. We\u0027re united by the spirit of open source, and a common vision: \"to transform companies, empower employees\". Odoo is available in two editions: • Community: Open Source, 100% free. • Enterprise: extra apps, infrastructure and professional services. Compare Editions Open Source + AI \u003d ❤️ Use Odoo.sh to develop or vibe-code tailored modules. As we are open source, LLMs are already trained on our source code. 40k+ community apps Thanks to its open source development model, Odoo became the world\u0027s largest business apps store. Imagine getting an app for every business needs. Browse Community Apps No corporate bullsh*t \"With most systems, you get 70% of what you hoped. With Odoo, you get more than what you expected. You, guys, will transform the market.\" - Anonymous competitor No vendor lock-in No proprietary data format, just PostgreSQL: you own your data. No software lock-in: you get the source code, GitHub access, and the flexibility to host on our infrastructure, or on premise. Follow us on GitHub Fair pricing No usage-based pricing, no feature upselling, no long term contracts, no hosting limits, no surprises... just a single price per user - all inclusive. View Pricing A unique value proposition Join 15 million happy users who grow their business with Odoo The processing time for accounting documents has been noticeably reduced, in certain cases even from 2 days to only 5 hours. As a result we can now focus on what matters: reporting and advising the client. Harry Van Donink CEO KPMG Belgium Unleash your growth potential Start now - It\u0027s free No credit card required Instant access Odoo Experience on YouTube 1. Use the live chat to ask your questions. 2. The operator answers within a few minutes. Watch now",
+    "scrapedAt": "2026-05-10 04:18:10.901551"
+  },
+  {
+    "id": 484,
+    "url": "https://www.python.org/",
+    "title": "Welcome to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Join us at PyCon US 2026 in Long Beach, CA starting May 13! Grab your ticket today before they\u0027re gone. PYCON US: TICKET SALES ENDING SOON! Get Started Whether you\u0027re new to programming or an experienced developer, it\u0027s easy to learn and use Python. Start with our Beginner’s Guide Download Python source code and installers are available for download for all versions! Latest: Python 3.14.4 Docs Documentation for Python\u0027s standard library, along with tutorials and guides, are available online. docs.python.org Jobs Looking for work or have a Python related position that you\u0027re trying to hire for? Our relaunched community-run job board is the place to go. jobs.python.org Latest News More 2026-05-07 Python 3.15.0 beta 1 is here! 2026-05-04 Python 3.14.5 release candidate 2026-04-23 Announcing Python Software Foundation Fellow Members for Q1 2026! 🎉 2026-04-14 PyCon US 2026: Why we\u0027re asking you to think about your hotel reservation 2026-04-13 Reflecting on Five Years as the PSF’s First CPython Developer in Residence Upcoming Events More 2026-05-13 PyCon US 2026 2026-05-27 PyCon Italia 2026 2026-05-28 PyLadies Amsterdam: Scalable Data Harvesting for AI 2026-05-28 Python Leiden User Group 2026-06-03 Python Meeting Düsseldorf Success Stories More Einblick reimagines the modern data science workflow in a collaborative data science canvas, rather than a linear notebook. Working in a canvas environment offers many advantages including live collaboration, an expansive visual interface, and a progressive computation engine. In this article, we’ll highlight one of the key ways we’re saving data scientists time–our operators. We’ll go through a couple of our core operators, why Python is such a crucial part of our software solution, and how we augmented our offerings with a user operator interface. The latter allows users to customize and use their own operators, which can be used in any Einblick canvas, and shared with other Einblick users. Reimagining data science with Python-based operators in Einblick’s visual canvas by Becca Weng Use Python for… More Web Development: Django, Pyramid, Bottle, Tornado, Flask, Litestar, FastAPI GUI Development: tkInter, PyGObject, PyQt, PySide, Kivy, wxPython, DearPyGui AI and Machine Learning: PyTorch, TensorFlow, scikit-learn, Transformers, Anthropic, LangChain Scientific and Numeric: SciPy, Pandas, IPython Software Development: Buildbot, Trac, Roundup System Administration: Ansible, Salt, OpenStack, xonsh \u003e\u003e\u003e Python Software Foundation The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Learn more Become a Member Donate to the PSF",
+    "scrapedAt": "2026-05-10 04:18:04.276345"
+  },
+  {
+    "id": 483,
+    "url": "http://www.plone.org/",
+    "title": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "content": "Skip to main contentSkip to navigationSkip to footer Home Plone - The CMS That Gives You Peace of Mind Open Source Content Management System Built on Python and React, for People that value our Community, Trust, Fun, Security and Openness. Fast and Easy Easy to use and fast to edit. A modern editing experience users will love. Try Plone Secure and Solid The most secure CMS on the market. Security built-in with a track record of over 20 years. Plone Security Open and Free 100% open source and free, forever. Backed by the Plone Foundation and the most friendly community out there. Plone Foundation Plone 6.1 Is Here! Plone 6.1 is the latest and greatest evolution of Plone CMS. And Plone 6.1.4 is now also available. Download the latest version of Plone What Plone Can Do for You EditorsDevelopersDecision makers Editing and managing your content shouldn\u0027t be a chore. Plone is fast, modern, and easy to use. Full with features to give you control over your content. Try Plone 6 Plone 6 features Use cases Read documentation Developing for Plone is fun! Modern React frontend, robust Python backend, powerful Rest API and a helpful and friendly community to support you. Headless CMS server with a REST API, allowing a developer to build a custom frontend with their chosen technology. Install Plone Read documentation Get training Your content editors will love how easy Plone is to use. Plone can be run fully \u0027on prem\u0027 or in the cloud, but your data belongs to you. On top of that the full software stack is Open Source, backed by our foundation. Modify and expand your set up. Grow. No one can revoke the software license for your setup or start charging costs. Plone 6 features Read success stories Find a solution provider Loading Plone by Numbers Age 25 Plone was born in 2001. Contributors 1024 In Github Version 6.1 Install Loading Loading Previous Plone 6.1 released! Run the latest and greatest Plone Plone 6.1 is here. And Plone 6.1.4 is now also available. Download the latest version of Plone World Plone Day 2026, April 16 - Summary Over 40 new videos, check them out! World Plone Day 2026! Plone 6.1 released! Run the latest and greatest Plone Plone 6.1 is here. And Plone 6.1.4 is now also available. Download the latest version of Plone World Plone Day 2026, April 16 - Summary Over 40 new videos, check them out! World Plone Day 2026! Plone 6.1 released! Run the latest and greatest Plone Plone 6.1 is here. And Plone 6.1.4 is now also available. Download the latest version of Plone Next 1 2 Loading Loading Our Platinum Sponsors Loading Our Premium Sponsors Loading About Plone Try Plone Download Plone Plone Releases Documentation Training Security Roadmap GitHub Community Forum Chat Contribute code Report an issue News and events Conference Join the Plone newsletter Foundation Join the foundation Board Donate Sponsors Apply for Event and Sprint Funds Code of conduct Foundation members Shop Follow us Mastodon Twitter Instagram YouTube Linkedin Facebook Privacy Policy Cookie settings The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution-ShareAlike 4.0 International license. Plone and the Plone® logo are registered trademarks of the Plone Foundation, registered in the United States and other countries. For guidelines on the permitted uses of the Plone trademarks, see https://plone.org/foundation/logo. All other trademarks are owned by their respective owners.",
+    "scrapedAt": "2026-05-10 04:18:01.687402"
+  },
+  {
+    "id": 482,
+    "url": "http://twistedmatrix.com/",
+    "title": "Twisted",
+    "content": "An event-driven networking engine Written in Python Licensed under the open source MIT License View Github View Documentation Check PyPi download page               \n                $ virtualenv try-twisted\n                $ . try-twisted/bin/activate\n                $ pip install twisted[tls]\n                $ twist --help\n              \n            Premium Sponsors Twisted makes it easy to implement custom network applications. Here\u0027s a TCP server that echoes back everything that\u0027s written to it:                   \nfrom twisted.internet import protocol, reactor, endpoints\n\nclass Echo(protocol.Protocol):\n    def dataReceived(self, data):\n        self.transport.write(data)\n\nclass EchoFactory(protocol.Factory):\n    def buildProtocol(self, addr):\n        return Echo()\n\nendpoints.serverFromString(reactor, \"tcp:1234\").listen(EchoFactory())\nreactor.run()\n                  \n                Learn more about writing servers, writing clients and the core networking libraries, including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more. Twisted includes an event-driven web server. Here\u0027s a sample web application; notice how the resource object persists in memory, rather than being recreated on each request:                   \nfrom twisted.web import server, resource\nfrom twisted.internet import reactor, endpoints\n\nclass Counter(resource.Resource):\n    isLeaf \u003d True\n    numberRequests \u003d 0\n\n    def render_GET(self, request):\n        self.numberRequests +\u003d 1\n        request.setHeader(b\"content-type\", b\"text/plain\")\n        content \u003d u\"I am request #{}\\n\".format(self.numberRequests)\n        return content.encode(\"ascii\")\n\nendpoints.serverFromString(reactor, \"tcp:8080\").listen(server.Site(Counter()))\nreactor.run()\n                \n                Learn more about web application development, templates and Twisted\u0027 HTTP client. Here\u0027s a simple publish/subscribe server, where clients see all messages posted by other clients:                   \nfrom twisted.internet import reactor, protocol, endpoints\nfrom twisted.protocols import basic\n\nclass PubProtocol(basic.LineReceiver):\n    def __init__(self, factory):\n        self.factory \u003d factory\n\n    def connectionMade(self):\n        self.factory.clients.add(self)\n\n    def connectionLost(self, reason):\n        self.factory.clients.remove(self)\n\n    def lineReceived(self, line):\n        for c in self.factory.clients:\n            source \u003d u\"\u003c{}\u003e \".format(self.transport.getHost()).encode(\"ascii\")\n            c.sendLine(source + line)\n\nclass PubFactory(protocol.Factory):\n    def __init__(self):\n        self.clients \u003d set()\n\n    def buildProtocol(self, addr):\n        return PubProtocol(self)\n\nendpoints.serverFromString(reactor, \"tcp:1025\").listen(PubFactory())\nreactor.run()\n                  \n                You can test this out by opening two terminals and doing telnet localhost 1025 in each, then typing things. Twisted includes a sophisticated IMAP4 client library.                   \nimport sys\n\nfrom twisted.internet import protocol, defer, endpoints, task\nfrom twisted.mail import imap4\nfrom twisted.python import failure\n\n\nasync def main(\n    reactor, username\u003d\"alice\", password\u003d\"secret\", strport\u003d\"tls:example.com:993\"\n):\n    endpoint \u003d endpoints.clientFromString(reactor, strport)\n    factory \u003d protocol.Factory.forProtocol(imap4.IMAP4Client)\n    try:\n        client \u003d await endpoint.connect(factory)\n        await client.login(username.encode(\"utf-8\"),\n                           password.encode(\"utf-8\"))\n        await client.select(\"INBOX\")\n        info \u003d await client.fetchEnvelope(imap4.MessageSet(1))\n        print(\"First message subject:\", info[1][\"ENVELOPE\"][1])\n    except:\n        print(\"IMAP4 client interaction failed\")\n        print(failure.Failure().getTraceback())\n\n\ntask.react(lambda *a, **k: defer.ensureDeferred(main(*a, **k)), sys.argv[1:])\n                  \n                Give this a try, supplying your IMAP4 username, app password (generate one for gmail, generate one for fastmail), and client endpoint description for your IMAP4 server. You\u0027ll see the subject of the first message in your mailbox printed. See the TwistedMail documentation for more information. Twisted includes an SSH client \u0026 server, \"conch\" (i.e.: the Twisted Shell).                   \nimport sys, os\n\nfrom twisted.internet import protocol, defer, endpoints, task\nfrom twisted.conch.endpoints import SSHCommandClientEndpoint\n\nasync def main(reactor, username\u003d\"alice\", sshhost\u003d\"example.com\", portno\u003d\"22\"):\n    envAgent \u003d endpoints.UNIXClientEndpoint(reactor, os.environ[\"SSH_AUTH_SOCK\"])\n    endpoint \u003d SSHCommandClientEndpoint.newConnection(\n        reactor, \"echo \u0027hello world\u0027\", username, sshhost,\n        int(portno), agentEndpoint\u003denvAgent,\n    )\n\n    class ShowOutput(protocol.Protocol):\n        received \u003d b\"\"\n        def dataReceived(self, data):\n            self.received +\u003d data\n        def connectionLost(self, reason):\n            finished.callback(self.received)\n\n    finished",
+    "scrapedAt": "2026-05-10 04:17:55.856194"
+  },
+  {
+    "id": 481,
+    "url": "https://www.python.org/events/python-user-group/1518/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 07 June from 4pm UTC to 7pm UTC, 2023 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-05-10 04:17:48.637598"
+  },
+  {
     "id": 480,
     "url": "https://www.python.org/events/python-user-group/1322/",
     "title": "Python Meeting Düsseldorf | Python.org",
@@ -3342,26 +3377,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 481,
-    "url": "https://www.python.org/events/python-user-group/1518/"
-  },
-  {
-    "id": 482,
-    "url": "http://twistedmatrix.com/"
-  },
-  {
-    "id": 483,
-    "url": "http://www.plone.org/"
-  },
-  {
-    "id": 484,
-    "url": "https://www.python.org/"
-  },
-  {
-    "id": 485,
-    "url": "https://www.odoo.com/"
   },
   {
     "id": 486,
@@ -88210,10 +88225,1056 @@ window.searchData = [
     "id": 68889,
     "url": "https://djangogirls.org/en/sogakope/",
     "parentUrl": "https://www.python.org/events/python-user-group/2153/"
+  },
+  {
+    "id": 68980,
+    "url": "https://github.com/twisted",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68981,
+    "url": "https://docs.twisted.org/en/latest/community.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68982,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d44",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68983,
+    "url": "https://docs.twisted.org/en/stable/core/howto/servers.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68984,
+    "url": "https://www.fastmail.com/help/clients/apppassword.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68985,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/TwistedMatrixLaboratories.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68986,
+    "url": "https://mail.python.org/mailman3/lists/twisted.python.org/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68987,
+    "url": "https://github.com/twisted/ldaptor",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68988,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/TwistedMail.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68989,
+    "url": "https://docs.twisted.org/en/stable/web/howto/web-in-60/index.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68990,
+    "url": "https://support.google.com/accounts/answer/185833?hl\u003den",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68991,
+    "url": "https://docs.twisted.org/en/stable/web/howto/client.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68992,
+    "url": "https://github.com/twisted/pydoctor",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68993,
+    "url": "https://www.sftpplus.com/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68994,
+    "url": "https://docs.twisted.org/en/stable/core/howto/index.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68995,
+    "url": "https://docs.twisted.org/en/latest/development/sponsorship.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68996,
+    "url": "https://pypi.org/project/Twisted/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68997,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/Windows.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68998,
+    "url": "https://github.com/twisted/constantly",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 68999,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/ContributingToTwistedLabs.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69000,
+    "url": "https://docs.twisted.org/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69001,
+    "url": "https://thinkst.com/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69002,
+    "url": "https://labs.twistedmatrix.com/2020/03/twisted-drops-python-27-support.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69003,
+    "url": "https://github.com/twisted/towncrier",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69004,
+    "url": "https://docs.twisted.org/en/stable/api/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69005,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/ProjectsUsingTwisted.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69006,
+    "url": "https://docs.twisted.org/en/latest/community.html#mail-lists",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69007,
+    "url": "https://github.com/twisted/twisted/security/policy",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69008,
+    "url": "https://docs.twisted.org/en/stable/core/howto/endpoints.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69009,
+    "url": "https://docs.twisted.org/en/latest/community.html#real-time-chat",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69010,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/TwistedDevelopment.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69011,
+    "url": "https://github.com/twisted/txmongo",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69012,
+    "url": "https://stackoverflow.com/questions/tagged/twisted",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69014,
+    "url": "https://github.com/sponsors/twisted/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69015,
+    "url": "https://github.com/twisted/incremental",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69016,
+    "url": "https://github.com/twisted/twisted",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69017,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/SuccessStories.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69018,
+    "url": "https://github.com/twisted/klein",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69019,
+    "url": "https://docs.twisted.org/en/stable/core/howto/clients.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69020,
+    "url": "https://github.com/twisted/treq",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69021,
+    "url": "https://docs.twisted.org/en/stable/web/howto/twisted-templates.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 69022,
+    "url": "https://plone.org/why-plone/features",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69023,
+    "url": "https://github.com/orgs/plone/people",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69024,
+    "url": "https://plone.org/news-and-events/news/news-for-2026/world-plone-day-2026-summary",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69025,
+    "url": "https://twitter.com/plone",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69026,
+    "url": "https://plone.org/foundation/members",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69027,
+    "url": "https://github.com/plone",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69028,
+    "url": "https://plone.org/foundation/sponsorship",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69029,
+    "url": "https://plone.org/contribute",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69030,
+    "url": "https://plone.org/download",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69031,
+    "url": "https://plone.org/community",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69032,
+    "url": "https://www.linkedin.com/company/plone-foundation/",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69033,
+    "url": "https://plone.org/news-and-events/plone-in-social-media",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69034,
+    "url": "https://plone.org/services/providers",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69035,
+    "url": "https://www.facebook.com/plonecms",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69036,
+    "url": "https://www.instagram.com/plonecms/",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69037,
+    "url": "https://plone.org/community/bugs",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69038,
+    "url": "https://beta.plone.org/foundation",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69039,
+    "url": "https://plone.org/download/releases",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69040,
+    "url": "https://github.com/sponsors/plone",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69041,
+    "url": "https://twitter.com/intent/tweet?url\u003dhttps://plone.org",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69042,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps://plone.org",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69043,
+    "url": "https://plone.org/",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69044,
+    "url": "https://ploneconf.org",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69045,
+    "url": "https://plone.org/foundation",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69046,
+    "url": "https://6.docs.plone.org",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69047,
+    "url": "https://plone.social/@plone",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69048,
+    "url": "https://plone.org/why-plone/plone-6",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69049,
+    "url": "https://plone.org/roadmap",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69050,
+    "url": "https://plone.org/foundation/members/application-procedure",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69051,
+    "url": "https://plone.org/privacy-policy",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69052,
+    "url": "https://t.me/share/url?url\u003dhttps://plone.org\u0026text\u003dPlone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69053,
+    "url": "https://plone.org/why-plone/they-use-plone",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69054,
+    "url": "https://plone.org/news-and-events/join-the-plone-newsletter",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69055,
+    "url": "https://training.plone.org",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69056,
+    "url": "https://6.docs.plone.org/",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69057,
+    "url": "https://plone.org/why-plone",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69058,
+    "url": "https://plone.org/foundation/materials/foundation-resolutions/code-of-conduct",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69059,
+    "url": "https://plone.org/#view",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69060,
+    "url": "https://www.youtube.com/@plonecms",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69061,
+    "url": "https://plone.org/#footer",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69062,
+    "url": "https://plone.org/try-plone",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69063,
+    "url": "https://www.linkedin.com/shareArticle?mini\u003dtrue\u0026url\u003dhttps://plone.org\u0026title\u003dhttps://plone.org",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69064,
+    "url": "https://plone.org/#navigation",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69065,
+    "url": "https://plone.teemill.com/",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69066,
+    "url": "https://plone.org/community/chat",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69067,
+    "url": "https://api.whatsapp.com/send?phone\u003d\u0026text\u003dhttps://plone.org",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69068,
+    "url": "https://plone.org/security",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69069,
+    "url": "https://community.plone.org/",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69070,
+    "url": "https://plone.org/services/training",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69071,
+    "url": "https://plone.org/news-and-events",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69072,
+    "url": "https://plone.org/foundation/event-sponsorship",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69073,
+    "url": "https://plone.org/foundation/board",
+    "parentUrl": "http://www.plone.org/"
+  },
+  {
+    "id": 69127,
+    "url": "https://www.odoo.com/app/discuss",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69128,
+    "url": "https://www.odoo.com/app/subscriptions",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69129,
+    "url": "https://www.odoo.com/app/point-of-sale-shop",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69130,
+    "url": "https://www.odoo.com/page/editions",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69131,
+    "url": "https://www.odoo.com/app/project",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69132,
+    "url": "https://www.odoo.com/app/knowledge",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69133,
+    "url": "https://www.odoo.com/app/employees",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69134,
+    "url": "https://www.odoo.com/page/all-apps",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69135,
+    "url": "https://www.odoo.com/app/studio",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69136,
+    "url": "https://www.odoo.com/appointment/5295",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69137,
+    "url": "https://www.odoo.com/app/purchase",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69138,
+    "url": "https://www.odoo.com/#",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69139,
+    "url": "https://www.odoo.com/app/documents",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69140,
+    "url": "https://www.odoo.com/app/field-service",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69141,
+    "url": "https://www.odoo.com/fr_FR/event/odoo-experience-2025-6601/track",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69142,
+    "url": "https://www.odoo.com/app/accounting",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69143,
+    "url": "https://www.odoo.com/app/sign",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69144,
+    "url": "https://www.odoo.com/app/inventory",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69145,
+    "url": "https://www.odoo.com/app/email-marketing",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69146,
+    "url": "https://www.odoo.com/trial",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69147,
+    "url": "https://apps.odoo.com/apps",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69148,
+    "url": "https://www.odoo.com/app/planning",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69149,
+    "url": "https://www.odoo.com/app/timesheet",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69150,
+    "url": "https://www.odoo.com/app/website",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69151,
+    "url": "https://www.odoo.com/app/ecommerce",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69152,
+    "url": "https://github.com/odoo",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69153,
+    "url": "https://www.odoo.com/pricing",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69154,
+    "url": "https://www.odoo.com/appointment/10551",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69155,
+    "url": "https://www.odoo.com/#wrap",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69156,
+    "url": "https://www.odoo.com/appointment/6693",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69157,
+    "url": "https://www.odoo.com/appointment/6694",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69158,
+    "url": "https://www.odoo.com/app/helpdesk",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69159,
+    "url": "https://www.odoo.com/app/manufacturing",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69160,
+    "url": "https://www.odoo.com/app/spreadsheet",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69161,
+    "url": "https://www.odoo.com/app/crm",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69162,
+    "url": "https://www.odoo.com/app/sales",
+    "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 69163,
+    "url": "https://www.odoo.sh",
+    "parentUrl": "https://www.odoo.com/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_doodle_1.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/apps_switched.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/accountant/static/description/icon.svg",
+    "alt": "Odoo Accounting icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/knowledge/static/description/icon.svg",
+    "alt": "Odoo Knowledge icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/sign/static/description/icon.svg",
+    "alt": "Odoo Sign icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/crm/static/description/icon.svg",
+    "alt": "Odoo CRM icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/web_studio/static/description/icon.svg",
+    "alt": "Odoo Studio icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/sale_subscription/static/description/icon.svg",
+    "alt": "Odoo Subscriptions icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/ai_app/static/description/icon.svg",
+    "alt": "Odoo Unknown icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/point_of_sale/static/description/icon.svg",
+    "alt": "Odoo Point of Sale icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/mail/static/description/icon.svg",
+    "alt": "Odoo Discuss icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/documents/static/description/icon.svg",
+    "alt": "Odoo Documents icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/project/static/description/icon.svg",
+    "alt": "Odoo Project icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/hr_timesheet/static/description/icon.svg",
+    "alt": "Odoo Timesheet icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/industry_fsm/static/description/icon.svg",
+    "alt": "Odoo Field Service icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/planning/static/description/icon.svg",
+    "alt": "Odoo Planning icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/helpdesk/static/description/icon.svg",
+    "alt": "Odoo Helpdesk icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/website_sale/static/description/icon.svg",
+    "alt": "Odoo eCommerce icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/website/static/description/icon.svg",
+    "alt": "Odoo Website icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/mass_mailing/static/description/icon.svg",
+    "alt": "Odoo Email Marketing icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/purchase/static/description/icon.svg",
+    "alt": "Odoo Purchase icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/stock/static/description/icon.svg",
+    "alt": "Odoo Inventory icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/mrp/static/description/icon.svg",
+    "alt": "Odoo Manufacturing icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/sale/static/description/icon.svg",
+    "alt": "Odoo Sales icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/hr/static/description/icon.svg",
+    "alt": "Odoo Employees icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://download.odoocdn.com/icons/spreadsheet_dashboard/static/description/icon.svg",
+    "alt": "Odoo Spreadsheet dashboard icon",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/arrows/secondary_arrow_sm_03.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_persona/bg_yellow.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_persona/bill.png",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/speed_1.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/ctrl-k-630.gif",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/speed_3.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/speed_4.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/mobile_productivity.webp",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_doodle_3.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/youtube.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/claude.webp",
+    "alt": "Odoo Sh AI",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/apps/home/unique-value-2024.svg",
+    "alt": "Unique value",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_doodle_4.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/graphics/arrow_circular_down_left.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/arrows/grey_arrow_loop_02.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_testimonials/quote.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_testimonials/avatar/van_donink.webp",
+    "alt": "Harry Van Donink picture",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/snippets/s_wd_testimonials/logo/kpmg_logo.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/arrows/secondary_arrow_sm_01.svg",
+    "alt": "",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://odoocdn.com/openerp_website/static/src/img/2016/live-support/info.gif",
+    "alt": "Live support on Youtube",
+    "pageTitle": "Open Source ERP and CRM | Odoo",
+    "pageUrl": "https://www.odoo.com/"
+  },
+  {
+    "src": "https://plone.org/static/media/logo.cab945d8.svg",
+    "alt": "Plone.org logo",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/why-plone/images/fast.png/@@images/image/teaser",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/why-plone/images/secure-and-solid.png/@@images/image/teaser",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/why-plone/images/open-and-free.png/@@images/image/teaser",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/images/bluep6.webp/@@images/image/teaser",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/why-plone/images/easy.png/@@images/image/preview",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/why-plone/images/open-and-free.png/@@images/image/preview",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/why-plone/images/secure-and-solid.png/@@images/image/preview",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/images/slider-images/bluep6.webp/@@images/image",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/news-and-events/events/wpd/2026/world-plone-day-2026/wpd-2026-bg.jpg/@@images/image",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/images/slider-images/bluep6.webp/@@images/image",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/news-and-events/events/wpd/2026/world-plone-day-2026/wpd-2026-bg.jpg/@@images/image",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/images/slider-images/bluep6.webp/@@images/image",
+    "alt": "",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://plone.org/static/media/logo.cab945d8.svg",
+    "alt": "Plone.org logo",
+    "pageTitle": "Plone CMS: Open Source Content Management — Plone: Enterprise Level CMS - Free and OpenSource - Community Driven - Secure",
+    "pageUrl": "http://www.plone.org/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/ribbon.svg",
+    "alt": "",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/sponsor-thinkst.svg",
+    "alt": "Thinkst Canary",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/divider.svg",
+    "alt": "divider graphic",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/sponsor-thinkst.svg",
+    "alt": "Thinkst Canary",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/sponsor-sftpplus.svg",
+    "alt": "",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/deco-blob.svg",
+    "alt": "deco-blob decoration",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
   {
     "src": "https://pyddf.de/content/images/2026/01/Python-Meeting-Blog-Cover-3.webp",
     "alt": "Python Meeting Düsseldorf",
