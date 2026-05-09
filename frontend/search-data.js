@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 747,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc",
+    "title": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int ",
+    "scrapedAt": "2026-05-10 04:41:43.736155"
+  },
+  {
+    "id": 746,
+    "url": "https://github.com/python/cpython/issues/91896",
+    "title": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString #91896 New issue Copy link New issue Copy link Closed Closed Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString#91896 Copy link Assignees Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on Apr 25, 2022 Issue body actions The current docstring of collections.abc.ByteString is:     \"\"\"This unifies bytes and bytearray.\n\n    XXX Should add all their methods.\n    \"\"\"\n Let\u0027s do that last thing. This will be useful for typing code that accepts both bytes and bytearray, especially with my proposal in PEP-688 to make bytes no longer acceptable as a shortcut for bytearray in the type system. cc @rhettinger for collections.abc Linked PRs gh-91896: Deprecate collections.abc.ByteString #102096 gh-91896: Improve visibility of ByteString deprecation warnings #104294 gh-91896: Fixup some docs issues following ByteString deprecation #104422 gh-91896: Revert some very noisy DeprecationWarnings for ByteString #104424 Reactions are currently unavailable Metadata Metadata Assignees JelleZijlstra Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:41:40.207774"
+  },
+  {
+    "id": 745,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-10 04:41:34.581302"
+  },
+  {
+    "id": 744,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-10 04:41:31.253138"
+  },
+  {
+    "id": 743,
+    "url": "https://docs.python.org/3/library/sys.html#sys.platform",
+    "title": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but refer",
+    "scrapedAt": "2026-05-10 04:41:27.196733"
+  },
+  {
     "id": 742,
     "url": "https://docs.python.org/3/howto/isolating-extensions.html#isolating-extensions-howto",
     "title": "Isolating Extension Modules — Python 3.14.5rc1 documentation",
@@ -4907,26 +4942,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 743,
-    "url": "https://docs.python.org/3/library/sys.html#sys.platform"
-  },
-  {
-    "id": 744,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
-  },
-  {
-    "id": 745,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag"
-  },
-  {
-    "id": 746,
-    "url": "https://github.com/python/cpython/issues/91896"
-  },
-  {
-    "id": 747,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
   },
   {
     "id": 748,
@@ -128265,10 +128280,987 @@ window.searchData = [
     "id": 93981,
     "url": "https://docs.python.org/3/c-api/subinterpreters.html#c.Py_EndInterpreter",
     "parentUrl": "https://docs.python.org/3/howto/isolating-extensions.html#isolating-extensions-howto"
+  },
+  {
+    "id": 93984,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getprofile",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 93988,
+    "url": "https://docs.python.org/3/library/sys.html#sys.setprofile",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 93995,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.inspect",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 93997,
+    "url": "https://docs.python.org/3/library/audit_events.html#audit-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94000,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.interactive",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94001,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.mant_dig",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94002,
+    "url": "https://docs.python.org/3/library/sys.html#sys.activate_stack_trampoline",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94004,
+    "url": "https://docs.python.org/3/library/sys.html#sys.set_coroutine_origin_tracking_depth",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94007,
+    "url": "https://docs.python.org/3/library/sys.html#sys.deactivate_stack_trampoline",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94010,
+    "url": "https://docs.python.org/3/library/sys.html#sys.get_asyncgen_hooks",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94012,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.no_site",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94014,
+    "url": "https://docs.python.org/3/library/sys.html#c99",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94016,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getunicodeinternedsize",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94026,
+    "url": "https://peps.python.org/pep-0451/",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94029,
+    "url": "https://docs.python.org/3/library/sys.html#sys.tracebacklimit",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94030,
+    "url": "https://docs.python.org/3/library/sys.html#sys._emscripten_info.shared_memory",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94031,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.gil",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94033,
+    "url": "https://docs.python.org/3/library/sys.html#sys._debugmallocstats",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94039,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.quiet",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94042,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__excepthook__",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94045,
+    "url": "https://docs.python.org/3/library/platform.html#platform.android_ver",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94047,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#apiabiversion",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94050,
+    "url": "https://docs.python.org/3/library/sys.html#sys.intern",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94051,
+    "url": "https://docs.python.org/3/library/sys.html#sys.thread_info.name",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94052,
+    "url": "https://docs.python.org/3/library/sys.html#sys._current_frames",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94053,
+    "url": "https://docs.python.org/3/library/sys.html#sys.thread_info",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94055,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.warn_default_encoding",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94058,
+    "url": "https://docs.python.org/3/library/sys.html#sys.maxunicode",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94062,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getsizeof",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94064,
+    "url": "https://docs.python.org/3/library/sys.html#sys.set_int_max_str_digits",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94066,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__breakpointhook__",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94067,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.safe_path",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94068,
+    "url": "https://docs.python.org/3/library/threading.html#threading.excepthook",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94071,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getswitchinterval",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94074,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.MetaPathFinder.find_spec",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94075,
+    "url": "https://docs.python.org/3/library/sys.html#sys._emscripten_info",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94076,
+    "url": "https://docs.python.org/3/library/sys.html#sys._emscripten_info.runtime",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94078,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.isolated",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94082,
+    "url": "https://docs.python.org/3/library/sys.html#sys.addaudithook",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94083,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.dont_write_bytecode",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94085,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.rounds",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94087,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__unraisablehook__",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94092,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.min_10_exp",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94093,
+    "url": "https://docs.python.org/3/library/sys.html#sys.hash_info",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94096,
+    "url": "https://docs.python.org/3/library/sys.html#sys._emscripten_info.emscripten_version",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94100,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.int_max_str_digits",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94103,
+    "url": "https://docs.python.org/3/library/threading.html#threading.settrace",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94108,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.dev_mode",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94111,
+    "url": "https://docs.python.org/3/library/sys.html#sys.winver",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94113,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PYTHON_API_VERSION",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94116,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.verbose",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94117,
+    "url": "https://docs.python.org/3/library/sys.html#sys.audit",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94119,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_Audit",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94121,
+    "url": "https://docs.python.org/3/library/sys.html#sys.is_finalizing",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94122,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getandroidapilevel",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94124,
+    "url": "https://docs.python.org/3/library/sys.html#sys.dllhandle",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94128,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.min_exp",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94129,
+    "url": "https://docs.python.org/3/library/sys.html#sys.implementation",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94130,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.utf8_mode",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94131,
+    "url": "https://docs.python.org/3/library/sys.html#sys.byteorder",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94136,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.max",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94138,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getwindowsversion",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94142,
+    "url": "https://docs.python.org/3/library/sys.html#sys.setswitchinterval",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94143,
+    "url": "https://docs.python.org/3/library/sys.html#sys.is_stack_trampoline_active",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94144,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.no_user_site",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94145,
+    "url": "https://docs.python.org/3/library/sys.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94146,
+    "url": "https://docs.python.org/3/library/sys.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94148,
+    "url": "https://docs.python.org/3/library/functions.html#input",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94149,
+    "url": "https://docs.python.org/3/library/sys.html#sys.thread_info.lock",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94151,
+    "url": "https://docs.python.org/3/library/sys.html#sys.api_version",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94153,
+    "url": "https://docs.python.org/3/library/sys.html#sys._is_gil_enabled",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94155,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.epsilon",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94159,
+    "url": "https://docs.python.org/3/library/sys.html#sys.call_tracing",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94163,
+    "url": "https://docs.python.org/3/library/sys.html#sys.get_coroutine_origin_tracking_depth",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94169,
+    "url": "https://docs.python.org/3/library/fileinput.html#module-fileinput",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94172,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.buffer",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94176,
+    "url": "https://docs.python.org/3/library/os.html#os.RTLD_LAZY",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94179,
+    "url": "https://docs.python.org/3/library/sys.html#sys.get_int_max_str_digits",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94180,
+    "url": "https://docs.python.org/3/library/compileall.html#module-compileall",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94185,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PySys_AddAuditHook",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94192,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__stdin__",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94193,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.radix",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94196,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.hash_randomization",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94199,
+    "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94200,
+    "url": "https://perf.wiki.kernel.org",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94201,
+    "url": "https://docs.python.org/3/library/profile.html#profile",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94210,
+    "url": "https://docs.python.org/3/library/sys.html#sys.thread_info.version",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94211,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getallocatedblocks",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94214,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.max_10_exp",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94219,
+    "url": "https://peps.python.org/pep-0421/",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94220,
+    "url": "https://peps.python.org/pep-0578/",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94222,
+    "url": "https://docs.python.org/3/library/sys.html#sys.hexversion",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94223,
+    "url": "https://peps.python.org/pep-3149/",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94234,
+    "url": "https://docs.python.org/3/library/sys.html#sys.version",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94236,
+    "url": "https://docs.python.org/3/library/sys.html#sys.gettrace",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94237,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_repr_style",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94243,
+    "url": "https://docs.python.org/3/library/sys.html#sys._jit.is_active",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94244,
+    "url": "https://docs.python.org/3/library/os.html#os.uname",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94247,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.max_exp",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94248,
+    "url": "https://docs.python.org/3/library/sys.html#sys.abiflags",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94252,
+    "url": "https://docs.python.org/3/library/sys.html#sys._current_exceptions",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94253,
+    "url": "https://docs.python.org/3/library/sys.html#sys.int_info.bits_per_digit",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94257,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.optimize",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94259,
+    "url": "https://docs.python.org/3/library/sys.html#sys.hash_info.width",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94261,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-prefix",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94262,
+    "url": "https://docs.python.org/3/library/sys.html#sys.excepthook",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94263,
+    "url": "https://docs.python.org/3/library/sys.html#sys.displayhook",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94267,
+    "url": "https://docs.python.org/3/library/sys.html#sys.copyright",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94269,
+    "url": "https://docs.python.org/3/library/sys.html#sys._emscripten_info.pthreads",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94270,
+    "url": "https://docs.python.org/3/library/sys.html#sys.hash_info.nan",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94272,
+    "url": "https://docs.python.org/3/library/sys.html#sys.int_info.sizeof_digit",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94273,
+    "url": "https://docs.python.org/3/library/sys.html#sys._getframemodulename",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94277,
+    "url": "https://docs.python.org/3/library/math.html#math.ulp",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94279,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.dig",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94281,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__stdout__",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94287,
+    "url": "https://docs.python.org/3/library/sys.html#sys.builtin_module_names",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94290,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/sys.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94292,
+    "url": "https://docs.python.org/3/library/sys.html#sys.setdlopenflags",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94293,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#c.PyInterpreterConfig.use_main_obmalloc",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94295,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.debug",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94298,
+    "url": "https://code.activestate.com/recipes/577504-compute-memory-footprint-of-an-object-and-its-cont/",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94302,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.run",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94305,
+    "url": "https://docs.python.org/3/library/sys.html#sys._getframe",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94308,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__stderr__",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94309,
+    "url": "https://docs.python.org/3/library/sys.html#sys.__displayhook__",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94310,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getdlopenflags",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94311,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.bytes_warning",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94313,
+    "url": "https://docs.python.org/3/library/os.html#os.name",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94316,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags.ignore_environment",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94318,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info.min",
+    "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 94322,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#global-conf-vars",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94323,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_AtExit",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94324,
+    "url": "https://docs.python.org/3/c-api/init_config.html#init-config",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94330,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsInitialized",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94338,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetCopyright",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94342,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_SetProgramName",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94343,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.PyUnstable_AtExit",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94359,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#c.PyInterpreterState",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94362,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_SetAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94368,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#interpreter-initialization-and-finalization",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94377,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawFree",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94378,
+    "url": "https://docs.python.org/3/c-api/datetime.html",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94381,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_SetupDebugHooks",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94383,
+    "url": "https://docs.python.org/3/c-api/threads.html",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94386,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetBuildInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94388,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsFinalizing",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94391,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#process-wide-parameters",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94395,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2008-5983",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94398,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPlatform",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94400,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#before-python-initialization",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94401,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_InitThreads",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94404,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.PySys_SetArgvEx",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94405,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_SetPythonHome",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94409,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_GetAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94410,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#cautions-regarding-runtime-finalization",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94413,
+    "url": "https://docs.python.org/3/library/atexit.html#module-atexit",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94429,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.PySys_SetArgv",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94430,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawCalloc",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94437,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#initializing-and-finalizing-the-interpreter",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94444,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#pre-init-safe",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94461,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyObject_SetArenaAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94462,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#global-configuration-variables",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94465,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94469,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetCompiler",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94477,
+    "url": "https://docs.python.org/3/c-api/init_config.html#init-from-config",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94480,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesMain",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94492,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/interp-lifecycle.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94494,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetVersion",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94497,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyObject_GetArenaAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94505,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#c.PyMutex_Lock",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94506,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#c.PyMutex_Unlock",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94507,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawRealloc",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 94698,
+    "url": "https://github.com/python/cpython/pull/104422",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94701,
+    "url": "https://github.com/rhettinger",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94702,
+    "url": "https://github.com/python/cpython/pull/104424",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94704,
+    "url": "https://peps.python.org/688",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94709,
+    "url": "https://github.com/python/cpython/issues/91896#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94710,
+    "url": "https://github.com/python/cpython/issues/91896#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94711,
+    "url": "https://github.com/python/cpython/pull/104294",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94712,
+    "url": "https://github.com/python/cpython/issues/91896#issue-1213932492",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 94713,
+    "url": "https://github.com/python/cpython/pull/102096",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
