@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 107,
+    "url": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf",
+    "title": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf",
+    "content": " \n1 \n \nBBC GROUP MODERN SLAVERY STATEMENT  \nFINANCIAL YEAR ENDED 31 MARCH 2025 \nThis statement is made pursuant to section 54 of the Modern Slavery Act 2015 and sets \nout the work undertaken during the financial year ending 31 March 2025 to further \nprevent, identify and address modern slavery across the organisation and its supply \nchains, as well as detailing future plans to continue to drive this work forward.  \n \nThe BBC has a moral and legal responsibility to prevent modern slavery from occurring \nin any form across our organisation and within our supply chains. The BBC understands \nmodern slavery to include forced labour, human trafficking, sexual exploitation, child \nlabour, criminal exploitation, and servitude; and acknowledge that any form of labour \nexploitation, if left present, has the ability to evolve into modern slavery. We are \ncommitted to ensuring our organisational practices and risk-management approach \nsupport our responsibility to ensure the BBC is proactively preventing modern slavery \nand addressing it should a case occur.  \n \nOUR ORGANISATION \nThe BBC is one of the largest public service broadcasting organisations in the world. Our \nmission, public purpose, commitments and governance are set out in the Royal Charter \nand we are regulated by Ofcom, the communications regulator. The BBC uses the income \nfrom the licence fee to serve a global audience by providing television, radio and online \nservices. As a public service broadcaster, the BBC consists of a portfolio of television \nservices; ten UK-wide radio stations; two national radio stations; digital services \nincluding BBC News, Sport, Weather, CBBC, CBeebies, iPlayer, BBC Sounds, BBC Red \nButton and our archive; and BBC World Service television, radio and online, which is \navailable in more than 40 languages.  \n \nAs well as being a public service broadcaster, the BBC has commercial subsidiaries which \noperate in the UK and internationally. BBC StudioWorks provides studios and post \nproduction services to TV broadcasters and production companies, and BBC Studios \nproduces and distributes world-class content here in the UK and globally. Over the last \nyear, BBC Studios continued their ethical trading programme, which focused on the risks \nwithin their Licensed Consumer Products business and is monitored through their key \nperformance indicators. More detail can be found in the BBC Studios Modern Slavery \nStatement 2024/25. \n \nThe BBC has operations globally, including international news bureaus in 68 cities across \n55 countries, which support our mission to educate and inform by delivering news and \nother services to the world. This includes the BBC’s international news World Service.  \n \n \n2 \n \nWe are committed to ensuring that everyone who works for and with us is treated fairly, \nis able to work in a safe environment and has their human rights respected and \nprotected. During 2024/25 there were approximately 22,000 people working for the BBC \naround the world and thousands more across our global supply chains.  \n \nOUR SUPPLY CHAIN \nOur supply chains are complex, extensive and cover a wide range of products, goods not \nfor resale, and services. Major categories of the supply chain include: \n \n• Corporate Services - including consultancies, travel, legal services, publications, \noffice supplies, audit and financial services \n• Independents – independent production companies (indies) \n• Logistics - including hotels, shipping, couriers and transport \n• Marketing - including market research, audience reporting services, license fee \ncollection, advertising \n• Production Resources - including costume and make-up, lighting, location \nservices, events and exhibitions, post-production, outside broadcast \n• Property and Workplace - including cleaning, catering, security, utilities, \nconstruction  \n• Technology and Broadcasting - including IT hardware and infrastructure, \ntransmission, technology services, professional production equipment \n \nFor the indies, we commission them to produce TV, audio and online content for the \nBBC. More information about the standards indies work to when commissioned by the \nBBC can be found on our website.  \n \nAPPROACH TO IDENTIFYING AND ASSESSING MODERN SLAVERY RISK \nWe have a risk-based approach to managing modern slavery. This is informed through a \nrisk assessment to identify and target ethical issues, including modern slavery, in our \norganisation and supply chains. The ongoing conflicts around the world, increasing \nimpacts of climate change, the global cost of living crisis amongst other external factors, \nare all contributing to the challenges being felt across our organisation and supply chain.  \n \nThe risk assessment utilises publicly available reports on modern slavery and human \nrights, industry knowledge, as well as in-house expertise, to identify where the priority \nareas are based on inherent risk. It assesses the likelihood and impact of modern slavery \noccurring. The results of the assessm",
+    "scrapedAt": "2026-05-10 03:41:46.738085"
+  },
+  {
+    "id": 106,
+    "url": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments",
+    "title": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "content": "Image source, Getty Images ByLucy Hooker Business reporter Published 23 April 2026 Updated 6 May 2026 The price of flights has been rising since the start of the conflict in the Middle East, a worry for anyone planning a summer holiday. Some airlines are also cutting back the number of flights they are operating, which could mean travellers facing changes to their plans. On Wednesday, analytics firm Cirium released data showing that airlines have cut 13,000 flights globally in May. However, the travel agents\u0027 trade body Advantage Travel Partnership said the cancellations were marginal overall - about 1% - and UK flights to summer sun destinations were unaffected. Which airlines are cancelling flights? Many airlines that serve the UK have said they plan to operate fewer flights. They include: KLM Air Canada Asiana Airlines Delta Airlines Lufthansa SAS The following companies have said they don\u0027t plan to change their schedules: British Airways owner IAG EasyJet Jet2Holidays What is happening to flight prices? While some airlines have cut back on the number of flights to save money, others have said they will start charging more or will put up charges for luggage. These include: Air France-KLM Indigo British Airways-owner IAG Pakistan International Airlines Thai Airways Turkish Airlines-Sun Express Virgin Atlantic Image source, Getty Images Can airlines change the price or cancel my flight after I have booked? Overall cancellations will be a very small proportion of the millions of flights in and out of the UK, says Rory Boland, travel editor at consumer publication Which?. Airlines are likely to target cancellations on routes where there are multiple flights a day to make it easier to put passengers on a different flight. Low-cost Spanish regional airline Volotea has come under fire for saying it will add a surcharge to tickets it has already sold and is being challenged by local consumer rights groups. An airline or tour operator could only raise the price post-sale if they had a specific caveat written into the terms and conditions, says independent consumer commentator Jane Hawkes, but it is not standard practice. However, when it comes to package holidays, tour operators can add up to 8% to the cost of your deal after you\u0027ve booked, based on a \"significant rise in fuel costs\", says Boland. But Which? found most operators were promising not to add surcharges this year. To play this video you need to enable JavaScript in your browser. This video can not be played Figure caption, Could jet fuel shortages affect your holiday plans? Why are airlines raising prices? A lot of the industry\u0027s jet fuel supplies pass through the Strait of Hormuz, which has effectively been closed to shipping since the start of March. Airlines are not physically running short of fuel currently, but there have been warnings of potential shortages by the summer if the conflict continues. In the meantime the squeeze on supply has pushed up the price of jet fuel sharply - it roughly doubled during March and the first half of April. Airlines agree deals in advance that help them lock in a lower price, but longer term they will be paying more for fuel. The biggest rises in fares have been on long-haul routes via Asia, that have been forced to adapt their flight paths to avoid flying over the Gulf. Flights from London to Melbourne in June now cost 76% more than last year and a flights to Hong Kong are up 72%, according to consultancy Teneo. Should I book my summer holiday now or wait? \"There\u0027s no right or wrong,\" says Jane Hawkes. It could pay to wait for last-minute deals, or you might want to seize the moment now. She doesn\u0027t expect prices to fall over the rest of the year, however, because airlines still need to cover the increased costs. She suggests being flexible over where and when you travel, including considering switching to road or rail or holidaying in the UK. Book insurance and check your policy covers you for travel disruption, she adds. And make sure you have a \"contingency pot\". Even if your holiday operator or airline is supposed to cover any disruption, you may need to pay upfront and claim it back later, which can take months, she warns. Spain\u0027s industry and tourism minister said on 27 April that people should buy airline tickets as soon as possible in case fares are increased to cover higher jet fuel costs. Jordi Hereu told Spanish newspaper Expansion: \"What we\u0027re recommending is that people buy their tickets now because it\u0027s true that (airlines) are currently using kerosene that was purchased some time ago, and therefore there\u0027s an element of price fluctuations involved.\" What are my rights if my flight is cancelled? If your flight is cancelled the airline must get you to your destination or offer a refund. If you are delayed more than a couple of hours the airline is required to provide food and hotel accommodation. Your rights if your flight is delayed or cancelled That is in ordinary circumstances. In cases of war, w",
+    "scrapedAt": "2026-05-10 03:41:41.043029"
+  },
+  {
+    "id": 105,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nhk30p",
+    "title": "Lives Less Ordinary - Strangers to coworkers to friends to...sisters? - BBC Sounds",
+    "content": "Close menu Use BBC.com or the new BBC App to listen to BBC podcasts, Radio 4 and the World Service outside the UK. Find out how to listen to other BBC stations Episode details World Service,·04 May 2026,·39 mins Strangers to coworkers to friends to...sisters? Lives Less Ordinary Play BookmarkBookmark SubscribeSubscribe Available for over a year Cassandra Madison and Julia Tinetti met working at the same bar in their 20s and were struck by how similar they looked. Their adoption records didn\u0027t match, but a surprise gift later revealed the extraordinary truth. From the moment they started chatting, Cassandra and Julia quickly realised they had lots in common: both had been adopted as babies, both grew up in Connecticut, and both had tattoos of the Dominican Republic flag. Their physical resemblance and connection was so strong that coworkers and customers joked they must be related, especially as they regularly mistook one for the other. Cassandra and Julia embraced the idea, even referring to themselves as sisters. They went so far as to compare adoption papers – but when the details didn’t match, the whole matter was put to bed. Years later, when Cassandra received a genetic test as a Christmas gift, she ended up finding her birth family. In the process, long-held secrets emerged and revelations which pointed back, unexpectedly, to Julia. Presenter: Asya Fouks Producer: Emily Naylor Lives Less Ordinary is a podcast from the BBC World Service that brings you the most incredible true stories from around the world. Each episode a guest shares their most dramatic, moving, personal story. Listen for unbelievable twists, mysteries uncovered, and inspiring journeys - spanning the entire human experience. Step into someone else’s life and expect the unexpected. Got a story to tell? Send an email to liveslessordinary@bbc.co.uk or message us via WhatsApp: 0044 330 678 2784 You can read our privacy notice here: https://www.bbc.co.uk/programmes/articles/5YD3hBqmw26B8WMHt6GkQxG/lives-less-ordinary-privacy-notice Programme Website Show less More episodes Cymraeg Gaeilge Gàidhlig BBC Sounds Help Contacts, Privacy and Information Help with Signing In Newsletter Explore the BBC",
+    "scrapedAt": "2026-05-10 03:41:39.6173"
+  },
+  {
+    "id": 104,
+    "url": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o",
+    "title": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "content": "Image source, PA Media Image caption, From above, it looks like the island is made from stone Published 5 May 2026 Scientists have made a surprising discovery on the Isle of Lewis, in the Western Isles of Scotland. They\u0027ve found that an ancient artificial island in a loch, which was thought to be made of stone, isn\u0027t exactly what it seems. Researchers say the island was actually built entirely on a platform made of wood, which was used to support the whole structure. Experts added that they believe it dates back to the early Bronze Age - and that the technique could have been used at other nearby sites throughout the Outer Hebrides. More like this 72-million-year-old dinosaur egg nests discovered Published 7 days ago Earliest poem written in English has been discovered Published 30 April Ancient poo gives scientists a history lesson in seabirds Published 28 April What did experts discover on the Isle of Lewis? Image source, PA Media The discovery was made by experts, led by scientists from the University of Southampton and the University of Reading. From above, the Neolithic island - also known as a crannog - in Loch Bhorgastail appears to be made of stone. Crannogs are small artificial islands that are typically thousands of years old, and hundreds of them exist in Scotland\u0027s lochs. While it was known that there was some wood underneath this island, the extent of it was not discovered until excavation and analysis started. Using 3D computer imagery, researchers found that timber formed the basis of the structure. Archaeologists uncovered a layered wood and brushwood construction under the stone, and they also made another unexpected revelation. Image source, PA Media They found hundreds of pieces of Neolithic pottery submerged in the surrounding water. University of Southampton archaeologist Dr Stephanie Blankshein explained: \"While we still don\u0027t know exactly why these islands were built, the resources and labour required to construct them suggests not only complex communities capable of such feats, but also the great significance of these sites.\" She added: \"A lot of work went into it, we\u0027ve had a lot of really good dates come out of it, and all the dates are aligning to about 3500 to 3300 BC across all the sites we\u0027re seeing. \"So we know that this was an activity that wasn\u0027t just taking place at this site, but other sites nearby and even on other islands throughout the Outer Hebrides.\" Watch Newsround Watch Newsround. VideoWatch Newsround Watch Newsround - signed and subtitled. VideoWatch Newsround - signed and subtitled Top stories Elections in Wales, Scotland and England: What happened? Six-year-old draws 100 animals for Sir David Attenborough\u0027s 100th birthday! Comments 9 Schools in Mexico to finish early for World Cup and \"extraordinary heat wave\" Comments 5 Quiz of the Week: Have you been following this week\u0027s news? How is sewage and farming waste affecting underwater life? The robot monk in South Korea and other bots with jobs! Comments 6 All you need to know for Strictly 2026 Comments 13",
+    "scrapedAt": "2026-05-10 03:41:38.174764"
+  },
+  {
+    "id": 103,
+    "url": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo",
+    "title": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "content": "Image caption, Maison du Pilates in Bournemouth opened in 2025 ByCharlotte Coles, South of England and Fern Buckley, Reporting fromBournemouth Published 4 May 2026 Calls have been made for Reformer Pilates to be formally regulated, as the boom in the industry has led to a shortage of qualified instructors. Statistics show that the amount of Reformer Pilates businesses in the UK rose ten-fold, external by between 2024 and 2025. But the rise has led to intensive in-house training being run to meet demand, with teachers\u0027 association Pilates Foundations warning, external that classes are \"potentially dangerous in the hands of someone who has had a short period of training\", and that there have already been documented cases of injuries. Rebecca Hosking, an instructor at Maison du Pilates in Bournemouth, believes that more should be done to regulate the industry. Image caption, Rebecca Hosking teaches Reformer Pilates at Maison du Pilates in Bournemouth Reformer Pilates focuses on controlled movement, targeting muscles you might not even know you had. Although the craze is high right now, Reformer was invented by Joseph Pilates during World War I, when he adapted hospital beds with springs to help rehabilitate patients. But despite Reformer Pilates becoming increasingly popular, with celebrities such as Ed Sheeran taking up the exercise, the industry is not formally regulated. Nathan Benjamin-Smith, owner of Reformer Pilates Bicester in Oxfordshire, said: \"From my perspective, it\u0027s less about a shortage of instructors, and more about the rapid growth of the industry outpacing the availability of highly experienced, well-trained professionals. \"As demand has increased, there\u0027s also been a rise in shorter training courses, which can vary significantly in depth and quality.\" Hosking says \"there is always evidence evolving and changing\" and that \"you never stop training as any exercise professional\". \"There\u0027s so many training providers now, you seem to be able to get a training in a very short amount of time,\" she said. \"I was definitely trained in an era where it was quite a remedial approach to teaching Pilates. \"I feel that with the increased amount of reformer studios it\u0027s more of maybe an athletic approach which is probably coming over from across the waters... there\u0027s a lot of changes in the industry and I definitely feel that there\u0027s space for some more control and just to keep people safe.\" To play this video you need to enable JavaScript in your browser. This video can not be played Figure caption, Reformer pilates - what is it all about? Nicki Fussell, who teaches Reformer Pilates at The Barns in Reading, as well as Barnsgrove Private Members Club and Optimum Sports Injury Clinic in Hampshire, said she is concerned that people will get injured if they are being taught by an under-qualified instructor. \"I\u0027m a big believer in Pilates for everyone, but I would hope, which is what you do see, an inexperienced instructor often then goes and retrains with a good organisation because they feel out of their depth or they get told what to teach,\" she said. \"If they don\u0027t have the in-depth knowledge and they haven\u0027t got Pilates in their body, it\u0027s very hard to embrace it and to love it.\" Image source, Nicki Fussell Image caption, Nicki Fussell has been teaching Pilates since 2001 Fussell took her exams in Polestar over a two-year course, which involved more than 200 hours of work, and has since taught more than 10,000 classes. She said it would be \"amazing\" if the industry could introduce minimum training standards and added that every client should check what qualifications their instructor has. Image caption, Jessica Rowe says she has made friends through doing Reformer Pilates Done safely, Reformer Pilates can bring significant benefits, including improved posture, increased flexibility, and full-body muscle toning. Jessica Rowe, who has been doing Reformer Pilates consistently for nearly a year, said as well as her strength improving, she has also built good friendships. \"It\u0027s the community here... it\u0027s nice to have a dedicated class that is so focused around your body for women,\" she added. Get in touch Your Voice Contact form Contact form Related topics Berkshire Exercise Health Wellbeing Fitness Dorset Hampshire \u0026 Isle of Wight More on this story Travelling the world as Ed Sheeran\u0027s personal trainer Published 10 October 2025 Pilates studio approved despite parking concerns Published 15 January Related links Pilates Foundation Top stories Live. Challenge Starmer by Monday or I will, Labour MP tells cabinet ministers 23655 viewing24k viewing How Reform won votes from Swansea to Sunderland Published 2 hours ago Labour lose Lambeth and Lewisham as Green support surges in London More to explore The UK is set for a staycation summer - and there are plenty of hidden gems Anti-work anthems, Boy George and controversial lyrics: A guide to all 35 Eurovision songs Move over matcha. Hojicha is coming to a cafe near you \u0027I",
+    "scrapedAt": "2026-05-10 03:41:36.709892"
+  },
+  {
     "id": 102,
     "url": "https://www.bbc.co.uk/programmes/p004j5sw",
     "title": "BBC Two - Life on Earth, Life in the Trees, David Attenborough encounters gorillas",
@@ -712,26 +747,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 103,
-    "url": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
-  },
-  {
-    "id": 104,
-    "url": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
-  },
-  {
-    "id": 105,
-    "url": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
-  },
-  {
-    "id": 106,
-    "url": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
-  },
-  {
-    "id": 107,
-    "url": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf"
   },
   {
     "id": 108,
@@ -26219,10 +26234,381 @@ window.searchData = [
     "id": 15577,
     "url": "https://www.bbc.co.uk/programmes/p00dzfn6",
     "parentUrl": "https://www.bbc.co.uk/programmes/p004j5sw"
+  },
+  {
+    "id": 15584,
+    "url": "https://www.pilatesfoundation.com/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15586,
+    "url": "https://www.bbc.co.uk/news/topics/c77jz3mdmwvt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15587,
+    "url": "https://www.bbc.co.uk/news/articles/cp802pzx609o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15596,
+    "url": "https://www.bbc.co.uk/news/topics/cgemke1zwzrt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15598,
+    "url": "https://www.bbc.co.uk/news/topics/clm1wxp534pt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15601,
+    "url": "https://www.pilatesfoundation.com/are-reformer-classes-safe",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15602,
+    "url": "https://www.bbc.co.uk/news/articles/ckgqeqy4xdwo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15614,
+    "url": "https://hrnews.co.uk/from-pilates-to-pottery-these-are-the-businesses-brits-are-starting-as-self-employment-rises/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "id": 15620,
+    "url": "https://www.bbc.co.uk/newsround/articles/c5y8jpzyvqjo",
+    "parentUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "id": 15622,
+    "url": "https://www.bbc.co.uk/newsround/articles/czjwjx9dgeeo",
+    "parentUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "id": 15630,
+    "url": "https://www.bbc.co.uk/sounds/play/p0nhk30p#",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
+  },
+  {
+    "id": 15634,
+    "url": "https://www.bbc.co.uk/programmes/p0nhk30p",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
+  },
+  {
+    "id": 15635,
+    "url": "https://www.bbc.co.uk/sounds/series/p02s5rx7",
+    "parentUrl": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/b27c/live/3ee8b780-3f23-11f1-80a9-03674e4a073c.jpg",
+    "alt": "Young woman in red checked shirt rests her chin on her hand. She is sitting in an airport waiting room with a red case next to her",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/a344/live/a1a2f3d0-328b-11f1-9fac-89e41bab67f2.jpg",
+    "alt": "Young woman wearing blue jeans, a grey trenchcoat and white trainers sits on her suitcase at an airport, clutching her passport and ticket ",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
+    "alt": "Eboni a woman in her 30s with curly brown hair standing above The Minack Theatre which is carved into the cliff face in Cornwall and covered in luscious green gardens with a view across turquoise sea",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/1df6/live/5bfd3b00-4a1f-11f1-ac78-2112837ce2aa.png",
+    "alt": "A montage of Eurovision hopefuls Cosmó, Felicia, Boy George, Antigoni and Lion Ceccah, against the official colours of the 2026 contest",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/53a9/live/e2069670-4b77-11f1-afc3-cfcf15dbebde.jpg",
+    "alt": "A woman with long brown hair in a grey coat smiles at the camera as she holds up a brown drink in a plastic cup with a straw. She is sat in front of a plain grey painted wall with a wooden plank.",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b857/live/074b0f30-4abd-11f1-aa18-a5969e596c8c.jpg",
+    "alt": "Krista Scelza is wearing a white cropped top, which reads \"Extreme babysitting\",  to show her pregnant belly. To left is a sign on the wall which reads \"Let\u0027 cook with love\" and a baking tray with flour with the words \"Half-baked\". ",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/d77e/live/5155c6a0-4960-11f1-8cde-350b393d70a2.jpg",
+    "alt": "Large curved bronze sculpture by Henry Moore on a plinth, surrounded by open grass and trees in bright sunlight",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/39dc/live/2b3a9040-4947-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A young woman in a black hat and sunglasses is leaning on a shelf inside a bird hide. She has a set of binoculars hanging around her neck. There is moorland visible in the background. ",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Which airlines are cancelling flights to UK over jet fuel shortages? - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cr41yel6v4eo#comments"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dunknown\u0026x1\u003d[]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[sounds]\u0026x12\u003d[]",
+    "alt": "",
+    "pageTitle": "Lives Less Ordinary - Strangers to coworkers to friends to...sisters? - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/400x400/p0ltmj9y.jpg",
+    "alt": "",
+    "pageTitle": "Lives Less Ordinary - Strangers to coworkers to friends to...sisters? - BBC Sounds",
+    "pageUrl": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/0ec2/live/1ada6260-4871-11f1-b010-8f8612d9ae2e.jpg",
+    "alt": "An artificial island built from large white stones in a Scottish loch - captured from above.",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/b05a/live/e3d69030-4871-11f1-b010-8f8612d9ae2e.jpg",
+    "alt": "Scientists excavating underwater at Loch Bhorgastail on the Isle of Lewis.",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/a266/live/fb2edfd0-4876-11f1-b010-8f8612d9ae2e.jpg",
+    "alt": "Fragments of Neolithic pottery found on the island. ",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ed21/live/98ba1ab0-4b7b-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Shanequa in the studio",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/22d9/live/a8ac9d70-23f1-11ef-a13a-0b8c563da930.jpg",
+    "alt": "Newsround BSL logo with hands",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/ed6a/live/be52f990-4b03-11f1-88b5-8b9134afe1e6.jpg",
+    "alt": "election rosettes",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f575/live/cba5e1c0-4ab8-11f1-aa18-a5969e596c8c.png",
+    "alt": "Max showing his 100th drawing of a platysaurus attenboroughi, also known as Attenborough\u0027s flat lizard. ",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2d93/live/db784440-4aee-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "girl supporting mexico at 2022 world cup",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/594e/live/dd619a20-4aa0-11f1-b55d-0f258dce1735.png",
+    "alt": "Bakayo Saka points towards the arsenal logo on his red and white shirt, the Newsround quiz of the week logo is to his left",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/965f/live/d362c780-4891-11f1-b79c-a724f7254ef0.jpg",
+    "alt": "A small orange-coloured shore crab - Carcinus maenas - sat on a blade of seagrass in one of the research sites off the Orkney Islands in Scotland.",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5e2c/live/c219a3c0-4a2d-11f1-bfb3-af42b3144659.jpg",
+    "alt": "robot monk praying",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5896/live/74b86d80-4949-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "From left to right Craig Revel Horwood, Motsi Mabuse, Head Judge Shirley Ballas and Anton Du Beke can be seen standing in front of a blue background with glitter in the air around them. ",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Archaeologists uncover ancient island mystery on Isle of Lewis - BBC Newsround",
+    "pageUrl": "https://www.bbc.co.uk/newsround/articles/c4g872xel26o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/7657/live/382b7450-44b4-11f1-ac78-2112837ce2aa.png",
+    "alt": "A Reformer Pilates studio with seven machines, each one being used by a woman, and a female instructor stood in the middle of the room",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/541c/live/4a73c100-44b7-11f1-b55d-0f258dce1735.png",
+    "alt": "A woman stood in front of a wall with a sign saying \u0027Pilates first, champagne later\u0027, looking next to the camera",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/2015/live/d7c46a70-4550-11f1-b55d-0f258dce1735.png",
+    "alt": "A woman smiling into the camera stood against a white backdrop",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/df14/live/979ac880-455b-11f1-bd52-e755d604ece4.png",
+    "alt": "A woman in a pilates studio smiling next to the camera",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/506/cpsprodpb/c0fc/live/c42d9b60-a444-11f0-8a54-1ddc6d4d2c2f.jpg",
+    "alt": "Ed Sheeran attends an event in New York on 24 September 2025. He is wearing camouflage trousers and a white T-shirt and has tattoos on his arm. He is holding a microphone and sitting on a box and talking. He has a bottle of water next to him.",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/2873/live/95ab0b40-f1fd-11f0-a2ce-b77b236ada53.png",
+    "alt": "Megan Smith is standing in her pilates gym. She is wearing black exercise clothing and has long blonde hair. ",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
+    "alt": "Eboni a woman in her 30s with curly brown hair standing above The Minack Theatre which is carved into the cliff face in Cornwall and covered in luscious green gardens with a view across turquoise sea",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/1df6/live/5bfd3b00-4a1f-11f1-ac78-2112837ce2aa.png",
+    "alt": "A montage of Eurovision hopefuls Cosmó, Felicia, Boy George, Antigoni and Lion Ceccah, against the official colours of the 2026 contest",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/53a9/live/e2069670-4b77-11f1-afc3-cfcf15dbebde.jpg",
+    "alt": "A woman with long brown hair in a grey coat smiles at the camera as she holds up a brown drink in a plastic cup with a straw. She is sat in front of a plain grey painted wall with a wooden plank.",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b857/live/074b0f30-4abd-11f1-aa18-a5969e596c8c.jpg",
+    "alt": "Krista Scelza is wearing a white cropped top, which reads \"Extreme babysitting\",  to show her pregnant belly. To left is a sign on the wall which reads \"Let\u0027 cook with love\" and a baking tray with flour with the words \"Half-baked\". ",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/d77e/live/5155c6a0-4960-11f1-8cde-350b393d70a2.jpg",
+    "alt": "Large curved bronze sculpture by Henry Moore on a plinth, surrounded by open grass and trees in bright sunlight",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/39dc/live/2b3a9040-4947-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A young woman in a black hat and sunglasses is leaning on a shelf inside a bird hide. She has a set of binoculars hanging around her neck. There is moorland visible in the background. ",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Calls for Reformer Pilates regulation amid boom - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp9p5m00nxgo"
+  },
   {
     "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dclip::unknown\u0026x1\u003d[urn:bbc:pips:p004j5sw]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[player-clip]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[programmes_ps]\u0026x12\u003d[IPLAYER]",
     "alt": "",
