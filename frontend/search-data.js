@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 533,
+    "url": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/",
+    "title": "Using Python to make unstable APIs reliable | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python to make unstable APIs reliable Written by Cédric Blom, Sales Spirit Introduction Sales Spirit is the company behind several publisher websites, such as Prijsvergelijken.nl: the largest telecom comparison website in the Netherlands. Important for our success is having a complete and flawless product offering on our websites. To achieve this goal, we work closely together with many business partners. Maintaining different and varying product offerings from business partners is a constant struggle. Automating the maintenance using partner APIs is an important aspect of our work at Sales Spirit. These APIs vary widely in terms of reliability, performance, protocols and language, completeness, etc. At the same time we like to offer our clients reliable, good performing and complete websites. It wasn’t until we incorporated Python in our workflow before we were fully up for this challenge. Python has helped us to built an API platform that does not only deliver output of great quality, but is very readable and maintainable as well. Building an API platform with Python We developed a tailor-made API platform at Sales Spirit, to deal with the APIs as provided by our business partners. The platform has many use cases, one such use case is our postcode check. Clients can fill in their postcode and house number at our broadband compare page, to check for broadband availability at their home address. Under the hood we check the availability of broadband at several broadband providers using their APIs. In this specific use case performance and reliability are very important, since we are dealing with a live service. The APIs themselves do not always offer this. We have ensured the performance and reliability by organizing our API platform in a master – worker configuration. The workers run concurrently, each dealing with one API call. The workers are also sandboxed, such that the API platform remains stable should anything happen to a worker. Another advantage of having the workers sandboxed is that they can easily be killed. We can therefore put workers on a time bound, this helps to ensure that our platform can deliver within a certain timespan. The master – worker configuration was implemented using Python Threads. As opposed to other thread solutions, Python threads are really easy to use. Most operations in Python have guaranteed atomicity, due to the Global Interpreter Lock (GIL). This has saved us a tremendous amount of time while ensuring thread safety for our workers. As a bonus, the infrastructure for creating Python Threads is well organized and documented and is incorporated in Python’s standard library. To finish off our API platform, we had to come up with a solution for making processing and collecting API results easy. For the processing part we ended up writing a library, containing a bunch of data processing tools. Most tools are essentially abstracted versions of popular Python libraries, entirely tailored to our needs. For example, our tool for generating SQL queries from API results is entirely based on SQLAlchemy. Python really shines when it comes down to writing powerful and easy to use abstractions of otherwise complicated operations. We designed a special thread safe output class for collecting API results. The class is passed to each worker as an object. Workers can write results to the object without having to worry about how all data eventually comes together. We used Python lists and dictionaries as our basic building blocks for developing the output class. Thus most of the heavy lifting for making the output class thread safe came out of the Python box. The results written to the output class are shared with the master thread. It is the master’s job to bring the individual results together and to generate a final output. The master gets its instructions from a configuration file. The configuration file may contain simple instructions, such as outputting all results as a list. It is also possible to setup a repeat instruction for failed API requests. Using instructions such as these may improve the quality of the output, but has an impact on performance. For live services such as the postcode check, this may not be the best approach for improving on output quality and completeness. Instead, we fill in the blanks using the output from workers that were successful. With our API platform, this advanced post processing technique is all setup with just a few lines in the configuration file. Conclusion Important for the success of Sales Spirit is having a complete and flawless product offering on our websites. The pages are often automatically populated with data, using partner APIs. Ensuring the quality of websites using these APIs is a real challenge. We used Python to develop a tailor-made API platform that deals with",
+    "scrapedAt": "2026-05-10 04:22:57.444114"
+  },
+  {
+    "id": 531,
+    "url": "https://www.python.org/events/python-events/locations/1491/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events PyCon Italia 2026 27 May 2026 – 30 May 2026 Bologna, Italy Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-05-10 04:22:52.871181"
+  },
+  {
+    "id": 529,
+    "url": "https://www.python.org/events/python-events/2171/",
+    "title": "PyCon DE 2027 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon DE 2027 Heidelberg, Germany From 20 April through 22 April, 2027 PyCon DE 2027 ← Previous XtremePython 2026 in Online Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Heidelberg, Germany PyCon DE 2027 enterPy (cancelled) DjangoCon Europe 2018",
+    "scrapedAt": "2026-05-10 04:22:41.68834"
+  },
+  {
+    "id": 528,
+    "url": "https://2026.pycon.it/en",
+    "title": "PyCon Italia 2026 | PyCon Italia",
+    "content": "Bologna, May 27 - 30, 2026 We welcome you to PyCon Italia 2026! Conference Breakdown Wednesday, May 27: Open Learning Day [Free Event] From Thursday, May 28 to Saturday, May 30: Conference (Talks, Tutorials, social events) [Tickets] Want to know more? Visit our FAQs section Program May 27 Wednesday May 28 Thursday May 29 Friday May 30 Saturday 11:05 - 13:05 Italian, Beginner Riccardo Figliozzi Tigella data-driven: come scegliere la tigella perfetta con l\u0027AI. 12:25 - 12:55 English, Beginner Giulia Scalaberni Useful, Broken, Beautiful: Ikigai, Kintsugi and sustainable work 11:05 - 11:35 English, Intermediate Bilge Yücel Most AI Agents Are Broken. Let’s Fix That 11:05 - 11:35 English, Intermediate Mahe Iram Khan How to mix conda and pip without causing “environmental” damage Full Program Keynoters May 28English Django has a marketing problem: debunking the myths that won\u0027t die Sarah Boyce May 29English From “Fast Enough” to “Fast by Design”: The Evolution of CPython Performance Diego Russo May 28English Stop Being a Generalist: The Small Model Revolution Dawn Wages May 29English Open-source Multimodal AI MERVE NOYAN May 30English Durable Agents: long running AI workflows in a flakey world Samuel Colvin Keynoters Social Events PyCon Italia non è solo codice - è soprattutto le persone! Join us for the PyDrink on Wednesday evening: drinks, cured meats, and crescentine from Lab16, in the heart of Bologna. And don\u0027t miss the PyDinner on Thursday evening at the Savoia Hotel Regency for an Italian dinner with old and new acquaintances. The best conversations at PyCon happen outside of the talks! Social Events Speakers We have published the list of speakers for PyCon Italia! Speakers Tickets Student This reduced price is available for all full-time or unemployed individuals who have recently graduated. €60 Students Tickets Personal This ticket is available for all individuals. €300 Late Tickets Business This ticket is for companies and business purchases! €400 Late Tickets Sponsor Us With more than 1000 attendees, you can utilize this opportunity to gain recognition for your brand, meet highly qualified professionals, and so much more! Why not ask your organization to sponsor us? Learn More Gold Bronze Patron Startup Kinship Media Partners Follow us on #PyConIT",
+    "scrapedAt": "2026-05-10 04:22:38.21568"
+  },
+  {
+    "id": 527,
+    "url": "https://www.python.org/events/python-events/1873/",
+    "title": "PyCon Italia 2025 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon Italia 2025 Bologna, Italy From 28 May through 31 May, 2025 PyCon Italia 2025 Explore events -- Change your date range More events at Bologna, Italy PyCon Italia 2026 PyCon Italia 2025",
+    "scrapedAt": "2026-05-10 04:22:31.534278"
+  },
+  {
     "id": 526,
     "url": "http://docs.python.org/library/markup",
     "title": "Structured Markup Processing Tools — Python 3.14.5rc1 documentation",
@@ -3647,26 +3682,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 527,
-    "url": "https://www.python.org/events/python-events/1873/"
-  },
-  {
-    "id": 528,
-    "url": "https://2026.pycon.it/en"
-  },
-  {
-    "id": 529,
-    "url": "https://www.python.org/events/python-events/2171/"
-  },
-  {
-    "id": 531,
-    "url": "https://www.python.org/events/python-events/locations/1491/"
-  },
-  {
-    "id": 533,
-    "url": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/"
   },
   {
     "id": 534,
@@ -96150,10 +96165,649 @@ window.searchData = [
     "id": 71402,
     "url": "https://docs.python.org/3/library/xml.sax.handler.html#lexicalhandler-objects",
     "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71403,
+    "url": "https://2025.pycon.it/en",
+    "parentUrl": "https://www.python.org/events/python-events/1873/"
+  },
+  {
+    "id": 71407,
+    "url": "https://2026.pycon.it/en/keynotes/from-fast-enough-to-fast-by-design",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71408,
+    "url": "https://bari.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71409,
+    "url": "https://pyre.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71410,
+    "url": "https://www.pytech.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71411,
+    "url": "https://www.soprasteria.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71412,
+    "url": "https://www.linkedin.com/company/pyzena/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71413,
+    "url": "https://materatech.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71414,
+    "url": "https://www.bloomberg.com/company/values/tech-at-bloomberg/python/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71415,
+    "url": "https://catania.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71416,
+    "url": "https://shetechitaly.org/eventi/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71417,
+    "url": "https://2026.pycon.it/en/event/useful-broken-beautiful-ikigai-kintsugi-and-sustainable-work",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71418,
+    "url": "https://www.nephila.digital/it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71419,
+    "url": "https://2026.pycon.it/tickets",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71420,
+    "url": "https://2026.pycon.it/en/event/how-to-mix-conda-and-pip-without-causing-environmental-damage",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71421,
+    "url": "https://2026.pycon.it/en/keynotes/django-has-a-marketing-problem-debunking-the-myths-that-wont-die",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71422,
+    "url": "https://2026.pycon.it/en/sponsor",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71423,
+    "url": "https://marche.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71424,
+    "url": "https://pycon.it/speakers",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71425,
+    "url": "https://www.appsignal.com/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71426,
+    "url": "https://www.meetup.com/it-IT/pycampania/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71427,
+    "url": "https://cargoful.tech/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71428,
+    "url": "https://www.facebook.com/pythonitalia",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71429,
+    "url": "https://www.jetbrains.com/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71430,
+    "url": "https://dvisionlab.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71431,
+    "url": "https://schroedinger-hat.org/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71432,
+    "url": "http://www.gogenerali.com",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71433,
+    "url": "https://2026.pycon.it/en/keynotes/duable-agents-long-running-ai-workflows-in-a-flakey-world",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71434,
+    "url": "https://www.linkedin.com/company/pycon-italia",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71435,
+    "url": "https://pythonbiellagroup.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71436,
+    "url": "https://2026.pycon.it/en/keynotes/open-source-multimodal-ai",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71437,
+    "url": "https://paradigma.me/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71438,
+    "url": "https://pydantic.dev/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71439,
+    "url": "https://kraken.tech/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71440,
+    "url": "https://pisa.dev/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71441,
+    "url": "https://venice.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71442,
+    "url": "https://www.cometocode.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71443,
+    "url": "https://linkeurope.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71444,
+    "url": "https://2026.pycon.it/faqs",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71445,
+    "url": "https://djangogirls.org/pt/bologna/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71446,
+    "url": "https://pycon.it/social-events",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71447,
+    "url": "https://venice.pydata.org/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71448,
+    "url": "https://torino.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71449,
+    "url": "https://2026.pycon.it/en/keynoters",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71450,
+    "url": "http://milano.python.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71451,
+    "url": "https://cassandra.app/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71452,
+    "url": "https://www.meetup.com/it-it/pydata-roma-capitale/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71453,
+    "url": "https://2026.pycon.it/en/event/most-ai-agents-are-broken-lets-fix-that",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71454,
+    "url": "https://www.instagram.com/pycon.it",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71455,
+    "url": "https://2026.pycon.it/en/schedule",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71456,
+    "url": "https://pescara.python.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71457,
+    "url": "https://shop.strawberry.rocks/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71458,
+    "url": "https://2026.pycon.it/en/keynotes/stop-being-a-generalist-the-small-model-revolution",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71459,
+    "url": "https://t.me/pyroma",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71460,
+    "url": "https://www.py4ai.com/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71461,
+    "url": "http://www.fabiolamanna.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71462,
+    "url": "https://pointerpodcast.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71463,
+    "url": "https://www.theredcode.it/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71464,
+    "url": "https://2026.pycon.it/en/event/tigella-data-driven-come-scegliere-la-tigella-perfetta-con-lai",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71465,
+    "url": "https://www.europython-society.org/",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71466,
+    "url": "https://social.python.it/@pycon",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71467,
+    "url": "https://twitter.com/pyconit",
+    "parentUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "id": 71469,
+    "url": "https://www.python.org/events/python-events/903/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 71470,
+    "url": "http://pycon.de/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 71471,
+    "url": "https://www.python.org/events/python-events/2142/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 71472,
+    "url": "https://www.python.org/events/python-events/locations/764/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 71473,
+    "url": "https://www.python.org/events/python-events/640/",
+    "parentUrl": "https://www.python.org/events/python-events/2171/"
+  },
+  {
+    "id": 71481,
+    "url": "https://www.google.com/calendar/ical/j7gov1cmnqr9tvg14k621j7t5c@group.calendar.google.com/public/basic.ics",
+    "parentUrl": "https://www.python.org/events/python-events/locations/1491/"
+  },
+  {
+    "id": 71491,
+    "url": "https://www.prijsvergelijken.nl/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-make-unstable-apis-reliable/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/6dc1cb80-e5b2-4531-a080-7ccb44aa7aca.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/3b1df081-6d7c-4610-af14-6c86da1ba8e7.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/3898994a-d396-4054-b4dd-ad3f926bd34e.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/2e490172-515e-4500-bf43-ede861be4954.jpg",
+    "alt": "Speaker",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/7b5b9f4c-113a-4c5f-a72c-c6b135f6711c.jpg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/d852e4ed-ce4d-443d-b8ff-775a6fb2090d.jpeg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/3f18f8bc-8895-4f3a-a8e2-00a19ab63645.jpeg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/aed3e423-41e8-4c82-9c18-dd4355bd1643.png",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/files/participant_avatar/07e0d19b-76cb-4eca-a936-f622f766c02a.jpg",
+    "alt": "",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Generali_LOGO_LOCK_UP-ritagliato/55986ddfdc0f25fa5d35d4ccf18cb178.png",
+    "alt": "Generali",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/cassandra-logo/05c5c94324772079abb598dd168b4cd7.png",
+    "alt": "Cassandra",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/nephila-logo-blu-1024/91557c04f5ac11e14c3412e71182014b.png",
+    "alt": "Nephila",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Kraken_Logo_2022/84d1c4634056284ca5798b50ba11c077.png",
+    "alt": "Kraken",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/BBGEngineering_black/c42f4a5a5a9f0c768360b0f0c1a899a9.png",
+    "alt": "Bloomberg",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/SOPRASTERIA_logo_CMJN_exe_no30M8G/5ada1abea4ac81ad1f7829f8f16d7029.png",
+    "alt": "Sopra Steria",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_pytech_r1_stampa/133853d7b643c0f90c8e5e482d6ca967.png",
+    "alt": "PyTech",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/FabioLamannaLogo-1_1/07c92eb5bf0f26ce132f01f6f59eff51.png",
+    "alt": "Fabio Lamanna",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/output-onlinepngtools/c0b753da6450c23ee79a97639fbc0b49.png",
+    "alt": "Pydantic",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/dvision_hori_light/1ebc3bc6cb8d84e310bc897d8365aae0.png",
+    "alt": "Dvision Lab",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PNG_Logo_horizontal_dark_NEW/89d966a295585de6e5cf71bf166a930c.png",
+    "alt": "Cargoful",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/marchio_on_dark-paradigma/b6219ec6d49a7521c2c7c1b1a471ad5f.png",
+    "alt": "Paradigma",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/EPS-Logo-v3-300px-round-alpha-1/acd53699cf16f63adff35502225cc598.png",
+    "alt": "EuroPython Society",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Appsignal-original-azure_Gd8QSZi/5a0d181d303eeda37b6e96168cd037d9.png",
+    "alt": "AppSignal",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/jetbrains_jYR78eG/b12309ee70637191dc84c3ddf011f7c7.png",
+    "alt": "JetBrains",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Link_IT_Europe_Logo/4269147db9999ad4206b73c738c7013c.png",
+    "alt": "Link IT Europe",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_strawberry/d8f1e5d7f942a4b4a2d7d7b2a5fe946d.png",
+    "alt": "Strawberry",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PBG_logo_B_3300x_1/f7d01cbe0912f44bc6b46fc55229a0c4.png",
+    "alt": "Python Biella Group",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PyRE_logo_trasparent_R8J7lRs/038abea0a2db11567e70c2500ca77dcd.png",
+    "alt": "PyRE",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo_PyMI/120858b0732bc0a1cdd353f0cd91376d.png",
+    "alt": "Python Milano",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/theRedCode_logo_xl/2a2399f0297f8a78c66ba96af5877c30.png",
+    "alt": "theRedCode",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_-_background_-_rounded_-_flat_background.0157aeb9/bd5e8a7231dc6c1bb03b5ee501f54266.png",
+    "alt": "Schrödinger Hat",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/PLUG_logo_logo_transparent/0317be60b2d8061165d0de72b2ce8054.png",
+    "alt": "Come to Code",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/LOGO_FULL/4a00b8ef35064f2e8380e1ee0e779763.png",
+    "alt": "PointerPodcast",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo-very-h-res/3fc3459d3c088293a86f8f740535e164.png",
+    "alt": "She Tech",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pisadev/52a80ea2efece100f3f7a27aaa02bd46.png",
+    "alt": "pisa.dev",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/django_girls_italy_magenta/71c2e7b569da6129fec6ca1adf96a064.png",
+    "alt": "Django Girls Italia",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pybari-black/05add9db317c3442e3687997825511c2.png",
+    "alt": "PyBari",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/python-pescara-logo/6852f2c65b4102436b570f310df88a15.png",
+    "alt": "Python Pescara",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/LogoPyRoma/60743486dcfb37d6c2c1f0e5f4c723c6.png",
+    "alt": "PyRoma",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo/fad51e08b67179cd8266eab9ba5f8730.png",
+    "alt": "Python Torino",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/python-marche-title1/068b20ebd584cbc3244b43bfb2eb2e50.png",
+    "alt": "Python Marche",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pyct-logo1/4233ff9e0ecf526eb9f96e508948e4fe.png",
+    "alt": "Python Catania",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/logo_0uLYy82/845f750a87d25b451010baf35b815e99.png",
+    "alt": "PyCampania",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/pydata_roma_capitale_logo_2000x857px/43d611a93e2d8d71296bfe0a0ba90f01.png",
+    "alt": "PyData Roma Capitale",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/99ec-1140o400o3-NibR2i48H8yVCaLCKjHe4G/da7ae794f69ff261050392cfb4a242b0.png",
+    "alt": "PyData Venice",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/93e6-1140o400o3-ErxQ6jqKoURTaUjbfakNLa/9580710171b41a48d6a7f4b86ba117a8.png",
+    "alt": "PyVenice",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Logo_Horizontal/6fa2de155d9e9ebdb1862c2fd0b2f17d.png",
+    "alt": "Matera Tech",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/image/911c5cf1dc4f7ef17ecd3cd992ecc712.png",
+    "alt": "PyZena",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
+  {
+    "src": "https://cdn.pycon.it/CACHE/images/sponsors/Py4AI/2f65bf4e45b68cdcbcc94bb431851001.png",
+    "alt": "Py4AI",
+    "pageTitle": "PyCon Italia 2026 | PyCon Italia",
+    "pageUrl": "https://2026.pycon.it/en"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
