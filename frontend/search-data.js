@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 701,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy",
+    "title": "Policies — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 09, 2026 (15:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-10 04:36:41.339984"
+  },
+  {
+    "id": 700,
+    "url": "https://github.com/python/cpython/issues/124153",
+    "title": "Add `PyType_GetBaseByToken` function with `Py_tp_token` slot · Issue #124153 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add PyType_GetBaseByToken function with Py_tp_token slot #124153 New issue Copy link New issue Copy link Closed Closed Add PyType_GetBaseByToken function with Py_tp_token slot#124153 Copy link Labels type-featureA feature request or enhancementA feature request or enhancement Description neonene opened on Sep 17, 2024 Issue body actions This issue implements a proposal related to PEP-489 and PEP-630. Decision: Add Py_tp_token slot and PyType_GetBaseByToken function capi-workgroup/decisions#34 TODO: Implement the feature Use it in _PyStgInfo_FromType_NoState() in _ctypes.c Ensure no performance regression in PyType_GetModuleByDef() and other functions affected by this feature on Windows PGO builds TODO (optional): Replace PyType_GetModuleByDef() in defdict_or() (_collectionsmodule.c) Replace _PyType_GetModuleByDef2() in _decimal.c Remove _PyType_GetModuleByDef2() Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: Better support for type checking encukou/abi3#19 https://discuss.python.org/t/55598 Linked PRs gh-124153: Introduce PyType_GetBaseByToken function (PoC) #121079 gh-124153: Implement PyType_GetBaseByToken() and Py_tp_token slot #124163 gh-124153: Remove _PyType_GetModuleByDef2 private function #124261 gh-124153: Clean up workarounds for PyType_GetBaseByToken() performance #124323 gh-124153: Fix unstable optimization of PyType_GetBaseByToken() and friends #124488 gh-124153: Add Py_tp_token support to xxlimited module #141644 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:36:36.002231"
+  },
+  {
+    "id": 699,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_TRUE",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code o",
+    "scrapedAt": "2026-05-10 04:36:30.798724"
+  },
+  {
+    "id": 698,
+    "url": "https://github.com/python/cpython/issues/128509",
+    "title": "Add an API for determining if an object is immortal · Issue #128509 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add an API for determining if an object is immortal #128509 New issue Copy link New issue Copy link Closed Closed Add an API for determining if an object is immortal#128509 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description ZeroIntensity opened on Jan 5, 2025 Issue body actions Feature or enhancement Proposal: Immortal objects might lead to some unexpected results for users that are (unfortunately) messing with reference count details, as seen in #127191; but currently, there\u0027s no way to determine what objects are actually immortal. Immortality is an implementation detail, but it still does affect reference counting, and given that it\u0027s not very safe to rely on very specific reference counts, we don\u0027t want the only way to check for immortality to be via sys.getrefcount. So, given that we already have sys._is_interned, it seems fitting to add a sys._is_immortal alongside it. If we go with this, I think it\u0027s also a good idea to note it in some of the documentation. For example, sys.getrefcount says this: some objects are immortal and have a very high refcount that does not reflect the actual number of references. Here, it might be a good idea to mention my proposed sys._is_immortal, so there\u0027s less ambiguity about the returned value. cc @erlend-aasland Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-128509: Add sys._is_immortal for identifying immortal objects #128510 gh-128509: Add PyUnstable_IsImmortal for finding immortal objects #129182 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:36:26.916802"
+  },
+  {
+    "id": 697,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-display",
+    "title": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debug",
+    "scrapedAt": "2026-05-10 04:36:22.145093"
+  },
+  {
     "id": 696,
     "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish",
     "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
@@ -4592,26 +4627,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 697,
-    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
-  },
-  {
-    "id": 698,
-    "url": "https://github.com/python/cpython/issues/128509"
-  },
-  {
-    "id": 699,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_TRUE"
-  },
-  {
-    "id": 700,
-    "url": "https://github.com/python/cpython/issues/124153"
-  },
-  {
-    "id": 701,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
   },
   {
     "id": 702,
@@ -115650,10 +115665,620 @@ window.searchData = [
     "id": 81396,
     "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_1BYTE_DATA",
     "parentUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Finish"
+  },
+  {
+    "id": 81401,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-run",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81403,
+    "url": "https://docs.python.org/3/glossary.html#term-optimized-scope",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81404,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-alias",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81405,
+    "url": "https://docs.python.org/3/reference/datamodel.html#traceback-objects",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81408,
+    "url": "https://docs.python.org/3/library/functions.html#print",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81410,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-continue",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81411,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-quit",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81412,
+    "url": "https://docs.python.org/3/library/code.html#module-code",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81415,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-help",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81417,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-disable",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81418,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.get_default_backend",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81419,
+    "url": "https://docs.python.org/3/library/bdb.html#module-bdb",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81420,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-jump",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81421,
+    "url": "https://docs.python.org/3/library/pdb.html#debugger-commands",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81422,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-unalias",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81423,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.post_mortem",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81424,
+    "url": "https://docs.python.org/3/library/pdb.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81425,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-ll",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81426,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-interact",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81427,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-tbreak",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81428,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.run",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81429,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-p",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81432,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-source",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81433,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pdb.py",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81435,
+    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-m",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81438,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-up",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81440,
+    "url": "https://docs.python.org/3/library/pdb.html#cmdoption-pdb-c",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81441,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-next",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81442,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.runcall",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81444,
+    "url": "https://docs.python.org/3/library/pdb.html#",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81446,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.runeval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81450,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-return",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81451,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-break",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81452,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81453,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#global",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81454,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-where",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81455,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.set_default_backend",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81456,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-0",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81457,
+    "url": "https://docs.python.org/3/library/traceback.html#module-traceback",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81458,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-args",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81460,
+    "url": "https://docs.python.org/3/library/pdb.html#debugger-aliases",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81461,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-step",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81462,
+    "url": "https://docs.python.org/3/library/pdb.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81465,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-restart",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81466,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-ignore",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81467,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-whatis",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81469,
+    "url": "https://docs.python.org/3/library/pdb.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81471,
+    "url": "https://docs.python.org/3/library/functions.html#eval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81472,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.runeval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81474,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/pdb.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81475,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-condition",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81476,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-retval",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81478,
+    "url": "https://docs.python.org/3/library/functions.html#exec",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81480,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.runcall",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81482,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-down",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81483,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-undisplay",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81485,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-pp",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81486,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-clear",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81487,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81488,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-list",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81490,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.run",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81493,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-debug",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81496,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.pm",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81497,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-until",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81499,
+    "url": "https://docs.python.org/3/library/pdb.html#pdbcommand-enable",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81503,
+    "url": "https://docs.python.org/3/library/sys.html#sys.last_exc",
+    "parentUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "id": 81505,
+    "url": "https://github.com/python/cpython/pull/128510",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81509,
+    "url": "https://github.com/python/cpython/issues/127191",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81510,
+    "url": "https://github.com/python/cpython/issues/128509#issue-2769071430",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81511,
+    "url": "https://docs.python.org/3/library/sys.html#sys._is_interned",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81512,
+    "url": "https://github.com/ZeroIntensity",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81513,
+    "url": "https://github.com/python/cpython/pull/129182",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81516,
+    "url": "https://github.com/python/cpython/issues/128509#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81517,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22extension-modules%22",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81520,
+    "url": "https://github.com/python/cpython/issues/128509#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "id": 81794,
+    "url": "https://github.com/python/cpython/pull/124163",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81797,
+    "url": "https://github.com/python/cpython/pull/124261",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81798,
+    "url": "https://github.com/python/cpython/issues/124153#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81800,
+    "url": "https://github.com/neonene",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81802,
+    "url": "https://discuss.python.org/t/55598",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81803,
+    "url": "https://github.com/python/cpython/pull/141644",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81805,
+    "url": "https://github.com/python/cpython/issues/124153#issue-2529892601",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81806,
+    "url": "https://github.com/encukou/abi3/issues/19",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81807,
+    "url": "https://peps.python.org/630",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81808,
+    "url": "https://peps.python.org/489",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81809,
+    "url": "https://github.com/python/cpython/issues/124153#top",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81810,
+    "url": "https://github.com/capi-workgroup/decisions/issues/34",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81811,
+    "url": "https://github.com/python/cpython/pull/121079",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81812,
+    "url": "https://github.com/python/cpython/pull/124323",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81813,
+    "url": "https://github.com/python/cpython/pull/124488",
+    "parentUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "id": 81816,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.ProactorEventLoop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81817,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-custom-policies",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81818,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.set_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81822,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#custom-policies",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81825,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.new_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81831,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#getting-and-setting-the-policy",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81832,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-policy-get-set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81833,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.AbstractEventLoop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81835,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/asyncio-policy.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81840,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy.get_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81845,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81846,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-event-loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81847,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#policy-objects",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81850,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81851,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81852,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#policies",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81855,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.set_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81857,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-policy-builtin",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81858,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.new_event_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "id": 81860,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-policy-objects",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.set_event_loop_policy"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/53406459?v\u003d4\u0026size\u003d80",
+    "alt": "@neonene",
+    "pageTitle": "Add `PyType_GetBaseByToken` function with `Py_tp_token` slot · Issue #124153 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/53406459?v\u003d4\u0026size\u003d48",
+    "alt": "@neonene",
+    "pageTitle": "Add `PyType_GetBaseByToken` function with `Py_tp_token` slot · Issue #124153 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124153"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_TRUE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_TRUE"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "Add an API for determining if an object is immortal · Issue #128509 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "Add an API for determining if an object is immortal · Issue #128509 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128509"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdbcommand-display"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
