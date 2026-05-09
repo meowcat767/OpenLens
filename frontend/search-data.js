@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 388,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:07:45.674227"
+  },
+  {
+    "id": 387,
+    "url": "https://docs.python.org/3/deprecations/index.html",
+    "title": "Deprecations — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Deprecations | Theme Auto Light Dark | Deprecations¶ Pending removal in Python 3.15¶ The import system: Setting __cached__ on a module while failing to set __spec__.cached is deprecated. In Python 3.15, __cached__ will cease to be set or take into consideration by the import system or standard library. (gh-97879) Setting __package__ on a module while failing to set __spec__.parent is deprecated. In Python 3.15, __package__ will cease to be set or take into consideration by the import system or standard library. (gh-97879) ctypes: The undocumented ctypes.SetPointerType() function has been deprecated since Python 3.13. http.server: The obsolete and rarely used CGIHTTPRequestHandler has been deprecated since Python 3.13. No direct replacement exists. Anything is better than CGI to interface a web server with a request handler. The --cgi flag to the python -m http.server command-line interface has been deprecated since Python 3.13. importlib: load_module() method: use exec_module() instead. locale: The getdefaultlocale() function has been deprecated since Python 3.11. Its removal was originally planned for Python 3.13 (gh-90817), but has been postponed to Python 3.15. Use getlocale(), setlocale(), and getencoding() instead. (Contributed by Hugo van Kemenade in gh-111187.) pathlib: PurePath.is_reserved() has been deprecated since Python 3.13. Use os.path.isreserved() to detect reserved paths on Windows. platform: java_ver() has been deprecated since Python 3.13. This function is only useful for Jython support, has a confusing API, and is largely untested. sysconfig: The check_home argument of sysconfig.is_python_build() has been deprecated since Python 3.12. threading: RLock() will take no arguments in Python 3.15. Passing any arguments has been deprecated since Python 3.14, as the Python version does not permit any arguments, but the C version allows any number of positional or keyword arguments, ignoring every argument. types: types.CodeType: Accessing co_lnotab was deprecated in PEP 626 since 3.10 and was planned to be removed in 3.12, but it only got a proper DeprecationWarning in 3.12. May be removed in 3.15. (Contributed by Nikita Sobolev in gh-101866.) typing: The undocumented keyword argument syntax for creating NamedTuple classes (for example, Point \u003d NamedTuple(\"Point\", x\u003dint, y\u003dint)) has been deprecated since Python 3.13. Use the class-based syntax or the functional syntax instead. When using the functional syntax of TypedDicts, failing to pass a value to the fields parameter (TD \u003d TypedDict(\"TD\")) or passing None (TD \u003d TypedDict(\"TD\", None)) has been deprecated since Python 3.13. Use class TD(TypedDict): pass or TD \u003d TypedDict(\"TD\", {}) to create a TypedDict with zero field. The typing.no_type_check_decorator() decorator function has been deprecated since Python 3.13. After eight years in the typing module, it has yet to be supported by any major type checker. wave: The getmark(), setmark(), and getmarkers() methods of the Wave_read and Wave_write classes have been deprecated since Python 3.13. zipimport: load_module() has been deprecated since Python 3.10. Use exec_module() instead. (Contributed by Jiahao Li in gh-125746.) Pending removal in Python 3.16¶ The import system: Setting __loader__ on a module while failing to set __spec__.loader is deprecated. In Python 3.16, __loader__ will cease to be set or taken into consideration by the import system or the standard library. array: The \u0027u\u0027 format code (wchar_t) has been deprecated in documentation since Python 3.3 and at runtime since Python 3.13. Use the \u0027w\u0027 format code (Py_UCS4) for Unicode characters instead. asyncio: asyncio.iscoroutinefunction() is deprecated and will be removed in Python 3.16; use inspect.iscoroutinefunction() instead. (Contributed by Jiahao Li and Kumar Aditya in gh-122875.) asyncio policy system is deprecated and will be removed in Python 3.16. In particular, the following classes and functions are deprecated: asyncio.AbstractEventLoopPolicy asyncio.DefaultEventLoopPolicy asyncio.WindowsSelectorEventLoopPolicy asyncio.WindowsProactorEventLoopPolicy asyncio.get_event_loop_policy() asyncio.set_event_loop_policy() Users should use asyncio.run() or asyncio.Runner with loop_factory to use the desired event loop implementation. For example, to use asyncio.SelectorEventLoop on Windows: import asyncio\n\nasync def main():\n    ...\n\nasyncio.run(main(), loop_factory\u003dasyncio.SelectorEventLoop)\n (Contributed by Kumar Aditya in gh-127949.) builtins: Bitwise inversion on boolean types, ~True or ~False has been deprecated since Python 3.12, as it produces surprising and unintuitive results (-2 and -1). Use not x instead for the logical negation of a Boolean. In the rare case that you need the bitwise inversion of the underlying integer, convert to int explicitly (~int(x)). functools: Calling the Python implementation of functools.reduce() with function or sequence ",
+    "scrapedAt": "2026-05-10 04:07:42.521751"
+  },
+  {
+    "id": 386,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg",
+    "title": "",
+    "content": "xar!\u0000\u001c\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u001a�\u0000\u0000\u0000\u0000\u0000\u0000��\u0000\u0000\u0000\u0001x��\\io�8��\u001e ����1�1w�E�\u000f��EN�/_\u0006�$�v������4i���d���H\u0011��I���{.�\\��n:��5��p\u003e��7�\u0007�탙��\u001e΢?k5s����麟˝X~:�p��+��åZ\u001a����}\u003d��O\b �; �\u0003� �G\u0000?\"x�����K\u0003�ƫ���j���?[ \u0004�-��p9\u000fÕY\u0002����c�jxH:�L\u001d/�.R�}\u001c?���L�7Ks�c��}�!z�G�\u001e��pY6��,��\u00131[���`�^|L��8�#�̗Q \u0001\u0000R��l\u0003m����!\u003e\\v)�\u0019�\u0016�\u001fo?��r\u003d �J�ͧ�X��C:�\u0007\u0026���E�Zډ\u0016�.t\u000b���\u0006���:2�U�h|3\u0018\u000f�\u003c\u0006�W[弌o�\u0006��q/s~֮�2�t\u003d���\u0027Ҷ�w�Q�U�j�����Tt�\u0003�{+������ĥ�.�w�W�j��V�7V��\u001e��Z/c{,g��� ����Kr\u001al��*N���q��:x\u0026\u0017�}���`��, �\u0013a�\u000e��LR��+\u001d���_\u0007�y��z�t�8\u001d����|�\u003eM\\��a�j�k����!W ���\u0007[Y/�S�g�|\u001b�;��ʷ���$k�o\u0014�\u000fd~7Q�y�*L���M1W��gu��\u0026�l�;t���\u0017\u0012���-U�Ϛ�v;��N\u0003�ţ\u0027��\u0027M7[\u0000���z{��\u0006� .�ς���d�l/-ħ��\u0007�gjڊ�S\u000e�~;��l�N���A����Q�\u001d\u0006\u001eȧ\u001b7�FQ�L-k���y��gb/�/��ysk�Z\u001a�̦��]�Pr\u001d^ ��ڢO���\u001e��E�5k7\u0007y���U�~���i�I�\u003c��ì3�/���ĕW�A�5�\u0018\b|�U��\u000b\u001edGm\\\u000f\u000e�yjX+�~�N����`́]�\\܈�W�����j���dj{ZճJ񞬕*��\u0003���~��S�.�S��?n¸!�U\u0007�sW��\u003d���!\u003d܂F\u001ft��Ef��uѮ�t\u0003�\u000e��Z\u0013���n\u000b�Od��.D��5K��Q_�r��Sנb�k3��0\u0027�Ee\u0006ڬս\u0000���lF��.\u0010��gjpR#�R�3�\u0015�ĝ�B��i�L{Q\u000b\u001a�Ɍs7(\u0012�VZ�Ƭ\u00263/ |�ˏ��T�+�XL�\u000e^���B�քn�\u001by��M짋q�\u0017���]G,�\u001f��\u0026�^V\u000b��dƪ��mK�\u0004�b�\u003e]z��\u0016��q��󽸟�6~\u0014-�(��k*�潡(ԁ�̷\u0015T��Y�P��beWneZ��\u0006\u001f[�.���y��L�v\u003d{�/z���\u000f\u003d��ަ��c�omz�����`\u000f\u001f�\u0014dz��2�\u0027lxY{ݶO�g��W{X�\u003dT�yʹ�:��8�\u0015�7��Z�`\u003dQ|~\u0016�^\u0010�j�bo��Б�\u0003�\u0007�X�\u001c����,����blR̗h1�ۘ�\u001f[�\u0001�{�p\u0015�N��\u0002[3�v�m�\u001ejE\u0012�\"�\u001fL�����!��\u0013ٞ:���\u001c�v�|n�O���-���\u001f�i-:?��lk,�;|cK���\u000f\u0015j������W�cr\u001f�7{_y��3�$���F���nL����Ll4��#+��zoy�B!`�\u003d�\u001a��V8���κ���uۉOڋn�V\u000e^��\u0012��Z�4��g��c�\u0003q�v��up���l�:�\u0010�N��u3\u001bv��o���Y�\u0006/\u0002�\u001cWiƮ�T\\�\u003e�X�2^�G��\u003d���;\u001f�~6�\u001c�q0 ��P��#�����k\u003enm�Z�QH�^��ʗ\\c�S�6ޕ]7Yo6��)�^ny�W\u000eH\u00077�G�tdn�\u0016M�1�Vl��� e�������چ��f��\u001fw���U\u0005d�M\u001a�� U˩lJ�H�����:�h͛\u0007%a�6��Q�8�a.U\u0018�ɾ\u0019�jQ:�\u0019���\u003d?�a~\u003c\u0019��t\u001b����E��\u001d�y/���A�I�@iy�ئ\u000f����v\u0010��\u0010GE\u0013���Di�9�� ���ϲ�ɹ�\u0002�ĩ�p��۹z�C���DT�qq��\u0016ҵ�v}��\\�*�r4�i��F� f\u0017�Ϫκ_���\u0017P9�D�q�o,�l\u0004+�]oC U�^�\u0003\u001aLzf,�\u000e\u0013!��j�\"�,]\u001e������vS��^���\u0011�\u000f\u001d��#\u000b潸\u000f\u001dZ�S�]�mt��\b�Ƣ� ʵ�� �L�W*����VU�!+~͋{���3���vكW� �����U%��ۓ]i��f�u_w���]�G��\u003dZ�A�\u0017�#�f�1�\u000f)\u001a\u0012q`��\u0007\u003e�f��]�\u0019�m�@�Ϫ��.��mi��ۅk���(�\u000e\u0012�{\u001b\u001e�� \u000e\u001e�h����\u003c�1��K\u0005;f3��\u001eӑ Fn�\u001d5�˫�Ѻ��+����3�J�\u003d/�\u001b��O�*�l\u0010��Ռ��˅n�sn�\u0005\u001e4��R\u0016��|?\u0015/�q:7,��\u0001��\u001c߀�E+M�\u001e5�ˀm\u000e�6�������.�Wʓ�6��x�\u001fϫ�zjt�\u0026\u0004�Qy�˃�,�M n\u0026\u0014���|\u0015\u001dJ^\u003c���\u003c���\u0003�7�]CY¯\u0015�Sz�(0��\u001c���x�ݯ* ���N�Z���Ү�:� \u000fA\u003ev\u0006\u000e�Oh\u000f�Z\u0015������j{�g#Z���t��fMSn\u0001�*\u0015���*��*�hMa�{u3\u00077:�7����vX�V�\u000b��]��~�0\u001f�\u0001�\u000eZ��6�\u000b?��f\u0016@��8�\u001b�\u001a7���.wH\u0011��ݸqdb�;k�:h޺�(��ͺ�T����L�p��g�N�ז ?)L �Rj[_�\u001a�[lu��u�ݑ�}���\u001dk$�T�2�\u0007� �|��\u001f\u0000]�\u0012R��p5��܏eA\u0026XߒE{���\u001e�ڞ*�w\u001a�i\u0015���h��G\u0005�ӏ�L��-Z�H\"�US��i:R��H\u0018 ]XW$�\u0013�ʷ���#��%\u0005$��S\u0004����!̤\u0027Ӕ+��\u0005\u001cD���wJ�l��\u000f��[�6�\u000b{O\u001dwaJ����W^\u0000k���\u000e\u0007�eo�]/nn«�B��IA�����b\u0011�Һ1��ԼZ���\u001a�����������PX�jk���M��ƍx�m�Q\u003e�\u001a t���O*ӑ\u0007�6��DW�\u0007#�\u001bëh���\\����dji:*�\"+\u001aV��\\+�ey�\u001b ��@y�~cxX5��\\V���\u001e�\u001aّ7�hv�;�:\u0027u*��\"�� �Nc\u0026Am+\u0001�\u0010��˚\u0003\u000f�b\u0019u�㋥�\\�\\��,\u001bg2n0XT7�bP�L{��\u0026�jgF�\u001anf�ϝ�-�Ͳ[͸ȍk�k `c��Ǯ� ��1�W�k%:q��n{px��\u0006��.o\u001a�k��p\u0017����i����k��C����C����*Q��\u000b\u0003UM`T�\u0014\u0013e\b,0P\u0027);�l����2�|F�����l\u001d�w��{�|��\u0013%�]g?\u001e�q�@\u000b�0�5\u0016w���4[1+4��m���͌]ҭ���̲8��̏..r^ `�ߔF\u0014��t��/�:\u003d�\\�dy\u0015��\u003ee�r�0��Vn�\u000e{�v�T�e\u0015�.��� �֜v\b/�;le6��u� �n�\u0006��v%�\u001e�\u0015mb�؛\u0003L��\u003d���[\\�3x�b\u001b9s��#�\u000f�{\\s��Y\u0013\u001f�`\u003cϯF\u0017�e�f�\u0013S��ʵl�eX��D�F��\u000erC `3�\"T�ܰ�n\u003c�M\u001bê��\u0002���H\u0005x:\u0007�\\8����N�7��|��-V���\u001c�lܹ� ?S\u000eD�꺠�D���;��(��\u0007hv\bZ}�Ó`�~Pq9��\u0019\u003d�.��\u001e�jkC�zq\u0026~L\u0002-�t^��\u000e��mM����*sQ�u�\u000e\u001d \b���\u0012�\u0001L�s$.��0��(�ͽ�m�*x��]\u0001�GJ��ܛ�I�����rG�MB-�\b�^[��ŭ��]��6�A���B��Җ�փ\u001b\u0005K\u0013�w�֩Z-�7��\u0012��+�ӊz�qd�\u001c��h`äD�\u001d\u0014n���� �:�Q��{��?���Q�Y�\u001c�(�7�()T�vc���v����C�\u0000�f���Dt,��\u0017��|Z,�\u000f�F����8�b�~�a|~]�9b3\u000b�M�ۯ�R�\u0000v�\u000b:����j{7��Ak��_M������.v�z�Twz]l\u0010��*ߔ�^�SU��\u001fL����3Du[�9�y��K��\u0026g?�c�\u001fw���M\u0007���\u000e{\"A�\u0011|�оgh�3��\u0019�� �{��\u003dC���}�оgh�3��\u0019�� �{��\u003dC���}�оgh�3��\u0019�� �2��r�ǂp81\u001f����0�K�����ˉ�E��\u0027H\b�L�}�����:�[�\u0003�\u0017)ܻ\u001c.�.z���py��\u003e\u0017,\u0016�Ir�����Vt\u0018.~K�7ݭ�B�����#�\u00188�!F%\u0010����\u0018\u0010 市R�\u0010M�\u0010Pb~�����!�R ��gG�Fk C\u0017#H\u0014@҅�\u0000\u00009\u001a1�$��Hp����7\u001d�M��y�\\�\u0017�S2ї���p\u0026��Sf�Z/�r���e�X����T��W�\u0003w�Sǣ֐;�w\u0000�O\u0013��ǟ�eJ�\u001f��p9\u003d�l��L�h\u0026\u001e�E��f�)\u001e\u00183�L�~�-\u001f��]��\u001d�)��� 3r�g\\*#?\u0010� \u0002C\u0019Z�\"ZA\u000b @�#��b\u0017@�\u0011A� ��\u0006+�*f�t4��Q�\u0027���)ͨA�\u001b\u0001 t�r�l��|�\u0026��-�� �l�����\u0012����ű��~\u003d�Ϛ��S\u003c_��X��o���z�|v\u0002Q�\u0011��3����\u0011�s�\u0011q����J!-��6����%��\u0012A�B\u0007 --ޕ��脀�6�D\"\u0000aH�\u0000�F\u0027F9 q�6�Ԯ���\u0010��}\u0019�rÙ6�t�ƪiޯ���f�Q�^%+��ǻ\u0016w�\u0018ܮc��c�|�v�?�b;����a꛷g!�\u0002S��z���Q;q��x��\u0016I��\b�ǰ��\u0015z\u0004�;d�\u0012\"� �[dY����{p1B\u001e��\u0011� s\u001c\u0007a�\u0015��Q���\\\b�c���v�|���{A�ą�S0# ��o\"�Sx��\u0015����w#�\u000f���\u0026���K��\u0010\u000f�}����ͺQ\"\\\u0013Jh( �\u000e\u0019�\u0001;�Tf�\u001d�@\be�?.߀��\u000f�s��G���\u0005o\b� o�v/�\u001b\u0002�\u0011��\u0017��Z�\u0027�䮾��+*�ƞ{\u0002{�� vI\u001a�Q�t�y\u001c�U��\\\u001a�C\u001b�c���$B�0�� ��J��I�-o\u0011�/\u001f��\"\u000e��\bٿ q�?�8�b�5�r�X��\u0005�+*�F\u001c?%�\u0011\u003d�Ƅ��\u0011%���E�\"䂄X2\u0015\u0002\u0000�1�H��f�b+��\u0012�A��\u001b���\u0002 \u0019\u0001LٸՅ!@\\�Q \u0010V\u000bj�$�\u0018Ӛ�Y�]\u000b5\u0016�I6d�r�����xC�������z������z;��a�Oe\u0027]\u0017�s!�U{�$��\u0027��~�\u000f�\u0002�I�\u00197\u0000k��K$`�\u0019+�$3��\u0018��sm��[�ۋ�����?ҷF��_�[��~9��J%#\u0017�ʖ�g���\u001f�m�4�(GP�X\u0010%\u001d��\u001b�\u001cH)Q\u0018R) �!}K\u0006R \u0001�\u001ab@\u001cGS�\u0010ɕŜk�|�DY乡��q\u001b����Znk LBY�y2��\u0016֮fy��^�\u0007�\u0013����|��,z:\u0016%��r�q](�1�ub�\u0011���(�r\u0017s�\u0014@:D �� \u0018|�\u0010?���G\u0002?\u0026����^�w I\u0019�r��\u0027����;\u0002!��~��\u001b�\u0004\u001a�\u0018�XJl\u0014\u0017��*�\u0012���%F\u0000�\u0005Ӿ)\u000f�`�Cc�-T rH�F���\u000eA\u0004\u0015�A�;\u0003�\u001e�#�|�Z����fjf��Z\u003d�s\u0027\u001b\u003e���\u00067�\u0004\u003c�\u001b���\u0019~�\b\u0018��s`��i�\u0001\u00106�����4�p���T\u0016\u001f�c��\u0006�-�qȮ\u001f)�\u00056����p \u0014�H! C\u0006 �XY���f�嶷�*��Bzs_Ho���\\�k6��\u003doH��(��X$��˩\u0003����G{M8I�Ԙ8P)B�r�\u000eaȀ6Xba\u0011g,#I�%���?���!~2�܏�}������ ޜ_�\u0019\u0007Om����K\u0002P��9�j��09V�DrN_ K� ��t\u0014e�k�\"\u00000@J�e���C���\u0026��\u000b���8��\u000b8xj�\u001b;���C\u000e:��\u0018�qѤ\u000e\u001dI��ص.��� d�� \u001d.B $���ЎyˑI��c#f�\u0005S�Q ���p�d�\u000b�\u0026�p[E�M�����j\u0001��O�b��� g��|\u003eY�Rq�o�`�S�\u0013h��\u0013J\u000es��)\u0012\u0006\\�~\u001c�X�\u0002�$��$�g�\u0012I]\u00065��ET��\u0010��7�)\u0001S��rZ��8�8Ps���.]AB �� r�",
+    "scrapedAt": "2026-05-10 04:07:35.606092"
+  },
+  {
+    "id": 385,
+    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tar.xz.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzTCCAlSgAwIBAgIUNKmgm8crGeqcaZGe+UcKIkC6eeMwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODI3WhcNMjYwNDA3MTc1ODI3WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE8GWpcLUVObEUDkYGyztWraUKIIh7R/lw+i6Byw6iUgoyO7SeWt/O1Gr4v5bLBvDr9Zf3qH0ZYpPPy7mEWjpX5aOCAXMwggFvMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUsLccaNXB35sDVjPPrG4MSXLmDPAwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBigYKKwYBBAHWeQIEAgR8BHoAeAB2AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPW1IAAAQDAEcwRQIgbfqtlIPOp3dexdPPIw8P2dB7LWUGpwxzlrHeehtcCwICIQDf8s5K9AJQfzX0+PF+/WI/1qiWsJIQP0kmGfZd3t3WsTAKBggqhkjOPQQDAwNnADBkAjAWOvDGxPInHozw71vK+D0hBicVo6EnON/DtyL7ibZFehA/GQT74s0vg7BJVxr1v7YCMH4KTfKB5uZKIRJOr5OdHB0c9DYtZb8Rvuag5g4e48GhKVaW1yDsRKhFJ6uevehvbg\u003d\u003d\"}, \"tlogEntries\": [{\"logIndex\": \"1247676092\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584107\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEUCIFF1ZkKHkOfCGGlc25+n2BiMTGlgW4VdLYCZwOZKcGTqAiEA91EgqiYvuRUdudBKpPsVQb/E05TCR993D8kRW6Hk8io\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125771830\", \"rootHash\": \"7AwwN9ITapmRRfpMaltblXB/KVxly9DcOGDHeFPjdeo\u003d\", \"treeSize\": \"1125771836\", \"hashes\": [\"756uhIKcieJ+hbtjS3a1kEODI683klDcC43zOgVG6/0\u003d\", \"Ct3LP6+4l/UhDNZNhiuC/GcPV0jUDyZVp4HRoj0poaY\u003d\", \"RXkU0cJhMqEd0Zyy9YeHPH8JHonofzADND438l33X0U\u003d\", \"6Wg3vEwO12L72STDZN9L79qgdwxsY9zT7hqSb1HXZXA\u003d\", \"IfRWcPrix0hDOpyycaEQVejN9YyiPN67yhz1YR4NIDY\u003d\", \"yTa95BXAWI9bH35Oy1diIUgjjJKAec3GLyLfaRrI0Tg\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125771836\\n7AwwN9ITapmRRfpMaltblXB/KVxly9DcOGDHeFPjdeo\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiEAhlJOgNDM16Po1F/3oPqb2r4rB3hBUPnExynP522NFOoCIC9OJcZfCU82PD4B55yXArKxDdxHEX56JyNgu8XTcC2y\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJkOTIzYzUxMzAzZTM4ZTI0OTEzNmZjMWJkZjM1NjhkNTZlY2IwMzIxNGVmZGVmNDg1MTYxNzZkM2Q3ZmFhZWY4In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUM0eDhwYklTeEJta2VoNWxDYjA1aUI1MXRyOHVzVklYL1MyandHVnAxMVJBSWhBT21pR0NndlJISFUrTGVnYWFKSjgzbUNtN0NkclBtM2F3MVNKdnIydGhDKyIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZWRU5EUVd4VFowRjNTVUpCWjBsVlRrdHRaMjA0WTNKSFpYRmpZVnBIWlN0VlkwdEphME0yWldWTmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJKTTFkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkVrelYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVU0UjFkd1kweFZWazlpUlZWRWExbEhlWHAwVjNKaFZVdEpTV2czVWk5c2R5dHBOa0lLZVhjMmFWVm5iM2xQTjFObFYzUXZUekZIY2pSMk5XSk1RblpFY2psYVpqTnhTREJhV1hCUVVIazNiVVZYYW5CWU5XRlBRMEZZVFhkblowWjJUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZ6VEdOakNtRk9XRUl6TlhORVZtcFFVSEpITkUxVFdFeHRSRkJCZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVdkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWpnS1FraHZRV1ZCUWpKQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRVnpGSlFRcEJRVkZFUVVWamQxSlJTV2RpWm5GMGJFbFFUM0F6WkdWNFpGQlFTWGM0VURKa1FqZE1WMVZIY0hkNGVteHlTR1ZsYUhSalEzZEpRMGxSUkdZNGN6VkxDamxCU2xGbWVsZ3dLMUJHS3k5WFNTOHhjV2xYYzBwSlVWQXdhMjFIWmxwa00zUXpWM05VUVV0Q1oyZHhhR3RxVDFCUlVVUkJkMDV1UVVSQ2EwRnFRVmNLVDNaRVIzaFFTVzVJYjNwM056RjJTeXRFTUdoQ2FXTldielpGYms5T0wwUjBlVXczYVdKYVJtVm9RUzlIVVZRM05ITXdkbWMzUWtwV2VISXhkamRaUXdwTlNEUkxWR1pMUWpWMVdrdEpVa3BQY2pWUFpFaENNR001UkZsMFdtSTRVbloxWVdjMVp6UmxORGhIYUV0V1lWY3hlVVJ6VWt0b1JrbzJkV1YyWldoMkNtSm5QVDBLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"timestampVerificationData\": {}}, \"messageSignature\"",
+    "scrapedAt": "2026-05-10 04:07:27.978954"
+  },
+  {
+    "id": 384,
+    "url": "https://github.com/sponsors/python",
+    "title": "Sponsor @python on GitHub Sponsors · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} You must be logged in to sponsor python Become a sponsor to Python Python python The capacity of the Python Software Foundation to support the development of CPython, the reference implementation of Python, hasn\u0027t kept pace with the growth in popularity of the programming language. CPython is developed and maintained largely by volunteers, and has accrued a large backlog of open issues (\u003e6,500 open issues at https://github.com/python/cpython) and unmerged code contributions (\u003e1,400 open pull requests https://github.com/python/cpython/pulls). Additionally, there are many R\u0026D requests from users that we need to address. The goal is to hire to address backlog, and afterwards, hire to address new projects. Current sponsors 174 Show more Past sponsors 787 Private Sponsor Private Sponsor Show more Featured work python/cpython The Python programming language Python 72,623 python/mypy Optional static typing for Python Python 20,413 python/pythondotorg Source code for python.org Python 1,633 python/asyncio asyncio historical repository 1,075 python/pymanager The Python Install Manager (for Windows) Python 288 python/psf-salt PSF infrastructure configuration Hurl 121 Learn more about sponsoring developers and organizations. Report abuse Select a tier Monthly One-time $ a month You\u0027ll receive any rewards listed in the $10 monthly tier. Additionally, a Public Sponsor achievement will be added to your profile. $10 a month Select An amount like $10 a month can help us fund workflow automation and improvements! $50 a month Select An amount like $50 a month can help us sustain the overhead needed to support core devs with things such as legal help, IT support, logistical needs, and management. $100 a month Select An amount like $100 a month can help us fund core dev sprints and language summits so the Python team can meet to address maintenance and sustainability without worrying about incurred costs. $150 a month Select An amount like $150 a month can help us pay for infrastructure and help ensure we don’t get into financial trouble if donated infrastructure becomes unavailable. $300 a month Select An amount like this can support core devs through PR/issue backlog so the team can concentrate on new projects/R\u0026D! $500 a month Select An amount like $500 a month can help fund things such as performance improvements, stability, installation flows, and diversity. $1,000 a month Select An amount like $1,000 a month can help us hire core devs to help with all aspects of sustainability! You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:07:18.938926"
+  },
+  {
     "id": 383,
     "url": "https://docs.python.org/release/3.14.4/whatsnew/changelog.html",
     "title": "Changelog — Python 3.14.4 documentation",
@@ -2677,26 +2712,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 384,
-    "url": "https://github.com/sponsors/python"
-  },
-  {
-    "id": 385,
-    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tar.xz.sigstore"
-  },
-  {
-    "id": 386,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg"
-  },
-  {
-    "id": 387,
-    "url": "https://docs.python.org/3/deprecations/index.html"
-  },
-  {
-    "id": 388,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes"
   },
   {
     "id": 389,
@@ -86635,10 +86650,1015 @@ window.searchData = [
     "id": 34170,
     "url": "https://github.com/python/cpython/issues/128055",
     "parentUrl": "https://docs.python.org/release/3.14.4/whatsnew/changelog.html"
+  },
+  {
+    "id": 34171,
+    "url": "https://github.com/cordery",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34172,
+    "url": "https://github.com/python/cpython/pulls",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34173,
+    "url": "https://github.com/tiangolo",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34174,
+    "url": "https://github.com/shanefontaine",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34175,
+    "url": "https://github.com/cjames23",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34176,
+    "url": "https://github.com/apisarenco",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34177,
+    "url": "https://github.com/Zeerg",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34178,
+    "url": "https://github.com/python/asyncio",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34179,
+    "url": "https://github.com/veekaybee",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34180,
+    "url": "https://github.com/celebritynewsag",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34181,
+    "url": "https://github.com/esoma",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34182,
+    "url": "https://github.com/cbonoz",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34183,
+    "url": "https://github.com/daemon",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34184,
+    "url": "https://github.com/anthonycepeda",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34185,
+    "url": "https://github.com/petercool",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34186,
+    "url": "https://github.com/p141592",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34187,
+    "url": "https://github.com/ehaca",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34188,
+    "url": "https://github.com/heterotopian",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34189,
+    "url": "https://github.com/whispcat",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34190,
+    "url": "https://github.com/di",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34191,
+    "url": "https://github.com/jezdez",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34192,
+    "url": "https://github.com/ChristianCoenen",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34193,
+    "url": "https://github.com/Pachwenko",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34194,
+    "url": "https://github.com/Borda",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34195,
+    "url": "https://github.com/cjgibson",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34196,
+    "url": "https://github.com/python/pymanager",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34197,
+    "url": "https://github.com/devlikepro",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34198,
+    "url": "https://github.com/safijari",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34199,
+    "url": "https://github.com/maggu",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34200,
+    "url": "https://github.com/ryansmccoy",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34201,
+    "url": "https://github.com/sabderemane",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34202,
+    "url": "https://github.com/paikend",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34203,
+    "url": "https://github.com/python/cpython",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34204,
+    "url": "https://github.com/ofek",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34205,
+    "url": "https://github.com/guibeira",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34206,
+    "url": "https://github.com/hashberg-io",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34207,
+    "url": "https://github.com/python/pythondotorg",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34208,
+    "url": "https://github.com/python/psf-salt",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34209,
+    "url": "https://github.com/httpie",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34210,
+    "url": "https://github.com/timavera",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34211,
+    "url": "https://github.com/thorrester",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34212,
+    "url": "https://github.com/KentShikama",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34213,
+    "url": "https://docs.github.com/articles/sponsoring-an-open-source-contributor",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34214,
+    "url": "https://github.com/ElecteSrl",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34215,
+    "url": "https://github.com/python/psf-salt/stargazers",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34216,
+    "url": "https://github.com/asai95",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34217,
+    "url": "https://github.com/python/asyncio/stargazers",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34218,
+    "url": "https://github.com/sponsors/python?frequency\u003drecurring",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34219,
+    "url": "https://github.com/NickleDave",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34220,
+    "url": "https://github.com/cole",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34221,
+    "url": "https://github.com/python/mypy",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34222,
+    "url": "https://github.com/python",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34223,
+    "url": "https://github.com/apologist",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34224,
+    "url": "https://github.com/gto76",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34225,
+    "url": "https://github.com/zevaverbach",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34226,
+    "url": "https://github.com/katacliny",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34228,
+    "url": "https://docs.github.com/sponsors/sponsoring-open-source-contributors/managing-your-sponsorship#managing-the-privacy-setting-for-your-sponsorship",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34229,
+    "url": "https://github.com/login?return_to\u003d%2Fsponsors%2Fpython%2Fsponsorships%3Ftier_id%3D44986",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34230,
+    "url": "https://github.com/login?return_to\u003d%2Fsponsors%2Fpython%2Fsponsorships%3Ftier_id%3D44985",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34231,
+    "url": "https://github.com/investnext",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34232,
+    "url": "https://github.com/consideRatio",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34233,
+    "url": "https://github.com/surfaceowl",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34234,
+    "url": "https://github.com/thinkjrs",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34235,
+    "url": "https://github.com/brunodantas",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34236,
+    "url": "https://github.com/Yandawl",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34237,
+    "url": "https://github.com/login?return_to\u003d%2Fsponsors%2Fpython%2Fsponsorships%3Ftier_id%3D44984",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34238,
+    "url": "https://github.com/login?return_to\u003d%2Fsponsors%2Fpython%2Fsponsorships%3Ftier_id%3D44983",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34239,
+    "url": "https://github.com/munisisazade",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34240,
+    "url": "https://github.com/login?return_to\u003d%2Fsponsors%2Fpython%2Fsponsorships%3Ftier_id%3D44982",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34241,
+    "url": "https://github.com/login?return_to\u003d%2Fsponsors%2Fpython%2Fsponsorships%3Ftier_id%3D44981",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34242,
+    "url": "https://github.com/login?return_to\u003d%2Fsponsors%2Fpython%2Fsponsorships%3Ftier_id%3D44980",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34243,
+    "url": "https://github.com/LaurentTreguier",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34244,
+    "url": "https://github.com/python/mypy/stargazers",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34245,
+    "url": "https://github.com/sponsors/python#start-of-content",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34246,
+    "url": "https://github.com/jcarbaugh",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34247,
+    "url": "https://github.com/GabrielBianconi",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34248,
+    "url": "https://github.com/LivePreso",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34249,
+    "url": "https://github.com/edwardlee23",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34250,
+    "url": "https://github.com/mrkmcknz",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34251,
+    "url": "https://github.com/Phelsong",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34252,
+    "url": "https://github.com/jerr0328",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34253,
+    "url": "https://github.com/ChuckWoodraska",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34254,
+    "url": "https://github.com/kam193",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34255,
+    "url": "https://github.com/wdwinslow",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34256,
+    "url": "https://github.com/danabauer",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34257,
+    "url": "https://github.com/hamkee-dev-group",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34258,
+    "url": "https://github.com/sponsors/python?frequency\u003done-time",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34259,
+    "url": "https://github.com/szobov",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34260,
+    "url": "https://github.com/Snaipe",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34261,
+    "url": "https://github.com/ben-ogden",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34262,
+    "url": "https://github.com/python/cpython/stargazers",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34263,
+    "url": "https://github.com/python/pythondotorg/stargazers",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34264,
+    "url": "https://github.com/python/pymanager/stargazers",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34265,
+    "url": "https://github.com/mnkth01a",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34266,
+    "url": "https://github.com/contact/report-abuse?report\u003dhttps%3A%2F%2Fgithub.com%2Fsponsors%2Fpython+%28GitHub+Sponsors%29",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34267,
+    "url": "https://github.com/codingjoe",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34268,
+    "url": "https://github.com/Tincre",
+    "parentUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "id": 34312,
+    "url": "https://docs.python.org/3/faq/installed.html",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34315,
+    "url": "https://docs.python.org/3/deprecations/index.html#deprecations",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34338,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-future-versions",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34371,
+    "url": "https://docs.python.org/3/deprecations/index.html#c-api-deprecations",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34447,
+    "url": "https://docs.python.org/3/deprecations/index.html#id1",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34449,
+    "url": "https://docs.python.org/3/deprecations/index.html#id2",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34451,
+    "url": "https://docs.python.org/3/deprecations/index.html#id3",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34476,
+    "url": "https://docs.python.org/3/deprecations/index.html#",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34514,
+    "url": "https://github.com/python/cpython/blob/main/Doc/deprecations/index.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34542,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-16",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34543,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-17",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34545,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-18",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34546,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-19",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 34563,
+    "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-15",
+    "parentUrl": "https://docs.python.org/3/deprecations/index.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Deprecations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Deprecations — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d160\u0026v\u003d4",
+    "alt": "@python",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9677399?s\u003d60\u0026v\u003d4",
+    "alt": "@ofek",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635076?s\u003d60\u0026v\u003d4",
+    "alt": "@esoma",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8472271?s\u003d60\u0026v\u003d4",
+    "alt": "@kam193",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/72019805?s\u003d60\u0026v\u003d4",
+    "alt": "@anthonycepeda",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/25950317?s\u003d60\u0026v\u003d4",
+    "alt": "@ehaca",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/545606?s\u003d60\u0026v\u003d4",
+    "alt": "@maggu",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/18037290?s\u003d60\u0026v\u003d4",
+    "alt": "@asai95",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/17890338?s\u003d60\u0026v\u003d4",
+    "alt": "@sabderemane",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/24454777?s\u003d60\u0026v\u003d4",
+    "alt": "@httpie",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/977973?s\u003d60\u0026v\u003d4",
+    "alt": "@Snaipe",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16545607?s\u003d60\u0026v\u003d4",
+    "alt": "@thinkjrs",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/94071427?s\u003d60\u0026v\u003d4",
+    "alt": "@Tincre",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32424503?s\u003d60\u0026v\u003d4",
+    "alt": "@Pachwenko",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/50474387?s\u003d60\u0026v\u003d4",
+    "alt": "@investnext",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6329898?s\u003d60\u0026v\u003d4",
+    "alt": "@KentShikama",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2351243?s\u003d60\u0026v\u003d4",
+    "alt": "@apisarenco",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/39159?s\u003d60\u0026v\u003d4",
+    "alt": "@jcarbaugh",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/18452217?s\u003d60\u0026v\u003d4",
+    "alt": "@LivePreso",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/98562418?s\u003d60\u0026v\u003d4",
+    "alt": "@Phelsong",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/274325?s\u003d60\u0026v\u003d4",
+    "alt": "@cordery",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7851779?s\u003d60\u0026v\u003d4",
+    "alt": "@szobov",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4191354?s\u003d60\u0026v\u003d4",
+    "alt": "@cjgibson",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37613029?s\u003d60\u0026v\u003d4",
+    "alt": "@petercool",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/155617407?s\u003d60\u0026v\u003d4",
+    "alt": "@devlikepro",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/27845995?s\u003d60\u0026v\u003d4",
+    "alt": "@edwardlee23",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/102234903?s\u003d60\u0026v\u003d4",
+    "alt": "@mnkth01a",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/154365430?s\u003d60\u0026v\u003d4",
+    "alt": "@ElecteSrl",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/51131160?s\u003d60\u0026v\u003d4",
+    "alt": "@timavera",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199851453?s\u003d60\u0026v\u003d4",
+    "alt": "@hamkee-dev-group",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8156339?s\u003d60\u0026v\u003d4",
+    "alt": "@Zeerg",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1275491?s\u003d60\u0026v\u003d4",
+    "alt": "@GabrielBianconi",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/751594?s\u003d60\u0026v\u003d4",
+    "alt": "@danabauer",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/48217609?s\u003d60\u0026v\u003d4",
+    "alt": "@thorrester",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7433434?s\u003d60\u0026v\u003d4",
+    "alt": "@ben-ogden",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8369962?s\u003d60\u0026v\u003d4",
+    "alt": "@cjames23",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/138867093?s\u003d60\u0026v\u003d4",
+    "alt": "@whispcat",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4422988?s\u003d60\u0026v\u003d4",
+    "alt": "@brunodantas",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/294415?s\u003d60\u0026v\u003d4",
+    "alt": "@di",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11934090?s\u003d60\u0026v\u003d4",
+    "alt": "@NickleDave",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/355893?s\u003d60\u0026v\u003d4",
+    "alt": "@heterotopian",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3837836?s\u003d60\u0026v\u003d4",
+    "alt": "@veekaybee",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1326112?s\u003d60\u0026v\u003d4",
+    "alt": "@tiangolo",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6035284?s\u003d60\u0026v\u003d4",
+    "alt": "@Borda",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/737690?s\u003d60\u0026v\u003d4",
+    "alt": "@ChuckWoodraska",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10093193?s\u003d60\u0026v\u003d4",
+    "alt": "@guibeira",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/22673372?s\u003d60\u0026v\u003d4",
+    "alt": "@surfaceowl",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1772890?s\u003d60\u0026v\u003d4",
+    "alt": "@codingjoe",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16176593?s\u003d60\u0026v\u003d4",
+    "alt": "@munisisazade",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1524722?s\u003d60\u0026v\u003d4",
+    "alt": "@jerr0328",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11562137?s\u003d60\u0026v\u003d4",
+    "alt": "@wdwinslow",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54000226?s\u003d60\u0026v\u003d4",
+    "alt": "@hashberg-io",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1352964?s\u003d60\u0026v\u003d4",
+    "alt": "@celebritynewsag",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10470044?s\u003d60\u0026v\u003d4",
+    "alt": "@apologist",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/18177650?s\u003d60\u0026v\u003d4",
+    "alt": "@ryansmccoy",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/134694?s\u003d60\u0026v\u003d4",
+    "alt": "@cole",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1610?s\u003d60\u0026v\u003d4",
+    "alt": "@jezdez",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2838836?s\u003d60\u0026v\u003d4",
+    "alt": "@zevaverbach",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5191844?s\u003d60\u0026v\u003d4",
+    "alt": "@safijari",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5256328?s\u003d60\u0026v\u003d4",
+    "alt": "@p141592",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1396046?s\u003d60\u0026v\u003d4",
+    "alt": "@gto76",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/34369026?s\u003d60\u0026v\u003d4",
+    "alt": "@katacliny",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/22744609?s\u003d60\u0026v\u003d4",
+    "alt": "@ChristianCoenen",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9441295?s\u003d60\u0026v\u003d4",
+    "alt": "@shanefontaine",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2351087?s\u003d60\u0026v\u003d4",
+    "alt": "@cbonoz",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1089376?s\u003d60\u0026v\u003d4",
+    "alt": "@mrkmcknz",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8414953?s\u003d60\u0026v\u003d4",
+    "alt": "@Yandawl",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7602755?s\u003d60\u0026v\u003d4",
+    "alt": "@LaurentTreguier",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6188572?s\u003d60\u0026v\u003d4",
+    "alt": "@daemon",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3837114?s\u003d60\u0026v\u003d4",
+    "alt": "@consideRatio",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/26214518?s\u003d60\u0026v\u003d4",
+    "alt": "@paikend",
+    "pageTitle": "Sponsor @python on GitHub Sponsors · GitHub",
+    "pageUrl": "https://github.com/sponsors/python"
+  },
   {
     "src": "https://docs.python.org/release/3.14.4/_static/py.svg",
     "alt": "Python logo",
