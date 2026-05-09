@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 393,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip",
+    "title": "",
+    "content": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000���\\1�yE\u0015�\u0000\u0000X�\u0001\u0000 \u0000\u0000\u0000python.exe�\u0007T�M�/:I\b\u001d�t�\u0005D\u0001\u0005BS@�\u0002\u0012\u0015\u0004��@h�(��\u0004B��\u0011�\u0006�X@, * 6�B�.*(\"(\u001dD\"�4�Ps�? \u003e������{�Y��uϸ�\u003d�\u003d{��\u003d{�\u001f-\u000e�\u0003\u0004\u0000� \u0000@�\u0003P\u0002��\u0010�7\u0002 �5�ek�#��2%0��26�\u003e!���\u0000�`W?����\u0000\u0001�G\u0007���}��\u0026��h�\u0000\u000f� \u001f\u001f�\u001cKD����ΰZ�տwk�ކ�*9�k�?2h�r\u0007�V)3q�rcX��Nz \u0003ϙc�u��(Q\u0019x��\u0027\u0006ݮĤ���\u0001\u001fwoH�?�`e �G2;�^�泊M\u0000Y�\u0003_�\u0004�\u0001\u0000�` ,[\u0000\u0000F\u001e\u0000C\u0006\u0002��\u0000���R� c ��\u00188@\u0000�8J�2\u0013g��;�3�[\u0012�R\u0000�\u0011C1\u0000к0�D8B zÀ�\u0016\u0000 \u001d\u0006T!�\u0001\u0000��05V����\u0002��ڟ� \u0001\u001fA\u0000\u0000(�a)��Z\u0014��pQ �p%�\u0002��b\u0002 \u003e��� \u00010Ta�\u0001\u001240��p\u0000�ܿ�QT\u0002���\u003e\u001a��6�\u001by�!��5\u0026V\u0000\u0000}\u0018\u0000 ��\u000f�\u001b��l\u0012\u001a+�\u003c��;n\b���0t�� X�Ɣ�\u0000��\u003dxz��\u0013��;�\u003eJ\u0003\u0010ʏ��������Ca�تF���p���56a ] 0� /\u0000�Nv\u0000� T\u001a�n��\u001dT \u003e\u0000\u0018\u001c)bTM6\u0000\u0012)�\u0010�\u003d\u0017\u0000�T�S\\\u0000P��\u0000P3�\u0015/�\u0002�D \u003d@�a\u0007�:�\u000e�\b��T�`(\u001f\u0004��\u0002�.C�1f�B\b�ggHFR\u000fB9\u0005N\u0000�� Y�؄\u001a���R\u000eH�rvFo� c ԣ�\u0000hP� 5 Ռ�^��,C\u0026\u0004~u�e�8�qbS\br��؄1Ufg1\b�9T�6h���\u001a� ȡ�\u003dp\u0000Nv��2�\u0000H���\u00127�\u0000Hj �S���c�K�M\u0015N�gt\u003d�\u001f\u0000j\u0005\u000f���%t\u0000�׏L\u0006K\u0026�6Đ�\u0003@\u003d�H���G9 ��\u0018m�l���\u000eK��\u0026h\u0003�\u0014��@uf(F\u00100ՠ\u0018�Z�5\u001a�d\u0004]�\u0006\u0005\u0000��/�B\u0010�:��\u0013K�z�\u0000@��\u0003qШ� *F��\u0001��\\�%��9�-�t:����9ж����H� \u000f\u0000\u001a�\u001e��9\b\u0000�գ��\u001d�B\u0026�\u000eR�\u001c\u001a�\"�\b\u001e�\bKv�3Ē rXlB�*�5\u001f[�\u0000�3�h$\u0000�\u0026�\u0003n\u0000��M�B�2�\u001e\u0001\u0000cB�W���5�%�h�\u000b\u001f�4m�\u000b\u001f�\u0003�.l��6�q�\u0001hbч���\u0010�b.ǉM\u0018�.\u0015�N:ahM\u0026Q\b\u001c�Ш�VĦ� H\u0001@�\u0003M\u0000�DN\u001b�����f\u0001J\u0027P8�)�\u0014(OF\u000e@$\u0005i-��4Ħ �9R�\u0004\u0000j�\u001e)/ɜ�z�\u001a+U� \u003eJ��U\u0011�Y�\u0006������$\u0018j��WA\u0018��we\u0015Ħ��\u0000@�����؄\u001a��W��vЂ4Ē?҅\u0013x!}\u001e�\u0000\u0000\u001atS 6�F�\u0005K~C\u0017v�J�(\u0004],\u0019�R�弱�\u0026r���6\u00277@#�jN�� \u0002���F#���tai^\u0000�� txt\u00016��\u0010�|��O \u0019�� �ǒ�6B�\u0016K�r�\"�;\u001a\bB\u001a� ,�\u0001�\u0015\u0019\u0000B��37W\u0011lt���\u001aC9�I2\u0000��-ж���J(�:eT�*��pi4Ry�\u0000\u0018\u001d)�1\u0004��9I�\\\u0006\u0000@�\u0018�0\u000f\u000b?B���D!�3T\u000e�ʷM\u0006\u0000�C��Ǧ��C�\u001bL\u001e\u0015uʨ�\u0027*\u0000�\u001bZ\u000e �iT,\u0012)Ø�52\u0000@Y�bS��2\u0000�!��\u0000�\u0018 @�\u0003 �P\"��a\u0013����U%\u0016�\u0000��A����\u0011Xw��\u0011:\u001d�*|\u0007\"��q:�o\u0011�+�ClFb�6�[^���\u0017�\u0026�\u0010�\"ޢ�\u001a�cSyI橼/�)Br�w�%����� �\u0026��DT��\u0004sb\u0013^(��j��\u0026�c�R�19\u0010\u0003���`���Q8c�Ū�ct�#\u0015�\u0001��$ �\u0027�3�\u0003{\\x ���ЇY\u003c$\u003d\u0004tv��H`K|\u0017�K��\u0001��\u0026j\u0026\u0007\u0000�\u001d~�s�%��H\u0003@ǒ?�rP�8\u0000\u0018Eaɭ�T�\u0006i\u0000�{YmaQ\u0026�X��ʌuRN�ӱs\u001d┹\u000e:âV3l��-�\u003c\u0006YR,\u0019\u0019�\u000e\u0000l�zN��-�iS\u001d\u001a�M���֛2�\"�p5tN�M��)�\u0013ta\u000b.\u0000�\u0014�\u001a���L�Z�1�FP�T �j1���Cc5LŰ\u001a�\u0013X�*l)�\u0011\u0000�n�j��\u001a\u0016eR�MAΊA�8�Ya�Z�)HyH��\u001aU��W\u001a��W%�\u000e�~�LC�\u0003+ �aS�\u0018v����\u000bZ\u001bE��W/\u0000`�aS�ߤ\u0000��I�1\u0019��$�S�����3�E���|\u0026\u0006\u0000�\u003c\u0005��f�{ �zd�\u0014�f�\u001f�-6����\"���\u001b�@F�#˪�b.u6r�k�Rȭ�R�t��;hL�JZ��B\u0012:\u0003R-\u0026���9�N_�2Μ\u000b\u001dl ;j�A�\u000bc��$ �\u0000Kf⩩}\u0010�W�Q�MM�BE��`�|��\u001c\u001a�˃\u001c���\u0006Fus9+lJ\u0012�\u0012�\u000b\u00034*�\b5�0�I\u0027 U\u0013����b\"�Ro\"g% �a��� 4\u0003t�B\u000eȟ�h���\u0015�c�M5��\u0012X�0�2�� ��8\u000e�\u0005�KX�\u00118S�\bj� ��%_��,\u000e6�\u0006\u001a3��W_�B\u000e7s.����v��$Q\b�K���3T\u0015�ՍӅ1v�2�n�����\u0026\u003c�ANҚ0��g0��\u0002ԅ��\b�,l*\u001f\u001f�Ūc8\u001d�v����6\u001aK^�%���p\u000f��\u000b�K�\u0012c\u000b�\"[��\u0016��s�\b����\u0005�/ 4X�p�\u00020�\u0004#�A+T�ᯠq�T,t(��a�8N�Nf��\u0012��O��*\u0019\u0005Y�T\u003d\u0002\u001f\u0000�\u0002X2\u0002�\u001c;]�\u0011�τjN��� �L��յd����n�\u001f�2�|��\u001c?6�WN r�А$~ �F#*\u0027nҟ���������yK�2vUܴ\u0019�?��5\u0015KG��C�7N\u0018�Q�z$E\u0018�\u003c@k\u000e�\\\u0018����z\u0014v\u0018 (蹰�\u0001AF/\u0010\"�E�K�\u0004\u001a:\\\u000e[ \u0003�?\u0000��\u001bU!B\u0026d�qq\u0000�\u0012\u001a`\u0026)�hq\u0000F9L��\u0010q\u0000L5\u001a�ȓ�䷦� �\u001cцF�F\u001c���)\u0013r\u0013�l�+��(�\u0001n��4\u0011\u0007 �\u0006��+�\\�T�\u0002*Ǆ��\u0004���F3*��;�d$B\u0018\u001a���z����?\u0027��ڰ)��B\u0000�ʆ�B�� }��Ȏ��\u001a� �\u0026!�%\u0012U6,�JЀ\u0001�ш��`�\u0006�X�\u0016l��\u001c\u001aU6,�JXb�(h9v]vT�7�wa�t\u0013�βʷ��A{\u000b�Z��\u0027�\u0026���?�?��\u0005��\u001f�\u0017�z�a�U.��K�E Yt �\u003c�E���`Q\u0015\u0016^��g��)\u0016\u001eϢ\u0004\u0016�d��,jŢ��9��;�\u0003G�C���g�U�\"ɤ\u0013�����?�kϯ\u0006C~\u0026Nc��n �2��jLJ�G��\u0012�?\u0013X��3d�0�\"\u0016���J�?\u0005��G\u001eK�\u0012\u0016��h\u0003������[4�\u001fl���\u001c\u0000�b���]o�\u0001p�\u001fe�ә \u0007\u0000�RJXe P1�� ��\u0001� �39泮� \u0000i�\u0000�\u0014\u0004\u0000r ��\u0000\u0018\u0014\u0006�I �41\u0000r�\u0001x\"\u000e��\u0004\u0000�\u0012\u0000�J0߂�[�!?\u0000\u0014^\u0000nJ\u0002\u0000yM���~\u001c�6�\u003e��?\u0018#\u0011oL�\u001f�) ����l����Q����������c��c`$�;�_%�Í��$�\u000f PS���j�\u003d�۵�o��*�\u001aT��\u000f@\u0011�j�\u001f\u0003���X��TU���\"~����@��r[�z�2\u0000@�\u001e\u0015UUwO/\u0000:d\u0000��hT�\u000f��9\u0018\u001bA\u003c}�� ��;v\b�� �ͨK�\u0007�\u0000eǌ���;Ɛ��\u001bfŨ*�;��C���0�\u0014~�\u0018|��\u0000�@�g��Co��`5/\u0017\u0016�K��`��1�O�رc\u001en^�\u003d�g� \u0026�˱���\u001bv�ю��� �/�7��\u0017!\u000f\u0000t�S�`�\u0003}\u001f�\u0006?�G\u001d��Ud�\u0005\u0016�\u0001a$���Qsն�b��A���P@��~�����\u0001Pq\u000b a�����~���\u003d\u0018\" \u001dC���T�\u0018,�\u0000�i�V1�N�U��\u003d�\u001d\u000e���06\u0018`� �*�B�\u0003�\u0007\u0017@ir\u0002�\u0001�@h�C��b-\u0000\u0007\u0004�� ��\u0002\u0000\\�%ϒg�S\u001e\u0017 p�\u0001\u0000�d\u0003��l�\b\u0017�꿴��sAyY�\u0026�t�! @�0\u0000BRL ��\u0000��o\u001d�$�\u0027�c\u0003|�܀�\u0000����Ra$\u0010�,\u0003°\u0012�\u000e��f\u0003ܚ�[�\u003d��i!N ��\u0001�l؁�\u0026\u0012\b �\u0007���*����ܼ\u0005�t�p����-\u0000���X�`��\u0000��\u0001��\u0005�W\u0006�\u0005 \u0000�׺�\u0000D�\u0000`�\u000bV� \u0000\u0005 ��/X�2\u0000Eh��[ � \u001f\u00062��\u0026�_���l��\u0015�U$����\u001f0�\u0016 5M\u0015\u000f__� p8c\\H �����\u001d�����\u000f\u0006@\u001c�p���x\u0002\u000e\u001f�\u000f$�\u0004�\u0003����\u0003�\u0019_]��\u001f�/\u0004O\u0000�����\u003e��\u0016�j���f�!���q�\u003e�\u0004|0\u000e\u001f�\u0007;!��s �\u0011\"\u0003�\u000b� 4\u0004\u001f��J��\u0007\u0007\u0003�\u000e@�\u003d}�B��p\u001f\u000f\u003c�5�+ ��\u0000���C�q��9�*����\u0004\u0007���� \u0000(\u0002�\u0017���� ۘ� �`?��w\u001a�\u0007�\u0000\u001f�C\u0000`\u0003�1\u00126L-\u003d���Їd\u001c.\u0010���p��+3\u0017�PJ\u0004�ܙu�\u0001ΝY[\u000f���^\u003e!P� ��xW\u000f�o���/4\u00008W\u0002ăsw��usu? �\u0019��2Y\u0019�xH.��?\u003e\u001c�P\u0002�l�\u003d�����oc\u0011��\u0010Jpu��\u0003��K��\u0012�Pw�\\J\u0001�{0��\u0005�\u0002�\u0000���\u0012��5�G�/D9��_�\u003d��\u001c\u001c�O���+��)�)3��\u001f\u001c�|�Z���\u0010��O��������w ���\u000by��k�\u001aH\b �\u001b���Z\b3\u000f\b8\u001a\u001a���KSBp$\u0000bP��O0!����?���\u0003�E��?s�{��.�]�� @ �\u001aO�c�\u0011� O0fn\u0003��\u0000w|H\b�@ڬ��*\u0004J\u0010�CX���]xWHW�`|\b�\u0002�����#����\u0001�~���x�PH�����\u0003��\u0005�a,��\u001e\u0000�G�� ֑!\u0004����\u001f�(d��/\u001eJ��\u0010�. ks�\u0010\u0002\u0016��\u0001�\u0010�CL�n�^^��UMnA�-\u0002?�φ�m��\u0000D�3�\u0005��\u0003�\b��k\u0001�Y\u000b�)y\u0000��2\u000bu^�I�\u0005\u0000x/\u000f�#\u0001\u0000�\u0002\u0000L�3i� \u0000]�\u0000\u003c\u0013\u0004@U\b���L�#\u0004��\u0002\u0000�B\u0000܆ޓ\u0015\u0000�\u0013\u0002@C\u0018\u0000+\u0005\u00004�\u0001x% \u0000�\u0002�N\b\u0003�����D\u0000�*\u0000 !\u0002��\bt�\u0001�A\u0004�\u0000\u0011\u0000h�\u0000\u0004�\u0000 - �\u0003$_\u0014��\u0000x(\u0000P$ ��\u0018\u0000\u0004\u0005\u00008�\u0001ph\u001d\u0000� \u0000\u0004�\u0003�u\u001d\u0000� \u0000�_\u0007\u0000�z\u0000�\u0015��|\u003d\u0000W\u0014\u0000�Z\u000f��\u0004\u0000y ��\u0017�N\u0012\u0000 ��$��nP`R�O~%ϤJR\u0000(��I��\bl�/\u0007Е\b�\u0019X6\u0000$�~]\u0002\u0000 z\u0027ha^�~ ���L\u0005������9\u0010�\u0001\u0012��1U\u0018 A\u001f\u001c�0���\\`�\u0004�\u0007D�\u0000 � �0@��F`�� ��a��\u0003\u0000�\u0001\u0012��1\u0001�g{��;������k�\u001b�� \u0000+���\u0017��\u000fx�\u001fp�\u001f��?������S����\u0001��\u0003\u003e�\u0007�1��\u0006��\u0003��\u0003��\u0000\u0000}\u0010�L��KJ2\u0000P��*+��\u0003 \u000fZ\\�p�\u001c���G\u0004\u0000�5\u00004��1%\u0000��\u0000xC��\u0015\\Z\u0000XP�%\u000f�\u0001�_~�w�\u0018\u0006�6�\"�\u0007\u0006�~��eG$ ����~\u0002 x��;ǆ�0P�K�\"N�@�/�������k\u0010��\u000e�\u0007��\u0004��ɪ��ʢ���\u0001\u001e\u003e�^z��6���e�!\u0004W\u000fW�\u0000��l$\u003eD�@��[�5$\u0004���\u001b�����\u000fѓ ��\u001e���s Q��q\u000f\u000e\b �$(�\u0007�mw �S S�E����x�C\bv����ǍF�\u0012�CC\b��\u003d\u0003���4���h�\u0010�{h�\u000f!��G�u��A��\u0010\u0002��*�\u0027��\u0017�\u000f�Y�k�i\u0004�\u003d\u0014r���ax_�/\u0014�ɺ���\u000f\u000b8�\u000f�E��\u0018�Cn�����o\b^\u0016�w\u001b�?7���M%]�Ͼ1��\u0001~��\u0004\u001f7\u001f_\u001f�c�~c��q�\u0019��@_\u001fwW�\u0003�%�������\b\b\u000fA���\u0010\\������\u0006\u0006\u0006\u0004\u0013�\u001e����\u001ez�QxuU55ͭZ�j[5�)kj�oUv��WVU�����\u001a\u001e\u001a��1���W�Z�Y��V5 m7\u001dW�\u001e:۔5\u003d�\u003c����\u001eʮꚚ���[\u003du4\\�([�?��tU�T��k(o�p�Q���TSvs�qW�ئ��� ���g�*j�Y���6�m�Z۔�U�jʚ�\u001a:�:[�ܔ�5f�Ҷ���\u003e�|���|Mv{3�\u003e�g�\u003e��",
+    "scrapedAt": "2026-05-10 04:08:14.175591"
+  },
+  {
+    "id": 392,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-color-calendar",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:08:04.391252"
+  },
+  {
+    "id": 391,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzzCCAlSgAwIBAgIUFTELJ2/kdcns4Wq/ca0jQ0vjlqkwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODQ5WhcNMjYwNDA3MTc1ODQ5WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUQ7yawAD2fEV/fjW3dcD0tusfZGkUu2mBVBOLU21vanxoy4OO0V+48eQJCUAkC4EBR6f/BujtPAHSXTeO/kuDaOCAXMwggFvMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUX32z8BWek5iNZpUNiEDA5g2MTm4wHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBigYKKwYBBAHWeQIEAgR8BHoAeAB2AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPsnsAAAQDAEcwRQIgVyz9SLcztCSxiowZQRJ1bx2QkFaajiSk3ospxNnQic0CIQCI7jHoSGEz6890cmcFdwl+i3p49BclwnGHXtEzOz8JvjAKBggqhkjOPQQDAwNpADBmAjEA/boyRIVe2fAHo/oGu854U7+vwBmBXZI8lJHgFLovO6MlLG/KocMM0Brm5NoXB3dQAjEA5JLZ9QCIIAsgXoI6RCXbCoPj9eG8pUrIXNO+3wfOVzeAyUTXICKeLoEPwoTA1jLZ\"}, \"tlogEntries\": [{\"logIndex\": \"1247676385\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584130\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEUCIGB/NE6kNMCw88I5YM9qzkANjIObmoVVGRTMbY1mMZcDAiEAodY2A/1hleAxjqaFyDIUr+sP0a+i89CmJ1v2L6tmXYo\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125772123\", \"rootHash\": \"meTpVSJAfMmztAqZr9zWd46gWqtGZLGMSqCTNL6g24U\u003d\", \"treeSize\": \"1125772127\", \"hashes\": [\"BudjL4jG92DILaYTiBPmL7sARvWcGsqOYhdd3IZ6Odg\u003d\", \"p931oPlQ2MWw9w7UpWwGK6xL2mkNN4ecYkVp7GNIijM\u003d\", \"YOlvvKJaTg0j2LDj8nQH+DWhdxD3bHWPBc8smxJUN+g\u003d\", \"J5+EinhfZZnTmnvdQcOgpqjTczWn8hZj9cZ1KvAQsVo\u003d\", \"5kRR5CEDUCrThucErnPdsouRH8mqBDjkFxcSZw3WPjM\u003d\", \"zmBLZP0bwwnxrHyzGFdDU63XZvMcC+gI5povkq57SPA\u003d\", \"D8oBImywij7355j0NzbcVyK6zepoR6IzraPf3JJDeJU\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125772127\\nmeTpVSJAfMmztAqZr9zWd46gWqtGZLGMSqCTNL6g24U\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBEAiBB8O7VtvZdLIufHNqu/U5mwPvDa4qlAGitO4ov+0mdNAIgOCQZybzvcfb8vOUCjyYjIsBursXBLycNc6Bp/Y1FSTU\u003d\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiIxYzVhOWIxZDBhM2YxNGNmM2MzOGYwMzMyMzJiN2ZmNDVlZmQyZWRkZGU1OTQwMTY5ZjIwZWY4NGVjNzIzNWI1In19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUQxMUZKWENEa0xIMmlWdmxsMUNEdGFxUXVBWkh6TUNENkR5azJ4R01DcG13SWhBUGszQXlhZEhaaCtraEpqT3F6TVdCWmVOMWNhZHViSCtsM2s2TFlpdEFoUSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZla05EUVd4VFowRjNTVUpCWjBsVlJsUkZURW95TDJ0a1kyNXpORmR4TDJOaE1HcFJNSFpxYkhGcmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJSTlZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkZFMVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZWVVRkNVlYZEJSREptUlZZdlptcFhNMlJqUkRCMGRYTm1Xa2RyVlhVeWJVSldRazhLVEZVeU1YWmhibmh2ZVRSUFR6QldLelE0WlZGS1ExVkJhME0wUlVKU05tWXZRblZxZEZCQlNGTllWR1ZQTDJ0MVJHRlBRMEZZVFhkblowWjJUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZZTXpKNkNqaENWMlZyTldsT1duQlZUbWxGUkVFMVp6Sk5WRzAwZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVdkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWpnS1FraHZRV1ZCUWpKQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRYzI1elFRcEJRVkZFUVVWamQxSlJTV2RXZVhvNVUweGplblJEVTNocGIzZGFVVkpLTVdKNE1sRnJSbUZoYW1sVGF6TnZjM0I0VG01UmFXTXdRMGxSUTBrM2FraHZDbE5IUlhvMk9Ea3dZMjFqUm1SM2JDdHBNM0EwT1VKamJIZHVSMGhZZEVWNlQzbzRTblpxUVV0Q1oyZHhhR3RxVDFCUlVVUkJkMDV3UVVSQ2JVRnFSVUVLTDJKdmVWSkpWbVV5WmtGSWJ5OXZSM1U0TlRSVk55dDJkMEp0UWxoYVNUaHNTa2huUmt4dmRrODJUV3hNUnk5TGIyTk5UVEJDY20wMVRtOVlRak5rVVFwQmFrVkJOVXBNV2psUlEwbEpRWE5uV0c5Sk5sSkRXR0pEYjFCcU9XVkhPSEJWY2tsWVRrOHJNM2RtVDFaNlpVRjVWVlJZU1VOTFpVeHZSVkIzYjFSQkNqRnFURm9LTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"tim",
+    "scrapedAt": "2026-05-10 04:08:00.067746"
+  },
+  {
+    "id": 390,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-win32.zip.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIIC0DCCAlWgAwIBAgIUN1lyG0+qFqOC5LjOpxP3pGqG1SkwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODQ2WhcNMjYwNDA3MTc1ODQ2WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE54l3vB4ZY3LRBCcxFCA7VhAFfz815xH1MLCU/L7KgIMBUijvfZDqSBpG3jtKBWJcRQ1nGVjcay2tnwwFZsxOB6OCAXQwggFwMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUA+WcmvsDFkFzDP46pztaoXWnAcswHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBiwYKKwYBBAHWeQIEAgR9BHsAeQB3AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPp7EAAAQDAEgwRgIhAPTTgQmP1pNxzj86YOzA91QJHj5fBNNQ3BNKfGu3wlwDAiEA44Hf7fAk28jl3Xq7j/PT5PXwPAv60hXIlymWyDUXeiIwCgYIKoZIzj0EAwMDaQAwZgIxANtnf/nDqKJG7xNtjcStP6NH+Aze4CUQkrzSx4dvtPfkJEpb6N0U5u1n1+kZlQBFEQIxAOoDKWfKBOzGtlZAzl+Vx8e71RPzsx8/7sYd7+TsypvQiK/44ymqYB7gHpxJfBGAPQ\u003d\u003d\"}, \"tlogEntries\": [{\"logIndex\": \"1247676353\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584127\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEUCID8Q8GH5X0LkRwOcgyITOqdY0dVM7jdUot+de/4QsnIhAiEA+S6LLZVrBwW+jJ0rYQ8xoA2KGWPuue62aVR5TWaR9CE\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125772091\", \"rootHash\": \"0Kdj+Z7lnQjSmn0ogJVZDG2H0C/kCafLfjkXgR07A+g\u003d\", \"treeSize\": \"1125772092\", \"hashes\": [\"Q1LYB7FwRdbJFrKK1FogPw+q8flZsCL6mg+4dLEKxb8\u003d\", \"sORMbRs9i4WqZcl3TEKIJRn9LEQchG40Mp6wEQuxZws\u003d\", \"HLaBKUTovHKqCdxHv2GAEIUweTnlA33RnwEoy4+B19M\u003d\", \"K5/inbKCQAaLsUI9ARNbTktWTHMX2oEo4UQ78lwxpQA\u003d\", \"JlezDmsKJjycuR/6UfSDDc6L+GXknVDOZK2xXNuMGPo\u003d\", \"D8oBImywij7355j0NzbcVyK6zepoR6IzraPf3JJDeJU\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125772092\\n0Kdj+Z7lnQjSmn0ogJVZDG2H0C/kCafLfjkXgR07A+g\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiEAiEzjGbYAFTiBEuUaN/qKVWglEQeV/PdkEoD5efHJtbgCIADiD6QekCIhk5uBZ7z2qUPpPwnE41HJ+7dW1pLQEATt\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiIzMGU5NmZiZTJhOTJjMjQyOTZkZDc2MjAxZGJmNzkzZmI4Nzc3MjEwNjBlODM0OGI5YjY0N2FlYmY0MzA2ODUwIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FVUNJUUMxMnRFK2pZTjBxdWRxYnV5Z0dsV3RXMW8yMEJMNWVTMndNSXJ1V04xdHdBSWdhdDNiemRURVlWbUtrd3p3ZHA2eDlrdjFVWmEwQzFMeTlud2JybDJmaUtzPSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTXdSRU5EUVd4WFowRjNTVUpCWjBsVlRqRnNlVWN3SzNGR2NVOUROVXhxVDNCNFVETndSM0ZITVZOcmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJSTWxkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkZFeVYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVUxTkd3emRrSTBXbGt6VEZKQ1EyTjRSa05CTjFab1FVWm1lamd4TlhoSU1VMU1RMVVLTDB3M1MyZEpUVUpWYVdwMlpscEVjVk5DY0VjemFuUkxRbGRLWTFKUk1XNUhWbXBqWVhreWRHNTNkMFphYzNoUFFqWlBRMEZZVVhkblowWjNUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZCSzFkakNtMTJjMFJHYTBaNlJGQTBObkI2ZEdGdldGZHVRV056ZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVhkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWprS1FraHpRV1ZSUWpOQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRY0RkRlFRcEJRVkZFUVVWbmQxSm5TV2hCVUZSVVoxRnRVREZ3VG5oNmFqZzJXVTk2UVRreFVVcElhalZtUWs1T1VUTkNUa3RtUjNVemQyeDNSRUZwUlVFME5FaG1DamRtUVdzeU9HcHNNMWh4TjJvdlVGUTFVRmgzVUVGMk5qQm9XRWxzZVcxWGVVUlZXR1ZwU1hkRFoxbEpTMjlhU1hwcU1FVkJkMDFFWVZGQmQxcG5TWGdLUVU1MGJtWXZia1J4UzBwSE4zaE9kR3BqVTNSUU5rNUlLMEY2WlRSRFZWRnJjbnBUZURSa2RuUlFabXRLUlhCaU5rNHdWVFYxTVc0eEsydGFiRkZDUmdwRlVVbDRRVTl2UkV0WFprdENUM3BIZEd4YVFYcHNLMVo0T0dVM01WSlFlbk40T0M4M2MxbGtOeXRVYzNsd2RsRnBTeTgwTkhsdGNWbENOMmRJY0hoS0NtWkNSMEZRVVQwOUNpMHRMUzB0UlU1RUlFTkZVbFJKUmtsRFFWUkZMUzB0TFMwSyJ9fX19\"}], \"timestampVerificationData\": {}}, \"messageSi",
+    "scrapedAt": "2026-05-10 04:07:57.909845"
+  },
+  {
+    "id": 389,
+    "url": "https://www.python.org/download/sigstore/",
+    "title": "Sigstore Information | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Starting with the Python 3.11.0, Python 3.10.7, Python 3.9.14, Python 3.8.14, and Python 3.7.14 releases, CPython release artifacts are additionally signed with Sigstore. Starting with Python 3.14, Sigstore is the only method of signing and verification of release artifacts. Releases of Python older than the 3.14 series also include legacy OpenPGP signatures that can be verified using public keys. See more in PEP 761 about this change. This page provides guidance on verifying Sigstore signatures as a CPython consumer, and outlines some motivation for using these additional signatures. Sigstore verification of CPython Releases Introduction to Sigstore Sigstore is a new standard for signing, verifying and protecting software. The Sigstore project is a set of tools and services: a certificate authority a signature transparency log multiple ecosystem-specific signing clients (such as https://pypi.org/p/sigstore/) At a high level, Sigstore uses a certificate authority to tie OpenID Connect (OIDC) identities to ephemeral keys, and uses a transparency log to publish the results of signing events. This eliminates the need for signers to manage private keys. It also allows users to verify signatures based on characteristics of the OIDC identities, such as an email address. More detail about the signing process and the interplay of these tools and services is provided in the Sigstore docs. Additionally, a security model for Sigstore can be found here. Verifying CPython release artifacts with Sigstore Verification requires the presence of two files: the release artifact in question and bundled \"verification materials\" which typically has a file extension of .sigstore. For example, for the Python 3.11.0 source release, you would download the following files: $ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz\n$ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz.sigstore\n These verification materials should exist for all release artifacts, and are listed on the downloads page along with their corresponding artifacts. Verification additionally requires prior knowledge of the identity of the signer. For CPython releases, these are the email addresses of the release manager for the given release. The release managers for current and upcoming releases are as follows: Release PEP Release manager OIDC Issuer 3.7 PEP 537 nad@python.org https://github.com/login/oauth 3.8 PEP 569 lukasz@langa.pl https://github.com/login/oauth 3.9 PEP 596 lukasz@langa.pl https://github.com/login/oauth 3.10 PEP 619 pablogsal@python.org https://accounts.google.com 3.11 PEP 664 pablogsal@python.org https://accounts.google.com 3.12 PEP 693 thomas@python.org https://accounts.google.com 3.13 PEP 719 thomas@python.org https://accounts.google.com 3.14 PEP 745 hugo@python.org https://github.com/login/oauth 3.15 PEP 790 hugo@python.org https://github.com/login/oauth 3.16 savannah@python.org https://github.com/login/oauth 3.17 savannah@python.org https://github.com/login/oauth Finally, verification requires a Sigstore client. Using https://pypi.org/p/sigstore/ is recommended: To install with additional install-time assurances including hash-checking and version pinning, you can run the following to install from a fully specified requirements file: $ python -m pip install -r https://raw.githubusercontent.com/sigstore/sigstore-python/main/install/requirements.txt\n Alternatively, to install as usual without these assurances: $ python -m pip install sigstore\n Finally, in the directory where you downloaded the release artifact and verification materials, you can run the following: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://accounts.google.com \\\n  Python-3.11.0.tgz\n Running this command should result in the output OK: Python-3.11.0.tgz, which indicates that the signature is valid. Migrating from GPG signatures Before Sigstore signatures were available, CPython also provided GPG signatures as a means of verifying the origin and integrity of artifacts. Below are some tips for migrating an existing configuration verifying using GPG to adopting Sigstore. Instead of using a GPG key for verification, use the above table to choose which signing identity and OIDC issuer is expected for each Python release version. After an artifact has been verified using GPG, it\u0027s common to pin the artifact to a specific checksum value like SHA-256. If this value is already available, it\u0027s possible to check the validity of the artifact checksum using Sigstore using only the artifact checksum. For example, using a checksum of deadbeef...: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://accounts.",
+    "scrapedAt": "2026-05-10 04:07:55.05694"
+  },
+  {
     "id": 388,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-build-changes",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -2712,26 +2747,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 389,
-    "url": "https://www.python.org/download/sigstore/"
-  },
-  {
-    "id": 390,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-win32.zip.sigstore"
-  },
-  {
-    "id": 391,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-macos11.pkg.sigstore"
-  },
-  {
-    "id": 392,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-color-calendar"
-  },
-  {
-    "id": 393,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip"
   },
   {
     "id": 394,
@@ -87205,10 +87220,117 @@ window.searchData = [
     "id": 34563,
     "url": "https://docs.python.org/3/deprecations/index.html#pending-removal-in-python-3-15",
     "parentUrl": "https://docs.python.org/3/deprecations/index.html"
+  },
+  {
+    "id": 35803,
+    "url": "https://www.python.org/downloads/release/python-3110/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35804,
+    "url": "https://peps.python.org/pep-0719/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35805,
+    "url": "https://github.com/sigstore/sigstore-python/issues",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35807,
+    "url": "https://www.python.org/downloads/metadata/pgp/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35808,
+    "url": "https://peps.python.org/pep-0569/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35809,
+    "url": "https://peps.python.org/pep-0537/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35810,
+    "url": "https://docs.sigstore.dev/cosign/system_config/installation",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35811,
+    "url": "https://docs.sigstore.dev",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35812,
+    "url": "https://pypi.org/p/sigstore/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35813,
+    "url": "https://peps.python.org/pep-0619/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35814,
+    "url": "https://www.python.org/downloads/release/python-3914/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35815,
+    "url": "https://peps.python.org/pep-0693/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35816,
+    "url": "https://www.python.org/downloads/release/python-3814/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35818,
+    "url": "https://peps.python.org/pep-0596/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35819,
+    "url": "https://peps.python.org/pep-0664/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35820,
+    "url": "https://sigstore.dev",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35821,
+    "url": "https://www.python.org/downloads/release/python-3107/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35822,
+    "url": "https://docs.sigstore.dev/security",
+    "parentUrl": "https://www.python.org/download/sigstore/"
+  },
+  {
+    "id": 35823,
+    "url": "https://www.python.org/downloads/release/python-3714/",
+    "parentUrl": "https://www.python.org/download/sigstore/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-color-calendar"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-color-calendar"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
