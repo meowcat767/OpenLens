@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 303,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/",
+    "title": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Mercedes-Benz Mercedes-Benz C-Klasse Mercedes-Benz C-Klasse 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Connectiviteit en smartphone-integratie (MBUX) Milde hybride ondersteuning op alle motoren Ruim elektrisch rijbereik (C 300 e) Zwakke punten Sommige materiaalkeuzes in het interieur Hoge basisprijs en ellenlange optielijst Rijcomfort (AMG Line) Toon aanbod Toon aanbod Mercedes-Benz C-Klasse: de vaste waarde wordt alsmaar meer digitaal en hybride De vijfde generatie van de Mercedes-Benz C-Klasse (W206) wordt steeds meer een kleine S-Klasse. Voortaan rijdt hij als milde hybride of plug-inhybride de showroom uit, inclusief AMG-modellen. De stationwagenversie is er voor het eerst in een All-Terrain-crossovervariant (X206). Lees meer Mercedes-Benz C-Klasse : een overzicht Bekijk hier de actuele prijzen voor de Mercedes-Benz C-Klasse : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 57.578,-* Occasions vanaf:€ 1.006,-* *Laagste prijs op AutoScout24 in de afgelopen maand Mercedes-Benz C-Klasse aanbiedingen Mercedes-Benz C 200Estate CDI Avantgarde EXPORTPRIJS € 7.499 08/2013 220.248 km Diesel - (l/100 km) 2,8 Autobedrijf NL 7641 AGWierden Mercedes-Benz C 180AMG Line | Pano/Dak | Burmester | Leder/Alcantara € 37.400 03/2022 104.994 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5741 SXBeek En Donk Mercedes-Benz C 180Ambition | Leder | NL Auto | Stoelver. € 15.400 05/2016 123.748 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8356 VSBlokzijl Mercedes-Benz C 180C180 156pk 7G-TRONIC Prestige € 19.950 03/2015 118.780 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5441 PLOeffelt Mercedes-Benz C 63 AMGEstate S Premium Plus Pack - PANO - MAT ZILVER - H € 59.990 12/2019 109.230 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1704 RNHeerhugowaard Mercedes-Benz C 63 AMGS E Performance | 680 pk | AMG Drivers Package | A € 81.9501 12/2023 68.299 km Elektro/Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8072 TBNunspeet Mercedes-Benz C 180Aut7 Avantgarde ✅ Xenon ✅ Navi ✅ Trekhaak € 10.940 € 11.940,- 02/2013 155.998 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 1741 NASchagen Mercedes-Benz C 200CDI Classic Lerenbekleding PDC voor\u0026achter Clima M € 4.944 12/2006 173.000 km Diesel - (l/100 km) 2,8 Autobedrijf NL 2803 PAGouda Mercedes-Benz C 200200 CDI Business Class Avantgarde. CRUISE, AIRCO, € 2.950 01/2009 272.326 km Diesel 6,7 l/100 km (gem.) 2,8 Autobedrijf NL 7678 RLGeesteren Mercedes-Benz C 200Estate CDI Prestige € 7.999 12/2015 235.761 km Diesel - (l/100 km) 2,8 Autobedrijf NL 4905 AAOosterhout Mercedes-Benz C 350Estate e Lease Edition € 13.995 12/2015 180.626 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5175 AXLoon Op Zand Mercedes-Benz C 200Estate CDI Business Class Avantgarde/clima/cruise/ € 3.999 01/2012 292.871 km Diesel - (l/100 km) 2,8 Autobedrijf NL 5012 TRTilburg Mercedes-Benz C 180CDI Pano, Navi, Climat, Leer, Pdc, LM.. € 13.800 05/2018 111.929 km Diesel - (l/100 km) 2,8 Autobedrijf NL 7721 CJDalfsen Mercedes-Benz C 200AMG Line Panorama| Achteruitrijcamera | Elekt. sto € 41.500 01/2023 60.000 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3641 RPMijdrecht Mercedes-Benz C 63 AMGEstate C63 S Keramisch / Kuip / 360 camera / Sfeer € 65.950 01/2021 59.551 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4131 NNVianen Mercedes-Benz C 300Estate e AMG Line € 36.9501 01/2023 76.375 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 2461 EGTer Aar Mercedes-Benz C 63 AMGEstate 457PK Harman/Kardon Pano/dak Leder Stoelver € 27.950 09/2008 174.998 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5741 SXBeek En Donk Mercedes-Benz C 63 AMGS Panorama Dealer 360 Headup Burmeister Memory € 52.500 01/2018 105.908 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3641 RPMijdrecht Mercedes-Benz C 300e Business Solution AMG Limited AMG Line | Airco E € 31.4951 03/2021 93.743 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7825 AMEmmen Mercedes-Benz C 300Estate CDI HYBRID Lease Edition | Ambiente | Elc t € 9.440 09/2016 295.025 km Elektro/Diesel - (l/100 km) 2,8 Autobedrijf NL 7207 BJZutphen Bekijk alle Mercedes-Benz C-Klasse aanbiedingen Goede redenen De Mercedes-Benz C-Klasse (W206) zet het elegant-dynamische lijnenspel van zijn voorganger (W205) verder en ziet er binnenin met zijn schermen uit als een mini-S-Klasse. Vergeleken met zijn Duitse premiumconcurrenten is de C-Klasse het meest gericht op comfort. Sinds de vorige generatie treedt rijdynamiek meer dan ooit op het voorplan. De plug-inhybride C 300 e is niet alleen fiscaal vriendelijk, maar met een elektrisch rijbereik van 99 tot 111 kilometer (WLTP) perfect voor volledig elektrisch woon-werkverkeer. De Mercedes-Benz C-Klasse (W206) biedt een ruime keuze uit benzine- en dieselmotoren die door de standaard milde hybride ondersteuning zuiniger en soepeler zijn dan ooit. Alle belangrijke gegevens over de Mercedes-Benz C-Klasse (W206) Motoren De C-Klasse staat traditioneel sterk in de zakelijke markt, waar hij vroeger ",
+    "scrapedAt": "2026-05-10 03:58:42.300952"
+  },
+  {
+    "id": 302,
+    "url": "https://www.autoscout24.nl/lst/c/bedrijfswagen",
+    "title": "Bestelwagen occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Bestelwagen occasion kopen Filteren Alles reset Merk en model Carroserievorm Bedrijfswagen Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Zoeken op trefwoord Filteren2 Nederland Bedrijfswagen Zoekopdracht opslaan Ford Transit Connect 1.6 TDCI L1 Trend 96000 KM AIRCO LEES TEKST Bewaar 24 € 4.899 04/2015 96.459 km Diesel 55 kW (75 PK) Alarm, Schuifdeur rechts, Bluetooth, Airconditioning, Elektrisch verstelbare buitenspiegels, Multifunctioneel stuurwiel, Lendensteun, Centrale deurvergrendeling met afstandsbediening RB Automotive LierenNL-7364 BL LIEREN + Meer voertuigen Volkswagen Crafter 35 2.0 TDI L2H2 Navigatie Pdc Trekhaak Airco Cruis Bewaar 25 € 13.950Excl. BTW 06/2016 137.495 km Diesel 100 kW (136 PK) Met onderhoudshistorie, Elektrisch verstelbare buitenspiegels, Trekhaak, Stoelverwarming, Bluetooth, Parkeerhulp voor, Navigatiesysteem, Airconditioning B\u0026S Auto\u0027sNL-6088 EB ROGGEL + Meer voertuigen Volkswagen T6 Transporter 2.0 TDI 150PK DSG Dubbele cabine L1H1 Highline | L Bewaar 50 € 23.950Excl. BTW 02/2017 131.426 km Diesel 110 kW (150 PK) LED verlichting, Lichtmetalen velgen, Schuifdeur rechts, Parkeerhulp met camera, Garantie, Lederen stuurwiel, Parkeerhulp voor, Alarm Autobedrijf Tijink v.o.f.NL-7635 NA LATTROP-BREKLENKAMP + Meer voertuigen Iveco Daily 35S15 2.3 410 L4H2 | 3500KG Trekgew. | Trekhaak | Bewaar 23 € 14.000Excl. BTW 10/2016 162.887 km Diesel 107 kW (145 PK) Met onderhoudshistorie, Getinte ramen, Bluetooth, Airconditioning, Stuurbekrachtiging, Radio, Multifunctioneel stuurwiel, Centrale vergrendeling Greven Automotive B.V.NL-9502 EC STADSKANAAL + Meer voertuigen Volkswagen Crafter 2.0 TDI 177PK L4H3 | 3000KG Trekgew. | Aut. | Airc Bewaar 26 € 25.600Excl. BTW 09/2023 140.082 km Diesel 130 kW (177 PK) Getinte ramen, Standkachel, Met onderhoudshistorie, Parkeerhulp met camera, Schuifdeur rechts, Airconditioning, Radio, Apple CarPlay Greven Automotive B.V.NL-9502 EC STADSKANAAL + Meer voertuigen Volkswagen Crafter 2.0 TDI L4H3 Westfalia Offgrid Camper Bewaar 31 € 46.995 05/2021 123.691 km Diesel 75 kW (102 PK) Alarm, Cruise control, Lendensteun, Handsfree, Trekhaak, Digitale radio-ontvangst, Elektrisch verstelbare buitenspiegels, Centrale deurvergrendeling met afstandsbediening AMV WentingNL-7021 BZ ZELHEM + Meer voertuigen Volkswagen Caddy 2.0 TDI L2H1 Maxi Airco Cruise controle Trekhaak 1 Bewaar 34 € 10.950Excl. BTW 09/2020 106.349 km Diesel 75 kW (102 PK) Vertrouwd op weg! Dani AutomobielenNL-7665 SE ALBERGEN + Meer voertuigen Citroen Jumpy 2.0 BlueHDI 120 Business XL DC S\u0026S MARGE AUTO!! Bewaar 39 € 19.850 € 21.950,- Prijsdaling 04/2017 98.007 km Diesel 90 kW (122 PK) Getinte ramen, Lichtmetalen velgen, Schuifdeur rechts, Garantie, Nieuwe APK, Apple CarPlay, Parkeerhulp achter, Trekhaak Autobedrijf Wemmenhove B.V.NL-7921 VM ZUIDWOLDE + Meer voertuigen Citroen Jumper L3H2 Dubbele cabine | 2.0BlueHDi 130Pk | 7-Persoon Bewaar 32 € 10.950Excl. BTW 10/2017 110.681 km Diesel 96 kW (131 PK) Parkeerhulp met camera, Alarm, Bluetooth, Elektrische ramen, Airconditioning, Startonderbreker, Radio, Multifunctioneel stuurwiel Russcher Auto\u0027sNL-7951 TA STAPHORST + Meer voertuigen Ford Transit Custom 2.0 TDCI L1H1 Limited 170PK | Dubbele Cabine | Aut Bewaar 27 € 19.800Excl. BTW 09/2017 131.625 km Diesel 125 kW (170 PK) Getinte ramen, Lichtmetalen velgen, Schuifdeur rechts, Met onderhoudshistorie, Cruise control, Lane Departure Warning Systeem, Airbag passagier, Stuurbekrachtiging Greven Automotive B.V.NL-9502 EC STADSKANAAL + Meer voertuigen Volkswagen T5 Transporter 2.0 TDI L1H1 140PK | EXPORT | Airco | Cruise | Nav Bewaar 31 € 6.400Excl. BTW 03/2014 307.441 km Diesel 103 kW (140 PK) Greven Automotive B.V.NL-9502 EC STADSKANAAL + Meer voertuigen Renault Trafic 1.6 dCi T29 L2 Formula Edition Dubbel Cabine dubbe Bewaar 23 € 13.745Excl. BTW 11/2016 173.805 km Diesel 93 kW (126 PK) Getinte ramen, Schuifdeur links, Navigatiesysteem, Lichtmetalen velgen, Alarm, Schuifdeur rechts, Keyless Entry, Cruise control Autobedrijf van LeersumNL-4033 BV LIENDEN + Meer voertuigen Citroen Jumpy 2.0 BlueHDI 180 M Club Export only | Euro 6 | Wh Bewaar 23 € 8.950Excl. BTW 09/2019 267.915 km Diesel 130 kW (177 PK) Met onderhoudshistorie, Lichtmetalen velgen, Alarm, Trekhaak, Parkeerhulp met camera, Lichtsensor, Bluetooth, Navigatiesysteem Auto CombiNL-7773 NJ HARDENBERG + Meer voertuigen Peugeot e-Expert E-Expert|Cruise|Pdc|Bleuth Standard Asphalt 50 kWh Bewaar 50 € 20.950Excl. BTW 10/2023 175 km Elektrisch 100 kW (136 PK) Navigatiesysteem, Centrale vergrendeling, Armsteun, Vermoeidheidsdetectie, Dodehoekdetectie, Mistlampen, Grootlichtassistent, Regensensor Autocentrum CarstarNL-2295 RV KWINTSHEUL + Meer voertuigen Volkswagen T5 Transporter 2.0 TDI L1H1 Marge Btw vrij 140pk Dsg Automaat Air Bewaar 42 € 6.950 01/2013 310.890 km Diesel 10",
+    "scrapedAt": "2026-05-10 03:58:38.802814"
+  },
+  {
+    "id": 301,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/",
+    "title": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "content": "Ga naar hoofdinhoud De beste auto\u0027s De beste auto\u0027s: Alle artikelen Beste lease-auto 2026 AutoScout24 · 11-03-2026 · 7 min. Leestijd Lees meer Beste lease-auto 2026 De mooiste elektrische auto\u0027s 2026 AutoScout24 · 11-03-2026 · 10 min. Leestijd Lees meer De mooiste elektrische auto\u0027s 2026 Zuinigste auto in 2026 AutoScout24 · 11-03-2026 · 7 min. Leestijd Lees meer Zuinigste auto in 2026 Beste elektrische middenklassers 2026 De elektrische auto wordt voor steeds meer mensen bereikbaar, ook voor mensen met een kleinere portemonnee. In het middensegment zijn de EV’s niet aan te slepen. Hoog tijd om de beste elektrische middenklassers 2026 op een rij te zetten. AutoScout24 · 11-03-2026 · 6 min. Leestijd Lees meer Beste elektrische middenklassers 2026 Beste zakelijke leaseauto 2026 Wat zijn de beste zakelijke leaseauto’s in 2026? We zetten de modellen op een rij die uitblinken in comfort, zuinigheid en technologie. AutoScout24 · 10-03-2026 · 7 min. Leestijd Lees meer Beste zakelijke leaseauto 2026 Beste routeplanner voor elektrische auto: slimste keus voor EV-rijders Een elektrische auto vraagt om een slimme routeplanner, die rekening houdt met de laadstatus en actieradius van je EV en benodigde laadstops. Een goede routeplanner voor elektrische auto\u0027s voorkomt laadstress en leidt je soepel van A naar B via beschikbare openbare oplaadstations. Wat is de beste? AutoScout24 · 04-08-2025 · 7 min. Leestijd Lees meer Beste routeplanner voor elektrische auto: slimste keus voor EV-rijders Beste nieuwe elektrische auto 2025 De wereld van elektrische auto\u0027s blijft zich in een razendsnel tempo ontwikkelen. In dit artikel zetten we de beste nieuwe elektrische auto’s van 2025 op een rij. We bespreken meerdere modellen die opvallen door hun prestaties, technologie en milieuvriendelijkheid. AutoScout24 · 04-08-2025 · 6 min. Leestijd Lees meer Beste nieuwe elektrische auto 2025 Auto met schuifdeuren: welke past bij jou? Een auto met schuifdeuren is ideaal als je vaak kinderen, ouderen of grote spullen vervoert. Maar welke modellen zijn er in Nederland, wat zijn de voordelen, welke types schuifdeuren bestaan er en hoe werken elektrische schuifdeuren? Lees hier alles wat je moet weten. AutoScout24 · 07-07-2025 · 6 min. Leestijd Lees meer Auto met schuifdeuren: welke past bij jou? Goedkoopste nieuwe auto Niet iedereen heeft een groot budget om een dure auto te kopen. Sommigen geven simpelweg niet zoveel om auto\u0027s en willen gewoon een betaalbare, betrouwbare en zuinige auto die hen veilig van A naar B brengt. Maar wat is nu de goedkoopste nieuwe auto? AutoScout24 · 18-06-2025 · 8 min. Leestijd Lees meer Goedkoopste nieuwe auto De beste elektrische auto’s Wie op zoek is naar een elektrische auto, vraagt zich natuurlijk af wat de beste elektrische auto’s zijn. Wat ‘de beste’ elektrische auto is hangt af van je persoonlijke wensen, maar in dit artikel zetten we een aantal goede opties op een rij. AutoScout24 · 18-06-2025 · 6 min. Leestijd Lees meer De beste elektrische auto’s Advies: de nieuwste artikelen Alles bekijken Plug-in hybride in 2026: hoe zinvol is een PHEV echt? Hybride auto’s combineren een verbrandingsmotor met een elektromotor. Ontdek de verschillen tussen micro, mild, full en plug-in hybrides, hoe ze werken en welk type het beste past bij jouw rijgedrag en dagelijks gebruik. AutoScout24 · 08-05-2026 · 8 min. Leestijd Lees meer Plug-in hybride in 2026: hoe zinvol is een PHEV echt? Subsidie elektrische auto Elektrische auto’s spelen een belangrijke rol om klimaatdoelen te halen, alleen zijn ze door hun kostbare techniek duurder dan brandstofauto’s. De overheid stimuleert de verkoop via subsidies. Welke subsidies zijn nog mogelijk? Lees hier alles over subsidies voor elektrische auto’s. AutoScout24 · 16-03-2026 · 7 min. Leestijd Lees meer Subsidie elektrische auto Lease een Youngtimer – bijtelling extra voordelig! Hoe lease je nou precies een youngtimer? Wat zijn de voordelen? Hoe reken je uit hoeveel je gaat betalen? Wij zetten het voor je op een rijtje. AutoScout24 · 16-03-2026 · 5 min. Leestijd Lees meer Lease een Youngtimer – bijtelling extra voordelig! Naar boven",
+    "scrapedAt": "2026-05-10 03:58:35.700322"
+  },
+  {
+    "id": 300,
+    "url": "https://nos.nl/teletekst",
+    "title": "NOS.nl - NOS Teletekst",
+    "content": "Voorpagina Teletekst Teletekst pagina nummer OK Vorige Paginaniet beschikbaar Vorige subpaginaniet beschikbaar Volgende subpagina Volgende pagina 1234567890 Backspace Teletekst pagina 100                       NOS Teletekst 100 \n\n\n\n\n\n   \n\n   Streep door festival in A\u0027dam... 131 \n                                        \n   Jetten naar Caribische eilanden. 111 \n                                        \n   Witte Huis geeft ufo-files vrij. 128 \n                          -             \n   Berlijn voorlopig niet autovrij. 131 \n                                        \n\n     nieuws     101   sport         600 \n     televisie  200   weer,verkeer  700 \n     radio      250   voetbal       800 \n     financieel 501   ondertiteling 888 \n                                        \n\n          copyright N O S  2026         \n nieuws     sport     tv gids     weer  \n Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-10 03:58:24.578513"
+  },
+  {
+    "id": 299,
+    "url": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "title": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "content": "NOS Sport•woensdag, 20:30 Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027 Deel dit artikel 0:51 Sabalenka sluit boycot grandslamtoernooien niet uit: \u0027Rechten verdedigen\u0027 Toptennisster Aryna Sabalenka, de nummer één van de wereld bij de vrouwen, zegt een boycot niet langer uit te sluiten als het prijzengeld bij de vier grandslamtoernooien, de belangrijkste evenementen van het seizoen, niet omhoog gaat. \"Wij geven een show. Zonder ons zouden er geen toernooien zijn, zonder ons zou er geen entertainment zijn. Ik denk dat we beter betaald zouden moeten worden\", laat de Witrussin weten in Rome, waar het laatste voorbereidingstoernooi voor Roland Garros plaatsvindt. \"Op een gegeven moment zullen we moeten boycotten als dat de enige manier is om onze rechten te verdedigen.\" Eltingh begrijpt ophef \"Een boycot is sowieso altijd de slechtste oplossing bij onenigheid\", vindt Jacco Eltingh, oud-prof en tegenwoordig technisch directeur bij de KNLTB. Maar hij begrijpt wel dat de tennissers zich tekortgedaan voelen. \"Op het moment dat het publiek geen interesse meer toont en niet naar het stadion komt en daar dingen koopt, niet meer televisie kijkt of naar de radio luistert, dan zullen er geen bedrijven meer zijn die zich daaraan willen koppelen en zouden er geen uitzendrechten betaald worden. En dat komt wel door datgene wat er op de baan gebeurt. En dat zijn de spelers.\" 1:42 Eltingh: \u0027Sabalenka heeft een punt, maar een boycot helpt de sport niet\u0027 Sabalenka uitte maandag samen met een groep wereldtoppers, onder wie ook Coco Gauff, Jannik Sinner en Carlos Alcaraz, haar \"diepe teleurstelling\" over het prijzengeld op Roland Garros dit jaar. Hoewel Roland Garros het prijzengeld voor de editie van dit jaar heeft verhoogd (met 9,5 procent tot 61,7 miljoen euro), zijn Sabalenka en haar collega\u0027s het niet eens met hun aandeel. \"Dat zal waarschijnlijk onder de 15 procent blijven, ver verwijderd van de gevraagde 22 procent.\" \u0027Eindjes aan elkaar knopen\u0027 De Amerikaanse Gauff, de nummer vier van de wereld, voegde eraan toe dat de oproep vooral betrekking heeft op de groep tennissers die lager op de wereldranglijst staan en daardoor van minder inkomsten verzekerd zijn. \"Kijk bijvoorbeeld naar zaken zoals sponsorinkomsten. Wij (de topspelers, red.) verdienen ook naast de baan geld, maar een speler uit de top tweehonderd moet echt de eindjes aan elkaar knopen.\" Veel grote namen De onderstaande spelers staan achter de oproep om de prijzengeldstructuur van Roland Garros aan te passen. Vrouwen: Aryna Sabalenka, Coco Gauff, Iga Swiatek, Jessica Pegula, Madison Keys, Jasmine Paolini, Emma Navarro, Zheng Qinwen, Paula Badosa en Mirra Andreeva. Mannen: Jannik Sinner, Carlos Alcaraz, Alexander Zverev, Taylor Fritz, Alex De Minaur, Casper Ruud, Daniil Medvedev, Andrey Rublev en Stefanos Tsitsipas. Novak Djokovic staat er niet bij, maar de 24-voudig grandslamkampioen is de afgelopen jaren een prominente voorvechter geweest voor het ophogen van het prijzengeld op de grootste toernooien. (Bron: Sky Sports) Eltingh bevestigt die zienswijze. \"Er gaat in het tennis best veel geld om. Maar dat gaat vooral naar een select groepje spelers. Ik denk dat zo\u0027n 150 tot 200 mannen en 100 tot 150 vrouwen kunnen zeggen: dit zijn mijn inkomsten geweest, dit mijn kosten en dan houd ik aan het eind van het jaar nog wat spaarcentjes over.\" \"Heel veel tennissers moeten er heel veel in investeren, zeker de eerste jaren. Sabalenka zegt ook dat het niet alleen om de topspelers gaat, maar met name ook voor buiten de top honderd. Dat is een beetje raar, want die komen niet eens rechtstreeks in het hoofdtoernooi. Maar als je heel eerlijk bent: als een bedrijf dit zou doen, zou er direct een staking van het personeel volgen.\" Eltingh ziet echter meer in overleg. \"Je moet het toch met deze mensen oplossen. Maar ook ik vind dat de grandslams te makkelijk autonome beslissingen kunnen nemen zonder dat ze daar door de ITF, of World Tennis zoals het tegenwoordig heet, op worden aangesproken. De spelers worden ook niet voldoende gehoord ten aanzien van hun wensen.\" Toptennissers verenigen zich tegen \u0027diep teleurstellend\u0027 prijzengeld op Roland Garros Tussen het grote geld weet tennistoernooi Rosmalen zich al jaren staande te houden Tennistoppers pleiten voor eerlijkere verdeling prijzengeld grandslamtoernooien Tennis Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? woensdag, 15:54 Goede start Van de Zandschulp bij masterstoernooi Rome, afstraffing De Jong gisteren, 17:27 Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door zondag, 18:36 Vijfde masterstitel op rij voor Sinner bij afwezigheid van Alcaraz maandag 23 maart, 21:06 Na Alcaraz strandt ook Medvedev al in derde ronde van masterstoernooi Miami Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-10 03:58:14.310062"
+  },
+  {
     "id": 298,
     "url": "https://nos.nl/livestream/2613619-kijk-en-luister-hier-naar-het-nos-radio-1-journaal",
     "title": "Kijk (en luister) hier naar het NOS Radio 1 Journaal",
@@ -2082,26 +2117,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 299,
-    "url": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
-  },
-  {
-    "id": 300,
-    "url": "https://nos.nl/teletekst"
-  },
-  {
-    "id": 301,
-    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
-  },
-  {
-    "id": 302,
-    "url": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
-  },
-  {
-    "id": 303,
-    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
   },
   {
     "id": 304,
@@ -47770,10 +47785,1147 @@ window.searchData = [
     "id": 22391,
     "url": "https://app.nos.nl/shorthand/vuurwerk-in-cijfers/index.html",
     "parentUrl": "https://nos.nl/artikel/2613612-kabinet-compenseert-vuurwerkhandelaren-voor-100-miljoen-euro"
+  },
+  {
+    "id": 22395,
+    "url": "https://nos.nl/artikel/2613610-gefrustreerde-griekspoor-verliest-in-rome-van-de-zandschulp-wel-door",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22397,
+    "url": "https://twitter.com/intent/tweet?text\u003dOphef+over+prijzengeld+grandslams%3A+%27Maar+boycot+altijd+slechtste+oplossing%27\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22398,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22399,
+    "url": "https://nos.nl/artikel/2607573-na-alcaraz-strandt-ook-medvedev-al-in-derde-ronde-van-masterstoernooi-miami",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22400,
+    "url": "https://nos.nl/artikel/2613021-toptennissers-verenigen-zich-tegen-diep-teleurstellend-prijzengeld-op-roland-garros",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22401,
+    "url": "https://api.whatsapp.com/send?text\u003dOphef+over+prijzengeld+grandslams%3A+%27Maar+boycot+altijd+slechtste+oplossing%27+https%3A%2F%2Fnos.nl%2Fartikel%2F2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22402,
+    "url": "https://nos.nl/artikel/2562304-tennistoppers-pleiten-voor-eerlijkere-verdeling-prijzengeld-grandslamtoernooien",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22403,
+    "url": "https://nos.nl/artikel/2570741-tussen-het-grote-geld-weet-tennistoernooi-rosmalen-zich-al-jaren-staande-te-houden",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22404,
+    "url": "https://nos.nl/artikel/2612935-vijfde-masterstitel-op-rij-voor-sinner-bij-afwezigheid-van-alcaraz",
+    "parentUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "id": 22406,
+    "url": "https://nos.nl/teletekst/702",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22407,
+    "url": "https://nos.nl/teletekst/800",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22408,
+    "url": "https://nos.nl/teletekst/888",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22409,
+    "url": "https://nos.nl/teletekst/128",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22410,
+    "url": "https://nos.nl/teletekst/700",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22411,
+    "url": "https://nos.nl/teletekst/601",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22412,
+    "url": "https://nos.nl/teletekst/600",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22413,
+    "url": "https://nos.nl/teletekst/501",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22414,
+    "url": "https://ster.nl/online-reclame-bij-ster/",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22415,
+    "url": "https://nos.nl/teletekst/101",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22416,
+    "url": "https://nos.nl/teletekst/200",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22417,
+    "url": "https://nos.nl/teletekst/100",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22418,
+    "url": "https://nos.nl/teletekst/111",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22419,
+    "url": "https://nos.nl/teletekst/131",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22420,
+    "url": "https://nos.nl/teletekst/100/2",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22421,
+    "url": "https://nos.nl/teletekst/250",
+    "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 22422,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22423,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-lease-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22424,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-nieuwe-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22425,
+    "url": "https://www.autoscout24.nl/informeren/advies/hybride-autos/plug-in-hybride/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22426,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-mooiste-elektrische-auto-s/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22427,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-zakelijke-leaseauto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22428,
+    "url": "https://www.autoscout24.nl/informeren/advies/kosten-en-wetgeving/subsidie-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22429,
+    "url": "https://www.autoscout24.nl/informeren/advies/lease/lease-een-youngtimer-bijtelling-extra-voordelig/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22430,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-goedkoopste-nieuwe-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22431,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/auto-met-schuifdeuren/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22432,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-beste-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22434,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/zuinigste-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22435,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-elektrische-middenklassers/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22436,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-routeplanner-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 22437,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-tijink-v-o-f-lattrop-breklenkamp-7635-na",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22438,
+    "url": "https://www.autoscout24.nl/autobedrijven/c-de-bruin-personenauto-s-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22439,
+    "url": "https://www.autoscout24.nl/autobedrijven/russcher-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22440,
+    "url": "https://www.autoscout24.nl/autobedrijven/greven-automotive-b-v-stadskanaal-9502-ec",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22441,
+    "url": "https://www.autoscout24.nl/",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22442,
+    "url": "https://www.autoscout24.nl/autobedrijven/amv-wenting",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22443,
+    "url": "https://www.autoscout24.nl/autobedrijven/ocm-automotive-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22444,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-van-leersum",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22445,
+    "url": "https://www.autoscout24.nl/autobedrijven/b-en-s-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22446,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-tjeerdsma",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22447,
+    "url": "https://www.autoscout24.nl/lst/c/bedrijfswagen#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22448,
+    "url": "https://www.autoscout24.nl/autobedrijven/autocentrum-carstar-kwintsheul-2295-rv",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22449,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-wemmenhove-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22450,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-combi",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22451,
+    "url": "https://www.autoscout24.nl/autobedrijven/dani-automobielen",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22452,
+    "url": "https://www.autoscout24.nl/autobedrijven/rb-automotive-lieren",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 22453,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-superb/skoda-superb-combi/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22454,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-gle-coupe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22455,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22456,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-300/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22457,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-63-amg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22458,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a4/avant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22459,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-320/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22462,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-sprinter/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22463,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22465,
+    "url": "https://www.autoscout24.nl/auto/tesla/tesla-model-3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22466,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22467,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/g-580/review-mercedes-benz-g-580-2025-elektrisch-zwaargewicht/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22468,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-s60/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22469,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-180/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22470,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-cla-klasse/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22471,
+    "url": "https://www.autoscout24.nl/auto/alfa-romeo/alfa-romeo-giulia/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22472,
+    "url": "https://www.autoscout24.nl",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22473,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/eqs-suv/mercedes-eqs-suv-2023-test-waarom-hij-de-eqs-sedan-overbodig-maakt/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22474,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22475,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/c-400/mercedes-c-klasse-eq-getest/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22476,
+    "url": "https://www.autoscout24.nl/auto/jaguar/jaguar-xe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22477,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-classe-gla/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22478,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-(alle)",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22479,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-230/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22480,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-220/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22481,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-200/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22482,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-270/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22483,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/dus-jij-denkt-dat-de-mercedes-e-klasse-comfortabeler-is-dan-de-bmw-5-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22484,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-250/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22485,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-vito/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22486,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-240/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22487,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/mercedes-glc-review-laat-zien-waarom-suv-s-geweldig-zijn/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22488,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-eqa/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22489,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-280/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22492,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/eqe-43/mercedes-amg-eqe-43-4matic-review-ook-de-elektrische-toekomst-van-amg-is-bloedstollend/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22493,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-passat/volkswagen-passat-variant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22494,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 22495,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/g-klasse-(alle)/ve_brabus",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4g3kfFNhcexmrTog3lFvri/3705d0e65f39b5fe8e956103fc7186f5/mercedes-benz-c-klasse-front.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-front",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4g3kfFNhcexmrTog3lFvri/3705d0e65f39b5fe8e956103fc7186f5/mercedes-benz-c-klasse-front.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-front",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/qDYfOZugn1pQ0mmDm2yoj/2d96188eeaf9fd53ccd2b2a003b945c2/mercedes-benz-c-klasse-back.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-back",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6TPe9AaUgPxyNfPrd1pejW/d68c0fe9563b15074720a3ec5a6afd24/mercedes-benz-c-klasse-side.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-side",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/efa957d2-b2fb-4113-9915-755484ffccf8_2fbf8c1f-5021-40bf-be5f-07adb41cfe45.jpg/360x270.jpg",
+    "alt": "Estate CDI Avantgarde EXPORTPRIJS",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7741f651-909c-49ec-9c40-dbb92ab59865_e3a18970-9a67-4fe3-84f7-a3b5803b8633.jpg/360x270.jpg",
+    "alt": "AMG Line | Pano/Dak | Burmester | Leder/Alcantara",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/45c058fa-84bb-4bfb-be58-6538123c2924_b4a66fb6-10d3-48db-8483-1f8de7c7becb.jpg/360x270.jpg",
+    "alt": "Ambition | Leder | NL Auto | Stoelver.",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/20bb039e-c05c-4e91-941a-33fa6f6f5883_4affa227-356f-41b2-a3ca-5b63d085122f.jpg/360x270.jpg",
+    "alt": "C180 156pk 7G-TRONIC Prestige",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eb9016ee-cd45-4633-a7f7-21e0bf8c52d7_eb443436-686e-43e2-a625-42b7cf75f84c.jpg/360x270.jpg",
+    "alt": "Estate S Premium Plus Pack - PANO - MAT ZILVER - H",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2fb9d95f-d692-4506-866b-2c97d3f96267_a8b3530d-0585-45ac-a13a-fb8644507f3e.jpg/360x270.jpg",
+    "alt": "S E Performance | 680 pk | AMG Drivers Package | A",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/233ecff9-3524-48c0-ae25-1c26b00de1cc_1e2549aa-3513-4817-b8be-7f1662fc661d.jpg/360x270.jpg",
+    "alt": "Aut7 Avantgarde ✅ Xenon ✅ Navi ✅ Trekhaak",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d334cfb7-d086-4cf4-b23e-c28d9124a1f5_ed65336c-c661-4b4f-90ae-c9b19c936b56.jpg/360x270.jpg",
+    "alt": "CDI Classic Lerenbekleding PDC voor\u0026achter Clima M",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/aabb2940-c4ca-43a9-8b11-b7a3f8e6e879_69fc3efc-8680-43ef-bd37-dc8c388b9615.jpg/360x270.jpg",
+    "alt": "200 CDI Business Class Avantgarde. CRUISE, AIRCO,",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fa01f2fd-127d-429a-97ce-d46cf104efe3_3e2dc2f6-0fcf-4d5d-a126-b89199f7c4a9.jpg/360x270.jpg",
+    "alt": "Estate CDI Prestige",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1f2d2df2-a6de-439b-9704-98655db572f9_d517468a-ed71-4098-b810-9dd2dd5282cf.jpg/360x270.jpg",
+    "alt": "Estate e Lease Edition",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/54439182-749f-4722-9fa9-d30018d8d34c_825d41bd-1acf-4f5b-858c-cf065d85be70.jpg/360x270.jpg",
+    "alt": "Estate CDI Business Class Avantgarde/clima/cruise/",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0c21972c-0ecd-4c19-88b5-2d407195ab44_e6f28967-9f02-4b6d-b0a2-d058527b0fdc.jpg/360x270.jpg",
+    "alt": "CDI Pano, Navi, Climat, Leer, Pdc, LM..",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0b003b4e-7634-41b1-bcae-7a775609cdc6_47629619-0147-41e1-8d30-511946a9ab7c.jpg/360x270.jpg",
+    "alt": "AMG Line Panorama| Achteruitrijcamera | Elekt. sto",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d70393ed-7224-4c78-b7d6-43f8b7b70572_cb07f534-c69f-458c-9ffd-d16b5282a7ad.jpg/360x270.jpg",
+    "alt": "Estate C63 S Keramisch / Kuip / 360 camera / Sfeer",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/676a3ffc-8162-4fb2-a4af-09f326ef4240_89abf875-5b45-45cc-b959-1907a1e17cad.jpg/360x270.jpg",
+    "alt": "Estate e AMG Line",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/63d6bd20-5a9b-458e-b080-0440427223f0_161dcec9-e184-40c1-90a6-06d68bf78540.jpg/360x270.jpg",
+    "alt": "Estate 457PK Harman/Kardon Pano/dak Leder Stoelver",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/61f9bafc-2179-4dc7-a7c6-3ce59a3c618b_7af074f9-d765-4017-927f-efa184183f93.jpg/360x270.jpg",
+    "alt": "S Panorama Dealer 360 Headup Burmeister Memory",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5545ebbd-dbb9-4793-af07-dc2590c7e890_c2025b57-ae1b-4e8d-a6f4-7b245fd0eabf.jpg/360x270.jpg",
+    "alt": "e Business Solution AMG Limited AMG Line | Airco E",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cde80bb8-4d4b-41b7-8752-6cd38d0e246a_5520ba3f-fb3f-48c1-bd0f-119dbfa43457.jpg/360x270.jpg",
+    "alt": "Estate CDI HYBRID Lease Edition | Ambiente | Elc t",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/31i0dMtJeOJebdkoaCNMdN/16bef42dadb2824a2ef8b88a242affd8/mercedes-benz-c-klasse-interior.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-interior",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GBidDlqEvOyfGsIXAwP8/14460d31e3a70da4a827609185f35e8b/CR-40_-_AutoScout24_-_Mercedes-Benz_G_580_foto1.jpg?w\u003d1100",
+    "alt": "Review – Mercedes-Benz G 580 (2025): elektrisch zwaargewicht",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5k1FTVQ0goBjGyaaBJeh2S/7c9079c188f4e9f620e6bfdc41b83755/mercedes-eqs-suv-580-2023-1.jpg?w\u003d1100",
+    "alt": "Mercedes EQS SUV (2023) test: waarom hij de EQS sedan overbodig maakt",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4prQQKryuOEjY2edk87Q8h/e2a287ba9dfb25a4ca236aa78d60eeb6/mercedes-amg-eqe-43-4matic-2022-30-1.jpg?w\u003d1100",
+    "alt": "Mercedes-AMG EQE 43 4Matic review: ook de elektrische toekomst van AMG is bloedstollend",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6Nd0mQbcK5Wixx7IM0BEJV/f70e10f2108e2cb7f017b897ad87d822/mercedes-glc-2022-1.jpg?w\u003d1100",
+    "alt": "Mercedes GLC review: laat zien waarom suv’s geweldig zijn",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GNGBbc1RBf21b9fDW1EIy/21839a2a19994f63c5b35811782d64e8/Mercedes-Benz_C-Klasse_EQ.jpg?w\u003d1100",
+    "alt": "Mercedes C-Klasse EQ getest: tot 762 km actieradius en alternatief voor BMW i3",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/22FYdWWMfjuuSSs8pqX6SJ/902487346b82d97a8cca6c331d5d3cb5/mercedes-e-klasse-bmw-5-serie-2022-20-1.jpg?w\u003d1100",
+    "alt": "Dus jij denkt dat de Mercedes E-Klasse comfortabeler is dan de BMW 5-serie ",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8caca329-3397-4e4d-8868-332197423d6c_53caf227-e4e4-42b3-9692-98105712afd3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fc6dee93-2c69-4bd7-a224-0ad91216230f_124224e3-ffad-4135-8ccf-e45d6cd79ceb.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/7076818-original-477de26d-a130-45c0-86e4-332bb90c2f8d.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/89/XGZ5pqUYCtfNBS4IW3qCpuANWdVaaEnz/7EIXX9UsoQj68K8XhADPcqGKi1OolLIo.jpg",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bdbd67a5-1d3d-4c9a-baf2-08d0b8b76767_b23f7f16-5aaa-4004-a85d-a2d02936871c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/48518569-original-122ee386-e6dc-4703-99c9-bb1de494df5e.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/36d0305d-a785-4713-ab0f-44688f884d68_30556601-efb0-4c9d-a1a4-271883a22ed7.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46771975-original-ba63909c-ef93-4bde-8d2a-4c5408783f20.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/889a70a5-2909-4dc7-bae0-5b2db92e1f45_70397f16-081a-469d-89be-2f5a74abd09a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46771975-original-ba63909c-ef93-4bde-8d2a-4c5408783f20.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/76e644bc-868f-4641-a4dc-01b99a76b7e9_001b1127-4212-45d5-95d8-ef8ec7f90f43.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/45091851-original-da6da431-1736-4085-a63d-ff1d581a3959.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bc4745b3-2e37-4f82-b3c6-7b335e523089_f1475853-ba37-43e9-874d-d3edf0c758f4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/6155406-original-7a4f7685-6d50-4ea8-b7a7-78eba049b3a6.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/343/14Gz1kNLxojDsXet9isOrBAE2hhiZddg/4RqAoYyk8YElxGzmiFQ6Ma6AhoYX7ccf.jpg",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/63b1d1d4-cb60-421d-97fd-24314d71ec77_d3b881a0-8db8-4031-ae12-f12d0726f690.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/8985-original-e7494337-75d9-4c28-bc8b-3191ab981a34.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/987a1279-59e6-43fd-b8b2-42a370de7b04_f49cbba2-be56-4799-9e81-6c4301939242.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/9912-original-8aeaacb3-2b06-45b7-85fc-dcc48c5c8d8a.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d1a59c07-54d1-4789-804d-1859b0840d44_84d652f6-8bbd-42bb-8d51-584ffb0ddcdc.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46771975-original-ba63909c-ef93-4bde-8d2a-4c5408783f20.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/acd18655-cbf4-4b46-9011-ae6d6247486f_acdb89b8-a06e-4ab0-88c1-e36df40a2be0.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46771975-original-ba63909c-ef93-4bde-8d2a-4c5408783f20.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b8ebf5dc-eb93-4fd7-9822-1daade54490e_2cce9bc3-53b2-466b-aecc-9e0f7f102231.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/53706089-1c65-4db9-9c17-484ea39b6bd8_80700351-e9fc-4e4f-89c6-cb5fe56ac4ce.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/10568-original-c8fd50df-421c-47bc-9dc0-36a606fd2c6b.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d21796bc-e98c-4d73-a539-b798ebca87b5_eda913b2-70c9-4e62-84f5-7055121c8dc4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/40136437-original-c1e9cfcd-fd2f-4919-8289-7fd6c3528855.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/954dbd70-d198-4823-b1a3-bd8381b94039_87e06fa3-068f-4d37-a083-fa4bdb697fbe.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/6155406-original-7a4f7685-6d50-4ea8-b7a7-78eba049b3a6.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0f0d699d-f804-481d-a97d-f805e375d240_21ce4e80-1d2b-417d-b172-c25202debc3a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/37867280-original-38085e16-c0fd-401e-b855-e920c63659ab.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7beb46b0-037f-482a-b528-d656a17fa7e6_81cd4517-fb74-439b-9a06-7f26e3f3e05e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/3768040-original-4d5e70fa-e216-44fe-8f40-d28150c95c5b.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6bcc0835-2c52-479b-8ee1-d1270522f5bb_eeead3b4-5a01-4f8c-9289-75f2272fc39e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/9896-original-c8cab53c-b2f8-4154-84cf-a58eb43b4177.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/53869757-7a4c-4ab5-9bde-df1b3bcb2b33_b05ebf98-56a3-49d1-b3d4-356796db60bb.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46771975-original-ba63909c-ef93-4bde-8d2a-4c5408783f20.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/73319d74-b506-47cd-98ec-4e0b4b56672a_8a100aaf-ac6b-43dd-9ac2-332ae0cd0e81.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/6155406-original-7a4f7685-6d50-4ea8-b7a7-78eba049b3a6.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5URhveuFGwvDHmI6vuFoHC/f1df100f1ab98c692f2c4bec48d8de1b/Tesla-Model-3-Performance-2025__2_.jpg?w\u003d1100",
+    "alt": "Tesla-Model-3-Performance-2025 (2)",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/18XX42xzRxjhEtcPxKJZST/a92fa03eb31a20603af533c36fc25317/Small-21082-MaseratiGranTurismoFolgoreCopperGlance.jpg?w\u003d460",
+    "alt": "maserati-granturismo-folgore-front",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4dtrr7EhLHV4DH8Z8MSBJh/0587554355ca5b5192202bb9b2d15e23/car_crosses_country_road_winding_in_twilight_.jpeg?w\u003d460",
+    "alt": "car crosses country road winding in twilight",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5URhveuFGwvDHmI6vuFoHC/f1df100f1ab98c692f2c4bec48d8de1b/Tesla-Model-3-Performance-2025__2_.jpg?w\u003d460",
+    "alt": "Tesla-Model-3-Performance-2025 (2)",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6VfA4HzSkTGnVcbWfFPpBD/0ef904539067972edfa714981f3146d9/_BST-118__Volvo-EX30-2025.jpg?w\u003d460",
+    "alt": "(BST-118) Volvo-EX30-2025",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1QgHiEZYg73cERueprP8A1/439ebfd85d83b09a0ae1d384cc8c273a/BST-14_-_Beste_routeplanner.jpg?w\u003d460",
+    "alt": "Beste routeplanner",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2oWawve4N2SqjVy06EAFcy/ee5c7cecd3c26e1eb589f87a0f4a1aa5/volkswagen_id.7_15.jpeg?w\u003d460",
+    "alt": "volkswagen id.7 15",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rHR8N8JLJWlEWc6iOmUKi/4d5ab26175ff8c9b140c12437c768908/ADV-182_-_auto_met_schuifdeuren.jpg?w\u003d460",
+    "alt": "Auto met schuifdeuren",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/ehNDDNs9jyGqq3qnhU4UM/2ae0a1ad15ccaa2cd26abe7b0802ed29/BST-42_-_AutoScout24_-_Goedkoopste_nieuwe_auto_foto4.webp?w\u003d460",
+    "alt": "Goedkoopste nieuwe auto",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1lU2i8Q5hOSbDjBCE7LLVv/e234cc4cadffbc245bdf1a2489bf0355/ford-mustang-mach-e-side.jpg?w\u003d460",
+    "alt": "ford-mustang-mach-e-side",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1sKSgvDA0lxqSIRsmhEH2W/461271222b1e62c009fdf287c2ec6170/waarom-audis-e-hybrid-anders-is-dan-ehybrid-van-volkswagen-2025-03.jpg?w\u003d1100",
+    "alt": "waarom-audis-e-hybrid-anders-is-dan-ehybrid-van-volkswagen-2025-03",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4Z2wMpAuqoUqUJhIExN7dl/75f7e2aa8ecbf293e6f533206a00060b/iStock-936987354.jpg?w\u003d1100",
+    "alt": "Presse, Geld, Finanzen",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5C5uwNK4nBTJlPEuF6bwXm/31b5253d968dff559c05cf6497ab3a5f/youngtimers-en-klassiekers-2022-1.jpg?w\u003d1100",
+    "alt": "Betaalbare youngtimer of klassieker kopen? Waarom je één van deze acht moet hebben",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/7/k/V/t/e/VimcKJ4LtpJ5JaDPe8QdKyAeah6TFJWuVJTW2gb/0x0x2864x1611-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/C/g/5/Z/u/AUpNyTi2sp5QPN3riM3AedLh2q1sLa1WFUdw4VL/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/r/U/V/E/H/7t9x6n92KTJgAgnMKUeSJYRxt6a7beQzxax5R4/314x0x3176x2382-768x576.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/06/11/1235855/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/04/04/1210391/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/E/N/P/Z/b/rfRHEAMLkvwTWmC727hWkfaVhY1bF4V1fsA54vQ/339x46x2684x2013-192x144.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/5/T/s/W/P/dRdSyd4WgdnfqULZUBpqVhW4T3XiUfsy5vS8vM9/822x675x2496x1872-768x576.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/4/N/C/m/7/sn6mmyass2Wch2yDZ5yUaZdoYshyckx5g8h6tce/65x86x2872x2154-768x576.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/6/T/K/k/H/uczNqW4GT1JCg8MNB7U6WZH85UzZmx7cEc8wows/299x239x1648x1236-576x432.webp",
+    "alt": "",
+    "pageTitle": "Ophef over prijzengeld grandslams: \u0027Maar boycot altijd slechtste oplossing\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613390-ophef-over-prijzengeld-grandslams-maar-boycot-altijd-slechtste-oplossing"
+  },
   {
     "src": "https://images.cdn.nos.nl/3/D/Y/J/8/1/2PXViARQaGNqtGPvNsH5aKfFm2HdjbWgtrpAXKh/0x0x4000x2250-1024x576.webp",
     "alt": "",
