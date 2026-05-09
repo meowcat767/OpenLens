@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 333,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/",
+    "title": "Tweedehands camper te koop - camper occasion kopen",
+    "content": "Ga naar hoofdinhoud Homepage Tweedehands caravans te koop - caravans occasion kopen Camper Tweedehands camper te koop Toon meer Actueel aanbod van Camper Volkswagen California T7 2.0 tdi Beach Camper 150cv DSG7 € 71.300,- BTW verrekenbaar - km - (Bouwjaar) 110 kW (150 PK) Nieuw 2 bedden Automatisch Diesel 1,0 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl - (g/km) Bedrijf, IT-31033 Castelfranco - Treviso - TV Volkswagen California T7 2.0 tdi Beach Camper 150cv DSG7 € 69.500,- BTW verrekenbaar - km - (Bouwjaar) 110 kW (150 PK) Nieuw 2 bedden Automatisch Diesel 1,0 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl - (g/km) Bedrijf, IT-31033 Castelfranco - Treviso - TV Citroen Jumper 33 Camper L3H2 Control *TEMP*KLIMA*KÜCHE* € 44.885,- BTW verrekenbaar 23.546 km 07/2023 121 kW (165 PK) Gebruikt 2 bedden Handgeschakeld Diesel 9,7 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 253 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, DE-25436 Uetersen bei Hamburg Fiat Ducato CAMPER 2.3 Iveco power* nwe Distr riem € 19.995,- 215.071 km 07/2016 100 kW (136 PK) Gebruikt - (Aantal bedden) Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, NL-6466 GW KERKRADE McLouis Mobilehome/Camper 6 zitplaatsen Mercedes 316 € 17.400,- 164.000 km 06/2001 - kW (- PK) Gebruikt 6 bedden Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, BE-9340 Lede Volkswagen T4 Automaat|Camera|Zeer nette Camper € 13.750,- 249.322 km 10/2001 75 kW (102 PK) Gebruikt - (Aantal bedden) Automatisch Diesel - (l/100 km) - (g/km) Bedrijf, NL-2295 RV KWINTSHEUL Overig CHEVROLET CHEVY VAN 20 CAMPER BUS 5.7 V8 € 14.999,- 235.682 km 01/1995 - kW (- PK) Gebruikt - (Aantal bedden) Automatisch LPG - (l/100 km) 0 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-5421 WK GEMERT Volkswagen Transporter Kombi Camper 2.0 TDI L2H1 9-perso € 29.950,- BTW verrekenbaar 179.018 km 08/2018 63 kW (86 PK) Gebruikt 2 bedden Handgeschakeld Diesel - (l/100 km) 173 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-7665 SE ALBERGEN Mercedes-Benz SPRINTER 316 CDI Aut 2016 Camper Zonnepanelen € 14.950,- 330.742 km 05/2016 120 kW (163 PK) Gebruikt - (Aantal bedden) Automatisch Diesel - (l/100 km) 208 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-7961 EA RUINERWOLD Volkswagen California T7 2.0 tdi Beach Camper 150cv DSG7 € 71.300,- BTW verrekenbaar - km - (Bouwjaar) 110 kW (150 PK) Nieuw 2 bedden Automatisch Diesel 1,0 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl - (g/km) Bedrijf, IT-31033 Castelfranco - Treviso - TV Volkswagen California T7 2.0 tdi Beach Camper 150cv DSG7 € 69.500,- BTW verrekenbaar - km - (Bouwjaar) 110 kW (150 PK) Nieuw 2 bedden Automatisch Diesel 1,0 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl - (g/km) Bedrijf, IT-31033 Castelfranco - Treviso - TV Citroen Jumper 33 Camper L3H2 Control *TEMP*KLIMA*KÜCHE* € 44.885,- BTW verrekenbaar 23.546 km 07/2023 121 kW (165 PK) Gebruikt 2 bedden Handgeschakeld Diesel 9,7 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 253 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, DE-25436 Uetersen bei Hamburg Fiat Ducato CAMPER 2.3 Iveco power* nwe Distr riem € 19.995,- 215.071 km 07/2016 100 kW (136 PK) Gebruikt - (Aantal bedden) Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, NL-6466 GW KERKRADE McLouis Mobilehome/Camper 6 zitplaatsen Mercedes 316 € 17.400,- 164.000 km 06/2001 - kW (- PK) Gebruikt 6 bedden Handgeschakeld Diesel - (l/100 km) - (g/km) Bedrijf, BE-9340 Lede Volkswagen T4 Automaat|Camera|Zeer nette Camper € 13.750,- 249.322 km 10/2001 75 kW (102 PK) Gebruikt - (Aantal bedden) Automatisch Diesel - (l/100 km) - (g/km) Bedrijf, NL-2295 RV KWINTSHEUL Overig CHE",
+    "scrapedAt": "2026-05-10 04:01:56.959147"
+  },
+  {
+    "id": 332,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a1/",
+    "title": "Audi A1 - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Audi Audi A1 Audi A1 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Stijlvolle vormgeving Audi-kwaliteit in compact formaat Prettige comfortabele rijeigenschappen Zwakke punten Hoge aanschafprijs Geen hybrideversie Tweede generatie minder onderscheidend Toon aanbod Toon aanbod Audi A1: de hippe compacte Audi Met de Audi A1 haakte het merk in op het succes van de moderne MINI: een hip vormgegeven compacte hatchback met veel personalisatiemogelijkheden. De tweede generatie kreeg een meer conventionele vormgeving en was vooral het luxere alternatief voor bijvoorbeeld de Volkswagen Polo. Audi A1 : een overzicht Bekijk hier de actuele prijzen voor de Audi A1 : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 31.885,-* Occasions vanaf:€ 2.964,-* *Laagste prijs op AutoScout24 in de afgelopen maand Audi A1 aanbiedingen Audi A1Sportback 30 TFSI Pro Line Automaat/116pk/Navigati € 28.8501 08/2025 4.201 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7773 NJHardenberg Audi A1Sportback 35 TFSI B\u0026O|STOELVERWARMING|18INCH|AIRCO € 18.450 € 19.500,- 06/2019 100.304 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 4815 HTBreda Audi A1Sportback 40TFSI 200PK Edition #1 Black optic M-LE € 27.949 03/2019 89.060 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8444 DCHeerenveen Audi A1Sportback 1.0 TFSI Sport Pro Line € 8.640 10/2015 218.602 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1424 NWDe Kwakel Audi A1Sportback 30 TFSI epic 5deurs | Automaat | Airco | € 15.9991 04/2020 163.287 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7944 HTMeppel Audi A11.0 TFSI ADRENALIN l NAP l 5DRS l CRUISE l BLUETOO € 13.995 11/2016 112.181 km Benzine 4,3 l/100 km (gem.) 2,8 Autobedrijf NL 7821 APEmmen Audi A1Sportback 1.0 TFSI Adrenalin Sport Pro S-Line | 2e € 12.950 03/2017 108.474 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7831 CCNieuw-weerdinge Audi A11.0 TFSI DESIGN € 11.750 04/2017 138.227 km Benzine 0,0 l/100 km (gem.) 2,8 Autobedrijf NL 5113 TCUlicoten Audi A1Sportback 1.0 TFSI Adrenalin, Navigatie,L.M.Velgen € 12.250 01/2016 111.343 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3927 BGRenswoude Audi A11.2 TFSI Pro Line S Clima € 4.950 11/2013 199.856 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2521 RLDen Haag Audi A11.2 TFSI S-LINE LED |CRUISE | STOELVER | NAVI| NWE € 5.495 10/2011 276.465 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4825 ASBreda Audi A11.4 TFSI Pro Line S Automaat PDC Navi AC 18\" BT MF € 7.990 06/2011 171.000 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1921 CXAkersloot Audi A1Sportback 1.0 TFSI S Line |CRUISE|AIRCO|LM VELGEN € 13.750 03/2016 78.432 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2952 AXAlblasserdam Audi A135 TFSI Epic S-tronic 150 Pk Ecc Cruise Navi Led P € 17.9991 11/2020 146.952 km Benzine 5,0 l/100 km (gem.) 2,8 Autobedrijf NL 3284 WDZuid-beijerland Audi A1Sportback 1.2 TFSI Ambition / Ketting vv. / Stoelv € 6.950 02/2012 187.307 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8161 PAEpe Audi A1Sportback 25 TFSI Pro Line|Virtueel Cockpit|Parkee € 15.950 08/2019 96.887 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8077 RHHulshorst Audi A1Sportback 1.0 TFSI Adrenalin € 11.950 11/2016 121.124 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2288 GVRijswijk Audi A1Sportback 1.2 TFSI S-Line Airco|Cruise|Leder|Pdc € 7.999 07/2013 190.615 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5151 RWDrunen Audi A11.0 TFSI Pro Line Automaat | Stoelverwarming | Nav € 11.495 12/2015 136.519 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7671 SPVriezenveen Audi A1SB 1.0 TFSI Advance Sport S-Line | Clima | Cruise € 13.000 04/2019 181.657 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9502 ECStadskanaal Bekijk alle Audi A1 aanbiedingen Goede redenen Een van de meest hippe en jeugdige Audi-modellen Meer personalisatiemogelijkheden dan gemiddeld De kwaliteiten van grotere Audi’s, maar dan in compact formaat Met de S1- en Quattro-varianten wordt ook de sportieve rijder aangesproken Technische gegevens Motorisatie Het motorenaanbod van de Audi A1 bestaat vooral uit viercilindermotoren, met een inhoud van 1,2- tot 2,0-liter. Alleen de eerste generatie was ook leverbaar met dieselmotoren, viercilinders met 1,6- of 2,0-liter inhoud. Bij de tweede generatie begint het aanbod met een 1,0-liter driecilinder benzinemotor. Het vermogen varieert van 63 kW (86 pk) voor het instapmodel tot 188 kW (256 pk) voor de sportieve Quattro-uitvoering. Afgezien van de vierwielaangedreven S1- en Quattro-versies heeft de Audi A1 altijd voorwielaandrijving. Afhankelijk van de uitvoering was/is de Audi A1 leverbaar met handgeschakelde transmissie met vijf of zes versnellingen en met zes- of zeventrapsautomaat. Afmetingen Ongeacht de modelgeneratie is de Audi A1 ongeveer vier meter lang, 1,70 meter breed en 1,40 meter hoog. De wielbasis bedraagt ongeveer 2,50 meter. In verhouding is de tweede generatie Audi A1 een fractie lager, langer en breder dan het eerste model. De eerste modelgeneratie bood keuze uit een driedeurs en vij",
+    "scrapedAt": "2026-05-10 04:01:50.834998"
+  },
+  {
+    "id": 331,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/",
+    "title": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Volkswagen Volkswagen Golf Volkswagen Golf 7 Volkswagen Golf 7 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Comfortabel Lekker allround Ruim interieur Zwakke punten Weinig emotie Facelift (2017) had ingewikkeld infotainment Vereenvoudigde wielophanging voor basismotoren Toon aanbod Toon aanbod Volkswagen Golf 7: een allround Golf in diverse smaken Modelbeschrijving De zevende generatie Golf kwam in 2012 op de markt. De verkoopteller van de Golf sinds de eerste generatie stond op dat moment op 29 miljoen exemplaren. Niet heel raar dus dat Volkswagen een vervolg gaf aan de Golf. Lees meer Volkswagen Golf 7 : een overzicht Bekijk hier de actuele prijzen voor de Volkswagen Golf 7 : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 35.775,-* Occasions vanaf:€ 478,-* *Laagste prijs op AutoScout24 in de afgelopen maand Volkswagen Golf 7 aanbiedingen Volkswagen Golf2.0 TSI 4Motion R PANO VIRTUAL LEER MEMORY € 23.999 04/2019 159.356 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5015 ASTilburg Volkswagen Golf1.0 TSI Comfortline | LED | CarPlay | Adaptive Cru € 12.885 03/2018 138.841 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7711 EPNieuwleusen Volkswagen Golf1.5 eTSI Style Panorama IQ Elek Stoel Dealer ondrh € 20.750 07/2020 136.000 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3641 RPMijdrecht Volkswagen Golf1.2 TSI CUP Edition NAVI | STOELVERWARMING € 10.999 04/2014 99.887 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7602 PWAlmelo Volkswagen Golf1.6 TDI Comfortline | Airco | Adap. Cruise | Carpl € 11.500 01/2018 199.551 km Diesel - (l/100 km) 2,8 Autobedrijf NL 9502 ECStadskanaal Volkswagen Golf1.4 eHybrid Style Business | IQ | ACC | elekt stoe € 22.9401 05/2023 85.000 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 4793 ASFijnaart Volkswagen Golf1.4 TSI Highline € 9.250 09/2014 149.999 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7335 GWApeldoorn Volkswagen Golf1.5 eHybrid Life Edition | Pano | LED | Camera | P € 34.9951 06/2025 3.409 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1911 DBUitgeest Volkswagen Golf1.4 eHybrid Style, BOEKJES,NAP EN ONDERHOUDSHISTOR € 19.9501 03/2021 97.751 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 3604 BAMaarssen Volkswagen Golf1.4 TSI Optive 4 Trekhaak | Cruisecontr. | Airco * € 3.950 01/2008 183.034 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7957 ATDe Wijk Volkswagen Golf1.5 eTSI 3x R-Line | Panoramadak | Harman Kardon | € 29.950 09/2021 77.584 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7556 MZHengelo (ov) Volkswagen Golf1.5 TSI Comfortline AppleCarPlay € 14.950 01/2019 134.806 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2288 GVRijswijk Volkswagen Golf1.0 TSI Trendline|Trekhaak|Led|Airco € 10.950 09/2017 166.901 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1504 AKZaandam Volkswagen Golf2.0 TSI R 4Motion 20 Jahre Ed. 333PK | Akra | Pano € 49.980 06/2023 32.841 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5015 BMTilburg Volkswagen Golf2.0 TSI R 4Motion 300PK|XENON|PANODAK|CAMERA|ACC|C € 18.950 02/2014 158.478 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2921 LXKrimpen Aan Den Ijssel Volkswagen Golf1.0 TSI LIFE I ADAPTIVE CRUISE CONTROL I SFEERVERL € 17.9451 05/2022 120.111 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3443 TJWoerden Volkswagen Golf2.0 GTI EDITION 265 pk € 7.950 05/2012 243.718 km Benzine 7,3 l/100 km (gem.) 2,8 Autobedrijf NL 5113 TCUlicoten Volkswagen Golf1.5 eTSI DSG Style ✅ Pano ✅ Stuurverwarming ✅ Mass € 20.440 03/2020 141.747 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1741 NASchagen Volkswagen Golf1.2 TSI TEAM BlueMotion **5DRS-AIRCO-CRUISECNTRL** € 4.499 € 4.999,- 05/2009 183.151 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 7327 JZApeldoorn Volkswagen Golf2.0 TDI 190PK DSG R-Line•ACC•Navi € 19.950 08/2020 158.632 km Diesel - (l/100 km) 2,8 Autobedrijf NL 7021 BZZelhem Bekijk alle Volkswagen Golf 7 aanbiedingen Goede redenen Volkswagen Golf is een fijn gebalanceerde rijdersauto met veel comfort. 1.5 TSI (EVO) viercilinder benzinemotor zeer populaire keuze voor Golf. Verkrijgbaar als Golf driedeurs, vijfdeurs, SportsVan (MPV), Variant (stationwagon) en zelfs een elektrische e-Golf. Een Golf 7 voor iedereen dus! Naast ruim en comfortabel ook bijzonder veilig: 5 sterren in Euro NCAP-botsproef. Technische gegevens Motorisatie De zevende generatie Volkswagen Golf is de laatste der Golfen met een serie conventionele motoren. Door zijn levensloop werden er diverse benzine- en dieselmotoren gebruikt met uiteenlopende vermogens en specifieke configuraties. Deze motoren waren verkrijgbaar in de hatchback, Variant (stationwagon) en SportsVan (MPV). Het vermogen van de motoren loopt uiteen van 63 kW (85 pk) tot 228 kW (310 pk). De Volkswagen Golf 7 is onder meer verkrijgbaar met een 63 kW (85 pk) sterke 1.0 TSI die de 1.2 TSI viercilinder turbobenzine als basismotorisering met 63 kW 85 pk) of 77 kW (105 pk) – optioneel met automaat – vervangt. Vroegere Golf 7-modellen hebben een 1,4-liter vie",
+    "scrapedAt": "2026-05-10 04:01:40.688668"
+  },
+  {
+    "id": 330,
+    "url": "https://www.autoscout24.nl/lst/c/cabrio",
+    "title": "Cabrio occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Cabrio occasion kopen Filteren Alles reset Merk en model Carroserievorm Cabrio Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Zoeken op trefwoord Filteren2 Nederland Cabrio Zoekopdracht opslaan Peugeot 207 CC 1.6 VTi Cabriolet - Leuke Auto - Airco - Elek D Bewaar 24 € 1.990 08/2008 146.243 km Benzine 88 kW (120 PK) Autobedrijf N.DrostNL-7961 ED RUINERWOLD + Meer voertuigen Ferrari 308 GTSi | 34.637 Km | Europese auto | Airco | 1981 Bewaar 19 € 109.950 01/1981 34.637 km Benzine 157 kW (213 PK) E\u0026R ClassicsNL-5145 NA WAALWIJK + Meer voertuigen Aston Martin DB9 Volante 5.9 V12 Touchtronic | 450pk | Only 449km | Bewaar 33 € 94.9501 07/2006 449 km Benzine 331 kW (450 PK) Ibalo Luxury SportscarsNL-7471 ST GOOR + Meer voertuigen Ferrari F8 Spider Tailor made 1 of Novitec N-Largo WideBody Blu Swat Bewaar 40 € 785.2501 01/2022 2.985 km Benzine 530 kW (721 PK) Signature Cars By Absolute Motors Signature CarsNL-2988 CM RIDDERKERK + Meer voertuigen Dodge Viper SRT10 Cabriolet Bewaar 19 € 69.950 01/2004 21.285 km Benzine 372 kW (506 PK) E\u0026R ClassicsNL-5145 NA WAALWIJK + Meer voertuigen Opel Cascada 1.4 Turbo ecoFLEX Cosmo, Leder, Stoelverw., PDC V+ Bewaar 36 € 10.850 07/2013 118.315 km Benzine 103 kW (140 PK) Xenon verlichting, Navigatiesysteem, Bi-Xenon koplampen, Sportstoelen, Elektrische stoelverstelling, Stoelventilatie, Met onderhoudshistorie, Nieuwe APK Koudijs Auto\u0027sNL-3771 NB Barneveld + Meer voertuigen Volkswagen Buggy 1.3 1961! Zeer mooi ! Bewaar 8 € 13.949 02/1961 17.932 km Benzine -/- B.O.K.S. – Bouw Op Kwaliteit \u0026 Service Autobedrijf Gerrit Boks B.V.NL-7324 AB APELDOORN + Meer voertuigen BMW 440 4-serie Cabrio 440i xDrive M-Sport | Indiv. Leder Bewaar 35 € 46.950 07/2020 73.664 km Benzine 241 kW (328 PK) 360° camera, Elektrische stoelverstelling, Alarm, Centrale deurvergrendeling met afstandsbediening, Adaptieve Cruise Control, Stoelverwarming, Digitale radio-ontvangst, Head-up display Vakgarage Van der Klij VOFNL-4191 PC GELDERMALSEN + Meer voertuigen BMW Z4 Roadster 2.5i Bewaar 33 € 15.950 03/2004 98.481 km Benzine 141 kW (192 PK) Alarm, Sportstoelen, Navigatiesysteem, Airbag bestuurder, Stoelverwarming, Regensensor, CD, Airconditioning HDA Wijchen B.V.NL-6603 BV WIJCHEN + Meer voertuigen BMW Z3 Roadster 1.8. Stoelverwarming! Bewaar 27 € 5.949 05/1996 191.382 km Benzine 85 kW (116 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD + Meer voertuigen Ferrari 296 GTS 3.0 V6 | 1e Eigenaar | ACC | CarPlay | AFS | MyFer Bewaar 26 € 362.9991 09/2025 500 km Elektro/Benzine 610 kW (829 PK) VDM Cars UtrechtNL-3992 DB HOUTEN + Meer voertuigen Porsche 356 Speedster Recreation by Vintage Bewaar 27 € 49.950 01/1973 21.734 km Benzine 63 kW (86 PK) Witmer \u0026 OdijkNL-2361 HG WARMOND + Meer voertuigen Mercedes-Benz SLR Mclaren Mint Condition * First paint * Germin Vehi Bewaar 50 € 489.000 05/2010 15.668 km Benzine 460 kW (625 PK) Autohuis MeppelNL-7942 LB MEPPEL + Meer voertuigen Jaguar E-Type S3 Cabrio | Gerestaureerd | 1971 Bewaar 16 € 79.950 01/1971 105.797 km Benzine 202 kW (275 PK) E\u0026R ClassicsNL-5145 NA WAALWIJK + Meer voertuigen Peugeot 207 CC 1.6-16V T Sport Bewaar 22 € 5.450 05/2008 69.686 km Benzine 110 kW (150 PK) Profi CarsNL-1333 HD ALMERE + Meer voertuigen Porsche 997 Cabrio 3.8 355pk Carrera 4S H6 Cruise Carplay Voll Bewaar 50 € 51.900 03/2008 164.778 km Benzine 261 kW (355 PK) Altijd 300 auto\u0027s op voorraad, inruilen doen we graag Garage PloeghNL-9231 HS SURHUISTERVEEN + Meer voertuigen Fiat 500X 1.5 Hybrid Sport Cabrio |CarPlay!|Automaat!| Bewaar 30 € 23.9501 03/2024 44.235 km Elektro/Benzine 96 kW (131 PK) Open dak, Lichtmetalen velgen, Navigatiesysteem, Getinte ramen, Dodehoekdetectie, Digitale radio-ontvangst, Automatische klimaatregeling, Parkeerhulp voor Automax Automotive B.V.NL-7821 AH EMMEN + Meer voertuigen Fiat 500C 0.9 TwinAir Turbo Cult | Cabrio | Automaat | Airco Bewaar 29 € 7.995 04/2015 103.567 km Benzine 59 kW (80 PK) Elektrische ramen, Lichtmetalen velgen, Parkeerhulp achter, Mistlampen, Automatische klimaatregeling, Airconditioning, Hill-Hold Control, Open dak Berg AutomotiveNL-6671 MG ZETTEN + Meer voertuigen Citroen 2CV Cabriolet Bewaar 19 € 22.950 01/1988 28.474 km Benzine 20 kW (27 PK) E\u0026R ClassicsNL-5145 NA WAALWIJK + Meer voertuigen Ferrari 812 GTS 6.5 V12 HELE | Carbon | Pass. Display | Lift | Bewaar 50 € 474.500 05/2021 7.157 km Benzine 588 kW (799 PK) Prins Esclusivo B.V.NL-8071 SC NUNSPEET + Meer voertuigen Wilt u automatisch informatie krijgen over nieuwe voertuigen die bij uw zoekopdracht passen? Zoekopdracht opslaan BTW verrekenbaar Deze informatie wordt verstrekt door de leverancier van het certificaat en/of rapport. Specificatie van de fabrikant voor nieuwe voertuigen. Afhankelijk van de kilometerstand, het rijgedrag, de leeftijd van de batterij en het laadgedrag, kan ",
+    "scrapedAt": "2026-05-10 04:01:32.617461"
+  },
+  {
+    "id": 329,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta",
+    "title": "Koop Ford Fiesta occasions op AutoScout24",
+    "content": "Ga naar hoofdinhoud Filteren Alles reset Merk en model Ford Fiesta Carroserievorm Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Zoeken op trefwoord Filteren2 Ford Fiesta Nederland Zoekopdracht opslaan Ford Fiesta 1.4 Trend Bewaar 29 € 2.499 09/2009 253.229 km Benzine 71 kW (97 PK) Alarm, Airconditioning, Radio, Elektrisch verstelbare buitenspiegels, Startonderbreker, Centrale deurvergrendeling met afstandsbediening, Centrale vergrendeling, ABS CardepotNL-5048 AZ TILBURG + Meer voertuigen Ford Fiesta 1.0 EcoBoost ST-Line Bewaar 11 € 12.995 12/2019 85.846 km Benzine 74 kW (101 PK) Sportonderstel, Alarm, Hill-Hold Control, Lichtmetalen velgen, Lichtsensor, Lane Departure Warning Systeem, Sportstoelen, Apple CarPlay Auto Service Zandhorst B.V.NL-1704 RX HEERHUGOWAARD + Meer voertuigen Ford Fiesta 1.0 EcoBoost ST-Line Nieuwe Distributie! Bewaar 29 € 8.449 03/2018 184.475 km Benzine 74 kW (101 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD + Meer voertuigen Ford Fiesta 1.4i 16v AUTOMAAT 5-DEURS TITANIUM|CLIMA AIRCO|CRU Bewaar 50 € 7.999 04/2010 100.329 km Benzine 71 kW (97 PK) Trekhaak, Nieuwe APK, Cruise control, Traction control, Voorruitverwarming, Garantie, Automatische klimaatregeling, Parkeerhulp achter Autobedrijf BangmaNL-8253 RB DRONTEN + Meer voertuigen Ford Fiesta 1.0 Hybrid ST-Line 1e Eigenaar | Volledig Onderh | Bewaar 35 € 15.5501 07/2023 75.782 km Elektro/Benzine 92 kW (125 PK) al 40 jaar de specialist in jong gebruikte occasions Auto Stuart ElstNL-6662 PT ELST + Meer voertuigen Ford Fiesta 1.0 Hybrid Titanium 2e Eigenaar | Volledig Onderh Bewaar 37 € 14.1501 11/2022 55.546 km Elektro/Benzine 92 kW (125 PK) al 40 jaar de specialist in jong gebruikte occasions Auto Stuart ElstNL-6662 PT ELST + Meer voertuigen Ford Fiesta 1.0 EcoBoost ST-Line | Panorama | WinterPack | NAP Bewaar 37 € 12.949 06/2018 74.316 km Benzine 74 kW (101 PK) Panorama dak, Sportonderstel, Lane Departure Warning Systeem, Garantie, Sportstoelen, Open dak, Lichtmetalen velgen, Automatische klimaatregeling AutoStockNL-4879 NL ETTEN-LEUR + Meer voertuigen Ford Fiesta 1.0 EcoBoost Titanium X | Navi | Cruise | Half lee Bewaar 30 € 7.950 02/2015 91.566 km Benzine 74 kW (101 PK) Nieuwe APK, Automatische klimaatregeling, Lichtmetalen velgen, Zij-airbags, Bluetooth, Mistlampen, Isofix, Navigatiesysteem Vakgarage WalsNL-2032 ZG HAARLEM + Meer voertuigen Ford Fiesta 1.0 EcoBoost ST-Line 100PK Winterpack Adaptieve Cr Bewaar 27 € 13.750 06/2020 64.363 km Benzine 74 kW (101 PK) Lichtmetalen velgen, Automatische klimaatregeling, Stuurwielverwarming, Stoelverwarming, Lane Departure Warning Systeem, Voorruitverwarming, Lendensteun, Sportstoelen Auto OostdijkNL-2681 RV MONSTER + Meer voertuigen Ford Fiesta 1.0 Style |Airco|Navi|Bluetooth|5 Deurs|Start/Stop Bewaar 35 € 4.849 01/2015 191.288 km Benzine 59 kW (80 PK) Met onderhoudshistorie, Radio, Bluetooth, Elektrisch verstelbare buitenspiegels, Airconditioning, Zij-airbags, Navigatiesysteem, Centrale deurvergrendeling met afstandsbediening Flevocars B.V.NL-8243 PM LELYSTAD + Meer voertuigen Ford Fiesta 1.3-8V Futura 5-Drs Bj:2006 NAP! Bewaar 24 € 750 02/2006 290.535 km Benzine 51 kW (69 PK) Met onderhoudshistorie, Airconditioning, Getinte ramen, Mistlampen, Elektrisch verstelbare buitenspiegels, Lichtmetalen velgen, Zij-airbags, Airbag passagier Autobedrijf DuranNL-8304 AW EMMELOORD + Meer voertuigen Ford Fiesta 1.6 ST2 **CLIMA-APK-NAP** Bewaar 23 € 10.450 02/2014 96.629 km Benzine 134 kW (182 PK) Sportonderstel, Alarm, Getinte ramen, Stoelverwarming, Spoiler, Niet-rokers auto, Centrale vergrendeling, Elektrische ramen De Vries MobiliteitNL-7327 JZ APELDOORN + Meer voertuigen Ford Fiesta 1.0 Style 5 deurs | Navigatie | Nette staat Bewaar 17 € 6.445 07/2016 77.451 km Benzine 48 kW (65 PK) Elektrisch verstelbare buitenspiegels, Met onderhoudshistorie, Radio, Centrale deurvergrendeling met afstandsbediening, Elektrische ramen, Bluetooth, Airconditioning, Zij-airbags Autobedrijf van Herick B.V.NL-3771 MT BARNEVELD + Meer voertuigen Ford Fiesta 1.0 Style 5d., Airco | LMV | Leuke auto! Bewaar 31 € 7.450 06/2016 121.395 km Benzine 49 kW (67 PK) Uw vakgarage sinds 1950, Eerlijk en deskundig advies. Garage JelsmaNL-6891 BG Rozendaal (Arnhem) + Meer voertuigen Ford Fiesta 1.0 EcoBoost ST Line Bewaar 25 € 7.850 05/2017 162.527 km Benzine 74 kW (101 PK) Lichtmetalen velgen, Airconditioning, Getinte ramen, Automatische klimaatregeling, Mistlampen, Lendensteun, Spoiler, Navigatiesysteem Koudijs Auto\u0027sNL-3771 NB Barneveld + Meer voertuigen Ford Fiesta 1.0 Style 5 Deurs Navigatie Airco/ecc Bewaar 41 € 5.950 03/2014 174.695 km Benzine 49 kW (67 PK) Met onderhoudshistorie, Navigatiesysteem, Alarm, Airconditioning, Elektrisch verstelbare buitenspiegels, Elektrische ramen, Multifunctioneel stuurwiel, Radio van Wallinga Automob",
+    "scrapedAt": "2026-05-10 04:01:23.998276"
+  },
+  {
     "id": 328,
     "url": "https://www.autoscout24.nl/auto/tweedehands-auto/limburg/",
     "title": "Occasions Limburg: tweedehands auto kopen in Limburg",
@@ -2292,26 +2327,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 329,
-    "url": "https://www.autoscout24.nl/lst/ford/fiesta"
-  },
-  {
-    "id": 330,
-    "url": "https://www.autoscout24.nl/lst/c/cabrio"
-  },
-  {
-    "id": 331,
-    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
-  },
-  {
-    "id": 332,
-    "url": "https://www.autoscout24.nl/auto/audi/audi-a1/"
-  },
-  {
-    "id": 333,
-    "url": "https://www.autoscout24.nl/caravans-campers/camper/"
   },
   {
     "id": 334,
@@ -52985,10 +53000,1997 @@ window.searchData = [
     "id": 23922,
     "url": "https://www.autoscout24.nl/auto/tweedehands-auto/limburg/#all-car-makes",
     "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/limburg/"
+  },
+  {
+    "id": 23924,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_active",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23925,
+    "url": "https://www.autoscout24.nl/autobedrijven/koudijs-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23926,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bc_rood",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23927,
+    "url": "https://www.autoscout24.nl/lst/ford/escort",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23928,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/\u0027s-hertogenbosch",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23929,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_st-line-x",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23930,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bt_hatchback",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23931,
+    "url": "https://www.autoscout24.nl/lst/seat/ibiza",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23932,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-fiesta/ford-fiesta-st/",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23933,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_ecoboost",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23934,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/zaanstad",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23935,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_sport",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23936,
+    "url": "https://www.autoscout24.nl/lst/ford/focus/ve_st",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23937,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bt_sedan",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23939,
+    "url": "https://www.autoscout24.nl/lst/ford/focus",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23940,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_st-3",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23941,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/arnhem",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23942,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23943,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/almere",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23944,
+    "url": "https://www.autoscout24.nl/lst/opel/astra",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23945,
+    "url": "https://www.autoscout24.nl/autobedrijven/garage-jelsma",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23946,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-roetert",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23947,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ft_benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23948,
+    "url": "https://www.autoscout24.nl/autobedrijven/flevocars-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23949,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/haarlemmermeer",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23950,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_st",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23951,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/haarlem",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23953,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bc_blauw",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23955,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_st-line",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23956,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2021",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23957,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/polo",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23958,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_vignale",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23959,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2022",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23960,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2020",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23961,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2018",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23962,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bc_wit",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23963,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2019",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23964,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2016",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23965,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2017",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23966,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2014",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23967,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/zwolle",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23968,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2015",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23969,
+    "url": "https://www.autoscout24.nl/lst/ford/puma",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23970,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-focus/ford-focus-turnier/",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23971,
+    "url": "https://www.autoscout24.nl/lst/c/ford-fiesta-tot-10000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23972,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2013",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23973,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2010",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23974,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_1.25",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23975,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/re_2009",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23976,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23977,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/tilburg",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23978,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-oostdijk-monster",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23979,
+    "url": "https://www.autoscout24.nl/autobedrijven/vakgarage-wals",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23981,
+    "url": "https://www.autoscout24.nl/lst/c/ford-fiesta-tot-5000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23982,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23985,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_titanium",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23986,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23987,
+    "url": "https://www.autoscout24.nl/autobedrijven/de-vries-mobiliteit",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23988,
+    "url": "https://www.autoscout24.nl/lst/c/ford-fiesta-tot-12500-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23989,
+    "url": "https://www.autoscout24.nl/lst/ford/focus/ve_hybrid",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23991,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/tr_handgeschakeld",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23992,
+    "url": "https://www.autoscout24.nl/lst/ford/gt",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23993,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/amersfoort",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23994,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bc_grijs",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23996,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_1.6",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23997,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/zoetermeer",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23998,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_1.4",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 23999,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24000,
+    "url": "https://www.autoscout24.nl/lst/ford/focus/bt_stationwagen",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24002,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bc_zwart",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24004,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ft_diesel",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24005,
+    "url": "https://www.autoscout24.nl/autobedrijven/autostock-etten-leur",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24006,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/enschede",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24007,
+    "url": "https://www.autoscout24.nl/lst/c/ford-fiesta-tot-6000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24008,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/nijmegen",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24010,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/bc_groen",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24012,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/apeldoorn",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24014,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-bangma",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24015,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/breda",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24016,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-duran",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24017,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-fusion/",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24018,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/ve_ghia",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24019,
+    "url": "https://www.autoscout24.nl/autobedrijven/van-heijningen-auto-s-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24020,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-stuart-elst-elst",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24021,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/groningen",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24022,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24023,
+    "url": "https://www.autoscout24.nl/lst/ford/focus/ve_rs",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24024,
+    "url": "https://www.autoscout24.nl/lst/ford/fiesta/utrecht",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24025,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobuitenhuis",
+    "parentUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "id": 24026,
+    "url": "https://www.autoscout24.nl/autobedrijven/automax-automotive-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24029,
+    "url": "https://www.autoscout24.nl/autobedrijven/hda-wijchen-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24030,
+    "url": "https://www.autoscout24.nl/autobedrijven/e-en-r-classics",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24032,
+    "url": "https://www.autoscout24.nl/autobedrijven/vdm-cars-utrecht",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24033,
+    "url": "https://www.autoscout24.nl/autobedrijven/signature-cars-ridderkerk",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24034,
+    "url": "https://www.autoscout24.nl/autobedrijven/autohuis-meppel",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24036,
+    "url": "https://www.autoscout24.nl/autobedrijven/berg-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24037,
+    "url": "https://www.autoscout24.nl/autobedrijven/ibalo-luxury-sportscars",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24038,
+    "url": "https://www.autoscout24.nl/lst/c/cabrio#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24039,
+    "url": "https://www.autoscout24.nl/autobedrijven/garage-ploegh",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24041,
+    "url": "https://www.autoscout24.nl/autobedrijven/vakgarage-van-der-klij-vof",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24042,
+    "url": "https://www.autoscout24.nl/autobedrijven/prins-esclusivo-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24043,
+    "url": "https://www.autoscout24.nl/autobedrijven/witmer-en-odijk",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24044,
+    "url": "https://www.autoscout24.nl/autobedrijven/profi-cars-almere",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "id": 24049,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24055,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf-gti",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24059,
+    "url": "https://www.autoscout24.nl/lst/audi/a3",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24064,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/passat/volkswagen-passat-2024-review-hoogtijdagen-voorbij-maar-beter-dan-ooit/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24065,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-plus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24070,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24072,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/e-golf",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24075,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/golf/review-volkswagen-golf-r-2025-het-ultieme-slotakkoord-van-een-icoon/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24082,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf/ve_gte",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24083,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf-plus",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24084,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "id": 24085,
+    "url": "https://www.autoscout24.nl/lst/peugeot/208",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24086,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a1/audi-a1-sportback/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24087,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-tt/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24088,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q2/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24093,
+    "url": "https://www.autoscout24.nl/lst/audi/s3",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24094,
+    "url": "https://www.autoscout24.nl/lst/audi/q2",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24095,
+    "url": "https://www.autoscout24.nl/lst/audi/s1",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24098,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a1/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24103,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a1/audi-a1-allstreet/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24104,
+    "url": "https://www.autoscout24.nl/auto/seat/seat-ibiza/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24108,
+    "url": "https://www.autoscout24.nl/lst/audi/a1",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24109,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-s1/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24113,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-s3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24114,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-180",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24118,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a1/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24127,
+    "url": "https://www.autoscout24.nl/lst/audi/tt-rs",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24128,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-tt/audi-tt-rs/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "id": 24130,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/camper-integraal/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24131,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24133,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/4x4-camper/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24134,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/poessl/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24135,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/weinsberg/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24136,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/oldtimer-camper/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24137,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/camper-aanhanger/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24138,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/adria/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24139,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/buerstner/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24140,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/karmann/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24141,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/euramobil/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24142,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/lmc/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24143,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/bakwagen-camper/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24144,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/luxe-camper/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24145,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/minicamper/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24146,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/rapido/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24148,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/hymer/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24150,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/hobby/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24151,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/alkoof-camper/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24153,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/volkswagen/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24154,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/fendt/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24155,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/carthago/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24156,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/tec/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24157,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/dethleffs/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24158,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/knaus/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24159,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/tabbert/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24160,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/sunlight/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24161,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/winnebago/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24162,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/westfalia/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "id": 24163,
+    "url": "https://www.autoscout24.nl/caravans-campers/camper/laika/",
+    "parentUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/caravan/images/hero/default-banner-wohnmobil-l-01.jpg",
+    "alt": "Camper",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7b3ee17a-5fdb-46e0-ac46-01531f4eaf10_2ae5948b-f297-4ce4-bc33-9c6a942b34ac.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d9a44e99-4f18-4d53-8443-e965c0d05a63_6454198f-1196-46bc-bedd-02a972075889.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8c8010d6-610a-4632-a784-ed0762021d89_eecfba58-e68c-4200-b094-bd9eb5c53eef.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/54befed2-8d38-4df2-b6fd-7028b39febcd_dc8f84b6-366e-4a86-a5aa-6b2b6430894e.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4df238e5-dbdf-4142-81ca-e9130666f23e_e0bb5de0-5af7-498a-b2c1-c02141cb4bce.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/06295383-b836-466b-8430-8de5cc3fc839_429a9ae9-bba8-4b4c-b756-9e3e6ce1e7c2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b128d7a6-f3f5-4ed7-b41d-c199be2f2a04_1b27770c-c7eb-47bc-8250-fadd72f9d846.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b35a7c4d-4948-4f43-a900-ef02a0a50d49_b7122c97-6b9b-401d-a41b-8d8479511f02.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/356efe99-14b3-4c32-ab97-17e25f16bffa_d60d67a9-3331-48f0-ad05-e53c746012af.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7b3ee17a-5fdb-46e0-ac46-01531f4eaf10_2ae5948b-f297-4ce4-bc33-9c6a942b34ac.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d9a44e99-4f18-4d53-8443-e965c0d05a63_6454198f-1196-46bc-bedd-02a972075889.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8c8010d6-610a-4632-a784-ed0762021d89_eecfba58-e68c-4200-b094-bd9eb5c53eef.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/54befed2-8d38-4df2-b6fd-7028b39febcd_dc8f84b6-366e-4a86-a5aa-6b2b6430894e.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4df238e5-dbdf-4142-81ca-e9130666f23e_e0bb5de0-5af7-498a-b2c1-c02141cb4bce.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/06295383-b836-466b-8430-8de5cc3fc839_429a9ae9-bba8-4b4c-b756-9e3e6ce1e7c2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b128d7a6-f3f5-4ed7-b41d-c199be2f2a04_1b27770c-c7eb-47bc-8250-fadd72f9d846.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b35a7c4d-4948-4f43-a900-ef02a0a50d49_b7122c97-6b9b-401d-a41b-8d8479511f02.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/356efe99-14b3-4c32-ab97-17e25f16bffa_d60d67a9-3331-48f0-ad05-e53c746012af.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Tweedehands camper te koop - camper occasion kopen",
+    "pageUrl": "https://www.autoscout24.nl/caravans-campers/camper/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2bHes2Wc8TRnNVj8uDKy2q/a7be1eb2e3001d7ba5e928a789e49616/Audi-A1-Front-Side.jpg?w\u003d1100",
+    "alt": "audi-a1-front",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2bHes2Wc8TRnNVj8uDKy2q/a7be1eb2e3001d7ba5e928a789e49616/Audi-A1-Front-Side.jpg?w\u003d1100",
+    "alt": "audi-a1-front",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2bIcCJLHyTGlXZSdJZ5bes/8533c68186ad4ae9588b0739758dd352/Audi-A1-Side.jpg?w\u003d1100",
+    "alt": "audi-a1-side",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6IY5lGCx3vBBA7KiXFTu5h/6e6f9125d519fca4642c959f69b54e00/Audi-A1-Side-Rear.jpg?w\u003d1100",
+    "alt": "audi-a1-back",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d468d361-dfe0-415d-aaae-c88a264da348_d83589cd-837d-45c9-96dc-e2ebb16bcfa9.jpg/360x270.jpg",
+    "alt": "Sportback 30 TFSI Pro Line Automaat/116pk/Navigati",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/22e53f7f-4ea2-4361-9ffa-a56898b5ef36_d1b10a8e-6dd5-4b11-bf4f-5475e66b1ebe.jpg/360x270.jpg",
+    "alt": "Sportback 35 TFSI B\u0026O|STOELVERWARMING|18INCH|AIRCO",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f95d282a-a4ab-494d-a99e-2f1738b5bbfa_1956b2ef-cf1e-4e2c-a44a-9547aa272fd2.jpg/360x270.jpg",
+    "alt": "Sportback 40TFSI 200PK Edition #1 Black optic M-LE",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dd86c7d9-33aa-4987-b3aa-ac300db59b90_e7d45567-8995-4140-a110-513ce7f5c942.jpg/360x270.jpg",
+    "alt": "Sportback 1.0 TFSI Sport Pro Line",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/751ca9e0-8b3e-4dc8-8b38-e19be86a1e9c_03052306-30b9-48a3-a48a-0036f494524e.jpg/360x270.jpg",
+    "alt": "Sportback 30 TFSI epic 5deurs | Automaat | Airco |",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f33de2a4-35f0-439a-a445-10ed7ccb33c5_e73efdd2-5e23-46b4-b4a2-705641566b25.jpg/360x270.jpg",
+    "alt": "1.0 TFSI ADRENALIN l NAP l 5DRS l CRUISE l BLUETOO",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3f102f02-cd4d-4d52-9b23-12bdd044b93f_3a65ea38-2abd-4b46-97d1-dc2ae330a097.jpg/360x270.jpg",
+    "alt": "Sportback 1.0 TFSI Adrenalin Sport Pro S-Line | 2e",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/16a082ea-e5bf-4683-896c-21833ba98f2f_b939e20d-db4c-4f9d-8a29-a050a63504de.jpg/360x270.jpg",
+    "alt": "1.0 TFSI DESIGN",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7041d143-da7a-48b7-aa9f-ad961433f179_9af0191d-e885-40ef-b60a-9fbada3896a0.jpg/360x270.jpg",
+    "alt": "Sportback 1.0 TFSI Adrenalin, Navigatie,L.M.Velgen",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4727f1a4-c084-4f58-a589-cdc3c71d6aff_e6cd6559-becf-451f-b5d6-36dd5850cdc4.jpg/360x270.jpg",
+    "alt": "1.2 TFSI Pro Line S Clima",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8f430eda-b6b4-42a0-bb95-e8caf980780f_d231fe64-a9ad-4f52-8793-3c9bf27496a7.jpg/360x270.jpg",
+    "alt": "1.2 TFSI S-LINE LED |CRUISE | STOELVER | NAVI| NWE",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/15ab97e0-d556-4cac-8395-60d9f3c5e585_05d58bbb-ef29-4a1b-8b14-a90a9d0bcf63.jpg/360x270.jpg",
+    "alt": "1.4 TFSI Pro Line S Automaat PDC Navi AC 18\" BT MF",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6c039221-7a40-481c-b5b0-a14b6aead529_d5e7a255-5294-4ed0-8e33-04787495ef4d.jpg/360x270.jpg",
+    "alt": "Sportback 1.0 TFSI S Line |CRUISE|AIRCO|LM VELGEN",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ae5ffa1b-4dcf-44ac-aff1-e5227fdee6d0_6d2f2c2f-9800-466f-a5d7-bb7177426a0e.jpg/360x270.jpg",
+    "alt": "35 TFSI Epic S-tronic 150 Pk Ecc Cruise Navi Led P",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/612394ca-1a24-455d-b5c7-f7a69c8bf3cf_4c0ce086-ebd3-4330-925b-98a8989a4b9a.jpg/360x270.jpg",
+    "alt": "Sportback 1.2 TFSI Ambition / Ketting vv. / Stoelv",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3f82242b-5027-47a1-b44f-460775629f77_45790f3c-4091-4661-b7da-91d0bab5b4fc.jpg/360x270.jpg",
+    "alt": "Sportback 25 TFSI Pro Line|Virtueel Cockpit|Parkee",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/458a0a85-0342-4175-9eef-b682d792b91c_b80141b7-e174-46c9-b2d8-69ecf944ddbd.jpg/360x270.jpg",
+    "alt": "Sportback 1.0 TFSI Adrenalin",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3c96b5dc-f288-4e1f-8613-972dacc13c30_cd10bda5-77ba-4526-a66d-5ac307e5b44c.jpg/360x270.jpg",
+    "alt": "Sportback 1.2 TFSI S-Line Airco|Cruise|Leder|Pdc",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/879be5cb-d3aa-461e-b3e4-5cc52fcc40e6_973e5cd7-11ea-49ae-a4d2-90318aafa15f.jpg/360x270.jpg",
+    "alt": "1.0 TFSI Pro Line Automaat | Stoelverwarming | Nav",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/34ac09c9-a021-4253-9985-b556fc2435d2_55153e32-eb69-43e3-b8fb-5d9e494bed08.jpg/360x270.jpg",
+    "alt": "SB 1.0 TFSI Advance Sport S-Line | Clima | Cruise",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2esoIJo5vMBYxhZbdwZEcB/d6257fa8f40acdabaaec8d09bc9215e9/Audi-A1_Sportback-2019-1280-53-2.jpg?w\u003d1100",
+    "alt": "audi-a1-sportback-interior",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2KQ8p9ilQYIVuXt8bITYOL/495aea1e71676fb28cb96264b332568b/Audi-A1_Sportback-2019-1280-6c.jpg?w\u003d1100",
+    "alt": "audi-a1-sportback-seating",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4doYOPGs6jVGktqfoQW3Bu/d39b4f6ea92007da0062de3d483094e3/Audi-A3_Sportback-2025-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A3",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/aWx6gpOLYLd5aX9x682qr/7858f13b6111a435866372c241202cd4/Volkswagen-Polo_GTI-2022-1280-08.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Polo",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5alsYuHJSPfexkNp8T7s0J/aa72350c5ed80b8aa2df1da40fd7caed/audi-s1-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi S1",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6cP9ciJSTMqBl7nS0gONSV/e1c6ca6170e833f5425c259c5950b7d2/vw-golf-l-01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Golf",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1NzPnFqY0otGznHsF6IzXZ/8e8bc35d029e89a6f8c79a463801037e/audi-q2-front.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q2",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6dQ5jtJrlLSEjlJgTE46EV/f796579df1a984407569dc643335ab3d/audi-tt-rs-l-01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi TT RS",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3YpPph7xTaEibPKGpRmFCe/145939569f7e493fe384335b18f034c7/seat-ibiza-front.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "SEAT Ibiza",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4W8crWBZY063YUE5Plup3e/56da2067e87b6b5dcd1e45fc8939ef8f/mercedes-benz-a-180-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Mercedes-Benz A 180",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6HYMOLSBNkMLpMCDwChawT/d16943cb18f3008b4443fda4267a1bb5/Audi_S3_frontview.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi S3",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/26SyJqp2gqMsfaOC9Lpq4W/5b7ffe8e77d85b3381a3191200a9b76c/peugeot-208-side.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Peugeot 208",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/012ILYaqYbxYb5iRsLgbKE/d119060df57457deb9caf1a2b1972ba1/audi-q4-etron-2026.jpg?w\u003d1100",
+    "alt": "Audi Q4 e-tron Facelift (2026): Eerste indruk, meer actieradius en nieuwe Digital Stage",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rZf7ZBcZJTfK9bfHP8ksO/d0aec57170687bc819249f34cfcdbd3e/Audi_A6_Avant_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi A6 Avant e-tron (2025): elektrische stationwagen met premium flair",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6GrNuhCdk6OUcKerAQQRj6/c5b306af8fce1429d7a3c8da9c4d3de1/Audi_Q3_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q3 (2025): compacte SUV met een volwassen karakter",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/74ohGiWKbkJYWEGdrM9Oq1/33e5e1fbcf4782f3f14360ad6e4a66ac/audi-tt-toyota-gr-supra-2023-1.jpg?w\u003d1100",
+    "alt": "TEST Audi TT vs",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Jjx5gIxNMbtJmblUubHrU/3af2d0e1f13497249344d2e556397cb7/audi-a8-l-2022-8-1.jpg?w\u003d1100",
+    "alt": "Review: zo verpest Mercedes het feestje van de plug-in hybride Audi A8 60 TFSI e",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5gnWDSiDpiVTvxmso92fJo/d0614d95cf5bd31d6b24a64f0b1df330/Audi_Q6_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q6 e-tron (2025): elektrische SUV met sportieve roots",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Audi A1 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a1/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6ym050rNQr3ePkb2q0GWHw/a2dda96dbe84c3ebaa3246dba1b63e73/vw-golf-7-front.jpeg?w\u003d1100",
+    "alt": "vw-golf-7-front",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6ym050rNQr3ePkb2q0GWHw/a2dda96dbe84c3ebaa3246dba1b63e73/vw-golf-7-front.jpeg?w\u003d1100",
+    "alt": "vw-golf-7-front",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Ruk2MdbxMHdYEdvjXenl3/f8fca114873682bc8e1601f4cad77f80/vw-golf-7-side.jpeg?w\u003d1100",
+    "alt": "vw-golf-7-side",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1QvbNwTXAnON9ERjY55cY5/d8eed504be5f848a356545cd6a4fd3da/vw-golf-7-back.jpeg?w\u003d1100",
+    "alt": "vw-golf-7-back",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f02bd88b-fc93-44cf-880b-4a41a1a0190c_42a2e014-9a46-42d0-83e9-272c3177ac54.jpg/360x270.jpg",
+    "alt": "2.0 TSI 4Motion R PANO VIRTUAL LEER MEMORY",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/278ff362-f816-4625-86c4-cc6fa1885335_e6edda4f-3a67-4bfe-afe0-03ce2fdd724a.jpg/360x270.jpg",
+    "alt": "1.0 TSI Comfortline | LED | CarPlay | Adaptive Cru",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bed8b675-64a0-4d28-be25-122c951662fc_9ca78a63-9e0a-43d3-8228-8bda8be1564e.jpg/360x270.jpg",
+    "alt": "1.5 eTSI Style Panorama IQ Elek Stoel Dealer ondrh",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2c71fb36-d269-4dc1-9167-2211e309d5bc_94edb520-0d7b-4f8d-9f75-30f580ac2af3.jpg/360x270.jpg",
+    "alt": "1.2 TSI CUP Edition NAVI | STOELVERWARMING",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f4fd9a28-e2ad-4684-b4e9-37440d9093c1_8a4d6651-6913-44ff-9bae-3c9be2ac4f09.jpg/360x270.jpg",
+    "alt": "1.6 TDI Comfortline | Airco | Adap. Cruise | Carpl",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/21301373-d7fc-4bbe-9162-7fdff103bd99_ce1a490c-ab73-4569-8b7a-cba5ea8cee91.jpg/360x270.jpg",
+    "alt": "1.4 eHybrid Style Business | IQ | ACC | elekt stoe",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dc1f9c9d-f68c-40e3-b5e7-f7e9e7aa7b49_febc5d72-0b93-41cf-9e16-c354f0e689c6.jpg/360x270.jpg",
+    "alt": "1.4 TSI Highline",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/361bd434-5937-4265-abb4-976d0c45ff42_b3197f12-785b-4eba-9dd4-87a57b372b06.jpg/360x270.jpg",
+    "alt": "1.5 eHybrid Life Edition | Pano | LED | Camera | P",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/891e0a50-22a5-47f2-a24f-b5811943ab0c_061263ba-4da3-431d-ae1e-5508b1b7412c.jpg/360x270.jpg",
+    "alt": "1.4 eHybrid Style, BOEKJES,NAP EN ONDERHOUDSHISTOR",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0cbfa5fd-ea14-4bd7-848f-23124d10b5b8_36e531e7-94c2-4324-8535-0f6567b9f271.jpg/360x270.jpg",
+    "alt": "1.4 TSI Optive 4 Trekhaak | Cruisecontr. | Airco *",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/91ab0173-bc02-45a7-856a-53d98ca7a66a_1b648fcf-3564-43a8-a7da-6c12b9e6968e.jpg/360x270.jpg",
+    "alt": "1.5 eTSI 3x R-Line | Panoramadak | Harman Kardon |",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b0068a5c-7839-468a-beef-dac0853ed3fe_f4cbce9d-825e-445c-a04a-c8aa575304a3.jpg/360x270.jpg",
+    "alt": "1.5 TSI Comfortline AppleCarPlay",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7d89f9c3-81d0-4cec-9cb1-84b40aaed95c_26e9eb76-2a45-46a7-b26c-ca9c6c007656.jpg/360x270.jpg",
+    "alt": "1.0 TSI Trendline|Trekhaak|Led|Airco",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0cc9e83a-14df-4db3-9ce8-8f919b6031e4_80af2153-4188-4809-89ae-0126a731fadb.jpg/360x270.jpg",
+    "alt": "2.0 TSI R 4Motion 20 Jahre Ed. 333PK | Akra | Pano",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0decad76-88d4-4eff-8ee8-a59e422231a4_23b4719e-d5e7-4d9d-8198-01400e459bb1.jpg/360x270.jpg",
+    "alt": "2.0 TSI R 4Motion 300PK|XENON|PANODAK|CAMERA|ACC|C",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e5ad1fd1-4e2d-4b9d-a23d-079a40e9ac9a_38998294-0436-407a-abf9-0600f39cbb25.jpg/360x270.jpg",
+    "alt": "1.0 TSI LIFE I ADAPTIVE CRUISE CONTROL I SFEERVERL",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8639570f-9dce-4be2-b59e-c476f92bece4_d1a04425-3908-4ef2-81ce-4ad49db0936a.jpg/360x270.jpg",
+    "alt": "2.0 GTI EDITION 265 pk",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7289dbeb-dc0d-41b5-8443-3b9f20df635e_bdce0f25-d2d0-4059-9dcd-f1e5a6eb1237.jpg/360x270.jpg",
+    "alt": "1.5 eTSI DSG Style ✅ Pano ✅ Stuurverwarming ✅ Mass",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a5141c6f-abff-4b2a-a140-1940a2084321_74b5e4b8-0c44-4d82-ab1a-f630cf39bc53.jpg/360x270.jpg",
+    "alt": "1.2 TSI TEAM BlueMotion **5DRS-AIRCO-CRUISECNTRL**",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f7bdb07d-ebd1-45f7-a04e-bcb1368a91ae_bcc32224-103a-4011-afe6-5c855ad3746e.jpg/360x270.jpg",
+    "alt": "2.0 TDI 190PK DSG R-Line•ACC•Navi",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/aWx6gpOLYLd5aX9x682qr/7858f13b6111a435866372c241202cd4/Volkswagen-Polo_GTI-2022-1280-08.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Polo",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5Pa6Y8pHgBl8kVK6eRIuWo/463ce31d773c166be606321614841794/vw-e-golf-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen e-Golf",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/51EegdnKLRrsIWDsMhALhH/5a74eae78edc9920dcbf62cd243d2ccc/vw-golf-plus-l-01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Golf Plus",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4doYOPGs6jVGktqfoQW3Bu/d39b4f6ea92007da0062de3d483094e3/Audi-A3_Sportback-2025-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A3",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4TFXdgnnvt1VetKH5sCvGS/420e428acdf109eb191d016b2bc76ea2/VW_Golf_R_1.jpg?w\u003d1100",
+    "alt": "Review – Volkswagen Golf R (2025): het ultieme slotakkoord van een icoon",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6QrxRIGO4wQohPGqv1ExW3/7a647efa3acc830c9f09a4764411a367/vw-id-polo-2026-titel-tv.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6x8o0XhH6xvw5Qtmlgkco6/e0652515df6cfdfc8e8ab4bde67506c9/volkswagen-buzz-actieradius-2022-1.jpg?w\u003d1100",
+    "alt": "Volkswagen ID",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5zaYaiVIgyOgjq6tOZ6kEg/0d025176b9ebd32e93afe5cf2237fb4e/volkswagen-id7-2024-review-foto17.jpg?w\u003d1100",
+    "alt": "Review – Volkswagen ID",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5IthSaHSFWCaXR0EyH1Hsf/192e8496637d055e3543f10c760b85bf/volkswagen-passat-2024-review-hoogtijdagen-voorbij-maar-beter-dan-ooit-2024-03.jpg?w\u003d1100",
+    "alt": "Volkswagen Passat (2024) review: hoogtijdagen voorbij, maar beter dan ooit",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/18LVPIXb8GhQdIAYhDaDeQ/db30365ff57775d46063d314b9b9db42/volkswagen-id-4-tiguan-2023-1.jpg?w\u003d1100",
+    "alt": "TEST benzine vs",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Volkswagen Golf 7 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-7/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1181bf4c-1aa9-4c65-88b3-3b3765af7ff6_e940fcf1-e6d1-4558-bb9f-aeeaea4efd08.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/31057298-original-9d586998-3f8a-446f-b3c5-e8da65cc7608.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b04ec142-65d0-4dd8-acb6-ba25e87f8a87_21bb5d88-19d6-446d-b47d-c3a4ec538b0b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/14626798-original-567a1f2c-c6e1-4f6b-98d0-72cc38feb4cd/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/28fb4e9f-d244-442d-b231-b6bcbe3b4e6f_89b161fb-c396-4b58-8a8c-e41d54fab280.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/28782063-original-1fe5432a-c25d-4711-8b62-8605dcee085c.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c9cca6cd-df2c-487e-8285-2ee0423d42b0_0a965d61-b3d2-4f65-a253-727675a4ac9e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/40620043-original-75dc537e-158a-474a-97f9-30a169650e46.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/620dbe41-7494-4382-93b9-c97c9ce2a18f_b313e557-d32c-4ceb-8783-226c462bf63b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/14626798-original-567a1f2c-c6e1-4f6b-98d0-72cc38feb4cd/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/93ddfef9-53d4-41ad-b6a8-40e390e290c2_6f46db0b-a860-4d0c-8e31-0d6c4f96170a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46302854-original-430749e4-a00a-4f5e-bd1c-caadd2a1be00.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dabcda0f-ef66-4409-9d4f-276f02422869_2eda34e9-98cf-4625-8b8f-242d77cfbad1.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/10072-original-41397b45-c946-43c8-9741-c7b416fa67a9.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1a73280f-c0ee-44e3-b121-4c85d6e09b9b_61fcc61b-3e26-4787-b426-cc678c6692c2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ceeb27e4-01b1-41bc-888f-978ec1171425_530a65f1-699a-421f-8456-e834aded722a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/28701555-original-853b59b4-0c99-4ed3-b237-a416d8bc0d05.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/964852c6-ba7e-4570-8bd5-9f63f8a859b2_108620a4-4eea-4f3f-95e9-46dbe6e2419a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/786cbe30-e415-4c9c-8b39-155fed011bbd_9f694d41-ecd7-4f4e-a720-d4e0f53f825b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/45531155-original-7db820b7-5597-4dd4-8502-291f5867d6df.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/17ac9e58-3879-493f-ab96-f10540417aac_74ee39f1-8584-44c8-a519-34b59a954e43.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b4eacf10-a0c7-4f30-896a-5ae741f5d5af_17161889-7246-45f1-a377-1f5328c4d343.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/17202776-original-bcd10440-3b5e-4a36-96c2-1e9a525a8fb5.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/21441989-f49f-4b31-ace1-0543913527b8_6e315568-d72d-4d90-90e2-6cf487154117.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/14626798-original-567a1f2c-c6e1-4f6b-98d0-72cc38feb4cd/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4bd9d6e5-7e09-4679-b453-8816d39e66a6_59c3079e-eb30-4abe-b595-0c7e19bc9c51.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47590431-original-166ac78e-c93e-4cc3-8d68-b086d945aaaa.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/21f15cdd-a6a1-4791-9012-54e3500baf68_2cec0ccf-b100-4929-95d4-6a8bbd048b63.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/2227420-original-c3e29df5-c41e-4630-82ae-927c1cdaa518.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2e23dc2d-c8bf-46e9-9879-75446194d46e_c479a8ed-1161-44fc-9a2f-183af13001dd.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/36795699-original-43195073-2a77-41ea-9139-16605bc6ea85.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f3ad4150-26f5-4e80-b2ea-2b6edc3154d7_6b3fa300-7210-41b6-b632-f459c60c4a83.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/38686350-original-aafe67bc-7808-460d-bed1-9e4be1c39915.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fb3d5523-e0c6-4410-8862-fc636cf1ee94_27e10521-1c16-48e0-b794-3ee89f1297de.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/14626798-original-567a1f2c-c6e1-4f6b-98d0-72cc38feb4cd/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ae5ca3ee-6bca-4cc3-8b91-920c28a54890_afa88782-18c7-489f-bb6c-fb172d4bcc9d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/9894-original-aaba77fc-f5ca-46ed-8bdf-9fbb3b3e0f07.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Cabrio occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/cabrio"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bb0df5c2-7e24-4d96-a963-93dbfb8182bf_eb648dbc-18ed-4642-909e-3d567c3d716e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/36223949-original-e348b3b3-873f-4f1b-92c6-5b1ba52e49e7.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/115a8a93-2fdd-49ab-b82f-cd4bda0781fe_66427d19-d207-42bf-b31d-5b82e2f7ec42.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/10737-original-107586e5-1362-4c2f-9b7c-d32383b46f39.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/068a731b-066c-48ca-9c51-696c6b6f9a47_ca45ae26-03b2-4608-9653-689230074a12.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a69a026a-fdf4-44fc-942f-f1a6432396b7_281486ec-c07e-4107-80d5-b01b3944181d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/726ac82d-d605-4d24-9594-74bd90fa3ec0_cbe8043c-1bf6-40aa-afe0-11dd212a2475.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/44148464-original-143d6496-e2f1-474d-a3a2-e42ec2ba200f.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/68ffe3b4-9202-4037-bd36-4f0de00abc0b_1396b933-24cf-40f1-a9c0-b9f18f118c3a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/44148464-original-143d6496-e2f1-474d-a3a2-e42ec2ba200f.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/28b9fe6f-3309-401c-a3c7-5d634b37c05b_70e5c887-3f78-4eed-972c-b865f91a6e92.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46196912-original-34ea3aff-bb39-4464-8744-145eb5ee71d8.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6d612fd5-f05d-4a8b-8407-f934b65fe212_dd9cc316-f671-4d7d-8cdc-e5e911aae7d3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/39335224-original-133f2aba-c932-4b7f-b9be-d08a503100da.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3d29a022-84ad-483e-9764-6aec65ad2f3c_1bb267b5-5f52-4675-87f5-04874ebe86d5.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/043e76b9-f17c-4f6f-8de6-18a3bab6ca84_1149a6d4-4928-4f3b-a454-55c1a6d4c0f2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6757896c-a831-41d7-a5bc-43a40772f234_178756c4-1987-4e9f-a8fb-80b618431678.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/65f9a65b-3de6-4af2-a85a-a7e48ae9e7ca_455f9014-6ec2-4a22-9fdb-47f60aec68a9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46407913-original-e285e022-66a4-44f7-9450-074287ad37a8.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/404699f1-b626-4e7e-8c2f-166c6898e7fd_45d031a7-965a-45f0-9a2f-7dfb7d40d058.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/29364806-original-2548f931-9832-4028-8bfe-e5a992f8ca3f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/12dac435-810b-4c75-a2a4-ef5e5064ba04_588df0ac-6fce-4315-9357-bc6cc7a9fc80.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/9270-original-6c6aa983-f61c-469b-9b59-6ae7ef3a9687.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c6271ae9-7ea3-4c6e-b29c-9d7be6f770e4_bfd25c05-c195-478d-ad29-740358cf9072.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46302854-original-430749e4-a00a-4f5e-bd1c-caadd2a1be00.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fdcccea0-e81e-468a-ac20-8a20bd67d494_df32d941-5fd3-455c-ad98-4fc2ff3adab7.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/21739962-original-ff10b591-5a25-490e-a498-891c2c56f761.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2b826fc3-0573-4c4c-8d68-1dc598b1e73e_3031346b-1509-4fd6-87f4-cf954c7bf40f.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/41312312-original-d97cd307-e14f-48ba-b6bd-27bb3c89392c.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a7002cc7-7432-4837-847e-e54db349338d_210b6989-54d9-46e6-9728-817e8ceeab35.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47077192-original-30a75257-17e2-4a7c-96ca-01c0b6d37032.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/99d23f3c-19b7-488a-a26e-445f1b2e20ae_0ef2f4da-70b2-4a7b-bfbd-36efff803e6f.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/9166-original-2055dd1e-9a3e-4e1f-8d7e-3b59b92f2d00.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Koop Ford Fiesta occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/ford/fiesta"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
