@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 676,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-10 04:34:08.745306"
+  },
+  {
+    "id": 675,
+    "url": "https://www.python.org/search",
+    "title": "Welcome to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Search Python.org",
+    "scrapedAt": "2026-05-10 04:34:05.355067"
+  },
+  {
+    "id": 674,
+    "url": "http://wiki.python.org/moin/IntroductoryBooks",
+    "title": "IntroductoryBooks",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. The books on this page are all general introductions to the Python language. Most of these books will contain a few chapters on particular applications such as GUI interfaces or Web programming, but won\u0027t go into great detail on any one topic; refer to the PythonBooks page for lists of application-specific books. Experienced programmers who prefer a brief and condensed introduction should look at the list of ReferenceBooks. Python from Scratch By Nilo Ney Coutinho Menezes Logikraft/Novatec ISBN: 978-85-7522-949-1 (Paperback), 978-85-7522-950-7 (Hardcover), 978-85-7522-951-4 (E-book) Publication May/June, 2025 Book Overview This book is designed specifically with programming beginners in mind. Basic programming concepts — such as expressions, variables, loops, decisions, lists, dictionaries, sets, functions, files, classes, objects, SQLite 3 databases, regular expressions and graphical interfaces with Tkinter — are clearly presented one by one with examples and exercises to illustrate. The book aims to explore computer programming as an everyday tool. It can be read during an introduction to computer programming course or used as a study guide for self-learners. Only basic computer knowledge, such as typing texts, opening and saving files, is needed to start the course. All software used in the book can be downloaded for free and runs on Windows, Linux, and macOS. Although Python (version +3.13) is a very powerful language full of modern programming features, this book focuses primarily on programming logic and teaching how to program. Some language features were not used in order to favor programming logic exercises and offer the reader broader preparation for other languages. Powerful language features such as generators, sets, lambda functions and comprehensions are presented, and the reader will find various notes and explanations of Python-specific features in addition to programming logic. Who this book is written for: Students who want to learn programming on their own, the book was written so you can gradually learn to program. The first chapters explain the basic programming concepts in a logical order, with practical exercises. All you need to know is how to use a computer and a browser (Firefox, Edge, Safari, or Google Chrome). The book starts by showing how to download and install Python on Windows, but it also covers Linux (Ubuntu) and macOS. Special attention was given to conditional structures (if), loops (while), and functions (including recursion). The book also covers string manipulation (text processing), so you learn to work with variables containing text and prepare to write more complete programs. At the end, we cover files, creating simple web pages, a light introduction to object-oriented programming, regular expressions, and graphical interfaces. The Quick Python Book, 4th Edition By Naomi Ceder Manning Publications Co ISBN 9781633436336 580 pages Publication Feb, 2025 Sample chapters, liveBook, and source code available on the Manning Publications web site: The Quick Python Book, 4th Edition Book overview: For over 25 years, The Quick Python Book has been one of the best Python books money can buy. It concisely covers programming basics, while introducing Python\u0027s comprehensive standard library and unique features in depth and detail. In this fourth edition, you’ll find new coverage of AI coding tools like Copilot and Google\u0027s Colaboratory (Colab), and develop a mindset that can make the most of AI. The Quick Python Book, Fourth Edition includes: Python syntax, data structures, and best practices Python as an object oriented language Common Python libraries Basic data handling with Python Using AI code generation tools with Python Whether you’re new to Python or looking to advance your basic skills, The Quick Python Book, Fourth Edition will get you writing effective Python code fast. Python authority and former Chair of the Python Software Foundation Board or Directors Naomi Ceder has returned to author this extensively revised fourth edition. With the personal touch of a skilled teacher, Naomi beautifully balances details of the language with the insights and advice you need to handle any task. Who this book is written for: This book is for someone who knows how to program, who whats to learn Python quickly and efficiently. Python knowledge building step by step from the basics to the first desktop application Dr. Csaba Dobreff Released 2025 1819 Pages Book Overview The aim of this book is to take the reader from the basic knowledge of computing essentials for programming in Py",
+    "scrapedAt": "2026-05-10 04:33:59.754016"
+  },
+  {
+    "id": 672,
+    "url": "http://docs.python.org/3/tutorial/",
+    "title": "The Python Tutorial — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Tutorial | Theme Auto Light Dark | The Python Tutorial¶ Tip This tutorial is designed for programmers that are new to the Python language, not beginners who are new to programming. Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms. The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python website, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation. The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications. This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. Be aware that it expects you to have a basic understanding of programming in general. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well. For a description of standard objects and modules, see The Python Standard Library. The Python Language Reference gives a more formal definition of the language. To write extensions in C or C++, read Extending and Embedding the Python Interpreter and Python/C API reference manual. There are also several books covering Python in depth. This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library. The Glossary is also worth going through. 1. Whetting Your Appetite 2. Using the Python Interpreter 2.1. Invoking the Interpreter 2.1.1. Argument Passing 2.1.2. Interactive Mode 2.2. The Interpreter and Its Environment 2.2.1. Source Code Encoding 3. An Informal Introduction to Python 3.1. Using Python as a Calculator 3.1.1. Numbers 3.1.2. Text 3.1.3. Lists 3.2. First Steps Towards Programming 4. More Control Flow Tools 4.1. if Statements 4.2. for Statements 4.3. The range() Function 4.4. break and continue Statements 4.5. else Clauses on Loops 4.6. pass Statements 4.7. match Statements 4.8. Defining Functions 4.9. More on Defining Functions 4.9.1. Default Argument Values 4.9.2. Keyword Arguments 4.9.3. Special parameters 4.9.3.1. Positional-or-Keyword Arguments 4.9.3.2. Positional-Only Parameters 4.9.3.3. Keyword-Only Arguments 4.9.3.4. Function Examples 4.9.3.5. Recap 4.9.4. Arbitrary Argument Lists 4.9.5. Unpacking Argument Lists 4.9.6. Lambda Expressions 4.9.7. Documentation Strings 4.9.8. Function Annotations 4.10. Intermezzo: Coding Style 5. Data Structures 5.1. More on Lists 5.1.1. Using Lists as Stacks 5.1.2. Using Lists as Queues 5.1.3. List Comprehensions 5.1.4. Nested List Comprehensions 5.2. The del statement 5.3. Tuples and Sequences 5.4. Sets 5.5. Dictionaries 5.6. Looping Techniques 5.7. More on Conditions 5.8. Comparing Sequences and Other Types 6. Modules 6.1. More on Modules 6.1.1. Executing modules as scripts 6.1.2. The Module Search Path 6.1.3. “Compiled” Python files 6.2. Standard Modules 6.3. The dir() Function 6.4. Packages 6.4.1. Importing * From a Package 6.4.2. Intra-package References 6.4.3. Packages in Multiple Directories 7. Input and Output 7.1. Fancier Output Formatting 7.1.1. Formatted String Literals 7.1.2. The String format() Method 7.1.3. Manual String Formatting 7.1.4. Old string formatting 7.2. Reading and Writing Files 7.2.1. Methods of File Objects 7.2.2. Saving structured data with json 8. Errors and Exceptions 8.1. Syntax Errors 8.2. Exceptions 8.3. Handling Exceptions 8.4. Raising Exceptions 8.5. Exception Chaining 8.6. User-defined Exceptions 8.7. Defining Clean-up Actions 8.8. Predefined Clean-up Actions 8.9. Raising and Handling Multiple Unrelated Exceptions 8.10. Enriching Exceptions with Notes 9. Classes 9.1. A Word About Names and Objects 9.2. Python Scopes and Namespaces 9.2.1. Scopes and Namespaces Example 9.3. A First Look at Classes 9.3.1. Class Definition Syntax 9.3.2. Class Objects 9.3.3. Instance Objects 9.3.4. Method Objects 9.3.5. Class and Instance Variables 9.4. Random Remarks 9.5. Inheritance 9.5.1. Multiple Inheritance 9.6. Private Variables",
+    "scrapedAt": "2026-05-10 04:33:50.278671"
+  },
+  {
+    "id": 671,
+    "url": "http://www.google.com",
+    "title": "Google",
+    "content": "Klik hier als je niet binnen enkele seconden wordt omgeleid. OverStore AI-modus Meer bekijken Verwijderen Verwijderen Ongepaste voorspellingen melden Google aangeboden in: Frysk Nederland AdverterenBedrijf Hoe Google Zoeken werkt Ons derde decennium van klimaatactie: dit is wat we doen PrivacyVoorwaarden Instellingen Zoekinstellingen Geavanceerd zoeken Je gegevens in Google Zoeken Personalisatie en cookies Zoekgeschiedenis Google Zoeken Help Feedback sturen Donker thema: uit nl ‪Nederlands‬ ‪Deutsch‬ ‪English (United Kingdom)‬ ‪Español (España)‬ ‪Français (France)‬ ‪Italiano‬ Alle talen ‪Afrikaans‬ ‪azərbaycan‬ ‪bosanski‬ ‪català‬ ‪Čeština‬ ‪Cymraeg‬ ‪Dansk‬ ‪Deutsch‬ ‪eesti‬ ‪English (United Kingdom)‬ ‪English (United States)‬ ‪English‬ ‪Español (España)‬ ‪Español (Latinoamérica)‬ ‪euskara‬ ‪Filipino‬ ‪Français (Canada)‬ ‪Français (France)‬ ‪Gaeilge‬ ‪galego‬ ‪Hrvatski‬ ‪Indonesia‬ ‪isiZulu‬ ‪íslenska‬ ‪Italiano‬ ‪Kiswahili‬ ‪latviešu‬ ‪lietuvių‬ ‪magyar‬ ‪Melayu‬ ‪norsk‬ ‪o‘zbek‬ ‪polski‬ ‪Português (Brasil)‬ ‪Português (Portugal)‬ ‪română‬ ‪shqip‬ ‪Slovenčina‬ ‪slovenščina‬ ‪srpski (latinica)‬ ‪Suomi‬ ‪Svenska‬ ‪Tiếng Việt‬ ‪Türkçe‬ ‪Ελληνικά‬ ‪беларуская‬ ‪български‬ ‪кыргызча‬ ‪македонски‬ ‪монгол‬ ‪Русский‬ ‪српски (ћирилица)‬ ‪Українська‬ ‪ქართული‬ ‪қазақ тілі‬ ‪հայերեն‬ ‫עברית‬ ‫اردو‬ ‫العربية‬ ‫فارسی‬ ‪አማርኛ‬ ‪नेपाली‬ ‪मराठी‬ ‪हिन्दी‬ ‪বাংলা‬ ‪ਪੰਜਾਬੀ‬ ‪ગુજરાતી‬ ‪தமிழ்‬ ‪తెలుగు‬ ‪ಕನ್ನಡ‬ ‪മലയാളം‬ ‪සිංහල‬ ‪ไทย‬ ‪ລາວ‬ ‪မြန်မာ‬ ‪ខ្មែរ‬ ‪한국어‬ ‪中文（香港）‬ ‪日本語‬ ‪简体中文‬ ‪繁體中文‬ Inloggen Voordat je verdergaat naar Google We gebruiken cookies en gegevens voor het volgende: Google-services leveren en onderhouden Uitval bijhouden en bescherming bieden tegen spam, fraude en misbruik Doelgroepbetrokkenheid en sitestatistieken meten om inzicht te krijgen in hoe onze services worden gebruikt en de kwaliteit van die services te verbeteren Als je Alles accepteren kiest, gebruiken we cookies en gegevens ook voor het volgende: Nieuwe services ontwikkelen en verbeteren Advertenties laten zien en de effectiviteit ervan meten Gepersonaliseerde content laten zien (afhankelijk van je instellingen) Gepersonaliseerde advertenties laten zien (afhankelijk van je instellingen) Als je Alles afwijzen kiest, gebruiken we cookies niet voor deze aanvullende doeleinden. Niet-gepersonaliseerde content wordt beïnvloed door factoren zoals de content die je op dat moment bekijkt, activiteit in je actieve zoeksessie en je locatie. Niet-gepersonaliseerde advertenties worden beïnvloed door de content die je op dat moment bekijkt en je algemene locatie. Gepersonaliseerde content en advertenties kunnen ook relevantere resultaten, aanbevelingen en op jou toegespitste advertenties omvatten die zijn gebaseerd op eerdere activiteit van deze browser, zoals uitgevoerde Google-zoekopdrachten. We gebruiken cookies en gegevens ook om te zorgen dat de functionaliteit geschikt is voor je leeftijd, als dit relevant is. Selecteer Meer opties om meer informatie te bekijken, waaronder over hoe je je privacyinstellingen beheert. Je kunt ook altijd naar g.co/privacytools gaan. Alles afwijzen Alles accepteren Meer opties Privacy · Voorwaarden Google-apps",
+    "scrapedAt": "2026-05-10 04:33:40.631638"
+  },
+  {
     "id": 670,
     "url": "http://code.activestate.com/recipes/langs/python/",
     "title": "Popular Python recipes « ActiveState Code",
@@ -4417,26 +4452,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 671,
-    "url": "http://www.google.com"
-  },
-  {
-    "id": 672,
-    "url": "http://docs.python.org/3/tutorial/"
-  },
-  {
-    "id": 674,
-    "url": "http://wiki.python.org/moin/IntroductoryBooks"
-  },
-  {
-    "id": 675,
-    "url": "https://www.python.org/search"
-  },
-  {
-    "id": 676,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
   },
   {
     "id": 677,
@@ -106615,10 +106630,2166 @@ window.searchData = [
     "id": 76162,
     "url": "https://code.activestate.com/recipes/580788-implementing-class-based-callbacks-in-python/?in\u003dlang-python",
     "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76163,
+    "url": "https://www.google.com/history/optout?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76164,
+    "url": "https://policies.google.com/technologies/cookies?utm_source\u003ducbs\u0026hl\u003dnl",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76165,
+    "url": "https://www.google.com/?sca_esv\u003df66bc4a1ca8f57b4\u0026output\u003dsearch\u0026gbv\u003d1\u0026sei\u003dNKj_aYahDfXZi-gPm-vDqAg",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76166,
+    "url": "https://www.google.com/intl/nl_nl/ads/?subid\u003dww-ww-et-g-awa-a-g_hpafoot1_1!o2\u0026utm_source\u003dgoogle.com\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dgoogle_hpafooter\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76167,
+    "url": "https://store.google.com/NL?utm_source\u003dhp_header\u0026utm_medium\u003dgoogle_ooo\u0026utm_campaign\u003dGS100042\u0026hl\u003dnl-NL",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76168,
+    "url": "https://consent.google.com/d?continue\u003dhttps://www.google.com/?gws_rd%3Dssl\u0026gl\u003dNL\u0026m\u003d0\u0026pc\u003dshp\u0026cm\u003d5\u0026hl\u003dnl\u0026src\u003d4",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76169,
+    "url": "https://policies.google.com/privacy?hl\u003dnl\u0026fg\u003d1\u0026utm_source\u003ducbs",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76170,
+    "url": "https://www.google.com/services/?subid\u003dww-ww-et-g-awa-a-g_hpbfoot1_1!o2\u0026utm_source\u003dgoogle.com\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dgoogle_hpbfooter\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76171,
+    "url": "https://www.google.com/history/privacyadvisor/search/unauth?utm_source\u003dgooglemenu\u0026fg\u003d1\u0026cctld\u003dcom",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76172,
+    "url": "https://about.google/?fg\u003d1\u0026utm_source\u003dgoogle-NL\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dhp-header",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76173,
+    "url": "https://policies.google.com/terms?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76174,
+    "url": "https://policies.google.com/privacy?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76175,
+    "url": "https://www.google.com/setprefs?sig\u003d0_sJ1BqMchogiHmU0EAdlCnsRejzA%3D\u0026hl\u003dfy\u0026source\u003dhomepage\u0026sa\u003dX\u0026ved\u003d0ahUKEwiGi9uilK2UAxX17AIHHZv1EIUQ2ZgBCBg",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76176,
+    "url": "https://policies.google.com/terms?hl\u003dnl\u0026fg\u003d1\u0026utm_source\u003ducbs",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76177,
+    "url": "https://www.google.com/advanced_search?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76178,
+    "url": "https://support.google.com/websearch/?p\u003dws_results_help\u0026hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76179,
+    "url": "https://google.com/search/howsearchworks/?fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76180,
+    "url": "https://sustainability.google/?utm_source\u003dgooglehpfooter\u0026utm_medium\u003dhousepromos\u0026utm_campaign\u003dbottom-footer\u0026utm_content\u003d",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76181,
+    "url": "https://www.google.com/preferences?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 76182,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#default-argument-values",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76183,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76185,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76186,
+    "url": "https://docs.python.org/3/tutorial/errors.html#exception-chaining",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76187,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#weak-references",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76188,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76189,
+    "url": "https://docs.python.org/3/tutorial/modules.html#packages",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76191,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76192,
+    "url": "https://docs.python.org/3/tutorial/modules.html#intra-package-references",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76193,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#performance-measurement",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76194,
+    "url": "https://docs.python.org/3/glossary.html#glossary",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76195,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#error-output-redirection-and-program-termination",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76198,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76199,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-queues",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76200,
+    "url": "https://docs.python.org/3/tutorial/modules.html#more-on-modules",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76201,
+    "url": "https://docs.python.org/3/tutorial/classes.html#instance-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76202,
+    "url": "https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76203,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#command-line-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76204,
+    "url": "https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76205,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#match-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76206,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76207,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#operating-system-interface",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76208,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#logging",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76209,
+    "url": "https://docs.python.org/3/tutorial/floatingpoint.html#representation-error",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76210,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76211,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#the-customization-modules",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76212,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#executable-python-scripts",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76213,
+    "url": "https://docs.python.org/3/tutorial/classes.html#multiple-inheritance",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76215,
+    "url": "https://docs.python.org/3/tutorial/errors.html#syntax-errors",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76217,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#positional-or-keyword-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76218,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#internet-access",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76219,
+    "url": "https://docs.python.org/3/tutorial/modules.html#the-module-search-path",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76220,
+    "url": "https://docs.python.org/3/whatsnew/changelog.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76221,
+    "url": "https://docs.python.org/3/tutorial/venv.html#introduction",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76222,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76223,
+    "url": "https://docs.python.org/3/tutorial/errors.html#exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76224,
+    "url": "https://docs.python.org/3/tutorial/classes.html#class-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76225,
+    "url": "https://docs.python.org/3/tutorial/classes.html#method-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76226,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76227,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#manual-string-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76228,
+    "url": "https://docs.python.org/3/tutorial/errors.html#enriching-exceptions-with-notes",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76229,
+    "url": "https://docs.python.org/3/tutorial/classes.html#a-first-look-at-classes",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76230,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#batteries-included",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76231,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#interactive-mode",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76232,
+    "url": "https://docs.python.org/3/tutorial/modules.html#compiled-python-files",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76233,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76234,
+    "url": "https://docs.python.org/3/tutorial/introduction.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76235,
+    "url": "https://docs.python.org/3/tutorial/errors.html#handling-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76236,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76237,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#saving-structured-data-with-json",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76238,
+    "url": "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76239,
+    "url": "https://docs.python.org/3/tutorial/classes.html#iterators",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76240,
+    "url": "https://docs.python.org/3/tutorial/venv.html#managing-packages-with-pip",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76241,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#source-code-encoding",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76242,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#comparing-sequences-and-other-types",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76243,
+    "url": "https://docs.python.org/3/tutorial/errors.html#predefined-clean-up-actions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76244,
+    "url": "https://docs.python.org/3/tutorial/classes.html#random-remarks",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76245,
+    "url": "https://docs.python.org/3/tutorial/classes.html#scopes-and-namespaces-example",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76246,
+    "url": "https://docs.python.org/3/tutorial/classes.html#inheritance",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76247,
+    "url": "https://docs.python.org/3/tutorial/floatingpoint.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76248,
+    "url": "https://docs.python.org/3/tutorial/errors.html#raising-and-handling-multiple-unrelated-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76249,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-conditions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76250,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#dates-and-times",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76252,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#text",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76253,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#file-wildcards",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76254,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#the-del-statement",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76255,
+    "url": "https://docs.python.org/3/tutorial/modules.html#importing-from-a-package",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76256,
+    "url": "https://docs.python.org/3/tutorial/interactive.html#tab-completion-and-history-editing",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76257,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#recap",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76258,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#templating",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76259,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#keyword-only-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76260,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76261,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#the-interpreter-and-its-environment",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76262,
+    "url": "https://docs.python.org/3/tutorial/interactive.html#alternatives-to-the-interactive-interpreter",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76264,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#special-parameters",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76265,
+    "url": "https://docs.python.org/3/tutorial/classes.html#class-definition-syntax",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76267,
+    "url": "https://docs.python.org/3/tutorial/classes.html#a-word-about-names-and-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76268,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76269,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76270,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#data-compression",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76271,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#pass-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76272,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76273,
+    "url": "https://docs.python.org/3/tutorial/classes.html#generators",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76274,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#argument-passing",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76275,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#invoking-the-interpreter",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76276,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#multi-threading",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76277,
+    "url": "https://docs.python.org/3/tutorial/errors.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76278,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#mathematics",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76279,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76280,
+    "url": "https://docs.python.org/3/tutorial/appetite.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76281,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#tools-for-working-with-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76282,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#if-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76283,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#numbers",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76284,
+    "url": "https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76285,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76286,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#string-pattern-matching",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76288,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76289,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#working-with-binary-data-record-layouts",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76290,
+    "url": "https://docs.python.org/3/tutorial/modules.html#packages-in-multiple-directories",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76291,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76292,
+    "url": "https://docs.python.org/3/tutorial/classes.html#generator-expressions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76293,
+    "url": "https://docs.python.org/3/tutorial/errors.html#raising-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76294,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76296,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#looping-techniques",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76297,
+    "url": "https://docs.python.org/3/tutorial/classes.html#odds-and-ends",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76298,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#the-range-function",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76299,
+    "url": "https://docs.python.org/3/tutorial/",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76300,
+    "url": "https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76301,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#else-clauses-on-loops",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76302,
+    "url": "https://docs.python.org/3/tutorial/introduction.html#lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76303,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76304,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76305,
+    "url": "https://docs.python.org/3/tutorial/interactive.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76306,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#keyword-arguments",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76307,
+    "url": "https://docs.python.org/3/tutorial/classes.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76308,
+    "url": "https://docs.python.org/3/tutorial/interpreter.html#interactive-mode",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76309,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#old-string-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76312,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#function-examples",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76313,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76314,
+    "url": "https://docs.python.org/3/tutorial/venv.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76315,
+    "url": "https://docs.python.org/3/tutorial/classes.html#private-variables",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76316,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#documentation-strings",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76317,
+    "url": "https://docs.python.org/3/tutorial/modules.html#standard-modules",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76318,
+    "url": "https://docs.python.org/3/tutorial/modules.html#the-dir-function",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76319,
+    "url": "https://github.com/python/cpython/blob/main/Doc/tutorial/index.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76320,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#positional-only-parameters",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76321,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#output-formatting",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76323,
+    "url": "https://docs.python.org/3/tutorial/#the-python-tutorial",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76324,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76325,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#for-statements",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76326,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#the-interactive-startup-file",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76327,
+    "url": "https://docs.python.org/3/tutorial/modules.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76328,
+    "url": "https://docs.python.org/3/tutorial/stdlib2.html#decimal-floating-point-arithmetic",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76329,
+    "url": "https://docs.python.org/3/tutorial/whatnow.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76331,
+    "url": "https://docs.python.org/3/tutorial/appendix.html",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76332,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#nested-list-comprehensions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76333,
+    "url": "https://docs.python.org/3/tutorial/appendix.html#error-handling",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76334,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76335,
+    "url": "https://docs.python.org/3/tutorial/stdlib.html#quality-control",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76336,
+    "url": "https://docs.python.org/3/tutorial/datastructures.html#sets",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76337,
+    "url": "https://docs.python.org/3/tutorial/controlflow.html#function-annotations",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76338,
+    "url": "https://docs.python.org/3/tutorial/errors.html#defining-clean-up-actions",
+    "parentUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": 76339,
+    "url": "http://www.apress.com/book/bookDisplay.html?bID\u003d93",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76340,
+    "url": "https://wiki.python.org/moin/McDonald.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76341,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1590590066",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76342,
+    "url": "http://www.pragprog.com/titles/gwpy/practical-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76343,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0761523340",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76344,
+    "url": "https://www.amazon.com/Python-Dash-Christian-Mayer-dp-1718502222/dp/1718502222",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76345,
+    "url": "https://wiki.python.org/moin/NoStarch.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76346,
+    "url": "http://safari1.oreilly.com/main.asp?bookname\u003d0130260363",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76347,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0201709384",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76348,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0672319942",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76349,
+    "url": "http://www.packtpub.com/packt/free-ebook/learning-python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76350,
+    "url": "https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning-cookbook",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76351,
+    "url": "http://www.oreilly.com/catalog/9780596158071/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76352,
+    "url": "http://www.accu.org/bookreviews/public/reviews/p/p003210.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76353,
+    "url": "https://smile.amazon.com/gp/product/B08G1XLDNB/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76354,
+    "url": "http://www.cengagebrain.com/shop/isbn/9781111822705",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76356,
+    "url": "http://www.rmi.net/~lutz/about-pyref4e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76357,
+    "url": "http://www.oreilly.com/catalog/python3/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76358,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1590593561",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76359,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1884777740",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76360,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1-59059-519-x",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76361,
+    "url": "http://gnosis.cx/TPiP/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76362,
+    "url": "https://wiki.python.org/moin/BeautifulSoup.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76363,
+    "url": "https://www.packtpub.com/application-development/modular-programming-python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76365,
+    "url": "http://www.accu.org/bookreviews/public/reviews/c/c002320.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76366,
+    "url": "http://www.informit.com/articles/printerfriendly.asp?p\u003d28672\u0026rl\u003d1",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76367,
+    "url": "https://shortener.manning.com/1GBV",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76368,
+    "url": "http://www.qtrac.eu/py3book.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76369,
+    "url": "https://wiki.python.org/moin/CategoryPyCon2008.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76370,
+    "url": "http://home.wlu.edu/~lambertk/python/cs2python/index.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76371,
+    "url": "https://www.packtpub.com/application-development/python-3-object-oriented-programming-third-edition",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76372,
+    "url": "http://www.network-theory.co.uk/python/manual/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76373,
+    "url": "http://www.amazon.com/Quick-Python-Book-Second/dp/193518220X/ref\u003dsr_1_1?ie\u003dUTF8\u0026qid\u003d1309567984\u0026sr\u003d8-1",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76374,
+    "url": "https://www.packtpub.com/application-development/learn-python-7-days",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76375,
+    "url": "http://www.rmi.net/~lutz/about-lp5e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76376,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0954161769",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76377,
+    "url": "https://pythonfromscratch.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76378,
+    "url": "https://play.google.com/store/books/details/Dr_Csaba_Dobreff_Python_knowledge_building_step_by?id\u003dJMZDEQAAQBAJ",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76379,
+    "url": "http://www.packtpub.com/building-machine-learning-systems-with-python/book",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76380,
+    "url": "https://wiki.python.org/moin/OpenRefine.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76381,
+    "url": "http://www.premierpressbooks.com/ptr_detail.cfm?group\u003dProgramming\u0026isbn\u003d1-59200-073-8",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76382,
+    "url": "http://www.manning.com/sande",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76383,
+    "url": "http://prenhall.com/goldwasser",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76384,
+    "url": "https://thomasweise.github.io/programmingWithPython/programmingWithPython.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76385,
+    "url": "https://python-freelancer.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76386,
+    "url": "http://dannyreviews.com/h/Text_Python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76387,
+    "url": "https://www.createspace.com/3611970",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76388,
+    "url": "http://www.spronck.net/pythonbook",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76389,
+    "url": "http://coweb.cc.gatech.edu/mediaComp-teach",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76391,
+    "url": "http://corepython.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76392,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0136150314",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76393,
+    "url": "http://www.apress.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76394,
+    "url": "https://www.nostarch.com/pythonforkids",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76395,
+    "url": "https://books.google.com.br/books?id\u003dHvSsCAAAQBAJ",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76396,
+    "url": "http://mcsp.wartburg.edu/zelle/python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76397,
+    "url": "http://www.toonzcat.com/book.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76398,
+    "url": "https://wiki.python.org/moin/TextProcessingInPython.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76399,
+    "url": "http://dannyreviews.com/h/Python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76400,
+    "url": "http://www2.linuxjournal.com/lj-issues/issue73/3851.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76401,
+    "url": "https://wiki.python.org/moin/CategoryDocumentation.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76402,
+    "url": "https://www.amazon.com/dp/B0C9SDNCP3",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76403,
+    "url": "http://manning.com/ceder/SampleChapter-4.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76404,
+    "url": "http://www.pragprog.com/titles/gwpy2/practical-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76405,
+    "url": "https://manning-content.s3.amazonaws.com/download/3/145ee71-1acd-4e02-a9b0-fb0f1892485e/SampleCh30.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76406,
+    "url": "https://wiki.python.org/moin/DevOps.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76407,
+    "url": "https://www.barnesandnoble.com/w/learning-iot-with-python-and-raspberry-pi-ei-horvath/1133345171?ean\u003d9780578549361",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76408,
+    "url": "http://homepage.mac.com/s_lott/books/python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76409,
+    "url": "http://gnosis.cx/publish/programming/charming_python_b8.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76410,
+    "url": "http://www.manning.com/garrard/GeoPython_MEAP_ch01.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76411,
+    "url": "http://www.talentreboot.com/publications/book-how-would-pareto-learn-python/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76412,
+    "url": "http://python-ebook.blogspot.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76413,
+    "url": "http://manning.com/briggs/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76414,
+    "url": "http://books.dzone.com/reviews/quick-python-book-delivers",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76415,
+    "url": "http://lists.tummy.com/pipermail/frpythoneers/2000-June/000085.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76416,
+    "url": "https://www.nostarch.com/doingmathwithpython",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76417,
+    "url": "https://wiki.python.org/moin/FredrikLundh.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76419,
+    "url": "https://www.nostarch.com/pythonwithminecraft",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76420,
+    "url": "http://www.manning.com/foord",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76422,
+    "url": "http://www.diveintopython.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76423,
+    "url": "https://wiki.python.org/moin/ReferenceBooks.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76424,
+    "url": "http://www.apress.com/book/view/9781590599822/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76425,
+    "url": "http://www.otago.ac.nz",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76426,
+    "url": "http://www.china-pub.com/computers/common/info.asp?id\u003d3097",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76427,
+    "url": "http://www2.linuxjournal.com/lj-issues/issue85/4564.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76429,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596009402",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76430,
+    "url": "https://thepythoncodingbook.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76431,
+    "url": "http://www.ironpythoninaction.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76432,
+    "url": "http://oreilly.com/catalog/9781449382674/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76433,
+    "url": "https://wiki.python.org/moin/PostScript.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76434,
+    "url": "http://www.wowbook.com/computer/book/info/book_detail.asp?isbn\u003dISBN89-450-7052-4",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76435,
+    "url": "https://github.com/thomasWeise/programmingWithPython",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76436,
+    "url": "http://uselesspython.com/gettingstarted.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76437,
+    "url": "http://www.headfirstlabs.com/books/hfpython/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76438,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596000960",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76439,
+    "url": "http://www.cengagebrain.com/shop/isbn/9781285752006",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76440,
+    "url": "http://www.usenix.org/publications/login/1998-4/python.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76441,
+    "url": "http://home.wlu.edu/~lambertk/breezypythongui/easyguibook.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76442,
+    "url": "http://rmi.net/~lutz/about-lp4e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76443,
+    "url": "https://nostarch.com/python-dash",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76444,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1592000738",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76445,
+    "url": "http://www.ercb.com/ddj/1997/ddj.9711.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76446,
+    "url": "http://www.amazon.com/Python-complete-beginners-friendly-experience/dp/1514376989/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76447,
+    "url": "https://www.manning.com/books/the-quick-python-book-third-edition",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76448,
+    "url": "http://www.amazon.com/dp/B0063ZM6I0",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76449,
+    "url": "http://www.cambridge.org/us/catalogue/catalogue.asp?isbn\u003d9780521725965",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76450,
+    "url": "https://www.nostarch.com/automatestuff",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76451,
+    "url": "https://www.nostarch.com/pythoncrashcourse",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76452,
+    "url": "http://www.manning.com/getpage.html?project\u003dharms\u0026filename\u003dChapters.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76453,
+    "url": "https://wiki.python.org/moin/McNeil.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76454,
+    "url": "https://wiki.python.org/moin/CategoryPythonWebsite.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76456,
+    "url": "http://www.manning.com/garrard/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76457,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0971677506",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76458,
+    "url": "https://www.packtpub.com/packt/free-ebook/what-you-need-know-about-machine-learning2",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76459,
+    "url": "http://tinyurl.com/jskh",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76460,
+    "url": "http://shop.oreilly.com/product/9780596158118.do",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76461,
+    "url": "https://wiki.python.org/moin/GitHub.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76462,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d1887902996",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76463,
+    "url": "http://www.apress.com/book/bookDisplay.html?bID\u003d10013",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76465,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0471778648",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76466,
+    "url": "http://www.softbaugh.com/courses/python1/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76468,
+    "url": "http://www.rmi.net/~lutz/about-pp4e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76469,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596158068",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76471,
+    "url": "http://studypack.com/comp/course/view.php?id\u003d232",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76472,
+    "url": "https://github.com/thomasWeise/programmingWithPython/issues",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76473,
+    "url": "https://www.amazon.com/dp/1094777978",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76474,
+    "url": "http://www.accu.org/bookreviews/public/reviews/q/q002082.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76475,
+    "url": "http://home.wlu.edu/~lambertk/python/cs1python/index.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76476,
+    "url": "https://www.packtpub.com/packt/free-ebook/what-you-need-know-about-python2",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76477,
+    "url": "http://www.pythonfood.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76478,
+    "url": "https://www.amazon.com/Python-3-8-Nat-Dunn/dp/1951959027",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76479,
+    "url": "https://pythonfromtheverybeginning.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76480,
+    "url": "http://www.manning.com/ceder",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76481,
+    "url": "https://www.manning.com/books/the-quick-python-book-third-edition#downloads",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76482,
+    "url": "https://github.com/thomasWeise/programmingWithPythonCode",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76483,
+    "url": "https://www.packtpub.com/packt/free-ebook/learning-python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76484,
+    "url": "http://www.swaroopch.com/notes/Python",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76485,
+    "url": "https://www.packtpub.com/application-development/learn-programming-python-cody-jackson",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76486,
+    "url": "http://www.headfirstlabs.com/books/hfprog",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76487,
+    "url": "http://oreilly.com/catalog/9780596158071/toc.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76488,
+    "url": "http://home.wlu.edu/~lambertk/breezypythongui/index.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76489,
+    "url": "http://vig.prenhall.com/catalog/academic/product/1,4096,0130923613,00.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76490,
+    "url": "http://www.talentreboot.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76491,
+    "url": "https://www.nostarch.com/teachkids",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76492,
+    "url": "http://shop.oreilly.com/product/0636920028154.do",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76493,
+    "url": "http://homepage.mac.com/s_lott/books/nonprogrammer.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76494,
+    "url": "http://www.manning.com/ceder/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76495,
+    "url": "http://manning.com/ceder/SampleChapter-6.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76496,
+    "url": "https://nostarch.com/art-clean-code",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76497,
+    "url": "https://www.packtpub.com/application-development/python-apprentice",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76498,
+    "url": "https://wiki.python.org/moin/MapInfo.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76499,
+    "url": "http://www.rmi.net/~lutz/about-pp3e.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76501,
+    "url": "https://blog.finxter.com/book-leaving-the-rat-race-with-python/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76502,
+    "url": "https://nostarch.com/pythononeliners",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76503,
+    "url": "https://manning-content.s3.amazonaws.com/download/e/2d021c6-d4ed-40e5-8f6d-084f92ccbb86/SampleCh04.pdf",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76504,
+    "url": "http://www.freenetpages.co.uk/hp/alan.gauld/index.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76505,
+    "url": "http://www.amk.ca/python/books/qpb.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76506,
+    "url": "https://www.amazon.com/Python-Very-Beginning-exercises-answers/dp/0957671156/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76507,
+    "url": "https://www.packtpub.com/big-data-and-business-intelligence/practical-data-analysis-cookbook",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76508,
+    "url": "https://nostarch.com/learn-code-solving-problems",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76509,
+    "url": "http://pythonforcompletebeginners.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76510,
+    "url": "https://www.packtpub.com/application-development/python-projects-kids",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76511,
+    "url": "http://shop.oreilly.com/product/9780596158095.do",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76512,
+    "url": "http://www.testingperspective.com/?page_id\u003d1889",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76513,
+    "url": "http://thinkpython.com",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76514,
+    "url": "https://regexusingpython.wordpress.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76515,
+    "url": "http://www.python.org/doc/essays/foreword.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76516,
+    "url": "https://www.manning.com/books/get-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76517,
+    "url": "https://wiki.python.org/moin/CategoryPythonInEducation.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76518,
+    "url": "http://python.itcarlow.ie",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76519,
+    "url": "https://launchpad.net/practical-programming",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76520,
+    "url": "http://www.prakashbooks.com/details.php3?id\u003d5806",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76521,
+    "url": "https://www.amazon.com/Art-Clean-Code-Practices-Complexity/dp/1718502184",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76522,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0130923613",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76523,
+    "url": "http://www-106.ibm.com/developerworks/linux/library/l-pbook3.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76524,
+    "url": "https://www.learningiot.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76525,
+    "url": "http://www.pythonware.com/people/fredrik/librarybook.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76526,
+    "url": "https://www.packtpub.com/networking-and-servers/learning-python-forensics",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76527,
+    "url": "http://www.llumina.com/store/python.htm",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76528,
+    "url": "https://www.packtpub.com/python-3-object-oriented-programming/book",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76529,
+    "url": "http://www.awaretek.com/CorePython.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76530,
+    "url": "https://www.amazon.com/dp/B0BW32CWD5",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76531,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0130410659",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76533,
+    "url": "http://www.amazon.com/exec/obidos/ISBN\u003d0596009259",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76534,
+    "url": "https://thomasweise.github.io/programmingWithPython",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76535,
+    "url": "https://wiki.python.org/moin/PythonBooks.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76536,
+    "url": "https://www.packtpub.com/python-2-6-text-processing-beginners-guide/book",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76537,
+    "url": "http://www2.linuxjournal.com/lj-issues/issue66/3541.html",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76538,
+    "url": "http://www.cs.otago.ac.nz/student/papers.php?name\u003dCOMP150",
+    "parentUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "id": 76540,
+    "url": "https://docs.python.org/3/c-api/long.html#deprecated-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76541,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnsignedLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76542,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnsignedLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76546,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76548,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.bits_per_digit",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76549,
+    "url": "https://docs.python.org/3/c-api/long.html#pylongwriter-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76551,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsNativeBytes",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76552,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76554,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnicodeObject",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76555,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AS_LONG",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76556,
+    "url": "https://docs.python.org/3/c-api/long.html#integer-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76557,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_SHIFT",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76558,
+    "url": "https://docs.python.org/3/library/sys.html#sys.int_info",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76561,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.digit_size",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76563,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromString",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76566,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsSsize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76571,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLongMask",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76574,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.digits_order",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76576,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76577,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76578,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/long.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76579,
+    "url": "https://docs.python.org/3/glossary.html#term-named-tuple",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76582,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76583,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.value",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76585,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_REJECT_NEGATIVE",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76586,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromSsize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76587,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongWriter",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76588,
+    "url": "https://docs.python.org/3/c-api/none.html",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76589,
+    "url": "https://docs.python.org/3/c-api/long.html#export-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76590,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_LITTLE_ENDIAN",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76592,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyTypeObject",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76593,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLongLongAndOverflow",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76594,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_BIG_ENDIAN",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76595,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyObject",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76596,
+    "url": "https://docs.python.org/3/c-api/bool.html",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76597,
+    "url": "https://docs.python.org/3/c-api/concrete.html",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76598,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76601,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76602,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLongLongMask",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76605,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.negative",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76606,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsDouble",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76607,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Occurred",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76608,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromSize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76612,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.ndigits",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76613,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromUnsignedNativeBytes",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76615,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongExport.digits",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76616,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyUnstable_Long_IsCompact",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76617,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76618,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsPid",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76619,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_DEFAULTS",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76620,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_NATIVE_ENDIAN",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76621,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_UNSIGNED_BUFFER",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76622,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76623,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsSize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76624,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76625,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsVoidPtr",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76626,
+    "url": "https://docs.python.org/3/library/exceptions.html#OverflowError",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76627,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_MASK",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76628,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromVoidPtr",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76632,
+    "url": "https://docs.python.org/3/c-api/stable.html#stable",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76633,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromPid",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76634,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsLongAndOverflow",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76635,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongLayout.digit_endianness",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76636,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsInt",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76637,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromDouble",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76638,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUnsignedLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76639,
+    "url": "https://docs.python.org/3/c-api/long.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76640,
+    "url": "https://docs.python.org/3/c-api/long.html#c.Py_ASNATIVEBYTES_ALLOW_INDEX",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76641,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyUnstable_Long_CompactValue",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76642,
+    "url": "https://docs.python.org/3/c-api/intro.html#c.Py_ssize_t",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76643,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#integers",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76644,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_BASE",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76646,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromLongLong",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76649,
+    "url": "https://docs.python.org/3/c-api/stable.html#unstable-c-api",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "id": 76650,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromNativeBytes",
+    "parentUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt32"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "IntroductoryBooks",
+    "pageUrl": "http://wiki.python.org/moin/IntroductoryBooks"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Tutorial — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Tutorial — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/tutorial/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg",
+    "alt": "Google",
+    "pageTitle": "Google",
+    "pageUrl": "http://www.google.com"
+  },
   {
     "src": "https://code.activestate.com/static/activestyle/img/activestate.png",
     "alt": "",
