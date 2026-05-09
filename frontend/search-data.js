@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 807,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ByteString",
+    "title": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias a",
+    "scrapedAt": "2026-05-10 04:48:22.06508"
+  },
+  {
+    "id": 806,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#unittest",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:48:14.973723"
+  },
+  {
+    "id": 805,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS",
+    "title": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Abstract Objects Layer » Sequence Protocol | Theme Auto Light Dark | Sequence Protocol¶ int PySequence_Check(PyObject *o)¶ Part of the Stable ABI. Return 1 if the object provides the sequence protocol, and 0 otherwise. Note that it returns 1 for Python classes with a __getitem__() method, unless they are dict subclasses, since in general it is impossible to determine what type of keys the class supports. This function always succeeds. Py_ssize_t PySequence_Size(PyObject *o)¶ Py_ssize_t PySequence_Length(PyObject *o)¶ Part of the Stable ABI. Returns the number of objects in sequence o on success, and -1 on failure. This is equivalent to the Python expression len(o). PyObject *PySequence_Concat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. This is the equivalent of the Python expression o1 + o2. PyObject *PySequence_Repeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. This is the equivalent of the Python expression o * count. PyObject *PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. The operation is done in-place when o1 supports it. This is the equivalent of the Python expression o1 +\u003d o2. PyObject *PySequence_InPlaceRepeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. The operation is done in-place when o supports it. This is the equivalent of the Python expression o *\u003d count. PyObject *PySequence_GetItem(PyObject *o, Py_ssize_t i)¶ Return value: New reference. Part of the Stable ABI. Return the ith element of o, or NULL on failure. This is the equivalent of the Python expression o[i]. PyObject *PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Return value: New reference. Part of the Stable ABI. Return the slice of sequence object o between i1 and i2, or NULL on failure. This is the equivalent of the Python expression o[i1:i2]. int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)¶ Part of the Stable ABI. Assign object v to the ith element of o. Raise an exception and return -1 on failure; return 0 on success. This is the equivalent of the Python statement o[i] \u003d v. This function does not steal a reference to v. If v is NULL, the element is deleted, but this feature is deprecated in favour of using PySequence_DelItem(). int PySequence_DelItem(PyObject *o, Py_ssize_t i)¶ Part of the Stable ABI. Delete the ith element of object o. Returns -1 on failure. This is the equivalent of the Python statement del o[i]. int PySequence_SetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2, PyObject *v)¶ Part of the Stable ABI. Assign the sequence object v to the slice in sequence object o from i1 to i2. This is the equivalent of the Python statement o[i1:i2] \u003d v. int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Part of the Stable ABI. Delete the slice in sequence object o from i1 to i2. Returns -1 on failure. This is the equivalent of the Python statement del o[i1:i2]. Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the number of occurrences of value in o, that is, return the number of keys for which o[key] \u003d\u003d value. On failure, return -1. This is equivalent to the Python expression o.count(value). int PySequence_Contains(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Determine if o contains value. If an item in o is equal to value, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression value in o. int PySequence_In(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Alias for PySequence_Contains(). Soft deprecated since version 3.14: The function should no longer be used to write new code. Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the first index i for which o[i] \u003d\u003d value. On error, return -1. This is equivalent to the Python expression o.index(value). PyObject *PySequence_List(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a list object with the same contents as the sequence or iterable o, or NULL on failure. The returned list is guaranteed to be new. This is equivalent to the Python expression list(o). PyObject *PySequence_Tuple(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a tuple object with the same contents as the sequence or iterable o, or NULL on failure. If o is a tuple, a new reference will be returned, otherwise a tuple will be constructed with the appropriate contents. This is equivalent to the Py",
+    "scrapedAt": "2026-05-10 04:48:10.73916"
+  },
+  {
+    "id": 804,
+    "url": "https://docs.python.org/3/library/threading.html#threading.RLock",
+    "title": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be ",
+    "scrapedAt": "2026-05-10 04:48:07.086092"
+  },
+  {
+    "id": 803,
+    "url": "https://github.com/python/cpython/issues/128563",
+    "title": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k A new tail-calling interpreter for significantly better interpreter performance #128563 New issue Copy link New issue Copy link Closed Closed A new tail-calling interpreter for significantly better interpreter performance#128563 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description Fidget-Spinner opened on Jan 6, 2025 Issue body actions Feature or enhancement Proposal Prior discussion at: faster-cpython/ideas#642 I propose adding a tail-calling interpreter to CPython for significantly better performance on compilers that support it. This idea is not new, and has been implemented by: Protobuf https://blog.reverberate.org/2021/04/21/musttail-efficient-interpreters.html Lua (Deegen) https://sillycross.github.io/2022/11/22/2022-11-22/ CPython currently has a few interpreters: A switch-case interpreter (MSVC) A computed goto interpreter (Clang, GCC) An uop interpreter. (Everything) The tail-calling interpreter will be the 4th that coexists with the rest. This means no compatibility concerns. Performance Preliminary benchmarks by me suggest excellent performance improvements --- 10% geometric mean speedup in pyperformance, with up to 40% speedup in Python-heavy benchmarks: https://gist.github.com/Fidget-Spinner/497c664eef389622d146d632990b0d21. These benchmarks were performed with clang-19 on both main and my branch, with ThinLTO and PGO, on AMD64 Ubuntu 22.04. PGO seems especially crucial for the speedups based on my testing. For those outside of CPython development: a 10% speedup is roughly equal to 2 minor CPython releases worth of improvements. For example, CPython 3.12 roughly sped up by 5%. The speedup is so significant that if accepted, the new interpreter will be faster than the current JIT compiler. CORRECTION NOTICE: We\u0027ve since found a compiler bug in LLVM 19 that artificially boosted the new interpreter\u0027s numbers. The numbers are closer to geomean 3-5% speedup. I apologize for reporting incorrect figures previously due to the compiler bug. Drawbacks Maintainability (this will introduce more code) Portability I will address maintainability by using the interpreter generator that was introduced as part of CPython 3.12. This generator will allow us to automatically generate most of the infrastructure needed for this change. Preliminary estimates suggest the generator will be only 200 lines of Python code, most of which is shared/copied/same conceptually as the other generators. For portability, this will fix itself (see the next section). Portability and Precedent At the moment, this is only supported by clang-19 for AArch64 and AMD64, with partial support on clang-18 and gcc-next, but likely bad performance on those. The reason is that we need both the __attribute__((musttail)) and __attribute__((preserve_none)) attributes for good performance. GCC only has gnu::musttail but not preserve_none. There has been prior precedence on adding compiler-specific optimizations for CPython. See for example the original computed goto issue by Antoine Pitrou https://bugs.python.org/issue4753. At the time, it was a new feature only on GCC and not on Clang, but we still added it anyways. Eventually a few years later, Clang also introduced the feature. The key point gcc will likely eventually catch up and add these features. EDIT: Added that it\u0027s only a likely case to have bad perf on GCC. Reading https://gcc.gnu.org/bugzilla/show_bug.cgi?id\u003d118328, I have not tested on GCC trunk. This is pure speculation that perf is bad. I can try with GCC eventually after the PR lands and we can test it from there. However, testing with clang with just musttail and no preserve_none, the performance was quite bad. Implementation plan Parse error labels in _PyEval_EvalFrameDefault. Implement the rest. Add likely/unlikely attributes to DEOPT_IF/EXIT_IF. Support GCC 15.0 if we determine the performance is good. Add option to Windows build script. Mention in Whats New. (Note: We NEED PGO, otherwise the perf is not very good on clang) Open new issue to add it as option on Windows build script. Open new issue to set it as auto detect on --enable-optimizations on configure. Open new issue on improving the code quality, by moving some parameters into other places to free up registers. Worries about new bugs Computed goto is well-tested, so worrying about the new interpret",
+    "scrapedAt": "2026-05-10 04:48:02.463823"
+  },
+  {
     "id": 802,
     "url": "https://docs.python.org/3/library/warnings.html#warning-filter",
     "title": "warnings — Warning control — Python 3.14.5rc1 documentation",
@@ -5327,26 +5362,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 803,
-    "url": "https://github.com/python/cpython/issues/128563"
-  },
-  {
-    "id": 804,
-    "url": "https://docs.python.org/3/library/threading.html#threading.RLock"
-  },
-  {
-    "id": 805,
-    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
-  },
-  {
-    "id": 806,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#unittest"
-  },
-  {
-    "id": 807,
-    "url": "https://docs.python.org/3/library/typing.html#typing.ByteString"
   },
   {
     "id": 808,
@@ -138245,10 +138260,352 @@ window.searchData = [
     "id": 106421,
     "url": "https://docs.python.org/3/library/warnings.html#updating-code-for-new-versions-of-dependencies",
     "parentUrl": "https://docs.python.org/3/library/warnings.html#warning-filter"
+  },
+  {
+    "id": 106422,
+    "url": "https://github.com/python/cpython/pull/129754",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106423,
+    "url": "https://github.com/python/cpython/pull/129115",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106425,
+    "url": "https://github.com/python/cpython/pull/129113",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106426,
+    "url": "https://github.com/python/cpython/pull/129112",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106427,
+    "url": "https://github.com/python/cpython/pull/129078",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106429,
+    "url": "https://github.com/faster-cpython/ideas/issues/642",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106430,
+    "url": "https://reviews.llvm.org/D99517",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106432,
+    "url": "https://github.com/python/cpython/issues/128563#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106433,
+    "url": "https://github.com/python/cpython/pull/129417",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106434,
+    "url": "https://github.com/python/cpython/pull/129812",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106436,
+    "url": "https://bugs.python.org/issue4753",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106438,
+    "url": "https://github.com/python/cpython/pull/130911",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106439,
+    "url": "https://github.com/python/cpython/pull/129481",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106440,
+    "url": "https://github.com/python/cpython/issues/128563#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106441,
+    "url": "https://discuss.python.org/t/a-new-tail-calling-interpreter-for-significantly-better-interpreter-performance/76315",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106442,
+    "url": "https://blog.reverberate.org/2021/04/21/musttail-efficient-interpreters.html",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106443,
+    "url": "https://gcc.gnu.org/bugzilla/show_bug.cgi?id\u003d118328",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106445,
+    "url": "https://reviews.llvm.org/D69024",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106447,
+    "url": "https://github.com/Fidget-Spinner",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106449,
+    "url": "https://gist.github.com/Fidget-Spinner/497c664eef389622d146d632990b0d21",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106450,
+    "url": "https://github.com/python/cpython/pull/129809",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106451,
+    "url": "https://github.com/python/cpython/pull/128718",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106452,
+    "url": "https://github.com/python/cpython/issues/128563#issue-2771530876",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106453,
+    "url": "https://github.com/python/cpython/pull/129608",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106454,
+    "url": "https://github.com/python/cpython/pull/129728",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106456,
+    "url": "https://sillycross.github.io/2022/11/22/2022-11-22/",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106457,
+    "url": "https://github.com/python/cpython/pull/129803",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106458,
+    "url": "https://github.com/python/cpython/pull/130908",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106459,
+    "url": "https://github.com/python/cpython/pull/129525",
+    "parentUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "id": 106589,
+    "url": "https://docs.python.org/3/c-api/tuple.html#c.PyTupleObject",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106591,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Tuple",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106592,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_ITEM",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106595,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106599,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/sequence.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106600,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_SetSlice",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106602,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Concat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106603,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106605,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Length",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106607,
+    "url": "https://docs.python.org/3/c-api/mapping.html",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106608,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_GetSlice",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106609,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_DelSlice",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106611,
+    "url": "https://docs.python.org/3/c-api/sequence.html#sequence-protocol",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106613,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_GetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106614,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Repeat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106615,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_InPlaceRepeat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106617,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Count",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106623,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_DelItem",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106624,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_List",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106625,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_InPlaceConcat",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106627,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Index",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106629,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_SetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106634,
+    "url": "https://docs.python.org/3/c-api/abstract.html",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106637,
+    "url": "https://docs.python.org/3/c-api/number.html",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "id": 106638,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.ByteString"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.ByteString"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#unittest"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#unittest"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_ITEMS"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.RLock"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.RLock"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?s\u003d64\u0026v\u003d4",
+    "alt": "Fidget-Spinner",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?v\u003d4\u0026size\u003d80",
+    "alt": "@Fidget-Spinner",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?v\u003d4\u0026size\u003d48",
+    "alt": "@Fidget-Spinner",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28750310?s\u003d64\u0026v\u003d4",
+    "alt": "@Fidget-Spinner",
+    "pageTitle": "A new tail-calling interpreter for significantly better interpreter performance · Issue #128563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128563"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
