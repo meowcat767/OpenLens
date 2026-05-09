@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 373,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa",
+    "title": "Koop Opel Corsa occasions op AutoScout24",
+    "content": "Ga naar hoofdinhoud Filteren Alles reset Merk en model Opel Corsa Carroserievorm Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Zoeken op trefwoord Filteren2 Opel Corsa Nederland Zoekopdracht opslaan Opel Corsa 1.4-16V Color Edit. Bewaar 15 € 3.750 03/2011 146.076 km Benzine 74 kW (101 PK) Alarm, Airbag bestuurder, Sportstoelen, Lichtmetalen velgen, Mistlampen, Getinte ramen, Startonderbreker, Zij-airbags Auto ElsenaarNL-3925 LW SCHERPENZEEL + Meer voertuigen Opel Corsa 1.2 Turbo Edition org.NL Bewaar 25 € 10.9401 11/2020 59.001 km Benzine 74 kW (101 PK) Garantie, Lane Departure Warning Systeem, Verkeersbordherkenning, Android Auto, Vermoeidheidsdetectie, Met onderhoudshistorie, Zij-airbags, Centrale vergrendeling De GoedeNL-1841 JJ STOMPETOREN + Meer voertuigen Opel Corsa 1.2 EcoFlex Cosmo LPG | Navi | Airco | Cruise Cont Bewaar 20 € 2.445 06/2012 251.059 km LPG 61 kW (83 PK) Met onderhoudshistorie, Niet-rokers auto, Navigatiesysteem, Parkeerhulp achter, Alarm, ABS, Electronic Stability Program, Automatische klimaatregeling Auto HoffNL-7761 AJ SCHOONEBEEK + Meer voertuigen Opel Corsa 1.2 100pk Automaat Edition Apple Carplay Camera Bl Bewaar 44 € 15.939 02/2022 60.807 km Benzine 74 kW (101 PK) Alarm, Lichtmetalen velgen, Automatische klimaatregeling, Garantie, LED verlichting, Parkeerhulp met camera, Elektrische ramen, Regensensor Autohuis Westerkwartier B.V.NL-9351 NP LEEK + Meer voertuigen Opel Corsa 1.2 Edition | Pano | Camera | Stoel- Stuurverwarm Bewaar 39 € 13.2001 02/2022 91.592 km Benzine 55 kW (75 PK) De topservice van een merkdealer. Tegen een betaalbare Auto ChristiaanNL-8356 VS Blokzijl + Meer voertuigen Opel Corsa 1.2 Edition - Carplay, Navi, Cruise, Lichtmetalen Bewaar 28 € 11.3451 01/2021 55.966 km Benzine 55 kW (75 PK) Lichtmetalen velgen, Garantie, Apple CarPlay, Airconditioning, Android Auto, Elektrische ramen, Vermoeidheidsdetectie, Mistlampen Autobedrijf ZielemanNL-7711 AL NIEUWLEUSEN + Meer voertuigen Opel Corsa 1.2 Turbo 100 pk Elegance Led Panorama Camera CarP Bewaar 26 € 16.9001 09/2023 19.824 km Benzine 74 kW (101 PK) Panorama dak, Sportstoelen, Automatische klimaatregeling, Stuurwielverwarming, Parkeerhulp voor, Stoelverwarming, Parkeerhulp met camera, Dodehoekdetectie Autobedrijf Wout BoumanNL-4261 AG WIJK EN AALBURG + Meer voertuigen Opel Corsa 1.2 Turbo 101pk Edition org.NL Bewaar 24 € 10.9401 € 11.740,- Prijsdaling 10/2020 46.224 km Benzine 74 kW (101 PK) Startonderbreker, Garantie, Apple CarPlay, Cruise control, Android Auto, Met onderhoudshistorie, Verkeersbordherkenning, Vermoeidheidsdetectie De GoedeNL-1841 JJ STOMPETOREN + Meer voertuigen Opel Corsa 1.4-16V OPC-line Cosmo Pano Clima Navi Stoelverwar Bewaar 18 € 6.940 € 7.940,- Prijsdaling 06/2015 122.084 km Benzine 74 kW (101 PK) Sportstoelen, Stoelverwarming, Panorama dak, Nieuwe APK, Airbag bestuurder, Sportonderstel, Cruise control, Navigatiesysteem Autobedrijf Van YperenNL-3641 SB MIJDRECHT + Meer voertuigen Opel Corsa 1.2 Turbo 100 pk Elegance Led Panorama Camera CarP Bewaar 22 € 16.9001 03/2023 32.083 km Benzine 74 kW (101 PK) Panorama dak, Sportstoelen, Automatische klimaatregeling, Parkeerhulp met camera, Stoelverwarming, Stuurwielverwarming, Lichtmetalen velgen, Lederen stuurwiel Autobedrijf Wout BoumanNL-4261 AG WIJK EN AALBURG + Meer voertuigen Opel Corsa 1.2 Edition, NL, cruise, CarPlay, navi, DAB, L.M. Bewaar 26 € 12.950 05/2022 46.756 km Benzine 55 kW (75 PK) Lichtmetalen velgen, Android Auto, Apple CarPlay, Vermoeidheidsdetectie, Elektrisch verstelbare buitenspiegels, Digitale radio-ontvangst, Startonderbreker, Navigatiesysteem Van Heijningen Auto\u0027s B.V.NL-5301 LW ZALTBOMMEL + Meer voertuigen Opel Corsa 1.2 Edition, CARPLAY, NAVI, NAP, APK, CRUISECR Bewaar 27 € 8.999 05/2020 121.813 km Benzine 74 kW (101 PK) Lichtmetalen velgen, Airbag passagier, Lane Departure Warning Systeem, Alarm, Elektrische ramen, Verkeersbordherkenning, Vermoeidheidsdetectie, Cruise control Kronenborg Auto\u0027sNL-1704 RA HEERHUGOWAARD + Meer voertuigen Opel Corsa 1.4 turbo OPC-line Bewaar 18 € 8.945 07/2018 94.152 km Benzine 74 kW (101 PK) Mistlampen, Stoelverwarming, Cruise control, Getinte ramen, Lichtmetalen velgen, Elektrisch verstelbare buitenspiegels, Stuurwielverwarming, Airconditioning Van Thiel Auto\u0027s B.V.NL-6603 BS WIJCHEN + Meer voertuigen Opel Corsa 1.2 GS Line | Matrix Led | Sport Stoelen | Carplay Bewaar 28 € 13.4501 02/2021 67.382 km Benzine 74 kW (101 PK) Sportstoelen, Lichtmetalen velgen, Alarm, Vermoeidheidsdetectie, Mistlampen, Grootlichtassistent, Android Auto, Regensensor Van der Linden Auto\u0027s B.V.NL-7905 SE HOOGEVEEN + Meer voertuigen Opel Corsa 1.2 Edition | Navigatie | Carplay\u0026Android | DAB | Bewaar 26 € 12.450 08/2022 59.717 km Benzine 2 kW (3 PK) Lichtmetalen velgen, Elektrische ramen, Centrale deurvergrendeling met afstandsbediening, Cruise",
+    "scrapedAt": "2026-05-10 04:05:52.772219"
+  },
+  {
+    "id": 372,
+    "url": "https://www.autoscout24.nl/lst/c/hatchback",
+    "title": "Hatchback occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Hatchback occasion kopen Filteren Alles reset Merk en model Carroserievorm Hatchback Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Zoeken op trefwoord Filteren2 Nederland Hatchback Zoekopdracht opslaan Volkswagen Golf 1.2 TSI Highline BlueMotion Bewaar 12 € 4.450 Zeer populair 02/2011 122.237 km Benzine 77 kW (105 PK) Autohandel Honing, Klant is Koning!! Autohandel HoningNL-3812 RJ AMERSFOORT + Meer voertuigen Fiat Punto Evo 1.3 M-Jet Lounge * Cruise * Airco * Bewaar 22 € 3.995 12/2015 203.123 km Diesel 59 kW (80 PK) Vakgarage ElibolNL-3291 CN STRIJEN + Meer voertuigen BMW 420 4-serie Gran Coupé 420i High Executive, Automaat, Bewaar 28 € 36.940 04/2022 89.981 km Benzine 135 kW (184 PK) Open dak, Sportstoelen, Alarm, Lichtmetalen velgen, Stuurwielverwarming, Getinte ramen, Stoelverwarming, Navigatiesysteem Autobedrijf Bas BloembergNL-6931 KA WESTERVOORT + Meer voertuigen CUPRA Leon 1.4 e-Hybrid 245pk VZ Business | Pano | Bucket Sea Bewaar 42 € 27.445 08/2022 57.000 km Elektro/Benzine 180 kW (245 PK) Adaptieve Cruise Control, Met onderhoudshistorie, Parkeerhulp met camera, Elektrisch verstelbare buitenspiegels, Getinte ramen, Verkeersbordherkenning, Dodehoekdetectie, Garantie Autobedrijf Okken GietenNL-9461 VA GIETEN + Meer voertuigen Alfa Romeo MiTo 1.4 T Sport 6 Bak Cruise Airco NAP Nette Staat Bewaar 28 € 3.440 08/2008 200.647 km Benzine 114 kW (155 PK) JVDK AutoserviceNL-3641 SG MIJDRECHT + Meer voertuigen Volkswagen Golf GTE 1.4 TSI GTE PDC/LED/IQ/ACC/STOEL+STUURVERW/NAVI/CA Bewaar 28 € 22.950 02/2021 99.805 km Elektro/Benzine 180 kW (245 PK) Garantie, Lichtmetalen velgen, Sportstoelen, Airbag bestuurder, Airconditioning, Zij-airbags, Stuurwielverwarming, Adaptieve Cruise Control Vortkamp EnschedeNL-7532 SW ENSCHEDE + Meer voertuigen Mercedes-Benz B 200 B200 | CRUISE | CAMERA | PDC | Bewaar 41 € 23.450 01/2022 103.380 km Benzine 120 kW (163 PK) Bandenspanningscontrole, Lichtmetalen velgen, Parkeerhulp met camera, LED verlichting, Verkeersbordherkenning, Digitale radio-ontvangst, Regensensor, Parkeerhulp voor Garage ColijnNL-4382 NA VLISSINGEN + Meer voertuigen BMW 440 4-serie Gran Coupé M440i xDrive M Sport Individual Bewaar 47 € 54.980 03/2022 68.178 km Elektro/Benzine -/- D2 AutomotiveNL-5015 BM TILBURG + Meer voertuigen Renault Twingo 0.9 TCe Intens 90PK | Climate Control | Cruise Con Bewaar 24 € 10.950 04/2020 87.362 km Benzine 68 kW (92 PK) Lichtmetalen velgen, Automatische klimaatregeling, Alarm, Parkeerhulp achter, Garantie, Getinte ramen, Apple CarPlay, Cruise control Renault SchoonNL-9503 EX STADSKANAAL + Meer voertuigen Audi S3 Sportback 2.0 TFSI Quattro Pano|RS Seat|HuD|B\u0026O|Ke Bewaar 39 € 46.490 12/2021 39.738 km Benzine 228 kW (310 PK) Sfeerverlichting, Head-up display, Sportstoelen, Stuurwielverwarming, Geheel digitaal combi-instrument, Open dak, Panorama dak, Elektrische stoelverstelling F1 AutomotiveNL-5628 CH EINDHOVEN + Meer voertuigen Toyota iQ 1.0 VVTi Black Edition, Airco, 4-zits, Parrot, tre Bewaar 24 € 4.940 01/2010 160.929 km Benzine 50 kW (68 PK) Airconditioning, Lichtmetalen velgen, Met onderhoudshistorie, Multifunctioneel stuurwiel, Lederen stuurwiel, Zij-airbags, Trekhaak, Radio Autobedrijf Bas BloembergNL-6931 KA WESTERVOORT + Meer voertuigen Peugeot 308 1.2 PureTech 130pk S\u0026S ROAD TRIP Bewaar 17 € 11.950 08/2020 84.210 km Benzine 96 kW (131 PK) Lichtmetalen velgen, Cruise control, ABS, Airconditioning Autobedrijf Jos Bongers B.V.NL-5441 PL OEFFELT + Meer voertuigen Peugeot 308 1.6 BlueHDi Blue Lease Executive PANO NAVI CRUISE. Bewaar 50 € 6.000 03/2015 231.912 km Diesel 88 kW (120 PK) Garantie, Panorama dak, Alarm, Dagrijverlichting, Airconditioning, Getinte ramen, Navigatiesysteem, Parkeerhulp voor R.T.O. Autoservice B.V.NL-7876 AW VALTHERMOND + Meer voertuigen Renault Clio 1.2 Campus Accès|NAP|APK Bewaar 23 € 1.994 01/2007 156.469 km Benzine 43 kW (58 PK) Garantie, Lederen stuurwiel, Bandenspanningscontrole, Stuurbekrachtiging, Airbag passagier, Centrale vergrendeling, Zij-airbags Adequaat Auto\u0027sNL-2461 EX TER AAR + Meer voertuigen Peugeot 107 1.0-12V XS 68pk | 5 deuren | 1e eigenaar | CV Bewaar 12 € 3.990 07/2010 59.500 km Benzine 50 kW (68 PK) Auto Service Venderbosch B.V.NL-7025 AD HALLE + Meer voertuigen BMW 125 1-serie 125i M Sport uitlaat Navi Cruise Alcantara Bewaar 43 € 19.440 04/2015 119.985 km Benzine 160 kW (218 PK) Getinte ramen, Met onderhoudshistorie, Stoelverwarming, Cruise control, Regensensor, ABS, Navigatiesysteem, Automatische klimaatregeling Benschop AutomotiveNL-2872 ZR Schoonhoven + Meer voertuigen BMW 114 1-serie 114i EDE Business+ |CRUISE|CLIMA|PDC|LEDER Bewaar 30 € 4.950 01/2013 256.615 km Benzine 75 kW (102 PK) Alarm, Trekhaak, Getinte ramen, Navigatiesysteem, Lane Departure Warning Systeem, Sportstoelen, Bi-Xenon koplampen, Cruise control Car Store AssenNL",
+    "scrapedAt": "2026-05-10 04:05:50.072779"
+  },
+  {
+    "id": 371,
+    "url": "https://www.autoscout24.nl/auto/renault/",
+    "title": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "content": "Ga naar hoofdinhoud Homepage Auto Renault Renault Toon aanbod 1 / 11 btnLabelPrevbtnLabelNext Toon aanbod Toon aanbod Oprichter Louis Renault bouwde zijn eerste auto in 1898 en richtte het bedrijf Renault op in 1899. Inmiddels is Renault een van de grootste autofabrikanten in Europa. Renault zet in op elektrificatie met volledig elektrische kleine modellen als de Zoe en de Twingo en een compleet gamma hybrides. Lees verder Meer tonen Renault Vind het model dat bij je past Sedan Coupé Cabrio Renault 4 E-Tech electric Renault 5 E-Tech electric Renault Arkana Renault Austral Renault Avantime Renault Captur Renault Clio Renault Espace Alles weergeven Renault aanbiedingen Renault Scenic1.2 TCE 115PK ZEER NETJES GOED ONDERHOUDEN € 5.438 03/2014 191.771 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5473 GPHeeswijk-dinther Renault Scenic1.6-16V Tech Line | Panoramadak | Navigatie | Airc € 950 07/2007 198.980 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9502 ECStadskanaal Renault Symbioz1.8 E-TECH FULL HYBRID 160PK ESPRIT ALPINE | Panor € 32.9001 08/2025 18.417 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 9207 GLDrachten Renault ClioEstate 0.9 TCe Night\u0026Day Sensor|Navi|Trekhaak! € 4.250 12/2014 168.884 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3214 VPZuidland Renault Austral1.3 MILD HYBRID 140PK EQUILIBRE | Trekhaak | Pack € 26.4501 12/2023 31.695 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 9207 GLDrachten Renault Captur0.9 TCe Expression Trekhaak € 6.800 12/2013 144.529 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7126 AABredevoort Renault Clio0.9 TCe Expression Android auto Apple Carplay Nieu € 3.994 12/2013 231.696 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2803 PAGouda Renault Megane E-TechEstate 1.6 Plug-In Hybrid 160 R.S. Line PANO CAMER € 21.0001 06/2022 81.018 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7876 AWValthermond Renault Austral1.2 E-Tech full hybrid 200PK techno esprit Alpine € 34.9501 05/2025 19.261 km Elektro/Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3861 SNNijkerk Renault Clio0.9 TCe Zen 5 DRS Navigatie / Cruise / Airco € 7.950 07/2017 134.555 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2408 AMAlphen Aan Den Rijn Renault Captur0.9 TCe Intens / Stoelverw. / Keyless / Climate / € 11.400 05/2019 91.157 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3861 SNNijkerk Renault ClioEstate 0.9 TCe Intens | LED | Camera | Nette staat € 8.745 12/2017 82.339 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3771 MTBarneveld Renault MeganeEstate 1.2 TCe GT-Line|Trekhaak|Xenon|eerste-eigen € 13.950 03/2017 72.632 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7963 ADRuinen Renault Modus1.4-16V Air APK 04-2027 Airco Cruise controle elek € 1.850 07/2006 228.641 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7665 SEAlbergen Renault Captur1.6 E-Tech Plug-in Hybrid 160PK / Camera / Parkeer € 18.9001 07/2022 39.626 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 3861 SNNijkerk Renault Megane E-TechEstate 1.6 Plug-In Hybrid 160 Business Edition One € 14.5001 10/2020 125.946 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 9502 EZStadskanaal Renault Twingo1.0 SCe Dynamique 71 pk zeer nette staat airco cru € 5.999 10/2015 60.177 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8171 NTVaassen Renault Kadjar1.2 TCe Intens Automaat | Trekhaak | Cruise Contro € 14.950 05/2017 89.438 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9503 EXStadskanaal Renault MeganeEstate 1.3 TCe Bose / Camera / PDC V+A / Climate / € 12.900 07/2020 142.730 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3861 SNNijkerk Renault Clio0.9 TCe Expression | Airco | Cruise Control | Trek € 7.950 01/2013 97.817 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9503 EXStadskanaal Bekijk alle Renault aanbiedingen Bijzonderheden van het automerk Renault Puur elektrische modellen (Zoe en Twingo) en middenklasser Megane Veel hybride versies bij de MPV’s en SUV’s Groot aanbod occasions Historie Renault De eerste auto van Louis Renault is gebaseerd op een driewielige De Dion-Bouton, die hij in 1898 ombouwt tot een vierwieler met een voor toen bijzondere transmissie. Hij wint een weddenschap met deze auto en merkt dat er veel belangstelling voor is. Met zijn broers richt hij het bedrijf met de naam Renault Frères op en gaat auto’s bouwen. De productie neemt snel toe, tot 6.800 in 1910. Louis Renault staat inmiddels alleen aan het hoofd van het bedrijf en door zijn contacten met de Franse elite en internationale zakenlui groeit het merk en zijn reputatie. In de Eerste Wereldoorlog speelt Renault een belangrijke rol door de productie van pantservoertuigen voor het Franse leger. Na de oorlog herstelt Renault zijn fabrieken snel en brengt de productie van zijn luxueuze automobielen weer op gang. Kort na de Tweede Wereldoorlog wordt Louis Renault gearresteerd vanwege collaboratie met de Duitsers. Hij overlijdt kort daarna. Het bedrijf Renault Frères wordt door de Franse overheid genationaliseerd en omgedoopt tot Régie Nationale des Usines Renault. De Renault 4CV is de eerste nieuwe na",
+    "scrapedAt": "2026-05-10 04:05:46.212231"
+  },
+  {
+    "id": 370,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/",
+    "title": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "content": "Ga naar hoofdinhoud Homepage Auto Mercedes-Benz Mercedes-Benz GLC Mercedes-Benz GLC 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Hoogwaardig interieur Brede keuze aan aandrijflijnen Comfortabele rijeigenschappen Zwakke punten Hoge aanschafprijs Gewicht plug-in en EV Opties snel kostbaar Toon aanbod Toon aanbod Mercedes-Benz GLC: plug-in én volledig elektrisch De Mercedes-Benz GLC van de tweede generatie is een veelzijdige premium SUV – en hij is er óók als Coupé. Sinds eind 2025 biedt Mercedes-Benz de GLC ook als volledig elektrische GLC EQ aan. Daarmee speelt de fabrikant in op de vraag naar emissievrij rijden in het premium SUV-segment. Lees verder. Marktpositie | Technische gegevens | Varianten | Doelgroep | Alternatieven | Review | Problemen en terugroepacties Mercedes-Benz GLC : een overzicht Bekijk hier de actuele prijzen voor de Mercedes-Benz GLC : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 68.063,-* Occasions vanaf:€ 11.759,-* *Laagste prijs op AutoScout24 in de afgelopen maand Mercedes-Benz GLC voor een topprijs Ontdek de beste aanbiedingen, vergelijk interessante modellen en vind de Mercedes-Benz GLC die perfect aansluit op uw wensen en behoeften. Vind de Mercedes-Benz GLC op AutoScout24 Mercedes-Benz GLC aanbiedingen Mercedes-Benz GLC 300Coupé 300e 4MATIC Premium Plus Pannorama elektr tr € 45.900 09/2020 82.074 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7575 PDOldenzaal Mercedes-Benz GLC 300Coupé 300e 4MATIC Bus.Sol. AMG org.NL el.dak+trekh € 49.9401 03/2021 22.839 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1841 JJStompetoren Mercedes-Benz GLC 350Coupé 350e 4MATIC Business Solution AMG Upgrade Ed € 34.850 05/2018 104.671 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 6003 DHWeert Mercedes-Benz GLC 300GLC 300e 4Matic Luchtvering/Memory € 36.9991 € 39.999,- 08/2020 50.678 km Elektro/Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 5705 DKHelmond Mercedes-Benz GLC 300300e 4MATIC Business Solution AMG Line | LED | Bur € 35.4951 04/2021 117.174 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7825 AMEmmen Mercedes-Benz GLC 350Coupé 350e 4MATIC Premium Plus/PLUG IN HYBRIDE € 31.950 € 33.900,- 12/2017 131.793 km Elektro/Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 4131 NNVianen Mercedes-Benz GLC 350350e 4M AMG Pano | Trekhaak | Camera | Stoelverwar € 25.950 02/2018 111.915 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5928 RTVenlo Mercedes-Benz GLC 300300e 4MATIC Business Solution | Massage | Stoelver € 27.488 04/2020 183.349 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 9403 APAssen Mercedes-Benz GLC 300Automaat navigatie 300e 4M Bns Sol. AMG € 47.950 03/2022 26.495 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6603 BVWijchen Mercedes-Benz GLC 350350e 4MATIC 327PK Aut. | Business | Panoramadak | € 21.900 10/2017 202.349 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 3931 MSWoudenberg Mercedes-Benz GLC 300300e 4MATIC AMG Line | Night | Pano | Memory € 64.490 10/2024 35.289 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7025 ADHalle Mercedes-Benz GLC 2004MATIC AMG Line | NW PRIJS €90.138 | Mild Hybrid ( € 65.950 10/2024 4.398 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 4462 HDGoes Mercedes-Benz GLC 300300e 4MATIC Business Solution AMG € 34.9991 10/2020 90.751 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5705 DKHelmond Mercedes-Benz GLC 300300e 4MATIC AMG Line | Trekhaak | ACC | 360* Camer € 59.9501 12/2023 47.693 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 6121 RXBorn Mercedes-Benz GLC 300300e 4MATIC Premium Plus Luchtvering/Burmester/Pan € 38.950 08/2021 114.149 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 2288 GVRijswijk Mercedes-Benz GLC 63 AMGCoupé S 4MATIC+ Premium Plus € 92.9991 03/2020 69.000 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8253 PSDronten Mercedes-Benz GLC 250Coupé 4Matic Premium Plus | Luchtvering | Burmeste € 32.9001 01/2018 156.777 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9723 HMGroningen Mercedes-Benz GLC 300300e 4MATIC AMG Line | Panoramadak | Burmester | N € 63.900 01/2024 44.750 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 3845 MBHarderwijk Mercedes-Benz GLC 3004MATIC AMG Premium Plus | DESIGNO | Pano | Burmest € 38.650 06/2020 94.934 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 8271 RGIjsselmuiden Mercedes-Benz GLC 43 AMG4MATIC, 368Pk, 2017, Liefhebbers auto, Rode gordel € 29.950 € 31.950,- 01/2017 179.856 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 5344 ACOss Bekijk alle Mercedes-Benz GLC aanbiedingen Marktpositie Mercedes-Benz GLC De Mercedes-Benz GLC valt in het premium SUV-segment en staat in het modellengamma van de fabrikant tussen de compacte GLA en de grotere GLE. De GLC is gericht op kopers die comfort, technologie en een representatieve uitstraling zoeken in een SUV. De tweede generatie, geïntroduceerd in 2022, bouwt voort op de eerste GLC (2015–2022) en is er – net als de eerste generatie – ook als sportiever ogende Coupé. De v",
+    "scrapedAt": "2026-05-10 04:05:41.571372"
+  },
+  {
+    "id": 369,
+    "url": "https://www.autoscout24.nl/uitgebreid-zoeken",
+    "title": "Koop occasions op AutoScout24",
+    "content": "Ga naar hoofdinhoud Vorige Uitgebreid zoeken Filter verwijderen Basisgegevens \u0026 locatie Prijsdalingen Merk 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Model 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Verdere kenmerken Meer merken en modellen toevoegen Carroserievorm Alle Hatchback Cabrio Coupé SUV/Off-Road/Pick-Up Stationwagen Sedan MPV Bedrijfswagen Overig Brandstof Alle Hybride (Elektro/Benzine) Hybride (Elektro/Diesel) Benzine CNG Diesel Elektrisch Waterstof LPG Ethanol Overig Bouwjaar Minimale eerste registratiedatum van 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Maximale eerste registratiedatum tot 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Prijs Prijs vanaf van 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Prijs tot (€) tot 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation BTW verrekenbaar Land Nederland 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Zoek op plaats of postcode 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Straal (km) Straal 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Over de grens Kilometerstand Minimale kilometerstand van 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Maximale kilometerstand tot 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Vermogen kW 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation van tot Transmissie Alle Automatisch Handgeschakeld Half/Semi-automaat Aantal deuren Alle 2/3 4/5 6/7 Aantal zitplaatsen Minimum aantal zitplaatsen van 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Maximaal aantal zitplaatsen tot 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Type verkoper Alle Autobedrijf Particulier Voertuigtype Nieuw Gebruikt Leasewagen / bedrijfswagen Oldtimer Demo Nieuw en geregistreerd Opties 4x4 ABS Adaptieve Cruise Control Airconditioning Automatische klimaatregeling Cruise control Elektrische ramen LED verlichting Multifunctioneel stuurwiel Navigatiesysteem Stoelverwarming Trekhaak Xenon verlichting Toon meer filters Exterieur Kleur Beige Blauw Bruin Brons Geel Grijs Groen Rood Zwart Zilver Paars Wit Oranje Goud Laksoort Metallic Bekleding Kleur bekleding Beige Zwart Grijs Bruin Andere Blauw Rood Groen Geel Oranje Wit Materiaal Alcantara Stof Leder Andere Half leder Velours Staat van het voertuig Maximum aantal eigenaren Alle 1 2 3 4+ Schadeauto Toon niet 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Garantie Met onderhoudshistorie Niet-rokers auto BOVAG Import Tellercheck 100% onderhouden BOVAG Garantie BOVAG Onderhoudsvrij NAP-Check Certified Choice Fabrieksgarantie Energieverbruik Emissieklasse Alle 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation Roetfilter Details Online sinds Alle 0 Vorschläge gefunden. Verwenden Sie die Auf- und Ab-Tasten zur Navigation 265.075 resultaten {\"vat\":\"0\",\"rnd\":\"58\",\"price\":\"1,2,3,4,5,6,7,8,9,10\",\"fr\":\"1,2,3,4,5,6,7,8,9,10,11\",\"type\":\"U,N,D,O,J,S\",\"articleType\":\"C\",\"leasing\":\"false\",\"buyonline\":\"false\",\"countrySearch\":\"NL\",\"atsd\":\"\",\"cockpit\":\"F\"} Naar boven",
+    "scrapedAt": "2026-05-10 04:05:37.169366"
+  },
+  {
     "id": 368,
     "url": "https://www.autoscout24.nl/lst/kia/picanto",
     "title": "Koop Kia Picanto occasions op AutoScout24",
@@ -2572,26 +2607,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 369,
-    "url": "https://www.autoscout24.nl/uitgebreid-zoeken"
-  },
-  {
-    "id": 370,
-    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
-  },
-  {
-    "id": 371,
-    "url": "https://www.autoscout24.nl/auto/renault/"
-  },
-  {
-    "id": 372,
-    "url": "https://www.autoscout24.nl/lst/c/hatchback"
-  },
-  {
-    "id": 373,
-    "url": "https://www.autoscout24.nl/lst/opel/corsa"
   },
   {
     "id": 374,
@@ -58345,10 +58360,1795 @@ window.searchData = [
     "id": 25736,
     "url": "https://www.autoscout24.nl/lst/kia/picanto/bc_zwart",
     "parentUrl": "https://www.autoscout24.nl/lst/kia/picanto"
+  },
+  {
+    "id": 25737,
+    "url": "https://www.autoscout24.nl/uitgebreid-zoeken#main-target",
+    "parentUrl": "https://www.autoscout24.nl/uitgebreid-zoeken"
+  },
+  {
+    "id": 25739,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-gle-coupe/?_gl\u003d1*16046cm*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODc5NTkkajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25740,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#conclusie-van-het-autoscout24-testteam",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25742,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#technische-gegevens",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25743,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/glc-(alle)",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25745,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-ix3/?_gl\u003d1*15dfzrr*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODgxMzckajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25746,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/glc-(alle)/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25747,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-gla-klasse/?_gl\u003d1*1btsdvo*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODc3ODgkajU4JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25748,
+    "url": "https://www.autoscout24.nl/auto/tesla/tesla-model-y/?_gl\u003d1*1wmpq3j*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODgzMDEkajU4JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25753,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25755,
+    "url": "https://terugroepregister.rdw.nl/Pages/Terugroepregister.aspx",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25757,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/mercedes-benz-glc-350/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25759,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25760,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/glc",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25762,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#problemen-en-terugroepacties",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25763,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x3/?_gl\u003d1*itscdl*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODgwODkkajQwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25764,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#marktpositie",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25766,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-gls-klasse/?_gl\u003d1*14h76ga*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODgwMDQkajE1JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25767,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/g-63-amg/ve_brabus",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25768,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#varianten",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25769,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-classe-glb/?_gl\u003d1*1ko4evp*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODc4NTgkajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25771,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-xc60/?_gl\u003d1*8je79e*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODgyNDckajE5JGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25774,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q5/?_gl\u003d1*bec4vi*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODgxOTMkajQkbDAkaDA",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25775,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#doelgroep",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25777,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-gle/?_gl\u003d1*16v0h0o*_up*MQ..*_ga*MTQ4MjE1MDAzOC4xNzc2NjY5MTcy*_ga_BGSHTTTQ7W*czE3NzY2ODc3ODYkbzIkZzAkdDE3NzY2ODc5MDkkajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25778,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/mercedes-glc-review-laat-zien-waarom-suv-s-geweldig-zijn/?_gl\u003d1*1cm196u*_up*MQ..*_ga*MTY1NTI1NzA5OS4xNzc2NjcxNDMy*_ga_BGSHTTTQ7W*czE3NzY2NzE0MzEkbzEkZzAkdDE3NzY2NzE0MzEkajYwJGwwJGgw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25779,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/mercedes-benz-glc-220/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25781,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/#alternatieven",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "id": 25785,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-captur/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25786,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-wind/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25787,
+    "url": "https://www.autoscout24.nl/auto/renault/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25788,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-mascott/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25790,
+    "url": "https://www.autoscout24.nl/autobedrijven/regio/groningen/groningen/renault/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25791,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-espace/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25792,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-express/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25793,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-grand-espace/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25794,
+    "url": "https://www.autoscout24.nl/lst/renault/kangoo",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25796,
+    "url": "https://www.autoscout24.nl/autobedrijven/regio/noord-brabant/eindhoven/renault/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25797,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-laguna/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25798,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-kadjar/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25800,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-r-19/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25801,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-rafale/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25802,
+    "url": "https://www.autoscout24.nl/lst/renault/trafic",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25804,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-austral/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25806,
+    "url": "https://www.autoscout24.nl/auto/renault/busje/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25807,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-grand-scenic/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25808,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-symbioz/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25810,
+    "url": "https://www.autoscout24.nl/auto/renault/elektrische-renault/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25813,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-avantime/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25815,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-grand-modus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25816,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-safrane/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25818,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-scenic-e-tech-electric/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25819,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-kangoo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25822,
+    "url": "https://www.autoscout24.nl/auto/renault/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25823,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-4-e-tech-electric/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25824,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-talisman/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25825,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-5-e-tech-electric/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25826,
+    "url": "https://www.autoscout24.nl/auto/renault/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25827,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-twizy/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25828,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-fluence/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25829,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-megane-e-tech-electric/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25830,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-modus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25832,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-logan/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25833,
+    "url": "https://www.autoscout24.nl/auto/renault/automaat/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25835,
+    "url": "https://www.autoscout24.nl/autobedrijven/regio/gelderland/nijmegen/renault/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25838,
+    "url": "https://www.autoscout24.nl/auto/renault/coupe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25839,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-koleos/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25840,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-vel-satis/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25841,
+    "url": "https://www.autoscout24.nl/lst/renault/fuego",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25842,
+    "url": "https://www.autoscout24.nl/autobedrijven/regio/overijssel/zwolle/renault/",
+    "parentUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "id": 25844,
+    "url": "https://www.autoscout24.nl/lst/c/hatchback#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25845,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-bas-bloemberg",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25847,
+    "url": "https://www.autoscout24.nl/autobedrijven/d2-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25848,
+    "url": "https://www.autoscout24.nl/autobedrijven/car-store-assen",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25849,
+    "url": "https://www.autoscout24.nl/autobedrijven/f1-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25850,
+    "url": "https://www.autoscout24.nl/autobedrijven/louwman-byd-breda",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25852,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-jos-bongers-b-v-oeffelt",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25857,
+    "url": "https://www.autoscout24.nl/autobedrijven/benschop-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25858,
+    "url": "https://www.autoscout24.nl/autobedrijven/jvdk-autoservice",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25860,
+    "url": "https://www.autoscout24.nl/autobedrijven/garage-colijn",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "id": 25864,
+    "url": "https://www.autoscout24.nl/autobedrijven/kronenborg-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25865,
+    "url": "https://www.autoscout24.nl/lst/opel/astra/bt_stationwagen",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25866,
+    "url": "https://www.autoscout24.nl/lst/opel/agila",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25867,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/zaanstad",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25868,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/re_2025",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25870,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-christiaan",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25871,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25872,
+    "url": "https://www.autoscout24.nl/lst/c/opel-corsa-tot-5000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25873,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_oranje",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25874,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-van-yperen-mijdrecht-3641-sb-1",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25875,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/almere",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25876,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25877,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-elsenaar",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25878,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/amersfoort",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25879,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_zilver",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25880,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2010",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25881,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2011",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25884,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/breda",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25885,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/ft_diesel",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25886,
+    "url": "https://www.autoscout24.nl/lst/c/opel-corsa-tot-10000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25887,
+    "url": "https://www.autoscout24.nl/lst/c/opel-corsa-tot-15000-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25888,
+    "url": "https://www.autoscout24.nl/autobedrijven/de-goede",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25889,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25891,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25895,
+    "url": "https://www.autoscout24.nl/autobedrijven/elite-sportauto-s-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25899,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/enschede",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25900,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/bt_mpv",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25901,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/ft_benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25902,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/tr_automatisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25903,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2021",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25904,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/ve_d",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25905,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2020",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25906,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2023",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25907,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2022",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25908,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2025",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25909,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/zwolle",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25910,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/re_2024",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25911,
+    "url": "https://www.autoscout24.nl/autobedrijven/autohuis-westerkwartier-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25912,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/bt_hatchback",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25913,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_wit",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25914,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-hoff-schoonebeek",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25917,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/tr_handgeschakeld",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25919,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/nijmegen",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25920,
+    "url": "https://www.autoscout24.nl/lst/peugeot/207",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25921,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_zwart",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25922,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_blauw",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25924,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/arnhem",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25925,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/\u0027s-hertogenbosch",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25926,
+    "url": "https://www.autoscout24.nl/auto/opel/opel-cascada/",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25928,
+    "url": "https://www.autoscout24.nl/auto/opel/opel-ascona/",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25929,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/ot_demo",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25930,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/groningen",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25931,
+    "url": "https://www.autoscout24.nl/lst/opel/frontera",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25932,
+    "url": "https://www.autoscout24.nl/lst/c/opel-corsa-tot-12500-euro",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25936,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/zoetermeer",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25937,
+    "url": "https://www.autoscout24.nl/lst/peugeot/e-208",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25938,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/tilburg",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25939,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25941,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/haarlemmermeer",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25942,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_grijs",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25943,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/ft_elektrisch",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25944,
+    "url": "https://www.autoscout24.nl/auto/opel/opel-mokka/",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25945,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/re_2017",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25946,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/re_2016",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25948,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_rood",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25949,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/re_2015",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25950,
+    "url": "https://www.autoscout24.nl/lst/opel/combo/ve_life",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25951,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bc_groen",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25952,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/haarlem",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25953,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa-e/bc_oranje",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25954,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/apeldoorn",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25956,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/bt_hatchback",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "id": 25957,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/utrecht",
+    "parentUrl": "https://www.autoscout24.nl/lst/opel/corsa"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d2ec1df0-26ae-41fd-b39f-8887cbe434cd_b1b40b8b-54cd-4157-824b-af81a6d0f4ce.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4e3d6c64-bcdb-4abf-bd86-95f221cc4dfb_f533188f-1888-4b77-9d6f-cdcd129af3b7.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4d9f84db-fc37-454d-b5eb-a1c06552188d_18b14d63-9f05-41f8-85f4-a017ad1e9c84.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8653dd8e-d62d-4180-89c0-159802febb4f_85ec6ba1-d2e5-4200-a20d-f91018cc3b90.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47249286-original-50d42b8b-2a09-410e-8959-76a43e80ee9d.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b6fb692a-cb38-4a52-865e-43b66c4eb335_331e4625-faf7-4284-963b-5aaf6dfc0718.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/14215881-original-e4b70090-cc0f-4e69-abc5-ca6d1b90c9d6.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9b202e10-97a6-4473-be92-668ba1a11998_4009622f-c2f6-439f-9212-9683723edc41.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11261-original-33375ed2-3618-450a-a45d-323e00c18962.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/daa12ed0-2b07-474f-b1ec-8d363321ad42_3aa0992a-e042-4970-97df-45eef02d04c3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/8526-original-740d2f74-0a0c-4ad2-8c2a-282f9ebbbf42.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fb7e7ed7-3e12-41ae-a728-6de223d30fb9_9a0130fc-2ae3-4a6f-9679-201287a7cd72.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/badd8c76-b478-4323-b2e5-7ea7ba8f68ab_6f769f64-ae31-4736-90cf-1c41246133d4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/501bf1cf-3e84-4bea-be46-13bb2cb0bf19_05c4963b-0cae-401f-a1b2-0cd396bcd47e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/8526-original-740d2f74-0a0c-4ad2-8c2a-282f9ebbbf42.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/28db68a7-ff65-428c-abed-130e3bf66ffa_e3796cf0-92f0-4f1d-937a-f57ba32f404b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47077192-original-30a75257-17e2-4a7c-96ca-01c0b6d37032.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/41256306-c400-45d3-8ef8-4b39d722ad5b_02de2d50-42c8-412f-ad19-aca7a23dad56.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4ab8b1b1-b38c-41f6-b42d-4a70f0f1465d_668adce1-1ed8-4562-be49-cd168dd343d8.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1853faae-3621-41ef-86a5-6db657260ae7_a8285781-25a5-4428-8cb6-3e7f61b95436.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47428031-original-b8da39bb-b055-430c-9a28-8e2934aadae8.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c27ef2a0-a378-4b0e-8a91-b8aa51dfb9db_0265eaf5-3c19-4a15-afe8-b74120bdadd5.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47428031-original-b8da39bb-b055-430c-9a28-8e2934aadae8.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9d91c218-f50e-41d2-b79f-1ae1fa16694a_b62aa590-8194-41d2-9d38-eae4a065e029.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/60038433-original-6abc7c46-1d66-4d3f-914c-5183ad68756f.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2649e6fd-7997-49e8-aa22-f28b96c74ef4_03f11cdf-fbd6-4eda-80df-33cd22262435.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/40136437-original-c1e9cfcd-fd2f-4919-8289-7fd6c3528855.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4cd3e193-d0c6-45ad-a789-ed827808356c_ce64675f-e443-4d1c-83dc-611c3477bc3a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/44148464-original-143d6496-e2f1-474d-a3a2-e42ec2ba200f.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7490359c-6317-404e-a4f0-42e50d7f5aab_cc81e823-9c68-46c0-9964-2cd92bb0a02a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/20250231-original-ddb5589a-dfb2-4269-8037-be90340104d5.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Koop Opel Corsa occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/opel/corsa"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0e588a06-be7f-457e-b1a9-d84a3b686be4_f422f702-2b4a-4e10-bedd-78523930f735.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/28190408-original-bf3d1617-4b7c-4a0b-b0f8-5374df04b5c9.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/347e5ada-79f8-425e-9256-334bbfac814f_a140d4b0-54df-4376-8a93-9996ce3c622e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/42052397-original-e26ea42f-4c79-436c-af12-0a49de3bf23d.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/15fb6354-fb09-4108-9ba6-d9fccf414180_7a366aa9-8616-46a8-b078-a2c951af5dd6.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/22115121-original-334405e6-6da1-45e1-a86e-287095f6148f/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0852f339-3267-4de9-9ce5-3f6a34dd27be_554ce386-a1d6-4cdf-a31e-5d04ba3f191e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/19fa713e-c0ef-4da8-9427-5cc2c841c711_3892c48f-a3ea-4247-b1c9-261ddcd4b7f3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7ffb4eb5-ff56-407f-8436-1d43f8ae37ed_8130ce8a-485b-463f-978f-84ec7e3699e5.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/25619956-original-636cd035-8493-4f10-9e94-4f87d585b9aa.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/147573f2-9b69-489f-8a78-df88dadf8700_cc50b14a-6912-4a81-9458-8f972b293f6e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47974128-original-c68ab6bc-0eda-4f6f-bec0-4cab6e27b669.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c678b8f1-db70-4cbe-b252-e89790a09948_98b9dd2e-5cc4-477f-9026-f2dea874a377.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4e4642a9-041e-4100-9ef4-6e2c9f8ef6fc_fb9d1e74-bf42-48ab-b7d5-9dfb211b1f75.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/52661937-original-82fd3a13-719e-454e-bd29-6514307a3d3d.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/df0cb28c-7157-478e-9603-1e836eed39dd_683d91c6-b0df-4e81-a463-8e888cfbd970.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2af5aa41-d498-429c-b369-37f065c37d1c_5f0ffdf6-964d-448e-a20f-c3b881f8e4f3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/22115121-original-334405e6-6da1-45e1-a86e-287095f6148f/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8a82c0cb-d8b2-4373-b804-44fde13cc092_7721e58f-1928-497d-a909-9754f73b96c5.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/42011281-original-aec57dd5-9b8b-4c01-8f29-11c22ea4a9af.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/71473ee5-6cca-4de7-9e11-515bfdb55a1e_f2164dcf-9e77-4df5-b0aa-f77c4a4b2bf9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/635bb0d1-d5e9-47be-bf92-99460803ff6b_ced7ae2d-62bb-42aa-aab8-c4a20e72761b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/22975854-original-13962a30-5fe8-48c2-af0d-7559a52e5d12/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6f78a12a-59cb-4bb8-be30-b0f8e0814746_28fdfb76-8b93-4a1c-a918-b8293dcef2ed.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47511969-original-496861c2-7012-4362-8f69-89eee3484502.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a52d3438-90e8-47ff-8591-400c9474ffb0_997799ea-a4d8-4e3b-8ee5-9648128c6eba.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/38271904-original-ecf2c454-6c6e-4125-b333-b8a7c81b8e99.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/72489bf1-6e09-470f-a4be-54014604053f_8c3b8cdd-9879-4a2f-8ebb-e6a73198e084.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/31671518-original-e6b0cb69-c376-49d7-a435-9cc52d51b036.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/877aaba9-52e5-4624-9827-fb16919fb142_eebf0e29-aafe-4d3d-a2d8-2f9a598925c4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/278ff362-f816-4625-86c4-cc6fa1885335_e6edda4f-3a67-4bfe-afe0-03ce2fdd724a.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/258/258.gif",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fbae3112-94fd-4e9d-870d-6a3f20388d33_df3b9123-b603-4970-9159-ad3d1761cc49.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/25619956-original-636cd035-8493-4f10-9e94-4f87d585b9aa.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Hatchback occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/hatchback"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/tWd7VJlOUj9VWmEFhFNRM/9540aabd2eaf1dd599eb764c2f92b883/renault-e-tech_banner.jpg?w\u003d1100",
+    "alt": "AS24 Renault E-Tech banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/tWd7VJlOUj9VWmEFhFNRM/9540aabd2eaf1dd599eb764c2f92b883/renault-e-tech_banner.jpg?w\u003d1100",
+    "alt": "AS24 Renault E-Tech banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2WGp6doDCb6HL6i8KMELZx/b5b56849e98305f1637390ae20e479a0/AS24-renault_banner.jpeg?w\u003d1100",
+    "alt": "AS24 renault banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1Z6J9uE8feCWZTpc27ADXa/728e2062bf5600c04a6906c3ef1b0f49/AS24-renault_banner.jpg?w\u003d1100",
+    "alt": "Renault Clio (2023) banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4c5v7lHUXogDLb1gYxTPYT/333410c642f2fa8dae47275742db07d1/AS24-renault_banner.jpeg?w\u003d1100",
+    "alt": "Renault Mégane E-Tech (2023) banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1Yiznr3mbQGBhD70L7Xezc/a504fa8b455b71203c667247ca0b21d4/AS24-renault_banner.jpg?w\u003d1100",
+    "alt": "Renault Espace (2023) banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3A3pEgxinEjdW5fCpK2REg/fde2204af29d1826aee9219acd3c2e5a/AS24-renault_banner.jpg?w\u003d1100",
+    "alt": "Renault Kangoo E-Tech Electric (2022) banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3XFzAgt8DwWBjxu1LIf42Q/f89fdc9b4fe4d921b7ded365c1ad732c/AS24-renault_banner.jpg?w\u003d1100",
+    "alt": "AS24 Renault Kangoo 2021 banner",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6d3Lom8kgqMCEvNvV9e13k/dbc9ecb818814cef87026d0cae5efd02/renault-twingo-ze-front.jpg?w\u003d1100",
+    "alt": "renault-twingo-ze-front",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3xFINDDeWMZhfOsAfcNSD2/53fcfcde3fd358fb31e24a74a82b0749/renault-zoe-e-tech-electric-side.jpg?w\u003d1100",
+    "alt": "renault-zoe-e-tech-electric-side",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/39qqkE0PY1NrArWjqwdSuY/ebb859258bbafee6deaa6ae438106aea/renault-zoe-front.jpg?w\u003d1100",
+    "alt": "renault-zoe-front",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3VCoIagg14ATTnGuFguQv7/577612e8f754a00d21c2f2206ba73be3/Renault_Grand_Scenic_AS24_1.jpeg?w\u003d1100",
+    "alt": "Renault Grand Scenic AS24 1",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5xOKncCrTtn95sPBYhNR80/eca9b8e286535b91ffb6249858132c8e/renault_4_e-tech_electric_dashboard.jpeg?w\u003d1100",
+    "alt": "Renault 4 E-Tech electric",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/22ooS0A7aeiWkpNnYzopLc/7859f44e0482d8bee44287f72380f777/Renault_5_E-Tech_eletric_voorkant.jpg?w\u003d1100",
+    "alt": "Renault 5 E-Tech electric",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3uwSsvhXoPj5nMZoRaA9dU/45dd9debcb6c72edba8c4337026801cc/AS24-renault_01.jpg?w\u003d1100",
+    "alt": "Renault Arkana",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2YHUXFpeKBUC45tDRU7lZc/cf6bb378cb5bbbbc7e5eb6e342b5ce88/Renault-Austral-2022_02.jpg?w\u003d1100",
+    "alt": "Renault Austral",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3g0Jie3jC3GrbXmHWWSaV5/13805fea43f3628b55f400f62614a8ee/renault-avantime-l-03.jpg?w\u003d1100",
+    "alt": "Renault Avantime",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/28RE5J7ejgCSp7Y2GbwmDU/0595b84045eb78aaf50afdc980774e4b/renault-captur-front.jpg?w\u003d1100",
+    "alt": "Renault Captur",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1quTEYtWa8jFhvUziVqxWI/e5d389bef41694acc058764d1bf7c962/New_Renault_Clio.jpg?w\u003d1100",
+    "alt": "Renault Clio",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GJFZEvEPGx0JtuK8aUZNj/65e0fd6f9123cfadb3003ca893e7663a/renault-espace-l-01.jpg?w\u003d1100",
+    "alt": "Renault Espace",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fd2c2ea5-9eae-4911-85ea-f95d56c7409b_679f5915-c676-4b00-aad5-3c13fc1801b0.jpg/360x270.jpg",
+    "alt": "1.2 TCE 115PK ZEER NETJES GOED ONDERHOUDEN",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a9ce5b16-c7e5-40a0-8c00-ec00a89b04ed_dff948a0-59e4-46d6-865c-f951194823b6.jpg/360x270.jpg",
+    "alt": "1.6-16V Tech Line | Panoramadak | Navigatie | Airc",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bd7b2edd-d0b3-4fdb-b531-021c5a1f21ce_6712b10c-09ae-4ec7-b6f9-02e0aaf1c07b.jpg/360x270.jpg",
+    "alt": "1.8 E-TECH FULL HYBRID 160PK ESPRIT ALPINE | Panor",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/84bb5eee-4189-4d6d-a408-ce7e4e6cbe0d_a07a4780-3b7f-4e8f-a7e4-c2427381bfa2.jpg/360x270.jpg",
+    "alt": "Estate 0.9 TCe Night\u0026Day Sensor|Navi|Trekhaak!",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/08f1237b-ac26-4802-b3f7-5b51bc89d905_ed1e2a0d-17cf-4966-92e2-d0e0f6cb4598.jpg/360x270.jpg",
+    "alt": "1.3 MILD HYBRID 140PK EQUILIBRE | Trekhaak |  Pack",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/76e72aba-9b75-47b1-96b5-11218b008f0a_79b38a97-a81d-4bb6-8065-312677de4c05.jpg/360x270.jpg",
+    "alt": "0.9 TCe Expression Trekhaak",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2727e569-3737-4052-8dff-8e6d2b4658ac_8e9b0418-0e21-4520-840f-c5a1feff102b.jpg/360x270.jpg",
+    "alt": "0.9 TCe Expression Android auto Apple Carplay Nieu",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8cded6b7-77db-45ec-8ec8-4f54a1f53e87_0ee06030-cc5c-465b-972b-507f9b20b821.jpg/360x270.jpg",
+    "alt": "Estate 1.6 Plug-In Hybrid 160 R.S. Line PANO CAMER",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/31f3ec71-d69c-4ed9-80b3-d9eeb30a5745_08b53419-3d7b-4fb5-8e94-748477a4b6b8.jpg/360x270.jpg",
+    "alt": "1.2 E-Tech full hybrid 200PK techno esprit Alpine",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/088d511f-3e0d-43fc-a4ee-81a65313797d_35acb5f6-efe0-497d-b73a-4b1bc242df63.jpg/360x270.jpg",
+    "alt": "0.9 TCe Zen 5 DRS Navigatie / Cruise / Airco",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eab03cde-59fa-4eef-b8e8-b9126631bd6b_c0a807f2-de20-4077-980b-d17d907551bb.jpg/360x270.jpg",
+    "alt": "0.9 TCe Intens / Stoelverw. / Keyless / Climate /",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a337825e-5581-4c46-897d-0e7030b5ace9_6a011f85-b4de-4fd3-94bb-5992743496d9.jpg/360x270.jpg",
+    "alt": "Estate 0.9 TCe Intens | LED | Camera | Nette staat",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e48f014d-550a-4c23-b3a7-39a666b95222_18279c1d-64b6-4077-a019-fcf337507dbb.jpg/360x270.jpg",
+    "alt": "Estate 1.2 TCe GT-Line|Trekhaak|Xenon|eerste-eigen",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fbf1a73d-8e74-4fb8-9a64-cfb649690fc7_81227357-b8f8-4ee8-903e-da619bc924be.jpg/360x270.jpg",
+    "alt": "1.4-16V Air APK 04-2027 Airco Cruise controle elek",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e8450bbf-41f2-4ed4-89a8-a518d7643449_6b2488cb-b6e4-422f-9655-efa42c792515.jpg/360x270.jpg",
+    "alt": "1.6 E-Tech Plug-in Hybrid 160PK / Camera / Parkeer",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/39f36f2a-efa1-4eac-acd5-dffc45151c95_e4afd4f9-92f3-4fc6-86ba-2c157ce51897.jpg/360x270.jpg",
+    "alt": "Estate 1.6 Plug-In Hybrid 160 Business Edition One",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/92046f0d-d367-4e33-adae-9b34f777f4f7_0b4340c0-a8b7-47b3-921c-8f8bf95db913.jpg/360x270.jpg",
+    "alt": "1.0 SCe Dynamique 71 pk zeer nette staat airco cru",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/53cc782d-a878-4cc8-9487-7b31731659b7_7af53b31-5bd3-41a6-8515-34c848abd106.jpg/360x270.jpg",
+    "alt": "1.2 TCe Intens Automaat | Trekhaak | Cruise Contro",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8cf46ca7-05dd-4cfb-81a4-d271db7c03e7_74d50a96-25b3-4a5d-bb01-01655a6cd6e5.jpg/360x270.jpg",
+    "alt": "Estate 1.3 TCe Bose / Camera / PDC V+A / Climate /",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e8016fce-9fbc-4959-80b1-102ce2d70a58_0cc7adba-2da2-49d8-8b29-6b8c6dac1a9a.jpg/360x270.jpg",
+    "alt": "0.9 TCe Expression | Airco | Cruise Control | Trek",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3irBsPcAVETht1VI8Nhbai/0ff00f8990a2b617d82ec4dc7d1fa4f3/renault-twingo-e-tech-back.jpg?w\u003d1100",
+    "alt": "renault-twingo-e-tech-back",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3RGZpne2x47rtOgKtsxbTP/5a23945e6375458e6ee8939e3af48db7/AS24-renault_05.jpg?w\u003d1100",
+    "alt": "renault-arkana-back",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk Renault bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/renault/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6G9rCDFSQnDZ7h4NlQh5q4/6eb9bccf29bb36fc9af43be58e155d29/MB_GLC_schuin-voor.jpg?w\u003d1100",
+    "alt": "MB_GLC_schuin-voor",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6G9rCDFSQnDZ7h4NlQh5q4/6eb9bccf29bb36fc9af43be58e155d29/MB_GLC_schuin-voor.jpg?w\u003d1100",
+    "alt": "MB_GLC_schuin-voor",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5HLk4y73hGwMfA3T7rDWQz/248f55a4d27b584668155c53348c837d/MB_GLC_achter.jpg?w\u003d1100",
+    "alt": "MB_GLC_achter",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3IkfEhB96pqRcG4pJhalp2/9d1bdaeee8e8ebdde26e610cc68b36e0/MB_GLC_zijkant.jpg?w\u003d1100",
+    "alt": "MB_GLC_zijkant",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Ru99b9kVzXhAFdszlKP5I/c8c0c50aeec7957c02f95aea82d9c897/Special_element_MB_GLC_EQ.jpg?w\u003d1100",
+    "alt": "Special_element_MB_GLC_EQ",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/299de3b7-ab7f-4169-843e-9ba53061ad35_90ced990-499d-4f4d-a935-5e3219310b0d.jpg/360x270.jpg",
+    "alt": "Coupé 300e 4MATIC Premium Plus Pannorama elektr tr",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c4eb07a0-13a1-4fa2-bb82-eb5b1c8167d2_c16fac4b-8b12-4fb9-b42d-52c9da6a0913.jpg/360x270.jpg",
+    "alt": "Coupé 300e 4MATIC Bus.Sol. AMG org.NL el.dak+trekh",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/850e7636-6eca-4bdc-bdd4-fdca6681bece_c9431391-4821-4c3a-bb5d-2cdc7bd7aa49.jpg/360x270.jpg",
+    "alt": "Coupé 350e 4MATIC Business Solution AMG Upgrade Ed",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c2a55f37-ef8c-4c9a-8853-d45c290f3491_940a0bac-8c49-45ad-bb6d-5f7ea3e5b6c1.jpg/360x270.jpg",
+    "alt": "GLC 300e 4Matic Luchtvering/Memory",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c5c96e31-b45f-4ec9-abf3-885723a2068f_d314a906-ff45-45ef-9d8b-d1860c7dd9f6.jpg/360x270.jpg",
+    "alt": "300e 4MATIC Business Solution AMG Line | LED | Bur",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7cd0c769-85c9-4852-8d72-aaa843d261f6_9f5de5a9-84a8-4ba1-a07f-7a8e381577e0.jpg/360x270.jpg",
+    "alt": "Coupé 350e 4MATIC Premium Plus/PLUG IN HYBRIDE",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/614f9eb4-64a6-4770-96af-d6cd39e20a5f_94108234-177b-478f-bf7f-8c85c2ea7367.jpg/360x270.jpg",
+    "alt": "350e 4M AMG Pano | Trekhaak | Camera | Stoelverwar",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b3688c6a-439f-4cba-ae26-6a9f0d998b9c_d98fa080-01f0-4b7c-80af-155c777ee739.jpg/360x270.jpg",
+    "alt": "300e 4MATIC Business Solution | Massage | Stoelver",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/503a251b-ed27-476a-b288-bdf618986a7c_41325e0c-4908-4b81-84f7-c4575e7169b4.jpg/360x270.jpg",
+    "alt": "Automaat navigatie 300e 4M Bns Sol. AMG",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a724a0ba-fbda-445a-944e-8fe459fd0f15_c1dd419d-a08d-45d1-aeee-28a0bfffb251.jpg/360x270.jpg",
+    "alt": "350e 4MATIC 327PK Aut. | Business | Panoramadak |",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9d6d7d0a-8892-4c0e-8890-09e0a2afd28d_31a9ccbc-6513-40de-ab0c-7acbc230797d.jpg/360x270.jpg",
+    "alt": "300e 4MATIC AMG Line | Night | Pano | Memory",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d58cf044-8da7-4ac0-a1cf-992412725790_b96ddeec-23f6-4f40-9a7d-8cc3898f358c.jpg/360x270.jpg",
+    "alt": "4MATIC AMG Line | NW PRIJS €90.138 | Mild Hybrid (",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1b8667ae-ec6e-4dac-9a92-bffac9100d92_cd3f4b0d-b6b7-465f-b0a9-2b00dc6581b9.jpg/360x270.jpg",
+    "alt": "300e 4MATIC Business Solution AMG",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5be771fc-6a86-4677-9dd2-5f672585f1c2_8199ed4b-2ac2-4665-a03c-5cd4ff418754.jpg/360x270.jpg",
+    "alt": "300e 4MATIC AMG Line | Trekhaak | ACC | 360* Camer",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/958894da-d940-4fea-8588-c7ff43c716ed_8f600939-4762-48df-ad0f-07768c145317.jpg/360x270.jpg",
+    "alt": "300e 4MATIC Premium Plus Luchtvering/Burmester/Pan",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3f8bbb9d-ffbd-4d56-b087-a75c2b2ef330_787f98de-6109-4baa-bb64-b7506b4e5a2c.jpg/360x270.jpg",
+    "alt": "Coupé S 4MATIC+ Premium Plus",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9495df36-56ef-4b00-b918-2a18737b8827_a94195e1-3a4f-434a-b2c5-5035bfcea527.jpg/360x270.jpg",
+    "alt": "Coupé 4Matic Premium Plus | Luchtvering | Burmeste",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7c2c600f-7dce-4142-bbfe-0ab177752eb1_0211fbe5-1784-4e12-9b5d-2ea1833a54d3.jpg/360x270.jpg",
+    "alt": "300e 4MATIC AMG Line | Panoramadak | Burmester | N",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4810bc59-e421-41fe-b5ff-55a903ee7f89_bcce5687-b60c-46f1-9572-8b5a1f0fcce4.jpg/360x270.jpg",
+    "alt": "4MATIC AMG Premium Plus | DESIGNO | Pano | Burmest",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/875f189c-22e6-4021-9a69-b548a99668be_6c78df10-f015-4c8f-8b9b-2250bbd56e92.jpg/360x270.jpg",
+    "alt": "4MATIC, 368Pk, 2017, Liefhebbers auto, Rode gordel",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GBidDlqEvOyfGsIXAwP8/14460d31e3a70da4a827609185f35e8b/CR-40_-_AutoScout24_-_Mercedes-Benz_G_580_foto1.jpg?w\u003d1100",
+    "alt": "Review – Mercedes-Benz G 580 (2025): elektrisch zwaargewicht",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5k1FTVQ0goBjGyaaBJeh2S/7c9079c188f4e9f620e6bfdc41b83755/mercedes-eqs-suv-580-2023-1.jpg?w\u003d1100",
+    "alt": "Mercedes EQS SUV (2023) test: waarom hij de EQS sedan overbodig maakt",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4prQQKryuOEjY2edk87Q8h/e2a287ba9dfb25a4ca236aa78d60eeb6/mercedes-amg-eqe-43-4matic-2022-30-1.jpg?w\u003d1100",
+    "alt": "Mercedes-AMG EQE 43 4Matic review: ook de elektrische toekomst van AMG is bloedstollend",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6Nd0mQbcK5Wixx7IM0BEJV/f70e10f2108e2cb7f017b897ad87d822/mercedes-glc-2022-1.jpg?w\u003d1100",
+    "alt": "Mercedes GLC review: laat zien waarom suv’s geweldig zijn",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GNGBbc1RBf21b9fDW1EIy/21839a2a19994f63c5b35811782d64e8/Mercedes-Benz_C-Klasse_EQ.jpg?w\u003d1100",
+    "alt": "Mercedes C-Klasse EQ getest: tot 762 km actieradius en alternatief voor BMW i3",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/22FYdWWMfjuuSSs8pqX6SJ/902487346b82d97a8cca6c331d5d3cb5/mercedes-e-klasse-bmw-5-serie-2022-20-1.jpg?w\u003d1100",
+    "alt": "Dus jij denkt dat de Mercedes E-Klasse comfortabeler is dan de BMW 5-serie ",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over de Mercedes-Benz GLC bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-glc/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/uitgebreid-zoeken"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/uitgebreid-zoeken"
+  },
   {
     "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
     "alt": "Financing disclaimer",
