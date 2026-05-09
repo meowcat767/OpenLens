@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 263,
+    "url": "https://nos.nl/video/2613588-veerdienst-wadden-getroffen-door-brand-in-datacentrum-alles-uitgeprint",
+    "title": "Veerdienst Wadden getroffen door brand in datacentrum: \u0027Alles uitgeprint\u0027",
+    "content": "Aan het laden NOS Nieuws•gisteren, 14:49 Veerdienst Wadden getroffen door brand in datacentrum: \u0027Alles uitgeprint\u0027 In Harlingen wordt ouderwets met pen en papier de reserveringen van passagiers naar Vlieland en Terschelling gecontroleerd. De kaartjesscanners werken niet na de zware brand in een datacentrum in Almere gisteren. Deze video komt voor in \u0027Geen data verloren gegaan bij brand Almere, klanten snel weer online\u0027",
+    "scrapedAt": "2026-05-10 03:55:07.886895"
+  },
+  {
+    "id": 262,
+    "url": "https://www.ster.nl/online-reclame-bij-ster/",
+    "title": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "content": "Bereik miljoenen Nederlanders Adverteren bij de publieke omroep Gratis media-advies Bereik miljoenen Nederlanders Adverteren bij de publieke omroep Gratis media-advies Online reclame inzetten bij de publieke omroep? In een paar snelle stappen zetten we samen jouw online campagne in en profiteer je van een groot bereik op een veilig en betrouwbaar netwerk. Denk hierbij aan pre-rolls voor programma’s als ‘Heel Holland Bakt’, pre-rolls voor livestreams op NPO Start en banners op NOS.nl. Online adverteren bij Ster: bereik miljoenen mensen via NPO, zonder cookies. Neem contact op Vraag gratis advies aan! Voornaam Vul je voornaam in. Achternaam Vul je achternaam in. Bedrijfsnaam Telefoonnummer Vul een geldig telefoonnummer in. Zakelijk e-mailadres Vul een geldig e-mailadres in. Controle Vul de verplichte velden in en we nemen spoedig contact op! Bel me terug Mail me terug Neem contact met mij op Meer weten? Nienke Matser accountmanager Kom in contact Nienke Matser accountmanager Voornaam Achternaam Telefoon Zakelijk e‑mailadres Controle Nee, toch niet Verstuur Bedankt! Placeholder wanneer ongeveer contact opgenomen gaat worden. Oké Meer weten? VOORDELEN ONLine adverteren bij ster Online marketing is constant in beweging. Je wil daarom zichtbaar zijn op kanalen die vertrouwd zijn bij je doelgroep, een groot bereik genereren en veilig zijn. We zetten de voordelen van online adverteren bij de NPO op een rij: Een campagne is mogelijk vanaf €1.000 Snel inzetbaar Lage productiekosten Veilig online netwerk: inzicht waar jouw reclame wordt geplaatst Veel respect voor privacy van de gebruiker, cookieloos inzetten van online reclame Voordeliger tarief voor partijen van algemeen nut Waarom Ster: onderzoek en privacy Bij Ster staat online adverteren in het teken van vertrouwen, kwaliteit en effectiviteit. Al decennialang doet Ster onderzoek naar het effect, de impact en de waardering van reclame rond de content van de publieke omroep. Deze inzichten worden continu vertaald naar praktische adviezen voor campagnes met meer aandacht en een hogere merkimpact. De programma’s, websites en apps van de publieke omroep worden door het Nederlandse publiek hoog gewaardeerd. Reclame rondom deze content profiteert van die waardering en straalt positief af op merken. Onderzoek van Ster laat zien dat adverteren in een kwalitatieve, vertrouwde omgeving bijdraagt aan betere reclame‑acceptatie, hogere aandacht en een positievere merkbeleving. Tegelijkertijd kiest Ster bewust voor privacyvriendelijk adverteren. Online campagnes worden ingezet zonder cookies of persoonsgegevens. In plaats daarvan maakt Ster gebruik van contextual targeting: advertenties sluiten aan bij de inhoud van programma’s en artikelen, het platform, het moment van de dag en het device. Zo blijft adverteren relevant, terwijl de privacy van gebruikers volledig wordt gerespecteerd. Online Video Bereik 3 miljoen Nederlanders per maand (6+) Display Bereik 5,9 miljoen Nederlanders per maand (6+) Meer weten? Joyce Kolijn accountmanager +31 35 672 55 66 joyce.kolijn@ster.nl Kom in contact Voornaam Vul je voornaam in. Achternaam Vul je achternaam in. Zakelijk e‑mailadres Vul je e-mail in. Telefoon Vul je telefoonnummer in. Controle Nee, toch niet Verstuur Bedankt! Placeholder wanneer ongeveer contact opgenomen gaat worden. Oké Mogelijkheden online reclame bij de publieke omroep Zowel niet-commerciële partijen met een niet-commerciële boodschap als commerciële partijen kunnen display-advertenties en pre-rolls bij livestreams inkopen. Daarnaast hebben niet-commerciële partijen ook de mogelijkheid om video-advertenties in te zetten. Bij Ster hanteren we voor niet-commerciële partijen met een niet-commerciële boodschap de definitie algemeen nut. Het gaat om instellingen met een wetenschappelijk, cultureel, godsdienstig, levensbeschouwelijk, politiek of liefdadig karakter, die een CBF-keurmerk of ANBI-status hebben. Voor campagnes van dergelijke afzenders is er niet alleen ruimte online, maar natuurlijk ook op radio en televisie. DISPLAY-ADVERTenties (banners) Met display‑advertenties (banners) adverteer je op de websites en in de apps van de publieke omroep. Denk aan apps en NPO‑platforms. Ster toont per pagina maximaal één banner, waardoor je campagne altijd exclusieve zichtbaarheid krijgt zonder concurrentie van andere advertenties. Dit zorgt voor een hoge acceptatie, goede viewability en meer impact. Een campagne van Ziemi leverde het bedrijf 3,2 miljoen impressies en 8.000 websitebezoeken op. Je kunt banners inkopen op verschillende niveaus. Met Run of Network (RON) wordt je banner breed over het Ster‑netwerk verspreid. Kies je voor Run of Channel (ROC), dan adverteer je binnen een specifieke titel of kanaal. Met Run of Specifics (ROS) kun je nog gerichter inkopen, bijvoorbeeld op een bepaald programma, website, app of inhoudelijke context. Zo sluit je campagne aan bij de omgeving waarin je doelgroep zich bevindt. Banners zijn beschikbaar in vaste formaten, waaronder het veelgebru",
+    "scrapedAt": "2026-05-10 03:55:06.105009"
+  },
+  {
+    "id": 261,
+    "url": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome",
+    "title": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "content": "AFP Tallon Griekspoor NOS Sport•gisteren, 17:27•Aangepast gisteren, 20:16 Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door Deel dit artikel Tallon Griekspoor is uitgeschakeld in de tweede ronde van het Masters-toernooi van Rome. Botic van de Zandschulp plaatste zich wel voor de derde ronde. Het toernooi in Rome wordt gezien als een laatste test voor Roland Garros, het prestigieuze grandslamtoernooi dat op 28 mei begint in Parijs. Er staat in Rome veel op het spel voor Griekspoor. Momenteel is hij de nummer 31 op de wereldranglijst, terwijl de beste 32 spelers een geplaatste status krijgen op Roland Garros. Nederlands beste tennisser moet vrezen dat hij buiten de top-32 valt. Hij verloor met 7-6 (5), 3-6, 4-6 van de pas 21-jarige Belg Alexander Blockx (ATP-36). Frustratie Griekspoor De eerste set ging gelijk op. Uiteindelijk wist Griekspoor in de tiebreak te winnen. De tweede set kende een ander beeld: Blockx won na een break met 6-3. Gefrustreerd sloeg Griekspoor zijn racket op de grond kapot. In de beslissende set kreeg Griekspoor geen vat op de services van Blockx, die nauwelijks een punt verloor op eigen opslag. De jonge Belg had opnieuw aan één break genoeg tegen Griekspoor, die aanzienlijk meer onnodige fouten sloeg dan zijn tegenstander: 35 tegenover 12. Van de Zandschulp Eerder op de dag kroop Botic van de Zandschulp door het oog van de naald. Hij won in een partij van ruim twee uur in drie sets van lucky loser Aleksandar Kovacevic, de nummer 95 van de wereldranglijst. Van de Zandschulp, zelf nummer 54 van de ranglijst, verloor de eerste set afgetekend met 6-2. Hij herstelde zich in de tweede, door regen onderbroken set met 6-2. Reuters Connect Botic van de Zandschulp In de beslissende derde set sloeg Van de Zandschulp pas in de tiebreak toe: 7-5, nadat hij zijn eerste matchpunt had laten liggen. Kovacevic (27) wordt vaak geroemd om zijn service en in de eerste set toonde hij waarom: op zijn opslag verloor hij maar drie punten. Van de Zandschulp worstelde met zijn timing en maakte veel fouten. In de derde set overleefde de Nederlander op 5-6 een matchpoint van de Amerikaan. In de tiebreak was zijn tweede matchpoint raak. Djokovic Novak Djokovic verloor bij zijn terugkeer van de 20-jarige Kroaat Dino Prizmic. In drie sets wist Djokovic, de nummer vier van de wereld, niet te winnen van de nummer 79 van de ranglijst: 2-6, 6-2 en 6-4. De partij was voor de 38-jarige Serviër de eerste wedstrijd nadat hij twee maanden was uitgeschakeld met een schouderblessure. Het Masterstoernooi in Rome is pas zijn derde toernooi van dit jaar. Goede start Van de Zandschulp bij masterstoernooi Rome, afstraffing De Jong De Jong meteen uitgeschakeld in Madrid, Van de Zandschulp meldt zich af Tennis Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? dinsdag 14 april, 13:25 Wisselvallige Griekspoor komt in München tekort tegen Shapovalov maandag 13 april, 13:22 Van de Zandschulp overtuigend naar tweede ronde in München vrijdag 24 april, 12:45 Griekspoor boekt in Madrid tegen Dzumhur zijn eerste gravelzege van het seizoen zaterdag 4 april, 15:50 Van de Zandschulp loopt ondanks twee matchpoints vierde ATP-finale in carrière mis Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-10 03:55:03.776282"
+  },
+  {
+    "id": 260,
+    "url": "https://jeugdjournaal.nl",
+    "title": "NOS Jeugdjournaal",
+    "content": "vandaag Dit is het Jeugdjournaal Kindernieuwsteam! Even voorstellen vandaag Avondjournaal van vandaag vandaag Dit is het Jeugdjournaal Kindernieuwsteam! Even voorstellen vandaag Avondjournaal van vandaag Net binnen🌍Nieuws💪Jeugd🌟Famous😱Wow🐹Dieren Geen tanks bij militaire parade in Rusland vanwege oorlog in Oekraïne Kinderen wandelen 24 uur lang voor goed doel: \u0027Wel een beetje vermoeiend\u0027 Voetballers uit Vlieland stoppen met competitie: tegenstanders vinden reis te ver Meer kinderen dragen kleine scheenbeschermers, artsen maken zich zorgen Mexico wil schooljaar eerder stoppen vanwege WK voetbal Bezoeker Duitse dierentuin klimt in leeuwenverblijf om dieren te voeren Tijdelijk gevechtspauze tussen Rusland en Oekraïne Dubbel feest in Eindhoven: ook PSV-vrouwen zijn kampioen Nieuwswekker: PSV weer kampioen + Gevechtspauze Rusland en Oekraïne Speel de Jeugdjournaal Nieuwsquiz! Veel schade door tornado\u0027s in Amerika: \u0027Wonder dat er geen doden zijn\u0027 Daan is tramspotter: \u0027Trams zijn mijn passie\u0027 Op dit schoolplein zijn alle telefoons verboden, ook voor ouders Meer dan 2500 mensen van 100 jaar of ouder in Nederland Marswagentje na zes dagen bevrijd, zat vast aan steen Nintendo Switch 2 wordt duurder naar archief Oorlog in het Midden-Oosten Sla Oorlog in het Midden-Oosten over Niet gelukt: VS en Iran kunnen geen afspraken maken over einde oorlog Iran en de Verenigde Staten praten over einde oorlog Iran en VS stoppen met vechten, maar aanvallen in Libanon gaan door Mardin is opgelucht dat Iran en de VS tijdelijk stoppen met vechten VS en Iran stoppen tijdelijk met vechten Johnny maakt zich zorgen om zijn land Libanon Hoe is het leven van kinderen in Israël? Kinderen in Libanon vluchten voor raketten: \u0027Geen huis, geen school\u0027 Veelgestelde vraag van kinderen: komt er een Derde Wereldoorlog? Oorlog in Libanon: \u0027We moesten vluchten en nu leven we in een tent\u0027 Nederlands schip naar Midden-Oosten om landen te beschermen Schepen met olie door Iran aangevallen meer Oorlog in het Midden-Oosten Podcast Sla Podcast over Podcast: Waarom wordt er zo weinig gepraat over Roma en Sinti in de oorlog? Podcast: Waarom zien we steeds vaker ratten? (En is dat een probleem?) Podcast: Hoe bedenk je de perfecte grap? Podcast: Wat hebben kinderen nou aan gemeenteraadsverkiezingen? Podcast: Hoe kies je een middelbare school die bij je past? Podcast: Waarom wordt Iran aangevallen? Podcast: Waarom moeten steeds meer kinderen naar Halt? Podcast: Wordt Rob Jetten een goede minister-president voor Nederland? Podcast: Hoe win je goud op de Olympische Winterspelen? Podcast: Hoe zorg je dat je klaar bent voor de doorstroomtoets? Podcast: Hoe wordt het kerstdiner een succes? Podcast: Hoe zwaar is het om youtuber te zijn? meer Podcast Uitgezocht Sla Uitgezocht over Uitgezocht: Waarom is vapen en roken niet verboden? Uitgezocht: Zo maakt social media jou verslaafd Uitgezocht: waarom word je verliefd? Uitgezocht: Wie was Jeffrey Epstein? Uitgezocht: Hoe toeristen de mooiste plekken op aarde verpesten Uitgezocht: de pizzaplannen van de nieuwe regering Uitgezocht: Waarom houdt niemand Trump tegen? Uitgezocht: Hoe is het kindernieuws in 45 jaar veranderd? Uitgezocht: Kan je fan zijn van een artiest die is gecanceld? Uitgezocht: Wat hebben Suriname en Nederland met elkaar te maken? Uitgezocht: Hoe herken je AI-video\u0027s? Uitgezocht: Hoe haal je een wereldrecord? meer Uitgezocht Interviews Sla Interviews over Paul Sinha schrijft hits voor Roxy Dekker en Bankzitters: \u0027Kippenvel\u0027 Hoe is het om journalist te zijn in oorlogsgebied? Joost bedenkt attracties voor een pretpark Willie Wartaal over blunders, vader zijn en The Voice Frank is drone-piloot: \u0027Ik kijk waar de vijand zich verstopt\u0027 Jens van \u0027t Wout over zijn gouden tanden, tattoos en Olympisch kampioen worden Nathan Rutjes over Lavezzi, matjes en \u0027de mol\u0027 Jadiel is jongste eredivisie-speler ooit: \u0027Gek idee dat ik geschiedenis schrijf\u0027 Plien van Bennekom over grapjes maken, gebakjes en haar bff Topschaatser Antoinette werd als kind gepest: \u0027Ze noemden me vuurtoren\u0027 Jorinde van Klinken leert Sil discuswerpen: \u0027En dan gaan!\u0027 Wereldkampioen Lotte van Drunen (18) over motorcrossen en botten breken meer Interviews Kindervragen Sla Kindervragen over Kindervraag: Waarom eindigen bijna alle Poolse achternamen met \u0027ski\u0027? Kindervraag: Wat is Gen Z? Kindervraag: Wie heeft YouTube gemaakt? Kindervraag: Waarom wordt alles steeds duurder? Kindervraag: Wat is het oudste hardcore-liedje? Kindervraag: Wat was de eerste anime ooit? Kindervraag: Wat als het luchtalarm écht afgaat op maandag? Kindervraag: Hoeveel soorten beugels zijn er? Kindervraag: Wat is de bekendste K-popgroep? Kindervraag: Hoe word je juf of meester? Kindervraag: Wat kan je doen tegen online oplichting? Kindervraag: Kunnen wetenschappers dino\u0027s tot leven wekken? meer Kindervragen Extra Jeugdjournaals Sla Extra Jeugdjournaals over Het extra NOS Jeugdjournaal over de Tweede Wereldoorlog Het extra NOS Jeugdjournaal over geweld Het NOS Jeugdjournaal Jaaroverzic",
+    "scrapedAt": "2026-05-10 03:55:01.273082"
+  },
+  {
+    "id": 259,
+    "url": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren",
+    "title": "Minister: niet meer aan de grens controleren",
+    "content": "Omroep Gelderland De marechaussee bij een grenscontrole. Dit is een nieuwsbericht van Omroep Gelderland vandaag, 06:53 Minister: niet meer aan de grens controleren Deel dit artikel Asielminister Bart van den Brink wil de regels voor grenscontroles versoepelen. De Koninklijke Marechaussee gaat na september niet meer aan de grens controleren als het aan de CDA-minister ligt, maar gaat gebruikmaken van mobiele controles. Volgens Van den Brink is dit een effectievere manier van controleren. \"De marechaussee analyseert waar het best gecontroleerd kan worden en voertuigen worden uitgezocht op basis van inlichtingen en een risicoprofiel.\" Huidige controles verlengd De huidige manier van controleren, aan de grens, wordt verlengd tot eind september. Die periode wil de CDA-minister gebruiken om de mobiele controles op te zetten. De controles aan Nederlandse en Duitse kant kregen veel kritiek van burgers en ondernemers in grensregio\u0027s. De Nederlandse controles leidden van december 2024 tot en met afgelopen maart tot 270 aanhoudingen, bijvoorbeeld vanwege mensensmokkel of documentfraude. In diezelfde periode is aan zeshonderd vreemdelingen de toegang tot Nederland geweigerd. Burgemeester Boumans hoopt dat Duitsland volgt Burgemeester Boumans van de gemeente Doetinchem laat weten dat de grootste overlast niet zozeer van de Nederlandse, maar juist van de Duitse grenscontroles komt. \"Ik hoop dat dit bij de Duitse buren ook een verder belletje doet rinkelen. We hebben al gezien dat de druk die wij vanuit de grensregio opvoeren wel bijdraagt in het feit dat ze het aan de andere kant van de grens toenemend ongemakkelijk vinden in het contact met ons. Ik hoop dat dit nu een krachtig signaal is, en het zou nog mooier zijn als het kabinet ook de hoop uitspreekt dat de Duitsers dit nu ook gewoon anders gaan doen\", aldus Boumans. Dit leverden de grenscontroles in een jaar tijd op (opent in nieuw venster) Dit is een nieuwsbericht van Omroep Gelderland (opent in nieuw venster) Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd!",
+    "scrapedAt": "2026-05-10 03:54:55.709667"
+  },
+  {
     "id": 258,
     "url": "https://nos.nl/artikel/2613408-uit-de-marge-met-linkse-koers-de-green-party-breekt-door-in-de-britse-politiek",
     "title": "Uit de marge met linkse koers: de Green Party breekt door in de Britse politiek",
@@ -1802,26 +1837,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 259,
-    "url": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
-  },
-  {
-    "id": 260,
-    "url": "https://jeugdjournaal.nl"
-  },
-  {
-    "id": 261,
-    "url": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
-  },
-  {
-    "id": 262,
-    "url": "https://www.ster.nl/online-reclame-bij-ster/"
-  },
-  {
-    "id": 263,
-    "url": "https://nos.nl/video/2613588-veerdienst-wadden-getroffen-door-brand-in-datacentrum-alles-uitgeprint"
   },
   {
     "id": 264,
@@ -44585,10 +44600,1356 @@ window.searchData = [
     "id": 21578,
     "url": "https://nos.nl/artikel/2604033-geven-kiezers-uit-deze-engelse-voorstad-wankelende-starmer-laatste-zetje",
     "parentUrl": "https://nos.nl/artikel/2613408-uit-de-marge-met-linkse-koers-de-green-party-breekt-door-in-de-britse-politiek"
+  },
+  {
+    "id": 21579,
+    "url": "https://www.gld.nl/nieuws/8421057/dit-leverden-de-grenscontroles-in-een-jaar-tijd-op",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
+  {
+    "id": 21580,
+    "url": "https://twitter.com/intent/tweet?text\u003dMinister%3A+niet+meer+aan+de+grens+controleren\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fregio%2Fgelderland%2Fartikel%2F756968-minister-niet-meer-aan-de-grens-controleren\u0026via\u003d%40nos",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
+  {
+    "id": 21581,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fregio%2Fgelderland%2Fartikel%2F756968-minister-niet-meer-aan-de-grens-controleren",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
+  {
+    "id": 21582,
+    "url": "https://www.gld.nl",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
+  {
+    "id": 21583,
+    "url": "https://api.whatsapp.com/send?text\u003dMinister%3A+niet+meer+aan+de+grens+controleren+https%3A%2F%2Fnos.nl%2Fregio%2Fgelderland%2Fartikel%2F756968-minister-niet-meer-aan-de-grens-controleren",
+    "parentUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
+  {
+    "id": 21584,
+    "url": "https://jeugdjournaal.nl#skipInterviews",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21585,
+    "url": "https://jeugdjournaal.nl/artikel/2594957-podcast-hoe-wordt-het-kerstdiner-een-succes",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21586,
+    "url": "https://jeugdjournaal.nl/artikel/2593554-uitgezocht-kan-je-fan-zijn-van-een-artiest-die-is-gecanceld",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21587,
+    "url": "https://jeugdjournaal.nl/artikel/2613139-het-extra-nos-jeugdjournaal-over-de-tweede-wereldoorlog",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21588,
+    "url": "https://jeugdjournaal.nl/artikel/2607684-hoe-is-het-leven-van-kinderen-in-israel",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21589,
+    "url": "https://jeugdjournaal.nl/artikel/2598671-uitgezocht-waarom-houdt-niemand-trump-tegen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21590,
+    "url": "https://jeugdjournaal.nl#skipExtra Jeugdjournaals",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21591,
+    "url": "https://jeugdjournaal.nl/artikel/2610101-niet-gelukt-vs-en-iran-kunnen-geen-afspraken-maken-over-einde-oorlog",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21592,
+    "url": "https://jeugdjournaal.nl/artikel/2498450-kijk-hier-de-speciale-jeugdjournaal-verkiezingsuitzending",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21593,
+    "url": "https://jeugdjournaal.nl/artikel/2600494-uitgezocht-de-pizzaplannen-van-de-nieuwe-regering",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21594,
+    "url": "https://jeugdjournaal.nl/artikel/2606422-uitgezocht-waarom-word-je-verliefd",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21595,
+    "url": "https://jeugdjournaal.nl/artikel/2606539-kindervraag-hoeveel-soorten-beugels-zijn-er",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21596,
+    "url": "https://jeugdjournaal.nl/artikel/2613583-marswagentje-na-zes-dagen-bevrijd-zat-vast-aan-steen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21597,
+    "url": "https://jeugdjournaal.nl/artikel/2613613-daan-is-tramspotter-trams-zijn-mijn-passie",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21598,
+    "url": "https://apps.apple.com/nl/app/nos-jeugdjournaal/id319038532",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21599,
+    "url": "https://jeugdjournaal.nl/artikel/2609647-mardin-is-opgelucht-dat-iran-en-de-vs-tijdelijk-stoppen-met-vechten",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21600,
+    "url": "https://jeugdjournaal.nl/artikel/2560872-het-speciale-jeugdjournaal-over-grenzen-aangeven",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21601,
+    "url": "https://jeugdjournaal.nl/artikel/2606045-nederlands-schip-naar-midden-oosten-om-landen-te-beschermen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21602,
+    "url": "https://jeugdjournaal.nl/artikel/2589771-uitgezocht-hoe-herken-je-ai-video-s",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21603,
+    "url": "https://jeugdjournaal.nl/artikel/2613706-voetballers-uit-vlieland-stoppen-met-competitie-tegenstanders-vinden-reis-te-ver",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21604,
+    "url": "https://jeugdjournaal.nl/artikel/2613657-speel-de-jeugdjournaal-nieuwsquiz",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21605,
+    "url": "https://jeugdjournaal.nl/artikel/2613581-nintendo-switch-2-wordt-duurder",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21606,
+    "url": "https://jeugdjournaal.nl#skipPodcast",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21607,
+    "url": "https://jeugdjournaal.nl/artikel/2610036-iran-en-de-verenigde-staten-praten-over-einde-oorlog",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21608,
+    "url": "https://jeugdjournaal.nl#skipKindervragen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21609,
+    "url": "https://jeugdjournaal.nl/artikel/2612361-podcast-waarom-wordt-er-zo-weinig-gepraat-over-roma-en-sinti-in-de-oorlog",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21610,
+    "url": "https://jeugdjournaal.nl/artikel/2586170-wereldkampioen-lotte-van-drunen-18-over-motorcrossen-en-botten-breken",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21611,
+    "url": "https://jeugdjournaal.nl/artikel/2604979-kindervraag-wat-als-het-luchtalarm-echt-afgaat-op-maandag",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21612,
+    "url": "https://jeugdjournaal.nl/artikel/2404755-het-speciale-nos-jeugdjournaal-over-klimaatverandering",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21613,
+    "url": "https://jeugdjournaal.nl/artikel/2613728-geen-tanks-bij-militaire-parade-in-rusland-vanwege-oorlog-in-oekraine",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21614,
+    "url": "https://jeugdjournaal.nl/artikel/2613690-mexico-wil-schooljaar-eerder-stoppen-vanwege-wk-voetbal",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21615,
+    "url": "https://jeugdjournaal.nl/artikel/2613592-meer-dan-2500-mensen-van-100-jaar-of-ouder-in-nederland",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21616,
+    "url": "https://jeugdjournaal.nl/artikel/2572809-uitgezocht-hoe-haal-je-een-wereldrecord",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21617,
+    "url": "https://jeugdjournaal.nl/artikel/2592615-plien-van-bennekom-over-grapjes-maken-gebakjes-en-haar-bff",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21618,
+    "url": "https://jeugdjournaal.nl/artikel/2605726-kindervraag-wat-was-de-eerste-anime-ooit",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21619,
+    "url": "https://jeugdjournaal.nl/artikel/2610495-kindervraag-wat-is-gen-z",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21620,
+    "url": "https://jeugdjournaal.nl/artikel/2593990-podcast-hoe-zwaar-is-het-om-youtuber-te-zijn",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21621,
+    "url": "https://jeugdjournaal.nl/artikel/2608711-johnny-maakt-zich-zorgen-om-zijn-land-libanon",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21622,
+    "url": "https://jeugdjournaal.nl/artikel/2609358-kindervraag-wat-is-het-oudste-hardcore-liedje",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21623,
+    "url": "https://jeugdjournaal.nl/artikel/2601425-jens-van-t-wout-over-zijn-gouden-tanden-tattoos-en-olympisch-kampioen-worden",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21624,
+    "url": "https://play.google.com/store/apps/details?id\u003dnl.nos.jeugdjournaal",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21625,
+    "url": "https://jeugdjournaal.nl/artikel/2605911-podcast-hoe-kies-je-een-middelbare-school-die-bij-je-past",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21626,
+    "url": "https://jeugdjournaal.nl/artikel/2587014-jorinde-van-klinken-leert-sil-discuswerpen-en-dan-gaan",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21627,
+    "url": "https://jeugdjournaal.nl/artikel/2611056-uitgezocht-waarom-is-vapen-en-roken-niet-verboden",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21628,
+    "url": "https://jeugdjournaal.nl/artikel/2588031-kijk-hier-naar-de-grote-jeugdjournaal-verkiezingsuitzending",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21629,
+    "url": "https://jeugdjournaal.nl/artikel/2613703-meer-kinderen-dragen-kleine-scheenbeschermers-artsen-maken-zich-zorgen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21630,
+    "url": "https://jeugdjournaal.nl/artikel/2608752-kindervraag-waarom-wordt-alles-steeds-duurder",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21631,
+    "url": "https://jeugdjournaal.nl/artikel/2613726-kinderen-wandelen-24-uur-lang-voor-goed-doel-wel-een-beetje-vermoeiend",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21632,
+    "url": "https://jeugdjournaal.nl/artikel/2606322-veelgestelde-vraag-van-kinderen-komt-er-een-derde-wereldoorlog",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21633,
+    "url": "https://jeugdjournaal.nl/artikel/2603656-kindervraag-hoe-word-je-juf-of-meester",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21634,
+    "url": "https://jeugdjournaal.nl/artikel/2609793-iran-en-vs-stoppen-met-vechten-maar-aanvallen-in-libanon-gaan-door",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21635,
+    "url": "https://jeugdjournaal.nl/artikel/2549891-het-nos-jeugdjournaal-jaaroverzicht-2024",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21636,
+    "url": "https://jeugdjournaal.nl/artikel/2599328-kindervraag-kunnen-wetenschappers-dino-s-tot-leven-wekken",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21637,
+    "url": "https://jeugdjournaal.nl/artikel/2602556-uitgezocht-hoe-toeristen-de-mooiste-plekken-op-aarde-verpesten",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21638,
+    "url": "https://jeugdjournaal.nl/artikel/2604481-uitgezocht-wie-was-jeffrey-epstein",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21639,
+    "url": "https://jeugdjournaal.nl/artikel/2612873-paul-sinha-schrijft-hits-voor-roxy-dekker-en-bankzitters-kippenvel",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21640,
+    "url": "https://jeugdjournaal.nl/artikel/2613658-nieuwswekker-psv-weer-kampioen-gevechtspauze-rusland-en-oekraine",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21641,
+    "url": "https://jeugdjournaal.nl/artikel/2609566-vs-en-iran-stoppen-tijdelijk-met-vechten",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21642,
+    "url": "https://jeugdjournaal.nl/artikel/2607998-kindervraag-wie-heeft-youtube-gemaakt",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21643,
+    "url": "https://jeugdjournaal.nl/artikel/2607860-kindervraag-wat-kan-je-doen-tegen-online-oplichting",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21644,
+    "url": "https://jeugdjournaal.nl/artikel/2613667-bezoeker-duitse-dierentuin-klimt-in-leeuwenverblijf-om-dieren-te-voeren",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21645,
+    "url": "https://jeugdjournaal.nl/artikel/2332781-zo-zou-het-jeugdjournaal-er-in-de-tweede-wereldoorlog-uitzien",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21646,
+    "url": "https://jeugdjournaal.nl/artikel/2607484-kindervraag-wat-is-de-bekendste-k-popgroep",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21647,
+    "url": "https://jeugdjournaal.nl/artikel/2597027-uitgezocht-hoe-is-het-kindernieuws-in-45-jaar-veranderd",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21648,
+    "url": "https://jeugdjournaal.nl/artikel/2613595-op-dit-schoolplein-zijn-alle-telefoons-verboden-ook-voor-ouders",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21649,
+    "url": "https://jeugdjournaal.nl/artikel/2610157-hoe-is-het-om-journalist-te-zijn-in-oorlogsgebied",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21650,
+    "url": "https://jeugdjournaal.nl#skipOorlog in het Midden-Oosten",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21651,
+    "url": "https://jeugdjournaal.nl/artikel/2610560-podcast-waarom-zien-we-steeds-vaker-ratten-en-is-dat-een-probleem",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21652,
+    "url": "https://jeugdjournaal.nl/artikel/2600923-podcast-hoe-win-je-goud-op-de-olympische-winterspelen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21653,
+    "url": "https://jeugdjournaal.nl/artikel/2515909-het-speciale-nos-jeugdjournaal-over-discriminatie",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21654,
+    "url": "https://jeugdjournaal.nl/archief/artikelen#item-13",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21655,
+    "url": "https://jeugdjournaal.nl/artikel/2608621-podcast-hoe-bedenk-je-de-perfecte-grap",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21656,
+    "url": "https://jeugdjournaal.nl/artikel/2609151-uitgezocht-zo-maakt-social-media-jou-verslaafd",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21657,
+    "url": "https://jeugdjournaal.nl/artikel/2603547-frank-is-drone-piloot-ik-kijk-waar-de-vijand-zich-verstopt",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21658,
+    "url": "https://jeugdjournaal.nl/artikel/2604906-podcast-waarom-wordt-iran-aangevallen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21659,
+    "url": "https://jeugdjournaal.nl/uitzending/101779-avondjournaal-van-vandaag",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21660,
+    "url": "https://jeugdjournaal.nl/artikel/2600037-podcast-hoe-zorg-je-dat-je-klaar-bent-voor-de-doorstroomtoets",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21661,
+    "url": "https://jeugdjournaal.nl/artikel/2596154-het-nos-jeugdjournaal-jaaroverzicht-2025",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21662,
+    "url": "https://jeugdjournaal.nl/artikel/2590669-topschaatser-antoinette-werd-als-kind-gepest-ze-noemden-me-vuurtoren",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21663,
+    "url": "https://jeugdjournaal.nl/artikel/2608317-het-extra-nos-jeugdjournaal-over-geweld",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21664,
+    "url": "https://jeugdjournaal.nl/artikel/2609279-joost-bedenkt-attracties-voor-een-pretpark",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21665,
+    "url": "https://jeugdjournaal.nl/artikel/2470826-het-speciale-nos-jeugdjournaal-over-gezinnen-in-armoede",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21666,
+    "url": "https://jeugdjournaal.nl/artikel/2613623-veel-schade-door-tornado-s-in-amerika-wonder-dat-er-geen-doden-zijn",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21667,
+    "url": "https://jeugdjournaal.nl/artikel/2611638-kindervraag-waarom-eindigen-bijna-alle-poolse-achternamen-met-ski",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21668,
+    "url": "https://jeugdjournaal.nl/artikel/2613663-tijdelijk-gevechtspauze-tussen-rusland-en-oekraine",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21669,
+    "url": "https://jeugdjournaal.nl#skipUitgezocht",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21670,
+    "url": "https://jeugdjournaal.nl/artikel/2599618-nathan-rutjes-over-lavezzi-matjes-en-de-mol",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21671,
+    "url": "https://jeugdjournaal.nl/artikel/2606846-kinderen-in-libanon-vluchten-voor-raketten-geen-huis-geen-school",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21672,
+    "url": "https://jeugdjournaal.nl/artikel/2519256-het-extra-nos-jeugdjournaal-over-herdenken",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21673,
+    "url": "https://jeugdjournaal.nl/artikel/2603965-podcast-waarom-moeten-steeds-meer-kinderen-naar-halt",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21674,
+    "url": "https://jeugdjournaal.nl/artikel/2591626-uitgezocht-wat-hebben-suriname-en-nederland-met-elkaar-te-maken",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21675,
+    "url": "https://jeugdjournaal.nl/artikel/2606057-schepen-met-olie-door-iran-aangevallen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21676,
+    "url": "https://jeugdjournaal.nl/artikel/2613736-dit-is-het-jeugdjournaal-kindernieuwsteam-even-voorstellen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21677,
+    "url": "https://jeugdjournaal.nl/artikel/2605482-willie-wartaal-over-blunders-vader-zijn-en-the-voice",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21678,
+    "url": "https://jeugdjournaal.nl/artikel/2613662-dubbel-feest-in-eindhoven-ook-psv-vrouwen-zijn-kampioen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21679,
+    "url": "https://jeugdjournaal.nl/artikel/2594522-jadiel-is-jongste-eredivisie-speler-ooit-gek-idee-dat-ik-geschiedenis-schrijf",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21680,
+    "url": "https://jeugdjournaal.nl/artikel/2606610-oorlog-in-libanon-we-moesten-vluchten-en-nu-leven-we-in-een-tent",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21681,
+    "url": "https://jeugdjournaal.nl/artikel/2603006-podcast-wordt-rob-jetten-een-goede-minister-president-voor-nederland",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21682,
+    "url": "https://jeugdjournaal.nl/artikel/2606817-podcast-wat-hebben-kinderen-nou-aan-gemeenteraadsverkiezingen",
+    "parentUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "id": 21683,
+    "url": "https://nos.nl/artikel/2613356-goede-start-van-de-zandschulp-bij-masterstoernooi-rome-afstraffing-de-jong",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21684,
+    "url": "https://nos.nl/artikel/2611553-de-jong-meteen-uitgeschakeld-in-madrid-van-de-zandschulp-meldt-zich-af",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21685,
+    "url": "https://twitter.com/intent/tweet?text\u003dGefrustreerde+Griekspoor+verliest+in+Rome%2C+Van+de+Zandschulp+wel+door\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613610-gefrustreerde-griekspoor-verliest-in-rome-van-de-zandschulp-wel-door\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21686,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613610-gefrustreerde-griekspoor-verliest-in-rome-van-de-zandschulp-wel-door",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21687,
+    "url": "https://api.whatsapp.com/send?text\u003dGefrustreerde+Griekspoor+verliest+in+Rome%2C+Van+de+Zandschulp+wel+door+https%3A%2F%2Fnos.nl%2Fartikel%2F2613610-gefrustreerde-griekspoor-verliest-in-rome-van-de-zandschulp-wel-door",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21688,
+    "url": "https://nos.nl/artikel/2610405-wisselvallige-griekspoor-komt-in-munchen-tekort-tegen-shapovalov",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21689,
+    "url": "https://nos.nl/sport/tennis",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21690,
+    "url": "https://nos.nl/artikel/2610285-van-de-zandschulp-overtuigend-naar-tweede-ronde-in-munchen",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21691,
+    "url": "https://nos.nl/artikel/2611815-griekspoor-boekt-in-madrid-tegen-dzumhur-zijn-eerste-gravelzege-van-het-seizoen",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21692,
+    "url": "https://nos.nl/artikel/2609045-van-de-zandschulp-loopt-ondanks-twee-matchpoints-vierde-atp-finale-in-carriere-mis",
+    "parentUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "id": 21694,
+    "url": "https://www.ster.nl/klantcases/ziemi/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21695,
+    "url": "https://www.ster.nl/bereik-doelgroepen/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21696,
+    "url": "https://www.ster.nl/commercialtests/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21697,
+    "url": "https://www.ster.nl/klantportal/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21698,
+    "url": "https://www.ster.nl/contact/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21699,
+    "url": "https://www.ster.nl/radioreclame-bij-ster/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21700,
+    "url": "https://www.ster.nl/onderzoek/stappenplan-online-display/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21701,
+    "url": "https://www.ster.nl/hoe-werkt-het/tv-reclame-bij-ster/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21702,
+    "url": "https://www.ster.nl/uitgelichte-inkoopopties/wk-online/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21703,
+    "url": "https://www.ster.nl/bereik-doelgroepen/npo-online/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21704,
+    "url": "https://www.ster.nl/tv-reclame-bij-ster/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21705,
+    "url": "https://www.ster.nl/online-reclame-bij-ster#veelgestelde-vragen-over-online-adverteren-bij-ster",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21706,
+    "url": "https://ster365-my.sharepoint.com/personal/eileen_snelders_ster_nl/_layouts/15/Doc.aspx?sourcedoc\u003d%7BAA3CB809-CEFA-4446-9779-A052542299BA%7D\u0026file\u003dStandpuntenpagina.docx\u0026action\u003ddefault\u0026mobileredirect\u003dtrue\u0026DefaultItemOpen\u003d1",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21707,
+    "url": "https://www.ster.nl/maatschappelijke-organisaties-algemeen-nut/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21708,
+    "url": "https://www.ster.nl/kosten-online-reclame/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "id": 21709,
+    "url": "https://www.ster.nl/onderzoek/whitepaper-online-beleving/",
+    "parentUrl": "https://www.ster.nl/online-reclame-bij-ster/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://cdn.nos.nl/image/2026/05/08/1357413/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Veerdienst Wadden getroffen door brand in datacentrum: \u0027Alles uitgeprint\u0027",
+    "pageUrl": "https://nos.nl/video/2613588-veerdienst-wadden-getroffen-door-brand-in-datacentrum-alles-uitgeprint"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "laden",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "laden",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "Loading",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "Loading",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/1m5h5duf/ster-smartphone-teletekst-loeki-add.jpg?width\u003d864\u0026height\u003d0\u0026quality\u003d60\u0026v\u003d1dc863e8c859010)",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/img/loading.svg",
+    "alt": "Loading",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/oego52vt/nathanreinds-bevrijdingsfestivaloverijssel-shr-1.jpg?width\u003d700\u0026height\u003d320\u0026quality\u003d60\u0026v\u003d1db3070e3d4b500",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/wzfhqelq/online-video-growing.jpg?cc\u003d0,0.13333333333333333,0,0.18095238095238092\u0026width\u003d700\u0026height\u003d320\u0026quality\u003d60\u0026v\u003d1d75854583bcc10",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://www.ster.nl/media/4sfjojxp/ster-via-desktop-advertentie-nos-home-2024.jpg?width\u003d700\u0026height\u003d320\u0026quality\u003d60\u0026v\u003d1dbc98b9caf4190",
+    "alt": "",
+    "pageTitle": "Online adverteren bij Ster (NPO) | Cookieloos \u0026 brandsafe - Ster reclame",
+    "pageUrl": "https://www.ster.nl/online-reclame-bij-ster/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/5/T/s/W/P/dRdSyd4WgdnfqULZUBpqVhW4T3XiUfsy5vS8vM9/644x716x3072x1728-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/B/c/5/L/W/P52QhUMGHYcQnMZujYaBCTeR77HJRDt6dAdHkoK/2x38x2480x1395-768x432.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/E/N/P/Z/b/rfRHEAMLkvwTWmC727hWkfaVhY1bF4V1fsA54vQ/339x46x2684x2013-768x576.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/C/9/Y/s/W/6fzMzCBc1jyafXaRXN29yXv3FtzCBQrX2hUT3Fd/225x0x1260x945-576x432.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/3/u/6/X/H/bFaXa89AAM1qzN9J9w6a3bs2hvjj1qcXdqQMw3R/618x46x2760x2070-96x72.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/5/q/G/z/7/cuqyE58xUhhhKDz4LNYPGnTv2EaBx1fptuZsxpN/190x121x2688x2016-96x72.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/D/G/8/1/D/ym57nfNQ4sj25yFszRWMpKvcYGB9SL6S8XfAqTF/1533x63x1692x1269-576x432.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/F/p/G/T/K/dC3FEAdjteujyiT2AVnK1NRAtJBkHU9XsdV2yFC/146x0x2356x1767-768x576.webp",
+    "alt": "",
+    "pageTitle": "Gefrustreerde Griekspoor verliest in Rome, Van de Zandschulp wel door",
+    "pageUrl": "https://nos.nl/artikel/2613610-van-de-zandschulp-na-thriller-door-naar-derde-ronde-masters-toernooi-rome"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/E/a/5/C/L/W6b1gzXAxHVinK1yZdpHwEU6mEwJhB97uQKLd69/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://static.nos.nl/img/jeugd/avondjournaal/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/E/a/5/C/L/W6b1gzXAxHVinK1yZdpHwEU6mEwJhB97uQKLd69/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://static.nos.nl/img/jeugd/avondjournaal/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/B/Z/Y/u/U/WSNcZEjNnHiguuJuw3xEghqnXgfQvEpqTY62qXf/220x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/4/x/N/j/7/BPQNTWfvqoziazLWKDc5SYXVzXqQG6yjA6LJ6dj/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/D/Y/r/S/9/sSrjJnzbkXetTG84wxTqixsrT2EwVhTHeTCbz1j/1x1x824x618-480x360.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/2/3/R/q/2/7ZAArnGevr351RmB1aDVhmoaYMUAP5Cn2VBNpz3/0x0x1920x1080-128x72.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/9/h/1/R/C/bvsc6phT45tGneKnJawJcJM3nWbbqt8zhH5z2Xm/260x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/8/Y/V/Z/R/H2dNUm8zpmAU1BoWAkpa7HWk1xQLaonMX3WUuD6/441x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/A/W/g/z/H/siX5ukwnZPDveHN6Cipp6U11vGEcWVr3Aa2qTBC/180x0x3636x2727-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/B/X/q/e/Z/JsrV9WXVxgBK4CbwMXjbvMEx7DCDUnJrVoYdTkR/494x0x3000x2250-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/B/6/o/n/2/sbaUKCFDSXwrRHBALdp6SqR9S3xmSCyNJpp5Yun/366x0x1440x1080-96x72.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/5/w/m/W/Z/SczoQbZZxWKmnhRiKGRg2xwAqjkpb24XArNF95p/0x0x1168x876-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/9/G/r/V/d/nxNmBcvxdKQH9HMVoLCrPEKnUaXHmdeBwLa56wN/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/8/j/p/H/V/4i2Dumu257ynBGjUi3kyewY4cpcwWmegxwtAcXF/0x0x1600x1200-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/i/h/i/9/5YD1ZPitbSB4DmpndCuhGfM6BUaJxr9iSEjsJjb/0x0x2048x1536-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/6/a/N/8/4/QYUJvMKUPugMrZzHoQiiSVxxBLHYZkGbk7jZJJo/535x0x3192x2394-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/9/e/9/c/q/M21cunLCwUXW7aQVpWuLhjP6m7uvQMXf2eypKHC/241x0x728x546-96x72.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/B/F/A/d/n/QtvPSFFw9UEvbW7rd8MGFC3tpLeHe3U54c7PQk7/12x0x428x321-288x216.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/D/2/i/h/e/6Mf7WVwJ8Cc92CFCL9zfVJQyop3xN9xSYm5rNso/0x20x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/9/d/L/H/i/UCyBcK8LSyE3XEjEmVehUXqeFNusEgPmacfDQLN/0x0x2716x2037-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/6/9/K/w/V/cVLU969S69WxC1DJ5rnB9sSYFrCC2iubKb46eko/221x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/B/i/7/u/W/oWdGVG3YHZz7z6cg1eTj9uDRrsbYZLoayajBVRh/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/5/q/E/U/X/1r3CkEkt9hQyu9UmhpRDLzwZwQtfgMVPBRkmoYv/220x0x3552x2664-96x72.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/C/F/v/w/s/7Sygn1hqSUp4k2KURrxkodMMLv5qBMPwZ6gZtKo/0x0x2048x1536-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/7/R/U/Z/J/jYgL19FynZKzPz9gMsFccjNaz836Gysqq6FiJuH/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/E/o/w/x/B/soRxbtEaULGZ7ho6NEjexe9iCbZKNeFwQmt3Psm/5x423x3984x2241-1024x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/F/N/x/e/u/hLDCec6kUky8zHFSDvGRnTgzsN84S4JsSFcFJLJ/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/9/k/H/2/Y/R4opt6DAvTd4sU76qxjFnbiTkKxLPfESvTW2rTm/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/5/x/D/h/h/6vArNgTNNszpjyphA9RM2YtzwgtPbDR5c9eJqpN/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/H/a/2/L/i/ZB6mBBHvDifnhaxHGtgvVS4WBNbQJuC3PSB7nS5/1x1112x1628x1221-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/E/S/N/T/F/NZCzBi6ipXQJ1HEdBo87PF8wm72bYVANDuoM5wN/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/J/D/L/a/i/JVZRtUEKzo5Rh3QDqXP8URUxh9vSYajSzEiQWMb/240x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/7/i/m/x/H/1gYww6efLyuoDWGUSjqHoRz2sJND7ZCTVPZxPW/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/9/c/2/z/1/kcsm2Pf9DLTE7h9FHgUkGP5sqyt9tAwPR7t4ZCT/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/E/K/v/P/Q/Zfig186THmY9XooKrggFeor1TzWcHCuagf18yJL/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/8/P/S/m/n/qHHWqVLyYd5dpMoHTEYXnTJ9FJgW8L8n2oZsXHQ/282x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/F/Q/f/C/M/1fMt6BPqVZAG688rcETm6PwXrTiK2dsH9n1fDam/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/A/W/a/v/r/s94zenJ2mhp2usM8UjfmaYC9zc8xg6XmfRS4eT8/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/G/3/D/d/t/TEsy3K9Fojb7tYiW883qyzdwMBovBALFSes96iU/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/8/L/x/G/U/1Cuo3b5iJPpEKyiw95T1gHop7AeBWJrfCVez4wt/241x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/9/Z/p/s/T/SdVoVp9m8rfsGF6APWgHP9vu8sjQ2yzwzqbPFpF/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/3/r/j/p/6/M5JJFUCJDxHw5ANUjjinpk5LvdptNQ1oJyauCa1/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/6/R/e/A/8/D5RdW89QZepYkLyMHiwDx6RUyWRVoYvRuyievPZ/0x0x1600x900-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/B/S/X/A/A/ZkUdnQsPCw2RVRnNXJx3KyJWE4t8tdsDMCzCdPJ/0x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/N/b/K/w/3/jtorx5FJ6A6EKi7BCbt8N1R86T8sm8L6TJEgaF/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/3/w/4/4/w/pKc39b7T5LZCwCbiLTUP3Jkr63z1JmSJeqc6YZu/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/9/h/U/T/H/gsNiPNCtp57dVg751Sfz2CfLyfubJjAhLG9iYjL/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/7/i/v/b/R/6PMXYmXbkzkPuKMDMVMpSYuvmoDV4EiP7Jxm2u3/296x0x1200x900-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/5/j/m/L/k/AYB2oUNMnEFMZhjZFjGeLc6CdtiHcVuGnCXR1da/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/J/B/i/y/R/RWjZLrkysoTgBKYAQG25fcbnff3b8xrQiJuCtSW/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/P/j/E/d/J/3aB3G8kB1A54J6bqwgPxnVQHQx6uQiTrp5Zzzh/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/4/8/9/Y/E/Gj9MkDmwhq4TWFKgYCfGiMJoZaFarPszHEJenyT/0x0x1600x900-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/F/C/n/e/D/6gaZN5WoXH3ucJmhHjQfZxd44gf1r1fCtwZksUE/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/J/6/k/k/Z/Ed23nYxnFw33BoW9sZP3o7cVgWFGSoNEz1TbyRD/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/C/L/8/g/c/ptGhJQGhX9ndJNYDKGcofMLfMDjszuvrifn6TyZ/5x894x2240x1260-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/7/g/i/B/o/o6n5UqzxwZK2yRdLPogdEsbJ3vwC5smk7ciJmv4/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/E/h/F/b/F/HC4ArSpabvUTeeojbossZm8k1UKmGv8Czaeasdq/0x0x2048x1536-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/3/r/B/3/k/xfJzxgKRt5N5ctrR1jtzjVVmsVbKRo36PHhUGXT/346x712x2168x1626-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/H/t/2/r/U/dwphyY8u9tqpLTakUM5zH15U75j7VUGr8T4WwKi/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/A/T/t/z/H/mt2DoQKush6LQwV49Yo4vqscieRXanNpRXcix2E/1x600x2248x1686-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/H/z/r/h/S/wtKRQsh4ouCWJs6eEqCfUaRmB8skkW87of46y7P/0x0x4000x3000-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/G/t/Y/M/3/mYVMMDxFVc8U2ofkNU6mir8bn6S8bSL8qwe1WnW/540x321x952x714-480x360.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/E/8/8/y/U/fCaCqc9GChcSPyhLHCLxG9vAzMdtBN19TeUrkey/0x556x1920x1440-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/D/3/8/p/B/8QLbm6Zxjd8TEah3gLqRAG6ry2fmSp2NCDxRn9J/1x480x2248x1686-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/D/c/8/V/n/L33WYaxFxwAySnS3gWhGKsDhXeRYTbUszjRXkid/0x408x1200x675-640x360.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/4/7/G/C/W/pC12ZeTqZtbs5wtoSoHcDLRAemvgPqHYU6Qbewn/0x0x4000x3000-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/E/z/n/A/p/KPdyGHsK8guC79PHKk2EKMY3RJ9YFJ8RBxeFXLV/1x0x3748x2811-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/7/E/G/R/J/mD5PYuqFwgAigTkWcqZ72biUZefbsgkBz8UCjC5/0x0x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/C/R/t/9/f/Kekxvm2y57cNq85NfAgzwb8SZ1K2Atssib9PhmA/0x207x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/5/C/r/J/H/HUZP64DoHwagZGooj4b75a9PJLuT7uR6BRb4v1d/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/C/y/6/H/j/AYmtkHg6pYN4rDb483HgmDViENTmn6VErQcPU8y/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/8/a/9/b/W/cKCZ8QXipThsySc1gryCLxyhykRgHitiTMLCzmm/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/F/x/i/w/q/kHeuE2SrQyiGFrkSDmamZboPArXBiA7MNtAf3TZ/0x0x1024x576-512x288.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/f/1/N/j/jmQPALRADZVuXx7cMMZ9K25XL8t1LEU8km3VuFp/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/G/5/R/q/6/kkE3gREdA6zRPuzMmxbtd9w44tTnNnfijVvvpa6/227x0x3548x2661-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/E/P/C/5/b/Pe3C84FsC4LReX1asUVvvM7hWtH1VLuQfJmcM7g/96x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/2/1/a/8/x/VtnkGFWs5rdv1JzQUHVPsuFWjbnZnZL3JTvaaWe/137x77x1136x639-640x360.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/5/m/T/z/W/k152Lzxa7iC5A29Vmcx8FBVpYvqa3LW7dJgWAtj/457x23x1328x996-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/B/q/H/X/1/ivCSh9qbYf3Ei7H1bg8NqDwe1BMk9P5B2zxAZLr/237x0x1440x1080-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/C/K/m/N/Q/VVR4TSgnudGCwdoCqF4wwSz5TKbWriL114Pvb1G/0x0x1600x1200-576x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/p/U/d/3/M/AbsUMDnf7PtN58S4d7xwsCpTsVgUjM9XcXa2JM/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/S/a/E/p/b/QhoNUacgqmcPLz7Mhv7XJ6aTe3WYj8CyEWr1sT/94x1x3812x2859-768x576.webp",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/03/23/1206391/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/12/29/1174024/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/04/07/1070340/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/05/04/1078594/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2023/04/09/959450/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2023/11/19/1027580/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2021/11/07/800998/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2020/05/03/647367/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://static.nos.nl/img/jeugd/appbanner/jj/blue_348.png",
+    "alt": "screenshot Jeugdjournaal app",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://static.nos.nl/img/jeugd/appbanner/green_348.png",
+    "alt": "screenshot Jeugdjournaal app",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://static.nos.nl/img/jeugd/appbanner/jj/yellow_348.png",
+    "alt": "screenshot Jeugdjournaal app",
+    "pageTitle": "NOS Jeugdjournaal",
+    "pageUrl": "https://jeugdjournaal.nl"
+  },
+  {
+    "src": "https://regio.cdn.nos.nl/2026/05/08/41c28ef1-0028-399a-94a1-cf6077fd9f67/128x72.jpg",
+    "alt": "",
+    "pageTitle": "Minister: niet meer aan de grens controleren",
+    "pageUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
+  {
+    "src": "https://static.nos.nl/regio/logos/Gelderland/Regio_Gelderland.svg",
+    "alt": "",
+    "pageTitle": "Minister: niet meer aan de grens controleren",
+    "pageUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
+  {
+    "src": "https://static.nos.nl/regio/logos/Gelderland/Regio_Gelderland.svg",
+    "alt": "",
+    "pageTitle": "Minister: niet meer aan de grens controleren",
+    "pageUrl": "https://nos.nl/regio/gelderland/artikel/756968-minister-niet-meer-aan-de-grens-controleren"
+  },
   {
     "src": "https://images.cdn.nos.nl/5/7/n/s/F/F/8EnyL65deEsgSuG2wmcFK4kVEkSuoBRZknv2b5S/0x207x4000x2250-1024x576.webp",
     "alt": "",
