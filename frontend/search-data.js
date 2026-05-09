@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 853,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be unpickleable from within the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. Availabl",
+    "scrapedAt": "2026-05-10 04:53:27.34687"
+  },
+  {
+    "id": 852,
+    "url": "https://github.com/python/cpython/issues/118761",
+    "title": "Improve import time of various stdlib modules · Issue #118761 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Improve import time of various stdlib modules #118761 New issue Copy link New issue Copy link Closed Closed Improve import time of various stdlib modules#118761 Copy link Labels performancePerformance or resource usagePerformance or resource usagestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-importlibtype-featureA feature request or enhancementA feature request or enhancement Description layday opened on May 8, 2024 Issue body actions Feature or enhancement Proposal: Following on from #109653, further improvements can be made to import times. Links to previous discussion of this feature: https://discuss.python.org/t/deferred-computation-evalution-for-toplevels-imports-and-dataclasses/34173 For example: importlib.metadata is often used for tasks that need to happen at import, e.g. to enumerate/load entry point plug-ins, so it might be worth seeing if we can cut down its own import time a bit more. importlib.metadata imports zipfile at the top for a function that won\u0027t be called in the vast majority of cases. It also imports importlib.abc, which in turn imports importlib.resources, to subclass an ABC with a single, non-abstract method - I assume redefining the method in importlib.metadata would be harmless. Some other less frequently-used imports which are only accessed once or twice, such as json, could also be tucked away in their calling functions. Linked PRs gh-118761: Improve import time of pprint #122725 gh-118761: Speedup pathlib import by deferring shutil #123520 gh-121423: Improve import time of socket by writing socket.errorTab as a constant and lazy import modules #121424 gh-118761: Improve import time of mimetypes #126979 gh-118761: improve import time for pickle #128732 gh-118761: substitute re import in base64.b16decode for a more efficient alternative #128736 gh-118761: improve import time for secrets #128738 gh-118761: Improve import time for csv #128858 gh-118761: Reduce import time of gettext.py by delaying re import #128898 gh-118761: improve optparse import time by delaying textwrap import #128899 gh-118761: Improve import time of tomllib #128907 gh-118761: Improve import time for pstats and zipfile by removing imports to typing #128981 gh-118761: Improve import time of sqlite3 #129118 gh-118761: Improve import time of subprocess #129427 gh-118761: Always lazy import warnings in threading #129428 [3.13] gh-118761: Improve import time of subprocess (GH-129427) #129447 [3.12] gh-118761: Improve import time of subprocess (GH-129427) #129448 gh-118761: Improve import time by lazy import of warnings #129765 gh-118761: Improve import time by lazy import of traceback #129811 gh-118761: Always lazy import re in locale #129860 gh-118761: Improve import time of dataclasses #129925 gh-118761: Improve import time of cmd module #130056 gh-118761: Revert \"Improve import time of subprocess (GH-129427)\" #130201 [3.13] gh-118761: Revert \"Improve import time of subprocess (GH-129427)\" (GH-130201) #130204 [3.12] gh-118761: Revert \"Improve import time of subprocess (GH-129427)\" (GH-130201) #130205 gh-137855: Improve import time of sqlite3 #131796 gh-118761: Optimise import time for ast #131953 gh-137855: Optimise import time for textwrap #131956 gh-118761: Fix star-import of ast #132024 gh-118761: Fix star-import of ast (alternative) #132025 gh-118761: Improve import time of annotationlib #132028 gh-118761: Use enum._simple_enum for annotationlib.Format #132031 gh-118761: Cover the import time optimisations in What\u0027s New #132035 gh-118761: Optimise import time for shlex #132036 gh-118761: Optimise import time for string #132037 gh-137855: email.quoprimime removing re import #132046 gh-118761: Defer import of functools in annotationlib #132059 gh-118761: Lazily import annotationlib in typing #132060 GH-118761: Expose more core interpreter types in _types #132103 gh-118761: Add helper to ensure that lazy imports are actually lazy #132614 gh-118761: Add test_lazy_import for more modules #133057 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels performancePerformance or resource usagePerformance or resource usagestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-importlibtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at",
+    "scrapedAt": "2026-05-10 04:53:24.284258"
+  },
+  {
+    "id": 851,
+    "url": "https://github.com/python/cpython/issues/124548",
+    "title": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Conversation Copy link Copy Markdown Member ericsnowcurrently commented Sep 25, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. This is an implementation of InterpreterPoolExecutor that builds on ThreadPoolExecutor. This assumes that we\u0027re okay adding the executor separately from PEP 734. That PEP is about adding a new stdlib module, which is a separate matter from adding the new executor. Possible future improvements: support passing (most) arbitrary functions without pickling support passing closures optionally exec functions against __main__ instead of the their original module CC @brianquinlan Issue: Add concurrent.futures.InterpreterPoolExecutor #124694 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ❤️ 1 temeddix reacted with heart emoji All reactions ❤️ 1 reaction ericsnowcurrently added 4 commits September 27, 2024 12:04 Make ThreadPoolExecutor extensible. 5c69d38 Add InterpreterPoolExecutor. 01789be Clean up the interpreter if initialize() fails. 6def4be Add a missing import. 84993a5 ericsnowcurrently force-pushed the interpreter-pool-executor branch from 46b5388 to 84993a5 Compare September 27, 2024 18:08 ericsnowcurrently changed the title Add concurrent.futures.InterpreterPoolExecutor gh-124694: Add concurrent.futures.InterpreterPoolExecutor Sep 27, 2024 bedevere-app Bot mentioned this pull request Sep 27, 2024 Add concurrent.futures.InterpreterPoolExecutor #124694 Closed ericsnowcurrently added 2 commits September 27, 2024 14:57 Fix some typos. c540cf0 Add more tests. 45d584d ericsnowcurrently force-pushed the interpreter-pool-executor branch from 28f948b to 45d584d Compare September 27, 2024 20:57 ericsnowcurrently added 4 commits September 27, 2024 15:32 Add docs. c90c016 Add a NEwS entry. 1cb4657 Fix the last test. 4dc0989 Add more tests. 57b2db6 ericsnowcurrently marked this pull request as ready for review September 27, 2024 22:37 bedevere-app Bot added the awaiting core review label Sep 27, 2024 ZeroIntensity reviewed Sep 29, 2024 View reviewed changes Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/concurrent.futures.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/concurrent/futures/interpreter.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. ericsnowcurrently added 5 commits September 30, 2024 16:11 Simplify ExecutionFailed. 75e11d2 Fix the signature of resolve_task(). 69c2b8e Capture any uncaught exception. f03c314 Add TODO comments. 4806d9f Docs fixes. efc0395 Copy link Copy Markdown Member Author ericsnowcurrently commented Sep 30, 2024 @ZeroIntensity, I\u0027ve fixed all those Docs things. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ZeroIntensity approved these changes Sep 30, 2024 View reviewed changes Copy link Copy Markdown Member ZeroIntensity left a comment There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. A small nitpick is that it might be a good idea to mention textwrap.dedent in the docs for initializer -- I\u0027m worried that users might run into pesky indentation problems when passing scripts, and textwrap.dedent is a nice way to deal with that. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Copy link Copy Markdown M",
+    "scrapedAt": "2026-05-10 04:53:20.053895"
+  },
+  {
+    "id": 850,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb",
+    "title": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debug",
+    "scrapedAt": "2026-05-10 04:53:13.45613"
+  },
+  {
+    "id": 849,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:53:08.800439"
+  },
+  {
     "id": 848,
     "url": "https://github.com/python/cpython/issues/119613",
     "title": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
@@ -5642,26 +5677,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 849,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
-  },
-  {
-    "id": 850,
-    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
-  },
-  {
-    "id": 851,
-    "url": "https://github.com/python/cpython/issues/124548"
-  },
-  {
-    "id": 852,
-    "url": "https://github.com/python/cpython/issues/118761"
-  },
-  {
-    "id": 853,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
   },
   {
     "id": 854,
@@ -145085,10 +145100,2258 @@ window.searchData = [
     "id": 117860,
     "url": "https://github.com/python/cpython/pull/120020",
     "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 119203,
+    "url": "https://github.com/cdce8p",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119204,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-a29aee3",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119205,
+    "url": "https://github.com/python/cpython/pull/124548/commits/c90c016202a86af860c638b59db7c62396fcb912",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119206,
+    "url": "https://github.com/python/cpython/pull/124548/commits/8bab4576c97e7ca70c96d707e13d8d00d2f9516c",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119207,
+    "url": "https://github.com/python/cpython/pull/124548#ref-commit-843c78d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119208,
+    "url": "https://github.com/python/cpython/commit/46b5388d28782801867814efa94fd99e5b53ff43",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119210,
+    "url": "https://github.com/python/cpython/pull/124548/files/57b2db672fc011d19f04ca34bc6e716c580f382a#diff-eb5cd13d65d2f215d8dc0d95eb1a1341ff69b226ac56ec6099e39582edecc8cf",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119211,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420271014",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119212,
+    "url": "https://github.com/python/cpython/pull/124548/commits/45d584d43408772f0fe0cb00231161830c97caac",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119213,
+    "url": "https://github.com/python/cpython/pull/124548#ref-issue-1199014337",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119214,
+    "url": "https://github.com/python/cpython/pull/124548",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119215,
+    "url": "https://github.com/python/cpython/pull/124548/commits/1cb4657c418534198e633ea83335402ffe2b0470",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119216,
+    "url": "https://github.com/python/cpython/pull/124548/files/57b2db672fc011d19f04ca34bc6e716c580f382a",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119217,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420825212",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119218,
+    "url": "https://github.com/python/cpython/pull/124548/files/efc03956b5a3d2b519496fa58858d5c4153c0950",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119219,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420135705",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119220,
+    "url": "https://github.com/python/cpython/pull/124548/files/97d02924a5033f76ce0098814bc66a5d2e25e796",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119221,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384294740",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119222,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420236091",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119224,
+    "url": "https://buildbot.python.org/#/builders/1594/builds/338",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119226,
+    "url": "https://buildbot.python.org/#/builders/1613/builds/112",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119227,
+    "url": "https://github.com/python/cpython/commit/28f948b115deff68360c1fe406855a00e7b1c2b1",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119228,
+    "url": "https://github.com/numpy/numpy/issues/24755",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119229,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2422766689",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119230,
+    "url": "https://github.com/python/cpython/pull/129669",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119231,
+    "url": "https://github.com/python/cpython/pull/124548/commits/a29aee3d7ebf8ca4dee811dae4c9258c7e87887e",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119233,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-c540cf0",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119234,
+    "url": "https://github.com/python/cpython/issues/81474",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119235,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2422842744",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119237,
+    "url": "https://github.com/python/cpython/pull/124548/commits/c540cf0a9de1709c5a3d8661875b19c99013e15d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119239,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420159627",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119241,
+    "url": "https://github.com/python/cpython/pull/124548#event-14434642204",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119242,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384350859",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119243,
+    "url": "https://github.com/python/cpython/pull/124548/commits/01789be00f372c65b0519eab1580faa5491e0e2e",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119244,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420488611",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119245,
+    "url": "https://github.com/python/cpython/pull/124548/files/f61d62d5c9d9dee1f473e603c0ad40ab76ffe790",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119246,
+    "url": "https://github.com/1st1",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119247,
+    "url": "https://buildbot.python.org/#/builders/259",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119249,
+    "url": "https://github.com/python/cpython/pull/124548#issue-2549015376",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119250,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420823208",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119253,
+    "url": "https://github.com/python/cpython/commit/84993a5f62a047af803e8e930748a81faf83275d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119254,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420237059",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119255,
+    "url": "https://github.com/donbarbos",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119256,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384571582",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119257,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124548",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119258,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-5c69d38",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119260,
+    "url": "https://github.com/python/cpython/pull/124548/files/57b2db672fc011d19f04ca34bc6e716c580f382a#diff-2418446f6b32195bf39c0f315ac97d47108a451144cc0132a88a7c7997966417",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119261,
+    "url": "https://github.com/python/cpython/pull/124548/commits/84993a5f62a047af803e8e930748a81faf83275d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119262,
+    "url": "https://github.com/python/cpython/pull/124548#event-14434758202",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119263,
+    "url": "https://github.com/ebonnal/cpython/commit/843c78d8b73c8c14bb5b253341f66e7b8c0834cd",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119264,
+    "url": "https://github.com/python/cpython/issues/125667",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119265,
+    "url": "https://github.com/python/cpython/pull/124548/commits/57b2db672fc011d19f04ca34bc6e716c580f382a",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119267,
+    "url": "https://github.com/cython/cython/issues/6445",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119268,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420323148",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119269,
+    "url": "https://github.com/python/cpython/pull/124548/commits/efc03956b5a3d2b519496fa58858d5c4153c0950",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119270,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420331719",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119271,
+    "url": "https://github.com/python/cpython/pull/124548#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119273,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2384510312",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119274,
+    "url": "https://github.com/python/cpython/commit/45d584d43408772f0fe0cb00231161830c97caac",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119275,
+    "url": "https://github.com/python/cpython/pull/124548#pullrequestreview-2338770119",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119276,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2423367364",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119277,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-3136684509",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119278,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-75e11d2",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119279,
+    "url": "https://github.com/python/cpython/pull/124548#pullrequestreview-2335870259",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119280,
+    "url": "https://github.com/python/cpython/pull/124548#commits-pushed-c90c016",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119281,
+    "url": "https://github.com/python/cpython/compare/46b5388d28782801867814efa94fd99e5b53ff43..84993a5f62a047af803e8e930748a81faf83275d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119282,
+    "url": "https://github.com/python/cpython/pull/124548#ref-issue-2595961431",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119283,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2423241253",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119284,
+    "url": "https://github.com/python/cpython/pull/124548#event-14437840960",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119285,
+    "url": "https://github.com/python/cpython/pull/124548/commits/cd29914577b48124d4cafdd3709969b243e0402b",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119286,
+    "url": "https://github.com/bluss",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119287,
+    "url": "https://github.com/python/cpython/pull/116430",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119288,
+    "url": "https://github.com/python/cpython/issues/125716",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119289,
+    "url": "https://github.com/python/cpython/pull/124548#ref-issue-2553488515",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119290,
+    "url": "https://github.com/willingc",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119291,
+    "url": "https://github.com/python/cpython/pull/125708",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119292,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420845402",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119293,
+    "url": "https://github.com/python/cpython/pull/124548/commits/69c2b8efe501154d0811d42b3fa8fed27340aa07",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119295,
+    "url": "https://github.com/python/cpython/pull/125668",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119296,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-2831320805",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119297,
+    "url": "https://buildbot.python.org/#/builders/1613",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119298,
+    "url": "https://github.com/python/cpython/pull/124548/commits/5c69d38fa93f15224e859cf5d170e76bdcd7b2c6",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119299,
+    "url": "https://github.com/python/cpython/pull/124548#event-14690406418",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119300,
+    "url": "https://github.com/python/cpython/pull/133958",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119301,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-3058541953",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119302,
+    "url": "https://github.com/python/cpython/pull/124548/commits/f03c314fb643e7acc2d1181950a23702ee678fa0",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119303,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420764227",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119305,
+    "url": "https://github.com/python/cpython/pull/124548/commits/6def4bedeb4a61e10e66d94221490a55723eaebe",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119306,
+    "url": "https://github.com/python/typeshed/pull/14263",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119307,
+    "url": "https://github.com/python/cpython/pull/124548#ref-pullrequest-2172175353",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119308,
+    "url": "https://github.com/python/cpython/compare/28f948b115deff68360c1fe406855a00e7b1c2b1..45d584d43408772f0fe0cb00231161830c97caac",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119309,
+    "url": "https://buildbot.python.org/#/builders/259/builds/1528",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119310,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420147477",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119311,
+    "url": "https://github.com/python/cpython/pull/124548#event-14690406408",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119312,
+    "url": "https://github.com/apache/arrow/issues/44511",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119315,
+    "url": "https://github.com/python/cpython/pull/124548#issuecomment-2420789112",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119316,
+    "url": "https://buildbot.python.org/#/builders/1610/builds/198",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119317,
+    "url": "https://github.com/brianquinlan",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119318,
+    "url": "https://github.com/python/cpython/pull/124548#event-14437841153",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119319,
+    "url": "https://github.com/python/cpython/pull/124548/commits/75e11d2ff9fe0849eac91dfe9bb30f55034ff55d",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119320,
+    "url": "https://github.com/python/cpython/pull/124548/commits/4dc0989b7287390347663c09aaeb367e1cacb38e",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119321,
+    "url": "https://github.com/python/cpython/pull/124548/commits/4806d9f469cbd2d5a1a42fb43fd32cf7b07e4fce",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119322,
+    "url": "https://github.com/python/cpython/pull/124548#event-14436228088",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119323,
+    "url": "https://github.com/jakirkham",
+    "parentUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "id": 119325,
+    "url": "https://github.com/python/cpython/pull/128981",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119326,
+    "url": "https://github.com/python/cpython/pull/131953",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119327,
+    "url": "https://github.com/python/cpython/pull/131956",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119328,
+    "url": "https://github.com/python/cpython/pull/132046",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119329,
+    "url": "https://github.com/python/cpython/pull/133057",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119330,
+    "url": "https://github.com/python/cpython/pull/131796",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119331,
+    "url": "https://github.com/python/cpython/pull/128907",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119332,
+    "url": "https://github.com/python/cpython/pull/122725",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119333,
+    "url": "https://github.com/python/cpython/issues/118761#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119334,
+    "url": "https://github.com/python/cpython/pull/129118",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119335,
+    "url": "https://discuss.python.org/t/deferred-computation-evalution-for-toplevels-imports-and-dataclasses/34173",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119336,
+    "url": "https://github.com/python/cpython/pull/129860",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119339,
+    "url": "https://github.com/python/cpython/pull/132035",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119341,
+    "url": "https://github.com/python/cpython/pull/130056",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119342,
+    "url": "https://github.com/python/cpython/pull/132036",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119343,
+    "url": "https://github.com/python/cpython/pull/132037",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119346,
+    "url": "https://github.com/python/cpython/pull/132031",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119347,
+    "url": "https://github.com/python/cpython/pull/128738",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119348,
+    "url": "https://github.com/python/cpython/pull/128858",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119349,
+    "url": "https://github.com/python/cpython/pull/121424",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119350,
+    "url": "https://github.com/python/cpython/pull/128736",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119351,
+    "url": "https://github.com/python/cpython/pull/129428",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119352,
+    "url": "https://github.com/python/cpython/pull/128899",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119353,
+    "url": "https://github.com/python/cpython/pull/129427",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119354,
+    "url": "https://github.com/python/cpython/pull/128898",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119355,
+    "url": "https://github.com/python/cpython/pull/123520",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119356,
+    "url": "https://github.com/python/cpython/pull/128732",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119357,
+    "url": "https://github.com/python/cpython/pull/130204",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119358,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-importlib%22",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119359,
+    "url": "https://github.com/layday",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119360,
+    "url": "https://github.com/python/cpython/pull/130205",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119361,
+    "url": "https://github.com/python/cpython/issues/118761#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119362,
+    "url": "https://github.com/python/cpython/pull/132024",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119364,
+    "url": "https://github.com/python/cpython/pull/132028",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119365,
+    "url": "https://github.com/python/cpython/pull/132025",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119366,
+    "url": "https://github.com/python/cpython/pull/130201",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119367,
+    "url": "https://github.com/python/cpython/pull/132103",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119368,
+    "url": "https://github.com/python/cpython/pull/132060",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119369,
+    "url": "https://github.com/python/cpython/pull/129811",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119370,
+    "url": "https://github.com/python/cpython/pull/129765",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119371,
+    "url": "https://github.com/python/cpython/pull/132614",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119373,
+    "url": "https://github.com/python/cpython/issues/118761#issue-2285570381",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119374,
+    "url": "https://github.com/python/cpython/pull/132059",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119375,
+    "url": "https://github.com/python/cpython/pull/126979",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119376,
+    "url": "https://github.com/python/cpython/pull/129925",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119377,
+    "url": "https://github.com/python/cpython/pull/129448",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119378,
+    "url": "https://github.com/python/cpython/pull/129447",
+    "parentUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "id": 119380,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.active_children",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119382,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.close",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119384,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.SimpleQueue.put",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119385,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Condition",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119386,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.sharedctypes.copy",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119387,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.ThreadPool",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119390,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.join",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119393,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.map_async",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119394,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.close",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119395,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.AuthenticationError",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119396,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Namespace",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119397,
+    "url": "https://docs.python.org/3/library/select.html#module-select",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119398,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119399,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Listener.address",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119400,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Event",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119402,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.put",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119403,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.close",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119404,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseProxy",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119405,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#using-a-remote-manager",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119406,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.BufferTooShort",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119408,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Array",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119409,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d5313",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119412,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.SimpleQueue.get",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119413,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Value",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119415,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Lock",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119416,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#logging",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119417,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.log_to_stderr",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119418,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager.get_server",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119419,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-programming",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119420,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119422,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.apply_async",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119423,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.freeze_support",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119424,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.sharedctypes.RawArray",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119425,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager.address",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119426,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseProxy.__repr__",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119429,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.map",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119433,
+    "url": "https://docs.python.org/3/library/xmlrpc.client.html#module-xmlrpc.client",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119434,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#reference",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119435,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119436,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGTERM",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119437,
+    "url": "https://docs.python.org/3/library/logging.html#logging.NOTSET",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119438,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-listeners-clients",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119440,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.listen",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119441,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.fileno",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119443,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseProxy._getvalue",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119444,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_logger",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119446,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.deliver_challenge",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119448,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.name",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119449,
+    "url": "https://docs.python.org/3/library/multiprocessing.shared_memory.html#multiprocessing.shared_memory.SharedMemory",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119452,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#synchronization-between-processes",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119453,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.AsyncResult.successful",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119454,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.AsyncResult",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119455,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#miscellaneous",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119456,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.ProcessError",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119457,
+    "url": "https://docs.python.org/3/library/queue.html#queue.Full",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119459,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.BoundedSemaphore.locked",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119461,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119462,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Listener",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119463,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Listener.last_accepted",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119464,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#authentication-keys",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119468,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Lock.release",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119469,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.RLock.acquire",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119470,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager.start",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119471,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.sharedctypes.Value",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119472,
+    "url": "https://docs.python.org/3/library/tempfile.html#tempfile.mkstemp",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119474,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_start_method",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119475,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.RLock.release",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119477,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.imap_unordered",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119479,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.answer_challenge",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119480,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.get_nowait",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119481,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Pipe",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119482,
+    "url": "https://docs.python.org/3/library/os.html#os.kill",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119485,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.fileno",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119487,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.wait",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119488,
+    "url": "https://docs.python.org/3/library/hmac.html#module-hmac",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119489,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.run",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119491,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.AsyncResult.ready",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119492,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.AsyncResult.get",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119493,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Condition",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119494,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.list",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119495,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.recv_bytes",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119496,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#the-process-class",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119498,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Semaphore.locked",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119499,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.connection",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119500,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#process-and-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119507,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.daemon",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119508,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.parent_process",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119510,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.RLock",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119511,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#shared-ctypes-objects",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119512,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-auth-keys",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119514,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.dict",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119515,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#address-formats",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119517,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.empty",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119518,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.send_bytes",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119519,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.exitcode",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119520,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119522,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.qsize",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119523,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.put_nowait",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119524,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.RLock.locked",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119525,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Semaphore",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119527,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Barrier",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119528,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.JoinableQueue",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119529,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#global-start-method",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119531,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#using-a-pool-of-workers",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119532,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Listener.close",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119533,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.SimpleQueue",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119534,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.full",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119538,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Lock.acquire",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119539,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.starmap",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119540,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.authkey",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119541,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.join",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119542,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.SimpleQueue.close",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119544,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Semaphore.get_value",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119547,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.AsyncResult.wait",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119549,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#introduction",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119550,
+    "url": "https://docs.python.org/3/library/select.html#select.select",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119551,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#cleanup",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119552,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d5155",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119553,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d3770",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119555,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.terminate",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119556,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#programming-guidelines",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119560,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.close",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119561,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.imap",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119562,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-address-formats",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119564,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#connection-objects",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119565,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.managers",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119569,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#customized-managers",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119572,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.current_process",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119573,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Listener.accept",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119574,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.sharedctypes.synchronized",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119576,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d33725",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119577,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Semaphore",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119579,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_executable",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119581,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.sharedctypes.Array",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119583,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.sentinel",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119584,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.recv_bytes_into",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119586,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.get_all_start_methods",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119587,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.dummy",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119590,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.RLock",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119592,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.pool",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119595,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.join_thread",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119596,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager.connect",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119597,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.recv",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119598,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Client",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119599,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#exchanging-objects-between-processes",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119600,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.cancel_join_thread",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119601,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager.register",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119607,
+    "url": "https://docs.python.org/3/library/queue.html#queue.Queue.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119608,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.poll",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119609,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119610,
+    "url": "https://docs.python.org/3/library/signal.html#signal.signal",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119611,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.sharedctypes",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119612,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#the-spawn-and-forkserver-start-methods",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119613,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.is_alive",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119614,
+    "url": "https://docs.python.org/3/library/queue.html#queue.Queue.join",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119615,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119616,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.BoundedSemaphore",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119617,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseProxy.__str__",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119621,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.set_forkserver_preload",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119622,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.JoinableQueue.task_done",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119623,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119624,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.apply",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119626,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Lock.locked",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119627,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Queue",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119628,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.SimpleQueue.empty",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119629,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager.Lock",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119630,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-examples",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119638,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.Namespace",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119640,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/multiprocessing/",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119641,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.JoinableQueue.join",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119646,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Barrier",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119647,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.starmap_async",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119648,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Event",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119649,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-managers",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119650,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Array",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119651,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#sharing-state-between-processes",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119652,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.TimeoutError",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119653,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.close",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119654,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/multiprocessing.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119656,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.sharedctypes.RawValue",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119658,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#pipes-and-queues",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119659,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-programming-spawn",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119661,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#all-start-methods",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119664,
+    "url": "https://docs.python.org/3/library/queue.html#queue.Queue.task_done",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119665,
+    "url": "https://github.com/python/cpython/issues/132898",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119667,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.connection.Connection.send",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119668,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.pid",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119671,
+    "url": "https://docs.python.org/3/library/queue.html#queue.Empty",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119672,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.start",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119674,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#synchronization-primitives",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119675,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#managers",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119676,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.BoundedSemaphore",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119677,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#examples",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119678,
+    "url": "https://docs.python.org/3/library/os.html#os.urandom",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119679,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Value",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119680,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseProxy._callmethod",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119681,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d5331",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119683,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#proxy-objects",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119685,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.get",
+    "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31134424?u\u003de8afd95a97b5556c467d1be27788950e67378ef1\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@layday",
+    "pageTitle": "Improve import time of various stdlib modules · Issue #118761 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31134424?u\u003de8afd95a97b5556c467d1be27788950e67378ef1\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@layday",
+    "pageTitle": "Improve import time of various stdlib modules · Issue #118761 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118761"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d48\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d48\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8851008?s\u003d80\u0026u\u003d9b03921947eac905400f43f5929d4efdf66af8f1\u0026v\u003d4",
+    "alt": "@brianquinlan",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d80\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d80\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3019665?s\u003d40\u0026v\u003d4",
+    "alt": "@jakirkham",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d40\u0026v\u003d4",
+    "alt": "@donbarbos",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/30130371?s\u003d40\u0026v\u003d4",
+    "alt": "@cdce8p",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/239003?s\u003d40\u0026v\u003d4",
+    "alt": "@1st1",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2680980?s\u003d40\u0026v\u003d4",
+    "alt": "@willingc",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/356399?s\u003d40\u0026v\u003d4",
+    "alt": "@asvetlov",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d40\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3209739?s\u003d40\u0026v\u003d4",
+    "alt": "@bluss",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d52\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8851008?s\u003d52\u0026v\u003d4",
+    "alt": "@brianquinlan",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d52\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d52\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/239003?s\u003d52\u0026v\u003d4",
+    "alt": "@1st1",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2680980?s\u003d52\u0026v\u003d4",
+    "alt": "@willingc",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3209739?s\u003d52\u0026v\u003d4",
+    "alt": "@bluss",
+    "pageTitle": "gh-124694: Add concurrent.futures.InterpreterPoolExecutor by ericsnowcurrently · Pull Request #124548 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124548"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#binary-releases-for-the-experimental-just-in-time-compiler"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d80",
     "alt": "@skirpichev",
