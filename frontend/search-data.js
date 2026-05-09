@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 248,
+    "url": "https://source.android.com/docs/automotive",
+    "title": "Automotive | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Automotive Stay organized with collections Save and categorize content based on your preferences. Android Automotive Android Automotive is a full-stack, open source, highly customizable platform running directly on in-vehicle hardware. Learn More Guidelines for Development Learn about our extensive ecosystem of guidelines specific to the development of Automotive apps. Development Tools Read about the tools we provide to support your development of AAOS-based apps. Testing Tools See the scalable infrastructure and robust set of testing tools we provide so you can maximize your efficiency and ensure compliance. Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2026-04-20 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2026-04-20 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:53:55.576545"
+  },
+  {
+    "id": 247,
+    "url": "https://source.android.com/docs/core/connect",
+    "title": "Connectivity | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Core Topics Connectivity Stay organized with collections Save and categorize content based on your preferences. This section describes implementation of standard Android connectivity protocols and describes use of related features, including Bluetooth, NFC, Wi-Fi, Telephony, and more. Follow the instructions in this section to verify your Android devices are connected properly. Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2025-10-27 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2025-10-27 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:53:51.179411"
+  },
+  {
+    "id": 246,
+    "url": "https://source.android.com/docs/core",
+    "title": "Android OS core topics | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Core Topics Stay organized with collections Save and categorize content based on your preferences. Android OS core topics From the basic building blocks of an Android device to the more intricate, advanced features, learn about all the ways you can customize the Android OS. system architecture Architecture Read about the Android system architecture and each of its constituent pieces. connectivity Connect devices Explore Android connectivity protocols, including Bluetooth, NFC, Wi-Fi. power Power profiles See battery profiles and power utilization strategies available in Android. interaction Inputs and sensors Explore how Android processes user inputs from input devices and sensors. camera Camera Build an abstraction layer to receive and process camera input on an Android device. settings Custom settings Implement and customize the OS settings to give users options. fonts Fonts Install and customize fonts. audio Audio in Android Android\u0027s audio Hardware Abstraction Layer (HAL) connects audio-specific framework APIs to the audio driver and hardware. display Display features Learn about different features available for the Android display, from app shortcuts to Night Light. graphics Graphics Android offers a variety of graphics rendering APIs for 2D and 3D that interact with graphics drivers. media Media playback Learn about the Android multimedia framework and how applications interact with it. performance Performance optimization Improve system health and performance. runtime Android Runtime (ART) Android Runtime (ART) can improve app performance and simplify debugging. updates Optimize system updates Configure system updates, including over-the-air (OTA) updates and A/B tests for updates. tests Develop and design tests Android offers various tools and test suites to effectively, efficiently, and thoroughly test the Android platform. data Data use Android offers a variety of options to track and understand data usage. storage Data storage Android devices support traditional, on-device storage in addition to portable storage options. permissions Access permissions Android access configurations limit an app’s access to sensitive data. data Virtualization Execute code in a secure and private execution environment. Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2025-01-22 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2025-01-22 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:53:45.364333"
+  },
+  {
+    "id": 245,
+    "url": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes",
+    "title": "Site updates | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs What\u0027s New? Site updates Stay organized with collections Save and categorize content based on your preferences. This page lists monthly site changes and documentation updates. 2026 2025 2024 2023 2022 2021 Changes to AOSP Starting March 27, 2025, the latest release branch will always be referenced by the new android-latest-release manifest, which can be used directly with Repo. We recommend platform developers use android-latest-release instead of aosp-main to build and contribute to AOSP. The android-latest-release manifest is set to the latest AOSP release branch, android16-qpr2-release. See About android-latest-release for more information. Request Android source To get the source code for third-party components distributed by Google in binary form within an Android product, see Get Android source. April 2026 These are the April site changes. Find regularly scheduled bulletins such as the Android Security Bulletins on their respective pages. Location Change Architecture Updated guidance for Generic Bootloader (GBL) to detail requirements for firmware-provided UEFI variables, including gbl_fw_api_level, for version determination on Deploy GBL. Updated Generic Kernel Image (GKI) release process with GKI release dates for Android 12 in 2026. Updated instructions for adding GKI modules on Configure kernel features as GKI modules. Added new builds to android16-6.12 release builds, android15-6.6 release builds, android14-6.1 release builds, android14-5.15 release builds, android13-5.15 release builds, and android12-5.10 release builds. Deprecated branches android13-5.10-2025-03, android13-5.15-2025-03, android14-5.15-2025-03, android14-6.1-2025-03, and android15-6.6-2025-03 on Generic Kernel Image (GKI) release builds. Automotive Published Car-apps-release-20, with updates for Dialer, DriverUI, Car library, Car media, Sensitive App Protection, and Radio. Added missing com.android.oem.tokens import on App Lock. Added Media Apps with Car App Library. Updated Watchdog resource overuse configuration path on Monitor flash memory usage. Added Car-apps-release-21 and Car-apps-release-22. Build Updated Codenames, tags, and build numbers with build numbers for AOSP releases. Compatibility Added Honor Pad V9 to the list of supported tablets for Camera ITS testing on Test camera images using automation. Updated Run audio framework CTS Verifier tests with new test procedures and screenshots for frequency tests. Updated Camera ITS tests on running scene5. Removed an obsolete NFC Forum Tag Type 1 requirement on Android 12 7.4.4. Near-Field Communications, Android 13 7.4.4. Near-Field Communications, Android 14 7.4.4. Near-Field Communications, Android 15 7.4.4. Near-Field Communications, and Android 16 7.4.4. Near-Field Communications. Cuttlefish Added description for Cuttlefish vendor only build target on Create a Cuttlefish hybrid device. Graphics Added Vulkan 1.4 functionality overview. Updated Winscope IntDef mapping instructions on Run Winscope. Security Published the Android Security Bulletin—April 2026, Android Automotive OS Update Bulletin—April 2026, Wear OS Security Bulletin—April 2026, Pixel Update Bulletin—April 2026, Android XR Bulletin—April 2026, and Android security acknowledgements. Added documentation for Weaver, the hardware abstraction layer (HAL) for on-device cryptographic key management, which provides secure storage and access control for keys used in authentication and encryption, safeguarding against unauthorized use even on compromised devices. Added the Android Security Paper to the list of reports. Removed CVE-2026-21735 and CVE-2025-48650 on Android Security Bulletin—March 2026, and CVE-2025-48581 on Android Security Bulletin—November 2025. Updated denial of service for cellular or WiFi service on Security updates and resources. Tests Updated Python version and OS requirements for ATS CLI on Install Python 3. Updated OmniLab Android Test Station to clarify that users should use --force_update to upgrade to the latest version, and that OmniLab ATS 2.0 is available starting with build R52. March 2026 These are the March site changes. Find regularly scheduled bulletins such as the Android Security Bulletins on their respective pages. Location Change Architecture Updated guidance for Generic Bootloader (GBL) to clarify that any FAT partition type",
+    "scrapedAt": "2026-05-10 03:53:39.235916"
+  },
+  {
+    "id": 244,
+    "url": "https://source.android.com/docs/setup/build/feature-flagging",
+    "title": "Feature launch flag overview | Android Open Source Project",
+    "content": "Skip to main content / English Deutsch Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Documentation Effective in 2026, to align with our trunk stable development model and ensure platform stability for the ecosystem, we will publish source code to AOSP in Q2 and Q4. For building and contributing to AOSP, we recommend utilizing android-latest-release instead of aosp-main. The android-latest-release manifest branch will always reference the most recent release pushed to AOSP. For more information, see Changes to AOSP. AOSP Docs Getting Started Feature launch flag overview Stay organized with collections Save and categorize content based on your preferences. When adding code into AOSP, use feature launch flags to isolate untested code from tested code. Enable feature launch flags to execute and test your code. Conversely, disable feature launch flags to ensure untested code doesn\u0027t execute. Feature launch flags are used primarily in these two ways: If you\u0027re contributing to AOSP, you might be asked by your change\u0027s reviewer to implement a feature launch flag so that the feature is tested properly. For further information on branches, see Release lifecycle. Google uses feature launch flags to ensure the Android latest release branch (android16-qpr2-release) is stable for everyone. If your company keeps a mirror of AOSP and works from that mirror, use feature launch flagging to keep your mirror of AOSP code stable for your development team. Note: Feature launch flagging is part of a new development process called Trunk Stable whereby all official AOSP releases are snapped from a single internal main development branch. To achieve this goal, the main development branch must remain stable at all time. Trunk Stable requires all updates and new features to be flagged so they can, on a case-by-case basis, be included or excluded from the internal main branch before snapping a release. For more on the AOSP release process, see Release lifecycle. The high-level steps for implementing feature launch flagging are: For a given code change, determine if you need a flag and, if so, determine the flag type. Declare the flag. Wrap your code change in the flag. Set the flag\u0027s value. Build and test your code. Change flag values at runtime. Test code that uses feature release flags The pages in this section teach you how to perform each of these steps. Content and code samples on this page are subject to the licenses described in the Content License. Java and OpenJDK are trademarks or registered trademarks of Oracle and/or its affiliates. Last updated 2026-04-10 UTC. [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thumb-down\"],[\"Out of date\",\"outOfDate\",\"thumb-down\"],[\"Samples / code issue\",\"samplesCodeIssue\",\"thumb-down\"],[\"Other\",\"otherDown\",\"thumb-down\"]],[\"Last updated 2026-04-10 UTC.\"],[],[]]",
+    "scrapedAt": "2026-05-10 03:53:33.126495"
+  },
+  {
     "id": 243,
     "url": "https://source.android.com/#main-content",
     "title": "Android Open Source Project",
@@ -1697,26 +1732,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 244,
-    "url": "https://source.android.com/docs/setup/build/feature-flagging"
-  },
-  {
-    "id": 245,
-    "url": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
-  },
-  {
-    "id": 246,
-    "url": "https://source.android.com/docs/core"
-  },
-  {
-    "id": 247,
-    "url": "https://source.android.com/docs/core/connect"
-  },
-  {
-    "id": 248,
-    "url": "https://source.android.com/docs/automotive"
   },
   {
     "id": 249,
@@ -43290,10 +43305,765 @@ window.searchData = [
     "id": 21209,
     "url": "https://source.android.com/docs/security/best-practices",
     "parentUrl": "https://source.android.com/docs/compatibility"
+  },
+  {
+    "id": 21227,
+    "url": "https://source.android.com/docs/setup/contribute/release-lifecycle",
+    "parentUrl": "https://source.android.com/docs/setup/build/feature-flagging"
+  },
+  {
+    "id": 21231,
+    "url": "https://source.android.com/docs/setup/build/feature-flagging#main-content",
+    "parentUrl": "https://source.android.com/docs/setup/build/feature-flagging"
+  },
+  {
+    "id": 21232,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-releases",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21233,
+    "url": "https://source.android.com/docs/automotive/unbundled_apps/app-lock",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21234,
+    "url": "https://source.android.com/docs/core/tests/development/android-test-station/ats-2-upgrade",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21236,
+    "url": "https://source.android.com/docs/compatibility/cts/audio-framework",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21237,
+    "url": "https://source.android.com/docs/compatibility/13/android-13-cdd#744_near-field_communications",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21238,
+    "url": "https://source.android.com/docs/automotive/unbundled_apps/integration",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21240,
+    "url": "https://source.android.com/docs/core/connect/uicc#prepare_uicc",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21241,
+    "url": "https://source.android.com/docs/core/tests/tradefed/testing/through-suite/option-passing",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21242,
+    "url": "https://source.android.com/docs/security/bulletin/xr/2026/2026-04-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21243,
+    "url": "https://source.android.com/docs/security/test/autorepro",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21244,
+    "url": "https://source.android.com/docs/compatibility/cts/verifier-pro-audio",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21246,
+    "url": "https://source.android.com/docs/compatibility/14/android-14-cdd#744_near-field_communications",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21247,
+    "url": "https://source.android.com/docs/security/bulletin/2025-12-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21248,
+    "url": "https://source.android.com/docs/setup/build/feature-flagging/set-values",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21249,
+    "url": "https://source.android.com/docs/automotive/unbundled_apps/ua-release-notes#car-apps-release-22",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21250,
+    "url": "https://source.android.com/docs/security/bulletin/aaos/2026/2026-01-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21251,
+    "url": "https://source.android.com/docs/automotive/unbundled_apps/ua-release-notes#car-apps-release-21",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21252,
+    "url": "https://source.android.com/docs/security/bulletin/2026/2026-02-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21253,
+    "url": "https://source.android.com/docs/automotive/unbundled_apps/ua-release-notes#car-apps-release-20",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21255,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-android16-6_12-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21256,
+    "url": "https://source.android.com/docs/core/tests/debug/rescue-party",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21257,
+    "url": "https://source.android.com/docs/security/bulletin/wear/2026/2026-03-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21258,
+    "url": "https://source.android.com/docs/core/architecture/16kb-page-size/16kb-developer-option",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21260,
+    "url": "https://source.android.com/docs/core/tests/development/android-test-station/ats-user-guide",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21262,
+    "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-03-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21263,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21264,
+    "url": "https://source.android.com/docs/security/bulletin/aaos/2026/2026-04-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21265,
+    "url": "https://source.android.com/docs/compatibility/16/android-16-cdd#744_near-field_communications",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21266,
+    "url": "https://source.android.com/docs/core/power/wattson/how-to-wattson",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21267,
+    "url": "https://source.android.com/docs/core/tests/tradefed/testing/through-tf/dry-run",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21268,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-android13-5_15-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21270,
+    "url": "https://source.android.com/docs/security/features/keystore/attestation#provisioninginfo_extension_schema",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21271,
+    "url": "https://source.android.com/docs/security/bulletin/2026/2026-01-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21272,
+    "url": "https://source.android.com/docs/setup/download#initialize_the_repo_client",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21273,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-android15-6_6-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21274,
+    "url": "https://source.android.com/docs/security/bulletin/wear/2026/2026-02-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21275,
+    "url": "https://source.android.com/docs/core/graphics/productionized-dpu-readback",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21276,
+    "url": "https://source.android.com/docs/compatibility/cts/camera-modular-rig-system",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21277,
+    "url": "https://source.android.com/docs/security/test/memory-safety/hwasan-reports",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21278,
+    "url": "https://source.android.com/docs/security/bulletin/pixel-watch/2026/2026-03-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21279,
+    "url": "https://source.android.com/docs/security/bulletin/xr",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21280,
+    "url": "https://source.android.com/docs/setup/about/faqs#android-latest-release",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21281,
+    "url": "https://source.android.com/docs/core/connect/android-custom-tabs-captive-portal",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21282,
+    "url": "https://source.android.com/docs/core/interaction",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21283,
+    "url": "https://source.android.com/docs/core/connect/bluetooth/hci_requirements",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21284,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-android14-5_15-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21285,
+    "url": "https://source.android.com/docs/whatsnew/site-updates#main-content",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21286,
+    "url": "https://source.android.com/docs/core/ota/modular-system/nfc-services",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21287,
+    "url": "https://source.android.com/docs/core/architecture/kernel/dma-buf-heaps",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21288,
+    "url": "https://source.android.com/docs/core/tests/development/android-test-station/ats-release-notes",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21289,
+    "url": "https://source.android.com/docs/security/bulletin/2026/2026-04-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21291,
+    "url": "https://android.googlesource.com/platform/manifest/+/refs/heads/android-latest-release/default.xml#7",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21292,
+    "url": "https://source.android.com/docs/automotive/unbundled_apps/ua-release-notes",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21293,
+    "url": "https://source.android.com/docs/compatibility/15/android-15-cdd#744_near-field_communications",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21294,
+    "url": "https://source.android.com/docs/core/architecture/aidl/aidl-backends#link-to-death",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21295,
+    "url": "https://source.android.com/docs/security/bulletin/2025-04-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21296,
+    "url": "https://source.android.com/docs/security/bulletin/xr/2026/2026-01-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21298,
+    "url": "https://source.android.com/docs/compatibility/12/android-12-cdd#744_near-field_communications",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21299,
+    "url": "https://source.android.com/docs/devices/cuttlefish/create-chd",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21300,
+    "url": "https://source.android.com/docs/core/architecture/aidl/fmq",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21301,
+    "url": "https://source.android.com/docs/core/connect/android-proprietary-nci-commands",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21302,
+    "url": "https://source.android.com/opensourcerequest",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21303,
+    "url": "https://source.android.com/docs/security/overview/reports",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21304,
+    "url": "https://source.android.com/docs/core/architecture/kernel/convert-or-add",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21305,
+    "url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21306,
+    "url": "https://source.android.com/docs/core/power/wattson/wattson",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21307,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-android14-6_1-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21308,
+    "url": "https://source.android.com/docs/security/bulletin/wear/2026/2026-04-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21310,
+    "url": "https://source.android.com/docs/compatibility/15/android-15-cdd#75_cameras",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21312,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-respin",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21313,
+    "url": "https://source.android.com/docs/compatibility/cts/cts-16-1-release-notes",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21315,
+    "url": "https://source.android.com/docs/automotive/camera/acs/overview",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21316,
+    "url": "https://source.android.com/docs/security/features/authentication/weaver",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21317,
+    "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-02-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21318,
+    "url": "https://source.android.com/docs/core/graphics/implement-vulkan#vulkan-1.4-functionality-overview",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21319,
+    "url": "https://source.android.com/docs/setup/reference",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21320,
+    "url": "https://source.android.com/docs/security/bulletin/aaos/2026/2026-03-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21321,
+    "url": "https://source.android.com/docs/compatibility/cts/downloads",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21322,
+    "url": "https://source.android.com/docs/core/architecture/kernel/release-notes",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21323,
+    "url": "https://source.android.com/docs/core/graphics/winscope/run",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21324,
+    "url": "https://source.android.com/docs/core/architecture/ipc/binder-freezer",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21326,
+    "url": "https://source.android.com/docs/core/architecture/bootloader/generic-bootloader/gbl-dev",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21327,
+    "url": "https://source.android.com/docs/compatibility/cts/camera-its-box-gen2",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21328,
+    "url": "https://source.android.com/docs/security/test/memory-safety/bootloader-support",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21330,
+    "url": "https://source.android.com/docs/security/bulletin/xr/2026/2026-03-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21331,
+    "url": "https://source.android.com/docs/core/connect/wifi-network-selection",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21333,
+    "url": "https://source.android.com/docs/compatibility/cts/camera-its-box",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21335,
+    "url": "https://source.android.com/docs/core/tests/development/android-test-station/faq",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21336,
+    "url": "https://source.android.com/docs/core/ota/dynamic_partitions/how_to_size_super",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21337,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-android13-5_10-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21338,
+    "url": "https://source.android.com/docs/automotive/start/releases/aaos-25q4",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21339,
+    "url": "https://source.android.com/docs/security/overview/updates-resources",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21340,
+    "url": "https://source.android.com/docs/compatibility/16/android-16-cdd#75_cameras",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21341,
+    "url": "https://source.android.com/docs/security/bulletin/android-14",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21342,
+    "url": "https://source.android.com/docs/core/tests",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21343,
+    "url": "https://source.android.com/docs/compatibility/cts/usb-audio",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21344,
+    "url": "https://source.android.com/docs/compatibility/14/android-14-cdd#75_cameras",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21345,
+    "url": "https://source.android.com/docs/security/bulletin/xr/2026/2026-02-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21346,
+    "url": "https://source.android.com/docs/setup/reference/build-numbers",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21347,
+    "url": "https://source.android.com/docs/setup/build",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21348,
+    "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-04-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21349,
+    "url": "https://source.android.com/docs/core/architecture/vintf/fcm",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21350,
+    "url": "https://source.android.com/docs/compatibility/cts/setup",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21351,
+    "url": "https://source.android.com/docs/automotive/watchdog/wd_flash_memory",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21353,
+    "url": "https://source.android.com/docs/core/power",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21354,
+    "url": "https://source.android.com/docs/security/overview/acknowledgements",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21355,
+    "url": "https://source.android.com/docs/compatibility/cts/media-cts",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21356,
+    "url": "https://source.android.com/docs/core/tests/development/android-test-station/ats-user-guide#install-python3",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21357,
+    "url": "https://source.android.com/docs/automotive/hmi/aosp_host/media-cal",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21358,
+    "url": "https://source.android.com/docs/core/graphics",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21359,
+    "url": "https://source.android.com/docs/security/bulletin/wear/2026/2026-01-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21362,
+    "url": "https://source.android.com/docs/core/ota",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21363,
+    "url": "https://source.android.com/docs/compatibility/cts/cts-faq#tests-run-disabled-flags",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21364,
+    "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-01-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21365,
+    "url": "https://source.android.com/docs/core/architecture/kernel/gki-android12-5_10-release-builds",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21366,
+    "url": "https://source.android.com/docs/core/architecture/kernel/android-common",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21367,
+    "url": "https://source.android.com/docs/security/bulletin/aaos/2026/2026-02-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21368,
+    "url": "https://source.android.com/docs/security/bulletin/2025-11-01",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21369,
+    "url": "https://source.android.com/docs/compatibility/cts/ctsv-setup-bananapi-r3-ap",
+    "parentUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "id": 21370,
+    "url": "https://source.android.com/docs/core/settings",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21371,
+    "url": "https://source.android.com/docs/core/runtime",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21372,
+    "url": "https://source.android.com/docs/core/permissions",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21375,
+    "url": "https://source.android.com/docs/core#main-content",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21377,
+    "url": "https://source.android.com/docs/core/audio",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21380,
+    "url": "https://source.android.com/docs/core/media",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21382,
+    "url": "https://source.android.com/docs/core/storage",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21388,
+    "url": "https://source.android.com/docs/core/data",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21390,
+    "url": "https://source.android.com/docs/core/display",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21392,
+    "url": "https://source.android.com/docs/core/camera",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21393,
+    "url": "https://source.android.com/docs/core/perf",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21394,
+    "url": "https://source.android.com/docs/core/fonts/custom-font-fallback",
+    "parentUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "id": 21396,
+    "url": "https://source.android.com/docs/core/connect#main-content",
+    "parentUrl": "https://source.android.com/docs/core/connect"
+  },
+  {
+    "id": 21402,
+    "url": "https://source.android.com/docs/automotive/tools",
+    "parentUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "id": 21404,
+    "url": "https://source.android.com/docs/automotive#main-content",
+    "parentUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "id": 21408,
+    "url": "https://source.android.com/docs/automotive/dev-tools",
+    "parentUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "id": 21409,
+    "url": "https://source.android.com/docs/automotive/start/what_automotive",
+    "parentUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "id": 21410,
+    "url": "https://source.android.com/docs/automotive/guidelines",
+    "parentUrl": "https://source.android.com/docs/automotive"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Automotive | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/car.svg",
+    "alt": "",
+    "pageTitle": "Automotive | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "src": "https://developer.android.com/images/picto-icons/learning-resources.svg",
+    "alt": "",
+    "pageTitle": "Automotive | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/tools-update.svg",
+    "alt": "",
+    "pageTitle": "Automotive | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "src": "https://developer.android.com/images/spot-icons/engagement.svg",
+    "alt": "",
+    "pageTitle": "Automotive | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/automotive"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Connectivity | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/core/connect"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Android OS core topics | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "src": "https://developer.android.com/images/cluster-illustrations/ui-guidelines.svg",
+    "alt": "",
+    "pageTitle": "Android OS core topics | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/core"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Site updates | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/whatsnew/site-updates#aosp-changes"
+  },
+  {
+    "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
+    "alt": "Android Open Source Project",
+    "pageTitle": "Feature launch flag overview | Android Open Source Project",
+    "pageUrl": "https://source.android.com/docs/setup/build/feature-flagging"
+  },
   {
     "src": "https://www.gstatic.com/devrel-devsite/prod/v1b953b434e2033f0160fd97c99360ee5d4d0a613449c2a694360a72d378b9d8e/androidsource/images/lockup.png",
     "alt": "Android Open Source Project",
