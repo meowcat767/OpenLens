@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 664,
+    "url": "https://www.python.org/dev/",
+    "title": "Python Developer\u0027s Guide | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u0027s Developer Guide can be found at https://devguide.python.org. The pieces of documentation hosted here are: PEPs (Python Enhancement Proposals) Buildbots Python.org maintenance and administration The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-05-10 04:33:02.734795"
+  },
+  {
+    "id": 663,
+    "url": "http://docs.python.org/3/reference/",
+    "title": "The Python Language Reference — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference | Theme Auto Light Dark | The Python Language Reference¶ This reference manual describes the syntax and “core semantics” of the language. It is terse, but attempts to be exact and complete. The semantics of non-essential built-in object types and of the built-in functions and modules are described in The Python Standard Library. For an informal introduction to the language, see The Python Tutorial. For C or C++ programmers, two additional manuals exist: Extending and Embedding the Python Interpreter describes the high-level picture of how to write a Python extension module, and the Python/C API reference manual describes the interfaces available to C/C++ programmers in detail. 1. Introduction 1.1. Alternate Implementations 1.2. Notation 2. Lexical analysis 2.1. Line structure 2.2. Other tokens 2.3. Names (identifiers and keywords) 2.4. Literals 2.5. String and Bytes literals 2.6. Numeric literals 2.7. Operators and delimiters 3. Data model 3.1. Objects, values and types 3.2. The standard type hierarchy 3.3. Special method names 3.4. Coroutines 4. Execution model 4.1. Structure of a program 4.2. Naming and binding 4.3. Exceptions 4.4. Runtime Components 5. The import system 5.1. importlib 5.2. Packages 5.3. Searching 5.4. Loading 5.5. The Path Based Finder 5.6. Replacing the standard import system 5.7. Package Relative Imports 5.8. Special considerations for __main__ 5.9. References 6. Expressions 6.1. Arithmetic conversions 6.2. Atoms 6.3. Primaries 6.4. Await expression 6.5. The power operator 6.6. Unary arithmetic and bitwise operations 6.7. Binary arithmetic operations 6.8. Shifting operations 6.9. Binary bitwise operations 6.10. Comparisons 6.11. Boolean operations 6.12. Assignment expressions 6.13. Conditional expressions 6.14. Lambdas 6.15. Expression lists 6.16. Evaluation order 6.17. Operator precedence 7. Simple statements 7.1. Expression statements 7.2. Assignment statements 7.3. The assert statement 7.4. The pass statement 7.5. The del statement 7.6. The return statement 7.7. The yield statement 7.8. The raise statement 7.9. The break statement 7.10. The continue statement 7.11. The import statement 7.12. The global statement 7.13. The nonlocal statement 7.14. The type statement 8. Compound statements 8.1. The if statement 8.2. The while statement 8.3. The for statement 8.4. The try statement 8.5. The with statement 8.6. The match statement 8.7. Function definitions 8.8. Class definitions 8.9. Coroutines 8.10. Type parameter lists 8.11. Annotations 9. Top-level components 9.1. Complete Python programs 9.2. File input 9.3. Interactive input 9.4. Expression input 10. Full Grammar specification Previous topic 8. Editors and IDEs Next topic 1. Introduction This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 09, 2026 (15:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-10 04:32:59.208062"
+  },
+  {
+    "id": 662,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Programmers",
+    "title": "BeginnersGuide/Programmers",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Please Note This is a Wiki page. Users with edit rights can edit it. You are, therefore, encouraged to add details of material that other Python users will find useful. It is not an advertising page and is here to serve the whole Python community. Users who continually edit pages to give their own materials (particularly commercial materials) prominence, or spam the listing with multiple entries which point to resources with only slightly altered material, may subsequently find their editing rights disabled. You have been warned. On a cheerier note - there is a constant stream of new and updated information on Python as the language is exploding in popularity. Only enthusiastic volunteers can keep this page current, so if something helps you, feel free to link it here. If a link doesn\u0027t work, remove it unless there\u0027s an obvious new location for the same content. Python for Programmers The tutorials on this page aim at people with previous experience with other programming languages (C, Perl, Lisp, Visual Basic, etc.). Also of potential interest are related pages BeginnersGuide/Overview and BeginnersGuide/NonProgrammers (it\u0027s not always easy to distinguish \"for experienced programmers\" and \"for first-time programmers\" and there\u0027s likely some overlap). Also see the tips in MovingToPythonFromOtherLanguages. Books, Websites, Tutorials (non-interactive) Resources A beginner-friendly Python course with interactive, bite-size lessons, and over 100 challenges. A beginner-friendly Python tutorial that starts with the absolute basics but also covers more advanced stuff like Python software deployment. A Byte of Python, by Swaroop C.H. An introductory text for beginners and experienced programmers looking to learn Python. After Hours Programming\u0027s Python Introduction A beginners introduction into Python. Awesome Python A curated list of awesome Python frameworks, libraries, software and resources. CheckiO interactive learning resource Creative way to improve Python skills with interesting tasks, it also supports Python 3|2. Classpert - Python - A collection of free and paid Python online courses from a wide range of providers. Codédex - A learn to code platform for K-12 and college students. CodersLegacy A website + blog geared towards both new and experienced programmers. Mainly focused on teaching Python. Dive Into Python 3 by Mark Pilgrim. Effective Python - Paid book by Brett Slatkin; Practical best practices and idiomatic patterns to write cleaner, safer Python. Elements of Python Style This document goes beyond PEP8 to cover the core of what the author thinks of as great Python style. Finxter - Solve Python puzzles and test your Python skill level (beginner to grandmaster level). Full Stack Python Once you know the basics, learn how to build, deploy and operate Python Applications. ItsMyCode A Python Programming Blog which teaches Python basics and helps to solve various issues which developers face in day to day Programming Kaggle Learn Hands-on Python and data skills using real datasets and notebooks. Learn Python Step by Step - Start learning python from the basics to pro-level and attain proficiency. OverIQ Learn Python OverIQ - Site has additional tutorials on Django, Flask, SQLAlchemy and MySQL Connector. An entry-level course to get you started with Python Programming. Learn Python - Tutorial for Beginners A comprehensive Python guide to get started, Python tutorials, and examples for beginners. Free python tips and tutorials Python tips and tutorials for beginners and professional programmers. Intro to Python - A Brief Presentation about Python mainly aimed at experienced programmers. Might be nice as a first pass over the language. Learn Python in 10 minutes Pytest documentation Learn testing, fixtures, and clean API design through practical examples. Python 3 Patterns, Recipes, and Idioms by Bruce Eckel and Friends. Python Cookbook - Paid book by David Beazley \u0026 Brian K. Jones Recipe-based solutions to common real-world Python problems. Python Course - This online Python course is aiming at beginners and with advanced topics at experienced programmers as well. Python Koans Learn Python through TDD Python Programming for Beginners A short introduction to writing command-line applications in Python by Jacek Artymiak. PythonSpeed.com Great resource with insightful ways to speed up your Python code Python Essential Reference (book) If you want a highly compressed K\u0026R-style \u0027just the facts\u0027 overview, David Beazley\u0027s \"Python Essential Reference\" covers practically all of the language in about a hundred pa",
+    "scrapedAt": "2026-05-10 04:32:56.620104"
+  },
+  {
+    "id": 661,
+    "url": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments",
+    "title": "IntegratedDevelopmentEnvironments",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Please keep wiki links as wiki links, use external links only if there is no existing page for the IDE. Reviews First look on Thonny (Jeff Elkner, 2016-01-23) Evaluating IDEs for Scientific Python (Patrick Mineault, 2013-05-27) Comparison of Python IDEs for Development(Jason Fruit, 2013-01-14) Do Python Coding with NINJA-IDE(Dmitri Popov, 2011-07-13) InfoWorld review: Nine fine Python development tools (Rick Grehan, 2010-09-08) Stackoverflow \"what IDE to use for python\" (Various, 2009-01-01) Ask Slashdot: Best Cross-Platform, GUI Editor/IDE For Python? (Various, 2008-09-16) Wing IDE Professional 3.1.1: An IDE for Python (Dr. Dobb\u0027s Journal, June 9, 2008) September 2005 Review of 6 Python IDEs (PyDev, Eric3, Boa, BlackAdder, Komodo, Wing) and the February 2006 follow-up review of 4 (PyDev, SPE, Komodo, Wing) What is the best Python IDE? Opinionated tutorial chapter about using VS Code for Python development (Python.land, 2021) See also Wikipedia\u0027s list of Python IDEs and ShowMeDo videos for Wing 3 Professional, Python Development With SPE, Eclipse PyDev and IPython (see site page for updated information). IDEs with introspection-based code completion and integrated debugger Name Platform Entry Updated Notes Thonny Windows, Linux, Mac OS X, more 2025 For teaching/learning programming. Focused on program runtime visualization. Provides stepping both in statements and expressions, no-hassle variables view, separate mode for explaining references etc. Komodo Windows/Linux/Mac OS X 2025 Multi-language IDE with support for Python 2.x and Python 3. Retired by ActiveState https://www.activestate.com/products/komodo-ide/. Now open source only, see https://github.com/ActiveState/OpenKomodoIDE CodeLobster IDE Windows/Linux/Mac OS X 2023 Multi-language IDE with free support for Python: code completion, navigation and highlighting etc. LiClipse Linux/Mac OS X/Windows 2023 Commercial Eclipse-based IDE which provides a standalone bundling PyDev, Workspace Mechanic, Eclipse Color Theme, StartExplorer and AnyEdit, along with lightweight support for other languages, and other usability enhancements (such as multi-caret-edition). NetBeans Linux, Mac, Solaris, Windows 2023 Python/Jython support in NetBeans -- Open source, allows Python and Jython Editing, code-completion, debugger, refactoring, templates, syntax analysis, etc. Note: the Python plugin as a community-supported project, and may trail behind. Currently it works for 8.1, does not appear to be available for 8.2 PyCharm Linux/Mac OS X/Windows 2025 The Community edition is a free IDE with a smart Python editor providing quick code navigation, code completion, refactoring, unit testing and debugger. The commercial Professional edition fully supports Web development with Django, Flask, Mako and Web2Py and allows to develop remotely. JetBrains offers free PyCharm Professional licenses for open-source projects under certain conditions https://www.jetbrains.com/buy/opensource/. Also free access for Student/Educational use. Python for VS Code Linux/Mac OS X/Windows 2023 Free open-source extension for Visual Studio Code (now maintained by Microsoft). Supports syntax highlighting, debugging, code completion, code navigation, unit testing, refactoring, with support for Django, multi threaded, local and remote debugging. KDevelop Linux/Mac OS X/(Windows) 2023 Free open-source IDE with a focus on static analysis-based code completion, navigation and highlighting. Also features a VI emulation mode. PyDev Eclipse 2023 Free, open-source plugin for Eclipse -- Allows Python, Jython, and IronPython editing, code-completion, debugger, refactoring, quick navigation, templates, code analysis, unittest integration, Django integration, etc. Wing Windows, Intel \u0026 ARM Linux, macOS 2025 Family of Python IDEs with AI-assisted development, advanced debugger, editor with vi, emacs, visual studio and other key bindings, auto-completion, auto-editing, import management, multi-selection, inline code warnings, snippets, goto-definition, find uses, refactoring, unit testing with code coverage, remote development, support for containers and clusters, array and dataframe viewer, bookmarking, project management with version control, Python environment creation with virtualenv, pipenv, conda, Docker, and Poetry, Python package management with pip, pipenv, conda, and Poetry, source browser, PEP 8 / Black / YAPF / Ruff reformatting, and much more. Product levels, include free and paid versions with a fully functional trial and free licenses for educational use and unpaid open source developers. Documenta",
+    "scrapedAt": "2026-05-10 04:32:53.2584"
+  },
+  {
+    "id": 660,
+    "url": "http://wiki.python.org/moin/PythonEditors",
+    "title": "PythonEditors",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. If you have anything to contribute -- e.g. configurations for editors, new editors, or opinion -- don\u0027t hesitate to edit or create pages. There\u0027s an EditorConfigurationHowto available. Contents Multiplatform Editors Unix-Only Editors Windows-Only Editors Macintosh-Only Editors Online Editors Glorified Editors Enhanced Python shells Mobile Device Editors Other Resources Never ending debate Please keep wiki links as wiki links, use external links only if there is no existing page for the editor. Please add pages like BoaConstructor also to page IntegratedDevelopmentEnvironments. Multiplatform Editors Name Platform Impl. Language License Notes a8 Linux, FreeBSD Python, GTK GPLv3 Embed Vim. Little brother of PIDA Alphatk Unix/X, Windows, Mac OS X Tcl/Tk Proprietary Extensible in Tcl, Tk; Can interact with python. Atom Unix/X, Windows, Mac OS X Python MIT Python language support for Atom-IDE, powered by the Python language server. Code::Blocks Linux, Windows, Mac OS X C++, wxWidgets GPLv3 class browser does not currently work for .py files, but it\u0027s still a nice IDE to use for python projects Bluefish Linux, Windows, Mac OS X C, GTK+ GPLv3 The link points to the features page. Cream Linux, Windows, FreeBSD C GPLv3 Cream is a free and easy-to-use configuration of the powerful and famous Vim text editor for both Microsoft Windows and GNU/Lfinux. Cssed Unix/X, Windows, Mac OS X C, GTK+ GPLv2 CSS editor with syntax highlighting for Python, and embedded Python interpreter. Extensible through a Python API. codeEditor Unix/X, Windows, Mac OS X Python, wxPython BSD Extensible in Python; part of PythonCard. Includes PyCrust shell. CodeLobster Unix/X, Windows, Mac OS X Python Proprietary Free version includes Python support. eric Linux, Windows, Mac OS X Python, PyQt GPLv3 Complete IDE, very well integrated with PyQT development, but usable for any kind of project. Supports projects, debugging, auto-complete, syntax coloring, etc. It is extensible via plug-in system. Integrated version control interface for Git, Subversion and Mercurial through core plugins. eric6 requires Python 3 (and, if desired, PyQt5), and supports CxFreeze and PyInstaller, Django and Pyramid, PyLint and Vulture CRiSP Unix/X, Windows, Mac OS X Proprietary BRIEF-compatible, supports Python syntax, in-buffer Python interpreter, supports lots of languages. Powerful macro language. DRAKON Editor Windows, Mac OS X, Linux Tcl/Tk Public domain DRAKON diagram editor with code generation in Python. DreamPie Windows, Linux and Mac/MacPorts Python, PyGTK GPLv3 Interactive shell with history box and code box, auto-completion of attributes and file names, auto-display of function arguments and documentation. Keeps your recent results, provides session history saving (optionally in HTML), interactive plotting with matplotlib. Extremely fast and responsive. DrPython Unix/X, Windows, Mac OS X Python, wxPython GPL Simple, Highly Customizable Editor/Environment. A Tribute to DrScheme. Eclipse Unix/X, Windows, Mac OS X Java EPL Eclipse is ... an open extensible IDE for anything and nothing in particular.\" Support for Python can be obtained via the PyDEV plugin. EditPad Pro Linux, Windows Proprietary Built-in Python syntax highlighting, Python class browsing, Python-compatible regular expressions, code folding, and extensive options for running external tools such as Python scripts. Editra Linux, Windows, Mac OS X Python, wxPython wxWindows A general purpose developer\u0027s text editor written in Python/wxPython. It supports python syntax highlighting, auto-ident, auto-completion, classbrowser, and can run scripts from inside the editor. Extensible with plugins written in python. EmacsEditor Unix/X, Windows, Mac OS C, Lisp GPLv3 Python support with EmacsPythonMode. Extensible in Python using pymacs Epsilon Linux, Windows, FreeBSD and OS/2 Proprietary Customizable Python mode, syntax coloring, function tagging. ExCo Linux, Windows, Mac OS Python, PyQt4 GPLv3 Extensible editor written in Python, Python/C/Nim code tree browser, 3-window editing, text diff, multi-language support, Python REPL, manipulate editor text with Python code FTE Text Editor Unix/X, Windows, DOS, OS/2 C++ GPL Supports lots of languages, including Python; doesn\u0027t seem programmable Geany Unix/X, Windows C, GTK+ GPLv2 A small and lightweight GTK+ IDE that supports lots of languages, including Python. gedit Unix/X, Windows, Mac OS C, Python GPLv2 gedit is the official text editor of the GNOME desktop environment, with Python syntax highlighting. J Linux, Windows, Mac OS X Java GPLv2 syntax coloring for py",
+    "scrapedAt": "2026-05-10 04:32:50.026821"
+  },
+  {
     "id": 659,
     "url": "http://docs.python.org/3/library/",
     "title": "The Python Standard Library — Python 3.14.5rc1 documentation",
@@ -4347,26 +4382,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 660,
-    "url": "http://wiki.python.org/moin/PythonEditors"
-  },
-  {
-    "id": 661,
-    "url": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
-  },
-  {
-    "id": 662,
-    "url": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
-  },
-  {
-    "id": 663,
-    "url": "http://docs.python.org/3/reference/"
-  },
-  {
-    "id": 664,
-    "url": "https://www.python.org/dev/"
   },
   {
     "id": 665,
@@ -102875,10 +102890,2108 @@ window.searchData = [
     "id": 75335,
     "url": "https://docs.python.org/3/library/csv.html",
     "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 75337,
+    "url": "https://code.visualstudio.com/docs/languages/python",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75338,
+    "url": "https://codingfriends.github.io/Tincta/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75339,
+    "url": "https://wiki.python.org/moin/OpenSource.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75340,
+    "url": "https://https//cliprun.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75341,
+    "url": "http://eric-ide.python-projects.org",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75342,
+    "url": "https://wxpython.org/Phoenix/docs/html/wx.py.PyCrust.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75343,
+    "url": "https://wiki.python.org/moin/PythonWin.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75344,
+    "url": "http://code.google.com/p/pysmell",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75345,
+    "url": "http://www.geany.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75346,
+    "url": "http://www.openkomodo.com",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75347,
+    "url": "https://wiki.python.org/moin/QtConsole.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75348,
+    "url": "http://www.crisp.demon.co.uk/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75349,
+    "url": "https://chocolatapp.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75350,
+    "url": "http://www.activestate.com/komodo-edit/compare-with-komodo-ide",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75351,
+    "url": "http://www.purl.org/net/alphatk/about.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75352,
+    "url": "https://wiki.python.org/moin/DrScheme.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75353,
+    "url": "https://apps.apple.com/us/app/pythonista-3/id1085978097",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75354,
+    "url": "http://bluefish.openoffice.nl/features.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75355,
+    "url": "https://wiki.python.org/moin/PyBoard.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75356,
+    "url": "https://wiki.python.org/moin/EmacsPythonMode.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75357,
+    "url": "https://github.com/microsoft/vscode-python",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75358,
+    "url": "http://www.datanaut.de/download",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75359,
+    "url": "https://github.com/pfalcon/pyedit",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75360,
+    "url": "https://wiki.python.org/moin/Vim.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75361,
+    "url": "http://www.jasspa.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75362,
+    "url": "https://wiki.python.org/moin/ActiveState.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75363,
+    "url": "https://wiki.python.org/moin/PyCrust.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75364,
+    "url": "http://MacPorts.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75365,
+    "url": "http://wiki.python.org/moin/SPE",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75367,
+    "url": "http://www.cwi.nl/~jack/macpython.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75369,
+    "url": "https://itunes.apple.com/us/app/python-box/id1355983473?mt\u003d8",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75370,
+    "url": "https://itunes.apple.com/us/app/python-2.7-for-ios/id485729872?ls\u003d1\u0026mt\u003d8",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75371,
+    "url": "http://www.codelobster.com",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75372,
+    "url": "http://plugins.intellij.net/plugin/?id\u003d631",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75373,
+    "url": "https://wiki.python.org/moin/TkInter.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75374,
+    "url": "https://wiki.python.org/moin/PythonEditors#Online_Editors",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75375,
+    "url": "https://wiki.python.org/moin/PythonEditors#Enhanced_Python_shells",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75376,
+    "url": "http://mooedit.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75377,
+    "url": "https://www.pythonanywhere.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75378,
+    "url": "https://wiki.python.org/moin/EditorConfigurationHowto.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75379,
+    "url": "http://cssed.sourceforge.net",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75380,
+    "url": "http://editxt.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75381,
+    "url": "https://itunes.apple.com/us/app/python-3.3-for-ios/id577911279?ls\u003d1\u0026mt\u003d8",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75382,
+    "url": "http://www.vim.org",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75383,
+    "url": "http://www.sublimetext.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75384,
+    "url": "http://anjuta.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75385,
+    "url": "https://platform.activestate.com/ActiveState/ActivePython-3.6",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75386,
+    "url": "https://wiki.python.org/moin/PythonEditors#Mobile_Device_Editors",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75387,
+    "url": "http://jetbrains.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75388,
+    "url": "https://atom.io/packages/ide-python",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75389,
+    "url": "https://wiki.python.org/moin/CxFreeze.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75391,
+    "url": "http://wiki.wxpython.org/PythonCardEditor",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75392,
+    "url": "http://www.codingmonkeys.de/subethaedit/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75393,
+    "url": "https://wiki.python.org/moin/EmacsEditor.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75394,
+    "url": "http://thonny.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75395,
+    "url": "http://projects.gandreas.com/scride/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75396,
+    "url": "https://pypi.org/project/pywin32/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75397,
+    "url": "http://pida.co.uk",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75398,
+    "url": "http://wiki.netbeans.org/Python",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75399,
+    "url": "http://alphatcl.sf.net",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75400,
+    "url": "http://www.activestate.com/komodo-ide",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75401,
+    "url": "https://github.com/zyedidia/micro",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75402,
+    "url": "https://wiki.python.org/moin/WxGlade.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75403,
+    "url": "http://sourcenav.sf.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75404,
+    "url": "https://www.anaconda.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75405,
+    "url": "http://www.panic.com/coda/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75406,
+    "url": "http://scintilla.sourceforge.net/gen_python_api.zip",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75407,
+    "url": "http://drpython.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75408,
+    "url": "http://sourceforge.net/projects/gecrit/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75409,
+    "url": "http://www.kdevelop.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75411,
+    "url": "http://jpydbg.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75412,
+    "url": "https://aws.amazon.com/cloud9/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75413,
+    "url": "http://www.eclipse.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75414,
+    "url": "https://wiki.python.org/moin/Java.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75415,
+    "url": "https://wiki.python.org/moin/PyChecker.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75416,
+    "url": "https://sourceforge.net/projects/codecrusader/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75417,
+    "url": "https://wiki.python.org/moin/PyInstaller.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75418,
+    "url": "https://wiki.python.org/moin/PythonEditors(3f)action(3d)AttachFile(26)do(3d)view(26)target(3d)pye.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75419,
+    "url": "http://www.editra.org",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75420,
+    "url": "http://nedit.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75421,
+    "url": "http://pythoncard.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75422,
+    "url": "http://activegrid.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75423,
+    "url": "http://www.mirbsd.org/jupp.htm",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75424,
+    "url": "https://wiki.python.org/moin/TextMate.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75425,
+    "url": "https://notepad-plus-plus.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75426,
+    "url": "https://wiki.python.org/moin/EmacsVsVi.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75427,
+    "url": "http://code.google.com/p/ulipad",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75428,
+    "url": "http://code.google.com/p/wxpysuite/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75429,
+    "url": "https://wiki.python.org/moin/ActivePython.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75430,
+    "url": "https://wiki.python.org/moin/Win32All.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75431,
+    "url": "https://wiki.python.org/moin/Python(20)Box.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75432,
+    "url": "http://www.jedit.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75433,
+    "url": "http://www.codeforge.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75434,
+    "url": "http://www.xored.com/trustudio",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75435,
+    "url": "https://itunes.apple.com/us/app/python-3.4-for-ios/id583476348?ls\u003d1\u0026mt\u003d8",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75436,
+    "url": "https://colab.google/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75437,
+    "url": "https://github.com/holzschu/python3_ios",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75438,
+    "url": "http://www.activestate.com/komodo-ide/python-editor",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75439,
+    "url": "http://www.activestate.com/komodo-edit",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75440,
+    "url": "http://www.slickedit.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75441,
+    "url": "https://wiki.python.org/moin/DrPython.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75442,
+    "url": "http://github.com/jfmoy/Fraise",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75443,
+    "url": "http://armedbear-j.sf.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75444,
+    "url": "http://www.jedsoft.org/jed/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75445,
+    "url": "https://wiki.python.org/moin/PyLint.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75446,
+    "url": "https://wiki.python.org/moin/IntegratedDevelopmentEnvironments.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75447,
+    "url": "http://pype.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75448,
+    "url": "http://netbeans.org",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75449,
+    "url": "https://wiki.python.org/moin/MacPython.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75450,
+    "url": "https://wiki.python.org/moin/Genie(20)Jython.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75451,
+    "url": "https://www.nano-editor.org",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75452,
+    "url": "https://wiki.python.org/moin/WxPython.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75453,
+    "url": "http://www.codeblocks.org/features",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75454,
+    "url": "https://github.com/limodou/ulipad",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75455,
+    "url": "http://pythontoolkit.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75456,
+    "url": "https://wiki.python.org/moin/VisualWx.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75457,
+    "url": "http://www.mimikaki.net/en/mimi/download.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75458,
+    "url": "http://sourceforge.net/projects/xrope/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75459,
+    "url": "http://www.gnome.org/projects/gedit/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75460,
+    "url": "https://wiki.python.org/moin/FreeSoftware.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75462,
+    "url": "http://rope.sf.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75463,
+    "url": "http://beaver-editor.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75464,
+    "url": "http://jetbrains.com/pycharm/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75465,
+    "url": "http://pydev.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75466,
+    "url": "http://fte.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75467,
+    "url": "http://www.barebones.com/products/textwrangler/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75468,
+    "url": "https://jupyter.org/try-jupyter/lab/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75469,
+    "url": "http://www.barebones.com/products/bbedit/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75470,
+    "url": "https://wiki.python.org/moin/PyPy.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75471,
+    "url": "https://wiki.python.org/moin/PyQt5.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75472,
+    "url": "https://wiki.python.org/moin/NodeJs.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75473,
+    "url": "http://www.boddie.org.uk/david/Projects/Python/KDE/khpython/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75474,
+    "url": "https://code.google.com/p/pyscripter/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75475,
+    "url": "https://wiki.python.org/moin/PythonEditors#Macintosh-Only_Editors",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75476,
+    "url": "http://www.literateprogramming.com",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75477,
+    "url": "http://developer.apple.com/xcode/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75478,
+    "url": "https://wiki.python.org/moin/PythonEditors#Unix-Only_Editors",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75479,
+    "url": "https://wiki.python.org/moin/PythonEditors#Other_Resources",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75480,
+    "url": "https://www.spyder-ide.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75481,
+    "url": "https://wiki.python.org/moin/WxDesigner.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75482,
+    "url": "https://wiki.python.org/moin/PythonEditors#Windows-Only_Editors",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75483,
+    "url": "https://wiki.python.org/moin/PythonEditors#Never_ending_debate",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75484,
+    "url": "http://users.on.net/~jon.dowdall/pypad/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75486,
+    "url": "http://ne.di.unimi.it/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75487,
+    "url": "http://www.blender3d.org",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75488,
+    "url": "http://drakon-editor.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75489,
+    "url": "http://www.lugaru.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75490,
+    "url": "http://soft.kaworu.it/wxKonTEXTen.htm",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75491,
+    "url": "http://dreampie.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75492,
+    "url": "http://www.editpadpro.com/editpython.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75493,
+    "url": "https://wiki.python.org/moin/IDEStudio.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75494,
+    "url": "https://wiki.python.org/moin/PySlices.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75495,
+    "url": "http://matkuki.github.io/ExCo/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75496,
+    "url": "http://wingware.com/wingide",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75497,
+    "url": "http://www.netbeans.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75498,
+    "url": "http://francois.granger.free.fr/MacPython/Mi%20Python.sit",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75499,
+    "url": "http://macromates.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75500,
+    "url": "https://wiki.python.org/moin/LeoEditor.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75501,
+    "url": "https://itunes.apple.com/us/app/python-3.2-for-ios/id519319292?ls\u003d1\u0026mt\u003d8",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75502,
+    "url": "https://cocalc.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75503,
+    "url": "https://wiki.python.org/moin/JupyterLab.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75504,
+    "url": "https://wiki.python.org/moin/BoaConstructor.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75505,
+    "url": "https://wiki.python.org/moin/PySide.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75506,
+    "url": "https://github.com/aliafshar/a8",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75507,
+    "url": "http://www.peterborgapps.com/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75508,
+    "url": "http://bpython-interpreter.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75509,
+    "url": "https://github.com/pinard/pymacs",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75510,
+    "url": "http://cream.sourceforge.net",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75511,
+    "url": "https://wiki.python.org/moin/CategoryEditors.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75512,
+    "url": "https://wiki.python.org/moin/PythonEditors#Multiplatform_Editors",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75513,
+    "url": "http://project5.freezope.org/kiki/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75514,
+    "url": "http://dev.artenum.com/projects/jyconsole",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75515,
+    "url": "https://wiki.python.org/moin/RegExp.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75516,
+    "url": "https://wiki.python.org/moin/PyQt4.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75517,
+    "url": "https://wiki.python.org/moin/PythonEditors#Glorified_Editors",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75518,
+    "url": "https://wiki.python.org/moin/TextWrangler.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75519,
+    "url": "https://wiki.python.org/moin/WordStar.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75520,
+    "url": "https://wiki.python.org/moin/SageMath.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75521,
+    "url": "http://www.pyzo.org/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75522,
+    "url": "http://pydev.org//",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75523,
+    "url": "http://ninja-ide.org",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75524,
+    "url": "https://wiki.python.org/moin/Tix.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75525,
+    "url": "https://wiki.python.org/moin/ZeroPrice.html",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75526,
+    "url": "https://chromewebstore.google.com/detail/python-code-runner/keiealdacakpnbbljlmhfgcebmaadieg",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75527,
+    "url": "http://www.boddie.org.uk/david/Projects/Python/Qt/",
+    "parentUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "id": 75529,
+    "url": "https://pythoncard.sourceforge.net",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75530,
+    "url": "http://kdevelop.org/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75533,
+    "url": "http://aptana.com/products/studio3",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75534,
+    "url": "https://celestialteapot.com/exedore/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75535,
+    "url": "https://wiki.python.org/moin/CategoryIntegratedDevelopmentEnvironme.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75536,
+    "url": "http://www.liclipse.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75537,
+    "url": "https://wiki.python.org/moin/ShowMeDo.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75540,
+    "url": "https://pythontoolkit.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75541,
+    "url": "http://www.codelobster.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75543,
+    "url": "https://pytools.codeplex.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75544,
+    "url": "https://wiki.python.org/moin/Komodo.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75546,
+    "url": "http://wingware.com/downloads",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75547,
+    "url": "http://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Python",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75548,
+    "url": "https://www.visualstudio.com/vs/python/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75550,
+    "url": "http://stackoverflow.com/questions/81584",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75552,
+    "url": "https://monkeystudio.pasnox.com",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75553,
+    "url": "https://www.jetbrains.com/buy/opensource/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75554,
+    "url": "https://python.land/creating-python-programs/using-a-python-ide#What_is_The_Best_Python_IDE",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75557,
+    "url": "https://github.com/ActiveState/OpenKomodoIDE",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75558,
+    "url": "http://spyced.blogspot.com/2006/02/pycon-python-ide-review.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75559,
+    "url": "http://sakurastudio.yolasite.com/micro-dev.php",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75561,
+    "url": "https://www.activestate.com/products/komodo-ide/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75562,
+    "url": "http://www.infoworld.com/d/developer-world/infoworld-review-nine-fine-python-development-tools-374",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75563,
+    "url": "http://rope.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75564,
+    "url": "http://pythonide.stani.be/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75565,
+    "url": "https://anvil.works/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75566,
+    "url": "http://wingware.com/store/purchase",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75567,
+    "url": "https://github.com/fortharris/Pcode",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75568,
+    "url": "http://www.wxpython.org",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75569,
+    "url": "http://spyced.blogspot.com/2005/09/review-of-6-python-ides.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75570,
+    "url": "https://www.jetbrains.com/pycharm/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75571,
+    "url": "http://pythonide.blogspot.com/2007/02/how-to-download-latest-spe-from_26.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75572,
+    "url": "http://pida.co.uk/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75575,
+    "url": "https://pypi.org/project/PythonToolkit",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75576,
+    "url": "https://wiki.python.org/moin/CategoryIntegratedDevelopmentEnvironment.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75578,
+    "url": "http://code.google.com/p/pyscripter/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75580,
+    "url": "https://developer.apple.com/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75581,
+    "url": "http://xcorr.net/2013/04/17/evaluating-ides-for-scientific-python/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75582,
+    "url": "http://icsharpcode.net/OpenSource/SD/Default.aspx",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75584,
+    "url": "https://github.com/aptana/studio3",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75585,
+    "url": "https://wiki.python.org/moin/SourceForge.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75586,
+    "url": "http://idlex.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75587,
+    "url": "https://wiki.python.org/moin/eric.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75589,
+    "url": "http://project5.freezope.org/kiki",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75591,
+    "url": "https://wiki.python.org/moin/BlackAdder.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75592,
+    "url": "https://python-xy.github.io",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75593,
+    "url": "http://pychecker.sourceforge.net/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75594,
+    "url": "http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Do-Python-Coding-with-NINJA-IDE/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75596,
+    "url": "https://wiki.python.org/moin/PythonEditors.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75597,
+    "url": "https://wiki.python.org/moin/PythonEditors.html#Glorified_Editors.",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75598,
+    "url": "http://www.blender.org",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75600,
+    "url": "https://wiki.python.org/moin/QtDesigner.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75602,
+    "url": "https://wiki.python.org/moin/PyPi.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75603,
+    "url": "http://pythoncentral.io/comparison-of-python-ides-development/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75604,
+    "url": "https://github.com/Microsoft/vscode-python",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75605,
+    "url": "https://marketplace.visualstudio.com/items?itemName\u003dms-python.python",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75606,
+    "url": "https://wiki.python.org/moin/Web2Py.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75607,
+    "url": "http://pida.co.uk/trac/wiki/DeveloperRepos",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75608,
+    "url": "http://ask.slashdot.org/article.pl?sid\u003d08/09/16/136219",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75612,
+    "url": "https://wiki.python.org/moin/NetBeans.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75613,
+    "url": "http://proyectojuanchacon.blogspot.com.ee/2016/01/thonny-python-ide-for-beginners.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75614,
+    "url": "http://www.drdobbs.com/linux-open-source/208402843",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75615,
+    "url": "https://vpython.org/",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75616,
+    "url": "https://wiki.python.org/moin/PyDev.html",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75617,
+    "url": "http://www.eclipse.org",
+    "parentUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "id": 75618,
+    "url": "https://itsmycode.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75619,
+    "url": "http://docs.python.org/tut/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75620,
+    "url": "https://github.com/amontalenti/elements-of-python-style",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75621,
+    "url": "http://stromberg.dnsalias.org/~dstromberg/Intro-to-Python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75622,
+    "url": "https://hackr.io/tutorials/learn-python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75623,
+    "url": "https://coderslegacy.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75624,
+    "url": "https://www.stavros.io/tutorials/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75625,
+    "url": "https://blog.finxter.com/subscribe",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75626,
+    "url": "https://code.tutsplus.com/c/python/t/courses",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75627,
+    "url": "https://pythonspot.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75628,
+    "url": "https://effectivepython.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75629,
+    "url": "https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75630,
+    "url": "http://thonny.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75631,
+    "url": "https://python.swaroopch.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75632,
+    "url": "http://en.wikiversity.org/wiki/Topic:Python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75633,
+    "url": "https://www.codedex.io.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75634,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/MovingToPythonFromOtherLanguages.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75635,
+    "url": "https://finxter.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75636,
+    "url": "http://www.linuxjournal.com/lj-issues/issue73/3946.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75637,
+    "url": "https://aqemery.github.io/learn-python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75638,
+    "url": "https://youtu.be/RZF17FfRIIo",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75639,
+    "url": "https://www.scaler.com/topics/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75641,
+    "url": "https://labex.io/learn/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75642,
+    "url": "https://github.com/gregmalcolm/python_koans",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75643,
+    "url": "https://gitconnected.com/learn/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75644,
+    "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/resources/lecture-videos/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75645,
+    "url": "https://diveintopython3.problemsolving.io/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75646,
+    "url": "http://freepythontips.wordpress.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75647,
+    "url": "https://www.youtube.com/@coreyms/courses",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75648,
+    "url": "https://pythonspeed.com/performance/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75649,
+    "url": "https://classpert.com/python-programming",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75650,
+    "url": "https://www.codecademy.com/learn/learn-python-3",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75651,
+    "url": "https://pyflo.net",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75652,
+    "url": "https://www.kaggle.com/learn/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75653,
+    "url": "https://www.nbshare.io",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75654,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/CategoryCategory.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75655,
+    "url": "https://www.programiz.com/python-programming",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75656,
+    "url": "https://www.webucator.com/catalog/python-training/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75657,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/BeginnersGuide(2f)Overview.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75658,
+    "url": "https://awesome-python.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75659,
+    "url": "https://learnpy.dev",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75661,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/CategoryDocumentation.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75662,
+    "url": "https://youtu.be/HJSLyzm4j6Y",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75663,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/CategoryPythonWebsite.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75664,
+    "url": "https://python.land/python-tutorial",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75665,
+    "url": "https://www.checkio.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75666,
+    "url": "http://www.python-course.eu",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75667,
+    "url": "http://pythontutor.com/visualize.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75668,
+    "url": "https://www.techbeamers.com/python-tutorial-step-by-step/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75669,
+    "url": "https://www.fullstackpython.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75670,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/BeginnersGuide(2f)NonProgrammers.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75671,
+    "url": "http://www.afterhoursprogramming.com/tutorial/Python/Introduction/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75672,
+    "url": "https://programiz.pro/learn/master-python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75673,
+    "url": "https://overiq.com/python-101/index.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75674,
+    "url": "https://www.youtube.com/watch?v\u003drfscVS0vtbw",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75675,
+    "url": "http://cscircles.cemc.uwaterloo.ca",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75676,
+    "url": "http://codecondo.com/10-ways-to-learn-python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75677,
+    "url": "http://www.trytoprogram.com/python-programming/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75678,
+    "url": "https://docs.pytest.org/en/stable/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75679,
+    "url": "https://genepy.org/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75680,
+    "url": "https://www.khanacademy.org/computing/computer-science",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75681,
+    "url": "http://thepythonguru.com/getting-started-with-python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75682,
+    "url": "https://github.com/huangsam/ultimate-python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75683,
+    "url": "https://www.youtube.com/watch?v\u003dDFLD3JjsvJo\u0026list\u003dPLboXykqtm8dy_DNg1NZiS08Dnyj35PWXw",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75684,
+    "url": "https://www.youtube.com/watch?v\u003dHGOBQPFzWKo",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75685,
+    "url": "https://www.youtube.com/playlist?list\u003dPLlgoYPTU6ljCEggReCMF0m0760QTot9Qz",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75686,
+    "url": "https://www.dabeaz.com/per.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75687,
+    "url": "https://tutswiki.com/pandas-cookbook/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75688,
+    "url": "https://python-3-patterns-idioms-test.readthedocs.io/en/latest/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "id": 75690,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#expression-statements",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75692,
+    "url": "https://docs.python.org/3/reference/expressions.html#assignment-expressions",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75693,
+    "url": "https://docs.python.org/3/c-api/index.html#c-api-index",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75694,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-try-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75696,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#naming-and-binding",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75697,
+    "url": "https://docs.python.org/3/reference/expressions.html#lambda",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75698,
+    "url": "https://docs.python.org/3/reference/datamodel.html#objects-values-and-types",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75699,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-yield-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75700,
+    "url": "https://docs.python.org/3/reference/import.html#package-relative-imports",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75701,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-for-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75703,
+    "url": "https://docs.python.org/3/reference/import.html#replacing-the-standard-import-system",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75704,
+    "url": "https://docs.python.org/3/reference/expressions.html#evaluation-order",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75705,
+    "url": "https://docs.python.org/3/reference/expressions.html#conditional-expressions",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75706,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-del-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75707,
+    "url": "https://docs.python.org/3/extending/index.html#extending-index",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75708,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75709,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#annotations",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75710,
+    "url": "https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75711,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75712,
+    "url": "https://docs.python.org/3/reference/introduction.html#notation",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75713,
+    "url": "https://docs.python.org/3/reference/expressions.html#operator-precedence",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75714,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-import-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75715,
+    "url": "https://docs.python.org/3/reference/toplevel_components.html#complete-python-programs",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75716,
+    "url": "https://docs.python.org/3/reference/executionmodel.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75718,
+    "url": "https://docs.python.org/3/reference/import.html#special-considerations-for-main",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75719,
+    "url": "https://docs.python.org/3/reference/expressions.html#comparisons",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75720,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#runtime-components",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75721,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-global-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75722,
+    "url": "https://docs.python.org/3/reference/expressions.html#boolean-operations",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75723,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-pass-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75724,
+    "url": "https://docs.python.org/3/reference/expressions.html#expression-lists",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75725,
+    "url": "https://docs.python.org/3/using/editors.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75726,
+    "url": "https://docs.python.org/3/reference/introduction.html#alternate-implementations",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75727,
+    "url": "https://docs.python.org/3/reference/expressions.html#arithmetic-conversions",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75728,
+    "url": "https://docs.python.org/3/reference/expressions.html#unary-arithmetic-and-bitwise-operations",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75730,
+    "url": "https://docs.python.org/3/reference/datamodel.html#coroutines",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75732,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75733,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-return-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75734,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#assignment-statements",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75735,
+    "url": "https://docs.python.org/3/reference/expressions.html#await-expression",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75736,
+    "url": "https://docs.python.org/3/reference/#the-python-language-reference",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75737,
+    "url": "https://docs.python.org/3/reference/import.html#importlib",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75738,
+    "url": "https://docs.python.org/3/reference/datamodel.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75739,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-type-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75740,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#other-tokens",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75741,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75742,
+    "url": "https://docs.python.org/3/reference/expressions.html#shifting-operations",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75743,
+    "url": "https://docs.python.org/3/reference/toplevel_components.html#interactive-input",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75744,
+    "url": "https://docs.python.org/3/reference/import.html#searching",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75746,
+    "url": "https://docs.python.org/3/reference/import.html#the-path-based-finder",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75747,
+    "url": "https://github.com/python/cpython/blob/main/Doc/reference/index.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75748,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75749,
+    "url": "https://docs.python.org/3/reference/expressions.html#the-power-operator",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75750,
+    "url": "https://docs.python.org/3/reference/expressions.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75751,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75752,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#literals",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75753,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#exceptions",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75755,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-if-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75756,
+    "url": "https://docs.python.org/3/reference/import.html#loading",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75757,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75758,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#class-definitions",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75759,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-with-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75760,
+    "url": "https://docs.python.org/3/reference/introduction.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75761,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#line-structure",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75762,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#coroutines",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75763,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#structure-of-a-program",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75764,
+    "url": "https://docs.python.org/3/reference/import.html#packages",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75765,
+    "url": "https://docs.python.org/3/reference/import.html#references",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75766,
+    "url": "https://docs.python.org/3/reference/expressions.html#primaries",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75767,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-break-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75768,
+    "url": "https://docs.python.org/3/reference/toplevel_components.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75769,
+    "url": "https://docs.python.org/3/reference/expressions.html#binary-bitwise-operations",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75770,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#numeric-literals",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75772,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-while-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75774,
+    "url": "https://docs.python.org/3/reference/datamodel.html#special-method-names",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75775,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-raise-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75776,
+    "url": "https://docs.python.org/3/reference/",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75777,
+    "url": "https://docs.python.org/3/reference/expressions.html#binary-arithmetic-operations",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75778,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#type-parameter-lists",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75779,
+    "url": "https://docs.python.org/3/reference/toplevel_components.html#file-input",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75780,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#operators-and-delimiters",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75781,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#names-identifiers-and-keywords",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75782,
+    "url": "https://docs.python.org/3/tutorial/index.html#tutorial-index",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75785,
+    "url": "https://docs.python.org/3/reference/toplevel_components.html#expression-input",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75786,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#the-match-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75787,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#the-continue-statement",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75788,
+    "url": "https://docs.python.org/3/reference/import.html",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75789,
+    "url": "https://docs.python.org/3/reference/expressions.html#atoms",
+    "parentUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "id": 75790,
+    "url": "https://www.python.org/dev/buildbot/",
+    "parentUrl": "https://www.python.org/dev/"
+  },
+  {
+    "id": 75791,
+    "url": "https://pythondotorg.readthedocs.io/",
+    "parentUrl": "https://www.python.org/dev/"
+  },
+  {
+    "id": 75793,
+    "url": "https://devguide.python.org",
+    "parentUrl": "https://www.python.org/dev/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Language Reference — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Language Reference — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/reference/"
+  },
+  {
+    "src": "https://wiki.python.org/moin/BeginnersGuide/logo.png",
+    "alt": "",
+    "pageTitle": "BeginnersGuide/Programmers",
+    "pageUrl": "http://wiki.python.org/moin/BeginnersGuide/Programmers"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "IntegratedDevelopmentEnvironments",
+    "pageUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "src": "https://wiki.python.org/wiki/europython/img/idea.png",
+    "alt": "(!)",
+    "pageTitle": "IntegratedDevelopmentEnvironments",
+    "pageUrl": "http://wiki.python.org/moin/IntegratedDevelopmentEnvironments"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "PythonEditors",
+    "pageUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "src": "https://wiki.python.org/wiki/europython/img/idea.png",
+    "alt": "(!)",
+    "pageTitle": "PythonEditors",
+    "pageUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
+  {
+    "src": "https://wiki.python.org/wiki/europython/img/checkmark.png",
+    "alt": "(./)",
+    "pageTitle": "PythonEditors",
+    "pageUrl": "http://wiki.python.org/moin/PythonEditors"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
