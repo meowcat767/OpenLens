@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 858,
+    "url": "https://github.com/python/cpython/issues/128911",
+    "title": "[C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function · Issue #128911 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k [C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function #128911 New issue Copy link New issue Copy link Closed Closed [C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function#128911 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Jan 16, 2025 Issue body actions Feature or enhancement Proposal: Python has an internal _PyImport_GetModuleAttrString(mod_name, attr_name) helper function to import a module and get a module attribute. I propose to make this function public to be able to use it outside Python. UPDATE: Function renamed to PyImport_ImportModuleAttrString(). The function is convenient to use and is used by the following files in Python: Modules/arraymodule.c Modules/cjkcodecs/cjkcodecs.h Modules/_ctypes/callbacks.c Modules/_datetimemodule.c Modules/_decimal/_decimal.c Modules/_elementtree.c Modules/faulthandler.c Modules/_lsprof.c Modules/_operator.c Modules/_pickle.c Modules/posixmodule.c Modules/selectmodule.c Modules/_sqlite/connection.c Modules/_sqlite/module.c Modules/_sre/sre.c Modules/timemodule.c Modules/_zoneinfo.c Objects/abstract.c Objects/fileobject.c Objects/memoryobject.c Parser/pegen.c Parser/tokenizer/file_tokenizer.c Python/import.c Python/pylifecycle.c Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-128911: Add PyImport_ImportModuleAttr() function #128912 gh-128911: Add tests on the PyImport C API #128915 [3.13] gh-128911: Add tests on the PyImport C API (#128915) #128960 [3.12] gh-128911: Add tests on the PyImport C API (GH-128915) (GH-128960) #128989 gh-128911: Use PyImport_ImportModuleAttr() function #129657 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:54:02.680291"
+  },
+  {
+    "id": 857,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:53:57.259803"
+  },
+  {
+    "id": 856,
+    "url": "https://docs.python.org/3/library/functools.html#module-functools",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than lru_cache() with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to property(), with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of cached_property() are somewhat different from property(). A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to cached_property() can also be achieved by stacking property() on top of lru_cache(). See How do I cache method calls? for more details on how this differs from cached_property(). Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key fun",
+    "scrapedAt": "2026-05-10 04:53:53.244992"
+  },
+  {
+    "id": 855,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#with",
+    "title": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those v",
+    "scrapedAt": "2026-05-10 04:53:49.551576"
+  },
+  {
+    "id": 854,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT",
+    "title": "Reference Counting — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Reference Counting | Theme Auto Light Dark | Reference Counting¶ The functions and macros in this section are used for managing reference counts of Python objects. Py_ssize_t Py_REFCNT(PyObject *o)¶ Part of the Stable ABI since version 3.14. Get the reference count of the Python object o. Note that the returned value may not actually reflect how many references to the object are actually held. For example, some objects are immortal and have a very high refcount that does not reflect the actual number of references. Consequently, do not rely on the returned value to be accurate, other than a value of 0 or 1. Use the Py_SET_REFCNT() function to set an object reference count. Note On free-threaded builds of Python, returning 1 isn’t sufficient to determine if it’s safe to treat o as having no access by other threads. Use PyUnstable_Object_IsUniquelyReferenced() for that instead. See also the function PyUnstable_Object_IsUniqueReferencedTemporary(). Changed in version 3.10: Py_REFCNT() is changed to the inline static function. Changed in version 3.11: The parameter type is no longer const PyObject*. void Py_SET_REFCNT(PyObject *o, Py_ssize_t refcnt)¶ Set the object o reference counter to refcnt. On Python build with Free Threading, if refcnt is larger than UINT32_MAX, the object is made immortal. This function has no effect on immortal objects. Added in version 3.9. Changed in version 3.12: Immortal objects are not modified. void Py_INCREF(PyObject *o)¶ Indicate taking a new strong reference to object o, indicating it is in use and should not be destroyed. This function has no effect on immortal objects. This function is usually used to convert a borrowed reference to a strong reference in-place. The Py_NewRef() function can be used to create a new strong reference. When done using the object, release is by calling Py_DECREF(). The object must not be NULL; if you aren’t sure that it isn’t NULL, use Py_XINCREF(). Do not expect this function to actually modify o in any way. For at least some objects, this function has no effect. Changed in version 3.12: Immortal objects are not modified. void Py_XINCREF(PyObject *o)¶ Similar to Py_INCREF(), but the object o can be NULL, in which case this has no effect. See also Py_XNewRef(). PyObject *Py_NewRef(PyObject *o)¶ Part of the Stable ABI since version 3.10. Create a new strong reference to an object: call Py_INCREF() on o and return the object o. When the strong reference is no longer needed, Py_DECREF() should be called on it to release the reference. The object o must not be NULL; use Py_XNewRef() if o can be NULL. For example: Py_INCREF(obj);\nself-\u003eattr \u003d obj;\n can be written as: self-\u003eattr \u003d Py_NewRef(obj);\n See also Py_INCREF(). Added in version 3.10. PyObject *Py_XNewRef(PyObject *o)¶ Part of the Stable ABI since version 3.10. Similar to Py_NewRef(), but the object o can be NULL. If the object o is NULL, the function just returns NULL. Added in version 3.10. void Py_DECREF(PyObject *o)¶ Release a strong reference to object o, indicating the reference is no longer used. This function has no effect on immortal objects. Once the last strong reference is released (i.e. the object’s reference count reaches 0), the object’s type’s deallocation function (which must not be NULL) is invoked. This function is usually used to delete a strong reference before exiting its scope. The object must not be NULL; if you aren’t sure that it isn’t NULL, use Py_XDECREF(). Do not expect this function to actually modify o in any way. For at least some objects, this function has no effect. Warning The deallocation function can cause arbitrary Python code to be invoked (e.g. when a class instance with a __del__() method is deallocated). While exceptions in such code are not propagated, the executed code has free access to all Python global variables. This means that any object that is reachable from a global variable should be in a consistent state before Py_DECREF() is invoked. For example, code to delete an object from a list should copy a reference to the deleted object in a temporary variable, update the list data structure, and then call Py_DECREF() for the temporary variable. Changed in version 3.12: Immortal objects are not modified. void Py_XDECREF(PyObject *o)¶ Similar to Py_DECREF(), but the object o can be NULL, in which case this has no effect. The same warning from Py_DECREF() applies here as well. void Py_CLEAR(PyObject *o)¶ Release a strong reference for object o. The object may be NULL, in which case the macro has no effect; otherwise the effect is the same as for Py_DECREF(), except that the argument is also set to NULL. The warning for Py_DECREF() does not apply with respect to the object passed because the macro carefully uses a temporary variable and sets the argument to NULL before releasing the reference. It is a good idea to use this macro whenever releasi",
+    "scrapedAt": "2026-05-10 04:53:39.203684"
+  },
+  {
     "id": 853,
     "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn",
     "title": "multiprocessing — Process-based parallelism — Python 3.14.5rc1 documentation",
@@ -5677,26 +5712,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 854,
-    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
-  },
-  {
-    "id": 855,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#with"
-  },
-  {
-    "id": 856,
-    "url": "https://docs.python.org/3/library/functools.html#module-functools"
-  },
-  {
-    "id": 857,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported"
-  },
-  {
-    "id": 858,
-    "url": "https://github.com/python/cpython/issues/128911"
   },
   {
     "id": 859,
@@ -146850,10 +146865,180 @@ window.searchData = [
     "id": 119685,
     "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue.get",
     "parentUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-spawn"
+  },
+  {
+    "id": 119689,
+    "url": "https://docs.python.org/3/c-api/exceptions.html",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119690,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_SET_REFCNT",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119694,
+    "url": "https://github.com/python/cpython/blob/main/Doc/c-api/refcounting.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119696,
+    "url": "https://docs.python.org/3/c-api/veryhigh.html",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119700,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_CLEAR",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119702,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_XNewRef",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119704,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#reference-counting",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119705,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_IncRef",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119707,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_XDECREF",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119708,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_XSETREF",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119712,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_SETREF",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119724,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_XINCREF",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119725,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_DecRef",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 119726,
+    "url": "https://docs.python.org/3/using/configure.html#free-threading-build",
+    "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 121334,
+    "url": "https://github.com/python/cpython/pull/128960",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121336,
+    "url": "https://github.com/python/cpython/issues/128911#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121337,
+    "url": "https://github.com/python/cpython/issues/128911#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121343,
+    "url": "https://github.com/python/cpython/issues/128911#issue-2792492139",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121344,
+    "url": "https://github.com/python/cpython/pull/128915",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121345,
+    "url": "https://github.com/python/cpython/pull/128912",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121346,
+    "url": "https://github.com/python/cpython/pull/128989",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 121347,
+    "url": "https://github.com/python/cpython/pull/129657",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function · Issue #128911 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function · Issue #128911 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#module-functools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#module-functools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#with"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#with"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Reference Counting — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Reference Counting — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
