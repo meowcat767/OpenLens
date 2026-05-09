@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 112,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366",
+    "title": "The Little Drummer Girl - BBC iPlayer",
+    "content": "Close menu Home The Little Drummer Girl Drama The Little Drummer Girl Seduction, betrayal and spies. A fiery actress meets a mysterious stranger, and is caught up in a deadly espionage sting. With Florence Pugh and Alexander Skarsgard. Series 1: Episode 1 (56 mins) Start watching Episode 1 A fiery and brilliant actress is drawn into a dangerous international espionage operation. 56 mins Episode 2 Charlie is recruited to infiltrate a revolutionary cell by Becker and Kurtz. 55 mins Episode 3 Kurtz and Becker race to save Charlie from a fatal mistake. 57 mins Episode 4 Charlie is tortured by feelings for Becker as she is drawn deeper into Michel\u0027s network. 58 mins Episode 5 Charlie is trained by militia in Lebanon and earns the trust of Fatmeh, Khalil\u0027s sister. 58 mins Episode 6 Charlie prepares for her part in Khalil\u0027s next strike, but has she really switched sides? 58 mins Explore the BBC",
+    "scrapedAt": "2026-05-10 03:41:58.989235"
+  },
+  {
+    "id": 111,
+    "url": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero",
+    "title": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "content": "Image source, Reuters ByHugh Pym, Health editor and Tabby Wilson Published 8 May 2026 British passengers and crew on the cruise ship hit with an outbreak of hantavirus will be tested before returning to the UK. The MV Hondius is expected to dock in the Canary Islands this weekend, with the remaining 22 Britons due to fly home on a charter flight soon after. Five cases of hantavirus have been confirmed, including one of the three passengers who have died during a cruise on the Dutch vessel. Two British men with confirmed cases are receiving treatment in the Netherlands and South Africa, while a third Briton is being treated for a suspected case on the remote Atlantic island of Tristan da Cunha, where the ship stopped in mid-April. Ahead of the ship\u0027s arrival on the island of Tenerife on Sunday, government officials have been setting out plans to fly home the British citizens. When the vessel arrives, passengers and crew will be tested for the virus onboard by Spanish officials. If they are symptomatic they will be taken to local hospitals for treatment. Those without symptoms will be taken straight to a chartered plane and flown to the UK as soon as possible, most likely the same day. Although none of the remaining Britons are currently displaying symptoms, they will be asked to isolate and self-test for 45 days - either at home or at other accommodation - upon their return. No legislation will be used to impose self isolation. Support from medical staff will be available to help carry out blood tests. British national Martin Anstee, a 56-year-old retired police officer and an expedition guide on board the MV Hondius, was evacuated to the Netherlands on Wednesday alongside a 41-year-old Dutch crew member and a 65-year-old German. He remains in a stable condition and told the BBC that he was \"fine\". Another British passenger, 69, has a confirmed case and was medically evacuated to South Africa at the end of April. He remains in intensive care and has been said by officials to be \"doing better\". Britons on hantavirus cruise ship face 45 days of self-isolation Published 2 days ago What is hantavirus and how does it spread? Published 2 days ago Race to trace passengers who left hantavirus cruise ship at island Published 2 days ago Two other British nationals are already self-isolating at home in the UK after potential exposure. They are doing so voluntarily and do not have any symptoms. They were part of a group of 30 people from a dozen nations - including seven Britons - who disembarked from the ship at St Helena in the South Atlantic on 24 April, according to operator Oceanwide Expeditions. The operator said the first confirmed case of hantavirus was not reported until 4 May and that all guests who disembarked the ship had been contacted. Four Britons who disembarked on St Helena remain there. They do not have symptoms but are in contact with health officials. It is understood that medical staff will be sent to the islands to provide support. A military plane has arrived at Ascension Island, a British territory in the South Atlantic, with supplies of testing kits, oxygen and other medical equipment. Medical personnel are expected to take these to St Helena and Tristan da Cunha. Contact tracing is under way in several other countries for dozens of passengers who left the Dutch cruise ship before the outbreak was detected - including Switzerland and the Netherlands. The World Health Organization (WHO) called it a \"serious incident\" but said the risk to the public was low, stressing the outbreak was not similar to the Covid-19 pandemic. British people affected by hantavirus outbreak Three Britons are confirmed or suspected to have contracted hantavirus One of them is being treated in the Netherlands, another man is being treated in South Africa, and a third is on the remote Atlantic island of Trista da Cunha Seven Britons disembarked the MV Hondius in St Helena on 24 April before the first confirmed case of hantavirus was reported on 4 May, with four remaining there Two of the Britons who disembarked on 24 April have already returned to the UK and are self-isolating voluntarily but do not have symptoms The seventh person has not yet been traced, the UKHSA has said The origin of the outbreak is still unknown and it is not known if people other than cruise ship passengers and crew have been infected with the disease. WHO director-general Tedros Ghebreyesus told a news conference that the first two cases had \"travelled through Argentina, Chile and Uruguay on a bird-watching trip which included visits to sites where the species of rat known to carry the virus was present\". One of the three deaths was a Dutch woman, 69, who left the MV Hondius when it stopped at St Helena on 24 April and travelled to South Africa where she died two days later. Her husband died on board the vessel on 11 April, while a German woman also died on board. Neither are confirmed to have had the virus. Hantavirus typically spreads from rodent",
+    "scrapedAt": "2026-05-10 03:41:56.713854"
+  },
+  {
+    "id": 110,
+    "url": "https://www.bbc.co.uk/news/articles/c0r255xlr59o",
+    "title": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "content": "England council results Number of councillors 136 of 136 councils Counting complete Reform UK REF 1,453 1,451 (Reform UK 1,453 councillors 1,451 councillors gained) Labour LAB 1,068 1,496 (Labour 1,068 councillors 1,496 councillors lost) Liberal Democrat LD 844 155 (Liberal Democrat 844 councillors 155 councillors gained) Conservative CON 801 563 (Conservative 801 councillors 563 councillors lost) Green GRN 587 441 (Green 587 councillors 441 councillors gained) Independent IND 212 34 (Independent 212 councillors 34 councillors gained) Change How this election works Local elections in England cover more than 5,000 seats across 136 local authorities and six mayoral races. The banner shows each party’s seat total as results come in. Results from all counts are expected by Saturday. Live. updates Get the full results Image source, PA Media ByRichard Wheeler Political reporter Published 8 May 2026 Nigel Farage said he believes a \"truly historic shift in British politics\" has occurred after Reform UK won hundreds of seats and took control of more councils in England. The Reform leader said his party was showing it could win in Conservative and Labour heartlands, adding he expected the support from voters would not be a \"one-off\". The party\u0027s gains include winning control of its first London borough in Havering, surging to victory over the Tories in Essex and Suffolk, and picking up seats at the expense of Labour in the Midlands and the north of England. Reform came second in the Welsh Parliament elections behind Plaid Cymru while party figures said they would be \"competitive\" in Scotland. LIVE: UK election results LIVE: Scottish Parliament election LIVE: Wales Senedd election Reform was in its infancy the last time these councils in England were up for election, and when the national contests in Scotland and Wales took place. The party gained control of 10 councils in England last year and has now followed this up with further successes at the ballot box. Increased support for Reform saw them take control of councils from Labour, including Barnsley, Wakefield, Sunderland and Gateshead, and shift Hartlepool, Tameside, Redditch and Tamworth to no overall control. A third of the seats were up for election in Wigan, with Reform winning 24 out of 25 as Labour suffered heavy losses to see its majority on the council reduced. Control of Newcastle-under-Lyme passed to Reform from the Tories. Speaking after Reform secured control of Havering, Farage said: \"What\u0027s happened is a truly historic shift in British politics. \"We\u0027ve been so used to thinking about politics in terms of left and right, yet what Reform are able to do is to win in areas that have always been Conservative, but equally, we\u0027re proving in a big way that we could win in areas that Labour has dominated since the end of World War I.\" Farage highlighted his party\u0027s successes in former Labour strongholds dubbed the \"red wall\", which the Conservatives initially made gains in the 2019 general election under the leadership of Boris Johnson before suffering losses in 2024. He said he was convinced a \"fundamental change\" was happening in which voters \"aren\u0027t just coming to us for a one-off, they\u0027re now becoming Reformers in every way\". Farage added Reform was \"competitive right down from the southwest of England up to the northeast of Scotland\". Polling expert Sir John Curtice said Reform has done best in places that \"voted heavily for Brexit\" in 2016. He later outlined a projected national share of the vote for Britain, which suggested Reform was on 26% ahead of the Greens on 18%, Labour and the Tories both on 17% and the Liberal Democrats on 16%. This was on the basis of results in more than 1,000 wards where the BBC collected detailed voting data and if people who did not have an election voted similarly to those who did. Sir John said Reform\u0027s tally was down on the 30% figure which the BBC published after last year\u0027s local elections. Sign up for our Politics Essential newsletter to keep up with the inner workings of Westminster and beyond. Related topics England local elections 2026 Reform UK UK elections 2026 Top stories Live. Challenge Starmer by Monday or I will, Labour MP tells cabinet ministers 23086 viewing23k viewing How Reform won votes from Swansea to Sunderland Published 3 hours ago Labour lose Lambeth and Lewisham as Green support surges in London More to explore The UK is set for a staycation summer - and there are plenty of hidden gems Anti-work anthems, Boy George and controversial lyrics: A guide to all 35 Eurovision songs Move over matcha. Hojicha is coming to a cafe near you \u0027I became a surrogate after watching friends\u0027 IVF journey\u0027 Largest-ever Henry Moore exhibition opens at Kew Why Gen Z birdwatchers are flocking to reserves The risk-taker who changed how we see Earth Live from your living room: The rise of concert films and livestreamed gigs Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere",
+    "scrapedAt": "2026-05-10 03:41:55.29195"
+  },
+  {
+    "id": 109,
+    "url": "https://www.bbc.co.uk/videos/cz02rz5z895o",
+    "title": "Could your child might be sitting on £2,000 of unclaimed cash? - BBC",
+    "content": "Could your child be sitting on £2,000 of unclaimed cash? To play this video you need to enable JavaScript in your browser. This video can not be played Could your child be sitting on £2,000 of unclaimed cash? Close It\u0027s Money Monday — and some good news for your bank balance. Finance expert Laura Pomfret shares how to save on your food shop, why your child could have £2,000 in unclaimed cash, and how to make sure you\u0027re getting all the benefits you\u0027re entitled to. To watch this with subtitles go to BBC iPlayer and search for Morning Live from 04/05/2026. Published 5 days ago Share close panel Share page Copy link About sharing Read description",
+    "scrapedAt": "2026-05-10 03:41:53.815203"
+  },
+  {
+    "id": 108,
+    "url": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o",
+    "title": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "content": "Image source, Getty Images Image caption, Paul Hollywood was caught speeding along the M25 ByHsin-Yi Lo South East Published 7 May 2026 Bake Off star Paul Hollywood was pulled over by police after speeding at nearly 100mph while rushing his sick cat to the vet, a court heard. The celebrity baker was accused of tailgating cars at high speeds on the M25 to \"bully\" them out of the right-hand lane. A Surrey Police officer said Hollywood\u0027s Land Rover Defender was officially clocked at 96mph, but he was believed to have reached speeds of more than 105mph when he got on to the M26. When pulled over, the court heard the 60-year-old blamed his behaviour on a desire to take his cat to the vet as quickly as possible. At Worthing Magistrates\u0027 Court last week, Hollywood pleaded guilty to speeding, and had five penalty points added to his licence, a £293 fine, £120 in costs, and a £117 victim surcharge. After an intervention from his lawyers, a second charge of driving without due care and attention was dropped. \"Mr Hollywood accepted he was driving too fast,\" wrote Peter Csemiczky, a partner at Hickman and Rose law firm. He added Hollywood \"apologised\" for his actions and \"understood he would be punished\". Court papers showed the incident happened at about 15:20 GMT on 9 January. \u0027Aggressively tailgating\u0027 Surrey Police officer, Alexander McAlpine, tracked Hollywood in an unmarked police car and said he saw his vehicle \"repeatedly bully\" other vehicles out of its way by tailgating. \"Whenever there was a vehicle ahead, the driver would close up to a follow distance of less than five metres which was wholly inappropriate for the conditions and speed,\" McAlphine said. He added Hollywood reached speeds of about 100mph on the M25 despite heavy traffic conditions and the road being damp. The officer caught the incident on his dash camera, then pulled over Hollywood to challenge him over his speeding and \"aggressively tailgating other road users\". Hollywood, a judge on Bake Off since 2010, is also a motoring enthusiast who has competed in professional races for Aston Martin. Court papers showed he had no penalty points on his licence when he was pulled over by the police officer in January. Additional reporting by PA Follow BBC Surrey on Facebook, external, on X, external, and on Instagram, external. Send your story ideas to southeasttoday@bbc.co.uk, external or WhatsApp us on 08081 002250. Related topics Worthing The Great British Bake Off M25 motorway Related internet links HM Courts \u0026 Tribunals Service Top stories Live. Challenge Starmer by Monday or I will, Labour MP tells cabinet ministers 23675 viewing24k viewing How Reform won votes from Swansea to Sunderland Published 2 hours ago Labour lose Lambeth and Lewisham as Green support surges in London More to explore The UK is set for a staycation summer - and there are plenty of hidden gems Anti-work anthems, Boy George and controversial lyrics: A guide to all 35 Eurovision songs Move over matcha. Hojicha is coming to a cafe near you \u0027I became a surrogate after watching friends\u0027 IVF journey\u0027 Largest-ever Henry Moore exhibition opens at Kew Why Gen Z birdwatchers are flocking to reserves The risk-taker who changed how we see Earth Live from your living room: The rise of concert films and livestreamed gigs Politics Essential: Get the latest news and analysis delivered to your inbox every weekday Elsewhere on the BBC Amandaland has returned with Lucy Punch and Joanna Lumley From small-time carpenter to Britain’s most famous fugitive New mysteries and puzzling cases await DI Goodman The energy direct debit cycle and the cheapest ways to spend abroad Most read 1 Man arrested after car hits group in town centre 2 PM turns to old Labour hands after election losses but some MPs left baffled 3 Steve Rosenberg: This year\u0027s Victory Day parade in Moscow felt very different 4 Brits on virus-hit cruise ship to isolate at hospital site 5 How Reform won votes from Swansea to Sunderland 6 HMS Dragon heads to Middle East for potential Strait of Hormuz mission 7 SNP leader John Swinney rules out Holyrood talks with Reform UK 8 Anti-work anthems, Boy George and controversial lyrics: A guide to all 35 Eurovision songs 9 Iran demands guarantees for World Cup participation 10 Teachers in England to vote on striking over pay",
+    "scrapedAt": "2026-05-10 03:41:52.531505"
+  },
+  {
     "id": 107,
     "url": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf",
     "title": "https://www.bbc.co.uk/aboutthebbc/documents/bbcmsa2025.pdf",
@@ -747,26 +782,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 108,
-    "url": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
-  },
-  {
-    "id": 109,
-    "url": "https://www.bbc.co.uk/videos/cz02rz5z895o"
-  },
-  {
-    "id": 110,
-    "url": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
-  },
-  {
-    "id": 111,
-    "url": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
-  },
-  {
-    "id": 112,
-    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
   },
   {
     "id": 113,
@@ -26299,10 +26314,412 @@ window.searchData = [
     "id": 15635,
     "url": "https://www.bbc.co.uk/sounds/series/p02s5rx7",
     "parentUrl": "https://www.bbc.co.uk/sounds/play/p0nhk30p"
+  },
+  {
+    "id": 15676,
+    "url": "https://www.instagram.com/bbcinsurrey/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 15678,
+    "url": "https://www.bbc.co.uk/news/topics/c340r9425rvt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 15683,
+    "url": "https://www.bbc.co.uk/news/topics/c1kr68g27d2t",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 15688,
+    "url": "https://www.gov.uk/government/organisations/hm-courts-and-tribunals-service",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 15689,
+    "url": "https://twitter.com/BBCSurrey",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 15690,
+    "url": "https://www.bbc.co.uk/news/topics/c88ky5rgvz3t",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 15702,
+    "url": "https://www.facebook.com/BBCSurrey/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "id": 15709,
+    "url": "https://www.bbc.co.uk/news/topics/cp07jzgm24jt",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "id": 15757,
+    "url": "https://www.bbc.co.uk/news/articles/c9wepl8we90o",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "id": 15758,
+    "url": "https://www.bbc.co.uk/send/u236848972",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "id": 15765,
+    "url": "https://www.bbc.co.uk/news/articles/c8r8j1l6j0go",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "id": 15770,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bqr4f6/the-little-drummer-girl-series-1-episode-1",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 15771,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366/the-little-drummer-girl#",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 15772,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bt8t5j/the-little-drummer-girl-series-1-episode-5",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 15773,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0brgchg/the-little-drummer-girl-series-1-episode-2",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 15774,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bs494y/the-little-drummer-girl-series-1-episode-3",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 15775,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bsrc4w/the-little-drummer-girl-series-1-episode-4",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "id": 15777,
+    "url": "https://www.bbc.co.uk/iplayer/episode/b0bv1fmv/the-little-drummer-girl-series-1-episode-6",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_one::iplayer.tv.tleo.the_little_drummer_girl.b0bqs366.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-tleo]\u0026x8\u003d[reverb-3.12.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_one]",
+    "alt": "",
+    "pageTitle": "The Little Drummer Girl - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "The Little Drummer Girl - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/b0bqs366"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/ad9b/live/d59ba950-4a7a-11f1-bd52-e755d604ece4.jpg",
+    "alt": "A drone view of the cruise ship MV Hondius, carrying passengers suspected of having cases of hantavirus on board, leaving Cape Verde on 6 May.",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/214d/live/4d682620-4a7b-11f1-bd52-e755d604ece4.png",
+    "alt": "Your Voice banner image. Your Voice is written in white against a purple background.  ",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/b9e2/live/f2e37910-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "A thin, grey banner promoting the News Daily newsletter. On the right, there is a graphic of an orange sphere with two concentric crescent shapes around it in a red-orange gradient, like a sound wave. The banner reads: \"The latest news in your inbox first",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
+    "alt": "Eboni a woman in her 30s with curly brown hair standing above The Minack Theatre which is carved into the cliff face in Cornwall and covered in luscious green gardens with a view across turquoise sea",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/1df6/live/5bfd3b00-4a1f-11f1-ac78-2112837ce2aa.png",
+    "alt": "A montage of Eurovision hopefuls Cosmó, Felicia, Boy George, Antigoni and Lion Ceccah, against the official colours of the 2026 contest",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/53a9/live/e2069670-4b77-11f1-afc3-cfcf15dbebde.jpg",
+    "alt": "A woman with long brown hair in a grey coat smiles at the camera as she holds up a brown drink in a plastic cup with a straw. She is sat in front of a plain grey painted wall with a wooden plank.",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b857/live/074b0f30-4abd-11f1-aa18-a5969e596c8c.jpg",
+    "alt": "Krista Scelza is wearing a white cropped top, which reads \"Extreme babysitting\",  to show her pregnant belly. To left is a sign on the wall which reads \"Let\u0027 cook with love\" and a baking tray with flour with the words \"Half-baked\". ",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/d77e/live/5155c6a0-4960-11f1-8cde-350b393d70a2.jpg",
+    "alt": "Large curved bronze sculpture by Henry Moore on a plinth, surrounded by open grass and trees in bright sunlight",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/39dc/live/2b3a9040-4947-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A young woman in a black hat and sunglasses is leaning on a shelf inside a bird hide. She has a set of binoculars hanging around her neck. There is moorland visible in the background. ",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Britons on virus-hit cruise ship will be tested before charter flight back to UK - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c5yr41vq2ero"
+  },
+  {
+    "src": "https://static.files.bbci.co.uk/elections/images/uk2026/election-logo-cutout-en.svg",
+    "alt": "Election",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/999/cpsprodpb/f54f/live/8c066220-4ae9-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Nigel Farage addresses the media in Havering. He is stood in front of a group of Reform supporters and is wearing a blue jacket, a white shirt and a striped tie.",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/6133/live/2bce6ee0-0b00-11f0-97d3-37df2b293ed1.png",
+    "alt": "Thin, red banner promoting the Politics Essential newsletter with text saying, “Top political analysis in your inbox every day”. There is also an image of the Houses of Parliament.",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
+    "alt": "Eboni a woman in her 30s with curly brown hair standing above The Minack Theatre which is carved into the cliff face in Cornwall and covered in luscious green gardens with a view across turquoise sea",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/1df6/live/5bfd3b00-4a1f-11f1-ac78-2112837ce2aa.png",
+    "alt": "A montage of Eurovision hopefuls Cosmó, Felicia, Boy George, Antigoni and Lion Ceccah, against the official colours of the 2026 contest",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/53a9/live/e2069670-4b77-11f1-afc3-cfcf15dbebde.jpg",
+    "alt": "A woman with long brown hair in a grey coat smiles at the camera as she holds up a brown drink in a plastic cup with a straw. She is sat in front of a plain grey painted wall with a wooden plank.",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b857/live/074b0f30-4abd-11f1-aa18-a5969e596c8c.jpg",
+    "alt": "Krista Scelza is wearing a white cropped top, which reads \"Extreme babysitting\",  to show her pregnant belly. To left is a sign on the wall which reads \"Let\u0027 cook with love\" and a baking tray with flour with the words \"Half-baked\". ",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/d77e/live/5155c6a0-4960-11f1-8cde-350b393d70a2.jpg",
+    "alt": "Large curved bronze sculpture by Henry Moore on a plinth, surrounded by open grass and trees in bright sunlight",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/39dc/live/2b3a9040-4947-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A young woman in a black hat and sunglasses is leaning on a shelf inside a bird hide. She has a set of binoculars hanging around her neck. There is moorland visible in the background. ",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Nigel Farage: Reform election gains show historic shift in British politics - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/c0r255xlr59o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Could your child might be sitting on £2,000 of unclaimed cash? - BBC",
+    "pageUrl": "https://www.bbc.co.uk/videos/cz02rz5z895o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/5a6f/live/58261d20-49e4-11f1-9921-0be54b6c608a.jpg",
+    "alt": "A man with white hair and heard, wearing a dark blue polo shirt. ",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/e92b/live/02a43c40-4ae5-11f1-8c8d-458160734f59.jpg",
+    "alt": "Eboni a woman in her 30s with curly brown hair standing above The Minack Theatre which is carved into the cliff face in Cornwall and covered in luscious green gardens with a view across turquoise sea",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/1df6/live/5bfd3b00-4a1f-11f1-ac78-2112837ce2aa.png",
+    "alt": "A montage of Eurovision hopefuls Cosmó, Felicia, Boy George, Antigoni and Lion Ceccah, against the official colours of the 2026 contest",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/53a9/live/e2069670-4b77-11f1-afc3-cfcf15dbebde.jpg",
+    "alt": "A woman with long brown hair in a grey coat smiles at the camera as she holds up a brown drink in a plastic cup with a straw. She is sat in front of a plain grey painted wall with a wooden plank.",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/b857/live/074b0f30-4abd-11f1-aa18-a5969e596c8c.jpg",
+    "alt": "Krista Scelza is wearing a white cropped top, which reads \"Extreme babysitting\",  to show her pregnant belly. To left is a sign on the wall which reads \"Let\u0027 cook with love\" and a baking tray with flour with the words \"Half-baked\". ",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/d77e/live/5155c6a0-4960-11f1-8cde-350b393d70a2.jpg",
+    "alt": "Large curved bronze sculpture by Henry Moore on a plinth, surrounded by open grass and trees in bright sunlight",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/39dc/live/2b3a9040-4947-11f1-861c-270dbba6d6ae.jpg",
+    "alt": "A young woman in a black hat and sunglasses is leaning on a shelf inside a bird hide. She has a set of binoculars hanging around her neck. There is moorland visible in the background. ",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/503a/live/9006c180-4a35-11f1-b55d-0f258dce1735.jpg",
+    "alt": "A cut out photo of a grey haired David Attenborough looking at the camera, wearing a blue shirt and shown from shoulder up. Behind him is a graphic design of a green arc against a baige background with pink mountains and leaves, and flying green birds",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/278d/live/554855e0-4ac6-11f1-ac78-2112837ce2aa.png",
+    "alt": "Billie Eilish smiling at the cameria wearing a green cardigan against a blue background",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/385/cpsprodpb/04b9/live/ffef6760-bfb9-11f0-8669-5560f5c90fbe.png",
+    "alt": "Politics Essential logo showing Houses of Parliament against a red background",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cf77/live/d6b85f50-43a8-11f1-b55d-0f258dce1735.jpg",
+    "alt": "Amandaland",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7bed/live/b1091940-48b5-11f1-ac78-2112837ce2aa.jpg",
+    "alt": "Gangster Presents... The Story of Ronnie Biggs",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/250b/live/e00cd400-2440-11f1-b297-95b0a0a8331e.jpg",
+    "alt": "Beyond Paradise",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/images/ic/480x270/p0m1qfq3.jpg",
+    "alt": "",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Bake Off star Paul Hollywood caught speeding on M25 by Surrey Police - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cj0pq12vdm0o"
+  },
   {
     "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/b27c/live/3ee8b780-3f23-11f1-80a9-03674e4a073c.jpg",
     "alt": "Young woman in red checked shirt rests her chin on her hand. She is sitting in an airport waiting room with a red case next to her",
