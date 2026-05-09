@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 413,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-arm64.zip",
+    "title": "",
+    "content": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000���\\.��!��\u0000\u0000X�\u0001\u0000 \u0000\u0000\u0000python.exe�\u0007XS��(:I�E�.5�J\u0011\b�(�\u0000\"XA� �\u0016���C@�� \b����T\u0010\u0004\u0015Q�HQTP�(\u001d�\b\"\u001d\u0012\b�};�\u0011������{���w���Ug�5k�̞\u003d�\u0027�\u0000\u0002\u0000@\u0003\u0000�P\u0000x\u000e�\u001b\u0006��\u001b\u0011\u0000�M��6P��A�9��\u0007Q3W7�������\u0027�����;\u0000�C�\u0005z!ݼ���L���N89VV��\u001b6�y\u001f8�\u0006��o��m���\u001aT\u0027oFy��� �\u0015Z��Fa�_�P\u0013T\u0027���/XZ�k z#O��\u001b\u0015\u003eS�^�u�@�M�\u001c]!���\u001b�\u0003�T@\u0007����m�\u0018`�o�\u0001�\u0000\u0000\u00160*O�\u000b\u0000���\u0012*\u0007��\u0000�A�o\b2a�$\u0026-�\u0000\u0002�EW�ˮ����F���@��\u0004\u0000���\u0000@j¨\u00130F\u0015���\u001a\u0000 \u0006��!�\u00010�/�_t3Ѝ�\u0004�j+��\u0026\u0017�\u000b \u0000\u0000��n\u0004�m�\u0018�4a\u0027��d\u001f`\u000f�\"�:����\u001e\u0006\u0000�ܺ\u001a`�\u0005\u0000@نo���W-糮8�Yl���?����s\u0004\u001b91\u0006\u0000h�\u00005\u0011�����v�\u0010%���9�9p \u0000��E���l�\u0000���A2;\u001cC\u0012\u0001�\u0013:\u0000�U#�����\b��)�\u000e@�\u0002\u001cF�S�cH�\u0006�|\u0004 �\u0002���?�`ʓ\u0000P��\u0007\u001b�\u0011�\u0002�\u001e; �\"���(\u0000��\u0007� FfoL�PT�\u0011\b��h�¾\u000b\u0000���\u003e\u0000�\u0002�\u0000\u0011��\u0000P \u0027c\u001b�\u003e-�\u003e�6��(�|\u0000p��\u001fS^� |�\u000e�ϊ���GÀ�q,��\u001d�)W8-��fx΄-��\u001f\u0005��\u003d\u000b\u00003v\u000e�l\u001c\u000bH\u0000\u0010L �� ��������M@9; |6�Uocߦ� ���N���֬U� �L�e�`�ۗ@z�0��\u0016J�g���4V(\u0014ޭ�!a\"T� \u0000�0� A\u001b\b\"8��7�Y��\u003c�]\u0000��R(�[琢\u0007\u003e�#\u0000 \u0003\b\u0026v@�\u000bE\u000f$o���iU�fߏP-�\u0018����\u0016C�\u0002�\u0005�y\u0014\u001cL���\u0019��#\u0019\u001a7���5J:�B)۬�9�����Ckkk\\\u0004�^\u0003�\u0000�H\u001e��(��T���W�l�\u0003�\u0005�S�\u0002���A�2��\u000b���z�\u001d7��tM5��sE\u0000� :�ۈ\u0000f76�\u0013\u0000\u0003* \u0000��h��͵C�\u00078�;7t ������\u0010͑�\b\bW\u0018w�|FF@��\u00068�7ij-�rj �a와`2\u000b��f}���%�`��\u0018�2� \u0003ɮ0L(ZT�}�\u0006��ja�O�H\u00260\u0016�31�a�E`��4��P\u0001\u0013*\"��[�\u0000f,���P \u0013�\u0000cJ`�\u0007�\u0007Y1�R�� ̬� ỳ$\u0002c����\u0019\u0013+�3\u0002 I\u0012�\u0000��4O��3\u0000 �\u0001\u0016U\u0002��\u0027j]\u001d��\u0016������Ï(ן~a�ih��p��1��o��:�\u001d\u0018��\u0019��L8(e\u0000�Ph�S�2\u001c�1hbʡ��T-�����a��8 ��0�\"\u001a�7\u001f\u00003C�F��\u0019�����1Q� \u0003�뾹�wk|[�G�\u0019�\u0002ǐ\u000e\"\u0000�+��W~L��v@�Z S� \u0007|\u0007a �ь�W\u0012\u000e��G\u001b�US_i�s�; �g\u001dR \u001d���_���\u001c�\u003d���);\u0000�:����x��\u0019uvP!���dIQ��$ ��5�\u000b�\u0015�!6\u0002P�O��(8�\u0004�B1�{\u003c��\u0027z�O������a\u0010�������l�6�a�E�o�N~C_a���H������o�Jt�o�\u0001������Rs݈�gK��w�Е�*T\u0013�\u0000\u0010���A�b�\u0003��8\u0000��\u0026���b�\u0000�\u0017\u0007���l����7�ͻ_���U��*��k�\u0010\u001b�w�^k{k\u0005k\u0007k\u00077/k{?OUek��\u0000Wo/9\u001f\u0027���B\u001b?� B� ��\u000b�\u0010ؖ{����zTz������\u0019H��v\u0000.2o�\u003c�\u003c.!\u0000���\u000f���P� ��۩\u0002�X��_����;:�\u0000\u0010\"J\u003d�\u00009\u003d\u0013��Vz:�\u000e�o\u003c�y�O�IH/�\u000f�Aj�k�A�̿��\u0000\u0000y��\u001e��3��{�\u0027��W�\u0007ό���\u0027���\" ]\u0016\u0000�y� �}\u000b|��\u0019\u0016\u0016���\u0002ퟻ7��\u00058�\\\u000f\u0019X��;I�g��g����\u0007o]�g7\u0000�\u0010/d�/t?� ��\u0007EH�Fr��6xJ\u0010�O��R�ڒ\u0002 \u001e�\u0017\u000f*a�ݬ\u001d�w��N\u001e��4\u0000�9��S�\u001b�ϛ����+\u0006�\u0001���W���\u0002Я\u000e��Qc�o5:�a�\u0005\u0018��;\u0000�\u00000 ��\u000ed\u0001�}7����/0���!\u0017`�~\u0002�ϴ��$\u001fz)���\u001es\u0000�s�F!��\u0005\u0000\u001f�o�\u0005`\u0018�\u0001n�^@�XGo/�o�gb~���Q}\u0005ey�q�\u0001X�+���#\u0000�Ņ��.� ����`\u0003B}p�\u0011`!F�?���\u003e�\u0015��\u0007�\u000e\u0000�tvs ��a�ݜpX{?� \u0000T\u0000���-����-lC�� r�����y\u0005\u0000 \u0005�.��M��TP]�\u001f���\u0004j�q,\u000e�\u0003\\�[\u0000\u0000�\u0000KE�֣t���\u0010�o),�\u0007���p�v�u*�\u001a\u0014\u000f�:���\u0006X���Z\u0000�sq��\u001c�ꇳw�zx;�{@ ��\u0007@:XG{\u000f\u000f\u0007{Gwh\u0007�\u0018�*U\u0013\u0007م\"��\u0005c�A�ֽ:z{�Ǥ�G.���F\u0003�\u001d��ʂ+���\u000fy4��@�_�1��������\u0011��\u001d�\u0015��\u0003�p\u0003\\��zi\u001a�y;���\u000f:�\u0003[�f��\u001et\u0002�\u001fa�\u000b0 �\u000f�y��y�t�\u000f�y� �@\u001c�+��G��\u0003 q�N�)�).��k}m8�o��\u0001jU������N�\u001e8C��%\u0000��M��\u001fQR\\�z\u001f��y:����\"��n��p�w�\u0007\u001b�g�/\u0014j���q�����ƾ~��c\u0007 b7\u0000��\u0000(K\u0000��\u000e����Yf�\u0004\u0000��\u0000\u001c����\u0002k��w�����S ���X�\u000bT�s\u001c\u0000��^�n\u0002�\u001brA�\u0011\u0002��\u0002�F\u0002�j.\u0000�A5��\u0006�\u000b��\u0001�� �5\u001e\u0000�\u000e��\u0007��@\u0007\u0026�\u000b�q�\u0003\u000b�]���\u000b@\u001bЅ3�\u0000@\u000bT�k;\u0000�\u0006�@�\u001f��\u0012\u00004�\u0003�\u0003�0y�uH\u003d\u0013�^?�\u0011w�����]\u001a �[ y\u0000\b��\u001d�\u0000\u0010���s\u0000\b|й\u0016\u0000�,Ե\u003e\u0006\u0000��\u0015 \u0010��|0@�\u003e!��\u0001\u0002�\u0019�! \u0010�s0 \u0010�3\u0018 \u0010��w\u0012 \u0010\u0018��8\u0018 0A�d0@`\u0006\u0000t�\u0000\u0001z�����\u001f��\u0001��|������H\u0003��Ƨ;���\u000b��_���\u0027�\u000b?�_����_�/�����\u000b�_��I�\u0007\u003e����G\u0000�\u003c\u0001@��o��4\u0000$y~��\u000f\u0001ȃ�k���\u0000 \u000f*��\u0026�\u0006�F�X6\u001a�\u001d\u0000�P\u0011m4�\u0016\u0000����\u000b�)\u0018���U�9\u003d\u0018�۵Ş\u001b �m�Ъ3\u0014\u0006�1n�\u0006\u0006\\�|��x\u0016\u0006 ��,�\u001c �m\u0019/��۵%\u001eMt��\u00072\b�����%� \u0027/��y9z;�y�h���\u001d�U\u0017C�\u0007�{9�{x{��Bq�bhmV\u0026M{���G(2����_K,��k���+���_��������9@���s����\\��\u0018�����\u0019�\u001f`�՛6+\u0013\u0012�\u0019�\u0017�\u001fp�����Ӛ�z?$R�\u001f�\u0018��\u0016\u0010�A#��~8�@�\u0000����-��\u0003���K�U�\u001f�s �\u000e`GpA8\u000f�\u0007�WK����W��;�O \u0019��\b\u001d\u0000�Ĝ�\u003d�qb��\u003eP��D\u0013�GH���ƶN;z{��\u0007�9�y�\u0005�w$�\u000fu(��n�}|\u003c�\u001c�\u0001��KTV\u0016i����\u001d쏴p�\u000f�G�����\u0007��x�\u0005���L�\u0007����q�� �*j� *ʪ��J�*��*�8Yyyu\u0027\u001c\u000e���,\u001f�u�[��׶�T\u0014��\u001d4�eU�4Te��\u001d�d�q�N������*�\u001aJ��j[����l�謨�S�UQrАUVVV�u��p�uR�pR�W�W�)���m9��ں����������{Q� �rY�s��D�\u001e\u003d�R�WPEY�iSL;�/\u0010�����_#��\u0000�a�N8\u001f��\u0013��qs��� ��ؗ~Ǿ�S\u001d��Т�n �Ăݼ�\u0014Ő^��8-��ž\u0011��\u001e��%���\u0015����/�{\u000b�{�k�T�����A�\u0010C\u001b�������[\u0000�1 �\u000f�%\u0026-�� t�ps\u003c�\u000b5�v�A]T4T\u001cT�\u0015��\u001d\u001d�\u0015��Ő\u001e�^.��.�꿧�����Ö́\u0026js�ڬЉ\u0004���� X��!����~���\u001b\u0018`��Q�~y�\u0000\u0000F\u001f�\u0013�\u0000l��~�\u0006�\u003c\u0027�Z��~\u001d��[��CS�-#G�̋l�-\u0003+v\u003dx��dq8-�@\u001a�+\u000fr���\u0007͵6���\u0007룏�w�����V�f[mR�\u0013��\u0004S��W���m�Vc8b�P ��*��(�y���_\u0027{-�\u001a\u001e�\u003dX�U�Ti�f��6�7zK{��U��j���ꯩ��_݌��\u003c\u0012$\u0012\u001e\u0016o?�f\u0001X������O���^{���Sg#���%C���\u0027s\u0005?�\u003d ]�\b�\u003c \u000f\u0001��v� QP+/\u001a��\u0018�����hyH�gxiC_\u0005NC��D\\Hd�g\u0011��\u0018��:��\u0010z0\u003c�!�m\u001eҫS3��ŢG�om���}^�\u0004�z\u0019�4{��\u001aaP;�Ԑ��33*l)\u001c\u003e�$q��w����ɘ֙壇}\u001aX\u0005Č\u0006.\u000b��/�L�0:�؍����G�\u0011���d� ��$�d�\u003d{ ��\u0006�3����d�\u0000����2\u0011��X|�Sz$v;�F�Ri���\u003e�.�\u0003O�\"��\b�kK\u00038v\u003c���)�\u00110�\u001b\u0018�\u0019i֤�+y�:\u0001\u000eT��\b\u0027:����J����\u0006�n/^�?�#T-���5���N\u001cn��`iuW��GN�e���V �κ,)��N\u0000:�\u0013�8#\u00027����mvՆ���������\u0006�`����\b\u003e�r?RIQ��Ӈ�t7�e�I~�Cq�����)�K�mК��V�߿\u0007@�A��\u0027���ՙ�G\b\u003e\u0027u�L����k׮U\u0013��� �\u000euL\u0017/]������u+\u0018�~t�Me�O5LP�\u0007\u0018i�v\u0006M�jMS���髙2�d\u000e\u0018�9���U\u0012\u001d�\u001c��JN�I��hq\u0001��L����e��W�j��\u0027\u0019\u0003�+�j��4�����j\u0011`\u0007x�u�2�a$\u000b������\u001f�G�J�b. �9 �_z��\"]��BQ�M\u0003(�f\u001f\u0018.�$���(�]���]�o\u0015�u}�\u001d\u0001�^0���η@m�\u0026\u0013I\u0010��)^���+�����\u0019餢��۽�O� �p/�qў�ѽZ[�2���\u0013Ƣ��p��VC`:91�ƽ�᏷�9\u0005�\u0016+�/�^6\u001a0|t~�����[�S[͗#�)��J�J�1S��\u000b\u0011Mr���d\u0004��ݮ\u003e\u000e:(|u`�C~)�\u001f�[\u001f��y}�ՠxy�^\u0006��U�ŋ\u0017��Oyץɞ��ڌ\u000f:F\u0011�g!\\7}j[�-B!6TT��\u0018�}�������1F�;\u001enY�|�;l⑐��GNtƯP\u0018�V8W���y�6�F�#��@�u7���\u0000��JK�k���@\u0010{�zI��\u0002OA��\u0027��\u0015m���o�\u0013��������\u000b�J\u001e�*\u000b\u0014\u003d�\u0011 ����D��3�6��\u003c4rӻ�N��\u000bgU\u001f\u0016���-g��\u001e���\u0007�H�9b�����W\u0006ǥ���\u000f\\��E\u001e\\��d��v�\u0026 �E\u003e���]\u0015\u001a\u0000�\u0011fB?�X\u000b[��)#�h\u0005*G_��\u0010+���|�c\u0013��c�\u0011C\u0006�C�/\u003d�\u003eU���{��³ċ\u0017��(�F�M���_\u0005\u0011�@��EY�Z\u0003��#����Wď�;��;x+Gk���\u0006��?�\"\u003c\u0007�{���\u0010YuE����V�Sr�%-�:�#E\u0000�ޗW|Q�Nm��/�_:�rD�\u001fMϭg9p��tqb$�T\u0014eee���%\u000bA\u0002�\u0010\u001d�b\u0027�^{:�\u000bSe\u000f��̾(�J�]\u0017��\u0019Ώ\u0018�N#\u003c���;`�1l;{�8�\u001a\u0007�}4׮�\u0011��W�z�K�C�-��W�\"h��KdRU�G�;�^yyx�d,�5i��*\u003d��r��:\u0001���\u0011���պ�\u0026�f\u000f�thh�/���\u003d[v֗x��MѬ\u000e�*\u0006)8�{bJb��\u001e 3��_�yX���\u0000\u0014�LT�Ȅ\u0014����W�dہW�C�*\u0011�\u0013�\u001a�\u003e��xxщ\u0027t\"/Ig�G\u0003\u00134\u0017��V�\u001eí̮q�z�\u0010OջW\u0005Rl��l��̺�\u001aG���%�\u003d�/�9�\"MShB�\u0012�X`�oh2�2d\u0006���w\u0004��`���16\u0017�\u0011i8� 6ʹ���h�iw�\u0000opM�\u0007�[B���\u0026�O]\u001a}�ӵ���[�S\u001c7F䄤^",
+    "scrapedAt": "2026-05-10 04:10:16.970966"
+  },
+  {
+    "id": 412,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#uuid",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:10:11.257093"
+  },
+  {
+    "id": 411,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-pyrepl-highlighting",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:10:06.331359"
+  },
+  {
+    "id": 410,
+    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz.spdx.json",
+    "title": "",
+    "content": "{ \"SPDXID\": \"SPDXRef-DOCUMENT\", \"creationInfo\": { \"created\": \"2026-04-07T15:11:42Z\", \"creators\": [ \"Person: Python Release Managers\", \"Tool: ReleaseTools-2133a4a21a9fe2acc68a130eaf615deae3c6080c\" ], \"licenseListVersion\": \"3.22\" }, \"dataLicense\": \"CC0-1.0\", \"documentNamespace\": \"https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz.spdx.json\", \"files\": [ { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-COPYING\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"f1b1126ed7da8f2068302e7a692b0600e6f94b07\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"31b15de82aa19a845156169a17a5488bf597e561b2c318d159ed583139b25e87\" } ], \"fileName\": \"Modules/expat/COPYING\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-ascii.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"b0235fa3cf845a7d68e8e66dd344d5e32e8951b5\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"42f8b392c70366743eacbc60ce021389ccaa333598dd49eef6ee5c93698ca205\" } ], \"fileName\": \"Modules/expat/ascii.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-asciitab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"cbb53d16ca1f35ee9c9e296116efd222ae611ed9\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"1cc0ae749019fc0e488cd1cf245f6beaa6d4f7c55a1fc797e5aa40a408bc266b\" } ], \"fileName\": \"Modules/expat/asciitab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-expat.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"9dfd09a3be37618cbcea380c2374b2b8f0288f57\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"26805a0d1a7a6a5cd8ead9cf7f4da29f63f0547a9ad41e80dba4ed9fe1943140\" } ], \"fileName\": \"Modules/expat/expat.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-expat-external.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"da0328279276800cc747ea7da23886a3f402ccb3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"15a80e414e9e7c43edba64b1608a77c724387070138693f9e9bcca49c78a2df7\" } ], \"fileName\": \"Modules/expat/expat_external.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-iasciitab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"1b0e9014c0baa4c6254d2b5e6a67c70148309c34\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"ad8b01e9f323cc4208bcd22241df383d7e8641fe3c8b3415aa513de82531f89f\" } ], \"fileName\": \"Modules/expat/iasciitab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-internal.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"6a4a232233ba1034c3f2b459159d502e9b2d413b\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"c803935722f0dbdeeede7f040028fb119135e96dfad949479f8a5304b885bdd6\" } ], \"fileName\": \"Modules/expat/internal.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-latin1tab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"d335ecca380e331a0ea7dc33838a4decd93ec1e4\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"eab66226da100372e01e42e1cbcd8ac2bbbb5c1b5f95d735289cc85c7a8fc2ba\" } ], \"fileName\": \"Modules/expat/latin1tab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-nametab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"cf2bc9626c945826602ba9170786e9a2a44645e4\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"67dcf415d37a4b692a6a8bb46f990c02d83f2ef3d01a65cd61c8594a084246f2\" } ], \"fileName\": \"Modules/expat/nametab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-siphash.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"aca27f46d9fd387b63ce7ff2e4f172cad130b39b\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"f537add526ecda8389503b7ef45fb52b6217e4dc171dcc3a8dc6903ff6134726\" } ], \"fileName\": \"Modules/expat/siphash.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-utf8tab.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"b77c8fcfb551553c81d6fbd94c798c8aa04ad021\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"8cd26bd461d334d5e1caedb3af4518d401749f2fc66d56208542b29085159c18\" } ], \"fileName\": \"Modules/expat/utf8tab.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-winconfig.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"a3a8c44efd55dbf2cfea8fcee009ec63120ec0a3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"e70948500d34dfcba4e9f0b305319dfe2a937c7cbfb687905128b56e1a6f8b33\" } ], \"fileName\": \"Modules/expat/winconfig.h\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlparse.c\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"0c74fbd48dd515c58eeb65b7e71b29da94be4694\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"861e7a50ce81f9f16b42d32a9caa4f817d962b274b2929b579511c6f76d348d4\" } ], \"fileName\": \"Modules/expat/xmlparse.c\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlrole.c\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"7cff4d7210f046144f5fa635113f9c26f30fe3d3\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"eaa6c327f9db4a5cec768d0c01927fea212d3ef4d4f970ebc0a98b9f3602784c\" } ], \"fileName\": \"Modules/expat/xmlrole.c\" }, { \"SPDXID\": \"SPDXRef-FILE-Modules-expat-xmlrole.h\", \"checksums\": [ { \"algorithm\": \"SHA1\", \"checksumValue\": \"ac2964cca107f62dd133bfd4736a9a17defbc401\" }, { \"algorithm\": \"SHA256\", \"checksumValue\": \"92e41f373b67f6e0dcd7735faef3c3f1e2c17fe59e007e6b74beef6a2e70fa88\" } ], \"fileName\": \"Modules/expat/xmlrole.h\" },",
+    "scrapedAt": "2026-05-10 04:09:58.40046"
+  },
+  {
+    "id": 409,
+    "url": "https://www.python.org/downloads/release/python-3145rc1/",
+    "title": "Python Release Python 3.14.5rc1 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Release date: May 4, 2026 Python 3.14.5rc1 is a release candidate for the fifth maintenance release of 3.14, containing around 113 bugfixes, build improvements and documentation changes since 3.14.4. Garbage collector Notably, the garbage collector (GC) has changed in Python 3.14.5rc1. The incremental garbage collector shipped in Python 3.14.0-3.14.4 has been reverted back to the generational garbage collector from 3.13, due to a number of reports of significant memory pressure in production environments. See What\u0027s New and discuss.python.org for details. Call to action We strongly encourage testing of this release candidate, ahead of the planned 3.14.5 final on Friday 2026-05-08. As always, report any issues to the Python bug tracker. Please keep in mind that this is a preview release and its use is not recommended for production environments. Major new features of the 3.14 series, compared to 3.13 Some of the major new features and changes in Python 3.14 are: New features PEP 779: Free-threaded Python is officially supported PEP 649: The evaluation of annotations is now deferred, improving the semantics of using annotations. PEP 750: Template string literals (t-strings) for custom string processing, using the familiar syntax of f-strings. PEP 734: Multiple interpreters in the stdlib. PEP 784: A new module compression.zstd providing support for the Zstandard compression algorithm. PEP 758: except and except* expressions may now omit the brackets. Syntax highlighting in PyREPL, and support for color in unittest, argparse, json and calendar CLIs. PEP 768: A zero-overhead external debugger interface for CPython. UUID versions 6-8 are now supported by the uuid module, and generation of versions 3-5 are up to 40% faster. PEP 765: Disallow return/break/continue that exit a finally block. PEP 741: An improved C API for configuring Python. A new type of interpreter. For certain newer compilers, this interpreter provides significantly better performance. Opt-in for now, requires building from source. Improved error messages. Builtin implementation of HMAC with formally verified code from the HACL* project. A new command-line interface to inspect running Python processes using asynchronous tasks. The pdb module now supports remote attaching to a running Python process. For more details on the changes to Python 3.14, see What’s new in Python 3.14. Build changes PEP 761: Python 3.14 and onwards no longer provides PGP signatures for release artifacts. Instead, Sigstore is recommended for verifiers. Official macOS and Windows release binaries include an experimental JIT compiler. Official Android binary releases are now available. Incompatible changes, removals and new deprecations Incompatible changes Python removals and deprecations C API removals and deprecations Overview of all pending deprecations Python install manager The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases. More resources Online documentation PEP 745, 3.14 Release Schedule Report bugs at github.com/python/cpython/issues Help fund Python directly (or via GitHub Sponsors) and support the Python community And now for something completely different I asked Rodrigo Girão Serrão for a fun π fact: Euler\u0027s identity says that eiπ + 1 \u003d 0 and is often cited as an equality of profound mathematical elegance, since it relates five of the most fundamental mathematical constants: 0, 1, π, e, and i. A mathematics professor at Stanford University has said \"like a Shakespearean sonnet that captures the very essence of love, or a painting that brings out the beauty of the human form that is far more than just skin deep, Euler\u0027s equation reaches down into the very depths of existence\". Source Enjoy the new release Thanks to all of the many volunteers who help make Python Development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation. Full Changelog macOS Download macOS installer Windows Download Python install manager Source release Download XZ compressed source tarball Version Operating system Description File size Sigstore SBOM SHA-256 checksum Gzipped source tarball Source release 29.8 MB .sigstore SPDX 6d3e5301534e221e2a4e8add507fb1a20e31d3530d32eb618f3ae0a7170bc2f0 XZ compressed source tarball Source release 22.8 MB .sigstore SPDX 67ee56f36fc22e5ada84d452430362e",
+    "scrapedAt": "2026-05-10 04:09:47.100174"
+  },
+  {
     "id": 408,
     "url": "https://docs.python.org/3/whatsnew/3.14.html",
     "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
@@ -2852,26 +2887,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 409,
-    "url": "https://www.python.org/downloads/release/python-3145rc1/"
-  },
-  {
-    "id": 410,
-    "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz.spdx.json"
-  },
-  {
-    "id": 411,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-pyrepl-highlighting"
-  },
-  {
-    "id": 412,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#uuid"
-  },
-  {
-    "id": 413,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-arm64.zip"
   },
   {
     "id": 414,
@@ -87625,10 +87640,199 @@ window.searchData = [
     "id": 44520,
     "url": "https://github.com/python/cpython/issues/149595",
     "parentUrl": "https://github.com/python/cpython/issues"
+  },
+  {
+    "id": 45756,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-win32.zip.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45759,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-amd64.exe",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45761,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-x86_64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45764,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-amd64.zip.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45765,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-arm64.zip",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45768,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-amd64.exe.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45769,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-win32.zip",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45772,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-arm64.exe",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45773,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-win32.zip.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45774,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1.exe",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45777,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-amd64.exe.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45780,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-amd64.zip.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45784,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-macos11.pkg",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45786,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-x86_64-linux-android.tar.gz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45790,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tar.xz.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45791,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-arm64.zip.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45792,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-macos11.pkg.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45793,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-arm64.exe.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45794,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-aarch64-linux-android.tar.gz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45800,
+    "url": "https://docs.python.org/3.14/whatsnew/3.14.html",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45803,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tar.xz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45804,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tgz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45805,
+    "url": "https://www.python.org/ftp/python/3.14.5/windows-3.14.5rc1.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45809,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1.exe.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45810,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-aarch64-linux-android.tar.gz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45811,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tgz.spdx.json",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45814,
+    "url": "https://www.python.org/ftp/python/3.14.5/windows-3.14.5rc1.json.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45816,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tar.xz",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45818,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-amd64.zip",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45822,
+    "url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5rc1.tgz.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45826,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1.exe.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45827,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-embed-arm64.zip.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
+  },
+  {
+    "id": 45833,
+    "url": "https://www.python.org/ftp/python/3.14.5/python-3.14.5rc1-arm64.exe.sigstore",
+    "parentUrl": "https://www.python.org/downloads/release/python-3145rc1/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#uuid"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#uuid"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-pyrepl-highlighting"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-pyrepl-highlighting"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
