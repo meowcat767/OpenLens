@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 817,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring",
+    "title": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_U",
+    "scrapedAt": "2026-05-10 04:49:26.802165"
+  },
+  {
+    "id": 816,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-10 04:49:23.153225"
+  },
+  {
+    "id": 815,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free",
+    "title": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int ",
+    "scrapedAt": "2026-05-10 04:49:19.240291"
+  },
+  {
+    "id": 814,
+    "url": "https://github.com/python/cpython/issues/120600",
+    "title": "[C API] Make Py_TYPE() opaque in limited C API 3.14 · Issue #120600 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k [C API] Make Py_TYPE() opaque in limited C API 3.14 #120600 New issue Copy link New issue Copy link Closed Closed [C API] Make Py_TYPE() opaque in limited C API 3.14#120600 Copy link Labels topic-C-API Description vstinner opened on Jun 16, 2024 Issue body actions In the limited C API 3.14 and newer, I propose to change Py_TYPE() and Py_SET_TYPE() implementation to opaque function calls to hide implementation details. I made a similar change for Py_REFCNT() and Py_SET_REFCNT() in Python 3.12. The problem is that with Free Threading (PEP 703), the implementation of these functions become less trivial than just getting/setting an object member: static inline PyTypeObject* Py_TYPE(PyObject *ob) {\n    return (PyTypeObject *)_Py_atomic_load_ptr_relaxed(\u0026ob-\u003eob_type);\n}\n\nstatic inline void Py_SET_TYPE(PyObject *ob, PyTypeObject *type) {\n    _Py_atomic_store_ptr(\u0026ob-\u003eob_type, type);\n} _Py_atomic_load_ptr_relaxed() and _Py_atomic_store_ptr() must now be called. But I would prefer to not \"leak\" such implementation detail into the limited C API. cc @colesbury @Fidget-Spinner Linked PRs gh-120600: Make Py_TYPE() opaque in limited C API 3.14 #120601 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-API Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:49:16.292496"
+  },
+  {
+    "id": 813,
+    "url": "https://docs.python.org/3/library/itertools.html#module-itertools",
+    "title": "itertools — Functions creating iterators for efficient looping — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Functional Programming Modules » itertools — Functions creating iterators for efficient looping | Theme Auto Light Dark | itertools — Functions creating iterators for efficient looping¶ This module implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML. Each has been recast in a form suitable for Python. The module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination. Together, they form an “iterator algebra” making it possible to construct specialized tools succinctly and efficiently in pure Python. For instance, SML provides a tabulation tool: tabulate(f) which produces a sequence f(0), f(1), .... The same effect can be achieved in Python by combining map() and count() to form map(f, count()). General iterators: Iterator Arguments Results Example accumulate() p [,func] p0, p0+p1, p0+p1+p2, … accumulate([1,2,3,4,5]) → 1 3 6 10 15 batched() p, n (p0, p1, …, p_n-1), … batched(\u0027ABCDEFG\u0027, n\u003d3) → ABC DEF G chain() p, q, … p0, p1, … plast, q0, q1, … chain(\u0027ABC\u0027, \u0027DEF\u0027) → A B C D E F chain.from_iterable() iterable p0, p1, … plast, q0, q1, … chain.from_iterable([\u0027ABC\u0027, \u0027DEF\u0027]) → A B C D E F compress() data, selectors (d[0] if s[0]), (d[1] if s[1]), … compress(\u0027ABCDEF\u0027, [1,0,1,0,1,1]) → A C E F count() [start[, step]] start, start+step, start+2*step, … count(10) → 10 11 12 13 14 ... cycle() p p0, p1, … plast, p0, p1, … cycle(\u0027ABCD\u0027) → A B C D A B C D ... dropwhile() predicate, seq seq[n], seq[n+1], starting when predicate fails dropwhile(lambda x: x\u003c5, [1,4,6,3,8]) → 6 3 8 filterfalse() predicate, seq elements of seq where predicate(elem) fails filterfalse(lambda x: x\u003c5, [1,4,6,3,8]) → 6 8 groupby() iterable[, key] sub-iterators grouped by value of key(v) groupby([\u0027A\u0027,\u0027B\u0027,\u0027DEF\u0027], len) → (1, A B) (3, DEF) islice() seq, [start,] stop [, step] elements from seq[start:stop:step] islice(\u0027ABCDEFG\u0027, 2, None) → C D E F G pairwise() iterable (p[0], p[1]), (p[1], p[2]) pairwise(\u0027ABCDEFG\u0027) → AB BC CD DE EF FG repeat() elem [,n] elem, elem, elem, … endlessly or up to n times repeat(10, 3) → 10 10 10 starmap() func, seq func(*seq[0]), func(*seq[1]), … starmap(pow, [(2,5), (3,2), (10,3)]) → 32 9 1000 takewhile() predicate, seq seq[0], seq[1], until predicate fails takewhile(lambda x: x\u003c5, [1,4,6,3,8]) → 1 4 tee() it, n it1, it2, … itn splits one iterator into n tee(\u0027ABC\u0027, 2) → A B C, A B C zip_longest() p, q, … (p[0], q[0]), (p[1], q[1]), … zip_longest(\u0027ABCD\u0027, \u0027xy\u0027, fillvalue\u003d\u0027-\u0027) → Ax By C- D- Combinatoric iterators: Iterator Arguments Results product() p, q, … [repeat\u003d1] cartesian product, equivalent to a nested for-loop permutations() p[, r] r-length tuples, all possible orderings, no repeated elements combinations() p, r r-length tuples, in sorted order, no repeated elements combinations_with_replacement() p, r r-length tuples, in sorted order, with repeated elements Examples Results product(\u0027ABCD\u0027, repeat\u003d2) AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD permutations(\u0027ABCD\u0027, 2) AB AC AD BA BC BD CA CB CD DA DB DC combinations(\u0027ABCD\u0027, 2) AB AC AD BC BD CD combinations_with_replacement(\u0027ABCD\u0027, 2) AA AB AC AD BB BC BD CC CD DD Itertool Functions¶ The following functions all construct and return iterators. Some provide streams of infinite length, so they should only be accessed by functions or loops that truncate the stream. itertools.accumulate(iterable[, function, *, initial\u003dNone])¶ Make an iterator that returns accumulated sums or accumulated results from other binary functions. The function defaults to addition. The function should accept two arguments, an accumulated total and a value from the iterable. If an initial value is provided, the accumulation will start with that value and the output will have one more element than the input iterable. Roughly equivalent to: def accumulate(iterable, function\u003doperator.add, *, initial\u003dNone):\n    \u0027Return running totals\u0027\n    # accumulate([1,2,3,4,5]) → 1 3 6 10 15\n    # accumulate([1,2,3,4,5], initial\u003d100) → 100 101 103 106 110 115\n    # accumulate([1,2,3,4,5], operator.mul) → 1 2 6 24 120\n\n    iterator \u003d iter(iterable)\n    total \u003d initial\n    if initial is None:\n        try:\n            total \u003d next(iterator)\n        except StopIteration:\n            return\n\n    yield total\n    for element in iterator:\n        total \u003d function(total, element)\n        yield total\n To compute a running minimum, set function to min(). For a running maximum, set function to max(). Or for a running product, set function to operator.mul(). To build an amortization table, accumulate the interest and apply payments: \u003e\u003e\u003e data \u003d [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]\n\u003e\u003e\u003e list(accumulate(data, max))              # running maximum\n[3, 4, 6, 6, 6, 9, 9, 9, 9, 9]\n\u003e\u003e\u003e list(accumulate(data, operator.mul))     # running product\n[3, 12, 72, 144, 144, 1296, 0, 0, 0, 0]\n\n# Amortize a 5% loan of 1000 with 10 annual payments of ",
+    "scrapedAt": "2026-05-10 04:49:09.392971"
+  },
+  {
     "id": 812,
     "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number",
     "title": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.5rc1 documentation",
@@ -5397,26 +5432,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 813,
-    "url": "https://docs.python.org/3/library/itertools.html#module-itertools"
-  },
-  {
-    "id": 814,
-    "url": "https://github.com/python/cpython/issues/120600"
-  },
-  {
-    "id": 815,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free"
-  },
-  {
-    "id": 816,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
-  },
-  {
-    "id": 817,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
   },
   {
     "id": 818,
@@ -139840,10 +139855,230 @@ window.searchData = [
     "id": 109346,
     "url": "https://docs.python.org/3/library/decimal.html#decimal.HAVE_THREADS",
     "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 109350,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.dropwhile",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109351,
+    "url": "https://docs.python.org/3/library/itertools.html#itertool-functions",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109357,
+    "url": "https://docs.python.org/3/library/operator.html#operator.mul",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109359,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.batched",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109360,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.cycle",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109364,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.tee",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109365,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools-recipes",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109366,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.permutations",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109369,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.combinations",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109370,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.compress",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109374,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.count",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109375,
+    "url": "https://en.wikipedia.org/wiki/Cartesian_product",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109378,
+    "url": "https://pypi.org/project/more-itertools/",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109379,
+    "url": "https://docs.python.org/3/library/operator.html#module-operator",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109381,
+    "url": "https://www.britannica.com/science/permutation",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109384,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/itertools.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109387,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109388,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.repeat",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109389,
+    "url": "https://docs.python.org/3/library/math.html#math.perm",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109390,
+    "url": "https://docs.python.org/3/library/itertools.html#",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109391,
+    "url": "https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109392,
+    "url": "https://more-itertools.readthedocs.io/en/stable/api.html#more_itertools.before_and_after",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109394,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.combinations_with_replacement",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109399,
+    "url": "https://docs.python.org/3/library/math.html#math.comb",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109401,
+    "url": "https://www.ramseysolutions.com/real-estate/amortization-schedule",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109405,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.takewhile",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109406,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.product",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109407,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.pairwise",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 109409,
+    "url": "https://github.com/python/cpython/issues/120600#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 109412,
+    "url": "https://github.com/python/cpython/pull/120601",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 109414,
+    "url": "https://github.com/python/cpython/issues/120600#issue-2355975533",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 109418,
+    "url": "https://github.com/python/cpython/issues/120600#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Make Py_TYPE() opaque in limited C API 3.14 · Issue #120600 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Make Py_TYPE() opaque in limited C API 3.14 · Issue #120600 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "itertools — Functions creating iterators for efficient looping — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "itertools — Functions creating iterators for efficient looping — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
