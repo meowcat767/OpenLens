@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 726,
+    "url": "https://github.com/python/cpython/issues/120804",
+    "title": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Rewrite asyncio subprocesses without child watchers #120804 New issue Copy link New issue Copy link Closed Closed Rewrite asyncio subprocesses without child watchers #120804 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixestopic-asyncio Description kumaraditya303 opened on Jun 20, 2024 Issue body actions Tasks Remove child watchers (excludes threaded and pidfd watcher) GH-120804: Remove SafeChildWatcher, FastChildWatcher and MultiLoopChildWatcher from asyncio #120805 Remove get_child_watcher and set_child_watcher GH-120804: Remove get_child_watcher and set_child_watcher from asyncio #120818 Remove threaded and pidfd watcher GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 Remove abc of it GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 Add documentation regarding it and news entry GH-120804: add docs for removal for asyncio child watchers #120895 Each task item will be done in a separate PR and news entry will be added when all of this is done otherwise it will be confusing for users. Linked PRs GH-120804: Remove SafeChildWatcher, FastChildWatcher and MultiLoopChildWatcher from asyncio #120805 GH-120804: Remove get_child_watcher and set_child_watcher from asyncio #120818 GH-120804: Remove PidfdChildWatcher, ThreadedChildWatcher and AbstractChildWatcher from asyncio APIs #120893 GH-120804: add docs for removal for asyncio child watchers #120895 gh-120804: remove is_active method from internal child watchers implementation in asyncio #121124 Reactions are currently unavailable Metadata Metadata Assignees kumaraditya303 Labels 3.14bugs and security fixesbugs and security fixestopic-asyncio Projects asyncio Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:39:35.490405"
+  },
+  {
+    "id": 725,
+    "url": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo",
+    "title": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic c",
+    "scrapedAt": "2026-05-10 04:39:29.888964"
+  },
+  {
+    "id": 724,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64",
+    "title": "Integer Objects — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)",
+    "scrapedAt": "2026-05-10 04:39:27.229118"
+  },
+  {
+    "id": 723,
+    "url": "https://github.com/python/cpython/issues/69998",
+    "title": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k locale.nl_langinfo() can\u0027t decode THOUSEP monetary value #69998 New issue Copy link New issue Copy link Closed Closed locale.nl_langinfo() can\u0027t decode THOUSEP monetary value#69998 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description serhiy-storchaka opened on Dec 5, 2015 Issue body actions BPO 25812 Nosy @malemburg, @loewis, @warsaw, @vstinner, @bitdancer, @serhiy-storchaka, @nnja Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d \u0027https://github.com/nnja\u0027\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2015-12-05.21:19:05.273\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-bug\u0027, \u0027library\u0027]\ntitle \u003d \"locale.nl_langinfo() can\u0027t decode value\"\nupdated_at \u003d \u003cDate 2019-01-09.11:53:37.581\u003e\nuser \u003d \u0027https://github.com/serhiy-storchaka\u0027 bugs.python.org fields: activity \u003d \u003cDate 2019-01-09.11:53:37.581\u003e\nactor \u003d \u0027vstinner\u0027\nassignee \u003d \u0027nnja\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2015-12-05.21:19:05.273\u003e\ncreator \u003d \u0027serhiy.storchaka\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 25812\nkeywords \u003d []\nmessage_count \u003d 4.0\nmessages \u003d [\u0027255979\u0027, \u0027267017\u0027, \u0027267192\u0027, \u0027333308\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027lemburg\u0027, \u0027loewis\u0027, \u0027barry\u0027, \u0027vstinner\u0027, \u0027r.david.murray\u0027, \u0027serhiy.storchaka\u0027, \u0027nnja\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue25812\u0027\nversions \u003d [\u0027Python 3.8\u0027] Linked PRs gh-69998: Fix decoding error in locale.nl_langinfo() #124963 Reactions are currently unavailable Metadata Metadata Assignees nnja Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Locale issues 🗺 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:39:22.4705"
+  },
+  {
+    "id": 722,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:39:14.614673"
+  },
+  {
     "id": 721,
     "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_FALSE",
     "title": "dis — Disassembler for Python bytecode — Python 3.14.5rc1 documentation",
@@ -4767,26 +4802,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 722,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union"
-  },
-  {
-    "id": 723,
-    "url": "https://github.com/python/cpython/issues/69998"
-  },
-  {
-    "id": 724,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64"
-  },
-  {
-    "id": 725,
-    "url": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
-  },
-  {
-    "id": 726,
-    "url": "https://github.com/python/cpython/issues/120804"
   },
   {
     "id": 728,
@@ -122090,10 +122105,709 @@ window.searchData = [
     "id": 89003,
     "url": "https://docs.python.org/3/library/types.html#standard-interpreter-types",
     "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 90511,
+    "url": "https://github.com/malemburg",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90514,
+    "url": "https://github.com/python/cpython/issues/69998#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90515,
+    "url": "https://github.com/warsaw",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90516,
+    "url": "https://github.com/orgs/python/projects/22",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90517,
+    "url": "https://github.com/serhiy-storchaka",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90521,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22type-bug%22",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90524,
+    "url": "https://github.com/nnja",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90525,
+    "url": "https://github.com/loewis",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90526,
+    "url": "https://github.com/python/cpython/issues/69998#top",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90527,
+    "url": "https://bugs.python.org/issue25812",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90528,
+    "url": "https://github.com/python/cpython/issues/69998#issue-1198944975",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90529,
+    "url": "https://github.com/python/cpython/pull/124963",
+    "parentUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "id": 90645,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_ALL",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90646,
+    "url": "https://docs.python.org/3/library/locale.html#background-details-hints-tips-and-caveats",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90647,
+    "url": "https://www.rfc-editor.org/info/bcp47",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90648,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90650,
+    "url": "https://docs.python.org/3/library/locale.html#locale.str",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90652,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_NUMERIC",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90653,
+    "url": "https://learn.microsoft.com/en-us/windows/win32/intl/locale-names",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90654,
+    "url": "https://docs.python.org/3/library/locale.html#locale.gettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90656,
+    "url": "https://docs.python.org/3/library/locale.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90657,
+    "url": "https://docs.python.org/3/library/locale.html#locale.bindtextdomain",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90658,
+    "url": "https://docs.python.org/3/library/locale.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90659,
+    "url": "https://docs.python.org/3/library/locale.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90660,
+    "url": "https://docs.python.org/3/library/locale.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90661,
+    "url": "https://docs.python.org/3/library/locale.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90663,
+    "url": "https://docs.python.org/3/library/locale.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90664,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90665,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90666,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90667,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90668,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90669,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90670,
+    "url": "https://docs.python.org/3/library/locale.html#locale.YESEXPR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90672,
+    "url": "https://docs.python.org/3/library/locale.html#locale.T_FMT_AMPM",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90673,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90674,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90676,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90677,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90678,
+    "url": "https://docs.python.org/3/library/locale.html#locale.normalize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90679,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90680,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90681,
+    "url": "https://docs.python.org/3/library/locale.html#locale.DAY_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90682,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABDAY_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90683,
+    "url": "https://docs.python.org/3/library/locale.html#locale.currency",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90684,
+    "url": "https://www.iso.org/iso-639-language-code",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90685,
+    "url": "https://docs.python.org/3/library/locale.html#locale.localize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90689,
+    "url": "https://docs.python.org/3/library/time.html#time.strftime",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90690,
+    "url": "https://docs.python.org/3/library/locale.html#locale-names",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90691,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_8",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90692,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/locale.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90693,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90694,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_9",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90695,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90696,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90697,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_D_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90698,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90699,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90700,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_MESSAGES",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90701,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90702,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90703,
+    "url": "https://docs.python.org/3/library/locale.html#locale.THOUSEP",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90705,
+    "url": "https://docs.python.org/3/library/locale.html#locale.format_string",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90706,
+    "url": "https://docs.python.org/3/library/locale.html#locale.D_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90707,
+    "url": "https://docs.python.org/3/library/locale.html#locale.RADIXCHAR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90709,
+    "url": "https://docs.python.org/3/library/locale.html#locale-name",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90711,
+    "url": "https://docs.python.org/3/library/locale.html#for-extension-writers-and-programs-that-embed-python",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90713,
+    "url": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap07.html#tag_07_03_05_02",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90714,
+    "url": "https://docs.python.org/3/library/locale.html#locale.delocalize",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90715,
+    "url": "https://docs.python.org/3/library/locale.html#locale.NOEXPR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90716,
+    "url": "https://docs.python.org/3/library/locale.html#locale.localeconv",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90717,
+    "url": "https://docs.python.org/3/library/locale.html#locale.strcoll",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90719,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_MONETARY",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90720,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ALT_DIGITS",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90721,
+    "url": "https://docs.python.org/3/library/locale.html#locale.Error",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90723,
+    "url": "https://docs.python.org/3/library/locale.html#",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90724,
+    "url": "https://docs.python.org/3/library/locale.html#locale.bind_textdomain_codeset",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90726,
+    "url": "https://docs.python.org/3/library/locale.html#access-to-message-catalogs",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90729,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_TIME",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90731,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CODESET",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90734,
+    "url": "https://www.iso.org/iso-3166-country-codes.html",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90735,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/locale.py",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90736,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90739,
+    "url": "https://learn.microsoft.com/en-us/cpp/c-runtime-library/locale-names-languages-and-country-region-strings",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90740,
+    "url": "https://docs.python.org/3/library/locale.html#locale.textdomain",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90741,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_11",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90742,
+    "url": "https://docs.python.org/3/library/locale.html#locale.dgettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90744,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_12",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90745,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ERA_D_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90746,
+    "url": "https://docs.python.org/3/c-api/conversion.html#c.Py_TOLOWER",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90747,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_10",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90748,
+    "url": "https://www.unicode.org/iso15924/",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90749,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CHAR_MAX",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90750,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getpreferredencoding",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90752,
+    "url": "https://docs.python.org/3/library/locale.html#locale.T_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90754,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_2",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90755,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_3",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90756,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_4",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90757,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_5",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90758,
+    "url": "https://docs.python.org/3/library/locale.html#locale.atof",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90759,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_6",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90760,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_COLLATE",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90761,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_7",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90762,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_8",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90763,
+    "url": "https://docs.python.org/3/library/locale.html#locale.atoi",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90764,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_9",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90765,
+    "url": "https://docs.python.org/3/library/locale.html#locale.LC_CTYPE",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90766,
+    "url": "https://docs.python.org/3/library/locale.html#locale.MON_1",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90769,
+    "url": "https://docs.python.org/3/library/locale.html#locale.dcgettext",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90773,
+    "url": "https://docs.python.org/3/library/locale.html#locale.D_FMT",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90774,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_12",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90775,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_11",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90776,
+    "url": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap08.html#tag_08_02",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90777,
+    "url": "https://docs.python.org/3/library/locale.html#locale.ABMON_10",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90778,
+    "url": "https://docs.python.org/3/library/locale.html#locale.CRNCYSTR",
+    "parentUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "id": 90782,
+    "url": "https://github.com/python/cpython/issues/120804#issue-2364875592",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 90783,
+    "url": "https://github.com/python/cpython/issues/120804#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 90784,
+    "url": "https://github.com/python/cpython/pull/120818",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 90788,
+    "url": "https://github.com/python/cpython/pull/120805",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 90789,
+    "url": "https://github.com/python/cpython/pull/121124",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 90791,
+    "url": "https://github.com/python/cpython/pull/120895",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 90793,
+    "url": "https://github.com/python/cpython/issues/120804#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "id": 90794,
+    "url": "https://github.com/python/cpython/pull/120893",
+    "parentUrl": "https://github.com/python/cpython/issues/120804"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Rewrite asyncio subprocesses without child watchers · Issue #120804 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120804"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.nl_langinfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_AsUInt64"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2030983?s\u003d64\u0026u\u003dbddda4e6629c0d6a49f8366894922cd81ac6ec24\u0026v\u003d4",
+    "alt": "nnja",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2030983?s\u003d64\u0026u\u003dbddda4e6629c0d6a49f8366894922cd81ac6ec24\u0026v\u003d4",
+    "alt": "@nnja",
+    "pageTitle": "locale.nl_langinfo() can\u0027t decode THOUSEP monetary value · Issue #69998 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/69998"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
