@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 526,
+    "url": "http://docs.python.org/library/markup",
+    "title": "Structured Markup Processing Tools — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Structured Markup Processing Tools | Theme Auto Light Dark | Structured Markup Processing Tools¶ Python supports a variety of modules to work with various forms of structured data markup. This includes modules to work with the Standard Generalized Markup Language (SGML) and the Hypertext Markup Language (HTML), and several interfaces for working with the Extensible Markup Language (XML). html — HyperText Markup Language support html.parser — Simple HTML and XHTML parser Example HTML Parser Application HTMLParser Methods Examples html.entities — Definitions of HTML general entities XML Processing Modules XML security xml.etree.ElementTree — The ElementTree XML API Tutorial XML tree and elements Parsing XML Pull API for non-blocking parsing Finding interesting elements Modifying an XML File Building XML documents Parsing XML with Namespaces XPath support Example Supported XPath syntax Reference Functions XInclude support Example Reference Functions Element Objects ElementTree Objects QName Objects TreeBuilder Objects XMLParser Objects XMLPullParser Objects Exceptions xml.dom — The Document Object Model API Module Contents Objects in the DOM DOMImplementation Objects Node Objects NodeList Objects DocumentType Objects Document Objects Element Objects Attr Objects NamedNodeMap Objects Comment Objects Text and CDATASection Objects ProcessingInstruction Objects Exceptions Conformance Type Mapping Accessor Methods xml.dom.minidom — Minimal DOM implementation DOM Objects DOM Example minidom and the DOM standard xml.dom.pulldom — Support for building partial DOM trees DOMEventStream Objects xml.sax — Support for SAX2 parsers SAXException Objects xml.sax.handler — Base classes for SAX handlers ContentHandler Objects DTDHandler Objects EntityResolver Objects ErrorHandler Objects LexicalHandler Objects xml.sax.saxutils — SAX Utilities xml.sax.xmlreader — Interface for XML parsers XMLReader Objects IncrementalParser Objects Locator Objects InputSource Objects The Attributes Interface The AttributesNS Interface xml.parsers.expat — Fast XML parsing using Expat XMLParser Objects ExpatError Exceptions Example Content Model Descriptions Expat error constants Previous topic quopri — Encode and decode MIME quoted-printable data Next topic html — HyperText Markup Language support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Structured Markup Processing Tools | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 09, 2026 (15:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-10 04:22:16.869009"
+  },
+  {
+    "id": 525,
+    "url": "http://wiki.python.org/moin/TkInter",
+    "title": "Tkinter",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. 2026-02-14 16:14",
+    "scrapedAt": "2026-05-10 04:22:13.561132"
+  },
+  {
+    "id": 524,
+    "url": "https://www.django-cms.org/",
+    "title": "django CMS - Enterprise Content Management with Django - django CMS",
+    "content": "Content: Home django CMS 5 is here Faster, Leaner, and Headless-Ready It\u0027s packed with performance boosts, streamlined workflows, and new headless capabilities that take modern content management to the next level. Learn moreGet our newsletter Get Started How to install Install django CMS in your environment with docker. $ git clone [email protected]:django-cms/django-cms-quickstart.git\n$ cd django-cms-quickstart\n$ docker compose build web \u0026\u0026 docker compose up -d database_default\n$ docker compose run web python manage.py migrate \u0026\u0026 docker compose run web python manage.py createsuperuser\n$ docker compose up -d\n$ open http://127.0.0.1:8000 Need help? Check out our support section. Get started with django CMS Get started Quickly get started and play around with django CMS on your local machine using the djangocms command to start a new project. $ python3 -m venv .venv\n$ source .venv/bin/activate\n$ pip install django-cms\n$ djangocms mysite\n$ cd mysite\n$ python -m manage runserver\n Need help? Check out our support section. Full Installation Howto Get Involved django CMS is open and free. django CMS depends on your help. What can you do for django CMS? Join the django-cms Github Sponsors Contribute your work Volunteer Become a member of the django CMS Association I want to help Get Support Solutions for all your django CMS needs Reach out to the django CMS community to get help or find an expert. Join our folks on Discord Post your issue on Stack Overflow Read the technical docs Find an Expert Ask our AI 🤖 See all support options Who we serve django CMS is for Enterprise Marketers Django CMS enables enterprise marketers to create rich user experiences with robust workflow support, robust content versioning, and a great editor experience for sustained marketing success. Read more django CMS is for Digital Agencies Perfect for agencies: It\u0027s open-source, free, based on the super robust django web framework and backed by a strong community for quick support and reliable long-term support. Read more django CMS is for Developers Django CMS is ideal for developers, offering scalability, robust security, and flexibility through the powerful Django framework, with extensive customization options and seamless third-party integrations. Read more django CMS News Release What’s New in django CMS 5.0.7 This release focuses on stability, security, editor experience, and compatibility improvements across the CMS core. It includes fixes for frontend ... Fabian Braun May 8, 2026 Release django CMS 3.11 \u0026 4.1 Reach End of Life: Final Patch Releases and What to Do Next April 2026 officially closed the chapter on two long-standing django CMS LTS branches: 3.11 and 4.1. Fabian Braun May 5, 2026 Release Full CKEditor 5 Support Lands in djangocms-text: A Milestone for Rich Text Editing The final missing piece for djangocms-text-ckeditor5 has arrived: complete support for text-enabled CMS plugins. Fabian Braun April 27, 2026 View all news Trusted by companies all over the world A CMS built for Enterprises Django CMS is the ideal choice for enterprises seeking a powerful and flexible content management solution. Designed to scale with your needs, it handles high volumes of content and traffic effortlessly. Its modular architecture allows for extensive customization and seamless integration with other systems, while its robust security features safeguard your data. Approved by content editors With built-in multi-language support and detailed user roles and permissions, Django CMS caters to global operations and diverse teams. Its intuitive page building ensures easy content management, and its extensive packages ecosystem offers limitless possibilities for extending functionality. Approved by developers Developers favor django CMS for its robust foundation on the Django framework, offering unmatched scalability and security. Its modular architecture and extensive plugin system provide exceptional customizability, while seamless integration with third-party tools streamlines workflows. Clear documentation and a supportive community make it developer-friendly, ensuring ease of implementation and troubleshooting. Read more about why django CMS 2019 CMS Critic People\u0027s Choice Award Winner Voted Best Open Source CMS \"by a significant margin of several hundred votes over the competition\" Read why django CMS is open and free. The django CMS Association is how we Guardians of django CMS have organized ourselves. As a non-profit association it needs your help. Why contribute to django CMS? We need your help for django CMS to remain open, free, cutting edge and well maintained. Your financial contributions support the , which directly translates to continuous, high-quality software improvements and fixes. The django CMS Fellow also provides great technical support for developers (i.e. by handling your technical questions and requests across our channels). Find out how to help 10,631 Stars on Github 3,196 Forks 97 Closed issues in last 30 days 46 C",
+    "scrapedAt": "2026-05-10 04:22:07.51103"
+  },
+  {
+    "id": 523,
+    "url": "https://pypi.org/project/requests/",
+    "title": "requests · PyPI",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Search PyPI Search requests 2.33.1 pip install requests Copy PIP instructions Latest version Released: Mar 30, 2026 Python HTTP for Humans. Navigation Verified details These details have been verified by PyPI Project links Source GitHub Statistics Repository Stars: Forks: Open issues: Open PRs: Maintainers graffatcolmingov Lukasa nateprewitt Unverified details These details have not been verified by PyPI Project links Documentation Meta License: Apache Software License (Apache-2.0) Author: Kenneth Reitz Maintainer: Ian Stapleton Cordasco Requires: Python \u003e\u003d3.10 Provides-Extra: security , socks , use-chardet-on-py3 Classifiers Development Status 5 - Production/Stable Environment Web Environment Intended Audience Developers License OSI Approved :: Apache Software License Natural Language English Operating System OS Independent Programming Language Python Python :: 3 Python :: 3 :: Only Python :: 3.10 Python :: 3.11 Python :: 3.12 Python :: 3.13 Python :: 3.14 Python :: Implementation :: CPython Python :: Implementation :: PyPy Topic Internet :: WWW/HTTP Software Development :: Libraries Report project as malware Project description Requests Requests is a simple, yet elegant, HTTP library. \u003e\u003e\u003e import requests\n\u003e\u003e\u003e r \u003d requests.get(\u0027https://httpbin.org/basic-auth/user/pass\u0027, auth\u003d(\u0027user\u0027, \u0027pass\u0027))\n\u003e\u003e\u003e r.status_code\n200\n\u003e\u003e\u003e r.headers[\u0027content-type\u0027]\n\u0027application/json; charset\u003dutf8\u0027\n\u003e\u003e\u003e r.encoding\n\u0027utf-8\u0027\n\u003e\u003e\u003e r.text\n\u0027{\"authenticated\": true, ...\u0027\n\u003e\u003e\u003e r.json()\n{\u0027authenticated\u0027: True, ...}\n Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your PUT \u0026 POST data — but nowadays, just use the json method! Requests is one of the most downloaded Python packages today, pulling in around 30M downloads / week— according to GitHub, Requests is currently depended upon by 1,000,000+ repositories. You may certainly put your trust in this code. Installing Requests and Supported Versions Requests is available on PyPI: $ python -m pip install requests\n Requests officially supports Python 3.10+. Supported Features \u0026 Best–Practices Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today. Keep-Alive \u0026 Connection Pooling International Domains and URLs Sessions with Cookie Persistence Browser-style TLS/SSL Verification Basic \u0026 Digest Authentication Familiar dict–like Cookies Automatic Content Decompression and Decoding Multi-part File Uploads SOCKS Proxy Support Connection Timeouts Streaming Downloads Automatic honoring of .netrc Chunked HTTP Requests API Reference and User Guide available on Read the Docs Cloning the repository When cloning the Requests repository, you may need to add the -c fetch.fsck.badTimezone\u003dignore flag to avoid an error about a bad commit timestamp (see this issue for more background): git clone -c fetch.fsck.badTimezone\u003dignore https://github.com/psf/requests.git\n You can also apply this setting to your global Git config: git config --global fetch.fsck.badTimezone ignore\n Project details Verified details These details have been verified by PyPI Project links Source GitHub Statistics Repository Stars: Forks: Open issues: Open PRs: Maintainers graffatcolmingov Lukasa nateprewitt Unverified details These details have not been verified by PyPI Project links Documentation Meta License: Apache Software License (Apache-2.0) Author: Kenneth Reitz Maintainer: Ian Stapleton Cordasco Requires: Python \u003e\u003d3.10 Provides-Extra: security , socks , use-chardet-on-py3 Classifiers Development Status 5 - Production/Stable Environment Web Environment Intended Audience Developers License OSI Approved :: Apache Software License Natural Language English Operating System OS Independent Programming Language Python Python :: 3 Python :: 3 :: Only Python :: 3.10 Python :: 3.11 Python :: 3.12 Python :: 3.13 Python :: 3.14 Python :: Implementation :: CPython Python :: Implementation :: PyPy Topic Internet :: WWW/HTTP Software Development :: Libraries Release history Release notifications | RSS feed 2.34.0.dev1 pre-release May 3, 2026 This version 2.33.1 Mar 30, 2026 2.33.0 Mar 25, 2026 2.32.5 Aug 18, 2025 2.32.4 Jun 9, 2025 2.32.3 May 29, 2024 2.32.2 May 21, 2024 2.32.1 yanked May 20, 2024 Reason this release was yanked: Yanked due to conflicts with CVE-2024-35195 mitigation 2.32.0 yanked May 20, 2024 Reason this release was yanked: Yanked due to conflicts with CVE-2024-35195 mitigation 2.31.0 May 22, 2023 2.30.0 May 3, 2023 2.29.0 Apr 26, 2023 2.28.2 Jan 12, 2023 2.28.1 Jun 29, 2022 2.28.0 Jun 9, 2022 2.27.1 Jan 5, 2022 2.27.0 Jan 3, 2022 2.26.0 Jul 13, 2021 2.25.1 Dec 16, 2020 2.25.0 Nov 11, 2020 2.24.0 Jun 17, 2020 2.23.0 Feb 19, 2020 2.22.0 May 16, 2019 2.21.0 Dec 10, 2018 2.20.1 Nov 8, 2018 2.20.0 Oct 18, 2018 2.19.1 Jun 14, 2018 2.19.0 Jun",
+    "scrapedAt": "2026-05-10 04:21:54.176164"
+  },
+  {
+    "id": 522,
+    "url": "http://www.djangoproject.com/",
+    "title": "The web framework for perfectionists with deadlines | Django",
+    "content": "Skip to main content Django makes it easier to build better web apps more quickly and with less code. Get started with Django Meet Django Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source. Ridiculously fast. Django was designed to help developers take applications from concept to completion as quickly as possible. Reassuringly secure. Django takes security seriously and helps developers avoid many common security mistakes. Exceedingly scalable. Some of the busiest sites on the web leverage Django’s ability to quickly and flexibly scale. Learn more about Django Join the Community Forum - Post a question Discord - Chat with us Back to Top Additional Information Additional Information Download latest release: 6.0.5 Django documentation Support Django! Machine Learning Consulting Sigmoidal donated to the Django Software Foundation to support Django development. Donate today! Latest news Announcing the Google Summer of Code 2026 contributors for Django We are excited to announce the contributors selected for Google Summer of Code 2026 with Django. This year saw strong interest from the community, with over 200 proposals submitted. Posted by Apoorv Garg on May 5, 2026 Django security releases issued: 6.0.5 and 5.2.14 Django 6.0.5 and 5.2.14 fix 3 security issues Posted by Sarah Boyce on May 5, 2026 More news New to Django? Installation guide Write your first Django app Getting started with Django The power of Django Object-relational mapper Automatic admin interface Robust template system Quick internationalization Explore more features Get involved Ticket system Report bugs and make feature requests Development dashboard see what\u0027s currently being worked on Inside the Django community Get Help Django Discord Server Join the Django Discord Community Official Django Forum Join the community on the Django Forum. The Django Software Foundation About the Foundation Our non-profit supports the project Support Django Your contribution makes Django stronger Contact the Django Software Foundation More about the DSF",
+    "scrapedAt": "2026-05-10 04:21:47.011187"
+  },
+  {
     "id": 520,
     "url": "http://docs.python.org/library/email",
     "title": "email — An email and MIME handling package — Python 3.14.5rc1 documentation",
@@ -3612,26 +3647,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 522,
-    "url": "http://www.djangoproject.com/"
-  },
-  {
-    "id": 523,
-    "url": "https://pypi.org/project/requests/"
-  },
-  {
-    "id": 524,
-    "url": "https://www.django-cms.org/"
-  },
-  {
-    "id": 525,
-    "url": "http://wiki.python.org/moin/TkInter"
-  },
-  {
-    "id": 526,
-    "url": "http://docs.python.org/library/markup"
   },
   {
     "id": 527,
@@ -94460,10 +94475,2903 @@ window.searchData = [
     "id": 71004,
     "url": "https://docs.python.org/3/library/email.utils.html",
     "parentUrl": "http://docs.python.org/library/email"
+  },
+  {
+    "id": 71012,
+    "url": "http://www.djangoproject.com/#top",
+    "parentUrl": "http://www.djangoproject.com/"
+  },
+  {
+    "id": 71017,
+    "url": "http://www.djangoproject.com/#main-content",
+    "parentUrl": "http://www.djangoproject.com/"
+  },
+  {
+    "id": 71028,
+    "url": "https://pypi.org/project/requests/2.8.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71029,
+    "url": "https://pypi.org/project/requests/0.13.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71030,
+    "url": "https://pypi.org/project/requests/0.14.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71031,
+    "url": "https://github.com/psf",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71032,
+    "url": "https://search.sigstore.dev/?logIndex\u003d1200073594",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71033,
+    "url": "https://pypi.org/project/requests/2.29.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71034,
+    "url": "https://pypi.org/project/requests/0.6.5/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71035,
+    "url": "https://pypi.org/project/requests/0.7.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71036,
+    "url": "https://pypi.org/project/requests/2.12.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71037,
+    "url": "https://pypi.org/project/requests/2.16.5/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71038,
+    "url": "https://pypi.org/search/?c\u003dEnvironment+%3A%3A+Web+Environment",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71039,
+    "url": "https://pypi.org/project/requests/0.2.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71040,
+    "url": "https://pypi.org/project/requests/0.7.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71041,
+    "url": "https://pypi.org/project/requests/2.17.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71042,
+    "url": "https://pypi.org/project/requests/2.2.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71043,
+    "url": "https://pypi.org/project/requests/0.13.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71044,
+    "url": "https://pypi.org/project/requests/2.8.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71045,
+    "url": "https://pypi.org/project/requests/2.30.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71046,
+    "url": "https://pypi.org/project/requests/0.14.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71047,
+    "url": "https://pypi.org/project/requests/2.28.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71048,
+    "url": "https://pypi.org/project/requests/0.6.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71049,
+    "url": "https://pypi.org/search/?c\u003dLicense+%3A%3A+OSI+Approved+%3A%3A+Apache+Software+License",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71050,
+    "url": "https://pypi.org/project/requests/2.16.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71051,
+    "url": "https://pypi.org/project/requests/2.23.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71052,
+    "url": "https://pypi.org/project/requests/0.7.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71053,
+    "url": "https://pypi.org/project/requests/2.17.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71055,
+    "url": "https://pypi.org/project/requests/1.0.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71057,
+    "url": "https://pypi.org/project/requests/0.13.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71059,
+    "url": "https://pypi.org/project/requests/2.12.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71062,
+    "url": "https://pypi.org/project/requests/0.6.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71066,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.14",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71067,
+    "url": "https://pypi.org/project/requests/0.6.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71068,
+    "url": "https://pypi.org/project/requests/2.24.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71069,
+    "url": "https://github.com/psf/requests/blob/HEAD/.github/workflows/publish.yml",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71070,
+    "url": "https://pypi.org/project/requests/2.18.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71071,
+    "url": "https://pypi.org/project/requests/0.13.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71073,
+    "url": "https://pypi.org/project/requests/1.0.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71074,
+    "url": "https://pypi.org/project/requests/0.13.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71076,
+    "url": "https://pypi.org/project/requests/2.12.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71077,
+    "url": "https://pypi.org/rss/project/requests/releases.xml",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71080,
+    "url": "https://pypi.org/project/requests/2.17.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71082,
+    "url": "https://pypi.org/project/requests/0.6.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71083,
+    "url": "https://pypi.org/project/requests/2.18.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71084,
+    "url": "https://pypi.org/project/requests/2.2.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71087,
+    "url": "https://pypi.org/project/requests/2.6.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71088,
+    "url": "https://pypi.org/project/requests/0.10.8/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71090,
+    "url": "https://pypi.org/project/requests/1.1.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71091,
+    "url": "https://pypi.org/project/requests/1.0.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71093,
+    "url": "https://pypi.org/project/requests/2.32.5/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71094,
+    "url": "https://pypi.org/project/requests/0.8.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71095,
+    "url": "https://pypi.org/project/requests/0.9.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71096,
+    "url": "https://pypi.org/user/graffatcolmingov/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71097,
+    "url": "https://pypi.org/project/requests/0.7.6/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71098,
+    "url": "https://kennethreitz.org",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71099,
+    "url": "https://pypi.org/project/requests/0.2.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71100,
+    "url": "https://pypi.org/project/requests/2.22.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71101,
+    "url": "https://pypi.org/project/requests/2.16.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71102,
+    "url": "https://pypi.org/project/requests/0.3.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71103,
+    "url": "https://pypi.org/project/requests/2.1.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71104,
+    "url": "https://pypi.org/project/requests/0.12.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71105,
+    "url": "https://github.com/psf/requests/network/dependents?package_id\u003dUGFja2FnZS01NzA4OTExNg%3D%3D",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71106,
+    "url": "https://pypi.org/project/requests/2.7.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71107,
+    "url": "https://pypi.org/project/requests/1.0.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71108,
+    "url": "https://pypi.org/project/requests/2.27.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71109,
+    "url": "https://pypi.org/project/requests/0.7.5/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71110,
+    "url": "https://pypi.org/project/requests/0.8.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71111,
+    "url": "https://pypi.org/project/requests/0.2.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71112,
+    "url": "https://github.com/psf/requests/tree/refs/tags/v2.33.1",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71113,
+    "url": "https://pypi.org/project/requests/2.16.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71114,
+    "url": "https://pypi.org/project/requests/0.3.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71115,
+    "url": "https://pypi.org/project/requests/2.33.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71116,
+    "url": "https://pypi.org/project/requests/2.5.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71117,
+    "url": "https://pypi.org/project/requests/2.28.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71118,
+    "url": "https://pypi.org/project/requests/0.10.6/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71119,
+    "url": "https://pypi.org/project/requests/2.32.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71120,
+    "url": "https://pypi.org/project/requests/0.7.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71121,
+    "url": "https://pypi.org/project/requests/0.8.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71122,
+    "url": "https://pypi.org/project/requests/2.11.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71123,
+    "url": "https://pypi.org/project/requests/2.17.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71124,
+    "url": "https://pypi.org/project/requests/0.8.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71125,
+    "url": "https://pypi.org/project/requests/2.16.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71126,
+    "url": "https://pypi.org/project/requests/0.2.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71128,
+    "url": "https://pypi.org/project/requests/0.11.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71129,
+    "url": "https://pypi.org/project/requests/0.12.01/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71130,
+    "url": "https://pypi.org/project/requests/2.0.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71131,
+    "url": "https://pypi.org/project/requests/2.6.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71132,
+    "url": "https://pypi.org/project/requests/2.32.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71133,
+    "url": "https://pypi.org/project/requests/2.34.0.dev1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71134,
+    "url": "https://pypi.org/project/requests/1.0.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71135,
+    "url": "https://github.com/psf/requests/graphs/contributors",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71136,
+    "url": "https://pypi.org/project/requests/2.33.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71137,
+    "url": "https://pypi.org/project/requests/2.28.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71138,
+    "url": "https://pypi.org/project/requests/0.10.7/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71139,
+    "url": "https://pypi.org/project/requests/0.6.6/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71140,
+    "url": "https://pypi.org/project/requests/#requests-2.33.1.tar.gz",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71141,
+    "url": "https://pypi.org/project/requests/0.7.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71142,
+    "url": "https://pypi.org/search/?c\u003dTopic+%3A%3A+Software+Development+%3A%3A+Libraries",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71143,
+    "url": "https://pypi.org/project/requests/2.11.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71144,
+    "url": "https://pypi.org/project/requests/2.16.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71145,
+    "url": "https://pypi.org/project/requests/0.2.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71147,
+    "url": "https://pypi.org/project/requests/submit-malware-report/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71148,
+    "url": "https://pypi.org/project/requests/#requests-2.33.1-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71150,
+    "url": "https://pypi.org/project/requests/0.12.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71151,
+    "url": "https://pypi.org/project/requests/2.6.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71152,
+    "url": "https://pypi.org/project/requests/2.32.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71153,
+    "url": "https://pypi.org/project/requests/1.2.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71154,
+    "url": "https://pypi.org/project/requests/0.10.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71155,
+    "url": "https://pypi.org/project/requests/0.8.7/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71156,
+    "url": "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71157,
+    "url": "https://pypi.org/project/requests/#files",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71158,
+    "url": "https://pypi.org/project/requests/2.26.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71159,
+    "url": "https://pypi.org/project/requests/0.10.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71160,
+    "url": "https://pypi.org/project/requests/2.5.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71161,
+    "url": "https://in-toto.io/Statement/v1",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71162,
+    "url": "https://pypi.org/project/requests/2.5.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71163,
+    "url": "https://pypi.org/project/requests/1.2.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71164,
+    "url": "https://github.com/psf/requests/tree/111d2b77790bf49943c0dfa09b365371c24aec7e",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71165,
+    "url": "https://pypi.org/project/requests/2.32.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71166,
+    "url": "https://pypi.org/project/requests/2.14.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71167,
+    "url": "https://pypi.org/project/requests/0.9.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71168,
+    "url": "https://github.com/psf/requests/issues/2690",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71169,
+    "url": "https://pypi.org/project/requests/0.8.6/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71170,
+    "url": "https://pypi.org/project/requests/0.4.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71171,
+    "url": "https://pypi.org/project/requests/0.3.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71172,
+    "url": "https://pypi.org/project/requests/2.20.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71173,
+    "url": "https://files.pythonhosted.org/packages/d7/8e/7540e8a2036f79a125c1d2ebadf69ed7901608859186c856fa0388ef4197/requests-2.33.1-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71174,
+    "url": "https://pypi.org/project/requests/2.14.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71175,
+    "url": "https://pypi.org/project/requests/0.11.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71176,
+    "url": "https://pypi.org/project/requests/2.5.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71177,
+    "url": "https://pypi.org/project/requests/2.0.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71178,
+    "url": "https://pypi.org/project/requests/2.10.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71179,
+    "url": "https://pypi.org/project/requests/1.2.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71180,
+    "url": "https://pypi.org/project/requests/2.27.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71182,
+    "url": "https://pypi.org/project/requests/0.13.9/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71183,
+    "url": "https://pypi.org/project/requests/0.9.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71184,
+    "url": "https://pypi.org/project/requests/0.8.5/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71185,
+    "url": "https://pypi.org/project/requests/0.3.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71186,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+Implementation+%3A%3A+PyPy",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71187,
+    "url": "https://pypi.org/project/requests/0.4.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71188,
+    "url": "https://pypi.org/project/requests/0.10.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71189,
+    "url": "https://pypi.org/project/requests/2.4.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71190,
+    "url": "https://github.com/psf/requests/blob/111d2b77790bf49943c0dfa09b365371c24aec7e/.github/workflows/publish.yml",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71191,
+    "url": "https://pypi.org/search/?c\u003dNatural+Language+%3A%3A+English",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71192,
+    "url": "https://pypi.org/project/requests/2.32.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71193,
+    "url": "https://pypi.org/project/requests/2.4.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71194,
+    "url": "https://github.com/psf/requests",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71195,
+    "url": "https://pypi.org/project/requests/1.2.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71196,
+    "url": "https://pypi.org/project/requests/0.9.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71197,
+    "url": "https://pypi.org/project/requests/0.8.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71198,
+    "url": "https://pypi.org/project/requests/2.15.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71199,
+    "url": "https://pypi.org/project/requests/0.3.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71200,
+    "url": "https://pypi.org/project/requests/2.21.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71201,
+    "url": "https://pypi.org/project/requests/2.15.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71202,
+    "url": "https://pypi.org/project/requests/0.10.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71204,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+Implementation+%3A%3A+CPython",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71205,
+    "url": "https://pypi.org/project/requests/2.4.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71206,
+    "url": "https://pypi.org/project/requests/2.31.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71207,
+    "url": "https://pypi.org/project/requests/2.9.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71208,
+    "url": "https://pypi.org/project/requests/0.13.7/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71209,
+    "url": "https://pypi.org/project/requests/2.19.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71210,
+    "url": "https://pypi.org/project/requests/2.18.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71211,
+    "url": "https://pypi.org/user/nateprewitt/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71212,
+    "url": "https://pypi.org/project/requests/2.12.5/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71213,
+    "url": "https://pypi.org/project/requests/0.6.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71214,
+    "url": "https://pypi.org/search/?c\u003dTopic+%3A%3A+Internet+%3A%3A+WWW%2FHTTP",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71215,
+    "url": "https://pypi.org/project/requests/2.9.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71216,
+    "url": "https://pypi.org/project/requests/0.13.8/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71217,
+    "url": "https://pypi.org/project/requests/2.12.3/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71218,
+    "url": "https://pypi.org/project/requests/2.13.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71219,
+    "url": "https://pypi.org/project/requests/2.18.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71220,
+    "url": "https://requests.readthedocs.io",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71221,
+    "url": "https://pypi.org/project/requests/0.0.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71222,
+    "url": "https://pypi.org/project/requests/2.12.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71223,
+    "url": "https://pypi.org/project/requests/0.10.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71225,
+    "url": "https://pypi.org/project/requests/2.4.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71226,
+    "url": "https://pypi.org/project/requests",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71227,
+    "url": "https://pypi.org/project/requests/0.14.2/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71228,
+    "url": "https://pypi.org/project/requests/0.8.9/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71229,
+    "url": "https://pypi.org/project/requests/#content",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71230,
+    "url": "https://pepy.tech/project/requests",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71231,
+    "url": "https://pypi.org/project/requests/0.13.5/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71232,
+    "url": "https://pypi.org/project/requests/2.14.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71233,
+    "url": "https://docs.pypi.org/attestations/publish/v1",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71235,
+    "url": "https://pypi.org/user/Lukasa/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71236,
+    "url": "https://pypi.org/project/requests/2.20.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71237,
+    "url": "https://pypi.org/project/requests/0.5.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71238,
+    "url": "https://pypi.org/project/requests/2.25.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71239,
+    "url": "https://pypi.org/project/requests/2.3.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71240,
+    "url": "https://pypi.org/project/requests/2.9.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71241,
+    "url": "https://pypi.org/project/requests/0.13.6/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71243,
+    "url": "https://pypi.org/project/requests/0.8.8/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71244,
+    "url": "https://pypi.org/project/requests/2.18.4/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71245,
+    "url": "https://search.sigstore.dev/?logIndex\u003d1200073618",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71246,
+    "url": "https://pypi.org/project/requests/2.19.1/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71247,
+    "url": "https://pypi.org/project/requests/0.5.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71248,
+    "url": "https://pypi.org/project/requests/2.25.0/",
+    "parentUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "id": 71249,
+    "url": "https://www.django-cms.org/en/blog/author/fabian-braun/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71250,
+    "url": "https://www.django-cms.org/en/solutions-why-django-cms/content-management-software-for-developers/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71251,
+    "url": "https://www.django-cms.org/en/blog/2026/05/05/django-cms-3-11-4-1-reach-end-of-life-final-patch-releases-and-what-to-do-next/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71252,
+    "url": "http://discord-main-channel.django-cms.org",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71253,
+    "url": "https://www.django-cms.org/en/give-back-to-the-community/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71254,
+    "url": "https://www.django-cms.org/en/#",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71255,
+    "url": "https://www.django-cms.org/en/blog/2026/04/27/full-ckeditor-5-support-lands-in-djangocms-text-a-milestone-for-rich-text-editing/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71256,
+    "url": "https://www.django-cms.org/en/volunteering-opportunities/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71257,
+    "url": "https://www.django-cms.org/en/community/django-cms-supporters/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71258,
+    "url": "http://www.pbs.org/foundation/home/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71259,
+    "url": "https://www.django-cms.org/en/site-notice/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71260,
+    "url": "https://www.django-cms.org/en/django-cms-5/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71261,
+    "url": "http://www.cmscritic.com/django-cms-review/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71262,
+    "url": "https://www.django-cms.org/en/press/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71263,
+    "url": "https://fosstodon.org/@djangocms",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71264,
+    "url": "https://www.django-cms.org/en/solutions-why-django-cms/for-enterprise-marketers/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71265,
+    "url": "https://www.django-cms.org/en/developers/roadmap/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71266,
+    "url": "https://www.django-cms.org/en/support/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71267,
+    "url": "https://github.com/divio/django-cms",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71268,
+    "url": "https://chat.django-cms.org/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71269,
+    "url": "https://docs.django-cms.org/en/latest/introduction/01-install.html",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71270,
+    "url": "https://www.django-cms.org/en/about-us/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71271,
+    "url": "http://education.nationalgeographic.org/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71272,
+    "url": "http://github.com/sponsors/django-cms",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71273,
+    "url": "https://www.linkedin.com/company/56462850",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71274,
+    "url": "https://www.youtube.com/c/djangocms",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71275,
+    "url": "http://outdatedbrowser.com/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71276,
+    "url": "https://www.django-cms.org/cdn-cgi/l/email-protection",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71277,
+    "url": "http://www.parrot.com/usa/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71278,
+    "url": "https://www.django-cms.org/cdn-cgi/l/email-protection#1f767179705f7b757e717870327c726c31706d78",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71279,
+    "url": "https://www.django-cms.org/en/newsletter/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71280,
+    "url": "https://www.django-cms.org/en/solutions-why-django-cms/for-agencies-and-service-providers/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71281,
+    "url": "https://www.django-cms.org/en/case-studies/loreal/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71283,
+    "url": "https://www.softwaresuggest.com/us/django-cms",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71284,
+    "url": "https://discord-support-channel.django-cms.org",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71285,
+    "url": "https://www.django-cms.org/en/contribute/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71286,
+    "url": "https://www.cmscritic.com/awards/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71287,
+    "url": "https://stackoverflow.com/questions/tagged/django-cms",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71288,
+    "url": "https://www.django-cms.org/en/developers/issue-tracker/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71289,
+    "url": "http://docs.django-cms.org",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71290,
+    "url": "https://www.django-cms.org/en/blog/2026/05/08/whats-new-in-django-cms-5-0-7/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71291,
+    "url": "https://flightopportunities.nasa.gov/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71292,
+    "url": "https://www.django-cms.org/en/blog/category/release/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71293,
+    "url": "https://docs.docker.com/get-docker/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71294,
+    "url": "https://www.django-cms.org/en/developers/documentation/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71295,
+    "url": "https://www.django-cms.org/en/community/events/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71296,
+    "url": "https://www.django-cms.org/en/solutions-why-django-cms/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71297,
+    "url": "https://www.django-cms.org/en/blog/2020/07/07/5-step-django-cms-tutorial-for-new-developers/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71298,
+    "url": "https://www.django-cms.org/en/#wrapper",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71299,
+    "url": "https://www.django-cms.org/en/community/security/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71300,
+    "url": "https://www.django-cms.org/en/case-studies/ubuntu-developer/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71302,
+    "url": "https://www.django-cms.org/en/developers/repository/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71303,
+    "url": "https://students-residents.aamc.org/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71304,
+    "url": "https://www.django-cms.org/en/tech-partners/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71305,
+    "url": "https://www.django-cms.org/en/community/blog/",
+    "parentUrl": "https://www.django-cms.org/"
+  },
+  {
+    "id": 71309,
+    "url": "https://docs.python.org/3/library/html.parser.html#htmlparser-methods",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71310,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#tutorial",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71312,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#element-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71313,
+    "url": "https://docs.python.org/3/library/xml.dom.html#accessor-methods",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71315,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml-tree-and-elements",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71316,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#reference",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71317,
+    "url": "https://docs.python.org/3/library/xml.sax.utils.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71318,
+    "url": "https://docs.python.org/3/library/xml.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71319,
+    "url": "https://docs.python.org/3/library/pyexpat.html#xmlparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71320,
+    "url": "https://docs.python.org/3/library/pyexpat.html#module-xml.parsers.expat.errors",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71322,
+    "url": "https://docs.python.org/3/library/html.parser.html#example-html-parser-application",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71323,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html#dom-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71324,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#modifying-an-xml-file",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71325,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#building-xml-documents",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71326,
+    "url": "https://docs.python.org/3/library/xml.dom.html#text-and-cdatasection-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71327,
+    "url": "https://docs.python.org/3/library/html.parser.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71328,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71330,
+    "url": "https://docs.python.org/3/library/xml.dom.html#conformance",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71331,
+    "url": "https://docs.python.org/3/library/markup.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71332,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xpath-support",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71333,
+    "url": "https://docs.python.org/3/library/xml.dom.html#type-mapping",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71334,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#supported-xpath-syntax",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71335,
+    "url": "https://docs.python.org/3/library/quopri.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71336,
+    "url": "https://docs.python.org/3/library/xml.dom.html#domimplementation-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71337,
+    "url": "https://docs.python.org/3/library/xml.dom.html#nodelist-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71338,
+    "url": "https://docs.python.org/3/library/html.entities.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71339,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xmlparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71340,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#example",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71341,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#inputsource-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71343,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#pull-api-for-non-blocking-parsing",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71344,
+    "url": "https://docs.python.org/3/library/xml.dom.html#node-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71345,
+    "url": "https://docs.python.org/3/library/xml.dom.html#processinginstruction-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71346,
+    "url": "https://docs.python.org/3/library/xml.dom.html#namednodemap-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71347,
+    "url": "https://docs.python.org/3/library/xml.dom.html#exceptions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71348,
+    "url": "https://docs.python.org/3/library/xml.sax.html#saxexception-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71349,
+    "url": "https://docs.python.org/3/library/xml.dom.html#element-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71350,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementinclude-functions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71351,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#the-attributes-interface",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71352,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xinclude-support",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71353,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71354,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/markup.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71355,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#elementtree-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71356,
+    "url": "https://docs.python.org/3/library/xml.dom.html#attr-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71357,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#xmlreader-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71358,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#incrementalparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71359,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#entityresolver-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71360,
+    "url": "https://docs.python.org/3/library/pyexpat.html#expaterror-exceptions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71361,
+    "url": "https://docs.python.org/3/library/html.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71362,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71364,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#errorhandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71367,
+    "url": "https://docs.python.org/3/library/xml.dom.pulldom.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71368,
+    "url": "https://docs.python.org/3/library/xml.sax.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71369,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#dtdhandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71370,
+    "url": "https://docs.python.org/3/library/xml.dom.html#document-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71371,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#the-attributesns-interface",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71372,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#parsing-xml",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71373,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#contenthandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71374,
+    "url": "https://docs.python.org/3/library/xml.dom.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71375,
+    "url": "https://docs.python.org/3/library/markup.html#structured-markup-processing-tools",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71376,
+    "url": "https://docs.python.org/3/library/html.parser.html#examples",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71377,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#qname-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71378,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id4",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71379,
+    "url": "https://docs.python.org/3/library/pyexpat.html#module-xml.parsers.expat.model",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71380,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#exceptions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71381,
+    "url": "https://docs.python.org/3/library/xml.dom.html#documenttype-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71382,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#id3",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71383,
+    "url": "https://docs.python.org/3/library/xml.dom.pulldom.html#domeventstream-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71384,
+    "url": "https://docs.python.org/3/library/xml.sax.reader.html#locator-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71385,
+    "url": "https://docs.python.org/3/library/xml.dom.html#comment-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71386,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71388,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html#minidom-and-the-dom-standard",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71391,
+    "url": "https://docs.python.org/3/library/xml.dom.html#objects-in-the-dom",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71393,
+    "url": "https://docs.python.org/3/library/xml.html#xml-vulnerabilities",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71394,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#finding-interesting-elements",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71395,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xmlpullparser-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71396,
+    "url": "https://docs.python.org/3/library/xml.dom.html#module-contents",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71397,
+    "url": "https://docs.python.org/3/library/xml.dom.minidom.html#dom-example",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71398,
+    "url": "https://docs.python.org/3/library/pyexpat.html#example",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71399,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#parsing-xml-with-namespaces",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71400,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#treebuilder-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71401,
+    "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#functions",
+    "parentUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "id": 71402,
+    "url": "https://docs.python.org/3/library/xml.sax.handler.html#lexicalhandler-objects",
+    "parentUrl": "http://docs.python.org/library/markup"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Structured Markup Processing Tools — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Structured Markup Processing Tools — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/library/markup"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "Tkinter",
+    "pageUrl": "http://wiki.python.org/moin/TkInter"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/ba/29/ba29703b-7568-4379-8d37-1dda48f69246/bg-djangocms.png__1170x350_q90_subsampling-2.png",
+    "alt": "",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/d5/e1/d5e13765-c37a-464f-8ea3-eacdf8fe587d/tq97u8sdt-u01ev8ahf5x-g640cc9bfdc7-512.png__50x50_q90_crop_subsampling-2_upscale.png",
+    "alt": "Fabian Braun",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/d5/e1/d5e13765-c37a-464f-8ea3-eacdf8fe587d/tq97u8sdt-u01ev8ahf5x-g640cc9bfdc7-512.png__50x50_q90_crop_subsampling-2_upscale.png",
+    "alt": "Fabian Braun",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/d5/e1/d5e13765-c37a-464f-8ea3-eacdf8fe587d/tq97u8sdt-u01ev8ahf5x-g640cc9bfdc7-512.png__50x50_q90_crop_subsampling-2_upscale.png",
+    "alt": "Fabian Braun",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/59/e5/59e59a34-1cdb-4a0d-91a5-43839e2dba57/logo-natgeo.png__200x0_q90_subsampling-2.png",
+    "alt": "",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/e0/26/e02669e0-d133-47a9-849b-231117f5396a/men_expert_logo.png__200x0_q90_subsampling-2.png",
+    "alt": "",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/f9/4b/f94b1688-50c4-448e-b3d4-36dc7f804dca/nasa.png__200x0_q90_subsampling-2.png",
+    "alt": "",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/4d/49/4d4938a7-5b74-4092-bd4a-f40becd84bd4/logo-salt2x_white.png__200x0_q90_subsampling-2.png",
+    "alt": "",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/38/62/38629daf-74e6-441e-aac5-eaa5e69aed7d/logo-aamc.png__200x0_q90_subsampling-2.png",
+    "alt": "AAMC - Association of American Medical Colleges - django CMS website",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/41/f5/41f50e38-3938-49e2-9ddb-eba2a735fe3f/500px-canonical_logowhite.png__200x0_q90_subsampling-2.png",
+    "alt": "",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/3c/59/3c59f9cf-e9fe-44c9-97dc-630c0c671d47/pbs.png__200x0_q90_subsampling-2.png",
+    "alt": "",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/14/37/143724d0-620e-436f-b38d-aba3ce51e69d/logo_parrot-1.png__200x0_q90_subsampling-2.png",
+    "alt": "AAMC - Association of American Medical Colleges - django CMS website",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public/2f/76/2f767777-5900-4140-86ce-3d5743d98830/django_cms-page_tree-screen.png",
+    "alt": "CMS for developers and content editors - The new page tree in django CMS version 3.3",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/b4/76/b4769ac0-846a-4824-8f8f-758773402ee3/best-open-source-cms300x0-is.png__1170x0_q90_subsampling-2.png",
+    "alt": "2015 best open source cms award winner - django CMS",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public_thumbnails/filer_public/24/70/24707d85-1f4e-4d1e-85b2-1c2d16cf3810/customers-choice.png__1170x0_q90_subsampling-2.png",
+    "alt": "2021 Customers\u0027 Choice Award - django CMS",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public/96/9a/969ac532-12a7-487e-8bb6-f0f39a7c007a/945373_10151470651302099_514930306_n.jpg",
+    "alt": "CMS for developers and content editors - The new page tree in django CMS version 3.3",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public/3b/4b/3b4b7b5c-34ee-405f-aef1-167821359c6d/icon-github.png",
+    "alt": "icon-github.png",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://django-cms-2016-69800ad.aldryn-media.io/filer_public/b1/8d/b18d2af6-dad7-456c-b6c5-350ae0dfbde9/icon-linkedin-32.png",
+    "alt": "icon-linkedin-32.png",
+    "pageTitle": "django CMS - Enterprise Content Management with Django - django CMS",
+    "pageUrl": "https://www.django-cms.org/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/cc51c37d0c7604e3c0825efceb9e26f84427f67e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f33393665336465353333323061626639383535643931326364336439343331663f73697a653d3530",
+    "alt": "Avatar for graffatcolmingov from gravatar.com",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/c79bcf4dbcf29e6ff2393371939bec26953fab5f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62356165656530356138663435326339623131336435313239383065623065343f73697a653d3530",
+    "alt": "Avatar for Lukasa from gravatar.com",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b35e3b7909504680a0db25a146ec8ef1028830e6/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66333733383231373065396436613962363632653739353331313730343232653f73697a653d3530",
+    "alt": "Avatar for nateprewitt from gravatar.com",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/506b1a4c6b40f7ef7d0602fddd7a98ff5ac8467d/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f72657175657374732e7376673f6d61784167653d3836343030",
+    "alt": "Version",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/508b21fb70f4bc69e3d62730b3ac3c307a209bca/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f72657175657374732e737667",
+    "alt": "Supported Versions",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/2757478eed0aacd27f29fb7253fdc8b8ca900354/68747470733a2f2f7374617469632e706570792e746563682f62616467652f72657175657374732f6d6f6e7468",
+    "alt": "Downloads",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ea4a3e8164c289858e9bdc8e83e5425979d1fb3e/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6e7472696275746f72732f7073662f72657175657374732e737667",
+    "alt": "Contributors",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/3e0fbfd546b3c6185a88eb4d13ee4cbfd9792b5f/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f72657175657374732f6d61696e2f6578742f73732e706e67",
+    "alt": "Read the Docs",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/9ccac975f9a405d76d40072b700ba9137de9c19a/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f72657175657374732f6d61696e2f6578742f6b722e706e67",
+    "alt": "Kenneth Reitz",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/78df7a4e37f894af3fe57b07e37c10f51822d696/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f7073662f72657175657374732f6d61696e2f6578742f7073662e706e67",
+    "alt": "Python Software Foundation",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/cc51c37d0c7604e3c0825efceb9e26f84427f67e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f33393665336465353333323061626639383535643931326364336439343331663f73697a653d3530",
+    "alt": "Avatar for graffatcolmingov from gravatar.com",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/c79bcf4dbcf29e6ff2393371939bec26953fab5f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62356165656530356138663435326339623131336435313239383065623065343f73697a653d3530",
+    "alt": "Avatar for Lukasa from gravatar.com",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b35e3b7909504680a0db25a146ec8ef1028830e6/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f66333733383231373065396436613962363632653739353331313730343232653f73697a653d3530",
+    "alt": "Avatar for nateprewitt from gravatar.com",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/blue-cube.572a5bfb.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "requests · PyPI",
+    "pageUrl": "https://pypi.org/project/requests/"
+  },
+  {
+    "src": "https://static.djangoproject.com/img/fundraising-heart.cd6bb84ffd33.svg",
+    "alt": "Support Django!",
+    "pageTitle": "The web framework for perfectionists with deadlines | Django",
+    "pageUrl": "http://www.djangoproject.com/"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
