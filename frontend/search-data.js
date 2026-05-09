@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 554,
+    "url": "https://www.python.org/success-stories/getting-to-know-python/",
+    "title": "Getting to Know Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Getting to Know Python Written by William Oxman, HiringSolved I started using Python briefly in college, thinking it was about as useful as the little bit of bash that I then knew--it just looked a little nicer. I took a whirlwind hiatus of AMD64 C, C++, Lisp, and ML, and then found my first job which brought me back to writing Python for the support of a medical robotics platform. It\u0027s a lovely feeling to discover and correct internal ignorance, and I was very happy to be wrong on this front. It felt like gaining a significant edge on the programmer I used to be; I didn\u0027t need to spend as long to get the job done. Now I could quickly spam my friends emails, easily connect to free wifi in airports on Ubuntu, and efficiently scrape data from the web. It feels a lot like cheating compared staring at assembly in order to write more efficient C, which always makes me feel suspicious that the other shoe will drop and it turns out writing Python is directly responsible for the death of many kittens. As I learn and grow, I\u0027ve bumped into Python\u0027s shortcomings as well. I look at this as a positive--if you\u0027re not bumping into limitations in life, you\u0027re not experimenting enough to reach your full potential. To be frank, I don\u0027t see myself as an especially perspicacious engineer, so often this is just bumping my head into the same problem until I realize what it actually is. Of all the stack traces in the world, Python makes this easiest on me. Watching Python attain such a large market share among programming languages has been really rewarding. It\u0027s a bit of a trap to become ensconced in one programming language, but it feels like rooting for the good guys more often than not. With BHAGs like the GILectomy looming large in the future of Python, it\u0027s hard to not pay close attention, and even harder to not feel like Python really is the Swiss Army Knife in my toolbox. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:25:10.156043"
+  },
+  {
+    "id": 553,
+    "url": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/",
+    "title": "Python in the Blind Audio Tactile Mapping System | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python in the Blind Audio Tactile Mapping System Written by Chad Haynes and Thomas Logan, Carolina Computer Assistive Technology Introduction The Blind Audio Tactile Mapping System (BATS) seeks to provide access to maps for the blind and visually impaired. Our goal is to devise ways to present traditionally visual information to the user\u0027s other senses. The need for this project became clear when Jason Morris came to the University of North Carolina at Chapel Hill to study Classics. Morris works at the Ancient World Mapping Center (AWMC), a foundation to advance the field of ancient studies with the use of cartography and geographic information science. Morris, who has been blind since an early age, has faced the denial of access to information critical to his choice of study for the majority of his life. With his work at the AWMC he vowed to create a solution. Morris\u0027 chance meeting with Gary Bishop, Associate Professor of Computer Science, set the project in motion. Bishop had been seeking users who could benefit from the development of assistive tools customized for their needs. At the time of their meeting, there were no maps of the ancient world in a format accessible to the visually impaired. After their initial conversation, Dr. Bishop created the opportunity for a team of undergraduate students to implement a solution in a semester-long software engineering course. We were fortunate to be part of the five-person team assembled to work on this exciting project. The goal of the software engineering course, taught by Associate Professor Kye Hedlund, was to teach students about working collaboratively, identifying goals, and meeting deadlines. Our team began by meeting with our three advisors to talk about initial design decisions. Professor Bishop presented us with Dr. Dan Jacobson\u0027s paper Navigating maps with little or no sight: An audio-tactile approach as a basis for developing a tool that provided access to spatial information through sound and touch. The core components of our system were a Pentium III computer running Windows 2000, a touch pad as the primary input device, and the Microsoft Speech SDK 5.1 to communicate information with a synthesized voice. Choice of Python Faced with the daunting task of coding a program with little precedent, the first major design decision our team had to tackle was the choice of a programming language. Our initial thoughts were to use either C++ or Java since everyone in the group was proficient with both. One group member had been exposed to Python in an earlier class and was impressed with the power and ease of use it provided. The fact that the other four members had no experience with the language fortunately did not stop us from making the wise decision to use Python. Very early in the development we required a simple program to test how the touch pad interacts with the operating system. This proved incredibly easy with wxPython, a Python wrapper for the powerful wxWindows GUI toolkit. Setting up a frame to take full control of the screen was very straightforward and required minimal coding. Given our strict time constraints, a language that allowed for rapid development such as this was a great advantage. No one in the group at that time had any real concept of the extent to which we would be able to use Python in the project. However, as we discovered the extensive collection of libraries and modules available for it, we decided that Python could be used exclusively. Implementation Our next meetings were with Tom Elliott, the Director of the Ancient World Mapping Center, who conveniently holds an undergraduate degree in Computer Science. He introduced us to the Barrington Atlas, a twelve year undertaking that culminated with the first comprehensive maps of ancient Greek and Roman civilizations to be produced since 1874. The Ancient World Mapping Center is now digitizing all the information contained in this atlas, making the information held within it into an even richer educational tool. The British Isles were selected as the prototype map. Our discussions centered on translating the visual representation of the image and its underlying database information into a format our program could use. Test map for the BATs system Zoom in Elliott provided the first two data files for BATS using ArcView, a powerful tool for working with maps. Two ASCII text files were produced, indicating the surface type and elevation of our map. The information had been formatted as a grid of 1024 columns and 768 rows to match the resolution of our display and touch pad. We decided to read this grid of numbers into Numeric arrays in Python. Originally quite a bit of preprocessing was involved to scale down the data to fit our internal model. We did not want to go through the reading and scaling process every time ",
+    "scrapedAt": "2026-05-10 04:25:08.145543"
+  },
+  {
+    "id": 552,
+    "url": "https://www.python.org/success-stories/simulating-biomolecules-with-python/",
+    "title": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Simulating Biomolecules with Python Written by Konrad Hinsen, Centre National de la Recherche Scientifique Background The Molecular Modeling Toolkit (MMTK) is a open source Python library for molecular modeling and simulation with a focus on biomolecular systems, written in a mixture of Python and C. It provides standard techniques such as Molecular Dynamics or normal mode calculations in a ready-to-use form, but also provides a basis of low-level operations on top of which new techniques can easily be implemented. I started developing MMTK in 1996. I had some experience with mainstream simulation packages for biomolecules that were written in Fortran and had their origins in the 1970s. Those packages were too cumbersome to use and in particular to modify and extend. Since my research work is focused on the development of new simulation techniques, modifiability was a particularly important criterion. Dynamic deformation of the chaperon protein GroEL, obtained with the MMTK-based interactive DomainFinder (Zoom in) Characteristic features of biomolecular simulations that had to be taken into account are the long execution times of some simulation techniques (several weeks are not uncommon) and the complexity of the data structures describing biomolecules. Choice of languages The choice of Python plus C was made after an evaluation of various languages. I was rapidly convinced that only a mixture of a high-level interpreted language and a CPU-efficient compiled language could meet my seemingly conflicting requirements of rapid development and efficient execution. For the high-level part, Tcl was ruled out because it could not handle the complex data structures required by the project. Perl was ruled out because of its unpleasant syntax (this was of course a subjective choice), and because of its badly integrated OO mechanism. Python scored high in readability, OO support, library support, and integration with compiled languages. Moreover, Numerical Python had just been released and was an important building block for my developments. For the low-level part, Fortran 77 was eliminated because of its archaic character, lack of memory management, and portability issues in C-Fortran interfacing. C++ was a candidate, but ultimately not chosen because portability between compilers was still an issue in 1996, and because I considered the benefits of C++ for the small amount of compiled code in the project insufficient to compensate for the complexity of the language. Library architecture The architecture of MMTK is clearly Python-driven. To the user, it presents itself as a pure Python library. The C code in MMTK was written from scratch in the form of Python extension modules that only handle the few time-critical aspects: evaluation of interaction energies, and long-running iterative algorithms such as energy minimization and Molecular Dynamics, which run without any Python-related overhead. Extensive use is made of Numerical Python, LAPACK, and the netCDF library. MMTK provides multi-threading support for shared memory parallel machines, and MPI-based parallelization for distributed memory machines. The biggest part of MMTK is a set of classes that describe atoms and molecules and manage a database of molecules and fragments. Biomolecules (proteins, DNA, and RNA) are handled by subclasses of the generic Molecule class. Another important subset of MMTK implements schemas for calculating interaction energies (called somewhat incorrectly \"force fields\" in the simulation community). I/O-related code is the third pillar of MMTK. It reads and writes a few popular file formats plus its own trajectory format that is based on the netCDF format. Contrary to other trajectory file formats, MMTK\u0027s netCDF files are both binary (and thus compact) files and portable between platforms. and moreover permit efficient access to nearly arbitrary subsets. Snapshot from a Molecular Dynamics simulation of lysozyme in water, run with MMTK. Zoom in Modularity and extendibility were important design criteria. Algorithms, energy terms, and specializations of the data types can be added without having to modify the MMTK code. The design of MMTK as a library, rather than a closed program, is essential for many applications. An important aspect of biomolecular simulations is visualization. MMTK delegates this task to external tools. Two visualization programs, VMD and PyMOL, are particularly well integrated. Most MMTK users access the library from simple Python scripts, but MMTK has also been used as a basis for end-user programs with graphical user interfaces, such as nMOLDYN and DomainFinder. MMTK currently consists of about 18,000 lines of Python code, 12,000 lines of hand-written C code, and some machine-generated C code. The majority of the code was developed by one person dur",
+    "scrapedAt": "2026-05-10 04:25:05.289054"
+  },
+  {
+    "id": 551,
+    "url": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/",
+    "title": "Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association Written by Roy Hyunjin Han, CrossCompute Overview The American Public Power Association eReliability Tracker is an award-winning Pyramid web application that helps electric utilities track performance metrics. As part of their subscription benefits, utilities receive a Reliability Benchmarking Report that is custom tailored to each utility using eReliability Tracker data. In this case study, we show how the American Public Power Association used Python + Markdown + CSS + JupyterLab + CrossCompute to transform a three to six month labor intensive process into a highly flexible automated PDF report that can leverage the full analytical power of Python. The outcome is that over five hundred utilities can now receive valuable reliability metrics more frequently to improve their services. The eReliability Tracker Team uses the time saved to innovate new analytics that help utilities deliver power to their communities. Challenge The Reliability Benchmarking Report was originally developed in Microsoft Access and had been faithfully and successfully delivered for many years to eReliability Tracker subscribers. However, as the number of subscriptions multiplied, the semi-manual click intensive process to generate a custom report for each utility became increasingly arduous. Changes in the underlying data could trigger a cascade of tedious updates to the tables and charts in each utility\u0027s report and significantly delay the iterative inter-departmental review process. Solution In 2021, an analyst in the APPA Office of Data Analytics decided to recreate the eReliability Tracker Benchmarking Report using Python. Within the next two months, she was able to automate all ten sections of the report in JupyterLab using the CrossCompute Report Automation Framework. She used numpy and pandas to compute the various statistics and matplotlib and seaborn to generate the plots. To style the report, the analyst used standard Markdown + CSS. Outcome For every change in the underlying dataset or downstream computation, the analyst is now able to regenerate custom PDF reports for all 500 utilities in about an hour, which means she can iterate and innovate faster. Subsequent iterations of the report can take advantage of the rich library of free and open source computational and visualization packages available in Python. All ten sections of the report are also deployed internally as web-based CrossCompute tools so that non-technical users can drag and drop new data and regenerate the report\u0027s tables and charts without touching code. Acknowledgments Thank you to the American Public Power Association, U.S. Department of Energy, Python Software Foundation, Tampa Bay Innovation Center and CrossCompute for making this work possible. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:25:02.744593"
+  },
+  {
+    "id": 550,
+    "url": "https://www.python.org/success-stories/category/engineering/",
+    "title": "Engineering | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Engineering Engineering Python for Collaborative Robots Abridging clinical conversations using Python Getting to Know Python Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:24:56.348418"
+  },
+  {
     "id": 549,
     "url": "https://www.python.org/success-stories/category/government/",
     "title": "Government | Our Success Stories | Python.org",
@@ -3787,26 +3822,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 550,
-    "url": "https://www.python.org/success-stories/category/engineering/"
-  },
-  {
-    "id": 551,
-    "url": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
-  },
-  {
-    "id": 552,
-    "url": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
-  },
-  {
-    "id": 553,
-    "url": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
-  },
-  {
-    "id": 554,
-    "url": "https://www.python.org/success-stories/getting-to-know-python/"
   },
   {
     "id": 555,
@@ -96965,10 +96980,119 @@ window.searchData = [
     "id": 71724,
     "url": "https://www.python.org/m/about/success/astra/property_manager.jpg",
     "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
+  {
+    "id": 71758,
+    "url": "https://crosscompute.com",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 71760,
+    "url": "https://www.publicpower.org/reliability-tracking",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 71761,
+    "url": "https://github.com/crosscompute",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 71771,
+    "url": "http://dirac.cnrs-orleans.fr/MMTK/",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 71772,
+    "url": "http://dirac.cnrs-orleans.fr/DomainFinder/",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 71774,
+    "url": "https://www.python.org/m/about/success/mmtk/groel_deformation.tiff",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 71778,
+    "url": "https://www.python.org/m/about/success/mmtk/lysozyme_with_solvent.tiff",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 71781,
+    "url": "https://sourceforge.net/projects/pywin32/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71785,
+    "url": "http://www.cs.unc.edu/assist",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71786,
+    "url": "http://www.pfdubois.com/numpy/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71788,
+    "url": "https://www.python.org/m/about/success/bats/bats.jpg",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71790,
+    "url": "http://www.swig.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71792,
+    "url": "https://www.python.org/m/about/success/bats/tact3image.jpg",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71793,
+    "url": "http://pyxml.sourceforge.net/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71796,
+    "url": "http://www.openal.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71797,
+    "url": "http://www.immersion.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 71811,
+    "url": "https://hiringsolved.com/",
+    "parentUrl": "https://www.python.org/success-stories/getting-to-know-python/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.python.org/m/about/success/bats/tact3image-web.jpg",
+    "alt": "BATS Test Map",
+    "pageTitle": "Python in the Blind Audio Tactile Mapping System | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/bats/bats-web.jpg",
+    "alt": "BATS in Action",
+    "pageTitle": "Python in the Blind Audio Tactile Mapping System | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/mmtk/groel_deformation-web.jpg",
+    "alt": "Example MMTK Molecular Model",
+    "pageTitle": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/mmtk/lysozyme_with_solvent-web.jpg",
+    "alt": "Example MMTK Molecular Model",
+    "pageTitle": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
   {
     "src": "https://www.python.org/m/about/success/astra/property_manager_web.gif",
     "alt": "Architecture of the Property Manager",
