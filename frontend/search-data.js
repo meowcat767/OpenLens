@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 233,
+    "url": "https://www.android.com/intl/en_uk/phones/shop/",
+    "title": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "content": "Play silent looping video Pause silent looping video Shop the latest Android phones. Compare Compare Results New New New Results Filter Filters CategoryTemplate OptionTemplate Clear Filters Show Results See all New Google Pixel 8 From $699.00 CTA Play silent looping video Pause silent looping video Play silent looping video Pause silent looping video Lots of options? We can help you choose. Get started Play silent looping video Pause silent looping video Lots of options? We can help you choose. Get started Product availability, features, and specifications vary by region, carrier, and device. Not all devices or features shown on this page are available in all markets. Please check with your local retailer or mobile carrier for current availability and compatibility in your area. Android is a trademark of Google LLC. All other trademarks are the property of their respective owners. Play silent looping video Pause silent looping video",
+    "scrapedAt": "2026-05-10 03:52:14.217378"
+  },
+  {
+    "id": 232,
+    "url": "https://www.android.com/google-messages/",
+    "title": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "content": "Chat slim en beveiligd zoals jij dat wilt Met Google Berichten kun je de functionaliteit aanpassen, gesprekken privé houden en de nieuwste AI-functies gebruiken. Google Messages proberen1 Berichten voor het web Hoogtepunten Uit jezelf in elke chat Selfie-gif\u0027s Lachen en versturen maar Geef je chats een leuk persoonlijk tintje door een animatievideo van 3 seconden op te nemen en te delen. Kijken hoe het werkt Aanpassen Ga voor iets anders en kies zelf je kleuren Pas je functionaliteit aan met verschillende kleuren, emoji\u0027s en thema\u0027s en voeg aan elk gesprek extra effecten toe. Meer functies bekijken Photomoji Maak en deel je eigen aangepaste emoji\u0027s Transformeer je favoriete afbeeldingen snel en makkelijk in emoji\u0027s die je in je chats kunt delen. Kijken hoe het werkt RCS Weg met de wazigheid. Met RCS kun je foto\u0027s en video\u0027s in hoge resolutie versturen en krijgen. Ook weet je wanneer vrienden je bericht hebben gezien of een antwoord typen.* *In ondersteunde gesprekken als RCS-chats beschikbaar zijn en aanstaan. Meer functies bekijken Selfie-gif\u0027s Lachen en versturen maar Geef je chats een leuk persoonlijk tintje door een animatievideo van 3 seconden op te nemen en te delen. Kijken hoe het werkt Aanpassen Ga voor iets anders en kies zelf je kleuren Pas je functionaliteit aan met verschillende kleuren, emoji\u0027s en thema\u0027s en voeg aan elk gesprek extra effecten toe. Meer functies bekijken Photomoji Maak en deel je eigen aangepaste emoji\u0027s Transformeer je favoriete afbeeldingen snel en makkelijk in emoji\u0027s die je in je chats kunt delen. Kijken hoe het werkt RCS Weg met de wazigheid Met RCS kun je foto\u0027s en video\u0027s in hoge resolutie versturen en krijgen. Ook weet je wanneer vrienden je bericht hebben gezien of een antwoord typen.* *In ondersteunde gesprekken als RCS-chats beschikbaar zijn en aanstaan. Meer functies bekijken Functies Alles wat je nodig hebt, gewoon ingebouwd Privacy en beveiliging Bescherm je chats tegen spammers Beveilig je berichten met privacyopties, bescherming tegen spam en gegevensversleuteling met RCS van hoge kwaliteit. Meer functies bekijken AI in Berichten Wat je wilt zeggen, mogelijk gemaakt door AI van Google Transformeer je favoriete foto\u0027s in reacties, geef je chats de gewenste sfeer en doe nog zo veel meer. Probeer het uit! Meer functies bekijken Connectiviteit Houd het gesprek op meerdere apparaten gaande Ga zonder onderbrekingen van je telefoon naar je tablet naar je smartwatch, allemaal tijdens hetzelfde gesprek. Meer functies bekijken Aanpassen Tekstberichten zoals je praat Stop je persoonlijkheid en stem in je berichten door emoji\u0027s te maken, chatkleuren te kiezen en animatie-effecten in de spotlight te zetten. Meer functies bekijken Nuttig Stuur makkelijker tekstberichten Krijg suggesties voor reacties, nuttige herinneringen en porren, en automatische ruisonderdrukking. Bekijk meer functies Privacy en beveiliging Bescherm je chats tegen spammers Beveilig je berichten met privacyopties, bescherming tegen spam en gegevensversleuteling met RCS van hoge kwaliteit. Meer functies bekijken AI in Berichten Wat je wilt zeggen, mogelijk gemaakt door AI van Google Transformeer je favoriete foto\u0027s in reacties, geef je chats de gewenste sfeer en doe nog zo veel meer. Probeer het uit! Meer functies bekijken Connectiviteit Houd het gesprek op meerdere apparaten gaande Ga zonder onderbrekingen van je telefoon naar je tablet naar je smartwatch, allemaal tijdens hetzelfde gesprek. Meer functies bekijken Aanpassen Tekstberichten zoals je praat Stop je persoonlijkheid en stem in je berichten door emoji\u0027s te maken, chatkleuren te kiezen en animatie-effecten in de spotlight te zetten. Meer functies bekijken Nuttig Stuur makkelijker tekstberichten Krijg suggesties voor reacties, nuttige herinneringen en porren, en automatische ruisonderdrukking. Meer functies bekijken Probeer Google Berichten en bewaar wat ertoe doet Bewaar je gegevens, contacten en chats, en wissel naadloos tekstberichten uit met vrienden en familie, welk apparaat ze ook hebben. Nu proberen Veelgestelde vragen Vind de antwoorden die je nodig hebt Hoe download ik Google Berichten? Android-gebruikers kunnen Google Berichten downloaden via de Google Play Store. Vanuit daar kun je Google Berichten naar een Android-telefoon of WearOS-apparaat downloaden. Voor desktop of tablet ga je naar messages.google.com en koppel je je Android-apparaat om aan de slag te gaan. Wat is RCS? RCS staat voor \u0027Rich Communication Services\u0027 en is de moderne standaard voor berichtentechnologie. RCS biedt een verbeterde berichtenfunctionaliteit door functies toe te voegen zoals foto\u0027s en video\u0027s van hoge kwaliteit, typindicatoren en leesbevestigingen. RCS-functies bieden meer dan traditionele sms\u0027jes (Short Message Service). Hoe meld ik me aan voor bètatesten? Als je je wilt aanmelden voor bètatesten, moet je eerst Google Berichten hebben geïnstalleerd. Ga daarna naar de pagina voor Google Berichten in de Google Play Store en selecteer onderaan Deelnemen of Een",
+    "scrapedAt": "2026-05-10 03:52:12.075369"
+  },
+  {
+    "id": 231,
+    "url": "https://android.com/ai/more/",
+    "title": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "content": "AI op je apparaten Je dagelijkse leven, nu nog makkelijker. Van je telefoon tot je smartwatch en smartbril: AI van Google helpt je om creatief te zijn, productiever te werken en makkelijker en veiliger te communiceren. Creativiteit Bewerkingen van professionele kwaliteit\u2028die magisch voelen. AI van Google transformeert je afbeeldingen en video\u0027s van goed naar geweldig. Zo kun je jouw beelden van momenten en herinneringen precies vastleggen zoals jij ze wilt onthouden. Magische gum voor audio Vermindert storende videogeluiden zoals auto\u0027s en wind. Magische gum voor audio uitproberen Google Foto\u0027s openen Google Foto\u0027s openen Google Foto\u0027s openen Achtergrond genereren Nieuwe manieren om jezelf uit te drukken. Vind je eigen stem met berichtentools waarmee je concepten kunt opstellen, onderweg kunt reageren en je gesprekken kunt personaliseren met aangepaste emoji\u0027s. Magisch opstellen Vind de juiste woorden. Herschrijf je berichten in verschillende stijlen. Google Berichten openen Fotomoji Van filmrol naar aangepaste emoji: maak een nieuwe emoji van je eigen foto\u0027s. Fotomoji maken Slimme antwoorden in Auto Android Beantwoord met één tik om het gesprek veilig aan de gang te houden. Google Foto\u0027s openen Overzichten voor Android Auto Krijg samenvattingen van lange groepschats en laat berichten hardop voorlezen. Nu proberen Beveiliging AI-gestuurde bescherming. Android gebruikt de beste AI van Google (en expertise op het gebied van machine learning) om je te beschermen tegen spammers, fraudeurs en dieven. Diefstalbeveiliging Bescherm je telefoon tegen dieven. Kijken hoe het werkt Scam- en spamdetectie Vermijd scammers en spammers. Kijken hoe het werkt Vind de antwoorden die je nodig hebt. Hoe gebruik ik de Google Assistent op Android Auto? Stap 1: Als Android Auto actief is, kun je de Google Assistent activeren door \u0027Hey Google\u0027 te zeggen, op het microfoontje op het display van de auto te tikken, of door op het stuur de knop \u0027drukken om te praten\u0027 in te drukken (indien beschikbaar). Stap 2: Stel of geef daarna je vraag of opdracht zoals \u0027breng me naar de dichtstbijzijnde koffiebar\u0027 of \u0027speel wat jazz af\u0027. Hoe zorg ik dat Android Auto op het display van mijn auto komt te staan? Bij de meeste geschikte auto\u0027s of aftermarket-stereosets kun je je telefoon aansluiten via een USB-kabel. Als het display van je auto geschikt is voor draadloze verbindingen, koppel je je telefoon via bluetooth met je auto. Afhankelijk van je auto maakt je telefoon na het koppelen automatisch verbinding of vind je het app-icoon van Android Auto op het display van je auto. Hoe schrijf ik een bericht met Magisch opstellen? Stap 1: Open Google Berichten op je Android-telefoon en begin een gesprek. Tip: Zorg ervoor dat de opstelregel van het bericht ook het woord \u0027bericht\u0027 bevat. Stap 2: Selecteer het icoon Magisch opstellen om de mogelijke schrijfstijlen weer te geven. Stap 3: Selecteer de suggestie die je wilt gebruiken. Je kunt kiezen uit Remix (opnieuw verwoorden), Shakespeare, Relaxed, Enthousiast, Poëtisch en Formeel. Stap 4: Als je klaar bent om het bericht te sturen, tik je op Sturen. Wat zijn slimme acties? Slimme acties in Android Auto bestaan uit AI-gestuurde samenvattingen van groepsberichten of lange berichten die worden voorgelezen. Daarnaast genereren slimme antwoorden automatische antwoorden die contextueel relevante reacties kunnen zijn op de ontvangen berichten. Je kunt ook andere suggesties krijgen, zoals aanbevolen playlists of navigatie met één tik naar specifieke bestemmingen zoals Thuis of Werk. Hoe werkt de Magische editor? Je kunt de Magische editor gebruiken om je foto\u0027s op je Pixel-apparaat om te toveren. Je kunt delen van je foto\u0027s verplaatsen, wissen of de compositie ervan aanpassen en voorinstellingen voor contextuele of speciale effecten erop toepassen, zoals Lucht of Gouden uur. Belangrijk: Je apparaat moet een 64-bits chipset met minstens 4 GB RAM hebben en Android 8.0 of hoger. Deze functie is experimenteel en werkt misschien niet altijd zoals verwacht. Hoe gebruik ik Fotomoji? Stap 1: Open Google Berichten en begin een gesprek. Stap 2: Houd je vinger op een bericht. Stap 3: Selecteer Maken. Stap 4: Selecteer een foto in je afbeeldingengalerij. AI maakt een uitsnede van een gezicht of voorwerp en maakt hier een emoji van. Als de foto meerdere onderwerpen bevat, tik je op het onderwerp dat je wilt sturen. Stap 5: Tik op Sturen. Je emoji wordt opgeslagen in je emoji-overzicht voor toekomstig gebruik. Ontdek meer over AI van Google op Android. Jouw AI-assistent van Google. Maak kennis met Gemini, je persoonlijke AI-assistent die altijd klaarstaat om je te helpen met schrijven, creëren, plannen, leren en nog veel meer. Gemini ontdekken Zoek meteen naar van alles Krijg informatie over wat er op het scherm van je telefoon staat, zonder van app te wisselen. Ontdek Circle to Search Thanks for visiting. We’d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. ",
+    "scrapedAt": "2026-05-10 03:52:10.034447"
+  },
+  {
+    "id": 230,
+    "url": "https://www.android.com/",
+    "title": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "content": "Beleef de toekomst als eerste op Android. De innovatie van Android bepaalt de standaard. Dat betekent nuttige AI, meer nieuwe functies, regelmatige upgrades en allerlei manieren om je telefoon te personaliseren zodat die bij je stijl past. Gemini proberen Telefoons kopen Play Pause Play Pause Het beste van Google op Android. Gemini Live De AI-assistent die je helpt te maken, te leren en meer te doen. Gemini proberen Meer informatie Circle to Search Zoek naar wat je maar wilt op je telefoon. Tik, krabbel of markeer gewoon. Slimmer zoeken Je beste foto\u0027s en video\u0027s tot nu toe. Schoon de achtergrond op, verbeter de belichting en bewerk de audio met AI. AI van Google ontdekken Play Pause Play Pause Quick Share Deel foto\u0027s en video\u0027s in hoge resolutie meteen met apparaten in de buurt.1 Meer informatie Vind-plek Vind verloren items en leg snel en beveiligd contact met vrienden. Vind-plek gebruiken Meer informatie over Vind-plek Play Pause Meer keuze. Meer van jou. \u2028 Meer gebruiksplezier. Telefoons kopen Play Pause Meer keuze. Meer van jou. Meer gebruiksplezier. Telefoons kopen Haal alles uit je Android-apparaat. Verbonden apparaten Je favoriete apparaten, naadloos verbonden. Verbinding maken Proactieve beveiliging Krachtige beveiliging die altijd aanstaat. Verkennen Privacy op jouw voorwaarden Ontdek manieren om controle te houden over je privacy Meer informatie 1 / Haal alles uit je Android-apparaat. Verbonden apparaten Je favoriete apparaten, naadloos verbonden. Verbinding maken Proactieve beveiliging Krachtige beveiliging die altijd aanstaat. Verkennen Privacy op jouw voorwaarden Ontdek manieren om controle te houden over je privacy Meer informatie Android wordt steeds beter. Android 16 ontdekken Nieuwste functies bekijken Play Pause Play Pause 1Apparaten moeten dichtbij genoeg zijn voor delen via bluetooth en wifi moet aanstaan. Werkt met compatibele apparaten. De beschikbaarheid, functies en specificaties van producten variëren per regio, provider en apparaat. Niet alle apparaten of functies op deze pagina zijn in alle markten beschikbaar. Neem contact op met je lokale verkoper of mobiele provider voor de huidige beschikbaarheid en compatibiliteit in jouw regio. Android is een handelsmerk van Google LLC. Alle andere handelsmerken zijn eigendom van de respectieve eigenaren. Play Pause",
+    "scrapedAt": "2026-05-10 03:52:06.415652"
+  },
+  {
+    "id": 229,
+    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini",
+    "title": "Before you continue",
+    "content": "EN EnglishUnited States Deutsch English Español Français Italiano Nederlands All languages Afrikaans azərbaycan bosanski català Čeština Cymraeg Dansk Deutsch eesti EnglishUnited Kingdom EspañolEspaña EspañolLatinoamérica euskara Filipino FrançaisCanada FrançaisFrance Gaeilge galego Hrvatski Indonesia isiZulu íslenska Italiano Kiswahili latviešu lietuvių magyar Melayu Nederlands norsk o‘zbek polski PortuguêsBrasil PortuguêsPortugal română shqip Slovenčina slovenščina srpski (latinica) Suomi Svenska Tiếng Việt Türkçe Ελληνικά беларуская български кыргызча қазақ тілі македонски монгол Русский српски Українська ქართული հայերեն עברית اردو العربية فارسی አማርኛ नेपाली मराठी हिन्दी অসমীয়া বাংলা ਪੰਜਾਬੀ ગુજરાતી ଓଡ଼ିଆ தமிழ் తెలుగు ಕನ್ನಡ മലയാളം සිංහල ไทย ລາວ မြန်မာ ខ្មែរ 한국어 日本語 简体中文 繁體中文 繁體中文香港 Sign in EN EnglishUnited States Deutsch English Español Français Italiano Nederlands All languages Afrikaans azərbaycan bosanski català Čeština Cymraeg Dansk Deutsch eesti EnglishUnited Kingdom EspañolEspaña EspañolLatinoamérica euskara Filipino FrançaisCanada FrançaisFrance Gaeilge galego Hrvatski Indonesia isiZulu íslenska Italiano Kiswahili latviešu lietuvių magyar Melayu Nederlands norsk o‘zbek polski PortuguêsBrasil PortuguêsPortugal română shqip Slovenčina slovenščina srpski (latinica) Suomi Svenska Tiếng Việt Türkçe Ελληνικά беларуская български кыргызча қазақ тілі македонски монгол Русский српски Українська ქართული հայերեն עברית اردو العربية فارسی አማርኛ नेपाली मराठी हिन्दी অসমীয়া বাংলা ਪੰਜਾਬੀ ગુજરાતી ଓଡ଼ିଆ தமிழ் తెలుగు ಕನ್ನಡ മലയാളം සිංහල ไทย ລາວ မြန်မာ ខ្មែរ 한국어 日本語 简体中文 繁體中文 繁體中文香港 Sign in Before you continue to Google We use cookies and data to Deliver and maintain Google services Track outages and protect against spam, fraud, and abuse Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services If you choose to “Accept all,” we will also use cookies and data to Develop and improve new services Deliver and measure the effectiveness of ads Show personalized content, depending on your settings Show personalized ads, depending on your settings If you choose to “Reject all,” we will not use cookies for these additional purposes. Non-personalized content is influenced by things like the content you’re currently viewing, activity in your active Search session, and your location. Non-personalized ads are influenced by the content you’re currently viewing and your general location. Personalized content and ads can also include more relevant results, recommendations, and tailored ads based on past activity from this browser, like previous Google searches. We also use cookies and data to tailor the experience to be age-appropriate, if relevant. Select “More options” to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time. Reject all Accept all Accept all Reject all More options Privacy Terms Privacy Policy Terms of Service",
+    "scrapedAt": "2026-05-10 03:52:00.496917"
+  },
+  {
     "id": 228,
     "url": "https://android.com/ai/",
     "title": "AI op Android: functies, apps en je AI-assistent | Android",
@@ -1592,26 +1627,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 229,
-    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
-  },
-  {
-    "id": 230,
-    "url": "https://www.android.com/"
-  },
-  {
-    "id": 231,
-    "url": "https://android.com/ai/more/"
-  },
-  {
-    "id": 232,
-    "url": "https://www.android.com/google-messages/"
-  },
-  {
-    "id": 233,
-    "url": "https://www.android.com/intl/en_uk/phones/shop/"
   },
   {
     "id": 234,
@@ -42555,10 +42570,707 @@ window.searchData = [
     "id": 21022,
     "url": "https://www.android.com/intl/nl_nl/ai/gemini/",
     "parentUrl": "https://android.com/ai/"
+  },
+  {
+    "id": 21024,
+    "url": "https://policies.google.com/technologies/cookies?hl\u003den-US\u0026utm_source\u003ducb",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 21025,
+    "url": "https://policies.google.com/terms?hl\u003den-US\u0026utm_source\u003ducb",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 21026,
+    "url": "https://policies.google.com/privacy?hl\u003den-US\u0026utm_source\u003ducb",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 21027,
+    "url": "https://consent.google.com/d?continue\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26amp;ios-min-version%3D322.0%26amp;is_sa%3D1%26amp;campaign_id%3Dandroid_web_gemini%26amp;utm_medium%3Dxpa%26amp;utm_source%3Dandroid_web%26amp;utm_campaign%3Dandroid_web_gemini%26amp;pt%3D9008%26amp;mt%3D8%26amp;ct%3Dandroid_web_gemini\u0026gl\u003dNL\u0026hl\u003den-US\u0026cm\u003d2\u0026pc\u003dbard\u0026src\u003d1\u0026escs\u003dAZ8E49Aatf12o7uZ0HUovX2GJ-AOuSClkKxfl4MOJATeik0aHadgrtfW1h2YF7fg-1jhrFLbbY5UV6fWxz6vr_3zLgVRNGAGA9Lp",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 21028,
+    "url": "https://accounts.google.com/ServiceLogin?hl\u003den-US\u0026continue\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26amp;ios-min-version%3D322.0%26amp;is_sa%3D1%26amp;campaign_id%3Dandroid_web_gemini%26amp;utm_medium%3Dxpa%26amp;utm_source%3Dandroid_web%26amp;utm_campaign%3Dandroid_web_gemini%26amp;pt%3D9008%26amp;mt%3D8%26amp;ct%3Dandroid_web_gemini\u0026gae\u003dcb-",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 21042,
+    "url": "https://support.google.com/messages/answer/14295463",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21044,
+    "url": "https://pixel.withgoogle.com/Pixel_8a/edit-videos-audio-magic-eraser",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21045,
+    "url": "https://www.android.com/intl/nl_nl/google-messages/",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21046,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.photos",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21047,
+    "url": "https://www.android.com/intl/nl_nl/safety/security/#safety-security-spam-phishing-protection",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21049,
+    "url": "https://support.google.com/pixelphone/answer/14853283",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21050,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.projection.gearhead",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21051,
+    "url": "https://www.android.com/intl/nl_nl/safety/security/#safety-theft-protection-module",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 21052,
+    "url": "https://messages.google.com/web/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21053,
+    "url": "http://messages.google.com",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21054,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.messaging\u0026referrer\u003dutm_source%3Dwebsite",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21055,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.messaging\u0026hl\u003den_US\u0026gl\u003dUS\u0026pli\u003d1",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21056,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.messaging\u0026hl\u003dnl_nl",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21057,
+    "url": "https://blog.google/products/messages/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21058,
+    "url": "https://workspace.google.com/intl/en/products/meet/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21059,
+    "url": "https://support.google.com/messages/?hl\u003den#topic\u003d7502209",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 21060,
+    "url": "https://www.android.com/intl/en_uk/phones/help-me-choose/",
+    "parentUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "id": 21061,
+    "url": "https://www.android.com/intl/en_uk/phones/shop/google.com",
+    "parentUrl": "https://www.android.com/intl/en_uk/phones/shop/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/6f/74/4f77334841449d27f2df69722e59/shop-hero-poster.webp",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/android_camera/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/android_camera/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/android_camera/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/battery_charging_full/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/battery_charging_full/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/battery_charging_full/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/mobile/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/mobile/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/mobile/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/brightness_7/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/brightness_7/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/brightness_7/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/deployed_code/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/deployed_code/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/deployed_code/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/sim_card/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/sim_card/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/sim_card/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/memory/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/memory/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/memory/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/rss_feed/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/rss_feed/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/rss_feed/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/verified/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/verified/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/verified/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/water_drop/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/water_drop/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/water_drop/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/20/21/751794044a26a647ca2deecc11c0/droid.webp",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/9d/e3/a3ac5233428fa8fb4df6bcdee95c/wayfinder-hero-mobile-2x.webp",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/02/ad/b8d8e43b4686972cab6c2d1bc42b/wayfinder-hero-desktop-l-2x.webp",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/9unTpQzbGBTBzJyZEGFCx7rdY3S7_YUWxvOqFXM6gD6UZl9ItXoXLmINcADy5lNEpQ9LnqA6AWVv9mN-2jPUVRunmX2mCh9PgpZ0ovphWNKKZpXaPK4",
+    "alt": "Een afbeelding van een persoon die naar hun Android-apparaat kijkt met een schildicoon en een hangslot.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/OKajTggT4r5tZdZVbSZRKWzUNiKfVYv47iKPP7lrr5IZjqAS6_yCMhNehojXonucqEOvTc7Bi2Z3zVOFeZ33mm5uTF1551TTdL8NQ19C2PTJNQHyc0A",
+    "alt": "Een afbeelding van 2 mensen die naast elkaar liggen en naar een Android kijken. Links onderin staat het icoon van een kat en rechts staan 2 chatbubbels.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_YyR3J37FWzuyyoidONtZ1p-M1wUnbiblUMf_DypR1-Y-AoKBgOTQPl6LcCjsp_Hf5qGn0MnaUiW7FP1E4CmYvP3hxeu941t3xopYRY7qw0TrJX_pg",
+    "alt": "Een afbeelding van een persoon die achter een computer zit.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/gQCxZ1IupvoWoLEvUuQ7dZWF6PRMap9sWR8mJbR-hKejkshHna2PFTKzLai-Hy9jpSh-BqnqA95EOhxXv9Cmx0vTYkWBAYRdECtARnYe69gkgD3_Y8fo",
+    "alt": "Een afbeelding van 3 mensen die buiten zitten. Een van hen toont de anderen een Android-scherm. Links onderin staan chatbubbels in een overlay en rechts onderin is er een overlay van een hart-emoji.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/TZml3KXODlwotfExJKXFkebu7DNhob1JhGTU65aP4k6lh7vlGclRIwuheX3G9lXaa6wCQQE2VrpnkqEdC7OTTDbQ76ImVW_Jvw0FBB6se3pefmDjUTtL",
+    "alt": "Een afbeelding van 2 mensen die naar een Android-tablet kijken met onderaan een antwoordherinnering in een overlay.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/9unTpQzbGBTBzJyZEGFCx7rdY3S7_YUWxvOqFXM6gD6UZl9ItXoXLmINcADy5lNEpQ9LnqA6AWVv9mN-2jPUVRunmX2mCh9PgpZ0ovphWNKKZpXaPK4",
+    "alt": "Een afbeelding van een persoon die naar hun Android-apparaat kijkt met een schildicoon en een hangslot.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/OKajTggT4r5tZdZVbSZRKWzUNiKfVYv47iKPP7lrr5IZjqAS6_yCMhNehojXonucqEOvTc7Bi2Z3zVOFeZ33mm5uTF1551TTdL8NQ19C2PTJNQHyc0A",
+    "alt": "Een afbeelding van 2 mensen die naast elkaar liggen en naar een Android kijken. Links onderin staat het icoon van een kat en rechts staan 2 chatbubbels.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/_YyR3J37FWzuyyoidONtZ1p-M1wUnbiblUMf_DypR1-Y-AoKBgOTQPl6LcCjsp_Hf5qGn0MnaUiW7FP1E4CmYvP3hxeu941t3xopYRY7qw0TrJX_pg",
+    "alt": "Een afbeelding van een persoon die achter een computer zit.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/gQCxZ1IupvoWoLEvUuQ7dZWF6PRMap9sWR8mJbR-hKejkshHna2PFTKzLai-Hy9jpSh-BqnqA95EOhxXv9Cmx0vTYkWBAYRdECtARnYe69gkgD3_Y8fo",
+    "alt": "Een afbeelding van 3 mensen die buiten zitten. Een van hen toont de anderen een Android-scherm. Links onderin staan chatbubbels in een overlay en rechts onderin is er een overlay van een hart-emoji.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/TZml3KXODlwotfExJKXFkebu7DNhob1JhGTU65aP4k6lh7vlGclRIwuheX3G9lXaa6wCQQE2VrpnkqEdC7OTTDbQ76ImVW_Jvw0FBB6se3pefmDjUTtL",
+    "alt": "Een afbeelding van 2 mensen die naar een Android-tablet kijken met onderaan een antwoordherinnering in een overlay.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/BKY2w4lpsuj-b0bEdK8XuyRPaKLmdJ9aSSxe3H1INgitl4tsPhuQkkMjvYGkzJ8s0Hj56XkDK5WGADDluhsR65ZNfZPZAud83VZquwqhf6Qjsp_QuQ",
+    "alt": "2 handen houden een telefoon voor een tablet die op het dashboard van een auto is bevestigd. Op het scherm staat een verbindingsknop en het BMW-logo. Rondom zijn het BMW-logo en een auto-icoon verbonden via een stippellijn.",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Chatbubbels aanpassen en plezier maken met Google Berichten | Android",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/sVS9xZ2ojVWsMKWTqKfBWHVK0jF9fUJG6BF5Cw4F4hq8jTvUOeXB2XGDaZGxhbtP0oU6vQO3qy5Ji2WZD8vB_VhT5NrUDlb7PMlQ9nESCmK2PRo6xss",
+    "alt": "Een telefoon met daarop bloemen tegen een blauwe achtergrond wordt gebruikt als voorbeeld om te tonen hoe de functie voor AI-gegenereerde achtergronden werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/1AxGW-0fKSDhz9bw3y--IvDntOpmRD6TQNOKwHlTdbhXQWC0CpElIajLalTLCStLp041fr0OXpXUxY6uutFY68wvCabWHfFLmlVKEm9931rGyRZi0w",
+    "alt": "Verschillende emoji\u0027s met stergezichten zweven rond de omtrek van een telefoon om te tonen hoe Magisch opstellen werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/x69t0Aw7rRyDv2KnNog7qVS2X9ZQklcnJi-RXTqEzt28vK7FMNQC_FGdi0H_On3JPDh8NvRvwqj21ic0nqBnSVPODmz67SR1CaM1I--NzxfEF6P7FPo",
+    "alt": "Een foto van een teckel die op het gras ligt, wordt gebruikt als voorbeeld om te tonen hoe de functie Fotomoji werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/r_G32j1ttxtpL_Hjy6A-pVDIzhlAlbcymcI5f-KaEnLifoop6j5FR8eP2fFmoeIOcW3Eox_590S8m8FFxiZAqWq75vMuwf39ZMNsVKcCUwh0hSu_rqw",
+    "alt": "Een Smart Reply-melding toont hoe slimme antwoorden werken in Android Auto.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/n71sNDsk82dVapeFVFoFDDBYGBtGxAjC-SOYuh_TgCkbgkFPfyWQfI4UWFJ5knMXb5ZaMb77JGf6nG5pnLuigq-rXEyRmoP-hm5MqePIDE2E3ibpRdM",
+    "alt": "Een voorbeeld van hoe Overzichten voor Auto verschijnt boven een dashboard van een witte auto.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/iSqKdI6IEEEXUGfGU2GBLzJGJ4iySQHBGvBm2uAL7Kmxj8v-hobgB4jB7CBaoapkBPN8wFW3JX9lLl8k6_Zp4jUjH6UKdrS7ynXDo91aCyfufB46lQTA",
+    "alt": "Een illustratie van een hand die een telefoon vasthoudt met een blauw hangsloticoon en schild tegen een zwarte achtergrond.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/tu_Nirq28X0n_vdOZSBuKYH1ZWZf873L9cBGe-Fa0_NztwoNKrbhwuIu0AuHgwfGgZQY-hGcfG-sbFU1IWYdYprvkzyEQjO1rbgERYhe0Zrejfq22w",
+    "alt": "Een voorbeeld van een spammelding staat voor een zwarte telefoon op een blauwe achtergrond.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/JnUQcfmhOzobC4GcxF75JkGMg-B46WnjiWI_U_OsCpDg1GKgBMLXKDlQf5EY--1Izg1bmA0iM3k37fhCWy3DAqc2sHjl6S4pt0gEKUppXRs3C9Jz5A",
+    "alt": "Een zacht oplichtende lichtstraal omlijnt een telefoon, met daarop een voorbeeld van een Gemini-melding.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/6Q0UpmklaRHhEEoa0i3cm97ibIyeqX_LrTfxkfxIJ5B3Zfj0-4YxD_mU24NLn7ja0bb5ICX0zdX1gmKc5rB6v9cyV6I6rp9klDJaRPD2exnyQZC4llg",
+    "alt": "Een rode tas wordt gebruikt als voorbeeld om te tonen hoe Circle to Search werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/79/52/3ef8ede54f08873de279c16bb598/row-asset-desktop-samsung.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/29/a8/63842edd4cbdb3ab1fbbeb85702d/row-asset-mobile-samsung.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/22/63/f25fc2a746fa9f79d2c80acc8449/features-gemini-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "The phone screen shows an image of an espresso machine to use as an example of how Gemini Live\u0027s newest feature works highlighting information you need on your phone screen.",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/f9/24/c139be3447278c2a7189c7209646/features-cts-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A luxury purse on an Android phone screen is being circled to show how the Circle to Search feature works. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/84/9f/a84f692c4a428194a945b7c9d619/00-features-googleai-xl.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/89/53/b1bd392e452bbee16d10ccc03dd0/03-features-googleai-s.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/5e/d3/a0a6d005483991c968422c40fd7f/features-quickshare-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A Quick Share window on an Android phone screen shows a picture of a bouquet of flowers surrounded by kitchen items on a wooden table. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b2/42/d2f004824075bd66252b49f82565/features-findhub-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "ROW - Features - Find Hub",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/fe/46/1829faba41e2ba7b409904fa95fd/phones-xl-4x.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/99/6a/17e6f8a34ed3835498ac61bc43fc/wayfinder-mobile-2x.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c3/d7/71d634dd481ba89150df442afc43/b214fec71154aa607416689e3af9906e75d234da.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an Iris Pixel Watch 4 is tapping their Iris Pixel Buds that’s in their ear. A devices icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b0/8b/b87b73dd41ad8f7889a0df8db155/4482e21a15601af0f6b4f123aeb593815fb9ce64.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an orange beanie is happily talking on their moonstone Pixel 10 phone outside a train station.  A green security shield icon is right above the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/62/42/1ecf7ab44fc6b021f898ce02d5c9/f5ccfd8227d7981b3f69143b6edcbe157978c5c3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing a light blue peacoat is inside a car talking on their Pixel phone. A lock icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c3/d7/71d634dd481ba89150df442afc43/b214fec71154aa607416689e3af9906e75d234da.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an Iris Pixel Watch 4 is tapping their Iris Pixel Buds that’s in their ear. A devices icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b0/8b/b87b73dd41ad8f7889a0df8db155/4482e21a15601af0f6b4f123aeb593815fb9ce64.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an orange beanie is happily talking on their moonstone Pixel 10 phone outside a train station.  A green security shield icon is right above the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/62/42/1ecf7ab44fc6b021f898ce02d5c9/f5ccfd8227d7981b3f69143b6edcbe157978c5c3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing a light blue peacoat is inside a car talking on their Pixel phone. A lock icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c2/90/ef1311e149848f45ef52c4970055/spotlight-xl-4x.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/5b/ef/8a8efe5c4f2ab54569f90a2ea340/row-module-asset-mobile.webp",
+    "alt": "",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_160x56px.svg",
+    "alt": "Google",
+    "pageTitle": "Before you continue",
+    "pageUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
   {
     "src": "https://lh3.googleusercontent.com/4QDjgLWFFWv-qLZ9FPp7d0T2CDu5kcoOs7ueksVn9_d92nXDih4sb7lsbU9KEcf9tnnCBr_U46Lm6egsqU_KH_x37_OrvcDwYTzw23gAbOW9LmV5k2NU",
     "alt": "Een tijdelijke afbeelding",
