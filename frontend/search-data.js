@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 559,
+    "url": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/",
+    "title": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Lincoln Loop: Building a sustainable business inspired by Python’s ethos Written by Peter Baumgartner, Lincoln Loop When our agency began in 2007, using Python on the web was still a rarity, but some new projects in the space were starting to pop up. TurboGears had gained popularity with its MVC approach, but it was another Python web framework, Django, that piqued my interest. I had worked previously with WordPress and Ruby on Rails, but neither felt like a long-term match. Trying to customize WordPress to build custom applications was like putting a square peg in a round hole, and Rails, the hot framework at the time, felt too magical and lacked sufficient documentation for me to really wrap my head around it. Django (and Python) clicked with me immediately. They were well documented, and because of Django\u0027s newsroom roots, I could build content platforms as well as rich web applications. Thanks largely to those technologies, Lincoln Loop has grown from a one-person local operation to a full-service global web agency with over 15 years of success. Why Python Is the Best Choice for Lincoln Loop We came to Python through Django but stuck with the programming language largely because of its philosophy. The language principles espoused by the Zen of Python not only describe how we should write code, but some became tenets of how we run our business. Ideas like “Practicality beats purity” and “Explicit is better than implicit” work far beyond the terminal. Following Python\u0027s ideals of practicality and explicitness not only makes our code better but also the end products we deliver to our clients. Another reason Python has worked out so well for our client projects is the rich ecosystem of open-source libraries available on PyPI. They let us focus on our client\u0027s unique business logic, and for everything else, we can leverage open-source libraries. The breadth of tooling available is staggering. We pull API clients, content management systems, image manipulation libraries, and even machine learning or data science toolkits from PyPI. We\u0027re excited to start seeing packages built in Rust show up on PyPI. Its recent adoption for performance-critical code paths means we get high-performance memory-safe code that can be accessed with a friendly Python API. It feels like we\u0027re getting to have our cake and eat it too! It\u0027s no wonder Python ranks as one of the most popular languages in developer surveys year after year. It’s a proven technology, and the “batteries included” approach gives us the building blocks we need to solve our clients\u0027 problems quickly and efficiently. Django Has Powered Development for Lincoln Loop Since 2007 Our agency was among the early adopters of Django. But since those early days, we’ve seen massive growth in the ecosystem. Once considered bleeding-edge technology, Django is now a stable, mature framework. Plus, it’s flexible enough to accommodate the needs of the wide variety of organizations we work with as partners. Python and Django have allowed us to create content management systems for large-scale publishers with tens of millions of daily page views as well as immersive educational experiences for prestigious universities. We’ve seen our client base transition from bootstrapped startups to enterprise organizations with billions of dollars in revenue. Python has been our foundation every step of the way. Unlike most of the tech world that jumps from framework to framework, embracing whatever is the hot new technology, Lincoln Loop has stayed focused on Python and Django. Consequently, we have an incredibly deep understanding of how to use them to solve our clients’ problems. The longevity of our tooling also means the solutions we build are sustainable. We have clients who have run the same technology stack (with upgrades along the way) for more than ten years. Python’s Core Advantage Comes Down to Community Open source software relies on its community for its success. Without a healthy community, the open-source ecosystem will eventually fizzle and fade. For us, the Python community may be its greatest advantage compared to other programming languages. If you go to a Python conference, you’ll find specialists with very diverse backgrounds. In addition to the web, you\u0027ll meet folks in research, data science, machine learning, and system operations. Most of the open source Python code from those different groups ends up in PyPI. Whatever your organization needs to do, it is likely that someone in the Python community has already written the code that will deliver the functionality you need. Since the language is so widely used, you have a lot of online resources available when you want to find help. Whether it is a blog post describing how to solve a specific problem, a deep-dive conference talk on a specific topic, or som",
+    "scrapedAt": "2026-05-10 04:25:32.25619"
+  },
+  {
+    "id": 558,
+    "url": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/",
+    "title": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python with Gretel.ai to Generate Synthetic Location Data Written by Alex Watson, co-founder and CPO, Gretel.ai, Gretel.ai Header Photo Credit: sylv1rob1 via ShutterStock* How Gretel.ai trained a FastCUT GAN using Python to generate realistic synthetic location data for any city in the world. Introduction At Gretel.ai, our mission is to make it fast and easy for developers and data scientists to create production-grade synthetic data. To achieve this, we’ve designed a series of APIs that allow anyone to get up and running within minutes so they can identify, transform and generate the data necessary to fuel the testing of modern software applications and AI/ML models. Python is the engine that powers much of Gretel’s research, development, and deployment of our APIs and toolkit. From a user experience perspective, Python’s extensive libraries and frameworks (e.g., Scikit-learn and TensorFlow for machine learning, Spacy for text processing, and Numpy for data exploration), its ability to handle complex data structures, and its turnkey integrations help us ensure Gretel’s platform is easy to use and extensible to any workflow or project. In this post, we highlight how–with the support of Python–we created a GAN location generator that can use map images and geolocation data to create new synthetic training data that can help the model predict where a human (or an e-bike in this case) might be, for any location in the world, with a high degree of statistical accuracy. This proof of concept for making better predictions by combining and contextualizing different types of data has applications across industries – such as improving medical diagnosis and financial market forecasts and even building realistic simulations in the metaverse. If you want to try this experiment yourself, all the tools, code, and data are open-sourced and available on GitHub. An Overview of the Process Generating realistic location data for users for testing or modeling simulations is a hard problem. Current approaches just create random locations inside a box, placing users in waterways or on top of buildings. This inability to make accurate, synthetic location data stifles a lot of innovative projects that require diverse and complex datasets to fuel their work. Gretel’s approach is to model this problem by encoding e-bike location data as pixels in an image, and then training that data as an image translation task similar to CycleGAN, Pix2pix, and StyleGAN. For this study, we used the newer contrastive unpaired translation (FastCUT) model that was created by the authors of pix2pix and CycleGAN as it’s memory-efficient, fast for training (i.e., useful for higher-res locations), and generalizes well with minimal parameter tuning. The Approach For this case study, we wanted to test if we could accurately predict the locations of scooters in one city based on training a GAN model using publicly available e-bike data from other cities. To do this, we first fed our model image data of different city maps, including DC, Denver, and San Diego, then separately trained the model on tabular data of e-bike locations throughout those cities, which included time-series data that captured the flow of e-bike traffic, too. Here is an example of what the raw data looks like before and after it was combined: Creating contextual learning by combining time-series and image data Three-Step Process There were three essential steps for training our model. First, we created the training data. To do this, we created a Domain A from a corpus of precise e-bike locations on a map, and a Domain B from the same maps, but without locations. Next, we trained our FastCUT model on our new training data (which includes both the labeled and unlabeled map images). This was accomplished by training the model on translating Domain B → Domain A. Lastly, once our initial model was trained, we generated our synthetic dataset, which we then used to further test and optimize the model’s predictions for realistic user locations for a new city map. This generative process required downloading new maps for a target location (Domain C), then running inference on the FastCUT model to predict scooter locations (in other words, translating Domain C → Domain A), and finally processing those images using OpenCV-Python to find e-bike locations and then convert them to geolocation (i.e., latitudinal/longitudinal) data points. With this information, we built our synthetic location dataset and we’re ready for testing. The Results: San Diego → San Francisco → Tokyo With our model trained on real-world San Diego e-bike data, we then repeated the same initial process of training our model with image data from various U.S. cities but then asked our model to predict the missing e-bike location data. The output was predictions t",
+    "scrapedAt": "2026-05-10 04:25:30.185577"
+  },
+  {
+    "id": 557,
+    "url": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/",
+    "title": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning Written by Andrei Stoian and Benoit Chevallier-Mames, Zama Zama creates open-source tools that bring Fully Homomorphic Encryption (FHE) to blockchain and AI developers. FHE is a cryptographic technique that enables computations on encrypted data without needing to decrypt it or access the private key. This approach is invaluable in industries requiring strong privacy protections—such as healthcare, finance, advertising, and defense. FHE not only ensures trust when outsourcing machine learning tasks to the cloud, but also facilitates collaborative analytics between multiple parties, all while keeping the data secure and private throughout the entire process. Concrete ML: a user-friendly Python Package with classical APIs To simplify the adoption of FHE, which involves a complex and resource-intensive technological stack, we developed tools that streamline the integration of FHE into applications. Since Python is the de facto standard for building machine learning (ML) applications, it was an obvious choice to create an open-source FHE library in Python. The library features APIs that closely resemble those of familiar ML libraries, making it accessible to machine learning practitioners. For classical machine learning models, we drew inspiration from the API of scikit-learn, the leading ML library that supports a wide range of models, including linear models, decision trees, and random forests. For deep learning models, we decided to support PyTorch through the intermediary of ONNX, the open standard for machine learning interoperability. Finally, for DataFrames, Concrete ML took inspiration from pandas. Building with Concrete ML Both our ML framework and FHE compiler are open-source. Recently, external developers have used our libraries to build exciting FHE applications, such as an encrypted version of Shazam where songs are encrypted before matching to a database, and an encrypted DNA ancestry analysis solution that keeps the DNA encrypted throughout the entire process. Ready to start building with FHE? Read the Concrete ML documentation Explore the comprehensive tutorials and demos About the authors Andrei Stoian, PhD, is head of the machine learning team at Zama. His main responsibility in this role is to oversee the development of Concrete ML, Zama\u0027s privacy preserving machine learning toolkit based on fully homomorphic encryption. In the past, Andrei worked on machine learning tools and algorithms for video analytics and satellite image processing on embedded systems. Andrei has co-authored more than 20 papers about machine learning applications and holds several patents. Benoit Chevallier-Mames is serving as VP of Cloud \u0026 Machine Learning at Zama. He has spent 20+ years between cryptographic research and secure implementations in a wide range of domains such as side-channel security, provable security, whitebox cryptography, and fully homomorphic encryption. Benoit has co-written 15+ peer-reviewed papers and is the co-author of 50+ patents. He holds a PhD from Ecole Normale Superieure / Paris University and a master\u0027s degree from CentraleSupelec. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:25:27.514886"
+  },
+  {
+    "id": 556,
+    "url": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/",
+    "title": "Using Python to build a solution for instant tokenized real estate redemptions | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python to build a solution for instant tokenized real estate redemptions Written by Brian Whippo, Head of Developer Relations, Algorand Foundation, Algorand Lofty is a startup enabling users to turn the equity of real estate properties into digital tokens, which are then available for peer-to-peer trading on a secondary marketplace. In practice, it enables real estate to be traded similarly to more liquid assets like stocks. To date, more than 180 properties have been tokenized on the platform, generating $3M+ in rental income for users. To achieve its vision for a future where real estate is more easily tradeable and investable, Lofty utilizes Algorand – a Layer-1 blockchain with native Python programmability. While the core of the platform’s smart contracts were developed in an older Algorand programming language (TEAL), the team has shifted to developing new features in Python, including a smart contract released this year that enables users to instantly redeem tokens for the value of a sold property share. Smart contracts are self-contained programs that validate transactions according to predefined rules and parameters. They are a commonly utilized tool on decentralized blockchain networks such as Algorand and Ethereum. For Lofty, smart contracts are used for all transactions, including limit orders and market orders. The former enables peer-to-peer swaps routed by Lofty, so while users experience a seamless trading experience, their funds are settled directly between buyers and sellers, never touching Lofty’s accounts. The latter enables liquidity pools to act as a counterparty to buyers and sellers, enabling instant liquid transactions from real estate. The liquidity pools themselves are also smart contract-based escrow accounts. It took the Lofty engineering team only one week to build the smart contracts for the new token redemption feature. Python programmability on Algorand makes the entire development lifecycle easier and means more affordable and efficient maintenance and upgrades going forward. Specific benefits of Algorand Python (algopy) versus other blockchain-specific languages include: Natural Python syntax using standard Python class structures, making code more readable and maintainable Strong typing system with proper classes and inheritance, just as one would use in regular Python Intuitive method decorators like @abimethod and @subroutine that clearly define the contract’s external method entry points vs. internal methods Simplified on-chain transaction handling with helper classes like AssetTransfer Abstraction of Algorand-specific data concepts through Python classes like Asset and Account Familiar object-oriented programming patterns, making contracts more accessible to Python developers without specialized smart contract expertise Ability to use testing, linting, formatting, and other familiar Python libraries with smart contract code In the following example, a smart contract is written in Python to facilitate token swaps. The Swap contract allows users to exchange one token for another at a fixed 1:2 ratio. The contract maintains separate incoming and outgoing asset pools, provides administrative functions for the governor, and includes safety checks to ensure sufficient liquidity before processing swaps. Code: By building its new smart contracts in Python, and tapping into Algorand’s broader suite of developer tools like AlgoKit, Lofty is able to easily and affordably maintain its code as the company scales and introduces new features. Lofty’s tokenized real estate marketplace could not exist without blockchain. By building on the decentralized, open-source, and efficient Algorand network, Lofty users benefit from instant transaction finality, a 5+ year history of 100% network uptime, and global scalability (able to settle 10,000 transactions per second) – all at the cost of just fractions of a penny each. In addition, Algorand offers native features like atomic transactions and multisig capabilities, which are central to Lofty’s platform. Atomic transactions enable trustless transactions between users, giving them the experience and feel of a centralized exchange while ensuring that actual funds are settled safely in a peer-to-peer way, while native multisig allowed Lofty to build embedded wallets that users operate on their account dashboard. This enables anyone to immediately start using a blockchain-based product, regardless of any prior understanding of blockchain concepts. Algorand is the only Layer-1 network offering native Python programmability, giving developers a simple path to unlocking the powerful possibilities of decentralized blockchain for all types of industries. DISCLAIMER: The content provided herein is for informational purposes only. The information is provided by the Algorand Foundatio",
+    "scrapedAt": "2026-05-10 04:25:25.062055"
+  },
+  {
+    "id": 555,
+    "url": "https://www.python.org/success-stories/python-for-scientific-data-visualization/",
+    "title": "Python for Scientific Data Visualization | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Scientific Data Visualization Written by Prabhu Ramachandran, MayaVi Background MayaVi is an open source scientific data visualization tool written entirely in Python. I started work on MayaVi in 2000. At that time, a few colleagues of mine needed to visualize their computational fluid dynamics (CFD) data but the only suitable tools available were commercial, closed source programs that were prohibitively expensive. We looked at some open source tools as alternatives. OpenDX had just been released to the public and at that time was hard for me to get up and running. OpenDX was also a fairly complex system with a steep learning curve. Another visualization/graphics library, VTK, was also available as open source. VTK is an extremely powerful visualization library written in C++. It is very portable and runs on various flavors of Unix, Windows, and recently on Mac OS X. VTK was chosen as the most appropriate solution, but it was not enough to solve the problem at hand. An application was needed on top of the VTK library before non-programmers equipped only with specialized domain knowledge could sit at a computer and visualize their data. Python Chosen Although most of my previous experience was in C and C++, I felt that another language might be a better choice for quickly developing a graphical user interface. VTK is written in C++, but it has also been wrapped for Python, Tcl and Java. I took a look at each of those. I ruled out Tcl because I felt Python\u0027s syntax was much cleaner and because I had heard that large Tcl programs could be hard to maintain. Java had the disadvantage of requiring compilation with each change in the code, and the ability to run code in any recent browser was of no use for this project. Java\u0027s verbose syntax as compared to Python was also a point against it. Python was just as portable as Java and a much easier to learn and use language. I\u0027d also read the Python tutorial, seen various Python programs and liked the language very much for its simplicity, object oriented nature, dynamic data typing, and large standard library. Starting with a few simple Python scripts using VTK, I was able to get my colleagues up and running fairly quickly with a few custom CFD visualization scripts. At this time I was still learning Python and Tkinter (the GUI toolkit used in MayaVi) and created a GUI based tool called VTK-CFD in June 2000. This went through several rounds of improvements until I eventually completely re-wrote it and released MayaVi in May 2001. Results MayaVi was written in 100% pure Python and by virtue of VTK, Python, and Tkinter\u0027s portability, it works on Linux, Unix, and Windows. Python turned out to be simple, easy to learn, and yet extremely powerful. Its interactive interpreter was a huge plus when learning and experimenting. It also has excellent freely available documentation. I found the development cycle extremely fast because Python is both object oriented and interpreted. The program can be well-designed from an OO standpoint, and thus more maintainable, but there is no compilation to wait for each time you make alterations to your code. Python\u0027s readability and dynamic typing made it even easier to write, maintain, and extend the code. I never had to worry about types, which let me focus on the problem at hand rather than wrestle with the language and its syntax. This made me much more productive than I was with C and C++. For example, I was able to write a complete VTK documentation browser with GUI and search engine in just 400 lines of code. Flow past a cylindrical post, showing configuration dialog, VTK pipeline, and VTK documentation browser. Data courtesy of NASA. Zoom in Excellent support for introspection, coupled with a comprehensive standard library, made it easy to write data-driven code like the vtkPipeline browser. This automatically generates a GUI at runtime that displays the VTK graphics pipeline. It also generates a GUI configuration dialog for any VTK object by parsing the object\u0027s methods with Python\u0027s regular expression module, categorizing it, and building the GUI accordingly. This code is also used in MayaVi\u0027s persistence mechanism, which can save most VTK objects to disk by inspecting them at runtime. The use of introspection to write data-driven modules such as these avoided substantial amounts of manual coding, and makes MayaVi self-extending as additional VTK objects are defined. Since Python is a scripting language, it was the natural choice for an extension language for MayaVi. As a result, MayaVi isn\u0027t just written in Python but can also be scripted by end users working in Python, in order to extend it with additional useful functionality. I\u0027m not a software developer or a computer scientist. Neither am I a graphics expert. While I did have a good bit of programmin",
+    "scrapedAt": "2026-05-10 04:25:20.498115"
+  },
+  {
     "id": 554,
     "url": "https://www.python.org/success-stories/getting-to-know-python/",
     "title": "Getting to Know Python | Our Success Stories | Python.org",
@@ -3822,26 +3857,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 555,
-    "url": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
-  },
-  {
-    "id": 556,
-    "url": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
-  },
-  {
-    "id": 557,
-    "url": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
-  },
-  {
-    "id": 558,
-    "url": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
-  },
-  {
-    "id": 559,
-    "url": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
   },
   {
     "id": 560,
@@ -97065,10 +97080,176 @@ window.searchData = [
     "id": 71811,
     "url": "https://hiringsolved.com/",
     "parentUrl": "https://www.python.org/success-stories/getting-to-know-python/"
+  },
+  {
+    "id": 71817,
+    "url": "http://www.vtk.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
+  {
+    "id": 71819,
+    "url": "https://www.python.org/m/about/success/mayavi/mpss0.png",
+    "parentUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
+  {
+    "id": 71820,
+    "url": "http://mayavi.sf.net/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
+  {
+    "id": 71826,
+    "url": "https://algorand.co/algokit",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "id": 71830,
+    "url": "https://algorand.co/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "id": 71836,
+    "url": "https://www.lofty.ai/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "id": 71839,
+    "url": "https://zama.ai",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 71840,
+    "url": "https://github.com/zama-ai/concrete",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 71843,
+    "url": "https://github.com/zama-ai/concrete-ml",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 71845,
+    "url": "https://www.zama.ai/post/encrypted-shazam-using-fully-homomorphic-encryption-concrete-ml-tutorial",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 71846,
+    "url": "http://scikit-learn.org/",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 71848,
+    "url": "https://docs.zama.ai/concrete-ml/tutorials/showcase",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 71850,
+    "url": "https://www.zama.ai/post/build-an-end-to-end-encrypted-23andme-genetic-testing-application-using-concrete-ml-fully-homomorphic-encryption",
+    "parentUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "id": 71859,
+    "url": "https://gretel.ai/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 71861,
+    "url": "https://github.com/gretelai/GAN-location-generator.git",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 71862,
+    "url": "https://imgur.com/kUq1ITA",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 71864,
+    "url": "https://imgur.com/tGWSqTL",
+    "parentUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "id": 71871,
+    "url": "https://peps.python.org/pep-0020/#the-zen-of-python",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 71876,
+    "url": "https://survey.stackoverflow.co/2022/",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 71879,
+    "url": "https://lincolnloop.com",
+    "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/lincoln_loop.jpg",
+    "alt": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos",
+    "pageTitle": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Header_Image_FEpYWhD.jpg",
+    "alt": "Using Python with Gretel.ai to Generate Synthetic Location Data",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/9C4n5BG.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/tGWSqTL.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://i.imgur.com/kUq1ITA.jpg",
+    "alt": "",
+    "pageTitle": "Using Python with Gretel.ai to Generate Synthetic Location Data | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-with-gretelai-to-generate-synthetic-location-data/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/1.png",
+    "alt": "image1",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/2.png",
+    "alt": "image2",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/3.png",
+    "alt": "image3",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/4.png",
+    "alt": "image",
+    "pageTitle": "Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/zama-concrete-ml-simplifying-homomorphic-encryption-for-python-machine-learning/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/successstory_algorand.png",
+    "alt": "image",
+    "pageTitle": "Using Python to build a solution for instant tokenized real estate redemptions | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/mayavi/mpss0-half.jpg",
+    "alt": "Mayavi Screen Shot",
+    "pageTitle": "Python for Scientific Data Visualization | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
   {
     "src": "https://www.python.org/m/about/success/bats/tact3image-web.jpg",
     "alt": "BATS Test Map",
