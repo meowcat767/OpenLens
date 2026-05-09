@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 293,
+    "url": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet",
+    "title": "Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet",
+    "content": "ANP Asielminister Van den Brink kondigde vrijdag twee nieuwe maatregelen aan NOS Nieuws•gisteren, 14:24•Aangepast gisteren, 15:07 Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet Deel dit artikel Met het sneller ongewenst verklaren van vreemdelingen en meer mogelijkheden om binnengrenzen strenger te controleren wil het kabinet alsnog een aantal maatregelen doorvoeren om het asielbeleid aan te scherpen. Premier Jetten kondigde het al aan en twee en een halve week na het stranden van de asielnoodmaatregelenwet in de Eerste Kamer zet het kabinet nu een eerste stap. Daarbij wil het kabinet via een zogenoemde nota van wijziging, het aanpassen van een bestaand wetsvoorstel, de mogelijkheden verruimen om personen sneller als ongewenst te verklaren, aldus minister Van den Brink (CDA) van Asiel. Hij wijst erop dat dat sneller gaat dan nieuwe wetgeving doorvoeren. Het gaat om mensen die in ons land asiel hebben aangevraagd, maar ook strafbare feiten hebben gepleegd. Zij moeten sneller dan nu ongewenst verklaard kunnen worden. Wie dan ondanks zo\u0027n ongewenstverklaring niet vertrekt kan voor een jaar in de gevangenis belanden. Het gaat straks ook om mensen die van buiten Europa komen. Meerdere misdaden Van den Brink denkt dat de maatregel kan helpen, hoewel hij niet kan niet zeggen om hoeveel mensen het zou gaan. \"We willen wel mensen asiel bieden, maar niet als je een misdaad pleegt\". Het gaat om misdrijven waar een gevangenisstraf van minimaal twee jaar op staat, of meerdere misdaden die daartoe optellen. Verder wil het kabinet het toezicht op de binnengrenzen aanscherpen en de Koninklijke Marechaussee meer mogelijkheden geven om effectiever op te treden. Het gaat niet zozeer om controles aan de grenzen zelf, zegt Van den Brink, maar om meer gerichte controles op wegen achter de grenzen. Of daar ook meer geld voor komt is niet duidelijk. Afschaffen van dwangsommen Van den Brink, die een paar weken geleden de wetten van zijn voorganger Faber door de Eerste Kamer moest loodsen -waarvan één het niet redde- heeft goede hoop dat een Kamermeerderheid deze maatregelen wel zal steunen. De norm is straks heel duidelijk, stelt Van den Brink: \"Iemand die strafbare feiten pleegt en ondanks een ongewenstheidverklaring terugkeert naar ons land gaat de cel in\". Het strafbaar stellen van alle mensen zonder verblijfsrecht ligt politiek gevoelig, niet alleen voor oppositiepartijen GroenLinks-PvdA en SGP, maar ook voor coalitiepartijen D66 en CDA. Dat onderdeel van de verworpen asielnoodmaatregelenwet, over \u0027terugkeerfrustreerders\u0027 zoals Van den Brink het noemt, komt later. Ook voor het afschaffen van dwangsommen voor de Immigratie- en Naturalisatiedienst, die nu kunnen worden opgelegd als de overheid te laat beslist over aanvragen, komt nog een voorstel. Politiek verslaggever Jorn Jonker: \"Het kabinet wil uitstralen dat het op dit terrein wel kan leveren. In dit dossier gaat het veel over beeldvorming. Via Europese afspraken wordt binnenkort al veel geregeld wat in de weggestemde wetten stond. Maar wat die wetten daarbovenop zouden regelen, willen ze alsnog in maatregelen gieten en zo het wegstemmen in de Eerste Kamer \u0027repareren\u0027. Dit is politiek het makkelijkste gedeelte daarvan en daarom kan het ook zo snel aangekondigd worden. De regeringspartijen hebben zich ook voorgenomen om mensen die niet meewerken aan hun vertrek strafbaar te stellen, maar hoe ze dat gaan doen is politiek veel lastiger. D66 wil bijvoorbeeld niet dat het te veel lijkt op het strafbaar stellen illegaliteit\". Eerste Kamer tegen veelbesproken asielwet, minister beticht PVV van \u0027politieke sabotage\u0027 Premier Jetten: binnen twee weken nieuwe wetsvoorstellen asiel Hoe politiek Den Haag \u0027grip op migratie\u0027 probeert te krijgen (opent in nieuw venster) Van den Brink Politiek Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-10 03:57:42.098566"
+  },
+  {
+    "id": 292,
+    "url": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand",
+    "title": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "content": "AP / NOS NOS Nieuws•donderdag, 12:26 Berlijn autovrij? Plan voor referendum leidt tot felle weerstand Deel dit artikel Chiem Balduk correspondent Duitsland Vorige slide Chiem Balduk correspondent Duitsland Volgende slide De Berlijnse deelstaatverkiezingen zijn pas in september, maar nu al hangt de Duitse hoofdstad vol met campagneposters. Het onderwerp is het misschien wel meest radicale verkeersplan ter wereld: een vrijwel autovrij Berlijn. Activisten willen een referendum hierover afdwingen, rechtse partijen voeren actief tegencampagne. Het is een wetsvoorstel waar een groep juristen, verkeerskundigen en groene activisten jaren aan gewerkt heeft. Het idee is om het autoverkeer flink te beperken binnen de ringspoorlijn, een gebied waar ongeveer 30 procent van de bijna vier miljoen Berlijners woont. Het gebied is met maar liefst 88 vierkante kilometer ongeveer zo groot als Eindhoven. Alle mensen zouden nog maar twaalf dagen per jaar met een auto in dit gebied mogen rijden. Uitzonderingen komen er voor hulpdiensten, taxi\u0027s, mensen met een beperking, goederenverkeer en mensen met cruciale beroepen. De rest is aangewezen op het ov, de fiets of benenwagen. NOS Het gebied waarover het gaat Het zou leiden tot minder verkeersongelukken, -overlast en -uitstoot. De ruimte die vrijkomt kan worden gebruikt voor fietspaden, groen en zitjes. \"Of speeltuintjes... of urban libraries\", dagdroomt Marie Wagner, een van de initiatiefnemers. \"En eindelijk kunnen kinderen veilig naar school fietsen.\" Tegenstanders wijzen op hogere verkeerslast op omliggende wijken en economische schade, doordat bedrijven zouden vertrekken en winkels slechter bereikbaar zijn. Dat wuift Wagner weg. \"Slechts 9 procent van inkopen binnen de ring wordt gedaan door mensen die met een auto reizen\", zegt ze. \"Bovendien heeft onderzoek uitgewezen dat aantrekkelijkere straten leiden tot meer consumptie, omdat mensen daar langer blijven.\" Wie wel de auto moet en mag gebruiken, zoals klusjesmannen, kunnen juist makkelijker door de stad bewegen, is het idee. Collega Gerald Stefani benadrukt dat de activisten niet tegen de auto an sich zijn. \"We willen het autogebruik niet afschaffen, maar reguleren. Ook blijft met twaalf autodagen per jaar nog veel mogelijk, zoals grote boodschappen en verhuizingen.\" Over de uitvoering maakt hij zich geen zorgen. \"Voor iedere rit zou je online een QR-code kunnen aanvragen.\" Weerstand in autostad Berlijn is een autostad. In de bloeiperiode rond 1900, de Gründerzeit, werden de kenmerkende Berlijnse huurblokken weids opgezet langs brede straten. Daar viel de auto later eenvoudig in te passen. Verwoesting door de Tweede Wereldoorlog, de bouw van de Berlijnse Muur en sloopdrift van naoorlogse stedenplanners maakten de weg vrij voor brede autowegen. AFP Zicht op het centrum van Berlijn, met op de voorgrond de kenmerkende Berlijnse woningbouw Het initiatief stuit op felle weerstand van de lokale politiek. Rechtse partijen als CDU, FDP en AfD hebben de stad volgehangen met posters met \u0027Autofrei? Nein!\u0027 en \u0027Auto verbieten verboten\u0027 (autoverbod verbieden). CDU-burgemeester Wegner spreekt van een \"goedbedoelde droom van een stedelijke idylle, maar die tot een nachtmerrie zal leiden\". Zijn partij staat op verlies bij de komende deelstaatverkiezing en wordt even groot gepeild als de Groenen en Die Linke, evenals de AfD. Het beeld van \u0027links\u0027 die je auto wil afpakken, is dan een campagnegeschenk. Daarom houden de linkse partijen zich waarschijnlijk afzijdig op dit thema; zij hebben geen posters opgehangen voor het verkeersreferendum. NOS / Chiem Balduk Campagneposters van de AfD (tegenstander) en de Tierschutzpartei (voorstander) De anti-campagne is juist behulpzaam, zegt Stefani. Het levert bekendheid op: \"Er zijn mensen die vanwege de CDU-posters juist komen ondertekenen\". Volgens Wagner willen vrijwel alle partijen het autogebruik terugdringen, maar durven ze geen grote stappen te zetten. \"De auto zit diep in de Duitse psyche\", zegt Stefani. \"Het is zo belangrijk geweest voor de Duitse economische ontwikkeling, dat veranderingen op autogebied automatisch weerstand oproepen. Dat zien we ook met de discussie over een maximumsnelheid.\" Het is spannender dan een krimi. De actievoerders verkeren in het laatste stadium om een referendum in september af te dwingen: het ophalen van 174.000 handtekeningen. Dat ging in de wintermaanden moeizaam, maar nu is er een inhaalspurt. Met nog één dag te gaan lijkt het erop of eronder, zegt Marie Wagner. \"Het is spannender dan een krimi.\" Op het Alexanderplatz vragen de actievoerders Berlijners om hun handtekening. De één tekent direct (\"Het is zeker niet radicaal, de huidige vervuiling is radicaal!\"), de ander wuift het voorstel weg (\"Minder auto\u0027s prima, maar niet de mijne\"). Een vrouw twijfelt. Ze woont binnen de ring en heeft een auto. \"Voor boodschappen is het wel handig.\" Toch vindt ze het idee wel spannend. Na wat overtuigingskracht van de actievoerders tekent ze. \"Misschien goed, dan word ik eens",
+    "scrapedAt": "2026-05-10 03:57:37.815618"
+  },
+  {
+    "id": 291,
+    "url": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "title": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "content": "NOS Nieuws•gisteren, 09:10•Aangepast gisteren, 10:27 Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027 Deel dit artikel Premier Jetten noemt het gooien van een vuurwerkbom door de brievenbus van het D66-partijkantoor \"een kansloze actie\". \"Vrij kansloos als je denkt dat je met dit soort acties politici kunt intimideren. We laten ons echt niet het zwijgen opleggen.\" Jetten sprak met de pers voor de start van de ministerraad: 0:49 Minister-president Rob Jetten (D66) reageert op vuurwerkbom: \u0027Het is een kansloze actie\u0027 Jetten zei voor aanvang van de ministerraad dat er veel schade is, en dat de mensen die bij een sprekersavond van de Jonge Democraten aanwezig waren erg geschrokken zijn. \"Gelukkig is iedereen ongedeerd\", aldus de D66-leider. Kort na de aanslag werd een verdachte aangehouden. Het gaat om een 37-jarige man zonder vaste woon- of verblijfplaats, meldt de politie vanochtend. Hij zit nog vast. Vaker intimidatie Het was de tweede keer in negen maanden tijd dat het D66-bureau doelwit was van een actie. Rond het asielprotest op het Malieveld, in september, werd het bekogeld met stenen. Jetten wijst erop dat het niet alleen om D66 gaat, maar dat er \"elke week wel\" pogingen worden gedaan om bijvoorbeeld gemeenteraadsleden, burgemeesters, politie- of ambulancemensen te intimideren. \"Maar je zag gisteravond gelukkig ook dat de meeste Nederlanders heel duidelijk maken dat we dit in ons land absoluut niet accepteren en dat dit niet een land is waar je met geweld je zin kan krijgen. Dit past absoluut niet bij de Nederlandse normen en waarden.\" In september sprak Jetten, die toen nog geen premier was, over \"politiek geweld\". Die woorden wil hij nu niet gebruiken, omdat het motief achter de vuurwerkbom nog niet duidelijk is. Dat wordt nog onderzocht door de politie. \u0027Doelbewust naar D66\u0027 Het ging toen om een ander soort incident, zegt Jetten. \"Er stonden mensen met vlaggen voor het partijkantoor en er werd gefilmd terwijl de ruiten werden ingegooid\", dus het was meteen duidelijk wat de bedoeling was. Hij denkt overigens wel dat de dader doelbewust naar het pand van D66 is gelopen om juist daar een vuurwerkbom naar binnen te gooien. Maar op de exacte reden voor die actie wil hij niet vooruit lopen. \u0027Aanslag op democratie\u0027 VVD-leider Yesilgöz vindt het \"echt vreselijk\" wat er is gebeurd. \"Dit is bedoeld om mensen monddood te maken\" en dat kan wat haar betreft echt niet. \"Je gaat gewoon niet naar geweldsmiddelen grijpen.\" \"Je blijft met je poten van anderen af\", zegt Yesilgöz. \"Als je het ergens niet mee eens bent, ga stemmen, ga het debat aan. Er zijn een miljoen manieren in een democratie om je stem te laten horen.\" Ook andere bewindspersonen veroordelen de actie. CDA-minister Heerma spreekt van \"een aanslag op de democratie\". Hij ziet dat de drempel om te intimideren en geweld te gebruiken, lager lijkt te worden. \u0027Geschokt en verdrietig\u0027 Minister Van Weel van Justitie en Veiligheid vindt het \"schandalig dat een politieke partij wordt aangevallen in ons land\". Hij stelt dat de temperatuur in het politieke debat \"ontzettend hoog\" is. \"Dit is de bijl aan de wortel van de democratie.\" De Jonge Democraten, die gisteravond een bijeenkomst met ruim dertig mensen hadden in het D66-kantoor, zijn \"geschokt, woedend en verdrietig\". Zij spreken van \"een aanslag\"(opent in nieuw venster). \"Dit raakt niet alleen D66 of de JD, maar onze democratie. Wij laten ons niet intimideren.\" Nog geen motief bekend voor gooien vuurwerkbom partijkantoor D66, verdachte zit vast Vuurwerkbom door brievenbus D66-kantoor in Den Haag, verdachte aangehouden Opnieuw drie veroordelingen voor rellen bij asielprotest op Haagse Malieveld Politiek Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Meer bekijken? vrijdag 13 maart, 11:22 Vier verdachten opgepakt voor brandstichting synagoge Rotterdam maandag 16 maart, 18:17 Verdachten aanslag synagoge Rotterdam vast voor terrorisme maandag 16 maart, 13:35 Jetten: aanslagen op Joodse gemeenschap onacceptabel, link met Iran onderzocht gisteren, 14:44 8/5 in Nieuwsuur: Aanslag op D66-kantoor • Gaza\u0027s oranje lijn • Dronken in het vliegtuig Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-05-10 03:57:26.489634"
+  },
+  {
+    "id": 290,
+    "url": "https://nos.nl/video/2613365-een-jaar-na-een-natuurbrand-kan-een-gebied-zelf-herstellen",
+    "title": "Een jaar na een natuurbrand: kan een gebied zelf herstellen?",
+    "content": "Aan het laden NOS Nieuws•woensdag, 17:13 Een jaar na een natuurbrand: kan een gebied zelf herstellen? Een jaar na een grote natuurbrand in Ede, zijn de gevolgen voor dieren en planten goed zichtbaar. De vlammen verdwijnen relatief snel, maar laten in de natuur hun sporen nog jaren na.",
+    "scrapedAt": "2026-05-10 03:57:21.769272"
+  },
+  {
+    "id": 289,
+    "url": "https://nos.nl/op3",
+    "title": "NOS op 3",
+    "content": "Nieuws om te delen Je vindt ons hier en de hele dag op 3FM en FunX Je vindt ons hier en de hele dag op 3FM en FunX Onze verhalen Dit is NOS op 3, nieuws om te delen Vergelijkbaar misdrijf, andere straf: wat er allemaal meespeelt in de rechtbank Geen regels voor damp uit vapes: \u0027Totaal geen zicht op wat je binnenkrijgt\u0027 Onder de 30 en geen kinderwens: klinieken zien vraag naar sterilisatie toenemen Specials Spanning op het stroomnet Even voorstellen: Oranje Blik op slavernijexcuses Middellandze Zee en migratie Waarom is de oceaan beschermen zo moeilijk? De Democrachine Uit watersnood geboren 8 miljard mensen, op dat hele kleine stukje aarde Wie ben ik? | NOS op 3-eindejaarsgame Kies zelf hoe diep je erin duikt Vorige slide Volgende slide Achter de schermen Over NOS op 3 Wie zijn we en wat doen we?",
+    "scrapedAt": "2026-05-10 03:57:19.110921"
+  },
+  {
     "id": 288,
     "url": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor",
     "title": "Meer Formule 1-wijzigingen op komst: akkoord over minder energie uit elektrische motor",
@@ -2012,26 +2047,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 289,
-    "url": "https://nos.nl/op3"
-  },
-  {
-    "id": 290,
-    "url": "https://nos.nl/video/2613365-een-jaar-na-een-natuurbrand-kan-een-gebied-zelf-herstellen"
-  },
-  {
-    "id": 291,
-    "url": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
-  },
-  {
-    "id": 292,
-    "url": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
-  },
-  {
-    "id": 293,
-    "url": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
   },
   {
     "id": 294,
@@ -46960,10 +46975,404 @@ window.searchData = [
     "id": 22164,
     "url": "https://nos.nl/artikel/2612630-f1-keert-terug-na-gedwongen-pauze-nieuwe-regels-vernieuwde-auto-s-en-een-sprintweekend",
     "parentUrl": "https://nos.nl/artikel/2613605-meer-formule-1-wijzigingen-op-komst-akkoord-over-minder-energie-uit-elektrische-motor"
+  },
+  {
+    "id": 22165,
+    "url": "https://www.youtube.com/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22166,
+    "url": "https://nos.nl/artikel/2531123-geen-regels-voor-damp-uit-vapes-totaal-geen-zicht-op-wat-je-binnenkrijgt",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22167,
+    "url": "https://nos.nl/op3/over-ons",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22168,
+    "url": "https://app.nos.nl/op3/stroomnet/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22169,
+    "url": "https://app.nos.nl/op3/8-miljard-mensen/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22170,
+    "url": "https://www.youtube.com/watch?v\u003dFL7ZO3B1PMQ",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22171,
+    "url": "https://nos.nl/artikel/2516323-onder-de-30-en-geen-kinderwens-klinieken-zien-vraag-naar-sterilisatie-toenemen",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22172,
+    "url": "https://app.nos.nl/op3/deltawerken",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22173,
+    "url": "https://www.twitch.tv/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22174,
+    "url": "https://app.nos.nl/op3/stikstof-uitgelegd/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22175,
+    "url": "https://www.instagram.com/nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22176,
+    "url": "https://app.nos.nl/op3/verkiezingen-uitgelegd/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22177,
+    "url": "https://www.tiktok.com/@nosop3",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22178,
+    "url": "https://app.nos.nl/op3/wk-2023/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22179,
+    "url": "https://app.nos.nl/op3/slavernijverleden/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22180,
+    "url": "https://app.nos.nl/op3/wie-ben-ik/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22181,
+    "url": "https://nos.nl/artikel/2540117-vergelijkbaar-misdrijf-andere-straf-wat-er-allemaal-meespeelt-in-de-rechtbank",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22182,
+    "url": "https://app.nos.nl/op3/centraal-europese-route/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22183,
+    "url": "https://app.nos.nl/op3/oceaan-uitgediept/#/",
+    "parentUrl": "https://nos.nl/op3"
+  },
+  {
+    "id": 22185,
+    "url": "https://nos.nl/artikel/2613587-8-5-in-nieuwsuur-aanslag-op-d66-kantoor-gaza-s-oranje-lijn-dronken-in-het-vliegtuig",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22186,
+    "url": "https://nos.nl/artikel/2606607-verdachten-aanslag-synagoge-rotterdam-vast-voor-terrorisme",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22187,
+    "url": "https://nos.nl/artikel/2606580-jetten-aanslagen-op-joodse-gemeenschap-onacceptabel-link-met-iran-onderzocht",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22188,
+    "url": "https://twitter.com/intent/tweet?text\u003dJetten+na+aanslag+op+D66-kantoor%3A+%27We+laten+ons+niet+intimideren%27\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22190,
+    "url": "https://nos.nl/nieuws/politiek",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22192,
+    "url": "https://nos.nl/artikel/2611577-opnieuw-drie-veroordelingen-voor-rellen-bij-asielprotest-op-haagse-malieveld",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22193,
+    "url": "https://x.com/JongeDemocraten/status/2052650346288459950",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22194,
+    "url": "https://api.whatsapp.com/send?text\u003dJetten+na+aanslag+op+D66-kantoor%3A+%27We+laten+ons+niet+intimideren%27+https%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22195,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22196,
+    "url": "https://nos.nl/artikel/2606153-vier-verdachten-opgepakt-voor-brandstichting-synagoge-rotterdam",
+    "parentUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "id": 22197,
+    "url": "https://twitter.com/intent/tweet?text\u003dBerlijn+autovrij%3F+Plan+voor+referendum+leidt+tot+felle+weerstand\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22198,
+    "url": "https://nos.nl/artikel/2565934-parijs-wordt-groener-en-schoner-luchtvervuiling-in-twintig-jaar-gehalveerd",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22200,
+    "url": "https://nos.nl/artikel/2608932-keukenhof-en-winkelcentra-zetten-zich-schrap-voor-paasdrukte",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22201,
+    "url": "https://nos.nl/artikel/2611137-twee-jaar-na-legalisering-kan-duitser-te-makkelijk-wiet-kopen-vindt-regering",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22202,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22203,
+    "url": "https://nos.nl/artikel/2558039-start-bouw-autovrije-wijk-utrecht-parkeerplekken-nemen-veel-ruimte-in",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22204,
+    "url": "https://api.whatsapp.com/send?text\u003dBerlijn+autovrij%3F+Plan+voor+referendum+leidt+tot+felle+weerstand+https%3A%2F%2Fnos.nl%2Fartikel%2F2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22207,
+    "url": "https://nos.nl/collectie/14015/artikel/2610602-energiecrisis-zet-plankgas-rijden-op-duitse-autobahn-op-politieke-agenda",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22208,
+    "url": "https://nos.nl/artikel/2612949-nazi-kolos-in-neurenberg-wordt-operahuis-mag-juist-geen-ruine-worden",
+    "parentUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "id": 22209,
+    "url": "https://nos.nl/artikel/2611423-eerste-kamer-tegen-veelbesproken-asielwet-minister-beticht-pvv-van-politieke-sabotage",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 22210,
+    "url": "https://nos.nl/artikel/2611537-premier-jetten-binnen-twee-weken-nieuwe-wetsvoorstellen-asiel",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 22211,
+    "url": "https://twitter.com/intent/tweet?text\u003dKabinet+komt+met+eerste+nieuwe+maatregelen+na+stranden+asielnoodwet\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 22212,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 22213,
+    "url": "https://nos.nl/artikel/2609164-hoe-politiek-den-haag-grip-op-migratie-probeert-te-krijgen",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "id": 22216,
+    "url": "https://api.whatsapp.com/send?text\u003dKabinet+komt+met+eerste+nieuwe+maatregelen+na+stranden+asielnoodwet+https%3A%2F%2Fnos.nl%2Fartikel%2F2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet",
+    "parentUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://images.cdn.nos.nl/8/E/R/F/N/E/Bwjb3q4Z5LgobtY2Ur55ppHps4vv8APZ6HK7W4o/0x113x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet",
+    "pageUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/2/u/p/n/H/UqU6mbyhUmzmKTjwVLgb4YJjwduN2SPEtwrMf3i/1x1x3888x2916-768x576.webp",
+    "alt": "",
+    "pageTitle": "Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet",
+    "pageUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/3/r/m/s/S/bRiy5PpdtRyi39JjCLmkV3sxdB2Vo8iQjyxRwEP/0x217x2860x2145-768x576.webp",
+    "alt": "",
+    "pageTitle": "Kabinet komt met eerste nieuwe maatregelen na stranden asielnoodwet",
+    "pageUrl": "https://nos.nl/artikel/2613584-kabinet-komt-met-eerste-nieuwe-maatregelen-na-stranden-asielnoodwet"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/D/y/H/C/N/daJaK5rnjifsiiBCsqoqo8C3FHWT5WAmNMgmq4L/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/06/04/1090543/bio_medium.jpg",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/06/04/1090543/bio_medium.jpg",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/k/a/L/r/fQiQVsvtrpwoL4yKE8WSZLuWoVRiBf63yYsjm71/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/H/2/6/e/d/Cno9JYkPasEiKZHnj6YsacNn37a52oudp5v8rg7/0x193x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/G/m/u/P/m/zUioW6xpTAqLUNNQ4Vh8u2fRSJtrbZSAZpvSSfE/235x46x1680x945-768x432.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/05/03/1221190/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2025/03/03/1198033/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/5/u/5/A/p/H4WRjJryQUUHVMcQub3vPgevD3WhC65MgB8zaki/260x0x3252x2439-768x576.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/H/W/Y/U/V/3WdG9yXLPfaAhLiRhZfb4AeNLjNECtLN1CzHC8d/6x99x3460x2595-768x576.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/A/n/B/v/T/syyfFQpfFocHCqorccwuygUL9FngRFssJinE9UD/76x1x824x618-96x72.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/9/Z/e/f/s/1poTQNNK1XBHXRwQSvdWEetKmxCGuQUpmCQqmNZ/221x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/z/S/k/5/Q/S3eaSZiQiVE6GEVahGpp66Q8DFczpDDpo9Ez1U/299x0x1200x900-576x432.webp",
+    "alt": "",
+    "pageTitle": "Berlijn autovrij? Plan voor referendum leidt tot felle weerstand",
+    "pageUrl": "https://nos.nl/artikel/2613445-berlijn-autovrij-plan-voor-referendum-leidt-tot-felle-weerstand"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/k/Q/N/S/Zm1853cHue1WqwyrY1YWBW1aiwkZRnURW61VMZU/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/B/7/X/q/S/oyJUZ7DtUDSNTRrVxhzSaCHuKZ9Z3mM2uf3Uez1/207x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/3/Z/w/H/Q/fHXFoKkb8C3R7Xv6wmkpQWi8CqvVkQ5Zkgy4Fvn/219x0x3540x2655-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/7/h/d/L/e/1LWSqXno3Zw5U9iWZHGb2Q7Zgc9jrHgCNNhD83g/84x0x2132x1599-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/A/E/Y/8/r/JTpKRWzszmaBeKMeVjBNxFqjq3txYuxv3E1R6CV/61x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/A/W/s/n/p/cLaYnn25LkYmsLcmHe1LJWMUmrwSP5gXiWnkuMC/221x0x3556x2667-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/C/b/1/R/g/EPwzfZ8mCXmsVjCoF3phb4xPy3LPzZMAEjtEF1Z/288x1x3552x2664-768x576.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/k/Q/N/S/Zm1853cHue1WqwyrY1YWBW1aiwkZRnURW61VMZU/263x0x1440x1080-96x72.webp",
+    "alt": "",
+    "pageTitle": "Jetten na aanslag op D66-kantoor: \u0027We laten ons niet intimideren\u0027",
+    "pageUrl": "https://nos.nl/artikel/2613542-jetten-na-aanslag-op-d66-kantoor-we-laten-ons-niet-intimideren"
+  },
+  {
+    "src": "https://static.nos.nl/img/op3/op3-youtube.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/10/10/1145430/768x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/07/31/1116430/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://cdn.nos.nl/image/2024/04/11/1071273/1024x576a.jpg",
+    "alt": "",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
+  {
+    "src": "https://static.nos.nl/img/op3/op3-team.jpg",
+    "alt": "Afbeelding van het maken van een video",
+    "pageTitle": "NOS op 3",
+    "pageUrl": "https://nos.nl/op3"
+  },
   {
     "src": "https://images.cdn.nos.nl/8/6/M/j/J/f/hDPF3oJoij1reUTPCi8dwySgMtTxrXUqKfg2ShW/0x307x4000x2250-1024x576.webp",
     "alt": "",
