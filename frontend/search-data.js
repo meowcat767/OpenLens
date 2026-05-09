@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 868,
+    "url": "https://docs.python.org/3/library/profile.html#module-profile",
+    "title": "The Python Profilers — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Debugging and Profiling » The Python Profilers | Theme Auto Light Dark | The Python Profilers¶ Source code: Lib/profile.py and Lib/pstats.py Introduction to the profilers¶ cProfile and profile provide deterministic profiling of Python programs. A profile is a set of statistics that describes how often and for how long various parts of the program executed. These statistics can be formatted into reports via the pstats module. The Python standard library provides two different implementations of the same profiling interface: cProfile is recommended for most users; it’s a C extension with reasonable overhead that makes it suitable for profiling long-running programs. Based on lsprof, contributed by Brett Rosen and Ted Czotter. profile, a pure Python module whose interface is imitated by cProfile, but which adds significant overhead to profiled programs. If you’re trying to extend the profiler in some way, the task might be easier with this module. Originally designed and written by Jim Roskind. Note The profiler modules are designed to provide an execution profile for a given program, not for benchmarking purposes (for that, there is timeit for reasonably accurate results). This particularly applies to benchmarking Python code against C code: the profilers introduce overhead for Python code, but not for C-level functions, and so the C code would seem faster than any Python one. Instant User’s Manual¶ This section is provided for users that “don’t want to read the manual.” It provides a very brief overview, and allows a user to rapidly perform profiling on an existing application. To profile a function that takes a single argument, you can do: import cProfile\nimport re\ncProfile.run(\u0027re.compile(\"foo|bar\")\u0027)\n (Use profile instead of cProfile if the latter is not available on your system.) The above action would run re.compile() and print profile results like the following:       214 function calls (207 primitive calls) in 0.002 seconds\n\nOrdered by: cumulative time\n\nncalls  tottime  percall  cumtime  percall filename:lineno(function)\n     1    0.000    0.000    0.002    0.002 {built-in method builtins.exec}\n     1    0.000    0.000    0.001    0.001 \u003cstring\u003e:1(\u003cmodule\u003e)\n     1    0.000    0.000    0.001    0.001 __init__.py:250(compile)\n     1    0.000    0.000    0.001    0.001 __init__.py:289(_compile)\n     1    0.000    0.000    0.000    0.000 _compiler.py:759(compile)\n     1    0.000    0.000    0.000    0.000 _parser.py:937(parse)\n     1    0.000    0.000    0.000    0.000 _compiler.py:598(_code)\n     1    0.000    0.000    0.000    0.000 _parser.py:435(_parse_sub)\n The first line indicates that 214 calls were monitored. Of those calls, 207 were primitive, meaning that the call was not induced via recursion. The next line: Ordered by: cumulative time indicates the output is sorted by the cumtime values. The column headings include: ncalls for the number of calls. tottime for the total time spent in the given function (and excluding time made in calls to sub-functions) percall is the quotient of tottime divided by ncalls cumtime is the cumulative time spent in this and all subfunctions (from invocation till exit). This figure is accurate even for recursive functions. percall is the quotient of cumtime divided by primitive calls filename:lineno(function) provides the respective data of each function When there are two numbers in the first column (for example 3/1), it means that the function recursed. The second value is the number of primitive calls and the former is the total number of calls. Note that when the function does not recurse, these two values are the same, and only the single figure is printed. Instead of printing the output at the end of the profile run, you can save the results to a file by specifying a filename to the run() function: import cProfile\nimport re\ncProfile.run(\u0027re.compile(\"foo|bar\")\u0027, \u0027restats\u0027)\n The pstats.Stats class reads profile results from a file and formats them in various ways. The files cProfile and profile can also be invoked as a script to profile another script. For example: python -m cProfile [-o output_file] [-s sort_order] (-m module | myscript.py)\n -o \u003coutput_file\u003e¶ Writes the profile results to a file instead of to stdout. -s \u003csort_order\u003e¶ Specifies one of the sort_stats() sort values to sort the output by. This only applies when -o is not supplied. -m \u003cmodule\u003e¶ Specifies that a module is being profiled instead of a script. Added in version 3.7: Added the -m option to cProfile. Added in version 3.8: Added the -m option to profile. The pstats module’s Stats class has a variety of methods for manipulating and printing the data saved into a profile results file: import pstats\nfrom pstats import SortKey\np \u003d pstats.Stats(\u0027restats\u0027)\np.strip_dirs().sort_stats(-1).print_stats()\n The strip_dirs() method removed the extraneous path from all the module names. The sort_s",
+    "scrapedAt": "2026-05-10 04:55:05.57285"
+  },
+  {
+    "id": 867,
+    "url": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3",
+    "title": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Data Persistence » sqlite3 — DB-API 2.0 interface for SQLite databases | Theme Auto Light Dark | sqlite3 — DB-API 2.0 interface for SQLite databases¶ Source code: Lib/sqlite3/ SQLite is a C library that provides a lightweight disk-based database that doesn’t require a separate server process and allows accessing the database using a nonstandard variant of the SQL query language. Some applications can use SQLite for internal data storage. It’s also possible to prototype an application using SQLite and then port the code to a larger database such as PostgreSQL or Oracle. The sqlite3 module was written by Gerhard Häring. It provides an SQL interface compliant with the DB-API 2.0 specification described by PEP 249, and requires the third-party SQLite library. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. This document includes four main sections: Tutorial teaches how to use the sqlite3 module. Reference describes the classes and functions this module defines. How-to guides details how to handle specific tasks. Explanation provides in-depth background on transaction control. See also https://www.sqlite.org The SQLite web page; the documentation describes the syntax and the available data types for the supported SQL dialect. https://www.w3schools.com/sql/ Tutorial, reference and examples for learning SQL syntax. PEP 249 - Database API Specification 2.0 PEP written by Marc-André Lemburg. Tutorial¶ In this tutorial, you will create a database of Monty Python movies using basic sqlite3 functionality. It assumes a fundamental understanding of database concepts, including cursors and transactions. First, we need to create a new database and open a database connection to allow sqlite3 to work with it. Call sqlite3.connect() to create a connection to the database tutorial.db in the current working directory, implicitly creating it if it does not exist: import sqlite3\ncon \u003d sqlite3.connect(\"tutorial.db\")\n The returned Connection object con represents the connection to the on-disk database. In order to execute SQL statements and fetch results from SQL queries, we will need to use a database cursor. Call con.cursor() to create the Cursor: cur \u003d con.cursor()\n Now that we’ve got a database connection and a cursor, we can create a database table movie with columns for title, release year, and review score. For simplicity, we can just use column names in the table declaration – thanks to the flexible typing feature of SQLite, specifying the data types is optional. Execute the CREATE TABLE statement by calling cur.execute(...): cur.execute(\"CREATE TABLE movie(title, year, score)\")\n We can verify that the new table has been created by querying the sqlite_master table built-in to SQLite, which should now contain an entry for the movie table definition (see The Schema Table for details). Execute that query by calling cur.execute(...), assign the result to res, and call res.fetchone() to fetch the resulting row: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master\")\n\u003e\u003e\u003e res.fetchone()\n(\u0027movie\u0027,)\n We can see that the table has been created, as the query returns a tuple containing the table’s name. If we query sqlite_master for a non-existent table spam, res.fetchone() will return None: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT name FROM sqlite_master WHERE name\u003d\u0027spam\u0027\")\n\u003e\u003e\u003e res.fetchone() is None\nTrue\n Now, add two rows of data supplied as SQL literals by executing an INSERT statement, once again by calling cur.execute(...): cur.execute(\"\"\"\n    INSERT INTO movie VALUES\n        (\u0027Monty Python and the Holy Grail\u0027, 1975, 8.2),\n        (\u0027And Now for Something Completely Different\u0027, 1971, 7.5)\n\"\"\")\n The INSERT statement implicitly opens a transaction, which needs to be committed before changes are saved in the database (see Transaction control for details). Call con.commit() on the connection object to commit the transaction: con.commit()\n We can verify that the data was inserted correctly by executing a SELECT query. Use the now-familiar cur.execute(...) to assign the result to res, and call res.fetchall() to return all resulting rows: \u003e\u003e\u003e res \u003d cur.execute(\"SELECT score FROM movie\")\n\u003e\u003e\u003e res.fetchall()\n[(8.2,), (7.5,)]\n The result is a list of two tuples, one per row, each containing that row’s score value. Now, insert three more rows by calling cur.executemany(...): data \u003d [\n    (\"Monty Python Live at the Hollywood Bowl\", 1982, 7.9),\n    (\"Monty Python\u0027s The Meaning of Life\", 1983, 7.5),\n    (\"Monty Python\u0027s Life of Brian\", 1979, 8.0),\n]\ncur.executemany(\"INSERT INTO movie VALUES(?, ?, ?)\", data)\ncon.commit()  # Remember to commit the transaction after executing INSERT.\n Notice that ? placeholders are used to bind data to the query. Always use placeholders inste",
+    "scrapedAt": "2026-05-10 04:55:03.052008"
+  },
+  {
+    "id": 866,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#threading",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:54:58.596956"
+  },
+  {
+    "id": 865,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-10 04:54:52.155324"
+  },
+  {
+    "id": 864,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 310, in __getitem__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function ordinal 0 not found\n\u003e\u003e\u003e\n Calling functions¶ You can call these functions like any other Python callable. This example uses the rand() functi",
+    "scrapedAt": "2026-05-10 04:54:46.220383"
+  },
+  {
     "id": 863,
     "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task",
     "title": "Coroutines and tasks — Python 3.14.5rc1 documentation",
@@ -5747,26 +5782,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 864,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex"
-  },
-  {
-    "id": 865,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag"
-  },
-  {
-    "id": 866,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#threading"
-  },
-  {
-    "id": 867,
-    "url": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
-  },
-  {
-    "id": 868,
-    "url": "https://docs.python.org/3/library/profile.html#module-profile"
   },
   {
     "id": 869,
@@ -148270,10 +148285,1205 @@ window.searchData = [
     "id": 121918,
     "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.TimeoutError",
     "parentUrl": "https://docs.python.org/3/library/asyncio-task.html#asyncio.TaskGroup.create_task"
+  },
+  {
+    "id": 123584,
+    "url": "https://docs.python.org/3/library/sqlite3.html#module-functions",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123586,
+    "url": "https://docs.python.org/3/library/sqlite3.html#default-adapters-and-converters-deprecated",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123588,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.create_window_function",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123589,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Error.sqlite_errorcode",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123592,
+    "url": "https://www.sqlite.org/lang_returning.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123594,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.fetchmany",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123595,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_DEFENSIVE",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123596,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.setlimit",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123597,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.setinputsizes",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123598,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/sqlite3.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123599,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.complete_statement",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123600,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.rowcount",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123601,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Warning",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123602,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_ENABLE_VIEW",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123603,
+    "url": "https://docs.python.org/3/library/sqlite3.html#cmdoption-python-m-sqlite3-h-v-filename-sql-h",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123604,
+    "url": "https://docs.python.org/3/library/sqlite3.html#cmdoption-python-m-sqlite3-h-v-filename-sql-v",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123605,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.NotSupportedError",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123606,
+    "url": "https://sqlite.org/deterministic.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123607,
+    "url": "https://docs.python.org/3/library/os.html#os.SEEK_END",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123608,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_ENABLE_QPSG",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123609,
+    "url": "https://www.sqlite.org/uri.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123610,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-guides",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123611,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.datetime",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123612,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Blob.write",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123614,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.fetchall",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123615,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_ENABLE_FKEY",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123616,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-transaction-control-autocommit",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123617,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.InterfaceError",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123618,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_WRITABLE_SCHEMA",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123619,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#tut-formatting",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123620,
+    "url": "https://docs.python.org/3/library/sqlite3.html#explanation",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123622,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.getconfig",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123624,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/sqlite3/",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123625,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.IntegrityError",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123626,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.threadsafety",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123628,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.set_authorizer",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123629,
+    "url": "https://sqlite.org/",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123631,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.load_extension",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123633,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-create-and-use-row-factories",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123634,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_IGNORE",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123635,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Blob",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123637,
+    "url": "https://www.w3schools.com/sql/",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123638,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.commit",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123639,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-use-placeholders-to-bind-values-in-sql-queries",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123640,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_TRUSTED_SCHEMA",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123641,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.set_progress_handler",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123642,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_OK",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123643,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.connection",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123645,
+    "url": "https://en.wikipedia.org/wiki/ISO_8601",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123646,
+    "url": "https://en.wikipedia.org/wiki/Database_transaction",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123647,
+    "url": "https://www.sqlite.org/schematab.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123649,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-use-the-connection-context-manager",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123650,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123652,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.executemany",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123653,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DENY",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123655,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-adapter-converter-recipes",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123656,
+    "url": "https://www.sqlite.org/c3ref/c_dbconfig_defensive.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123658,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.create_collation",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123659,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_ENABLE_TRIGGER",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123660,
+    "url": "https://sqlite.org/inmemorydb.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123661,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite-and-python-types",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123662,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_DQS_DML",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123665,
+    "url": "https://docs.python.org/3/library/sqlite3.html#adapter-and-converter-recipes",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123666,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-placeholders",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123667,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-adapt-custom-python-types-to-sqlite-values",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123669,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.enable_callback_tracebacks",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123670,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-conform",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123672,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-connection-context-manager",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123674,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123676,
+    "url": "https://docs.python.org/3/library/sqlite3.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123677,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.in_transaction",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123679,
+    "url": "https://docs.python.org/3/howto/unicode.html#unicode-howto",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123681,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.close",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123682,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Row",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123683,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Error",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123684,
+    "url": "https://sqlite.org/rescode.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123685,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.lastrowid",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123686,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Blob.tell",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123687,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.blobopen",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123688,
+    "url": "https://www.sqlite.org/loadext.html#loading_an_extension",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123694,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-use-connection-shortcut-methods",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123695,
+    "url": "https://www.sqlite.org/c3ref/c_limit_attached.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123696,
+    "url": "https://en.wikipedia.org/wiki/Cursor_(databases)",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123697,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Blob.read",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123698,
+    "url": "https://docs.python.org/3/library/sqlite3.html#",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123699,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.create_function",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123701,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.cursor",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123702,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Error.sqlite_errorname",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123703,
+    "url": "https://peps.python.org/pep-0249/#threadsafety",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123704,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.set_trace_callback",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123705,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-handle-non-utf-8-text-encodings",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123708,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-register-adapter-callables",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123709,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.InternalError",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123710,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Row.keys",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123711,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-convert-sqlite-values-to-custom-python-types",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123713,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_LEGACY_ALTER_TABLE",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123714,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.DataError",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123716,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.rollback",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123717,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.connect",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123718,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-explanation",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123719,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.autocommit",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123720,
+    "url": "https://www.sqlite.org/lang_transaction.html#deferred_immediate_and_exclusive_transactions",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123722,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.row_factory",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123723,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.executescript",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123724,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.register_converter",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123726,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-adapters",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123727,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_DECLTYPES",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123728,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_RESET_DATABASE",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123729,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.arraysize",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123730,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Blob.close",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123731,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.setconfig",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123732,
+    "url": "https://www.sqlite.org",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123734,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.text_factory",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123735,
+    "url": "https://www.sqlite.org/lang_transaction.html#implicit_versus_explicit_transactions",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123736,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.setoutputsize",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123737,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.iterdump",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123738,
+    "url": "https://en.wikipedia.org/wiki/SQL_injection",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123741,
+    "url": "https://docs.python.org/3/library/sqlite3.html#connection-objects",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123742,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.isolation_level",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123743,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.backup",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123744,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.register_adapter",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123745,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.execute",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123746,
+    "url": "https://docs.python.org/3/library/contextlib.html#contextlib.closing",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123747,
+    "url": "https://docs.python.org/3/library/sqlite3.html#transaction-control",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123750,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-converters",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123751,
+    "url": "https://docs.python.org/3/library/sqlite3.html#row-objects",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123753,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.executescript",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123754,
+    "url": "https://docs.python.org/3/library/sqlite3.html#blob-objects",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123755,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_NO_CKPT_ON_CLOSE",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123756,
+    "url": "https://docs.python.org/3/library/sqlite3.html#transaction-control-via-the-isolation-level-attribute",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123757,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-howtos",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123758,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.total_changes",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123759,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.executemany",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123760,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.DatabaseError",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123763,
+    "url": "https://docs.python.org/3/library/sqlite3.html#transaction-control-via-the-autocommit-attribute",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123764,
+    "url": "https://docs.python.org/3/library/sqlite3.html#module-constants",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123765,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.PrepareProtocol",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123766,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-transaction-control-isolation-level",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123767,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.interrupt",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123768,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.fetchone",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123770,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-howto-encoding",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123771,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.row_factory",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123772,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-reference",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123774,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Blob.seek",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123776,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.OperationalError",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123777,
+    "url": "https://docs.python.org/3/library/os.html#os.SEEK_CUR",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123778,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.paramstyle",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123779,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.apilevel",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123780,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.description",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123781,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_LEGACY_FILE_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123782,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_TRIGGER_EQP",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123785,
+    "url": "https://peps.python.org/pep-0249/",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123786,
+    "url": "https://docs.python.org/3/library/os.html#os.SEEK_SET",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123787,
+    "url": "https://www.sqlite.org/flextypegood.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123789,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-types",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123790,
+    "url": "https://sqlite.org/threadsafe.html",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123791,
+    "url": "https://docs.python.org/3/library/sqlite3.html#tutorial",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123792,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-connection-shortcuts",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123794,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123796,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.enable_load_extension",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123797,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/sqlite3/__main__.py",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123798,
+    "url": "https://docs.python.org/3/library/sqlite3.html#cursor-objects",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123799,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.create_aggregate",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123800,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.getlimit",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123801,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123802,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_DQS_DDL",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123803,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-howto-row-factory",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123804,
+    "url": "https://peps.python.org/pep-0246/",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123805,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.deserialize",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123806,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-uri-tricks",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123808,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-write-adaptable-objects",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123809,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.serialize",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123810,
+    "url": "https://sqlite.org/compile.html#threadsafe",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123811,
+    "url": "https://docs.python.org/3/library/sqlite3.html#how-to-work-with-sqlite-uris",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123812,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-controlling-transactions",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123814,
+    "url": "https://docs.python.org/3/library/sqlite3.html#reference",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123815,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.close",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123816,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3-dbconfig-constants",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123817,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123818,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-loadable-sqlite-extensions",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123819,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.PARSE_COLNAMES",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123820,
+    "url": "https://docs.python.org/3/library/sqlite3.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123822,
+    "url": "https://docs.python.org/3/library/sqlite3.html#prepareprotocol-objects",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123823,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.execute",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123824,
+    "url": "https://docs.python.org/3/library/sqlite3.html#sqlite3.LEGACY_TRANSACTION_CONTROL",
+    "parentUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "id": 123826,
+    "url": "https://docs.python.org/3/library/profile.html#calibration",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123827,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.add",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123829,
+    "url": "https://docs.python.org/3/library/profile.html#profile.runctx",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123830,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.print_stats",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123832,
+    "url": "https://docs.python.org/3/library/profile.html#profile.run",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123834,
+    "url": "https://docs.python.org/3/library/profile.html#using-a-custom-timer",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123835,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.get_stats_profile",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123837,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/profile.py",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123839,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.strip_dirs",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123840,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.create_stats",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123841,
+    "url": "https://docs.python.org/3/library/profile.html#cmdoption-cProfile-o",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123842,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pstats.py",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123843,
+    "url": "https://docs.python.org/3/library/profile.html#cmdoption-cProfile-s",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123844,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.run",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123845,
+    "url": "https://docs.python.org/3/library/profile.html#the-stats-class",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123847,
+    "url": "https://docs.python.org/3/library/profile.html#introduction-to-the-profilers",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123848,
+    "url": "https://docs.python.org/3/library/profile.html#",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123849,
+    "url": "https://docs.python.org/3/library/profile.html#the-python-profilers",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123850,
+    "url": "https://docs.python.org/3/library/profile.html#module-cProfile",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123851,
+    "url": "https://docs.python.org/3/library/time.html#module-time",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123853,
+    "url": "https://docs.python.org/3/library/profile.html#profile-calibration",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123855,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.disable",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123856,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.print_callees",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123857,
+    "url": "https://docs.python.org/3/library/profile.html#profile-limitations",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123858,
+    "url": "https://docs.python.org/3/library/profile.html#limitations",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123860,
+    "url": "https://docs.python.org/3/library/profile.html#cmdoption-cProfile-m",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123861,
+    "url": "https://docs.python.org/3/library/time.html#time.perf_counter",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123865,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.print_stats",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123867,
+    "url": "https://docs.python.org/3/library/profile.html#instant-user-s-manual",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123871,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.dump_stats",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123874,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.print_callers",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123875,
+    "url": "https://docs.python.org/3/library/os.html#os.times",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123876,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.enable",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123877,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123878,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.reverse_order",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123883,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123885,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.runctx",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123886,
+    "url": "https://docs.python.org/3/library/profile.html#what-is-deterministic-profiling",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123887,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/profile.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123888,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.dump_stats",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123889,
+    "url": "https://docs.python.org/3/library/profile.html#profile.Profile.runcall",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "id": 123890,
+    "url": "https://docs.python.org/3/library/profile.html#pstats.Stats.sort_stats",
+    "parentUrl": "https://docs.python.org/3/library/profile.html#module-profile"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Profilers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python Profilers — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/profile.html#module-profile"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sqlite3 — DB-API 2.0 interface for SQLite databases — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sqlite3.html#module-sqlite3"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#threading"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#threading"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesWarningFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double_complex"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
