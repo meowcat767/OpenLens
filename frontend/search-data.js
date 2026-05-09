@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 670,
+    "url": "http://code.activestate.com/recipes/langs/python/",
+    "title": "Popular Python recipes « ActiveState Code",
+    "content": "Skip to Search Skip to Navigation Skip to Content Community | Code | Docs | Downloads ▼ Perl Python Tcl Komodo IDE | more ▼ Lists Support PPM Index PyPM Index Welcome, guest | Sign In | My Account | Store | Cart ActiveState Code » Recipes Languages Tags Authors Sets Popular Python recipes Tags: Recipe 1 to 20 of 4591 « Prev 1 2 3 ... 230 Next » 261k views 2 score Uno (Text-Based) Python / artificial_intelligence, cards, game, text_game, uno / by Brandon Martin (6 years ago) 99k views 2 score Insert a Text Box in a PDF page (fitz / PyMuPDF) Python / fitz, mupdf, pdf, textbox / by Jorj X. McKie (6 years ago) 95k views 2 score Frame with border color for Tkinter Python / border, color, frame, tkinter / by Miguel Martínez López (7 years ago) 395k views 3 score The Game of Tic Tac Toe in Python Python / beginner, game, python / by Captain DeadBones (10 years ago) 77k views 2 score Inserting Images on PDF Pages Python / fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago) 76k views 2 score Convert Microsot Excel (XLSX) to PDF with Python and xtopdf Python / excel, formats, openpyxl, pdf, python, xlsx, xtopdf / by Vasudev Ram (8 years ago) 161k views 2 score Implementing function-based callbacks in Python Python / callback, function, functions, python, techniques / by Vasudev Ram (7 years ago) 38k views 2 score Implementing class-based callbacks in Python Python / callbacks, classes, functions, methods, objects, programming, python / by Vasudev Ram (7 years ago) 88k views 2 score Create Calendars on PDF with a few lines Python / calendar, fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago, revision 2) 96k views 3 score Tkinter table with scrollbars Python / scrollbars, table, tkinter / by Miguel Martínez López (6 years ago, revision 13) 65k views 3 score How to handle PDF embedded files with PyMuPDF Python / embedded_files, fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago, revision 3) 94k views 2 score How to create a simple PDF Pie Chart using fitz / PyMuPDF Python / fitz, pdf_generation / by Jorj X. McKie (6 years ago) 60k views 1 score Equally-spaced numbers (linspace) Python / float, linspace, range, spread / by Andrew Barnert (9 years ago) 56k views 2 score Inserting pages into a PDF with PyMuPDF Python / fitz, mupdf, pdf, text_conversion / by Jorj X. McKie (6 years ago, revision 2) 93k views 2 score Shoelace Formula for polygonal area Python / 2d, area / by Paddy McCarthy (6 years ago) 35k views 1 score PDF Text Extraction using fitz / MuPDF (PyMuPDF) Python / cbz, epub, mupdf, openxps, pdf, pymupdf, text_extraction, xps / by Jorj X. McKie (8 years ago) 77k views 2 score Simple multicolumn listbox for tkinter Python / listbox, multicolumn, table, tkinter / by Miguel Martínez López (7 years ago) 21k views 1 score Simulating an unless (reverse if) statement in Python Python / features, if, perl, programming, python, trick / by Vasudev Ram (7 years ago) 63k views 3 score groupby() For Unsorted Input Python / algorithm, datastructures, generators, grouping, lazy / by Alfe (6 years ago) 61k views 2 score How to Create a PDF with a Caustic Drawing Python / fitz, mupdf, pdf, pymupdf / by Jorj X. McKie (6 years ago) Recipe 1 to 20 of 4591 « Prev 1 2 3 ... 230 Next » View popular, latest, top-rated or most viewed Feed of the popular Python recipes Python Versions All Python 2 recipes All Python 3 recipes Top-rated recipes Decorator for BindingConstants at … (Python) Infix operators (Python) Spreadsheet (Python) Named Tuples (Python) Linear equations solver in 3 lines (Python) Singleton? We don\u0027t need no stinki… (Python) Send an HTML email with embedded i… (Python) Creating a daemon the Python way (Python) Groupby (Python) Readable switch construction witho… (Python) Python tags more… algorithms database debugging files graphics linux math mathematics network oop programs python shortcuts sysadmin text threads tkinter web windows xml Accounts Create Account (Free!) Sign In Code Recipes Recipes Languages Tags Authors Sets Feedback \u0026 Information About FAQ Terms of Service ActiveState ActiveState Blog Perl Solutions Python Solutions Tcl Solutions Download ActivePerl Download ActivePython Download ActiveTcl About ActiveState Careers Privacy Policy | Contact Us | Support © 2024 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActiveState Perl Dev Kit®, ActiveState Tcl Dev Kit®, ActivePerl®, ActivePython®, and ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners. x Undo",
+    "scrapedAt": "2026-05-10 04:33:27.566126"
+  },
+  {
+    "id": 669,
+    "url": "http://pypi.python.org/pypi?%3Aaction\u003dindex",
+    "title": "PyPI · The Python Package Index",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Find, install and publish Python packages with the Python Package Index Search PyPI Search Or browse projects 805,440 projects 8,648,780 releases 18,784,328 files 1,054,097 users The Python Package Index (PyPI) is a repository of software for the Python programming language. PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI. English español français 日本語 português (Brasil) українська Ελληνικά Deutsch 中文 (简体) 中文 (繁體) русский עברית Esperanto 한국어 Supported by AWS Cloud computing and Security Sponsor Datadog Monitoring Depot Continuous Integration Fastly CDN Google Download Analytics Pingdom Monitoring Sentry Error logging StatusPage Status page",
+    "scrapedAt": "2026-05-10 04:33:24.542771"
+  },
+  {
+    "id": 668,
+    "url": "https://www.python.org/doc/nonenglish/",
+    "title": "Languages",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Attempt to have languages and links listed in the native tongue of the user. 2009-09-01 This page\u0027s links go to the various languages\u0027 pages, most of which have been copied from the other set of language pages, with a few updates. Ideally, all the pages should be like the Polish or Turkish pages - all native language, only the necessary English. There are some ground rules, some are laid down by the site admins, some are my suggestions: Pages must be named in ASCII and English (PolishLanguage) Pages must have an explanation in English at the top (Links to Python information in \u003clanguage X\u003e) (my suggestion) We probably want to limit invites to edit the pages to people we know well, or Pythonistas with a track record. Hopefully, this is inclusive enough without opening the site up to a spam flood and vandalismfest. Where these pages really need help: check links, remove broken ones. add new links that are quality Python information and active. some care for languages that have next to nothing, but do have people in the Python community - even a link to the Wikipedia page for Python, in that language, is a start (Some are pretty complete and of high quality - the Russian language Wikipedia page for Python, for instance, packs a lot in). Languages AfrikaansLanguage Afrikaans AlbanianLanguage Shqip AmharicLanguage አማርኛ ArabicLanguage العربية ArmenianLanguage Հայերեն AssameseLanguage অসমীয়া AzerbaijaniLanguage Azərbaycan dili BelarusianLanguage Беларуская мова BengaliLanguage বাংলা BodoLanguage बड़ो BosnianLanguage bosanski BulgarianLanguage български език BurmeseLanguage မြန်မာဘာသာ CatalanLanguage català ChineseLanguage 中文 CroatianLanguage hrvatski CzechLanguage čeština DanishLanguage dansk DogriLanguage डोगरी Devanagari script DutchLanguage Nederlands EsperantoLanguage Esperanto EstonianLanguage eesti keel FinnishLanguage suomi FrenchLanguage français GeorgianLanguage ქართული ენა GermanLanguage Deutsch GreekLanguage Νέα Ελληνικά GujaratiLanguage ગુજરાતી HausaLanguage Hausa HebrewLanguage עִבְרִית HindiLanguage हिन्दी HungarianLanguage magyar nyelv IndonesianLanguage Bahasa Indonesia IcelandicLanguage íslenska IgboLanguage Asụsụ Igbo ItalianLanguage italiano JapaneseLanguage 日本語 KannadaLanguage ಕನ್ನಡ KashmiriLanguage कॉशुर (Koshur) KazakhLanguage Қазақ тілі KhmerLanguage ភាសាខ្មែរ KonkaniLanguage कोंकणी Devangari script KoreanLanguage 한국어/조선말 LaoLanguage ພາສາລາວ LatvianLanguage latviešu valoda LithuanianLanguage lietuvių kalba MalayLanguage Bahasa Melayu MalayalamLanguage മലയാളം MarathiLanguage मराठी MongolianLanguage Монгол хэл NepaliLanguage नेपाली NorwegianLanguage norsk OriyaLanguage ଓଡ଼ିଆ OromoLanguage Afaan Oromoo PersianLanguage فارسی PolishLanguage język polski PortugueseLanguage português PunjabiLanguage ਪੰਜਾਬੀ WesternPunjabiLanguage پنجابی RomanianLanguage limba română RussianLanguage русский язык SanskritLanguage संस्कृत SlovakLanguage slovenský jazyk SloveneLanguage slovenščina SerbianLanguage Српски SinhalaLanguage සිංහල SpanishLanguage español SwahiliLanguage Kiswahili SwedishLanguage svenska TagalogLanguage Wikang Tagalog TamilLanguage தமிழ TeluguLanguage తెలుగు ThaiLanguage ภาษาไทย TigrinyaLanguage ትግርኛ TurkishLanguage Türkçe UkranianLanguage украї́нська мо́ва UrduLanguage اُردوُ UzbekLanguage O‘zbek tili VietnameseLanguage tiếng Việt XhosaLanguage isiXhosa ZuluLanguage isiZulu CategoryLanguage CategoryUnicode 2026-02-14 16:09",
+    "scrapedAt": "2026-05-10 04:33:20.947064"
+  },
+  {
+    "id": 667,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers",
+    "title": "BeginnersGuide/NonProgrammers",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Python for New Programmers If you\u0027ve never programmed before, the tutorials on this page are recommended for you; they don\u0027t assume that you have previous experience. If you have programming experience, also check out the BeginnersGuide/Programmers page. Books Each of these books can be purchased online but is also available as free textual, website, or video content. please keep this list alphabetized Automate the Boring Stuff with Python - Practical Programming for Total Beginners by Al Sweigart is \"written for office workers, students, administrators, and anyone who uses a computer to learn how to code small, practical programs to automate tasks on their computer.\" ||website ||print version || How To Think Like a Computer Scientist is a classic open-source book by Allen Downey with contributions from Jeffrey Elkner and Chris Meyers. It was updated to Python 3 by Peter Wentworth. ||website ||print version || Making Games with Python \u0026 Pygame by Al Sweigart introduces the Pygame framework for novices and intermediate programmers to make graphical games. ||website ||print version || Python One-Liners by Christian Mayer teaches you how to read and write \"one-liners\": concise statements of useful functionality packed into a single line of code. ||website with free one-liner explainer videos ||print version || Think Python by Allen B. Downey teaches you how to think like a computer scientist. ||website ||print version || You can find many free Python books online. For example, check out this article with 101 free Python books. Interactive Courses These sites give you instant feedback on programming problems that you can solve in your browser. please keep this list alphabetized A beginner-friendly and free Python tutorial with interactive code examples, explaining the Python language in an easy-to-understand way. A beginner-friendly Python course that teaches to learn to code through bite-size lessons, quizzes and 100+ challenges. A beginner-friendly Python course with exercises covering 100+ key topics, quizzes, and hands-on practice. CheckiO is a gamified website containing programming tasks that can be solved in Python 3. Codédex is a learn to code platform for K-12 and college students. Codecademy (Python) Code the blocks combines Python programming with a 3D environment where you \"place blocks\" and construct structures. It also comes with Python tutorials that teach you how to create progressively elaborate 3D structures. Codevisionz Python 10+ hrs of Python learning material - Learn common programming concepts through code examples, quizzes, and challenges Computer Science Circles has 30 lessons, 100 exercises, and a message system where you can ask for help. Teachers can use it with their students. It is also available in Dutch, French, German, and Lithuanian. DataCamp Python Tutorial Unlike most other Python tutorials, this 4 hour tutorial by DataCamp focuses on Python specifically for Data Science. It has 57 interactive exercises and 11 videos. Finxter - How good are your Python skills? Test and Training with \u003e300 hand-picked Python puzzles. HackInScience - 50+ Python exercises on a free, adless, simple, and open-source platform. How to Think Like a Computer Scientist: Interactive Edition is an interactive reimagination of Elkner, Downey and Meyer\u0027s book with visualizations and audio explanations. LabEx - Hands-on Labs - Practice Python programming with interactive exercises in a web-based coding environment, offering hands-on labs and real-world scenarios. LearnPython is an interactive Python tutorial that is suitable for absolute beginners. Learn Python - A no install Python course with interactive exercises powered by Pyodide. Resources for Younger Learners (This section was previously called \"K-12 Oriented\", K-12 being a USA-centric term which refers to the primary and secondary educational stages; through level 3 on the UNESCO ISCED education levels list.) please keep this list alphabetized Guido van Robot A teaching tool in which students write simple programs using a Python-like language to control a simulated robot. Field-tested at Yorktown High School, the project includes a lesson plan. Python for Kids by Jason R Briggs. Book with sample code and puzzles. PythonTurtle A learning environment for Python suitable for beginners and children, inspired by Logo. Geared mainly towards children, but known to be successful with adults as well. Webucator\u0027s self-paced Python 3 course free for homeschoolers and other students (use HOMESCHOOL as the coupon code when checking out). This course is appropr",
+    "scrapedAt": "2026-05-10 04:33:18.317106"
+  },
+  {
+    "id": 665,
+    "url": "http://docs.python.org/3/faq/",
+    "title": "Python Frequently Asked Questions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Frequently Asked Questions | Theme Auto Light Dark | Python Frequently Asked Questions¶ General Python FAQ Programming FAQ Design and History FAQ Library and Extension FAQ Extending/Embedding FAQ Python on Windows FAQ Graphic User Interface FAQ “Why is Python Installed on my Computer?” FAQ Previous topic Remote debugging attachment protocol Next topic General Python FAQ This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python Frequently Asked Questions | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on May 09, 2026 (15:15 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-05-10 04:33:14.874676"
+  },
+  {
     "id": 664,
     "url": "https://www.python.org/dev/",
     "title": "Python Developer\u0027s Guide | Python.org",
@@ -4382,26 +4417,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 665,
-    "url": "http://docs.python.org/3/faq/"
-  },
-  {
-    "id": 667,
-    "url": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
-  },
-  {
-    "id": 668,
-    "url": "https://www.python.org/doc/nonenglish/"
-  },
-  {
-    "id": 669,
-    "url": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
-  },
-  {
-    "id": 670,
-    "url": "http://code.activestate.com/recipes/langs/python/"
   },
   {
     "id": 671,
@@ -104940,10 +104955,1790 @@ window.searchData = [
     "id": 75793,
     "url": "https://devguide.python.org",
     "parentUrl": "https://www.python.org/dev/"
+  },
+  {
+    "id": 75794,
+    "url": "https://docs.python.org/3/faq/design.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75795,
+    "url": "https://docs.python.org/3/faq/library.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75797,
+    "url": "https://github.com/python/cpython/blob/main/Doc/faq/index.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75798,
+    "url": "https://docs.python.org/3/faq/programming.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75800,
+    "url": "https://docs.python.org/3/faq/",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75805,
+    "url": "https://docs.python.org/3/faq/general.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75811,
+    "url": "https://docs.python.org/3/faq/gui.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75812,
+    "url": "https://docs.python.org/3/faq/windows.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75813,
+    "url": "https://docs.python.org/3/howto/remote_debugging.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75815,
+    "url": "https://docs.python.org/3/faq/#python-frequently-asked-questions",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75816,
+    "url": "https://docs.python.org/3/faq/extending.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 75817,
+    "url": "https://techbeamers.com/python-tutorial-step-by-step/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75818,
+    "url": "http://docs.python.org/py3k/tutorial/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75819,
+    "url": "https://blog.finxter.com/email-academy/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75820,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Intro(20)to(20)programming(20)with(20)Python(20)and(20)Tkinter.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75821,
+    "url": "http://anh.cs.luc.edu/handsonPythonTutorial/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75824,
+    "url": "http://cscircles.cemc.uwaterloo.ca/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75825,
+    "url": "https://labex.io/skilltrees/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75826,
+    "url": "https://automatetheboringstuff.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75827,
+    "url": "http://en.wikibooks.org/wiki/Non-Programmer\u0027s_Tutorial_for_Python_3.0",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75828,
+    "url": "https://www.pythonspot.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75829,
+    "url": "http://www.pasteur.fr/recherche/unites/sis/formation/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75830,
+    "url": "https://www.afterhoursprogramming.com/tutorial/Python/Overview/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75831,
+    "url": "http://letsfindcourse.com/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75832,
+    "url": "http://www.checkio.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75833,
+    "url": "https://hackinscience.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75834,
+    "url": "http://www.amazon.com/Making-Games-Python-Pygame-Sweigart/dp/1469901730?ie\u003dUTF8\u0026tag\u003dplaywithpyth-20\u0026linkCode\u003das2\u0026camp\u003d1789\u0026creative\u003d9325\u0026creativeASIN\u003d0982106017",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75835,
+    "url": "https://www.amazon.com/Think-Python-Like-Computer-Scientist/dp/1491939362/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75837,
+    "url": "http://thepythonguru.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75838,
+    "url": "http://www.livewires.org.uk/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75840,
+    "url": "http://www.divx.com/divx/windows/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75841,
+    "url": "https://www.codecademy.com/search?query\u003dpython",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75842,
+    "url": "http://illustratedtheoryofnumbers.com/prog.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75843,
+    "url": "https://runestone.academy/ns/books/published/thinkcspy/index.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75844,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/McCaughan.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75845,
+    "url": "http://www.python-course.eu/python3_course.php",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75846,
+    "url": "https://overiq.com/python/3.4/intro-to-python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75847,
+    "url": "https://askpython.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75848,
+    "url": "https://www.datacamp.com/courses/intro-to-python-for-data-science",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75849,
+    "url": "https://www.quizcure.com/topic/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75851,
+    "url": "https://www.webucator.com/self-paced-training/index.cfm#!?courseId\u003dPYT111",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75853,
+    "url": "http://inventwithpython.com/pygame",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75854,
+    "url": "https://blog.finxter.com/free-python-books/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75855,
+    "url": "http://gvr.sourceforge.net",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75856,
+    "url": "http://pythonturtle.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75858,
+    "url": "http://openbookproject.net/thinkcs/python/english3e/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75859,
+    "url": "http://www.talk-it.biz/tutorial-categories/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75860,
+    "url": "http://pythontips.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75861,
+    "url": "https://www.amazon.com/gp/product/B07ZY7XMX8",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75862,
+    "url": "https://codevisionz.com/learn-python-programming/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75863,
+    "url": "https://itsmycode.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75864,
+    "url": "https://pythononeliners.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75865,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/NumPy.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75866,
+    "url": "http://www.amazon.com/gp/product/1593275994/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75867,
+    "url": "https://www.afternerd.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75868,
+    "url": "https://youtu.be/uCzFUKWtzgA?list\u003dPLboXykqtm8dy_DNg1NZiS08Dnyj35PWXw",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75870,
+    "url": "https://finxter.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75871,
+    "url": "http://www.biopython.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75872,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/BeginnersGuide(2f)Programmers.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75874,
+    "url": "http://jasonrbriggs.com/python-for-kids/index.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75875,
+    "url": "http://www.alan-g.me.uk/l2p2",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75876,
+    "url": "https://codetheblocks.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75877,
+    "url": "https://www.codedex.io",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75878,
+    "url": "https://www.datacamp.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75880,
+    "url": "https://www.patternsgameprog.com/series/discover-python-and-patterns/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75881,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/CategoryPythonInEducation.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75882,
+    "url": "https://coursesity.com/best-tutorials-learn/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75883,
+    "url": "http://young-programmers.blogspot.com/search/label/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75884,
+    "url": "https://www.coursesonline.co.uk/courses/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75885,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/PyCrust.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75886,
+    "url": "http://www.khanacademy.org/#computer-science",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75887,
+    "url": "http://python.lycee.free.fr/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75888,
+    "url": "https://www.learnpython.org/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75889,
+    "url": "https://www.programiz.com/learn-python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75890,
+    "url": "http://www.videolan.org/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75891,
+    "url": "https://learn-python.adamemery.dev",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75892,
+    "url": "http://greenteapress.com/thinkpython/html/index.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75893,
+    "url": "http://www.onlamp.com/pub/a/python/2002/10/17/biopython.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 75894,
+    "url": "https://wiki.python.org/moin/SlovakLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75895,
+    "url": "https://wiki.python.org/moin/ArmenianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75896,
+    "url": "https://wiki.python.org/moin/BodoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75897,
+    "url": "https://wiki.python.org/moin/MongolianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75898,
+    "url": "https://wiki.python.org/moin/SloveneLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75899,
+    "url": "https://wiki.python.org/moin/IndonesianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75900,
+    "url": "https://wiki.python.org/moin/PortugueseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75901,
+    "url": "https://wiki.python.org/moin/SwahiliLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75902,
+    "url": "https://wiki.python.org/moin/SanskritLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75903,
+    "url": "https://wiki.python.org/moin/EstonianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75904,
+    "url": "https://wiki.python.org/moin/ArabicLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75905,
+    "url": "https://wiki.python.org/moin/ItalianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75906,
+    "url": "https://wiki.python.org/moin/GreekLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75907,
+    "url": "https://wiki.python.org/moin/KhmerLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75908,
+    "url": "https://wiki.python.org/moin/KonkaniLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75909,
+    "url": "https://wiki.python.org/moin/PunjabiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75910,
+    "url": "https://wiki.python.org/moin/RomanianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75911,
+    "url": "https://wiki.python.org/moin/FrenchLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75912,
+    "url": "https://wiki.python.org/moin/RussianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75913,
+    "url": "https://wiki.python.org/moin/IcelandicLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75914,
+    "url": "https://wiki.python.org/moin/KoreanLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75915,
+    "url": "https://wiki.python.org/moin/AlbanianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75916,
+    "url": "https://wiki.python.org/moin/BurmeseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75917,
+    "url": "https://wiki.python.org/moin/PersianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75918,
+    "url": "https://wiki.python.org/moin/HindiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75919,
+    "url": "https://wiki.python.org/moin/UzbekLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75920,
+    "url": "https://wiki.python.org/moin/VietnameseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75921,
+    "url": "https://wiki.python.org/moin/ChineseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75922,
+    "url": "https://wiki.python.org/moin/HausaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75923,
+    "url": "https://wiki.python.org/moin/BosnianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75924,
+    "url": "https://wiki.python.org/moin/NepaliLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75925,
+    "url": "https://wiki.python.org/moin/SinhalaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75926,
+    "url": "https://wiki.python.org/moin/MarathiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75927,
+    "url": "https://wiki.python.org/moin/XhosaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75928,
+    "url": "https://wiki.python.org/moin/ThaiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75929,
+    "url": "https://wiki.python.org/moin/TigrinyaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75930,
+    "url": "https://wiki.python.org/moin/KazakhLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75931,
+    "url": "https://wiki.python.org/moin/BengaliLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75932,
+    "url": "https://wiki.python.org/moin/CatalanLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75933,
+    "url": "https://wiki.python.org/moin/OriyaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75934,
+    "url": "https://wiki.python.org/moin/TurkishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75935,
+    "url": "https://wiki.python.org/moin/LaoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75936,
+    "url": "https://wiki.python.org/moin/TagalogLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75937,
+    "url": "https://wiki.python.org/moin/AmharicLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75938,
+    "url": "https://wiki.python.org/moin/LithuanianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75939,
+    "url": "https://wiki.python.org/moin/NorwegianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75940,
+    "url": "https://wiki.python.org/moin/CategoryUnicode.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75941,
+    "url": "https://wiki.python.org/moin/DanishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75942,
+    "url": "https://wiki.python.org/moin/TamilLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75943,
+    "url": "https://wiki.python.org/moin/HungarianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75945,
+    "url": "https://wiki.python.org/moin/BulgarianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75947,
+    "url": "https://wiki.python.org/moin/MalayalamLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75948,
+    "url": "https://wiki.python.org/moin/WesternPunjabiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75949,
+    "url": "https://wiki.python.org/moin/ZuluLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75950,
+    "url": "https://wiki.python.org/moin/HebrewLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75951,
+    "url": "https://wiki.python.org/moin/PolishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75952,
+    "url": "https://wiki.python.org/moin/DogriLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75953,
+    "url": "https://wiki.python.org/moin/AzerbaijaniLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75954,
+    "url": "https://wiki.python.org/moin/TeluguLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75955,
+    "url": "https://wiki.python.org/moin/GeorgianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75956,
+    "url": "https://wiki.python.org/moin/OromoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75957,
+    "url": "https://wiki.python.org/moin/GermanLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75958,
+    "url": "https://wiki.python.org/moin/JapaneseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75959,
+    "url": "https://wiki.python.org/moin/AssameseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75960,
+    "url": "https://wiki.python.org/moin/MalayLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75961,
+    "url": "https://wiki.python.org/moin/AfrikaansLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75962,
+    "url": "https://wiki.python.org/moin/GujaratiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75963,
+    "url": "https://wiki.python.org/moin/SpanishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75964,
+    "url": "https://wiki.python.org/moin/FinnishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75965,
+    "url": "https://wiki.python.org/moin/SerbianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75966,
+    "url": "https://wiki.python.org/moin/UrduLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75967,
+    "url": "https://wiki.python.org/moin/EsperantoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75968,
+    "url": "https://wiki.python.org/moin/SwedishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75969,
+    "url": "https://wiki.python.org/moin/IgboLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75970,
+    "url": "https://wiki.python.org/moin/KashmiriLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75971,
+    "url": "https://wiki.python.org/moin/UkranianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75972,
+    "url": "https://wiki.python.org/moin/CzechLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75973,
+    "url": "https://wiki.python.org/moin/BelarusianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75974,
+    "url": "https://wiki.python.org/moin/DutchLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75975,
+    "url": "https://wiki.python.org/moin/CroatianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75976,
+    "url": "https://wiki.python.org/moin/KannadaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75977,
+    "url": "https://wiki.python.org/moin/CategoryLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75978,
+    "url": "https://wiki.python.org/moin/LatvianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 75991,
+    "url": "https://code.activestate.com/recipes/users/4182236/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75992,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/linux/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75993,
+    "url": "https://code.activestate.com/recipes/580794-simple-multicolumn-listbox-for-tkinter/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75994,
+    "url": "https://code.activestate.com/recipes/578816-the-game-of-tic-tac-toe-in-python/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75995,
+    "url": "https://code.activestate.com/recipes/tags/if/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75996,
+    "url": "https://code.activestate.com/recipes/579000-equally-spaced-numbers-linspace/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75997,
+    "url": "https://code.activestate.com/recipes/tags/text_extraction/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75998,
+    "url": "https://code.activestate.com/recipes/tags/mupdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 75999,
+    "url": "https://code.activestate.com/recipes/tags/range/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76000,
+    "url": "https://code.activestate.com/recipes/580809-insert-a-text-box-in-a-pdf-page-fitz-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76001,
+    "url": "https://code.activestate.com/recipes/tags/embedded_files/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76002,
+    "url": "https://code.activestate.com/recipes/tags/listbox/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76003,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/tkinter/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76004,
+    "url": "https://www.activestate.com/blog",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76005,
+    "url": "https://code.activestate.com/recipes/tags/text_conversion/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76006,
+    "url": "https://code.activestate.com/recipes/tags/grouping/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76007,
+    "url": "https://code.activestate.com/recipes/277940-decorator-for-bindingconstants-at-compile-time/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76008,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/network/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76009,
+    "url": "https://code.activestate.com/recipes/tags/linspace/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76010,
+    "url": "https://code.activestate.com/recipes/tags/beginner/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76011,
+    "url": "https://community.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76012,
+    "url": "https://code.activestate.com/recipes/410692-readable-switch-construction-without-lambdas-or-di/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76013,
+    "url": "https://code.activestate.com/recipes/tags/programming/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76014,
+    "url": "https://code.activestate.com/recipes/580806-how-to-create-a-pdf-with-a-caustic-drawing/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76015,
+    "url": "https://code.activestate.com/recipes/users/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76016,
+    "url": "https://platform.activestate.com/signup/?activationnext\u003dhttps%3A//code.activestate.com/recipes/langs/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76017,
+    "url": "https://code.activestate.com/recipes/tags/pdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76018,
+    "url": "https://code.activestate.com/recipes/580787-implementing-function-based-callbacks-in-python/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76019,
+    "url": "https://www.activestate.com/support/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76020,
+    "url": "https://code.activestate.com/recipes/365013-linear-equations-solver-in-3-lines/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76021,
+    "url": "https://code.activestate.com/recipes/langs/python/#as_content",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76022,
+    "url": "https://code.activestate.com/recipes/users/4194238/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76023,
+    "url": "https://code.activestate.com/recipes/580803-inserting-images-on-pdf-pages/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76024,
+    "url": "https://platform.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76025,
+    "url": "https://code.activestate.com/recipes/278731-creating-a-daemon-the-python-way/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76026,
+    "url": "https://code.activestate.com/about/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76027,
+    "url": "https://code.activestate.com/recipes/tags/methods/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76028,
+    "url": "https://code.activestate.com/recipes/langs/python/popular/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76029,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76030,
+    "url": "https://code.activestate.com/recipes/tags/callback/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76031,
+    "url": "https://code.activestate.com/help/terms/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76032,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/programs/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76033,
+    "url": "https://www.activestate.com/support",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76034,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/shortcuts/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76035,
+    "url": "https://code.activestate.com/recipes/tags/border/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76036,
+    "url": "https://code.activestate.com/recipes/tags/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76037,
+    "url": "https://code.activestate.com/ppm",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76038,
+    "url": "https://code.activestate.com/recipes/users/4193772/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76039,
+    "url": "https://code.activestate.com/help/tags/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76040,
+    "url": "https://code.activestate.com/recipes/langs/python/#site_nav",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76041,
+    "url": "http://docs.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76042,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/meta:min_python_3/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76043,
+    "url": "https://www.activestate.com/products/python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76044,
+    "url": "https://code.activestate.com/recipes/tags/algorithm/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76045,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/xml/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76046,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/algorithms/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76047,
+    "url": "https://code.activestate.com/recipes/users/4184772/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76048,
+    "url": "https://www.activestate.com/privacy-policy",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76049,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/text/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76050,
+    "url": "https://store.activestate.com/cart",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76051,
+    "url": "https://code.activestate.com/recipes/tags/game/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76052,
+    "url": "https://code.activestate.com/recipes/tags/callbacks/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76053,
+    "url": "https://code.activestate.com/recipes/580758-simulating-an-unless-reverse-if-statement-in-pytho/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76054,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/windows/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76055,
+    "url": "https://www.activestate.com/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76056,
+    "url": "https://code.activestate.com/recipes/tags/multicolumn/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76057,
+    "url": "https://code.activestate.com/recipes/tags/lazy/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76058,
+    "url": "https://code.activestate.com/recipes/384122-infix-operators/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76059,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/files/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76060,
+    "url": "https://code.activestate.com/recipes/580810-how-to-create-a-simple-pdf-pie-chart-using-fitz-py/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76061,
+    "url": "https://code.activestate.com/recipes/473810-send-an-html-email-with-embedded-image-and-plain-t/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76062,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76063,
+    "url": "https://code.activestate.com/recipes/langs/python/new/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76064,
+    "url": "https://code.activestate.com/recipes/tags/features/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76065,
+    "url": "https://code.activestate.com/recipes/users/4189907/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76066,
+    "url": "https://code.activestate.com/recipes/tags/objects/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76067,
+    "url": "https://code.activestate.com/recipes/tags/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76068,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/meta:min_python_2/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76069,
+    "url": "https://code.activestate.com/pypm",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76070,
+    "url": "https://code.activestate.com/recipes/users/4173351/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76071,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/debugging/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76072,
+    "url": "https://www.activestate.com/tcl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76073,
+    "url": "https://code.activestate.com/recipes/tags/artificial_intelligence/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76074,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/graphics/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76075,
+    "url": "https://code.activestate.com/help/faq/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76076,
+    "url": "https://code.activestate.com/recipes/259173-groupby/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76077,
+    "url": "https://www.activestate.com/komodo-ide/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76078,
+    "url": "https://code.activestate.com/recipes/langs/python/?page\u003d230",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76079,
+    "url": "https://code.activestate.com/recipes/tags/classes/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76080,
+    "url": "https://code.activestate.com/recipes/355045-spreadsheet/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76081,
+    "url": "https://www.activestate.com/company/contact-us",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76082,
+    "url": "https://www.activestate.com/python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76083,
+    "url": "https://www.activestate.com/activetcl/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76084,
+    "url": "https://code.activestate.com/recipes/tags/color/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76085,
+    "url": "https://code.activestate.com/recipes/langs/python/views/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76086,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/threads/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76087,
+    "url": "https://lists.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76088,
+    "url": "https://code.activestate.com/recipes/langs/python/top/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76089,
+    "url": "https://www.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76090,
+    "url": "https://code.activestate.com/recipes/tags/text_game/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76091,
+    "url": "https://www.activestate.com/company",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76092,
+    "url": "https://code.activestate.com/recipes/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76093,
+    "url": "https://platform.activestate.com/signin/?next\u003dhttps%3A//code.activestate.com/recipes/langs/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76094,
+    "url": "https://code.activestate.com/recipes/tags/xtopdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76095,
+    "url": "https://code.activestate.com/recipes/580805-create-calendars-on-pdf-with-a-few-lines/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76096,
+    "url": "https://code.activestate.com/recipes/tags/pdf_generation/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76097,
+    "url": "https://code.activestate.com/recipes/580802-inserting-pages-into-a-pdf-with-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76098,
+    "url": "https://code.activestate.com/recipes/users/398009/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76099,
+    "url": "https://code.activestate.com/recipes/tags/uno/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76100,
+    "url": "https://code.activestate.com/recipes/tags/fitz/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76101,
+    "url": "https://store.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76102,
+    "url": "https://code.activestate.com/recipes/580812-shoelace-formula-for-polygonal-area/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76103,
+    "url": "https://code.activestate.com/recipes/580811-uno-text-based/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76104,
+    "url": "https://code.activestate.com/recipes/580796-how-to-handle-pdf-embedded-files-with-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76105,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/oop/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76106,
+    "url": "https://www.activestate.com/perl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76107,
+    "url": "https://code.activestate.com/recipes/tags/frame/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76108,
+    "url": "https://code.activestate.com/recipes/langs/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76109,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/math/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76110,
+    "url": "https://code.activestate.com/recipes/tags/float/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76111,
+    "url": "https://code.activestate.com/recipes/tags/perl/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76113,
+    "url": "https://code.activestate.com/recipes/tags/techniques/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76114,
+    "url": "https://code.activestate.com/recipes/tags/functions/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76115,
+    "url": "https://code.activestate.com/recipes/tags/xps/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76116,
+    "url": "https://code.activestate.com/recipes/tags/generators/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76117,
+    "url": "https://code.activestate.com/recipes/66531-singleton-we-dont-need-no-stinkin-singleton-the-bo/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76118,
+    "url": "https://code.activestate.com/recipes/580793-tkinter-table-with-scrollbars/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76119,
+    "url": "https://code.activestate.com/recipes/tags/epub/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76120,
+    "url": "https://code.activestate.com/recipes/tags/function/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76121,
+    "url": "https://code.activestate.com/recipes/tags/openxps/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76122,
+    "url": "https://code.activestate.com/recipes/tags/excel/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76123,
+    "url": "https://code.activestate.com/recipes/tags/scrollbars/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76124,
+    "url": "https://www.activestate.com/products/perl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76125,
+    "url": "https://code.activestate.com/recipes/sets/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76126,
+    "url": "https://code.activestate.com/recipes/580735-frame-with-border-color-for-tkinter/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76127,
+    "url": "https://www.activestate.com/activeperl/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76128,
+    "url": "https://www.activestate.com/activepython/downloads",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76129,
+    "url": "https://code.activestate.com/recipes/users/4184316/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76130,
+    "url": "https://code.activestate.com/recipes/tags/cbz/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76131,
+    "url": "https://www.activestate.com/products/tcl",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76132,
+    "url": "https://code.activestate.com/recipes/tags/tkinter/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76133,
+    "url": "https://code.activestate.com/recipes/tags/cards/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76134,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/database/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76135,
+    "url": "https://code.activestate.com/recipes/tags/spread/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76136,
+    "url": "https://code.activestate.com/recipes/tags/pymupdf/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76137,
+    "url": "https://code.activestate.com/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76138,
+    "url": "https://code.activestate.com/recipes/langs/python/?page\u003d3",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76139,
+    "url": "https://code.activestate.com/recipes/langs/python/?page\u003d2",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76140,
+    "url": "https://code.activestate.com/recipes/tags/calendar/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76141,
+    "url": "https://code.activestate.com/recipes/tags/2d/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76142,
+    "url": "https://code.activestate.com/recipes/580626-pdf-text-extraction-using-fitz-mupdf-pymupdf/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76143,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/mathematics/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76144,
+    "url": "https://code.activestate.com/recipes/tags/table/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76145,
+    "url": "https://www.activestate.com/community",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76146,
+    "url": "https://code.activestate.com/recipes/tags/area/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76147,
+    "url": "https://code.activestate.com/recipes/500261-named-tuples/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76148,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/web/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76149,
+    "url": "https://code.activestate.com/recipes/tags/textbox/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76150,
+    "url": "https://code.activestate.com/recipes/580800-groupby-for-unsorted-input/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76151,
+    "url": "https://code.activestate.com/recipes/langs/python/#q",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76152,
+    "url": "https://code.activestate.com/recipes/tags/trick/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76153,
+    "url": "https://code.activestate.com/recipes/tags/datastructures/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76154,
+    "url": "https://code.activestate.com/feeds/recipes/langs/python/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76155,
+    "url": "https://code.activestate.com/recipes/tags/openpyxl/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76156,
+    "url": "https://www.activestate.com/company/careers",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76157,
+    "url": "https://code.activestate.com/recipes/tags/xlsx/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76158,
+    "url": "https://code.activestate.com/recipes/tags/formats/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76159,
+    "url": "http://ads.activestate.com/www/delivery/ck.php?n\u003daa9dea02\u0026cb\u003dINSERT_RANDOM_NUMBER_HERE",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76160,
+    "url": "https://code.activestate.com/recipes/579128-convert-microsot-excel-xlsx-to-pdf-with-python-and/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76161,
+    "url": "https://code.activestate.com/recipes/langs/python/tags/sysadmin/",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "id": 76162,
+    "url": "https://code.activestate.com/recipes/580788-implementing-class-based-callbacks-in-python/?in\u003dlang-python",
+    "parentUrl": "http://code.activestate.com/recipes/langs/python/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://code.activestate.com/static/activestyle/img/activestate.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/arrowL.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/arrowR.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/arrowL.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/feed.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://code.activestate.com/static/img/help.png",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "http://ads.activestate.com/www/delivery/avw.php?zoneid\u003d1\u0026cb\u003dINSERT_RANDOM_NUMBER_HERE\u0026n\u003daa9dea02",
+    "alt": "",
+    "pageTitle": "Popular Python recipes « ActiveState Code",
+    "pageUrl": "http://code.activestate.com/recipes/langs/python/"
+  },
+  {
+    "src": "https://pypi.org/static/images/logo-large.516e776d.svg",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/60f709d24f3e4d469f9adc77c65e2f5291a3d165/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d77686974652d6c6f676f2d7038506f476831302e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/67af7117035e2345bacb5a82e9aa8b5b3e70701d/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d4a2d6b64742d706e2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "Languages",
+    "pageUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "src": "https://wiki.python.org/moin/BeginnersGuide/logo.png",
+    "alt": "",
+    "pageTitle": "BeginnersGuide/NonProgrammers",
+    "pageUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Frequently Asked Questions — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Frequently Asked Questions — Python 3.14.5rc1 documentation",
+    "pageUrl": "http://docs.python.org/3/faq/"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
