@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 848,
+    "url": "https://github.com/python/cpython/issues/119613",
+    "title": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Deprecate Py_IS_NAN/INFINITY/FINITE? #119613 New issue Copy link New issue Copy link Closed Closed Deprecate Py_IS_NAN/INFINITY/FINITE?#119613 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description skirpichev opened on May 27, 2024 Issue body actions Feature or enhancement Proposal: isnan(), isinf() and isfinite() are part of C99, which is a requirement for 3.11+. Probably, it does make sense to deprecate (undocumented) public macros and switch codebase to use C stdlib functions. JFR: #119457 (comment) Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-119613: use C99+ functions instead of Py_IS_NAN/INFINITY/FINITE #119619 gh-119613: deprecate Py_IS_NAN/INFINITY and Py_IS_FINITE #119701 gh-119613: Soft deprecate the Py_MEMCPY() macro #120020 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:52:54.292397"
+  },
+  {
+    "id": 847,
+    "url": "https://docs.python.org/3/library/functions.html#open",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-10 04:52:50.204994"
+  },
+  {
+    "id": 846,
+    "url": "https://github.com/python/cpython/issues/118767",
+    "title": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Make bool(NotImplemented) into an error #118767 New issue Copy link New issue Copy link Closed Closed Make bool(NotImplemented) into an error#118767 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixes Description JelleZijlstra opened on May 8, 2024 Issue body actions See https://discuss.python.org/t/should-bool-notimplemented-become-an-error/51342 and #79893. Linked PRs gh-118767: Make bool(NotImplemented) raise TypeError #118775 gh-118767: Improve tests and docs for bool(NotImplemented) #118813 gh-118767: remove bool(NotImplemented) from pending-removal document #139526 [3.14] gh-118767: Remove bool(NotImplemented) from pending-removal document (GH-139526) #139599 [3.13] gh-118767: remove bool(NotImplemented) from pending-removal document (GH-139526) #139677 Reactions are currently unavailable Metadata Metadata Assignees JelleZijlstra Labels 3.14bugs and security fixesbugs and security fixes Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:52:46.846333"
+  },
+  {
+    "id": 845,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html",
+    "title": "RFC 1494 - Equivalences between 1988 X.400 and RFC-822 Message Bodies",
+    "content": "Light Dark Auto Network Working Group                                      H. Alvestrand\nRequest for Comments: 1494                                  SINTEF DELAB\n                                                             S. Thompson\n                                                       Soft*Switch, Inc.\n                                                             August 1993\n\n       Equivalences between 1988 X.400 and RFC-822 Message Bodies\n\nStatus of this Memo\n\n   This RFC specifies an IAB standards track protocol for the Internet\n   community, and requests discussion and suggestions for improvements.\n   Please refer to the current edition of the \"IAB Official Protocol\n   Standards\" for the standardization state and status of this protocol.\n   Distribution of this memo is unlimited.\n\nTable of Contents\n\n   1.  Introduction .............................................    2\n   2.  Equivalence Table Definition .............................    2\n   3.  Generic conversions ......................................    3\n   3.1.  Byte copy ..............................................    3\n   3.2.  Text Conversion ........................................    3\n   3.3.  Image Conversion .......................................    3\n   3.4.  Tunneling ..............................................    3\n   4.  Conversion Table for known X.400 and MIME  Types .........    4\n   4.1.  MIME to X.400 Table ....................................    4\n   4.2.  X.400 to MIME Table ....................................    4\n   5.  Newly defined X.400 Body Parts ...........................    5\n   5.1.  Use of OBJECT IDENTIFIERs and ASN.1 MACROS .............    5\n   5.2.  The Generic MIME Extended Body Part ....................    6\n   5.3.  The PostScript body part ...............................    7\n   5.4.  The JPEG body part .....................................    7\n   5.5.  The GIF body part ......................................    8\n   6.  Newly defined MIME content-types .........................    8\n   6.1.  The application/x400-bp content-type ...................    8\n   6.2.  The image/g3fax content-type ...........................    9\n   6.2.1.  G3Fax Parameters .....................................    9\n   6.2.2.  Content Encoding .....................................   10\n   6.3.  The Application/ODA content-type .......................   11\n   7. Equivalence Definitions ...................................   11\n   7.1. IA5Text - text/plain ....................................   11\n   7.2. GeneralText - text/plain (ISO-8859) .....................   12\n   7.3. BilaterallyDefined -  application/octet-stream ..........   13\n   7.4. ODA - application/oda ...................................   14\n   7.5. g3-facsimile - image/g3fax ..............................   15\n   7.6. application/postscript -  postscript-body-part ..........   16\n   7.7. application/jpeg - jpeg-body-part .......................   16\n\n\n\nAlvestrand \u0026 Thompson                                           [Page 1] \nRFC 1494              X.400/MIME Body Equivalences           August 1993\n\n\n   7.8. image/gif - gif-body-part ...............................   16\n   8. OID Assignments ...........................................   17\n   9. IANA Registration form for new mappings ...................   17\n   10. Security Considerations ..................................   18\n   11. Authors\u0027 Addresses .......................................   18\n   12. References ...............................................   19\n\n1.  Introduction\n\n   This document is a companion to [1], which defines the principles\n   behind interworking between MIME-based RFC-822 mail and X.400 mail.\n   This document describes the content of the \"IANA MHS/MIME Equivalence\n   table\" referenced in the companion document, and defines the initial\n   configuration of this table.  Mappings for new MIME content-types\n   and/or X.400 body part types should be registered with the IANA to\n   minimize redundancy and promote interoperability.\n\n   In MIME, the term \"content-type\" is used to refer to an information\n   object contained in the body of a message.  In contrast, X.400 uses\n   the term \"body part type.\"  In this document, the term \"body part\" is\n   used to refer to either.\n\n   Please send comments to the MIME-MHS mailing list:\n   \u003cmime-mhs@surfnet.nl\u003e.\n\n2.  Equivalence Table Definition\n\n   For each MIME content-type/X.400 body part pair, the Equivalence\n   Table will contain an entry with the following sections:\n\n   X.400 Body Part\n        This section identifies the X.400 Body Part governed by this\n        Table entry. It includes any OBJECT IDENTIFIERs or other\n        parameters necessary to uniquely identify the Body Part.\n\n   MIME Content-Type\n        This section identifies the MIME content-type governed by this\n        Table entry.  The MIME content-type named here must be\n        registered with the IANA.\n\n   Conversion Type\n        This section identifies the type of conversion applie",
+    "scrapedAt": "2026-05-10 04:52:38.807399"
+  },
+  {
+    "id": 844,
+    "url": "https://docs.python.org/3/reference/expressions.html#in",
+    "title": "6. Expressions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations",
+    "scrapedAt": "2026-05-10 04:52:23.960321"
+  },
+  {
     "id": 843,
     "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.isolated",
     "title": "Python Initialization Configuration — Python 3.14.5rc1 documentation",
@@ -5607,26 +5642,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 844,
-    "url": "https://docs.python.org/3/reference/expressions.html#in"
-  },
-  {
-    "id": 845,
-    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html"
-  },
-  {
-    "id": 846,
-    "url": "https://github.com/python/cpython/issues/118767"
-  },
-  {
-    "id": 847,
-    "url": "https://docs.python.org/3/library/functions.html#open"
-  },
-  {
-    "id": 848,
-    "url": "https://github.com/python/cpython/issues/119613"
   },
   {
     "id": 849,
@@ -144580,10 +144595,572 @@ window.searchData = [
     "id": 116818,
     "url": "https://docs.python.org/3/library/stdtypes.html#str.isidentifier",
     "parentUrl": "https://docs.python.org/3/library/stdtypes.html#bytearray"
+  },
+  {
+    "id": 117445,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1495",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117446,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117447,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#appendix-E",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117448,
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-mimemhs-body-equival/02/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117449,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-3.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117450,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-3.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117451,
+    "url": "https://datatracker.ietf.org/person/sjt@gateway.ssw.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117452,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-3.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117453,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-5.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117454,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-6.2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117455,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-3.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117456,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-5.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117457,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-5.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117458,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117459,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-5.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117460,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117461,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-5.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117462,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117463,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117464,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-12",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117465,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117466,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-11",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117467,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117468,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-14",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117469,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117470,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-13",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117471,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7.8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117472,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-16",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117473,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-6.2.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117474,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-15",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117475,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-18",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117476,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-17",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117477,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1327",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117478,
+    "url": "https://datatracker.ietf.org/doc/html/rfc822",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117479,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117480,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1341",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117481,
+    "url": "https://datatracker.ietf.org/doc/rfc1494/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117482,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-mimemhs-body-equival-02",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117483,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-19",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117484,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117485,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117486,
+    "url": "https://www.rfc-editor.org/rfc/pdfrfc/rfc1494.txt.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117487,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117488,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117489,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117490,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117491,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-12",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117492,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117493,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-11",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117494,
+    "url": "https://github.com/ietf-tools/datatracker/issues/new/choose",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117495,
+    "url": "https://www.rfc-editor.org/rfc/rfc1494.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117496,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1341#appendix-H",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117497,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117498,
+    "url": "https://www.rfc-editor.org/errata.php#reportnew",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117499,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117500,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-6.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117501,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-6.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117502,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-6.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117503,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117504,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#ref-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117505,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117506,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#ref-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117507,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#ref-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117508,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#ref-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117509,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#ref-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117510,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#ref-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117511,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1502",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117512,
+    "url": "https://datatracker.ietf.org/doc/rfc1494/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117513,
+    "url": "https://datatracker.ietf.org/wg/mimemhs/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117514,
+    "url": "https://www.rfc-editor.org/rfc/rfc1494.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117515,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117516,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117517,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117518,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117519,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117520,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117521,
+    "url": "https://datatracker.ietf.org/person/harald@alvestrand.no",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117522,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117523,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117524,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1494.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "id": 117528,
+    "url": "https://github.com/python/cpython/issues/79893",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117532,
+    "url": "https://github.com/python/cpython/issues/118767#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117533,
+    "url": "https://github.com/python/cpython/pull/139677",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117534,
+    "url": "https://github.com/python/cpython/pull/139526",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117535,
+    "url": "https://github.com/python/cpython/pull/118775",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117536,
+    "url": "https://github.com/python/cpython/pull/118813",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117537,
+    "url": "https://github.com/python/cpython/pull/139599",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117538,
+    "url": "https://github.com/python/cpython/issues/118767#issue-2285889747",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117539,
+    "url": "https://discuss.python.org/t/should-bool-notimplemented-become-an-error/51342",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117540,
+    "url": "https://github.com/python/cpython/issues/118767#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "id": 117847,
+    "url": "https://github.com/python/cpython/issues/119613#issue-2319458234",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 117851,
+    "url": "https://github.com/skirpichev",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 117854,
+    "url": "https://github.com/python/cpython/issues/119613#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 117856,
+    "url": "https://github.com/python/cpython/issues/119613#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 117857,
+    "url": "https://github.com/python/cpython/pull/119701",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 117858,
+    "url": "https://github.com/python/cpython/pull/119457#discussion_r1615985599",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 117859,
+    "url": "https://github.com/python/cpython/pull/119619",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "id": 117860,
+    "url": "https://github.com/python/cpython/pull/120020",
+    "parentUrl": "https://github.com/python/cpython/issues/119613"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@skirpichev",
+    "pageTitle": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Deprecate Py_IS_NAN/INFINITY/FINITE? · Issue #119613 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119613"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#open"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#open"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Make `bool(NotImplemented)` into an error · Issue #118767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118767"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 1494 - Equivalences between 1988 X.400 and RFC-822 Message Bodies",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.64.0/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 1494 - Equivalences between 1988 X.400 and RFC-822 Message Bodies",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc1494.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#in"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#in"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
