@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 564,
+    "url": "https://www.python.org/success-stories/category/software-development/",
+    "title": "Software Development | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Software Development Software Development Python on Arm: 2025 Update Zama Concrete ML: Simplifying Homomorphic Encryption for Python Machine Learning Building Robust Codebases with Python\u0027s Type Annotations Building a Dependency Graph of Our Python Codebase Bleeding Edge Dependency Testing Using Python How We Created a Python Development Framework for Non-Developers Vacation rental marketplace development using Python Deliver Clean and Safe Code for Your Python Applications A Startup Healthcare Tech Firm Is Now Poised for the Future Using Python to build a range of products across multiple industries Using Python for marketplace development under tight deadlines Using Python to develop a patient health portal Building an online pharmacy marketplace with Python Python provides convenience and flexibility for scalable ML/AI Securing Python Runtimes Building an open-source and cross-platform Azure CLI with Python D-Link Australia Uses Python to Control Firmware Updates Distributed System For Technology Integration EZRO Content Management System Avoiding Documentation Costs with Python A Custom Image Viewing Game for an Autistic Child XIST: An XML Transformation Engine Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-05-10 04:25:56.158229"
+  },
+  {
+    "id": 563,
+    "url": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/",
+    "title": "Frequentis TAPtools® - Python in Air Traffic Control | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Frequentis TAPtools® - Python in Air Traffic Control Written by Michael Bartl, Frequentis Introduction Frequentis is one of the world\u0027s leading providers for safety-critical solutions in the field of Air Traffic Management and Public Safety \u0026 Transport. With over 500 employees world-wide, it provides innovative, user-centered solutions to its customers. Frequentis has been using Python in its TAPtools® product family, which focuses on the Tower and Airport Tools segment of Air Traffic Control. These tools are used by air traffic controllers to track weather conditions, control runway lighting, and to monitor and control navigational aid instruments. TAPtools® products display runway and weather conditions for air traffic controllers managing the approach of incoming aircraft Zoom in A Brief History One of the problems in developing air traffic control solutions is that each customer\u0027s unique airport, regulatory picture, and methodologies impose specific and different requirements for user interface look and behavior. A significant part of the deployment of an air traffic control system is the customization of its interface. Instead of developing each user interface from the ground up on a per-customer basis, Frequentis has developed a user interface layout tool called PanView, similar to products like QDesigner or Visual Studio. This tool is used to design and build the user interface which is then executed by a piece of software called the PanMachine. The PanMachine runs on in-house developed hardware called the PowerPanel, a 66MHz PowerPC with 32 MB RAM and a 12\" touch screen entry device. TAPtools® user interfaces are developed for the unique requirements of each air traffic control customer Zoom in With these tools, Frequentis developers can rapidly prototype a layout in front of the customer, greatly reducing the number of customer design workshops necessary in the deployment of a solution. The Customer is King PanView and the PanMachine were originally developed using Lua as the scripting language used to connect the user interface to the underlying functionality of the air traffic control system. This choice was found to be problematic for the layout implementors for a variety of reasons: Limited information is provided on errors, making it hard for developers to locate bugs. Variables are global, not local, by default. Python is exactly the other way around, making programs less prone to error. Lua has no list data structure. Although its dictionaries can be used as lists, this caused unnecessary complexity in practice. Lua code is easy to follow for short scripts, but its syntax and minimal standard library makes it unmanageable for larger programs. In a very important project, the Finnish Civil Aviation Administration (FCAA) wanted to run their user interface layouts not just on the PowerPanel, but also in the context of a web browser. This requirement was important enough that it led to re-implementation of the PanMachine in Java, so it could be run as an applet in the browser. Because Lua could not be run under Java, this was a good time to replace it. Python and Jython, the Java implementation of Python, were chosen because they would allow both the PowerPC and Java implementations of the PanMachine to execute the same user interface layouts. Python, implemented in C, was used on the PowerPC, and Jython, implemented in Java, was used in the browser applet. Implementation in Python Re-implementation using Python went smoothly. The Python language interpreter and support libraries are written in C and can be compiled with most C compilers. In this project, the ability for Python to be embedded into other code worked very well. The documentation is excellent and the examples are easy to follow. However, the PowerPanel hardware has no hard disk and thus could not itself compile the Python interpreter\u0027s C sources. To work around this problem, the developers cross-compiled Python from another machine, producing object code for the PowerPC using a compiler running on another type of hardware. Once this was done, Python byte code produced on any machine could be run on the PowerPanel without modification; only the initial compilation of the language itself required cross-compilation. Rewriting the Lua Layouts Once the Python-based implementation of the GUI layout tools was complete, it became necessary to rewrite the existing Lua layouts using Python. Our layout coders embraced Python with open arms because it solved all the problems they had been having with Lua, and it made new code easier to write because of Python\u0027s straightforward syntax and extensive standard libraries. In this transition, we found that Python\u0027s syntax was very easy to learn for new users, and our coders were able to completely rewrite the Lua layouts to take advanta",
+    "scrapedAt": "2026-05-10 04:25:53.452226"
+  },
+  {
+    "id": 562,
+    "url": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/",
+    "title": "Building a Dependency Graph of Our Python Codebase | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Building a Dependency Graph of Our Python Codebase Written by George Farcasiu, Noah Kim, Jacon Brugh, Jiahao Li, Hudson River Trading Introduction In keeping with our roots in high frequency trading, Hudson River Trading (HRT) moves fast. As is the case with any metric in engineering, speed has its tradeoffs. Over the last half-decade, HRT saw exponential growth in the size and interconnectedness of its research-oriented Python codebase, owing to a combination of a scrappy engineering culture that generally prizes \"good enough\" over \"perfect,\" our collaborative working environment that encourages code sharing between teams, and a period of accelerated growth. As our Python codebase grew to millions of lines, import times increased by an order of magnitude, code changes became more expensive to test, and lint times increased far outside the range of usefulness--we were experiencing the effects of code \"tangle.\" Tangling Code \"tangling\" is a concept HRTers borrowed from descriptions of the same issue in Dropbox publications about their own Python codebase. We call code \"tangled\" when its dependency graph has many overlapping cycles, and unrelated portions of the codebase are coupled through indirect and unintuitive import paths. Tangling can be a problem in any large codebase (including in other languages)! In our experience, tangling affects performance of both runtime imports and static analysis (e.g. mypy), and causes tight coupling which can reduce reliability. Of these issues, our users find runtime import overhead to be the biggest problem, since it slows down the development iteration loop and wastes CPU time in the datacenter. This is likely more problematic for HRT than most other Python shops, as short-lived Python processes make up a considerable fraction of our computational workload. The negative effects of tangling can increase quickly--a few misplaced imports and suddenly hundreds of modules are coupled together. The effects of import overhead are magnified by tangling because importing any module in a cycle ends up transitively importing all modules in that cycle (and their dependencies). While some imports are very fast, there are many cases that incur significant overhead. One common way overhead sneaks in is through filesystem access--for example, the now deprecated pkg_resources module crawls the filesystem to locate resources. This process becomes particularly problematic when operating over our Network File System. A further source of computational overhead is the loading of bulky, monolithic C extensions by packages such as pandas and NumPy--and even proprietary extensions. Additionally, some of our pure-Python modules incur a range of costly static initialization steps like detecting environmental features or handling dynamic registration of classes or callbacks. In isolation, each of these introduces a manageable import workload; however, in the most tangled portions of our codebase, the compounding effect can amount to over 30 seconds of import time for most programs. This overhead slows down the development iteration loop, and wastes CPU time in our distributed compute environment. Dependency Management At a high level, our approach to untangling is to establish and maintain a layered architecture where modules in lower layers don\u0027t import from modules in higher layers. Establishing proper layering helps callers to only import what they need. Ideally, our dependency graph should resemble a directed acyclic graph, where modules are topologically ordered by their assigned layers. However, in practice, some cycles are acceptable so long as they are relatively small and contained to one (sub)package. Transitioning to a better dependency management paradigm requires identifying the current causes of tangling, refactoring the codebase to restructure dependencies, and putting in place dependency validation to avoid future regressions. And all of this work has to be done without pausing development in the codebase! Tangle Tools: Understanding the Tangle Once we understood that tangling underlies many of our developer experience problems, we set out to build a toolkit for analyzing the dependency graph of our codebase--Tangle Tools. Tangle Tools analyzes Python source code to generate a dependency graph of the entire codebase (nodes correspond to modules and edges to imports). Our users can then utilize the command line and browser interfaces to discover, navigate, and refactor dependencies. A typical untangling workflow involves: Finding an unwanted transitive dependency Tracing import paths from a source to the unwanted dependency Computes a flow network between the source and dependency Identifies which edges would reduce flow if removed Refactoring imports to disconnect the source from the dependency Utilizes code transforma",
+    "scrapedAt": "2026-05-10 04:25:50.910237"
+  },
+  {
+    "id": 561,
+    "url": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/",
+    "title": "Python for Financial Machine Learning at Union Investment | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Financial Machine Learning at Union Investment Written by Dr. Christian Mandery and Nikolas Gerlich, Union Investment Introduction Union Investment is one of Germany’s largest asset managers, managing a total of over US$ 350 billion for its customers in Germany and other European countries. As an active fundamental asset manager, we are always working on further improving our investment process. Employing novel data sources and information for our investment process in a world where more and more data is created and made available each day is key contributor to success in our business. Machine Learning with Python A promising way to integrate novel data in asset management is machine learning (ML), which allows to uncover patterns found within financial time series data and leverage these patterns for making even better investment decisions. Machine learning allows us to: Identify possible return drivers, either on the level of individual stocks or for a whole asset class such as the stock or the bond market, Predict key performance indicators, such as revenue, on a company level and Determine whether we can benefit from a specific data set and derive a value from it for our investment process. In order to create machine learning models for these tasks, we have developed our own machine learning platform MALINA – MAchine Learning for INvestment Applications – which is a tailor-made solution to create interpretable machine learning models for financial time series data. MALINA is developed solely using Python and consists of more than 30k lines of Python code. Within our MALINA framework, we created four decoupled modules: a machine learning module which allows us to define and benchmark models for financial time series data using different ML algorithms, a back testing module, which allows us to run back tests for trading strategies based on the developed ML models, a model interpretation module, which integrates our own interpretation methods for some of the machine learning algorithms available in the ML module and a web-based user interface that allows the user to define and benchmark models without the necessity of actually writing code. Especially module 3, the development of novel approaches for interpreting our machine learning models, is key to us. This module allows us to open the black box of machine learning and to understand our models and their predictions, which further helps us to uncover the patterns these models have learnt. Figure : Screenshot of our web-based user interface powered by Python and the Django framework. Python’s Outstanding Ecosystem In addition to the Python language itself, using Python allows us to rely heavily on proven open source libraries from the Python ecosystem such as Pandas, which provides a robust and powerful framework for managing and analyzing data, Scikit-Learn, which is the \"go-to\" package for machine learning in Python and by many considered to be the industry standard for machine learning at all, statsmodels and XGBoost, which extend the feature set of scikit-learn to provide advanced statistical models and gradient boosting, Django, an excellent and comprehensive framework to develop web applications which we built upon to create the web-based user interface and Sphinx, which is an excellent package to create documentation from Python DocStrings and allows us to automatically keep our documentation up with the development of our code. All these packages have the advantage of being well-known and widely established, which means that extensive amounts of documentation and discussion can be found online for each of them. In addition, each of these packages being available as open source software means that we can easily dive into the existing code. For, e.g., the machine learning algorithms provided by Scikit-Learn that means that we are able to develop our own extensions, such as custom-tailored interpretation methods – something that would not be possible when using a proprietary machine learning framework. In addition, many of the smaller packages available within Python ecosystem features have been very useful and saved us a lot of time when developing MALINA. One particular example here might be joblib, which makes it extremely easy to parallelize computations in a platform-agnostic manner without hassling about the details of the underlying OS. Finally, the cross-platform capabilities mean that we can easily port MALINA to a different platform. So, while for development we can stick to the Windows machines that are commonly used in our company, we can readily switch to a Linux system for using our MALINA framework in a production environment. Conclusion Machine learning offers exciting new possibilities in analyzing and predicting financial time series. Due to the nature of fin",
+    "scrapedAt": "2026-05-10 04:25:48.32733"
+  },
+  {
+    "id": 560,
+    "url": "https://www.python.org/success-stories/create/",
+    "title": "Sign In to Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Sign In Login: Password: Forgot your password? Remember Me: Forgot Password? Sign In Register Don\u0027t have a Python.org account yet? Create new account",
+    "scrapedAt": "2026-05-10 04:25:43.859465"
+  },
+  {
     "id": 559,
     "url": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/",
     "title": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos | Our Success Stories | Python.org",
@@ -3857,26 +3892,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 560,
-    "url": "https://www.python.org/success-stories/create/"
-  },
-  {
-    "id": 561,
-    "url": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
-  },
-  {
-    "id": 562,
-    "url": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
-  },
-  {
-    "id": 563,
-    "url": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
-  },
-  {
-    "id": 564,
-    "url": "https://www.python.org/success-stories/category/software-development/"
   },
   {
     "id": 565,
@@ -97180,10 +97195,195 @@ window.searchData = [
     "id": 71879,
     "url": "https://lincolnloop.com",
     "parentUrl": "https://www.python.org/success-stories/lincoln-loop-building-a-sustainable-business-inspired-by-pythons-ethos/"
+  },
+  {
+    "id": 71884,
+    "url": "https://www.python.org/accounts/password/reset/",
+    "parentUrl": "https://www.python.org/success-stories/create/"
+  },
+  {
+    "id": 71885,
+    "url": "https://www.python.org/accounts/signup/",
+    "parentUrl": "https://www.python.org/success-stories/create/"
+  },
+  {
+    "id": 71889,
+    "url": "https://union-investment.com/home.html",
+    "parentUrl": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
+  },
+  {
+    "id": 71897,
+    "url": "https://www.hudsonrivertrading.com/hrtbeat/dependency-graph-python-codebase/",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 71898,
+    "url": "https://dropbox.tech/application/our-journey-to-type-checking-4-million-lines-of-python",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 71903,
+    "url": "https://www.hudsonrivertrading.com/hrtbeat/",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 71909,
+    "url": "https://en.wikipedia.org/wiki/Coupling_(computer_programming)",
+    "parentUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "id": 71912,
+    "url": "http://www.frequentis.com/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 71913,
+    "url": "http://www.taptools.com/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 71918,
+    "url": "https://www.python.org/m/about/success/frequentis/screen.png",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 71919,
+    "url": "http://www.lua.org/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 71920,
+    "url": "http://docs.python.org/extending/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 71922,
+    "url": "https://www.python.org/m/about/success/frequentis/main.png",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 71923,
+    "url": "http://www.jython.org/",
+    "parentUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "id": 71929,
+    "url": "https://www.python.org/success-stories/building-an-online-pharmacy-marketplace-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71930,
+    "url": "https://www.python.org/success-stories/caldintav-python-for-high-speed-railway-bridges/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71931,
+    "url": "https://www.python.org/success-stories/using-python-to-build-a-range-of-products-across-multiple-industries/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71932,
+    "url": "https://www.python.org/success-stories/using-python-to-develop-a-patient-health-portal/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71935,
+    "url": "https://www.python.org/success-stories/building-an-open-source-and-cross-platform-azure-cli-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71936,
+    "url": "https://www.python.org/success-stories/avoiding-documentation-costs-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71939,
+    "url": "https://www.python.org/success-stories/deliver-clean-and-safe-code-for-your-python-applications/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71940,
+    "url": "https://www.python.org/success-stories/a-custom-image-viewing-game-for-an-autistic-child/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71941,
+    "url": "https://www.python.org/success-stories/vacation-rental-marketplace-development-using-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71942,
+    "url": "https://www.python.org/success-stories/xist-an-xml-transformation-engine/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71943,
+    "url": "https://www.python.org/success-stories/ezro-content-management-system/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71944,
+    "url": "https://www.python.org/success-stories/distributed-system-for-technology-integration/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71949,
+    "url": "https://www.python.org/success-stories/using-python-for-marketplace-development-under-tight-deadlines/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71951,
+    "url": "https://www.python.org/success-stories/securing-python-runtimes/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71953,
+    "url": "https://www.python.org/success-stories/how-we-created-a-python-development-framework-for-non-developers/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71956,
+    "url": "https://www.python.org/success-stories/python-provides-convenience-and-flexibility-for-scalable-mlai/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
+  },
+  {
+    "id": 71957,
+    "url": "https://www.python.org/success-stories/a-startup-healthcare-tech-firm-is-now-poised-for-the-future/",
+    "parentUrl": "https://www.python.org/success-stories/category/software-development/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.python.org/m/about/success/frequentis/main-web.png",
+    "alt": "Runway Control Screen",
+    "pageTitle": "Frequentis TAPtools® - Python in Air Traffic Control | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/frequentis/screen-web.png",
+    "alt": "Custom Interface Screenshot",
+    "pageTitle": "Frequentis TAPtools® - Python in Air Traffic Control | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/frequentis-taptools-python-in-air-traffic-control/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/HRT_Building_a_Dependency_Graph_of_our_Python_Codebase.png",
+    "alt": "Building a Dependency Graph of Our Python Codebase",
+    "pageTitle": "Building a Dependency Graph of Our Python Codebase | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "src": "https://i.imgur.com/3MdTTlo.jpg",
+    "alt": "Rendered Summary Graph",
+    "pageTitle": "Building a Dependency Graph of Our Python Codebase | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/building-a-dependency-graph-of-our-python-codebase/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Success_Story_Screenshot_dv24mLv.png",
+    "alt": "Screenshot of our web-based user interface powered by Python and the Django framework.",
+    "pageTitle": "Python for Financial Machine Learning at Union Investment | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-financial-machine-learning-at-union-investment/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/lincoln_loop.jpg",
     "alt": "Lincoln Loop: Building a sustainable business inspired by Python’s ethos",
