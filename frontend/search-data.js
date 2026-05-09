@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 787,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#imaplib",
+    "title": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has si",
+    "scrapedAt": "2026-05-10 04:46:20.885986"
+  },
+  {
+    "id": 786,
+    "url": "https://github.com/python/cpython/issues/127221",
+    "title": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Add colour to unittest output #127221 New issue Copy link New issue Copy link Closed Closed Add colour to unittest output#127221 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Nov 24, 2024 Issue body actions Feature or enhancement In Python 3.13, we added colour output to the new REPL, tracebacks and doctest, that can also be controlled with the PYTHON_COLORS, NO_COLOR and FORCE_COLOR environment variables: https://docs.python.org/3/whatsnew/3.13.html#summary-release-highlights https://docs.python.org/3.13/using/cmdline.html#using-on-controlling-color Let\u0027s add colour to unittest output. Linked PRs gh-127221: Add colour to unittest output #127223 Reactions are currently unavailable Metadata Metadata Assignees hugovk Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:46:16.804609"
+  },
+  {
+    "id": 785,
+    "url": "https://github.com/python/cpython/issues/126374",
+    "title": "Support options with optional arguments · Issue #126374 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} python / cpython Public Uh oh! There was an error while loading. Please reload this page. Notifications You must be signed in to change notification settings Fork 34.6k Star 72.6k Support options with optional arguments #126374 New issue Copy link New issue Copy link Closed Closed Support options with optional arguments#126374 Copy link Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Nov 3, 2024 Issue body actions Feature or enhancement GNU getopt supports options with optional arguments. For example GNU grep can be used with option --color\u003dauto and with just --color. Unix getopt does not need it, because it stops after encountering first nonoption argument, but GNU getopt needs it to support options intermixed with positional arguments. getopt.gnu_getopt() needs it for the same reason. Neither optparse nor argparse directly support such kind of optional arguments. It can be supported in optparse with custom callback, but support of optional arguments in argparse is non-standard. In future I\u0027m planning to add support of such kind of optional arguments in argparse, and maybe in optparse. Linked PRs gh-126374: Add support of options with optional arguments in the getopt module #126375 Reactions are currently unavailable Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions You can’t perform that action at this time.",
+    "scrapedAt": "2026-05-10 04:46:12.848002"
+  },
+  {
+    "id": 784,
+    "url": "https://docs.python.org/3/library/functions.html#super",
+    "title": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » The Python Standard Library » Built-in Functions | Theme Auto Light Dark | Built-in Functions¶ The Python interpreter has a number of functions and types built into it that are always available. They are listed here in alphabetical order. Built-in Functions A abs() aiter() all() anext() any() ascii() B bin() bool() breakpoint() bytearray() bytes() C callable() chr() classmethod() compile() complex() D delattr() dict() dir() divmod() E enumerate() eval() exec() F filter() float() format() frozenset() G getattr() globals() H hasattr() hash() help() hex() I id() input() int() isinstance() issubclass() iter() L len() list() locals() M map() max() memoryview() min() N next() O object() oct() open() ord() P pow() print() property() R range() repr() reversed() round() S set() setattr() slice() sorted() staticmethod() str() sum() super() T tuple() type() V vars() Z zip() _ __import__() abs(number, /)¶ Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__(). If the argument is a complex number, its magnitude is returned. aiter(async_iterable, /)¶ Return an asynchronous iterator for an asynchronous iterable. Equivalent to calling x.__aiter__(). Note: Unlike iter(), aiter() has no 2-argument variant. Added in version 3.10. all(iterable, /)¶ Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to: def all(iterable):\n    for element in iterable:\n        if not element:\n            return False\n    return True\n awaitable anext(async_iterator, /)¶ awaitable anext(async_iterator, default, /) When awaited, return the next item from the given asynchronous iterator, or default if given and the iterator is exhausted. This is the async variant of the next() builtin, and behaves similarly. This calls the __anext__() method of async_iterator, returning an awaitable. Awaiting this returns the next value of the iterator. If default is given, it is returned if the iterator is exhausted, otherwise StopAsyncIteration is raised. Added in version 3.10. any(iterable, /)¶ Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to: def any(iterable):\n    for element in iterable:\n        if element:\n            return True\n    return False\n ascii(object, /)¶ As repr(), return a string containing a printable representation of an object, but escape the non-ASCII characters in the string returned by repr() using \\x, \\u, or \\U escapes. This generates a string similar to that returned by repr() in Python 2. bin(integer, /)¶ Convert an integer number to a binary string prefixed with “0b”. The result is a valid Python expression. If integer is not a Python int object, it has to define an __index__() method that returns an integer. Some examples: \u003e\u003e\u003e bin(3)\n\u00270b11\u0027\n\u003e\u003e\u003e bin(-10)\n\u0027-0b1010\u0027\n If the prefix “0b” is desired or not, you can use either of the following ways. \u003e\u003e\u003e format(14, \u0027#b\u0027), format(14, \u0027b\u0027)\n(\u00270b1110\u0027, \u00271110\u0027)\n\u003e\u003e\u003e f\u0027{14:#b}\u0027, f\u0027{14:b}\u0027\n(\u00270b1110\u0027, \u00271110\u0027)\n See also enum.bin() to represent negative values as twos-complement. See also format() for more information. class bool(object\u003dFalse, /)¶ Return a Boolean value, i.e. one of True or False. The argument is converted using the standard truth testing procedure. If the argument is false or omitted, this returns False; otherwise, it returns True. The bool class is a subclass of int (see Numeric Types — int, float, complex). It cannot be subclassed further. Its only instances are False and True (see Boolean Type - bool). Changed in version 3.7: The parameter is now positional-only. breakpoint(*args, **kws)¶ This function drops you into the debugger at the call site. Specifically, it calls sys.breakpointhook(), passing args and kws straight through. By default, sys.breakpointhook() calls pdb.set_trace() expecting no arguments. In this case, it is purely a convenience function so you don’t have to explicitly import pdb or type as much code to enter the debugger. However, sys.breakpointhook() can be set to some other function and breakpoint() will automatically call that, allowing you to drop into the debugger of choice. If sys.breakpointhook() is not accessible, this function will raise RuntimeError. By default, the behavior of breakpoint() can be changed with the PYTHONBREAKPOINT environment variable. See sys.breakpointhook() for usage details. Note that this is not guaranteed if sys.breakpointhook() has been replaced. Raises an auditing event builtins.breakpoint with argument breakpointhook. Added in version 3.7. class bytearray(source\u003db\u0027\u0027) class bytearray(source, encoding, errors\u003d\u0027strict\u0027) Return a new array of bytes. The bytearray class is a mutable sequence of integers in the range 0 \u003c\u003d x \u003c 256. It has most of the usual methods of mutable sequences, described in Mutable Sequence Types, as well as most methods that the bytes type has, see Bytes and ",
+    "scrapedAt": "2026-05-10 04:46:06.253583"
+  },
+  {
+    "id": 783,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsolatedFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.5rc1 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting",
+    "scrapedAt": "2026-05-10 04:45:51.991443"
+  },
+  {
     "id": 782,
     "url": "https://docs.python.org/3/library/webbrowser.html#module-webbrowser",
     "title": "webbrowser — Convenient web-browser controller — Python 3.14.5rc1 documentation",
@@ -5187,26 +5222,6 @@ window.searchData = [
     "title": "",
     "content": "meowcat.site Welcome welcome to generic blog #8023043. Why Wordpress didn\u0027t work. – 30 Apr 2026 How I accidentally deleted my bin folder – 16 Dec 2025 opening – 15 Dec 2025 View all posts",
     "scrapedAt": "2026-05-10 02:27:45.885829"
-  },
-  {
-    "id": 783,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsolatedFlag"
-  },
-  {
-    "id": 784,
-    "url": "https://docs.python.org/3/library/functions.html#super"
-  },
-  {
-    "id": 785,
-    "url": "https://github.com/python/cpython/issues/126374"
-  },
-  {
-    "id": 786,
-    "url": "https://github.com/python/cpython/issues/127221"
-  },
-  {
-    "id": 787,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#imaplib"
   },
   {
     "id": 788,
@@ -133685,10 +133700,557 @@ window.searchData = [
     "id": 101390,
     "url": "https://docs.python.org/3/library/webbrowser.html#cmdoption-webbrowser-n",
     "parentUrl": "https://docs.python.org/3/library/webbrowser.html#module-webbrowser"
+  },
+  {
+    "id": 101585,
+    "url": "https://docs.python.org/3/library/functions.html#func-memoryview",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101586,
+    "url": "https://docs.python.org/3/library/math.html#math.fsum",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101587,
+    "url": "https://docs.python.org/3/library/functions.html#func-bytearray",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101591,
+    "url": "https://docs.python.org/3/library/functions.html#anext",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101592,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-complexvalue",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101596,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typesseq-mutable",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101597,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.isatty",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101600,
+    "url": "https://rhettinger.wordpress.com/2011/05/26/super-considered-super/",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101603,
+    "url": "https://docs.python.org/3/library/functions.html#filter",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101607,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOWrapper.reconfigure",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101608,
+    "url": "https://docs.python.org/3/library/functions.html#globals",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101611,
+    "url": "https://docs.python.org/3/library/tempfile.html#module-tempfile",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101615,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#strings",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101617,
+    "url": "https://docs.python.org/3/library/functions.html#aiter",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101623,
+    "url": "https://docs.python.org/3/library/functions.html#built-in-functions",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101636,
+    "url": "https://docs.python.org/3/library/__future__.html#future__._Feature",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101643,
+    "url": "https://docs.python.org/3/library/io.html#io.RawIOBase",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101654,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typesseq",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101659,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.chain",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101660,
+    "url": "https://docs.python.org/3/library/functions.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101663,
+    "url": "https://docs.python.org/3/library/functions.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101664,
+    "url": "https://en.wikipedia.org/wiki/Transpose",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101669,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typebytearray",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101672,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-sign",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101673,
+    "url": "https://github.com/python/cpython/blob/main/Doc/library/functions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101678,
+    "url": "https://docs.python.org/3/library/functions.html#func-set",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101679,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typesseq-list",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101687,
+    "url": "https://docs.python.org/3/library/io.html#io-overview",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101691,
+    "url": "https://docs.python.org/3/library/functions.html#func-dict",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101693,
+    "url": "https://docs.python.org/3/library/functions.html#sum",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101699,
+    "url": "https://docs.python.org/3/library/functions.html#property.__name__",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101705,
+    "url": "https://docs.python.org/3/library/functions.html#delattr",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101707,
+    "url": "https://docs.python.org/3/library/functions.html#enumerate",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101713,
+    "url": "https://docs.python.org/3/tutorial/inputoutput.html#tut-files",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101714,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typesseq-range",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101719,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.register_error",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101720,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bltin-type-objects",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101722,
+    "url": "https://docs.python.org/3/reference/datamodel.html#class-customization",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101727,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.filterfalse",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101730,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedWriter",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101734,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typebool",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101737,
+    "url": "https://docs.python.org/3/library/functions.html#func-str",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101738,
+    "url": "https://peps.python.org/pep-0709/",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101739,
+    "url": "https://docs.python.org/3/reference/datamodel.html#class-attrs-and-methods",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101740,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typememoryview",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101745,
+    "url": "https://docs.python.org/3/library/functions.html#func-frozenset",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101746,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-floatnumber",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101753,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-floatvalue",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101754,
+    "url": "https://docs.python.org/3/library/functions.html#any",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101760,
+    "url": "https://docs.python.org/3/library/stdtypes.html#float.hex",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101768,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedRandom",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101772,
+    "url": "https://docs.python.org/3/library/functions.html#property.deleter",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101774,
+    "url": "https://docs.python.org/3/library/functions.html#func-tuple",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101778,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typebytes",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101781,
+    "url": "https://docs.python.org/3/library/pydoc.html#module-pydoc",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101785,
+    "url": "https://docs.python.org/3/library/stdtypes.html#truth",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101788,
+    "url": "https://docs.python.org/3/library/functions.html#vars",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101793,
+    "url": "https://docs.python.org/3/library/functions.html#all",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101794,
+    "url": "https://docs.python.org/3/library/enum.html#enum.bin",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101799,
+    "url": "https://docs.python.org/3/library/functions.html#callable",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101800,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typesmapping",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101802,
+    "url": "https://docs.python.org/3/library/os.html#fd-inheritance",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101815,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-infinity",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101816,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-digitpart",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101820,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-exponent",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101821,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101825,
+    "url": "https://docs.python.org/3/library/functions.html#func-list",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101829,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-digit",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101832,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-number",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101833,
+    "url": "https://docs.python.org/3/library/os.html#os.linesep",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101834,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-nan",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101838,
+    "url": "https://docs.python.org/3/library/functools.html#functools.cmp_to_key",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101844,
+    "url": "https://docs.python.org/3/library/stdtypes.html#types-set",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101851,
+    "url": "https://docs.python.org/3/library/functions.html#property.getter",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101854,
+    "url": "https://docs.python.org/3/library/stdtypes.html#binaryseq",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101856,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.zip_longest",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101857,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes-methods",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101858,
+    "url": "https://docs.python.org/3/library/functions.html#property.setter",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101860,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.starmap",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101864,
+    "url": "https://docs.python.org/3/library/functions.html#func-range",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101867,
+    "url": "https://docs.python.org/3/library/stdtypes.html#typesseq-tuple",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101870,
+    "url": "https://docs.python.org/3/library/functions.html#grammar-token-float-absfloatvalue",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101876,
+    "url": "https://docs.python.org/3/library/ast.html#ast-compiler-flags",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101878,
+    "url": "https://docs.python.org/3/tutorial/floatingpoint.html#tut-fp-issues",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101881,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedReader",
+    "parentUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "id": 101889,
+    "url": "https://github.com/python/cpython/pull/126375",
+    "parentUrl": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "id": 101890,
+    "url": "https://github.com/python/cpython/issues/126374#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "id": 101891,
+    "url": "https://github.com/python/cpython/issues/126374#issue-2631482287",
+    "parentUrl": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "id": 101897,
+    "url": "https://github.com/python/cpython/issues/126374#top",
+    "parentUrl": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "id": 101898,
+    "url": "https://github.com/python/cpython/issues/127221#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 101899,
+    "url": "https://github.com/python/cpython/pull/127223",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 101903,
+    "url": "https://docs.python.org/3/whatsnew/3.13.html#summary-release-highlights",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 101907,
+    "url": "https://github.com/python/cpython/issues/127221#issue-2687656091",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 101908,
+    "url": "https://docs.python.org/3.13/using/cmdline.html#using-on-controlling-color",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "id": 101909,
+    "url": "https://github.com/python/cpython/issues/127221#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127221"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#imaplib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#imaplib"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d64\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d64\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to unittest output · Issue #127221 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127221"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d80",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Support options with optional arguments · Issue #126374 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Support options with optional arguments · Issue #126374 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126374"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Functions — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functions.html#super"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsolatedFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.5rc1 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsolatedFlag"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
