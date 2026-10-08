@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1456,
+    "url": "https://github.com/python/cpython/issues/133140",
+    "title": "Adding an unstable C API for unique references · Issue #133140 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Adding an unstable C API for unique references #133140 New issue Copy link New issue Copy link Closed Closed Adding an unstable C API for unique references#133140 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItopic-free-threadingtype-featureA feature request or enhancementA feature request or enhancement Description ZeroIntensity opened on Apr 29, 2025 Issue body actions Feature or enhancement Proposal: In #132070, there was a race brought up in free-threading through use of Py_REFCNT(op) \u003d\u003d 1. The fix is to use _PyObject_IsUniquelyReferenced. There were a couple additional comments about how we should handle this for the public API (for example, @godlygeek suggested implementing Py_REFCNT as _PyObject_IsUniquelyReferenced(op) ? 1 : INT_MAX). I think the best approach is to just expose an unstable API for this and point to it in Py_REFCNT\u0027s documentation. I\u0027m not imagining anything complex: int\nPyUnstable_Object_IsUniquelyReferenced(PyObject *op)\n{\n    return _PyObject_IsUniquelyReferenced(op);\n} @encukou, do you mind if this skips the C API WG? I\u0027m not sure there\u0027s much to discuss about the API, other than some light bikeshedding. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-133140: Add PyUnstable_Object_IsUniquelyReferenced for free-threading #133144 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItopic-free-threadingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:42:57.899049"
+  },
+  {
+    "id": 1455,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStr",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:42:55.019601"
+  },
+  {
+    "id": 1454,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_COMMON_CONSTANT",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code obje",
+    "scrapedAt": "2026-10-08 19:42:53.71048"
+  },
+  {
+    "id": 1453,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Freeze",
+    "title": "Type Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Type Objects | Theme Auto Light Dark | Type Objects¶ type PyTypeObject¶ Part of the Limited API (as an opaque struct). The C structure of the objects used to describe built-in types. PyTypeObject PyType_Type¶ Part of the Stable ABI. This is the type object for type objects; it is the same object as type in the Python layer. int PyType_Check(PyObject *o)¶ Return non-zero if the object o is a type object, including instances of types derived from the standard type object. Return 0 in all other cases. This function always succeeds. int PyType_CheckExact(PyObject *o)¶ Return non-zero if the object o is a type object, but not a subtype of the standard type object. Return 0 in all other cases. This function always succeeds. unsigned int PyType_ClearCache()¶ Part of the Stable ABI. Clear the internal lookup cache. Return the current version tag. unsigned long PyType_GetFlags(PyTypeObject *type)¶ Part of the Stable ABI. Return the tp_flags member of type. This function is primarily meant for use with Py_LIMITED_API; the individual flag bits are guaranteed to be stable across Python releases, but access to tp_flags itself is not part of the limited API. Added in version 3.2. Changed in version 3.4: The return type is now unsigned long rather than long. PyObject *PyType_GetDict(PyTypeObject *type)¶ Return the type object’s internal namespace, which is otherwise only exposed via a read-only proxy (cls.__dict__). This is a replacement for accessing tp_dict directly. The returned dictionary must be treated as read-only. This function is meant for specific embedding and language-binding cases, where direct access to the dict is necessary and indirect access (e.g. via the proxy or PyObject_GetAttr()) isn’t adequate. Extension modules should continue to use tp_dict, directly or indirectly, when setting up their own types. Added in version 3.12. void PyType_Modified(PyTypeObject *type)¶ Part of the Stable ABI. Invalidate the internal lookup cache for the type and all of its subtypes. This function must be called after any manual modification of the attributes or base classes of the type. int PyType_AddWatcher(PyType_WatchCallback callback)¶ Register callback as a type watcher. Return a non-negative integer ID which must be passed to future calls to PyType_Watch(). In case of error (e.g. no more watcher IDs available), return -1 and set an exception. In free-threaded builds, PyType_AddWatcher() is not thread-safe, so it must be called at start up (before spawning the first thread). Added in version 3.12. int PyType_ClearWatcher(int watcher_id)¶ Clear watcher identified by watcher_id (previously returned from PyType_AddWatcher()). Return 0 on success, -1 on error (e.g. if watcher_id was never registered.) An extension should never call PyType_ClearWatcher with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). Added in version 3.12. int PyType_Watch(int watcher_id, PyObject *type)¶ Mark type as watched. The callback granted watcher_id by PyType_AddWatcher() will be called whenever PyType_Modified() reports a change to type. (The callback may be called only once for a series of consecutive modifications to type, if _PyType_Lookup() is not called on type between the modifications; this is an implementation detail and subject to change.) An extension should never call PyType_Watch with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). Added in version 3.12. int PyType_Unwatch(int watcher_id, PyObject *type)¶ Mark type as not watched. This undoes a previous call to PyType_Watch(). type must not be NULL. An extension should never call this function with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). On success, this function returns 0. On failure, this function returns -1 with an exception set. Added in version 3.12. typedef int (*PyType_WatchCallback)(PyObject *type)¶ Type of a type-watcher callback function. The callback must not modify type or cause PyType_Modified() to be called on type or any type in its MRO; violating this rule could cause infinite recursion. Added in version 3.12. int PyType_HasFeature(PyTypeObject *o, int feature)¶ Return non-zero if the type object o sets the feature feature. Type features are denoted by single bit flags. int PyType_FastSubclass(PyTypeObject *type, int flag)¶ Return non-zero if the type object type sets the subclass flag flag. Subclass flags are denoted by Py_TPFLAGS_*_SUBCLASS. This function is used by many _Check functions for common types. See also PyObject_TypeCheck(), which is used as a slower alternative in _Check functions for types that don’t come with subclass flags. int PyType_IS_GC(PyTypeObject *o)¶ Return true if the type object includes support for the cycle detector; this tests the type flag Py_TPFLAGS_HAVE_GC. int PyType_IsSubtype(PyTypeObj",
+    "scrapedAt": "2026-10-08 19:42:52.415087"
+  },
+  {
+    "id": 1452,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:42:51.124538"
+  },
+  {
     "id": 1451,
     "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStrList",
     "title": "Python Initialization Configuration — Python 3.14.8 documentation",
@@ -9730,26 +9765,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1452,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug"
-  },
-  {
-    "id": 1453,
-    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Freeze"
-  },
-  {
-    "id": 1454,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_COMMON_CONSTANT"
-  },
-  {
-    "id": 1455,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStr"
-  },
-  {
-    "id": 1456,
-    "url": "https://github.com/python/cpython/issues/133140"
   },
   {
     "id": 1457,
@@ -240451,10 +240466,115 @@ window.searchData = [
     "id": 303375,
     "url": "https://github.com/python/cpython/blob/b6c92ec419cfa1e4483b072996bab403c9970a5d/.github/CODEOWNERS#L166",
     "parentUrl": "https://github.com/python/cpython/issues/132056"
+  },
+  {
+    "id": 304838,
+    "url": "https://github.com/python/cpython/issues/132070",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304839,
+    "url": "https://github.com/godlygeek",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304840,
+    "url": "https://github.com/python/cpython/issues/133140#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304841,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/133140",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304842,
+    "url": "https://github.com/python/cpython/pull/133144",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304847,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-free-threading%22",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304848,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/133140",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304849,
+    "url": "https://github.com/python/cpython/issues/133140#issue-3027762894",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "id": 304852,
+    "url": "https://github.com/python/cpython/issues/133140#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133140"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "Adding an unstable C API for unique references · Issue #133140 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Adding an unstable C API for unique references · Issue #133140 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133140"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_GetStr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_COMMON_CONSTANT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_COMMON_CONSTANT"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_Freeze"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_Freeze"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parser_debug"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
