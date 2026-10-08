@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1431,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources",
+    "title": "importlib.resources.abc – Abstract base classes for resources — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Importing Modules » importlib.resources.abc – Abstract base classes for resources | Theme Auto Light Dark | importlib.resources.abc – Abstract base classes for resources¶ Source code: Lib/importlib/resources/abc.py Added in version 3.11. class importlib.resources.abc.ResourceReader¶ Superseded by TraversableResources An abstract base class to provide the ability to read resources. From the perspective of this ABC, a resource is a binary artifact that is shipped within a package. Typically this is something like a data file that lives next to the __init__.py file of the package. The purpose of this class is to help abstract out the accessing of such data files so that it does not matter if the package and its data file(s) are stored e.g. in a zip file versus on the file system. For any of methods of this class, a resource argument is expected to be a path-like object which represents conceptually just a file name. This means that no subdirectory paths should be included in the resource argument. This is because the location of the package the reader is for, acts as the “directory”. Hence the metaphor for directories and file names is packages and resources, respectively. This is also why instances of this class are expected to directly correlate to a specific package (instead of potentially representing multiple packages or a module). Loaders that wish to support resource reading are expected to provide a method called get_resource_reader(fullname) which returns an object implementing this ABC’s interface. If the module specified by fullname is not a package, this method should return None. An object compatible with this ABC should only be returned when the specified module is a package. Deprecated since version 3.12: Use importlib.resources.abc.TraversableResources instead. abstractmethod open_resource(resource)¶ Returns an opened, file-like object for binary reading of the resource. If the resource cannot be found, FileNotFoundError is raised. abstractmethod resource_path(resource)¶ Returns the file system path to the resource. If the resource does not concretely exist on the file system, raise FileNotFoundError. abstractmethod is_resource(path)¶ Returns True if the named path is considered a resource. FileNotFoundError is raised if path does not exist. Changed in version 3.10: The argument name was renamed to path. abstractmethod contents()¶ Returns an iterable of strings over the contents of the package. Do note that it is not required that all names returned by the iterator be actual resources, e.g. it is acceptable to return names for which is_resource() would be false. Allowing non-resource names to be returned is to allow for situations where how a package and its resources are stored are known a priori and the non-resource names would be useful. For instance, returning subdirectory names is allowed so that when it is known that the package and resources are stored on the file system then those subdirectory names can be used directly. The abstract method returns an iterable of no items. class importlib.resources.abc.Traversable¶ An object with a subset of pathlib.Path methods suitable for traversing directories and opening files. For a representation of the object on the file-system, use importlib.resources.as_file(). name¶ Abstract. The base name of this object without any parent references. abstractmethod iterdir()¶ Yield Traversable objects in self. abstractmethod is_dir()¶ Return True if self is a directory. abstractmethod is_file()¶ Return True if self is a file. abstractmethod joinpath(*pathsegments)¶ Traverse directories according to pathsegments and return the result as Traversable. Each pathsegments argument may contain multiple names separated by forward slashes (/, posixpath.sep ). For example, the following are equivalent: files.joinpath(\u0027subdir\u0027, \u0027subsuddir\u0027, \u0027file.txt\u0027)\nfiles.joinpath(\u0027subdir/subsuddir/file.txt\u0027)\n Note that some Traversable implementations might not be updated to the latest version of the protocol. For compatibility with such implementations, provide a single argument without path separators to each call to joinpath. For example: files.joinpath(\u0027subdir\u0027).joinpath(\u0027subsubdir\u0027).joinpath(\u0027file.txt\u0027)\n Changed in version 3.11: joinpath accepts multiple pathsegments, and these segments may contain forward slashes as path separators. Previously, only a single child argument was accepted. abstractmethod __truediv__(child)¶ Return Traversable child in self. Equivalent to joinpath(child). abstractmethod open(mode\u003d\u0027r\u0027, *args, **kwargs)¶ mode may be ‘r’ or ‘rb’ to open as text or binary. Return a handle suitable for reading (same as pathlib.Path.open). When opening as text, accepts encoding parameters such as those accepted by io.TextIOWrapper. read_bytes()¶ Read contents of self as bytes. read_text(encoding\u003dNone)¶ Read contents of self as text. class importlib.resources.abc.T",
+    "scrapedAt": "2026-10-08 19:41:49.063105"
+  },
+  {
+    "id": 1430,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2024-12718",
+    "title": "",
+    "content": "Common vulnerabilities and Exposures (CVE) We\u0027re sorry but the CVE Website doesn\u0027t work properly without JavaScript enabled. Please enable it to continue.",
+    "scrapedAt": "2026-10-08 19:41:47.792204"
+  },
+  {
+    "id": 1429,
+    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM",
+    "title": "Sequence Protocol — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Abstract Objects Layer » Sequence Protocol | Theme Auto Light Dark | Sequence Protocol¶ int PySequence_Check(PyObject *o)¶ Part of the Stable ABI. Return 1 if the object provides the sequence protocol, and 0 otherwise. Note that it returns 1 for Python classes with a __getitem__() method, unless they are dict subclasses, since in general it is impossible to determine what type of keys the class supports. This function always succeeds. Py_ssize_t PySequence_Size(PyObject *o)¶ Py_ssize_t PySequence_Length(PyObject *o)¶ Part of the Stable ABI. Returns the number of objects in sequence o on success, and -1 on failure. This is equivalent to the Python expression len(o). PyObject *PySequence_Concat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. This is the equivalent of the Python expression o1 + o2. PyObject *PySequence_Repeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. This is the equivalent of the Python expression o * count. PyObject *PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)¶ Return value: New reference. Part of the Stable ABI. Return the concatenation of o1 and o2 on success, and NULL on failure. The operation is done in-place when o1 supports it. This is the equivalent of the Python expression o1 +\u003d o2. PyObject *PySequence_InPlaceRepeat(PyObject *o, Py_ssize_t count)¶ Return value: New reference. Part of the Stable ABI. Return the result of repeating sequence object o count times, or NULL on failure. The operation is done in-place when o supports it. This is the equivalent of the Python expression o *\u003d count. PyObject *PySequence_GetItem(PyObject *o, Py_ssize_t i)¶ Return value: New reference. Part of the Stable ABI. Return the ith element of o, or NULL on failure. This is the equivalent of the Python expression o[i]. PyObject *PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Return value: New reference. Part of the Stable ABI. Return the slice of sequence object o between i1 and i2, or NULL on failure. This is the equivalent of the Python expression o[i1:i2]. int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)¶ Part of the Stable ABI. Assign object v to the ith element of o. Raise an exception and return -1 on failure; return 0 on success. This is the equivalent of the Python statement o[i] \u003d v. This function does not “steal” a reference to v. If v is NULL, the element is deleted, but this feature is deprecated in favour of using PySequence_DelItem(). int PySequence_DelItem(PyObject *o, Py_ssize_t i)¶ Part of the Stable ABI. Delete the ith element of object o. Returns -1 on failure. This is the equivalent of the Python statement del o[i]. int PySequence_SetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2, PyObject *v)¶ Part of the Stable ABI. Assign the sequence object v to the slice in sequence object o from i1 to i2. This is the equivalent of the Python statement o[i1:i2] \u003d v. int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)¶ Part of the Stable ABI. Delete the slice in sequence object o from i1 to i2. Returns -1 on failure. This is the equivalent of the Python statement del o[i1:i2]. Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the number of occurrences of value in o, that is, return the number of keys for which o[key] \u003d\u003d value. On failure, return -1. This is equivalent to the Python expression o.count(value). int PySequence_Contains(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Determine if o contains value. If an item in o is equal to value, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression value in o. int PySequence_In(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Alias for PySequence_Contains(). Soft deprecated since version 3.14: The function should no longer be used to write new code. Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)¶ Part of the Stable ABI. Return the first index i for which o[i] \u003d\u003d value. On error, return -1. This is equivalent to the Python expression o.index(value). PyObject *PySequence_List(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a list object with the same contents as the sequence or iterable o, or NULL on failure. The returned list is guaranteed to be new. This is equivalent to the Python expression list(o). PyObject *PySequence_Tuple(PyObject *o)¶ Return value: New reference. Part of the Stable ABI. Return a tuple object with the same contents as the sequence or iterable o, or NULL on failure. If o is a tuple, a new reference will be returned, otherwise a tuple will be constructed with the appropriate contents. This is equivalent to the Pyt",
+    "scrapedAt": "2026-10-08 19:41:46.079661"
+  },
+  {
+    "id": 1428,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse",
+    "title": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.parse — Parse URLs into components | Theme Auto Light Dark | urllib.parse — Parse URLs into components¶ Source code: Lib/urllib/parse.py This module defines a standard interface to break Uniform Resource Locator (URL) strings up in components (addressing scheme, network location, path etc.), to combine the components back into a URL string, and to convert a “relative URL” to an absolute URL given a “base URL.” The module has been designed to match the internet RFC on Relative Uniform Resource Locators. It supports the following URL schemes: file, ftp, gopher, hdl, http, https, imap, itms-services, mailto, mms, news, nntp, prospero, rsync, rtsp, rtsps, rtspu, sftp, shttp, sip, sips, snews, svn, svn+ssh, telnet, wais, ws, wss. CPython implementation detail: The inclusion of the itms-services URL scheme can prevent an app from passing Apple’s App Store review process for the macOS and iOS App Stores. Handling for the itms-services scheme is always removed on iOS; on macOS, it may be removed if CPython has been built with the --with-app-store-compliance option. The urllib.parse module defines functions that fall into two broad categories: URL parsing and URL quoting. These are covered in detail in the following sections. This module’s functions use the deprecated term netloc (or net_loc), which was introduced in RFC 1808. However, this term has been obsoleted by RFC 3986, which introduced the term authority as its replacement. The use of netloc is continued for backward compatibility. URL Parsing¶ The URL parsing functions focus on splitting a URL string into its components, or on combining URL components into a URL string. urllib.parse.urlsplit(urlstring, scheme\u003dNone, allow_fragments\u003dTrue)¶ Parse a URL into five components, returning a 5-item named tuple SplitResult or SplitResultBytes. This corresponds to the general structure of a URL: scheme://netloc/path?query#fragment. Each tuple item is a string, possibly empty. The delimiters as shown above are not part of the result, except for a leading slash in the path component, which is retained if present. Additionally, the netloc property is broken down into these additional attributes added to the returned object: username, password, hostname, and port. Percent-encoded sequences are not decoded. For example: \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\"scheme://netloc/path?query#fragment\")\nSplitResult(scheme\u003d\u0027scheme\u0027, netloc\u003d\u0027netloc\u0027, path\u003d\u0027/path\u0027,\n            query\u003d\u0027query\u0027, fragment\u003d\u0027fragment\u0027)\n\u003e\u003e\u003e o \u003d urlsplit(\"http://docs.python.org:80/3/library/urllib.parse.html?\"\n...              \"highlight\u003dparams#url-parsing\")\n\u003e\u003e\u003e o\nSplitResult(scheme\u003d\u0027http\u0027, netloc\u003d\u0027docs.python.org:80\u0027,\n            path\u003d\u0027/3/library/urllib.parse.html\u0027,\n            query\u003d\u0027highlight\u003dparams\u0027, fragment\u003d\u0027url-parsing\u0027)\n\u003e\u003e\u003e o.scheme\n\u0027http\u0027\n\u003e\u003e\u003e o.netloc\n\u0027docs.python.org:80\u0027\n\u003e\u003e\u003e o.hostname\n\u0027docs.python.org\u0027\n\u003e\u003e\u003e o.port\n80\n\u003e\u003e\u003e o._replace(fragment\u003d\"\").geturl()\n\u0027http://docs.python.org:80/3/library/urllib.parse.html?highlight\u003dparams\u0027\n Following the syntax specifications in RFC 1808, urlsplit() recognizes a netloc only if it is properly introduced by ‘//’. Otherwise the input is presumed to be a relative URL and thus to start with a path component. \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\u0027//www.cwi.nl:80/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027www.cwi.nl:80\u0027, path\u003d\u0027/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027www.cwi.nl/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027www.cwi.nl/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027help/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027help/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n The scheme argument gives the default addressing scheme, to be used only if the URL does not specify one. It should be the same type (text or bytes) as urlstring, except that the default value \u0027\u0027 is always allowed, and is automatically converted to b\u0027\u0027 if appropriate. If the allow_fragments argument is false, fragment identifiers are not recognized. Instead, they are parsed as part of the path, parameters or query component, and fragment is set to the empty string in the return value. The return value is a named tuple, which means that its items can be accessed by index or as named attributes, which are: Attribute Index Value Value if not present scheme 0 URL scheme specifier scheme parameter netloc 1 Network location part empty string path 2 Hierarchical path empty string query 3 Query component empty string fragment 4 Fragment identifier empty string username User name None password Password None hostname Host name (lower case) None port Port number as integer, if present None Reading the port attribute will raise a ValueError if an invalid port is specified in the URL. See section Structured Parse Results for more information ",
+    "scrapedAt": "2026-10-08 19:41:44.810018"
+  },
+  {
+    "id": 1427,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lines",
+    "title": "3. Data model — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 3. Data model | Theme Auto Light Dark | 3. Data model¶ 3.1. Objects, values and types¶ Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Even code is represented by objects. Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The is operator compares the identity of two objects; the id() function returns an integer representing its identity. CPython implementation detail: For CPython, id(x) is the memory address where x is stored. An object’s type determines the operations that the object supports (e.g., “does it have a length?”) and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable. [1] The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable. (The value of an immutable container object that contains a reference to a mutable object can change when the latter’s value is changed; however the container is still considered immutable, because the collection of objects it contains cannot be changed. So, immutability is not strictly the same as having an unchangeable value, it is more subtle.) An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable. Objects are never explicitly destroyed; however, when they become unreachable they may be garbage-collected. An implementation is allowed to postpone garbage collection or omit it altogether — it is a matter of implementation quality how garbage collection is implemented, as long as no objects are collected that are still reachable. CPython implementation detail: CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. See the documentation of the gc module for information on controlling the collection of cyclic garbage. Other implementations act differently and CPython may change. Do not depend on immediate finalization of objects when they become unreachable (so you should always close files explicitly). Note that the use of the implementation’s tracing or debugging facilities may keep objects alive that would normally be collectable. Also note that catching an exception with a try…except statement may keep objects alive. Some objects contain references to “external” resources such as open files or windows. It is understood that these resources are freed when the object is garbage-collected, but since garbage collection is not guaranteed to happen, such objects also provide an explicit way to release the external resource, usually a close() method. Programs are strongly recommended to explicitly close such objects. The try…finally statement and the with statement provide convenient ways to do this. Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value. In most cases, when we talk about the value of a container, we imply the values, not the identities of the contained objects; however, when we talk about the mutability of a container, only the identities of the immediately contained objects are implied. So, if an immutable container (like a tuple) contains a reference to a mutable object, its value changes if that mutable object is changed. Types affect almost all aspects of object behavior. Even the importance of object identity is affected in some sense: for immutable types, operations that compute new values may actually return a reference to any existing object with the same type and value, while for mutable objects this is not allowed. For example, after a \u003d 1; b \u003d 1, a and b may or may not refer to the same object with the value one, depending on the implementation. This is because int is an immutable type, so the reference to 1 can be reused. This behaviour depends on the implementation used, so should not be relied upon, but is something to be aware of when making use of object identity tests. However, after c \u003d []; d \u003d [], c and d are guaranteed to refer to two different, unique, newly created empty lists. (Note that e \u003d f \u003d [] assigns the same object to both e and f.) 3.2. The standard type hierarchy¶ Below is a list of the types that are built into Python. Extension modules (written in C, Java, or other languages, depending on the implementation) can define additional types. Future versions of Pyth",
+    "scrapedAt": "2026-10-08 19:41:43.480933"
+  },
+  {
     "id": 1426,
     "url": "https://github.com/python/cpython/issues/118655",
     "title": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
@@ -9555,26 +9590,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1427,
-    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lines"
-  },
-  {
-    "id": 1428,
-    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse"
-  },
-  {
-    "id": 1429,
-    "url": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM"
-  },
-  {
-    "id": 1430,
-    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2024-12718"
-  },
-  {
-    "id": 1431,
-    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
   },
   {
     "id": 1432,
@@ -239711,10 +239726,148 @@ window.searchData = [
     "id": 298159,
     "url": "https://github.com/python/cpython/blob/709ca90a00e66cea432096a7ba61aa6459d2a9a7/.github/CODEOWNERS#L54",
     "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298863,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.as_file",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298864,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.read_text",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298873,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.is_resource",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298880,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.contents",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298882,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298885,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.read_bytes",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298887,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/importlib.resources.abc.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298888,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.is_file",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298889,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.joinpath",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298892,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.name",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298893,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.open",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298898,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/resources/abc.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298900,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources.files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298902,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.iterdir",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298903,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.open_resource",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298904,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.ResourceReader.resource_path",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298905,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.Traversable.__truediv__",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "id": 298907,
+    "url": "https://docs.python.org/3/library/importlib.resources.html#importlib.resources.files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.resources.abc – Abstract base classes for resources — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.resources.abc – Abstract base classes for resources — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.resources.abc.html#importlib.resources.abc.TraversableResources"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Sequence Protocol — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sequence.html#c.PySequence_Fast_GET_ITEM"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lines"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_lines"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026v\u003d4",
     "alt": "@noahbkim",
