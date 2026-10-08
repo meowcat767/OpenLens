@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 973,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata",
+    "title": "importlib.metadata – Accessing package metadata — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Importing Modules » importlib.metadata – Accessing package metadata | Theme Auto Light Dark | importlib.metadata – Accessing package metadata¶ Added in version 3.8. Changed in version 3.10: importlib.metadata is no longer provisional. Source code: Lib/importlib/metadata/__init__.py importlib.metadata is a library that provides access to the metadata of an installed Distribution Package, such as its entry points or its top-level names (Import Packages, modules, if any). Built in part on Python’s import system, this library provides the entry point and metadata APIs that were previously exposed by the now-removed pkg_resources package. Along with importlib.resources, it supersedes pkg_resources. importlib.metadata operates on third-party distribution packages installed into Python’s site-packages directory via tools such as pip. Specifically, it works with distributions with discoverable dist-info or egg-info directories, and metadata defined by the Core metadata specifications. Important These are not necessarily equivalent to or correspond 1:1 with the top-level import package names that can be imported inside Python code. One distribution package can contain multiple import packages (and single modules), and one top-level import package may map to multiple distribution packages if it is a namespace package. You can use packages_distributions() to get a mapping between them. By default, distribution metadata can live on the file system or in zip archives on sys.path. Through an extension mechanism, the metadata can live almost anywhere. See also https://importlib-metadata.readthedocs.io/ The documentation for importlib_metadata, which supplies a backport of importlib.metadata. This includes an API reference for this module’s classes and functions, as well as a migration guide for existing users of pkg_resources. Overview¶ Let’s say you wanted to get the version string for a Distribution Package you’ve installed using pip. We start by creating a virtual environment and installing something into it: $ python -m venv example\n$ source example/bin/activate\n(example) $ python -m pip install wheel\n You can get the version string for wheel by running the following: (example) $ python\n\u003e\u003e\u003e from importlib.metadata import version\n\u003e\u003e\u003e version(\u0027wheel\u0027)\n\u00270.32.3\u0027\n You can also get a collection of entry points selectable by properties of the EntryPoint (typically ‘group’ or ‘name’), such as console_scripts, distutils.commands and others. Each group contains a collection of EntryPoint objects. You can get the metadata for a distribution: \u003e\u003e\u003e from importlib.metadata import metadata\n\u003e\u003e\u003e list(metadata(\u0027wheel\u0027))\n[\u0027Metadata-Version\u0027, \u0027Name\u0027, \u0027Version\u0027, \u0027Summary\u0027, \u0027Home-page\u0027, \u0027Author\u0027, \u0027Author-email\u0027, \u0027Maintainer\u0027, \u0027Maintainer-email\u0027, \u0027License\u0027, \u0027Project-URL\u0027, \u0027Project-URL\u0027, \u0027Project-URL\u0027, \u0027Keywords\u0027, \u0027Platform\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Classifier\u0027, \u0027Requires-Python\u0027, \u0027Provides-Extra\u0027, \u0027Requires-Dist\u0027, \u0027Requires-Dist\u0027]\n You can also get a distribution’s version number, list its constituent files, and get a list of the distribution’s Distribution requirements. exception importlib.metadata.PackageNotFoundError¶ Subclass of ModuleNotFoundError raised by several functions in this module when queried for a distribution package which is not installed in the current Python environment. Functional API¶ This package provides the following functionality via its public API. Entry points¶ importlib.metadata.entry_points(**select_params)¶ Returns a EntryPoints instance describing entry points for the current environment. Any given keyword parameters are passed to the select() method for comparison to the attributes of the individual entry point definitions. Note: it is not currently possible to query for entry points based on their EntryPoint.dist attribute (as different Distribution instances do not currently compare equal, even if they have the same attributes) class importlib.metadata.EntryPoints¶ Details of a collection of installed entry points. Also provides a .groups attribute that reports all identified entry point groups, and a .names attribute that reports all identified entry point names. class importlib.metadata.EntryPoint¶ Details of an installed entry point. Each EntryPoint instance has .name, .group, and .value attributes and a .load() method to resolve the value. There are also .module, .attr, and .extras attributes for getting the components of the .value attribute, and .dist for obtaining information regarding the distribution package that provides the entry point. Query all entry points: \u003e\u003e\u003e eps \u003d entry_points()\n The entry_points() function returns a EntryPoints object, a collection of all EntryPoint objects with names and groups attributes for convenience: \u003e\u003e\u003e sorted(eps.groups)\n[\u0027console_",
+    "scrapedAt": "2026-10-08 19:21:51.207531"
+  },
+  {
+    "id": 972,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_count",
+    "title": "gc — Garbage Collector interface — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » gc — Garbage Collector interface | Theme Auto Light Dark | gc — Garbage Collector interface¶ This module provides an interface to the optional garbage collector. It provides the ability to disable the collector, tune the collection frequency, and set debugging options. It also provides access to unreachable objects that the collector found but cannot free. Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles. Automatic collection can be disabled by calling gc.disable(). To debug a leaking program call gc.set_debug(gc.DEBUG_LEAK). Notice that this includes gc.DEBUG_SAVEALL, causing garbage-collected objects to be saved in gc.garbage for inspection. The gc module provides the following functions: gc.enable()¶ Enable automatic garbage collection. gc.disable()¶ Disable automatic garbage collection. gc.isenabled()¶ Return True if automatic collection is enabled. gc.collect(generation\u003d2)¶ With no arguments, run a full collection. The optional argument generation may be an integer specifying which generation to collect (from 0 to 2). A ValueError is raised if the generation number is invalid. The sum of collected objects and uncollectable objects is returned. The free lists maintained for a number of built-in types are cleared whenever a full collection or collection of the highest generation (2) is run. Not all items in some free lists may be freed due to the particular implementation, in particular float. The effect of calling gc.collect() while the interpreter is already performing a collection is undefined. Changed in version 3.14: generation\u003d1 performs an increment of collection. Changed in version 3.14.5: generation\u003d1 performs collection of the middle generation. gc.set_debug(flags)¶ Set the garbage collection debugging flags. Debugging information will be written to sys.stderr. See below for a list of debugging flags which can be combined using bit operations to control debugging. gc.get_debug()¶ Return the debugging flags currently set. gc.get_objects(generation\u003dNone)¶ Returns a list of all objects tracked by the collector, excluding the list returned. If generation is not None, return only the objects tracked by the collector that are in that generation. Changed in version 3.8: New generation parameter. Changed in version 3.14: Generation 1 is removed Changed in version 3.14.5: Generation 1 is reintroduced to maintain GC behavior from 3.13. Raises an auditing event gc.get_objects with argument generation. gc.get_stats()¶ Return a list of three per-generation dictionaries containing collection statistics since interpreter start. The number of keys may change in the future, but currently each dictionary will contain the following items: collections is the number of times this generation was collected; collected is the total number of objects collected inside this generation; uncollectable is the total number of objects which were found to be uncollectable (and were therefore moved to the garbage list) inside this generation. Added in version 3.4. gc.set_threshold(threshold0[, threshold1[, threshold2]])¶ Set the garbage collection thresholds (the collection frequency). Setting threshold0 to zero disables collection. The GC classifies objects into three generations depending on how many collection sweeps they have survived. New objects are placed in the youngest generation (generation 0). If an object survives a collection it is moved into the next older generation. Since generation 2 is the oldest generation, objects in that generation remain there after a collection. In order to decide when to run, the collector keeps track of the number object allocations and deallocations since the last collection. When the number of allocations minus the number of deallocations exceeds threshold0, collection starts. Initially only generation 0 is examined. If generation 0 has been examined more than threshold1 times since generation 1 has been examined, then generation 1 is examined as well. With the third generation, things are a bit more complicated, see Collecting the oldest generation for more information. In the free-threaded build, the increase in process memory usage is also checked before running the collector. If the memory usage has not increased by 10% since the last collection and the net number of object allocations has not exceeded 40 times threshold0, the collection is not run. See Garbage collector design for more information. Changed in version 3.14: threshold2 is ignored Changed in version 3.14.5: threshold2 is restored to match Python 3.13 behavior. gc.get_count()¶ Return the current collection counts as a tuple of (count0, count1, count2). gc.get_threshold()¶ Return the current collection thresholds as a tuple of (threshold0, threshold1, threshold2). gc.g",
+    "scrapedAt": "2026-10-08 19:21:49.997386"
+  },
+  {
+    "id": 971,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4435",
+    "title": "",
+    "content": "Common vulnerabilities and Exposures (CVE) We\u0027re sorry but the CVE Website doesn\u0027t work properly without JavaScript enabled. Please enable it to continue.",
+    "scrapedAt": "2026-10-08 19:21:48.782528"
+  },
+  {
+    "id": 970,
+    "url": "https://pypi.org/project/typing_extensions/",
+    "title": "typing-extensions · PyPI",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Search PyPI Search typing-extensions 4.16.0 Backported and Experimental Type Hints for Python 3.9+ pip install typing-extensions Copy PIP instructions Typing Extensions Documentation – PyPI Overview The typing_extensions module serves two related purposes: Enable use of new type system features on older Python versions. For example, typing.TypeGuard is new in Python 3.10, but typing_extensions allows users on previous Python versions to use it too. Enable experimentation with new type system PEPs before they are accepted and added to the typing module. typing_extensions is treated specially by static type checkers such as mypy and pyright. Objects defined in typing_extensions are treated the same way as equivalent forms in typing. typing_extensions uses Semantic Versioning. The major version will be incremented only for backwards-incompatible changes. Therefore, it\u0027s safe to depend on typing_extensions like this: typing_extensions ~\u003dx.y, where x.y is the first version that includes all features you need. This is equivalent to typing_extensions \u003e\u003dx.y, \u003c(x+1). Do not depend on ~\u003d x.y.z unless you really know what you\u0027re doing; that defeats the purpose of semantic versioning. Included items See the documentation for a complete listing of module contents. Contributing See CONTRIBUTING.md for how to contribute to typing_extensions. Project links Data verified by PyPI on Jul 2, 2026 Data provided by the project maintainers, verified at the time the release was uploaded to PyPI. Bug Tracker Changes Home Repository Documentation Q \u0026 A Key dates PyPI data Data sourced directly from PyPI\u0027s database. Released: Jul 2, 2026 Latest release 6 maintainers PyPI data Data sourced directly from PyPI\u0027s database. guido hauntsaninja ilevkivskyi +3 more JelleZijlstra jukkal srittau Credits Author: Guido van Rossum, Jukka Lehtosalo, Łukasz Langa, Michael Lee GitHub Statistics Data verified by PyPI on Jul 2, 2026 The GitHub source repository was provided by the project maintainers and verified by PyPI at the time of upload. Stars, forks, and open issues/PRs are derived from that repository and have not been independently verified. Repository Stars: Forks: Open issues: Open PRs: License expression PSF-2.0 View SPDX License List Requires Python \u003e\u003d3.9 Tags annotations backport checker checking function hinting hints type typechecking typehinting typehints typing Classifiers Development Status 5 - Production/Stable Environment Console Intended Audience Developers Operating System OS Independent Programming Language Python :: 3 Python :: 3 :: Only Python :: 3.9 Python :: 3.10 Python :: 3.11 Python :: 3.12 Python :: 3.13 Python :: 3.14 Python :: 3.15 Topic Software Development Report project as malware Metadata Project links Data verified by PyPI on Jul 2, 2026 Data provided by the project maintainers, verified at the time the release was uploaded to PyPI. Bug Tracker Changes Home Repository Documentation Q \u0026 A Key dates PyPI data Data sourced directly from PyPI\u0027s database. Released: Jul 2, 2026 Latest release 6 maintainers PyPI data Data sourced directly from PyPI\u0027s database. guido hauntsaninja ilevkivskyi +3 more JelleZijlstra jukkal srittau Credits Author: Guido van Rossum, Jukka Lehtosalo, Łukasz Langa, Michael Lee GitHub Statistics Data verified by PyPI on Jul 2, 2026 The GitHub source repository was provided by the project maintainers and verified by PyPI at the time of upload. Stars, forks, and open issues/PRs are derived from that repository and have not been independently verified. Repository Stars: Forks: Open issues: Open PRs: License expression PSF-2.0 View SPDX License List Requires Python \u003e\u003d3.9 Tags annotations backport checker checking function hinting hints type typechecking typehinting typehints typing Classifiers Development Status 5 - Production/Stable Environment Console Intended Audience Developers Operating System OS Independent Programming Language Python :: 3 Python :: 3 :: Only Python :: 3.9 Python :: 3.10 Python :: 3.11 Python :: 3.12 Python :: 3.13 Python :: 3.14 Python :: 3.15 Topic Software Development Report project as malware Release files for typing-extensions 4.16.0 For a detailed explanation of source distributions (sdists) and built distributions (wheels), please see the package formats documentation. Source distribution (sdist) Source distribution for typing-extensions 4.16.0 File Size Uploaded typing_extensions-4.16.0.tar.gz 113.6 kB Jul 2, 2026 Details Built distribution (wheel) Table of built distributions (wheels) for typing-extensions 4.16.0 File Interpreter ABI Platform Reset typing_extensions-4.16.0-py3-none-any.whl 45.6 kB Jul 2, 2026 Python 3 none any Details Total release size: 159.1 kB Release files / typing_extensions-4.16.0.tar.gz Download URL typing_extensions-4.16.0.tar.gz Size 113.6 kB Tags Source SHA-256 checksum How to use checksums dc9",
+    "scrapedAt": "2026-10-08 19:21:47.161672"
+  },
+  {
+    "id": 969,
+    "url": "https://docs.python.org/3/library/io.html#io.Reader",
+    "title": "io — Core tools for working with streams — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » io — Core tools for working with streams | Theme Auto Light Dark | io — Core tools for working with streams¶ Source code: Lib/io.py Overview¶ The io module provides Python’s main facilities for dealing with various types of I/O. There are three main types of I/O: text I/O, binary I/O and raw I/O. These are generic categories, and various backing stores can be used for each of them. A concrete object belonging to any of these categories is called a file object. Other common terms are stream and file-like object. Independent of its category, each concrete stream object will also have various capabilities: it can be read-only, write-only, or read-write. It can also allow arbitrary random access (seeking forwards or backwards to any location), or only sequential access (for example in the case of a socket or pipe). All streams are careful about the type of data you give to them. For example giving a str object to the write() method of a binary stream will raise a TypeError. So will giving a bytes object to the write() method of a text stream. Changed in version 3.3: Operations that used to raise IOError now raise OSError, since IOError is now an alias of OSError. Text I/O¶ Text I/O expects and produces str objects. This means that whenever the backing store is natively made of bytes (such as in the case of a file), encoding and decoding of data is made transparently as well as optional translation of platform-specific newline characters. The easiest way to create a text stream is with open(), optionally specifying an encoding: f \u003d open(\"myfile.txt\", \"r\", encoding\u003d\"utf-8\")\n In-memory text streams are also available as StringIO objects: f \u003d io.StringIO(\"some initial text data\")\n Note When working with a non-blocking stream, be aware that read operations on text I/O objects might raise a BlockingIOError if the stream cannot perform the operation immediately. The text stream API is described in detail in the documentation of TextIOBase. Binary I/O¶ Binary I/O (also called buffered I/O) expects bytes-like objects and produces bytes objects. No encoding, decoding, or newline translation is performed. This category of streams can be used for all kinds of non-text data, and also when manual control over the handling of text data is desired. The easiest way to create a binary stream is with open() with \u0027b\u0027 in the mode string: f \u003d open(\"myfile.jpg\", \"rb\")\n In-memory binary streams are also available as BytesIO objects: f \u003d io.BytesIO(b\"some initial binary data: \\x00\\x01\")\n The binary stream API is described in detail in the docs of BufferedIOBase. Other library modules may provide additional ways to create text or binary streams. See socket.socket.makefile() for example. Raw I/O¶ Raw I/O (also called unbuffered I/O) is generally used as a low-level building-block for binary and text streams; it is rarely useful to directly manipulate a raw stream from user code. Nevertheless, you can create a raw stream by opening a file in binary mode with buffering disabled: f \u003d open(\"myfile.jpg\", \"rb\", buffering\u003d0)\n The raw stream API is described in detail in the docs of RawIOBase. Warning Raw I/O is a low-level interface and methods generally must have their return values checked and be explicitly retried to ensure an operation completes. For instance write() returns the number of bytes written which may be less than the number of bytes provided (a partial write). High-level I/O objects like Binary I/O and Text I/O implement retry behavior. Text Encoding¶ The default encoding of TextIOWrapper and open() is locale-specific (locale.getencoding()). However, many developers forget to specify the encoding when opening text files encoded in UTF-8 (e.g. JSON, TOML, Markdown, etc…) since most Unix platforms use UTF-8 locale by default. This causes bugs because the locale encoding is not UTF-8 for most Windows users. For example: # May not work on Windows when non-ASCII characters in the file.\nwith open(\"README.md\") as f:\n    long_description \u003d f.read()\n Accordingly, it is highly recommended that you specify the encoding explicitly when opening text files. If you want to use UTF-8, pass encoding\u003d\"utf-8\". To use the current locale encoding, encoding\u003d\"locale\" is supported since Python 3.10. See also Python UTF-8 Mode Python UTF-8 Mode can be used to change the default encoding to UTF-8 from locale-specific encoding. PEP 686 Python 3.15 will make Python UTF-8 Mode default. Opt-in EncodingWarning¶ Added in version 3.10: See PEP 597 for more details. To find where the default locale encoding is used, you can enable the -X warn_default_encoding command line option or set the PYTHONWARNDEFAULTENCODING environment variable, which will emit an EncodingWarning when the default encoding is used. If you are providing an API that uses open() or TextIOWrapper and passes encoding\u003dNone as a parameter, you can use tex",
+    "scrapedAt": "2026-10-08 19:21:45.757323"
+  },
+  {
     "id": 968,
     "url": "https://github.com/python/cpython/issues/129270",
     "title": "gh-65697: Prevent configparser from writing keys it cannot properly read by lincolnj1 · Pull Request #129270 · python/cpython · GitHub",
@@ -6440,26 +6475,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 969,
-    "url": "https://docs.python.org/3/library/io.html#io.Reader"
-  },
-  {
-    "id": 970,
-    "url": "https://pypi.org/project/typing_extensions/"
-  },
-  {
-    "id": 971,
-    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4435"
-  },
-  {
-    "id": 972,
-    "url": "https://docs.python.org/3/library/gc.html#gc.get_count"
-  },
-  {
-    "id": 973,
-    "url": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
   },
   {
     "id": 974,
@@ -164696,10 +164711,1483 @@ window.searchData = [
     "id": 144951,
     "url": "https://github.com/python/cpython/pull/129270#event-16064777859",
     "parentUrl": "https://github.com/python/cpython/issues/129270"
+  },
+  {
+    "id": 145122,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145123,
+    "url": "https://pypi.org/project/typing-extensions/3.6.2.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145124,
+    "url": "https://pypi.org/project/typing-extensions/4.8.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145125,
+    "url": "https://pypi.org/project/typing-extensions/4.2.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145126,
+    "url": "https://spdx.github.io/spdx-spec/v3.0.1/annexes/spdx-license-expressions/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145127,
+    "url": "https://pypi.org/project/typing-extensions/#user-content-typing-extensions",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145128,
+    "url": "https://github.com/python/typing_extensions",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145129,
+    "url": "https://gitter.im/python/typing",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145130,
+    "url": "https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145132,
+    "url": "https://pypi.org/project/typing-extensions/4.5.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145134,
+    "url": "https://pypi.org/project/typing-extensions/4.16.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145135,
+    "url": "https://pypi.org/project/typing-extensions/4.12.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145136,
+    "url": "https://pypi.org/project/typing-extensions/3.10.0.2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145137,
+    "url": "https://pypi.org/project/typing-extensions/4.15.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145138,
+    "url": "https://pypi.org/project/typing-extensions/4.13.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145139,
+    "url": "https://pypi.org/project/typing-extensions/3.10.0.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145140,
+    "url": "https://pypi.org/project/typing-extensions/3.6.5/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145141,
+    "url": "https://pypi.org/project/typing-extensions/4.14.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145142,
+    "url": "https://pypi.org/project/typing-extensions/4.11.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145143,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4.2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145144,
+    "url": "https://pypi.org/project/typing-extensions/3.7.2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145145,
+    "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145146,
+    "url": "https://pypi.org/project/typing-extensions/4.7.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145147,
+    "url": "https://pypi.org/project/typing-extensions/3.10.0.2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145148,
+    "url": "https://github.com/python/typing_extensions/blob/main/CONTRIBUTING.md",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145149,
+    "url": "https://pypi.org/project/typing-extensions/4.1.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145151,
+    "url": "https://pypi.org/project/typing-extensions/4.3.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145152,
+    "url": "https://pypi.org/project/typing-extensions/4.13.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145153,
+    "url": "https://pypi.org/project/typing-extensions/4.9.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145154,
+    "url": "https://typing-extensions.readthedocs.io/en/latest/#",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145155,
+    "url": "https://semver.org/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145156,
+    "url": "https://pypi.org/project/typing-extensions/4.12.0a2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145157,
+    "url": "https://pypi.org/project/typing-extensions/4.8.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145158,
+    "url": "https://pypi.org/project/typing-extensions/4.0.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145159,
+    "url": "https://pypi.org/project/typing-extensions/4.13.2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145160,
+    "url": "https://search.sigstore.dev/?logIndex\u003d2045493716",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145161,
+    "url": "https://pypi.org/search/?c\u003dTopic+%3A%3A+Software+Development",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145162,
+    "url": "https://pypi.org/project/typing-extensions/4.13.2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145164,
+    "url": "https://pypi.org/project/typing-extensions/4.10.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145165,
+    "url": "https://pypi.org/project/typing-extensions/4.10.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145166,
+    "url": "https://pypi.org/search/?c\u003dEnvironment+%3A%3A+Console",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145167,
+    "url": "https://pypi.org/project/typing-extensions/3.6.2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145168,
+    "url": "https://github.com/python/typing_extensions/issues",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145169,
+    "url": "https://pypi.org/rss/project/typing-extensions/releases.xml",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145171,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4.3/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145173,
+    "url": "https://pypi.org/project/typing-extensions/4.11.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145174,
+    "url": "https://pypi.org/project/typing-extensions/4.10.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145176,
+    "url": "https://pypi.org/project/typing-extensions/4.15.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145177,
+    "url": "https://pypi.org/user/hauntsaninja/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145179,
+    "url": "https://pypi.org/project/typing-extensions/4.14.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145180,
+    "url": "https://pypi.org/project/typing-extensions/4.12.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145183,
+    "url": "https://pypi.org/project/typing-extensions/4.12.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145187,
+    "url": "https://pypi.org/project/typing-extensions/4.13.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145188,
+    "url": "https://pypi.org/project/typing-extensions/4.16.0rc2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145189,
+    "url": "https://pypi.org/project/typing-extensions/4.16.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145191,
+    "url": "https://pypi.org/project/typing-extensions/4.3.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145192,
+    "url": "https://pypi.org/project/typing-extensions/4.15.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145193,
+    "url": "https://pypi.org/project/typing-extensions/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145194,
+    "url": "https://pypi.org/project/typing-extensions/4.7.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145195,
+    "url": "https://pypi.org/project/typing-extensions/3.10.0.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145196,
+    "url": "https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145197,
+    "url": "https://pypi.org/project/typing-extensions/4.0.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145198,
+    "url": "https://pypi.org/project/typing-extensions/4.12.2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145202,
+    "url": "https://pypi.org/project/typing-extensions/3.10.0.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145203,
+    "url": "https://pypi.org/project/typing-extensions/3.6.2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145204,
+    "url": "https://pypi.org/project/typing-extensions/4.16.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145205,
+    "url": "https://typing-extensions.readthedocs.io/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145206,
+    "url": "https://spdx.org/licenses/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145208,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4.2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145209,
+    "url": "https://pypi.org/project/typing-extensions/3.6.6/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145213,
+    "url": "https://pypi.org/project/typing-extensions/4.6.2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145214,
+    "url": "https://pypi.org/project/typing-extensions/4.6.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145217,
+    "url": "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145220,
+    "url": "https://pypi.org/project/typing-extensions/4.0.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145221,
+    "url": "https://pypi.org/project/typing-extensions/4.13.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145222,
+    "url": "https://pypi.org/project/typing-extensions/3.10.0.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145223,
+    "url": "https://pypi.org/project/typing-extensions/4.13.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145226,
+    "url": "https://pypi.org/project/typing-extensions/4.10.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145229,
+    "url": "https://pypi.org/project/typing-extensions/4.16.0rc2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145230,
+    "url": "https://pypi.org/project/typing-extensions/4.5.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145232,
+    "url": "https://pypi.org/project/typing-extensions/3.7.2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145234,
+    "url": "https://pypi.org/project/typing-extensions/4.16.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145235,
+    "url": "https://github.com/python/typing/discussions",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145236,
+    "url": "https://pypi.org/project/typing-extensions/#user-content-overview",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145237,
+    "url": "https://github.com/python/typing_extensions/blob/f29cd28d8ed7642cafb1d18daf5aa41be6a5c0aa/.github/workflows/publish.yml",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145238,
+    "url": "https://search.sigstore.dev/?logIndex\u003d2045493586",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145239,
+    "url": "https://pypi.org/project/typing-extensions/#user-content-included-items",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145240,
+    "url": "https://pypi.org/project/typing-extensions/submit-malware-report/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145241,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145242,
+    "url": "https://pypi.org/project/typing-extensions/4.9.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145243,
+    "url": "https://pypi.org/project/typing-extensions/4.6.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145244,
+    "url": "https://pypi.org/project/typing-extensions/4.8.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145245,
+    "url": "https://pypi.org/project/typing-extensions/4.1.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145246,
+    "url": "https://pypi.org/project/typing-extensions/4.12.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145247,
+    "url": "https://pypi.org/project/typing-extensions/#content",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145248,
+    "url": "https://pypi.org/project/typing-extensions/#user-content-contributing",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145249,
+    "url": "https://pypi.org/user/JelleZijlstra/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145250,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145251,
+    "url": "https://pypi.org/user/guido/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145252,
+    "url": "https://pypi.org/project/typing-extensions/4.4.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145253,
+    "url": "https://pypi.org/project/typing-extensions/3.6.5/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145255,
+    "url": "https://github.com/python/typing_extensions/tree/f29cd28d8ed7642cafb1d18daf5aa41be6a5c0aa",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145256,
+    "url": "https://pypi.org/project/typing-extensions/4.0.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145258,
+    "url": "https://pypi.org/project/typing-extensions/4.14.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145259,
+    "url": "https://pypi.org/project/typing-extensions/4.6.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145260,
+    "url": "https://pypi.org/project/typing-extensions/4.4.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145261,
+    "url": "https://pypi.org/project/typing-extensions/4.6.2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145262,
+    "url": "https://pypi.org/project/typing-extensions/4.1.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145263,
+    "url": "https://github.com/python/typing_extensions/actions/runs/28576933315/attempts/1",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145264,
+    "url": "https://pypi.org/project/typing-extensions/4.6.3/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145265,
+    "url": "https://pypi.org/project/typing-extensions/4.15.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145266,
+    "url": "https://pypi.org/project/typing-extensions/4.12.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145267,
+    "url": "https://pypi.org/project/typing-extensions/4.11.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145269,
+    "url": "https://pypi.org/project/typing-extensions/4.12.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145270,
+    "url": "https://pypi.org/project/typing-extensions/4.12.2/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145271,
+    "url": "https://pypi.org/user/jukkal/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145272,
+    "url": "https://pypi.org/project/typing-extensions/4.8.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145273,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4.3/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145274,
+    "url": "https://pypi.org/project/typing-extensions/4.6.3/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145275,
+    "url": "https://pypi.org/project/typing-extensions/4.9.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145276,
+    "url": "https://pypi.org/project/typing-extensions/4.7.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145277,
+    "url": "https://pypi.org/project/typing-extensions/4.7.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145278,
+    "url": "https://pypi.org/project/typing-extensions/4.14.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145279,
+    "url": "https://pypi.org/project/typing-extensions/3.6.6/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145281,
+    "url": "https://pypi.org/project/typing-extensions/4.11.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145282,
+    "url": "https://pypi.org/project/typing-extensions/3.7.4/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145283,
+    "url": "https://pypi.org/user/srittau/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145284,
+    "url": "https://pypi.org/project/typing-extensions/4.14.1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145286,
+    "url": "https://pypi.org/project/typing-extensions/3.6.2.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145287,
+    "url": "https://pypi.org/project/typing-extensions/4.1.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145289,
+    "url": "https://pypi.org/user/ilevkivskyi/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145290,
+    "url": "https://pypi.org/project/typing-extensions/4.13.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145291,
+    "url": "https://pypi.org/project/typing-extensions/4.7.0rc1/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145292,
+    "url": "https://pypi.org/project/typing-extensions/4.9.0rc1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145293,
+    "url": "https://pypi.org/search/?c\u003dProgramming+Language+%3A%3A+Python+%3A%3A+3.9",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145294,
+    "url": "https://pypi.org/project/typing-extensions/4.7.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145296,
+    "url": "https://pypi.org/project/typing-extensions/#typing_extensions-4.16.0.tar.gz",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145297,
+    "url": "https://pypi.org/project/typing-extensions/4.2.0/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145298,
+    "url": "https://pypi.org/project/typing-extensions/4.6.0/#files",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145299,
+    "url": "https://pypi.org/project/typing-extensions/4.12.0a2/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145300,
+    "url": "https://pypi.org/project/typing-extensions/4.14.1/",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145301,
+    "url": "https://pypi.org/project/typing-extensions/#typing_extensions-4.16.0-py3-none-any.whl",
+    "parentUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "id": 145356,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#requirements",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145359,
+    "url": "https://pypi.org/project/backports.entry_points_selectable/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145360,
+    "url": "https://importlib-metadata.readthedocs.io/en/latest/migration.html",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145361,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackageNotFoundError",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145362,
+    "url": "https://github.com/pypa/packaging-problems/issues/609",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145366,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#entry-points",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145368,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.packages_distributions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145369,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#example",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145370,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145372,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145374,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.distribution",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145376,
+    "url": "https://packaging.python.org/en/latest/specifications/core-metadata/#version",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145377,
+    "url": "https://importlib-metadata.readthedocs.io/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145378,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145379,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.requires",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145380,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/importlib/metadata/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145384,
+    "url": "https://importlib-metadata.readthedocs.io/en/latest/api.html",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145385,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#functional-api",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145387,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.EntryPoints",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145388,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackagePath",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145390,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145391,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#implementing-custom-providers",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145395,
+    "url": "https://more-itertools.readthedocs.io/en/stable/api.html#more_itertools.always_iterable",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145396,
+    "url": "https://packaging.python.org/en/latest/glossary/#term-Distribution-Package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145397,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.Distribution",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145398,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-requirements",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145401,
+    "url": "https://importlib-metadata.readthedocs.io/en/latest/api.html#importlib_metadata.PackageMetadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145402,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#package-distributions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145404,
+    "url": "https://peps.python.org/pep-0610/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145406,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#version",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145409,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/importlib.metadata.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145410,
+    "url": "https://packaging.python.org/en/latest/glossary/#term-Import-Package",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145411,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.EntryPoint",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145412,
+    "url": "https://setuptools.pypa.io/en/latest/userguide/entry_point.html",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145413,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145414,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.version",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145415,
+    "url": "https://packaging.python.org/en/latest/specifications/core-metadata/#core-metadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145416,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-versions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145417,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#mapping-import-to-distribution-packages",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145420,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145421,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-files",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145422,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.entry_points",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145425,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#importlib.metadata.PackageMetadata",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145426,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distribution-discovery",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145427,
+    "url": "https://peps.python.org/pep-0566/",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145429,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#overview",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "id": 145430,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html#distributions",
+    "parentUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.metadata – Accessing package metadata — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib.metadata – Accessing package metadata — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.metadata.html#module-importlib.metadata"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_count"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_count"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/7bd7e85672b5e784228c5627efa059f6a04bd829/68747470733a2f2f6261646765732e6769747465722e696d2f707974686f6e2f747970696e672e737667",
+    "alt": "Chat at https://gitter.im/python/typing",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/818ad692c3f59604570f681b6cba937c5ca41c4f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61653537396439623834316136376234393039323036373465323330386236643f73697a653d3335",
+    "alt": "Avatar for guido from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/95b14ca8b5963f3bb9611df7590d253f69ab4cfc/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f37623562626164643962616639633662333361303533653936383763653937653f73697a653d3335",
+    "alt": "Avatar for hauntsaninja from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/90ba3c8715f61b28706813450c2b94d050238124/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f33333766623664663363663537663562376634376535373366313535386366613f73697a653d3335",
+    "alt": "Avatar for ilevkivskyi from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/fb31ea7cd467cdca4a05137592a0c755b835e5e4/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35376461346432653261353237303236626161616162333565363837326661353f73697a653d3335",
+    "alt": "Avatar for JelleZijlstra from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/88122ccdb6efdd2a47959360d4eb2b822ae190e7/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61313430376536386135363432643663316331363539373431633135393233643f73697a653d3335",
+    "alt": "Avatar for jukkal from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/e5d0f138e0712eb35c736670b82de696a7fb139e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64356434306134306437356261333262316264666630326235373230316364313f73697a653d3335",
+    "alt": "Avatar for srittau from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/818ad692c3f59604570f681b6cba937c5ca41c4f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61653537396439623834316136376234393039323036373465323330386236643f73697a653d3335",
+    "alt": "Avatar for guido from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/95b14ca8b5963f3bb9611df7590d253f69ab4cfc/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f37623562626164643962616639633662333361303533653936383763653937653f73697a653d3335",
+    "alt": "Avatar for hauntsaninja from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/90ba3c8715f61b28706813450c2b94d050238124/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f33333766623664663363663537663562376634376535373366313535386366613f73697a653d3335",
+    "alt": "Avatar for ilevkivskyi from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/fb31ea7cd467cdca4a05137592a0c755b835e5e4/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35376461346432653261353237303236626161616162333565363837326661353f73697a653d3335",
+    "alt": "Avatar for JelleZijlstra from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/88122ccdb6efdd2a47959360d4eb2b822ae190e7/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61313430376536386135363432643663316331363539373431633135393233643f73697a653d3335",
+    "alt": "Avatar for jukkal from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/e5d0f138e0712eb35c736670b82de696a7fb139e/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64356434306134306437356261333262316264666630326235373230316364313f73697a653d3335",
+    "alt": "Avatar for srittau from gravatar.com",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/github.683a0246.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/pypi-attestation-cube.1cfdb012.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/github.683a0246.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/pypi-attestation-cube.1cfdb012.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/blue-cube.572a5bfb.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi.org/static/images/white-cube.2351a86c.svg",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/0e16ff2846ab7bc04f1e52d760b072c987232f52/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f416e7468726f7069635f6c6f676f5f2d5f536c6174652e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/2056e7cc45e271b6b509980e9ff24b8b6346f2f4/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f626c6f6f6d626572672e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/7e24ecafc35532bbd56c7c91521ea6701110c742/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6872742e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/6f7cbf25b7d9ee146661528e012e8fa51d6f3337/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f4d6574615f6c6f636b75705f706f7369746976655f7072696d6172795f5247425f636f70795f68546b493532472e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/22baa32a7b36b109ce052634015d878f5d029280/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6e76696469612e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/34ebcaca9a4316e862f2f7641b12534f0cb81bf1/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6d6963726f736f66742e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/237c8773674b9f8beff9f894a07424e3b579cd6a/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d636f6c6f722d6c6f676f2d35567a75416e7a6b2e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/f0e9bd2edb2aa1c533d61b0d4fda0ee761bef88a/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d636f6c6f722d6c6f676f2d416c6f43525230612e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/530379bec76c3440bd94a24092f49e27323ad0d7/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d636f6c6f722d6c6f676f2d71616563774a67722e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/9706778018adad6f5bf682f55d7bbc226abe551c/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d636f6c6f722d6c6f676f2d766c6d424c33654c2e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/522342e78db3080c18697369dde99a0ed7925e86/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d636f6c6f722d6c6f676f2d32755437496c54702e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/f2a422796f8e4d51d60d7030b7973aa1651bd096/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d636f6c6f722d6c6f676f2d346e306a654878502e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b0ba0741ac65afcb01ebb4bbf0634c54b8a15827/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d636f6c6f722d6c6f676f2d423232436b746e6b2e706e67",
+    "alt": "",
+    "pageTitle": "typing-extensions · PyPI",
+    "pageUrl": "https://pypi.org/project/typing_extensions/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "io — Core tools for working with streams — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/io.html#io.Reader"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "io — Core tools for working with streams — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/io.html#io.Reader"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/99031153?s\u003d80\u0026v\u003d4",
     "alt": "@lincolnj1",
