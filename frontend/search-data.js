@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 671,
+    "url": "http://www.google.com",
+    "title": "Google",
+    "content": "Klik hier als je niet binnen enkele seconden wordt omgeleid. OverStore Waar denk je aan? Afbeeldingen toevoegen Bestanden toevoegen 🍌Afbeeldingen maken AI-modus 🍌Maken Afbeeldingen maken verwijderen Meer bekijken Verwijderen Ongepaste voorspellingen melden Google aangeboden in: Frysk Nederland AdverterenBedrijf Hoe Google Zoeken werkt Ons derde decennium van klimaatactie: dit is wat we doen PrivacyVoorwaarden Instellingen Zoekinstellingen Geavanceerd zoeken Je gegevens in Google Zoeken Personalisatie en cookies Zoekgeschiedenis Google Zoeken Help Feedback sturen Donker thema: uit nl ‪Nederlands‬ ‪Deutsch‬ ‪English (United Kingdom)‬ ‪Español (España)‬ ‪Français (France)‬ ‪Italiano‬ Alle talen ‪Afrikaans‬ ‪azərbaycan‬ ‪bosanski‬ ‪català‬ ‪Čeština‬ ‪Cymraeg‬ ‪Dansk‬ ‪Deutsch‬ ‪eesti‬ ‪English (United Kingdom)‬ ‪English (United States)‬ ‪English‬ ‪Español (España)‬ ‪Español (Latinoamérica)‬ ‪euskara‬ ‪Filipino‬ ‪Français (Canada)‬ ‪Français (France)‬ ‪Gaeilge‬ ‪galego‬ ‪Hrvatski‬ ‪Indonesia‬ ‪isiZulu‬ ‪íslenska‬ ‪Italiano‬ ‪Kiswahili‬ ‪latviešu‬ ‪lietuvių‬ ‪magyar‬ ‪Melayu‬ ‪norsk‬ ‪o‘zbek‬ ‪polski‬ ‪Português (Brasil)‬ ‪Português (Portugal)‬ ‪română‬ ‪shqip‬ ‪Slovenčina‬ ‪slovenščina‬ ‪srpski (latinica)‬ ‪Suomi‬ ‪Svenska‬ ‪Tiếng Việt‬ ‪Türkçe‬ ‪Ελληνικά‬ ‪беларуская‬ ‪български‬ ‪кыргызча‬ ‪македонски‬ ‪монгол‬ ‪Русский‬ ‪српски (ћирилица)‬ ‪Українська‬ ‪ქართული‬ ‪қазақ тілі‬ ‪հայերեն‬ ‫עברית‬ ‫اردو‬ ‫العربية‬ ‫فارسی‬ ‪አማርኛ‬ ‪नेपाली‬ ‪मराठी‬ ‪हिन्दी‬ ‪বাংলা‬ ‪ਪੰਜਾਬੀ‬ ‪ગુજરાતી‬ ‪தமிழ்‬ ‪తెలుగు‬ ‪ಕನ್ನಡ‬ ‪മലയാളം‬ ‪සිංහල‬ ‪ไทย‬ ‪ລາວ‬ ‪မြန်မာ‬ ‪ខ្មែរ‬ ‪한국어‬ ‪中文（香港）‬ ‪日本語‬ ‪简体中文‬ ‪繁體中文‬ Inloggen Voordat je verdergaat naar Google We gebruiken cookies en gegevens, waaronder IP-adressen, voor het volgende: Google-services leveren en onderhouden Uitval bijhouden en bescherming bieden tegen spam, fraude en misbruik Doelgroepbetrokkenheid en sitestatistieken meten om inzicht te krijgen in hoe onze services worden gebruikt en de kwaliteit van die services te verbeteren Als je Alles accepteren kiest, gebruiken we cookies en gegevens, waaronder IP-adressen, ook voor het volgende: Nieuwe services ontwikkelen en verbeteren Advertenties plaatsen en de effectiviteit ervan meten Gepersonaliseerde content tonen (afhankelijk van je instellingen) Gepersonaliseerde advertenties tonen (afhankelijk van je instellingen) Als je Alles afwijzen kiest, gebruiken we cookies of IP-adressen niet voor deze aanvullende doeleinden. Niet-gepersonaliseerde content wordt beïnvloed door factoren zoals de content die je op dat moment bekijkt, activiteit in je actieve zoeksessie en je locatie. Niet-gepersonaliseerde advertenties worden beïnvloed door de content die je op dat moment bekijkt en je algemene locatie. Gepersonaliseerde content en advertenties kunnen ook relevantere resultaten, aanbevelingen en op jou toegespitste advertenties omvatten die zijn gebaseerd op eerdere activiteit van deze browser, zoals uitgevoerde Google-zoekopdrachten. We gebruiken cookies en gegevens ook om te zorgen dat de functionaliteit geschikt is voor je leeftijd, als dit relevant is. Selecteer Meer opties om meer informatie te bekijken, waaronder over hoe je je privacyinstellingen beheert. Je kunt ook altijd naar g.co/privacytools gaan. Alles afwijzen Alles accepteren Meer opties Privacy · Voorwaarden Google-apps Delen Link kopiëren Link kopiëren Link gekopieerd Facebook Gmail X Reddit WhatsApp",
+    "scrapedAt": "2026-10-08 19:09:34.207249"
+  },
+  {
+    "id": 670,
+    "url": "http://code.activestate.com/recipes/langs/python/",
+    "scrapedAt": "2026-10-08 19:09:32.99924"
+  },
+  {
+    "id": 669,
+    "url": "http://pypi.python.org/pypi?%3Aaction\u003dindex",
+    "title": "PyPI · The Python Package Index",
+    "content": "Skip to main content Switch to mobile version Warning Some features may not work without JavaScript. Please try enabling it if you encounter problems. Find, install and publish Python packages with the Python Package Index Search PyPI Search Or browse projects Publishing as a team? Use an organization account 910,673 projects 9,816,965 releases 21,867,907 files 1,124,415 users The Python Package Index (PyPI) is a repository of software for the Python programming language. PyPI helps you find and install software developed and shared by the Python community. Learn about installing packages. Package authors use PyPI to distribute their software. Learn how to package your Python code for PyPI. Anthropic, PBC Visionary sponsor Bloomberg Visionary sponsor Hudson River Trading Visionary sponsor Meta Visionary sponsor NVIDIA Visionary sponsor Microsoft Sustainability sponsor Depot Continuous Integration AWS Cloud computing and Security Sponsor Datadog Monitoring Fastly CDN Google Download Analytics Sentry Error logging StatusPage Status page \"PyPI\", \"Python Package Index\", and the blocks logos are registered trademarks of the Python Software Foundation. © 2026 Python Software Foundation Site map Deployed from 7beb0c8",
+    "scrapedAt": "2026-10-08 19:09:31.802062"
+  },
+  {
+    "id": 668,
+    "url": "https://www.python.org/doc/nonenglish/",
+    "title": "Languages",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Attempt to have languages and links listed in the native tongue of the user. 2009-09-01 This page\u0027s links go to the various languages\u0027 pages, most of which have been copied from the other set of language pages, with a few updates. Ideally, all the pages should be like the Polish or Turkish pages - all native language, only the necessary English. There are some ground rules, some are laid down by the site admins, some are my suggestions: Pages must be named in ASCII and English (PolishLanguage) Pages must have an explanation in English at the top (Links to Python information in \u003clanguage X\u003e) (my suggestion) We probably want to limit invites to edit the pages to people we know well, or Pythonistas with a track record. Hopefully, this is inclusive enough without opening the site up to a spam flood and vandalismfest. Where these pages really need help: check links, remove broken ones. add new links that are quality Python information and active. some care for languages that have next to nothing, but do have people in the Python community - even a link to the Wikipedia page for Python, in that language, is a start (Some are pretty complete and of high quality - the Russian language Wikipedia page for Python, for instance, packs a lot in). Languages AfrikaansLanguage Afrikaans AlbanianLanguage Shqip AmharicLanguage አማርኛ ArabicLanguage العربية ArmenianLanguage Հայերեն AssameseLanguage অসমীয়া AzerbaijaniLanguage Azərbaycan dili BelarusianLanguage Беларуская мова BengaliLanguage বাংলা BodoLanguage बड़ो BosnianLanguage bosanski BulgarianLanguage български език BurmeseLanguage မြန်မာဘာသာ CatalanLanguage català ChineseLanguage 中文 CroatianLanguage hrvatski CzechLanguage čeština DanishLanguage dansk DogriLanguage डोगरी Devanagari script DutchLanguage Nederlands EsperantoLanguage Esperanto EstonianLanguage eesti keel FinnishLanguage suomi FrenchLanguage français GeorgianLanguage ქართული ენა GermanLanguage Deutsch GreekLanguage Νέα Ελληνικά GujaratiLanguage ગુજરાતી HausaLanguage Hausa HebrewLanguage עִבְרִית HindiLanguage हिन्दी HungarianLanguage magyar nyelv IndonesianLanguage Bahasa Indonesia IcelandicLanguage íslenska IgboLanguage Asụsụ Igbo ItalianLanguage italiano JapaneseLanguage 日本語 KannadaLanguage ಕನ್ನಡ KashmiriLanguage कॉशुर (Koshur) KazakhLanguage Қазақ тілі KhmerLanguage ភាសាខ្មែរ KonkaniLanguage कोंकणी Devangari script KoreanLanguage 한국어/조선말 LaoLanguage ພາສາລາວ LatvianLanguage latviešu valoda LithuanianLanguage lietuvių kalba MalayLanguage Bahasa Melayu MalayalamLanguage മലയാളം MarathiLanguage मराठी MongolianLanguage Монгол хэл NepaliLanguage नेपाली NorwegianLanguage norsk OriyaLanguage ଓଡ଼ିଆ OromoLanguage Afaan Oromoo PersianLanguage فارسی PolishLanguage język polski PortugueseLanguage português PunjabiLanguage ਪੰਜਾਬੀ WesternPunjabiLanguage پنجابی RomanianLanguage limba română RussianLanguage русский язык SanskritLanguage संस्कृत SlovakLanguage slovenský jazyk SloveneLanguage slovenščina SerbianLanguage Српски SinhalaLanguage සිංහල SpanishLanguage español SwahiliLanguage Kiswahili SwedishLanguage svenska TagalogLanguage Wikang Tagalog TamilLanguage தமிழ TeluguLanguage తెలుగు ThaiLanguage ภาษาไทย TigrinyaLanguage ትግርኛ TurkishLanguage Türkçe UkranianLanguage украї́нська мо́ва UrduLanguage اُردوُ UzbekLanguage O‘zbek tili VietnameseLanguage tiếng Việt XhosaLanguage isiXhosa ZuluLanguage isiZulu CategoryLanguage CategoryUnicode 2026-02-14 16:09",
+    "scrapedAt": "2026-10-08 19:09:30.160233"
+  },
+  {
+    "id": 667,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers",
+    "title": "BeginnersGuide/NonProgrammers",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Python for New Programmers If you\u0027ve never programmed before, the tutorials on this page are recommended for you; they don\u0027t assume that you have previous experience. If you have programming experience, also check out the BeginnersGuide/Programmers page. Books Each of these books can be purchased online but is also available as free textual, website, or video content. please keep this list alphabetized Automate the Boring Stuff with Python - Practical Programming for Total Beginners by Al Sweigart is \"written for office workers, students, administrators, and anyone who uses a computer to learn how to code small, practical programs to automate tasks on their computer.\" ||website ||print version || How To Think Like a Computer Scientist is a classic open-source book by Allen Downey with contributions from Jeffrey Elkner and Chris Meyers. It was updated to Python 3 by Peter Wentworth. ||website ||print version || Making Games with Python \u0026 Pygame by Al Sweigart introduces the Pygame framework for novices and intermediate programmers to make graphical games. ||website ||print version || Python One-Liners by Christian Mayer teaches you how to read and write \"one-liners\": concise statements of useful functionality packed into a single line of code. ||website with free one-liner explainer videos ||print version || Think Python by Allen B. Downey teaches you how to think like a computer scientist. ||website ||print version || You can find many free Python books online. For example, check out this article with 101 free Python books. Interactive Courses These sites give you instant feedback on programming problems that you can solve in your browser. please keep this list alphabetized A beginner-friendly and free Python tutorial with interactive code examples, explaining the Python language in an easy-to-understand way. A beginner-friendly Python course that teaches to learn to code through bite-size lessons, quizzes and 100+ challenges. A beginner-friendly Python course with exercises covering 100+ key topics, quizzes, and hands-on practice. CheckiO is a gamified website containing programming tasks that can be solved in Python 3. Codédex is a learn to code platform for K-12 and college students. Codecademy (Python) Code the blocks combines Python programming with a 3D environment where you \"place blocks\" and construct structures. It also comes with Python tutorials that teach you how to create progressively elaborate 3D structures. Codevisionz Python 10+ hrs of Python learning material - Learn common programming concepts through code examples, quizzes, and challenges Computer Science Circles has 30 lessons, 100 exercises, and a message system where you can ask for help. Teachers can use it with their students. It is also available in Dutch, French, German, and Lithuanian. DataCamp Python Tutorial Unlike most other Python tutorials, this 4 hour tutorial by DataCamp focuses on Python specifically for Data Science. It has 57 interactive exercises and 11 videos. Finxter - How good are your Python skills? Test and Training with \u003e300 hand-picked Python puzzles. HackInScience - 50+ Python exercises on a free, adless, simple, and open-source platform. How to Think Like a Computer Scientist: Interactive Edition is an interactive reimagination of Elkner, Downey and Meyer\u0027s book with visualizations and audio explanations. LabEx - Hands-on Labs - Practice Python programming with interactive exercises in a web-based coding environment, offering hands-on labs and real-world scenarios. LearnPython is an interactive Python tutorial that is suitable for absolute beginners. Learn Python - A no install Python course with interactive exercises powered by Pyodide. Resources for Younger Learners (This section was previously called \"K-12 Oriented\", K-12 being a USA-centric term which refers to the primary and secondary educational stages; through level 3 on the UNESCO ISCED education levels list.) please keep this list alphabetized Guido van Robot A teaching tool in which students write simple programs using a Python-like language to control a simulated robot. Field-tested at Yorktown High School, the project includes a lesson plan. Python for Kids by Jason R Briggs. Book with sample code and puzzles. PythonTurtle A learning environment for Python suitable for beginners and children, inspired by Logo. Geared mainly towards children, but known to be successful with adults as well. Webucator\u0027s self-paced Python 3 course free for homeschoolers and other students (use HOMESCHOOL as the coupon code when checking out). This course is appropr",
+    "scrapedAt": "2026-10-08 19:09:28.652841"
+  },
+  {
+    "id": 665,
+    "url": "http://docs.python.org/3/faq/",
+    "title": "Python Frequently Asked Questions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python Frequently Asked Questions | Theme Auto Light Dark | Python Frequently Asked Questions¶ General Python FAQ Programming FAQ Design and History FAQ Library and Extension FAQ Extending/Embedding FAQ Python on Windows FAQ Graphic User Interface FAQ “Why is Python Installed on my Computer?” FAQ Previous topic Remote debugging attachment protocol Next topic General Python FAQ This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python Frequently Asked Questions | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:09:26.954476"
+  },
+  {
     "id": 664,
     "url": "https://www.python.org/dev/",
     "title": "Python Developer\u0027s Guide | Python.org",
@@ -4360,30 +4400,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 665,
-    "url": "http://docs.python.org/3/faq/"
-  },
-  {
-    "id": 667,
-    "url": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
-  },
-  {
-    "id": 668,
-    "url": "https://www.python.org/doc/nonenglish/"
-  },
-  {
-    "id": 669,
-    "url": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
-  },
-  {
-    "id": 670,
-    "url": "http://code.activestate.com/recipes/langs/python/"
-  },
-  {
-    "id": 671,
-    "url": "http://www.google.com"
   },
   {
     "id": 672,
@@ -105238,10 +105254,1035 @@ window.searchData = [
     "id": 72533,
     "url": "https://pythondotorg.readthedocs.io/",
     "parentUrl": "https://www.python.org/dev/"
+  },
+  {
+    "id": 72536,
+    "url": "https://docs.python.org/3/faq/design.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72537,
+    "url": "https://docs.python.org/3/faq/library.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72539,
+    "url": "https://docs.python.org/3/faq/programming.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72540,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/faq/index.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72542,
+    "url": "https://docs.python.org/3/faq/",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72547,
+    "url": "https://docs.python.org/3/faq/general.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72553,
+    "url": "https://docs.python.org/3/faq/gui.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72554,
+    "url": "https://docs.python.org/3/faq/windows.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72555,
+    "url": "https://docs.python.org/3/howto/remote_debugging.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72557,
+    "url": "https://docs.python.org/3/faq/#python-frequently-asked-questions",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72558,
+    "url": "https://docs.python.org/3/faq/extending.html",
+    "parentUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "id": 72559,
+    "url": "https://techbeamers.com/python-tutorial-step-by-step/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72560,
+    "url": "http://docs.python.org/py3k/tutorial/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72561,
+    "url": "https://blog.finxter.com/email-academy/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72562,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Intro(20)to(20)programming(20)with(20)Python(20)and(20)Tkinter.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72563,
+    "url": "http://anh.cs.luc.edu/handsonPythonTutorial/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72566,
+    "url": "http://cscircles.cemc.uwaterloo.ca/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72567,
+    "url": "https://labex.io/skilltrees/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72568,
+    "url": "https://automatetheboringstuff.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72569,
+    "url": "http://en.wikibooks.org/wiki/Non-Programmer\u0027s_Tutorial_for_Python_3.0",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72570,
+    "url": "https://www.pythonspot.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72571,
+    "url": "http://www.pasteur.fr/recherche/unites/sis/formation/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72572,
+    "url": "https://www.afterhoursprogramming.com/tutorial/Python/Overview/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72573,
+    "url": "http://letsfindcourse.com/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72574,
+    "url": "http://www.checkio.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72575,
+    "url": "https://hackinscience.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72576,
+    "url": "http://www.amazon.com/Making-Games-Python-Pygame-Sweigart/dp/1469901730?ie\u003dUTF8\u0026tag\u003dplaywithpyth-20\u0026linkCode\u003das2\u0026camp\u003d1789\u0026creative\u003d9325\u0026creativeASIN\u003d0982106017",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72577,
+    "url": "https://www.amazon.com/Think-Python-Like-Computer-Scientist/dp/1491939362/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72579,
+    "url": "http://thepythonguru.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72580,
+    "url": "http://www.livewires.org.uk/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72582,
+    "url": "http://www.divx.com/divx/windows/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72583,
+    "url": "https://www.codecademy.com/search?query\u003dpython",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72584,
+    "url": "http://illustratedtheoryofnumbers.com/prog.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72585,
+    "url": "https://runestone.academy/ns/books/published/thinkcspy/index.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72586,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/McCaughan.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72587,
+    "url": "http://www.python-course.eu/python3_course.php",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72588,
+    "url": "https://overiq.com/python/3.4/intro-to-python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72589,
+    "url": "https://askpython.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72590,
+    "url": "https://www.datacamp.com/courses/intro-to-python-for-data-science",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72591,
+    "url": "https://www.quizcure.com/topic/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72593,
+    "url": "https://www.webucator.com/self-paced-training/index.cfm#!?courseId\u003dPYT111",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72595,
+    "url": "http://inventwithpython.com/pygame",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72596,
+    "url": "https://blog.finxter.com/free-python-books/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72597,
+    "url": "http://gvr.sourceforge.net",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72598,
+    "url": "http://pythonturtle.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72600,
+    "url": "http://openbookproject.net/thinkcs/python/english3e/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72601,
+    "url": "http://www.talk-it.biz/tutorial-categories/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72602,
+    "url": "http://pythontips.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72603,
+    "url": "https://www.amazon.com/gp/product/B07ZY7XMX8",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72604,
+    "url": "https://codevisionz.com/learn-python-programming/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72605,
+    "url": "https://itsmycode.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72606,
+    "url": "https://pythononeliners.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72607,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/NumPy.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72608,
+    "url": "http://www.amazon.com/gp/product/1593275994/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72609,
+    "url": "https://www.afternerd.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72610,
+    "url": "https://youtu.be/uCzFUKWtzgA?list\u003dPLboXykqtm8dy_DNg1NZiS08Dnyj35PWXw",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72612,
+    "url": "https://finxter.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72613,
+    "url": "http://www.biopython.org",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72614,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/BeginnersGuide(2f)Programmers.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72616,
+    "url": "http://jasonrbriggs.com/python-for-kids/index.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72617,
+    "url": "http://www.alan-g.me.uk/l2p2",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72618,
+    "url": "https://codetheblocks.com",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72619,
+    "url": "https://www.codedex.io",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72620,
+    "url": "https://www.datacamp.com/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72622,
+    "url": "https://www.patternsgameprog.com/series/discover-python-and-patterns/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72623,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/CategoryPythonInEducation.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72624,
+    "url": "https://coursesity.com/best-tutorials-learn/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72625,
+    "url": "http://young-programmers.blogspot.com/search/label/python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72626,
+    "url": "https://www.coursesonline.co.uk/courses/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72627,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/PyCrust.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72628,
+    "url": "http://www.khanacademy.org/#computer-science",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72629,
+    "url": "http://python.lycee.free.fr/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72630,
+    "url": "https://www.learnpython.org/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72631,
+    "url": "https://www.programiz.com/learn-python",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72632,
+    "url": "http://www.videolan.org/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72633,
+    "url": "https://learn-python.adamemery.dev",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72634,
+    "url": "http://greenteapress.com/thinkpython/html/index.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72635,
+    "url": "http://www.onlamp.com/pub/a/python/2002/10/17/biopython.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "id": 72636,
+    "url": "https://wiki.python.org/moin/SlovakLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72637,
+    "url": "https://wiki.python.org/moin/ArmenianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72638,
+    "url": "https://wiki.python.org/moin/BodoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72639,
+    "url": "https://wiki.python.org/moin/MongolianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72640,
+    "url": "https://wiki.python.org/moin/SloveneLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72641,
+    "url": "https://wiki.python.org/moin/IndonesianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72642,
+    "url": "https://wiki.python.org/moin/PortugueseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72643,
+    "url": "https://wiki.python.org/moin/SwahiliLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72644,
+    "url": "https://wiki.python.org/moin/SanskritLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72645,
+    "url": "https://wiki.python.org/moin/EstonianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72646,
+    "url": "https://wiki.python.org/moin/ArabicLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72647,
+    "url": "https://wiki.python.org/moin/ItalianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72648,
+    "url": "https://wiki.python.org/moin/GreekLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72649,
+    "url": "https://wiki.python.org/moin/KhmerLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72650,
+    "url": "https://wiki.python.org/moin/KonkaniLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72651,
+    "url": "https://wiki.python.org/moin/PunjabiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72652,
+    "url": "https://wiki.python.org/moin/RomanianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72653,
+    "url": "https://wiki.python.org/moin/FrenchLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72654,
+    "url": "https://wiki.python.org/moin/RussianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72655,
+    "url": "https://wiki.python.org/moin/IcelandicLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72656,
+    "url": "https://wiki.python.org/moin/KoreanLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72657,
+    "url": "https://wiki.python.org/moin/AlbanianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72658,
+    "url": "https://wiki.python.org/moin/BurmeseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72659,
+    "url": "https://wiki.python.org/moin/PersianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72660,
+    "url": "https://wiki.python.org/moin/HindiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72661,
+    "url": "https://wiki.python.org/moin/UzbekLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72662,
+    "url": "https://wiki.python.org/moin/VietnameseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72663,
+    "url": "https://wiki.python.org/moin/ChineseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72664,
+    "url": "https://wiki.python.org/moin/HausaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72665,
+    "url": "https://wiki.python.org/moin/BosnianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72666,
+    "url": "https://wiki.python.org/moin/NepaliLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72667,
+    "url": "https://wiki.python.org/moin/SinhalaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72668,
+    "url": "https://wiki.python.org/moin/MarathiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72669,
+    "url": "https://wiki.python.org/moin/XhosaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72670,
+    "url": "https://wiki.python.org/moin/ThaiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72671,
+    "url": "https://wiki.python.org/moin/TigrinyaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72672,
+    "url": "https://wiki.python.org/moin/KazakhLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72673,
+    "url": "https://wiki.python.org/moin/BengaliLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72674,
+    "url": "https://wiki.python.org/moin/CatalanLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72675,
+    "url": "https://wiki.python.org/moin/OriyaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72676,
+    "url": "https://wiki.python.org/moin/TurkishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72677,
+    "url": "https://wiki.python.org/moin/LaoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72678,
+    "url": "https://wiki.python.org/moin/TagalogLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72679,
+    "url": "https://wiki.python.org/moin/AmharicLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72680,
+    "url": "https://wiki.python.org/moin/LithuanianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72681,
+    "url": "https://wiki.python.org/moin/NorwegianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72682,
+    "url": "https://wiki.python.org/moin/CategoryUnicode.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72683,
+    "url": "https://wiki.python.org/moin/DanishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72684,
+    "url": "https://wiki.python.org/moin/TamilLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72685,
+    "url": "https://wiki.python.org/moin/HungarianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72687,
+    "url": "https://wiki.python.org/moin/BulgarianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72689,
+    "url": "https://wiki.python.org/moin/MalayalamLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72690,
+    "url": "https://wiki.python.org/moin/WesternPunjabiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72691,
+    "url": "https://wiki.python.org/moin/ZuluLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72692,
+    "url": "https://wiki.python.org/moin/HebrewLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72693,
+    "url": "https://wiki.python.org/moin/PolishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72694,
+    "url": "https://wiki.python.org/moin/DogriLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72695,
+    "url": "https://wiki.python.org/moin/AzerbaijaniLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72696,
+    "url": "https://wiki.python.org/moin/TeluguLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72697,
+    "url": "https://wiki.python.org/moin/GeorgianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72698,
+    "url": "https://wiki.python.org/moin/OromoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72699,
+    "url": "https://wiki.python.org/moin/GermanLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72700,
+    "url": "https://wiki.python.org/moin/JapaneseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72701,
+    "url": "https://wiki.python.org/moin/AssameseLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72702,
+    "url": "https://wiki.python.org/moin/MalayLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72703,
+    "url": "https://wiki.python.org/moin/AfrikaansLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72704,
+    "url": "https://wiki.python.org/moin/GujaratiLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72705,
+    "url": "https://wiki.python.org/moin/SpanishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72706,
+    "url": "https://wiki.python.org/moin/FinnishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72707,
+    "url": "https://wiki.python.org/moin/SerbianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72708,
+    "url": "https://wiki.python.org/moin/UrduLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72709,
+    "url": "https://wiki.python.org/moin/EsperantoLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72710,
+    "url": "https://wiki.python.org/moin/SwedishLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72711,
+    "url": "https://wiki.python.org/moin/IgboLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72712,
+    "url": "https://wiki.python.org/moin/KashmiriLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72713,
+    "url": "https://wiki.python.org/moin/UkranianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72714,
+    "url": "https://wiki.python.org/moin/CzechLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72715,
+    "url": "https://wiki.python.org/moin/BelarusianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72716,
+    "url": "https://wiki.python.org/moin/DutchLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72717,
+    "url": "https://wiki.python.org/moin/CroatianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72718,
+    "url": "https://wiki.python.org/moin/KannadaLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72719,
+    "url": "https://wiki.python.org/moin/CategoryLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72720,
+    "url": "https://wiki.python.org/moin/LatvianLanguage.html",
+    "parentUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "id": 72744,
+    "url": "https://www.google.com/history/optout?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72745,
+    "url": "https://policies.google.com/technologies/cookies?utm_source\u003ducbs\u0026hl\u003dnl",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72746,
+    "url": "https://www.google.com/intl/nl_nl/ads/?subid\u003dww-ww-et-g-awa-a-g_hpafoot1_1!o2\u0026utm_source\u003dgoogle.com\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dgoogle_hpafooter\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72747,
+    "url": "https://store.google.com/NL?utm_source\u003dhp_header\u0026utm_medium\u003dgoogle_ooo\u0026utm_campaign\u003dGS100042\u0026hl\u003dnl-NL",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72748,
+    "url": "https://consent.google.com/d?continue\u003dhttps://www.google.com/?gws_rd%3Dssl\u0026gl\u003dNL\u0026m\u003d0\u0026pc\u003dshp\u0026cm\u003d5\u0026hl\u003dnl\u0026src\u003d4",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72749,
+    "url": "https://policies.google.com/privacy?hl\u003dnl\u0026fg\u003d1\u0026utm_source\u003ducbs",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72750,
+    "url": "https://www.google.com/?sca_esv\u003dfe9e84a888596578\u0026output\u003dsearch\u0026gbv\u003d1\u0026sei\u003dTs7HasvTBdO4-d8PzcrQwAQ",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72751,
+    "url": "https://www.google.com/services/?subid\u003dww-ww-et-g-awa-a-g_hpbfoot1_1!o2\u0026utm_source\u003dgoogle.com\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dgoogle_hpbfooter\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72752,
+    "url": "https://www.google.com/history/privacyadvisor/search/unauth?utm_source\u003dgooglemenu\u0026fg\u003d1\u0026cctld\u003dcom",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72753,
+    "url": "https://about.google/?fg\u003d1\u0026utm_source\u003dgoogle-NL\u0026utm_medium\u003dreferral\u0026utm_campaign\u003dhp-header",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72754,
+    "url": "https://policies.google.com/terms?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72755,
+    "url": "https://www.google.com/search?sca_esv\u003dfe9e84a888596578\u0026sxsrf\u003dAPpeQntavPm_5rQhd6fCPMf2Q2MM2JO8jA:1791479374115\u0026q\u003dWereldruimteweek+2026\u0026oi\u003dddle\u0026noiga\u003d1\u0026ct\u003d568423885\u0026hl\u003dnl\u0026si\u003dAPenkKlisoOXLiCMwraINHtdqOQii4CK9kOlkQc8Apn-pS60yUR95zS5b4mLxH6KUvFnZLCcJ3RuRnsiIkvSoFXt4jc4QFiQ2z2cdHbsqaVjb_vpWakDbpipFFZt9kpcFUiPIyD6DikyfpoWeI-eTt0F3JuVhBLOgilBFo8UA3vBDbCIqOe7_RY%3D\u0026sa\u003dX\u0026ved\u003d0ahUKEwjLstzd9KqXAxVTXP4FHU0lFEgQPQgG",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72756,
+    "url": "https://policies.google.com/privacy?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72757,
+    "url": "https://www.google.com/setprefs?sig\u003d0_zLCNGixNUl9Ca9rd5Jg-zyN_J6s%3D\u0026hl\u003dfy\u0026source\u003dhomepage\u0026sa\u003dX\u0026ved\u003d0ahUKEwjLstzd9KqXAxVTXP4FHU0lFEgQ2ZgBCDo",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72758,
+    "url": "https://policies.google.com/terms?hl\u003dnl\u0026fg\u003d1\u0026utm_source\u003ducbs",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72759,
+    "url": "https://www.google.com/advanced_search?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72760,
+    "url": "https://support.google.com/websearch/?p\u003dws_results_help\u0026hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72761,
+    "url": "https://google.com/search/howsearchworks/?fg\u003d1",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72762,
+    "url": "https://sustainability.google/?utm_source\u003dgooglehpfooter\u0026utm_medium\u003dhousepromos\u0026utm_campaign\u003dbottom-footer\u0026utm_content\u003d",
+    "parentUrl": "http://www.google.com"
+  },
+  {
+    "id": 72763,
+    "url": "https://www.google.com/preferences?hl\u003dnl\u0026fg\u003d1",
+    "parentUrl": "http://www.google.com"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.google.com/logos/doodles/2026/space-week-2026-day-2-6753651837111376.3-law.gif",
+    "alt": "Meer informatie over Wereldruimteweek 2026",
+    "pageTitle": "Google",
+    "pageUrl": "http://www.google.com"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg",
+    "alt": "Google",
+    "pageTitle": "Google",
+    "pageUrl": "http://www.google.com"
+  },
+  {
+    "src": "https://pypi.org/static/images/logo-large.516e776d.svg",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/0e16ff2846ab7bc04f1e52d760b072c987232f52/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f416e7468726f7069635f6c6f676f5f2d5f536c6174652e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/2056e7cc45e271b6b509980e9ff24b8b6346f2f4/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f626c6f6f6d626572672e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/7e24ecafc35532bbd56c7c91521ea6701110c742/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6872742e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/6f7cbf25b7d9ee146661528e012e8fa51d6f3337/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f4d6574615f6c6f636b75705f706f7369746976655f7072696d6172795f5247425f636f70795f68546b493532472e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/22baa32a7b36b109ce052634015d878f5d029280/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6e76696469612e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/34ebcaca9a4316e862f2f7641b12534f0cb81bf1/68747470733a2f2f73332e6475616c737461636b2e75732d656173742d322e616d617a6f6e6177732e636f6d2f707974686f6e646f746f72672d6173736574732f6d656469612f73706f6e736f725f7765625f6c6f676f732f6d6963726f736f66742e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/237c8773674b9f8beff9f894a07424e3b579cd6a/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6465706f742d636f6c6f722d6c6f676f2d35567a75416e7a6b2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/f0e9bd2edb2aa1c533d61b0d4fda0ee761bef88a/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d636f6c6f722d6c6f676f2d416c6f43525230612e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/530379bec76c3440bd94a24092f49e27323ad0d7/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d636f6c6f722d6c6f676f2d71616563774a67722e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/9706778018adad6f5bf682f55d7bbc226abe551c/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d636f6c6f722d6c6f676f2d766c6d424c33654c2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/522342e78db3080c18697369dde99a0ed7925e86/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d636f6c6f722d6c6f676f2d32755437496c54702e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/f2a422796f8e4d51d60d7030b7973aa1651bd096/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d636f6c6f722d6c6f676f2d346e306a654878502e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://pypi-camo.freetls.fastly.net/b0ba0741ac65afcb01ebb4bbf0634c54b8a15827/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d636f6c6f722d6c6f676f2d423232436b746e6b2e706e67",
+    "alt": "",
+    "pageTitle": "PyPI · The Python Package Index",
+    "pageUrl": "http://pypi.python.org/pypi?%3Aaction\u003dindex"
+  },
+  {
+    "src": "https://wiki.python.org/moin/logo.png",
+    "alt": "",
+    "pageTitle": "Languages",
+    "pageUrl": "https://www.python.org/doc/nonenglish/"
+  },
+  {
+    "src": "https://wiki.python.org/moin/BeginnersGuide/logo.png",
+    "alt": "",
+    "pageTitle": "BeginnersGuide/NonProgrammers",
+    "pageUrl": "http://wiki.python.org/moin/BeginnersGuide/NonProgrammers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Frequently Asked Questions — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/3/faq/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Frequently Asked Questions — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/3/faq/"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
