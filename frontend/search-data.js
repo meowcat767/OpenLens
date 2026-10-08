@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 998,
+    "url": "https://docs.python.org/3/library/sys.html#sys._is_immortal",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:22:54.004943"
+  },
+  {
+    "id": 997,
+    "url": "https://github.com/python/cpython/issues/121797",
+    "title": "Add class method Fraction.from_number() · Issue #121797 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add class method Fraction.from_number() #121797 New issue Copy link New issue Copy link Closed Closed Add class method Fraction.from_number()#121797 Copy link Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Jul 15, 2024 Issue body actions Feature or enhancement It is an alternate constructor which only accepts a single numeric argument. Unlike to Fraction.from_float() and Fraction.from_decimal() it accepts any real numbers supported by the standard constructor (int, float, Decimal, Rational numbers). Unlike to the standard constructor, it does not accept strings. Similar to float.from_number() and complex.from_number() (see #84978). Linked PRs gh-121797: Add class method Fraction.from_number() #121800 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixestype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:22:52.722768"
+  },
+  {
+    "id": 996,
+    "url": "https://github.com/python/cpython/issues/119698",
+    "title": "symtable.Class.get_methods() returns non-methods · Issue #119698 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} symtable.Class.get_methods() returns non-methods #119698 New issue Copy link New issue Copy link Closed Closed symtable.Class.get_methods() returns non-methods#119698 Copy link Labels type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description JelleZijlstra opened on May 29, 2024 Issue body actions Bug report Bug description: Running this file: import symtable\n\nst \u003d symtable.symtable(\"\"\"\nclass X:\n    class Nested: pass\n    type Alias \u003d int\n    x \u003d (x for x in range(10))\n    y \u003d filter(lambda z: z % 2, range(10))\n\"\"\", \"mod\", \"exec\")\n\ncls \u003d st.get_children()[0]\nprint(cls.get_methods()) Prints: (\u0027Nested\u0027, \u0027Alias\u0027, \u0027genexpr\u0027, \u0027lambda\u0027)\n None of these are methods. @carljm and I noticed this as part of the work on PEP 649 (#119361 (comment)). My draft implementation excludes generated __annotate__ functions from the list of \"methods\", but perhaps all non-methods should be excluded. CPython versions tested on: 3.12, CPython main branch Operating systems tested on: macOS Linked PRs gh-119698: deprecate symtable.Class.get_methods #120148 gh-119698: fix symtable.Class.get_methods and document its behaviour correctly #120151 [3.12] gh-119698: fix symtable.Class.get_methods and document its behaviour correctly (#120151) #120776 [3.13] gh-119698: fix symtable.Class.get_methods and document its behaviour correctly (GH-120151) #120777 gh-119698: symtable: Fix merge race #120779 gh-119698: fix a special case in symtable.Class.get_methods #121802 gh-119698: deprecate symtable.Class.get_methods #121902 [3.13] gh-119698: fix a special case in symtable.Class.get_methods (GH-121802) #121909 [3.12] gh-119698: fix a special case in symtable.Class.get_methods (GH-121802) #121910 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:22:50.926431"
+  },
+  {
+    "id": 995,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE",
+    "title": "Type Object Structures — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Object Implementation Support » Type Object Structures | Theme Auto Light Dark | Type Object Structures¶ Perhaps one of the most important structures of the Python object system is the structure that defines a new type: the PyTypeObject structure. Type objects can be handled using any of the PyObject_* or PyType_* functions, but do not offer much that’s interesting to most Python applications. These objects are fundamental to how objects behave, so they are very important to the interpreter itself and to any extension module that implements new types. Type objects are fairly large compared to most of the standard types. The reason for the size is that each type object stores a large number of values, mostly C function pointers, each of which implements a small part of the type’s functionality. The fields of the type object are examined in detail in this section. The fields will be described in the order in which they occur in the structure. In addition to the following quick reference, the Examples section provides at-a-glance insight into the meaning and use of PyTypeObject. Quick Reference¶ “tp slots”¶ PyTypeObject Slot [1] Type special methods/attrs Info [2] O T D I \u003cR\u003e tp_name const char * __name__ X X tp_basicsize Py_ssize_t X X X tp_itemsize Py_ssize_t X X tp_dealloc destructor X X X tp_vectorcall_offset Py_ssize_t X X (tp_getattr) getattrfunc __getattribute__, __getattr__ G (tp_setattr) setattrfunc __setattr__, __delattr__ G tp_as_async PyAsyncMethods * sub-slots % tp_repr reprfunc __repr__ X X X tp_as_number PyNumberMethods * sub-slots % tp_as_sequence PySequenceMethods * sub-slots % tp_as_mapping PyMappingMethods * sub-slots % tp_hash hashfunc __hash__ X G tp_call ternaryfunc __call__ X X tp_str reprfunc __str__ X X tp_getattro getattrofunc __getattribute__, __getattr__ X X G tp_setattro setattrofunc __setattr__, __delattr__ X X G tp_as_buffer PyBufferProcs * sub-slots % tp_flags unsigned long X X ? tp_doc const char * __doc__ X X tp_traverse traverseproc X G tp_clear inquiry X G tp_richcompare richcmpfunc __lt__, __le__, __eq__, __ne__, __gt__, __ge__ X G (tp_weaklistoffset) Py_ssize_t X ? tp_iter getiterfunc __iter__ X tp_iternext iternextfunc __next__ X tp_methods PyMethodDef [] X X tp_members PyMemberDef [] X tp_getset PyGetSetDef [] X X tp_base PyTypeObject * __base__ X tp_dict PyObject * __dict__ ? tp_descr_get descrgetfunc __get__ X tp_descr_set descrsetfunc __set__, __delete__ X (tp_dictoffset) Py_ssize_t X ? tp_init initproc __init__ X X X tp_alloc allocfunc X ? ? tp_new newfunc __new__ X X ? ? tp_free freefunc X X ? ? tp_is_gc inquiry X X \u003ctp_bases\u003e PyObject * __bases__ ~ \u003ctp_mro\u003e PyObject * __mro__ ~ [tp_cache] PyObject * [tp_subclasses] void * __subclasses__ [tp_weaklist] PyObject * (tp_del) destructor [tp_version_tag] unsigned int tp_finalize destructor __del__ X tp_vectorcall vectorcallfunc [tp_watched] unsigned char [1] (): A slot name in parentheses indicates it is (effectively) deprecated. \u003c\u003e: Names in angle brackets should be initially set to NULL and treated as read-only. []: Names in square brackets are for internal use only. \u003cR\u003e (as a prefix) means the field is required (must be non-NULL). [2] Columns: “O”: set on PyBaseObject_Type “T”: set on PyType_Type “D”: default (if slot is set to NULL) X - PyType_Ready sets this value if it is NULL\n~ - PyType_Ready always sets this value (it should be NULL)\n? - PyType_Ready may set this value depending on other slots\n\nAlso see the inheritance column (\"I\").\n “I”: inheritance X - type slot is inherited via *PyType_Ready* if defined with a *NULL* value\n% - the slots of the sub-struct are inherited individually\nG - inherited, but only in combination with other slots; see the slot\u0027s description\n? - it\u0027s complicated; see the slot\u0027s description\n Note that some slots are effectively inherited through the normal attribute lookup chain. sub-slots¶ Slot Type special methods am_await unaryfunc __await__ am_aiter unaryfunc __aiter__ am_anext unaryfunc __anext__ am_send sendfunc nb_add binaryfunc __add__ __radd__ nb_inplace_add binaryfunc __iadd__ nb_subtract binaryfunc __sub__ __rsub__ nb_inplace_subtract binaryfunc __isub__ nb_multiply binaryfunc __mul__ __rmul__ nb_inplace_multiply binaryfunc __imul__ nb_remainder binaryfunc __mod__ __rmod__ nb_inplace_remainder binaryfunc __imod__ nb_divmod binaryfunc __divmod__ __rdivmod__ nb_power ternaryfunc __pow__ __rpow__ nb_inplace_power ternaryfunc __ipow__ nb_negative unaryfunc __neg__ nb_positive unaryfunc __pos__ nb_absolute unaryfunc __abs__ nb_bool inquiry __bool__ nb_invert unaryfunc __invert__ nb_lshift binaryfunc __lshift__ __rlshift__ nb_inplace_lshift binaryfunc __ilshift__ nb_rshift binaryfunc __rshift__ __rrshift__ nb_inplace_rshift binaryfunc __irshift__ nb_and binaryfunc __and__ __rand__ nb_inplace_and binaryfunc __iand__ nb_xor binaryfunc __xor__ __rxor__ nb_inplace_xor binaryfunc __i",
+    "scrapedAt": "2026-10-08 19:22:48.59348"
+  },
+  {
+    "id": 994,
+    "url": "https://docs.python.org/3/library/locale.html#locale.setlocale",
+    "title": "locale — Internationalization services — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic cons",
+    "scrapedAt": "2026-10-08 19:22:47.262344"
+  },
+  {
     "id": 993,
     "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE",
     "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
@@ -6615,26 +6650,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 994,
-    "url": "https://docs.python.org/3/library/locale.html#locale.setlocale"
-  },
-  {
-    "id": 995,
-    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
-  },
-  {
-    "id": 996,
-    "url": "https://github.com/python/cpython/issues/119698"
-  },
-  {
-    "id": 997,
-    "url": "https://github.com/python/cpython/issues/121797"
-  },
-  {
-    "id": 998,
-    "url": "https://docs.python.org/3/library/sys.html#sys._is_immortal"
   },
   {
     "id": 999,
@@ -166926,10 +166941,1175 @@ window.searchData = [
     "id": 152061,
     "url": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_ExitScope",
     "parentUrl": "https://docs.python.org/3/c-api/monitoring.html#c.PyMonitoring_FireBranchLeftEvent"
+  },
+  {
+    "id": 152325,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_lshift",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152326,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_true_divide",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152332,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152333,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.richcmpfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152336,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#slot-type-typedefs",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152337,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_subtract",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152339,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_METHOD_DESCRIPTOR",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152340,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_multiply",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152341,
+    "url": "https://docs.python.org/3/c-api/buffer.html#buffer-structure",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152343,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_READYING",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152344,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_BASE_EXC_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152346,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_as_sequence",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152347,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.objobjargproc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152351,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#examples",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152355,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.destructor",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152358,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_and",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152360,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#async-structs",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152361,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#type-object-structures",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152362,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_negative",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152363,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.reprfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152368,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#id6",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152370,
+    "url": "https://docs.python.org/3/c-api/lifecycle.html#life-cycle",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152372,
+    "url": "https://docs.python.org/3/c-api/lifecycle.html#c.PyObject_CallFinalizerFromDealloc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152373,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyObject_GetBuffer",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152374,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#id2",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152375,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#id1",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152377,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_IsInstance",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152378,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyAsyncMethods.am_aiter",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152379,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_positive",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152380,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_and",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152383,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_as_mapping",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152384,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.ternaryfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152386,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyObject_HEAD",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152388,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#pyobject-slots",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152390,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_RichCompare",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152391,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_READY",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152393,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_call",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152398,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.unaryfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152399,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyAsyncMethods.am_await",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152402,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_del",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152403,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.binaryfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152407,
+    "url": "https://docs.python.org/3/extending/newtypes_tutorial.html#defining-new-types",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152408,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.lenfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152411,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.suboffsets",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152413,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_FillInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152417,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyObject.ob_type",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152418,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_invert",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152422,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_str",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152423,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_SET_SIZE",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152424,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_inplace_repeat",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152427,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_descr_set",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152429,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#pyvarobject-slots",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152432,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_HashNotImplemented",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152434,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.initproc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152436,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.iternextfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152437,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_ass_item",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152447,
+    "url": "https://docs.python.org/3/extending/newtypes.html#new-types-topics",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152448,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#slot-typedefs",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152451,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_rshift",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152452,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyMappingMethods.mp_subscript",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152454,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.descrsetfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152459,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_lshift",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152460,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_getset",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152461,
+    "url": "https://docs.python.org/3/c-api/call.html#c.vectorcallfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152462,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_setattr",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152463,
+    "url": "https://docs.python.org/3/c-api/lifecycle.html#c.PyObject_CallFinalizer",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152464,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#cols",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152465,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_matrix_multiply",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152467,
+    "url": "https://docs.python.org/3/c-api/objimpl.html",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152469,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_STACKLESS_EXTENSION",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152471,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_finalize",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152472,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_xor",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152474,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#sequence-object-structures",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152475,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152478,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#mapping-structs",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152479,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_repeat",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152481,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_DelItem",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152483,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/typeobj.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152484,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_as_async",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152485,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.format",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152487,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.Py_SIZE",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152489,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_index",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152490,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.PyBuffer_Release",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152491,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.getattrofunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152492,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyVarObject.ob_size",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152494,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_int",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152495,
+    "url": "https://docs.python.org/3/c-api/number.html#number",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152499,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_TYPE_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152500,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#number-object-structures",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152502,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_bool",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152504,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyBaseObject_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152505,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_bases",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152507,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_matrix_multiply",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152508,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#buffer-object-structures",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152509,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_getattr",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152510,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_power",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152511,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_version_tag",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152512,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152516,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_ClearManagedDict",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152517,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_members",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152518,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.ssizeargfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152521,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_power",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152522,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_BASETYPE",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152523,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_DICT_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152528,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_watched",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152532,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_getattro",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152536,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_add",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152539,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.objobjproc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152541,
+    "url": "https://docs.python.org/3/c-api/call.html#vectorcall",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152542,
+    "url": "https://docs.python.org/3/c-api/structures.html",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152543,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_DEFAULT",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152544,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.descrgetfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152545,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#pytypeobject-slots",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152547,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.shape",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152548,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#buffer-structs",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152551,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyObject.ob_refcnt",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152553,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetIter",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152554,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_setattro",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152555,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_methods",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152557,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_floor_divide",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152558,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.ssizeobjargproc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152559,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_VERSION_TAG",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152560,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_rshift",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152561,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_remainder",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152562,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GenericGetDict",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152565,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#static-types",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152566,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_multiply",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152569,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_absolute",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152571,
+    "url": "https://bugs.python.org/issue40217",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152575,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_INLINE_VALUES",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152578,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.Py_VISIT",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152580,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#sub-slots",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152582,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_concat",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152583,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_SetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152584,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.internal",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152585,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.getiterfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152587,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.hashfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152593,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.setattrofunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152594,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_float",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152596,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_VisitManagedDict",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152597,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_VALID_VERSION_TAG",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152598,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#slot-typedefs-table",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152599,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#tp-slots",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152600,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_VECTORCALL",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152601,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#mapping-object-structures",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152603,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_descr_get",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152607,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_subtract",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152608,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.releasebufferproc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152609,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_or",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152610,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_reserved",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152611,
+    "url": "https://docs.python.org/3/c-api/list.html#c.PyList_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152612,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.getattrfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152613,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152614,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.sendfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152615,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_remainder",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152617,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyVarObject",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152624,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_doc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152626,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_or",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152629,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyObject_VAR_HEAD",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152630,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_is_gc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152632,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_true_divide",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152634,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_item",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152635,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_TUPLE_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152636,
+    "url": "https://docs.python.org/3/c-api/call.html#c.PyVectorcall_Call",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152637,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_UNICODE_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152639,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_floor_divide",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152641,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_BYTES_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152644,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_inplace_xor",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152646,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_as_buffer",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152647,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.setattrfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152648,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyMappingMethods.mp_ass_subscript",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152649,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.getbufferproc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152652,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.visitproc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152653,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.PyUnstable_Object_GC_NewWithExtraData",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152656,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GenericSetAttr",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152659,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_divmod",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152663,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#quick-reference",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152666,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#pytypeobject-definition",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152670,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_RETURN_RICHCOMPARE",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152672,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152673,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_as_number",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152674,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GenericGetAttr",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152675,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#async-object-structures",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152676,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#number-structs",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152679,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#typedef-examples",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152680,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_contains",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152681,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_inplace_concat",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152682,
+    "url": "https://docs.python.org/3/c-api/call.html#c.PyObject_Call",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152683,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyAsyncMethods.am_anext",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152684,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.allocfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152692,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.newfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152693,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_IS_ABSTRACT",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152696,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyAsyncMethods.am_send",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152698,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#sequence-structs",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152699,
+    "url": "https://docs.python.org/3/c-api/buffer.html#c.Py_buffer.strides",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152701,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_LIST_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152702,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#supporting-cycle-detection",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152704,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyMappingMethods.mp_length",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152705,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#slots",
+    "parentUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "id": 152707,
+    "url": "https://github.com/python/cpython/issues/119698#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152708,
+    "url": "https://github.com/python/cpython/pull/120151",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152710,
+    "url": "https://github.com/carljm",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152711,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/119698",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152712,
+    "url": "https://github.com/python/cpython/issues/119698#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152715,
+    "url": "https://github.com/python/cpython/pull/121909",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152716,
+    "url": "https://github.com/python/cpython/pull/120779",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152717,
+    "url": "https://github.com/python/cpython/pull/121902",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152718,
+    "url": "https://github.com/python/cpython/pull/120777",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152719,
+    "url": "https://github.com/python/cpython/pull/120776",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152720,
+    "url": "https://github.com/python/cpython/pull/121910",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152721,
+    "url": "https://github.com/python/cpython/issues/119698#issue-2322168646",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152722,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/119698",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152723,
+    "url": "https://github.com/python/cpython/pull/119361#discussion_r1617999479",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152724,
+    "url": "https://github.com/python/cpython/pull/121802",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152725,
+    "url": "https://github.com/python/cpython/pull/120148",
+    "parentUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "id": 152727,
+    "url": "https://github.com/python/cpython/issues/121797#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "id": 152728,
+    "url": "https://github.com/python/cpython/issues/121797#issue-2409084431",
+    "parentUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "id": 152729,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/121797",
+    "parentUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "id": 152730,
+    "url": "https://github.com/python/cpython/pull/121800",
+    "parentUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "id": 152732,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/121797",
+    "parentUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "id": 152735,
+    "url": "https://github.com/python/cpython/issues/121797#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121797"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._is_immortal"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._is_immortal"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Add class method Fraction.from_number() · Issue #121797 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add class method Fraction.from_number() · Issue #121797 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121797"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "symtable.Class.get_methods() returns non-methods · Issue #119698 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "symtable.Class.get_methods() returns non-methods · Issue #119698 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119698"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Object Structures — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Object Structures — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_FINALIZE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.setlocale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.setlocale"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
