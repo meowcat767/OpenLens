@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1132,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html",
+    "title": "RFC 4337 - MIME Type Registration for MPEG-4",
+    "content": "Light Dark Auto Network Working Group                                             Y. Lim\nRequest for Comments: 4337                                   net\u0026tv Inc.\nCategory: Standards Track                                      D. Singer\n                                                          Apple Computer\n                                                              March 2006\n\n\n                   MIME Type Registration for MPEG-4 \n\nStatus of This Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\nCopyright Notice\n\n   Copyright (C) The Internet Society (2006).\n\nAbstract\n\n   This document defines the standard MIME types associated with MP4\n   files.  It also recommends use of registered MIME types according to\n   the type of contents.\n\nTable of Contents\n\n   1. Introduction ....................................................2\n   2. Selection of MIME Types for MP4 Files ...........................3\n   3. IANA Considerations .............................................3\n      3.1. MP4 File ...................................................4\n      3.2. MP4 File with Audio but without Visual Presentation ........5\n      3.3. MP4 File with MPEG-4 System Stream and neither\n           Visual nor Audio Presentation ..............................6\n      3.4. Initial Object Descriptor (IOD) in Binary Format ...........7\n      3.5. Initial Object Descriptor (IOD) in Textual Format ..........8\n   4. Security Considerations .........................................9\n   5. Acknowledgements ................................................9\n   6. Normative References ............................................9\n\n\n\n\n\n\n\n\n\n\nLim \u0026 Singer                Standards Track                     [Page 1] RFC 4337                   MPEG-4 MIME Types                  March 2006\n\n\n 1.  Introduction \n\n   This document describes a standard definition of MIME types\n   associated with MP4 files and the guidelines for using them.\n\n   MPEG-4 (ISO/IEC 14496) is a standard designed for the representation\n   and delivery of multimedia information over a variety of transport\n   protocols [1].  It includes interactive scene management and visual\n   and audio representations, as well as system functionality like\n   multiplexing, synchronization, and an object descriptor framework\n   [2].\n\n   The historical approach for MPEG data has been to declare it under\n   \"video\", and this approach is followed for ISO/IEC 14496.  In\n   addition, some MIME types are defined under \"audio\" and \"application\"\n   for the streams not containing visual presentation.\n\n   Amendment 1 of the ISO/IEC 14496 standard (also known as version 2)\n   introduced a standard file type, called MP4 files, for encapsulating\n   ISO/IEC 14496 data.  This is now separately specified as the MP4 file\n   format [4], which in turn is based on the ISO base media file format\n   [3].  A separate specification [5] covers the storage of Advanced\n   Video Coding (AVC) (also known as H.264) [6] material in files based\n   on the ISO base media file format.  The MP4 file type can be used in\n   a number of ways; perhaps the most important of these is its use as\n   an interchange format for ISO/IEC 14496 data, as a content-download\n   format, and as the format read by streaming media servers.\n\n   These first two uses will be greatly facilitated if there is a\n   standard MIME type for serving these files (e.g., over HTTP).\n\n   The ISO/IEC 14496 standard is broad, and therefore the type of data\n   that may be in such a file can vary.  In brief, simple compressed\n   video and audio (using a number of different compression algorithms)\n   can be included; interactive scene information; meta-data about the\n   presentation; references to ISO/IEC 14496 media streams outside the\n   file and so on.  Different top-level MIME types are used to identify\n   the type of the contents in the file.\n\n\n\n\n\n\n\n\n\n\n\n\n\nLim \u0026 Singer                Standards Track                     [Page 2] RFC 4337                   MPEG-4 MIME Types                  March 2006\n\n\n 2.  Selection of MIME Types for MP4 Files \n\n   The MIME types to be assigned to MP4 files are selected according to\n   the contents.  Basic guidelines for selecting MIME types are as\n   follows:\n\n   a) if the file contains neither visual nor audio presentations, but\n      only, for example, MPEG-J or MPEG-7, use application/mp4;\n\n   b) for all other files, including those that have MPEG-J, etc., in\n      addition to video or audio streams, video/mp4 should be used;\n      however:\n\n   c) for files with audio but no visual aspect, including those that\n      have MPEG-J, etc., in addition to audio streams, audio/mp4 may be\n      used.\n\n   In any case, these indicat",
+    "scrapedAt": "2026-10-08 19:28:35.785528"
+  },
+  {
+    "id": 1131,
+    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.util",
+    "title": "importlib — The implementation of import — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Importing Modules » importlib — The implementation of import | Theme Auto Light Dark | importlib — The implementation of import¶ Added in version 3.1. Source code: Lib/importlib/__init__.py Introduction¶ The purpose of the importlib package is three-fold. One is to provide the implementation of the import statement (and thus, by extension, the __import__() function) in Python source code. This provides an implementation of import which is portable to any Python interpreter. This also provides an implementation which is easier to comprehend than one implemented in a programming language other than Python. Two, the components to implement import are exposed in this package, making it easier for users to create their own custom objects (known generically as an importer) to participate in the import process. Three, the package contains modules exposing additional functionality for managing aspects of Python packages: importlib.metadata presents access to metadata from third-party distributions. importlib.resources provides routines for accessing non-code “resources” from Python packages. See also The import statement The language reference for the import statement. Packages specification Original specification of packages. Some semantics have changed since the writing of this document (e.g. redirecting based on None in sys.modules). The __import__() function The import statement is syntactic sugar for this function. The initialization of the sys.path module search path The initialization of sys.path. PEP 235 Import on Case-Insensitive Platforms PEP 263 Defining Python Source Code Encodings PEP 302 New Import Hooks PEP 328 Imports: Multi-Line and Absolute/Relative PEP 366 Main module explicit relative imports PEP 420 Implicit namespace packages PEP 451 A ModuleSpec Type for the Import System PEP 488 Elimination of PYO files PEP 489 Multi-phase extension module initialization PEP 552 Deterministic pycs PEP 3120 Using UTF-8 as the Default Source Encoding PEP 3147 PYC Repository Directories Functions¶ importlib.__import__(name, globals\u003dNone, locals\u003dNone, fromlist\u003d(), level\u003d0)¶ An implementation of the built-in __import__() function. Note Programmatic importing of modules should use import_module() instead of this function. importlib.import_module(name, package\u003dNone)¶ Import a module. The name argument specifies what module to import in absolute or relative terms (e.g. either pkg.mod or ..mod). If the name is specified in relative terms, then the package argument must be set to the name of the package which is to act as the anchor for resolving the package name (e.g. import_module(\u0027..mod\u0027, \u0027pkg.subpkg\u0027) will import pkg.mod). The import_module() function acts as a simplifying wrapper around importlib.__import__(). This means all semantics of the function are derived from importlib.__import__(). The most important difference between these two functions is that import_module() returns the specified package or module (e.g. pkg.mod), while __import__() returns the top-level package or module (e.g. pkg). If you are dynamically importing a module that was created since the interpreter began execution (e.g., created a Python source file), you may need to call invalidate_caches() in order for the new module to be noticed by the import system. Changed in version 3.3: Parent packages are automatically imported. importlib.invalidate_caches()¶ Invalidate the internal caches of finders stored at sys.meta_path. If a finder implements invalidate_caches() then it will be called to perform the invalidation. This function should be called if any modules are created/installed while your program is running to guarantee all finders will notice the new module’s existence. Added in version 3.3. Changed in version 3.10: Namespace packages created/installed in a different sys.path location after the same namespace was already imported are noticed. importlib.reload(module)¶ Reload a previously imported module. The argument must be a module object, so it must have been successfully imported before. This is useful if you have edited the module source file using an external editor and want to try out the new version without leaving the Python interpreter. The return value is the module object (which can be different if re-importing causes a different object to be placed in sys.modules). When reload() is executed: Python module’s code is recompiled and the module-level code re-executed, defining a new set of objects which are bound to names in the module’s dictionary by reusing the loader which originally loaded the module. The init function of extension modules is not called a second time. As with all other objects in Python the old objects are only reclaimed after their reference counts drop to zero. The names in the module namespace are updated to point to any new or changed objects. Other references to the old objects (such as names exte",
+    "scrapedAt": "2026-10-08 19:28:34.166254"
+  },
+  {
+    "id": 1130,
+    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner",
+    "title": "Runners — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Runners | Theme Auto Light Dark | Runners¶ Source code: Lib/asyncio/runners.py This section outlines high-level asyncio primitives to run asyncio code. They are built on top of an event loop with the aim to simplify async code usage for common wide-spread scenarios. Running an asyncio Program¶ asyncio.run(coro, *, debug\u003dNone, loop_factory\u003dNone)¶ Execute coro in an asyncio event loop and return the result. The argument can be any awaitable object. This function runs the awaitable, taking care of managing the asyncio event loop, finalizing asynchronous generators, and closing the executor. This function cannot be called when another asyncio event loop is running in the same thread. If debug is True, the event loop will be run in debug mode. False disables debug mode explicitly. None is used to respect the global Debug Mode settings. If loop_factory is not None, it is used to create a new event loop; otherwise asyncio.new_event_loop() is used. The loop is closed at the end. This function should be used as a main entry point for asyncio programs, and should ideally only be called once. It is recommended to use loop_factory to configure the event loop instead of policies. Passing asyncio.EventLoop allows running asyncio without the policy system. The executor is given a timeout duration of 5 minutes to shutdown. If the executor hasn’t finished within that duration, a warning is emitted and the executor is closed. Example: async def main():\n    await asyncio.sleep(1)\n    print(\u0027hello\u0027)\n\nasyncio.run(main())\n Added in version 3.7. Changed in version 3.9: Updated to use loop.shutdown_default_executor(). Changed in version 3.10: debug is None by default to respect the global debug mode settings. Changed in version 3.12: Added loop_factory parameter. Changed in version 3.14: coro can be any awaitable object. Note The asyncio policy system is deprecated and will be removed in Python 3.16; from there on, an explicit loop_factory is needed to configure the event loop. Runner context manager¶ class asyncio.Runner(*, debug\u003dNone, loop_factory\u003dNone)¶ A context manager that simplifies multiple async function calls in the same context. Sometimes several top-level async functions should be called in the same event loop and contextvars.Context. If debug is True, the event loop will be run in debug mode. False disables debug mode explicitly. None is used to respect the global Debug Mode settings. loop_factory could be used for overriding the loop creation. It is the responsibility of the loop_factory to set the created loop as the current one. By default asyncio.new_event_loop() is used and set as current event loop with asyncio.set_event_loop() if loop_factory is None. Basically, asyncio.run() example can be rewritten with the runner usage: async def main():\n    await asyncio.sleep(1)\n    print(\u0027hello\u0027)\n\nwith asyncio.Runner() as runner:\n    runner.run(main())\n Added in version 3.11. run(coro, *, context\u003dNone)¶ Execute coro in the embedded event loop. The argument can be any awaitable object. If the argument is a coroutine, it is wrapped in a Task. An optional keyword-only context argument allows specifying a custom contextvars.Context for the code to run in. The runner’s default context is used if context is None. Returns the awaitable’s result or raises an exception. This function cannot be called when another asyncio event loop is running in the same thread. Changed in version 3.14: coro can be any awaitable object. close()¶ Close the runner. Finalize asynchronous generators, shutdown default executor, close the event loop and release embedded contextvars.Context. get_loop()¶ Return the event loop associated with the runner instance. Note Runner uses the lazy initialization strategy, its constructor doesn’t initialize underlying low-level structures. Embedded loop and context are created at the with body entering or the first call of run() or get_loop(). Handling Keyboard Interruption¶ Added in version 3.11. When signal.SIGINT is raised by Ctrl-C, KeyboardInterrupt exception is raised in the main thread by default. However this doesn’t work with asyncio because it can interrupt asyncio internals and can hang the program from exiting. To mitigate this issue, asyncio handles signal.SIGINT as follows: asyncio.Runner.run() installs a custom signal.SIGINT handler before any user code is executed and removes it when exiting from the function. The Runner creates the main task for the passed coroutine for its execution. When signal.SIGINT is raised by Ctrl-C, the custom signal handler cancels the main task by calling asyncio.Task.cancel() which raises asyncio.CancelledError inside the main task. This causes the Python stack to unwind, try/except and try/finally blocks can be used for resource cleanup. After the main task is cancelled, asyncio.Runner.run() ra",
+    "scrapedAt": "2026-10-08 19:28:32.891908"
+  },
+  {
+    "id": 1129,
+    "url": "https://github.com/python/cpython/issues/120057",
+    "title": "Add os.reload_environ() function · Issue #120057 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add os.reload_environ() function #120057 New issue Copy link New issue Copy link Closed Closed Add os.reload_environ() function#120057 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Jun 4, 2024 Issue body actions Feature or enhancement When the environment is modified outside Python, os.environ is not updated. I propose adding a new os.environ.refresh() method to manually update os.environ. Discussion: https://discuss.python.org/t/method-to-refresh-os-environ/54774 Linked PRs gh-120057: Add os.environ.refresh() method #120059 gh-120057: Add os.get_user_default_environ() function #120494 Revert \"gh-120057: Add os.environ.refresh() method (#120059)\" #120789 Revert \"gh-120057: Add os.environ.refresh() method (#120059)\" #120790 gh-120057: Rename os.environ.refresh() to invalidate_cache() #120808 gh-120057: Add os.reload_environ() function #126268 gh-120057: add os.reload_environ to __all__ #140763 [3.14] gh-120057: add os.reload_environ to __all__ (GH-140763) #140773 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:28:31.613069"
+  },
+  {
+    "id": 1128,
+    "url": "https://github.com/hacl-star/hacl-star/",
+    "title": "GitHub - hacl-star/hacl-star: HACL*, a formally verified cryptographic library written in F* · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} main Branches Tags Go to file Code Open more actions menu Latest commit History 19,000 Commits 19,000 Commits Folders and files Name Name Last commit message Last commit date .ci .ci .docker/build .docker/build .github .github .nix .nix .scripts .scripts code code dist dist doc doc hints hints lib lib obj obj providers providers specs specs tests tests tools tools vale vale .drone.yml .drone.yml .gitattributes .gitattributes .gitignore .gitignore CHANGES.md CHANGES.md CODEOWNERS CODEOWNERS CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md GOVERNANCE.md GOVERNANCE.md Hacl.fst.config.json Hacl.fst.config.json LICENSE LICENSE MAINTAINERS.md MAINTAINERS.md Makefile Makefile Makefile.common Makefile.common Makefile.include Makefile.include Makefile.local Makefile.local Makefile.openssl Makefile.openssl PULL_REQUEST.md PULL_REQUEST.md README.md README.md SECURITY.md SECURITY.md build_local.sh build_local.sh flake.nix flake.nix pull_request_template.md pull_request_template.md runtimeconfig.json runtimeconfig.json View all files Repository files navigation A High-Assurance Cryptographic Library This repository contains verified code for a library of modern cryptographic algorithms, including Curve25519, Ed25519, AES-GCM, Chacha20, Poly1305, SHA-2, SHA-3, HMAC, and HKDF. This set of algorithms is enough to support the full NaCl API and several TLS 1.3 ciphersuites. The code for all of these algorithms is formally verified using the F* verification framework for memory safety, functional correctness, and secret independence (resistance to some types of timing side-channels). Status Warning: This is the research home of HACL*. If you are looking for documentation, releases, language bindings and code that can be satisfactorily integrated into a production project, please check out HACL packages. The code in this repository is divided into three closely-related sub-projects, all developed as part of Project Everest. We are actively developing and integrating our code on the main branch, which tracks F*\u0027s master branch. HACL* HACL* is a formally verified library of modern cryptographic algorithms written in a subset of F* called Low* and compiled to C using a compiler called KaRaMeL. The Low* source code for each primitive is verified for memory safety, functional correctness, and secret independence. The compiler generates efficient, readable, standalone C code for each algorithm that can be easily integrated into any C project. We include the current C code for various HACL* algorithms in the dist directory. HACL* can also be compiled to WebAssembly. ValeCrypt ValeCrypt provides formally verified high-performance cryptographic code for selected primitives in assembly language. It relies on the Vale tool to produce code and proofs in F*. Vale supports multiple platforms and proves that its implementations are memory safe, functionally correct, and that timing and memory accesses are secret independent. EverCrypt EverCrypt is a high-performance, cross-platform, formally verified modern cryptographic provider that packages implementations from HACL* and ValeCrypt, and automatically picks the fastest one available, depending on processor support and the target execution environment (multiplexing). Furthermore, EverCrypt offers an (agile) API that makes it simple to switch between algorithms (e.g., from SHA2 to SHA3). Citing HACL* If you want to cite HACL* in a research publication, here is some guidance to make sure you pick the right publications. For HACL* in its current incarnation, including SIMD versions of algorithms: CCS\u002720. @inproceedings{polubelova2020haclxn,\n  title\u003d{{HACLxN}: Verified generic {SIMD} crypto (for all your favourite platforms)},\n  author\u003d{Polubelova, Marina and Bhargavan, Karthikeyan and Protzenko, Jonathan and Beurdouche, Benjamin and Fromherz, Aymeric and Kulatova, Natalia and Zanella-B{\\\u0027e}guelin, Santiago},\n  booktitle\u003d{Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security},\n  pages\u003d{899--918},\n  year\u003d{2020}\n}\n For HACL* in general (discouraged, since none of that code exists anymore): CCS\u002717 @inproceedings{zinzindohoue2017hacl,\n  title\u003d{{HACL*}: A verified modern cryptographic library},\n  author\u003d{Zinzindohou{\\\u0027e}, Jean-Karim and Bhargavan, Karthikeyan and Protzenko, Jonathan and Beurdouche, Benjamin},\n  booktitle\u003d{Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security},\n  pages\u003d{1789--1806},\n  year\u003d{2017}\n}\n For EverCrypt, the agile, multiplexing, CPU-detecting API on top of HACL*: S\u0026P\u002720 @inproceedings{protzenko2020evercrypt,\n  title\u003d{Evercrypt: A fast, verified, cross-platform cryptographic provider},\n  author\u003d{Protzenko, Jonathan and Parno, Bryan and Fromherz, Aymeric and ",
+    "scrapedAt": "2026-10-08 19:28:29.305682"
+  },
+  {
     "id": 1127,
     "url": "https://github.com/python/cpython/issues/121141",
     "title": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
@@ -7525,26 +7560,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1128,
-    "url": "https://github.com/hacl-star/hacl-star/"
-  },
-  {
-    "id": 1129,
-    "url": "https://github.com/python/cpython/issues/120057"
-  },
-  {
-    "id": 1130,
-    "url": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner"
-  },
-  {
-    "id": 1131,
-    "url": "https://docs.python.org/3/library/importlib.html#module-importlib.util"
-  },
-  {
-    "id": 1132,
-    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html"
   },
   {
     "id": 1133,
@@ -199916,10 +199931,723 @@ window.searchData = [
     "id": 199491,
     "url": "https://github.com/python/cpython/issues/121141#issue-2381257086",
     "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 199492,
+    "url": "https://github.com/hacl-star/hacl-star/activity",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199493,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/dist",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199494,
+    "url": "https://github.com/FStarLang/karamel",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199495,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/CODE_OF_CONDUCT.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199496,
+    "url": "https://github.com/cryspen/hacl-packages/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199497,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.ci",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199498,
+    "url": "https://github.com/FStarLang/FStar",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199499,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.local",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199500,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/pull_request_template.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199501,
+    "url": "https://github.com/hacl-star/hacl-star/branches",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199502,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/build_local.sh",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199503,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/LICENSE",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199504,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/providers/evercrypt",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199505,
+    "url": "https://github.com/topics/inria",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199506,
+    "url": "https://github.com/hacl-star/hacl-star/#a-high-assurance-cryptographic-library",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199507,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/specs",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199508,
+    "url": "https://github.com/topics/hacl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199509,
+    "url": "https://github.com/contact/report-content?content_url\u003dhttps%3A%2F%2Fgithub.com%2Fhacl-star%2Fhacl-star\u0026report\u003dhacl-star+%28user%29",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199510,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/tools",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199511,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.docker/build",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199512,
+    "url": "https://github.com/topics/everest",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199513,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.common",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199514,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/CHANGES.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199515,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/dist",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199516,
+    "url": "https://project-everest.github.io/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199517,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/obj",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199518,
+    "url": "https://github.com/hacl-star/hacl-star/#security-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199519,
+    "url": "https://github.com/hacl-star/hacl-star/#valecrypt",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199520,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/vale",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199521,
+    "url": "https://github.com/hacl-star/hacl-star/#start-of-content",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199522,
+    "url": "https://github.com/project-everest/vale",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199523,
+    "url": "https://github.com/topics/verified-primitives",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199524,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/SECURITY.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199525,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/lib",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199526,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/code",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199528,
+    "url": "https://fstar-lang.org/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199529,
+    "url": "https://github.com/project-everest/hacl-star/tree/main/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199530,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/hints",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199531,
+    "url": "https://github.com/hacl-star/hacl-star/#license",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199532,
+    "url": "https://github.com/hacl-star/hacl-star/commits/main/",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199533,
+    "url": "https://github.com/hacl-star/hacl-star/tags",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199534,
+    "url": "https://github.com/hacl-star/hacl-star/custom-properties",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199535,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/.gitignore",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199536,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/runtimeconfig.json",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199537,
+    "url": "https://github.com/topics/cryptography",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199538,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.include",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199539,
+    "url": "https://github.com/hacl-star/hacl-star/#status",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199540,
+    "url": "https://github.com/hacl-star/hacl-star/#Apache-2.0-1-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199541,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/.drone.yml",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199542,
+    "url": "https://github.com/hacl-star/hacl-star#coc-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199543,
+    "url": "https://fstarlang.github.io",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199544,
+    "url": "https://github.com/hacl-star/hacl-star/#citing-hacl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199545,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/CODEOWNERS",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199546,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile.openssl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199547,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.nix",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199548,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/README.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199549,
+    "url": "https://github.com/hacl-star/hacl-star/#evercrypt",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199550,
+    "url": "https://github.com/hacl-star/hacl-star/#readme-ov-file",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199551,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Makefile",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199552,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/PULL_REQUEST.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199553,
+    "url": "https://github.com/topics/verification",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199554,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/GOVERNANCE.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199555,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/MAINTAINERS.md",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199556,
+    "url": "https://github.com/topics/formal-verification",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199557,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/tests",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199558,
+    "url": "https://github.com/hacl-star/hacl-star/#contact-or-contribute",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199559,
+    "url": "https://github.com/hacl-star/hacl-star/#hacl",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199560,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/code",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199561,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/vale",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199562,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/doc",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199563,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/providers",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199564,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/.gitattributes",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199565,
+    "url": "https://github.com/hacl-star/hacl-star/forks",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199566,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/flake.nix",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199567,
+    "url": "https://github.com/topics/formal-methods",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199569,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.github",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199570,
+    "url": "https://github.com/hacl-star/hacl-star/tree/main/.scripts",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199571,
+    "url": "https://github.com/hacl-star/hacl-star/blob/main/Hacl.fst.config.json",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199572,
+    "url": "https://github.com/topics/high-performance",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199573,
+    "url": "https://github.com/topics/security",
+    "parentUrl": "https://github.com/hacl-star/hacl-star/"
+  },
+  {
+    "id": 199574,
+    "url": "https://github.com/python/cpython/issues/120057#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199575,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/120057",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199576,
+    "url": "https://github.com/python/cpython/pull/120808",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199577,
+    "url": "https://github.com/python/cpython/issues/120057#issue-2333968700",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199578,
+    "url": "https://github.com/python/cpython/issues/120057#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199582,
+    "url": "https://github.com/python/cpython/pull/140773",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199583,
+    "url": "https://github.com/python/cpython/pull/120789",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199584,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/120057",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199585,
+    "url": "https://discuss.python.org/t/method-to-refresh-os-environ/54774",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199587,
+    "url": "https://github.com/python/cpython/pull/120494",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199588,
+    "url": "https://github.com/python/cpython/pull/120790",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199589,
+    "url": "https://github.com/python/cpython/pull/120059",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199590,
+    "url": "https://github.com/python/cpython/pull/126268",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199591,
+    "url": "https://github.com/python/cpython/pull/140763",
+    "parentUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "id": 199846,
+    "url": "https://datatracker.ietf.org/doc/rfc4337/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199847,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199848,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3550",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199849,
+    "url": "https://www.rfc-editor.org/errata_search.php?rfc\u003d4337",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199850,
+    "url": "https://www.rfc-editor.org/rfc/rfc4337.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199852,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6381",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199853,
+    "url": "https://www.rfc-editor.org/rfc/rfc4337.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199854,
+    "url": "https://datatracker.ietf.org/doc/html/draft-lim-mpeg4-mime-03",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199856,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199857,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199858,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199859,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199860,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199861,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199862,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199863,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199864,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199865,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199866,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199867,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199868,
+    "url": "https://datatracker.ietf.org/doc/rfc4337/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199869,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199870,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199871,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199872,
+    "url": "https://datatracker.ietf.org/person/yfl@qsun.ho.att.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199873,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199874,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199875,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-3.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199876,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199877,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199878,
+    "url": "https://datatracker.ietf.org/person/singer@apple.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199880,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199881,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199882,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199883,
+    "url": "https://datatracker.ietf.org/doc/draft-lim-mpeg4-mime/03/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199885,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199886,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199887,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4337.html#ref-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "id": 199888,
+    "url": "http://pitch.nist.gov/nics/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 4337 - MIME Type Registration for MPEG-4",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 4337 - MIME Type Registration for MPEG-4",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc4337.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib.util"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "importlib — The implementation of import — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/importlib.html#module-importlib.util"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Runners — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Runners — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-runner.html#asyncio.Runner"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "Add os.reload_environ() function · Issue #120057 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120057"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add os.reload_environ() function · Issue #120057 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120057"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
     "alt": "JelleZijlstra",
