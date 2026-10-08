@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1471,
+    "url": "https://github.com/python/cpython/issues/125767",
+    "title": "Support pickling of super object · Issue #125767 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Support pickling of super object #125767 New issue Copy link New issue Copy link Closed Closed Support pickling of super object#125767 Copy link Assignees Labels type-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Oct 21, 2024 Issue body actions Feature or enhancement As was noted in #125714 (comment), the super object is not pickleable. For example: import pickle\nclass X: pass\ns \u003d super(X, X())\npickle.dumps(s) Produces a traceback: Traceback (most recent call last):\n  File \"\u003cpython-input-0\u003e\", line 4, in \u003cmodule\u003e\n    pickle.dumps(s)\n    ~~~~~~~~~~~~^^^\n_pickle.PicklingError: first argument to __newobj__() must be \u003cclass \u0027super\u0027\u003e, not \u003cclass \u0027__main__.X\u0027\u003e\nwhen serializing super object This is because the special methods like __reduce_ex__() are looked up in an instance and translated to a lookup in the underlying object. \u003e\u003e\u003e super(X, X()).__reduce_ex__(5)\n(\u003cfunction __newobj__ at 0x7fd9e8a0ad50\u003e, (\u003cclass \u0027__main__.X\u0027\u003e,), None, None, None) This cannot be solved by implementing the __reduce_ex__() method in the super class, because the current behavior is expected when super() is used in the __reduce_ex__() implementation of some subclass. The super class likely should be registered in the global dispatch table. There may be similar issue with shallow and deep copying. Linked PRs gh-125767: Fix pickling and copying of super objects #125781 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees serhiy-storchaka Labels type-featureA feature request or enhancementA feature request or enhancement Projects Pickle and copy issues 🥒 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:43:39.588316"
+  },
+  {
+    "id": 1470,
+    "url": "https://docs.python.org/3/library/curses.html#curses.use_default_colors",
+    "title": "curses — Terminal handling for character-cell displays — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Command-line interface libraries » curses — Terminal handling for character-cell displays | Theme Auto Light Dark | curses — Terminal handling for character-cell displays¶ Source code: Lib/curses The curses module provides an interface to the curses library, the de-facto standard for portable advanced terminal handling. While curses is most widely used in the Unix environment, versions are available for Windows, DOS, and possibly other systems as well. This extension module is designed to match the API of ncurses, an open-source curses library hosted on Linux and the BSD variants of Unix. Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Availability: Unix. Note Whenever the documentation mentions a character it can be specified as an integer, a one-character Unicode string or a one-byte byte string. An integer is the code of a single encoded byte, optionally combined with attributes and a color pair, as returned by window.inch(). Whenever the documentation mentions a character string it can be specified as a Unicode string or a byte string. Note Whether curses may be used from several threads depends on the underlying library and how it was built. In many implementations, including the default build of ncurses, the screen state is shared and not thread-safe; since the blocking and refresh methods (such as getch() and refresh()) release the GIL, unsynchronized use from several threads can then crash the interpreter. Serialize the calls. See also Module curses.ascii Utilities for working with ASCII characters, regardless of your locale settings. Module curses.panel A panel stack extension that adds depth to curses windows. Module curses.textpad Editable text widget for curses supporting Emacs-like bindings. Curses Programming with Python Tutorial material on using curses with Python, by Andrew Kuchling and Eric Raymond. Functions¶ The module curses defines the following exception: exception curses.error¶ Exception raised when a curses library function returns an error. Note Whenever x or y arguments to a function or a method are optional, they default to the current cursor location. Whenever attr is optional, it defaults to A_NORMAL. The module curses defines the following functions: curses.assume_default_colors(fg, bg, /)¶ Allow use of default values for colors on terminals supporting this feature. Use this to support transparency in your application. Assign terminal default foreground/background colors to color number -1. So init_pair(x, COLOR_RED, -1) will initialize pair x as red on default background and init_pair(x, -1, COLOR_BLUE) will initialize pair x as default foreground on blue. Change the definition of the color-pair 0 to (fg, bg). This is an ncurses extension. Added in version 3.14. curses.baudrate()¶ Return the output speed of the terminal in bits per second. On software terminal emulators it will have a fixed high value. Included for historical reasons; in former times, it was used to write output loops for time delays and occasionally to change interfaces depending on the line speed. curses.beep()¶ Emit a short attention sound. curses.can_change_color()¶ Return True or False, depending on whether the programmer can change the colors displayed by the terminal. curses.cbreak()¶ Enter cbreak mode. In cbreak mode (sometimes called “rare” mode) normal tty line buffering is turned off and characters are available to be read one by one. However, unlike raw mode, special characters (interrupt, quit, suspend, and flow control) retain their effects on the tty driver and calling program. Calling first raw() then cbreak() leaves the terminal in cbreak mode. curses.color_content(color_number)¶ Return the intensity of the red, green, and blue (RGB) components in the color color_number, which must be between 0 and COLORS - 1. Return a 3-tuple, containing the R,G,B values for the given color, which will be between 0 (no component) and 1000 (maximum amount of component). Raise an exception if the color is not supported. curses.color_pair(pair_number)¶ Return the attribute value for displaying text in the specified color pair. Only the first 256 color pairs are supported. This attribute value can be combined with A_STANDOUT, A_REVERSE, and the other A_* attributes. pair_number() is the counterpart to this function. curses.curs_set(visibility)¶ Set the cursor state. visibility can be set to 0, 1, or 2, for invisible, normal, or very visible. If the terminal supports the visibility requested, return the previous cursor state; otherwise raise an exception. On many terminals, the “visible” mode is an underline curso",
+    "scrapedAt": "2026-10-08 19:43:37.266335"
+  },
+  {
+    "id": 1469,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#if",
+    "title": "8. Compound statements — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those vari",
+    "scrapedAt": "2026-10-08 19:43:35.865409"
+  },
+  {
+    "id": 1468,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.InterpreterPoolExecutor",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait_on",
+    "scrapedAt": "2026-10-08 19:43:34.529953"
+  },
+  {
+    "id": 1467,
+    "url": "https://docs.python.org/3/library/locale.html#module-locale",
+    "title": "locale — Internationalization services — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic cons",
+    "scrapedAt": "2026-10-08 19:43:33.212907"
+  },
+  {
     "id": 1466,
     "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.capture_call_graph",
     "title": "Call graph introspection — Python 3.14.8 documentation",
@@ -9835,26 +9870,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1467,
-    "url": "https://docs.python.org/3/library/locale.html#module-locale"
-  },
-  {
-    "id": 1468,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.InterpreterPoolExecutor"
-  },
-  {
-    "id": 1469,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#if"
-  },
-  {
-    "id": 1470,
-    "url": "https://docs.python.org/3/library/curses.html#curses.use_default_colors"
-  },
-  {
-    "id": 1471,
-    "url": "https://github.com/python/cpython/issues/125767"
   },
   {
     "id": 1472,
@@ -241431,10 +241446,117 @@ window.searchData = [
     "id": 305944,
     "url": "https://github.com/naro",
     "parentUrl": "https://github.com/python/cpython/issues/85957"
+  },
+  {
+    "id": 306884,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/125767",
+    "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 306885,
+    "url": "https://github.com/python/cpython/pull/125781",
+    "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 306886,
+    "url": "https://github.com/python/cpython/issues/125767#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 306887,
+    "url": "https://github.com/python/cpython/issues/125767#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 306891,
+    "url": "https://github.com/python/cpython/issues/125767#issue-2601439046",
+    "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 306892,
+    "url": "https://github.com/python/cpython/issues/125714#issuecomment-2423259145",
+    "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 306893,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125767",
+    "parentUrl": "https://github.com/python/cpython/issues/125767"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Support pickling of super object · Issue #125767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Support pickling of super object · Issue #125767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Support pickling of super object · Issue #125767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Support pickling of super object · Issue #125767 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "curses — Terminal handling for character-cell displays — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/curses.html#curses.use_default_colors"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "curses — Terminal handling for character-cell displays — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/curses.html#curses.use_default_colors"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#if"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#if"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.InterpreterPoolExecutor"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.InterpreterPoolExecutor"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#module-locale"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#module-locale"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
