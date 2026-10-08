@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1043,
+    "url": "https://github.com/python/cpython/issues/123757",
+    "title": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation gaogaotiantian commented Sep 6, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member An allow_restart argument is added to pdb.Pdb to enable run/restart command when needed (for stdlib, only in command line mode). Issue: Only support restart command in pdb when it\u0027s a command line usage #123756 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Only allow restart in command line mode 8c6fb05 bedevere-app Bot added the awaiting core review label Sep 6, 2024 bedevere-app Bot mentioned this pull request Sep 6, 2024 Only support restart command in pdb when it\u0027s a command line usage #123756 Closed 📜🤖 Added by blurb_it. 8a46e08 gaogaotiantian commented Sep 6, 2024 Copy link Copy Markdown Member Author Hi @iritkatriel , could you take a quick look at the proposal and the implementation and see if this makes sense? I will add the tests and the documentation after your pre-approval. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. gaogaotiantian added 2 commits September 6, 2024 21:23 Use an invocation type enum for restart check 2342a34 Add PdbInvokeType to __all__ 1d731c7 gaogaotiantian commented Sep 7, 2024 Copy link Copy Markdown Member Author Okay I defined a new Enum - PdbInvokeType for pdb to check whether to enable some commands internally. I also exported the enum because the debuggers based on pdb might need it. Do you think code wise this is the way to go? I\u0027ll work on the docs and tests if the feature is good to go. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Fix pyclbr test 78746ba iritkatriel reviewed Sep 7, 2024 View reviewed changes Comment thread Lib/pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Add unknown for invocation type 2b9e225 iritkatriel reviewed Sep 7, 2024 View reviewed changes Comment thread Lib/pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. iritkatriel reviewed Sep 7, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2024-09-06-01-35-11.gh-issue-123756.Ozbhke.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. gaogaotiantian added 2 commits September 19, 2024 22:20 Change the enum name and update docs/tests 420e498 Update news a49a13e gaogaotiantian commented Sep 20, 2024 Copy link Copy Markdown Member Author Hi @iritkatriel , I updated the docs and tests, also renamed the enum class. Could you review it? Thanks! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Fix test_pyclbr.py a4b995e iritkatriel reviewed Sep 20, 2024 View reviewed changes Comment thread Doc/library/pdb.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/pdb.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/pdb.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. gaogaotiantian added 3 commits September 24, 2024 09:56 Use simple strings for mode 03f91dc Revert changes to test_pyclbr 8284118 Update 2024-09-06-01-35-11.gh-issue-123756.Ozbhke.rst 162c53c gaogaotiantian commented Sep 24, 2024 Copy link Copy Markdown Member Author Hey @iritkatriel , I made some changes after the discussion on discord. Now the name of the argument is mode and it accepts a string \u0027cli\u0027 or \u0027inline\u0027, or a None. A few questions - do you think we should add run-time checker for the value? If we do, will it affect devs that build their debugger based on pdb? Should we have a separate method to check it so it can be overwritten? We can also do a setting kind of thing. The related question - should we type hint this? It\u0027s not common to type hint arguments in pdb.py - one of the reasons is of course the age of the file. However, last time I heard there\u0027s still a debate on whether we should type hint as much as possible in stdlibs. I think one thing we need to factor in is that - this argument is basically exclusively used by debugger developers. The debugger users should never need to use this. So maybe we can cut some corners (not making it super safe to use). For the documentation, for restart command, I did not link the availability of the command to the mode argument directly because that\u0027s not how normal user experiences the diff",
+    "scrapedAt": "2026-10-08 19:24:50.200796"
+  },
+  {
+    "id": 1042,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:24:46.119714"
+  },
+  {
+    "id": 1041,
+    "url": "https://docs.python.org/3/library/tkinter.html#module-tkinter",
+    "title": "tkinter — Python interface to Tcl/Tk — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Graphical user interfaces with Tk » tkinter — Python interface to Tcl/Tk | Theme Auto Light Dark | tkinter — Python interface to Tcl/Tk¶ Source code: Lib/tkinter/__init__.py The tkinter package (“Tk interface”) is the standard Python interface to the Tcl/Tk GUI toolkit. Both Tk and tkinter are available on most Unix platforms, including macOS, as well as on Windows systems. Running python -m tkinter from the command line should open a window demonstrating a simple Tk interface, letting you know that tkinter is properly installed on your system, and also showing what version of Tcl/Tk is installed, so you can read the Tcl/Tk documentation specific to that version. Tkinter supports a range of Tcl/Tk versions, built either with or without thread support. Tcl/Tk 8.5.12 is the minimum supported version; the official Python binary release bundles Tcl/Tk 8.6. See the source code for the _tkinter module for more information about supported versions. Changed in version 3.11: Support for Tcl/Tk versions older than 8.5.12 was removed. Tkinter is not a thin wrapper, but adds a fair amount of its own logic to make the experience more pythonic. This documentation will concentrate on these additions and changes, and refer to the official Tcl/Tk documentation for details that are unchanged. Note Tcl/Tk 8.5 (2007) introduced a modern set of themed user interface components along with a new API to use them (see tkinter.ttk). Both old and new APIs are still available. Most documentation you will find online still uses the old API and can be woefully outdated. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. See also TkDocs Extensive tutorial on creating user interfaces with Tkinter. Explains key concepts, and illustrates recommended approaches using the modern API. Tkinter 8.5 reference: a GUI for Python Reference documentation for Tkinter 8.5 detailing available classes, methods, and options. Tcl/Tk Resources: Tk commands Comprehensive reference to each of the underlying Tcl/Tk commands used by Tkinter. Tcl/Tk Home Page Additional documentation, and links to Tcl/Tk core development. Books: Modern Tkinter for Busy Python Developers By Mark Roseman. (ISBN 978-1999149567) Python GUI programming with Tkinter By Alan D. Moore. (ISBN 978-1788835886) Programming Python By Mark Lutz; has excellent coverage of Tkinter. (ISBN 978-0596158101) Tcl and the Tk Toolkit (2nd edition) By John Ousterhout, inventor of Tcl/Tk, and Ken Jones; does not cover Tkinter. (ISBN 978-0321336330) Architecture¶ Tcl/Tk is not a single library but rather consists of a few distinct modules, each with separate functionality and its own official documentation. Python’s binary releases also ship an add-on module together with it. Tcl Tcl is a dynamic interpreted programming language, just like Python. Though it can be used on its own as a general-purpose programming language, it is most commonly embedded into C applications as a scripting engine or an interface to the Tk toolkit. The Tcl library has a C interface to create and manage one or more instances of a Tcl interpreter, run Tcl commands and scripts in those instances, and add custom commands implemented in either Tcl or C. Each interpreter has an event queue, and there are facilities to send events to it and process them. Unlike Python, Tcl’s execution model is designed around cooperative multitasking, and Tkinter bridges this difference (see Threading model for details). Tk Tk is a Tcl package implemented in C that adds custom commands to create and manipulate GUI widgets. Each Tk object embeds its own Tcl interpreter instance with Tk loaded into it. Tk’s widgets are very customizable, though at the cost of a dated appearance. Tk uses Tcl’s event queue to generate and process GUI events. Ttk Themed Tk (Ttk) is a newer family of Tk widgets that provide a much better appearance on different platforms than many of the classic Tk widgets. Ttk is distributed as part of Tk, starting with Tk version 8.5. Python bindings are provided in a separate module, tkinter.ttk. Internally, Tk and Ttk use facilities of the underlying operating system, that is, Xlib on Unix/X11, Cocoa on macOS, GDI on Windows. When your Python application uses a class in Tkinter, for example, to create a widget, the tkinter module first assembles a Tcl/Tk command string. It passes that Tcl command string to an internal _tkinter binary module, which then calls the Tcl interpreter to evaluate it. The Tcl interpreter will then call into the Tk and/or Ttk packages, which will in turn make calls to Xlib, Cocoa, or GDI. Tkinter modules¶ Support for Tkinter is spread across several modules. Most applications will need the main tkinter module, as well as the tkinter.t",
+    "scrapedAt": "2026-10-08 19:24:44.860368"
+  },
+  {
+    "id": 1040,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getobjects",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:24:43.536524"
+  },
+  {
+    "id": 1039,
+    "url": "https://docs.python.org/3/library/logging.html#logging.warning",
+    "title": "logging — Logging facility for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » logging — Logging facility for Python | Theme Auto Light Dark | logging — Logging facility for Python¶ Source code: Lib/logging/__init__.py Important This page contains the API reference information. For tutorial information and discussion of more advanced topics, see Basic Tutorial Advanced Tutorial Logging Cookbook This module defines functions and classes which implement a flexible event logging system for applications and libraries. The key benefit of having the logging API provided by a standard library module is that all Python modules can participate in logging, so your application log can include your own messages integrated with messages from third-party modules. Here’s a simple example of idiomatic usage: # myapp.py\nimport logging\nimport mylib\nlogger \u003d logging.getLogger(__name__)\n\ndef main():\n    logging.basicConfig(filename\u003d\u0027myapp.log\u0027, level\u003dlogging.INFO)\n    logger.info(\u0027Started\u0027)\n    mylib.do_something()\n    logger.info(\u0027Finished\u0027)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    main()\n # mylib.py\nimport logging\nlogger \u003d logging.getLogger(__name__)\n\ndef do_something():\n    logger.info(\u0027Doing something\u0027)\n If you run myapp.py, you should see this in myapp.log: INFO:__main__:Started\nINFO:mylib:Doing something\nINFO:__main__:Finished\n The key feature of this idiomatic usage is that the majority of code is simply creating a module level logger with getLogger(__name__), and using that logger to do any needed logging. This is concise, while allowing downstream code fine-grained control if needed. Logged messages to the module-level logger get forwarded to handlers of loggers in higher-level modules, all the way up to the highest-level logger known as the root logger; this approach is known as hierarchical logging. For logging to be useful, it needs to be configured: setting the levels and destinations for each logger, potentially changing how specific modules log, often based on command-line arguments or application configuration. In most cases, like the one above, only the root logger needs to be so configured, since all the lower level loggers at module level eventually forward their messages to its handlers. basicConfig() provides a quick way to configure the root logger that handles many use cases. The module provides a lot of functionality and flexibility. If you are unfamiliar with logging, the best way to get to grips with it is to view the tutorials (see the links above and on the right). The basic classes defined by the module, together with their attributes and methods, are listed in the sections below. Loggers expose the interface that application code directly uses. Handlers send the log records (created by loggers) to the appropriate destination. Filters provide a finer grained facility for determining which log records to output. Formatters specify the layout of log records in the final output. Logger Objects¶ Loggers have the following attributes and methods. Note that Loggers should NEVER be instantiated directly, but always through the module-level function logging.getLogger(name). Multiple calls to getLogger() with the same name will always return a reference to the same Logger object. The name is potentially a period-separated hierarchical value, like foo.bar.baz (though it could also be just plain foo, for example). Loggers that are further down in the hierarchical list are children of loggers higher up in the list. For example, given a logger with a name of foo, loggers with names of foo.bar, foo.bar.baz, and foo.bam are all descendants of foo. In addition, all loggers are descendants of the root logger. The logger name hierarchy is analogous to the Python package hierarchy, and identical to it if you organise your loggers on a per-module basis using the recommended construction logging.getLogger(__name__). That’s because in a module, __name__ is the module’s name in the Python package namespace. class logging.Logger¶ name¶ This is the logger’s name, and is the value that was passed to getLogger() to obtain the logger. Note This attribute should be treated as read-only. level¶ The threshold of this logger, as set by the setLevel() method. Note Do not set this attribute directly - always use setLevel(), which has checks for the level passed to it. parent¶ The parent logger of this logger. It may change based on later instantiation of loggers which are higher up in the namespace hierarchy. Note This value should be treated as read-only. propagate¶ If this attribute evaluates to true, events logged to this logger will be passed to the handlers of higher level (ancestor) loggers, in addition to any handlers attached to this logger. Messages are passed directly to the ancestor loggers’ handlers - neither the level nor filters of the ancestor loggers in question are considered. If this evaluates to false, logging messages are not passed to the handlers of ancest",
+    "scrapedAt": "2026-10-08 19:24:42.252827"
+  },
+  {
     "id": 1038,
     "url": "https://github.com/python/cpython/issues/89902",
     "title": "The Python implementation of Decimal does not support the \"N\" format · Issue #89902 · python/cpython · GitHub",
@@ -6930,26 +6965,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1039,
-    "url": "https://docs.python.org/3/library/logging.html#logging.warning"
-  },
-  {
-    "id": 1040,
-    "url": "https://docs.python.org/3/library/sys.html#sys.getobjects"
-  },
-  {
-    "id": 1041,
-    "url": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
-  },
-  {
-    "id": 1042,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath"
-  },
-  {
-    "id": 1043,
-    "url": "https://github.com/python/cpython/issues/123757"
   },
   {
     "id": 1044,
@@ -191921,10 +191936,4944 @@ window.searchData = [
     "id": 168938,
     "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/89902",
     "parentUrl": "https://github.com/python/cpython/issues/89902"
+  },
+  {
+    "id": 168943,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.exception",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168948,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.removeFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168950,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LogRecord.getMessage",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168951,
+    "url": "https://docs.python.org/3/builtins/functions.html#filemodes",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168953,
+    "url": "https://docs.python.org/3/library/logging.html#logging.basicConfig",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168956,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.name",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168957,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#logging-cookbook",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168958,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.print_exception",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168959,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168962,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.removeFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168964,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.hasHandlers",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168965,
+    "url": "https://docs.python.org/3/library/logging.html#logging.error",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168966,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.format",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168968,
+    "url": "https://docs.python.org/3/library/logging.html#logging.raiseExceptions",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168969,
+    "url": "https://docs.python.org/3/library/logging.html#logging.addLevelName",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168970,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.release",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168971,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#formatting-styles",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168972,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168973,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.emit",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168974,
+    "url": "https://docs.python.org/3/library/logging.html#logger",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168975,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.handle",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168980,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/logging.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168981,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.formatStack",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168982,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.critical",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168984,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.format",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168985,
+    "url": "https://docs.python.org/3/library/logging.html#logging.setLogRecordFactory",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168986,
+    "url": "https://docs.python.org/3/library/logging.html#levels",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168987,
+    "url": "https://docs.python.org/3/library/traceback.html#traceback.print_stack",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168990,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.findCaller",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168991,
+    "url": "https://docs.python.org/3/library/logging.html#logging.DEBUG",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168992,
+    "url": "https://docs.python.org/3/library/logging.html#logging.disable",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168993,
+    "url": "https://docs.python.org/3/library/logging.html#logging.setLoggerClass",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168994,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168996,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.handle",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168997,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.addHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 168998,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.handleError",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169001,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.addFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169002,
+    "url": "https://docs.python.org/3/library/logging.html#logging.info",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169004,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter._log",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169005,
+    "url": "https://old.red-dove.com/python_logging.html",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169008,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.getChildren",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169009,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#logging.StreamHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169010,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.error",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169013,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter.formatHeader",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169014,
+    "url": "https://docs.python.org/3/howto/logging.html#arbitrary-object-messages",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169017,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.__init__",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169018,
+    "url": "https://docs.python.org/3/howto/logging.html#logging-basic-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169021,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169022,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLogger",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169023,
+    "url": "https://docs.python.org/3/library/logging.html#logging.debug",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169024,
+    "url": "https://docs.python.org/3/library/logging.html#",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169025,
+    "url": "https://docs.python.org/3/library/logging.html#logging.log",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169026,
+    "url": "https://docs.python.org/3/library/logging.html#logging.critical",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169029,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.flush",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169032,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.makeRecord",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169033,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter.manager",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169034,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d28524",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169035,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#filters-contextual",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169036,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.setLevel",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169037,
+    "url": "https://docs.python.org/3/library/logging.html#logging.lastResort",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169038,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.level",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169039,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.formatException",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169040,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.warning",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169041,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getHandlerNames",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169042,
+    "url": "https://docs.python.org/3/library/logging.html#logging.CRITICAL",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169045,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLevelName",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169046,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getHandlerByName",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169048,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LoggerAdapter.process",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169051,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#logging.FileHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169052,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.isEnabledFor",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169053,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.acquire",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169054,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169055,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.close",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169056,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.log",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169058,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.addFilter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169060,
+    "url": "https://docs.python.org/3/library/logging.html#logging.makeLogRecord",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169062,
+    "url": "https://docs.python.org/3/howto/logging-cookbook.html#context-info",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169063,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter.formatFooter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169064,
+    "url": "https://docs.python.org/3/howto/logging.html#custom-levels",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169068,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.setLevel",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169069,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLogRecordFactory",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169070,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLoggerClass",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169071,
+    "url": "https://docs.python.org/3/library/logging.html#logging.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169072,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter.format",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169073,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.propagate",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169074,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.getEffectiveLevel",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169076,
+    "url": "https://docs.python.org/3/library/time.html#time.time_ns",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169079,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Formatter.formatTime",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169083,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.parent",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169084,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.debug",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169088,
+    "url": "https://docs.python.org/3/library/logging.config.html#module-logging.config",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169089,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.handlers",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169090,
+    "url": "https://docs.python.org/3/library/logging.html#logging.WARNING",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169091,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169092,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Filter.filter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169093,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.createLock",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169095,
+    "url": "https://docs.python.org/3/library/logging.html#logging.BufferingFormatter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169096,
+    "url": "https://docs.python.org/3/howto/logging.html#logging-advanced-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169097,
+    "url": "https://docs.python.org/3/library/logging.handlers.html#module-logging.handlers",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169103,
+    "url": "https://docs.python.org/3/library/logging.html#logging.exception",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169104,
+    "url": "https://docs.python.org/3/library/logging.html#logging.getLevelNamesMapping",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169105,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.removeHandler",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169107,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/logging/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169108,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.getChild",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169109,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.disabled",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169110,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Logger.info",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169111,
+    "url": "https://docs.python.org/3/library/logging.html#logging.Handler.setFormatter",
+    "parentUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "id": 169453,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.DoubleVar.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169456,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_vrootwidth",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169457,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.TRUE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169458,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.TclError",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169459,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.bind",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169460,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.lift",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169461,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.option_get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169462,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.select_set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169463,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.EW",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169464,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.num",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169465,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.dlineinfo",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169466,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.mark_previous",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169467,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.image_cget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169468,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.type",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169469,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.scan_dragto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169470,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.option_readfile",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169471,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.count",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169472,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.event_add",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169473,
+    "url": "https://www.tcl-lang.org/man/tcl9.0/TkCmd/grid.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169474,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.READABLE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169475,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_size",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169476,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag_withtag",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169477,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.image_names",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169478,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SEL",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169479,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Button",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169481,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_atomname",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169482,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.clipboard_append",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169483,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.insert",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169484,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.scan_mark",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169485,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.window_create",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169486,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NSEW",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169487,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.scan_mark",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169488,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection_to",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169489,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_attributes",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169490,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scale.identify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169491,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BaseWidget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169492,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_children",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169493,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.focus",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169494,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_width",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169495,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.LabelFrame",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169496,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.window_names",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169497,
+    "url": "https://manpages.debian.org/bind(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169498,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place.place",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169499,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grab_current",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169500,
+    "url": "https://docs.python.org/3/library/tkinter.html#",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169501,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.nearest",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169502,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.selection_includes",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169503,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_vrootheight",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169504,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.insert",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169505,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_reqheight",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169506,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BaseWidget.destroy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169507,
+    "url": "https://wiki.tcl-lang.org/37432",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169508,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169509,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.selection_anchor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169510,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scrollbar.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169511,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy_config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169512,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_location",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169513,
+    "url": "https://docs.python.org/3/library/tkinter.colorchooser.html#module-tkinter.colorchooser",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169514,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.edit_modified",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169515,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screendepth",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169516,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169517,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.FIRST",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169519,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Checkbutton.toggle",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169520,
+    "url": "https://manpages.debian.org/cursors(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169521,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.size",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169522,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.clipboard_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169523,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_info",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169525,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Button",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169526,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.mark_set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169527,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.unbind_class",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169528,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag_overlapping",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169529,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.IntVar.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169530,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Button.invoke",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169531,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screenmmwidth",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169532,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.icursor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169533,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Radiobutton.deselect",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169534,
+    "url": "https://www.tcl-lang.org/man/tcl9.0/TkCmd/ttk_widget.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169535,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.selection_adjust",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169536,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_visual",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169537,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.manage",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169538,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Toplevel",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169539,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_ranges",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169540,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.OUTSIDE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169541,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tcl",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169542,
+    "url": "https://www.tcl-lang.org/man/tcl9.0/TkCmd/options.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169543,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BooleanVar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169544,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.deiconify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169545,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.blank",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169546,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.frame",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169547,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.resizable",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169548,
+    "url": "https://www.tcl.tk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169549,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.OptionMenu.destroy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169550,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_nextrange",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169551,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.itemconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169552,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_rowconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169553,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_text",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169555,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.title",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169556,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Widget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169557,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.trace_add",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169558,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.see",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169559,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169560,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.mark_next",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169562,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.index",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169563,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BooleanVar.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169564,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.select_item",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169565,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.mark_unset",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169566,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Entry",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169567,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.select_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169568,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.COMMAND",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169569,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.search",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169570,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy_hold",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169571,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.send_event",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169572,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.tkraise",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169573,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_rowconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169574,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_strictMotif",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169575,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BitmapImage",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169576,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.command",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169577,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection_range",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169578,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.nametowidget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169579,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.selection_handle",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169580,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_withdraw",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169581,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169582,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.select_to",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169583,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.sash_place",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169584,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_fpixels",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169585,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169586,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169588,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_columnconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169589,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_id",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169590,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.scan_mark",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169591,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_anchor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169592,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.tag_unbind",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169593,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screen",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169594,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169595,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_name",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169596,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169597,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.getint",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169598,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169600,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Radiobutton.select",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169601,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.icursor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169602,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.selection_from",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169603,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169604,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.type",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169605,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.focus",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169606,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.unpost",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169607,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.MOVETO",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169608,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.size",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169609,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place.place_info",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169610,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.edit_reset",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169611,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.index",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169612,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_lower",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169613,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.trace_info",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169614,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.see",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169615,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.focus_lastfor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169616,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.itemcget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169617,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place.configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169618,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.put",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169620,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_colormapfull",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169621,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169622,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.selection_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169624,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.CallWrapper",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169625,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place.place_forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169626,
+    "url": "https://www.tkdocs.com/shipman/",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169627,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.add_radiobutton",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169628,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.report_callback_exception",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169630,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.wait_visibility",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169631,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.pack_propagate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169632,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter-numeric-locale",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169633,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Frame",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169634,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scale.set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169636,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169638,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.ANCHOR",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169639,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.yposition",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169640,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.focus_set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169642,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SINGLE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169643,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.trace_variable",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169644,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169645,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.trace_vinfo",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169646,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_size",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169647,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169648,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.update_idletasks",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169649,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.dchars",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169650,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.CHECKBUTTON",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169651,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.tk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169652,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.tag_bind",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169653,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BOTH",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169654,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.VERTICAL",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169655,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.quit",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169657,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_vrootx",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169658,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_vrooty",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169659,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.window_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169660,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.event_info",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169661,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_focusFollowsMouse",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169662,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.YView.yview",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169663,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.YView.yview_scroll",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169664,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_group",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169665,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Frame",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169666,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.aspect",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169667,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_image",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169668,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_minsize",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169669,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169670,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.EXTENDED",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169671,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.CHAR",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169672,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.copy_replace",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169673,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_visualsavailable",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169674,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.width",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169676,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169677,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.edit",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169678,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Image.type",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169679,
+    "url": "https://tkdocs.com/book.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169680,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169681,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.yview_pickplace",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169682,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_iconify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169683,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169685,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169686,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.focus",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169689,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.transparency_set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169690,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.compare",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169691,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.getdouble",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169692,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.destroy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169693,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169694,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_depth",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169695,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.add_checkbutton",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169696,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_remove",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169697,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169698,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_propagate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169699,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SW",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169701,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_rootx",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169702,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Image",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169703,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.PanedWindow",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169704,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_rooty",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169706,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.image_types",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169707,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.activate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169708,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.scan_dragto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169709,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Image.config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169710,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_resizable",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169711,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169712,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.children",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169713,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.after_idle",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169714,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.trace_remove",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169715,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find_closest",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169716,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_bind",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169717,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.selection_set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169718,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.select_from",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169719,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.coords",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169720,
+    "url": "https://tkdocs.com/",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169722,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_colormapwindows",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169723,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.trace_vdelete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169724,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.select_present",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169725,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.focus_get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169726,
+    "url": "https://www.tcl-lang.org/man/tcl9.0/TkCmd/ttk_button.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169727,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.option_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169728,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.window_config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169729,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.overrideredirect",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169730,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SOLID",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169731,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy_status",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169732,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.OptionMenu",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169733,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scale.coords",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169734,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.RIDGE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169735,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_client",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169736,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Image.configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169737,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.time",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169739,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.minsize",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169740,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.image_types",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169741,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.client",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169742,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_iconmask",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169743,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.location",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169744,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.OFF",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169745,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menubutton",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169746,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.EventType",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169747,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.columnconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169748,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.INSIDE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169749,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.LAST",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169750,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/tkinter/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169751,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter-window-manager",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169752,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.ON",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169753,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.option_add",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169754,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.FALSE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169755,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SUNKEN",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169756,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.readprofile",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169757,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.rowconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169758,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NS",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169759,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place.config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169760,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.selection_range",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169761,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NO",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169762,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.scan",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169763,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.replace",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169764,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/tkinter.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169765,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_geometry",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169766,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NW",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169767,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.select_to",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169768,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.scan_dragto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169769,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169771,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169772,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screencells",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169773,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Treeview",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169774,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.image_names",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169776,
+    "url": "https://www.tcl-lang.org/man/tcl9.0/TkCmd/winfo.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169777,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.cget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169778,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BASELINE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169780,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.getboolean",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169781,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_maxsize",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169782,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.keysym",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169783,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.itemconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169784,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Widget.tk.deletefilehandler",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169785,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_manager",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169786,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_remove",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169787,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_transient",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169788,
+    "url": "https://docs.python.org/3/library/tkinter.html#module-_tkinter",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169789,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.mainloop",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169790,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169792,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169793,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.iconwindow",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169794,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.XView.xview",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169795,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.DOTBOX",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169796,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.y",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169798,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.x",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169799,
+    "url": "https://python-pillow.org/",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169801,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.tag_raise",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169802,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_pointerx",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169803,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_pointery",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169804,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.unbind_all",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169805,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_polygon",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169806,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find_all",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169807,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_pathname",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169808,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SEL_LAST",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169809,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_focusNext",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169810,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.copy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169811,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.destroy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169812,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169813,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169814,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169815,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_sizefrom",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169816,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.entrycget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169817,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_info",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169818,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.iconify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169819,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.sash_coord",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169820,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_cells",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169821,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_atom",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169822,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.gettags",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169823,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find_withtag",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169824,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169825,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Radiobutton.invoke",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169826,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.attributes",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169828,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BEVEL",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169829,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.event_generate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169830,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter-geometry-management",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169831,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_state",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169833,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.UNITS",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169834,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.tk_popup",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169835,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.selection_own",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169836,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.geometry",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169837,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NoDefaultRoot",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169838,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_overrideredirect",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169839,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.IntVar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169840,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.selection_own_get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169841,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.colormapwindows",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169842,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SCROLL",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169845,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169846,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.select_anchor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169847,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_propagate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169848,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.YView.yview_moveto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169850,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.data",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169851,
+    "url": "https://manpages.debian.org/grid(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169852,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.info",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169853,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_pixels",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169854,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_interps",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169855,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_toplevel",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169856,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.maxsize",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169857,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.setvar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169858,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.debug",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169859,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.insert",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169860,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_oval",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169861,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.select_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169862,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.iconname",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169863,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.proxy_forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169864,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.lower",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169865,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169866,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PAGES",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169867,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.postscript",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169868,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PIESLICE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169869,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.select_from",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169870,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.iconphoto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169872,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169874,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.invoke",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169876,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169877,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Image.height",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169878,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.StringVar.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169879,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_manage",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169880,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169881,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169882,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_reqwidth",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169883,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.StringVar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169884,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.insert_command",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169885,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.proxy_coord",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169886,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.scan_mark",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169887,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169888,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.keysym_num",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169889,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.iconposition",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169890,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.edit_undo",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169891,
+    "url": "https://manpages.debian.org/text(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169892,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_focusPrev",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169894,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.bindtags",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169895,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.insert_radiobutton",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169896,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Message",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169897,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169898,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scrollbar.delta",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169899,
+    "url": "https://docs.python.org/3/library/tkinter.dnd.html#module-tkinter.dnd",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169900,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.RADIOBUTTON",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169901,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.unbind",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169902,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.grid",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169903,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Checkbutton.select",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169904,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection_present",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169906,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.size",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169907,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.selection_get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169908,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Checkbutton.invoke",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169909,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.cget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169910,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag_above",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169911,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.itemconfig",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169912,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169913,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SEPARATOR",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169916,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Widget.tk.createfilehandler",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169917,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.positionfrom",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169919,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.type",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169920,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.panecget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169922,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.add_separator",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169923,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grab_set_global",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169924,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scrollbar.activate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169925,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Label",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169926,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BOTTOM",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169927,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.select_includes",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169928,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find_above",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169929,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.add",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169930,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.select_range",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169932,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy_forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169933,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.bind_class",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169934,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scrollbar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169935,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scale.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169936,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.state",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169937,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_location",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169938,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169939,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NUMERIC",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169940,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.delta",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169941,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.iconbitmap",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169942,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.image_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169944,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grab_release",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169945,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection_adjust",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169946,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169947,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screenheight",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169948,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.identify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169949,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screenmmheight",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169950,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.send",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169951,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.protocol",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169952,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tkraise",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169953,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy_current",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169956,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169957,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.insert_separator",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169958,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.mark_names",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169959,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Checkbutton.flash",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169961,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.scale",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169962,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.index",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169963,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag_below",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169964,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.image_names",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169965,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.entryconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169966,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.activate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169967,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy_status",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169968,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169969,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.post",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169970,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.select_adjust",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169971,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.TOP",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169972,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scrollbar.set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169973,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find_below",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169974,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_names",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169975,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection_element",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169976,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy_cget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169977,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_parent",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169978,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_title",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169979,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.after_info",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169980,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169981,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.DoubleVar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169982,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169983,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.XView.xview_scroll",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169984,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.widget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169985,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.char",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169986,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.insert_cascade",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169987,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.focusmodel",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169988,
+    "url": "https://www.tcl-lang.org/man/tcl9.0/TkCmd/index.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169991,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BUTT",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169992,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169993,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.selection_to",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169994,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.columnconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169995,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.curselection",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169996,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.edit_separator",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169997,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NORMAL",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169998,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_viewable",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 169999,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Image.width",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170000,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.lift",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170001,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.pack_slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170003,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.x_root",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170004,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.window_cget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170005,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.focus_force",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170006,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.rowconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170007,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.GROOVE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170008,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PROJECTING",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170009,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_bisque",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170010,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy_cget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170011,
+    "url": "https://docs.python.org/3/library/enum.html#enum.StrEnum",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170012,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.clipboard_get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170013,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.group",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170014,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.lower",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170015,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.after_cancel",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170016,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.DISABLED",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170017,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170018,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170019,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170020,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.ACTIVE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170021,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170022,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_class",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170023,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_protocol",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170024,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170025,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.END",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170027,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_rectangle",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170028,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_add",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170029,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170030,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170031,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.read",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170032,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170033,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170034,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scale",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170035,
+    "url": "https://docs.python.org/3/library/tkinter.font.html#module-tkinter.font",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170037,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.moveto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170038,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.scan_dragto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170040,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.ROUND",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170041,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170043,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_command",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170044,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_rgb",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170045,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_containing",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170046,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Radiobutton.flash",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170047,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.select_adjust",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170048,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.insert",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170050,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_server",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170051,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.keycode",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170052,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.remove",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170054,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.entryconfig",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170056,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170057,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.HIDDEN",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170058,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_visualid",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170059,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.N",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170060,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.update",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170061,
+    "url": "https://manpages.debian.org/place(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170062,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Spinbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170063,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.WRITABLE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170064,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.FLAT",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170065,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_exists",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170066,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.state",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170067,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.pack_slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170068,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.E",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170069,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.tag_lower",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170070,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170071,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.peer_create",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170072,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170073,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170074,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.canvasx",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170075,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.canvasy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170076,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.index",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170077,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170078,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.peer_names",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170079,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy_hold",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170080,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.ARC",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170081,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_iconphoto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170082,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.selection_from",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170083,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_geometry",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170084,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.selection_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170085,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.sash",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170086,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.NONE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170087,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.insert",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170088,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.RIGHT",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170089,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.image_create",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170090,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Pack.propagate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170092,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.dump",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170093,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.RAISED",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170094,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.W",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170095,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.dtag",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170096,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.X",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170097,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Y",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170098,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.mark_gravity",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170099,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.keys",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170100,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.S",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170101,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_bitmap",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170103,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Notebook",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170104,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag_all",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170105,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.WORD",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170106,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find_overlapping",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170108,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.find_enclosed",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170109,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Checkbutton",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170110,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.getboolean",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170111,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screenvisual",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170112,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Widget.state",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170113,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.waitvar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170114,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_screenwidth",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170115,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170116,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.xposition",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170117,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_y",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170118,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_x",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170119,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.CENTER",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170120,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag_enclosed",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170121,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.getint",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170122,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.serial",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170123,
+    "url": "https://docs.python.org/3/library/tkinter.scrolledtext.html#module-tkinter.scrolledtext",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170124,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.info_patchlevel",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170125,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_iconposition",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170127,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.MITER",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170128,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_iconname",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170129,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_cget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170130,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy_current",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170131,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.identify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170133,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_prevrange",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170134,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.register",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170135,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.anchor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170136,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.proxy_place",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170137,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_focusmodel",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170138,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.CASCADE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170139,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grab_set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170140,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.mainloop",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170142,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_iconbitmap",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170143,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.master",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170144,
+    "url": "https://learning-python.com/about-pp4e.html",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170145,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BooleanVar.initialize",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170146,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_setPalette",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170147,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.sizefrom",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170149,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.ALL",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170151,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grab_status",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170152,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy_config",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170153,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_window",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170154,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Style",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170155,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.select_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170156,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.grid_propagate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170157,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.selection_present",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170158,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.write",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170159,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.initialize",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170160,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.XView",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170161,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Button.invoke",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170163,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#tkinter.ttk.Label",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170164,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.busy_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170165,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.paneconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170166,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_deiconify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170168,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.edit_redo",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170169,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.wait_variable",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170170,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.SEL_FIRST",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170171,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.bind_all",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170172,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_grid",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170173,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.withdraw",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170175,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.getdouble",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170176,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.after",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170177,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html#module-tkinter.ttk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170178,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.UNDERLINE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170179,
+    "url": "https://www.amazon.com/exec/obidos/ASIN/032133633X",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170180,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Variable.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170181,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.INSERT",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170182,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.scan_dragto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170183,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.proxy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170184,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Radiobutton",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170185,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.invoke",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170186,
+    "url": "https://www.packtpub.com/en-us/product/python-gui-programming-with-tkinter-9781788835886",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170187,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_frame",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170188,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170189,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.bell",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170190,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.iconmask",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170191,
+    "url": "https://manpages.debian.org/entry(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170192,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.transparency_get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170194,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.paneconfig",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170195,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Tk.loadtk",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170196,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.sash_mark",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170197,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scrollbar.identify",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170198,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.EXCEPTION",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170199,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.MULTIPLE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170200,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.selection_clear",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170201,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.wait_window",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170202,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_raise",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170203,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.add",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170204,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.scan_mark",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170205,
+    "url": "https://manpages.debian.org/options(3)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170207,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170208,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.insert",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170209,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_height",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170210,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170212,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.LEFT",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170213,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_pointerxy",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170214,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Checkbutton.deselect",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170215,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Grid.grid_columnconfigure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170216,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.XView.xview_moveto",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170217,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.index",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170218,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.subsample",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170219,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.transient",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170220,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place.place_configure",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170221,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.YView",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170222,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_line",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170223,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.focus_displayof",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170224,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.insert_checkbutton",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170225,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.y_root",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170227,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Button.flash",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170228,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PanedWindow.panes",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170229,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.itemconfig",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170231,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Event.height",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170232,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BROWSE",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170233,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_aspect",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170234,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.YES",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170235,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.HORIZONTAL",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170237,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.event_delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170238,
+    "url": "https://docs.python.org/3/library/tkinter.messagebox.html#module-tkinter.messagebox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170239,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_positionfrom",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170240,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Wm.wm_iconwindow",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170241,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.create_arc",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170242,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.bbox",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170243,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.tk_busy_forget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170244,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.move",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170245,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.CURRENT",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170246,
+    "url": "https://manpages.debian.org/pack(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170247,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.add_cascade",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170248,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.deletecommand",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170249,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.add_command",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170250,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.CHORD",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170251,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.place_slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170252,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Scrollbar.fraction",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170253,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.get",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170255,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Entry.index",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170256,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.winfo_ismapped",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170257,
+    "url": "https://manpages.debian.org/colors(3tk)",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170258,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.propagate",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170259,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Place.place_slaves",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170260,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Canvas.addtag_closest",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170261,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.BooleanVar.set",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170262,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Misc.getvar",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170263,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Spinbox.icursor",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170264,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Listbox.itemcget",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170265,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Menu.delete",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170266,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.PhotoImage.zoom",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170267,
+    "url": "https://docs.python.org/3/library/tkinter.html#tkinter.Text.tag_unbind",
+    "parentUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "id": 170457,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-0265d90",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170458,
+    "url": "https://github.com/python/cpython/pull/123757/commits/0265d90b07616d5aeee9e7d6354649393f238d21",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170459,
+    "url": "https://github.com/python/cpython/commit/28efeefab7d577ea4fb6e3f6e82f903f2aee271d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170460,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403672154",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170461,
+    "url": "https://github.com/python/cpython/pull/123757#ref-issue-2509224325",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170462,
+    "url": "https://github.com/python/cpython/pull/123757/commits/7281465250d789f7b0e05539e6e5ad91c23236b4",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170464,
+    "url": "https://github.com/python/cpython/pull/123757/commits/a4b995e58eaa63a375745bd0520245e6655f0703",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170465,
+    "url": "https://github.com/python/cpython/pull/123757#ref-issue-2553572437",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170466,
+    "url": "https://github.com/python/cpython/pull/123757#event-14155129170",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170467,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a#diff-0b058b84ad2260ed9d97d2e500f40dbc4857ecacd1a41cd389b1b500d3f38da0",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170468,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2288319938",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170469,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2371849980",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170470,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-03f91dc",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170471,
+    "url": "https://github.com/python/cpython/pull/123757/commits/f9d01f910409a4eff1cf5458bf37609185c36e92",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170472,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2329062647",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170473,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403298442",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170474,
+    "url": "https://github.com/python/cpython/pull/123757/commits/78e2e66650f340e388084d9236f9e13ce3b9790a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170475,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2333008974",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170476,
+    "url": "https://github.com/python/cpython/pull/123757/commits/420e498d55fa4848068ec1426abe9ccb90066f40",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170477,
+    "url": "https://github.com/python/cpython/pull/123757/commits/3ce16ec83932cf5186cd288f3e5253686be0ec3a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170478,
+    "url": "https://github.com/python/cpython/pull/123757/commits/8284118c69395857ca38bf7fc6b74a9606bd9a33",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170479,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170480,
+    "url": "https://github.com/python/cpython/pull/123757#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170481,
+    "url": "https://github.com/python/cpython/pull/123757/commits/03f91dc62c8a265d7ffb27f33165f88e2711a7f6",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170482,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-c50b039",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170483,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2334987705",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170485,
+    "url": "https://github.com/python/cpython/pull/123757/commits/2b9e2253e8b1c7ea97bb927fd48455002d8cff33",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170486,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F123757",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170488,
+    "url": "https://github.com/python/cpython/pull/123757/commits/2342a348494a1d5a1c552e5df538a337a4938769",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170489,
+    "url": "https://github.com/python/cpython/pull/123757/files/78746ba7f99258968a793fc7343ba57534b59582",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170490,
+    "url": "https://github.com/python/cpython/pull/123757/files/162c53cdb54658f0a9fd9a73d774b9530061775b",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170492,
+    "url": "https://github.com/python/cpython/pull/123757/files/2b9e2253e8b1c7ea97bb927fd48455002d8cff33#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170493,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a#diff-03cb75fe4cee43d472cdf7d000745d71b0d137dddde696c7053d4c178cf2c0f1",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170494,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403671645",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170495,
+    "url": "https://github.com/python/cpython/pull/123757/commits/a49a13e993debc185766a81350831a93ddc3aaf7",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170496,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328667191",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170497,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2317763985",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170498,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2326373825",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170499,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328662731",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170500,
+    "url": "https://github.com/python/cpython/pull/123757#event-14403672177",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170502,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2325872600",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170503,
+    "url": "https://github.com/python/cpython/pull/123757/commits/1d731c7f659863f0b5c19f9169bab3ac0f8b9b9d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170504,
+    "url": "https://github.com/python/cpython/pull/123757/files/f9d01f910409a4eff1cf5458bf37609185c36e92",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170505,
+    "url": "https://github.com/python/cpython/pull/123757/commits/8a46e08e477871a062b373485c22083c2012cacf",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170506,
+    "url": "https://github.com/python/cpython/pull/123757/files/162c53cdb54658f0a9fd9a73d774b9530061775b#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170507,
+    "url": "https://github.com/python/cpython/pull/123757/commits/c50b03995a092e414a5285da3a87766727b7f335",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170508,
+    "url": "https://github.com/python/cpython/pull/123757/files/a4b995e58eaa63a375745bd0520245e6655f0703#diff-03cb75fe4cee43d472cdf7d000745d71b0d137dddde696c7053d4c178cf2c0f1",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170509,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328315130",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170510,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328317755",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170511,
+    "url": "https://github.com/python/cpython/pull/123757",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170512,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2328665298",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170513,
+    "url": "https://github.com/python/cpython/pull/123757/files/2b9e2253e8b1c7ea97bb927fd48455002d8cff33#diff-0b058b84ad2260ed9d97d2e500f40dbc4857ecacd1a41cd389b1b500d3f38da0",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170514,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2374660739",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170515,
+    "url": "https://github.com/python/cpython/pull/123757#issuecomment-2362579214",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170517,
+    "url": "https://github.com/python/cpython/pull/123757#issue-2509226918",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170519,
+    "url": "https://github.com/python/cpython/pull/123757/commits/8c6fb0514346ba85aac4187ca0e682a559774b72",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170520,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2288318175",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170521,
+    "url": "https://github.com/python/cpython/pull/123757/files/a4b995e58eaa63a375745bd0520245e6655f0703..03f91dc62c8a265d7ffb27f33165f88e2711a7f6#diff-03cb75fe4cee43d472cdf7d000745d71b0d137dddde696c7053d4c178cf2c0f1",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170522,
+    "url": "https://github.com/python/cpython/pull/123757#pullrequestreview-2287462964",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170523,
+    "url": "https://github.com/python/cpython/pull/123757/files/78e2e66650f340e388084d9236f9e13ce3b9790a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170525,
+    "url": "https://github.com/python/cpython/pull/123757/commits/27f065689c86391d9e4ac7953acfad35aa531992",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170527,
+    "url": "https://github.com/python/cpython/pull/123757/files/f9d01f910409a4eff1cf5458bf37609185c36e92#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170529,
+    "url": "https://github.com/python/cpython/pull/123757/files/3ce16ec83932cf5186cd288f3e5253686be0ec3a",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170530,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-2342a34",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170531,
+    "url": "https://github.com/python/cpython/pull/123757/commits/162c53cdb54658f0a9fd9a73d774b9530061775b",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170532,
+    "url": "https://github.com/python/cpython/pull/123757#commits-pushed-420e498",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170534,
+    "url": "https://github.com/python/cpython/pull/123757/files/78746ba7f99258968a793fc7343ba57534b59582#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170535,
+    "url": "https://github.com/python/cpython/pull/123757/files/2b9e2253e8b1c7ea97bb927fd48455002d8cff33",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170536,
+    "url": "https://github.com/python/cpython/pull/123757/files/a4b995e58eaa63a375745bd0520245e6655f0703",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170537,
+    "url": "https://github.com/ADThomas-astro",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "id": 170538,
+    "url": "https://github.com/python/cpython/pull/123757/commits/78746ba7f99258968a793fc7343ba57534b59582",
+    "parentUrl": "https://github.com/python/cpython/issues/123757"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20833207?s\u003d40\u0026v\u003d4",
+    "alt": "@ADThomas-astro",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-123756: Only allow restart in command line mode by gaogaotiantian · Pull Request #123757 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123757"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetProgramFullPath"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tkinter — Python interface to Tcl/Tk — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tkinter — Python interface to Tcl/Tk — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tkinter.html#module-tkinter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.getobjects"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.getobjects"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "logging — Logging facility for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "logging — Logging facility for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/logging.html#logging.warning"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
     "alt": "@serhiy-storchaka",
