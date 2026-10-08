@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 237,
+    "url": "https://www.android.com/ai/circle-to-search/",
+    "title": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "content": "Circle to Search Een slimmere manier om te zoeken, makkelijk gemaakt. Met Circle to Search vind je de informatie die je nodig hebt, zonder van app te wisselen. Zie het, omcirkel het en vind het meteen. Nu proberen Stille video op loop afspelen Stille video op loop pauzeren Eén gebaar, veel mogelijkheden. Meer informatie Stille video op loop afspelen Stille video op loop pauzeren Vind het. Vind elk onderdeel van een outfit met één zoekopdracht. Stille video op loop afspelen Stille video op loop pauzeren Vertaal het. Je nieuwe tolk is er. Zoek naar iets om te vertalen wat er op je scherm staat. Leer het. Krijg informatieve samenvattingen met één eenvoudig gebaar. Herken het. Herken de kenmerken van frauduleuze tekstberichten en voorkom dat je wordt misleid door scammers. Benoem het. Herken snel dat nummer. Zoek naar nummers die op je apparaat of in de buurt worden afgespeeld.1 Stille video op loop afspelen Stille video op loop pauzeren Vind het. Vind elk onderdeel van een outfit met één zoekopdracht. Stille video op loop afspelen Stille video op loop pauzeren Vertaal het. Je nieuwe tolk is er. Zoek naar iets om te vertalen wat er op je scherm staat. Leer het. Krijg informatieve samenvattingen met één eenvoudig gebaar. Herken het. Herken de kenmerken van frauduleuze tekstberichten en voorkom dat je wordt misleid door scammers. Benoem het. Herken snel dat nummer. Zoek naar nummers die op je apparaat of in de buurt worden afgespeeld.1 Vind de antwoorden die je nodig hebt. Hoe activeer ik Circle to Search op mijn Pixel-telefoon? Houd in de navigatiemodus met 3 knoppen je vinger op de startknop. Houd in de navigatiemodus met gebaren je vinger op de navigatiebalk. Hoe verschilt Circle to Search van andere zoekmachines? Je kunt naar alles op je scherm zoeken met een gebaar, zoals omcirkelen, tikken, krabbelen of markeren. Moet ik Chrome instellen als mijn standaardbrowser om Circle to Search te gebruiken? Chrome hoeft niet je standaardbrowser te zijn om Circle to Search te gebruiken. Ik heb een iPhone. Kan ik Circle to Search ook gebruiken? Ja, iPhone-gebruikers hebben via de Google-app en de Google Chrome-app op hun iPhone toegang tot een functie die vergelijkbaar is met Circle to Search van Google. Met deze functie, die \u0027Zoeken op scherm met Google Lens\u0027 heet, kun je objecten of tekst op je scherm zoeken door ze te omcirkelen of te markeren. Moet ik Circle to Search downloaden op mijn telefoon? Je hoeft Circle to Search niet te downloaden op een Android-apparaat. Hoe werkt de vertaalfunctie van Circle to Search? Met de vertaalfunctie van Circle to Search kun je tekst op het scherm meteen vertalen naar je voorkeurstaal door op de vertaalknop naast de zoekbalk te tikken. Deze functie herkent de taal automatisch en vertaalt de tekst naar je standaardsysteemtaal. Android Magazine Gerelateerde artikelen. Hoe scan je QR-codes op Android? Artikel lezen Deel je camera en scherm in Gemini Live-gesprekken. Artikel lezen Gebruik Circle to Search om naar alles wat je op je telefoon tegenkomt te zoeken, zonder van app te wisselen. Artikel lezen 1 / Koop de nieuwste Android-telefoons. Telefoons kopen Ontdek meer over AI van Google op Android Maak dagelijkse taken makkelijker. Of je nu decoratieadvies wilt of hulp nodig hebt om een recept te verdubbelen, AI-ondersteuning is veelzijdiger dan ooit. Gemini ontdekken Meer functies, meer mogelijkheden. Maak, communiceer en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies verkennen Beschikbaar op bepaalde apparaten. Een internetverbinding is vereist. Werkt op compatibele apps en platforms. De resultaten kunnen variëren afhankelijk van visuele overeenkomsten. Reeksen ingekort en gesimuleerd. De resultaten zijn bedoeld ter illustratie en kunnen variëren. Controleer of de reacties kloppen. 1De beschikbaarheid kan verschillen per land en apparaat. Je hebt een internetverbinding nodig. Werkt op compatibele apps en platforms. Muziek wordt niet herkend als het telefoonvolume uitstaat. De resultaten kunnen variëren afhankelijk van audio-overeenkomsten. De beschikbaarheid, functies en specificaties van producten variëren per regio, provider en apparaat. Niet alle apparaten of functies op deze pagina zijn in alle markten beschikbaar. Neem contact op met je lokale verkoper of mobiele provider voor de huidige beschikbaarheid en compatibiliteit in jouw regio. Android is een handelsmerk van Google LLC. Alle andere handelsmerken zijn eigendom van de respectieve eigenaren. Stille video op loop afspelen Stille video op loop pauzeren",
+    "scrapedAt": "2026-10-08 18:54:48.235742"
+  },
+  {
+    "id": 236,
+    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dandroid_web_gemini\u0026utm_medium\u003dxpa\u0026utm_source\u003dandroid_web\u0026utm_campaign\u003dandroid_web_gemini\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dandroid_web_gemini",
+    "title": "‎Google Gemini",
+    "content": "Sign in Google apps",
+    "scrapedAt": "2026-10-08 18:54:47.098098"
+  },
+  {
+    "id": 235,
+    "url": "https://www.android.com/new-features-on-android/featured/",
+    "title": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "content": "Nieuw op Android. Van outfits mixen en matchen in je eigen digitale kledingkast tot scammers herkennen die zich voordoen als je contacten: ontdek de nieuwste updates voor je apparaten. Stille video op loop afspelen Stille video op loop pauzeren Toon je persoonlijkheid Dagelijks gebruik Blijf verbonden Video bekijken Android 17 Toon je persoonlijkheid. Van een outfit plannen in je digitale kledingkast tot in één keer naar een hele look zoeken: ontdek de nieuwste functies waarmee je je eigen stempel kunt drukken. Toon je persoonlijkheid. Van een outfit plannen in je digitale kledingkast tot in één keer naar een hele look zoeken: ontdek de nieuwste functies waarmee je je eigen stempel kunt drukken. Stille video op loop afspelen Stille video op loop pauzeren Circle to Search Omcirkel een outfit en vind elk kledingstuk. Van bovenkleding tot schoenen en alles daartussenin: Circle to Search vindt het allemaal zonder dat je van app hoeft te wisselen.1 Begin nu met omcirkelen Begin nu met omcirkelen Stille video op loop afspelen Stille video op loop pauzeren Gemini Krijg hulp die op jou is afgestemd in Gemini. Gemini kan je op een unieke manier helpen als je je favoriete apps zoals Gmail, Foto\u0027s en YouTube koppelt.2 Krijg gepersonaliseerde hulp Krijg gepersonaliseerde hulp Stille video op loop afspelen Stille video op loop pauzeren Gboard Je emoji is nog schattiger geworden 🐭+🩷. Als een simpel roze hartje niet genoeg is om uit te drukken wat je voelt, remix je de emoji tot iets meer.3 Maak nieuwe combo\u0027s Maak nieuwe combo\u0027s Stille video op loop afspelen Stille video op loop pauzeren Gemini Praat, typ en doe alles op één plek. Wissel moeiteloos tussen praten en typen met Gemini Live, ingebouwd in je gesprek.4 Praat live met Gemini Geef je dagelijks leven een boost. Van betere beveiliging voor je gesprekken tot realtime vertalingen op je telefoon: ontdek de functies die je dagelijkse momenten verbeteren. Geef je dagelijks leven een boost. Van betere beveiliging voor je gesprekken tot realtime vertalingen op je telefoon: ontdek de functies die je dagelijkse momenten verbeteren. Stille video op loop afspelen Stille video op loop pauzeren Telefoon van Google Herken scammers die zich voordoen als je contacten. Krijg meldingen als een scammer lijkt te bellen vanaf een nummer dat je vertrouwt, zodat je het gesprek snel kunt beëindigen.5 Herken scammers snel Herken scammers snel Stille video op loop afspelen Stille video op loop pauzeren Google Play Boeken Samenvattingen en inzichten, rechtstreeks vanaf je pagina. Krijg een terugblik op wat je tot nu toe hebt gelezen en stel vragen om dieper in te gaan op thema\u0027s, context of personages.6 Verken Boekinzichten Verken Boekinzichten Stille video op loop afspelen Stille video op loop pauzeren Google Meet Live vertalingen, nu op Android-telefoons. Hoor realtime vertalingen die de stem en toon van de spreker vastleggen, waar je telefoon je ook brengt.7 Nu proberen Nu proberen Blijf verbonden. Of je nu foto\u0027s deelt of meldingen instelt voor als vrienden veilig thuis zijn, met deze updates blijf je in contact met de mensen die het belangrijkst voor je zijn. Blijf verbonden. Of je nu foto\u0027s deelt of meldingen instelt voor als vrienden veilig thuis zijn, met deze updates blijf je in contact met de mensen die het belangrijkst voor je zijn. Stille video op loop afspelen Stille video op loop pauzeren Vind-plek Krijg een melding als vrienden thuiskomen. Stel meldingen in voor wanneer dierbaren hun werk verlaten, thuiskomen of een geplande locatie bereiken. Inchecken is niet nodig.8 Stel meldingen in Stel meldingen in Stille video op loop afspelen Stille video op loop pauzeren Quick Share Deel elk moment ook met je iPhone®-vrienden. Deel foto\u0027s, video\u0027s en bestanden tussen bepaalde Android-telefoons9 en iPhones10. Geen internetverbinding vereist. Quick Share naar AirDrop® Quick Share naar AirDrop® Stille video op loop afspelen Stille video op loop pauzeren Persoonlijke veiligheid Zorg voor een gerust gevoel met veiligheidsfuncties voor kinderen. Binnenkort zijn voor kinderen functies beschikbaar zoals Detectie van auto-ongelukken, medische info en contacten voor noodgevallen.11 Stel de app Persoonlijke veiligheid in Stel de app Persoonlijke veiligheid in Ontdek hoe de nieuwe functies werken. Link to Youtube Video (visible only when JS is disabled) Android 17. Dankzij nieuwe tools voor multitasking, gaming en content maken is je apparaat beter dan ooit. Meer informatie Android 17. Dankzij nieuwe tools voor multitasking, gaming en content maken is je apparaat beter dan ooit. Meer informatie Stille video op loop afspelen Stille video op loop pauzeren Schermreacties Reacties in realtime. Maak schermopnamen die zowel je scherm als de camera aan de voorkant vastleggen. Reageer tegelijkertijd op video\u0027s, artikelen of reacties. Deze zomer als eerste beschikbaar op Pixel-apparaten. Bubbels Maak multitasken makkelijker. Bubbels, een meldingsfunctie op Android, gaat nu verder dan chats. Je kunt meer",
+    "scrapedAt": "2026-10-08 18:54:45.787215"
+  },
+  {
+    "id": 234,
+    "url": "https://www.android.com/safety/privacy/",
+    "title": "Android-privacyinstellingen en -rechten | Android",
+    "content": "Android-privacy helemaal naar jouw wens De uitstekende bescherming biedt je ook de mogelijkheid om je privacyvoorkeuren verder te personaliseren. Ontdek manieren om controle te houden over je privacy Privacydashboard Zie welke apps toegang hebben tot je gegevens Rechtenbeheer op apparaat Beheer je Android-privacyinstellingen Gedeelte Veiligheid van gegevens Bekijk hoe je gegevens worden gedeeld Camera en microfoon Bepaal wat je telefoon ziet en hoort Privacydashboard Check welke apps toegang hebben tot gevoelige gegevens. Zie welke apps in de afgelopen 24 uur toegang hebben gehad tot je camera, microfoon en locatie. Bepaal bovendien welke apps deze rechten mogen houden. Meer informatie over het privacydashboard Apparaatrechten Stel je privacyvoorkeuren in Met Android bepaal je zelf wanneer bepaalde gevoelige gegevens worden gedeeld met apps die je downloadt. App-rechten Bepaal wanneer je gegevens wilt delen. Geef altijd, eenmalig of nooit toegang tot je microfoon, camera of locatie. Meer informatie over app-rechten Rechtenbeheer Beheer al je rechten op één plek. Vind en beheer al je gevoelige app-rechten op één centrale plek. Meer informatie over Rechtenbeheer Locatie Bepaal hoe je locatie wordt gedeeld. Kies welke apps je geschatte locatie krijgen en welke nauwkeurigere informatie mogen hebben. Meer informatie over locatierechten Automatisch resetten van rechten Reset de toegang voor ongebruikte apps. Als je een app een tijdje niet hebt gebruikt, reset Android automatisch je rechten. Meer informatie over automatisch resetten Gedeelte Veiligheid van gegevens Hoe verschillende apps je gegevens gebruiken. Het gedeelte Veiligheid van gegevens in Google Play biedt meer informatie over welke gegevens een app kan openen en gebruiken. Zo kun je beter bepalen welke apps je wilt downloaden. Nu proberen Waarschuwingen voor trackers Met waarschuwingen voor onbekende trackers ben je beschermd tegen ongewenste tracking. Je telefoon vindt automatisch onbekende trackingapparaten die je volgen en stuurt je hier een melding over. Zo kun je ze zonder probleem vinden.1 Meer informatie over waarschuwingen voor onbekende trackers Camera en microfoon Zet de ogen en oren van je telefoon aan of uit. Android laat het je weten als je camera en microfoon actief zijn via groene iconen rechtsboven in het scherm. Gebruik de schakelaar om de camera- en microfoontoegang voor het hele systeem uit te zetten. Meer informatie over camera- en microfoonopties Advertentieprivacy Krijg controle over je advertentiebeleving. Android helpt voorkomen dat je activiteit in verschillende apps wordt bijgehouden door de gegevens te beperken die apps kunnen delen voor advertentieweergave. Meer informatie over advertentieprivacy Protected Computing Technologie die de veiligheid en privacy van je gegevens beschermt. Android minimaliseert en anonimiseert je gegevens van intelligente functies. De toegang wordt daarnaast beperkt om je privacy en veiligheid op technisch vlak te waarborgen. Meer informatie over Protected Computing Telefoons Je ideale telefoon vinden Kies een telefoon van je favoriete merk, met nuttige functies van Google. Ontdek Android-telefoons Overstappen naar Android Overstappen is nu makkelijker dan ooit Zet je foto\u0027s, video\u0027s, berichten en andere content van je iPhone beveiligd over naar je nieuwe Android-telefoon. Maak de overstap Prioriteit aan fysieke veiligheid Krijg hulp waar en wanneer je die het hardst nodig hebt. Maak het hulpverleners makkelijker om je te vinden tijdens een noodgeval. Krijg meldingen waarmee je sneller een veilige plek kunt vinden. En communiceer met dierbaren als je dringend hulp nodig hebt. Functies voor fysieke veiligheid ontdekken Thanks for visiting. We’d like to ask you a few questions about your experience to help us improve our website. It should take about a minute. Questionof What is your primary reason for visiting Android.com? Learn about Android Safety Learn how to switch to Android Get help finding a new smartphone Get help finding a new tablet Learn about a new Operating System release Learn about Google Apps and Android features Get help with using Android Learn about multi-device experiences Other Questionof Which of the following best describes where you are in the shopping process for a new smartphone? Initial gathering of information about what smartphones are available Narrowing down to a short list of smartphones Decided on the smartphone and ready to purchase Not currently shopping for a new smartphone Questionof How safe and secure do you think Android is? Extremely safe and secure Very safe and secure Somewhat safe and secure Not so safe and secure Not at all safe and secure Questionof How easy or hard was it to find what you were looking for on Android.com? Extremely easy Somewhat easy Neither easy nor hard Somewhat hard Extremely hard Questionof Overall, how satisfied are you with Android.com? Very Satisfied Somewhat Satisfied Neutral Somewhat Dissatisfied Very Dissatisfied Questionof How",
+    "scrapedAt": "2026-10-08 18:54:44.600112"
+  },
+  {
+    "id": 233,
+    "url": "https://www.android.com/intl/en_uk/phones/shop/",
+    "title": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "content": "Play silent looping video Pause silent looping video Shop the latest Android phones. Compare Compare Results New New New Results Filter Filters CategoryTemplate OptionTemplate Clear Filters Show Results See all New Google Pixel 8 From $699.00 CTA Play silent looping video Pause silent looping video Lots of options? We can help you choose. Get started Product availability, features, and specifications vary by region, carrier, and device. Not all devices or features shown on this page are available in all markets. Please check with your local retailer or mobile carrier for current availability and compatibility in your area. Android is a trademark of Google LLC. All other trademarks are the property of their respective owners. Play silent looping video Pause silent looping video",
+    "scrapedAt": "2026-10-08 18:54:43.48049"
+  },
+  {
     "id": 232,
     "url": "https://www.android.com/google-messages/",
     "title": "Probeer Google Berichten. Bewaar wat belangrijk is.",
@@ -1610,26 +1645,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 233,
-    "url": "https://www.android.com/intl/en_uk/phones/shop/"
-  },
-  {
-    "id": 234,
-    "url": "https://www.android.com/safety/privacy/"
-  },
-  {
-    "id": 235,
-    "url": "https://www.android.com/new-features-on-android/featured/"
-  },
-  {
-    "id": 236,
-    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dandroid_web_gemini\u0026utm_medium\u003dxpa\u0026utm_source\u003dandroid_web\u0026utm_campaign\u003dandroid_web_gemini\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dandroid_web_gemini"
-  },
-  {
-    "id": 237,
-    "url": "https://www.android.com/ai/circle-to-search/"
   },
   {
     "id": 238,
@@ -42257,10 +42272,831 @@ window.searchData = [
     "id": 17435,
     "url": "https://messages.google.com/install",
     "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17436,
+    "url": "https://www.android.com/intl/en_uk/phones/help-me-choose/",
+    "parentUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "id": 17437,
+    "url": "https://www.android.com/intl/en_uk/phones/shop/google.com",
+    "parentUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "id": 17438,
+    "url": "https://support.google.com/android/answer/13720755/",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17439,
+    "url": "https://android.com/articles/transfer-messages/",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17440,
+    "url": "https://www.android.com/safety/privacy/#safety-privacy-camera-and-mic",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17441,
+    "url": "https://blog.google/products/android/google-android-safety-features/",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17442,
+    "url": "https://play.google.com/store/apps",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17443,
+    "url": "https://www.android.com/safety/privacy/#safety-privacy-data-safety-section",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17444,
+    "url": "https://support.google.com/android/answer/3467281#zippy\u003d%2Cwhen-google-location-accuracy-is-on",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17445,
+    "url": "https://www.android.com/intl/nl_nl/safety/physical-safety/",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17446,
+    "url": "https://support.google.com/android/answer/9431959#types",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17447,
+    "url": "https://support.google.com/android/answer/9431959#unused_apps",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17449,
+    "url": "https://www.android.com/intl/nl_nl/switch-to-android/",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17450,
+    "url": "https://www.android.com/safety/privacy/#safety-privacy-dashboard",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17451,
+    "url": "https://support.google.com/android?p\u003dprivacy_dashboard",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17452,
+    "url": "https://blog.google/technology/safety-security/how-we-achieve-privacy-through-innovation/",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17453,
+    "url": "https://www.android.com/safety/privacy/#safety-privacy-permissions",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17454,
+    "url": "https://support.google.com/android/answer/9431959",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17455,
+    "url": "https://support.google.com/android?p\u003dcamera_mic_indicators",
+    "parentUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "id": 17456,
+    "url": "https://www.android.com/new-features-on-android/featured/#stay-connected",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17457,
+    "url": "https://support.google.com/meet/answer/16221730?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17458,
+    "url": "https://support.google.com/android/answer/9319337#zippy\u003d%2Cuse-the-personal-safety-app?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17459,
+    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dhighlight_q2_personal_int\u0026utm_source\u003dandroid_drop\u0026utm_medium\u003downed\u0026utm_campaign\u003dandroid_drop_q2_personal_int\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dandroid_drop_q2_personal_int\u0026promo\u003ddc:p18n\u0026redirect\u003dhome",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17460,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.dialer\u0026referrer\u003dutm_source%3Dweb%26utm_medium%3Downed%26utm_campaign%3Dy2026q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17461,
+    "url": "https://quickshare.google/qrcode?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17462,
+    "url": "https://blog.google/products-and-platforms/platforms/android/android-17-features",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17463,
+    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dhighlight_q2_gemlive\u0026utm_source\u003dandroid_drop\u0026utm_medium\u003downed\u0026utm_campaign\u003dhighlight_q2_gemlive\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dhighlight_q2_gemlive\u0026target\u003dlive",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17464,
+    "url": "https://www.youtube.com/watch?v\u003dt-FxQewIPq0",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17465,
+    "url": "https://www.android.com/new-features-on-android/featured/#superpower-your-everyday",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17467,
+    "url": "https://findmy.app.google/find?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17468,
+    "url": "https://www.android.com/new-features-on-android/featured/#express-yourself",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17469,
+    "url": "https://search.google/ways-to-search/circle-to-search/?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17470,
+    "url": "https://play.google.com/store/books/editorial?id\u003dmc_ebook_book_insights_fcp\u0026referrer\u003dutm_source%3Dweb%26utm_medium%3Downed%26utm_campaign%3Dy2026q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17471,
+    "url": "https://www.android.com/new-features-on-android/featured/#a17",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17472,
+    "url": "https://support.google.com/gboard#topic\u003d9023832?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17473,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.inputmethod.latin\u0026referrer\u003dutm_source%3Dweb%26utm_medium%3Downed%26utm_campaign%3Dy2026q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17475,
+    "url": "https://www.android.com/quick-share/with-iphone/?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17476,
+    "url": "https://meet.google.com/?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17477,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.safetyhub\u0026referrer\u003dutm_source%3Dweb%26utm_medium%3Downed%26utm_campaign%3Dy2026q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17478,
+    "url": "https://support.google.com/phoneapp/answer/3459196?utm_source\u003dweb\u0026utm_medium\u003downed\u0026utm_campaign\u003dy26q2AndroidDrop",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17479,
+    "url": "https://www.android.com/new-features-on-android/featured/#see-the-new-features-in-action",
+    "parentUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "id": 17481,
+    "url": "https://accounts.google.com/ServiceLogin?passive\u003d1209600\u0026continue\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26ios-min-version%3D322.0%26is_sa%3D1%26campaign_id%3Dandroid_web_gemini%26utm_medium%3Dxpa%26utm_source%3Dandroid_web%26utm_campaign%3Dandroid_web_gemini%26pt%3D9008%26mt%3D8%26ct%3Dandroid_web_gemini\u0026followup\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26ios-min-version%3D322.0%26is_sa%3D1%26campaign_id%3Dandroid_web_gemini%26utm_medium%3Dxpa%26utm_source%3Dandroid_web%26utm_campaign%3Dandroid_web_gemini%26pt%3D9008%26mt%3D8%26ct%3Dandroid_web_gemini\u0026ec\u003dGAZAkgU",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dandroid_web_gemini\u0026utm_medium\u003dxpa\u0026utm_source\u003dandroid_web\u0026utm_campaign\u003dandroid_web_gemini\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17485,
+    "url": "https://search.google/ways-to-search/circle-to-search/",
+    "parentUrl": "https://www.android.com/ai/circle-to-search/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/39/c4/2f99e10d4e33b4f5a6dde1a64ded/ai-overviews.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een Mont Blanc-dessert met matcha is omcirkeld en wordt gebruikt als voorbeeld om te tonen hoe de AI-overzichtsfunctie werkt in Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/2e/c0/1f7cc0e240a8bc7a5848fc620959/scam-detection.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een frauduleus tekstbericht op een telefoonscherm, waarbij het AI-overzicht van Google het bericht identificeert als mogelijke fraude.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/e2/19/875369224503b3d3abe8491e7027/sound-search.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een persoon die een microfoon vasthoudt en zingt wordt gebruikt als voorbeeld voor de functie om nummers te vinden van Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/39/c4/2f99e10d4e33b4f5a6dde1a64ded/ai-overviews.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een Mont Blanc-dessert met matcha is omcirkeld en wordt gebruikt als voorbeeld om te tonen hoe de AI-overzichtsfunctie werkt in Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/2e/c0/1f7cc0e240a8bc7a5848fc620959/scam-detection.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een frauduleus tekstbericht op een telefoonscherm, waarbij het AI-overzicht van Google het bericht identificeert als mogelijke fraude.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/e2/19/875369224503b3d3abe8491e7027/sound-search.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een persoon die een microfoon vasthoudt en zingt wordt gebruikt als voorbeeld voor de functie om nummers te vinden van Circle to Search.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/76/6f/f5a3f1724d178aaeb1d68ac22490/qr-code.png\u003dn-w610-h407-fcrop64\u003d1,0e2b0000f1d5ffff-rw",
+    "alt": "Een man zit buiten en kijkt glimlachend op een smartphone.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/3f/d0/f9d6f90e4673ae9bac30f5ec65a0/live.png\u003dn-w610-h407-fcrop64\u003d1,0e2b0000f1d5ffff-rw",
+    "alt": "Een telefoon toont het startscherm van Gemini.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/f7/33/4e81b11541e1a6a86eac90ca7ebe/cts.png\u003dn-w610-h407-fcrop64\u003d1,0e2b0000f1d5ffff-rw",
+    "alt": "Iemand omcirkelt een afbeelding op hun telefoon als voorbeeld van hoe Circle to Search werkt.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.android.com/ai/circle-to-search/",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.android.com/ai/circle-to-search/",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.android.com/ai/circle-to-search/",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.android.com/ai/circle-to-search/",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.android.com/ai/circle-to-search/",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.android.com/ai/circle-to-search/",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.android.com/ai/circle-to-search/",
+    "alt": "",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/7a/e4/d87f33c947e7ab1b483c924ee4ee/recirculation-gemini-4x.webp\u003dn-w543-h305-fcrop64\u003d1,00000030ffffffd0-rw",
+    "alt": "Een vooraanzicht van een Android-telefoon met de Gemini-prompt ervoor.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/0f/c3/38a7d2a24214b792495089f2aea8/recirculation-moreai-4x.webp\u003dn-w543-h305-fcrop64\u003d1,00000030ffffffd0-rw",
+    "alt": "Het scherm van een Android-telefoon toont een vrouw die op een strand staat met een gloeiende witte omtrek om haar heen.",
+    "pageTitle": "Zoek naar alles op je scherm met Circle to Search | Android",
+    "pageUrl": "https://www.android.com/ai/circle-to-search/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/7e/21/80f06d75498a97cede9b47b0dbdc/and3347-q2-android-thumbnail-opt-6-v09-b.webp\u003dn-w531-h299-fcrop64\u003d1,00230000ffddffff-rw",
+    "alt": "and3347-q2-android-thumbnail-opt-6-v09-b.webp",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/fb/1b/bee2b975485d8a21b4cdeef28013/us-ggl-android-17-blog-assets-location-button-a17-1280x1280-greyborder-v3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een app van een lokaal café op Android vraagt de gebruiker of die de exacte locatie wil delen voor één sessie",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/69/65/11e4247046adbe26694acd772c5c/fold-game-mode-web-1280x1280.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Nieuwe virtuele gamepadindeling voor opvouwbare Android-apparaten",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/42/9e/d8c53cdf403cbbea9dcb49d533ea/us-ggl-android-17-blog-assets-mark-as-lost-android17-1280x1280-greyborder-v3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Markeren als verloren, tweestapsverificatie op Android",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.android.com/new-features-on-android/featured/",
+    "alt": "",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.android.com/new-features-on-android/featured/",
+    "alt": "",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.android.com/new-features-on-android/featured/",
+    "alt": "",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.android.com/new-features-on-android/featured/",
+    "alt": "",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.android.com/new-features-on-android/featured/",
+    "alt": "",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.android.com/new-features-on-android/featured/",
+    "alt": "",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://www.android.com/new-features-on-android/featured/",
+    "alt": "",
+    "pageTitle": "Ontdek wat er nieuw is: de nieuwste Android-functies | Android",
+    "pageUrl": "https://www.android.com/new-features-on-android/featured/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/5UuJHTb9yMNavCahYd6AMVUiAYN8O_iZ5SHwO9M3E58GjfLEz2O3TrO4LbpHR5NKxbARnX9Hn2XTlwPSVf5GgRKEfNKukrgGQ3xIyO2cb8vvdFkAREg",
+    "alt": "Een grafische animatie die aangeeft dat het privacydashboard details biedt over welke apps in de afgelopen 24 uur toegang hebben gehad tot je camera, locatie en microfoon.",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/IkYAJqrrWqxmLGzZn5_9m5nsZ24eiCPTWHQuAi1KNb_56NM6_itLMqs6461wtkZHF_ZXCQ3yjS9-ftUz6NjOjrAjFwKlnwlXLRE1RY801OOO9BFFidQ",
+    "alt": "Een persoon staat op een grasheuvel en kijkt naar hun Android-telefoon. In een grafische overlay wordt gevraagd om een app toestemming te geven om foto\u0027s te maken en video\u0027s op te nemen. Rechtenopties zijn onder meer toegang geven tijdens gebruik van de a",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/DbVX9u68W237Qx-iaLbtXFI9siLqz6bZ748AMCvh2RY7Er1HpcHsTLcs-f4ZOpAiQ_QzDrtkTH3NRWV7qAGscO_4jkIwWmTjMWz6lfQjLZtVbt2ro3kJ",
+    "alt": "Een volwassene in een rolstoel kijkt glimlachend naar een Android-telefoon terwijl een kind danst en zingt. Een grafische overlay geeft de details aan van Rechtenbeheer, met onder andere het aantal apps dat toegang heeft tot lichaamssensoren, de agenda, g",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyGZmlGDXUoy2GuIVtuT9wkcMH7QNIs7lCNC1Xqb4UyZskF7pFhx7CFOKWF6rthCnepTKRwmChVv0HV-uCyTeVa8kP6UMxwcYqQgkpy7C6zAwg8J3Y8",
+    "alt": "Een afbeelding van een groep vrienden in een rotsachtige omgeving, waarbij één persoon naar een Android-telefoon kijkt.  In een grafische overlay, vlak naast de afbeelding, wordt gevraagd om een app toegang te geven tot de geschatte of exacte locatie. Aan",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/ZPc9RVttESk6qgPIiTJW34nHvMUVLKBOKJSKGZWZ8FEb4e2dDb-7r7MhJWc3tJ4Hn7ndm8F2SzJ4OrsfhxFMD8I4C0h7IX1zoHgAGWYXaZBuPRjjpPU",
+    "alt": "Een persoon staat met een kom eten bij het aanrecht en kijkt naar een Android-telefoon. Boven op de afbeelding is een grafische overlay van een instellingsmelding geplaatst. In de melding staat dat tijdelijke bestanden van ongebruikte apps zijn verwijderd",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/6hvXN3EAu0gmT4DqDLkEvN3Q6q4z2kI_FDOMMFe27cGV9zD6K2NKrNLK0ZGHfxvB7dZawr47tp-UzUbsqLe30Bx2teq7lAho3saBAZva2w5eZkZUi2Q",
+    "alt": "Iemand ligt met hun hulphond op een kleedje in het gras. De persoon gebruikt een Android-telefoon. Over een deel van de afbeelding is een grafische overlay van de omtrek van een Android-telefoon geplaatst. De overlay geeft informatie over gegevens die wor",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/-u2epR5O8P1yCC0lHqasks3nJSVqTWd6lWVRNcWJaq-JEV0Ep5vXZvWFOqJkHGghG9uzRSOXD0qTsMmdIf9iaXW9MbQVmYV9NANDl3FeKF-QZYH4bT-e",
+    "alt": "Een close-up van het rechterbovendeel van een Android-telefoon met een melding over onbekende trackingapparaten samen met een kaart die de afstand tot het apparaat toont.",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/59wqliGgkkj_RdkOuxKc7FT-YC87zwoYnREXs_a0auy1FcnqHVtezP4EffhfKXDodBydofBUp1ZwAPXFg6nuRy3nTbhl08dw6jmlua7qgG3HfaEJouc",
+    "alt": "Een close-up van het rechterbovendeel van een Android-telefoon met een groene stip bij de hoek van het scherm. In een grafische overlay staat dat de cameratoegang beschikbaar is en de microfoontoegang is geblokkeerd. Ernaast staat een icoon van een oog me",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/ye_byIMrzT6mwN_nHCyJOnSE746eUzpS9BgMmFF5M7Y8Np2iFbmly9itbKMWaHqZXUfr2hxgvKUmevgFXu43cqIHetmZkk_b_-TF7ORi0fUegA8hMslU",
+    "alt": "De omtrek van een Android-telefoon met een animatie van een hangslot, gevolgd door een lijst van advertenties die geen gebruikersgegevens hebben gekregen.",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/8lSY8K-Iiax5zUfqb4G7-YdDZSocowjvYSGcZ2jCLxmg8gXtnDJooP_IHP6-wt3cY84nR1dMFeIXBlG5CicF5ryjYKh-yTaOZT_X753Xfilr9mlDoI8H",
+    "alt": "De omtrek van een Android-telefoon met een animatie van iconen voor een slot, microfoon, afbeelding en volume.",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/Y54GWMqRXNdQVoQ2b0OseEzyYIX2sVE2tMOI8ncB_7hd1ofLZMS8nLvR8lGjAfsicP_Y8kUb6bA1yyVhVUurytGcn29TH1oudOo-9RTiDK1kXUcJdw",
+    "alt": "Een close-up van de camera aan de achterzijde van een Android-telefoon.",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/DysAwlQkK86KSrWW-28VPF2BjuHiZ_Bvg0gNYZiBtQQoTruQxC--v5OtqhX5mBEIHYFEZhsUs1HTWuN6PYC28pcjWIRgzLIyZMt7HykibtvNpRayD0I",
+    "alt": "Android-logo binnen de schakelaar-UI.",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/GLiEufW2Pq6K8vySrIrxavUXaVhvTcMeKsup3s63REWLfG8IGMwFl4h48oN8cBsP7hzoH_H70Dj88iAAu1TaYmVKEX-S8D7UDeiCjhHhOVMDCUm_pBg",
+    "alt": "Een vrachtwagenchauffeur zit achter het stuur. Linksboven staat een overlay met animatie en een melding dat er een auto-ongeluk is gedetecteerd, samen met een aftelklok van 60 seconden. Rechtsonder staat een UI-animatie met de opties I\u0027m OK (Ik ben in ord",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://lh3.googleusercontent.com/WyC9P3QnQMmIqp9TF5kJbNZxyX8SMhOtW9crxuClnYVeKMSPmf6qHLywz5dV0iu3SuJV_zbZlPlAIX535d5P8ht0AdHxFSfJiG3JjI1AXQ2dXpxT4g\u003drwa-e366-v1",
+    "alt": "",
+    "pageTitle": "Android-privacyinstellingen en -rechten | Android",
+    "pageUrl": "https://www.android.com/safety/privacy/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/9d/13/8a8b60df45b99d6811e101a9b79d/shop-desktop-l.webp\u003dn-w1422-h667-fcrop64\u003d1,4a220000b5deffff-rw",
+    "alt": "Shop page hero poster",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/android_camera/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/android_camera/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/android_camera/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/battery_charging_full/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/battery_charging_full/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/battery_charging_full/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/mobile/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/mobile/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/mobile/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/brightness_7/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/brightness_7/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/brightness_7/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/deployed_code/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/deployed_code/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/deployed_code/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/sim_card/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/sim_card/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/sim_card/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/memory/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/memory/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/memory/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/rss_feed/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/rss_feed/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/rss_feed/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/verified/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/verified/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/verified/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/water_drop/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/water_drop/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/water_drop/default/24px.svg",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.android.com/intl/en_uk/phones/shop/",
+    "alt": "",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/20/21/751794044a26a647ca2deecc11c0/droid.webp\u003dn-w531-h299-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Android Bot",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/25/37/43b5d93b490fa37e43423e0ce7bb/wayfinder-xl-4x.webp\u003dn-w1064-h599-fcrop64\u003d1,3eb80000c13cffff-rw",
+    "alt": "Pixel 11 series in various colors are arranged in two moving concentric circles.",
+    "pageTitle": "Shop Deals on New Pixel \u0026 Galaxy Android Phones | Android",
+    "pageUrl": "https://www.android.com/intl/en_uk/phones/shop/"
+  },
   {
     "src": "https://www.gstatic.com/marketing-cms/assets/images/14/33/c34a2892461e863c25410759173f/rcs-free.webp\u003dn-w543-h678-fcrop64\u003d1,0000199affffe666-rw",
     "alt": "Een jonge volwassene zit aan een bureau en glimlacht terwijl die naar een Pixel 9-apparaat kijkt.",
