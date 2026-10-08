@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 196,
+    "url": "https://pytorch.org/",
+    "title": "PyTorch Foundation - PyTorch",
+    "content": "Search Close Search JOIN US PyTorch Conference North America October 20-21, 2026 San Jose, CA #PyTorchCon REGISTER NOWSPONSOR Get Started: Install PyTorch Locally or Launch Instantly on Supported Cloud Platforms Get started October 8, 2026 in Blog Building Spyre as a Native PyTorch Device TL;DR Spyre becomes a native PyTorch device by connecting PyTorch\u0027s existing device, allocator, stream, and compiler abstractions through torch-spyre to the Spyre runtime and firmware. PrivateUse1 gives Spyre a real… Read More October 6, 2026 in Blog Modernizing Table Batched Embeddings with FBTriton This post explores the FBTriton kernel design for Table Batched Embedding (TBE) forward and backward passes. These core operators handle embedding lookups across thousands of sharded GPUs within recommendation systems.… Read More October 5, 2026 in Blog Evolution of the PyTorch Media Processing Landscape TL;DR If you need to decode or encode media, whether it\u0027s images, video, or audio, use TorchCodec. If you need to transform media, use TorchVision for images and video, and… Read More Join PyTorch Foundation As a member of the PyTorch Foundation, you’ll have access to resources that allow you to be stewards of stable, secure, and long-lasting codebases. You can collaborate on training, local and regional events, open-source developer tooling, academic research, and guides to help new users and contributors have a productive experience. EXPLORE BENEFITS Key Features \u0026 Capabilities Production Ready Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe. Distributed Training Scalable distributed training and performance optimization in research and production is enabled by the torch.distributed backend. Robust Ecosystem A rich ecosystem of tools and libraries extends PyTorch and supports development in computer vision, NLP and more. Cloud Support PyTorch is well supported on major cloud platforms, providing frictionless development and easy scaling. Install PyTorch Select your preferences and run the install command. Stable represents the most currently tested and supported version of PyTorch. This should be suitable for many users. Preview is available if you want the latest, not fully tested and supported, builds that are generated nightly. Please ensure that you have met the prerequisites below (e.g., numpy), depending on your package manager. You can also install previous versions of PyTorch. Note that LibTorch is only available for C++. NOTE: Latest Stable PyTorch requires Python 3.10 or later. PyTorch Build Your OS Package Language Compute Platform Run this Command: PyTorch Build Stable (2.7.0) Preview (Nightly) Your OS Linux Mac Windows Package Pip LibTorch Source Language Python C++ / Java Compute Platform CUDA 11.8 CUDA 12.6 CUDA 12.8 ROCm 6.3 CPU Run this Command: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 Previous versions of PyTorch Could not find the right platform for your hardware? See the PyTorch Additional Platforms page. Quick Start With Cloud Partners Get up and running with PyTorch quickly through popular cloud platforms and machine learning services. Amazon Web Services PyTorch on AWS Amazon SageMaker AWS Deep Learning Containers AWS Deep Learning AMIs Google Cloud Platform Cloud Deep Learning VM Image Deep Learning Containers Microsoft Azure PyTorch on Azure Azure Machine Learning Azure Functions Lightning Studios lightning.ai Alibaba Cloud Alibaba Cloud PAI Alibaba Cloud PAI PyTorch processor Submit a single-node PyTorch transfer learning job Ecosystem BROWSE PROJECTS Featured Projects Explore a rich ecosystem of libraries, tools, and more to support development. Captum Captum (“comprehension” in Latin) is an open source, extensible library for model interpretability built on PyTorch. PyTorch Geometric PyTorch Geometric is a library for deep learning on irregular input data such as graphs, point clouds, and manifolds. skorch skorch is a high-level library for PyTorch that provides full scikit-learn compatibility. Companies \u0026 Universities Using PyTorch Amazon Advertising Reduce inference costs by 71% and scale out using PyTorch, TorchServe, and AWS Inferentia. READ CASE STUDIES Salesforce Pushing the state of the art in NLP and Multi-task learning. Stanford University Using PyTorch’s flexibility to efficiently research new algorithmic approaches. Docs Access comprehensive developer documentation for PyTorch View Docs › Tutorials Get in-depth tutorials for beginners and advanced developers View Tutorials › Resources Find development resources and get your questions answered View Resources › Stay in touch for updates, event info, and the latest news By submitting this form, I consent to receive marketing emails from the LF and its projects regarding their events, training, research, developments, and related announcements. I understand that I can unsubscribe at any time using the links in the ",
+    "scrapedAt": "2026-10-08 18:53:26.673239"
+  },
+  {
+    "id": 195,
+    "url": "https://pandas.pydata.org/",
+    "title": "pandas - Python Data Analysis Library",
+    "content": "pandas pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language. Install pandas now! Getting started Install pandas Getting started Try pandas online Documentation User guide API reference Contributing to pandas Release notes Community About pandas Ask a question Ecosystem With the support of: The full list of companies supporting pandas is available in the sponsors page. Latest version: 3.0.6 What\u0027s new in 3.0.6 Release date: Sep 17, 2026 Documentation (web) Download source code Follow us Recommended books Previous versions 2.3.3 (Sep 29, 2025) changelog | docs | code 2.2.3 (Sep 20, 2024) changelog | docs | code 2.1.4 (Dec 08, 2023) changelog | docs | code 2.0.3 (Jun 28, 2023) changelog | docs | code",
+    "scrapedAt": "2026-10-08 18:53:25.428369"
+  },
+  {
+    "id": 194,
+    "url": "https://us.pycon.org/2026/attend/information/",
+    "title": "Registration Information - PyCon US 2026",
+    "content": "Translations available: español Registration Information You can access the registration page by logging into your PyCon US 2026 account and heading to your dashboard to register or view your existing registration. You can return and add events or book your hotel if you choose not to do so during your initial registration. Register for PyCon US Today! PyCon US trusts you to self-select a fair registration rate: Corporate Rate — If your company is paying for you to attend PyCon US, register at the corporate rate. You will help keep the conference affordable for everyone, especially students and those requiring a travel grant. Government employees should also register at the corporate rate. Individual Rate — If you are paying for yourself to attend PyCon US, feel free to come as an individual. Employees of non-profits might also choose to register at the individual rate. Student/Academic Rate — This rate is for full-time students and academics. If you are employed in a school or university, you qualify for this rate. However, if the funds available will allow for the Individual or Corporate rates, please select accordingly. Please review the Health and Safety Guidelines before registering to attend PyCon US. Registration prices Corporate: $899 USD Individual: $469 USD Student: $139 USD Note: Tutorial registration is not included in regular conference registration prices. Tutorial registration is now open, and the tutorial schedule can be found here. The cost is $150 USD per tutorial per person. Note: Children are welcome to attend with a legal guardian. Both people should be registered for the conference and have badges. The legal guardian should be with the child at all times and the child should never be left alone at the conference. What does my registration payment go towards? Your registration payments help us keep PyCon US registration tickets reasonably priced. Registration costs go towards offsetting costs for catering, audio visual, recording, internet, and other costs. By offsetting those costs, we can offer attendees reasonable registration rates and offer a travel grant program to those that need it. Furthermore, the revenue that PyCon US generates is used to run the Python Software Foundation. The Python Software Foundation runs PyCon US, gives out over $300k in grants per year to Python groups around the world, houses critical community infrastructure such as PyPI and python.org, and launches programs like the CPython Developers in Residence. To read more about what the PSF does and its finances, check out the 2024 Annual Impact Report. What’s included in my registration? Summits and Sponsor Presentations - May 14 \u0026 May 15, 2026 Coffee and refreshments will be served Sponsor Presentations are sessions provided by our sponsors. The schedule for these sessions can be found here. Many summits are held during PyCon US; some are closed attendance and some are available to register for on the PyCon US 2026 registration system. Opening Reception - May 14, 2026 Refreshments will be served You will receive one drink ticket upon entry The Opening Reception is the official opening of the PyCon US Expo Hall where our sponsors will be available to meet at their booths. Main Conference - May 15 - 17, 2026 Coffee, refreshments, and lunch are served each day General Sessions - enjoy our Keynote Speakers during these sessions Talk tracks - over 90 sessions to choose from (no additional registration is required to attend these sessions) Expo Hall Posters Open Spaces Lightning Talks Job Fair \u0026 Community Showcase - May 17, 2026 Lunch is served Visit with companies that have employment opportunities to offer and Open Source community organizations to find out what they\u0027ve been up to and how you can get involved Running alongside the Job Fair, the Community Showcase is a self-organizing opportunity for community groups to meet and mingle. If you host a regional PyCon, local meet up, or other community group or open source project, we invite you to come participate. There will be cards and table flags available to indicate where you’re group is sitting (on a first-come/first-served, self-organizing basis). This is a chance to talk with the community about what your group has been up to and to seek out interested new participants. To participate, just show up! Sprints - May 18 \u0026 May 19, 2026 Coffee, power, and wifi will be provided each day Sprint project submissions are available here. Not included: Tutorials - May 13 \u0026 14, 2026 The first 2 days of the conference offer a schedule packed with 3-hour tutorials to help both beginners and experienced developers learn new technologies and increase their skills. Registration and additional payment of $150 USD per tutorial per person are required for these tutorials via the PyCon US 2026 registration system. The tutorial schedule can be found here. Not included: PyLadies Auction - May 16, 2026 Information about the PyLadies Auction can be found here. Registration and additio",
+    "scrapedAt": "2026-10-08 18:53:24.250373"
+  },
+  {
+    "id": 193,
+    "url": "https://pygobject.gnome.org/",
+    "title": "Overview — PyGObject",
+    "content": "Skip to main content Back to top Ctrl+K System Settings Light Dark PyGObject is a Python package which provides bindings for GObject based libraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more. It supports Linux, Windows, and macOS and works with Python 3.9+ and PyPy3. PyGObject, including this documentation, is licensed under the LGPLv2.1+. If you want to write a Python application for GNOME or a Python GUI application using GTK, then PyGObject is the way to go. To get started, check out the “GNOME Developer Documentation”. For more information on specific libraries, check out the GNOME Python API documentation. import gi\n\ngi.require_version(\"Gtk\", \"4.0\")\nfrom gi.repository import GLib, Gtk\n\n\nclass MyApplication(Gtk.Application):\n    def __init__(self):\n        super().__init__(application_id\u003d\"com.example.MyGtkApplication\")\n        GLib.set_application_name(\"My Gtk Application\")\n\n    def do_activate(self):\n        window \u003d Gtk.ApplicationWindow(application\u003dself, title\u003d\"Hello World\")\n        window.present()\n\n\napp \u003d MyApplication()\napp.run()\n How does it work?# PyGObject uses GLib, GObject, GIRepository, libffi and other libraries to access the C library (libgtk-4.so) in combination with the additional metadata from the accompanying typelib file (Gtk-4.0.typelib) and dynamically provides a Python interface based on that information. Who Is Using PyGObject?# Anaconda - an installation program used by Fedora, RHEL and others Apostrophe - a Markdown editor Blanket - listen to different sounds BleachBit - delete unnecessary files from the system Bottles - run Windows software on Linux Cambalache - a user interface maker for GTK Cozy - the audiobook app for Linux D-Feet - an easy to use D-Bus debugger Deluge - a BitTorrent client Dialect - a translation app Drawing - a drawing application Feeds - an RSS/Atom feed reader Gajim - a fully-featured XMPP client Gameeky - a learning tool for making games and learning experiences Gaphor - a simple modeling tool Getting Things GNOME! - a personal task organizer Girens - a Plex client for playing movies, TV shows and music from your Plex library GNOME Music - a music player for GNOME GNOME Tweaks - a tool to customize advanced GNOME options GNOME Video Player - a GNOME video player Gramps - a genealogy program Iotas - simple note taking Komikku - a manga reader Lollypop - a modern music player Lutris - a video game manager Meld - a visual diff and merge tool Metadata Cleaner - an application to view and clean metadata in files MyPaint - a nimble, distraction-free, and easy tool for digital painters Nicotine+ - a graphical client for the Soulseek peer-to-peer network Orca - a flexible and extensible screen reader Paperwork - a personal document manager Pithos - a Pandora Radio client Pitivi - a free and open source video editor Plots - a graph plotting app Pulp - a minimal take on RSS reading Quod Libet - a music library manager / player Secrets - a password manager Setzer - a LaTeX editor Terminator - The Robot Future of Terminals Wike - a Wikipedia reader The following applications or libraries use PyGObject for optional features, such as plugins or as optional backends: beets - a music library manager and MusicBrainz tagger gedit - a GNOME text editor matplotlib - a python 2D plotting library Totem - a video player for GNOME Further Resources# GNOME Developer Documentation Tutorials for creating a GNOME application using PyGObject, GTK 4, and Libadwaita. GNOME Python API documentation Auto generated API documentation for many libraries accessible through PyGObject. On this page Show Source",
+    "scrapedAt": "2026-10-08 18:53:22.248069"
+  },
+  {
+    "id": 192,
+    "url": "https://jobs.python.org",
+    "title": "Python Job Board | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. New Senior Staff Engineer - Origination \u0026 New Products tem Remote (UK / EU), Remote (UK / EU), Remote (UK / EU) Back end, Cloud, Lead Posted: 18 September 2026 Developer / Engineer New ML Engineer Micro1 Remote, Worlwide, Worldwide Back end, Machine Learning Posted: 15 September 2026 Developer / Engineer New Software Engineer, Full Stack (Python, Java, Rust, C#, C++) Gridnaut Recruiting Remote, Remote, Worldwide Back end, Big Data, Cloud, Database, Front end, Machine Learning, Systems, Web, Python, Full Stack Posted: 11 September 2026 Developer / Engineer New SENIOR Back-End Python Engineer - FULLY REMOTE-WORLDWIDE ActivePrime, Inc. REMOTE, REMOTE Back end, Cloud, Text Processing Posted: 09 September 2026 Developer / Engineer Agentic Python Engineer Evaboot Remote, Remote/Worldwide, Remote/Worldwide, Remote Back end, Integration, Machine Learning Posted: 08 September 2026 Developer / Engineer Senior Python Developer Adzuna Remote (within 2 hours of London timezone), Remote Back end, Database, Front end, Integration, Management, Systems, Testing Posted: 03 September 2026 Developer / Engineer Agentic Python Engineer Evaboot Remote, Remote, Worldwide Back end, Front end Posted: 31 August 2026 Developer / Engineer Python developer Eleks Poland, Lviv, Ivano-Frankivsk, Ternopil, Uzhhorod, Chernivtsi or Kyiv, Ukraine/Poland Back end, Cloud, Machine Learning, Devops Posted: 28 August 2026 Developer / Engineer Python/DevOps Engineer NordVpn/NordSecurity Vilnius / Kaunas / Warsaw, Lithuania/Poland Back end, Cloud, Machine Learning Posted: 28 August 2026 Developer / Engineer Software Engineer (Remote) Softech Associate Panama City Beach, Florida, United States Back end, Cloud, Database, Front end, Integration, Machine Learning, Numeric processing, Testing, Text Processing, Web Posted: 16 August 2026 Developer / Engineer Agentic Python Engineer Evaboot Remote, Remote/Worldwide, Remote/Worldwide Back end, Integration, Machine Learning, Agentic AI / LLM Agents Posted: 16 August 2026 Developer / Engineer Lead Python Backend Engineer Reef Technologies Warsaw (fully remote), Poland Back end Posted: 04 August 2026 Developer / Engineer Senior Python Backend Engineer Reef Technologies Warsaw (fully remote), Poland Back end Posted: 04 August 2026 Developer / Engineer Python Backend Engineer Constelli Signals Hyderabad, Telangana, India Back end, Database Posted: 24 July 2026 Developer / Engineer Senior Full-Stack Engineer [Full Time; 100% remote; US-only] Hive Collective Anywhere, Anywhere, USA Back end, Machine Learning, Web Posted: 23 July 2026 Developer / Engineer Python Developer Micro1 Miami Shores, FL, United States Posted: 23 July 2026 Developer / Engineer Senior Python Engineer EPAM Miami Shores, FL, United States Posted: 23 July 2026 Developer / Engineer Senior Python Engineer Turing Miami Shores, FL, United States Posted: 23 July 2026 Developer / Engineer Senior Python/DevOps Engineer (100% Remote - USA Only) Six Feet Up 100% Remote, USA Only Back end, Big Data, Cloud, Database, Evangelism, Finance, Front end, Lead, Machine Learning Posted: 17 July 2026 Developer / Engineer Python + TypeScript Engineers Fusionbox Remote (US Based), Any US State, US Back end, Database, Front end, Web Posted: 16 July 2026 Developer / Engineer Senior AI-Augmented Full Stack Developer SureSwift Capital Victoria, Canada Back end, Front end Posted: 15 July 2026 Developer / Engineer Senior Backend Python Engineer mindIT HR Agency (on behalf of a confidential client) Remote, Argentina Back end, Machine Learning, Web Posted: 15 July 2026 Developer / Engineer Full-Stack Engineer AIDAR Hamburg, Germany Back end, Database, Front end, Machine Learning Posted: 15 July 2026 Developer / Engineer Senior Python Engineer EPAM Worldwide, Worldwide, Worldwide Back end, Machine Learning, Developers Posted: 15 July 2026 Developer / Engineer Submit a Job Have a job that our community would be interested in? Please check our job submission how-to for details on how to file a job posting. After you have reviewed our how-to document, please login and use this form to create a new job posting If you have submitted jobs previously under your login, you can view them by logging in now. In case of questions, please contact the PSF Python Job Board team. Thank you. Stay up-to-date Subscribe via RSS Follow The PSF via Twitter Job Board Sponsors",
+    "scrapedAt": "2026-10-08 18:53:20.537872"
+  },
+  {
     "id": 191,
     "url": "https://www.python.org/psf/membership/",
     "title": "Become a Member of the PSF | Python Software Foundation",
@@ -1325,26 +1360,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 192,
-    "url": "https://jobs.python.org"
-  },
-  {
-    "id": 193,
-    "url": "https://pygobject.gnome.org/"
-  },
-  {
-    "id": 194,
-    "url": "https://us.pycon.org/2026/attend/information/"
-  },
-  {
-    "id": 195,
-    "url": "https://pandas.pydata.org/"
-  },
-  {
-    "id": 196,
-    "url": "https://pytorch.org/"
   },
   {
     "id": 197,
@@ -33761,10 +33776,1514 @@ window.searchData = [
     "id": 15012,
     "url": "https://www.roundup-tracker.org/docs.html",
     "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15022,
+    "url": "https://www.python.org/jobs/type/machine-learning/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15023,
+    "url": "https://www.python.org/jobs/location/hyderabad-telangana-india/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15024,
+    "url": "https://www.python.org/jobs/location/anywhere-anywhere-usa/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15025,
+    "url": "https://www.python.org/jobs/location/miami-shores-fl-united-states/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15026,
+    "url": "https://www.python.org/accounts/login/?next\u003d/jobs/mine/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15027,
+    "url": "https://www.python.org/jobs/8109/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15028,
+    "url": "https://www.python.org/jobs/8117/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15029,
+    "url": "https://www.python.org/jobs/8129/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15030,
+    "url": "https://twitter.com/ThePSF",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15031,
+    "url": "https://www.python.org/jobs/8113/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15032,
+    "url": "https://www.python.org/jobs/8125/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15033,
+    "url": "https://www.python.org/jobs/8121/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15034,
+    "url": "https://www.python.org/jobs/8133/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15035,
+    "url": "https://www.python.org/jobs/type/web/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15036,
+    "url": "https://www.python.org/jobs/location/hamburg-germany/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15037,
+    "url": "https://www.python.org/jobs/type/lead/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15038,
+    "url": "https://www.python.org/jobs/location/worldwide-worldwide-worldwide/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15039,
+    "url": "https://www.python.org/jobs/type/testing/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15040,
+    "url": "https://www.python.org/jobs/location/vilnius-kaunas-warsaw-lithuaniapoland/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15041,
+    "url": "https://www.python.org/jobs/location/remote-within-2-hours-of-london-timezone-remote/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15042,
+    "url": "https://www.python.org/jobs/type/systems/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15043,
+    "url": "https://www.python.org/jobs/8118/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15044,
+    "url": "https://www.python.org/jobs/type/big-data/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15045,
+    "url": "https://www.python.org/jobs/8134/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15046,
+    "url": "https://www.python.org/jobs/8126/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15047,
+    "url": "https://www.python.org/jobs/location/remote-us-based-any-us-state-us/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15048,
+    "url": "https://www.python.org/jobs/8130/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15049,
+    "url": "https://www.python.org/jobs/category/developer-engineer/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15050,
+    "url": "https://www.python.org/jobs/8110/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15051,
+    "url": "https://www.python.org/jobs/8122/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15052,
+    "url": "https://www.python.org/jobs/type/integration/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15053,
+    "url": "https://www.python.org/jobs/location/100-remote-usa-only/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15054,
+    "url": "https://www.python.org/jobs/location/remote-remote-worldwide/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15055,
+    "url": "https://www.python.org/jobs/feed/rss/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15056,
+    "url": "https://www.python.org/jobs/location/remote-argentina/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15057,
+    "url": "https://www.python.org/jobs/type/text-processing/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15058,
+    "url": "https://www.python.org/jobs/8139/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15059,
+    "url": "https://www.python.org/jobs/location/remote-worlwide-worldwide/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15060,
+    "url": "https://www.python.org/jobs/location/victoria-canada/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15061,
+    "url": "https://www.python.org/jobs/8107/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15062,
+    "url": "https://www.python.org/jobs/8119/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15063,
+    "url": "https://www.python.org/accounts/login/?next\u003d/jobs/create/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15064,
+    "url": "https://www.python.org/jobs/8135/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15065,
+    "url": "https://www.python.org/jobs/type/front-end/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15066,
+    "url": "https://www.python.org/jobs/8131/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15067,
+    "url": "https://www.python.org/jobs/type/numeric-processing/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15068,
+    "url": "https://www.python.org/jobs/location/panama-city-beach-florida-united-states/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15069,
+    "url": "https://www.python.org/jobs/8111/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15070,
+    "url": "https://www.python.org/jobs/location/remote-uk-eu-remote-uk-eu-remote-uk-eu/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15071,
+    "url": "https://www.python.org/jobs/type/cloud/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15072,
+    "url": "https://www.python.org/jobs/location/poland-lviv-ivano-frankivsk-ternopil-uzhhorod-chernivtsi-or-kyiv-ukrainepoland/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15073,
+    "url": "https://www.python.org/jobs/location/remote-remoteworldwide-remoteworldwide/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15074,
+    "url": "https://www.python.org/jobs/type/evangelism/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15075,
+    "url": "https://www.python.org/jobs/type/finance/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15076,
+    "url": "https://www.python.org/jobs/location/remote-remote/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15077,
+    "url": "https://www.python.org/jobs/type/database/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15078,
+    "url": "https://www.python.org/jobs/location/remote-remoteworldwide-remoteworldwide-remote/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15079,
+    "url": "https://www.python.org/jobs/8116/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15080,
+    "url": "https://www.python.org/jobs/8128/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15081,
+    "url": "https://www.python.org/jobs/8108/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15082,
+    "url": "https://www.python.org/jobs/8136/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15083,
+    "url": "https://www.python.org/jobs/8120/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15084,
+    "url": "https://www.python.org/jobs/type/management/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15085,
+    "url": "https://www.python.org/jobs/location/warsaw-fully-remote-poland/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15086,
+    "url": "https://www.python.org/community/jobs/howto/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15087,
+    "url": "https://www.python.org/jobs/type/back-end/",
+    "parentUrl": "https://jobs.python.org"
+  },
+  {
+    "id": 15088,
+    "url": "https://gitlab.gnome.org/jpu/cambalache",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15089,
+    "url": "https://wiki.gnome.org/Apps/Lollypop",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15090,
+    "url": "https://pygobject.gnome.org/_images/overview-dark.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15091,
+    "url": "https://www.gtk.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15092,
+    "url": "https://pygobject.gnome.org/_sources/index.rst.txt",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15093,
+    "url": "https://matplotlib.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15094,
+    "url": "https://docs.gtk.org/gobject/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15095,
+    "url": "https://github.com/tchx84/gameeky",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15096,
+    "url": "https://sourceware.org/libffi/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15097,
+    "url": "https://meldmerge.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15098,
+    "url": "https://www.bleachbit.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15099,
+    "url": "https://mypaint.app/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15100,
+    "url": "https://api.pygobject.gnome.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15101,
+    "url": "https://gitlab.gnome.org/GNOME/showtime/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15102,
+    "url": "https://docs.gtk.org/gio/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15103,
+    "url": "https://wiki.gnome.org/Apps/Tweaks",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15104,
+    "url": "https://www.cvfosammmm.org/setzer/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15105,
+    "url": "https://wiki.gnome.org/Apps/GTG",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15106,
+    "url": "https://openpaper.work/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15107,
+    "url": "https://beets.io/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15108,
+    "url": "https://pygobject.gnome.org/_images/pygobject.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15109,
+    "url": "https://gajim.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15110,
+    "url": "https://fedoraproject.org/wiki/Anaconda",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15111,
+    "url": "https://nicotine-plus.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15112,
+    "url": "https://wiki.gnome.org/Apps/Gedit",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15113,
+    "url": "https://wiki.gnome.org/Apps/Videos",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15114,
+    "url": "https://apps.gnome.org/Dialect/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15115,
+    "url": "https://gitlab.gnome.org/tijder/girens",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15116,
+    "url": "https://apps.gnome.org/MetadataCleaner/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15117,
+    "url": "https://developer.gnome.org/documentation/tutorials/beginners.html",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15118,
+    "url": "https://usebottles.com/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15119,
+    "url": "https://www.gnome.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15120,
+    "url": "https://pygobject.gnome.org/#who-is-using-pygobject",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15121,
+    "url": "https://apps.gnome.org/Apostrophe/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15122,
+    "url": "https://gaphor.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15123,
+    "url": "https://hugolabe.github.io/Wike/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15124,
+    "url": "https://wiki.gnome.org/Projects/Orca",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15125,
+    "url": "https://pygobject.gnome.org/_images/overview.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15126,
+    "url": "https://apps.gnome.org/Komikku/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15127,
+    "url": "https://apps.gnome.org/Blanket/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15128,
+    "url": "https://gfeeds.gabmus.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15129,
+    "url": "https://wiki.gnome.org/action/show/Apps/DFeet",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15130,
+    "url": "https://pygobject.gnome.org/_images/pygobject-dark.svg",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15131,
+    "url": "https://www.pitivi.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15132,
+    "url": "https://deluge-torrent.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15133,
+    "url": "https://pygobject.gnome.org/#main-content",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15134,
+    "url": "https://apps.gnome.org/Secrets/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15135,
+    "url": "https://quodlibet.readthedocs.io/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15136,
+    "url": "https://maoschanz.github.io/drawing/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15137,
+    "url": "https://pygobject.gnome.org/#how-does-it-work",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15138,
+    "url": "https://github.com/alexhuntley/Plots/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15139,
+    "url": "https://pygobject.gnome.org/#further-resources",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15140,
+    "url": "https://gramps-project.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15141,
+    "url": "https://apps.gnome.org/Iotas/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15142,
+    "url": "https://gstreamer.freedesktop.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15143,
+    "url": "https://gitlab.gnome.org/cheywood/Pulp/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15144,
+    "url": "https://apps.gnome.org/Music/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15145,
+    "url": "https://lutris.net/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15146,
+    "url": "https://webkitgtk.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15147,
+    "url": "https://gnome-terminator.org/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15148,
+    "url": "https://docs.gtk.org/glib/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15149,
+    "url": "https://docs.gtk.org/girepository/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15150,
+    "url": "https://github.com/geigi/cozy",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15151,
+    "url": "https://pithos.github.io/",
+    "parentUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "id": 15152,
+    "url": "https://us.pycon.org/2026/schedule/sponsor-presentations/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15153,
+    "url": "https://www.marriott.com/en-us/hotels/lgbmc-marriott-long-beach-downtown/overview/?scid\u003df2ae0541-1279-4f24-b197-a979c79310b0",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15154,
+    "url": "https://www.marriott.com/en-us/hotels/lgbwi-the-westin-long-beach/overview/?scid\u003df2ae0541-1279-4f24-b197-a979c79310b0",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15155,
+    "url": "https://us.pycon.org/es/2026/attend/information/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15156,
+    "url": "https://us.pycon.org/2026/accounts/login/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15157,
+    "url": "https://us.pycon.org/2026/events/pyladies-auction/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15158,
+    "url": "https://us.pycon.org/2026/events/opening-reception/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15159,
+    "url": "https://us.pycon.org/2026/accounts/dashboard/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15160,
+    "url": "http://python.org/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15161,
+    "url": "https://us.pycon.org/2026/about/keynote-speakers/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15162,
+    "url": "https://us.pycon.org/2026/attend/travel-grants/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15163,
+    "url": "https://us.pycon.org/2026/venue/hotels/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15164,
+    "url": "https://www.hyatt.com/hyatt-regency/en-US/lgbrl-hyatt-regency-long-beach?src\u003dcorp_lclb_google_seo_lgbrl\u0026utm_source\u003dgoogle\u0026utm_medium\u003dorganic\u0026utm_campaign\u003dlmr",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15165,
+    "url": "https://us.pycon.org/2026/about/health-safety-guidelines/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15166,
+    "url": "https://us.pycon.org/2026/registration/letters/request",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15167,
+    "url": "https://us.pycon.org/2026/schedule/tutorials/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15168,
+    "url": "https://pypi.python.org/pypi",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15169,
+    "url": "https://www.marriott.com/en-us/hotels/lgbcy-courtyard-long-beach-downtown/overview/?scid\u003df2ae0541-1279-4f24-b197-a979c79310b0",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15170,
+    "url": "https://python.org/psf/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15171,
+    "url": "https://www.python.org/psf/annual-report/2024/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15172,
+    "url": "https://us.pycon.org/2026/events/dev-sprints/",
+    "parentUrl": "https://us.pycon.org/2026/attend/information/"
+  },
+  {
+    "id": 15173,
+    "url": "https://t.me/s/pandas_dev",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15174,
+    "url": "https://fosstodon.org/@pandas_dev",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15176,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.3.3/pandas-2.3.3.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15177,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v3.0.6/pandas-3.0.6.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15178,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.1/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15179,
+    "url": "https://pandas.pydata.org/getting_started.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15180,
+    "url": "https://pandas.pydata.org/docs/reference/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15181,
+    "url": "https://pandas.pydata.org/about/sponsors.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15182,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.3/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15183,
+    "url": "https://stackoverflow.com/questions/tagged/pandas",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15184,
+    "url": "https://pandas.pydata.org/try.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15185,
+    "url": "https://numfocus.org/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15186,
+    "url": "https://www.nvidia.com",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15187,
+    "url": "https://pandas.pydata.org/docs/whatsnew/v3.0.6.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15188,
+    "url": "https://pandas.pydata.org/about/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15189,
+    "url": "https://pandas.pydata.org/docs/whatsnew/v2.2.3.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15190,
+    "url": "https://pandas.pydata.org/docs/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15191,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.2.3/pandas-2.2.3.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15192,
+    "url": "https://pandas.pydata.org/docs/whatsnew/v2.0.3.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15193,
+    "url": "https://www.bodo.ai/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15194,
+    "url": "https://pandas.pydata.org/docs/whatsnew/v2.3.3.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15195,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.1.4/pandas-2.1.4.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15196,
+    "url": "https://store.metasnake.com/effective-pandas-book/lhte7",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15197,
+    "url": "https://x.com/pandas_dev",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15198,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.2/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15199,
+    "url": "https://pandas.pydata.org/docs/user_guide/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15200,
+    "url": "https://pandas.pydata.org/pandas-docs/version/2.0/",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15201,
+    "url": "https://tidelift.com",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15202,
+    "url": "https://pandas.pydata.org/docs/development/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15203,
+    "url": "https://pandas.pydata.org/docs/getting_started/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15204,
+    "url": "https://pandas.pydata.org/docs/whatsnew/v2.1.4.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15205,
+    "url": "https://pandas.pydata.org/docs/whatsnew/index.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15206,
+    "url": "https://www.packtpub.com/en-us/product/pandas-cookbook-9781836205876?utm_medium\u003daffiliate\u0026utm_campaign\u003dd6d8585f-f475-a1ee-3989-67f3faf1238a\u0026utm_term\u003d5b056f65-afab-5c56-1f0a-5fd88167b4b5\u0026utm_content\u003dB31091",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15207,
+    "url": "https://amzn.to/3DyLaJc",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15208,
+    "url": "https://pandas.pydata.org/community/ecosystem.html",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15209,
+    "url": "https://github.com/pandas-dev/pandas/releases/download/v2.0.3/pandas-2.0.3.tar.gz",
+    "parentUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "id": 15210,
+    "url": "https://discord.com/invite/eNSRmh92XT",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15211,
+    "url": "https://pytorch.org/projects/safetensors/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15212,
+    "url": "https://docs.aws.amazon.com/deep-learning-containers/latest/devguide/deep-learning-containers-ec2-tutorials-training.html#deep-learning-containers-ec2-tutorials-training-pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15213,
+    "url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15214,
+    "url": "https://aws.amazon.com/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15215,
+    "url": "https://aws.amazon.com/sagemaker",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15216,
+    "url": "https://www.linuxfoundation.org/legal/policies",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15217,
+    "url": "https://pytorch.org/working-groups/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15218,
+    "url": "https://pytorch.org/projects/host-your-project/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15219,
+    "url": "https://pytorch.org/blog/category/blog/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15220,
+    "url": "https://www.alibabacloud.com/help/en/pai/pytorch-1",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15221,
+    "url": "https://www.linkedin.com/company/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15222,
+    "url": "https://pytorch.org/get-started/locally/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15223,
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/register/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15224,
+    "url": "https://docs.pytorch.org/tutorials/recipes_index.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15225,
+    "url": "https://pytorch.org/programs/ambassadors/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15226,
+    "url": "https://pytorch.org/members",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15227,
+    "url": "https://pytorch.org/blog/evolution-of-the-pytorch-media-processing-landscape/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15228,
+    "url": "https://pytorch.org/get-started/previous-versions",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15229,
+    "url": "https://azure.microsoft.com/en-us/develop/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15230,
+    "url": "https://pytorch.org/join",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15231,
+    "url": "https://pytorch.org/projects/pytorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15232,
+    "url": "https://pytorch.org/get-started/additional-platforms/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15233,
+    "url": "https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15234,
+    "url": "https://pytorch.org/webinars/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15235,
+    "url": "https://pytorch.org/#",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15236,
+    "url": "https://pytorch.org/contact/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15237,
+    "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/sponsor/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15238,
+    "url": "https://pytorch.org/projects/helion/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15239,
+    "url": "https://pytorch.org/community-hub/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15240,
+    "url": "https://pytorch.org/projects/deepspeed/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15241,
+    "url": "https://pytorch.org/brand-guidelines/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15242,
+    "url": "https://pytorch.org/docs/stable/index.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15243,
+    "url": "https://www.alibabacloud.com/en/product/machine-learning",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15244,
+    "url": "https://pytorch.org/projects/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15245,
+    "url": "https://docs.aws.amazon.com/dlami/latest/devguide/tutorial-pytorch.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15246,
+    "url": "https://discuss.pytorch.org/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15247,
+    "url": "https://pytorch.org/pytorch-certification/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15248,
+    "url": "https://twitter.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15249,
+    "url": "https://pytorch.org/blog/building-spyre-as-a-native-pytorch-device/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15250,
+    "url": "https://www.facebook.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15251,
+    "url": "https://www.youtube.com/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15252,
+    "url": "https://lightning.ai",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15253,
+    "url": "https://github.com/pytorch/pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15254,
+    "url": "https://pytorch.org/join/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15255,
+    "url": "https://pytorch.org/governing-board/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15256,
+    "url": "https://pytorch.org/contributor-awards/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15257,
+    "url": "https://pytorch.org/announcements",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15258,
+    "url": "https://cloud.google.com/deep-learning-vm/docs/pytorch_start_instance",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15259,
+    "url": "https://pytorch.org/tutorials",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15260,
+    "url": "https://pytorch.org/meeting-calendar/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15261,
+    "url": "https://pytorch.org/foundation/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15262,
+    "url": "https://pytorch.org/docs",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15263,
+    "url": "https://www.linuxfoundation.org/trademark-usage",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15264,
+    "url": "https://cloud.google.com/ai-platform/deep-learning-containers/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15265,
+    "url": "https://pytorch.org/blog/modernizing-table-batched-embeddings-with-fbtriton/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15266,
+    "url": "https://pytorch.org/get-started/previous-versions/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15267,
+    "url": "https://pytorch.org/newsletter/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15268,
+    "url": "https://pytorch.org/tac/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15269,
+    "url": "https://pytorch.org/projects/ray/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15270,
+    "url": "https://pytorch.org/domains/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15271,
+    "url": "https://pytorch.org/case-studies/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15272,
+    "url": "https://join.slack.com/t/pytorch/shared_invite/zt-2j2la612p-miUinTTaxXczKOJw48poHA",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15273,
+    "url": "https://www.alibabacloud.com/help/en/pai/submit-a-standalone-training-job-that-uses-pytorch",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15274,
+    "url": "https://pytorch.org/resources",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15275,
+    "url": "https://pytorch.org/resources/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15276,
+    "url": "https://pytorch.org/events/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15277,
+    "url": "https://pytorch.org/projects/executorch/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15278,
+    "url": "https://pytorch.org/projects/vllm/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15279,
+    "url": "https://www.linuxfoundation.org/privacy/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15280,
+    "url": "https://pytorch.org/credits/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15281,
+    "url": "https://landscape.pytorch.org/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15282,
+    "url": "https://pytorch.org/staff/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15283,
+    "url": "https://pytorch.org/tutorials/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15284,
+    "url": "https://docs.microsoft.com/en-us/azure/azure-functions/machine-learning-pytorch?tabs\u003dbash",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15285,
+    "url": "https://pytorch.org/blog/",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15286,
+    "url": "https://pytorch.org/tutorials/beginner/introyt.html",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15287,
+    "url": "http://www.linuxfoundation.org/privacy",
+    "parentUrl": "https://pytorch.org/"
+  },
+  {
+    "id": 15288,
+    "url": "https://pytorch.org/join-ecosystem",
+    "parentUrl": "https://pytorch.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/numfocus.svg",
+    "alt": "NumFOCUS",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/nvidia.svg",
+    "alt": "Nvidia",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/tidelift.svg",
+    "alt": "Tidelift",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/partners/bodo.svg",
+    "alt": "Bodo",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/books/pydata_book.gif",
+    "alt": "Python for Data Analysis",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/books/pandas_cookbook_3.gif",
+    "alt": "Pandas Cookbook, Third Edition",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pandas.pydata.org/static/img/books/effective_pandas_2.gif",
+    "alt": "Effective pandas 2",
+    "pageTitle": "pandas - Python Data Analysis Library",
+    "pageUrl": "https://pandas.pydata.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/pygobject.svg",
+    "alt": "_images/pygobject.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/pygobject-dark.svg",
+    "alt": "_images/pygobject-dark.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/overview.svg",
+    "alt": "_images/overview.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "src": "https://pygobject.gnome.org/_images/overview-dark.svg",
+    "alt": "_images/overview-dark.svg",
+    "pageTitle": "Overview — PyGObject",
+    "pageUrl": "https://pygobject.gnome.org/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/74/ff/74ff72de3d8cc1934906cf58f2ebde8e.png",
+    "alt": "NVIDIA logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/48/08/48086cc37509aa28be13f56c4e8558db.png",
+    "alt": "Bloomberg logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/d4/e6/d4e628d2fdf6bfd222dee7587ffe71cc.png",
+    "alt": "Hudson River Trading logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/c3/78/c378c4a6aa9babef49c829d2f4786732.png",
+    "alt": "Fastly logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/8c/75/8c75d9738db77702b337f21aa13e082f.png",
+    "alt": "Google logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/d3/68/d36834df21aeeb79fbd2f6497cb7bba6.png",
+    "alt": "Anthropic, PBC logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/02/e2/02e2b3fe6073ea810225a8db6f1f3bcd.png",
+    "alt": "Meta logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/42/75/4275784f1c08ffcf3bcd80737457a280.png",
+    "alt": "Microsoft logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/87/be/87be9d019970e28e278442d055e38766.png",
+    "alt": "SerpApi logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/ab/01/ab011d15984cda205774818d1e50e7b0.png",
+    "alt": "Capital One logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/b4/a2/b4a25d8c7f163c5ad0b72bdd2ba435b3.png",
+    "alt": "Red Hat logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/b9/55/b955b7d75968a92d3dd6955c173ea7ef.png",
+    "alt": "Vercel logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/f8/9b/f89b26baba43df5849497932003d5809.png",
+    "alt": "Anaconda, Inc logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/e8/db/e8dba0907b99bf394f68ac3374ca3a60.png",
+    "alt": "AWS logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/96/39/9639a91eacbfc97749d3a85b419906a6.png",
+    "alt": "OpenEDG Python Institute logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/38/8a/388a4db1fc2ee7ca8b20f54f4b81707c.png",
+    "alt": "Snowflake logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/13/c9/13c99fc096274b79fbecd4f95d2dc51c.png",
+    "alt": "JetBrains logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/cf/84/cf8496fca0b75874033b48269e122a01.png",
+    "alt": "Cubist Systematic Strategies logo",
+    "pageTitle": "Python Job Board | Python.org",
+    "pageUrl": "https://jobs.python.org"
+  },
   {
     "src": "https://img.shields.io/pypi/v/roundup?color\u003dblue\u0026label\u003dCurrent%20Version\u0026cacheSeconds\u003d86400",
     "alt": "Display current version of Roundup on PyPI.",
