@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1689,
+    "url": "https://github.com/python/cpython/issues/119775",
+    "title": "Remove deprecated feature to create immutable types with mutable bases · Issue #119775 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Remove deprecated feature to create immutable types with mutable bases #119775 New issue Copy link New issue Copy link Closed Closed Remove deprecated feature to create immutable types with mutable bases#119775 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on May 30, 2024 Issue body actions Feature or enhancement Refs #95533 Refs #95388 Now instead of a deprecation warning, we need to raise a TypeError. I will send a PR. Linked PRs gh-119775: Remove ability to create immutable types with mutable bases #119776 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees sobolevn Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:53:50.911773"
+  },
+  {
+    "id": 1688,
+    "url": "https://docs.python.org/3/glossary.html#term-borrowed-reference",
+    "title": "Glossary — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A callable that can be called to retrieve the annotations of an object. Annotate functions are usually functions, automatically generated as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ Informally used to mean either an asynchronous generator function or an asynchronous generator iterator, depending on context. The formal terms asynchronous generator function and asynchronous generator iterator are uncommon in practice; “asynchronous generator” alone is almost always sufficient. asynchronous generator function¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. See PEP 525. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous ",
+    "scrapedAt": "2026-10-08 19:53:48.576377"
+  },
+  {
+    "id": 1687,
+    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview",
+    "title": "Built-in Types — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer litera",
+    "scrapedAt": "2026-10-08 19:53:47.236018"
+  },
+  {
+    "id": 1686,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_InitializeFromInitConfig",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:53:45.826425"
+  },
+  {
+    "id": 1685,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:53:44.461365"
+  },
+  {
     "id": 1684,
     "url": "https://docs.python.org/3/reference/compound_stmts.html#else",
     "title": "8. Compound statements — Python 3.14.8 documentation",
@@ -11340,26 +11375,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1685,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero"
-  },
-  {
-    "id": 1686,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_InitializeFromInitConfig"
-  },
-  {
-    "id": 1687,
-    "url": "https://docs.python.org/3/library/stdtypes.html#memoryview"
-  },
-  {
-    "id": 1688,
-    "url": "https://docs.python.org/3/glossary.html#term-borrowed-reference"
-  },
-  {
-    "id": 1689,
-    "url": "https://github.com/python/cpython/issues/119775"
   },
   {
     "id": 1690,
@@ -252776,10 +252791,117 @@ window.searchData = [
     "id": 367302,
     "url": "https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_December_2025",
     "parentUrl": "https://en.wikipedia.org/wiki/Tail_call"
+  },
+  {
+    "id": 369123,
+    "url": "https://github.com/python/cpython/issues/119775#issue-2325175225",
+    "parentUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 369126,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/119775",
+    "parentUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 369127,
+    "url": "https://github.com/python/cpython/pull/95533",
+    "parentUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 369129,
+    "url": "https://github.com/python/cpython/pull/119776",
+    "parentUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 369132,
+    "url": "https://github.com/python/cpython/issues/119775#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 369133,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/119775",
+    "parentUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "id": 369134,
+    "url": "https://github.com/python/cpython/issues/119775#top",
+    "parentUrl": "https://github.com/python/cpython/issues/119775"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Remove deprecated feature to create immutable types with mutable bases · Issue #119775 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated feature to create immutable types with mutable bases · Issue #119775 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Remove deprecated feature to create immutable types with mutable bases · Issue #119775 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Remove deprecated feature to create immutable types with mutable bases · Issue #119775 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119775"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-borrowed-reference"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-borrowed-reference"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#memoryview"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#memoryview"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.Py_InitializeFromInitConfig"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.Py_InitializeFromInitConfig"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsZero"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
