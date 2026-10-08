@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1290,
+    "url": "https://www.python.org/downloads/metadata/sigstore/",
+    "title": "Sigstore Information | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Starting with the Python 3.11.0, Python 3.10.7, Python 3.9.14, Python 3.8.14, and Python 3.7.14 releases, CPython release artifacts are additionally signed with Sigstore. Starting with Python 3.14, Sigstore is the only method of signing and verification of release artifacts. Releases of Python older than the 3.14 series also include legacy OpenPGP signatures that can be verified using public keys. See more in PEP 761 about this change. This page provides guidance on verifying Sigstore signatures as a CPython consumer, and outlines some motivation for using these additional signatures. Sigstore verification of CPython Releases Introduction to Sigstore Sigstore is a new standard for signing, verifying and protecting software. The Sigstore project is a set of tools and services: a certificate authority a signature transparency log multiple ecosystem-specific signing clients (such as https://pypi.org/p/sigstore/) At a high level, Sigstore uses a certificate authority to tie OpenID Connect (OIDC) identities to ephemeral keys, and uses a transparency log to publish the results of signing events. This eliminates the need for signers to manage private keys. It also allows users to verify signatures based on characteristics of the OIDC identities, such as an email address. More detail about the signing process and the interplay of these tools and services is provided in the Sigstore docs. Additionally, a security model for Sigstore can be found here. Verifying CPython release artifacts with Sigstore Verification requires the presence of two files: the release artifact in question and bundled \"verification materials\" which typically has a file extension of .sigstore. For example, for the Python 3.11.0 source release, you would download the following files: $ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz\n$ wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz.sigstore\n These verification materials should exist for all release artifacts, and are listed on the downloads page along with their corresponding artifacts. Verification additionally requires prior knowledge of the identity of the signer. For CPython releases, these are the email addresses of the release manager for the given release. The release managers for current and upcoming releases are as follows: Release PEP Release manager OIDC Issuer 3.7 PEP 537 nad@python.org https://github.com/login/oauth 3.8 PEP 569 lukasz@langa.pl https://github.com/login/oauth 3.9 PEP 596 lukasz@langa.pl https://github.com/login/oauth 3.10 PEP 619 pablogsal@python.org https://accounts.google.com 3.11 PEP 664 pablogsal@python.org https://accounts.google.com 3.12 PEP 693 thomas@python.org https://accounts.google.com 3.13 PEP 719 thomas@python.org https://accounts.google.com 3.14 PEP 745 hugo@python.org https://github.com/login/oauth 3.15 PEP 790 hugo@python.org https://github.com/login/oauth 3.16 PEP 826 savannah@python.org https://github.com/login/oauth 3.17 savannah@python.org https://github.com/login/oauth Finally, verification requires a Sigstore client. Using https://pypi.org/p/sigstore/ is recommended: To install with additional install-time assurances including hash-checking and version pinning, you can run the following to install from a fully specified requirements file: $ python -m pip install -r https://raw.githubusercontent.com/sigstore/sigstore-python/main/install/requirements.txt\n Alternatively, to install as usual without these assurances: $ python -m pip install sigstore\n Finally, in the directory where you downloaded the release artifact and verification materials, you can run the following: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://accounts.google.com \\\n  Python-3.11.0.tgz\n Running this command should result in the output OK: Python-3.11.0.tgz, which indicates that the signature is valid. Migrating from GPG signatures Before Sigstore signatures were available, CPython also provided GPG signatures as a means of verifying the origin and integrity of artifacts. Below are some tips for migrating an existing configuration verifying using GPG to adopting Sigstore. Instead of using a GPG key for verification, use the above table to choose which signing identity and OIDC issuer is expected for each Python release version. After an artifact has been verified using GPG, it\u0027s common to pin the artifact to a specific checksum value like SHA-256. If this value is already available, it\u0027s possible to check the validity of the artifact checksum using Sigstore using only the artifact checksum. For example, using a checksum of deadbeef...: $ python -m sigstore verify identity \\\n  --bundle Python-3.11.0.tgz.sigstore \\\n  --cert-identity pablogsal@python.org \\\n  --cert-oidc-issuer https://a",
+    "scrapedAt": "2026-10-08 19:35:28.470412"
+  },
+  {
+    "id": 1289,
+    "url": "https://peps.python.org/pep-0758/",
+    "title": "PEP 758 – Allow except and except* expressions without parentheses | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 758 – Allow except and except* expressions without parentheses PEP 758 – Allow except and except* expressions without parentheses Author: Pablo Galindo Salgado \u003cpablogsal at python.org\u003e, Brett Cannon \u003cbrett at python.org\u003e Status: Final Type: Standards Track Created: 30-Sep-2024 Python-Version: 3.14 Post-History: 02-Oct-2024 Resolution: 14-Mar-2025 Table of Contents Abstract Motivation Rationale Specification Backwards Compatibility Security Implications How to Teach This Reference Implementation Rejected Ideas Deferred Ideas Footnotes Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at The try statement. × See PEP 1 for how to propose changes. Abstract This PEP [1] proposes to allow unparenthesized except and except* blocks in Python’s exception handling syntax only when not using the as clause. Currently, when catching multiple exceptions, parentheses are required around the exception types. This was a Python 2 remnant. This PEP suggests allowing the omission of these parentheses, simplifying the syntax, making it more consistent with other parts of the syntax that make parentheses optional, and improving readability in certain cases. Motivation The current syntax for catching multiple exceptions requires parentheses in the except expression (equivalently for the except* expression). For example: try:\n    ...\nexcept (ExceptionA, ExceptionB, ExceptionC):\n    ...\n While this syntax is clear and unambiguous, it can be seen as unnecessarily verbose in some cases, especially when catching a large number of exceptions. By allowing the omission of parentheses, we can simplify the syntax: try:\n    ...\nexcept ExceptionA, ExceptionB, ExceptionC:\n    ...\n This change would bring the syntax more in line with other comma-separated lists in Python, such as function arguments, generator expressions inside of a function call, and tuple literals, where parentheses are optional. The same change would apply to except* expressions. For example: try:\n    ...\nexcept* ExceptionA, ExceptionB, ExceptionC:\n    ...\n When using the as clause to capture the exception instance parentheses must be used as before. Some users have expressed that they would find it confusing not to require parentheses as it would be unclear what exactly is being assigned to the target since in other parts of the language multiple as clauses can be used in similar situations (like in imports and context managers). This means that if an as clause its being added to the previous example it must be done as: try:\n    ...\nexcept (ExceptionA, ExceptionB, ExceptionC) as e:\n    ...\n Rationale The decision to allow unparenthesized except blocks is based on the following considerations: Simplicity: Removing the requirement for parentheses simplifies the syntax, making it more consistent with other parts of the language. Readability: In cases where many exceptions are being caught, the removal of parentheses can improve readability by reducing visual clutter. Consistency: This change makes the except clause more consistent with other parts of Python where unambiguous, comma-separated lists don’t require parentheses. Specification The syntax for the except clause will be modified to allow an unparenthesized list of exception types. The grammar will be updated as follows: except_block:\n    | \u0027except\u0027 expressions \u0027:\u0027 block\n    | \u0027except\u0027 expression \u0027as\u0027 NAME \u0027:\u0027 block\n    | \u0027except\u0027 \u0027:\u0027 block\n\nexcept_star_block\n    | \u0027except\u0027 \u0027*\u0027 expressions \u0027:\u0027 block\n    | \u0027except\u0027 \u0027*\u0027 expression \u0027as\u0027 NAME \u0027:\u0027 block\n This allows both the current parenthesized syntax and the new unparenthesized syntax while requiring parentheses when the as keyword is used: try:\n    ...\nexcept (ExceptionA, ExceptionB):  # Still valid\n    ...\nexcept ExceptionC, ExceptionD:    # New syntax\n    ...\nexcept (ExceptionE, ExceptionF) as e: # Parentheses still required\n    ...\n The semantics of exception handling remain unchanged. The interpreter will catch any of the listed exceptions, regardless of whether they are parenthesized or not. Backwards Compatibility This change is fully backwards compatible. All existing code using parenthesized except and except* blocks will continue to work without modification. The new syntax is purely additive and does not break any existing code. It’s worth noting that in Python 2 the unparenthesized syntax was allowed with two elements, but had different semantics, in which the first element of the list was used as the exception type and the second element as the capture variable. This change does not reintroduce the Python 2 semantics, and the unparenthesized syntax will behave identically to the parenthesized version. Security Implications There are no known security implications for this change. The semantics of exception handling remain the same, and this is purely a syntactic change. How to Teach This For new Python use",
+    "scrapedAt": "2026-10-08 19:35:27.075172"
+  },
+  {
+    "id": 1288,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule",
+    "title": "Importing Modules — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Importing Modules | Theme Auto Light Dark | Importing Modules¶ PyObject *PyImport_ImportModule(const char *name)¶ Return value: New reference. Part of the Stable ABI. This is a wrapper around PyImport_Import() which takes a const char* as an argument instead of a PyObject*. PyObject *PyImport_ImportModuleNoBlock(const char *name)¶ Return value: New reference. Part of the Stable ABI. This function is a deprecated alias of PyImport_ImportModule(). Changed in version 3.3: This function used to fail immediately when the import lock was held by another thread. In Python 3.3 though, the locking scheme switched to per-module locks for most purposes, so this function’s special behaviour isn’t needed anymore. Deprecated since version 3.13, will be removed in version 3.15: Use PyImport_ImportModule() instead. PyObject *PyImport_ImportModuleEx(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist)¶ Return value: New reference. Import a module. This is best described by referring to the built-in Python function __import__(). The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Failing imports remove incomplete module objects, like with PyImport_ImportModule(). PyObject *PyImport_ImportModuleLevelObject(PyObject *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Import a module. This is best described by referring to the built-in Python function __import__(), as the standard __import__() function calls this function directly. The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Added in version 3.3. PyObject *PyImport_ImportModuleLevel(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI. Similar to PyImport_ImportModuleLevelObject(), but the name is a UTF-8 encoded string instead of a Unicode object. Changed in version 3.3: Negative values for level are no longer accepted. PyObject *PyImport_Import(PyObject *name)¶ Return value: New reference. Part of the Stable ABI. This is a higher-level interface that calls the current “import hook function” (with an explicit level of 0, meaning absolute import). It invokes the __import__() function from the __builtins__ of the current globals. This means that the import is done using whatever import hooks are installed in the current environment. This function always uses absolute imports. PyObject *PyImport_ReloadModule(PyObject *m)¶ Return value: New reference. Part of the Stable ABI. Reload a module. Return a new reference to the reloaded module, or NULL with an exception set on failure (the module still exists in this case). PyObject *PyImport_AddModuleRef(const char *name)¶ Return value: New reference. Part of the Stable ABI since version 3.13. Return the module object corresponding to a module name. The name argument may be of the form package.module. First check the modules dictionary if there’s one there, and if not, create a new one and insert it in the modules dictionary. Return a strong reference to the module on success. Return NULL with an exception set on failure. The module name name is decoded from UTF-8. This function does not load or import the module; if the module wasn’t already loaded, you will get an empty module object. Use PyImport_ImportModule() or one of its variants to import a module. Package structures implied by a dotted name for name are not created if not already present. Added in version 3.13. PyObject *PyImport_AddModuleObject(PyObject *name)¶ Return value: Borrowed reference. Part of the Stable ABI since version 3.7. Similar to PyImport_AddModuleRef(), but return a borrowed reference and name is a Python str object. Added in version 3.3. PyObject *PyImport_AddModule(const char *name)¶ Return value: Borrowed reference. Part of the Stable ABI. Similar to PyImport_AddModuleRef(), but return a borrowed reference. PyObject *PyImport_ExecCodeModule(const char *name, PyObject *co)¶ Return value: New reference. Part of the Stable ABI. Given a module name (possibly of the form package.module) and a code object read from a Python bytecode file or obtained from the built-in function compile(), load the module. Return a new reference to the module object, or NULL with an exception set if an error occurred. name is removed from sys.modules in error cases, even if name was already in sys.modules o",
+    "scrapedAt": "2026-10-08 19:35:25.63549"
+  },
+  {
+    "id": 1287,
+    "url": "https://github.com/python/cpython/issues/111187",
+    "title": "Postpone removal version for locale.getdefaultlocale() · Issue #111187 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Postpone removal version for locale.getdefaultlocale() #111187 New issue Copy link New issue Copy link Closed Closed Postpone removal version for locale.getdefaultlocale()#111187 Copy link Description hugovk opened on Oct 22, 2023 Issue body actions locale.getdefaultlocale() was deprecated in Python 3.11 and originally planned for removal in 3.13 (gh-90817). It\u0027s now time for 3.13 changes, but we decided to postpone its removal to 3.15 as it\u0027s still used by many projects. Re: gh-104783: Remove locale.resetlocale() function #104784 (comment) Remove locale.resetlocale() function in Python 3.13 #104783 (comment) Linked PRs gh-111187: Postpone removal version for locale.getdefaultlocale() to 3.15 #111188 [3.12] gh-111187: Postpone removal version for locale.getdefaultlocale() to 3.15 (GH-111188) #111323 [3.11] gh-111187: Postpone removal version for locale.getdefaultlocale() to 3.15 (GH-111188) #111326 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:35:24.288057"
+  },
+  {
+    "id": 1286,
+    "url": "https://docs.python.org/3/library/os.html#os.unsetenv",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_Read",
+    "scrapedAt": "2026-10-08 19:35:21.929242"
+  },
+  {
     "id": 1285,
     "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Fetch",
     "title": "Exception Handling — Python 3.14.8 documentation",
@@ -8610,26 +8645,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1286,
-    "url": "https://docs.python.org/3/library/os.html#os.unsetenv"
-  },
-  {
-    "id": 1287,
-    "url": "https://github.com/python/cpython/issues/111187"
-  },
-  {
-    "id": 1288,
-    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule"
-  },
-  {
-    "id": 1289,
-    "url": "https://peps.python.org/pep-0758/"
-  },
-  {
-    "id": 1290,
-    "url": "https://www.python.org/downloads/metadata/sigstore/"
   },
   {
     "id": 1291,
@@ -230251,10 +230266,181 @@ window.searchData = [
     "id": 256717,
     "url": "https://bugs.python.org/issue22240",
     "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 258244,
+    "url": "https://github.com/python/cpython/issues/111187#issue-1956001652",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258247,
+    "url": "https://github.com/python/cpython/issues/104783#issuecomment-1773986960",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258248,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/111187",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258249,
+    "url": "https://github.com/python/cpython/pull/104784#issuecomment-1558552650",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258250,
+    "url": "https://github.com/python/cpython/pull/111326",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258251,
+    "url": "https://github.com/python/cpython/pull/111323",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258253,
+    "url": "https://github.com/python/cpython/pull/111188",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258254,
+    "url": "https://github.com/python/cpython/issues/111187#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258255,
+    "url": "https://github.com/python/cpython/issues/111187#top",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258256,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/111187",
+    "parentUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "id": 258329,
+    "url": "https://discuss.python.org/t/66453",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258330,
+    "url": "https://peps.python.org/pep-0758/#id2",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258331,
+    "url": "https://peps.python.org/pep-0758/#id1",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258332,
+    "url": "https://peps.python.org/pep-0758/#specification",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258333,
+    "url": "https://peps.python.org/pep-0758/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258334,
+    "url": "https://peps.python.org/pep-0758/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258335,
+    "url": "https://github.com/pablogsal/cpython/commits/notuples/",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258336,
+    "url": "https://peps.python.org/pep-0758/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258337,
+    "url": "https://peps.python.org/pep-0758/#footnotes",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258338,
+    "url": "https://discuss.python.org/t/66453/63",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258340,
+    "url": "https://peps.python.org/pep-0758/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258341,
+    "url": "https://peps.python.org/pep-0758/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258342,
+    "url": "https://peps.python.org/pep-0758/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258344,
+    "url": "https://peps.python.org/pep-0758/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258345,
+    "url": "https://peps.python.org/pep-0758/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258346,
+    "url": "https://peps.python.org/pep-0758/#deferred-ideas",
+    "parentUrl": "https://peps.python.org/pep-0758/"
+  },
+  {
+    "id": 258347,
+    "url": "https://peps.python.org/pep-0758/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0758/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModule"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Postpone removal version for locale.getdefaultlocale() · Issue #111187 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Postpone removal version for locale.getdefaultlocale() · Issue #111187 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/111187"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.unsetenv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.unsetenv"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
