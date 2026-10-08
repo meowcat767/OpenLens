@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1628,
+    "url": "https://docs.python.org/3/library/sys.html#sys.remote_exec",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:50:59.06502"
+  },
+  {
+    "id": 1627,
+    "url": "https://github.com/python/cpython/issues/131236",
+    "title": "Allow to generate multiple UUIDs at once via CLI · Issue #131236 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Allow to generate multiple UUIDs at once via CLI #131236 New issue Copy link New issue Copy link Closed #131218 Closed Allow to generate multiple UUIDs at once via CLI#131236 #131218 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description simon04 opened on Mar 14, 2025 Issue body actions Feature or enhancement Proposal: Add --count to the main() of the uuid module. Sometimes you need more than one UUID. In order to print 42 UUIDs, run python -m uuid --count 42 Inspired by https://www.man7.org/linux/man-pages/man1/uuidgen.1.html Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-131236: allow to generate multiple UUIDs at once via CLI #131218 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:50:57.720753"
+  },
+  {
+    "id": 1626,
+    "url": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:50:55.532906"
+  },
+  {
+    "id": 1625,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive",
+    "title": "zipfile — Work with ZIP archives — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » zipfile — Work with ZIP archives | Theme Auto Light Dark | zipfile — Work with ZIP archives¶ Source code: Lib/zipfile/ The ZIP file format is a common archive and compression standard. This module provides tools to create, read, write, append, and list a ZIP file. Any advanced use of this module will require an understanding of the format, as defined in PKZIP Application Note. This module does not handle multipart ZIP files. It can handle ZIP files that use the ZIP64 extensions (that is ZIP files that are more than 4 GiB in size). It supports decryption of encrypted files in ZIP archives, but it cannot create an encrypted file. Decryption is extremely slow as it is implemented in native Python rather than C. Handling compressed archives requires optional modules such as zlib, bz2, lzma, and compression.zstd. If any of them are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. The module defines the following items: exception zipfile.BadZipFile¶ The error raised for bad ZIP files. Added in version 3.2. exception zipfile.BadZipfile¶ Alias of BadZipFile, for compatibility with older Python versions. Deprecated since version 3.2. exception zipfile.LargeZipFile¶ The error raised when a ZIP file would require ZIP64 functionality but that has not been enabled. class zipfile.ZipFile The class for reading and writing ZIP files. See section ZipFile objects for constructor details. class zipfile.Path Class that implements a subset of the interface provided by pathlib.Path, including the full importlib.resources.abc.Traversable interface. Added in version 3.8. class zipfile.PyZipFile Class for creating ZIP archives containing Python libraries. class zipfile.ZipInfo(filename\u003d\u0027NoName\u0027, date_time\u003d(1980, 1, 1, 0, 0, 0))¶ Class used to represent information about a member of an archive. Instances of this class are returned by the getinfo() and infolist() methods of ZipFile objects. Most users of the zipfile module will not need to create these, but only use those created by this module. filename should be the full name of the archive member, and date_time should be a tuple containing six fields which describe the time of the last modification to the file; the fields are described in section ZipInfo objects. Changed in version 3.13: A public compress_level attribute has been added to expose the formerly protected _compresslevel. The older protected name continues to work as a property for backwards compatibility. _for_archive(archive)¶ Resolve the date_time, compression attributes, and external attributes to suitable defaults as used by ZipFile.writestr(). Returns self for chaining. Added in version 3.14. zipfile.is_zipfile(filename)¶ Returns True if filename is a valid ZIP file based on its magic number, otherwise returns False. filename may be a file or file-like object too. Changed in version 3.1: Support for file and file-like objects. zipfile.ZIP_STORED¶ The numeric constant for an uncompressed archive member. zipfile.ZIP_DEFLATED¶ The numeric constant for the usual ZIP compression method. This requires the zlib module. zipfile.ZIP_BZIP2¶ The numeric constant for the BZIP2 compression method. This requires the bz2 module. Added in version 3.3. zipfile.ZIP_LZMA¶ The numeric constant for the LZMA compression method. This requires the lzma module. Added in version 3.3. zipfile.ZIP_ZSTANDARD¶ The numeric constant for Zstandard compression. This requires the compression.zstd module. Note In APPNOTE 6.3.7, the method ID 20 was assigned to Zstandard compression. This was changed in APPNOTE 6.3.8 to method ID 93 to avoid conflicts, with method ID 20 being deprecated. For compatibility, the zipfile module reads both method IDs but will only write data with method ID 93. Added in version 3.14. Note The ZIP file format specification has included support for bzip2 compression since 2001, for LZMA compression since 2006, and Zstandard compression since 2020. However, some tools (including older Python releases) do not support these compression methods, and may either refuse to process the ZIP file altogether, or fail to extract individual files. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. Info-ZIP Home Page Information about the Info-ZIP project’s ZIP archive programs and development libraries. ZipFile objects¶ class zipfile.ZipFile(file, mode\u003d\u0027r\u0027, compression\u003dZIP_STORED, allowZip64\u003dTrue, compresslevel\u003dNone, *, strict_timestamps\u003dTrue, metadata_encoding\u003dNone)¶ Open a ZIP file, where file can be a path to a file (a string), a file-like object or a path-like object. The mode parameter should be \u0027r\u0027 to read an existing file, \u0027w\u0027 to truncate and write a new file, \u0027a\u0027 to append t",
+    "scrapedAt": "2026-10-08 19:50:54.230541"
+  },
+  {
+    "id": 1624,
+    "url": "https://github.com/python/cpython/issues/124704",
+    "title": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation gaogaotiantian commented Sep 27, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member There are a few design details, which are open to discuss: lldb does not trigger confirm prompt on Ctrl+D, only on commands. gdb triggers on all. I prefer consistency so pdb will trigger confirmation in all cases. We don\u0027t want to make the quitting process too cumbersome for users, so there are more than one way to confirm: y/Y as suggested in the prompt \u003center\u003e so you can do q, \u003center\u003e, \u003center\u003e Ctrl+D so you can do Ctrl+D, Ctrl+D The latter two are not listed in the prompt because the prompt would be a bit confusing. That\u0027s how gdb and lldb does it as well. (they do have slightly different policies on some input). n/N will return to debugger, all other inputs brings you back to the prompt os._exit(0) vs sys.exit(0). I gave some thoughts about how we should exit, do we want to do it gracefully. I chose the os._exit(0) at the end because I think when the users attach a debugger and want to quit, they don\u0027t care about whether the process will end gracefully (with all the atexit callbacks and potential exit routines), they just want to stop the process. If they want the process to run to the end, they should do c instead of q. In rare cases, where a separate non-daemon thread is there or the code in a raw try ... except ... block, force exit would do well for a debugger. Issue: Do not raise an Exception when exiting pdb #124703 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👎 3 jsta, asottile, and jkittner reacted with thumbs down emoji All reactions 👎 3 reactions gaogaotiantian added 2 commits September 27, 2024 11:30 Do not raise an Exception for exit in inline mode anymore 8ad5baa Use lower + strip 63a6bf6 gaogaotiantian requested a review from iritkatriel September 27, 2024 19:20 bedevere-app Bot added the awaiting core review label Sep 27, 2024 bedevere-app Bot mentioned this pull request Sep 27, 2024 Do not raise an Exception when exiting pdb #124703 Closed 📜🤖 Added by blurb_it. 5747b27 JelleZijlstra reviewed Sep 29, 2024 View reviewed changes Comment thread Lib/pdb.py Outdated reply \u003d \u0027y\u0027 self.message(\u0027\u0027) if reply \u003d\u003d \u0027y\u0027 or reply \u003d\u003d \u0027\u0027: os._exit(0) JelleZijlstra Sep 29, 2024 Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I think I\u0027d prefer sys.exit here. os._exit may lead to unreleased resources. If the user wants to kill the process faster, they can hit Ctrl-C or Ctrl-\\ after. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 AlexWaygood reacted with thumbs up emoji All reactions 👍 1 reaction gaogaotiantian Sep 29, 2024 Copy link Copy Markdown Member Author There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment It\u0027s always possible to have unreleased resources - we can\u0027t prevent that with SystemExit. It may get better in some cases, but raising SystemExit in an arbitrary place of the code does not seem like a very safe way to end the program to me. The only way to make sure all resources are released (if the program is written correctly) is to continue the program. One of the problem of SystemExit is: while True:\n    try:\n        breakpoint()\n    except:\n        pass This will trap in debugger forever. I know this example is a bit artificial, but it\u0027s not that rare for programs to handle SystemExit, and it\u0027s frustrating for users to be stuck in the debugger when they just want to quit. We have a warning for the users already and they should be aware that they are \"killing\" a process - which means the resources could potentially be leaked. At least they\u0027ll know the process will definitely be killed after they say yes. Of course that\u0027s my thought, and is open to more discussion. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions gaogaotiantian commented Oct 8, 2024 Copy link Copy Markdown Member Author I\u0027m having second thought about this. Not because of the resource release, but it seems like some people will bring up pdb in REPL, for example by running some code with breakpoint() in it. Force quit will kill REPL as well. So maybe SystemExit would be a better choice and it kind of ",
+    "scrapedAt": "2026-10-08 19:50:52.886479"
+  },
+  {
     "id": 1623,
     "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.site_import",
     "title": "Python Initialization Configuration — Python 3.14.8 documentation",
@@ -10920,26 +10955,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1624,
-    "url": "https://github.com/python/cpython/issues/124704"
-  },
-  {
-    "id": 1625,
-    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive"
-  },
-  {
-    "id": 1626,
-    "url": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache"
-  },
-  {
-    "id": 1627,
-    "url": "https://github.com/python/cpython/issues/131236"
-  },
-  {
-    "id": 1628,
-    "url": "https://docs.python.org/3/library/sys.html#sys.remote_exec"
   },
   {
     "id": 1629,
@@ -248781,10 +248796,464 @@ window.searchData = [
     "id": 351720,
     "url": "https://github.com/python/cpython/issues/121676#issue-2406836268",
     "parentUrl": "https://github.com/python/cpython/issues/121676"
+  },
+  {
+    "id": 352145,
+    "url": "https://github.com/adamchainz",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352146,
+    "url": "https://github.com/python/cpython/pull/124704/commits/b0968bd75964a311085ea95ae8e4f5637d603d33",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352147,
+    "url": "https://github.com/python/cpython/pull/124704#event-16071708509",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352149,
+    "url": "https://github.com/python/cpython/pull/124704",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352150,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2423340036",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352151,
+    "url": "https://github.com/python/cpython/pull/124704#event-16072174982",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352152,
+    "url": "https://github.com/python/cpython/pull/124704/files/5747b27504ac7e8b20cd6940d9335609a60e1092#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352153,
+    "url": "https://github.com/python/cpython/pull/124704#event-14435344643",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352154,
+    "url": "https://github.com/python/cpython/pull/124704/commits/63a6bf6205d30878133b7897a3a9bec017e8efb9",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352155,
+    "url": "https://github.com/python/cpython/pull/124704#ref-pullrequest-2837247643",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352156,
+    "url": "https://github.com/python/cpython/commit/7d275611f62c9008c2d90b08c9f21462f80a8328",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352157,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2412792243",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352158,
+    "url": "https://github.com/python/cpython/pull/124704#event-16072174777",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352159,
+    "url": "https://github.com/python/cpython/pull/124704#discussion_r1780071043",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352161,
+    "url": "https://github.com/python/cpython/pull/124704#issue-2553589800",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352163,
+    "url": "https://github.com/python/cpython/pull/124704#event-14435345126",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352164,
+    "url": "https://github.com/python/cpython/pull/124704#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352165,
+    "url": "https://github.com/mayfield",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352167,
+    "url": "https://github.com/python/cpython/pull/124704#ref-issue-3811353847",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352168,
+    "url": "https://github.com/python/cpython/pull/124704#commits-pushed-8ad5baa",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352169,
+    "url": "https://github.com/python/cpython/pull/124704/files/0cc53df365fe480dfaa1e7d57584e8d93de59492",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352170,
+    "url": "https://github.com/python/cpython/pull/124704/commits/0cc53df365fe480dfaa1e7d57584e8d93de59492",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352173,
+    "url": "https://github.com/python/cpython/pull/124704#pullrequestreview-2574448250",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352174,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2614601729",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352176,
+    "url": "https://github.com/python/cpython/pull/124704#discussion_r1780167080",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352177,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2569269452",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352178,
+    "url": "https://github.com/python/cpython/pull/124704#ref-issue-2553572437",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352181,
+    "url": "https://github.com/python/cpython/pull/124704#issuecomment-2398439709",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352182,
+    "url": "https://github.com/python/cpython/issues/143824",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352185,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124704",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352186,
+    "url": "https://github.com/python/cpython/pull/124704/commits/5747b27504ac7e8b20cd6940d9335609a60e1092",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352187,
+    "url": "https://github.com/python/cpython/pull/124704/files/5747b27504ac7e8b20cd6940d9335609a60e1092",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352189,
+    "url": "https://github.com/python/cpython/pull/124704/commits/8ad5baa584b8722e44794c57ce112eb208080710",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352190,
+    "url": "https://github.com/python/cpython/pull/124704#event-16072175046",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352192,
+    "url": "https://github.com/python/cpython/pull/124704#pullrequestreview-2335880672",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352193,
+    "url": "https://github.com/python/cpython/pull/129768",
+    "parentUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "id": 352679,
+    "url": "https://github.com/python/cpython/issues/131236#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 352680,
+    "url": "https://github.com/python/cpython/pull/131218",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 352682,
+    "url": "https://github.com/python/cpython/issues/131236#issue-2919946296",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 352683,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/131236",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 352684,
+    "url": "https://github.com/simon04",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 352685,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/131236",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 352686,
+    "url": "https://github.com/python/cpython/issues/131236#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "id": 352688,
+    "url": "https://www.man7.org/linux/man-pages/man1/uuidgen.1.html",
+    "parentUrl": "https://github.com/python/cpython/issues/131236"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.remote_exec"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.remote_exec"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/782446?u\u003db04ff20ddafb41870583859554c1e7c3180adca3\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@simon04",
+    "pageTitle": "Allow to generate multiple UUIDs at once via CLI · Issue #131236 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Allow to generate multiple UUIDs at once via CLI · Issue #131236 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131236"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._clear_type_cache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo._for_archive"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d60\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d48\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/857609?s\u003d80\u0026v\u003d4",
+    "alt": "@adamchainz",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20833207?s\u003d40\u0026v\u003d4",
+    "alt": "@ADThomas-astro",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/139316?s\u003d40\u0026v\u003d4",
+    "alt": "@mayfield",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/857609?s\u003d52\u0026v\u003d4",
+    "alt": "@adamchainz",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d52\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-124703: Do not raise an exception when quitting pdb by gaogaotiantian · Pull Request #124704 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124704"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
