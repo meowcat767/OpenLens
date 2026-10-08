@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 733,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException",
+    "title": "Exception Handling — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Exception Handling | Theme Auto Light Dark | Exception Handling¶ The functions described in this chapter will let you handle and raise Python exceptions. It is important to understand some of the basics of Python exception handling. It works somewhat like the POSIX errno variable: there is a global indicator (per thread) of the last error that occurred. Most C API functions don’t clear this on success, but will set it to indicate the cause of the error on failure. Most C API functions also return an error indicator, usually NULL if they are supposed to return a pointer, or -1 if they return an integer (exception: the PyArg_* functions return 1 for success and 0 for failure). Concretely, the error indicator consists of three object pointers: the exception’s type, the exception’s value, and the traceback object. Any of those pointers can be NULL if non-set (although some combinations are forbidden, for example you can’t have a non-NULL traceback if the exception type is NULL). When a function must fail because some function it called failed, it generally doesn’t set the error indicator; the function it called already set it. It is responsible for either handling the error and clearing the exception or returning after cleaning up any resources it holds (such as object references or memory allocations); it should not continue normally if it is not prepared to handle the error. If returning due to an error, it is important to indicate to the caller that an error has been set. If the error is not handled or carefully propagated, additional calls into the Python/C API may not behave as intended and may fail in mysterious ways. Note The error indicator is not the result of sys.exc_info(). The former corresponds to an exception that is not yet caught (and is therefore still propagating), while the latter returns an exception after it is caught (and has therefore stopped propagating). Printing and clearing¶ void PyErr_Clear()¶ Part of the Stable ABI. Clear the error indicator. If the error indicator is not set, there is no effect. void PyErr_PrintEx(int set_sys_last_vars)¶ Part of the Stable ABI. Print a standard traceback to sys.stderr and clear the error indicator. Unless the error is a SystemExit, in that case no traceback is printed and the Python process will exit with the error code specified by the SystemExit instance. Call this function only when the error indicator is set. Otherwise it will cause a fatal error! If set_sys_last_vars is nonzero, the variable sys.last_exc is set to the printed exception. For backwards compatibility, the deprecated variables sys.last_type, sys.last_value and sys.last_traceback are also set to the type, value and traceback of this exception, respectively. Changed in version 3.12: The setting of sys.last_exc was added. void PyErr_Print()¶ Part of the Stable ABI. Alias for PyErr_PrintEx(1). void PyErr_WriteUnraisable(PyObject *obj)¶ Part of the Stable ABI. Call sys.unraisablehook() using the current exception and obj argument. This utility function prints a warning message to sys.stderr when an exception has been set but it is impossible for the interpreter to actually raise the exception. It is used, for example, when an exception occurs in an __del__() method. The function is called with a single argument obj that identifies the context in which the unraisable exception occurred. If possible, the repr of obj will be printed in the warning message. If obj is NULL, only the traceback is printed. An exception must be set when calling this function. Changed in version 3.4: Print a traceback. Print only traceback if obj is NULL. Changed in version 3.8: Use sys.unraisablehook(). void PyErr_FormatUnraisable(const char *format, ...)¶ Similar to PyErr_WriteUnraisable(), but the format and subsequent parameters help format the warning message; they have the same meaning and values as in PyUnicode_FromFormat(). PyErr_WriteUnraisable(obj) is roughly equivalent to PyErr_FormatUnraisable(\"Exception ignored in: %R\", obj). If format is NULL, only the traceback is printed. Added in version 3.13. void PyErr_DisplayException(PyObject *exc)¶ Part of the Stable ABI since version 3.12. Print the standard traceback display of exc to sys.stderr, including chained exceptions and notes. Added in version 3.12. void PyErr_Display(PyObject *unused, PyObject *value, PyObject *tb)¶ Part of the Stable ABI. Legacy variant of PyErr_DisplayException(). Print the exception value with its traceback to sys.stderr. If value has no traceback set, tb is used as its traceback. The first argument is ignored. If sys.stderr is None, nothing is printed. If sys.stderr is not set, the exception is dumped to the C stderr stream instead. Deprecated since version 3.12: Use PyErr_DisplayException() instead. Raising exceptions¶ These functions help you set the current thread’s error indicator. For convenience, some of these ",
+    "scrapedAt": "2026-10-08 19:12:04.364523"
+  },
+  {
+    "id": 732,
+    "url": "https://github.com/python/cpython/issues/127688",
+    "title": "Add `SCHED_DEADLINE` and `SCHED_NORMAL` constants to `os` module · Issue #127688 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add SCHED_DEADLINE and SCHED_NORMAL constants to os module #127688 New issue Copy link New issue Copy link Closed Closed Add SCHED_DEADLINE and SCHED_NORMAL constants to os module#127688 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description rruuaanng opened on Dec 6, 2024 Issue body actions Feature or enhancement Proposal: This issue suggests adding new os constants. os.SCHED_DEADLINE # deadline scheduling\n# Set the current schedule to real-time schedule, To be precise, it\n# is not real-time scheduling, but it is relatively real-time.\nprio \u003d os.sched_param(sched_priority\u003d10)\nos.sched_setscheduler(0, os.SCHED_DEADLINE, prio)\n SCHED_NORMAL is the same as SCHED_OTHER. But to run in the old linux, we can\u0027t remove SCHED_OTHER, even if it no longer exists in the current main branch. But we still need to add SCHED_NORMAL, because SCHED_OTHER only exists in the old distribution. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-127688: Add SCHED_DEADLINE and SCHED_NORMAL constants to os module #127689 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:12:03.074634"
+  },
+  {
+    "id": 731,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#email",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:12:00.889044"
+  },
+  {
+    "id": 730,
+    "url": "https://github.com/python/cpython/issues/126353",
+    "title": "Remove implicit creation of event loop from `asyncio.get_event_loop` · Issue #126353 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }}",
+    "scrapedAt": "2026-10-08 19:11:59.640329"
+  },
+  {
+    "id": 729,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Warning ctypes provides low-level access to native libraries and the process’s memory, bypassing Python’s safety mechanisms and allowing execution of arbitrary native code. Incorrect use can corrupt data and objects, reveal sensitive information, cause crashes, or otherwise compromise the running process. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most re",
+    "scrapedAt": "2026-10-08 19:11:57.13399"
+  },
+  {
     "id": 728,
     "url": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html",
     "title": "Emscripten Runtime Environment - Emscripten 6.0.12-git (dev) documentation",
@@ -4785,26 +4820,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 729,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
-  },
-  {
-    "id": 730,
-    "url": "https://github.com/python/cpython/issues/126353"
-  },
-  {
-    "id": 731,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#email"
-  },
-  {
-    "id": 732,
-    "url": "https://github.com/python/cpython/issues/127688"
-  },
-  {
-    "id": 733,
-    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
   },
   {
     "id": 734,
@@ -122984,10 +122999,2098 @@ window.searchData = [
     "id": 87538,
     "url": "https://emscripten.org/docs/api_reference/html5.h.html",
     "parentUrl": "https://emscripten.org/docs/porting/emscripten-runtime-environment.html"
+  },
+  {
+    "id": 87539,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.byte_offset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87542,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.OleDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87544,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._align_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87546,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ulong",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87547,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.cdll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87548,
+    "url": "https://docs.python.org/3/library/ctypes.html#incomplete-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87549,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError.hresult",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87550,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.addressof",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87552,
+    "url": "https://docs.python.org/3/library/ctypes.html#loading-dynamic-link-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87554,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr.restype",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87555,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.bit_offset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87556,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87557,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData._b_needsfree_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87558,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ulonglong",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87559,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_short",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87560,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CDLL._name",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87561,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.get_last_error",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87562,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.BigEndianStructure",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87564,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.PyDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87566,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.util.find_library",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87570,
+    "url": "https://manpages.debian.org/dlopen(3)",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87572,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData._objects",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87573,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.windll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87574,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.RTLD_GLOBAL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87575,
+    "url": "https://learn.microsoft.com/en-us/cpp/build/reference/dumpbin-reference?view\u003dmsvc-170",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87576,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_param",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87577,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.WinError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87579,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_byte",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87580,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_time_t",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87581,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-functions-with-your-own-custom-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87582,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-fundamental-data-types-2",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87583,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.create_unicode_buffer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87584,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint64",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87585,
+    "url": "https://docs.python.org/3/library/ctypes.html#accessing-values-exported-from-dlls",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87586,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint8",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87587,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.DllGetClassObject",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87588,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.cast",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87589,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.type",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87594,
+    "url": "https://docs.python.org/3/library/ctypes.html#arrays",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87595,
+    "url": "https://docs.python.org/3/library/ctypes.html#variable-sized-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87596,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.HRESULT",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87597,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_bool",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87598,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData._b_base_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87599,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._Pointer.contents",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87600,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.is_anonymous",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87602,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ubyte",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87604,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.wstring_at",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87606,
+    "url": "https://docs.python.org/3/library/ctypes.html#fundamental-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87607,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/ctypes.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87609,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.util.find_msvcrt",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87611,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.BigEndianUnion",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87612,
+    "url": "https://docs.python.org/3/library/ctypes.html#structured-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87614,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_size_t",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87617,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.GetLastError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87618,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData.value",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87619,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._fields_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87620,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.memmove",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87621,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.sizeof",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87622,
+    "url": "https://docs.python.org/3/library/ctypes.html#thread-safety-without-the-gil",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87623,
+    "url": "https://docs.python.org/3/library/ctypes.html#loading-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87625,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.DllCanUnloadNow",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87626,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-variadic-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87627,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._Pointer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87628,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._anonymous_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87630,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_wchar",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87632,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError.details",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87633,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.WinDLL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87635,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87636,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.set_last_error",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87637,
+    "url": "https://docs.python.org/3/library/ctypes.html#structure-union-layout-alignment-and-byte-order",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87638,
+    "url": "https://docs.python.org/3/library/ctypes.html#specifying-the-required-argument-types-function-prototypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87639,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.byte_size",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87640,
+    "url": "https://docs.python.org/3/library/ctypes.html#utility-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87641,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Array._length_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87642,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr.argtypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87644,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.DEFAULT_MODE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87645,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87646,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-functions-continued",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87647,
+    "url": "https://docs.python.org/3/library/ctypes.html#",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87648,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.memset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87649,
+    "url": "https://numpy.org/doc/stable/reference/arrays.interface.html#object.__array_interface__",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87650,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_char",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87654,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.WINFUNCTYPE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87656,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.pythonapi",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87657,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87658,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.alignment",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87659,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.bit_size",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87660,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.get_errno",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87661,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.ArgumentError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87662,
+    "url": "https://docs.python.org/3/library/ctypes.html#function-prototypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87664,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.offset",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87665,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_double",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87666,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-reference",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87667,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87668,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Array",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87669,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.is_bitfield",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87670,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#WindowsError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87674,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longlong",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87677,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-finding-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87680,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_void_p",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87681,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError.text",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87682,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CFuncPtr.errcheck",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87683,
+    "url": "https://docs.python.org/3/reference/expressions.html#shifting",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87685,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int64",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87686,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_char_p",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87687,
+    "url": "https://docs.python.org/3/library/ctypes.html#calling-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87690,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.name",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87691,
+    "url": "https://docs.python.org/3/library/ctypes.html#structures-and-unions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87692,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87693,
+    "url": "https://docs.python.org/3/library/struct.html#format-characters",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87696,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87697,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ssize_t",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87699,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-wintypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87700,
+    "url": "https://docs.python.org/3/library/ctypes.html#callback-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87701,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int32",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87704,
+    "url": "https://docs.python.org/3/library/ctypes.html#finding-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87705,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.create_string_buffer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87707,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87708,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_ushort",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87710,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LibraryLoader",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87715,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.ARRAY",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87717,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._SimpleCData._type_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87718,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-callback-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87719,
+    "url": "https://docs.python.org/3/library/ctypes.html#bit-fields-in-structures-and-unions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87720,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int16",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87721,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint16",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87723,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.oledll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87724,
+    "url": "https://docs.python.org/3/library/ctypes.html#listing-loaded-shared-libraries",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87725,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CDLL._handle",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87728,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LittleEndianStructure",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87729,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_buffer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87730,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-fundamental-data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87731,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.pydll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87734,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField.size",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87738,
+    "url": "https://docs.python.org/3/library/ctypes.html#foreign-functions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87739,
+    "url": "https://docs.python.org/3/library/ctypes.html#arrays-and-pointers",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87741,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.set_errno",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87743,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LibraryLoader.LoadLibrary",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87745,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.RTLD_LOCAL",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87746,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Array._type_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87747,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_wchar_p",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87748,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_int8",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87750,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_address",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87751,
+    "url": "https://docs.python.org/3/library/ctypes.html#data-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87752,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/ctypes",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87753,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.pointer",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87754,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_uint32",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87757,
+    "url": "https://docs.python.org/3/library/ctypes.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87758,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.byref",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87759,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._Pointer._type_",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87761,
+    "url": "https://docs.python.org/3/library/ctypes.html#type-conversions",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87762,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.FormatError",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87763,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_long",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87765,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CFUNCTYPE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87766,
+    "url": "https://docs.python.org/3/library/ctypes.html#passing-pointers-or-passing-parameters-by-reference",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87768,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.resize",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87769,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.PYFUNCTYPE",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87771,
+    "url": "https://docs.python.org/3/library/ctypes.html#return-types",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87773,
+    "url": "https://docs.python.org/3/library/ctypes.html#pointers",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87774,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87776,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.from_buffer_copy",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87777,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_float",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87778,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.LittleEndianUnion",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87779,
+    "url": "https://docs.python.org/3/library/ctypes.html#surprises",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87780,
+    "url": "https://docs.python.org/3/library/ctypes.html#accessing-functions-from-loaded-dlls",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87781,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.in_dll",
+    "parentUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "id": 87786,
+    "url": "https://github.com/python/cpython/issues/126353#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126353"
+  },
+  {
+    "id": 89026,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/127688",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89027,
+    "url": "https://github.com/python/cpython/issues/127688#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89029,
+    "url": "https://github.com/python/cpython/issues/127688#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89031,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/127688",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89032,
+    "url": "https://github.com/python/cpython/pull/127689",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89033,
+    "url": "https://github.com/python/cpython/issues/127688#issue-2723010006",
+    "parentUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "id": 89035,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromWindowsErr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89037,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnExplicit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89038,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnExplicitObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89040,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#printing-and-clearing",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89041,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89043,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnFormat",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89044,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#unicode-exception-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89046,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#signal-handling",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89047,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#TabError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89048,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BufferError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89049,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PySignal_SetWakeupFd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89050,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeError.start",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89053,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetCause",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89054,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetTraceback",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89055,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_WindowsError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89057,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException.args",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89058,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IOError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89059,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#OSError.winerror",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89060,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetString",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89061,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89062,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UserWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89063,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIG_IGN",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89065,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetInterruptEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89066,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NewExceptionWithDoc",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89067,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_GeneratorExit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89068,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetHandledException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89069,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ProgramTextObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89070,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FileExistsError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89071,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NoMemory",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89072,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_AttributeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89075,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89076,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionInstance_Class",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89077,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GivenExceptionMatches",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89078,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetCause",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89079,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89080,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_RecursionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89081,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeError.end",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89082,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ChildProcessError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89084,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_FormatV",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89085,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_RuntimeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89086,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BlockingIOError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89087,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-types",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89088,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_SetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89089,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#FloatingPointError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89090,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_DeprecationWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89091,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FileNotFoundError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89092,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_BadArgument",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89094,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_PythonFinalizationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89095,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ResourceWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89097,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeEncodeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89100,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#querying-the-error-indicator",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89101,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NewException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89102,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#standardwarningcategories",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89103,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_AssertionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89107,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#raising-exceptions",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89108,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89111,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErrWithFilename",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89112,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FloatingPointError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89115,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_KeyboardInterrupt",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89117,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_RuntimeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89119,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-and-warning-types",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89120,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89122,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89123,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SystemExit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89125,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetContext",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89126,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SyntaxLocation",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89127,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_SetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89129,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BytesWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89130,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89131,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ResourceWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89132,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_SetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89133,
+    "url": "https://peps.python.org/pep-3151/",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89134,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_SetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89135,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrno",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89137,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#FutureWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89138,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetHandledException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89139,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SystemExit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89140,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BufferError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89141,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89144,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_ReprLeave",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89145,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_ReprEnter",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89146,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_MemoryError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89147,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_BadInternalCall",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89149,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_LeaveRecursiveCall",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89152,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-classes",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89153,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ExceptionMatches",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89154,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException.__context__",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89155,
+    "url": "https://docs.python.org/3/library/warnings.html#warnings.warn_explicit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89157,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89158,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ResourceWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89159,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89160,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrnoWithFilename",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89161,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89165,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IndentationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89166,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SyntaxWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89167,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetImportErrorSubclass",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89168,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnstable_Exc_PrepReraiseStar",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89170,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SyntaxError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89173,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_PrintEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89174,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionRefusedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89175,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_OSError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89176,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ImportWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89178,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89181,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_FormatUnraisable",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89182,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionResetError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89184,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#IndentationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89186,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_CheckSignals",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89187,
+    "url": "https://docs.python.org/3/c-api/call.html#call",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89188,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrnoWithFilenameObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89189,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException.__cause__",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89190,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionClass_Name",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89191,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IndexError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89192,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetNone",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89193,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#oserror-aliases",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89195,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BrokenPipeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89196,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ConnectionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89197,
+    "url": "https://docs.python.org/3/library/sys.html#sys.last_type",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89198,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseExceptionGroup",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89199,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89203,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89206,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#PythonFinalizationError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89207,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIG_DFL",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89208,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_NotADirectoryError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89209,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#Exception",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89210,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_SetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89211,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ConnectionAbortedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89213,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_TabError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89214,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeTranslateError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89215,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_StopIteration",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89216,
+    "url": "https://docs.python.org/3/library/sys.html#sys.unraisablehook",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89217,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ArithmeticError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89218,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnboundLocalError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89222,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeDecodeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89223,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_InterruptedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89224,
+    "url": "https://docs.python.org/3/howto/remote_debugging.html#remote-debugging",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89226,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_SetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89228,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ZeroDivisionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89230,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#recursion-control",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89231,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetArgs",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89232,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#win",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89233,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetImportError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89235,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetEnd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89236,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#warning-types",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89238,
+    "url": "https://docs.python.org/3/library/sys.html#sys.setrecursionlimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89242,
+    "url": "https://docs.python.org/3/c-api/frame.html#c.PyFrameObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89243,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getrecursionlimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89244,
+    "url": "https://docs.python.org/3/library/signal.html#signal.set_wakeup_fd",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89245,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ReferenceError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89247,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Clear",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89248,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_TimeoutError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89250,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ReferenceError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89251,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_SetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89252,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetInterrupt",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89254,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetExcInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89255,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UserWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89256,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Print",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89257,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetArgs",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89259,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_NotImplementedError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89260,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89261,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89262,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89263,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#KeyboardInterrupt",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89264,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_SetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89266,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SyntaxLocationEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89267,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnExplicitFormat",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89270,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_Warning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89271,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_SetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89272,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#issuing-warnings",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89273,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Print",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89275,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_ProgramText",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89277,
+    "url": "https://docs.python.org/3/library/sys.html#sys.last_value",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89278,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_KeyError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89280,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_EnvironmentError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89281,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#OSError.strerror",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89283,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetEncoding",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89284,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyTraceBack_Here",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89285,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ValueError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89286,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_PendingDeprecationWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89287,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_StopAsyncIteration",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89288,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_FutureWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89289,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionClass_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89290,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ArithmeticError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89292,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_UnicodeTranslateError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89293,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetEncoding",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89295,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#id1",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89298,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ImportError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89299,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_GetContext",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89300,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89303,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WarnEx",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89305,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_SystemError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89306,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_OverflowError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89308,
+    "url": "https://docs.python.org/3/library/reprlib.html#reprlib.recursive_repr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89309,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_repr",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89311,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErrWithFilenameObjects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89313,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_Exception",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89314,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromErrnoWithFilenameObjects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89315,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_LookupError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89317,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89318,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeTranslateError_GetStart",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89320,
+    "url": "https://docs.python.org/3/c-api/refcounting.html",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89321,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-handling",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89322,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_EncodingWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89323,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#exception-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89324,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_IsADirectoryError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89325,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#Warning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89326,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_SetRecursionLimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89327,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyException_SetTraceback",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89328,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ProcessLookupError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89329,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_ModuleNotFoundError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89331,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_EOFError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89334,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_RangedSyntaxLocationObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89335,
+    "url": "https://docs.python.org/3/library/sys.html#sys.exception",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89336,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeError.object",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89337,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BaseException",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89338,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SyntaxLocationObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89339,
+    "url": "https://docs.python.org/3/library/signal.html#module-signal",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89340,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_PermissionError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89342,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExceptionInstance_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89343,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ModuleNotFoundError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89344,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#PendingDeprecationWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89345,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#tracebacks",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89346,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_BaseExceptionGroup",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89347,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_GetReason",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89348,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_TypeError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89349,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.Py_GetRecursionLimit",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89351,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#RuntimeWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89353,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetExcFromWindowsErrWithFilenameObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89358,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException.__suppress_context__",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89359,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_SetFromWindowsErrWithFilename",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89362,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/exceptions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89363,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Display",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89364,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeDecodeError_Create",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89366,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyUnicodeEncodeError_GetObject",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89368,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Format",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89369,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_NameError",
+    "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/108215543?u\u003dc2ea60ea592b31d1b09ef3029652463815fce09b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rruuaanng",
+    "pageTitle": "Add `SCHED_DEADLINE` and `SCHED_NORMAL` constants to `os` module · Issue #127688 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add `SCHED_DEADLINE` and `SCHED_NORMAL` constants to `os` module · Issue #127688 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127688"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#email"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#email"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes._CData.__pointer_type__"
+  },
   {
     "src": "https://emscripten.org/_static/emscripten_logo_full.svg",
     "alt": "Emscripten",
