@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 41,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments",
+    "title": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "content": "Image source, Getty Images Image caption, The Premier League will have at least eight clubs in Europe next season By Dale Johnson Football issues correspondent Published 7 May 2026 A host of Premier League clubs will be backing Aston Villa to win the Europa League - as it could secure Champions League qualification for whoever finishes sixth. Villa will take on Freiburg in Istanbul on 20 May - just four days before the final day of the league season in England. Qualification for European competition has become pretty complicated in the past few seasons. This has largely been caused by Uefa\u0027s new European Performance Spots (EPS). These are the extra places in the Champions League given to the two leagues with the best overall record each season. The Premier League has secured one of the two berths for 2026-27, with the Spanish La Liga claiming the other - just like last season. It means there will be at least eight English teams in Europe next season. With Villa, Arsenal and Crystal Palace all in a European final, what could this mean for the rest of the Premier League? How the European places work The logic of the EPS is simple. But other factors complicate matters. It has two pillars: it is applied after all other considerations about domestic and European cup winners; it always provides one additional place to the overall allocation. So England was set to have seven teams in Europe before securing an EPS - but now will have at least eight. As it stands - and subject to who wins the FA Cup and where they finish - that now means this: The team finishing fifth will go into the Champions League The team finishing sixth will go into the Europa League The team finishing seventh will go into the Conference League The top five have pulled away in recent weeks, with the last places held by Liverpool and Aston Villa on 58 points in fourth and fifth respectively. There is a six-point cushion to Bournemouth in sixth place with three games to go. The battle now is for the positions below - and it could yet be that sixth gets a route into the Champions League. Just five points separate Bournemouth (52) from 12th-placed Sunderland (47). Brentford (51) sit in seventh, followed by Brighton (50), Chelsea (48), Everton (48), Fulham (48) and Sunderland (47). What if Arsenal win the Champions League? Arsenal meet Paris St-Germain in the final of the Champions League. The Gunners are going to finish in the top four of the Premier League, so winning the Champions League cannot impact the allocation. The place reserved for the Champions League titleholders would pass to the league champions in qualifying with the best Uefa coefficient. That looks like it would be Shakhtar Donetsk. For the Premier League to get a sixth Champions League place via this route, Arsenal would have needed to finish outside the top four. English clubs reach all three European finals for first time Published 7 May What if Villa win the Europa League? The first thing to remember is that the Europa League winners qualify for the Champions League. If Villa win the Europa League and finish in the top four, then nothing changes in terms of England\u0027s European spots. There would still be five teams in the Champions League, and eight in Europe. The place in the Champions League reserved for the Europa League titleholders would pass to the team in qualifying with the best Uefa coefficient. As it stands right now, that could be Benfica. If Villa finish outside the top four, the Premier League will have six teams in the Champions League: The top four Villa as Europa League winners The EPS Villa\u0027s precise final position would decide the Premier League\u0027s total European allocation. If they finish fifth, the EPS passes to the Premier League\u0027s sixth-placed team. And as we will know if Villa have won the Europa League ahead of the final day, it could present a titanic battle to finish in sixth. The Premier League would surrender a place in the Europa League. Overall, England would still have eight European places. Why is a Europa League place given up? This is all about applying the EPS after all other factors. So in this example, Aston Villa have earned a place in the Champions League but finished in a league position that qualifies them for the Europa League. Uefa rules state that the berth in the lower competition has to be forfeited and passed to another league. For instance, La Liga had no team in the first edition of the Conference League because Villarreal won a European competition and finished in seventh. Let\u0027s say Villa finish fifth. The Premier League gives up the Europa League place. Then you apply the EPS, which goes to sixth - the first team not in the Champions League. The Conference League place drops to seventh. If Villa finish sixth, then it is the Conference League place which is given up. After the EPS, eighth plays in the Europa League. But could Villa winning the Europa League give England a ninth European spot? Only if they finish outside the domes",
+    "scrapedAt": "2026-10-08 18:48:20.836339"
+  },
+  {
+    "id": 40,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo",
+    "title": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "content": "Image source, Getty Images Image caption, Andoni Iraola\u0027s Bournemouth are sixth in the Premier League By Sami Mokbel Senior football correspondent Published 8 May 2026 Bournemouth manager Andoni Iraola heads Crystal Palace\u0027s shortlist of candidates to replace outgoing head coach Oliver Glasner next season. Glasner, who has led the club to their first European final, is leaving Selhurst Park this month, confirming his decision to step down in January. Palace are at an advanced stage of identifying the Austrian\u0027s successor, with multiple sources indicating Iraola, who last month announced he will leave Bournemouth this summer, is the club\u0027s preferred option to replace Glasner. In addition to Iraola, it is understood that Coventry manager Frank Lampard, Ipswich\u0027s Kieran McKenna, former Tottenham boss Thomas Frank, ex-Nottingham Forest manager Sean Dyche, Fulham\u0027s Marco Silva and Lens\u0027 Pierre Sage are among the candidates Palace have explored. BBC Sport first revealed Palace\u0027s interest in Iraola in January. He had also been linked with the Athletic Bilbao job but German coach Edin Terzic was appointed their manager this week. Palace are now making concrete moves to persuade Iraola to stay in the Premier League next season. It is understood he is aware of Palace\u0027s interest and following preliminary talks - according to sources - is not ruling out joining the Eagles next season. Having made the decision to leave Bournemouth, it is understood Iraola is open to staying in the Premier League. Iraola would have shown an interest in the Newcastle job but it looks likely that Eddie Howe, barring an unforeseen change of situation, will stay at St James\u0027 Park next season. Chelsea is another option for Iraola as the Stamford Bridge club look to replace Liam Rosenior, who was sacked last month. There is an understanding at Selhurst Park that the situation regarding their next manager is fluid and the club are confident they can attract an accomplished head coach if their efforts to land Iraola are unsuccessful. But the south London club are also mindful of having a new manager in position as soon as possible to allow for the new man to be involved in the summer recruitment operation. The prospect of leading Palace into next season\u0027s Europa League could help the club attract one of their main candidates in the coming weeks. Palace will face Spanish side Rayo Vallecano in the final of the Europa Conference League on 27 May, with the winner qualifying for next season\u0027s Europa League. Related topics Bournemouth Football Crystal Palace Premier League More on this story Latest Crystal Palace news, analysis and fan views Ask about Crystal Palace - what do you want to know? Shorts Previous Next 1:26Esme Morgan - \u0027I never take my England spot for granted\u0027 00:01:26, play videoEsme Morgan - \u0027I never take my England spot for granted\u0027 0:41I haven\u0027t downplayed the seriousness of the findings - Burnham. 00:00:41, play videoI haven\u0027t downplayed the seriousness of the findings - Burnham 0:43Baroness Campbell on successful Netball World Cup bid. 00:00:43, play videoBaroness Campbell on successful Netball World Cup bid 1:20Pep Guardiola set to return to the Etihad. 00:01:20, play videoPep Guardiola set to return to the Etihad 0:53What role does data play in Brighton\u0027s recruitment? 00:00:53, play videoWhat role does data play in Brighton\u0027s recruitment? 1:27Workers paid under £1 an hour to make football shirts. 00:01:27, play videoWorkers paid under £1 an hour to make football shirts 1:29Rangers\u0027 McInnes on meeting Sir Alex Ferguson. 00:01:29, play videoRangers\u0027 McInnes on meeting Sir Alex Ferguson 0:22Everyone knows what Faletau can bring - McNally. 00:00:22, play videoEveryone knows what Faletau can bring - McNally 1:13Ronaldo threw his toys out of the pram? 00:01:13, play videoRonaldo threw his toys out of the pram? 1:06Can the Premier League afford to lose Man City? 00:01:06, play videoCan the Premier League afford to lose Man City? 1:27Jobi McAnuff: Tonda Eckert should miss games. 00:01:27, play videoJobi McAnuff: Tonda Eckert should miss games 1:04Eckert gets suspended six-week ban for Spygate scandal. 00:01:04, play videoEckert gets suspended six-week ban for Spygate scandal 1:06Swedish league leaders\u0027 boss coached Gyökeres at 12. 00:01:06, play videoSwedish league leaders\u0027 boss coached Gyökeres at 12 1:26Padel at the Olympics? 00:01:26, play videoPadel at the Olympics? 0:34Alistair Brownlee honoured with OBE after remarkable triathlon career. 00:00:34, play videoAlistair Brownlee honoured with OBE after remarkable triathlon career 0:36Sir Kevin Sinfield receives knighthood 00:00:36, play videoSir Kevin Sinfield receives knighthood 0:57Can Manchester City win their appeal? 00:00:57, play videoCan Manchester City win their appeal? 0:48Evans\u0027 \u0027tough moments\u0027 away from family. 00:00:48, play videoEvans\u0027 \u0027tough moments\u0027 away from family 0:56Bellingham \u0026 Rogers on \u0027amazing\u0027 Kane. 00:00:56, play videoBellingham \u0026 Rogers on \u0027amazing\u0027 Kane 0:36",
+    "scrapedAt": "2026-10-08 18:48:19.54586"
+  },
+  {
+    "id": 39,
+    "url": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t",
+    "title": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "content": "County Championship as it happened: Stokes takes two wickets on Durham return; Notts\u0027 Clarke hits century 8 May 2026 Live scores Summary Day one of nine County Championship matches Ben Stokes and Harry Brook make first domestic appearances this season Div One: Notts\u0027 Clarke hits century as Worrall takes five wickets for Surrey James Rew out for four opening the batting for Somerset against Glamorgan Warwickshire all out for 147 at home to Yorkshire; Hampshire collapse to 235 against Essex; Sussex v Leics Div Two: Lancashire all out for 201 v Middlesex; Derbyshire v Northants, Glos v Kent Stokes takes two wickets for Durham before Worcs fightback Have your say using the Get Involved button Close form Send us your county cricket views Get involved Live Reporting Ben Kosky, Alex Winter, Steve Mather and Thomas Dodd Image source, Getty Images Who was saying the bat\u0027s dominated the ball so far this season? That hasn\u0027t really been the case today, with only one century recorded across the nine County Championship games so far, by Nottinghamshire\u0027s Joe Clarke against Surrey. We\u0027ve had 14 wickets fall between Warwickshire and Yorkshire at Edgbaston, with 12 in the games between Essex and Hampshire and Lancashire and Middlesex. Meanwhile, England Test captain Ben Stokes picked up two wickets in his first outing of the summer for Durham against Worcestershire. Will the trend continue tomorrow, or will more batters come to the party? Make sure you join us again in the morning, from 10:40 BST onwards, to find out! Until then, have a good evening! 8 0 Share close panel Share page Copy link About sharing Image source, Getty Images Division One: Chelmsford: Essex 51-2 v Hampshire 235 Cardiff: Glamorgan v Somerset 337-9 Nottingham: Notts 317-7 v Surrey Hove: Sussex 3-0 v Leics 328 Edgbaston: Warwickshire 147 v Yorkshire 110-4 Division Two: Derby: Derbyshire 342-3 v Northants Bristol: Gloucestershire 325 v Kent 1-0 Manchester: Lancashire 201 v Middlesex 38-2 Worcester: Worcs 209-7 v Durham 4 0 Share close panel Share page Copy link About sharing A frantic final hour of this one, which finishes in some glorious May evening sunshine. Ben Charlesworth was the story at the start of the day for Gloucestershire, setting the hosts on their way with a knock of 85 off 148 balls. But the final portion of this one was all about James Taylor, who took four wickets in six overs on debut for Kent to finish with six wickets and send his side into bat for 12 balls in fading light. This one is finely poised going into Saturday. 10 0 Share close panel Share page Copy link About sharing Luke Robinson sends down the final over of the day and there\u0027s a scare for Tom Taylor as one ball swings back at him and just over the stumps. However, Taylor finishes the day by turning Robinson away for a single and he reaches the close on 10 not out, with Ethan Brookes at the other end on 21. 5 3 Share close panel Share page Copy link About sharing James Taylor ends his first stint as a Kent bowler with figures of six wickets for just 52 runs and nine maidens. A fine effort, and one which limits the hosts to just two bonus points, when it looked for all the world as though 350 was within reach for Gloucestershire. 17 2 Share close panel Share page Copy link About sharing Lovely cover drive by Ethan Brookes off Luke Robinson brings him four runs and lifts the Worcestershire total above 200. Back in the old days, that would have earned the Pears a bonus point but not the case any more - they\u0027ll need another 46 runs to claim that prize. 3 3 Share close panel Share page Copy link About sharing Who else but James Taylor to seal the deal and finish the Gloucestershire innings. We\u0027ll get a couple of overs with Kent at the crease, too. What fun. 18 1 Share close panel Share page Copy link About sharing Ethan Brookes defends against Kasey Aldridge as Worcestershire tick off another over - there are three more to be bowled tonight. It looks as though Ben Stokes is done for the day as far as bowling goes, with Luke Robinson operating at the other end. 6 1 Share close panel Share page Copy link About sharing Five wickets on debut! What a way to announce yourself. James Taylor delivers to and then catches the effort from Will Williams and there\u0027s now a real possibility Kent could be batting tonight! 23 3 Share close panel Share page Copy link About sharing Spoke too soon! A four-fer on debut for James Taylor, who traps Matt Taylor and the Gloucestershire batsman is on the way back to the dressing room without adding to his side\u0027s tally. 16 4 Share close panel Share page Copy link About sharing Seven overs left in Bristol, and Gloucestershire will do well to get to the close tonight with no more wickets loss having just loss Graeme van Buuren and Tommy Boorman in quick succession. Ed Middleton and Matt Taylor tasked with making sure that happens. James Taylor looking for his fourth wicket of the day, on debut for the visitors 9 2 Share close panel Share page Copy link Abo",
+    "scrapedAt": "2026-10-08 18:48:18.206954"
+  },
+  {
+    "id": 38,
+    "url": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo",
+    "title": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "content": "Image source, Getty Images By Theo Leggett Transport correspondent Published 8 May 2026 European airlines can use US-grade jet fuel to ease potential shortages caused by the US-Israel war with Iran, the EU and two major international airline bodies have suggested. The International Air Transport Association (IATA) has suggested that wider international acceptance of US-grade jet fuel could help to head off any supply problems. The European Aviation Safety Agency (EASA) has drawn up safety guidance, setting out how US supplies could be introduced into the European market, as well as information on the risks involved. Meanwhile, the EU has said there are no \"regulatory obstacles\" stopping European airlines using US-grade fuel so long as it done so safely. The price of jet fuel most European airlines currently use has jumped by half since the start of the war. In a blog post, IATA\u0027s director of flight and technical operations, Stuart Fox warned , externalthat if the conflict in the Middle East continues \"it won\u0027t be long before we see fuel shortages in some parts of the world\". There are two main types of fuel used in commercial aviation. Jet A-1 is the global standard used in most international operations, while Jet A is primarily used in North America. The two are both forms of kerosene and are essentially similar. However, Jet A-1 has a lower freezing point than Jet A. According to Fox, that means it can be used more flexibly on long haul and polar routes. Since the crisis erupted, supplies of Jet A-1 from the Gulf region have slowed to a trickle. This has been a particular problem for Europe, which normally relies heavily on imports from the region. Increased shipments from the US have been making up some of the shortfall. However, many US refineries are not set up to produce jet A-1, limiting the extra that can be brought across the Atlantic. Fox said in his post: \"European fuel supply could come under pressure if the war in the Middle East continues. Using Jet A, which is produced at scale outside the Gulf, could be a practical way to help ease some pressure on existing supply chains.\" He added that airlines in North America use Jet A every day, but still manage to serve communities in very cold regions, such as parts of Alaska, by using fuel additives, as well as by planning and monitoring flights to ensure aircraft operate within safe limits. Meanwhile, the EASA has issued a \"safety information bulletin\", external providing guidance for fuel suppliers and aircraft and airport operators. It said: \"A potential introduction of Jet A in Europe or in other parts of the world would not generate safety concerns provided that its introduction is properly managed\". However, it also warned that if it were introduced without careful management, it \"could result in an aircraft flying outside of its safe operating limits\". \"These risks may be further exacerbated by inconsistent fuel grade availability across airports, increasing the likelihood of mixing fuel grade and associated assumption mismatches\", EASA said. Later on Friday, the EU said: \"There is no regulatory obligation mandating the use of either fuel grade.\" It added: \"There are also no regulatory obstacles to the use of Jet A fuel imported to Europe provided its use is properly managed and communicated throughout the fuel supply chain to ensure highest standards of safe operation.\" Earlier on Friday, British Airways\u0027 owner IAG said, external that it currently had \"no issues with fuel availability in our main markets\", but suggested there could be problems if the war carries on. \"If the current conflict continues to restrict flows of both crude oil and jet fuel from the Middle East, there is the potential for supplies of jet fuel to be restricted on a global basis,\" it said. Related topics Companies Air travel More on this story Oil prices rise after US and Iran exchange fire in Hormuz strait Published 8 May The video playlist Watch our pick of standout clips from across the BBC Previous Next 0:39Moment student arrested for Dexter-style \u0027kill room\u0027 murder. 00:00:39, play videoMoment student arrested for Dexter-style \u0027kill room\u0027 murder 0:59Evicted 87-year-old, who triggered Spanish protests, dies. 00:00:59, play videoEvicted 87-year-old, who triggered Spanish protests, dies 1:19Man back in UK after 28-year journey around the world. 00:01:19, play videoMan back in UK after 28-year journey around the world 1:50Men jailed for raping girl after Snapchat grooming. 00:01:50, play videoMen jailed for raping girl after Snapchat grooming 1:36\u0027I had to crawl through a busy train like an animal\u0027 00:01:36, play video\u0027I had to crawl through a busy train like an animal\u0027 1:29The extreme motorsport where women keep winning. 00:01:29, play videoThe extreme motorsport where women keep winning 1:21How this influencer got millions of views without existing. 00:01:21, play videoHow this influencer got millions of views without existing 0:50Why Gears of War: E-Day won\u0027t come to ",
+    "scrapedAt": "2026-10-08 18:48:16.835132"
+  },
+  {
+    "id": 37,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb",
+    "title": "This Is a Bomb: The Nevada Casino Heist - BBC iPlayer",
+    "content": "Close menu Home This Is a Bomb: The Nevada Casino Heist Documentary This Is a Bomb: The Nevada Casino Heist 1,000 lbs of dynamite, a $3 million ransom, a casino facing destruction - and as the FBI races against the clock, each step reveals dark secrets. An outrageous true crime saga. Series 1: 1. The Bomb (38 mins) Start watching 1. The Bomb Unbeknownst to the FBI, a quiet Hungarian immigrant concocts an elaborate extortion plan. 38 mins 2. The Ransom Meticulous and methodical, Big John engineers his ransom scheme with military precision. 38 mins 3. The Manhunt The bomb\u0027s detonation leaves behind unanswered questions. 43 mins Explore the BBC",
+    "scrapedAt": "2026-10-08 18:48:15.627666"
+  },
+  {
     "id": 36,
     "url": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb",
     "title": "AI‑generated Met Gala looks are back: Here’s how to tell the real from the fake - BBC Bitesize",
@@ -240,26 +275,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 37,
-    "url": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
-  },
-  {
-    "id": 38,
-    "url": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
-  },
-  {
-    "id": 39,
-    "url": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
-  },
-  {
-    "id": 40,
-    "url": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
-  },
-  {
-    "id": 41,
-    "url": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
   },
   {
     "id": 42,
@@ -19156,10 +19171,1058 @@ window.searchData = [
     "id": 9148,
     "url": "https://www.bbc.co.uk/bitesize/groups/ck23v117579t",
     "parentUrl": "https://www.bbc.co.uk/bitesize/articles/z9tmdnb"
+  },
+  {
+    "id": 9149,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w1v8/this-is-a-bomb-the-nevada-casino-heist-series-1-1-the-bomb",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9150,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w90x/this-is-a-bomb-the-nevada-casino-heist-series-1-2-the-ransom",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9151,
+    "url": "https://www.bbc.co.uk/iplayer/episode/m002w90n/this-is-a-bomb-the-nevada-casino-heist-series-1-3-the-manhunt",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9152,
+    "url": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb/this-is-a-bomb-the-nevada-casino-heist#",
+    "parentUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "id": 9156,
+    "url": "https://www.bbc.co.uk/news/business/companies",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9157,
+    "url": "https://www.easa.europa.eu/en/newsroom-and-events/news/easa-issues-sib-safe-usage-jet-aviation-fuel-europe",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9160,
+    "url": "https://www.bbc.co.uk/news/topics/ce8nyjzdp0et",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9162,
+    "url": "https://www.rns-pdf.londonstockexchange.com/rns/4939D_1-2026-5-7.pdf",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9163,
+    "url": "https://www.bbc.co.uk/news/topics/crz4004j5zet",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9169,
+    "url": "https://www.iata.org/en/pressroom/opinions/jet-fuel-flexibility-how-the-industry-is-preparing-for-supply-disruptions/",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9180,
+    "url": "https://www.bbc.co.uk/news/articles/c86dp85g59xo",
+    "parentUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "id": 9184,
+    "url": "https://www.bbc.co.uk/sport/cricket/scores-fixtures/2026-05-08",
+    "parentUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "id": 9185,
+    "url": "https://www.bbc.co.uk/sport/articles/cvj6jk63kwz0o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9186,
+    "url": "https://www.bbc.co.uk/sport/football/teams/chelsea",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9187,
+    "url": "https://www.bbc.co.uk/sport/tennis/articles/cxyvr7q207gpo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9188,
+    "url": "https://www.bbc.co.uk/sport/olympics/articles/crq8nv3zep9yo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9189,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cm0e35gzgdqeo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9190,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cx2lggyz2wgo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9191,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c5lye031jvgro",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9192,
+    "url": "https://www.bbc.co.uk/sport/american-football/videos/c6073ny8547ro",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9195,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c20dyjd604qo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9196,
+    "url": "https://www.bbc.co.uk/sport/football/teams/nottingham-forest",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9197,
+    "url": "https://www.bbc.co.uk/sport/cricket/articles/c3qjn05lr4n7o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9200,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cvp8gex8wzneo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9201,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cdepl8k6y5no",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9202,
+    "url": "https://www.bbc.co.uk/sport/football/teams/newcastle-united",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9203,
+    "url": "https://www.bbc.co.uk/sport/football/teams/tottenham-hotspur",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9204,
+    "url": "https://www.bbc.co.uk/sport/topics/cpv471x401jt",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9206,
+    "url": "https://www.bbc.co.uk/sport/formula1/articles/cr15j3z2npz9o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9207,
+    "url": "https://www.bbc.co.uk/sport/football/teams/fulham",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9208,
+    "url": "https://www.bbc.co.uk/sport/articles/cked39dp0476o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9211,
+    "url": "https://www.bbc.co.uk/sport/football/teams/crystal-palace",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9212,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c1wz9002008o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9213,
+    "url": "https://www.bbc.co.uk/sport/football/articles/crlezygrpe6o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9215,
+    "url": "https://www.bbc.co.uk/send/u211221744",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9216,
+    "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmy4x3e7zwn9o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9220,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cmp302xqx5yyo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "id": 9222,
+    "url": "https://www.bbc.co.uk/sport/football/teams/sunderland",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9223,
+    "url": "https://www.bbc.co.uk/sport/football/teams/aston-villa",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9226,
+    "url": "https://www.bbc.co.uk/sport/topics/cglgnp4394wt",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9229,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c5y77vlezgno",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9235,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c5yr4vle9w2o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9236,
+    "url": "https://www.bbc.co.uk/sport/football/articles/ce8e6y90g2jo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9237,
+    "url": "https://www.bbc.co.uk/sport/football-quizzes",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9239,
+    "url": "https://www.bbc.co.uk/sport/football/champions-league",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9240,
+    "url": "https://www.bbc.co.uk/sport/football/teams/brighton-and-hove-albion",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9242,
+    "url": "https://www.bbc.co.uk/sport/football/teams/brentford",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9246,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c9vl1y7g1mjo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9247,
+    "url": "https://www.bbc.co.uk/sport/football/premier-league/table",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9254,
+    "url": "https://www.bbc.co.uk/sport/football/teams/arsenal",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9256,
+    "url": "https://www.bbc.co.uk/sport/football/teams/liverpool",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9259,
+    "url": "https://www.bbc.co.uk/sport/football/europa-league",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9264,
+    "url": "https://www.bbc.co.uk/sport/football/articles/cpqp9eqwe72o",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9265,
+    "url": "https://www.bbc.co.uk/sport/football/articles/c5yv6v2vrlyo",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9267,
+    "url": "https://www.bbc.co.uk/sport/football/premier-league/scores-fixtures",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "id": 9269,
+    "url": "https://www.bbc.co.uk/sport/football/teams/everton",
+    "parentUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/921/cpsprodpb/a88c/live/14383ad0-39d6-11f1-a1b6-b76b3bf64711.jpg",
+    "alt": "A group photo of the trophies for the Uefa Conference League, Uefa Champions League and Uefa Europa League",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/91b6/live/4a573810-8e3b-11f0-9cf6-cbf3e73ce2b9.jpg",
+    "alt": "A graphic of Premier League players from every team in the division in 2025-26 season, with the Premier League trophy in front of them.",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1920/cpsprodpb/4240/live/b321cc40-4f50-11f0-a466-d54f65b60deb.png",
+    "alt": "Quiz logo",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/2808/live/8b470880-c334-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Lionesses defender Esme Morgan",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a474/live/296087a0-c32e-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "UK Prime Minister Andy Burnham",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7466/live/b89e3970-c316-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Baroness Sue Campbell on England\u0027s successful bid for the 2031 Netball World Cup",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/8461/live/9ab58210-c307-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "Pep Guardiola looks on past the camera wearing a black t-shirt ",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b7e4/live/75f851e0-c2ea-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Brighton sporting director Mike Cave",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ec1c/live/7f76cd70-c176-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Dan Roan",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b1a6/live/34710e30-c315-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Sir Alex Ferguson and Rangers manager Derek McInnes",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/aae0/live/d065c7d0-c32a-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Taulupe Faletau",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4b2c/live/50777370-c294-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Julien Laurens \u0026 Ronaldo",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/400a/live/c66bd3b0-c27a-11f1-a308-2782c1dfd816.jpg",
+    "alt": "BBC Sport\u0027s Dale Johnson and the Manchester City badge",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3b37/live/1c61c4b0-c28e-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Jobi McAnuff \u0026 Tonda Eckert",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/45cc/live/0b86d760-c24e-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Tonda Eckert",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/1e7e/live/c88259d0-c289-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Andreas Engelmark \u0026 Gyokeres",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7699/live/389eeb90-c274-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "LTA\u0027s Tom Murray",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/284d/live/e6c6d120-c269-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Alistair Brownlee",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/13bd/live/70e891c0-c253-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "Kevin Sinfield",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7388/live/7dd79620-c257-11f1-ab30-1f92d324dff9.jpg",
+    "alt": "BBC Sport\u0027s Dan Roan and the Manchester City badge",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ffcd/live/788d8d10-c279-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Elfyn Evans\u0027s car takes off over the brow of a hill",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d5c9/live/95341730-c22a-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Bellingham, Kane, Rogers",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ab51/live/efef6300-c23e-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Erica Meg Parkinson",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f059/live/99c79680-bd9f-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "The Celebrity Traitors S2",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e1df/live/b395a730-c32d-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "This City Is Ours",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/487a/live/f801ca90-c1be-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Hot Money: The New Narcos",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/aa9a/live/4567dcf0-c15d-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Desert Island Discs: Professor Dame Parveen Kumar",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f4ad/live/ca558840-c23e-11f1-b390-9f59a375fdd2.jpg",
+    "alt": "Malick Yalcouye celebrates scoring Brighton\u0027s second goal during the Premier League game against Coventry City ",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/26d4/live/3ff2f8a0-c256-11f1-babe-4199b0e7ccea.png",
+    "alt": "A young Lionel Messi next to a yellow question mark",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f383/live/abedca80-bdc9-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Swedish Top Fuel drag racing driver Susanne Callin wearing a black and orange racing helmet with just her eyes exposed through the visor, looking directly at the camera, taken at Mantorp in Sweden in 2025.",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7530/live/5912e380-c248-11f1-9670-0b564215b759.jpg",
+    "alt": "Kane celebrates scoring for England against Czechia",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cddb/live/f3601520-c301-11f1-9955-5d2e13ff2bea.jpg",
+    "alt": "Photos of a Celtic shirt, an Arsenal shirt and a Liverpool training top inside Cambodian factories.",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/121f/live/b9a9c1d0-c26d-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Cameron Bancroft, left, and Steve Smith speak to journalists after the Cape Town Test in 2018",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9db8/live/302f0ab0-c244-11f1-bc2e-018d645d8d21.png",
+    "alt": "Lionel Messi waves, Cristiano Ronaldo sat in dug out",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5aef/live/01151d40-c0c4-11f1-885f-4f9e8c6dce17.jpg",
+    "alt": "Thomas Tuchel",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4cc2/live/a9d0d2e0-c177-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Daniil Medvedev points to his head",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dbd3/live/addecae0-c244-11f1-b2a8-994b2a5598cb.jpg",
+    "alt": "Angelica Tait holds a Great Britain flag aloft during the 2026 Flag Football World Championships",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a5b3/live/d4dfc4e0-b2dc-11f1-b227-bbba053e356a.jpg",
+    "alt": "Dorking Wanderers owner and manager Marc White",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e02c/live/b81738e0-c0d6-11f1-a5b0-6f550c662e91.jpg",
+    "alt": "Ferrari\u0027s Lewis Hamilton throws up spray during the aborted formation laps at the Bahrian Grand Prix in Malaysia",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c4be/live/c8a91df0-c1d4-11f1-a85d-a124076c9e55.jpg",
+    "alt": "Sebastien Pocognoli and his Scotland players",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8536/live/93b56cf0-c0aa-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Marshawn Lloyd",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e110/live/a03853f0-c0ac-11f1-bc2e-018d645d8d21.png",
+    "alt": "George Furbank, Louis Rees Zammit and Charlie Atkinson in a composite images",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Champions League sixth place: How Premier League teams could qualify for Europe this season - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/cewpkpdgllro#comments"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/923/cpsprodpb/9ef8/live/e107fb50-4aec-11f1-95d5-c35bb50319f8.jpg",
+    "alt": "Andoni Iraola",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/e5d3/live/eb58d3e0-fd8c-11ee-a9f7-4d961743aa47.jpg",
+    "alt": "Selhurst Park",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/e333/live/3219e500-7ac1-11f0-a34f-318be3fb0481.png",
+    "alt": "Ask Me Anything logo",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/2808/live/8b470880-c334-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Lionesses defender Esme Morgan",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a474/live/296087a0-c32e-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "UK Prime Minister Andy Burnham",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7466/live/b89e3970-c316-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Baroness Sue Campbell on England\u0027s successful bid for the 2031 Netball World Cup",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/8461/live/9ab58210-c307-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "Pep Guardiola looks on past the camera wearing a black t-shirt ",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b7e4/live/75f851e0-c2ea-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Brighton sporting director Mike Cave",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ec1c/live/7f76cd70-c176-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Dan Roan",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/b1a6/live/34710e30-c315-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Sir Alex Ferguson and Rangers manager Derek McInnes",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/aae0/live/d065c7d0-c32a-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Taulupe Faletau",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/4b2c/live/50777370-c294-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Julien Laurens \u0026 Ronaldo",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/400a/live/c66bd3b0-c27a-11f1-a308-2782c1dfd816.jpg",
+    "alt": "BBC Sport\u0027s Dale Johnson and the Manchester City badge",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3b37/live/1c61c4b0-c28e-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Jobi McAnuff \u0026 Tonda Eckert",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/45cc/live/0b86d760-c24e-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Tonda Eckert",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/1e7e/live/c88259d0-c289-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Andreas Engelmark \u0026 Gyokeres",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7699/live/389eeb90-c274-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "LTA\u0027s Tom Murray",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/284d/live/e6c6d120-c269-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Alistair Brownlee",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/13bd/live/70e891c0-c253-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "Kevin Sinfield",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7388/live/7dd79620-c257-11f1-ab30-1f92d324dff9.jpg",
+    "alt": "BBC Sport\u0027s Dan Roan and the Manchester City badge",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ffcd/live/788d8d10-c279-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Elfyn Evans\u0027s car takes off over the brow of a hill",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d5c9/live/95341730-c22a-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Bellingham, Kane, Rogers",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ab51/live/efef6300-c23e-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Erica Meg Parkinson",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f059/live/99c79680-bd9f-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "The Celebrity Traitors S2",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e1df/live/b395a730-c32d-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "This City Is Ours",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/487a/live/f801ca90-c1be-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Hot Money: The New Narcos",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/aa9a/live/4567dcf0-c15d-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Desert Island Discs: Professor Dame Parveen Kumar",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f4ad/live/ca558840-c23e-11f1-b390-9f59a375fdd2.jpg",
+    "alt": "Malick Yalcouye celebrates scoring Brighton\u0027s second goal during the Premier League game against Coventry City ",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/26d4/live/3ff2f8a0-c256-11f1-babe-4199b0e7ccea.png",
+    "alt": "A young Lionel Messi next to a yellow question mark",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f383/live/abedca80-bdc9-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Swedish Top Fuel drag racing driver Susanne Callin wearing a black and orange racing helmet with just her eyes exposed through the visor, looking directly at the camera, taken at Mantorp in Sweden in 2025.",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/7530/live/5912e380-c248-11f1-9670-0b564215b759.jpg",
+    "alt": "Kane celebrates scoring for England against Czechia",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/cddb/live/f3601520-c301-11f1-9955-5d2e13ff2bea.jpg",
+    "alt": "Photos of a Celtic shirt, an Arsenal shirt and a Liverpool training top inside Cambodian factories.",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/121f/live/b9a9c1d0-c26d-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Cameron Bancroft, left, and Steve Smith speak to journalists after the Cape Town Test in 2018",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9db8/live/302f0ab0-c244-11f1-bc2e-018d645d8d21.png",
+    "alt": "Lionel Messi waves, Cristiano Ronaldo sat in dug out",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/5aef/live/01151d40-c0c4-11f1-885f-4f9e8c6dce17.jpg",
+    "alt": "Thomas Tuchel",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4cc2/live/a9d0d2e0-c177-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Daniil Medvedev points to his head",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/dbd3/live/addecae0-c244-11f1-b2a8-994b2a5598cb.jpg",
+    "alt": "Angelica Tait holds a Great Britain flag aloft during the 2026 Flag Football World Championships",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/a5b3/live/d4dfc4e0-b2dc-11f1-b227-bbba053e356a.jpg",
+    "alt": "Dorking Wanderers owner and manager Marc White",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e02c/live/b81738e0-c0d6-11f1-a5b0-6f550c662e91.jpg",
+    "alt": "Ferrari\u0027s Lewis Hamilton throws up spray during the aborted formation laps at the Bahrian Grand Prix in Malaysia",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c4be/live/c8a91df0-c1d4-11f1-a85d-a124076c9e55.jpg",
+    "alt": "Sebastien Pocognoli and his Scotland players",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8536/live/93b56cf0-c0aa-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Marshawn Lloyd",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/e110/live/a03853f0-c0ac-11f1-bc2e-018d645d8d21.png",
+    "alt": "George Furbank, Louis Rees Zammit and Charlie Atkinson in a composite images",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "Iraola top of Palace shortlist for new manager - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/football/articles/c2d2eeknkjxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/3f7b294b-0431-4349-8a6a-08cc2d5980e5.jpg.webp",
+    "alt": "James Anderson",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/640/cpsprodpb/vivo/live/images/2026/5/8/6c491182-1d65-47a5-a884-c4658faa074d.jpg.webp",
+    "alt": "Charlie Allison",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/128/cpsprodpb//vivo/live/images/2019/5/30/e04931f5-3918-4858-b47f-a7b69c53482f.jpg.webp",
+    "alt": "",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "County Championship cricket LIVE: Ben Stokes \u0026 Harry Brook in action - scores, radio commentary \u0026 updates - BBC Sport",
+    "pageUrl": "https://www.bbc.co.uk/sport/live/cd9v3z0xyv3t"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/f286/live/ba7a9570-4ac3-11f1-9325-ade34e8d64d0.jpg",
+    "alt": "Picture of the underside of an unmarked plane coming in to land",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/867/cpsprodpb/ceca/live/514c94a0-4a6d-11f1-9270-375e80dbfe3c.jpg",
+    "alt": "A man grabs a black fuel pump at a petrol station",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/af9f/live/6a8cd5e0-c30a-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "A young man with blond hair sits up in a hospital bed. He is wearing a long-sleeved, olive-green shirt.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/d881/live/d25bd600-c32b-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "87-year-old Maricarmen Abascal has short dark hair and is wearing a white t-shirt. She is sat in a wheelchair holding a microphone.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3b14/live/b1a97650-c327-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "A man with a white beard and moustache wading out of the sea in a wetsuit. He is a wearing goggles and a blue head covering.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f092/live/03a5cd50-c300-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Three mugshots of men who were jailed",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ab78/live/0dd09520-c2a2-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "A woman with short brown hair sits with a dog in on her knee",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/a64e/live/2d009190-c309-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "Susanne standing outside with her fist raised in the air in a salute of celebration ",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/e198/live/6f8acf50-c27b-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Man with blonde bob pointing at camera",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/9ea1/live/44a00f70-c326-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "A computer-generated image of a man with short dark hair wearing a blue coat. Another man is visible in the background.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/3661/live/c4d89f60-c310-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "A mug shot of Christa Pike who has long, dark, curly hair.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/f681/live/b8682ff0-c303-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "A woman with shoulder-length blonde hair looks at someone off-camera",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/c758/live/bc8e3fb0-c313-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "A computer-generated image of green cells on a red background.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/8ab7/live/011aa5e0-c311-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "Brightly coloured game with water and lily pads.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/53cc/live/c899f250-c2fe-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "A display case full of national soccer jerseys at an Adidas store that sells soccer jerseys.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/ac8f/live/cf05d5d0-c27e-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Riots on the streets of France with a bin on the floor with smoke behind it\n",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/7686/live/23c07bc0-c252-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "A woman with black hair wearing a woolly-collared coat and looking off camera.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/14fa/live/dfa85b30-c254-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "A man with a full beard and moustache looks directly at the camera. He is wearing a bright blue open-necked shirt. ",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/62e2/live/40683560-c266-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Southampton football manager Tonda Eckert staring into distance",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/0d6b/live/0cba9740-c260-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "The sun setting above London skyline",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/aed4/live/c7f15120-c24c-11f1-babe-4199b0e7ccea.jpg",
+    "alt": "A young boy wearing a wooly hat and coat smiles into the camera.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/400/cpsprodpb/851c/live/f396fe50-c22a-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "A woman with long curly dark blonde hair smiles at someone off-camera. She is wearing a black tank top.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/f6b5/live/07b6ae40-b816-11f1-b19f-05e2dfdadad2.jpg",
+    "alt": "Aaron Huxter (left) with his daughter Olivia-Grace. Aaron has blue eyes, short brown hair and a bushy beard. Olivia wears a yellow jumper, has her brown hair in pigtails and smiles at the camera. ",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/4cba/live/bb309210-c22f-11f1-bc2e-018d645d8d21.png",
+    "alt": "Paul Scanlon and his wife Deborah standing on the balcony of a cruise ship. They are a middle-aged couple - Paul is bald and is wearing dark, circular glasses, a white shirt, black waistcoat and a red bow tie. He has his arm around Deborah who has horn-ri",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d9ff/live/0a1511f0-c2dd-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "A photo showing the inside of a coach, and the backs of passengers\u0027 heads as they sit in their seats. Some are looking out the window.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/d5d6/live/bb9758a0-c27b-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Christa Pike photographed in court in Tennessee",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8bf3/live/3fc23000-c227-11f1-b7d8-6f930589c871.jpg",
+    "alt": "Harmanpreet Kaur of India wearing a blue jersey with orange details reacts at the coin-toss",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9997/live/310516d0-c22d-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Tessa Wong wearing an orange singlet pointing to the Singapore skyline behind her.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/9db8/live/302f0ab0-c244-11f1-bc2e-018d645d8d21.png",
+    "alt": "Lionel Messi waves, Cristiano Ronaldo sat in dug out",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c413/live/31fc5740-c1ad-11f1-93a9-f546f29a5f8e.jpg",
+    "alt": "A still from Carrie shows the main character smiling as she stands on a stage wearing a tiara and a white prom dress. Gold and white stars fill the background behind her, and a spotlight illuminates her.",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/8046/live/757cc4b0-122f-11f1-b048-c9424b2cf5fd.png",
+    "alt": "A cut of of Anthony Zurcher wearing a suit and tie in front of a red, black, grey and blue graphic background featuring the US Capitol Building ",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/b271/live/4999dc70-bdb0-11f1-a64c-550be9e3c66b.jpg",
+    "alt": "Time",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/49c5/live/0d786260-c2f7-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "Piano Focus",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/646b/live/5c200910-b058-11f1-bc1f-3f186ca4140c.jpg",
+    "alt": "The Split Up",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/07a3/live/03194870-c1c6-11f1-bc2e-018d645d8d21.jpg",
+    "alt": "CrowdScience",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://sb.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cs_ucfr\u003d0\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "US jet fuel could be used in Europe to ease possible shortages - BBC News",
+    "pageUrl": "https://www.bbc.co.uk/news/articles/cp8pk2m4nlxo"
+  },
+  {
+    "src": "https://a1.api.bbc.co.uk/hit.xiti?\u0026col\u003d1\u0026from\u003dp\u0026ptag\u003djs\u0026s\u003d598253\u0026p\u003dbbc_two::iplayer.tv.tleo.this_is_a_bomb_the_nevada_casino_heist.m002w1vb.page\u0026x1\u003d[page]\u0026x2\u003d[responsive]\u0026x3\u003d[bbc_website]\u0026x4\u003d[en]\u0026x7\u003d[list-tleo]\u0026x8\u003d[reverb-3.14.0-nojs]\u0026x11\u003d[iplayer]\u0026x12\u003d[bbc_two]",
+    "alt": "",
+    "pageTitle": "This Is a Bomb: The Nevada Casino Heist - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
+  {
+    "src": "http://b.scorecardresearch.com/p?c1\u003d2\u0026c2\u003d17986528\u0026cv\u003d2.0\u0026cj\u003d1",
+    "alt": "",
+    "pageTitle": "This Is a Bomb: The Nevada Casino Heist - BBC iPlayer",
+    "pageUrl": "https://www.bbc.co.uk/iplayer/episodes/m002w1vb"
+  },
   {
     "src": "https://ichef.bbci.co.uk/images/ic/480xn/p0njdrq1.jpg",
     "alt": "An AI image of Katy Perry at the 2024 Met Gala",
