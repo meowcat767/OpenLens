@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1726,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html",
+    "title": "RFC 4047 - MIME Sub-type Registrations for Flexible Image Transport System (FITS)",
+    "content": "Light Dark Auto Network Working Group                                           S. Allen\nRequest for Comments: 4047                          UCO/Lick Observatory\nCategory: Informational                                         D. Wells\n                                    National Radio Astronomy Observatory\n                                                              April 2005\n\n\n                    MIME Sub-type Registrations for \n                 Flexible Image Transport System (FITS) \n\nStatus of This Memo\n\n   This memo provides information for the Internet community.  It does\n   not specify an Internet standard of any kind.  Distribution of this\n   memo is unlimited.\n\nCopyright Notice\n\n   Copyright (C) The Internet Society (2005).\n\nAbstract\n\n   This document describes the registration of the Multipurpose Internet\n   Mail Extensions (MIME) sub-types to be used by the international\n   astronomical community for the interchange of Flexible Image\n   Transport System (FITS) files.  The encoding is defined by the\n   published FITS standard documents.  The FITS format has been in use\n   since 1979, and almost all data from astronomical observations are\n   interchanged by using FITS.\n\nTable of Contents\n\n   1.  Introduction..................................................  2\n   2.  Conventions Used in this Document.............................  2\n   3.  Overview......................................................  2\n   4.  FITS Definition...............................................  3\n       4.1.  FITS Structure..........................................  3\n       4.2.  History of FITS Features................................  5\n       4.3.  Stability of the FITS definition........................  6\n       4.4.  Portability of FITS files...............................  7\n       4.5.  Application Programming Interfaces to FITS..............  7\n       4.6.  FITS File Conformance Testing...........................  8\n       4.7.  Archives That Distribute FITS Files.....................  8\n   5.  IANA Considerations...........................................  9\n       5.1.  Registration of application/fits........................ 10\n       5.2.  Registration of image/fits.............................. 14\n   6.  References.................................................... 19\n       6.1.  Normative References.................................... 19\n\n\n\nAllen \u0026 Wells                Informational                      [Page 1] RFC 4047          MIME Sub-type Registrations for FITS        April 2005\n\n\n       6.2.  Informative References.................................. 20\n   7.  Security Considerations....................................... 21\n   8.  Contributors.................................................. 21\n   9.  Acknowledgements.............................................. 22\n   Authors\u0027 Addresses................................................ 22\n   Full Copyright Statement.......................................... 23\n\n 1.  Introduction \n\n   The FITS file format [FITS] was designed in order to facilitate the\n   interchange of astronomical image data between observatories.  FITS\n   provides a means of transporting arrays and tables of data and\n   keyword/value pairs of metadata.  FITS is defined by standards\n   documents that are approved by the International Astronomical Union\n   (IAU, http://www.iau.org/) and published in refereed journals.\n\n   Before the inception of HTTP, astronomers used the Internet to\n   exchange FITS files.  Multiple unofficial media types for FITS files\n   [ASU] came into use shortly after the inception of the WWW and have\n   remained in use.  Currently (2005) the international astronomical\n   community is pursuing many cooperative efforts (e.g., [IVOA], [NVO],\n   [AstroGrid], [AVO]) to produce web services that provide astronomical\n   data.  The exchange of FITS files is a fundamental element of the\n   prototypes for these web services [SIAP].  The astronomical community\n   has to agree to use one set of media types for FITS files in order to\n   promote interoperability of its various services.\n\n   In its simplest form, FITS is used as a means of transporting\n   astronomical image data in a raster form along with coordinate\n   information and other standard and locally defined metadata.  In such\n   applications FITS is much like the well-known TIFF format [TIFF] with\n   the addition of the GeoTIFF tags [GeoTIFF].  However, FITS is capable\n   of describing a much broader range of data than 2-dimensional\n   rasters.  A consensus has developed in the FITS community that two\n   media types are needed:  one for images and one for all other cases.\n\n 2.  Conventions Used in this Document \n\n   The keywords \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in RFC-2119 [Require].\n\n 3.  Overview \n\n   This document describes the registration of the MIME media sub-types\n",
+    "scrapedAt": "2026-10-08 19:55:36.675753"
+  },
+  {
+    "id": 1725,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#errno",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:55:35.044685"
+  },
+  {
+    "id": 1724,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_create_key",
+    "title": "Thread-local storage support — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int key",
+    "scrapedAt": "2026-10-08 19:55:33.646066"
+  },
+  {
+    "id": 1723,
+    "url": "https://github.com/python/cpython/issues/123430",
+    "title": "Add `:root { color-scheme: light dark; }` to http.server directory list and error pages · Issue #123430 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add :root { color-scheme: light dark; } to http.server directory list and error pages #123430 New issue Copy link New issue Copy link Closed Closed Add :root { color-scheme: light dark; } to http.server directory list and error pages#123430 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description YorikHansen opened on Aug 28, 2024 Issue body actions Feature or enhancement Proposal: Allow browsers to apply light or dark themes to the http.server directory list according to the users prefered color scheme. This can be done by adding the CSS color-scheme property to :root with the value light dark. :root {\n    color-scheme: light dark;\n} Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: Something similar was discussed previously in #95812. There it was rejected, as \"[t]he listing [should] not contain any hardcoded colors\". I agree with this statement, but I think the page should allow browsers to select their own color scheme and don\u0027t see it as a \"a problem either with [the] configuration or with the browser\", as long as the color-scheme property is not set properly. Linked PRs gh-123430: Add dark mode support to pages generated by http.server #123475 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:55:32.281832"
+  },
+  {
+    "id": 1722,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:55:30.034232"
+  },
+  {
     "id": 1721,
     "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotStartsWith",
     "title": "unittest — Unit testing framework — Python 3.14.8 documentation",
@@ -11585,26 +11620,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1722,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64"
-  },
-  {
-    "id": 1723,
-    "url": "https://github.com/python/cpython/issues/123430"
-  },
-  {
-    "id": 1724,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_create_key"
-  },
-  {
-    "id": 1725,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#errno"
-  },
-  {
-    "id": 1726,
-    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html"
   },
   {
     "id": 1727,
@@ -253386,10 +253401,810 @@ window.searchData = [
     "id": 374014,
     "url": "https://github.com/python/cpython/issues/133231#top",
     "parentUrl": "https://github.com/python/cpython/issues/133231"
+  },
+  {
+    "id": 374378,
+    "url": "https://github.com/YorikHansen",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374379,
+    "url": "https://github.com/python/cpython/issues/123430#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374380,
+    "url": "https://github.com/python/cpython/issues/123430#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374381,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/123430",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374382,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374383,
+    "url": "https://github.com/python/cpython/issues/95812#issuecomment-1209057716",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374384,
+    "url": "https://github.com/python/cpython/issues/95812",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374388,
+    "url": "https://github.com/python/cpython/issues/123430#issue-2492285852",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 374389,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/123430",
+    "parentUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "id": 375672,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-GROUPS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375673,
+    "url": "https://datatracker.ietf.org/doc/rfc4047/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375674,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375675,
+    "url": "http://www.stsci.edu/resources/software_hardware/stsdas",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375676,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-FITS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375677,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-5.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375678,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-5.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375679,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-AVO",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375680,
+    "url": "http://www.cv.nrao.edu/fits/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375681,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-Remark",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375682,
+    "url": "http://aips2.nrao.edu/MIDAS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375683,
+    "url": "http://xmm.vilspa.esa.es/external/xmm_sw_cal/sas_frame.shtml",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375685,
+    "url": "http://www.us-vo.org/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375686,
+    "url": "http://cfa-www.harvard.edu/~john/fitsy/IUEDAC",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375687,
+    "url": "http://documents.wolfram.com/v5/Built-inFunctions/GraphicsAndSound/ImportAndExport/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375688,
+    "url": "http://www.trilon.com/xv/xv.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375689,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-BINTABLE",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375690,
+    "url": "http://www.spacetelescope.org/projects/fits_liberator/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375691,
+    "url": "https://datatracker.ietf.org/person/dwells@nrao.edu",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375692,
+    "url": "https://datatracker.ietf.org/doc/html/draft-allen-fitsmime-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375694,
+    "url": "http://www.us-vo.org/pubs/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375695,
+    "url": "http://archive.stsci.edu/iue/iuedacfits.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375696,
+    "url": "http://heasarc.gsfc.nasa.gov/docs/heasarc/fits.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375697,
+    "url": "http://idlastro.gsfc.nasa.gov/fitsy",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375698,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-19",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375700,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-14",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375701,
+    "url": "http://www.rsinc.com/ImageMagick",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375702,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375703,
+    "url": "https://datatracker.ietf.org/doc/draft-allen-fitsmime/00/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375704,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-AstroGrid",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375705,
+    "url": "http://archive.deep.ucolick.org/ComptonGRO",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375706,
+    "url": "http://heasarc.gsfc.nasa.gov/ftools/fv/fitsTcl_home.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375707,
+    "url": "http://www.adobe.com/products/photoshop/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375709,
+    "url": "http://salish.dao.nrc.ca:8080/jcmt/intro.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375710,
+    "url": "http://astroshed.com/fitsplug/fitsplug.htm",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375711,
+    "url": "http://www.stsci.edu/resources/software_hardware/pyfits",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375712,
+    "url": "http://cadcwww.dao.nrc.ca/cfht/cfht.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375713,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-IVOA",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375714,
+    "url": "http://cxc.harvard.edu/cda/LaPalma",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375715,
+    "url": "http://cxc.harvard.edu/ciao/XANADU",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375716,
+    "url": "http://heasarc.gsfc.nasa.gov/w3browse/Chandra",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375717,
+    "url": "http://xmm.vilspa.esa.es/external/xmm_data_acc/xsa/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375718,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-6.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375719,
+    "url": "http://heasarc.gsfc.nasa.gov/fitsio/fitsTcl",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375720,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-6.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375721,
+    "url": "http://www.wolfram.com/MatLab",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375722,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-GeoTIFF",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375723,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-23",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375724,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-22",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375726,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-21",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375727,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-20",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375728,
+    "url": "http://www.aoc.nrao.edu/aips/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375729,
+    "url": "http://archive.noao.edu/nsa/VLT",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375730,
+    "url": "http://hea-www.harvard.edu/RD/ds9/fv",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375731,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-NOST",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375732,
+    "url": "http://archive.stsci.edu/HEASARC",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375733,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375734,
+    "url": "http://heasarc.gsfc.nasa.gov/docs/xanadu/xanadu.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375735,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375736,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375737,
+    "url": "http://hea-www.harvard.edu/PROS/pros.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375738,
+    "url": "http://archive.eso.org/Subaru",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375739,
+    "url": "http://www.astrogrid.org/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375740,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-XTENSION",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375741,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-TIFF",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375742,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375743,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375744,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375745,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375746,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375747,
+    "url": "http://www.eso.org/projects/esomidas/ds9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375748,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375749,
+    "url": "http://hea-www.harvard.edu/RD/funtools/IDLASTRO",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375750,
+    "url": "http://www.aao.gov.au/archive/HIPASS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375751,
+    "url": "http://netpbm.sourceforge.net/gimp",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375752,
+    "url": "http://aladin.u-strasbg.fr/Starlink",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375753,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-SIAP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375754,
+    "url": "http://bimaarch.ncsa.uiuc.edu/Keck-DEIMOS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375755,
+    "url": "http://www.atnf.csiro.au/research/multibeam/multibeam.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375756,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-IMAGE",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375757,
+    "url": "http://heasarc.gsfc.nasa.gov/ftools/fv/Aladin",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375758,
+    "url": "http://www.atnf.csiro.au/people/mcalabre/WCS/PyFITS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375759,
+    "url": "http://fits.gsfc.nasa.gov/fits_libraries.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375760,
+    "url": "http://archive.ast.cam.ac.uk/ingarch/BIMA",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375761,
+    "url": "http://www.nrao.edu/software/fitsview/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375762,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2616",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375763,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-WCS1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375764,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-WCS2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375765,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-MIME2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375766,
+    "url": "http://www.iau.org/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375767,
+    "url": "http://bima.astro.umd.edu/miriad/STSDAS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375768,
+    "url": "https://www.rfc-editor.org/rfc/rfc4047.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375769,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-TABLE",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375770,
+    "url": "http://www.mathworks.com/xv",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375771,
+    "url": "http://www.mathworks.com/access/helpdesk/help/techdoc/ref/fitsread.shtml?cmdname\u003dfitsread",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375772,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375773,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375774,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375775,
+    "url": "http://www.remotesensing.org/geotiff/geotiff.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375776,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375777,
+    "url": "https://www.rfc-editor.org/rfc/rfc4047.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375778,
+    "url": "http://fits.gsfc.nasa.gov/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375779,
+    "url": "http://www.euro-vo.org/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375781,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-Require",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375782,
+    "url": "http://www.ivoa.net/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375783,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2046",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375784,
+    "url": "https://datatracker.ietf.org/doc/rfc4047/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375785,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4.6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375786,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375787,
+    "url": "http://iraf.noao.edu/AIPS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375789,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-ASU",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375790,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4.7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375791,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375792,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375793,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375794,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375795,
+    "url": "http://heasarc.gsfc.nasa.gov/docs/software/ftools/fitsverify/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375796,
+    "url": "http://gemini.ast.cam.ac.uk/sciops/data/dataIndex.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375797,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375798,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375799,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#section-4.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375800,
+    "url": "http://star-www.rl.ac.uk/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375801,
+    "url": "http://vizier.u-strasbg.fr/doc/asu.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375802,
+    "url": "http://archive.stsci.edu/fits/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375803,
+    "url": "http://tdc-www.harvard.edu/software/wcstools/FUNTOOLS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375805,
+    "url": "http://cossc.gsfc.nasa.gov/archive/index.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375807,
+    "url": "http://smoka.nao.ac.jp/SDSS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375808,
+    "url": "http://www.ipac.caltech.edu/AAT",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375809,
+    "url": "http://www.sdss.org/dr3/CFHT",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375810,
+    "url": "http://www.imagemagick.com/Mathematica",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375811,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-IAUFWG",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375812,
+    "url": "http://www.gimp.org/IDL",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375813,
+    "url": "http://www.jive.nl/archive/scripts/listarch.php",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375814,
+    "url": "http://partners.adobe.com/asn/developer/pdfs/tn/TIFF6.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375815,
+    "url": "http://hesperia.gsfc.nasa.gov/ssw/hessi/doc/FITSview",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375816,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4047.html#ref-NVO",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375817,
+    "url": "https://datatracker.ietf.org/person/sla@ucolick.org",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375818,
+    "url": "http://e2e.aoc.nrao.edu/archive/archive_describe.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375819,
+    "url": "http://lambda.gsfc.nasa.gov/EVN",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 4047 - MIME Sub-type Registrations for Flexible Image Transport System (FITS)",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 4047 - MIME Sub-type Registrations for Flexible Image Transport System (FITS)",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#errno"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#errno"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_create_key"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_create_key"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28537132?v\u003d4\u0026size\u003d48",
+    "alt": "@YorikHansen",
+    "pageTitle": "Add `:root { color-scheme: light dark; }` to http.server directory list and error pages · Issue #123430 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add `:root { color-scheme: light dark; }` to http.server directory list and error pages · Issue #123430 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123430"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt64"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
