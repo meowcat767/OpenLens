@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 340,
+    "url": "https://www.autoscout24.nl/moto/",
+    "title": "Uw motor, scooter of quad kopen en gratis verkopen",
+    "content": "Ga naar hoofdinhoud Homepage Moto Uw motor, scooter of quad kopen en gratis verkopen Topmerken Terwijl bij auto\u0027s de Duitse merken leidend zijn, ziet het er bij motoren iets anders uit. De populairste merken komen vooral uit Japan, China en Italië. Alle merken vindt u hier. BMW Ducati Harley-Davidson Honda Husqvarna Kawasaki KTM Peugeot Suzuki Triumph Vespa Yamaha Populaire modellen Sommige modellen zijn vooral sportief en aantrekkelijk, andere zijn meer robuust en geschikt voor lange afstandsroutes. Hier vindt u de meest populaire modellen uit alle categorieën. BMW R 1200 GS BMW R 1200 GS Adventure Honda NC 750 Kawasaki Z 900 BMW R nineT Kawasaki Z 1000 Harley-Davidson Softail Honda CBR 600 Ducati Scrambler Honda CB 500 Honda CB 1000 BMW R 1200 RT Top Automerken Ongeveer de helft van de populairste automerken heeft zijn roots in Duitsland, de andere helft is verdeeld over de rest van de wereld. Alle automerken vindt u hier. Audi BMW Ford Hyundai Kia Opel Peugeot Renault Tesla Toyota Volkswagen Volvo Type Motor Scooter, Cruiser, Superbike of Tourer – type motor is afhankelijk van de persoonlijke voorkeur van de eigenaar. Hier vind u het complete aanbod van motoren. Allrounder ATV Chopper Cruiser Enduro Mofa Moped Motocross Naked Bike Quad Scooter Superbike Alle merken - Overzicht A Aprilia B Baotian Beta BMW Bombardier Buell C Can Am CPI D Derbi DKW Ducati E Explorer G Gilera H Harley-Davidson Hercules Honda Husqvarna I Indian J Jawa K Kawasaki Kreidler KTM Kymco M MBK Moto Guzzi MV Agusta N NSU P Pegasus Peugeot Piaggio Polaris R Rex S Sachs Simson Skyteam SMC Suzuki SYM T TGB Triton Triumph V Victory Y Yamaha Overige thema’s en informatie Voertuigcategorieën Allrounder ATV Chopper Cruiser Enduro Mofa Moped Motocross Naked Bike Quad Scooter Superbike Supermoto Trike Naar boven",
+    "scrapedAt": "2026-10-08 18:58:35.525385"
+  },
+  {
+    "id": 339,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/suv/",
+    "title": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "content": "Ga naar hoofdinhoud Homepage Auto Autos per Carrosserie SUV SUV 1 / 6 btnLabelPrevbtnLabelNext Sterke punten Hogere instap Hogere bodemvrijheid Vaak met vierwielaandrijving Zwakke punten Hoge prijs Hoog verbruik Vaak verward met crossover Toon aanbod Toon aanbod SUV: De populairste auto ter wereld De SUV, die ooit op de markt kwam als een nicheproduct, is uitgegroeid tot gemeengoed. Toch wordt het model vaak verward met de tevens populaire crossover. Lees meer SUV aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Renault Clio1.5 dCi ECO Night\u0026Day (schade auto) € 1.445 03/2015 265.070 km Diesel - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Ford Fiesta1.0 EcoBoost Titanium (motor defect) € 1.995 08/2017 183.326 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Peugeot 2071.4-16V Color-line * HANDELSPRIJS !! € 500 04/2007 165.154 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3645 TAVinkeveen Volkswagen Golf Variant1.6-16V * HANDELS PRIJS !! € 500 07/2004 276.317 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3645 TAVinkeveen Ford FocusWagon 1.6 Comfort € 995 10/2010 308.177 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Peugeot 2081.2 PureTech Blue Lion | EXPORT | AUTO GAAT ZO MEE € 2.750 10/2016 172.531 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3843 WNHarderwijk Jaguar XF3.0 V6 Premium Luxury € 3.495 06/2008 273.355 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3812 RJAmersfoort Volkswagen Golf1.6 TDI Highline € 5.445 02/2015 197.867 km Diesel - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Audi A3Sportback 1.4 TFSI Ambition Pro Line Business € 3.950 09/2009 248.363 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8401 DTGorredijk BMW 3183-serie 318i Executive € 1.950 09/2004 189.341 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3812 RJAmersfoort Alfa Romeo 159Sportwagon 1.9 JTS Distinctive * INRUIL KOOPJE!* € 1.250 09/2006 313.878 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3645 TAVinkeveen BMW 1181-serie 118i EDE Sport | Automaat | Navigatie | Xe € 7.945 12/2015 213.062 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3781 VMVoorthuizen Mercedes-Benz E 350Coupé CGI Elegance! Leder! Navi! € 6.744 02/2010 233.633 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 2461 LZTer Aar Ford Focus1.5 Red Edition|LED|NAVI|PSENSOR|6BAK|STUURVERW|ST € 7.950 12/2015 125.291 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3812 RJAmersfoort Volvo XC902.5 T Elan € 950 02/2004 360.000 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 1841 JJStompetoren Peugeot 30081.6 THP GT € 990 05/2010 238.174 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7891 GMKlazienaveen Mercedes-Benz C 180Estate CGI BlueEFFICIENCY Business Class Avantgard € 4.995 01/2011 213.925 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Peugeot 2081.2 VTi Active € 2.999 12/2012 187.666 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4905 AAOosterhout Nissan Qashqai1.6 360 € 4.995 10/2013 146.703 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Toyota Aygo1.0-12V | 14\" LM | AUX | Radio/CD € 2.500 05/2008 104.224 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3751 LTBunschoten-spakenburg SUV occasions bekijken SUV in Amsterdam bekijkenSUV in Rotterdam bekijkenSUV in Den Haag bekijkenSUV in Utrecht bekijkenSUV in Eindhoven bekijkenSUV in Groningen bekijken Verschil tussen SUV en crossover Automerken draaien er hun hand niet voor om om nieuwe koetswerktypes te verzinnen. Daardoor kregen we decennia geleden de SUV en in een iets recentere geschiedenis de crossover. Hoewel beide koetswerktypes gebruik maken van een verhoogde rijhoogte, valt er een belangrijk verschil te noemen. De term SUV duikt voor het eerst op in een brochure voor de Jeep Cherokee in 1974 en is een afkorting voor “Sports Utilty Vehicle”. Dat samenraapsel van termen slaat terug op de originele doelstelling van de SUV. Zo moet een SUV de capabele offroadprestaties van een terreinwagen verzoenen met het comfort van een klassieke luxewagen. SUV’s typeren zich vaak door gebruik te maken van vierwielaandrijving en een verstevigd onderstel. Een belangrijk detail, want laat net daar hét grote verschil zitten met een crossover. De crossover is een carrosserie trend die haar oorsprong kent bij één merk: Nissan. In 2007 lanceert het Japanse merk de Qashqai, een verhoogde auto die de visuele kenmerken van een échte SUV over neemt maar wel kiest voor een meer klassieke voorwielaandrijving en relatief kleine motoren. Laat dat ook hét belangrijke verschil zijn: crossovers zijn meestal voertuigen die niet al te bijster uit de voeten kunnen op het onverharde. Hoewel je crossovers kan vinden met vierwielaandrijving, zijn die systemen vaak niet capabel genoeg voor zwaardere offroad prestaties. De SUV-gekte in Europa Door het extreme succes van verhoogde auto’s in Europa worden de termen SUV en crossover steeds vaker door elkaar gebruikt. Niet gek als je weet dat tussen 2016 en 2021 de popularit",
+    "scrapedAt": "2026-10-08 18:58:34.342354"
+  },
+  {
+    "id": 338,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-niro/",
+    "title": "Kia Niro - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Kia Kia Niro Kia Niro 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Voldoende ruimte Interessant ontwerp Laag verbruik Zwakke punten Weinig bevestigingsopties in bagageruimte Sluiten portieren nogal omslachtig Interieur slechts matig geïsoleerd Toon aanbod Toon aanbod Kia Niro: compacte maar ruime hybride/elektrische SUV De tweede generatie van de Kia Niro, die in 2022 verschijnt, is er uitsluitend in hybride en volledig elektrische varianten. Het ontwerp van deze generatie van de Niro is gebaseerd op de designstudie Kia Habaniro. Kia presenteert die in 2019 als conceptauto op de New York International Auto Show. Kia Niro : een overzicht Bekijk hier de actuele prijzen voor de Kia Niro : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 33.252,-* Occasions vanaf:€ 7.051,-* *Laagste prijs op AutoScout24 in de afgelopen maand Kia Niro aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Kia Niro1.6 Hybrid Active € 18.149 06/2021 67.733 km Elektro/Benzine 1,30 l/100 km (gem.) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Kia Niro1.6 GDi Hybrid DynamicLine | Trekhaak | Camera | C € 16.400 07/2019 98.520 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 3755 LDEemnes Kia Niro1.6 GDi Hybrid DynamicLine|AFNEEMBARE TREKHAAK|ALL € 28.895 07/2024 5.707 km Elektro/Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 5741 TVBeek En Donk Kia Niro1.6 GDi Full Hybrid | Nw model | Ad.cruise | Carpl € 23.9401 10/2023 82.615 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5708 EJHelmond Kia Niro1.6 GDi Hybrid ExecutiveLine |Stoel/stuur verw.|Ca € 23.5001 02/2023 88.074 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 4905 AAOosterhout Kia Niro1.6 Hybrid Style € 23.049 12/2023 33.650 km Elektro/Benzine 4,40 l/100 km (gem.) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Kia Niro1.6 Hybrid Active € 18.149 06/2021 67.733 km Elektro/Benzine 1,30 l/100 km (gem.) 2,8 Autobedrijf NL 3316 BEDordrecht Kia Niro1.6 GDi Hybrid DynamicLine/ Automaat/ Half-Leder/ € 13.850 10/2017 149.456 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 9206 AGDrachten Kia Niro1.6 GDi Hybrid 141PK DynamicLine | Navigatie | Ach € 16.745 08/2018 79.587 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 3771 MTBarneveld Kia Niro1.6 GDi PHEV ExecL. | Navi | Camera € 25.4501 € 26.750,- 03/2023 52.829 km Elektro/Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 9723 HMGroningen Kia Niro1.6 GDi PHEV 141pk DCT6 DynamicPlusLine € 19.950 09/2020 48.602 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 4382 NAVlissingen Kia Niro1.6 GDi Hybrid ExecutiveLine | Schuifdak | Stoelve € 16.495 01/2018 118.346 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 3762 ECSoest Kia Niro1.6 Hybrid Premium € 25.049 06/2024 47.224 km Elektro/Benzine 2,10 l/100 km (gem.) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Kia Niro1.6 Hybrid Style € 23.049 12/2023 33.650 km Elektro/Benzine 4,40 l/100 km (gem.) 2,8 Autobedrijf NL 3316 BEDordrecht Kia Niro1.6 GDi Hybrid ExecutiveLine Half leer/Airco-Ecc/N € 15.4501 10/2019 155.030 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7921 VMZuidwolde Kia Niro1.6 GDi Hybrid DynamicPlusLine | Trekhaak | Leder € 15.895 € 16.695,- 04/2019 128.891 km Elektro/Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 3762 ECSoest Kia Niro1.6 GDI HYBRID DYNAMICLINE € 9.5001 03/2019 234.515 km Elektro/Benzine 0,00 l/100 km (gem.) 2,8 Autobedrijf NL 3959 BBOverberg Kia Niro1.6 GDi Hybrid DynamicLine//Digitaal Dashboard//Tr € 16.8881 10/2021 140.810 km Elektro/Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7831 HSNieuw-weerdinge Kia Niro1.6 GDi Hybrid ComfortLine | Apple Carplay | Camer € 23.4001 12/2022 49.715 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 9403 APAssen Kia Niro1.6 Hybrid Style € 22.749 11/2022 26.492 km Elektro/Benzine 1,80 l/100 km (gem.) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Kia Niro occasions bekijkenKia Niro nieuwe auto\u0027s bekijken Kia Niro in Amsterdam bekijkenKia Niro in Rotterdam bekijkenKia Niro in Den Haag bekijkenKia Niro in Utrecht bekijkenKia Niro in Eindhoven bekijkenKia Niro in Groningen bekijken Bouwjaar2026 - 2016 Actuele advertenties1.256 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2017 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 14.944 en er zijn 83 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2022. Er staan 177 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2026 € 38.987 163 advertenties 2025 € 33.560 108 advertenties 2024 € 29.900 69 advertenties 2023 € 27.731 92 advertenties 2022 € 24.371 177 advertenties 2021 € 20.704 162 advertenties 2020 € 19.923 133 advertenties 2019 € 17.893 129 advertenties 2018 € 16.061 116 advertenties 2017 € 14.944 83 advertenties 2016 € 13.750 18 advertenties Meer jaren tonen Goede redenen Eenvoudig in- en uitst",
+    "scrapedAt": "2026-10-08 18:58:32.955253"
+  },
+  {
+    "id": 337,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/",
+    "title": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Volkswagen Volkswagen ID.3 Volkswagen ID.3 1 / 4 btnLabelPrevbtnLabelNext Sterke punten Goede actieradius Veel binnenruimte Iets hogere instap Zwakke punten Moeilijke bediening Stevig prijskaartje Traag infotainmentsysteem Toon aanbod Toon aanbod Volkswagen ID.3: de elektrische Golf De ID.3 was niet de eerste elektrische Volkswagen, maar betekende wel de start voor een elektrische familie van modellen: de ID’s. Daarin zette de ID.3 de toon met een competente elektrische aandrijflijn, een aerodynamisch design en een zeer ruim interieurontwerp. Lees meer Volkswagen ID.3 : een overzicht Bekijk hier de actuele prijzen voor de Volkswagen ID.3 : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 31.090,-* Occasions vanaf:€ 15.183,-* *Laagste prijs op AutoScout24 in de afgelopen maand Volkswagen ID.3 aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Volkswagen ID.3First Plus 58 kWh SOH 94,8% | IQ Light | Camera | € 20.7501 12/2020 65.109 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 7905 SEHoogeveen Volkswagen ID.3First 58 kWh SOH 91%| Carplay| Camera| PDC € 15.4501 10/2020 181.861 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7905 SEHoogeveen Volkswagen ID.3electric drive 150 kW 1st Pro Performance € 16.949 10/2020 103.861 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3316 BEDordrecht Volkswagen ID.3Pro 59 kWh SOH 92%/204pk/Grenadilla Black/18 inc € 25.8501 08/2023 68.106 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7773 NJHardenberg Volkswagen ID.3First Plus 58 kWh | 91,55% SOH | IQ | Camera | Ada € 17.9951 12/2020 121.001 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7821 ABEmmen Volkswagen ID.3electric drive 150 kW 1st Pro Performance € 16.949 10/2020 103.861 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1101 CLAmsterdam Volkswagen ID.3Tech 58 kWh Uniek! Alle optie\u0027s! Trekhaak, org. Fi € 24.9951 04/2021 60.632 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8171 NSVaassen Volkswagen ID.3First Plus 58 kWh / Trekhaak / Camera / Keyless / € 15.999 10/2020 156.093 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3911 RSRhenen Volkswagen ID.362kWh 204pk Adaptive-Cruise Stoel+Stuurverwarmd Na € 19.3951 07/2021 89.385 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5738 AKMariahout Volkswagen ID.3Life 58 kWh | 93,71% SOH | Steunhaak | Camera | Le € 20.9951 12/2020 44.172 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7821 ABEmmen Volkswagen ID.3Pure 45 kWh | Carplay | Clima | 12 maanden BOVAG | € 19.9001 12/2021 35.050 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 4817 BLBreda Volkswagen ID.3Pro 58 kWh | SOH 91,47% | Lichtmetalen velgen | € 18.444 09/2021 111.705 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3443 CSWoerden Volkswagen ID.3electric drive 150 kW 1st Pro Performance € 16.949 10/2020 103.861 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5222 AS\u0027s-hertogenbosch Volkswagen ID.3PRO 58 kWh Pro Edition - Adap cruise - SOH 93% € 21.9901 11/2022 73.041 km Elektrisch 0 2,8 Autobedrijf NL 7141 JLGroenlo Volkswagen ID.3Pro 58 kWh | 93,97% SOH | Led | Adap. Cruise | Sto € 21.895 03/2021 41.429 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7821 ABEmmen Volkswagen ID.3Pro 58 kWh | Rijklaar! | Adapt. Cruise | Apple Car € 22.8501 08/2022 79.805 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 7609 PPAlmelo Volkswagen ID.3Life 58 kWh SOH 93,9% | Adapt Cruise | Stoel/Stuur € 17.9501 € 18.950,- 06/2021 95.289 km Elektrisch - (kWh/100 km) 2,8 Prijsdaling Autobedrijf NL 7905 SEHoogeveen Volkswagen ID.3Pro S 77 kWh SOH 93,8% | Warmtepomp | 360° Camera € 27.7501 06/2022 50.745 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7905 SEHoogeveen Volkswagen ID.3Pro 58 kWh SoH 93,1% Stoelverwarming Parkeersensor € 19.9501 08/2022 110.725 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5305 EEZuilichem Volkswagen ID.3Pro 58 kWh SOH 95%, All-in prijs incl. 12 mnd. Bov € 20.8951 11/2022 82.382 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8171 NSVaassen Volkswagen ID.3 occasions bekijkenVolkswagen ID.3 nieuwe auto\u0027s bekijken Volkswagen ID.3 in Amsterdam bekijkenVolkswagen ID.3 in Rotterdam bekijkenVolkswagen ID.3 in Den Haag bekijkenVolkswagen ID.3 in Utrecht bekijkenVolkswagen ID.3 in Eindhoven bekijkenVolkswagen ID.3 in Groningen bekijken Bouwjaar2027 - 2020 Actuele advertenties632 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2020 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 18.977 en er zijn 92 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2026. Er staan 252 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2027 € 39.860 31 advertenties 2026 € 39.882 252 advertenties 2025 € 32.900 16 advertenties 2024 € 28.900 50 advertenties 2023 € 24.950 59 advertenties 2022 € 22.450 55 advertenties 2021 € 19.990 70 advertenties 20",
+    "scrapedAt": "2026-10-08 18:58:31.698912"
+  },
+  {
+    "id": 336,
+    "url": "https://www.autoscout24.nl/lst/c/coupe",
+    "title": "Coupé occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Coupé occasion kopen Filteren Alles reset Merk en model Uitvoering Carrosserievorm Coupé Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Filteren2 Nederland Coupé Zoekopdracht opslaan Ferrari SF90 Stradale 4.0 V8 | Atelier - Verde Zeltweg - Extended Fioran Bewaar 50 € 374.9501 01/2021 3.338 km Elektro/Benzine 736 kW (1.001 PK) Koster \u0026 Hogeslag AutomotiveNL-8281 JK GENEMUIDEN + Meer voertuigen Peugeot RCZ 1.6 THP Bewaar 20 € 5.950 Nieuw 06/2011 157.707 km Benzine 115 kW (156 PK) Autohandel Honing, Klant is Koning!! Autohandel HoningNL-3812 RJ AMERSFOORT + Meer voertuigen Mercedes-Benz E 350 Coupé CGI Elegance! Leder! Navi! Bewaar 22 € 6.744 Nieuw 02/2010 233.633 km Benzine 216 kW (294 PK) Met onderhoudshistorie, Parkeerhulp met camera, Stoelverwarming, Airconditioning, Bluetooth, Parkeerhulp voor, Hill-Hold Control, Schakelflippers AutoPlanner NLNL-2461 LZ TER AAR + Meer voertuigen Audi A5 Coupé 1.8 TFSI 2 X S-line ABT Leder/Navi/NL-Auto/N Bewaar 33 € 7.450 01/2012 194.280 km Benzine 118 kW (160 PK) Sportstoelen, Met onderhoudshistorie, Navigatiesysteem, Sportonderstel, Bi-Xenon koplampen, Parkeerhulp achter, Xenon verlichting, Airbag bestuurder Autobedrijf Van der ZwanNL-7772 TT HARDENBERG + Meer voertuigen Ford Mustang Fastback 2.3 EcoBoost Camera Cruise Xenon Bewaar 23 € 25.940 Nieuw 02/2018 71.775 km Benzine 231 kW (314 PK) Lichtmetalen velgen, Parkeerhulp met camera, Antislipregeling, Elektrische stoelverstelling, Xenon verlichting, LED verlichting, Digitale radio-ontvangst, Cruisecontrol Autobedrijf Van YperenNL-3641 SB MIJDRECHT BMW 430 4-serie Gran Coupé 430i High Executive | M Sport - Bewaar 41 € 27.950 05/2019 64.865 km Benzine 185 kW (252 PK) Sportonderstel, Stoelverwarming, Elektrische stoelverstelling, Sportstoelen, Stuurwielverwarming, Nieuwe APK, Parkeerhulp met camera, Inductieladen voor smartphones Koster \u0026 Hogeslag AutomotiveNL-8281 JK GENEMUIDEN + Meer voertuigen Volkswagen Scirocco 2.0 TSI R-Line | DSG | Navi | Maxton Bewaar 46 € 14.999 Zeer populair 05/2015 134.492 km Benzine 132 kW (179 PK) Met onderhoudshistorie, Centrale deurvergrendeling met afstandsbediening, LED verlichting, Parkeerhulp met camera, Getinte ramen, Voorruitverwarming, Sportonderstel, Isofix Garage ZuidbroekNL-7317 AK APELDOORN + Meer voertuigen Chevrolet Camaro Coupe 2.0 Turbo. 275 Hp Bewaar 5 € 16.000 12/2016 64.000 km Benzine 203 kW (276 PK) Airbag passagier, Binnenspiegel automatisch dimmend, Alarm, Stoelverwarming, Android Auto, Lichtmetalen velgen, Wifi-hotspot, Xenon verlichting ParticulierNL-1531rk Wormer Polestar 1 2.0 T8R / 1 of 1500 / Carbon / Bowers \u0026 Wilkins / Bewaar 35 € 109.9501 05/2022 348 km Elektro/Benzine 448 kW (609 PK) Hermans CollectablesNL-6951 KM DIEREN + Meer voertuigen Peugeot RCZ 1.6 THP | PDC | Climate cntrl. | Memory Bewaar 12 € 3.999 02/2012 137.435 km Benzine 115 kW (156 PK) Navigatiesysteem, Met onderhoudshistorie, Stoelverwarming, Parkeerhulp voor, Radio, Xenon verlichting, Spoiler, Bi-Xenon koplampen Saes tradingNL-6005 PW WEERT Audi A5 Coupé 2.0 TDI quattro Sport Edition | S-Line | 1/2 Bewaar 28 € 12.975 Zeer populair 01/2015 161.223 km Diesel 140 kW (190 PK) Sportstoelen, Electronic Stability Program, LED verlichting, Sportonderstel, 4x4, Radio, Alarm, Met onderhoudshistorie Hartog Automotive B.V.NL-8629 EG SCHARNEGOUTUM + Meer voertuigen BMW 320 E92 Bewaar 9 € 5.999 06/2008 198.000 km Benzine 120 kW (163 PK) Head-up display, Spoiler, Sportpakket, Handsfree, Navigatiesysteem, Niet-rokers auto, Apple CarPlay, Getinte ramen ParticulierNL-9611 Midden-Groningen Alfa Romeo Brera 2.2 JTS SkyWindow Technisch Super Vol Jaar APK Pan Bewaar 29 € 6.499 11/2009 149.038 km Benzine 136 kW (185 PK) CardepotNL-5048 AZ TILBURG Audi TT 1.8 TFSI Bewaar 34 € 5.995 12/2009 202.064 km Benzine 118 kW (160 PK) Alarm, Lederen stuurwiel, Lichtmetalen velgen, Automatische klimaatregeling, Radio, Stuurbekrachtiging, Electronic Stability Program, CD Automobielbedrijf VeldNL-8345 HJ KALLENKOTE + Meer voertuigen Audi R8 4.2 V8 FSI | Complete historie | Zeer nette staat Bewaar 28 € 57.450 08/2007 79.801 km Benzine 309 kW (420 PK) Van Driel AutomotiveNL-2132 PZ HOOFDDORP + Meer voertuigen Toyota Celica 1.8 VVT-i 143pk Clima Leder Liefhebber gezocht LEE Bewaar 18 € 3.495 03/2004 233.954 km Benzine 105 kW (143 PK) Occasiondealer \u0027t GooiNL-1241 CW KORTENHOEF Mercedes-Benz S 500 Coupé 4Matic | AMG | Leder | Pano | 360° Camera Bewaar 50 € 39.500 10/2014 159.522 km Benzine 335 kW (455 PK) Lederen stuurwiel, Airbag passagier, Panorama dak, LED verlichting, Stoelverwarming, Keyless Entry, Elektrische achterklep, Grootlichtassistent AIG AutomotiveNL-3751 LT BUNSCHOTEN-SPAKENBURG + Meer voertuigen Mercedes-Benz C 180 Coupé AMG PAKKET CLIMA NAVI Bewaar 29 € 13.950 07/2014 99.060 km Benzine 115 kW (156 PK) Uitmuntende kwaliteit en servi",
+    "scrapedAt": "2026-10-08 18:58:30.237124"
+  },
+  {
     "id": 335,
     "url": "https://www.autoscout24.nl/auto/volvo/",
     "title": "Alle informatie over het automerk Volvo bij AutoScout24.",
@@ -2325,26 +2360,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 336,
-    "url": "https://www.autoscout24.nl/lst/c/coupe"
-  },
-  {
-    "id": 337,
-    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
-  },
-  {
-    "id": 338,
-    "url": "https://www.autoscout24.nl/auto/kia/kia-niro/"
-  },
-  {
-    "id": 339,
-    "url": "https://www.autoscout24.nl/auto/carrosserie/suv/"
-  },
-  {
-    "id": 340,
-    "url": "https://www.autoscout24.nl/moto/"
   },
   {
     "id": 341,
@@ -54725,10 +54740,1582 @@ window.searchData = [
     "id": 20840,
     "url": "https://www.autoscout24.nl/autobedrijven/volvo-lotte",
     "parentUrl": "https://www.autoscout24.nl/auto/volvo/"
+  },
+  {
+    "id": 20841,
+    "url": "https://www.autoscout24.nl/autobedrijven/hartog-automotive-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "id": 20842,
+    "url": "https://www.autoscout24.nl/autobedrijven/autoplanner-nl",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "id": 20843,
+    "url": "https://www.autoscout24.nl/lst/c/coupe#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "id": 20845,
+    "url": "https://www.autoscout24.nl/autobedrijven/hermans-collectables",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "id": 20846,
+    "url": "https://www.autoscout24.nl/autobedrijven/van-driel-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "id": 20847,
+    "url": "https://www.autoscout24.nl/autobedrijven/aig-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "id": 20851,
+    "url": "https://www.autoscout24.nl/autobedrijven/garage-zuidbroek",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "id": 20853,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20854,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-buzz",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20855,
+    "url": "https://www.autoscout24.nl/auto/byd/byd-atto-3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20857,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20859,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20860,
+    "url": "https://www.autoscout24.nl/auto/hyundai/hyundai-kona-electric/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20863,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-5",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20869,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20870,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20871,
+    "url": "https://www.autoscout24.nl/lst/kia/e-niro",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20874,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-e308-sw/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20875,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/id-3/vw-id-3-neo-2026-eerste-indruk/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20877,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20879,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20882,
+    "url": "https://www.autoscout24.nl/lst/hyundai/kona",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20883,
+    "url": "https://www.autoscout24.nl/auto/opel/opel-astra-e/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20885,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-megane/renault-megane-e-tech/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20887,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/test-polestar-2-komt-verder-op-zijn-accu-dan-de-cupra-born-toch-houd-je-het-in-de-cupra-langer-uit/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20890,
+    "url": "https://www.autoscout24.nl/auto/mg/mg4-electric/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20891,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/id-3/review-volkswagen-id-3-gtx-een-elektrische-hot-hatch/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20892,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20893,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20894,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20895,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20896,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id.3?source\u003dautocatalog",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20897,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id-3/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "id": 20898,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-niro/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20899,
+    "url": "https://www.autoscout24.nl/lst/hyundai/ioniq",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20900,
+    "url": "https://www.autoscout24.nl/lst/kia/stonic",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20901,
+    "url": "https://www.autoscout24.nl/lst/kia/ceed-cee-d",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20902,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/ve_phev",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20903,
+    "url": "https://www.autoscout24.nl/lst/c/elektrische-kia",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20905,
+    "url": "https://www.autoscout24.nl/lst/kia/xceed",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20910,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kia/niro/kia-niro-ev-review-alles-werd-anders-behalve-de-actieradius-en-de-prijs/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20911,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20914,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kia/niro/kia-niro-ev-test-duurder-maar-ook-beter-dan-de-oude-e-niro/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20916,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20920,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kia/model/review-kia-sportage/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20923,
+    "url": "https://www.autoscout24.nl/lst/kia/ev6",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20924,
+    "url": "https://www.autoscout24.nl/lst/kia/ceed-sw-cee-d-sw",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20925,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-niro/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20928,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kia/niro/test-zo-verslaat-de-kia-niro-ev-andere-elektrische-gezinsauto-s-op-ruimte-en-comfort/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20929,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/ve_ev",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20930,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20931,
+    "url": "https://www.autoscout24.nl/lst/kia/ev3",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20933,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20936,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20937,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kia/niro/kia-niro-facelift-2026-test/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20940,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/ve_plug-in",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20941,
+    "url": "https://www.autoscout24.nl/lst/kia/niro/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20942,
+    "url": "https://www.autoscout24.nl/lst/kia/niro",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20943,
+    "url": "https://www.autoscout24.nl/informeren/autotests/kia/niro/kia-niro-ev-actieradius-gemeten-bij-100-en-130-km/h/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "id": 20944,
+    "url": "https://www.autoscout24.nl/auto/lexus/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "id": 20945,
+    "url": "https://www.autoscout24.nl/auto/hyundai/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "id": 20946,
+    "url": "https://www.autoscout24.nl/auto/skoda/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "id": 20947,
+    "url": "https://www.autoscout24.nl/auto/toyota/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "id": 20949,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/suv/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "id": 20950,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/suv/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "id": 20951,
+    "url": "https://www.autoscout24.nl/auto/ford/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "id": 20958,
+    "url": "https://www.autoscout24.nl/lst-moto/bmw/r-ninet",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20959,
+    "url": "https://www.autoscout24.nl/moto/mofa/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20960,
+    "url": "https://www.autoscout24.nl/lst-moto/honda/nc-750",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20962,
+    "url": "https://www.autoscout24.nl/moto/victory/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20963,
+    "url": "https://www.autoscout24.nl/moto/motocross/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20966,
+    "url": "https://www.autoscout24.nl/moto/superbike/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20967,
+    "url": "https://www.autoscout24.nl/moto/tgb/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20968,
+    "url": "https://www.autoscout24.nl/moto/polaris/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20969,
+    "url": "https://www.autoscout24.nl/moto/moto-guzzi/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20970,
+    "url": "https://www.autoscout24.nl/lst-moto/harley-davidson/softail",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20971,
+    "url": "https://www.autoscout24.nl/moto/baotian/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20974,
+    "url": "https://www.autoscout24.nl/moto/enduro/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20975,
+    "url": "https://www.autoscout24.nl/moto/kreidler/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20976,
+    "url": "https://www.autoscout24.nl/moto/sym/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20978,
+    "url": "https://www.autoscout24.nl/lst-moto/bmw/r-1200-gs-adventure",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20979,
+    "url": "https://www.autoscout24.nl/moto/dkw/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20980,
+    "url": "https://www.autoscout24.nl/moto/nsu/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20981,
+    "url": "https://www.autoscout24.nl/moto/chopper/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20982,
+    "url": "https://www.autoscout24.nl/moto/indian/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20983,
+    "url": "https://www.autoscout24.nl/lst-moto/honda/cb-1000",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20984,
+    "url": "https://www.autoscout24.nl/moto/mbk/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20985,
+    "url": "https://www.autoscout24.nl/moto/atv/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20988,
+    "url": "https://www.autoscout24.nl/moto/naked-bike/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20989,
+    "url": "https://www.autoscout24.nl/moto/can-am/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20991,
+    "url": "https://www.autoscout24.nl/moto/triton/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20992,
+    "url": "https://www.autoscout24.nl/moto/jawa/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20993,
+    "url": "https://www.autoscout24.nl/moto/bombardier/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20996,
+    "url": "https://www.autoscout24.nl/moto/hercules/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20997,
+    "url": "https://www.autoscout24.nl/moto/pegasus/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 20998,
+    "url": "https://www.autoscout24.nl/moto/explorer/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21000,
+    "url": "https://www.autoscout24.nl/lst-moto/bmw/r-1200-rt",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21003,
+    "url": "https://www.autoscout24.nl/lst-moto/honda/cbr-600",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21005,
+    "url": "https://www.autoscout24.nl/moto/gilera/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21006,
+    "url": "https://www.autoscout24.nl/moto/sachs/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21010,
+    "url": "https://www.autoscout24.nl/moto/smc/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21014,
+    "url": "https://www.autoscout24.nl/moto/buell/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21015,
+    "url": "https://www.autoscout24.nl/moto/cpi/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21016,
+    "url": "https://www.autoscout24.nl/moto/kymco/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21017,
+    "url": "https://www.autoscout24.nl/moto/trike/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21018,
+    "url": "https://www.autoscout24.nl/moto/rex/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21020,
+    "url": "https://www.autoscout24.nl/moto/quad/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21021,
+    "url": "https://www.autoscout24.nl/lst-moto/honda/cb-500",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21022,
+    "url": "https://www.autoscout24.nl/moto/allrounder/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21023,
+    "url": "https://www.autoscout24.nl/moto/simson/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21024,
+    "url": "https://www.autoscout24.nl/moto/piaggio/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21025,
+    "url": "https://www.autoscout24.nl/moto/aprilia/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21026,
+    "url": "https://www.autoscout24.nl/moto/skyteam/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21027,
+    "url": "https://www.autoscout24.nl/moto/mv-agusta/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21028,
+    "url": "https://www.autoscout24.nl/moto/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21030,
+    "url": "https://www.autoscout24.nl/lst-moto/kawasaki/z-1000",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21031,
+    "url": "https://www.autoscout24.nl/moto/#more-links",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21032,
+    "url": "https://www.autoscout24.nl/moto/moped/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21033,
+    "url": "https://www.autoscout24.nl/lst-moto/ducati/scrambler",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21034,
+    "url": "https://www.autoscout24.nl/lst-moto/kawasaki/z-900",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21035,
+    "url": "https://www.autoscout24.nl/moto/derbi/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21036,
+    "url": "https://www.autoscout24.nl/lst-moto/bmw/r-1200-gs",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21038,
+    "url": "https://www.autoscout24.nl/moto/scooter/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21039,
+    "url": "https://www.autoscout24.nl/moto/supermoto/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21041,
+    "url": "https://www.autoscout24.nl/moto/cruiser/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "id": 21042,
+    "url": "https://www.autoscout24.nl/moto/beta/",
+    "parentUrl": "https://www.autoscout24.nl/moto/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Uw motor, scooter of quad kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/moto/images/home/motorradmarken-m.jpg",
+    "alt": "",
+    "pageTitle": "Uw motor, scooter of quad kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/moto/images/home/beliebte-motorrad-modelle-m.jpg",
+    "alt": "",
+    "pageTitle": "Uw motor, scooter of quad kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/moto/images/home/top-auto-marken-m.jpg",
+    "alt": "",
+    "pageTitle": "Uw motor, scooter of quad kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Uw motor, scooter of quad kopen en gratis verkopen",
+    "pageUrl": "https://www.autoscout24.nl/moto/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2tVmaxmPBKESqE7Gj35Lcy/7e684167699cf78c71a017270e7e3f8d/renault-captur-rs-line-2021-7-1.jpg?w\u003d1100",
+    "alt": "renault-captur-rs",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2tVmaxmPBKESqE7Gj35Lcy/7e684167699cf78c71a017270e7e3f8d/renault-captur-rs-line-2021-7-1.jpg?w\u003d1100",
+    "alt": "renault-captur-rs",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/78li5wuFeiKeYBU1uUFPyC/beeb92fcd21695f914ec550578b3de88/nissan-qashqai-2-front.jpeg?w\u003d1100",
+    "alt": "nissan-qashqai-2-front",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/20ZCwLUoWg3NyDwfeDahe1/cb107f1e58ab45da766c223b273d2d95/Audi_SUV_Q7_2.jpeg?w\u003d1100",
+    "alt": "Audi Q7 SUV Front",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/im0wyd8kiOR22pZhmoC4t/07223888c44f95328ed78af396861ade/ssangyong-rexton-side.jpg?w\u003d1100",
+    "alt": "ssangyong-rexton-side",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7lShNWIE024Dm7cfd6VFbQ/5809da9994ffb8ce5db6673cce8837e2/New_Hyundai_Santa_Fe__3_.jpg?w\u003d1100",
+    "alt": "New+Hyundai+Santa+Fe+(3)",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5OUqOv1CIl8a8J9hfy6H1m/5c7449fc42199e23dedd52739f733856/BMW-X3_M_Competition-2022-1280-01.jpg?w\u003d1100",
+    "alt": "bmw-x3-m-front",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eed9d509-2bb9-4331-9fb3-895a94666537_054ae9c3-6052-4b4a-a161-313aa30b1f2f.jpg/360x270.jpg",
+    "alt": "1.5 dCi ECO Night\u0026Day (schade auto)",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/37047810-667f-4461-860e-f7e06b579d13_163f34fc-4bf6-4f7a-90fd-263848332b34.jpg/360x270.jpg",
+    "alt": "1.0 EcoBoost Titanium (motor defect)",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a35a2012-adb8-462f-8c0c-2ab0d0428824_1cc1b527-faa5-4ef5-b199-d56729de31d8.jpg/360x270.jpg",
+    "alt": "1.4-16V Color-line * HANDELSPRIJS !!",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f9204592-69e8-4376-a1b7-af83ce2ae2cf_ab5ff43c-6d65-4bff-9b05-51a2fd446eb0.jpg/360x270.jpg",
+    "alt": "1.6-16V * HANDELS PRIJS !!",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cd09d97b-844e-4fee-b30d-0c0b6a450499_0290171b-8c51-496e-933b-e9eeaadc3806.jpg/360x270.jpg",
+    "alt": "Wagon 1.6 Comfort",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/84754921-b7cc-48c6-8b07-bbe65d66334e_f5b63702-da03-4905-8c4a-8c231f073c15.jpg/360x270.jpg",
+    "alt": "1.2 PureTech Blue Lion | EXPORT | AUTO GAAT ZO MEE",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d8ba2664-420f-4053-ab80-971e9cf88b7c_c1584395-c72a-4670-8863-9e6b9cfe47f0.jpg/360x270.jpg",
+    "alt": "3.0 V6 Premium Luxury",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/85bb3453-5ae8-45f7-bb7f-60d6e149ec55_d394a60e-df63-44a5-9d05-341e778a0f0d.jpg/360x270.jpg",
+    "alt": "1.6 TDI Highline",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3482b4d0-150e-4b3c-87e5-2c90079654d9_9667d210-65fc-4f03-acfb-6b980cdd5555.jpg/360x270.jpg",
+    "alt": "Sportback 1.4 TFSI Ambition Pro Line Business",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f235bf90-15a0-4c7f-bdf9-fdfe9aef5312_8bc64a8a-f475-4a32-9c31-dd965f97dc8a.jpg/360x270.jpg",
+    "alt": "3-serie 318i Executive",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7a7ac0b8-e81a-47e0-842d-601e75803060_fc4dbf07-d969-453c-b34c-e1ac5f833aa7.jpg/360x270.jpg",
+    "alt": "Sportwagon 1.9 JTS Distinctive * INRUIL KOOPJE!*",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6a842b0b-4cfc-487c-86a8-c2fbb109c568_c488210f-c928-4ad5-a2cb-c8b2743b7b79.jpg/360x270.jpg",
+    "alt": "1-serie 118i EDE Sport | Automaat | Navigatie | Xe",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/55f03ae7-36b1-48b1-ad48-71372ba8612c_e9f86877-c275-4ad8-a776-6c440949c9ff.jpg/360x270.jpg",
+    "alt": "Coupé CGI Elegance! Leder! Navi!",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d00f3673-b737-440c-b571-69a7b406b80e_7ffd29a1-51eb-45ec-9c44-e0c53d08bd05.jpg/360x270.jpg",
+    "alt": "1.5 Red Edition|LED|NAVI|PSENSOR|6BAK|STUURVERW|ST",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2747853b-d016-4e56-ae69-026f66c91a9f_5edf47d6-aada-4813-89ab-9a8cf1c2845f.jpg/360x270.jpg",
+    "alt": "2.5 T Elan",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f90588ce-0f49-4d60-8301-1129101f23ea_b2806ffc-e700-4698-ac4c-426cfeef26e4.jpg/360x270.jpg",
+    "alt": "1.6 THP GT",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eb107292-6870-4a45-9aab-8d515dc2994f_013c45dd-973b-49d4-82c2-8958c2cc7ac2.jpg/360x270.jpg",
+    "alt": "Estate CGI BlueEFFICIENCY Business Class Avantgard",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5fdb4e44-92c5-4c6b-bf38-889b3daa859a_4138c905-e4bc-465a-b78b-781f02f402a9.jpg/360x270.jpg",
+    "alt": "1.2 VTi Active",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a642dca7-33ae-435f-9cfe-6971412f6a10_cc675adb-9a71-43cd-bbfe-fabf9e9531a4.jpg/360x270.jpg",
+    "alt": "1.6 360",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ccf87f75-d348-43b5-b023-d6f3e1c7b07a_cde1d141-e8e2-4475-bae7-8061a9deb986.jpg/360x270.jpg",
+    "alt": "1.0-12V | 14\" LM | AUX | Radio/CD",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "SUV: afmetingen, interieurs, motoren, prijzen en concurrenten - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/suv/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6sauejyYVwVxO58PXRMEZp/5e6599ee0117f6285411fc601adcce22/Kia-Niro-EV-2022-Front.jpg?w\u003d1100",
+    "alt": "Kia-Niro-EV-2022-Front",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6sauejyYVwVxO58PXRMEZp/5e6599ee0117f6285411fc601adcce22/Kia-Niro-EV-2022-Front.jpg?w\u003d1100",
+    "alt": "Kia-Niro-EV-2022-Front",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3JzHGxF8UGUM74Lwv062nM/c7c7b12dd6d787ddd054c3ffcdddcc02/Kia-Niro-EV-2022-Hero.jpg?w\u003d1100",
+    "alt": "Kia-Niro-EV-2022-Hero",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3sHSYT27e9bvaDR1julivN/a1dfd7e8538210e017d84518af0b3bc6/Kia-Niro-EV-2022-Rear.jpg?w\u003d1100",
+    "alt": "Kia-Niro-EV-2022-Rear",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/02673b6a-8cca-448e-a21e-0d0a1647f65b_b59e8e11-227d-42ff-b8ff-80107a683d03.jpg/360x270.jpg",
+    "alt": "1.6 Hybrid Active",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b5c2144b-82a7-411c-a2cb-cf8166e19fd9_1dc75d97-4134-4c16-b7b3-c5610021f2b1.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid DynamicLine | Trekhaak | Camera | C",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8ca3ad7d-3a08-4992-8c82-60fb7d274ce3_303d5e17-5cca-4e34-97b4-21441bfc4142.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid DynamicLine|AFNEEMBARE TREKHAAK|ALL",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/89e04bec-7e48-47b2-a5bf-6edec6672ef3_c8b3e844-1980-4ecc-9a29-3bfda42fcd41.jpg/360x270.jpg",
+    "alt": "1.6 GDi Full Hybrid | Nw model | Ad.cruise | Carpl",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a3ecf416-204e-4501-a35c-8ad53728bb0f_f3154ce7-1c9c-42a4-bcaa-06ef76daceca.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid ExecutiveLine |Stoel/stuur verw.|Ca",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1d203c58-be88-4d3d-8ee1-fc986a373630_56cf21a9-95ce-43af-9290-1d8427575b66.jpg/360x270.jpg",
+    "alt": "1.6 Hybrid Style",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d7236156-dbb4-451c-88d6-6b64ac63da79_9cf25f49-e330-456a-a60f-4eb0ecfb8d60.jpg/360x270.jpg",
+    "alt": "1.6 Hybrid Active",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/772260bb-f09a-4219-8dca-7408548c1975_635cc790-3663-40e6-8413-3f5c3e2ff804.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid DynamicLine/ Automaat/ Half-Leder/",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dc0d5ef5-b941-401a-8d8f-95c41fbc0f12_1a8b27d5-6aa1-4b28-89f5-9904e906757b.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid 141PK DynamicLine | Navigatie | Ach",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e4d2e2c9-efc7-4e81-abb8-621f4471ec4f_9313ac55-0462-4863-bae3-6aae8b85d1cb.jpg/360x270.jpg",
+    "alt": "1.6 GDi PHEV ExecL. | Navi | Camera",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8fafcdbe-053c-428a-973f-e36b926e471c_f61af7a0-e0d9-4709-8e9a-f3d6b5acada9.jpg/360x270.jpg",
+    "alt": "1.6 GDi PHEV 141pk DCT6 DynamicPlusLine",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ddd645a8-4340-49be-b419-a5b6fef35c44_4d46834a-ac59-49d2-9eff-29d8a9afb7fd.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid ExecutiveLine | Schuifdak | Stoelve",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/edb2357e-2c6d-4476-8ef3-eab43ce21480_1afc4b23-f907-4f96-b26c-bc8457a73b36.jpg/360x270.jpg",
+    "alt": "1.6 Hybrid Premium",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0c294c61-36a4-43b6-ad6c-c10cb70455ec_5beac2b1-01e1-448e-856b-43285b23571e.jpg/360x270.jpg",
+    "alt": "1.6 Hybrid Style",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/51bb984b-3850-4031-a113-9818a5d58fa3_b6017c6f-1178-4d08-a6ab-a05022d650ec.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid ExecutiveLine Half leer/Airco-Ecc/N",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e2566c4a-15c6-430e-9b6d-46846b2608d9_d3475bca-f82e-40cb-b3b6-d022af257ce8.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid DynamicPlusLine | Trekhaak | Leder",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bb6e8094-2bd0-4257-b22e-5d3458a52819_d4e27598-924f-44ef-ad4a-9e6ebdc72642.jpg/360x270.jpg",
+    "alt": "1.6 GDI HYBRID DYNAMICLINE",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f3bfc95b-eaca-481a-b1c2-404c92af0065_bf8e2c0c-b578-4663-a5d7-a94487e2d1c4.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid DynamicLine//Digitaal Dashboard//Tr",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/80acd257-08cd-4afc-8ccc-156c89aa3db5_d879507c-2660-4142-82f9-8f2b5c7186b8.jpg/360x270.jpg",
+    "alt": "1.6 GDi Hybrid ComfortLine | Apple Carplay | Camer",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a1ca013b-0200-4288-9dd3-5ba8b170e6a7_108135e7-ca5f-4790-81de-0597f2d5e4cf.jpg/360x270.jpg",
+    "alt": "1.6 Hybrid Style",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6cBNn9e6FK7FhM0TTnCiau/1147a9acbc83fe37cf84fe2fce2c31e4/kia-niro-ev-2023-interieur.jpeg?w\u003d1100",
+    "alt": "kia-niro-ev-2023-interieur",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7KrCBVllhVR0NLB7lqsDcE/d893ddf656800b5c09568252883d89ba/kia-niro-ev-2023-seats.jpeg?w\u003d1100",
+    "alt": "kia-niro-ev-2023-seats",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1CtVG3GbOvGuhTQ1SucZCd/edaecdc4f8e69243db85f35920c98d1f/kia-niro-ev-2023-trunk.jpeg?w\u003d1100",
+    "alt": "kia-niro-ev-2023-trunk",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/vkuOAxAovtOfjlxX0pBO8/33a3b158b30eb73601424d95fa8a9a56/hyundai_kona_hybrid__42_.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Hyundai Kona",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/27J2lZMdkY2xynEeYTz4K9/37b5ae4eee5b683b23714868c70580fa/Kia_EV3_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Kia EV3 ",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7sRpUTaHNX4Z0u75poYfhE/c1a2d64f50e34b63fdbe2821adb53421/Kia-Stonic-1_small.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Kia Stonic",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5IkYCvhbUINwFdPHrC19GZ/2a62af33fa2539c3bc9a1f01dbfecd82/Kia_Ceed_shot_a01.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Kia Ceed",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7AOX8V2xBBSZXwMsOYJlST/0986daf3add4f512fd0a6d105171aec8/kia-ceed-sw-l-01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Kia Ceed Sportswagon",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5zUA7eErtErwBZiaDmSPRH/3fe9c1f7d433ca6609d633a5e48b1f0e/kia-xceed-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Kia XCeed",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2V3eaPd6OUu7gNlO4fJF2f/a68efb5eb03a86638a10316b22106ffb/hyundai-ioniq-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Hyundai Ioniq",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/36XlGjfZmzlhQKtMqe0o6H/bcdde12e29ff583367013b0493d23b49/Kia_EV6_2.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Kia EV6",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5YCneP0O2km6Ypmj5sqitu/a520a045575394f5defab906c5dd5f43/kia-niro-ev-actieradius-2022-1.jpg?w\u003d1100",
+    "alt": "Kia Niro EV: actieradius gemeten bij 100 en 130 km/h",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7gVix7Y7u9UIRGuLGLFn0v/2b5f2c716993add75a6731edf3577cc6/kia-niro-ev-2022-29-1.jpg?w\u003d1100",
+    "alt": "Kia Niro EV review: alles werd anders, behalve de actieradius en de prijs",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3u2QReHMeKzoLOVK01fWo7/2cf803f45ff639914800ef190e8c3f82/kia-niro-ev-2022-1.jpg?w\u003d1100",
+    "alt": "Kia Niro EV test: duurder, maar ook beter dan de oude e-Niro?",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/24osEkbnvzAWxWGNBhrjJt/1e09b2aac22f4d995bf415defcc55a1b/test-kia-niro-ev-2022-1.jpg?w\u003d1100",
+    "alt": "TEST – zo verslaat de Kia Niro EV andere elektrische gezinsauto\u0027s op ruimte en comfort",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3VvoJCEl6NuywJHV95XLgn/cdd05f2694d58620714b8dae71ad2c30/Kia_Niro_1.jpg?w\u003d1100",
+    "alt": "Review – Kia Niro (vanaf 2022): alleskunner die elektrificatie bereikbaar maakt",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/LWRTp4voUNKMQqlEIozGe/071f03b45c92f146d189032eeb452e8f/AS24_Kia_Sportage_4.jpg?w\u003d1100",
+    "alt": "Review – Kia Sportage",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Kia Niro - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-niro/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/53iOJHLv6B8gNno0zy3XYe/b9730228eb4df3b4b1cc9d25717a4ecf/VW_ID.3_1.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/53iOJHLv6B8gNno0zy3XYe/b9730228eb4df3b4b1cc9d25717a4ecf/VW_ID.3_1.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4Fk4cbO3wiDSk72vxita4u/02f83f130079ae9e01dd7bae0d67534c/VW_ID.3_2.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5wMVezm3rbUHaxSoAe7kew/c7088ea2524661af846988f61ae6d50d/VW_ID.3_3.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/qNbBKzFlYxc/maxresdefault.jpg",
+    "alt": "Bekijk de Volkswagen ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a25a76a7-4751-4b64-9274-9c5dd6b91444_89478f59-f62d-47de-b2a3-7b3fbf04cc55.jpg/360x270.jpg",
+    "alt": "First Plus 58 kWh SOH 94,8% | IQ Light | Camera |",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/90860de0-0b90-41d6-90ab-ac8632b88b29_8c16a374-d8b2-4f25-b906-9847971ca88d.jpg/360x270.jpg",
+    "alt": "First 58 kWh SOH 91%| Carplay| Camera| PDC",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/62eb81c1-23cb-4ebf-a83b-0e7cfb914fba_1c89bd34-40e3-4fcb-8e7e-1d8c05dad30c.jpg/360x270.jpg",
+    "alt": "electric drive 150 kW 1st Pro Performance",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e5bfa5a4-2395-4c48-8447-cce39c40fda2_ceacf6fa-c119-450c-88b0-20c359643b5a.jpg/360x270.jpg",
+    "alt": "Pro 59 kWh  SOH 92%/204pk/Grenadilla Black/18 inc",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f4131083-9361-4943-a8ab-86eaf6ed9287_c17ff1b5-5c56-4e45-a9f1-30f15ced9673.jpg/360x270.jpg",
+    "alt": "First Plus 58 kWh | 91,55% SOH | IQ | Camera | Ada",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/40218afe-705a-4c3f-a4a2-79663c841495_08a61ec5-a32e-491c-8633-b12a40e86c58.jpg/360x270.jpg",
+    "alt": "electric drive 150 kW 1st Pro Performance",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/417cbf0a-1b82-4164-b1ad-9c1c92826710_282a4b06-d6d4-412a-a874-5b05108e9255.jpg/360x270.jpg",
+    "alt": "Tech 58 kWh Uniek! Alle optie\u0027s! Trekhaak, org. Fi",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cee04607-9121-48b9-85de-db220969a794_459c8459-5dc8-4824-81b6-7a0d6712e5aa.jpg/360x270.jpg",
+    "alt": "First Plus 58 kWh / Trekhaak / Camera / Keyless /",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/623c1a96-3ea1-40e9-9f3d-d6b991b9f917_cc399d30-7b94-4900-a379-b1146cdefddd.jpg/360x270.jpg",
+    "alt": "62kWh 204pk Adaptive-Cruise Stoel+Stuurverwarmd Na",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c4f09653-1da9-444d-b8e6-8fc200318c41_2ba10c05-5aa0-4953-a2ef-d60951f0e59f.jpg/360x270.jpg",
+    "alt": "Life 58 kWh | 93,71% SOH | Steunhaak | Camera | Le",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0df4b4ea-a840-4ae0-b670-035f63abad81_b26ed04e-1797-4cbc-a694-eca91489f19d.jpg/360x270.jpg",
+    "alt": "Pure 45 kWh | Carplay | Clima | 12 maanden BOVAG |",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a2b10cf3-bb0f-4120-9739-a784855c282e_a8bedc4e-fca1-40fe-81db-97bb99d37066.jpg/360x270.jpg",
+    "alt": "Pro 58 kWh | SOH 91,47% | Lichtmetalen velgen |",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/40a821ef-a5c7-4100-8652-efb0e60024c4_ee0bc70a-3b20-4f1b-b3bc-63d443ed8adf.jpg/360x270.jpg",
+    "alt": "electric drive 150 kW 1st Pro Performance",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1d705ade-b819-47ea-9f6c-6dd06e4cc68b_59d347f9-058f-4178-9425-5e643a90eb51.jpg/360x270.jpg",
+    "alt": "PRO 58 kWh Pro Edition - Adap cruise - SOH 93%",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6e616de3-99df-479b-bf11-453ec5bc265c_633e2a76-fdd3-4866-8332-acfd347dfaf9.jpg/360x270.jpg",
+    "alt": "Pro 58 kWh | 93,97% SOH | Led | Adap. Cruise | Sto",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b456f6a5-f56b-4983-8d30-9c83e9e744f9_9873e932-254f-49b1-b440-55054a5fb56f.jpg/360x270.jpg",
+    "alt": "Pro 58 kWh | Rijklaar! | Adapt. Cruise | Apple Car",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a1e32f06-4ca8-4698-9fcc-40eb1b83da8e_3e8eb908-2241-4fbf-a00f-dd6b8f3f7f67.jpg/360x270.jpg",
+    "alt": "Life 58 kWh SOH 93,9% | Adapt Cruise | Stoel/Stuur",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/abe25ce2-7520-41bd-8298-1a17a7c50698_864e22c4-4f82-4ed2-9de9-2f97585bd0cc.jpg/360x270.jpg",
+    "alt": "Pro S 77 kWh SOH 93,8% | Warmtepomp | 360° Camera",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dc6f4061-968a-4aeb-95eb-86cdf2d5f956_933e651e-add9-45c2-974d-8f545cc777d5.jpg/360x270.jpg",
+    "alt": "Pro 58 kWh SoH 93,1% Stoelverwarming Parkeersensor",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5339aa7a-71c1-4a47-8d39-0df8609c8b08_1e742398-e073-4490-aeb3-16cc51ad47db.jpg/360x270.jpg",
+    "alt": "Pro 58 kWh SOH 95%, All-in prijs incl. 12 mnd. Bov",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5Pa6Y8pHgBl8kVK6eRIuWo/463ce31d773c166be606321614841794/vw-e-golf-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen e-Golf",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/vkuOAxAovtOfjlxX0pBO8/33a3b158b30eb73601424d95fa8a9a56/hyundai_kona_hybrid__42_.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Hyundai Kona",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5ohwRHJ9uWZebzjWtNi6eA/cf13212f3376a8cb87d85f3e215b382f/volkswagen_id_01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen ID.4",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5CLUzwmvfeea9CPK46X5Cc/e122e0a92508fd5b78b101bfbcb7b2e0/AS24-skoda_01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Skoda Enyaq  iV",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/601eO16DFDJ7cwIFSF1xfE/1871111c64f5024104cdba601be267a8/Tesla_Model_3.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Tesla Model 3",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6yPtLT7dNBCYV3S1P18sb8/e7481e0e25a8987dee13d2bedf375001/volkswagen-id5-2022-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen ID.5",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4NozqqUEPIFZm99OOGvwAZ/fd006dd5fe74299849fdf21fb1f132c3/vw-id3neo-hero.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/XIm3PDXN2vGsaphmcbxkm/9bb8bd17c39c7c9e9bea444fc1aa36ce/zus-vt-cupra-born-polestar-2-2022-1.jpg?w\u003d1100",
+    "alt": "TEST: Polestar 2 komt verder op zijn accu dan de Cupra Born, toch houd je het in de Cupra langer uit",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5jKoMAzB58iq7s92vhiF7p/a40509336f3fab2aa72964bb42a1a948/CR_75_Volkswagen_ID_4.jpg?w\u003d1100",
+    "alt": "Review - Volkswagen ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6QrxRIGO4wQohPGqv1ExW3/7a647efa3acc830c9f09a4764411a367/vw-id-polo-2026-titel-tv.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6x8o0XhH6xvw5Qtmlgkco6/e0652515df6cfdfc8e8ab4bde67506c9/volkswagen-buzz-actieradius-2022-1.jpg?w\u003d1100",
+    "alt": "Volkswagen ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5zaYaiVIgyOgjq6tOZ6kEg/0d025176b9ebd32e93afe5cf2237fb4e/volkswagen-id7-2024-review-foto17.jpg?w\u003d1100",
+    "alt": "Review – Volkswagen ID",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Volkswagen ID.3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-id-3/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4f4b80d6-7d03-4ec1-af27-833b1fc64d6e_a7eab232-581f-4138-8ea9-56f0e4cbc85c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15036567-original-da232dcb-d989-4412-9572-c05b0a8ade60.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d7bc08a2-0e13-4180-8ae7-b3c0df4df410_df47fe7d-03c6-4350-85b2-0ee7bc78c8b8.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/28190408-original-bf3d1617-4b7c-4a0b-b0f8-5374df04b5c9.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/55f03ae7-36b1-48b1-ad48-71372ba8612c_e9f86877-c275-4ad8-a776-6c440949c9ff.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/29358785-original-566ae1ee-6271-4ab1-a8ca-157b86b40982.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6f1bfca5-2a80-4e61-b623-72c629561c38_f331d40e-0887-4c49-b4ab-7dcbb41c1b93.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63503981-original-5620709b-c8d6-4854-95c9-58144178e077.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6085640f-ceff-4cd2-b12d-82c4098aa264_ae2698db-f366-4e84-8f93-62533f42938f.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0cecc80e-147f-448b-b300-16cf235222e0_e76083c9-1888-43c0-ab5e-b4b80a85496c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15036567-original-da232dcb-d989-4412-9572-c05b0a8ade60.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d94e5fdb-4e2b-4226-9927-8a7ff2ff8ac1_00ed04a8-b577-435f-88a0-d9e7042e968d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/3766889-original-1ee8bdca-449c-4cf4-9e0c-5b40b4d3a013.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/651b0e68-e1f8-4ac1-b9ef-721584ea4421_f0bfd4a1-d6fc-4b5e-839f-837d721f17a8.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/90671c59-e6df-434b-ac17-34eb5bcfbbf9_30c7a9fb-1f51-414e-8bbc-ad2471063b8e.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/41066911-original-b68f2058-e9a5-4f09-846f-8036982a99a9.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/416d2e32-8c34-4619-a4f2-a3a2b4ac9122_4f254920-5589-4d3c-88dd-0057ff36dd78.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/30190426-original-0e086fc1-ac0e-4978-ab8e-41cad85fc426.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cbccdc95-300f-4864-9fa0-1c67fce58819_3df67aab-4769-4aaf-89eb-96c31a54a5fb.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ad9c15c6-5016-4cc0-a2c1-70a9148f81b9_aed7e3a2-896e-4e28-9f42-0878c7e7dba8.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/44580a22-f4d5-491a-8108-9e06b8d6ea58_99f88855-705e-480b-9679-402b1c49d7a8.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/36223949-original-e348b3b3-873f-4f1b-92c6-5b1ba52e49e7.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4bddd18b-bd7a-4a44-978f-e884b760473c_8acda1eb-4cbf-4ed1-afbb-c0ae08998834.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/581dc58d-2f58-4a73-8c35-21415b14bfb4_cd5400b2-4ec3-425b-9057-dd7028fe8296.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/12958819-original-254e7a1f-b83d-42f6-adb0-e1087a503b01.JPG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5026f006-b944-485e-a071-c62b1b9b98fe_b7a623f1-4a30-494e-8f48-aeeb167862d1.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/51153190-original-b9d8b954-35d9-4c62-b528-4f48a049ede6.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/240cf342-f7a2-4232-b150-16a0425bb717_d87faed2-d23f-4e11-a043-de3da2d037ff.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/24560161-original-c07db1e5-8f84-4376-b39b-d37fb391ecd7.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1ec796b6-88d4-493f-a4a5-b84700b8753e_e2e042f5-055f-49aa-a924-273359c39849.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/26234646-original-7f94add0-7931-4cca-9694-febd479726de.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c97a79a5-8e22-41a8-83ed-69e44d8ab8a6_c65b11f7-2712-4e19-8825-a417a01c900c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ae88d77c-93dd-4a02-b928-198dae4a23a0_f7a03e92-4e5e-48c5-942c-c0104d9f07bd.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/27398257-original-be3a4053-e4d9-4c4e-b3c3-a6f3f7ac4f15.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Coupé occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/coupe"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
