@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 556,
+    "url": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/",
+    "title": "Using Python to build a solution for instant tokenized real estate redemptions | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python to build a solution for instant tokenized real estate redemptions Written by Brian Whippo, Head of Developer Relations, Algorand Foundation, Algorand Lofty is a startup enabling users to turn the equity of real estate properties into digital tokens, which are then available for peer-to-peer trading on a secondary marketplace. In practice, it enables real estate to be traded similarly to more liquid assets like stocks. To date, more than 180 properties have been tokenized on the platform, generating $3M+ in rental income for users. To achieve its vision for a future where real estate is more easily tradeable and investable, Lofty utilizes Algorand – a Layer-1 blockchain with native Python programmability. While the core of the platform’s smart contracts were developed in an older Algorand programming language (TEAL), the team has shifted to developing new features in Python, including a smart contract released this year that enables users to instantly redeem tokens for the value of a sold property share. Smart contracts are self-contained programs that validate transactions according to predefined rules and parameters. They are a commonly utilized tool on decentralized blockchain networks such as Algorand and Ethereum. For Lofty, smart contracts are used for all transactions, including limit orders and market orders. The former enables peer-to-peer swaps routed by Lofty, so while users experience a seamless trading experience, their funds are settled directly between buyers and sellers, never touching Lofty’s accounts. The latter enables liquidity pools to act as a counterparty to buyers and sellers, enabling instant liquid transactions from real estate. The liquidity pools themselves are also smart contract-based escrow accounts. It took the Lofty engineering team only one week to build the smart contracts for the new token redemption feature. Python programmability on Algorand makes the entire development lifecycle easier and means more affordable and efficient maintenance and upgrades going forward. Specific benefits of Algorand Python (algopy) versus other blockchain-specific languages include: Natural Python syntax using standard Python class structures, making code more readable and maintainable Strong typing system with proper classes and inheritance, just as one would use in regular Python Intuitive method decorators like @abimethod and @subroutine that clearly define the contract’s external method entry points vs. internal methods Simplified on-chain transaction handling with helper classes like AssetTransfer Abstraction of Algorand-specific data concepts through Python classes like Asset and Account Familiar object-oriented programming patterns, making contracts more accessible to Python developers without specialized smart contract expertise Ability to use testing, linting, formatting, and other familiar Python libraries with smart contract code In the following example, a smart contract is written in Python to facilitate token swaps. The Swap contract allows users to exchange one token for another at a fixed 1:2 ratio. The contract maintains separate incoming and outgoing asset pools, provides administrative functions for the governor, and includes safety checks to ensure sufficient liquidity before processing swaps. Code: By building its new smart contracts in Python, and tapping into Algorand’s broader suite of developer tools like AlgoKit, Lofty is able to easily and affordably maintain its code as the company scales and introduces new features. Lofty’s tokenized real estate marketplace could not exist without blockchain. By building on the decentralized, open-source, and efficient Algorand network, Lofty users benefit from instant transaction finality, a 5+ year history of 100% network uptime, and global scalability (able to settle 10,000 transactions per second) – all at the cost of just fractions of a penny each. In addition, Algorand offers native features like atomic transactions and multisig capabilities, which are central to Lofty’s platform. Atomic transactions enable trustless transactions between users, giving them the experience and feel of a centralized exchange while ensuring that actual funds are settled safely in a peer-to-peer way, while native multisig allowed Lofty to build embedded wallets that users operate on their account dashboard. This enables anyone to immediately start using a blockchain-based product, regardless of any prior understanding of blockchain concepts. Algorand is the only Layer-1 network offering native Python programmability, giving developers a simple path to unlocking the powerful possibilities of decentralized blockchain for all types of industries. DISCLAIMER: The content provided herein is for informational purposes only. The information is provided by the Algorand Foundatio",
+    "scrapedAt": "2026-10-08 19:06:23.160078"
+  },
+  {
+    "id": 555,
+    "url": "https://www.python.org/success-stories/python-for-scientific-data-visualization/",
+    "title": "Python for Scientific Data Visualization | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Scientific Data Visualization Written by Prabhu Ramachandran, MayaVi Background MayaVi is an open source scientific data visualization tool written entirely in Python. I started work on MayaVi in 2000. At that time, a few colleagues of mine needed to visualize their computational fluid dynamics (CFD) data but the only suitable tools available were commercial, closed source programs that were prohibitively expensive. We looked at some open source tools as alternatives. OpenDX had just been released to the public and at that time was hard for me to get up and running. OpenDX was also a fairly complex system with a steep learning curve. Another visualization/graphics library, VTK, was also available as open source. VTK is an extremely powerful visualization library written in C++. It is very portable and runs on various flavors of Unix, Windows, and recently on Mac OS X. VTK was chosen as the most appropriate solution, but it was not enough to solve the problem at hand. An application was needed on top of the VTK library before non-programmers equipped only with specialized domain knowledge could sit at a computer and visualize their data. Python Chosen Although most of my previous experience was in C and C++, I felt that another language might be a better choice for quickly developing a graphical user interface. VTK is written in C++, but it has also been wrapped for Python, Tcl and Java. I took a look at each of those. I ruled out Tcl because I felt Python\u0027s syntax was much cleaner and because I had heard that large Tcl programs could be hard to maintain. Java had the disadvantage of requiring compilation with each change in the code, and the ability to run code in any recent browser was of no use for this project. Java\u0027s verbose syntax as compared to Python was also a point against it. Python was just as portable as Java and a much easier to learn and use language. I\u0027d also read the Python tutorial, seen various Python programs and liked the language very much for its simplicity, object oriented nature, dynamic data typing, and large standard library. Starting with a few simple Python scripts using VTK, I was able to get my colleagues up and running fairly quickly with a few custom CFD visualization scripts. At this time I was still learning Python and Tkinter (the GUI toolkit used in MayaVi) and created a GUI based tool called VTK-CFD in June 2000. This went through several rounds of improvements until I eventually completely re-wrote it and released MayaVi in May 2001. Results MayaVi was written in 100% pure Python and by virtue of VTK, Python, and Tkinter\u0027s portability, it works on Linux, Unix, and Windows. Python turned out to be simple, easy to learn, and yet extremely powerful. Its interactive interpreter was a huge plus when learning and experimenting. It also has excellent freely available documentation. I found the development cycle extremely fast because Python is both object oriented and interpreted. The program can be well-designed from an OO standpoint, and thus more maintainable, but there is no compilation to wait for each time you make alterations to your code. Python\u0027s readability and dynamic typing made it even easier to write, maintain, and extend the code. I never had to worry about types, which let me focus on the problem at hand rather than wrestle with the language and its syntax. This made me much more productive than I was with C and C++. For example, I was able to write a complete VTK documentation browser with GUI and search engine in just 400 lines of code. Flow past a cylindrical post, showing configuration dialog, VTK pipeline, and VTK documentation browser. Data courtesy of NASA. Zoom in Excellent support for introspection, coupled with a comprehensive standard library, made it easy to write data-driven code like the vtkPipeline browser. This automatically generates a GUI at runtime that displays the VTK graphics pipeline. It also generates a GUI configuration dialog for any VTK object by parsing the object\u0027s methods with Python\u0027s regular expression module, categorizing it, and building the GUI accordingly. This code is also used in MayaVi\u0027s persistence mechanism, which can save most VTK objects to disk by inspecting them at runtime. The use of introspection to write data-driven modules such as these avoided substantial amounts of manual coding, and makes MayaVi self-extending as additional VTK objects are defined. Since Python is a scripting language, it was the natural choice for an extension language for MayaVi. As a result, MayaVi isn\u0027t just written in Python but can also be scripted by end users working in Python, in order to extend it with additional useful functionality. I\u0027m not a software developer or a computer scientist. Neither am I a graphics expert. While I did have a good bit of programmin",
+    "scrapedAt": "2026-10-08 19:06:21.832524"
+  },
+  {
+    "id": 554,
+    "url": "https://www.python.org/success-stories/getting-to-know-python/",
+    "title": "Getting to Know Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Getting to Know Python Written by William Oxman, HiringSolved I started using Python briefly in college, thinking it was about as useful as the little bit of bash that I then knew--it just looked a little nicer. I took a whirlwind hiatus of AMD64 C, C++, Lisp, and ML, and then found my first job which brought me back to writing Python for the support of a medical robotics platform. It\u0027s a lovely feeling to discover and correct internal ignorance, and I was very happy to be wrong on this front. It felt like gaining a significant edge on the programmer I used to be; I didn\u0027t need to spend as long to get the job done. Now I could quickly spam my friends emails, easily connect to free wifi in airports on Ubuntu, and efficiently scrape data from the web. It feels a lot like cheating compared staring at assembly in order to write more efficient C, which always makes me feel suspicious that the other shoe will drop and it turns out writing Python is directly responsible for the death of many kittens. As I learn and grow, I\u0027ve bumped into Python\u0027s shortcomings as well. I look at this as a positive--if you\u0027re not bumping into limitations in life, you\u0027re not experimenting enough to reach your full potential. To be frank, I don\u0027t see myself as an especially perspicacious engineer, so often this is just bumping my head into the same problem until I realize what it actually is. Of all the stack traces in the world, Python makes this easiest on me. Watching Python attain such a large market share among programming languages has been really rewarding. It\u0027s a bit of a trap to become ensconced in one programming language, but it feels like rooting for the good guys more often than not. With BHAGs like the GILectomy looming large in the future of Python, it\u0027s hard to not pay close attention, and even harder to not feel like Python really is the Swiss Army Knife in my toolbox. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:06:20.485908"
+  },
+  {
+    "id": 553,
+    "url": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/",
+    "title": "Python in the Blind Audio Tactile Mapping System | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python in the Blind Audio Tactile Mapping System Written by Chad Haynes and Thomas Logan, Carolina Computer Assistive Technology Introduction The Blind Audio Tactile Mapping System (BATS) seeks to provide access to maps for the blind and visually impaired. Our goal is to devise ways to present traditionally visual information to the user\u0027s other senses. The need for this project became clear when Jason Morris came to the University of North Carolina at Chapel Hill to study Classics. Morris works at the Ancient World Mapping Center (AWMC), a foundation to advance the field of ancient studies with the use of cartography and geographic information science. Morris, who has been blind since an early age, has faced the denial of access to information critical to his choice of study for the majority of his life. With his work at the AWMC he vowed to create a solution. Morris\u0027 chance meeting with Gary Bishop, Associate Professor of Computer Science, set the project in motion. Bishop had been seeking users who could benefit from the development of assistive tools customized for their needs. At the time of their meeting, there were no maps of the ancient world in a format accessible to the visually impaired. After their initial conversation, Dr. Bishop created the opportunity for a team of undergraduate students to implement a solution in a semester-long software engineering course. We were fortunate to be part of the five-person team assembled to work on this exciting project. The goal of the software engineering course, taught by Associate Professor Kye Hedlund, was to teach students about working collaboratively, identifying goals, and meeting deadlines. Our team began by meeting with our three advisors to talk about initial design decisions. Professor Bishop presented us with Dr. Dan Jacobson\u0027s paper Navigating maps with little or no sight: An audio-tactile approach as a basis for developing a tool that provided access to spatial information through sound and touch. The core components of our system were a Pentium III computer running Windows 2000, a touch pad as the primary input device, and the Microsoft Speech SDK 5.1 to communicate information with a synthesized voice. Choice of Python Faced with the daunting task of coding a program with little precedent, the first major design decision our team had to tackle was the choice of a programming language. Our initial thoughts were to use either C++ or Java since everyone in the group was proficient with both. One group member had been exposed to Python in an earlier class and was impressed with the power and ease of use it provided. The fact that the other four members had no experience with the language fortunately did not stop us from making the wise decision to use Python. Very early in the development we required a simple program to test how the touch pad interacts with the operating system. This proved incredibly easy with wxPython, a Python wrapper for the powerful wxWindows GUI toolkit. Setting up a frame to take full control of the screen was very straightforward and required minimal coding. Given our strict time constraints, a language that allowed for rapid development such as this was a great advantage. No one in the group at that time had any real concept of the extent to which we would be able to use Python in the project. However, as we discovered the extensive collection of libraries and modules available for it, we decided that Python could be used exclusively. Implementation Our next meetings were with Tom Elliott, the Director of the Ancient World Mapping Center, who conveniently holds an undergraduate degree in Computer Science. He introduced us to the Barrington Atlas, a twelve year undertaking that culminated with the first comprehensive maps of ancient Greek and Roman civilizations to be produced since 1874. The Ancient World Mapping Center is now digitizing all the information contained in this atlas, making the information held within it into an even richer educational tool. The British Isles were selected as the prototype map. Our discussions centered on translating the visual representation of the image and its underlying database information into a format our program could use. Test map for the BATs system Zoom in Elliott provided the first two data files for BATS using ArcView, a powerful tool for working with maps. Two ASCII text files were produced, indicating the surface type and elevation of our map. The information had been formatted as a grid of 1024 columns and 768 rows to match the resolution of our display and touch pad. We decided to read this grid of numbers into Numeric arrays in Python. Originally quite a bit of preprocessing was involved to scale down the data to fit our internal model. We did not want to go through the reading and scaling process every time ",
+    "scrapedAt": "2026-10-08 19:06:19.162036"
+  },
+  {
+    "id": 552,
+    "url": "https://www.python.org/success-stories/simulating-biomolecules-with-python/",
+    "title": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Simulating Biomolecules with Python Written by Konrad Hinsen, Centre National de la Recherche Scientifique Background The Molecular Modeling Toolkit (MMTK) is a open source Python library for molecular modeling and simulation with a focus on biomolecular systems, written in a mixture of Python and C. It provides standard techniques such as Molecular Dynamics or normal mode calculations in a ready-to-use form, but also provides a basis of low-level operations on top of which new techniques can easily be implemented. I started developing MMTK in 1996. I had some experience with mainstream simulation packages for biomolecules that were written in Fortran and had their origins in the 1970s. Those packages were too cumbersome to use and in particular to modify and extend. Since my research work is focused on the development of new simulation techniques, modifiability was a particularly important criterion. Dynamic deformation of the chaperon protein GroEL, obtained with the MMTK-based interactive DomainFinder (Zoom in) Characteristic features of biomolecular simulations that had to be taken into account are the long execution times of some simulation techniques (several weeks are not uncommon) and the complexity of the data structures describing biomolecules. Choice of languages The choice of Python plus C was made after an evaluation of various languages. I was rapidly convinced that only a mixture of a high-level interpreted language and a CPU-efficient compiled language could meet my seemingly conflicting requirements of rapid development and efficient execution. For the high-level part, Tcl was ruled out because it could not handle the complex data structures required by the project. Perl was ruled out because of its unpleasant syntax (this was of course a subjective choice), and because of its badly integrated OO mechanism. Python scored high in readability, OO support, library support, and integration with compiled languages. Moreover, Numerical Python had just been released and was an important building block for my developments. For the low-level part, Fortran 77 was eliminated because of its archaic character, lack of memory management, and portability issues in C-Fortran interfacing. C++ was a candidate, but ultimately not chosen because portability between compilers was still an issue in 1996, and because I considered the benefits of C++ for the small amount of compiled code in the project insufficient to compensate for the complexity of the language. Library architecture The architecture of MMTK is clearly Python-driven. To the user, it presents itself as a pure Python library. The C code in MMTK was written from scratch in the form of Python extension modules that only handle the few time-critical aspects: evaluation of interaction energies, and long-running iterative algorithms such as energy minimization and Molecular Dynamics, which run without any Python-related overhead. Extensive use is made of Numerical Python, LAPACK, and the netCDF library. MMTK provides multi-threading support for shared memory parallel machines, and MPI-based parallelization for distributed memory machines. The biggest part of MMTK is a set of classes that describe atoms and molecules and manage a database of molecules and fragments. Biomolecules (proteins, DNA, and RNA) are handled by subclasses of the generic Molecule class. Another important subset of MMTK implements schemas for calculating interaction energies (called somewhat incorrectly \"force fields\" in the simulation community). I/O-related code is the third pillar of MMTK. It reads and writes a few popular file formats plus its own trajectory format that is based on the netCDF format. Contrary to other trajectory file formats, MMTK\u0027s netCDF files are both binary (and thus compact) files and portable between platforms. and moreover permit efficient access to nearly arbitrary subsets. Snapshot from a Molecular Dynamics simulation of lysozyme in water, run with MMTK. Zoom in Modularity and extendibility were important design criteria. Algorithms, energy terms, and specializations of the data types can be added without having to modify the MMTK code. The design of MMTK as a library, rather than a closed program, is essential for many applications. An important aspect of biomolecular simulations is visualization. MMTK delegates this task to external tools. Two visualization programs, VMD and PyMOL, are particularly well integrated. Most MMTK users access the library from simple Python scripts, but MMTK has also been used as a basis for end-user programs with graphical user interfaces, such as nMOLDYN and DomainFinder. MMTK currently consists of about 18,000 lines of Python code, 12,000 lines of hand-written C code, and some machine-generated C code. The majority of the code was developed by one person dur",
+    "scrapedAt": "2026-10-08 19:06:17.921309"
+  },
+  {
     "id": 551,
     "url": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/",
     "title": "Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association | Our Success Stories | Python.org",
@@ -3785,26 +3820,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 552,
-    "url": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
-  },
-  {
-    "id": 553,
-    "url": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
-  },
-  {
-    "id": 554,
-    "url": "https://www.python.org/success-stories/getting-to-know-python/"
-  },
-  {
-    "id": 555,
-    "url": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
-  },
-  {
-    "id": 556,
-    "url": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
   },
   {
     "id": 557,
@@ -97400,10 +97415,146 @@ window.searchData = [
     "id": 68499,
     "url": "https://github.com/crosscompute",
     "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 68509,
+    "url": "http://dirac.cnrs-orleans.fr/MMTK/",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 68510,
+    "url": "http://dirac.cnrs-orleans.fr/DomainFinder/",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 68512,
+    "url": "https://www.python.org/m/about/success/mmtk/groel_deformation.tiff",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 68516,
+    "url": "https://www.python.org/m/about/success/mmtk/lysozyme_with_solvent.tiff",
+    "parentUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "id": 68519,
+    "url": "https://sourceforge.net/projects/pywin32/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68523,
+    "url": "http://www.cs.unc.edu/assist",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68524,
+    "url": "http://www.pfdubois.com/numpy/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68526,
+    "url": "https://www.python.org/m/about/success/bats/bats.jpg",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68528,
+    "url": "http://www.swig.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68530,
+    "url": "https://www.python.org/m/about/success/bats/tact3image.jpg",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68531,
+    "url": "http://pyxml.sourceforge.net/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68534,
+    "url": "http://www.openal.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68535,
+    "url": "http://www.immersion.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "id": 68549,
+    "url": "https://hiringsolved.com/",
+    "parentUrl": "https://www.python.org/success-stories/getting-to-know-python/"
+  },
+  {
+    "id": 68555,
+    "url": "http://www.vtk.org/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
+  {
+    "id": 68557,
+    "url": "https://www.python.org/m/about/success/mayavi/mpss0.png",
+    "parentUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
+  {
+    "id": 68558,
+    "url": "http://mayavi.sf.net/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
+  {
+    "id": 68564,
+    "url": "https://algorand.co/algokit",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "id": 68568,
+    "url": "https://algorand.co/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "id": 68574,
+    "url": "https://www.lofty.ai/",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/successstory_algorand.png",
+    "alt": "image",
+    "pageTitle": "Using Python to build a solution for instant tokenized real estate redemptions | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-build-a-solution-for-instant-tokenized-real-estate-redemptions/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/mayavi/mpss0-half.jpg",
+    "alt": "Mayavi Screen Shot",
+    "pageTitle": "Python for Scientific Data Visualization | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-scientific-data-visualization/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/bats/tact3image-web.jpg",
+    "alt": "BATS Test Map",
+    "pageTitle": "Python in the Blind Audio Tactile Mapping System | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/bats/bats-web.jpg",
+    "alt": "BATS in Action",
+    "pageTitle": "Python in the Blind Audio Tactile Mapping System | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-in-the-blind-audio-tactile-mapping-system/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/mmtk/groel_deformation-web.jpg",
+    "alt": "Example MMTK Molecular Model",
+    "pageTitle": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
+  {
+    "src": "https://www.python.org/m/about/success/mmtk/lysozyme_with_solvent-web.jpg",
+    "alt": "Example MMTK Molecular Model",
+    "pageTitle": "Simulating Biomolecules with Python | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/simulating-biomolecules-with-python/"
+  },
   {
     "src": "https://www.python.org/m/about/success/astra/property_manager_web.gif",
     "alt": "Architecture of the Property Manager",
