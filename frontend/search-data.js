@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1700,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt32",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:54:28.468147"
+  },
+  {
+    "id": 1699,
+    "url": "https://docs.python.org/3/library/copy.html#module-copy",
+    "title": "copy — Shallow and deep copy operations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Types » copy — Shallow and deep copy operations | Theme Auto Light Dark | copy — Shallow and deep copy operations¶ Source code: Lib/copy.py Assignment statements in Python do not copy objects, they create bindings between a target and an object. For collections that are mutable or contain mutable items, a copy is sometimes needed so one can change one copy without changing the other. This module provides generic shallow and deep copy operations (explained below). Interface summary: copy.copy(obj)¶ Return a shallow copy of obj. copy.deepcopy(obj[, memo])¶ Return a deep copy of obj. copy.replace(obj, /, **changes)¶ Creates a new object of the same type as obj, replacing fields with values from changes. Added in version 3.13. exception copy.Error¶ Raised for module specific errors. The difference between shallow and deep copying is only relevant for compound objects (objects that contain other objects, like lists or class instances): A shallow copy constructs a new compound object and then (to the extent possible) inserts references into it to the objects found in the original. A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original. Two problems often exist with deep copy operations that don’t exist with shallow copy operations: Recursive objects (compound objects that, directly or indirectly, contain a reference to themselves) may cause a recursive loop. Because deep copy copies everything it may copy too much, such as data which is intended to be shared between copies. The deepcopy() function avoids these problems by: keeping a memo dictionary of objects already copied during the current copying pass; and letting user-defined classes override the copying operation or the set of components copied. This module does not copy types like module, method, stack trace, stack frame, file, socket, window, or any similar types. It does “copy” functions and classes (shallow and deeply), by returning the original object unchanged; this is compatible with the way these are treated by the pickle module. Shallow copies of many collections can be made using the corresponding copy() method (such as list.copy(), dict.copy() or set.copy()), and of sequences (such as lists or bytearrays) by making a slice of the entire sequence (sequence[:]). However, these methods and slicing can create an instance of the base type when copying an instance of a subclass, whereas copy.copy() normally returns an instance of the same type. Classes can use the same interfaces to control copying that they use to control pickling. See the description of module pickle for information on these methods. In fact, the copy module uses the registered pickle functions from the copyreg module. In order for a class to define its own copy implementation, it can define special methods __copy__() and __deepcopy__(). object.__copy__(self)¶ Called to implement the shallow copy operation; no additional arguments are passed. object.__deepcopy__(self, memo)¶ Called to implement the deep copy operation; it is passed one argument, the memo dictionary. If the __deepcopy__ implementation needs to make a deep copy of a component, it should call the deepcopy() function with the component as first argument and the memo dictionary as second argument. The memo dictionary should be treated as an opaque object. Function copy.replace() is more limited than copy() and deepcopy(), and only supports named tuples created by namedtuple(), dataclasses, and other classes which define method __replace__(). object.__replace__(self, /, **changes)¶ This method should create a new object of the same type, replacing fields with values from changes. Added in version 3.13. See also Module pickle Discussion of the special methods used to support object state retrieval and restoration. Previous topic types — Dynamic type creation and names for built-in types Next topic pprint — Data pretty printer This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Types » copy — Shallow and deep copy operations | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:54:27.105392"
+  },
+  {
+    "id": 1698,
+    "url": "https://github.com/python/cpython/issues/125837",
+    "title": "Refactor `RETURN_VALUE` and `RETURN_CONST` · Issue #125837 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Refactor RETURN_VALUE and RETURN_CONST #125837 New issue Copy link New issue Copy link Closed Closed Refactor RETURN_VALUE and RETURN_CONST#125837 Copy link Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usage Description markshannon opened on Oct 22, 2024 Issue body actions The RETURN_VALUE and RETURN_CONST instructions return the value on top of the stack and a constant, respectively. RETURN_CONST is effectively a superinstruction: LOAD_CONST + RETURN_VALUE. This worked well up to 3.13, but is likely to be an impediment to further optimizations: The JIT already breaks RETURN_CONST into LOAD_CONST and RETURN_VALUE so the superinstruction has no value. RETURN_VALUE has two different paths internally, one for normal functions and the other for generators. We know statically which sort of function we are in, so we should emit different bytecodes for the different behavior With the proposed changes to reference counting, it will help in the interpreter (we already do this in the JIT) to have a different instruction for immortal constants. (This might only be temporarily, as we expect to be able to defer reference counting on all constants) Changes to the instruction set: RETURN_CONST and INSTRUMENTED_RETURN_CONST will be removed. RETURN_VALUE_GEN, INSTRUMENTED_RETURN_GEN and LOAD_CONST_IMMORTAL will be added. We expect that LOAD_CONST_IMMORTAL will be removed again before 3.14, but that is not a requirement. Linked PRs GH-125837: Rework the instructions for loading constants and returning values. #125878 GH-125837: Split LOAD_CONST into three. #125972 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesinterpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usage Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:54:25.626485"
+  },
+  {
+    "id": 1696,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict",
+    "title": "typing — Support for type hints — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias as b",
+    "scrapedAt": "2026-10-08 19:54:23.407106"
+  },
+  {
+    "id": 1695,
+    "url": "https://docs.python.org/3/library/symtable.html#symtable.Class.get_methods",
+    "title": "symtable — Access to the compiler’s symbol tables — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » symtable — Access to the compiler’s symbol tables | Theme Auto Light Dark | symtable — Access to the compiler’s symbol tables¶ Source code: Lib/symtable.py Symbol tables are generated by the compiler from AST just before bytecode is generated. The symbol table is responsible for calculating the scope of every identifier in the code. symtable provides an interface to examine these tables. Generating Symbol Tables¶ symtable.symtable(code, filename, compile_type)¶ Return the toplevel SymbolTable for the Python source code. filename is the name of the file containing the code. compile_type is like the mode argument to compile(). Examining Symbol Tables¶ class symtable.SymbolTableType¶ An enumeration indicating the type of a SymbolTable object. MODULE \u003d \"module\"¶ Used for the symbol table of a module. FUNCTION \u003d \"function\"¶ Used for the symbol table of a function. CLASS \u003d \"class\"¶ Used for the symbol table of a class. The following members refer to different flavors of annotation scopes. ANNOTATION \u003d \"annotation\"¶ Used for annotations if from __future__ import annotations is active. TYPE_ALIAS \u003d \"type alias\"¶ Used for the symbol table of type constructions. TYPE_PARAMETERS \u003d \"type parameters\"¶ Used for the symbol table of generic functions or generic classes. TYPE_VARIABLE \u003d \"type variable\"¶ Used for the symbol table of the bound, the constraint tuple or the default value of a single type variable in the formal sense, i.e., a TypeVar, a TypeVarTuple or a ParamSpec object (the latter two do not support a bound or a constraint tuple). Added in version 3.13. class symtable.SymbolTable¶ A namespace table for a block. The constructor is not public. get_type()¶ Return the type of the symbol table. Possible values are members of the SymbolTableType enumeration. Changed in version 3.12: Added \u0027annotation\u0027, \u0027TypeVar bound\u0027, \u0027type alias\u0027, and \u0027type parameter\u0027 as possible return values. Changed in version 3.13: Return values are members of the SymbolTableType enumeration. The exact values of the returned string may change in the future, and thus, it is recommended to use SymbolTableType members instead of hard-coded strings. get_id()¶ Return the table’s identifier. get_name()¶ Return the table’s name. This is the name of the class if the table is for a class, the name of the function if the table is for a function, or \u0027top\u0027 if the table is global (get_type() returns \u0027module\u0027). For type parameter scopes (which are used for generic classes, functions, and type aliases), it is the name of the underlying class, function, or type alias. For type alias scopes, it is the name of the type alias. For TypeVar bound scopes, it is the name of the TypeVar. get_lineno()¶ Return the number of the first line in the block this table represents. is_optimized()¶ Return True if the locals in this table can be optimized. is_nested()¶ Return True if the block is a nested class or function. has_children()¶ Return True if the block has nested namespaces within it. These can be obtained with get_children(). get_identifiers()¶ Return a view object containing the names of symbols in the table. See the documentation of view objects. lookup(name)¶ Lookup name in the table and return a Symbol instance. get_symbols()¶ Return a list of Symbol instances for names in the table. get_children()¶ Return a list of the nested symbol tables. class symtable.Function¶ A namespace for a function or method. This class inherits from SymbolTable. get_parameters()¶ Return a tuple containing names of parameters to this function. get_locals()¶ Return a tuple containing names of locals in this function. get_globals()¶ Return a tuple containing names of globals in this function. get_nonlocals()¶ Return a tuple containing names of explicitly declared nonlocals in this function. get_frees()¶ Return a tuple containing names of free (closure) variables in this function. class symtable.Class¶ A namespace of a class. This class inherits from SymbolTable. get_methods()¶ Return a tuple containing the names of method-like functions declared in the class. Here, the term ‘method’ designates any function defined in the class body via def or async def. Functions defined in a deeper scope (e.g., in an inner class) are not picked up by get_methods(). For example: \u003e\u003e\u003e import symtable\n\u003e\u003e\u003e st \u003d symtable.symtable(\u0027\u0027\u0027\n... def outer(): pass\n...\n... class A:\n...    def f():\n...        def w(): pass\n...\n...    def g(self): pass\n...\n...    @classmethod\n...    async def h(cls): pass\n...\n...    global outer\n...    def outer(self): pass\n... \u0027\u0027\u0027, \u0027test\u0027, \u0027exec\u0027)\n\u003e\u003e\u003e class_A \u003d st.get_children()[2]\n\u003e\u003e\u003e class_A.get_methods()\n(\u0027f\u0027, \u0027g\u0027, \u0027h\u0027)\n Although A().f() raises TypeError at runtime, A.f is still considered as a method-like function. Deprecated since version 3.14, will be removed in version 3.16. class symtable.Symbol¶ An entry in a SymbolTable corresponding to an iden",
+    "scrapedAt": "2026-10-08 19:54:21.966394"
+  },
+  {
     "id": 1694,
     "url": "https://github.com/python/cpython/issues/124502",
     "title": "[C API] Add PyUnicode_Equal() function · Issue #124502 · python/cpython · GitHub",
@@ -11410,26 +11445,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1695,
-    "url": "https://docs.python.org/3/library/symtable.html#symtable.Class.get_methods"
-  },
-  {
-    "id": 1696,
-    "url": "https://docs.python.org/3/library/typing.html#typing.TypedDict"
-  },
-  {
-    "id": 1698,
-    "url": "https://github.com/python/cpython/issues/125837"
-  },
-  {
-    "id": 1699,
-    "url": "https://docs.python.org/3/library/copy.html#module-copy"
-  },
-  {
-    "id": 1700,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt32"
   },
   {
     "id": 1701,
@@ -252956,10 +252971,140 @@ window.searchData = [
     "id": 369587,
     "url": "https://github.com/python/cpython/pull/125105",
     "parentUrl": "https://github.com/python/cpython/issues/124502"
+  },
+  {
+    "id": 370017,
+    "url": "https://github.com/python/cpython/issues/125837#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370020,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/125837",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370023,
+    "url": "https://github.com/python/cpython/issues/120024",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370024,
+    "url": "https://github.com/python/cpython/pull/125878",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370025,
+    "url": "https://github.com/python/cpython/issues/125837#issue-2605185061",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370026,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125837",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370028,
+    "url": "https://github.com/python/cpython/issues/125837#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370029,
+    "url": "https://github.com/python/cpython/pull/125972",
+    "parentUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "id": 370032,
+    "url": "https://docs.python.org/3/library/copy.html#object.__copy__",
+    "parentUrl": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "id": 370035,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/copy.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "id": 370040,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/copy.py",
+    "parentUrl": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "id": 370042,
+    "url": "https://docs.python.org/3/library/copy.html#object.__deepcopy__",
+    "parentUrl": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "id": 370044,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#list.copy",
+    "parentUrl": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "id": 370060,
+    "url": "https://docs.python.org/3/library/copy.html#copy.Error",
+    "parentUrl": "https://docs.python.org/3/library/copy.html#module-copy"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt32"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_FromInt32"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "copy — Shallow and deep copy operations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "copy — Shallow and deep copy operations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/copy.html#module-copy"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Refactor `RETURN_VALUE` and `RETURN_CONST` · Issue #125837 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Refactor `RETURN_VALUE` and `RETURN_CONST` · Issue #125837 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125837"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.TypedDict"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.TypedDict"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Class.get_methods"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "symtable — Access to the compiler’s symbol tables — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/symtable.html#symtable.Class.get_methods"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
     "alt": "@vstinner",
