@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 692,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code obje",
+    "scrapedAt": "2026-10-08 19:10:25.866485"
+  },
+  {
+    "id": 691,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken",
+    "title": "Type Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Type Objects | Theme Auto Light Dark | Type Objects¶ type PyTypeObject¶ Part of the Limited API (as an opaque struct). The C structure of the objects used to describe built-in types. PyTypeObject PyType_Type¶ Part of the Stable ABI. This is the type object for type objects; it is the same object as type in the Python layer. int PyType_Check(PyObject *o)¶ Return non-zero if the object o is a type object, including instances of types derived from the standard type object. Return 0 in all other cases. This function always succeeds. int PyType_CheckExact(PyObject *o)¶ Return non-zero if the object o is a type object, but not a subtype of the standard type object. Return 0 in all other cases. This function always succeeds. unsigned int PyType_ClearCache()¶ Part of the Stable ABI. Clear the internal lookup cache. Return the current version tag. unsigned long PyType_GetFlags(PyTypeObject *type)¶ Part of the Stable ABI. Return the tp_flags member of type. This function is primarily meant for use with Py_LIMITED_API; the individual flag bits are guaranteed to be stable across Python releases, but access to tp_flags itself is not part of the limited API. Added in version 3.2. Changed in version 3.4: The return type is now unsigned long rather than long. PyObject *PyType_GetDict(PyTypeObject *type)¶ Return the type object’s internal namespace, which is otherwise only exposed via a read-only proxy (cls.__dict__). This is a replacement for accessing tp_dict directly. The returned dictionary must be treated as read-only. This function is meant for specific embedding and language-binding cases, where direct access to the dict is necessary and indirect access (e.g. via the proxy or PyObject_GetAttr()) isn’t adequate. Extension modules should continue to use tp_dict, directly or indirectly, when setting up their own types. Added in version 3.12. void PyType_Modified(PyTypeObject *type)¶ Part of the Stable ABI. Invalidate the internal lookup cache for the type and all of its subtypes. This function must be called after any manual modification of the attributes or base classes of the type. int PyType_AddWatcher(PyType_WatchCallback callback)¶ Register callback as a type watcher. Return a non-negative integer ID which must be passed to future calls to PyType_Watch(). In case of error (e.g. no more watcher IDs available), return -1 and set an exception. In free-threaded builds, PyType_AddWatcher() is not thread-safe, so it must be called at start up (before spawning the first thread). Added in version 3.12. int PyType_ClearWatcher(int watcher_id)¶ Clear watcher identified by watcher_id (previously returned from PyType_AddWatcher()). Return 0 on success, -1 on error (e.g. if watcher_id was never registered.) An extension should never call PyType_ClearWatcher with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). Added in version 3.12. int PyType_Watch(int watcher_id, PyObject *type)¶ Mark type as watched. The callback granted watcher_id by PyType_AddWatcher() will be called whenever PyType_Modified() reports a change to type. (The callback may be called only once for a series of consecutive modifications to type, if _PyType_Lookup() is not called on type between the modifications; this is an implementation detail and subject to change.) An extension should never call PyType_Watch with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). Added in version 3.12. int PyType_Unwatch(int watcher_id, PyObject *type)¶ Mark type as not watched. This undoes a previous call to PyType_Watch(). type must not be NULL. An extension should never call this function with a watcher_id that was not returned to it by a previous call to PyType_AddWatcher(). On success, this function returns 0. On failure, this function returns -1 with an exception set. Added in version 3.12. typedef int (*PyType_WatchCallback)(PyObject *type)¶ Type of a type-watcher callback function. The callback must not modify type or cause PyType_Modified() to be called on type or any type in its MRO; violating this rule could cause infinite recursion. Added in version 3.12. int PyType_HasFeature(PyTypeObject *o, int feature)¶ Return non-zero if the type object o sets the feature feature. Type features are denoted by single bit flags. int PyType_FastSubclass(PyTypeObject *type, int flag)¶ Return non-zero if the type object type sets the subclass flag flag. Subclass flags are denoted by Py_TPFLAGS_*_SUBCLASS. This function is used by many _Check functions for common types. See also PyObject_TypeCheck(), which is used as a slower alternative in _Check functions for types that don’t come with subclass flags. int PyType_IS_GC(PyTypeObject *o)¶ Return true if the type object includes support for the cycle detector; this tests the type flag Py_TPFLAGS_HAVE_GC. int PyType_IsSubtype(PyTypeObj",
+    "scrapedAt": "2026-10-08 19:10:24.674924"
+  },
+  {
+    "id": 690,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString",
+    "title": "Importing Modules — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Importing Modules | Theme Auto Light Dark | Importing Modules¶ PyObject *PyImport_ImportModule(const char *name)¶ Return value: New reference. Part of the Stable ABI. This is a wrapper around PyImport_Import() which takes a const char* as an argument instead of a PyObject*. PyObject *PyImport_ImportModuleNoBlock(const char *name)¶ Return value: New reference. Part of the Stable ABI. This function is a deprecated alias of PyImport_ImportModule(). Changed in version 3.3: This function used to fail immediately when the import lock was held by another thread. In Python 3.3 though, the locking scheme switched to per-module locks for most purposes, so this function’s special behaviour isn’t needed anymore. Deprecated since version 3.13, will be removed in version 3.15: Use PyImport_ImportModule() instead. PyObject *PyImport_ImportModuleEx(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist)¶ Return value: New reference. Import a module. This is best described by referring to the built-in Python function __import__(). The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Failing imports remove incomplete module objects, like with PyImport_ImportModule(). PyObject *PyImport_ImportModuleLevelObject(PyObject *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Import a module. This is best described by referring to the built-in Python function __import__(), as the standard __import__() function calls this function directly. The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Added in version 3.3. PyObject *PyImport_ImportModuleLevel(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI. Similar to PyImport_ImportModuleLevelObject(), but the name is a UTF-8 encoded string instead of a Unicode object. Changed in version 3.3: Negative values for level are no longer accepted. PyObject *PyImport_Import(PyObject *name)¶ Return value: New reference. Part of the Stable ABI. This is a higher-level interface that calls the current “import hook function” (with an explicit level of 0, meaning absolute import). It invokes the __import__() function from the __builtins__ of the current globals. This means that the import is done using whatever import hooks are installed in the current environment. This function always uses absolute imports. PyObject *PyImport_ReloadModule(PyObject *m)¶ Return value: New reference. Part of the Stable ABI. Reload a module. Return a new reference to the reloaded module, or NULL with an exception set on failure (the module still exists in this case). PyObject *PyImport_AddModuleRef(const char *name)¶ Return value: New reference. Part of the Stable ABI since version 3.13. Return the module object corresponding to a module name. The name argument may be of the form package.module. First check the modules dictionary if there’s one there, and if not, create a new one and insert it in the modules dictionary. Return a strong reference to the module on success. Return NULL with an exception set on failure. The module name name is decoded from UTF-8. This function does not load or import the module; if the module wasn’t already loaded, you will get an empty module object. Use PyImport_ImportModule() or one of its variants to import a module. Package structures implied by a dotted name for name are not created if not already present. Added in version 3.13. PyObject *PyImport_AddModuleObject(PyObject *name)¶ Return value: Borrowed reference. Part of the Stable ABI since version 3.7. Similar to PyImport_AddModuleRef(), but return a borrowed reference and name is a Python str object. Added in version 3.3. PyObject *PyImport_AddModule(const char *name)¶ Return value: Borrowed reference. Part of the Stable ABI. Similar to PyImport_AddModuleRef(), but return a borrowed reference. PyObject *PyImport_ExecCodeModule(const char *name, PyObject *co)¶ Return value: New reference. Part of the Stable ABI. Given a module name (possibly of the form package.module) and a code object read from a Python bytecode file or obtained from the built-in function compile(), load the module. Return a new reference to the module object, or NULL with an exception set if an error occurred. name is removed from sys.modules in error cases, even if name was already in sys.modules o",
+    "scrapedAt": "2026-10-08 19:10:23.517717"
+  },
+  {
+    "id": 689,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef",
+    "title": "Dictionary Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Dictionary Objects | Theme Auto Light Dark | Dictionary Objects¶ type PyDictObject¶ This subtype of PyObject represents a Python dictionary object. PyTypeObject PyDict_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python dictionary type. This is the same object as dict in the Python layer. int PyDict_Check(PyObject *p)¶ Thread safety: Atomic. Return true if p is a dict object or an instance of a subtype of the dict type. This function always succeeds. int PyDict_CheckExact(PyObject *p)¶ Thread safety: Atomic. Return true if p is a dict object, but not an instance of a subtype of the dict type. This function always succeeds. PyObject *PyDict_New()¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new empty dictionary, or NULL on failure. PyObject *PyDictProxy_New(PyObject *mapping)¶ Return value: New reference. Part of the Stable ABI. Return a types.MappingProxyType object for a mapping which enforces read-only behavior. This is normally used to create a view to prevent modification of the dictionary for non-dynamic class types. PyTypeObject PyDictProxy_Type¶ Part of the Stable ABI. The type object for mapping proxy objects created by PyDictProxy_New() and for the read-only __dict__ attribute of many built-in types. A PyDictProxy_Type instance provides a dynamic, read-only view of an underlying dictionary: changes to the underlying dictionary are reflected in the proxy, but the proxy itself does not support mutation operations. This corresponds to types.MappingProxyType in Python. void PyDict_Clear(PyObject *p)¶ Part of the Stable ABI. Thread safety: Atomic. Empty an existing dictionary of all key-value pairs. int PyDict_Contains(PyObject *p, PyObject *key)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Determine if dictionary p contains key. If an item in p matches key, return 1, otherwise return 0. On error, return -1. This is equivalent to the Python expression key in p. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_ContainsString(PyObject *p, const char *key)¶ Thread safety: Atomic. This is the same as PyDict_Contains(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. Added in version 3.13. PyObject *PyDict_Copy(PyObject *p)¶ Return value: New reference. Part of the Stable ABI. Thread safety: Atomic. Return a new dictionary that contains the same key-value pairs as p. int PyDict_SetItem(PyObject *p, PyObject *key, PyObject *val)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Insert val into the dictionary p with a key of key. key must be hashable; if it isn’t, TypeError will be raised. Return 0 on success or -1 on failure. This function does not “steal” a reference to val. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_SetItemString(PyObject *p, const char *key, PyObject *val)¶ Part of the Stable ABI. Thread safety: Atomic. This is the same as PyDict_SetItem(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. int PyDict_DelItem(PyObject *p, PyObject *key)¶ Part of the Stable ABI. Thread safety: Safe for concurrent use on the same object. Remove the entry in dictionary p with key key. key must be hashable; if it isn’t, TypeError is raised. If key is not in the dictionary, KeyError is raised. Return 0 on success or -1 on failure. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. int PyDict_DelItemString(PyObject *p, const char *key)¶ Part of the Stable ABI. Thread safety: Atomic. This is the same as PyDict_DelItem(), but key is specified as a const char* UTF-8 encoded bytes string, rather than a PyObject*. int PyDict_GetItemRef(PyObject *p, PyObject *key, PyObject **result)¶ Part of the Stable ABI since version 3.13. Thread safety: Safe for concurrent use on the same object. Return a new strong reference to the object from dictionary p which has a key key: If the key is present, set *result to a new strong reference to the value and return 1. If the key is missing, set *result to NULL and return 0. On error, raise an exception, set *result to NULL and return -1. Note The operation is atomic on free threading when key is str, int, float, bool or bytes. Added in version 3.13. See also the PyObject_GetItem() function. PyObject *PyDict_GetItem(PyObject *p, PyObject *key)¶ Return value: Borrowed reference. Part of the Stable ABI. Thread safety: Safe to call from multiple threads with external synchronization only. Return a borrowed reference to the object from dictionary p which has a key key. Return NULL if the key key is missing without setting an exception. Note Exceptions that occur while this calls __hash_",
+    "scrapedAt": "2026-10-08 19:10:22.337438"
+  },
+  {
+    "id": 688,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:10:21.091801"
+  },
+  {
     "id": 687,
     "url": "https://github.com/python/cpython/issues/118928",
     "title": "sqlite3: disallow using a sequence of params with named placeholders · Issue #118928 · python/cpython · GitHub",
@@ -4505,26 +4540,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 688,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
-  },
-  {
-    "id": 689,
-    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
-  },
-  {
-    "id": 690,
-    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
-  },
-  {
-    "id": 691,
-    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
-  },
-  {
-    "id": 692,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
   },
   {
     "id": 693,
@@ -110149,10 +110164,3130 @@ window.searchData = [
     "id": 75354,
     "url": "https://github.com/python/cpython/issues/118928#top",
     "parentUrl": "https://github.com/python/cpython/issues/118928"
+  },
+  {
+    "id": 75358,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_SetBytesArgv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75360,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.dump_refs",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75366,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pystatus",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75367,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus_NoMemory",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75369,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.exec_prefix",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75370,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Clear",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75374,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_PreInitializeFromBytesArgs",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75375,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus_Ok",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75379,
+    "url": "https://docs.python.org/3/c-api/init_config.html#configuration-options",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75380,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getfilesystemencodeerrors",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75385,
+    "url": "https://docs.python.org/3/library/sys.html#sys.int_info.str_digits_check_threshold",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75386,
+    "url": "https://docs.python.org/3/c-api/init_config.html#python-configuration",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75388,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.stdlib_dir",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75389,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.dev_mode",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75391,
+    "url": "https://docs.python.org/3/library/sys_path_init.html#sys-path-init-virtual-environments",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75392,
+    "url": "https://docs.python.org/3/c-api/init_config.html#module",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75399,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_InitIsolatedConfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75405,
+    "url": "https://docs.python.org/3/c-api/profiling.html",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75406,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.xoptions",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75408,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus.exitcode",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75412,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pywidestringlist",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75415,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.check_hash_pycs_mode",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75418,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75419,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_SetBytesString",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75424,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75426,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_SetArgv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75427,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawMalloc",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75430,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.malloc_stats",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75431,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-mimalloc",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75433,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_Main",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75434,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.tracemalloc",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75439,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.executable",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75443,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.faulthandler",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75447,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.stdio_encoding",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75448,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus.err_msg",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75449,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.run_command",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75451,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyWideStringList.length",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75452,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c-preinit",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75453,
+    "url": "https://docs.python.org/3/c-api/init_config.html#get-options",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75454,
+    "url": "https://docs.python.org/3/c-api/memory.html#memory",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75456,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.parse_argv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75458,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus_IsExit",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75460,
+    "url": "https://docs.python.org/3/glossary.html#term-locale-encoding",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75462,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_SetWideStringList",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75465,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.prefix",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75466,
+    "url": "https://docs.python.org/3/c-api/init_config.html#isolated-configuration",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75467,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.isolated",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75468,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.perf_profiling",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75469,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BytesWarning",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75470,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_PreInitializeFromArgs",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75471,
+    "url": "https://docs.python.org/3/library/sys.html#sys.orig_argv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75476,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.parse_argv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75477,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOWrapper",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75479,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pyconfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75480,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.int_max_str_digits",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75482,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_ExitStatusException",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75483,
+    "url": "https://docs.python.org/3/c-api/memory.html",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75484,
+    "url": "https://docs.python.org/3/c-api/init_config.html#create-config",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75485,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_AppendInittab",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75486,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.show_ref_count",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75488,
+    "url": "https://docs.python.org/3/c-api/init_config.html#set-options",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75493,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pycache_prefix",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75494,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.dev_mode",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75496,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.warn_default_encoding",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75497,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyWideStringList_Insert",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75498,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyWideStringList.items",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75499,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.use_environment",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75501,
+    "url": "https://docs.python.org/3/c-api/init_config.html#runtime-python-configuration-api",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75502,
+    "url": "https://docs.python.org/3/c-api/init_config.html#py-getargcargv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75503,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pyinitconfig-opts",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75506,
+    "url": "https://docs.python.org/3/c-api/init_config.html#python-initialization-configuration",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75508,
+    "url": "https://docs.python.org/3/c-api/init_config.html#example",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75509,
+    "url": "https://docs.python.org/3/library/sys.html#sys.getfilesystemencoding",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75513,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_InitPythonConfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75517,
+    "url": "https://docs.python.org/3/library/sys.html#sys.flags",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75518,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus_IsError",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75522,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_SetString",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75523,
+    "url": "https://docs.python.org/3/library/io.html#io.FileIO",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75524,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_FrozenModules",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75525,
+    "url": "https://docs.python.org/3/c-api/init_config.html#init-path-config",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75526,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_system_logger",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75530,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.run_presite",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75534,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.configure_locale",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75535,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.Py_GetArgcArgv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75536,
+    "url": "https://docs.python.org/3/c-api/init_config.html#delaying-main-module-execution",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75537,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-pymalloc",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75540,
+    "url": "https://docs.python.org/3/library/sys.html#sys.int_info.default_max_str_digits",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75542,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pyinitconfig-c-api",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75543,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus_Exception",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75546,
+    "url": "https://docs.python.org/3/c-api/init_config.html#preinitialize-python-with-pypreconfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75547,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.configure_c_stdio",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75549,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.install_signal_handlers",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75550,
+    "url": "https://docs.python.org/3/c-api/init_config.html#error-handling",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75552,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus_Exit",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75553,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pypreconfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75554,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyWideStringList",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75555,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-with-platlibdir",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75557,
+    "url": "https://docs.python.org/3/c-api/init_config.html#initialize-python",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75561,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.code_debug_ranges",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75565,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus_Error",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75566,
+    "url": "https://docs.python.org/3/c-api/init_config.html#pyconfig-c-api",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75567,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.coerce_c_locale_warn",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75568,
+    "url": "https://docs.python.org/3/c-api/init_config.html#init-isolated-conf",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75574,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.safe_path",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75575,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.base_executable",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75578,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.stdio_errors",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75580,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig._pystats",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75581,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.run_filename",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75582,
+    "url": "https://docs.python.org/3/c-api/init_config.html#init-python-config",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75584,
+    "url": "https://docs.python.org/3/library/sys.html#sys.dont_write_bytecode",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75588,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.base_exec_prefix",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75589,
+    "url": "https://docs.python.org/3/c-api/init_config.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75590,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.coerce_c_locale",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75591,
+    "url": "https://docs.python.org/3/c-api/init_config.html#python-path-configuration",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75592,
+    "url": "https://docs.python.org/3/c-api/init_config.html#id1",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75594,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_DecodeLocale",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75596,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/init_config.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75598,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.run_module",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75603,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#initialization",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75605,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig_InitIsolatedConfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75606,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.import_time",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75607,
+    "url": "https://docs.python.org/3/library/sys.html#sys.pycache_prefix",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75612,
+    "url": "https://peps.python.org/pep-0540/",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75613,
+    "url": "https://peps.python.org/pep-0552/",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75614,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.base_prefix",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75615,
+    "url": "https://docs.python.org/3/c-api/init_config.html#initialization-with-pyconfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75620,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_RunMain",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75622,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.platlibdir",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75625,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.module_search_paths_set",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75628,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.warnoptions",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75630,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75631,
+    "url": "https://docs.python.org/3/glossary.html#term-attached-thread-state",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75633,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.pythonpath_env",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75634,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ExtendInittab",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75637,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-cmdline",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75638,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyStatus.func",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75639,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyWideStringList_Append",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75640,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-pystats",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75641,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_frozen_modules",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75645,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.dump_refs_file",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75649,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.cpu_count",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75652,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig.allocator",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75653,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.orig_argv",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75655,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyPreConfig_InitPythonConfig",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75660,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig_Read",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75661,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.skip_source_first_line",
+    "parentUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "id": 75664,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/dict.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75667,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemString",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75669,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_SetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75671,
+    "url": "https://docs.python.org/3/c-api/mapping.html#c.PyMapping_Keys",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75672,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Watch",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75673,
+    "url": "https://docs.python.org/3/builtins/threadsafety.html#threadsafety-level-shared",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75674,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#dict.pop",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75675,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75677,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_SetItemString",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75678,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75679,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_DelItem",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75680,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_DelItemString",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75681,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75682,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#dict.setdefault",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75684,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_NewRef",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75685,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_WatchCallback",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75686,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictValues_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75687,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Unwatch",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75688,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_ContainsString",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75689,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75690,
+    "url": "https://docs.python.org/3/glossary.html#term-hashable",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75691,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODictValues_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75692,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75697,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Update",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75698,
+    "url": "https://docs.python.org/3/c-api/dict.html#dictionary-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75699,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__eq__",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75700,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictObject",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75701,
+    "url": "https://docs.python.org/3/glossary.html#term-strong-reference",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75703,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_SetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75704,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictViewSet_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75705,
+    "url": "https://docs.python.org/3/builtins/threadsafety.html#threadsafety-level-distinct",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75706,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_DelItem",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75707,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Keys",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75708,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_New",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75710,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Next",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75711,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_GetItemString",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75714,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Merge",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75715,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_SIZE",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75716,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_GetItem",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75717,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemRef",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75718,
+    "url": "https://docs.python.org/3/glossary.html#term-steal",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75720,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_Contains",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75722,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#KeyError",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75723,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Clear",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75724,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GET_SIZE",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75725,
+    "url": "https://docs.python.org/3/c-api/dict.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75728,
+    "url": "https://docs.python.org/3/c-api/set.html",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75730,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_PopString",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75732,
+    "url": "https://docs.python.org/3/library/collections.html#collections.OrderedDict",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75734,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Items",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75736,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Size",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75737,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_New",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75738,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#dict.values",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75739,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODictKeys_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75740,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictItems_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75742,
+    "url": "https://docs.python.org/3/c-api/dict.html#ordered-dictionaries",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75743,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_ClearWatcher",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75744,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75745,
+    "url": "https://docs.python.org/3/c-api/dict.html#dictionary-view-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75747,
+    "url": "https://docs.python.org/3/library/types.html#types.MappingProxyType",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75748,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_MergeFromSeq2",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75749,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictProxy_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75750,
+    "url": "https://docs.python.org/3/c-api/list.html#c.PyListObject",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75751,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_SetDefaultRef",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75752,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictValues_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75753,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75754,
+    "url": "https://docs.python.org/3/builtins/threadsafety.html#threadsafety-level-compatible",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75755,
+    "url": "https://docs.python.org/3/builtins/threadsafety.html#threadsafety-level-atomic",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75758,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Values",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75761,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictItems_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75762,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#dict.items",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75763,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_SetDefault",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75764,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODictItems_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75765,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75766,
+    "url": "https://docs.python.org/3/c-api/list.html",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75767,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicode_FromString",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75768,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictKeys_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75770,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictKeys_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75771,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_WriteUnraisable",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75772,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75773,
+    "url": "https://docs.python.org/3/glossary.html#term-free-threaded-build",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75775,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_WatchEvent",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75776,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDictProxy_New",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75778,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Copy",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75780,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#c.Py_BEGIN_CRITICAL_SECTION",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75781,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_Contains",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75782,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyODict_GetItemWithError",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75784,
+    "url": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemWithError",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75785,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#dict.keys",
+    "parentUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "id": 75786,
+    "url": "https://docs.python.org/3/library/sys.html#sys.path_importer_cache",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75787,
+    "url": "https://docs.python.org/3/library/sys.html#sys.path_hooks",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75790,
+    "url": "https://docs.python.org/3/builtins/functions.html#import__",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75792,
+    "url": "https://docs.python.org/3/library/sys.html#sys.modules",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75793,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_AddModuleRef",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75794,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__file__",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75796,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_GetModule",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75798,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_Import",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75799,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportFrozenModule",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75800,
+    "url": "https://docs.python.org/3/c-api/import.html#c._inittab.initfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75803,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__spec__",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75804,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_AddModule",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75809,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_AddModuleObject",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75810,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ExecCodeModuleObject",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75813,
+    "url": "https://docs.python.org/3/c-api/import.html#importing-modules",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75814,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ExecCodeModule",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75815,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_GetImporter",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75816,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_filename",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75817,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_Inittab",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75818,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/import.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75819,
+    "url": "https://peps.python.org/pep-3147/",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75820,
+    "url": "https://docs.python.org/3/c-api/marshal.html",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75823,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ExecCodeModuleWithPathnames",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75824,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75828,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.SourceFileLoader",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75830,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_GetMagicTag",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75831,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetAttr",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75832,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_GetMagicNumber",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75833,
+    "url": "https://docs.python.org/3/builtins/functions.html#compile",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75834,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_GetModuleDict",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75835,
+    "url": "https://docs.python.org/3/c-api/sys.html",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75836,
+    "url": "https://docs.python.org/3/glossary.html#term-path-based-finder",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75837,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleLevel",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75838,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ExecCodeModuleEx",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75839,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ReloadModule",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75846,
+    "url": "https://docs.python.org/3/c-api/import.html#c._inittab",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75850,
+    "url": "https://docs.python.org/3/c-api/import.html#c._frozen",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75851,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportFrozenModuleObject",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75852,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleEx",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75855,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleLevelObject",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75857,
+    "url": "https://docs.python.org/3/c-api/import.html#c._inittab.name",
+    "parentUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "id": 75858,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_IsSubtype",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75860,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods.nb_add",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75861,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_FromMetaclass",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75863,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_init",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75866,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Unwatch",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75867,
+    "url": "https://docs.python.org/3/glossary.html#term-method-resolution-order",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75868,
+    "url": "https://docs.python.org/3/library/weakref.html#module-weakref",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75870,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_vectorcall",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75871,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HEAPTYPE",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75872,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_sq_length",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75873,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyNumberMethods",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75874,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__init_subclass__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75877,
+    "url": "https://docs.python.org/3/c-api/weakref.html#weakrefobjects",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75878,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_WatchCallback",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75879,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_dealloc",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75880,
+    "url": "https://docs.python.org/3/c-api/type.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75881,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_AddWatcher",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75883,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetModuleByDef",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75884,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.PyObject_GC_New",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75886,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods.sq_length",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75887,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#heap-types",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75888,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_weaklistoffset",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75889,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Spec.itemsize",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75890,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Slot.pfunc",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75891,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_ClearWatcher",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75892,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_FromModuleAndSpec",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75893,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#class",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75894,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetFullyQualifiedName",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75895,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PySequenceMethods",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75898,
+    "url": "https://docs.python.org/3/c-api/allocation.html#c.PyObject_InitVar",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75899,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.PyObject_GC_Del",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75900,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__new__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75901,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyObject_Free",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75902,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_alloc",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75903,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetSlot",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75904,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetModule",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75905,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_traverse",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75906,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_GetTypeData",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75907,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_nb_add",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75908,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_MANAGED_WEAKREF",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75909,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Spec",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75910,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_tp_bases",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75911,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Spec.slots",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75912,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_tp_members",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75913,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetFlags",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75914,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Watch",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75915,
+    "url": "https://docs.python.org/3/c-api/allocation.html#c.PyObject_Init",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75916,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GenericNew",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75918,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_ClearCache",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75919,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_weaklist",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75921,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_IsSubclass",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75922,
+    "url": "https://docs.python.org/3/c-api/type.html#c.Py_TP_USE_SPEC",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75923,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_vectorcall_offset",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75924,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_FromSpec",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75925,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_tp_vectorcall",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75926,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Spec.name",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75927,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__set_name__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75928,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyBufferProcs.bf_releasebuffer",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75931,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_basicsize",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75932,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_FromSpecWithBases",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75933,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__name__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75934,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.PyObject_GC_NewVar",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75936,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyBufferProcs",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75937,
+    "url": "https://docs.python.org/3/c-api/type.html#type-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75938,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_MANAGED_DICT",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75939,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_name",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75941,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Modified",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75943,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_FastSubclass",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75944,
+    "url": "https://docs.python.org/3/c-api/allocation.html#c.PyObject_NewVar",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75945,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75947,
+    "url": "https://docs.python.org/3/c-api/structures.html#pymemberdef-offsets",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75948,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_subclasses",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75949,
+    "url": "https://docs.python.org/3/c-api/stable.html#limited-c-api",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75950,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.PyCMethod",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75951,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__dict__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75953,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_DECREF",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75954,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Slot",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75955,
+    "url": "https://docs.python.org/3/c-api/type.html#creating-heap-allocated-types",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75956,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Spec.flags",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75957,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_free",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75959,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetName",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75960,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetDict",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75961,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetState",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75962,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__subclasscheck__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75963,
+    "url": "https://docs.python.org/3/builtins/functions.html#issubclass",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75964,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_dictoffset",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75965,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__init__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75966,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_LONG_SUBCLASS",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75967,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__qualname__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75968,
+    "url": "https://docs.python.org/3/c-api/allocation.html#c.PyObject_New",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75969,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_HasFeature",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75970,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyAsyncMethods",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75971,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetQualName",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75972,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_mro",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75973,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_cache",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75974,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetModuleState",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75975,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Ready",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75976,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyBufferProcs.bf_getbuffer",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75977,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GenericAlloc",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75979,
+    "url": "https://docs.python.org/3/c-api/call.html#capi-call",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75980,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_itemsize",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75982,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_TypeCheck",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75984,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75985,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__module__",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75986,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_IS_GC",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75987,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_tp_doc",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75988,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_GetModuleName",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75989,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_tp_base",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75991,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75992,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Slot.slot",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75993,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_new",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75994,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyMappingMethods",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75995,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyUnstable_Type_AssignVersionTag",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75996,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_ITEMS_AT_END",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75997,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_tp_dealloc",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75998,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 75999,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_HAVE_GC",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 76001,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_dict",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 76004,
+    "url": "https://docs.python.org/3/builtins/functions.html#type",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 76005,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_SUPPORTS_WEAKREFS",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 76006,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_flags",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 76008,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/type.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 76009,
+    "url": "https://docs.python.org/3/c-api/type.html#c.PyType_Spec.basicsize",
+    "parentUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "id": 76010,
+    "url": "https://docs.python.org/3/reference/datamodel.html#code-objects",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76012,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.argval",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76013,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_lasti",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76014,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_STRING",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76017,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.baseopname",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76018,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76019,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-RERAISE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76020,
+    "url": "https://docs.python.org/3/glossary.html#term-exhausted",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76021,
+    "url": "https://docs.python.org/3/library/dis.html#dis.code_info",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76023,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasjump",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76028,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#annotation-scopes",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76029,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Positions",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76030,
+    "url": "https://docs.python.org/3/builtins/functions.html#slice",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76031,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Positions.end_lineno",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76032,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-MATCH_KEYS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76034,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_BUILD_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76035,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-MATCH_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76036,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasconst",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76037,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-GET_AWAITABLE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76039,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_MAPPING",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76040,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-MAKE_CELL",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76041,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76045,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DELETE_NAME",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76046,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-UNPACK_EX",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76047,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-FORMAT_SIMPLE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76048,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.cache_offset",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76049,
+    "url": "https://docs.python.org/3/library/dis.html#dis.opname",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76050,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CALL",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76051,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.argrepr",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76053,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_EXCEPT",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76054,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasexc",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76055,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.is_jump_target",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76057,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-END_SEND",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76058,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#del",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76059,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CONTAINS_OP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76061,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FROM_DICT_OR_GLOBALS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76062,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DELETE_FAST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76063,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.arg",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76066,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasfree",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76067,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-UNPACK_SEQUENCE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76069,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-PUSH_EXC_INFO",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76070,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_SUPER_ATTR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76071,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Positions.col_offset",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76072,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76073,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-IMPORT_NAME",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76075,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Positions.lineno",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76076,
+    "url": "https://docs.python.org/3/library/dis.html#dis.opmap",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76077,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasname",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76078,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-GET_LEN",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76079,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-FOR_ITER",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76081,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-collections",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76082,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SET_ADD",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76083,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#async-for",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76084,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_ATTR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76085,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-IS_OP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76086,
+    "url": "https://docs.python.org/3/glossary.html#term-iterator",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76087,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SETUP_ANNOTATIONS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76088,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasarg",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76089,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-PUSH_NULL",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76090,
+    "url": "https://docs.python.org/3/glossary.html#term-variable-annotation",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76091,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-HAVE_ARGUMENT",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76092,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_NO_INTERRUPT",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76094,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BINARY_SLICE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76095,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_GLOBAL",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76096,
+    "url": "https://docs.python.org/3/library/dis.html#dis.haslocal",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76097,
+    "url": "https://docs.python.org/3/library/dis.html#dis.show_code",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76098,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LIST_APPEND",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76099,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-COMPARE_OP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76100,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-MATCH_MAPPING",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76103,
+    "url": "https://docs.python.org/3/library/dis.html#dis.cmp_op",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76104,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_firstlineno",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76105,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_CHECK",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76106,
+    "url": "https://docs.python.org/3/reference/expressions.html#generator.throw",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76108,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-YIELD_VALUE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76109,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.cache_info",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76110,
+    "url": "https://docs.python.org/3/library/dis.html#",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76111,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-RAISE_VARARGS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76112,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasjabs",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76113,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-RETURN_VALUE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76115,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/dis.py",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76116,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-END_FOR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76117,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DELETE_DEREF",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76118,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.Py_TPFLAGS_SEQUENCE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76119,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#AssertionError",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76120,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-EXTENDED_ARG",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76121,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode.dis",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76123,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__enter__",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76124,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_SET",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76125,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hasjrel",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76126,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_JUMP_IF_FALSE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76127,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DELETE_SUBSCR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76128,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_JUMP_IF_NOT_NONE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76129,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#StopAsyncIteration",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76130,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CALL_FUNCTION_EX",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76131,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#iterator.__next__",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76132,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DICT_UPDATE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76133,
+    "url": "https://docs.python.org/3/library/dis.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76134,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SETUP_WITH",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76135,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76136,
+    "url": "https://docs.python.org/3/glossary.html#term-coroutine",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76138,
+    "url": "https://docs.python.org/3/reference/expressions.html#generator.close",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76139,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SETUP_FINALLY",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76140,
+    "url": "https://docs.python.org/3/library/dis.html#dis.findlabels",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76141,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CACHE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76142,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.offset",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76143,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ExceptionGroup",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76144,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CHECK_EG_MATCH",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76145,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.oparg",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76147,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode.info",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76148,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FROM_DICT_OR_DEREF",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76149,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnboundLocalError",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76150,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#type",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76152,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_LOCALS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76154,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#StopIteration",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76155,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_FAST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76156,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_ATTR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76157,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-FORMAT_WITH_SPEC",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76158,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.opname",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76159,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76161,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_varnames",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76162,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_DEREF",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76163,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_SLICE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76164,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_JUMP_IF_TRUE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76165,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_TUPLE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76166,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_GLOBAL",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76168,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-RESUME",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76169,
+    "url": "https://docs.python.org/3/library/dis.html#dis.stack_effect",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76170,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CLEANUP_THROW",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76176,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_FAST_STORE_FAST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76177,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SET_FUNCTION_ATTRIBUTE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76178,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.start_offset",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76181,
+    "url": "https://docs.python.org/3/library/dis.html#python-bytecode-instructions",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76182,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__aenter__",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76183,
+    "url": "https://docs.python.org/3/library/dis.html#cmdoption-dis-C",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76184,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SEND",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76186,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DICT_MERGE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76187,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_JUMP_IF_NONE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76188,
+    "url": "https://docs.python.org/3/library/dis.html#dis.get_instructions",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76189,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.starts_line",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76190,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-MATCH_SEQUENCE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76191,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CALL_INTRINSIC_1",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76192,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CALL_INTRINSIC_2",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76193,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-COPY",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76194,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode.first_line",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76195,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-GET_ITER",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76196,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-UNARY_NOT",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76197,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_ITERABLE_COROUTINE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76198,
+    "url": "https://docs.python.org/3/glossary.html#term-closure-variable",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76200,
+    "url": "https://docs.python.org/3/library/dis.html#cmdoption-dis-h",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76201,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-TO_BOOL",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76202,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_BACKWARD_NO_INTERRUPT",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76203,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-IMPORT_FROM",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76205,
+    "url": "https://docs.python.org/3/glossary.html#term-generator",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76206,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.baseopcode",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76207,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-MAP_ADD",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76211,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CHECK_EXC_MATCH",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76212,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_FORWARD",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76213,
+    "url": "https://docs.python.org/3/library/dis.html#cmdoption-dis-O",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76214,
+    "url": "https://docs.python.org/3/library/dis.html#dis.disco",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76215,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SWAP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76216,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-MAKE_FUNCTION",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76220,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_TOP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76222,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76223,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-COPY_FREE_VARS",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76224,
+    "url": "https://docs.python.org/3/library/dis.html#module-dis",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76225,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-WITH_EXCEPT_START",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76227,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.positions",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76228,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-UNARY_INVERT",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76229,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-END_ASYNC_FOR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76230,
+    "url": "https://docs.python.org/3/library/dis.html#dis.findlinestarts",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76231,
+    "url": "https://docs.python.org/3/library/dis.html#dis.hascompare",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76233,
+    "url": "https://docs.python.org/3/glossary.html#term-generator-iterator",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76234,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-GET_ANEXT",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76235,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#match",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76236,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.end_offset",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76237,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_BACKWARD",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76238,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVarTuple",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76239,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-RETURN_GENERATOR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76241,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_SLICE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76242,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Positions.end_col_offset",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76243,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_NAME",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76244,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/dis.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76245,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.opcode",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76246,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SET_UPDATE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76247,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BUILD_LIST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76249,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_DEREF",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76250,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DELETE_ATTR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76251,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_LOAD_FAST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76252,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.jump_target",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76253,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_names",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76254,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-GET_YIELD_FROM_ITER",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76257,
+    "url": "https://docs.python.org/3/library/typing.html#typing.Generic",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76258,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-POP_BLOCK",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76259,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LIST_EXTEND",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76261,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Instruction.line_number",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76262,
+    "url": "https://docs.python.org/3/builtins/functions.html#ascii",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76264,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-SETUP_CLEANUP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76265,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_AND_CLEAR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76266,
+    "url": "https://docs.python.org/3/library/dis.html#analysis-functions",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76267,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CLOSURE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76269,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_NAME",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76271,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_SUBSCR",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76272,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76273,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#assert",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76274,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-NOP",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76275,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-GET_AITER",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76276,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-DELETE_GLOBAL",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76277,
+    "url": "https://docs.python.org/3/library/dis.html#bytecode-analysis",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76279,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-CONVERT_VALUE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76280,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode.codeobj",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76281,
+    "url": "https://docs.python.org/3/library/dis.html#dis.Bytecode.from_traceback",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76282,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-STORE_FAST_LOAD_FAST",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "id": 76283,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-UNARY_NEGATIVE",
+    "parentUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-CALL_KW"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Type Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/type.html#c.PyType_GetBaseByToken"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleAttrString"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dictionary Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Dictionary Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/dict.html#c.PyDict_GetItemStringRef"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyInitConfig_SetStr"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d64\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
     "alt": "erlend-aasland",
