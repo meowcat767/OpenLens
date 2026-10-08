@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1127,
+    "url": "https://github.com/python/cpython/issues/121141",
+    "title": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Support copy.replace() on AST nodes #121141 New issue Copy link New issue Copy link Closed Closed Support copy.replace() on AST nodes#121141 Copy link Assignees Labels type-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on Jun 28, 2024 Issue body actions Feature or enhancement Proposal: I want this to work: \u003e\u003e\u003e n\u003dast.Name(id\u003d\"x\")\n\u003e\u003e\u003e copy.replace(n, id\u003d\"y\")\nTraceback (most recent call last):\n  File \"\u003cpython-input-4\u003e\", line 1, in \u003cmodule\u003e\n    copy.replace(n, id\u003d\"y\")\n    ~~~~~~~~~~~~^^^^^^^^^^^\n  File \"/Users/jelle/py/cpython/Lib/copy.py\", line 293, in replace\n    raise TypeError(f\"replace() does not support {cls.__name__} objects\")\nTypeError: replace() does not support Name objects\n Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-121141: add support for copy.replace to AST nodes #121162 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees JelleZijlstra picnixz Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:28:22.127793"
+  },
+  {
+    "id": 1126,
+    "url": "https://github.com/python/cpython/issues/123562",
+    "title": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Improve SyntaxError message for case ... as a.b #123562 New issue Copy link New issue Copy link Closed Closed Improve SyntaxError message for case ... as a.b#123562 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Description sobolevn opened on Sep 1, 2024 Issue body actions Feature or enhancement There\u0027s already a similar rule: cpython/Grammar/python.gram Line 1378 in 084e0f3 | or_pattern \u0027as\u0027 !NAME a\u003dexpression { RAISE_SYNTAX_ERROR_KNOWN_LOCATION(a, \"invalid pattern target\") } But, it has two problems: It does not work for cases like as a.b, because a matches NAME It does not show rich error message, only a static one: invalid pattern target My proposed change:     | or_pattern \u0027as\u0027 a\u003dexpression {\n        RAISE_SYNTAX_ERROR_KNOWN_LOCATION(\n            a, \"cannot use pattern target as %s\", _PyPegen_get_expr_name(a)) }\n Why is it safe? Here\u0027s how the parent rule is defined: as_pattern[pattern_ty]:\n    | pattern\u003dor_pattern \u0027as\u0027 target\u003dpattern_capture_target {\n        _PyAST_MatchAs(pattern, target-\u003ev.Name.id, EXTRA) }\n    | invalid_as_pattern\n So, if pattern\u003dor_pattern \u0027as\u0027 target\u003dpattern_capture_target with a valid \u0027as\u0027 NAME is matched, we won\u0027t fall to the next invalid_ rule. Proposed result: \u003e\u003e\u003e match 1:\n...     case x as a.b: ...\n...     \n  File \"\u003cpython-input-0\u003e\", line 2\n    case x as a.b: ...\n              ^^^\nSyntaxError: cannot use pattern target as attribute Refs #123440 Linked PRs gh-123562: Improve SyntaxError message for case ... as a.b #123563 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees sobolevn Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-parsertype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:28:20.027412"
+  },
+  {
+    "id": 1125,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:28:18.042284"
+  },
+  {
+    "id": 1124,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait_on",
+    "scrapedAt": "2026-10-08 19:28:16.721376"
+  },
+  {
+    "id": 1123,
+    "url": "https://docs.python.org/3/library/exceptions.html#ValueError",
+    "title": "Built-in Exceptions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current fram",
+    "scrapedAt": "2026-10-08 19:28:15.479032"
+  },
+  {
     "id": 1122,
     "url": "https://www.jython.org/",
     "title": "Home | Jython",
@@ -7490,26 +7525,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1123,
-    "url": "https://docs.python.org/3/library/exceptions.html#ValueError"
-  },
-  {
-    "id": 1124,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers"
-  },
-  {
-    "id": 1125,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes"
-  },
-  {
-    "id": 1126,
-    "url": "https://github.com/python/cpython/issues/123562"
-  },
-  {
-    "id": 1127,
-    "url": "https://github.com/python/cpython/issues/121141"
   },
   {
     "id": 1128,
@@ -199831,10 +199846,176 @@ window.searchData = [
     "id": 197906,
     "url": "https://go.java/index.html",
     "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 199468,
+    "url": "https://github.com/python/cpython/issues/123562#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199469,
+    "url": "https://github.com/python/cpython/issues/123562#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199471,
+    "url": "https://github.com/python/cpython/commit/084e0f35d1492495b01e7cf24c3106849e854188",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199472,
+    "url": "https://github.com/python/cpython/issues/123562#issue-2499326398",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199473,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/123562",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199476,
+    "url": "https://github.com/python/cpython/blob/084e0f35d1492495b01e7cf24c3106849e854188/Grammar/python.gram#L1378",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199479,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/123562",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199481,
+    "url": "https://github.com/python/cpython/pull/123563",
+    "parentUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "id": 199482,
+    "url": "https://github.com/python/cpython/issues/121141#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 199484,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/121141",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 199486,
+    "url": "https://github.com/python/cpython/pull/121162",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 199488,
+    "url": "https://github.com/python/cpython/issues/121141#top",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 199489,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/121141",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "id": 199491,
+    "url": "https://github.com/python/cpython/issues/121141#issue-2381257086",
+    "parentUrl": "https://github.com/python/cpython/issues/121141"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Support copy.replace() on AST nodes · Issue #121141 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/121141"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d64\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Improve `SyntaxError` message for `case ... as a.b` · Issue #123562 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123562"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#limited-c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor.terminate_workers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#ValueError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#ValueError"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
