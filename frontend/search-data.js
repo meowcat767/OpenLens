@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 305,
+    "url": "https://www.autoscout24.nl/lst",
+    "title": "Koop occasions op AutoScout24",
+    "content": "Ga naar hoofdinhoud Filteren Alles reset Merk en model Uitvoering Carrosserievorm Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Filteren1 Nederland Zoekopdracht opslaan Peugeot 208 1.2 PureTech Blue Lion Bewaar 30 € 3.949 Nieuw 10/2016 173.806 km Benzine 60 kW (82 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD Peugeot 206 + 1.1 XR | Distributieriem vervangen | Airco | Ele Bewaar 17 € 3.500 12/2009 68.967 km Benzine 44 kW (60 PK) Inruilindicatie? Stuur foto\u0027s via Whatsapp Selles Auto\u0027s Kamperzeedijk B.V.NL-8281 PC GENEMUIDEN + Meer voertuigen Volkswagen Polo 1.2 TSI Comfortline. Carplay! Bewaar 28 € 3.449 05/2012 239.048 km Benzine 66 kW (90 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD + Meer voertuigen Mercedes-Benz C 200 K. Classic \u0027Automaat\u0027 Cruise! Bewaar 29 € 3.750 Nieuw 06/2004 219.966 km Benzine 120 kW (163 PK) Met onderhoudshistorie, Trekhaak, Isofix, Airconditioning, Centrale vergrendeling, Boordcomputer, Automatische klimaatregeling, Elektrisch verstelbare buitenspiegels Autobedrijf Van der ZwanNL-7772 TT HARDENBERG + Meer voertuigen Renault Captur 0.9 TCe Edition One/ LED Koplampen/ Camera/ Stoelv Bewaar 40 € 7.995 04/2018 154.037 km Benzine 66 kW (90 PK) Parkeerhulp met camera, Elektrisch verstelbare buitenspiegels, Stoelverwarming, Met onderhoudshistorie, Lichtmetalen velgen, Alarm, Parkeerhulp voor, Parkeerhulp achter Vakgarage TerpstraNL-9206 AG DRACHTEN + Meer voertuigen Volkswagen Polo 1.4-16V Comfortline | 1E EIGENAAR | SLECHTS 48.852 Bewaar 42 € 8.750 07/2010 48.852 km Benzine 63 kW (86 PK) Cruisecontrol, Airconditioning, Elektrisch verstelbare buitenspiegels, Met onderhoudshistorie, Lederen stuurwiel, Stuurbekrachtiging, Keyless Entry, Centrale deurvergrendeling met afstandsbediening De Automakelaar Compact Cars B.V.NL-3846 BW Harderwijk + Meer voertuigen Ferrari SF90 Stradale 4.0 V8 | Atelier - Verde Zeltweg - Extended Fioran Bewaar 50 € 374.9501 01/2021 3.338 km Elektro/Benzine 736 kW (1.001 PK) Koster \u0026 Hogeslag AutomotiveNL-8281 JK GENEMUIDEN + Meer voertuigen Citroen C3 1.0 Sport (AIRCO,SPORTSTOELEN,NIEUWE APK,ELECTRISC Bewaar 22 € 3.945 Nieuw 03/2015 111.852 km Benzine 50 kW (68 PK) Airconditioning, Nieuwe APK, Elektrische ramen, Zij-airbags, Centrale vergrendeling, Bandenspanningscontrole, Radio, Boordcomputer AUTOHUIS HEIJKOOPNL-2931 SJ KRIMPEN AAN DE LEK + Meer voertuigen Peugeot 208 1.2 PureTech Blue Lease Allure Compacte stadsauto Bewaar 27 € 9.000 07/2020 126.198 km Benzine 74 kW (101 PK) Ayvens occasions Veghel Ayvens OccasionsNL-5466 AX VEGHEL + Meer voertuigen Volvo V40 2.0 D3 Business Sport R-Design Led/Stoelverw./Navi Bewaar 34 € 7.250 € 7.950,- Prijsdaling 03/2018 262.583 km Diesel 110 kW (150 PK) Met onderhoudshistorie, Trekhaak, Stoelverwarming, Sportstoelen, Airbag bestuurder, Lichtmetalen velgen, LED verlichting, Navigatiesysteem Autobedrijf Van der ZwanNL-7772 TT HARDENBERG + Meer voertuigen MINI Cooper S Mini 2.0 Chili Serious Business 5drs|PANO Bewaar 21 € 9.950 11/2014 168.578 km Benzine 141 kW (192 PK) Garantie, Panorama dak, Elektrische ramen, Sportstoelen, Alarm, LED verlichting, Sportonderstel, Navigatiesysteem Cornet\u0026VanBuuren B.V.NL-3897 AA ZEEWOLDE + Meer voertuigen Audi RS6 Avant Mansory | 860PK | Pano | HUD | B\u0026O | 360° | Bewaar 36 € 189.950 09/2023 24.948 km Elektro/Benzine 633 kW (861 PK) Panorama dak, Luchtvering, Automatische klimaatregeling, 4 zones, Sportstoelen, Elektrische stoelverstelling, Alarm, Head-up display, Getinte ramen Elegance Car SelectionNL-1689 AR ZWAAG + Meer voertuigen Mercedes-Benz C 180 Coupe K. Elegance Bewaar 26 € 2.949 € 3.449,- Prijsdaling 03/2004 169.966 km Benzine 105 kW (143 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD + Meer voertuigen Volkswagen Golf 1.6 FSI Trendline Business Bewaar 22 € 3.949 05/2006 186.138 km Benzine 85 kW (116 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD Volkswagen up! 1.0 high up! BlueMotion | PANORAMA DAK | 16\u0027\u0027 LMV Bewaar 44 € 7.750 06/2014 108.723 km Benzine 44 kW (60 PK) Panorama dak, Cruisecontrol, Airconditioning, Elektrische ramen, Met onderhoudshistorie, Parkeerhulp achter, Lichtmetalen velgen, Automatische klimaatregeling De Automakelaar Compact Cars B.V.NL-3846 BW Harderwijk + Meer voertuigen Volvo XC40 1.5 T2 Momentum Core|TREKHAAK|BLIS| Bewaar 26 € 19.950 Zeer populair 04/2021 132.649 km Benzine 95 kW (129 PK) Alarm, Airbag bestuurder, Parkeerhulp met camera, Trekhaak, Elektrische ramen, Dodehoekdetectie, Keyless Entry, Automatische klimaatregeling Cornet\u0026VanBuuren B.V.NL-3897 AA ZEEWOLDE + Meer voertuigen Audi A6 Avant 2.8 FSI S edition Bewaar 17 € 2.950 Nieuw 05/2010 379.244 km Benzine 140 kW (190 PK) Nieuwe APK, Sportonderstel, Sportstoelen, Xenon verlichting, Lederen stuurwiel, Navigatiesysteem, Cruisecontrol, Bi-Xenon kop",
+    "scrapedAt": "2026-10-08 18:57:22.576901"
+  },
+  {
+    "id": 304,
+    "url": "https://www.autoscout24.nl/lst/c/stationwagen",
+    "title": "Stationwagen occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Stationwagen occasion kopen Filteren Alles reset Merk en model Uitvoering Carrosserievorm Stationwagen Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Filteren2 Nederland Stationwagen Zoekopdracht opslaan Renault Megane Megane 1.4 TCe Dynamique Bewaar 4 € 500 Nieuw 06/2011 350.000 km LPG 96 kW (131 PK) ParticulierNL-9501GH Stadskanaal Ford Focus Wagon 1.6-16V Collection Bewaar 21 € 590 Nieuw 06/2003 144.470 km Benzine 74 kW (101 PK) Alarm, Automatische klimaatregeling, Airconditioning, Lichtmetalen velgen, Navigatiesysteem, Dakrails, Radio, Getinte ramen Autodeals EmmenNL-7891 GM KLAZIENAVEEN Volkswagen Golf Variant 1.6-16V * HANDELS PRIJS !! Bewaar 22 € 500 Nieuw 07/2004 276.317 km Benzine 77 kW (105 PK) GEWELDIG U HEEFT MIJ GEVONDEN!! KOM MIJ TESTEN EN KOPEN Autobedrijf Jos PriemNL-3645 TA VINKEVEEN + Meer voertuigen Peugeot 308 SW 1.2 PureTech Style Bovag Garantie Airco Bewaar 36 € 4.950 Nieuw 09/2015 150.346 km Benzine 81 kW (110 PK) Alarm, Met onderhoudshistorie, Getinte ramen, Lichtmetalen velgen, Automatische klimaatregeling, Hill-Hold Control, Dakrails, Navigatiesysteem Autobedrijf KelvinringNL-2952 BG ALBLASSERDAM Land Rover Range Rover Evoque Range Rover Evoque 2.2 eD4 2WD Prest BE Bewaar 20 € 9.500 Nieuw 04/2015 174.000 km Diesel 110 kW (150 PK) Reservewiel, Stoelverwarming, Sfeerverlichting, Stuurwielverwarming, Panorama dak, Navigatiesysteem, Spraakbediening, Elektrische achterklep ParticulierNL-3235 Voorne aan Zee Audi RS6 Avant 4.0 TFSI quattro MTM 1001pk Stage 4 Carbon V Bewaar 50 € 149.9951 04/2021 46.467 km Benzine 736 kW (1.001 PK) Stoelventilatie, Luchtvering, Panorama dak, Open dak, Getinte ramen, Elektrische stoelverstelling, Sportstoelen, Stoelverwarming Individual Cars B.V.NL-6003 DH WEERT + Meer voertuigen Ford Focus Wagon 1.0 Titanium navigatie airco/ecc keurige aut Bewaar 36 € 6.450 05/2017 150.728 km Benzine 93 kW (126 PK) Stoelverwarming, Getinte ramen, Apple CarPlay, Parkeerhulp voor, Navigatiesysteem, Met onderhoudshistorie, Voorruitverwarming, Alarm van Wallinga AutomobielenNL-2022 EA HAARLEM + Meer voertuigen Ford Focus Wagon 1.6 Comfort Bewaar 35 € 995 Nieuw 10/2010 308.177 km Benzine 74 kW (101 PK) Alarm, Airconditioning, Radio, Elektrisch verstelbare buitenspiegels, Antiblokkeersysteem, Centrale vergrendeling, Startonderbreker, Electronic Stability Program Automobielbedrijf VeldNL-8345 HJ KALLENKOTE + Meer voertuigen Audi RS6 Avant Mansory | 860PK | Pano | HUD | B\u0026O | 360° | Bewaar 36 € 189.950 09/2023 24.948 km Elektro/Benzine 633 kW (861 PK) Panorama dak, Luchtvering, Automatische klimaatregeling, 4 zones, Sportstoelen, Elektrische stoelverstelling, Alarm, Head-up display, Getinte ramen Elegance Car SelectionNL-1689 AR ZWAAG + Meer voertuigen Renault Clio Estate 0.9 TCe Expression Bewaar 33 € 1.745 Zeer populair 10/2013 284.273 km Benzine 66 kW (90 PK) Alarm, Navigatiesysteem, Bluetooth, Airconditioning, Cruisecontrol, Startonderbreker, Dagrijverlichting, Hill-Hold Control Automobielbedrijf VeldNL-8345 HJ KALLENKOTE Mercedes-Benz C 180 Coupe K. Elegance Bewaar 26 € 2.949 € 3.449,- Prijsdaling 03/2004 169.966 km Benzine 105 kW (143 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD + Meer voertuigen Volkswagen Golf 1.4 TSI Trendline Bewaar 12 € 2.500 Nieuw 11/2009 29.300 km Benzine 90 kW (122 PK) Panorama dak, Navigatiesysteem, Stoelverwarming, LED dagrijverlichting, LED verlichting, Parkeerhulp voor, Elektrische stoelverstelling, Koplamp volledig LED ParticulierNL-1073xl AMSTERDAM Audi A6 Avant 2.8 FSI S edition Bewaar 17 € 2.950 Nieuw 05/2010 379.244 km Benzine 140 kW (190 PK) Nieuwe APK, Sportonderstel, Sportstoelen, Xenon verlichting, Lederen stuurwiel, Navigatiesysteem, Cruisecontrol, Bi-Xenon koplampen Autobedrijf van der WeideNL-7841 EP SLEEN + Meer voertuigen Peugeot 308 SW 1.2 PureTech | Executive | Pano | Navi | Camera Bewaar 26 € 3.950 Nieuw 05/2017 175.058 km Benzine 81 kW (110 PK) Alarm, Panorama dak, Parkeerhulp met camera, Lichtmetalen velgen, Regensensor, Getinte ramen, Parkeerhulp achter, Parkeerhulp voor Auto Wientjes B.V.NL-7325 AM APELDOORN BMW 318 3-serie Touring 318i Automaat Sport Panoramadak St Bewaar 25 € 9.900 Zeer populair 03/2018 150.524 km Benzine 100 kW (136 PK) Sportonderstel, Stoelverwarming, Navigatiesysteem, Elektrische achterklep, Lichtmetalen velgen, Airbag passagier, LED verlichting, Alarm Auto Corsten B.V.NL-5738 AK MARIAHOUT + Meer voertuigen Renault Clio Estate 1.2-16V Authentique Sport (NAVI,LED,CRUISE, Bewaar 26 € 3.945 01/2014 170.956 km Benzine 54 kW (73 PK) Nieuwe APK, Lichtmetalen velgen, Airconditioning, Met onderhoudshistorie, Parkeerhulp achter, Mistlampen, Radio, Boordcomputer AUTOHUIS HEIJKOOPNL-2931 SJ KRIMPEN AAN DE LEK + Meer voertuigen Land Rover Freelander Freelander 1.8 SE Bewaar 5 € 3.500 Nieuw 02/2004 280.0",
+    "scrapedAt": "2026-10-08 18:57:21.14452"
+  },
+  {
+    "id": 303,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/",
+    "title": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Mercedes-Benz Mercedes-Benz C-Klasse Mercedes-Benz C-Klasse 1 / 4 btnLabelPrevbtnLabelNext Sterke punten Connectiviteit en smartphone-integratie (MBUX) Milde hybride ondersteuning op alle motoren Ruim elektrisch rijbereik (C 300 e) Zwakke punten Sommige materiaalkeuzes in het interieur Hoge basisprijs en ellenlange optielijst Rijcomfort (AMG Line) Toon aanbod Toon aanbod Mercedes-Benz C-Klasse: de vaste waarde wordt alsmaar meer digitaal en hybride De vijfde generatie van de Mercedes-Benz C-Klasse (W206) wordt steeds meer een kleine S-Klasse. Voortaan rijdt hij als milde hybride of plug-inhybride de showroom uit, inclusief AMG-modellen. De stationwagenversie is er voor het eerst in een All-Terrain-crossovervariant (X206). Lees meer Mercedes-Benz C-Klasse : een overzicht Bekijk hier de actuele prijzen voor de Mercedes-Benz C-Klasse : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 53.532,-* Occasions vanaf:€ 897,-* *Laagste prijs op AutoScout24 in de afgelopen maand Mercedes-Benz C-Klasse aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Mercedes-Benz C 180Estate CGI BlueEFFICIENCY Business Class Avantgard € 4.995 01/2011 213.925 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Mercedes-Benz C 220CDI AMG|C63 Pakket|Pano € 15.500 05/2016 268.002 km Diesel - (l/100 km) 2,8 Nieuw Autobedrijf NL 3439 JENieuwegein Mercedes-Benz C 200K. Classic \u0027Automaat\u0027 Cruise! € 3.750 06/2004 219.966 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7772 TTHardenberg Mercedes-Benz C 180CGI Nieuwe Ketting Business Edition Avantgarde Moo € 7.394 03/2011 208.082 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 2803 PAGouda Mercedes-Benz C 180Estate AMG-Pakket LEES TEKST € 12.999 01/2015 101.315 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7602 PWAlmelo Mercedes-Benz C 250Premium+ AMG Keyless|Sfeer|360Cam € 22.249 07/2017 135.385 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5628 CHEindhoven Mercedes-Benz C 180CGI BlueEFFICIENCY Business Class € 4.795 10/2010 323.722 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4817 BLBreda Mercedes-Benz C 200CGI Business Class Elegance Automaat Clima € 9.950 01/2011 126.668 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2521 RLDen Haag Mercedes-Benz C 230Avantgarde € 5.745 06/2009 240.001 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8345 HJKallenkote Mercedes-Benz C 180Estate AMG Sport Edition Premium Plus € 13.950 01/2018 190.171 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5466 ABVeghel Mercedes-Benz C 180Business Class Avantgarde|PDC|AIRCO|NETTE AUTO| € 6.950 € 7.450,- 08/2012 223.026 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 1507 CGZaandam Mercedes-Benz C 180AMG Sport Edition LED / NAP / LEDER / STOELVERW. / € 22.949 02/2017 97.736 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9403 VEAssen Mercedes-Benz C 350Estate e Lease Edition l Burmester l ILS l Vollede € 12.949 10/2015 172.521 km Elektro/Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 5015 BATilburg Mercedes-Benz C 180Estate K BlueEFFICIENCY AUTOMAAT € 4.999 05/2009 199.572 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7602 PWAlmelo Mercedes-Benz C 180Coupé Premium Plus AUTOMAAT € 19.999 05/2017 133.944 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5015 ASTilburg Mercedes-Benz C 180Coupé AMG Line Premium € 22.440 03/2018 121.415 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1424 NWDe Kwakel Mercedes-Benz C 350Avantgarde AMG Pano Origineel NL € 15.940 05/2008 81.475 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1688 JHNibbixwoud Mercedes-Benz C 300AMG Pano|Memory|Burmester|HuD|Cam € 30.890 07/2019 85.983 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5628 CHEindhoven Mercedes-Benz C 160Trekhaak/LED/PDC/Sportstoelen € 14.450 06/2016 91.567 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4033 BVLienden Mercedes-Benz C 180Amg Automaat Clima Navi Leer € 13.950 06/2013 101.098 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2521 RLDen Haag Mercedes-Benz C-Klasse occasions bekijkenMercedes-Benz C-Klasse nieuwe auto\u0027s bekijken Mercedes-Benz C-Klasse in Amsterdam bekijkenMercedes-Benz C-Klasse in Rotterdam bekijkenMercedes-Benz C-Klasse in Den Haag bekijkenMercedes-Benz C-Klasse in Utrecht bekijkenMercedes-Benz C-Klasse in Eindhoven bekijkenMercedes-Benz C-Klasse in Groningen bekijken Bouwjaar2026 - 1993 Actuele advertenties2.958 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2015 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 15.650 en er zijn 269 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2022. Er staan 269 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2026 € 59.895 174 advertenties 2025 € 48.946 119 advertenties 2024 € 44.500 63 advertenties 2023 € 38.133 191 advertenties 2022 € 35.121 269 advertenties 2021 € 29.711 137 advertenties 2020 € 25.978 123 advertenties ",
+    "scrapedAt": "2026-10-08 18:57:19.798041"
+  },
+  {
+    "id": 302,
+    "url": "https://www.autoscout24.nl/lst/c/bedrijfswagen",
+    "title": "Bestelwagen occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud Bestelwagen occasion kopen Filteren Alles reset Merk en model Uitvoering Carrosserievorm Bedrijfswagen Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Filteren2 Nederland Bedrijfswagen Zoekopdracht opslaan Mercedes-Benz Vito 114CDI 136PK 7G-Tronic Lang / 2.500KG Trekhaak / E Bewaar 34 € 14.950Excl. BTW Nieuw 10/2019 125.635 km Diesel 100 kW (136 PK) LED verlichting, Start/Stop-systeem, Garantie, Alarm, Schuifdeur rechts, Airconditioning, Multifunctioneel stuurwiel, Trekhaak Dethi VansNL-8171 MD VAASSEN Peugeot Partner 120 1.6 BlueHDi 75 L1 Pro Motor start niet! Bewaar 13 € 1.850Excl. BTW Nieuw 09/2017 184.987 km Diesel 55 kW (75 PK) Met onderhoudshistorie, Elektrisch verstelbare buitenspiegels, Airconditioning, Centrale vergrendeling, Centrale deurvergrendeling met afstandsbediening, Elektrische ramen Luca Cars B.V.NL-3751 BG BUNSCHOTEN-SPAKENBURG Volkswagen Transporter 1.9 TDI 300 Budgetline DC - EXPORT! - NAP - Airco Bewaar 18 € 2.900 09/2008 263.284 km Diesel 75 kW (102 PK) Euromax Auto\u0027sNL-5038 GP TILBURG + Meer voertuigen Ford Transit 290 2.2 TDCI L2H3 Trend 1E EIGENAAR LAGE KM AC Bewaar 17 € 7.299 Nieuw 05/2014 161.669 km Diesel 92 kW (125 PK) Met onderhoudshistorie, Alarm, Airconditioning, Bluetooth, Cruisecontrol, Start/Stop-systeem, Schuifdeur rechts, Trekhaak RB Automotive LierenNL-7364 BL LIEREN Volkswagen Transporter 2.5 TDI 340 Navi Cruise Trekhaak Bewaar 15 € 2.699 03/2005 285.149 km Diesel 96 kW (131 PK) Navigatiesysteem, Cruisecontrol, Antislipregeling Mark Coolen in- en verkoop auto\u0027sNL-5733 AA DEURNE Ford Transit 260S 2.2 TDCI SHD DC Bewaar 35 € 3.745Excl. BTW Nieuw 10/2011 218.967 km Diesel 85 kW (116 PK) Alarm, Schuifdeur rechts, Centrale vergrendeling, Startonderbreker, Antiblokkeersysteem, Antislipregeling Automobielbedrijf VeldNL-8345 HJ KALLENKOTE + Meer voertuigen Ford Transit Custom 340 2.0 TDCI L2H1 DC | Tik in motor Bewaar 17 € 8.450Excl. BTW 04/2019 186.423 km Diesel 125 kW (170 PK) Getinte ramen, Lichtmetalen velgen, Navigatiesysteem, Parkeerhulp met camera, Stoelverwarming, Schuifdeur links, Vermoeidheidsdetectie, Parkeerhulp voor YH CarsNL-3641 SB MIJDRECHT + Meer voertuigen Peugeot Partner 120 1.6 BlueHDi 75 L1 Première Bewaar 25 € 5.949Excl. BTW 09/2017 122.217 km Diesel 55 kW (75 PK) Onbetwist de occasion specialist! Auto ValkNL-3771 AG BARNEVELD + Meer voertuigen Ford Transit Custom 270 2.0 TDCI L1H1 Trend | NAP | Cruise | Navi | Ai Bewaar 37 € 8.495Excl. BTW 04/2018 169.060 km Diesel 77 kW (105 PK) Met onderhoudshistorie, Schuifdeur rechts, Airconditioning, Parkeerhulp achter, Trekhaak, Airbag passagier, Mistlampen, Bluetooth Berg AutomotiveNL-6671 MG ZETTEN + Meer voertuigen Ford Ranger 2.2 TDCi XLT Super Cab NAP, Airco, 1ste eigenaar, Bewaar 13 € 5.950Excl. BTW Nieuw 12/2014 132.068 km Diesel 110 kW (150 PK) Met onderhoudshistorie, 4x4, Trekhaak, Lichtmetalen velgen, Centrale deurvergrendeling met afstandsbediening, Radio, Bluetooth, Lederen stuurwiel Eskes Auto\u0027sNL-6831 AH ARNHEM Opel Vivaro 1.6 CDTI L1H1 GRIJS AIRCO NAVI MARGE EUR 6 Bewaar 18 € 6.750 Nieuw 01/2018 194.675 km Diesel 92 kW (125 PK) Met onderhoudshistorie, Schuifdeur rechts, Trekhaak, Alarm, Parkeerhulp met camera, LED verlichting, Navigatiesysteem, Lendensteun Auto ElsenaarNL-3925 LW SCHERPENZEEL Renault Trafic 1.6 dCiT29L2H1DCTuEn Bewaar 2 € 3.305 Nieuw 05/2016 260.656 km Diesel 88 kW (120 PK) ParticulierNL-8303 Noordoostpolder Mercedes-Benz Vito 113 CDI 343 DC Comfort Camera|PDC|Carplay Bewaar 24 € 12.750 06/2011 184.374 km Diesel 100 kW (136 PK) Schuifdeur rechts, Airconditioning, Met onderhoudshistorie, Parkeerhulp achter, Lichtmetalen velgen, Parkeerhulp met camera, Cruisecontrol, Dakrails Autobedrijf Van der ZwanNL-7772 TT HARDENBERG + Meer voertuigen Ford Transit Custom 2.2 TDCI L2H1 | Airco | Cruise | Camera | Navi | 3 Bewaar 27 € 6.800Excl. BTW 01/2013 125.588 km Diesel 93 kW (126 PK) Schuifdeur rechts, Getinte ramen, Airconditioning, Met onderhoudshistorie, Parkeerhulp met camera, Trekhaak, Parkeerhulp achter, Navigatiesysteem Greven Automotive B.V.NL-9502 EC STADSKANAAL + Meer voertuigen Opel Combo 1.5D L1H1 Edition | Navigatie | Achteruitrijcamera Bewaar 23 € 9.745Excl. BTW 06/2019 82.877 km Diesel 56 kW (76 PK) Schuifdeur rechts, Schuifdeur links, Navigatiesysteem, Parkeerhulp met camera, Parkeerhulp achter, Apple CarPlay, Cruisecontrol, Airbag passagier Autobedrijf van Herick B.V.NL-3771 MT BARNEVELD Peugeot Expert 231S 2.0 BlueHDI 120 Pro 2026 | Trekhaak | Airco | Bewaar 23 € 7.499Excl. BTW 11/2016 136.896 km Diesel 90 kW (122 PK) Alarm, Schuifdeur rechts, Airconditioning, Parkeerhulp achter, Startonderbreker, Airbag passagier, Elektrisch verstelbare buitenspiegels, Cruisecontrol Handelsonderneming Thomas Rutten B.V.NL-6021 PT BUDEL + Meer voertuigen Volkswagen Caddy 2.0 TDI L2H1 BMT MAXI AUT MARGE",
+    "scrapedAt": "2026-10-08 18:57:18.607335"
+  },
+  {
+    "id": 301,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/",
+    "title": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "content": "Ga naar hoofdinhoud De beste auto\u0027s De beste auto\u0027s: Alle artikelen Beste elektrische middenklassers 2026 AutoScout24 · 11-03-2026 · 6 min. Leestijd Lees meer Beste elektrische middenklassers 2026 Zuinigste auto in 2026 AutoScout24 · 11-03-2026 · 7 min. Leestijd Lees meer Zuinigste auto in 2026 Beste lease-auto 2026 AutoScout24 · 11-03-2026 · 7 min. Leestijd Lees meer Beste lease-auto 2026 De mooiste elektrische auto\u0027s 2026 Smaken verschillen, vooral als het gaat om auto\u0027s. Wat voor de ene persoon een droomauto is, kan voor een ander juist oninteressant zijn. Persoonlijke voorkeuren worden beïnvloed door factoren zoals design, prestaties, comfort en prijs. AutoScout24 · 11-03-2026 · 10 min. Leestijd Lees meer De mooiste elektrische auto\u0027s 2026 Beste zakelijke leaseauto 2026 Wat zijn de beste zakelijke leaseauto’s in 2026? We zetten de modellen op een rij die uitblinken in comfort, zuinigheid en technologie. AutoScout24 · 10-03-2026 · 7 min. Leestijd Lees meer Beste zakelijke leaseauto 2026 Beste nieuwe elektrische auto 2025 De wereld van elektrische auto\u0027s blijft zich in een razendsnel tempo ontwikkelen. In dit artikel zetten we de beste nieuwe elektrische auto’s van 2025 op een rij. We bespreken meerdere modellen die opvallen door hun prestaties, technologie en milieuvriendelijkheid. AutoScout24 · 04-08-2025 · 6 min. Leestijd Lees meer Beste nieuwe elektrische auto 2025 Beste routeplanner voor elektrische auto: slimste keus voor EV-rijders Een elektrische auto vraagt om een slimme routeplanner, die rekening houdt met de laadstatus en actieradius van je EV en benodigde laadstops. Een goede routeplanner voor elektrische auto\u0027s voorkomt laadstress en leidt je soepel van A naar B via beschikbare openbare oplaadstations. Wat is de beste? AutoScout24 · 04-08-2025 · 7 min. Leestijd Lees meer Beste routeplanner voor elektrische auto: slimste keus voor EV-rijders Auto met schuifdeuren: welke past bij jou? Een auto met schuifdeuren is ideaal als je vaak kinderen, ouderen of grote spullen vervoert. Maar welke modellen zijn er in Nederland, wat zijn de voordelen, welke types schuifdeuren bestaan er en hoe werken elektrische schuifdeuren? Lees hier alles wat je moet weten. AutoScout24 · 07-07-2025 · 6 min. Leestijd Lees meer Auto met schuifdeuren: welke past bij jou? Goedkoopste nieuwe auto Niet iedereen heeft een groot budget om een dure auto te kopen. Sommigen geven simpelweg niet zoveel om auto\u0027s en willen gewoon een betaalbare, betrouwbare en zuinige auto die hen veilig van A naar B brengt. Maar wat is nu de goedkoopste nieuwe auto? AutoScout24 · 18-06-2025 · 8 min. Leestijd Lees meer Goedkoopste nieuwe auto De beste elektrische auto’s Wie op zoek is naar een elektrische auto, vraagt zich natuurlijk af wat de beste elektrische auto’s zijn. Wat ‘de beste’ elektrische auto is hangt af van je persoonlijke wensen, maar in dit artikel zetten we een aantal goede opties op een rij. AutoScout24 · 18-06-2025 · 6 min. Leestijd Lees meer De beste elektrische auto’s Advies: de nieuwste artikelen Alles bekijken Onderhoudskosten elektrische auto: wat betaal je? Het onderhoud van een elektrische auto is vaak goedkoper dan dat van een benzineauto. Toch verschillen de kosten per model, leeftijd en gebruik. Ontdek wat je gemiddeld uitgeeft en welke kosten je naast een onderhoudsbeurt kunt verwachten. AutoScout24 · 08-10-2026 · 14 min. Leestijd Lees meer Onderhoudskosten elektrische auto: wat betaal je? Hoe lang gaat de accu van een elektrische auto mee? De accu is een belangrijk onderdeel van een elektrische auto. Maar hoeveel jaar en kilometer gaat hij mee? Ontdek wat capaciteitsverlies betekent, welke factoren de levensduur van een accu beïnvloeden en hoe je de staat laat controleren. AutoScout24 · 08-10-2026 · 16 min. Leestijd Lees meer Hoe lang gaat de accu van een elektrische auto mee? Problemen met je elektrische auto: herkennen en voorkomen Een elektrische auto kan problemen krijgen met de 12V-accu, het laden, de banden, remmen of software. Regelmatige controles helpen om problemen tijdig te herkennen. Ontdek wat je zelf kunt controleren en wanneer je hulp nodig hebt. AutoScout24 · 05-10-2026 · 15 min. Leestijd Lees meer Problemen met je elektrische auto: herkennen en voorkomen Naar boven",
+    "scrapedAt": "2026-10-08 18:57:17.261488"
+  },
+  {
     "id": 300,
     "url": "https://nos.nl/teletekst",
     "title": "NOS.nl - NOS Teletekst",
@@ -2080,26 +2115,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 301,
-    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
-  },
-  {
-    "id": 302,
-    "url": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
-  },
-  {
-    "id": 303,
-    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
-  },
-  {
-    "id": 304,
-    "url": "https://www.autoscout24.nl/lst/c/stationwagen"
-  },
-  {
-    "id": 305,
-    "url": "https://www.autoscout24.nl/lst"
   },
   {
     "id": 306,
@@ -47360,10 +47375,2305 @@ window.searchData = [
     "id": 18752,
     "url": "https://nos.nl/teletekst/250",
     "parentUrl": "https://nos.nl/teletekst"
+  },
+  {
+    "id": 18754,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18755,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-lease-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18756,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-nieuwe-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18757,
+    "url": "https://www.autoscout24.nl/informeren/advies/auto-onderhoud/elektrische-auto-voorkom-vaak-voorkomende-problemen/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18758,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-mooiste-elektrische-auto-s/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18759,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-zakelijke-leaseauto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18760,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-goedkoopste-nieuwe-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18761,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/auto-met-schuifdeuren/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18762,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/de-beste-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18764,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-elektrische-middenklassers/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18765,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/zuinigste-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18766,
+    "url": "https://www.autoscout24.nl/informeren/advies/beste-autos/beste-routeplanner-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "id": 18768,
+    "url": "https://www.autoscout24.nl/autobedrijven/gewi-auto-s-ammerzoden",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18769,
+    "url": "https://www.autoscout24.nl/autobedrijven/yh-cars",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18770,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-valk-barneveld",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18771,
+    "url": "https://www.autoscout24.nl/lst/c/bedrijfswagen#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18772,
+    "url": "https://www.autoscout24.nl/autobedrijven/automobielbedrijf-veld",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18773,
+    "url": "https://www.autoscout24.nl/autobedrijven/greven-automotive-b-v-stadskanaal-9502-ec",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18774,
+    "url": "https://www.autoscout24.nl/autobedrijven/handelsonderneming-thomas-rutten-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18775,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-van-der-zwan-hardenberg-7772-tt-2",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18776,
+    "url": "https://www.autoscout24.nl/autobedrijven/euromax-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18777,
+    "url": "https://www.autoscout24.nl/",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18778,
+    "url": "https://www.autoscout24.nl/autobedrijven/berg-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "id": 18779,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18780,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-superb/skoda-superb-combi/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18781,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-gle-coupe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18782,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18783,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-63-amg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18784,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a4/avant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18785,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18789,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18790,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/g-580/review-mercedes-benz-g-580-2025-elektrisch-zwaargewicht/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18791,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-180/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18792,
+    "url": "https://www.autoscout24.nl",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18793,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/eqs-suv/mercedes-eqs-suv-2023-test-waarom-hij-de-eqs-sedan-overbodig-maakt/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18794,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18795,
+    "url": "https://www.autoscout24.nl/auto/jaguar/jaguar-xe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18796,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-classe-gla/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18797,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-230/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18798,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-270/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18799,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-250/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18800,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-vito/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18801,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18802,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-eqa/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18804,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18805,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/eqe-43/mercedes-amg-eqe-43-4matic-review-ook-de-elektrische-toekomst-van-amg-is-bloedstollend/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18806,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-300/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18807,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18808,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-320/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18809,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-sprinter/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18810,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18811,
+    "url": "https://www.autoscout24.nl/auto/tesla/tesla-model-3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18812,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-s60/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18813,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-cla-klasse/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18814,
+    "url": "https://www.autoscout24.nl/auto/alfa-romeo/alfa-romeo-giulia/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18815,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/c-series/mercedes-benz-c-klasse-electric-2026-test/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18816,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18817,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/amg-gt/mercedes-amg-gt-4-deurs-coupe-presentatie-test-2026/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18818,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-220/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18819,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-200/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18820,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/glb/mercedes-benz-glb-2026-test/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18821,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18822,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-240/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18823,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-klasse-alle/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18824,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/mercedes-benz-c-280/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18826,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-passat/volkswagen-passat-variant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18827,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "id": 18828,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-corsten-b-v-mariahout",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18830,
+    "url": "https://www.autoscout24.nl/lst/c/stationwagen#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18831,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-van-der-weide-sleen",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18832,
+    "url": "https://www.autoscout24.nl/autobedrijven/autohuis-heijkoop",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18834,
+    "url": "https://www.autoscout24.nl/autobedrijven/elegance-car-selection",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18836,
+    "url": "https://www.autoscout24.nl/autobedrijven/autobedrijf-jos-priem",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18837,
+    "url": "https://www.autoscout24.nl/autobedrijven/individual-cars-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18839,
+    "url": "https://www.autoscout24.nl/autobedrijven/vakgarage-terpstra-drachten",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18840,
+    "url": "https://www.autoscout24.nl/autobedrijven/van-wallinga-automobielen",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "id": 18841,
+    "url": "https://www.autoscout24.nl/lst/aston-martin",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18842,
+    "url": "https://www.autoscout24.nl/lst/bugatti/veyron",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18843,
+    "url": "https://www.autoscout24.nl/lst/bt_stationwagen",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18844,
+    "url": "https://www.autoscout24.nl/lst/jensen",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18845,
+    "url": "https://www.autoscout24.nl/lst/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18846,
+    "url": "https://www.autoscout24.nl/lst/citroen",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18847,
+    "url": "https://www.autoscout24.nl/lst/subaru",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18848,
+    "url": "https://www.autoscout24.nl/lst/tesla",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18849,
+    "url": "https://www.autoscout24.nl/lst/lotus",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18850,
+    "url": "https://www.autoscout24.nl/lst/talbot",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18851,
+    "url": "https://www.autoscout24.nl/lst/seres",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18852,
+    "url": "https://www.autoscout24.nl/lst/daimler",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18853,
+    "url": "https://www.autoscout24.nl/lst/austin",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18854,
+    "url": "https://www.autoscout24.nl/lst/caravans-wohnm",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18855,
+    "url": "https://www.autoscout24.nl/lst/ft_benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18856,
+    "url": "https://www.autoscout24.nl/lst/alfa-romeo",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18857,
+    "url": "https://www.autoscout24.nl/lst/donkervoort",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18858,
+    "url": "https://www.autoscout24.nl/lst/tvr",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18859,
+    "url": "https://www.autoscout24.nl/lst/corvette",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18860,
+    "url": "https://www.autoscout24.nl/lst/dacia",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18861,
+    "url": "https://www.autoscout24.nl/lst/seat",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18862,
+    "url": "https://www.autoscout24.nl/lst/lucid",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18863,
+    "url": "https://www.autoscout24.nl/lst/de-tomaso",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18864,
+    "url": "https://www.autoscout24.nl/lst/farizon",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18865,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18866,
+    "url": "https://www.autoscout24.nl/lst/peugeot",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18868,
+    "url": "https://www.autoscout24.nl/lst/daihatsu",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18869,
+    "url": "https://www.autoscout24.nl/lst/gmc",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18870,
+    "url": "https://www.autoscout24.nl/autobedrijven/selles-auto-s-kamperzeedijk-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18871,
+    "url": "https://www.autoscout24.nl/lst/nissan/rogue",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18872,
+    "url": "https://www.autoscout24.nl/lst/matra",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18873,
+    "url": "https://www.autoscout24.nl/lst/austin-healey",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18874,
+    "url": "https://www.autoscout24.nl/lst/pontiac",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18875,
+    "url": "https://www.autoscout24.nl/lst/microcar",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18876,
+    "url": "https://www.autoscout24.nl/lst/dr-automobiles/dr5-0",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18877,
+    "url": "https://www.autoscout24.nl/autobedrijven/cornet-en-vanbuuren-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18878,
+    "url": "https://www.autoscout24.nl/lst/lincoln",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18879,
+    "url": "https://www.autoscout24.nl/lst/ac",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18880,
+    "url": "https://www.autoscout24.nl/lst/nsu",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18881,
+    "url": "https://www.autoscout24.nl/lst/bentley",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18882,
+    "url": "https://www.autoscout24.nl/lst/oldsmobile",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18883,
+    "url": "https://www.autoscout24.nl/lst/suzuki",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18884,
+    "url": "https://www.autoscout24.nl/autobedrijven/koster-en-hogeslag-automotive",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18885,
+    "url": "https://www.autoscout24.nl/lst/citroen/traction",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18886,
+    "url": "https://www.autoscout24.nl/lst/renault",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18887,
+    "url": "https://www.autoscout24.nl/lst/ot_oldtimer",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18888,
+    "url": "https://www.autoscout24.nl/lst/saab",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18889,
+    "url": "https://www.autoscout24.nl/lst/jaecoo",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18890,
+    "url": "https://www.autoscout24.nl/lst/man",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18891,
+    "url": "https://www.autoscout24.nl/lst/bt_coupe",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18892,
+    "url": "https://www.autoscout24.nl/autobedrijven/de-automakelaar-compact-cars-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18893,
+    "url": "https://www.autoscout24.nl/lst/morgan",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18894,
+    "url": "https://www.autoscout24.nl/lst/omoda",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18895,
+    "url": "https://www.autoscout24.nl/lst/triumph",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18896,
+    "url": "https://www.autoscout24.nl/lst/volkswagen",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18897,
+    "url": "https://www.autoscout24.nl/lst/buick",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18898,
+    "url": "https://www.autoscout24.nl/lst/ford",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18899,
+    "url": "https://www.autoscout24.nl/lst/ferrari/enzo-ferrari",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18900,
+    "url": "https://www.autoscout24.nl/lst/geely",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18901,
+    "url": "https://www.autoscout24.nl/lst/infiniti",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18902,
+    "url": "https://www.autoscout24.nl/lst/nissan",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18903,
+    "url": "https://www.autoscout24.nl/lst/bt_suv-off-road-pick-up",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18904,
+    "url": "https://www.autoscout24.nl/lst/oldtimer/messerschmitt",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18905,
+    "url": "https://www.autoscout24.nl/lst/bt_hatchback",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18906,
+    "url": "https://www.autoscout24.nl/lst/genesis",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18907,
+    "url": "https://www.autoscout24.nl/lst/voyah",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18908,
+    "url": "https://www.autoscout24.nl/lst/ineos",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18909,
+    "url": "https://www.autoscout24.nl/lst/rover",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18910,
+    "url": "https://www.autoscout24.nl/lst/dongfeng",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18911,
+    "url": "https://www.autoscout24.nl/lst/porsche",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18912,
+    "url": "https://www.autoscout24.nl/lst/micro",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18913,
+    "url": "https://www.autoscout24.nl/lst/trabant",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18914,
+    "url": "https://www.autoscout24.nl/lst/honda",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18915,
+    "url": "https://www.autoscout24.nl/lst/linktour",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18916,
+    "url": "https://www.autoscout24.nl/lst/nio",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18917,
+    "url": "https://www.autoscout24.nl/lst/audi",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18918,
+    "url": "https://www.autoscout24.nl/lst/fisker",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18919,
+    "url": "https://www.autoscout24.nl/lst/ft_elektrisch",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18920,
+    "url": "https://www.autoscout24.nl/lst/lancia",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18921,
+    "url": "https://www.autoscout24.nl/lst/ram",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18922,
+    "url": "https://www.autoscout24.nl/lst/oldtimer",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18923,
+    "url": "https://www.autoscout24.nl/lst/kia",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18924,
+    "url": "https://www.autoscout24.nl/autobedrijven/always-better-cars",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18925,
+    "url": "https://www.autoscout24.nl/lst/autobianchi",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18926,
+    "url": "https://www.autoscout24.nl/lst/cenntro",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18927,
+    "url": "https://www.autoscout24.nl/lst/ligier",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18928,
+    "url": "https://www.autoscout24.nl/lst/carver",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18929,
+    "url": "https://www.autoscout24.nl/lst/mclaren",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18930,
+    "url": "https://www.autoscout24.nl/lst/ferrari",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18931,
+    "url": "https://www.autoscout24.nl/lst/byd/atto-3",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18933,
+    "url": "https://www.autoscout24.nl/lst/changan",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18934,
+    "url": "https://www.autoscout24.nl/autobedrijven/flevo-mobiel",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18936,
+    "url": "https://www.autoscout24.nl/lst/cadillac",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18937,
+    "url": "https://www.autoscout24.nl/lst/hummer",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18938,
+    "url": "https://www.autoscout24.nl/lst/ssangyong",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18939,
+    "url": "https://www.autoscout24.nl/lst/aixam",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18940,
+    "url": "https://www.autoscout24.nl/lst/chevrolet",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18941,
+    "url": "https://www.autoscout24.nl/lst/volvo",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18942,
+    "url": "https://www.autoscout24.nl/lst/daewoo",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18943,
+    "url": "https://www.autoscout24.nl/lst/isuzu",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18944,
+    "url": "https://www.autoscout24.nl/lst/plymouth",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18945,
+    "url": "https://www.autoscout24.nl/lst/polestar",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18946,
+    "url": "https://www.autoscout24.nl/lst/lexus",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18947,
+    "url": "https://www.autoscout24.nl/lst/mini",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18948,
+    "url": "https://www.autoscout24.nl/lst/dodge",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18949,
+    "url": "https://www.autoscout24.nl/lst/ds-automobiles",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18950,
+    "url": "https://www.autoscout24.nl/lst/ft_elektro-benzine",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18951,
+    "url": "https://www.autoscout24.nl/lst/ft_diesel",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18952,
+    "url": "https://www.autoscout24.nl/lst/abarth",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18954,
+    "url": "https://www.autoscout24.nl/lst/maserati",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18955,
+    "url": "https://www.autoscout24.nl/lst#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18956,
+    "url": "https://www.autoscout24.nl/lst/mg",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18957,
+    "url": "https://www.autoscout24.nl/lst/rolls-royce",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18958,
+    "url": "https://www.autoscout24.nl/lst/wiesmann",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18959,
+    "url": "https://www.autoscout24.nl/lst/dfsk",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18960,
+    "url": "https://www.autoscout24.nl/lst/xpeng",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18961,
+    "url": "https://www.autoscout24.nl/lst/byd",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18962,
+    "url": "https://www.autoscout24.nl/lst/hyundai",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18963,
+    "url": "https://www.autoscout24.nl/lst/maxus",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18965,
+    "url": "https://www.autoscout24.nl/lst/mitsubishi",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18966,
+    "url": "https://www.autoscout24.nl/lst/bt_mpv",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18967,
+    "url": "https://www.autoscout24.nl/lst/piaggio",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18968,
+    "url": "https://www.autoscout24.nl/lst/aiways",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18969,
+    "url": "https://www.autoscout24.nl/lst/maybach",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18970,
+    "url": "https://www.autoscout24.nl/lst/silence",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18971,
+    "url": "https://www.autoscout24.nl/lst/chery",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18972,
+    "url": "https://www.autoscout24.nl/lst/cupra",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18974,
+    "url": "https://www.autoscout24.nl/lst/fiat",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18975,
+    "url": "https://www.autoscout24.nl/lst/daf",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18976,
+    "url": "https://www.autoscout24.nl/lst/bt_bedrijfswagen",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18977,
+    "url": "https://www.autoscout24.nl/lst/smart",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18979,
+    "url": "https://www.autoscout24.nl/lst/bmw",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18980,
+    "url": "https://www.autoscout24.nl/lst/mazda",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18981,
+    "url": "https://www.autoscout24.nl/lst/land-rover",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18982,
+    "url": "https://www.autoscout24.nl/lst/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18983,
+    "url": "https://www.autoscout24.nl/lst/chrysler",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18984,
+    "url": "https://www.autoscout24.nl/lst/leapmotor",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18985,
+    "url": "https://www.autoscout24.nl/lst/bt_sedan",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18986,
+    "url": "https://www.autoscout24.nl/lst/iveco",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18987,
+    "url": "https://www.autoscout24.nl/lst/opel",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18988,
+    "url": "https://www.autoscout24.nl/lst/westfield",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18989,
+    "url": "https://www.autoscout24.nl/lst/alpina",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18990,
+    "url": "https://www.autoscout24.nl/lst/lynk-and-co",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18991,
+    "url": "https://www.autoscout24.nl/lst/zeekr",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18992,
+    "url": "https://www.autoscout24.nl/lst/jaguar",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18993,
+    "url": "https://www.autoscout24.nl/lst/alpine",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18994,
+    "url": "https://www.autoscout24.nl/lst/ot_demo",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18996,
+    "url": "https://www.autoscout24.nl/lst/kgm",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18997,
+    "url": "https://www.autoscout24.nl/lst/skoda",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18998,
+    "url": "https://www.autoscout24.nl/autobedrijven/ayvens-occasions",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 18999,
+    "url": "https://www.autoscout24.nl/lst/jeep",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 19000,
+    "url": "https://www.autoscout24.nl/lst/hongqi",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 19001,
+    "url": "https://www.autoscout24.nl/lst/studebaker",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 19002,
+    "url": "https://www.autoscout24.nl/lst/lamborghini",
+    "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 19003,
+    "url": "https://www.autoscout24.nl/lst/lucid/air",
+    "parentUrl": "https://www.autoscout24.nl/lst"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/34104235-a935-4af8-a7a4-bd0f541fcaeb_fa5c0a21-2556-4c39-8582-e552ff119457.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1d677348-0abe-4b15-b380-8b2bf767ef75_c5f443b2-ba95-4b68-bb0f-615e70242fa3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/8894-original-afb7ce48-4d2a-491f-9cb6-599a7e02665b.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9670d604-b25b-4b57-8702-625d18044a00_bc8207a3-e717-415f-945f-08580fdf1465.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9b11a29f-a1e8-437d-b49f-d99ce6b584a9_c9d23fe9-4df8-49da-b5c6-3d2152336514.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63503981-original-5620709b-c8d6-4854-95c9-58144178e077.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b75ee65c-2013-41ad-b7c8-6050a40935ed_8185e4fb-e768-463c-9498-f9ec3d796108.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/64021674-original-2e9449ec-46ee-4d1f-a7c4-a591b194052f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7f3e6249-88fc-4f92-9ec9-828bfe62cac4_e1e166ff-7cb7-49ff-b564-dd26ad2eb4da.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63973319-original-2100ba1a-62ec-482d-bdf9-bf3bb2939427.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4f4b80d6-7d03-4ec1-af27-833b1fc64d6e_a7eab232-581f-4138-8ea9-56f0e4cbc85c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15036567-original-da232dcb-d989-4412-9572-c05b0a8ade60.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a07dba96-3e0a-4c51-a335-85191f01b366_25bae4d5-e43e-4fb1-8ef0-be1ea2e15f50.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4f42a29e-2a61-4c01-a29f-cb37ab5db1b5_912020b5-432d-4262-8f7f-d0eb1a207ae2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63494688-original-12c69b13-4098-42b6-9760-ea3aeeca85a5.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8746dbc2-db8e-4b67-ad06-7d5545178929_390e4d46-1739-4a0b-ade0-77a9f482fbbd.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63503981-original-5620709b-c8d6-4854-95c9-58144178e077.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/763a99c4-9632-410a-8da5-b39ad5a72ffb_8cf74f17-bd41-40c7-bcdc-676a018a6682.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/88133357-02df-4f91-9b48-99c43fe29a5a_52f6e4ab-72ea-4356-995a-0fbf53e91fac.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/39546944-original-a659e76f-6461-4da3-ad42-ceb46125057b.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1d8936e4-dca3-4007-ae13-06d3e0a62a39_a89d3f99-db2f-460c-9413-fbea2b3f5e75.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/30a0d8c3-1ced-42e2-8d23-be402f0e3bfa_b26c82e3-e46e-478f-ab6b-70a6672473f0.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/922d0d55-b0dd-41a0-8d32-2178bff97900_1025fe1c-2242-424f-8530-23b4fc3b03ca.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63973319-original-2100ba1a-62ec-482d-bdf9-bf3bb2939427.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9fa35d0b-69e8-4994-a73d-95422f9ba976_a4a4245f-9f62-4c35-9270-ec0597093d58.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/75e8d8a3-567d-4b8f-882e-74f464182198_be5159e5-20b7-466f-9c3a-24c72b9b26b9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/8444-original-2f57691c-cfdf-43e9-b380-5f1598869ba1.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c6ec2fec-203f-4bf1-ac15-e45a56fe0ed3_d32fcda6-20b8-430e-860f-1f675b42f735.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3f9d3b55-5fcd-414d-a396-f429a4b5fb6c_fac146a7-ed0b-4f5a-9bab-b8a885e72835.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11214-original-6d39b4db-558d-44d1-8acf-fa88e9c5ca7c.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cf04bdc8-b0fe-4050-a44a-183a215b9706_8e87ae47-ee88-40c1-9344-6a48346ae378.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15036567-original-da232dcb-d989-4412-9572-c05b0a8ade60.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Koop occasions op AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/82d76a22-c134-4925-95f8-f9798b2b586f_8ddb7786-c38f-4e04-90f4-9a2f78cefe4c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/227d4f0c-5acf-454e-8fca-0ae9450cf411_6dcb5550-3a28-4631-be77-b8dcdac2ec18.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/42154772-original-533316cd-8611-4185-804f-21267e8c9db8.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f9204592-69e8-4376-a1b7-af83ce2ae2cf_ab5ff43c-6d65-4bff-9b05-51a2fd446eb0.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11660791-original-0ec009fd-358b-4ed4-8dbb-3a5f92fb6c2f/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c34f22f1-6835-44dc-8d10-f5d5124d3e97_29361cb5-0d61-4dd8-ad20-d1501322f087.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/20374034-original-6e835fd9-3341-4e70-a4ac-32621825b3ce.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9dfbd5c8-3d04-4516-a2b1-d69ccd73c901_c729b8f7-3600-4a3f-8f15-23b81b9156a2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8590abbc-f088-4c79-a8ea-30072facfcba_33c3c483-3c6e-42d3-b87b-c154be5774b4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46511068-original-815de80a-b49c-4465-ab17-ee62e060a002.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/582e3b50-52f5-4111-bfe9-6d82b5d1d906_37f05be3-d4ef-41c9-a3ff-f6ecc8c32f20.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/21739962-original-ff10b591-5a25-490e-a498-891c2c56f761.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cd09d97b-844e-4fee-b30d-0c0b6a450499_0290171b-8c51-496e-933b-e9eeaadc3806.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/88133357-02df-4f91-9b48-99c43fe29a5a_52f6e4ab-72ea-4356-995a-0fbf53e91fac.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/39546944-original-a659e76f-6461-4da3-ad42-ceb46125057b.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/93ee0fb2-f354-4f32-af92-384ca4fb3203_4024a461-3786-4669-92a3-c3fc6d7b7cf2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1d8936e4-dca3-4007-ae13-06d3e0a62a39_a89d3f99-db2f-460c-9413-fbea2b3f5e75.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/23cdcc4d-30f9-4d3f-abd2-e11621b4133b_24cd886e-b69d-4c08-81b8-1cdfc44e1e90.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/75e8d8a3-567d-4b8f-882e-74f464182198_be5159e5-20b7-466f-9c3a-24c72b9b26b9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/8444-original-2f57691c-cfdf-43e9-b380-5f1598869ba1.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7a036185-4e7c-4afe-9ddf-c51b7a7a0140_6a3efc9f-8f4b-451e-942e-ba22c041c5e9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/15047993-original-f2636838-e8a3-4d05-b0d7-9f3c67fe8d80.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eac034af-b12a-41e5-a391-14ae5fafd77b_f691ebd9-c462-4432-b4b1-abaa0e75e142.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/41801154-original-cc4066d3-ba74-4bde-acd0-3411c5e0fd47.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/19cbc806-00e4-405c-b4c2-dec2f4460dfb_f4b9e345-d905-4b8b-b937-377b0a9be414.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/641f3390-f6fb-4906-9ac2-0adfe5d9d9dc_ce62479c-23ca-48bf-8260-1e7818ea6833.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/607a9b01-5b8b-4494-987e-ddecb9834374_10b05d47-9b3d-481d-8b02-386f0102fac6.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/5253885-original-77c24d97-d209-426d-af0d-0afc15662e04.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/37bb5280-35a2-45ab-9288-ff9c9b6d0420_718edc31-6e62-403a-a5e2-5161a7a0607c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/64021674-original-2e9449ec-46ee-4d1f-a7c4-a591b194052f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9a48087e-061a-4e90-92c0-9e80fc7e3ef9_8ad06cd7-77bb-4151-ad3a-5e48fbd92b3d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/35411453-original-01193eae-a488-4478-a755-b440da9d3cce.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Stationwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/stationwagen"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4g3kfFNhcexmrTog3lFvri/3705d0e65f39b5fe8e956103fc7186f5/mercedes-benz-c-klasse-front.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-front",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4g3kfFNhcexmrTog3lFvri/3705d0e65f39b5fe8e956103fc7186f5/mercedes-benz-c-klasse-front.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-front",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/qDYfOZugn1pQ0mmDm2yoj/2d96188eeaf9fd53ccd2b2a003b945c2/mercedes-benz-c-klasse-back.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-back",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6TPe9AaUgPxyNfPrd1pejW/d68c0fe9563b15074720a3ec5a6afd24/mercedes-benz-c-klasse-side.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-side",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/KT71uWBEYSE\u0026t\u003d24s/maxresdefault.jpg",
+    "alt": "Bekijk de Mercedes-Benz C-Klasse op YouTube",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eb107292-6870-4a45-9aab-8d515dc2994f_013c45dd-973b-49d4-82c2-8958c2cc7ac2.jpg/360x270.jpg",
+    "alt": "Estate CGI BlueEFFICIENCY Business Class Avantgard",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cf5e036c-244e-4038-b0ba-c5da66a12635_831e4a4f-3a18-458c-b1d0-75aa7fbc3094.jpg/360x270.jpg",
+    "alt": "CDI AMG|C63 Pakket|Pano",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9b11a29f-a1e8-437d-b49f-d99ce6b584a9_c9d23fe9-4df8-49da-b5c6-3d2152336514.jpg/360x270.jpg",
+    "alt": "K. Classic \u0027Automaat\u0027 Cruise!",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/00fff7fb-16ad-4059-8816-0d94b5c2f38d_8e3c71cb-ed14-4c35-83a5-fe44dc279c11.jpg/360x270.jpg",
+    "alt": "CGI Nieuwe Ketting Business Edition Avantgarde Moo",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7e020c7f-697e-4e2c-a1b3-ceb4b9212227_d868cf2b-2995-48d1-8b8d-6830bfbd4887.jpg/360x270.jpg",
+    "alt": "Estate AMG-Pakket LEES TEKST",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f4486f04-582d-4869-b05f-029c37a94ad3_8748b2e8-cbc1-4440-b892-659922017285.jpg/360x270.jpg",
+    "alt": "Premium+ AMG Keyless|Sfeer|360Cam",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e600d183-d6a1-4789-bc53-11cc1cd72926_dfdaa8c3-c28a-4b0c-a074-a50dd2389163.jpg/360x270.jpg",
+    "alt": "CGI BlueEFFICIENCY Business Class",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c76b303c-d32a-4d95-960f-29df49ed4eb6_646dbcd2-f97e-4680-8bbd-a409aee42ece.jpg/360x270.jpg",
+    "alt": "CGI Business Class Elegance Automaat Clima",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/61830907-097b-4e6d-a95e-b38ace1a7392_3efd92c6-b678-48c2-9557-4f38cb8e5fa2.jpg/360x270.jpg",
+    "alt": "Avantgarde",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4002f659-67fb-44c4-8116-f3eb21bad581_a317c9a3-26b7-48d8-b815-8d7f4461b581.jpg/360x270.jpg",
+    "alt": "Estate AMG Sport Edition Premium Plus",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/27efeb54-442c-40a0-af10-8d855b1da4ad_3a32576c-795c-4510-99db-b48eaac5b8dc.jpg/360x270.jpg",
+    "alt": "Business Class Avantgarde|PDC|AIRCO|NETTE AUTO|",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bb6a5406-7ce7-4951-b0a7-65a2f0ef4bd5_be9cb6d4-1e97-4923-a0b2-15d62b425502.jpg/360x270.jpg",
+    "alt": "AMG Sport Edition LED / NAP / LEDER / STOELVERW. /",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0048c81b-91aa-45c1-b333-bd82c1a5471b_c3d64f91-9023-4247-b13e-1714ad4e7e06.jpg/360x270.jpg",
+    "alt": "Estate e Lease Edition l Burmester l ILS l Vollede",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9653a976-19da-4da0-bff9-720f2a064ebd_0446483e-e4e2-4488-8567-e12b2e3bf5c2.jpg/360x270.jpg",
+    "alt": "Estate K BlueEFFICIENCY AUTOMAAT",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c9ee5a94-fe8d-4d49-8a2c-f5c2f616a5b7_f48e505f-20ae-4e75-b5c8-ce8690bd6f85.jpg/360x270.jpg",
+    "alt": "Coupé Premium Plus AUTOMAAT",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e0447476-87e8-444d-933a-b11e4045a738_4500e1d8-752f-4b4b-b51a-f3c40b26578e.jpg/360x270.jpg",
+    "alt": "Coupé AMG Line Premium",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/906e60b3-f44c-4d7b-891f-c7dda545d010_b72c5d4e-ea6b-48d5-a2fe-8a3deb3bd6f4.jpg/360x270.jpg",
+    "alt": "Avantgarde AMG Pano Origineel NL",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5fc8b127-fe69-4592-b0fd-335d58f75273_d780587b-9f6e-46b1-bb19-4230db2b7ad9.jpg/360x270.jpg",
+    "alt": "AMG Pano|Memory|Burmester|HuD|Cam",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/27c8fbf6-a1da-4fe4-a78f-4a0d6a33e0fd_0ce9ee33-b2f9-439e-b8b4-027f2ee55767.jpg/360x270.jpg",
+    "alt": "Trekhaak/LED/PDC/Sportstoelen",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d2c0fd23-8f1d-4d50-ad6d-f760ff925244_688b4901-f9b1-4237-a4fb-bbe8ca2a713d.jpg/360x270.jpg",
+    "alt": "Amg Automaat Clima Navi Leer",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/31i0dMtJeOJebdkoaCNMdN/16bef42dadb2824a2ef8b88a242affd8/mercedes-benz-c-klasse-interior.jpeg?w\u003d1100",
+    "alt": "mercedes-benz-c-klasse-interior",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2sxWgJiEXARZ13CPNAFz5u/044c887655129ea1926dcfca22104f94/Mercedes-Benz-C-klasse-Electric_header.jpg?w\u003d1100",
+    "alt": "Mercedes-Benz C-Klasse Electric (2026): elektrische sportsedan die luxe en technologie naar een hoger niveau tilt",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2pZTkbS4QIyHpqRK6OEbbK/f6ae7e87bf2f8b30e7ea011b466f6ed5/AutoScout24_Mercedes-Benz_GLB_1.jpg?w\u003d1100",
+    "alt": "Review – Mercedes-Benz GLB: veel ruimte, zeven zitplaatsen en elektrisch bereik",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GBidDlqEvOyfGsIXAwP8/14460d31e3a70da4a827609185f35e8b/CR-40_-_AutoScout24_-_Mercedes-Benz_G_580_foto1.jpg?w\u003d1100",
+    "alt": "Review – Mercedes-Benz G 580 (2025): elektrisch zwaargewicht",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5k1FTVQ0goBjGyaaBJeh2S/7c9079c188f4e9f620e6bfdc41b83755/mercedes-eqs-suv-580-2023-1.jpg?w\u003d1100",
+    "alt": "Mercedes EQS SUV (2023) test: waarom hij de EQS sedan overbodig maakt",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4prQQKryuOEjY2edk87Q8h/e2a287ba9dfb25a4ca236aa78d60eeb6/mercedes-amg-eqe-43-4matic-2022-30-1.jpg?w\u003d1100",
+    "alt": "Mercedes-AMG EQE 43 4Matic review: ook de elektrische toekomst van AMG is bloedstollend",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2NEMrttVjwcxAhio9megWx/1aafffea25481733a5f67f8c0b3428fb/Mercedes_AMG_GT_4.jpg?w\u003d1100",
+    "alt": "Mercedes-AMG GT 4-deurs Coupé (2026): veel blingbling en 1",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Mercedes-Benz C-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-c-klasse/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c3ac5ce8-22c8-48d8-bf28-670c6a6b3d98_a5dd4fa7-662f-418d-bae8-8512babca749.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/32085399-original-f9a70d55-0177-4267-af9f-6a73cb0dca3d.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9d575f5b-7044-49f3-bfaa-5d0a5c37a8f4_76357349-2123-4924-a2a2-47161155189c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f4ced6d5-e12d-44ce-919b-1800e02faf41_2aeb0674-0f31-4678-8a42-4c6dc4744196.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/51036003-original-4eb7d248-ab67-481e-b3d3-41f247eb2482.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/86319b9f-eedf-49d3-9ade-cf9e23af2aa7_f8ca732c-c269-4dd7-912f-552ca0f17bd3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cee6fc80-07d8-4c09-b852-4e12d3bb4ccc_2efcaea1-26b4-43a1-98ec-56300361f5e4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46825795-original-3df58ccd-511e-413c-afc9-33fea07ffbe0.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5fde2d46-54fc-4d86-86ce-bc3588b817d9_2a2749e0-d8cc-4a29-bf12-36a4b4aa3c58.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dc53f067-4ef2-4ef2-9df5-c9e8000d5a38_b75d973c-c30c-428a-be81-f352b6cc93a4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/35411453-original-01193eae-a488-4478-a755-b440da9d3cce.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8bdaa90c-ca56-4855-8196-955bee68b606_ac20af0d-0544-427f-8d01-bb93328820ad.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/11076-original-adb93227-4d1f-46b2-9ac6-61375ae6206a.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2666f336-178b-4696-8e2c-545d60f96497_451c1b0a-6ed5-4bac-b35f-a5fb97804d11.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/38686350-original-aafe67bc-7808-460d-bed1-9e4be1c39915.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0c801940-b303-44eb-a974-87fdf5618e56_0d6bc292-67f0-4998-86be-6bafaa6fa064.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b4ea4016-396f-4cab-aba4-bea2b79a7749_a2ebb840-875b-435f-8474-b6e74bbe7d35.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/391ebd23-9653-4c5e-b12c-55515574cf52_a265f962-586f-48de-a6c2-34db394b8152.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/adb431f8-0a5c-443c-a0a1-cf5ef7c1cb0e_47f380f0-d9cd-4fff-bbca-fce32bb61eaf.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/63503981-original-5620709b-c8d6-4854-95c9-58144178e077.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cc97a9e7-d212-4a43-89a4-3554df932599_2987c2e4-a2ec-4a76-83ee-f52cc53a15f0.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/46771975-original-ba63909c-ef93-4bde-8d2a-4c5408783f20.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/02c48916-ad34-43b7-9eab-67cf11e50b4a_c13a995f-1685-40d4-b904-d2b763841a8b.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/29364806-original-2548f931-9832-4028-8bfe-e5a992f8ca3f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fedf398d-921e-4d4c-9280-2bcd76c31948_2ec7ef6e-10a1-4734-8e77-683a73541506.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/17409506-original-e032e22d-1d2d-410a-9b18-eb04e05e87b2.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8e2e2d3b-bd0e-4e11-9637-611b3e309686_f0a1e300-aed9-4837-bb62-0dc44dd8c0d2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3a68227d-9e3c-4d57-889f-db3248c8e783_dd7ba733-4ac7-4dbe-995a-771d6040ba5d.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/34c2e4b8-5269-4249-8e48-f46e95792f4f_4bc3ab19-f8d4-44dc-b2bc-1c354ae85367.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/42892294-original-98e16786-494a-4127-b9d8-11dd4cd281d8.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2af9362b-ded7-4ea2-9fc9-d8d70fac3ee7_ab4f2e8b-a48b-4a39-afc7-fedd536aeaf4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Bestelwagen occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/bedrijfswagen"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5URhveuFGwvDHmI6vuFoHC/f1df100f1ab98c692f2c4bec48d8de1b/Tesla-Model-3-Performance-2025__2_.jpg?w\u003d1100",
+    "alt": "Tesla-Model-3-Performance-2025 (2)",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4dtrr7EhLHV4DH8Z8MSBJh/0587554355ca5b5192202bb9b2d15e23/car_crosses_country_road_winding_in_twilight_.jpeg?w\u003d460",
+    "alt": "car crosses country road winding in twilight",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5URhveuFGwvDHmI6vuFoHC/f1df100f1ab98c692f2c4bec48d8de1b/Tesla-Model-3-Performance-2025__2_.jpg?w\u003d460",
+    "alt": "Tesla-Model-3-Performance-2025 (2)",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/18XX42xzRxjhEtcPxKJZST/a92fa03eb31a20603af533c36fc25317/Small-21082-MaseratiGranTurismoFolgoreCopperGlance.jpg?w\u003d460",
+    "alt": "maserati-granturismo-folgore-front",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6VfA4HzSkTGnVcbWfFPpBD/0ef904539067972edfa714981f3146d9/_BST-118__Volvo-EX30-2025.jpg?w\u003d460",
+    "alt": "(BST-118) Volvo-EX30-2025",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2oWawve4N2SqjVy06EAFcy/ee5c7cecd3c26e1eb589f87a0f4a1aa5/volkswagen_id.7_15.jpeg?w\u003d460",
+    "alt": "volkswagen id.7 15",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1QgHiEZYg73cERueprP8A1/439ebfd85d83b09a0ae1d384cc8c273a/BST-14_-_Beste_routeplanner.jpg?w\u003d460",
+    "alt": "Beste routeplanner",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rHR8N8JLJWlEWc6iOmUKi/4d5ab26175ff8c9b140c12437c768908/ADV-182_-_auto_met_schuifdeuren.jpg?w\u003d460",
+    "alt": "Auto met schuifdeuren",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/ehNDDNs9jyGqq3qnhU4UM/2ae0a1ad15ccaa2cd26abe7b0802ed29/BST-42_-_AutoScout24_-_Goedkoopste_nieuwe_auto_foto4.webp?w\u003d460",
+    "alt": "Goedkoopste nieuwe auto",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1lU2i8Q5hOSbDjBCE7LLVv/e234cc4cadffbc245bdf1a2489bf0355/ford-mustang-mach-e-side.jpg?w\u003d460",
+    "alt": "ford-mustang-mach-e-side",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/o3LKf1OWXQQjqjr6JdKS3/fa4edccfee7177da6cf1f1e3cea128ca/Problemi_accensione_auto_diesel.jpg?w\u003d1100",
+    "alt": "Problemi accensione auto diesel",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7IO5Y4233eFegAVZlAFvqR/e4807df5367fb7c19b67e0e1464a65a1/Battery_factory.jpg?w\u003d1100",
+    "alt": "Battery factory.jpg",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1LygHxzbQW0vFTDBa0hkCf/1e8b0762715118e84b4deaf95dd1a59c/Hoofdfoto_pechverhelping_BMW.jpg?w\u003d1100",
+    "alt": "Hoofdfoto pechverhelping BMW",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "De beste auto\u0027s, merken en modellen in één oogopslag. - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/beste-autos/"
+  },
   {
     "src": "https://images.cdn.nos.nl/5/7/k/V/t/e/VimcKJ4LtpJ5JaDPe8QdKyAeah6TFJWuVJTW2gb/0x0x2864x1611-1024x576.webp",
     "alt": "Sabalenka sluit boycot grandslamtoernooien niet uit: \u0027Rechten verdedigen\u0027",
