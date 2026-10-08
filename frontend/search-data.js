@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 748,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION",
+    "title": "API and ABI Versioning — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » API and ABI Versioning | Theme Auto Light Dark | API and ABI Versioning¶ Build-time version constants¶ CPython exposes its version number in the following macros. Note that these correspond to the version code is built with. See Py_Version for the version used at run time. See C API Stability for a discussion of API and ABI stability across versions. PY_MAJOR_VERSION¶ The 3 in 3.4.1a2. PY_MINOR_VERSION¶ The 4 in 3.4.1a2. PY_MICRO_VERSION¶ The 1 in 3.4.1a2. PY_RELEASE_LEVEL¶ The a in 3.4.1a2. This can be 0xA for alpha, 0xB for beta, 0xC for release candidate or 0xF for final. PY_RELEASE_SERIAL¶ The 2 in 3.4.1a2. Zero for final releases. PY_VERSION_HEX¶ The Python version number encoded in a single integer. See Py_PACK_FULL_VERSION() for the encoding details. Use this for numeric comparisons, for example, #if PY_VERSION_HEX \u003e\u003d .... These macros are defined in Include/patchlevel.h. Run-time version¶ const unsigned long Py_Version¶ Part of the Stable ABI since version 3.11. The Python runtime version number encoded in a single constant integer. See Py_PACK_FULL_VERSION() for the encoding details. This contains the Python version used at run time. Use this for numeric comparisons, for example, if (Py_Version \u003e\u003d ...). Added in version 3.11. Bit-packing macros¶ uint32_t Py_PACK_FULL_VERSION(int major, int minor, int micro, int release_level, int release_serial)¶ Part of the Stable ABI since version 3.14. Return the given version, encoded as a single 32-bit integer with the following structure: Argument No. of bits Bit mask Bit shift Example values 3.4.1a2 3.10.0 major 8 0xFF000000 24 0x03 0x03 minor 8 0x00FF0000 16 0x04 0x0A micro 8 0x0000FF00 8 0x01 0x00 release_level 4 0x000000F0 4 0xA 0xF release_serial 4 0x0000000F 0 0x2 0x0 For example: Version Py_PACK_FULL_VERSION arguments Encoded version 3.4.1a2 (3, 4, 1, 0xA, 2) 0x030401a2 3.10.0 (3, 10, 0, 0xF, 0) 0x030a00f0 Out-of range bits in the arguments are ignored. That is, the macro can be defined as: #ifndef Py_PACK_FULL_VERSION\n#define Py_PACK_FULL_VERSION(X, Y, Z, LEVEL, SERIAL) ( \\\n   (((X) \u0026 0xff) \u003c\u003c 24) |                              \\\n   (((Y) \u0026 0xff) \u003c\u003c 16) |                              \\\n   (((Z) \u0026 0xff) \u003c\u003c 8) |                               \\\n   (((LEVEL) \u0026 0xf) \u003c\u003c 4) |                            \\\n   (((SERIAL) \u0026 0xf) \u003c\u003c 0))\n#endif\n Py_PACK_FULL_VERSION is primarily a macro, intended for use in #if directives, but it is also available as an exported function. Added in version 3.14. uint32_t Py_PACK_VERSION(int major, int minor)¶ Part of the Stable ABI since version 3.14. Equivalent to Py_PACK_FULL_VERSION(major, minor, 0, 0, 0). The result does not correspond to any Python release, but is useful in numeric comparisons. Added in version 3.14. Table of Contents API and ABI Versioning Build-time version constants Run-time version Bit-packing macros Previous topic Supporting Cyclic Garbage Collection Next topic Monitoring C API This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » API and ABI Versioning | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:12:46.66349"
+  },
+  {
+    "id": 747,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc",
+    "title": "Thread-local storage support — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int key",
+    "scrapedAt": "2026-10-08 19:12:45.400476"
+  },
+  {
+    "id": 746,
+    "url": "https://github.com/python/cpython/issues/91896",
+    "title": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString #91896 New issue Copy link New issue Copy link Closed Closed Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString#91896 Copy link Assignees Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on Apr 25, 2022 Issue body actions The current docstring of collections.abc.ByteString is:     \"\"\"This unifies bytes and bytearray.\n\n    XXX Should add all their methods.\n    \"\"\"\n Let\u0027s do that last thing. This will be useful for typing code that accepts both bytes and bytearray, especially with my proposal in PEP-688 to make bytes no longer acceptable as a shortcut for bytearray in the type system. cc @rhettinger for collections.abc Linked PRs gh-91896: Deprecate collections.abc.ByteString #102096 gh-91896: Improve visibility of ByteString deprecation warnings #104294 gh-91896: Fixup some docs issues following ByteString deprecation #104422 gh-91896: Revert some very noisy DeprecationWarnings for ByteString #104424 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees JelleZijlstra Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:12:44.198588"
+  },
+  {
+    "id": 745,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:12:42.093249"
+  },
+  {
+    "id": 744,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:12:40.906078"
+  },
+  {
     "id": 743,
     "url": "https://docs.python.org/3/library/sys.html#sys.platform",
     "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
@@ -4890,26 +4925,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 744,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
-  },
-  {
-    "id": 745,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag"
-  },
-  {
-    "id": 746,
-    "url": "https://github.com/python/cpython/issues/91896"
-  },
-  {
-    "id": 747,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
-  },
-  {
-    "id": 748,
-    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
   },
   {
     "id": 749,
@@ -128984,10 +128999,417 @@ window.searchData = [
     "id": 91023,
     "url": "https://docs.python.org/3/library/sys.html#sys.float_info.min",
     "parentUrl": "https://docs.python.org/3/library/sys.html#sys.platform"
+  },
+  {
+    "id": 91027,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#global-conf-vars",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91028,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.Py_AtExit",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91029,
+    "url": "https://docs.python.org/3/c-api/init_config.html#init-config",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91034,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsInitialized",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91042,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetCopyright",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91046,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_SetProgramName",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91047,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.PyUnstable_AtExit",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91062,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#c.PyInterpreterState",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91065,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_SetAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91071,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#interpreter-initialization-and-finalization",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91082,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawFree",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91083,
+    "url": "https://docs.python.org/3/c-api/datetime.html",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91086,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_SetupDebugHooks",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91087,
+    "url": "https://docs.python.org/3/c-api/threads.html",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91090,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetBuildInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91092,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_IsFinalizing",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91095,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#process-wide-parameters",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91099,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2008-5983",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91102,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetPlatform",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91104,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#before-python-initialization",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91105,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_InitThreads",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91109,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.PySys_SetArgvEx",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91110,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_SetPythonHome",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91115,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_GetAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91116,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#cautions-regarding-runtime-finalization",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91119,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/interp-lifecycle.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91120,
+    "url": "https://docs.python.org/3/library/atexit.html#module-atexit",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91134,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.PySys_SetArgv",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91135,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawCalloc",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91142,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#initializing-and-finalizing-the-interpreter",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91149,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#pre-init-safe",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91167,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyObject_SetArenaAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91168,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#global-configuration-variables",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91171,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91175,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetCompiler",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91183,
+    "url": "https://docs.python.org/3/c-api/init_config.html#init-from-config",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91186,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_BytesMain",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91199,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_GetVersion",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91202,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyObject_GetArenaAllocator",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91210,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#c.PyMutex_Lock",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91211,
+    "url": "https://docs.python.org/3/c-api/synchronization.html#c.PyMutex_Unlock",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91212,
+    "url": "https://docs.python.org/3/c-api/memory.html#c.PyMem_RawRealloc",
+    "parentUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "id": 91403,
+    "url": "https://github.com/python/cpython/pull/104422",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91404,
+    "url": "https://github.com/rhettinger",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91405,
+    "url": "https://github.com/python/cpython/pull/104424",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91407,
+    "url": "https://peps.python.org/688",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91411,
+    "url": "https://github.com/python/cpython/issues/91896#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91412,
+    "url": "https://github.com/python/cpython/issues/91896#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91413,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/91896",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91414,
+    "url": "https://github.com/python/cpython/pull/104294",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91415,
+    "url": "https://github.com/python/cpython/issues/91896#issue-1213932492",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91416,
+    "url": "https://github.com/python/cpython/pull/102096",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91417,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/91896",
+    "parentUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "id": 91461,
+    "url": "https://github.com/python/cpython/tree/3.14/Include/patchlevel.h",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91462,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#bit-packing-macros",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91464,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_RELEASE_LEVEL",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91465,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_MINOR_VERSION",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91466,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#run-time-version",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91473,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91474,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/apiabiversion.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91477,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_MAJOR_VERSION",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91479,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#api-and-abi-versioning",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91485,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_MICRO_VERSION",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91488,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91489,
+    "url": "https://docs.python.org/3/c-api/monitoring.html",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91490,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.PY_RELEASE_SERIAL",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91491,
+    "url": "https://docs.python.org/3/c-api/apiabiversion.html#build-time-version-constants",
+    "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "API and ABI Versioning — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "API and ABI Versioning — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_alloc"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate and schedule removal of collections.abc.ByteString and typing.ByteString · Issue #91896 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91896"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_QuietFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoUserSiteDirectory"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
