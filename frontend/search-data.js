@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 717,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#tkinter",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:11:25.96431"
+  },
+  {
+    "id": 716,
+    "url": "https://github.com/python/cpython/issues/126585",
+    "title": "Add EHWPOISON to errno module · Issue #126585 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add EHWPOISON to errno module #126585 New issue Copy link New issue Copy link Closed #126586 Closed Add EHWPOISON to errno module#126585 #126586 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description rruuaanng opened on Nov 8, 2024 Issue body actions Feature or enhancement Proposal: # Add a code block here, if required Currently, the attribute about EHWPOISON is missing in errno        EHWPOISON\n              Memory page has hardware error.\n from https://man7.org/linux/man-pages/man3/errno.3.html Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-126585: Add EHWPOISON error code #126586 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:11:24.719425"
+  },
+  {
+    "id": 715,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__",
+    "title": "3. Data model — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 3. Data model | Theme Auto Light Dark | 3. Data model¶ 3.1. Objects, values and types¶ Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Even code is represented by objects. Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The is operator compares the identity of two objects; the id() function returns an integer representing its identity. CPython implementation detail: For CPython, id(x) is the memory address where x is stored. An object’s type determines the operations that the object supports (e.g., “does it have a length?”) and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable. [1] The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable. (The value of an immutable container object that contains a reference to a mutable object can change when the latter’s value is changed; however the container is still considered immutable, because the collection of objects it contains cannot be changed. So, immutability is not strictly the same as having an unchangeable value, it is more subtle.) An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable. Objects are never explicitly destroyed; however, when they become unreachable they may be garbage-collected. An implementation is allowed to postpone garbage collection or omit it altogether — it is a matter of implementation quality how garbage collection is implemented, as long as no objects are collected that are still reachable. CPython implementation detail: CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. See the documentation of the gc module for information on controlling the collection of cyclic garbage. Other implementations act differently and CPython may change. Do not depend on immediate finalization of objects when they become unreachable (so you should always close files explicitly). Note that the use of the implementation’s tracing or debugging facilities may keep objects alive that would normally be collectable. Also note that catching an exception with a try…except statement may keep objects alive. Some objects contain references to “external” resources such as open files or windows. It is understood that these resources are freed when the object is garbage-collected, but since garbage collection is not guaranteed to happen, such objects also provide an explicit way to release the external resource, usually a close() method. Programs are strongly recommended to explicitly close such objects. The try…finally statement and the with statement provide convenient ways to do this. Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value. In most cases, when we talk about the value of a container, we imply the values, not the identities of the contained objects; however, when we talk about the mutability of a container, only the identities of the immediately contained objects are implied. So, if an immutable container (like a tuple) contains a reference to a mutable object, its value changes if that mutable object is changed. Types affect almost all aspects of object behavior. Even the importance of object identity is affected in some sense: for immutable types, operations that compute new values may actually return a reference to any existing object with the same type and value, while for mutable objects this is not allowed. For example, after a \u003d 1; b \u003d 1, a and b may or may not refer to the same object with the value one, depending on the implementation. This is because int is an immutable type, so the reference to 1 can be reused. This behaviour depends on the implementation used, so should not be relied upon, but is something to be aware of when making use of object identity tests. However, after c \u003d []; d \u003d [], c and d are guaranteed to refer to two different, unique, newly created empty lists. (Note that e \u003d f \u003d [] assigns the same object to both e and f.) 3.2. The standard type hierarchy¶ Below is a list of the types that are built into Python. Extension modules (written in C, Java, or other languages, depending on the implementation) can define additional types. Future versions of Pyth",
+    "scrapedAt": "2026-10-08 19:11:22.596457"
+  },
+  {
+    "id": 714,
+    "url": "https://docs.python.org/3/library/ast.html#ast.compare",
+    "title": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » ast — Abstract syntax trees | Theme Auto Light Dark | ast — Abstract syntax trees¶ Source code: Lib/ast.py The ast module helps Python applications to process trees of the Python abstract syntax grammar. The abstract syntax itself might change with each Python release; this module helps to find out programmatically what the current grammar looks like. An abstract syntax tree can be generated by passing ast.PyCF_ONLY_AST as a flag to the compile() built-in function, or using the parse() helper provided in this module. The result will be a tree of objects whose classes all inherit from ast.AST. An abstract syntax tree can be compiled into a Python code object using the built-in compile() function. Abstract grammar¶ The abstract grammar is currently defined as follows: -- ASDL\u0027s 4 builtin types are:\n-- identifier, int, string, constant\n\nmodule Python\n{\n    mod \u003d Module(stmt* body, type_ignore* type_ignores)\n        | Interactive(stmt* body)\n        | Expression(expr body)\n        | FunctionType(expr* argtypes, expr returns)\n\n    stmt \u003d FunctionDef(identifier name, arguments args,\n                       stmt* body, expr* decorator_list, expr? returns,\n                       string? type_comment, type_param* type_params)\n          | AsyncFunctionDef(identifier name, arguments args,\n                             stmt* body, expr* decorator_list, expr? returns,\n                             string? type_comment, type_param* type_params)\n\n          | ClassDef(identifier name,\n             expr* bases,\n             keyword* keywords,\n             stmt* body,\n             expr* decorator_list,\n             type_param* type_params)\n          | Return(expr? value)\n\n          | Delete(expr* targets)\n          | Assign(expr* targets, expr value, string? type_comment)\n          | TypeAlias(expr name, type_param* type_params, expr value)\n          | AugAssign(expr target, operator op, expr value)\n          -- \u0027simple\u0027 indicates that we annotate simple name without parens\n          | AnnAssign(expr target, expr annotation, expr? value, int simple)\n\n          -- use \u0027orelse\u0027 because else is a keyword in target languages\n          | For(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | While(expr test, stmt* body, stmt* orelse)\n          | If(expr test, stmt* body, stmt* orelse)\n          | With(withitem* items, stmt* body, string? type_comment)\n          | AsyncWith(withitem* items, stmt* body, string? type_comment)\n\n          | Match(expr subject, match_case* cases)\n\n          | Raise(expr? exc, expr? cause)\n          | Try(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | TryStar(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | Assert(expr test, expr? msg)\n\n          | Import(alias* names)\n          | ImportFrom(identifier? module, alias* names, int? level)\n\n          | Global(identifier* names)\n          | Nonlocal(identifier* names)\n          | Expr(expr value)\n          | Pass | Break | Continue\n\n          -- col_offset is the byte offset in the utf8 string the parser uses\n          attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)\n\n          -- BoolOp() can use left \u0026 right?\n    expr \u003d BoolOp(boolop op, expr* values)\n         | NamedExpr(expr target, expr value)\n         | BinOp(expr left, operator op, expr right)\n         | UnaryOp(unaryop op, expr operand)\n         | Lambda(arguments args, expr body)\n         | IfExp(expr test, expr body, expr orelse)\n         | Dict(expr?* keys, expr* values)\n         | Set(expr* elts)\n         | ListComp(expr elt, comprehension* generators)\n         | SetComp(expr elt, comprehension* generators)\n         | DictComp(expr key, expr value, comprehension* generators)\n         | GeneratorExp(expr elt, comprehension* generators)\n         -- the grammar constrains where yield expressions can occur\n         | Await(expr value)\n         | Yield(expr? value)\n         | YieldFrom(expr value)\n         -- need sequences for compare to distinguish between\n         -- x \u003c 4 \u003c 3 and (x \u003c 4) \u003c 3\n         | Compare(expr left, cmpop* ops, expr* comparators)\n         | Call(expr func, expr* args, keyword* keywords)\n         | FormattedValue(expr value, int conversion, expr? format_spec)\n         | Interpolation(expr value, constant str, int conversion, expr? format_spec)\n         | JoinedStr(expr* values)\n         | TemplateStr(expr* values)\n         | Constant(constant value, string? kind)\n\n         -- the following expression can appear in assignment context\n         | Attribute(expr value, identifier attr, expr_context ctx)\n         | Subscript(expr value, expr slice, expr_context ctx)\n         | Starred(expr value, expr_context ctx)\n         | Name(identif",
+    "scrapedAt": "2026-10-08 19:11:21.40805"
+  },
+  {
+    "id": 713,
+    "url": "https://docs.python.org/3/glossary.html#term-bytes-like-object",
+    "title": "Glossary — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A callable that can be called to retrieve the annotations of an object. Annotate functions are usually functions, automatically generated as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ Informally used to mean either an asynchronous generator function or an asynchronous generator iterator, depending on context. The formal terms asynchronous generator function and asynchronous generator iterator are uncommon in practice; “asynchronous generator” alone is almost always sufficient. asynchronous generator function¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. See PEP 525. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous ",
+    "scrapedAt": "2026-10-08 19:11:20.231164"
+  },
+  {
     "id": 712,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#fnmatch",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -4680,26 +4715,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 713,
-    "url": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
-  },
-  {
-    "id": 714,
-    "url": "https://docs.python.org/3/library/ast.html#ast.compare"
-  },
-  {
-    "id": 715,
-    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
-  },
-  {
-    "id": 716,
-    "url": "https://github.com/python/cpython/issues/126585"
-  },
-  {
-    "id": 717,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#tkinter"
   },
   {
     "id": 718,
@@ -117659,10 +117674,3820 @@ window.searchData = [
     "id": 81626,
     "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_is_created",
     "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 82872,
+    "url": "https://docs.python.org/3/c-api/refcounting.html#c.Py_INCREF",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82874,
+    "url": "https://docs.python.org/3/reference/expressions.html#subscriptions",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82875,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__await__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82877,
+    "url": "https://docs.python.org/3/glossary.html#term-function-annotation",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82878,
+    "url": "https://docs.python.org/3/glossary.html#term-token",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82881,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#types-genericalias",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82882,
+    "url": "https://docs.python.org/3/glossary.html#term-duck-typing",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82884,
+    "url": "https://docs.python.org/3/glossary.html#term-current-context",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82885,
+    "url": "https://peps.python.org/pep-3155/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82887,
+    "url": "https://docs.python.org/3/glossary.html#term-single-dispatch",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82888,
+    "url": "https://docs.python.org/3/glossary.html#term-path-entry-hook",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82890,
+    "url": "https://docs.python.org/3/glossary.html#term-complex-number",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82892,
+    "url": "https://docs.python.org/3/glossary.html#term-method",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82893,
+    "url": "https://peps.python.org/pep-0526/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82894,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__aiter__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82895,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.nsmallest",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82898,
+    "url": "https://docs.python.org/3/library/operator.html#operator.itemgetter",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82900,
+    "url": "https://docs.python.org/3/glossary.html#term-f-string",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82901,
+    "url": "https://docs.python.org/3/glossary.html#term-loader",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82902,
+    "url": "https://docs.python.org/3/glossary.html#term-concurrency",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82903,
+    "url": "https://docs.python.org/3/library/codecs.html#standard-encodings",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82905,
+    "url": "https://docs.python.org/3/glossary.html#term-positional-argument",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82908,
+    "url": "https://docs.python.org/3/reference/datamodel.html#special-lookup",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82909,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_freevars",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82911,
+    "url": "https://docs.python.org/3/glossary.html#term-namespace",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82913,
+    "url": "https://docs.python.org/3/glossary.html#term-dictionary-view",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82914,
+    "url": "https://docs.python.org/3/glossary.html#term-list-comprehension",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82916,
+    "url": "https://docs.python.org/3/glossary.html#term-dictionary",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82917,
+    "url": "https://docs.python.org/3/glossary.html#term-MRO",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82918,
+    "url": "https://docs.python.org/3/glossary.html#term-new-style-class",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82920,
+    "url": "https://docs.python.org/3/glossary.html#term-data-race",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82925,
+    "url": "https://docs.python.org/3/glossary.html#term-generic-function",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82927,
+    "url": "https://docs.python.org/3/glossary.html#term-interpreter-shutdown",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82928,
+    "url": "https://docs.python.org/3/library/locale.html#locale.strxfrm",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82929,
+    "url": "https://docs.python.org/3/glossary.html#term-provisional-package",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82930,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__class__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82931,
+    "url": "https://docs.python.org/3/library/queue.html#module-queue",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82937,
+    "url": "https://docs.python.org/3/howto/annotations.html#annotations-howto",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82938,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#nonlocal",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82940,
+    "url": "https://docs.python.org/3/glossary.html#term-mutable",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82941,
+    "url": "https://docs.python.org/3/glossary.html#term-garbage-collection",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82942,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#definition.__doc__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82943,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableMapping",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82946,
+    "url": "https://docs.python.org/3/glossary.html#term-standard-library",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82947,
+    "url": "https://docs.python.org/3/glossary.html#term-immutable",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82951,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#typesseq-common",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82954,
+    "url": "https://docs.python.org/3/glossary.html#term-race-condition",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82955,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__set__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82958,
+    "url": "https://docs.python.org/3/library/token.html#module-token",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82959,
+    "url": "https://docs.python.org/3/glossary.html#term-__future__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82964,
+    "url": "https://docs.python.org/3/glossary.html#term-synchronization-primitive",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82965,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__exit__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82967,
+    "url": "https://docs.python.org/3/builtins/time-complexity.html#time-complexity",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82969,
+    "url": "https://docs.python.org/3/reference/datamodel.html#descriptors",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82970,
+    "url": "https://docs.python.org/3/glossary.html#term-module-spec",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82972,
+    "url": "https://docs.python.org/3/glossary.html#term-CPython",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82973,
+    "url": "https://docs.python.org/3/glossary.html#term-metaclass",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82976,
+    "url": "https://docs.python.org/3/library/numbers.html#module-numbers",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82979,
+    "url": "https://docs.python.org/3/howto/free-threading-python.html#freethreading-python-howto",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82980,
+    "url": "https://docs.python.org/3/glossary.html#term-lock-free",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82981,
+    "url": "https://docs.python.org/3/glossary.html#term-global-state",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82982,
+    "url": "https://docs.python.org/3/glossary.html#term-optional-module",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82984,
+    "url": "https://docs.python.org/3/glossary.html#term-extension-module",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82985,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#bind-names",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82986,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__delete__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82988,
+    "url": "https://docs.python.org/3/glossary.html#term-EAFP",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82989,
+    "url": "https://docs.python.org/3/glossary.html#term-PEP",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82990,
+    "url": "https://docs.python.org/3/glossary.html#term-dictionary-comprehension",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82991,
+    "url": "https://peps.python.org/pep-0302/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82992,
+    "url": "https://docs.python.org/3/glossary.html#term-sequence",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82993,
+    "url": "https://peps.python.org/pep-0411/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82994,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#bytes.splitlines",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 82997,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__get__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83000,
+    "url": "https://docs.python.org/3/library/io.html#io.StringIO",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83002,
+    "url": "https://peps.python.org/pep-0420/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83003,
+    "url": "https://peps.python.org/pep-0238/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83004,
+    "url": "https://docs.python.org/3/library/gc.html#module-gc",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83005,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.nlargest",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83006,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Condition",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83007,
+    "url": "https://docs.python.org/3/glossary.html#term-asynchronous-generator-iterator",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83013,
+    "url": "https://docs.python.org/3/glossary.html#term-expression",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83014,
+    "url": "https://docs.python.org/3/library/typing.html#typing.get_type_hints",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83016,
+    "url": "https://docs.python.org/3/library/idle.html#idle",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83017,
+    "url": "https://docs.python.org/3/glossary.html#term-lambda",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83019,
+    "url": "https://docs.python.org/3/library/cmath.html#module-cmath",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83021,
+    "url": "https://docs.python.org/3/library/operator.html#operator.methodcaller",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83022,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#lexical",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83023,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__len__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83024,
+    "url": "https://docs.python.org/3/glossary.html#term-per-object-lock",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83027,
+    "url": "https://docs.python.org/3/glossary.html#term-class",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83030,
+    "url": "https://docs.python.org/3/glossary.html#term-keyword-argument",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83031,
+    "url": "https://docs.python.org/3/glossary.html#term-context",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83032,
+    "url": "https://docs.python.org/3/glossary.html#term-walrus-operator",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83034,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__reversed__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83036,
+    "url": "https://docs.python.org/3/using/configure.html#optional-module-requirements",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83037,
+    "url": "https://docs.python.org/3/library/operator.html#operator.attrgetter",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83038,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Lock",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83039,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stdlib_module_names",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83040,
+    "url": "https://peps.python.org/pep-0443/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83042,
+    "url": "https://docs.python.org/3/glossary.html#term-decorator",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83043,
+    "url": "https://docs.python.org/3/library/os.html#os.open",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83044,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#while",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83045,
+    "url": "https://docs.python.org/3/glossary.html#term-abstract-base-class",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83047,
+    "url": "https://docs.python.org/3/library/os.html#os.fspath",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83049,
+    "url": "https://docs.python.org/3/glossary.html#term-LBYL",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83052,
+    "url": "https://docs.python.org/3/glossary.html#term-t-strings",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83053,
+    "url": "https://peps.python.org/pep-0585/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83054,
+    "url": "https://docs.python.org/3/c-api/intro.html#api-refcountdetails",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83055,
+    "url": "https://peps.python.org/pep-0343/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83056,
+    "url": "https://docs.python.org/3/glossary.html#term-non-deterministic",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83057,
+    "url": "https://docs.python.org/3/glossary.html#term-attribute",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83059,
+    "url": "https://docs.python.org/3/glossary.html#term-type",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83063,
+    "url": "https://peps.python.org/pep-0683/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83064,
+    "url": "https://docs.python.org/3/glossary.html#term-global-interpreter-lock",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83065,
+    "url": "https://docs.python.org/3/glossary.html#term-text-encoding",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83068,
+    "url": "https://docs.python.org/3/glossary.html#term-type-hint",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83071,
+    "url": "https://docs.python.org/3/glossary.html#term-cyclic-isolate",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83075,
+    "url": "https://docs.python.org/3/library/math.html#module-math",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83076,
+    "url": "https://docs.python.org/3/glossary.html#term-evaluate-function",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83077,
+    "url": "https://peps.python.org/pep-0498/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83079,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-argument-vs-parameter",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83083,
+    "url": "https://docs.python.org/3/library/sys.html#sys.float_info",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83084,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections-abstract-base-classes",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83085,
+    "url": "https://docs.python.org/3/glossary.html#term-contiguous",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83089,
+    "url": "https://docs.python.org/3/library/abc.html#module-abc",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83090,
+    "url": "https://docs.python.org/3/glossary.html#term-qualified-name",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83091,
+    "url": "https://docs.python.org/3/glossary.html#term-asynchronous-generator-function",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83094,
+    "url": "https://docs.python.org/3/glossary.html#term-key-function",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83097,
+    "url": "https://docs.python.org/3/reference/datamodel.html#specialnames",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83098,
+    "url": "https://docs.python.org/3/library/tokenize.html#module-tokenize",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83100,
+    "url": "https://docs.python.org/3/builtins/functions.html#setattr",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83101,
+    "url": "https://peps.python.org/pep-0484/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83102,
+    "url": "https://docs.python.org/3/glossary.html#term-static-type-checker",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83103,
+    "url": "https://peps.python.org/pep-0278/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83104,
+    "url": "https://docs.python.org/3/glossary.html#term-Zen-of-Python",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83105,
+    "url": "https://docs.python.org/3/library/io.html#module-io",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83109,
+    "url": "https://docs.python.org/3/glossary.html#term-0",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83111,
+    "url": "https://docs.python.org/3/library/collections.html#collections.Counter",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83114,
+    "url": "https://docs.python.org/3/glossary.html#term-__slots__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83115,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Semaphore",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83118,
+    "url": "https://docs.python.org/3/howto/sorting.html#sortinghowto",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83119,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.islice",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83121,
+    "url": "https://docs.python.org/3/builtins/functions.html#getattr",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83124,
+    "url": "https://docs.python.org/3/howto/mro.html#python-2-3-mro",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83127,
+    "url": "https://docs.python.org/3/library/collections.html#collections.namedtuple",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83128,
+    "url": "https://docs.python.org/3/glossary.html#term-IDLE",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83129,
+    "url": "https://docs.python.org/3/glossary.html#term-meta-path-finder",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83133,
+    "url": "https://docs.python.org/3/glossary.html#term-universal-newlines",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83134,
+    "url": "https://docs.python.org/3/glossary.html#term-thread-safe",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83135,
+    "url": "https://docs.python.org/3/glossary.html#term-descriptor",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83139,
+    "url": "https://docs.python.org/3/glossary.html#term-hash-based-pyc",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83140,
+    "url": "https://docs.python.org/3/glossary.html#term-floor-division",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83143,
+    "url": "https://docs.python.org/3/library/dis.html#bytecodes",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83144,
+    "url": "https://docs.python.org/3/glossary.html#term-stdlib",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83145,
+    "url": "https://docs.python.org/3/library/functools.html#functools.singledispatch",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83146,
+    "url": "https://peps.python.org/pep-0362/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83147,
+    "url": "https://peps.python.org/pep-0483/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83148,
+    "url": "https://docs.python.org/3/glossary.html#term-type-alias",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83149,
+    "url": "https://docs.python.org/3/glossary.html#term-finder",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83152,
+    "url": "https://docs.python.org/3/glossary.html#term-dunder",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83153,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__annotate__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83154,
+    "url": "https://docs.python.org/3/library/__future__.html#module-__future__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83155,
+    "url": "https://docs.python.org/3/library/random.html#random.seed",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83156,
+    "url": "https://docs.python.org/3/glossary.html#term-t-string",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83160,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.count",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83161,
+    "url": "https://docs.python.org/3/library/os.html#os.fsencode",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83162,
+    "url": "https://docs.python.org/3/glossary.html#term-magic-method",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83164,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.index",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83166,
+    "url": "https://docs.python.org/3/glossary.html#term-path-entry",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83167,
+    "url": "https://docs.python.org/3/glossary.html#term-import-path",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83168,
+    "url": "https://docs.python.org/3/glossary.html#term-Python-3000",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83169,
+    "url": "https://peps.python.org/pep-0387/#soft-deprecation",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83170,
+    "url": "https://docs.python.org/3/glossary.html#term-class-variable",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83172,
+    "url": "https://docs.python.org/3/glossary.html#term-docstring",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83175,
+    "url": "https://docs.python.org/3/glossary.html#term-virtual-machine",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83177,
+    "url": "https://docs.python.org/3/library/random.html#module-random",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83179,
+    "url": "https://docs.python.org/3/glossary.html#term-portion",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83180,
+    "url": "https://docs.python.org/3/glossary.html#term-asynchronous-iterable",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83183,
+    "url": "https://docs.python.org/3/glossary.html#term-deadlock",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83184,
+    "url": "https://docs.python.org/3/glossary.html#term-free-variable",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83185,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__aexit__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83186,
+    "url": "https://peps.python.org/pep-3116/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83188,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#dict-views",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83189,
+    "url": "https://docs.python.org/3/glossary.html#term-object",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83190,
+    "url": "https://docs.python.org/3/library/time.html#time.localtime",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83191,
+    "url": "https://docs.python.org/3/glossary.html#term-context-variable",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83193,
+    "url": "https://docs.python.org/3/glossary.html#term-context-management-protocol",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83196,
+    "url": "https://docs.python.org/3/library/os.html#os.fsdecode",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83198,
+    "url": "https://docs.python.org/3/glossary.html#term-lexical-analyzer",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83199,
+    "url": "https://docs.python.org/3/glossary.html#term-path-entry-finder",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83201,
+    "url": "https://docs.python.org/3/glossary.html#term-set-comprehension",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83202,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#typeiter",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83204,
+    "url": "https://docs.python.org/3/builtins/functions.html#classmethod",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83205,
+    "url": "https://docs.python.org/3/library/collections.html#collections.defaultdict",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83207,
+    "url": "https://docs.python.org/3/glossary.html#term-BDFL",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83208,
+    "url": "https://docs.python.org/3/glossary.html#term-generator-function",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83209,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#list.sort",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83211,
+    "url": "https://docs.python.org/3/glossary.html#term-nested-scope",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83214,
+    "url": "https://docs.python.org/3/glossary.html#term-statement",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83215,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.PathEntryFinder",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83216,
+    "url": "https://docs.python.org/3/glossary.html#term-atomic-operation",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83217,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.MetaPathFinder",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83218,
+    "url": "https://docs.python.org/3/glossary.html#term-native-code",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83219,
+    "url": "https://docs.python.org/3/library/abc.html#abc.ABCMeta.register",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83220,
+    "url": "https://docs.python.org/3/reference/import.html#finders-and-loaders",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83221,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Event",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83222,
+    "url": "https://docs.python.org/3/glossary.html#term-module",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83225,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__anext__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83227,
+    "url": "https://docs.python.org/3/builtins/constants.html#True",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83228,
+    "url": "https://docs.python.org/3/glossary.html#term-regular-package",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83231,
+    "url": "https://docs.python.org/3/howto/descriptor.html#descriptorhowto",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83232,
+    "url": "https://docs.python.org/3/reference/expressions.html#yieldexpr",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83233,
+    "url": "https://docs.python.org/3/glossary.html#term-generator-expression",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83234,
+    "url": "https://docs.python.org/3/glossary.html#term-list",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83235,
+    "url": "https://docs.python.org/3/reference/import.html#reference-namespace-package",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83237,
+    "url": "https://docs.python.org/3/glossary.html#term-importing",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83238,
+    "url": "https://docs.python.org/3/reference/expressions.html#generator-methods",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83240,
+    "url": "https://docs.python.org/3/glossary.html#term-Pythonic",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83241,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.groupby",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83242,
+    "url": "https://docs.python.org/3/reference/import.html#module-specs",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83243,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Barrier",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83245,
+    "url": "https://docs.python.org/3/glossary.html#term-asynchronous-context-manager",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83248,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.GzipFile",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83250,
+    "url": "https://docs.python.org/3/glossary.html#term-f-strings",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83252,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/glossary.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83254,
+    "url": "https://docs.python.org/3/glossary.html#term-interpreted",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83258,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.Parameter",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83259,
+    "url": "https://docs.python.org/3/library/array.html#array.array",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83260,
+    "url": "https://docs.python.org/3/glossary.html#term-...",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83261,
+    "url": "https://docs.python.org/3/glossary.html#term-subscript",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83266,
+    "url": "https://docs.python.org/3/glossary.html#term-reference-count",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83267,
+    "url": "https://docs.python.org/3/c-api/threads.html#threads",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83268,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.merge",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83269,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.abc.Loader",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83271,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#iterator.__iter__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83273,
+    "url": "https://docs.python.org/3/glossary.html#term-importer",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83276,
+    "url": "https://docs.python.org/3/glossary.html#term-concurrent-modification",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83277,
+    "url": "https://gvanrossum.github.io/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83278,
+    "url": "https://docs.python.org/3/glossary.html#term-parallelism",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83280,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#bltin-ellipsis-object",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83284,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.casefold",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83285,
+    "url": "https://docs.python.org/3/builtins/functions.html#hasattr",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83288,
+    "url": "https://docs.python.org/3/glossary.html#term-virtual-environment",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83289,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#annassign",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83290,
+    "url": "https://docs.python.org/3/library/io.html#io.BytesIO",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83291,
+    "url": "https://peps.python.org/pep-0519/",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83294,
+    "url": "https://docs.python.org/3/glossary.html#term-reentrant",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83295,
+    "url": "https://docs.python.org/3/reference/datamodel.html#metaclasses",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83296,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__slots__",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83297,
+    "url": "https://docs.python.org/3/glossary.html#term-callback",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83298,
+    "url": "https://docs.python.org/3/glossary.html#term-lock",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83300,
+    "url": "https://docs.python.org/3/glossary.html#term-triple-quoted-string",
+    "parentUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "id": 83305,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-mode",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83306,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Gt",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83307,
+    "url": "https://docs.python.org/3/library/ast.html#node-classes",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83309,
+    "url": "https://docs.python.org/3/library/ast.html#ast.While",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83310,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AST",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83311,
+    "url": "https://docs.python.org/3/library/ast.html#ast.comprehension",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83312,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AST._field_types",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83313,
+    "url": "https://docs.python.org/3/library/ast.html#ast.unparse",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83314,
+    "url": "https://docs.python.org/3/library/ast.html#ast.keyword",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83315,
+    "url": "https://docs.python.org/3/library/ast.html#ast.BitXor",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83316,
+    "url": "https://docs.python.org/3/library/ast.html#ast.YieldFrom",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83317,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Assign",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83318,
+    "url": "https://docs.python.org/3/library/ast.html#type-annotations",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83319,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Return",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83320,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Call",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83321,
+    "url": "https://docs.python.org/3/library/ast.html#ast.arg",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83322,
+    "url": "https://docs.python.org/3/library/ast.html#compiler-flags",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83323,
+    "url": "https://docs.python.org/3/library/ast.html#function-and-class-definitions",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83325,
+    "url": "https://docs.python.org/3/library/ast.html#ast.fix_missing_locations",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83326,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Store",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83327,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Set",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83328,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__repr__",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83329,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Name",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83330,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Pow",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83333,
+    "url": "https://docs.python.org/3/library/ast.html#ast.TypeVarTuple",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83334,
+    "url": "https://docs.python.org/3/library/ast.html#ast.PyCF_OPTIMIZED_AST",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83335,
+    "url": "https://docs.python.org/3/library/ast.html#ast.match_case",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83336,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Yield",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83337,
+    "url": "https://docs.python.org/3/library/ast.html#subscripting",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83338,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.cleandoc",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83342,
+    "url": "https://docs.python.org/3/library/ast.html#ast.For",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83343,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AsyncFunctionDef",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83344,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Is",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83346,
+    "url": "https://docs.python.org/3/library/ast.html#ast.get_source_segment",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83348,
+    "url": "https://docs.python.org/3/library/ast.html#ast.copy_location",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83349,
+    "url": "https://docs.python.org/3/library/ast.html#ast.In",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83350,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/ast.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83352,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchSequence",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83354,
+    "url": "https://docs.python.org/3/library/ast.html#ast-statements",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83355,
+    "url": "https://docs.python.org/3/library/ast.html#ast.If",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83356,
+    "url": "https://docs.python.org/3/library/ast.html#ast.PyCF_ALLOW_TOP_LEVEL_AWAIT",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83357,
+    "url": "https://docs.python.org/3/library/ast.html#ast.FormattedValue",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83358,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Pass",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83360,
+    "url": "https://docs.python.org/3/library/ast.html#ast.For.type_comment",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83361,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Invert",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83362,
+    "url": "https://docs.python.org/3/library/ast.html#ast.PyCF_ONLY_AST",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83363,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NodeVisitor.visit_Constant",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83364,
+    "url": "https://asttokens.readthedocs.io/en/latest/user-guide.html",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83365,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Add",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83366,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Interactive",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83368,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchClass",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83369,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Interpolation",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83371,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Assert",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83372,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Div",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83373,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NotEq",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83374,
+    "url": "https://docs.python.org/3/library/ast.html#expressions",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83375,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Import",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83376,
+    "url": "https://docs.python.org/3/library/ast.html#ast.UAdd",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83378,
+    "url": "https://docs.python.org/3/library/ast.html#ast.SetComp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83379,
+    "url": "https://docs.python.org/3/library/ast.html#ast.TypeAlias",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83380,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-O",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83381,
+    "url": "https://docs.python.org/3/library/ast.html#ast.ImportFrom",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83382,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Mod",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83384,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#type-params",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83385,
+    "url": "https://leo-editor.github.io/leo-editor/appendices.html#leoast-py",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83386,
+    "url": "https://docs.python.org/3/library/ast.html#control-flow",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83387,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AST.end_lineno",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83388,
+    "url": "https://docs.python.org/3/library/ast.html#ast.GtE",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83389,
+    "url": "https://docs.python.org/3/library/ast.html#ast.BitAnd",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83391,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-a",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83392,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-h",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83393,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-i",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83395,
+    "url": "https://docs.python.org/3/library/ast.html#ast.TypeVar",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83396,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NodeTransformer",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83397,
+    "url": "https://docs.python.org/3/library/ast.html#ast.dump",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83398,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Module",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83399,
+    "url": "https://docs.python.org/3/library/ast.html#ast.LShift",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83400,
+    "url": "https://docs.python.org/3/library/ast.html#variables",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83401,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NamedExpr",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83402,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Lt",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83404,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchOr",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83405,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Expr",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83407,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NodeVisitor.visit",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83408,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-indent",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83409,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Not",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83410,
+    "url": "https://docs.python.org/3/library/ast.html#ast.arg.type_comment",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83411,
+    "url": "https://docs.python.org/3/library/ast.html#ast.BitOr",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83412,
+    "url": "https://docs.python.org/3/library/typing.html#type-aliases",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83413,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NodeVisitor.generic_visit",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83416,
+    "url": "https://docs.python.org/3/library/ast.html#ast.IfExp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83417,
+    "url": "https://docs.python.org/3/library/ast.html#ast.alias",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83419,
+    "url": "https://docs.python.org/3/library/ast.html#ast.With.type_comment",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83420,
+    "url": "https://docs.python.org/3/library/ast.html#",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83421,
+    "url": "https://docs.python.org/3/library/ast.html#ast-type-params",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83422,
+    "url": "https://docs.python.org/3/library/ast.html#ast.iter_fields",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83423,
+    "url": "https://docs.python.org/3/library/ast.html#ast.NotIn",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83424,
+    "url": "https://docs.python.org/3/library/ast.html#ast.FunctionDef.type_comment",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83425,
+    "url": "https://docs.python.org/3/library/ast.html#abstract-grammar",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83427,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatMult",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83428,
+    "url": "https://docs.python.org/3/library/ast.html#ast.walk",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83429,
+    "url": "https://docs.python.org/3/library/ast.html#ast.arguments",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83430,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Dict",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83431,
+    "url": "https://docs.python.org/3/library/ast.html#pattern-matching",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83432,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Raise",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83433,
+    "url": "https://docs.python.org/3/library/ast.html#command-line-usage",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83434,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Or",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83436,
+    "url": "https://docs.python.org/3/library/ast.html#ast.ParamSpec",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83437,
+    "url": "https://docs.python.org/3/library/ast.html#ast.ClassDef",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83438,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Global",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83440,
+    "url": "https://docs.python.org/3/library/ast.html#ast-helpers",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83441,
+    "url": "https://docs.python.org/3/library/ast.html#ast.GeneratorExp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83442,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AsyncFor",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83443,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchAs",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83444,
+    "url": "https://docs.python.org/3/library/ast.html#ast.USub",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83445,
+    "url": "https://docs.python.org/3/library/ast.html#ast-expressions",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83446,
+    "url": "https://docs.python.org/3/library/ast.html#ast.PyCF_TYPE_COMMENTS",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83448,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Expression",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83449,
+    "url": "https://docs.python.org/3/library/ast.html#ast.JoinedStr",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83450,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Match",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83452,
+    "url": "https://docs.python.org/3/library/ast.html#ast.DictComp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83453,
+    "url": "https://docs.python.org/3/library/ast.html#ast.BinOp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83455,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AugAssign",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83456,
+    "url": "https://peps.python.org/pep-3115/",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83457,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Lambda",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83459,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Mult",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83460,
+    "url": "https://docs.python.org/3/library/ast.html#ast.FloorDiv",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83461,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AnnAssign",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83462,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchValue",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83464,
+    "url": "https://docs.python.org/3/library/ast.html#ast.IsNot",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83465,
+    "url": "https://docs.python.org/3/library/ast.html#type-parameters",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83466,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Try",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83467,
+    "url": "https://docs.python.org/3/library/ast.html#ast.LtE",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83468,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Assign.type_comment",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83469,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchStar",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83470,
+    "url": "https://docs.python.org/3/library/ast.html#ast.RShift",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83471,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-m",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83473,
+    "url": "https://docs.python.org/3/reference/toplevel_components.html#interactive",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83474,
+    "url": "https://docs.python.org/3/library/ast.html#ast.literal_eval",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83476,
+    "url": "https://docs.python.org/3/library/ast.html#ast.get_docstring",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83478,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AST.end_col_offset",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83479,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Slice",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83480,
+    "url": "https://docs.python.org/3/library/ast.html#ast.TryStar",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83483,
+    "url": "https://docs.python.org/3/library/ast.html#ast.TemplateStr",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83484,
+    "url": "https://docs.python.org/3/library/ast.html#ast.withitem",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83485,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Load",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83486,
+    "url": "https://docs.python.org/3/library/ast.html#ast.TypeIgnore",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83487,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Delete",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83488,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Del",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83489,
+    "url": "https://docs.python.org/3/library/ast.html#ast.ListComp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83490,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-no-type-comments",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83491,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Compare",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83492,
+    "url": "https://docs.python.org/3/library/ast.html#ast.iter_child_nodes",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83493,
+    "url": "https://docs.python.org/3/library/ast.html#ast.ExceptHandler",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83496,
+    "url": "https://docs.python.org/3/library/ast.html#literals",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83497,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AST.col_offset",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83498,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchSingleton",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83500,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Continue",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83501,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AST.lineno",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83502,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Attribute",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83503,
+    "url": "https://docs.python.org/3/library/ast.html#ast.FunctionType",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83504,
+    "url": "https://docs.python.org/3/library/ast.html#ast.And",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83506,
+    "url": "https://greentreesnakes.readthedocs.io/en/latest/",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83510,
+    "url": "https://docs.python.org/3/library/ast.html#comprehensions",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83511,
+    "url": "https://docs.python.org/3/library/ast.html#ast.FunctionDef",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83512,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/ast.py",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83513,
+    "url": "https://docs.python.org/3/library/ast.html#imports",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83514,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Tuple",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83515,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Await",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83516,
+    "url": "https://libcst.readthedocs.io/",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83517,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Eq",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83518,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AsyncWith",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83519,
+    "url": "https://docs.python.org/3/library/ast.html#statements",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83520,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Sub",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83522,
+    "url": "https://docs.python.org/3/library/ast.html#ast.increment_lineno",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83523,
+    "url": "https://docs.python.org/3/library/ast.html#ast.UnaryOp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83524,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Starred",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83525,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Nonlocal",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83527,
+    "url": "https://docs.python.org/3/library/ast.html#ast.List",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83529,
+    "url": "https://docs.python.org/3/library/ast.html#root-nodes",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83532,
+    "url": "https://docs.python.org/3/library/ast.html#async-and-await",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83533,
+    "url": "https://docs.python.org/3/library/ast.html#ast.BoolOp",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83535,
+    "url": "https://docs.python.org/3/library/ast.html#ast.With",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83538,
+    "url": "https://greentreesnakes.readthedocs.io/",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83539,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Break",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83540,
+    "url": "https://docs.python.org/3/library/ast.html#ast.MatchMapping",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83541,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Subscript",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83542,
+    "url": "https://parso.readthedocs.io",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83544,
+    "url": "https://docs.python.org/3/library/ast.html#ast.AST._fields",
+    "parentUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "id": 83547,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__globals__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83549,
+    "url": "https://docs.python.org/3/reference/datamodel.html#slots",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83550,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_stacksize",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83555,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#set.add",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83559,
+    "url": "https://docs.python.org/3/library/enum.html#module-enum",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83562,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-augmented-assignment-tuple-error",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83566,
+    "url": "https://docs.python.org/3/reference/datamodel.html#datamodel-mappings",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83567,
+    "url": "https://docs.python.org/3/reference/datamodel.html#instance-methods",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83569,
+    "url": "https://docs.python.org/3/library/numbers.html#implementing-the-arithmetic-operations",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83570,
+    "url": "https://docs.python.org/3/builtins/functions.html#round",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83573,
+    "url": "https://docs.python.org/3/reference/datamodel.html#uses-for-metaclasses",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83574,
+    "url": "https://docs.python.org/3/library/typing.html#generics",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83575,
+    "url": "https://docs.python.org/3/reference/datamodel.html#implementing-descriptors",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83577,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.format",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83578,
+    "url": "https://docs.python.org/3/reference/datamodel.html#file.close",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83580,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ImportWarning",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83581,
+    "url": "https://docs.python.org/3/reference/datamodel.html#invoking-descriptors",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83582,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__gt__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83586,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__buffer__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83589,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__imod__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83590,
+    "url": "https://peps.python.org/pep-0634/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83592,
+    "url": "https://docs.python.org/3/reference/datamodel.html#sequences",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83594,
+    "url": "https://docs.python.org/3/reference/datamodel.html#modules",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83595,
+    "url": "https://docs.python.org/3/reference/datamodel.html#emulating-generic-types",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83596,
+    "url": "https://docs.python.org/3/reference/datamodel.html#special-attributes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83599,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.remove",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83601,
+    "url": "https://docs.python.org/3/reference/executionmodel.html#lazy-evaluation",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83602,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__isub__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83603,
+    "url": "https://docs.python.org/3/reference/datamodel.html#customizing-instance-and-subclass-checks",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83604,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.replace",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83605,
+    "url": "https://docs.python.org/3/reference/datamodel.html#built-in-methods",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83610,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.extend",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83613,
+    "url": "https://docs.python.org/3/reference/datamodel.html#class-method-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83614,
+    "url": "https://peps.python.org/pep-0749/#pep749-metaclasses",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83615,
+    "url": "https://docs.python.org/3/builtins/functions.html#reversed",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83617,
+    "url": "https://docs.python.org/3/builtins/functions.html#func-bytes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83620,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__dict__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83623,
+    "url": "https://docs.python.org/3/reference/datamodel.html#class-getitem-versus-getitem",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83624,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.finalize",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83625,
+    "url": "https://docs.python.org/3/reference/datamodel.html#method-binding",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83626,
+    "url": "https://docs.python.org/3/library/numbers.html#numbers.Complex",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83627,
+    "url": "https://docs.python.org/3/library/os.html#os.fdopen",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83631,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__missing__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83633,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_consts",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83634,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__match_args__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83638,
+    "url": "https://docs.python.org/3/reference/datamodel.html#user-defined-functions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83639,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_code",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83641,
+    "url": "https://docs.python.org/3/library/os.html#os.PathLike.__fspath__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83642,
+    "url": "https://docs.python.org/3/library/types.html#types.get_original_bases",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83643,
+    "url": "https://docs.python.org/3/reference/datamodel.html#custom-classes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83646,
+    "url": "https://docs.python.org/3/reference/datamodel.html#preparing-the-class-namespace",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83650,
+    "url": "https://docs.python.org/3/library/io.html#io.TextIOBase",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83651,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_positions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83652,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.BufferFlags",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83653,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__bases__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83654,
+    "url": "https://docs.python.org/3/reference/datamodel.html#emulating-callable-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83655,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__dict__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83656,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_generator",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83657,
+    "url": "https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83659,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__name__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83660,
+    "url": "https://docs.python.org/3/reference/datamodel.html#special-methods",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83662,
+    "url": "https://docs.python.org/3/builtins/functions.html#dir",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83663,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#definition.__qualname__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83668,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_lineno",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83671,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ge__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83675,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.submodule_search_locations",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83676,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__annotate__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83679,
+    "url": "https://docs.python.org/3/reference/datamodel.html#emulating-buffer-types",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83680,
+    "url": "https://docs.python.org/3/library/numbers.html#numbers.Integral",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83682,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__subclasses__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83686,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_trace_lines",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83690,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__float__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83693,
+    "url": "https://peps.python.org/pep-0688/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83696,
+    "url": "https://docs.python.org/3/reference/datamodel.html#traceback.tb_next",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83697,
+    "url": "https://docs.python.org/3/library/types.html#types.resolve_bases",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83701,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/reference/datamodel.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83702,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.insert",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83704,
+    "url": "https://docs.python.org/3/reference/datamodel.html#method.__name__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83706,
+    "url": "https://docs.python.org/3/library/sys.html#sys.exc_info",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83709,
+    "url": "https://docs.python.org/3/library/string.html#formatspec",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83711,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#typecontextmanager",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83712,
+    "url": "https://docs.python.org/3/reference/datamodel.html#file.write",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83713,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ceil__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83714,
+    "url": "https://docs.python.org/3/library/dbm.html#module-dbm.gnu",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83717,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__base__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83718,
+    "url": "https://docs.python.org/3/reference/datamodel.html#traceback.tb_lasti",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83719,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__module__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83720,
+    "url": "https://docs.python.org/3/reference/datamodel.html#built-in-functions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83721,
+    "url": "https://docs.python.org/3/library/types.html#types.coroutine",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83722,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__static_attributes__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83723,
+    "url": "https://docs.python.org/3/reference/datamodel.html#ellipsis",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83725,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__doc__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83727,
+    "url": "https://docs.python.org/3/reference/datamodel.html#customizing-attribute-access",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83728,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.append",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83731,
+    "url": "https://docs.python.org/3/reference/datamodel.html#coroutine.throw",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83732,
+    "url": "https://docs.python.org/3/reference/datamodel.html#executing-the-class-body",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83733,
+    "url": "https://docs.python.org/3/reference/datamodel.html#index-71",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83734,
+    "url": "https://docs.python.org/3/reference/datamodel.html#index-70",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83736,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__irshift__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83738,
+    "url": "https://docs.python.org/3/reference/expressions.html#expressions-value-comparisons",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83739,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__getattr__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83741,
+    "url": "https://docs.python.org/3/reference/datamodel.html#traceback.tb_lineno",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83742,
+    "url": "https://docs.python.org/3/library/typing.html#user-defined-generics",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83743,
+    "url": "https://docs.python.org/3/reference/datamodel.html#import-related-attributes-on-module-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83746,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__iadd__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83748,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_kwonlyargcount",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83749,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__doc__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83751,
+    "url": "https://docs.python.org/3/reference/datamodel.html#awaitable-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83752,
+    "url": "https://docs.python.org/3/reference/datamodel.html#data-model",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83754,
+    "url": "https://docs.python.org/3/reference/datamodel.html#mutable-sequences",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83756,
+    "url": "https://docs.python.org/3/library/math.html#math.ceil",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83759,
+    "url": "https://docs.python.org/3/reference/datamodel.html#index-64",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83761,
+    "url": "https://docs.python.org/3/reference/datamodel.html#generator-functions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83764,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_code",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83765,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__round__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83766,
+    "url": "https://docs.python.org/3/library/abc.html#abc.ABCMeta",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83767,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.clear",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83769,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__release_buffer__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83770,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__iand__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83771,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__imul__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83772,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_builtins",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83774,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module-dictionaries",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83775,
+    "url": "https://docs.python.org/3/builtins/functions.html#hex",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83777,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__rdivmod__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83778,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ilshift__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83779,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__del__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83780,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__dir__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83781,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id1",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83784,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id4",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83785,
+    "url": "https://docs.python.org/3/reference/datamodel.html#basic-customization",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83786,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id5",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83787,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__setattr__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83789,
+    "url": "https://docs.python.org/3/reference/datamodel.html#mappings",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83790,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.pop",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83791,
+    "url": "https://docs.python.org/3/reference/datamodel.html#asynchronous-iterators",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83792,
+    "url": "https://docs.python.org/3/reference/datamodel.html#",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83795,
+    "url": "https://docs.python.org/3/reference/datamodel.html#emulating-container-types",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83796,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#generic-functions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83797,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#generic-classes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83798,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__mro__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83799,
+    "url": "https://docs.python.org/3/reference/datamodel.html#none",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83800,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__imatmul__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83803,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#bytes.decode",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83807,
+    "url": "https://docs.python.org/3/library/types.html#types.ModuleType",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83808,
+    "url": "https://docs.python.org/3/builtins/constants.html#False",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83810,
+    "url": "https://docs.python.org/3/reference/datamodel.html#user-defined-funcs",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83811,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__annotations__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83813,
+    "url": "https://docs.python.org/3/reference/import.html#importsystem",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83815,
+    "url": "https://docs.python.org/3/reference/datamodel.html#method.__doc__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83816,
+    "url": "https://docs.python.org/3/reference/datamodel.html#customizing-positional-arguments-in-class-pattern-matching",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83817,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__annotations__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83818,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__defaults__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83822,
+    "url": "https://docs.python.org/3/reference/expressions.html#dict",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83823,
+    "url": "https://peps.python.org/pep-0562/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83826,
+    "url": "https://docs.python.org/3/reference/datamodel.html#class-instances",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83827,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.util.module_from_spec",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83832,
+    "url": "https://docs.python.org/3/reference/datamodel.html#builtin-functions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83835,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ne__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83837,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__doc__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83838,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ipow__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83839,
+    "url": "https://docs.python.org/3/reference/datamodel.html#notimplemented",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83840,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__annotations__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83844,
+    "url": "https://docs.python.org/3/reference/datamodel.html#customizing-class-creation",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83845,
+    "url": "https://docs.python.org/3/library/numbers.html#numbers.Number",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83847,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__complex__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83848,
+    "url": "https://docs.python.org/3/tutorial/classes.html#tut-multiple",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83851,
+    "url": "https://peps.python.org/pep-0366/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83855,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ior__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83856,
+    "url": "https://docs.python.org/3/reference/datamodel.html#immutable-sequences",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83857,
+    "url": "https://docs.python.org/3/library/dbm.html#module-dbm.ndbm",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83858,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_trace",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83860,
+    "url": "https://peps.python.org/pep-0560/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83865,
+    "url": "https://docs.python.org/3/reference/datamodel.html#numbers-real-float",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83867,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__itruediv__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83868,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__objclass__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83870,
+    "url": "https://docs.python.org/3/reference/datamodel.html#context-managers",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83872,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.machinery.ModuleSpec.name",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83874,
+    "url": "https://docs.python.org/3/reference/datamodel.html#dictionaries",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83876,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__length_hint__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83880,
+    "url": "https://docs.python.org/3/library/math.html#math.trunc",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83881,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#bltin-exceptions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83884,
+    "url": "https://docs.python.org/3/reference/datamodel.html#the-purpose-of-class-getitem",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83887,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__firstlineno__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83888,
+    "url": "https://docs.python.org/3/reference/datamodel.html#descriptor-invocation",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83890,
+    "url": "https://docs.python.org/3/builtins/functions.html#len",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83893,
+    "url": "https://docs.python.org/3/reference/datamodel.html#set-types",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83894,
+    "url": "https://docs.python.org/3/reference/datamodel.html#coroutine.send",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83895,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__type_params__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83900,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id12",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83902,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_back",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83903,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_trace_opcodes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83908,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__annotate__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83912,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83915,
+    "url": "https://docs.python.org/3/library/operator.html#operator.index",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83916,
+    "url": "https://docs.python.org/3/reference/datamodel.html#methods-on-code-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83918,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id17",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83920,
+    "url": "https://peps.python.org/pep-0252/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83921,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id16",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83922,
+    "url": "https://docs.python.org/3/reference/datamodel.html#classes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83923,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id18",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83925,
+    "url": "https://docs.python.org/3/reference/datamodel.html#special-method-lookup",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83928,
+    "url": "https://docs.python.org/3/tutorial/errors.html#tut-errors",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83931,
+    "url": "https://docs.python.org/3/reference/datamodel.html#traceback.tb_frame",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83933,
+    "url": "https://docs.python.org/3/reference/datamodel.html#other-writable-attributes-on-module-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83936,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_argcount",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83937,
+    "url": "https://docs.python.org/3/library/math.html#math.floor",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83938,
+    "url": "https://docs.python.org/3/reference/datamodel.html#annotations",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83941,
+    "url": "https://docs.python.org/3/reference/datamodel.html#internal-types",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83942,
+    "url": "https://peps.python.org/pep-3119/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83943,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyTypeObject.tp_base",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83944,
+    "url": "https://docs.python.org/3/reference/datamodel.html#class-object-creation",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83948,
+    "url": "https://docs.python.org/3/reference/datamodel.html#emulating-numeric-types",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83949,
+    "url": "https://docs.python.org/3/reference/datamodel.html#customizing-module-attribute-access",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83951,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame-object-methods",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83952,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__dict__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83954,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#textseq",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83955,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ixor__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83956,
+    "url": "https://docs.python.org/3/reference/expressions.html#membership-test-details",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83958,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__name__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83960,
+    "url": "https://docs.python.org/3/reference/datamodel.html#creating-the-class-object",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83964,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__le__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83965,
+    "url": "https://docs.python.org/3/reference/datamodel.html#slice-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83966,
+    "url": "https://docs.python.org/3/reference/datamodel.html#slice.indices",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83969,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_locals",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83970,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.clear",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83973,
+    "url": "https://docs.python.org/3/reference/datamodel.html#method.__module__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83974,
+    "url": "https://docs.python.org/3/library/__future__.html#future__._Feature.compiler_flag",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83975,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__annotate__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83978,
+    "url": "https://docs.python.org/3/builtins/functions.html#chr",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83980,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__mro_entries__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83981,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__qualname__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83984,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_name",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83989,
+    "url": "https://docs.python.org/3/reference/datamodel.html#callable-types",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83990,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.CO_HAS_DOCSTRING",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83991,
+    "url": "https://docs.python.org/3/reference/datamodel.html#frame.f_globals",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83992,
+    "url": "https://docs.python.org/3/reference/datamodel.html#determining-the-appropriate-metaclass",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83995,
+    "url": "https://docs.python.org/3/reference/import.html#package-path-rules",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83996,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_flags",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 83999,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__ifloordiv__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84001,
+    "url": "https://docs.python.org/3/library/numbers.html#numbers.Real",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84002,
+    "url": "https://docs.python.org/3/reference/datamodel.html#coroutine-functions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84003,
+    "url": "https://docs.python.org/3/reference/datamodel.html#coroutine.close",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84006,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_posonlyargcount",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84007,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__type_params__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84010,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__floor__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84012,
+    "url": "https://docs.python.org/3/library/asyncio-future.html#asyncio.Future",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84013,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#sequence.reverse",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84014,
+    "url": "https://docs.python.org/3/library/types.html#types.TracebackType",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84016,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__closure__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84017,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.mro",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84020,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_linetable",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84022,
+    "url": "https://docs.python.org/3/reference/datamodel.html#coroutine-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84025,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__path__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84026,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__format__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84027,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id24",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84029,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id23",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84030,
+    "url": "https://docs.python.org/3/reference/datamodel.html#file.read",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84031,
+    "url": "https://docs.python.org/3/reference/datamodel.html#asynchronous-context-managers",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84032,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id20",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84034,
+    "url": "https://docs.python.org/3/library/sys.html#sys.maxsize",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84035,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_cellvars",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84036,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id22",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84037,
+    "url": "https://docs.python.org/3/reference/datamodel.html#id21",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84039,
+    "url": "https://docs.python.org/3/reference/datamodel.html#numbers-complex-complex",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84042,
+    "url": "https://docs.python.org/3/reference/datamodel.html#method.__self__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84043,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_nlocals",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84045,
+    "url": "https://docs.python.org/3/library/collections.html#module-collections",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84046,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__dir__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84049,
+    "url": "https://docs.python.org/3/reference/datamodel.html#special-writable-attributes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84051,
+    "url": "https://docs.python.org/3/library/inspect.html#module-inspect",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84053,
+    "url": "https://docs.python.org/3/builtins/functions.html#bin",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84056,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__bytes__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84057,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__divmod__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84058,
+    "url": "https://docs.python.org/3/reference/datamodel.html#numbers-integral",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84059,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.makefile",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84060,
+    "url": "https://docs.python.org/3/builtins/functions.html#oct",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84063,
+    "url": "https://docs.python.org/3/library/xml.dom.html#dom-nodelist-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84064,
+    "url": "https://docs.python.org/3/reference/datamodel.html#method.__func__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84075,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__kwdefaults__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84076,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__builtins__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84077,
+    "url": "https://docs.python.org/3/library/math.html#math.sin",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84078,
+    "url": "https://docs.python.org/3/builtins/threadsafety.html#thread-safety-memoryview",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84079,
+    "url": "https://docs.python.org/3/reference/datamodel.html#numbers-number",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84084,
+    "url": "https://docs.python.org/3/library/sys.html#sys.last_traceback",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84087,
+    "url": "https://docs.python.org/3/reference/datamodel.html#special-read-only-attributes",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84090,
+    "url": "https://peps.python.org/pep-3135/",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84095,
+    "url": "https://docs.python.org/3/reference/datamodel.html#i-o-objects-also-known-as-file-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84096,
+    "url": "https://docs.python.org/3/reference/datamodel.html#asynchronous-generator-functions",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84098,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect.getdoc",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84099,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module.__class__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84101,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__abs__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84102,
+    "url": "https://docs.python.org/3/reference/datamodel.html#codeobject.co_qualname",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84103,
+    "url": "https://docs.python.org/3/library/operator.html#operator.length_hint",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84105,
+    "url": "https://docs.python.org/3/reference/datamodel.html#static-method-objects",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84108,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect-module-co-flags",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84111,
+    "url": "https://docs.python.org/3/reference/datamodel.html#type.__instancecheck__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84112,
+    "url": "https://docs.python.org/3/library/importlib.html#importlib.import_module",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84113,
+    "url": "https://docs.python.org/3/builtins/functions.html#help",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84115,
+    "url": "https://docs.python.org/3/builtins/functions.html#property",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84117,
+    "url": "https://docs.python.org/3/reference/datamodel.html#resolving-mro-entries",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84120,
+    "url": "https://docs.python.org/3/reference/datamodel.html#function.__code__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84122,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__delattr__",
+    "parentUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "id": 84125,
+    "url": "https://github.com/python/cpython/pull/126586",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 84126,
+    "url": "https://man7.org/linux/man-pages/man3/errno.3.html",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 84128,
+    "url": "https://github.com/python/cpython/issues/126585#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 84129,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/126585",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 84130,
+    "url": "https://github.com/rruuaanng",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 84131,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/126585",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 84132,
+    "url": "https://github.com/python/cpython/issues/126585#top",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 84134,
+    "url": "https://github.com/python/cpython/issues/126585#issue-2644273575",
+    "parentUrl": "https://github.com/python/cpython/issues/126585"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#tkinter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#tkinter"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/108215543?u\u003dc2ea60ea592b31d1b09ef3029652463815fce09b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@rruuaanng",
+    "pageTitle": "Add EHWPOISON to errno module · Issue #126585 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add EHWPOISON to errno module · Issue #126585 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#object.__rpow__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#ast.compare"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-bytes-like-object"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
