@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1197,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter",
+    "title": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_UCS4",
+    "scrapedAt": "2026-10-08 19:31:21.909588"
+  },
+  {
+    "id": 1196,
+    "url": "https://docs.python.org/3/library/ast.html#module-ast",
+    "title": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » ast — Abstract syntax trees | Theme Auto Light Dark | ast — Abstract syntax trees¶ Source code: Lib/ast.py The ast module helps Python applications to process trees of the Python abstract syntax grammar. The abstract syntax itself might change with each Python release; this module helps to find out programmatically what the current grammar looks like. An abstract syntax tree can be generated by passing ast.PyCF_ONLY_AST as a flag to the compile() built-in function, or using the parse() helper provided in this module. The result will be a tree of objects whose classes all inherit from ast.AST. An abstract syntax tree can be compiled into a Python code object using the built-in compile() function. Abstract grammar¶ The abstract grammar is currently defined as follows: -- ASDL\u0027s 4 builtin types are:\n-- identifier, int, string, constant\n\nmodule Python\n{\n    mod \u003d Module(stmt* body, type_ignore* type_ignores)\n        | Interactive(stmt* body)\n        | Expression(expr body)\n        | FunctionType(expr* argtypes, expr returns)\n\n    stmt \u003d FunctionDef(identifier name, arguments args,\n                       stmt* body, expr* decorator_list, expr? returns,\n                       string? type_comment, type_param* type_params)\n          | AsyncFunctionDef(identifier name, arguments args,\n                             stmt* body, expr* decorator_list, expr? returns,\n                             string? type_comment, type_param* type_params)\n\n          | ClassDef(identifier name,\n             expr* bases,\n             keyword* keywords,\n             stmt* body,\n             expr* decorator_list,\n             type_param* type_params)\n          | Return(expr? value)\n\n          | Delete(expr* targets)\n          | Assign(expr* targets, expr value, string? type_comment)\n          | TypeAlias(expr name, type_param* type_params, expr value)\n          | AugAssign(expr target, operator op, expr value)\n          -- \u0027simple\u0027 indicates that we annotate simple name without parens\n          | AnnAssign(expr target, expr annotation, expr? value, int simple)\n\n          -- use \u0027orelse\u0027 because else is a keyword in target languages\n          | For(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | While(expr test, stmt* body, stmt* orelse)\n          | If(expr test, stmt* body, stmt* orelse)\n          | With(withitem* items, stmt* body, string? type_comment)\n          | AsyncWith(withitem* items, stmt* body, string? type_comment)\n\n          | Match(expr subject, match_case* cases)\n\n          | Raise(expr? exc, expr? cause)\n          | Try(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | TryStar(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | Assert(expr test, expr? msg)\n\n          | Import(alias* names)\n          | ImportFrom(identifier? module, alias* names, int? level)\n\n          | Global(identifier* names)\n          | Nonlocal(identifier* names)\n          | Expr(expr value)\n          | Pass | Break | Continue\n\n          -- col_offset is the byte offset in the utf8 string the parser uses\n          attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)\n\n          -- BoolOp() can use left \u0026 right?\n    expr \u003d BoolOp(boolop op, expr* values)\n         | NamedExpr(expr target, expr value)\n         | BinOp(expr left, operator op, expr right)\n         | UnaryOp(unaryop op, expr operand)\n         | Lambda(arguments args, expr body)\n         | IfExp(expr test, expr body, expr orelse)\n         | Dict(expr?* keys, expr* values)\n         | Set(expr* elts)\n         | ListComp(expr elt, comprehension* generators)\n         | SetComp(expr elt, comprehension* generators)\n         | DictComp(expr key, expr value, comprehension* generators)\n         | GeneratorExp(expr elt, comprehension* generators)\n         -- the grammar constrains where yield expressions can occur\n         | Await(expr value)\n         | Yield(expr? value)\n         | YieldFrom(expr value)\n         -- need sequences for compare to distinguish between\n         -- x \u003c 4 \u003c 3 and (x \u003c 4) \u003c 3\n         | Compare(expr left, cmpop* ops, expr* comparators)\n         | Call(expr func, expr* args, keyword* keywords)\n         | FormattedValue(expr value, int conversion, expr? format_spec)\n         | Interpolation(expr value, constant str, int conversion, expr? format_spec)\n         | JoinedStr(expr* values)\n         | TemplateStr(expr* values)\n         | Constant(constant value, string? kind)\n\n         -- the following expression can appear in assignment context\n         | Attribute(expr value, identifier attr, expr_context ctx)\n         | Subscript(expr value, expr slice, expr_context ctx)\n         | Starred(expr value, expr_context ctx)\n         | Name(identif",
+    "scrapedAt": "2026-10-08 19:31:20.640693"
+  },
+  {
+    "id": 1195,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key_value",
+    "title": "Thread-local storage support — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int key",
+    "scrapedAt": "2026-10-08 19:31:19.360173"
+  },
+  {
+    "id": 1194,
+    "url": "https://github.com/python/cpython/issues/127275",
+    "title": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation junkmd commented Nov 25, 2024 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Please refer also to gh-127183 and gh-127184 for the behavior of CopyComPointer. Issue: Make CopyComPointer public and add to ctypes doc. #127255 📚 Documentation preview 📚: https://cpython-previews--127275.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-app Bot mentioned this pull request Nov 25, 2024 Make CopyComPointer public and add to ctypes doc. #127255 Closed bedevere-app Bot added the awaiting review label Nov 25, 2024 junkmd added 2 commits November 25, 2024 23:29 Make CopyComPointer public. 292b244 Change import sources. 3b1aac2 junkmd force-pushed the add_copy_com_pointer branch from 72cfa99 to 5ab0425 Compare November 25, 2024 23:30 junkmd added 3 commits November 25, 2024 23:41 Add CopyComPointer to ctypes doc. d6cabaa Add NEWS. e742f17 Update 3.14.rst. df91824 junkmd force-pushed the add_copy_com_pointer branch from 5ab0425 to df91824 Compare November 25, 2024 23:41 ZeroIntensity approved these changes Nov 30, 2024 View reviewed changes ZeroIntensity left a comment • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. I want Bénédikt to take a quick look before I tag Petr. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 🚀 1 junkmd reacted with rocket emoji All reactions 🚀 1 reaction bedevere-app Bot added awaiting core review and removed awaiting review labels Nov 30, 2024 ZeroIntensity added the topic-ctypes label Nov 30, 2024 ZeroIntensity requested a review from picnixz November 30, 2024 04:15 picnixz reviewed Nov 30, 2024 View reviewed changes Comment thread Doc/library/ctypes.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. junkmd added 2 commits November 30, 2024 09:02 Update CopyComPointer section. 4f6b8c8 Add mentions of the platform to 3.14.rst. 0449742 junkmd requested a review from picnixz November 30, 2024 09:03 picnixz approved these changes Nov 30, 2024 View reviewed changes ZeroIntensity requested a review from encukou November 30, 2024 12:18 encukou merged commit 412e11f into python:main Dec 3, 2024 bedevere-app Bot removed the awaiting core review label Dec 3, 2024 junkmd deleted the add_copy_com_pointer branch December 3, 2024 22:08 srinivasreddy pushed a commit to srinivasreddy/cpython that referenced this pull request Jan 8, 2025 pythongh-127255: Make CopyComPointer public and add to ctypes doc. ( … 0a68a73 pythonGH-127275) ebonnal pushed a commit to ebonnal/cpython that referenced this pull request Jan 12, 2025 pythongh-127255: Make CopyComPointer public and add to ctypes doc. ( … df18bb3 pythonGH-127275) junkmd mentioned this pull request Jun 17, 2025 Add CopyComPointer to stdlib/ctypes/__init__.pyi. python/typeshed#14294 Merged This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters. Learn more about bidirectional Unicode characters Show hidden characters Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Reviewers picnixz picnixz approved these changes ZeroIntensity ZeroIntensity approved these changes encukou Awaiting requested review from encukou Assignees No one assigned Labels topic-ctypes Projects None yet Milestone No milestone Development Successfully merging this pull request may close these issues. Uh oh! There was an error while loading. Please reload this page. 4 participants Add this suggestion to a batch that can be applied as a single commit.This suggestion is invalid because no changes were made to the code.Suggestions cannot be applied while the pull request is closed.Suggestions cannot be applied while viewing a subset of changes.Only one suggestion per line can be applied in a batch.Add this suggestion to a batch that can be applied as a single commit.Applying suggestions on deleted lines is not supported.You must change the existing code in this line in order to create ",
+    "scrapedAt": "2026-10-08 19:31:18.083574"
+  },
+  {
+    "id": 1193,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:31:14.889502"
+  },
+  {
     "id": 1192,
     "url": "https://github.com/python/cpython/issues/112887",
     "title": "[CVE-2025-4435] tarfile still extracts problematic files when filter is set and errorlevel is 0 · Issue #112887 · python/cpython · GitHub",
@@ -7980,26 +8015,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1193,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc"
-  },
-  {
-    "id": 1194,
-    "url": "https://github.com/python/cpython/issues/127275"
-  },
-  {
-    "id": 1195,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key_value"
-  },
-  {
-    "id": 1196,
-    "url": "https://docs.python.org/3/library/ast.html#module-ast"
-  },
-  {
-    "id": 1197,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter"
   },
   {
     "id": 1198,
@@ -222271,10 +222286,530 @@ window.searchData = [
     "id": 229646,
     "url": "https://github.com/python/cpython/issues/112887#top",
     "parentUrl": "https://github.com/python/cpython/issues/112887"
+  },
+  {
+    "id": 230885,
+    "url": "https://github.com/python/cpython/commit/412e11fe6e37f15971ef855f88b8b01bb3297679",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230886,
+    "url": "https://github.com/python/cpython/commit/5ab0425d950b20d08391e3a254f275314271c55d",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230887,
+    "url": "https://github.com/python/cpython/pull/127275#event-15480085082",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230888,
+    "url": "https://github.com/junkmd",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230889,
+    "url": "https://github.com/python/cpython/pull/127275/files/df91824d1107b3b2563afcb4e0bc8d15f29ab949#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230890,
+    "url": "https://github.com/python/cpython/pull/127275#commits-pushed-292b244",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230891,
+    "url": "https://cpython-previews--127275.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230892,
+    "url": "https://github.com/python/cpython/pull/127275#event-15511874662",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230894,
+    "url": "https://github.com/python/cpython/pull/127275/commits/d6cabaa02a2f02c9acfff17fc4a9393c50009e1e",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230895,
+    "url": "https://github.com/python/cpython/pull/127275#event-15516674759",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230896,
+    "url": "https://github.com/python/cpython/pull/127275#event-15480590829",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230898,
+    "url": "https://github.com/python/cpython/compare/5ab0425d950b20d08391e3a254f275314271c55d..df91824d1107b3b2563afcb4e0bc8d15f29ab949",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230899,
+    "url": "https://github.com/python/cpython/pull/127275#event-15480085290",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230900,
+    "url": "https://github.com/python/cpython/pull/127275#pullrequestreview-2470823663",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230901,
+    "url": "https://github.com/python/cpython/pull/127275#ref-issue-2690987693",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230902,
+    "url": "https://github.com/python/cpython/pull/127275#event-15427976451",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230903,
+    "url": "https://github.com/python/cpython/pull/127275#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230904,
+    "url": "https://github.com/python/cpython/pull/127275/commits/3b1aac29654dd1dd3215c462027f46c7cff61958",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230906,
+    "url": "https://github.com/python/cpython/pull/127275#event-15427953280",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230908,
+    "url": "https://github.com/python/cpython/pull/127275/commits/292b2447284947b84f290435f58c79cb2e52cdef",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230909,
+    "url": "https://github.com/srinivasreddy/cpython/commit/0a68a73c6055e5df2ba68c0181ab306887c2f1b7",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230910,
+    "url": "https://github.com/python/cpython/pull/127275#ref-pullrequest-3153658254",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230911,
+    "url": "https://github.com/python/cpython/issues/127183",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230912,
+    "url": "https://github.com/python/cpython/pull/127275#ref-commit-0a68a73",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230913,
+    "url": "https://github.com/python/cpython/pull/127275/commits/df91824d1107b3b2563afcb4e0bc8d15f29ab949",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230914,
+    "url": "https://github.com/python/cpython/pull/127275#event-15511873802",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230915,
+    "url": "https://github.com/ebonnal/cpython/commit/df18bb3afa025345c3ce4bcde1514a08817805b9",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230916,
+    "url": "https://github.com/python/cpython/pull/127275#event-15428050642",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230917,
+    "url": "https://github.com/python/cpython/pull/127275",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230918,
+    "url": "https://github.com/python/cpython/compare/72cfa99613f3336bb25338ce7dfa7fc38797f542..5ab0425d950b20d08391e3a254f275314271c55d",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230922,
+    "url": "https://github.com/python/cpython/pull/127275/files/df91824d1107b3b2563afcb4e0bc8d15f29ab949",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230923,
+    "url": "https://github.com/python/cpython/pull/127275/commits/4f6b8c817e12af4f69b331bfdd6bd77daa0fd5c6",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230926,
+    "url": "https://github.com/python/cpython/pull/127275#pullrequestreview-2470818606",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230928,
+    "url": "https://github.com/python/cpython/pull/127275#pullrequestreview-2470706059",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230930,
+    "url": "https://github.com/python/cpython/pull/127275#event-15480084960",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230931,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F127275",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230932,
+    "url": "https://github.com/python/cpython/pull/127275/files/df91824d1107b3b2563afcb4e0bc8d15f29ab949#diff-13b210c267218100dc49e485ac4735e44224ae266e36c35f1ac6bf774f59e60d",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230934,
+    "url": "https://github.com/python/cpython/commit/df91824d1107b3b2563afcb4e0bc8d15f29ab949",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230935,
+    "url": "https://github.com/python/cpython/pull/127184",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230937,
+    "url": "https://github.com/python/cpython/pull/127275#commits-pushed-4f6b8c8",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230938,
+    "url": "https://github.com/python/cpython/commit/72cfa99613f3336bb25338ce7dfa7fc38797f542",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230939,
+    "url": "https://github.com/python/cpython/pull/127275/commits/e742f17a0610103eda3cc8ab0805a6f0a5102d65",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230940,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3Atopic-ctypes",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230941,
+    "url": "https://github.com/python/cpython/pull/127275#commits-pushed-d6cabaa",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230942,
+    "url": "https://github.com/python/cpython/pull/127275/files/0449742dc905de1ee1395b0cc3ac273437a87932",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230943,
+    "url": "https://github.com/python/cpython/pull/127275#issue-2692573458",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230944,
+    "url": "https://github.com/python/cpython/pull/127275#event-15480947272",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230945,
+    "url": "https://github.com/python/typeshed/pull/14294",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230947,
+    "url": "https://github.com/python/cpython/pull/127275/commits/0449742dc905de1ee1395b0cc3ac273437a87932",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "id": 230948,
+    "url": "https://github.com/python/cpython/pull/127275#ref-commit-df18bb3",
+    "parentUrl": "https://github.com/python/cpython/issues/127275"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#module-ast"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#module-ast"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key_value"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key_value"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d80\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d48\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d60\u0026v\u003d4",
+    "alt": "ZeroIntensity",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d48\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/198396?s\u003d40\u0026v\u003d4",
+    "alt": "@srinivasreddy",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d40\u0026u\u003df4927e6499ced6c0e023a06d22faead4275b0d5d\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/45822440?s\u003d52\u0026v\u003d4",
+    "alt": "@junkmd",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d52\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d52\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-127255: Make `CopyComPointer` public and add to `ctypes` doc. by junkmd · Pull Request #127275 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127275"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#importlib-abc"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/737690?u\u003db8db203aac58b072bfabec2fe3acd2e0b0e01284\u0026v\u003d4\u0026size\u003d48",
     "alt": "@ChuckWoodraska",
