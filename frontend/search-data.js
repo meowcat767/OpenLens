@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1731,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.HTTPSServer",
+    "title": "http.server — HTTP servers — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » http.server — HTTP servers | Theme Auto Light Dark | http.server — HTTP servers¶ Source code: Lib/http/server.py This module defines classes for implementing HTTP servers. Warning http.server is not recommended for production. It only implements basic security checks. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. One class, HTTPServer, is a socketserver.TCPServer subclass. It creates and listens at the HTTP socket, dispatching the requests to a handler. Code to create and run the server looks like this: def run(server_class\u003dHTTPServer, handler_class\u003dBaseHTTPRequestHandler):\n    server_address \u003d (\u0027\u0027, 8000)\n    httpd \u003d server_class(server_address, handler_class)\n    httpd.serve_forever()\n class http.server.HTTPServer(server_address, RequestHandlerClass)¶ This class builds on the TCPServer class by storing the server address as instance variables named server_name and server_port. The server is accessible by the handler, typically through the handler’s server instance variable. server_name¶ The HTTP server’s fully qualified domain name. server_port¶ The HTTP server’s port number obtained from server_address. class http.server.ThreadingHTTPServer(server_address, RequestHandlerClass)¶ This class is identical to HTTPServer but uses threads to handle requests by using the ThreadingMixIn. This is useful to handle web browsers pre-opening sockets, on which HTTPServer would wait indefinitely. Added in version 3.7. class http.server.HTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ Subclass of HTTPServer with a wrapped socket using the ssl module. If the ssl module is not available, instantiating a HTTPSServer object fails with a RuntimeError. The certfile argument is the path to the SSL certificate chain file, and the keyfile is the path to the file containing the private key. A password can be specified for files protected and wrapped with PKCS#8, but beware that this could possibly expose hardcoded passwords in clear. See also See ssl.SSLContext.load_cert_chain() for additional information on the accepted values for certfile, keyfile and password. When specified, the alpn_protocols argument must be a sequence of strings specifying the “Application-Layer Protocol Negotiation” (ALPN) protocols supported by the server. ALPN allows the server and the client to negotiate the application protocol during the TLS handshake. By default, it is set to [\"http/1.1\"], meaning the server supports HTTP/1.1. Added in version 3.14. class http.server.ThreadingHTTPSServer(server_address, RequestHandlerClass, bind_and_activate\u003dTrue, *, certfile, keyfile\u003dNone, password\u003dNone, alpn_protocols\u003dNone)¶ This class is identical to HTTPSServer but uses threads to handle requests by inheriting from ThreadingMixIn. This is analogous to ThreadingHTTPServer only using HTTPSServer. Added in version 3.14. The HTTPServer, ThreadingHTTPServer, HTTPSServer and ThreadingHTTPSServer must be given a RequestHandlerClass on instantiation, of which this module provides three different variants: class http.server.BaseHTTPRequestHandler(request, client_address, server)¶ This class is used to handle the HTTP requests that arrive at the server. By itself, it cannot respond to any actual HTTP requests; it must be subclassed to handle each request method (for example, \u0027GET\u0027 or \u0027POST\u0027). BaseHTTPRequestHandler provides a number of class and instance variables, and methods for use by subclasses. The handler will parse the request and the headers, then call a method specific to the request type. The method name is constructed from the request. For example, for the request method SPAM, the do_SPAM() method will be called with no arguments. All of the relevant information is stored in instance variables of the handler. Subclasses should not need to override or extend the __init__() method. BaseHTTPRequestHandler has the following instance variables: client_address¶ Contains a tuple of the form (host, port) referring to the client’s address. server¶ Contains the server instance. close_connection¶ Boolean that should be set before handle_one_request() returns, indicating if another request may be expected, or if the connection should be shut down. requestline¶ Contains the string representation of the HTTP request line. The terminating CRLF is stripped. This attribute should be set by handle_one_request(). If no valid request line was processed, it should be set to the empty string. command¶ Contains the command (request type). For example, \u0027GET\u0027. path¶ Contains the request path. If the query component of the URL is present, then path includes the query. Using the terminology of RFC 3986, path here includes hier-part and the query. request_version¶ Contains the ver",
+    "scrapedAt": "2026-10-08 19:55:49.099696"
+  },
+  {
+    "id": 1730,
+    "url": "https://docs.python.org/3/library/typing.html#typing.NamedTuple",
+    "title": "typing — Support for type hints — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias as b",
+    "scrapedAt": "2026-10-08 19:55:47.708768"
+  },
+  {
+    "id": 1729,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-fork",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be picklable so they can be passed to the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. A",
+    "scrapedAt": "2026-10-08 19:55:46.316096"
+  },
+  {
+    "id": 1728,
+    "url": "https://docs.python.org/3/library/lzma.html#module-lzma",
+    "title": "lzma — Compression using the LZMA algorithm — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » lzma — Compression using the LZMA algorithm | Theme Auto Light Dark | lzma — Compression using the LZMA algorithm¶ Added in version 3.3. Source code: Lib/lzma.py This module provides classes and convenience functions for compressing and decompressing data using the LZMA compression algorithm. Also included is a file interface supporting the .xz and legacy .lzma file formats used by the xz utility, as well as raw compressed streams. The interface provided by this module is very similar to that of the bz2 module. Note that LZMAFile and bz2.BZ2File are not thread-safe, so if you need to use a single LZMAFile instance from multiple threads, it is necessary to protect it with a lock. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. exception lzma.LZMAError¶ This exception is raised when an error occurs during compression or decompression, or while initializing the compressor/decompressor state. Reading and writing compressed files¶ lzma.open(filename, mode\u003d\u0027rb\u0027, *, format\u003dNone, check\u003d-1, preset\u003dNone, filters\u003dNone, encoding\u003dNone, errors\u003dNone, newline\u003dNone)¶ Open an LZMA-compressed file in binary or text mode, returning a file object. The filename argument can be either an actual file name (given as a str, bytes or path-like object), in which case the named file is opened, or it can be an existing file object to read from or write to. The mode argument can be any of \"r\", \"rb\", \"w\", \"wb\", \"x\", \"xb\", \"a\" or \"ab\" for binary mode, or \"rt\", \"wt\", \"xt\", or \"at\" for text mode. The default is \"rb\". When opening a file for reading, the format and filters arguments have the same meanings as for LZMADecompressor. In this case, the check and preset arguments should not be used. When opening a file for writing, the format, check, preset and filters arguments have the same meanings as for LZMACompressor. For binary mode, this function is equivalent to the LZMAFile constructor: LZMAFile(filename, mode, ...). In this case, the encoding, errors and newline arguments must not be provided. For text mode, a LZMAFile object is created, and wrapped in an io.TextIOWrapper instance with the specified encoding, error handling behavior, and line ending(s). Changed in version 3.4: Added support for the \"x\", \"xb\" and \"xt\" modes. Changed in version 3.6: Accepts a path-like object. class lzma.LZMAFile(filename\u003dNone, mode\u003d\u0027r\u0027, *, format\u003dNone, check\u003d-1, preset\u003dNone, filters\u003dNone)¶ Open an LZMA-compressed file in binary mode. An LZMAFile can wrap an already-open file object, or operate directly on a named file. The filename argument specifies either the file object to wrap, or the name of the file to open (as a str, bytes or path-like object). When wrapping an existing file object, the wrapped file will not be closed when the LZMAFile is closed. The mode argument can be either \"r\" for reading (default), \"w\" for overwriting, \"x\" for exclusive creation, or \"a\" for appending. These can equivalently be given as \"rb\", \"wb\", \"xb\" and \"ab\" respectively. If filename is a file object (rather than an actual file name), a mode of \"w\" does not truncate the file, and is instead equivalent to \"a\". When opening a file for reading, the input file may be the concatenation of multiple separate compressed streams. These are transparently decoded as a single logical stream. When opening a file for reading, the format and filters arguments have the same meanings as for LZMADecompressor. In this case, the check and preset arguments should not be used. When opening a file for writing, the format, check, preset and filters arguments have the same meanings as for LZMACompressor. LZMAFile supports all the members specified by io.BufferedIOBase, except for detach() and truncate(). Iteration and the with statement are supported. The following method and attributes are also provided: peek(size\u003d-1)¶ Return buffered data without advancing the file position. At least one byte of data will be returned, unless EOF has been reached. The exact number of bytes returned is unspecified (the size argument is ignored). Note While calling peek() does not change the file position of the LZMAFile, it may change the position of the underlying file object (e.g. if the LZMAFile was constructed by passing a file object for filename). mode¶ \u0027rb\u0027 for reading and \u0027wb\u0027 for writing. Added in version 3.13. name¶ The lzma file name. Equivalent to the name attribute of the underlying file object. Added in version 3.13. Changed in version 3.4: Added support for the \"x\" and \"xb\" modes. Changed in version 3.5: The read() method now accepts an argument of None. Changed in version 3.6: Accepts a path-like object. Compressing and decompressing data in memory¶ class lzma.LZMACompressor(format\u003dFOR",
+    "scrapedAt": "2026-10-08 19:55:44.898396"
+  },
+  {
+    "id": 1727,
+    "url": "https://docs.python.org/3/library/tomllib.html#module-tomllib",
+    "title": "tomllib — Parse TOML files — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File Formats » tomllib — Parse TOML files | Theme Auto Light Dark | tomllib — Parse TOML files¶ Added in version 3.11. Source code: Lib/tomllib This module provides an interface for parsing TOML 1.0.0 (Tom’s Obvious Minimal Language, https://toml.io). This module does not support writing TOML. Warning Be cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended. See also The Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal and pickle modules. See also The TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files. This module defines the following functions: tomllib.load(fp, /, *, parse_float\u003dfloat)¶ Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table. parse_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised. A TOMLDecodeError will be raised on an invalid TOML document. tomllib.loads(s, /, *, parse_float\u003dfloat)¶ Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse_float argument has the same meaning as in load(). A TOMLDecodeError will be raised on an invalid TOML document. The following exceptions are available: exception tomllib.TOMLDecodeError(msg, doc, pos)¶ Subclass of ValueError with the following additional attributes: msg¶ The unformatted error message. doc¶ The TOML document being parsed. pos¶ The index of doc where parsing failed. lineno¶ The line corresponding to pos. colno¶ The column corresponding to pos. Changed in version 3.14: Added the msg, doc and pos parameters. Added the msg, doc, pos, lineno and colno attributes. Deprecated since version 3.14: Passing free-form positional arguments is deprecated. Examples¶ Parsing a TOML file: import tomllib\n\nwith open(\"pyproject.toml\", \"rb\") as f:\n    data \u003d tomllib.load(f)\n Parsing a TOML string: import tomllib\n\ntoml_str \u003d \"\"\"\npython-version \u003d \"3.11.0\"\npython-implementation \u003d \"CPython\"\n\"\"\"\n\ndata \u003d tomllib.loads(toml_str)\n Conversion Table¶ TOML Python TOML document dict string str integer int float float (configurable with parse_float) boolean bool offset date-time datetime.datetime (tzinfo attribute set to an instance of datetime.timezone) local date-time datetime.datetime (tzinfo attribute set to None) local date datetime.date local time datetime.time array list table dict inline table dict array of tables list of dicts Table of Contents tomllib — Parse TOML files Examples Conversion Table Previous topic configparser — Configuration file parser Next topic netrc — netrc file processing This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File Formats » tomllib — Parse TOML files | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:55:43.536307"
+  },
+  {
     "id": 1726,
     "url": "https://datatracker.ietf.org/doc/html/rfc4047.html",
     "title": "RFC 4047 - MIME Sub-type Registrations for Flexible Image Transport System (FITS)",
@@ -11620,26 +11655,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1727,
-    "url": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
-  },
-  {
-    "id": 1728,
-    "url": "https://docs.python.org/3/library/lzma.html#module-lzma"
-  },
-  {
-    "id": 1729,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-fork"
-  },
-  {
-    "id": 1730,
-    "url": "https://docs.python.org/3/library/typing.html#typing.NamedTuple"
-  },
-  {
-    "id": 1731,
-    "url": "https://docs.python.org/3/library/http.server.html#http.server.HTTPSServer"
   },
   {
     "id": 1732,
@@ -254141,10 +254156,365 @@ window.searchData = [
     "id": 375819,
     "url": "http://lambda.gsfc.nasa.gov/EVN",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc4047.html"
+  },
+  {
+    "id": 375822,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/tomllib",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375823,
+    "url": "https://pypi.org/project/tomlkit/",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375824,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError.lineno",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375826,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.load",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375828,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError.doc",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375831,
+    "url": "https://docs.python.org/3/library/tomllib.html#",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375833,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.loads",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375839,
+    "url": "https://toml.io/en/",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375841,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/tomllib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375846,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError.colno",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375847,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError.pos",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375848,
+    "url": "https://pypi.org/project/tomli-w/",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375851,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375857,
+    "url": "https://docs.python.org/3/library/tomllib.html#tomllib.TOMLDecodeError.msg",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375860,
+    "url": "https://docs.python.org/3/library/tomllib.html#toml-to-py-table",
+    "parentUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "id": 375863,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.MODE_NORMAL",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375864,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.compress",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375870,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.FORMAT_RAW",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375871,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMADecompressor.unused_data",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375873,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.FILTER_LZMA1",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375875,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.CHECK_SHA256",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375880,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.CHECK_CRC64",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375881,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.CHECK_NONE",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375882,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMADecompressor.eof",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375886,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMAFile.name",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375889,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMAFile.mode",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375891,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMACompressor.flush",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375892,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.decompress",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375893,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMADecompressor.decompress",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375894,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMADecompressor.check",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375895,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.CHECK_UNKNOWN",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375896,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.CHECK_CRC32",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375897,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.FILTER_DELTA",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375903,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMACompressor.compress",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375904,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.FORMAT_XZ",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375906,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/lzma.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375910,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMAFile",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375912,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.MF_HC3",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375913,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.MF_HC4",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375915,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMADecompressor",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375916,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.PRESET_EXTREME",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375917,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.MF_BT2",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375918,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.MF_BT3",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375919,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.MF_BT4",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375920,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMADecompressor.needs_input",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375921,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.is_check_supported",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375922,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.MODE_FAST",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375924,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.FORMAT_ALONE",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375925,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/lzma.py",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375926,
+    "url": "https://docs.python.org/3/library/lzma.html#filter-chain-specs",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375929,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.CHECK_ID_MAX",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375930,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.PRESET_DEFAULT",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375937,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.FORMAT_AUTO",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375938,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.FILTER_LZMA2",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375939,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.open",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375942,
+    "url": "https://docs.python.org/3/library/lzma.html#",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375943,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMACompressor",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375944,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMAFile.peek",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "id": 375945,
+    "url": "https://docs.python.org/3/library/lzma.html#lzma.LZMAError",
+    "parentUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#http.server.HTTPSServer"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "http.server — HTTP servers — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/http.server.html#http.server.HTTPSServer"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.NamedTuple"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.NamedTuple"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-fork"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-fork"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "lzma — Compression using the LZMA algorithm — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "lzma — Compression using the LZMA algorithm — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/lzma.html#module-lzma"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tomllib — Parse TOML files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tomllib — Parse TOML files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tomllib.html#module-tomllib"
+  },
   {
     "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor-white.svg",
     "alt": "IETF Logo",
