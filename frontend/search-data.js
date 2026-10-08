@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1593,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:49:17.575553"
+  },
+  {
+    "id": 1592,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:49:16.204583"
+  },
+  {
+    "id": 1591,
+    "url": "https://github.com/python/cpython/issues/123165",
+    "title": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add show_positions keyword argument to dis.dis and related functions #123165 New issue Copy link New issue Copy link Closed Closed Add show_positions keyword argument to dis.dis and related functions#123165 Copy link Assignees Labels easystdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Aug 20, 2024 Issue body actions Feature or enhancement Proposal: dis.dis is a useful debugging tool when trying to debug minor bytecode compiler errors. However it lacks one important feature, the ability to see the exact positions attached to instructions. It can only show line numbers. We should add a show_positions keyword argument to show positions. For example, the function: def foo(x):\n    if x \u003d\u003d 2:\n        return 1 disassembles to: \n  2           RESUME                   0\n\n  3           LOAD_FAST                0 (x)\n              LOAD_CONST               1 (2)\n              COMPARE_OP              88 (bool(\u003d\u003d))\n              POP_JUMP_IF_FALSE        1 (to L1)\n\n  4           RETURN_CONST             2 (1)\n\n  3   L1:     RETURN_CONST             0 (None)\n with show_positions it would disassemble to something like: 2:0-2:0                RESUME                   0\n\n3:7-3:8                LOAD_FAST                0 (x)\n3:12-3:13              LOAD_CONST               1 (2)\n3:7-3:13               COMPARE_OP              88 (bool(\u003d\u003d))\n3:7-3:13               POP_JUMP_IF_FALSE        1 (to L1)\n\n4:15-4:16              RETURN_CONST             2 (1)\n\n3:7-3:13       L1:     RETURN_CONST             0 (None)\n Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-123165: make dis functions render positions on demand #123168 gh-123165: correct tests for dis.dis(func, show_positions\u003dTrue) #123220 gh-123165: improve docs signature for dis.disassemble #123808 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees picnixz Labels easystdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:49:14.834114"
+  },
+  {
+    "id": 1590,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction",
+    "title": "fractions — Rational numbers — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Numeric and Mathematical Modules » fractions — Rational numbers | Theme Auto Light Dark | fractions — Rational numbers¶ Source code: Lib/fractions.py The fractions module provides support for rational number arithmetic. A Fraction instance can be constructed from a pair of rational numbers, from a single number, or from a string. class fractions.Fraction(numerator\u003d0, denominator\u003d1)¶ class fractions.Fraction(number) class fractions.Fraction(string) The first version requires that numerator and denominator are instances of numbers.Rational and returns a new Fraction instance with a value equal to numerator/denominator. If denominator is zero, it raises a ZeroDivisionError. The second version requires that number is an instance of numbers.Rational or has the as_integer_ratio() method (this includes float and decimal.Decimal). It returns a Fraction instance with exactly the same value. Assumed, that the as_integer_ratio() method returns a pair of coprime integers and last one is positive. Note that due to the usual issues with binary point (see Floating-Point Arithmetic: Issues and Limitations), the argument to Fraction(1.1) is not exactly equal to 11/10, and so Fraction(1.1) does not return Fraction(11, 10) as one might expect. (But see the documentation for the limit_denominator() method below.) The last version of the constructor expects a string. The usual form for this instance is: [sign] numerator [\u0027/\u0027 denominator]\n where the optional sign may be either ‘+’ or ‘-’ and numerator and denominator (if present) are strings of decimal digits (underscores may be used to delimit digits as with integral literals in code). In addition, any string that represents a finite value and is accepted by the float constructor is also accepted by the Fraction constructor. In either form the input string may also have leading and/or trailing whitespace. Here are some examples: \u003e\u003e\u003e from fractions import Fraction\n\u003e\u003e\u003e Fraction(16, -10)\nFraction(-8, 5)\n\u003e\u003e\u003e Fraction(123)\nFraction(123, 1)\n\u003e\u003e\u003e Fraction()\nFraction(0, 1)\n\u003e\u003e\u003e Fraction(\u00273/7\u0027)\nFraction(3, 7)\n\u003e\u003e\u003e Fraction(\u0027 -3/7 \u0027)\nFraction(-3, 7)\n\u003e\u003e\u003e Fraction(\u00271.414213 \\t\\n\u0027)\nFraction(1414213, 1000000)\n\u003e\u003e\u003e Fraction(\u0027-.125\u0027)\nFraction(-1, 8)\n\u003e\u003e\u003e Fraction(\u00277e-6\u0027)\nFraction(7, 1000000)\n\u003e\u003e\u003e Fraction(2.25)\nFraction(9, 4)\n\u003e\u003e\u003e Fraction(1.1)\nFraction(2476979795053773, 2251799813685248)\n\u003e\u003e\u003e from decimal import Decimal\n\u003e\u003e\u003e Fraction(Decimal(\u00271.1\u0027))\nFraction(11, 10)\n The Fraction class inherits from the abstract base class numbers.Rational, and implements all of the methods and operations from that class. Fraction instances are hashable, and should be treated as immutable. In addition, Fraction has the following properties and methods: Changed in version 3.2: The Fraction constructor now accepts float and decimal.Decimal instances. Changed in version 3.9: The math.gcd() function is now used to normalize the numerator and denominator. math.gcd() always returns an int type. Previously, the GCD type depended on numerator and denominator. Changed in version 3.11: Underscores are now permitted when creating a Fraction instance from a string, following PEP 515 rules. Changed in version 3.11: Fraction implements __int__ now to satisfy typing.SupportsInt instance checks. Changed in version 3.12: Space is allowed around the slash for string inputs: Fraction(\u00272 / 3\u0027). Changed in version 3.12: Fraction instances now support float-style formatting, with presentation types \"e\", \"E\", \"f\", \"F\", \"g\", \"G\" and \"%\"\". Changed in version 3.13: Formatting of Fraction instances without a presentation type now supports fill, alignment, sign handling, minimum width and grouping. Changed in version 3.14: The Fraction constructor now accepts any objects with the as_integer_ratio() method. numerator¶ Numerator of the Fraction in lowest term. denominator¶ Denominator of the Fraction in lowest terms. Guaranteed to be positive. as_integer_ratio()¶ Return a tuple of two integers, whose ratio is equal to the original Fraction. The ratio is in lowest terms and has a positive denominator. Added in version 3.8. is_integer()¶ Return True if the Fraction is an integer. Added in version 3.12. classmethod from_float(f)¶ Alternative constructor which only accepts instances of float or numbers.Integral. Beware that Fraction.from_float(0.3) is not the same value as Fraction(3, 10). Note From Python 3.2 onwards, you can also construct a Fraction instance directly from a float. classmethod from_decimal(dec)¶ Alternative constructor which only accepts instances of decimal.Decimal or numbers.Integral. Note From Python 3.2 onwards, you can also construct a Fraction instance directly from a decimal.Decimal instance. classmethod from_number(number)¶ Alternative constructor which only accepts instances of numbers.Integral, numbers.Rational, float or decimal.Decimal, and objects with the as_integer_ratio() method, but not strings. Added in version",
+    "scrapedAt": "2026-10-08 19:49:12.653491"
+  },
+  {
+    "id": 1589,
+    "url": "https://github.com/python/cpython/issues/129939",
+    "title": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add darkmode support for difflib\u0027s comparison pages #129939 New issue Copy link New issue Copy link Closed Closed Add darkmode support for difflib\u0027s comparison pages#129939 Copy link Labels type-featureA feature request or enhancementA feature request or enhancement Description Wulian233 opened on Feb 10, 2025 Issue body actions Feature or enhancement Proposal: Previously, a similar change was made in #123475, which was considered a new feature. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-129939: Add darkmode support for difflib\u0027s comparison pages #129940 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:49:11.329638"
+  },
+  {
     "id": 1588,
     "url": "https://github.com/python/cpython/issues/71339",
     "title": "Additional assert methods for unittest · Issue #71339 · python/cpython · GitHub",
@@ -10675,26 +10710,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1589,
-    "url": "https://github.com/python/cpython/issues/129939"
-  },
-  {
-    "id": 1590,
-    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
-  },
-  {
-    "id": 1591,
-    "url": "https://github.com/python/cpython/issues/123165"
-  },
-  {
-    "id": 1592,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3"
-  },
-  {
-    "id": 1593,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes"
   },
   {
     "id": 1594,
@@ -247626,10 +247641,248 @@ window.searchData = [
     "id": 343316,
     "url": "https://github.com/python/cpython/pull/129128",
     "parentUrl": "https://github.com/python/cpython/issues/71339"
+  },
+  {
+    "id": 343318,
+    "url": "https://github.com/python/cpython/pull/129940",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343319,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/129939",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343320,
+    "url": "https://github.com/python/cpython/issues/129939#issue-2841475535",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343322,
+    "url": "https://private-user-images.githubusercontent.com/71213467/411436548-5ad80601-15ea-4aec-8abe-2f494dd570e3.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODIwNTEsIm5iZiI6MTc5MTQ4MTc1MSwicGF0aCI6Ii83MTIxMzQ2Ny80MTE0MzY1NDgtNWFkODA2MDEtMTVlYS00YWVjLThhYmUtMmY0OTRkZDU3MGUzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDA4VDE3NDkxMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNiNzlmN2IwOWZhZDQ2MThkYTY4Y2E3MjU1YWVjYmE5MTBmZGQyNGRkMWU3MmI0Mzg0ZWEzYzJiYzJhMzZlYTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.H6Y3gzCHCSspCB2WmKnoOuCgxtTJZxT3tkwd1aOGfS4",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343323,
+    "url": "https://github.com/python/cpython/issues/129939#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343324,
+    "url": "https://github.com/python/cpython/issues/129939#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343325,
+    "url": "https://github.com/python/cpython/pull/123475",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343326,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/129939",
+    "parentUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "id": 343329,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__ceil__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343334,
+    "url": "https://docs.python.org/3/library/numbers.html#numbers.Rational",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343335,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.numerator",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343336,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.is_integer",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343339,
+    "url": "https://docs.python.org/3/library/math.html#math.gcd",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343342,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__format__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343343,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/fractions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343345,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/fractions.py",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343347,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__round__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343356,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.limit_denominator",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343357,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.as_integer_ratio",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343362,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.from_float",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343363,
+    "url": "https://docs.python.org/3/library/fractions.html#module-fractions",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343368,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.__floor__",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343371,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.from_decimal",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343376,
+    "url": "https://docs.python.org/3/library/fractions.html#fractions.Fraction.denominator",
+    "parentUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "id": 343377,
+    "url": "https://github.com/python/cpython/pull/123220",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 343378,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/123165",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 343379,
+    "url": "https://github.com/python/cpython/issues/123165#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 343384,
+    "url": "https://github.com/python/cpython/issues/123165#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 343385,
+    "url": "https://github.com/python/cpython/pull/123808",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 343388,
+    "url": "https://github.com/python/cpython/issues/123165#issue-2475068484",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 343389,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/123165",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "id": 343390,
+    "url": "https://github.com/python/cpython/pull/123168",
+    "parentUrl": "https://github.com/python/cpython/issues/123165"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#c-api-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#sqlite3"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add `show_positions` keyword argument to `dis.dis` and related functions · Issue #123165 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123165"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fractions — Rational numbers — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fractions — Rational numbers — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fractions.html#fractions.Fraction"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@Wulian233",
+    "pageTitle": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/71213467/411436548-5ad80601-15ea-4aec-8abe-2f494dd570e3.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODIwNTEsIm5iZiI6MTc5MTQ4MTc1MSwicGF0aCI6Ii83MTIxMzQ2Ny80MTE0MzY1NDgtNWFkODA2MDEtMTVlYS00YWVjLThhYmUtMmY0OTRkZDU3MGUzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDA4VDE3NDkxMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNiNzlmN2IwOWZhZDQ2MThkYTY4Y2E3MjU1YWVjYmE5MTBmZGQyNGRkMWU3MmI0Mzg0ZWEzYzJiYzJhMzZlYTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.H6Y3gzCHCSspCB2WmKnoOuCgxtTJZxT3tkwd1aOGfS4",
+    "alt": "Image",
+    "pageTitle": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129939"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add darkmode support for difflib\u0027s comparison pages · Issue #129939 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129939"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
     "alt": "@serhiy-storchaka",
