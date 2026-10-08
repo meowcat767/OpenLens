@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 963,
+    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-expression",
+    "title": "6. Expressions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations of",
+    "scrapedAt": "2026-10-08 19:21:24.288236"
+  },
+  {
+    "id": 962,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject",
+    "title": "Module Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Module Objects | Theme Auto Light Dark | Module Objects¶ PyTypeObject PyModule_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python module type. This is exposed to Python programs as types.ModuleType. int PyModule_Check(PyObject *p)¶ Return true if p is a module object, or a subtype of a module object. This function always succeeds. int PyModule_CheckExact(PyObject *p)¶ Return true if p is a module object, but not a subtype of PyModule_Type. This function always succeeds. PyObject *PyModule_NewObject(PyObject *name)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Return a new module object with module.__name__ set to name. The module’s __name__, __doc__, __package__ and __loader__ attributes are filled in (all but __name__ are set to None). The caller is responsible for setting a __file__ attribute. Return NULL with an exception set on error. Added in version 3.3. Changed in version 3.4: __package__ and __loader__ are now set to None. PyObject *PyModule_New(const char *name)¶ Return value: New reference. Part of the Stable ABI. Similar to PyModule_NewObject(), but the name is a UTF-8 encoded string instead of a Unicode object. PyObject *PyModule_GetDict(PyObject *module)¶ Return value: Borrowed reference. Part of the Stable ABI. Return the dictionary object that implements module’s namespace; this object is the same as the __dict__ attribute of the module object. If module is not a module object (or a subtype of a module object), SystemError is raised and NULL is returned. It is recommended extensions use other PyModule_* and PyObject_* functions rather than directly manipulate a module’s __dict__. The returned reference is borrowed from the module; it is valid until the module is destroyed. PyObject *PyModule_GetNameObject(PyObject *module)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Return module’s __name__ value. If the module does not provide one, or if it is not a string, SystemError is raised and NULL is returned. Added in version 3.3. const char *PyModule_GetName(PyObject *module)¶ Part of the Stable ABI. Similar to PyModule_GetNameObject() but return the name encoded to \u0027utf-8\u0027. The returned buffer is only valid until the module is renamed or destroyed. Note that Python code may rename a module by setting its __name__ attribute. void *PyModule_GetState(PyObject *module)¶ Part of the Stable ABI. Return the “state” of the module, that is, a pointer to the block of memory allocated at module creation time, or NULL. See PyModuleDef.m_size. PyModuleDef *PyModule_GetDef(PyObject *module)¶ Part of the Stable ABI. Return a pointer to the PyModuleDef struct from which the module was created, or NULL if the module wasn’t created from a definition. On error, return NULL with an exception set. Use PyErr_Occurred() to tell this case apart from a missing PyModuleDef. PyObject *PyModule_GetFilenameObject(PyObject *module)¶ Return value: New reference. Part of the Stable ABI. Return the name of the file from which module was loaded using module’s __file__ attribute. If this is not defined, or if it is not a string, raise SystemError and return NULL; otherwise return a reference to a Unicode object. Added in version 3.2. const char *PyModule_GetFilename(PyObject *module)¶ Part of the Stable ABI. Similar to PyModule_GetFilenameObject() but return the filename encoded to ‘utf-8’. The returned buffer is only valid until the module’s __file__ attribute is reassigned or the module is destroyed. Deprecated since version 3.2: PyModule_GetFilename() raises UnicodeEncodeError on unencodable filenames, use PyModule_GetFilenameObject() instead. Module definitions¶ The functions in the previous section work on any module object, including modules imported from Python code. Modules defined using the C API typically use a module definition, PyModuleDef – a statically allocated, constant “description” of how a module should be created. The definition is usually used to define an extension’s “main” module object (see Defining extension modules for details). It is also used to create extension modules dynamically. Unlike PyModule_New(), the definition allows management of module state – a piece of memory that is allocated and cleared together with the module object. Unlike the module’s Python attributes, Python code cannot replace or delete data stored in module state. type PyModuleDef¶ Part of the Stable ABI (including all members). The module definition struct, which holds all information needed to create a module object. This structure must be statically allocated (or be otherwise guaranteed to be valid while any modules created from it exist). Usually, there is only one variable of this type for each extension module. PyModuleDef_Base m_base¶ Always initialize this member to PyModuleDef_HEAD_INIT. const char *m_name¶ ",
+    "scrapedAt": "2026-10-08 19:21:23.038591"
+  },
+  {
+    "id": 961,
+    "url": "https://docs.python.org/3/library/bz2.html#module-bz2",
+    "title": "bz2 — Support for bzip2 compression — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » bz2 — Support for bzip2 compression | Theme Auto Light Dark | bz2 — Support for bzip2 compression¶ Source code: Lib/bz2.py This module provides a comprehensive interface for compressing and decompressing data using the bzip2 compression algorithm. The bz2 module contains: The open() function and BZ2File class for reading and writing compressed files. The BZ2Compressor and BZ2Decompressor classes for incremental (de)compression. The compress() and decompress() functions for one-shot (de)compression. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. (De)compression of files¶ bz2.open(filename, mode\u003d\u0027rb\u0027, compresslevel\u003d9, encoding\u003dNone, errors\u003dNone, newline\u003dNone)¶ Open a bzip2-compressed file in binary or text mode, returning a file object. As with the constructor for BZ2File, the filename argument can be an actual filename (a str or bytes object), or an existing file object to read from or write to. The mode argument can be any of \u0027r\u0027, \u0027rb\u0027, \u0027w\u0027, \u0027wb\u0027, \u0027x\u0027, \u0027xb\u0027, \u0027a\u0027 or \u0027ab\u0027 for binary mode, or \u0027rt\u0027, \u0027wt\u0027, \u0027xt\u0027, or \u0027at\u0027 for text mode. The default is \u0027rb\u0027. The compresslevel argument is an integer from 1 to 9, as for the BZ2File constructor. For binary mode, this function is equivalent to the BZ2File constructor: BZ2File(filename, mode, compresslevel\u003dcompresslevel). In this case, the encoding, errors and newline arguments must not be provided. For text mode, a BZ2File object is created, and wrapped in an io.TextIOWrapper instance with the specified encoding, error handling behavior, and line ending(s). Added in version 3.3. Changed in version 3.4: The \u0027x\u0027 (exclusive creation) mode was added. Changed in version 3.6: Accepts a path-like object. class bz2.BZ2File(filename, mode\u003d\u0027r\u0027, *, compresslevel\u003d9)¶ Open a bzip2-compressed file in binary mode. If filename is a str or bytes object, open the named file directly. Otherwise, filename should be a file object, which will be used to read or write the compressed data. The mode argument can be either \u0027r\u0027 for reading (default), \u0027w\u0027 for overwriting, \u0027x\u0027 for exclusive creation, or \u0027a\u0027 for appending. These can equivalently be given as \u0027rb\u0027, \u0027wb\u0027, \u0027xb\u0027 and \u0027ab\u0027 respectively. If filename is a file object (rather than an actual file name), a mode of \u0027w\u0027 does not truncate the file, and is instead equivalent to \u0027a\u0027. If mode is \u0027w\u0027 or \u0027a\u0027, compresslevel can be an integer between 1 and 9 specifying the level of compression: 1 produces the least compression, and 9 (default) produces the most compression. If mode is \u0027r\u0027, the input file may be the concatenation of multiple compressed streams. BZ2File provides all of the members specified by the io.BufferedIOBase, except for detach() and truncate(). Iteration and the with statement are supported. BZ2File also provides the following methods and attributes: peek([n])¶ Return buffered data without advancing the file position. At least one byte of data will be returned (unless at EOF). The exact number of bytes returned is unspecified. Note While calling peek() does not change the file position of the BZ2File, it may change the position of the underlying file object (e.g. if the BZ2File was constructed by passing a file object for filename). Added in version 3.3. fileno()¶ Return the file descriptor for the underlying file. Added in version 3.3. readable()¶ Return whether the file was opened for reading. Added in version 3.3. seekable()¶ Return whether the file supports seeking. Added in version 3.3. writable()¶ Return whether the file was opened for writing. Added in version 3.3. read1(size\u003d-1)¶ Read up to size uncompressed bytes, while trying to avoid making multiple reads from the underlying stream. Reads up to a buffer’s worth of data if size is negative. Returns b\u0027\u0027 if the file is at EOF. Added in version 3.3. readinto(b)¶ Read bytes into b. Returns the number of bytes read (0 for EOF). Added in version 3.3. mode¶ \u0027rb\u0027 for reading and \u0027wb\u0027 for writing. Added in version 3.13. name¶ The bzip2 file name. Equivalent to the name attribute of the underlying file object. Added in version 3.13. Changed in version 3.1: Support for the with statement was added. Changed in version 3.3: Support was added for filename being a file object instead of an actual filename. The \u0027a\u0027 (append) mode was added, along with support for reading multi-stream files. Changed in version 3.4: The \u0027x\u0027 (exclusive creation) mode was added. Changed in version 3.5: The read() method now accepts an argument of None. Changed in version 3.6: Accepts a path-like object. Changed in version 3.9: The buffering parameter has been removed. It was ignored and deprecated since Python 3.0. Pass an open file object to control how the file is opened. The compresslevel par",
+    "scrapedAt": "2026-10-08 19:21:21.805933"
+  },
+  {
+    "id": 960,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith",
+    "title": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » unittest — Unit testing framework | Theme Auto Light Dark | unittest — Unit testing framework¶ Source code: Lib/unittest/__init__.py (If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods.) The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework. To achieve this, unittest supports some important concepts in an object-oriented way: test fixture A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process. test case A test case is the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases. test suite A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. test runner A test runner is a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests. See also Module doctest Another test-support module with a very different flavor. Simple Smalltalk Testing: With Patterns Kent Beck’s original paper on testing frameworks using the pattern shared by unittest. pytest Third-party unittest framework with a lighter-weight syntax for writing tests. For example, assert func(10) \u003d\u003d 42. The Python Testing Tools Taxonomy An extensive list of Python testing tools including functional testing frameworks and mock object libraries. Testing in Python Mailing List A special-interest-group for discussion of testing, and testing tools, in Python. The script Tools/unittestgui/unittestgui.py in the Python source distribution is a GUI tool for test discovery and execution. This is intended largely for ease of use for those new to unit testing. For production environments it is recommended that tests be driven by a continuous integration system such as Buildbot, Jenkins, GitHub Actions, or AppVeyor. Basic example¶ The unittest module provides a rich set of tools for constructing and running tests. This section demonstrates that a small subset of the tools suffice to meet the needs of most users. Here is a short script to test three string methods: import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual(\u0027foo\u0027.upper(), \u0027FOO\u0027)\n\n    def test_isupper(self):\n        self.assertTrue(\u0027FOO\u0027.isupper())\n        self.assertFalse(\u0027Foo\u0027.isupper())\n\n    def test_split(self):\n        s \u003d \u0027hello world\u0027\n        self.assertEqual(s.split(), [\u0027hello\u0027, \u0027world\u0027])\n        # check that s.split fails when the separator is not a string\n        with self.assertRaises(TypeError):\n            s.split(2)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    unittest.main()\n A test case is created by subclassing unittest.TestCase. The three individual tests are defined with methods whose names start with the letters test. This naming convention informs the test runner about which methods represent tests. The crux of each test is a call to assertEqual() to check for an expected result; assertTrue() or assertFalse() to verify a condition; or assertRaises() to verify that a specific exception gets raised. These methods are used instead of the assert statement so the test runner can accumulate all test results and produce a report. The setUp() and tearDown() methods allow you to define instructions that will be executed before and after each test method. They are covered in more detail in the section Organizing test code. The final block shows a simple way to run the tests. unittest.main() provides a command-line interface to the test script. When run from the command line, the above script produces an output that looks like this: ...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n Passing the -v option to your test script will instruct unittest.main() to enable a higher level of verbosity, and produce the following output: test_isupper (__main__.TestStringMethods.test_isupper) ... ok\ntest_split (__main__.TestStringMethods.test_split) ... ok\ntest_upper (__main__.TestStringMethods.test_upper) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n The above examples show the most commonly used unittest features which are sufficient to meet many everyday testing needs. The remain",
+    "scrapedAt": "2026-10-08 19:21:20.594063"
+  },
+  {
+    "id": 959,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#finally",
+    "title": "8. Compound statements — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those vari",
+    "scrapedAt": "2026-10-08 19:21:19.315722"
+  },
+  {
     "id": 958,
     "url": "https://docs.python.org/3/library/locale.html#locale.getlocale",
     "title": "locale — Internationalization services — Python 3.14.8 documentation",
@@ -6370,26 +6405,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 959,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#finally"
-  },
-  {
-    "id": 960,
-    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
-  },
-  {
-    "id": 961,
-    "url": "https://docs.python.org/3/library/bz2.html#module-bz2"
-  },
-  {
-    "id": 962,
-    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
-  },
-  {
-    "id": 963,
-    "url": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-expression"
   },
   {
     "id": 964,
@@ -162716,10 +162731,1485 @@ window.searchData = [
     "id": 142730,
     "url": "https://docs.python.org/3/library/symtable.html#symtable.SymbolTable.get_identifiers",
     "parentUrl": "https://docs.python.org/3/library/symtable.html#symtable.Symbol"
+  },
+  {
+    "id": 143732,
+    "url": "https://docs.python.org/3/using/cmdline.html#using-on-warnings",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143733,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.defaultTestResult",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143735,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.output",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143736,
+    "url": "https://docs.python.org/3/library/doctest.html#doctest.DocTestSuite",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143738,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestSuite",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143739,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.suiteClass",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143741,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNoLogs",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143742,
+    "url": "https://docs.pytest.org/",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143743,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertMultiLineEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143744,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.skipTest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143745,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TextTestRunner._makeResult",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143746,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.loadTestsFromNames",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143747,
+    "url": "https://docs.python.org/3/library/unittest.html#class-and-module-fixtures",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143748,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.testsRun",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143749,
+    "url": "https://docs.python.org/3/library/logging.html#logging.ERROR",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143750,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.enterClassContext",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143751,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestSuite.addTest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143752,
+    "url": "https://docs.python.org/3/library/unittest.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143753,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.shouldStop",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143755,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestSuite.__iter__",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143757,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.subTest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143758,
+    "url": "https://web.archive.org/web/20150315073817/http://www.xprogramming.com/testfram.htm",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143759,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addError",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143760,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addDuration",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143764,
+    "url": "https://docs.python.org/3/library/unittest.html#subtests",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143765,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertSequenceEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143766,
+    "url": "https://docs.python.org/3/library/unittest.html#command-line-options",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143767,
+    "url": "https://docs.python.org/3/library/unittest.html#test-cases",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143768,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertSetEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143769,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143770,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.id",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143771,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertCountEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143772,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.defaultTestLoader",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143773,
+    "url": "https://wiki.python.org/moin/PythonTestingToolsTaxonomy",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143774,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.loadTestsFromModule",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143775,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase.asyncTearDown",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143776,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.doModuleCleanups",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143777,
+    "url": "https://docs.python.org/3/library/unittest.html#assert-methods",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143778,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.skipIf",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143779,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-k",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143781,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.registerResult",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143782,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-f",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143784,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-c",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143785,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest-test-discovery",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143786,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-b",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143787,
+    "url": "https://docs.python.org/3/library/unittest.html#signal-handling",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143789,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase.addAsyncCleanup",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143790,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertTrue",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143791,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143792,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.removeHandler",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143793,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.tearDownModule",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143794,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertGreaterEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143795,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.removeResult",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143796,
+    "url": "https://docs.python.org/3/library/unittest.html#test-discovery",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143797,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertLess",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143801,
+    "url": "https://docs.python.org/3/library/unittest.html#distinguishing-test-iterations-using-subtests",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143802,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.buffer",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143803,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotAlmostEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143804,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addExpectedFailure",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143805,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.loadTestsFromName",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143806,
+    "url": "https://docs.python.org/3/library/unittest.html#setupclass-and-teardownclass",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143807,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertWarns",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143808,
+    "url": "https://docs.python.org/3/library/unittest.html#load-tests-protocol",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143809,
+    "url": "https://docs.python.org/3/library/unittest.html#type-specific-methods",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143810,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertLogs",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143812,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TextTestResult",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143813,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.enterModuleContext",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143814,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIn",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143815,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-discover-s",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143816,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase.loop_factory",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143817,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIs",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143818,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.addTypeEqualityFunc",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143819,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.tb_locals",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143820,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-discover-p",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143822,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIsInstance",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143823,
+    "url": "https://docs.python.org/3/library/logging.html#logging.LogRecord",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143824,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143825,
+    "url": "https://docs.python.org/3/library/unittest.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143826,
+    "url": "https://docs.python.org/3/library/logging.html#logging.INFO",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143827,
+    "url": "https://docs.python.org/3/library/unittest.html#classes-and-functions",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143829,
+    "url": "http://lists.idyll.org/listinfo/testing-in-python",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143830,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertLessEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143832,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.tearDown",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143833,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest-skipping",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143834,
+    "url": "https://docs.python.org/3/library/warnings.html#warning-ignored",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143836,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.doCleanups",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143837,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUp",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143838,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.doClassCleanups",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143839,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestSuite.countTestCases",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143840,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.failures",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143841,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addSkip",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143845,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.unexpectedSuccesses",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143846,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.skipped",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143848,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.wasSuccessful",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143849,
+    "url": "https://docs.python.org/3/tutorial/modules.html#tut-modules",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143850,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.setUpModule",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143851,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.skipUnless",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143852,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-discover-v",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143853,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TextTestRunner",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143854,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-discover-t",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143860,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.EventLoop",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143861,
+    "url": "https://docs.python.org/3/library/unittest.html#",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143863,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.collectedDurations",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143864,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestSuite.run",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143865,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIn",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143866,
+    "url": "https://docs.python.org/3/tutorial/modules.html#tut-packages",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143867,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.countTestCases",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143868,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.addClassCleanup",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143869,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.enterContext",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143870,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.run",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143872,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.testNamePatterns",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143873,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertFalse",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143874,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase.enterAsyncContext",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143875,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertRaises",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143876,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/unittest.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143877,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/unittest/__init__.py",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143879,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertTupleEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143880,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143882,
+    "url": "https://www.jenkins.io/",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143883,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.skip",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143884,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIsNot",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143885,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.failfast",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143886,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertRaisesRegex",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143887,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143889,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addSubTest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143892,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.SkipTest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143893,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-durations",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143894,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.testMethodPrefix",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143895,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.expectedFailure",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143899,
+    "url": "https://docs.python.org/3/library/fnmatch.html#fnmatch.fnmatchcase",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143900,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestSuite.addTests",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143901,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestSuite.debug",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143904,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.stop",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143905,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.failureException",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143907,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addUnexpectedSuccess",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143908,
+    "url": "https://docs.python.org/3/library/unittest.html#skipping-tests-and-expected-failures",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143909,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertAlmostEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143911,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.main",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143913,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.shortDescription",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143916,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.getTestCaseNames",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143917,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.records",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143918,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.addCleanup",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143919,
+    "url": "https://docs.python.org/3/library/unittest.html#re-using-old-test-code",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143920,
+    "url": "https://docs.python.org/3/library/unittest.html#organizing-tests",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143921,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.startTest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143922,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIsNone",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143923,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.errors",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143924,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.maxDiff",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143926,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertDictEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143927,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertGreater",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143928,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.longMessage",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143930,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIsNotNone",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143931,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.setUpClass",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143932,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.stopTestRun",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143935,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.stopTest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143936,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertRegex",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143938,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.fail",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143940,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertWarnsRegex",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143941,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.FunctionTestCase",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143942,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.tearDownClass",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143943,
+    "url": "https://github.com/features/actions",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143948,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIsInstance",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143949,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.sortTestMethodsUsing",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143950,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase.asyncSetUp",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143951,
+    "url": "https://docs.python.org/3/library/doctest.html#module-doctest",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143952,
+    "url": "https://docs.python.org/3/library/unittest.html#organizing-test-code",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143953,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TextTestRunner.run",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143955,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotRegex",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143956,
+    "url": "https://www.appveyor.com/",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143957,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addFailure",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143958,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.addSuccess",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143960,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.errors",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143962,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertListEqual",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143963,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.discover",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143965,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.installHandler",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143966,
+    "url": "https://docs.python.org/3/library/unittest.html#cmdoption-unittest-locals",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143967,
+    "url": "https://docs.python.org/3/library/unittest.html#setupmodule-and-teardownmodule",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143968,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.IsolatedAsyncioTestCase.run",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143970,
+    "url": "https://docs.python.org/3/library/unittest.html#grouping-tests",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143972,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.expectedFailures",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143973,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestResult.startTestRun",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143974,
+    "url": "https://docs.python.org/3/library/unittest.html#basic-example",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143977,
+    "url": "https://docs.python.org/3/library/unittest.html#loading-and-running-tests",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143979,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestLoader.loadTestsFromTestCase",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143980,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.addModuleCleanup",
+    "parentUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "id": 143985,
+    "url": "https://docs.python.org/3/library/bz2.html#examples-of-usage",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143988,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.open",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143990,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Compressor.flush",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143991,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Decompressor.needs_input",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143993,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/bz2.py",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143994,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Decompressor.decompress",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143997,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Decompressor.unused_data",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143998,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.seekable",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 143999,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Decompressor.eof",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144001,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.peek",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144004,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/bz2.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144006,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Compressor",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144015,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.readable",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144016,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.readinto",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144019,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.fileno",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144020,
+    "url": "https://docs.python.org/3/library/bz2.html#incremental-de-compression",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144023,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.name",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144026,
+    "url": "https://docs.python.org/3/library/bz2.html#one-shot-de-compression",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144029,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.writable",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144031,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.mode",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144032,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File.read1",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144038,
+    "url": "https://docs.python.org/3/library/bz2.html#de-compression-of-files",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144039,
+    "url": "https://docs.python.org/3/library/bz2.html#",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144041,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Decompressor",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144042,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2Compressor.compress",
+    "parentUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "id": 144043,
+    "url": "https://docs.python.org/3/c-api/iterator.html",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144044,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef_Slot.value",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144045,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PYTHON_ABI_VERSION",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144047,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144048,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.freefunc",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144050,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_FromDefAndSpec2",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144051,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_MOD_PER_INTERPRETER_GIL_SUPPORTED",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144052,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddIntConstant",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144054,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144056,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_CheckExact",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144057,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddStringConstant",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144058,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_doc",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144061,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_mod_exec.exec_module",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144062,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_mod_create.create_module",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144063,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddObjectRef",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144064,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_name",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144065,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_mod_multiple_interpreters",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144067,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.traverseproc",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144068,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddStringMacro",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144072,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_free",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144073,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_mod_create",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144075,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_ExecDef",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144076,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_mod_exec",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144077,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyUnstable_Module_SetGIL",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144078,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef_Slot",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144079,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyState_AddModule",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144080,
+    "url": "https://docs.python.org/3/c-api/module.html#moduledef-dynamic",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144084,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_Create2",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144085,
+    "url": "https://docs.python.org/3/c-api/module.html#module-slots",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144087,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddType",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144088,
+    "url": "https://docs.python.org/3/c-api/module.html#support-functions",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144089,
+    "url": "https://docs.python.org/3/c-api/file.html",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144090,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144091,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_MOD_GIL_NOT_USED",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144092,
+    "url": "https://docs.python.org/3/c-api/object.html#c.PyObject_SetAttr",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144094,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetNameObject",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144096,
+    "url": "https://docs.python.org/3/c-api/gcsupport.html#c.inquiry",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144098,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_Add",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144099,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_New",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144102,
+    "url": "https://docs.python.org/3/c-api/module.html#creating-extension-modules-dynamically",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144105,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_methods",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144106,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_slots",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144108,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html#single-phase-initialization",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144112,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html#extension-modules",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144113,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyState_RemoveModule",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144114,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_traverse",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144116,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddFunctions",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144121,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_mod_gil",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144122,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_NewObject",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144124,
+    "url": "https://docs.python.org/3/c-api/module.html#module-objects",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144126,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddIntMacro",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144127,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_slots.m_reload",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144128,
+    "url": "https://docs.python.org/3/c-api/module.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144130,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_FromDefAndSpec",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144131,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_size",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144133,
+    "url": "https://docs.python.org/3/c-api/extension-modules.html#extension-export-hook",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144143,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_MOD_MULTIPLE_INTERPRETERS_SUPPORTED",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144145,
+    "url": "https://docs.python.org/3/c-api/module.html#module-lookup-single-phase-initialization",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144149,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef.m_base",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144150,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyState_FindModule",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144151,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetDef",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144153,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_Type",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144154,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetDict",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144156,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetName",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144157,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_SetDocString",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144158,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModuleDef_Slot.slot",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144159,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_Create",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144160,
+    "url": "https://docs.python.org/3/c-api/module.html#c.PyModule_AddObject",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144161,
+    "url": "https://docs.python.org/3/c-api/intro.html#c.PyDoc_STRVAR",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144163,
+    "url": "https://peps.python.org/pep-3121/",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144166,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/module.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144167,
+    "url": "https://docs.python.org/3/c-api/module.html#module-definitions",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "id": 144169,
+    "url": "https://docs.python.org/3/c-api/module.html#c.Py_MOD_GIL_USED",
+    "parentUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-expression"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#grammar-token-python-grammar-expression"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Module Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Module Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/module.html#c.PyModule_GetFilenameObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "bz2 — Support for bzip2 compression — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "bz2 — Support for bzip2 compression — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/bz2.html#module-bz2"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertStartsWith"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#finally"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#finally"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
