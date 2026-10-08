@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 840,
+    "url": "https://docs.python.org/3/reference/expressions.html#is",
+    "title": "6. Expressions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations of",
+    "scrapedAt": "2026-10-08 19:16:26.356289"
+  },
+  {
+    "id": 839,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() and",
+    "scrapedAt": "2026-10-08 19:16:25.042646"
+  },
+  {
+    "id": 838,
+    "url": "https://github.com/python/cpython/issues/125634",
+    "title": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation Xiaokang2022 commented Oct 17, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Issue: Add function ispackage to stdlib inspect #125633 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 🚀 1 Wulian233 reacted with rocket emoji All reactions 🚀 1 reaction Add function ispackage to stdlib inspect 12cb666 bedevere-app Bot added the awaiting review label Oct 17, 2024 bedevere-app Bot mentioned this pull request Oct 17, 2024 Add function ispackage to stdlib inspect #125633 Closed 📜🤖 Added by blurb_it. 2105a10 nineteendo reviewed Oct 17, 2024 View reviewed changes nineteendo left a comment Copy link Copy Markdown Contributor There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Can you add tests and fix the sphinx markup? Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👍 1 Xiaokang2022 reacted with thumbs up emoji All reactions 👍 1 reaction Comment thread Misc/NEWS.d/next/Library/2024-10-17-04-52-00.gh-issue-125633.lMck06.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Fixed the sphinx markup efa661d Wulian233 commented Oct 17, 2024 Copy link Copy Markdown Contributor Please add a unittest and document. Also add to 3.14 what\u0027s new(recommend) 👍 1 Xiaokang2022 reacted with thumbs up emoji All reactions 👍 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Xiaokang2022 added 3 commits October 17, 2024 18:35 Added tests 40d5a49 Added document 658ef94 Added to 3.14 what\u0027s new 0943c62 tomasr8 commented Oct 17, 2024 Copy link Copy Markdown Member One of the tests is currently failing because you also need to add the new test folder to the Makefile: cpython/Makefile.pre.in Line 2500 in 7b04496 test/test_inspect \\ should be:   test/test_inspect \\\n+ test/test_inspect/inspect_simple_pkg \\ 👍 2 Xiaokang2022 and Wulian233 reacted with thumbs up emoji All reactions 👍 2 reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Added the new test folder to the Makefile a0b64f7 Xiaokang2022 requested a review from erlend-aasland as a code owner October 17, 2024 11:30 Xiaokang2022 changed the title gh-125633: Adding function ispackage to stdlib inspect gh-125633: Add function ispackage to stdlib inspect Oct 17, 2024 Wulian233 commented Oct 17, 2024 Copy link Copy Markdown Contributor LGTM All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. vstinner approved these changes Oct 17, 2024 View reviewed changes vstinner left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Doc/library/inspect.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added awaiting merge and removed awaiting review labels Oct 17, 2024 Added the missing markup 4c183ee Eclips4 reviewed Oct 17, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2024-10-17-04-52-00.gh-issue-125633.lMck06.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Changed news a2eb627 vstinner reviewed Oct 17, 2024 View reviewed changes Comment thread Doc/library/inspect.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Xiaokang2022 added 2 commits October 18, 2024 00:18 Changed 3.14 what\u0027s new c256e01 Changed doc 20f497f Eclips4 reviewed Oct 17, 2024 View reviewed changes Comment thread Lib/inspect.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Improved the code ef7eebd Eclips4 approved these changes Oct 17, 2024 View reviewed changes Eclips4 left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The ",
+    "scrapedAt": "2026-10-08 19:16:23.812392"
+  },
+  {
+    "id": 837,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Warning ctypes provides low-level access to native libraries and the process’s memory, bypassing Python’s safety mechanisms and allowing execution of arbitrary native code. Incorrect use can corrupt data and objects, reveal sensitive information, cause crashes, or otherwise compromise the running process. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most re",
+    "scrapedAt": "2026-10-08 19:16:19.487267"
+  },
+  {
+    "id": 836,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard",
+    "title": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_UCS4",
+    "scrapedAt": "2026-10-08 19:16:18.260583"
+  },
+  {
     "id": 835,
     "url": "https://facebook.github.io/zstd/",
     "title": "Zstandard - Real-time data compression algorithm",
@@ -5525,26 +5560,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 836,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard"
-  },
-  {
-    "id": 837,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError"
-  },
-  {
-    "id": 838,
-    "url": "https://github.com/python/cpython/issues/125634"
-  },
-  {
-    "id": 839,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations"
-  },
-  {
-    "id": 840,
-    "url": "https://docs.python.org/3/reference/expressions.html#is"
   },
   {
     "id": 841,
@@ -142845,10 +142860,812 @@ window.searchData = [
     "id": 111899,
     "url": "https://opensource.facebook.com/support-ukraine",
     "parentUrl": "https://facebook.github.io/zstd/"
+  },
+  {
+    "id": 112406,
+    "url": "https://github.com/python/cpython/pull/125634/commits/a0b64f7e976376925e484a17876d0ca81fa72a0f",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112408,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2397401573",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112409,
+    "url": "https://github.com/python/cpython/blob/7b04496e5c7ed47e9653f4591674fc9ffef34587/.github/CODEOWNERS#L16",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112410,
+    "url": "https://github.com/tomasr8",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112411,
+    "url": "https://github.com/python/cpython/pull/125634/files/20f497f2e532825cd05a5a2a6d62e90ec464242b#diff-b89cd06e4637abacb73f2500301ff979a67ad7ecbfa7cf151c7243715898d7ea",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112413,
+    "url": "https://github.com/python/cpython/pull/125634/files/a2eb627352e333c08e0f0c5fe423b68dbca6050e#diff-28534bf091e28ca43bf9d54227179e5bb8297a038072241978f9b4f954427ae3",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112414,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2375502961",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112415,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2379267704",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112416,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2397401930",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112418,
+    "url": "https://github.com/python/cpython/pull/125634/files/ef7eebd47db61e8c76c146cf2c5c7f6b7ec80ba4",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112419,
+    "url": "https://github.com/python/cpython/pull/125634/files/ef7eebd47db61e8c76c146cf2c5c7f6b7ec80ba4#diff-1f0a8db227d22005511b0d90f5339b97db345917b863954b3b3ccb9ec308767c",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112420,
+    "url": "https://github.com/python/cpython/pull/125634/files/a2eb627352e333c08e0f0c5fe423b68dbca6050e#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112421,
+    "url": "https://github.com/python/cpython/pull/125634/files/a0b64f7e976376925e484a17876d0ca81fa72a0f#diff-28534bf091e28ca43bf9d54227179e5bb8297a038072241978f9b4f954427ae3",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112422,
+    "url": "https://github.com/python/cpython/pull/125634#issue-2593521897",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112423,
+    "url": "https://github.com/python/cpython/blob/7b04496e5c7ed47e9653f4591674fc9ffef34587/Makefile.pre.in#L2500",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112424,
+    "url": "https://github.com/python/cpython/pull/125634#event-14697568055",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112426,
+    "url": "https://github.com/python/cpython/pull/125634#event-14761784223",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112427,
+    "url": "https://github.com/python/cpython/pull/125634#issuecomment-2419306763",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112428,
+    "url": "https://github.com/python/cpython/pull/125634#issuecomment-2439844073",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112429,
+    "url": "https://github.com/python/cpython/pull/125634",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112430,
+    "url": "https://github.com/python/cpython/pull/125634/files/2105a1089f4ae44e0cce6b730bfa1ef42526d98f",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112431,
+    "url": "https://github.com/python/cpython/pull/125634#ref-issue-2593517522",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112432,
+    "url": "https://github.com/python/cpython/pull/125634/files/4c183ee489b32ec1d1d8ba70f86294fd8bac36d7#diff-951055039387d8257a818e3605adafb26a488cd4ae09b7c1f58d70813f69766f",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112433,
+    "url": "https://github.com/python/cpython/pull/125634/files/4c183ee489b32ec1d1d8ba70f86294fd8bac36d7",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112434,
+    "url": "https://github.com/python/cpython/pull/125634/files/20f497f2e532825cd05a5a2a6d62e90ec464242b",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112435,
+    "url": "https://github.com/python/cpython/pull/125634#event-14920112216",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112437,
+    "url": "https://github.com/python/cpython/pull/125634/commits/20f497f2e532825cd05a5a2a6d62e90ec464242b",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112438,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2375707168",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112439,
+    "url": "https://github.com/python/cpython/pull/125634#event-14700930692",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112440,
+    "url": "https://github.com/python/cpython/pull/125634/commits/adfc70b9aa3f84c0f4328d6801d81f53ca319ef5",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112441,
+    "url": "https://github.com/python/cpython/pull/125634/commits/95ac2c6febeef52bf6c7eb5fef81be453d8d1587",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112442,
+    "url": "https://github.com/python/cpython/commit/dad34531298fc0ea91b9000aafdd2ea2fce5e54a",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112444,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2379226356",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112445,
+    "url": "https://github.com/python/cpython/pull/125634/files/adfc70b9aa3f84c0f4328d6801d81f53ca319ef5#diff-92d8ecc68ed9e7ce3b31a764d5b0368db1514365c2a6433bbe3bad5c3210cea0",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112446,
+    "url": "https://github.com/ebonnal",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112448,
+    "url": "https://github.com/python/cpython/pull/125634/commits/c256e0142ac72e64ed7745f9e34263b896706a4a",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112449,
+    "url": "https://github.com/python/cpython/pull/125634/files/a2eb627352e333c08e0f0c5fe423b68dbca6050e",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112450,
+    "url": "https://github.com/python/cpython/pull/125634/files/ef7eebd47db61e8c76c146cf2c5c7f6b7ec80ba4#diff-92d8ecc68ed9e7ce3b31a764d5b0368db1514365c2a6433bbe3bad5c3210cea0",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112452,
+    "url": "https://github.com/python/cpython/pull/125634#event-14697646342",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112453,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2379404886",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112454,
+    "url": "https://github.com/ebonnal/cpython/commit/6ed9518763b433d7cbe83ef90b9fdedcab5a9f72",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112456,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2375688600",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112457,
+    "url": "https://github.com/python/cpython/pull/125634#event-14920112171",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112458,
+    "url": "https://github.com/Xiaokang2022",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112459,
+    "url": "https://github.com/python/cpython/pull/125634/commits/2105a1089f4ae44e0cce6b730bfa1ef42526d98f",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112460,
+    "url": "https://github.com/python/cpython/pull/125634#issuecomment-2419266476",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112461,
+    "url": "https://github.com/python/cpython/pull/125634/commits/4c183ee489b32ec1d1d8ba70f86294fd8bac36d7",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112462,
+    "url": "https://github.com/python/cpython/pull/125634/files/2105a1089f4ae44e0cce6b730bfa1ef42526d98f#diff-951055039387d8257a818e3605adafb26a488cd4ae09b7c1f58d70813f69766f",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112463,
+    "url": "https://github.com/python/cpython/pull/125634/commits/efa661db13d805af3275059a12844d6e52ec6f10",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112465,
+    "url": "https://github.com/python/cpython/pull/125634#discussion_r1817982299",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112466,
+    "url": "https://github.com/python/cpython/pull/125634/commits/12cb666cbe9a82d19d60db2e8e3137f9195f93b1",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112467,
+    "url": "https://github.com/python/cpython/pull/125634#event-15821194887",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112470,
+    "url": "https://github.com/python/cpython/pull/125634#event-14692293569",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112471,
+    "url": "https://github.com/python/cpython/pull/125634/files/a0b64f7e976376925e484a17876d0ca81fa72a0f",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112472,
+    "url": "https://github.com/python/cpython/pull/125634/files/95ac2c6febeef52bf6c7eb5fef81be453d8d1587#diff-92d8ecc68ed9e7ce3b31a764d5b0368db1514365c2a6433bbe3bad5c3210cea0",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112473,
+    "url": "https://github.com/python/cpython/pull/125634#issuecomment-2419165495",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112475,
+    "url": "https://github.com/python/cpython/pull/125634#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112477,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2374369507",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112479,
+    "url": "https://github.com/python/cpython/pull/125634/commits/ef7eebd47db61e8c76c146cf2c5c7f6b7ec80ba4",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112481,
+    "url": "https://github.com/python/cpython/pull/125634#issuecomment-2420086657",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112483,
+    "url": "https://github.com/python/cpython/commit/7b04496e5c7ed47e9653f4591674fc9ffef34587",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112484,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F125634",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112485,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2375828049",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112486,
+    "url": "https://github.com/python/cpython/pull/125634/commits/a2eb627352e333c08e0f0c5fe423b68dbca6050e",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112487,
+    "url": "https://github.com/python/cpython/pull/125634#ref-commit-6ed9518",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112488,
+    "url": "https://github.com/python/cpython/pull/125634/commits/40d5a49b069fc7d6cf2b35afc37bab5d9336e9ad",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112489,
+    "url": "https://github.com/python/cpython/pull/125634/commits/0943c6259ed214c2c7c5ae101a2ecaac641710af",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112490,
+    "url": "https://github.com/python/cpython/pull/125634#issuecomment-2439846300",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112491,
+    "url": "https://github.com/python/cpython/pull/125634/files/adfc70b9aa3f84c0f4328d6801d81f53ca319ef5",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112492,
+    "url": "https://github.com/python/cpython/pull/125634/commits/658ef94ab2f302995de0256352d9f6422a30a04b",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112493,
+    "url": "https://github.com/python/cpython/pull/125634#commits-pushed-c256e01",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112495,
+    "url": "https://github.com/python/cpython/pull/125634#commits-pushed-40d5a49",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112496,
+    "url": "https://github.com/python/cpython/pull/125634#pullrequestreview-2375760845",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "id": 112497,
+    "url": "https://github.com/python/cpython/pull/125634/files/95ac2c6febeef52bf6c7eb5fef81be453d8d1587",
+    "parentUrl": "https://github.com/python/cpython/issues/125634"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#is"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#is"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.get_annotations"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d80\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d48\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/65588599?s\u003d60\u0026v\u003d4",
+    "alt": "nineteendo",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/65588599?s\u003d48\u0026v\u003d4",
+    "alt": "@nineteendo",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d80\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d80\u0026u\u003d8c150d2d9a590aeedc3fc2fc34cd8a8bf15878b7\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026u\u003d8dbadbcbfc6f216f76a8b6f94fe25c12d4e4093b\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026u\u003d8dbadbcbfc6f216f76a8b6f94fe25c12d4e4093b\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d80\u0026u\u003dec74e9d96a5eab6e0b461f9d7a57c4e416b13d96\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d60\u0026v\u003d4",
+    "alt": "vstinner",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d48\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d60\u0026v\u003d4",
+    "alt": "Eclips4",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d60\u0026v\u003d4",
+    "alt": "vstinner",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d60\u0026v\u003d4",
+    "alt": "Eclips4",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d60\u0026v\u003d4",
+    "alt": "Eclips4",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d48\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d60\u0026v\u003d4",
+    "alt": "Wulian233",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d60\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d48\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d60\u0026v\u003d4",
+    "alt": "sobolevn",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d40\u0026u\u003dfd2a3ddb80bd163742847340896ae10103d3eac2\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d80\u0026u\u003d0d25ddfb5f320a9f4a88a6cb3f866aa27546b17b\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d60\u0026v\u003d4",
+    "alt": "ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026u\u003d0d25ddfb5f320a9f4a88a6cb3f866aa27546b17b\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d80\u0026u\u003d0d25ddfb5f320a9f4a88a6cb3f866aa27546b17b\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d60\u0026v\u003d4",
+    "alt": "ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d48\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026u\u003d8dbadbcbfc6f216f76a8b6f94fe25c12d4e4093b\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d40\u0026u\u003d8dbadbcbfc6f216f76a8b6f94fe25c12d4e4093b\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d40\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d40\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/65588599?s\u003d40\u0026v\u003d4",
+    "alt": "@nineteendo",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d40\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/100004682?s\u003d52\u0026v\u003d4",
+    "alt": "@Xiaokang2022",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71213467?s\u003d52\u0026v\u003d4",
+    "alt": "@Wulian233",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d52\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d52\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d52\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d52\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/65588599?s\u003d52\u0026v\u003d4",
+    "alt": "@nineteendo",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d52\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-125633: Add function `ispackage` to stdlib `inspect` by Xiaokang2022 · Pull Request #125634 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125634"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.COMError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_Discard"
+  },
   {
     "src": "https://facebook.github.io/zstd/images/zstd85.png",
     "alt": "",
