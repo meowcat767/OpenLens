@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1280,
+    "url": "https://docs.python.org/3/library/mailbox.html#module-mailbox",
+    "title": "mailbox — Manipulate mailboxes in various formats — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Data Handling » mailbox — Manipulate mailboxes in various formats | Theme Auto Light Dark | mailbox — Manipulate mailboxes in various formats¶ Source code: Lib/mailbox.py This module defines two classes, Mailbox and Message, for accessing and manipulating on-disk mailboxes and the messages they contain. Mailbox offers a dictionary-like mapping from keys to messages. Message extends the email.message module’s Message class with format-specific state and behavior. Supported mailbox formats are Maildir, mbox, MH, Babyl, and MMDF. See also Module email Represent and manipulate messages. Mailbox objects¶ class mailbox.Mailbox¶ A mailbox, which may be inspected and modified. The Mailbox class defines an interface and is not intended to be instantiated. Instead, format-specific subclasses should inherit from Mailbox and your code should instantiate a particular subclass. The Mailbox interface is dictionary-like, with small keys corresponding to messages. Keys are issued by the Mailbox instance with which they will be used and are only meaningful to that Mailbox instance. A key continues to identify a message even if the corresponding message is modified, such as by replacing it with another message. Messages may be added to a Mailbox instance using the set-like method add() and removed using a del statement or the set-like methods remove() and discard(). Mailbox interface semantics differ from dictionary semantics in some noteworthy ways. Each time a message is requested, a new representation (typically a Message instance) is generated based upon the current state of the mailbox. Similarly, when a message is added to a Mailbox instance, the provided message representation’s contents are copied. In neither case is a reference to the message representation kept by the Mailbox instance. The default Mailbox iterator iterates over message representations, not keys as the default dictionary iterator does. Moreover, modification of a mailbox during iteration is safe and well-defined. Messages added to the mailbox after an iterator is created will not be seen by the iterator. Messages removed from the mailbox before the iterator yields them will be silently skipped, though using a key from an iterator may result in a KeyError exception if the corresponding message is subsequently removed. Warning Be very cautious when modifying mailboxes that might be simultaneously changed by some other process. The safest mailbox format to use for such tasks is Maildir; try to avoid using single-file formats such as mbox for concurrent writing. If you’re modifying a mailbox, you must lock it by calling the lock() and unlock() methods before reading any messages in the file or making any changes by adding or deleting a message. Failing to lock the mailbox runs the risk of losing messages or corrupting the entire mailbox. Mailbox instances have the following methods: add(message)¶ Add message to the mailbox and return the key that has been assigned to it. Parameter message may be a Message instance, an email.message.Message instance, a string, a byte string, or a file-like object (which should be open in binary mode). If message is an instance of the appropriate format-specific Message subclass (e.g., if it’s an mboxMessage instance and this is an mbox instance), its format-specific information is used. Otherwise, reasonable defaults for format-specific information are used. Changed in version 3.2: Support for binary input was added. remove(key)¶ __delitem__(key)¶ discard(key)¶ Delete the message corresponding to key from the mailbox. If no such message exists, a KeyError exception is raised if the method was called as remove() or __delitem__() but no exception is raised if the method was called as discard(). The behavior of discard() may be preferred if the underlying mailbox format supports concurrent modification by other processes. __setitem__(key, message)¶ Replace the message corresponding to key with message. Raise a KeyError exception if no message already corresponds to key. As with add(), parameter message may be a Message instance, an email.message.Message instance, a string, a byte string, or a file-like object (which should be open in binary mode). If message is an instance of the appropriate format-specific Message subclass (e.g., if it’s an mboxMessage instance and this is an mbox instance), its format-specific information is used. Otherwise, the format-specific information of the message that currently corresponds to key is left unchanged. iterkeys()¶ Return an iterator over all keys keys()¶ The same as iterkeys(), except that a list is returned rather than an iterator itervalues()¶ __iter__()¶ Return an iterator over representations of all messages. The messages are represented as instances of the appropriate format-specific Message subclass unless a custom message factory was specified when the Mailbox inst",
+    "scrapedAt": "2026-10-08 19:35:01.180053"
+  },
+  {
+    "id": 1279,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse",
+    "title": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.parse — Parse URLs into components | Theme Auto Light Dark | urllib.parse — Parse URLs into components¶ Source code: Lib/urllib/parse.py This module defines a standard interface to break Uniform Resource Locator (URL) strings up in components (addressing scheme, network location, path etc.), to combine the components back into a URL string, and to convert a “relative URL” to an absolute URL given a “base URL.” The module has been designed to match the internet RFC on Relative Uniform Resource Locators. It supports the following URL schemes: file, ftp, gopher, hdl, http, https, imap, itms-services, mailto, mms, news, nntp, prospero, rsync, rtsp, rtsps, rtspu, sftp, shttp, sip, sips, snews, svn, svn+ssh, telnet, wais, ws, wss. CPython implementation detail: The inclusion of the itms-services URL scheme can prevent an app from passing Apple’s App Store review process for the macOS and iOS App Stores. Handling for the itms-services scheme is always removed on iOS; on macOS, it may be removed if CPython has been built with the --with-app-store-compliance option. The urllib.parse module defines functions that fall into two broad categories: URL parsing and URL quoting. These are covered in detail in the following sections. This module’s functions use the deprecated term netloc (or net_loc), which was introduced in RFC 1808. However, this term has been obsoleted by RFC 3986, which introduced the term authority as its replacement. The use of netloc is continued for backward compatibility. URL Parsing¶ The URL parsing functions focus on splitting a URL string into its components, or on combining URL components into a URL string. urllib.parse.urlsplit(urlstring, scheme\u003dNone, allow_fragments\u003dTrue)¶ Parse a URL into five components, returning a 5-item named tuple SplitResult or SplitResultBytes. This corresponds to the general structure of a URL: scheme://netloc/path?query#fragment. Each tuple item is a string, possibly empty. The delimiters as shown above are not part of the result, except for a leading slash in the path component, which is retained if present. Additionally, the netloc property is broken down into these additional attributes added to the returned object: username, password, hostname, and port. Percent-encoded sequences are not decoded. For example: \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\"scheme://netloc/path?query#fragment\")\nSplitResult(scheme\u003d\u0027scheme\u0027, netloc\u003d\u0027netloc\u0027, path\u003d\u0027/path\u0027,\n            query\u003d\u0027query\u0027, fragment\u003d\u0027fragment\u0027)\n\u003e\u003e\u003e o \u003d urlsplit(\"http://docs.python.org:80/3/library/urllib.parse.html?\"\n...              \"highlight\u003dparams#url-parsing\")\n\u003e\u003e\u003e o\nSplitResult(scheme\u003d\u0027http\u0027, netloc\u003d\u0027docs.python.org:80\u0027,\n            path\u003d\u0027/3/library/urllib.parse.html\u0027,\n            query\u003d\u0027highlight\u003dparams\u0027, fragment\u003d\u0027url-parsing\u0027)\n\u003e\u003e\u003e o.scheme\n\u0027http\u0027\n\u003e\u003e\u003e o.netloc\n\u0027docs.python.org:80\u0027\n\u003e\u003e\u003e o.hostname\n\u0027docs.python.org\u0027\n\u003e\u003e\u003e o.port\n80\n\u003e\u003e\u003e o._replace(fragment\u003d\"\").geturl()\n\u0027http://docs.python.org:80/3/library/urllib.parse.html?highlight\u003dparams\u0027\n Following the syntax specifications in RFC 1808, urlsplit() recognizes a netloc only if it is properly introduced by ‘//’. Otherwise the input is presumed to be a relative URL and thus to start with a path component. \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\u0027//www.cwi.nl:80/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027www.cwi.nl:80\u0027, path\u003d\u0027/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027www.cwi.nl/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027www.cwi.nl/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027help/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027help/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n The scheme argument gives the default addressing scheme, to be used only if the URL does not specify one. It should be the same type (text or bytes) as urlstring, except that the default value \u0027\u0027 is always allowed, and is automatically converted to b\u0027\u0027 if appropriate. If the allow_fragments argument is false, fragment identifiers are not recognized. Instead, they are parsed as part of the path, parameters or query component, and fragment is set to the empty string in the return value. The return value is a named tuple, which means that its items can be accessed by index or as named attributes, which are: Attribute Index Value Value if not present scheme 0 URL scheme specifier scheme parameter netloc 1 Network location part empty string path 2 Hierarchical path empty string query 3 Query component empty string fragment 4 Fragment identifier empty string username User name None password Password None hostname Host name (lower case) None port Port number as integer, if present None Reading the port attribute will raise a ValueError if an invalid port is specified in the URL. See section Structured Parse Results for more information ",
+    "scrapedAt": "2026-10-08 19:34:59.852791"
+  },
+  {
+    "id": 1278,
+    "url": "https://github.com/python/cpython/issues/122873",
+    "title": "Allow \"-m json\" instead of \"-m json.tool\" · Issue #122873 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Allow \"-m json\" instead of \"-m json.tool\" #122873 New issue Copy link New issue Copy link Closed Closed Allow \"-m json\" instead of \"-m json.tool\"#122873 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description treyhunner opened on Aug 9, 2024 Issue body actions Feature or enhancement Proposal: This is a feature proposal for allowing python3 -m json to work in addition to python -m json.tool and softly deprecating the use of python3 -m json.tool. I made a branch to see what these changes might look like. Here is a separate branch which issues a DeprecationWarning . However, since json.tool will continue working that warning may cause more hassle for end users than is worthwhile. I think the no-warning approach may be more sensible. Has this already been discussed elsewhere? I have already discussed this feature proposal on Discourse Links to previous discussion of this feature: Discussion in Ideas discuss thread Linked PRs gh-122873: Allow \"python3 -m json\" to work #122884 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:34:58.5934"
+  },
+  {
+    "id": 1277,
+    "url": "https://docs.python.org/3/glossary.html#term-package",
+    "title": "Glossary — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A callable that can be called to retrieve the annotations of an object. Annotate functions are usually functions, automatically generated as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ Informally used to mean either an asynchronous generator function or an asynchronous generator iterator, depending on context. The formal terms asynchronous generator function and asynchronous generator iterator are uncommon in practice; “asynchronous generator” alone is almost always sufficient. asynchronous generator function¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. See PEP 525. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous ",
+    "scrapedAt": "2026-10-08 19:34:56.316949"
+  },
+  {
+    "id": 1276,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/",
+    "title": "ECMA-376 - Ecma International",
+    "content": "This Standard defines Office Open XML’s vocabularies and document representation and packaging. It also specifies requirements for consumers and producers of Office Open XML. ECMA-376 contains 4 parts but only part 2 has been adopted in the last edition of the Standard. An Office Open XML overview is available below under ressources. The four parts of the Standard are the following: Part 1 “Fundamentals And Markup Language Reference”, 5th edition, December 2016 Part 2 “Open Packaging Conventions”, 5th edition, December 2021 Part 3 “Markup Compatibility and Extensibility”, 5th edition, December 2015 Part 4 “Transitional Migration Features”, 5th edition, December 2016 Download part 1 Download part 2 Download part 3 Download part 4 Classification CategoryDocument architecture SubcategoryNot available Technical CommitteeTC45 ISO/IEC number29500 Archives ECMA-376, 1st edition, December 2006Download ECMA-376, 2nd edition, December 2008Download ECMA-376, 3rd edition, June 2011Download ECMA-376, 4th edition, December 2012Download Resources Office Open XML overviewDownload Ecma International Rue du Rhône 114 1204 Geneva Switzerland About Ecma Publications and standards Policies Contact Committees News Privacy policy Members only Twitter Linkedin Link to: ECMA-420 Link to: ECMA-420 ECMA-420 Link to: ECMA-352 Link to: ECMA-352 ECMA-352 Scroll to top Scroll to top Scroll to top This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies. AcceptManage Cookie and privacy settings Necessary cookies Essential cookies are strictly necessary for the proper operation of our site. In particular, they govern the principles of navigation and memorize some of your choices between pages. If you refuse them, your browsing experience may be affected. Analytics cookies Analysis cookies collect statistical and anonymous information on the traffic recorded on our site. They help us to improve our pages, in order to better meet our users\u0027 expectations. If you do not want us to record your visit, you can disable this tracking. Click to enable/disable Google Analytics tracking. Additional services We also use various external services such as Google WebFonts and Google Maps. These providers may collect data such as your IP address. If you deactivate these cookies, the appearance of our site may have a negative impact on your reading experience. Changes will take effect once you reload the page. Click to enable/disable Google Webfonts. Click to enable/disable Google Maps. Privacy policy You can find out more about our use of cookies on our privacy policy page. SaveDeactivate all cookies Check to enable permanent hiding of message bar and refuse all cookies if you do not opt in. We need 2 cookies to store this setting. Otherwise you will be prompted again when opening a new browser window or new a tab. Click to enable/disable essential site cookies.",
+    "scrapedAt": "2026-10-08 19:34:55.002941"
+  },
+  {
     "id": 1275,
     "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level",
     "title": "Python Initialization Configuration — Python 3.14.8 documentation",
@@ -8540,26 +8575,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1276,
-    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
-  },
-  {
-    "id": 1277,
-    "url": "https://docs.python.org/3/glossary.html#term-package"
-  },
-  {
-    "id": 1278,
-    "url": "https://github.com/python/cpython/issues/122873"
-  },
-  {
-    "id": 1279,
-    "url": "https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse"
-  },
-  {
-    "id": 1280,
-    "url": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
   },
   {
     "id": 1281,
@@ -229196,10 +229211,933 @@ window.searchData = [
     "id": 255497,
     "url": "https://github.com/python/cpython/issues/132429#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255943,
+    "url": "https://ecma-international.org/technical-committees/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255944,
+    "url": "https://www.linkedin.com/company/ecma-international",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255945,
+    "url": "https://twitter.com/EcmaIntl",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255946,
+    "url": "https://www.ecma-international.org/policies/privacy-policy/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255947,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/#top",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255948,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-420/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255949,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/#",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255950,
+    "url": "https://www.ecma-international.org/publications-and-standards/standards/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255951,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_3rd_edition_june_2011.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255952,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_1st_edition_december_2006.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255953,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-4_5th_edition_december_2016.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255954,
+    "url": "https://ecma-international.org/wp-content/uploads/OpenXML-White-Paper.pdf",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255955,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-2_5th_edition_december_2021.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255956,
+    "url": "https://ecma-international.org/contact/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255957,
+    "url": "https://ecma-international.org/policies/privacy-policy/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255958,
+    "url": "https://www.ecma-international.org/mission/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255959,
+    "url": "https://ecma-international.org/policies/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255960,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-352/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255961,
+    "url": "https://members.ecma-international.org/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255962,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-3_5th_edition_december_2015.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255963,
+    "url": "https://ecma-international.org/news/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255964,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_2nd_edition_december_2008.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255965,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376-1_5th_edition_december_2016.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255966,
+    "url": "https://ecma-international.org/technical-committees/tc45/",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255967,
+    "url": "https://ecma-international.org/publications-and-standards/standards?order\u003dcategory#Document-architecture",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 255968,
+    "url": "https://ecma-international.org/wp-content/uploads/ECMA-376_4th_edition_december_2012.zip",
+    "parentUrl": "https://ecma-international.org/publications-and-standards/standards/ecma-376/"
+  },
+  {
+    "id": 256406,
+    "url": "https://github.com/treyhunner",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256407,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/122873",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256408,
+    "url": "https://discuss.python.org/t/allow-python-m-json-to-work-in-addition-to-python-m-json-tool/59835",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256411,
+    "url": "https://github.com/python/cpython/issues/122873#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256412,
+    "url": "https://github.com/python/cpython/issues/122873#top",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256413,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/122873",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256414,
+    "url": "https://github.com/python/cpython/compare/main...treyhunner:cpython:json-script",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256415,
+    "url": "https://github.com/python/cpython/issues/122873#issue-2458767634",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256417,
+    "url": "https://github.com/python/cpython/pull/122884",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256418,
+    "url": "https://github.com/python/cpython/compare/main...treyhunner:cpython:json-script2",
+    "parentUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "id": 256491,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.close",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256492,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.pack",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256493,
+    "url": "https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256495,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDF.unlock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256497,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.get_folder",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256498,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage.set_visible",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256500,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.update",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256502,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Message",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256503,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.__setitem__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256504,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.remove",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256505,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDFMessage",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256506,
+    "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000383.shtml",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256507,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.clear",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256508,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.get_sequences",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256510,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.items",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256511,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.__delitem__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256512,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDF",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256513,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256514,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mbox.get_file",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256515,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.__getitem__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256516,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.__delitem__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256517,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MHMessage",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256518,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Babyl.get_labels",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256519,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage.get_labels",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256520,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.get_info",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256521,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.iterkeys",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256523,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mboxMessage.set_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256524,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage.update_visible",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256525,
+    "url": "https://quimby.gnus.org/notes/BABYL",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256528,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.lock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256530,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.remove",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256531,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.popitem",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256533,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.get_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256534,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mbox.get_string",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256535,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MHMessage.remove_sequence",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256536,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage.set_labels",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256538,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.remove_folder",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256539,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.set_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256540,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256542,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Error",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256543,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mboxMessage.remove_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256544,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.get_string",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256546,
+    "url": "https://www.jwz.org/doc/content-length.html",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256547,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDF.get_file",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256549,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mboxMessage.get_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256550,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.__len__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256551,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.set_info",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256552,
+    "url": "http://www.tin.org/bin/man.cgi?section\u003d5\u0026topic\u003dmbox",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256553,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.discard",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256554,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256555,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.__iter__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256557,
+    "url": "https://docs.python.org/3/library/mailbox.html#",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256558,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.NotEmptyError",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256559,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mboxMessage",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256560,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage.remove_label",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256561,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.get_message",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256562,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDF.lock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256564,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.add_folder",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256565,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/mailbox.py",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256566,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.flush",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256567,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.set_sequences",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256568,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage.get_visible",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256570,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Babyl.get_file",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256572,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.__contains__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256573,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Babyl.unlock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256575,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDFMessage.remove_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256576,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.get_date",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256577,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mbox",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256578,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.get_info",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256579,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Babyl.lock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256580,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.set_info",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256582,
+    "url": "http://www.tin.org/bin/man.cgi?section\u003d5\u0026topic\u003dmmdf",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256583,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.unlock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256585,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.get_file",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256586,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MHMessage.get_sequences",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256587,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.flush",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256589,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mboxMessage.set_from",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256591,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.set_date",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256592,
+    "url": "https://cr.yp.to/proto/maildir.html",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256593,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.get_file",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256595,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.unlock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256598,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.close",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256600,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.discard",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256601,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MHMessage.set_sequences",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256602,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.iteritems",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256605,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mbox.lock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256606,
+    "url": "https://www.courier-mta.org/maildir.html",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256609,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.list_folders",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256610,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.get",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256611,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.get_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256612,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.NoSuchMailboxError",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256613,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.pop",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256614,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256615,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDFMessage.get_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256616,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/mailbox.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256617,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.flush",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256618,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDFMessage.get_from",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256619,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mboxMessage.get_from",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256620,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.colon",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256623,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.add_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256625,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.lock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256626,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.clean",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256628,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.ExternalClashError",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256629,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mbox.unlock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256630,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.update",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256631,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.close",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256633,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MH.get_folder",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256634,
+    "url": "https://www.nongnu.org/nmh/",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256635,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.__setitem__",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256637,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.get_bytes",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256639,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDFMessage.set_from",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256640,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDFMessage.set_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256641,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.add_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256642,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MHMessage.add_sequence",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256643,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.BabylMessage.add_label",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256645,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Babyl",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256647,
+    "url": "https://en.wikipedia.org/wiki/MMDF",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256648,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.get_subdir",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256649,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDFMessage.add_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256650,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.lock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256651,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.unlock",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256652,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.list_folders",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256653,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MMDF.get_bytes",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256654,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.remove_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256655,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.get_file",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256656,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.remove_folder",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256658,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.remove_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256660,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.FormatError",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256662,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mboxMessage.add_flag",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256665,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.add_folder",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256666,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.add",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256667,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.mbox.get_bytes",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256668,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.itervalues",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256670,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.keys",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256671,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Mailbox.values",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256672,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.set_flags",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256674,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.Maildir.add",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256675,
+    "url": "https://rand-mh.sourceforge.io/book/",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256676,
+    "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.set_subdir",
+    "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mailbox — Manipulate mailboxes in various formats — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "mailbox — Manipulate mailboxes in various formats — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#module-urllib.parse"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/285352?v\u003d4\u0026size\u003d48",
+    "alt": "@treyhunner",
+    "pageTitle": "Allow \"-m json\" instead of \"-m json.tool\" · Issue #122873 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Allow \"-m json\" instead of \"-m json.tool\" · Issue #122873 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122873"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-package"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-package"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
