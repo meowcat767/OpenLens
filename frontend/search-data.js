@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1674,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.time",
+    "title": "datetime — Basic date and time types — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Types » datetime — Basic date and time types | Theme Auto Light Dark | datetime — Basic date and time types¶ Source code: Lib/datetime.py The datetime module supplies classes for manipulating dates and times. While date and time arithmetic is supported, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation. Tip Skip to the format codes. See also Module calendar General calendar related functions. Module time Time access and conversions. Module zoneinfo Concrete time zones representing the IANA time zone database. Package dateutil Third-party library with expanded time zone and parsing support. Package DateType Third-party library that introduces distinct static types to for example, allow static type checkers to differentiate between naive and aware datetimes. Aware and naive objects¶ Date and time objects may be categorized as “aware” or “naive” depending on whether or not they include time zone information. With sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, an aware object can locate itself relative to other aware objects. An aware object represents a specific moment in time that is not open to interpretation. [1] A naive object does not contain enough information to unambiguously locate itself relative to other date/time objects. Whether a naive object represents Coordinated Universal Time (UTC), local time, or time in some other time zone is purely up to the program, just like it is up to the program whether a particular number represents metres, miles, or mass. Naive objects are easy to understand and to work with, at the cost of ignoring some aspects of reality. For applications requiring aware objects, datetime and time objects have an optional time zone information attribute, tzinfo, that can be set to an instance of a subclass of the abstract tzinfo class. These tzinfo objects capture information about the offset from UTC time, the time zone name, and whether daylight saving time is in effect. Only one concrete tzinfo class, the timezone class, is supplied by the datetime module. The timezone class can represent simple time zones with fixed offsets from UTC, such as UTC itself or North American EST and EDT time zones. Supporting time zones at deeper levels of detail is up to the application. The rules for time adjustment across the world are more political than rational, change frequently, and there is no standard suitable for every application aside from UTC. Constants¶ The datetime module exports the following constants: datetime.MINYEAR¶ The smallest year number allowed in a date or datetime object. MINYEAR is 1. datetime.MAXYEAR¶ The largest year number allowed in a date or datetime object. MAXYEAR is 9999. datetime.UTC¶ Alias for the UTC time zone singleton datetime.timezone.utc. Added in version 3.11. Available types¶ class datetime.date An idealized naive date, assuming the current Gregorian calendar always was, and always will be, in effect. Attributes: year, month, and day. class datetime.time An idealized time, independent of any particular day, assuming that every day has exactly 24*60*60 seconds. (There is no notion of “leap seconds” here.) Attributes: hour, minute, second, microsecond, and tzinfo. class datetime.datetime A combination of a date and a time. Attributes: year, month, day, hour, minute, second, microsecond, and tzinfo. class datetime.timedelta A duration expressing the difference between two datetime or date instances to microsecond resolution. class datetime.tzinfo An abstract base class for time zone information objects. These are used by the datetime and time classes to provide a customizable notion of time adjustment (for example, to account for time zone and/or daylight saving time). class datetime.timezone A class that implements the tzinfo abstract base class as a fixed offset from the UTC. Added in version 3.2. Objects of these types are immutable. Subclass relationships: Common properties¶ The date, datetime, time, and timezone types share these common features: Objects of these types are immutable. Objects of these types are hashable, meaning that they can be used as dictionary keys. Objects of these types support efficient pickling via the pickle module. Determining if an object is aware or naive¶ Objects of the date type are always naive. An object of type time or datetime may be aware or naive. A datetime object d is aware if both of the following hold: d.tzinfo is not None d.tzinfo.utcoffset(d) does not return None Otherwise, d is naive. A time object t is aware if both of the following hold: t.tzinfo is not None t.tzinfo.utcoffset(None) does not return None. Otherwise, t is naive. The distinction between aware and naive doesn’t apply to timedelta objects. timedelta objects¶ A timedelta object represents a du",
+    "scrapedAt": "2026-10-08 19:53:09.255811"
+  },
+  {
+    "id": 1673,
+    "url": "https://github.com/python/cpython/issues/100926",
+    "title": "ctypes infinite pointer cache · Issue #100926 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} ctypes infinite pointer cache #100926 New issue Copy link New issue Copy link Closed Closed ctypes infinite pointer cache #100926 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description earonesty opened on Jan 10, 2023 Issue body actions Bug(ish?) report The following function has a cache. If you are using a factory to call ctypes.POINTER in a loop, the memory usage is unbounded and unable to be reclaimed. https://docs.python.org/3/library/ctypes.html#ctypes.POINTER The documentation should mention that this is unbounded and should not be called in a loop, or the cache should be changed to a configurable, bounded LRU cache. Example of a variable length type factory used by windows, and a bad func that cannot be called in a loop: def shitemid_factory(size: int) -\u003e Type[ctypes.Structure]:\n    class SHITEMID_Var(ctypes.Structure):\n        _fields_ \u003d (\n            (\"cb\", USHORT),\n            (\"abID\", BYTE * size),\n        )\n\n    return SHITEMID_Var\n\ndef bad_func():\n    SHITEMID_Var \u003d shitemid_factory(sz - ctypes.sizeof(USHORT))\n    item_var \u003d ctypes.cast(item_ptr, ctypes.POINTER(SHITEMID_Var))\n Linked PRs gh-100926: Move ctype\u0027s pointers cache to StgInfo #131282 gh-100926: fix thread safety of ctypes __pointer_type__ #133843 gh-100926: use explicit stginfo lock for pointer cache #133867 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Ctypes issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:53:07.886703"
+  },
+  {
+    "id": 1672,
+    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4517",
+    "title": "",
+    "content": "Common vulnerabilities and Exposures (CVE) We\u0027re sorry but the CVE Website doesn\u0027t work properly without JavaScript enabled. Please enable it to continue.",
+    "scrapedAt": "2026-10-08 19:53:05.280816"
+  },
+  {
+    "id": 1671,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#functools",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:53:03.552759"
+  },
+  {
+    "id": 1670,
+    "url": "https://docs.python.org/3/library/urllib.request.html#module-urllib.request",
+    "title": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.request — Extensible library for opening URLs | Theme Auto Light Dark | urllib.request — Extensible library for opening URLs¶ Source code: Lib/urllib/request.py The urllib.request module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. See also The Requests package is recommended for a higher-level HTTP client interface. Warning On macOS it is unsafe to use this module in programs using os.fork() because the getproxies() implementation for macOS uses a higher-level system API. Set the environment variable no_proxy to * to avoid this problem (e.g. os.environ[\"no_proxy\"] \u003d \"*\"). Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The urllib.request module defines the following functions: urllib.request.urlopen(url, data\u003dNone, [timeout, ]*, context\u003dNone)¶ Open url, which can be either a string containing a valid, properly encoded URL, or a Request object. data must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details. urllib.request module uses HTTP/1.1 and includes Connection:close header in its HTTP requests. The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections. If context is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details. This function always returns an object which can work as a context manager and has the properties url, headers, and status. See urllib.response.addinfourl for more detail on these properties. For HTTP and HTTPS URLs, this function returns a http.client.HTTPResponse object slightly modified. In addition to the three new methods above, the msg attribute contains the same information as the reason attribute — the reason phrase returned by server — instead of the response headers as it is specified in the documentation for HTTPResponse. For FTP, file, and data URLs, this function returns a urllib.response.addinfourl object. Raises URLError on protocol errors. Note that None may be returned if no handler handles the request (though the default installed global OpenerDirector uses UnknownHandler to ensure this never happens). In addition, if proxy settings are detected (for example, when a *_proxy environment variable like http_proxy is set), ProxyHandler is default installed and makes sure the requests are handled through the proxy. The legacy urllib.urlopen function from Python 2.6 and earlier has been discontinued; urllib.request.urlopen() corresponds to the old urllib2.urlopen. Proxy handling, which was done by passing a dictionary parameter to urllib.urlopen, can be obtained by using ProxyHandler objects. The default opener raises an auditing event urllib.Request with arguments fullurl, data, headers, method taken from the request object. Changed in version 3.2: cafile and capath were added. HTTPS virtual hosts are now supported if possible (that is, if ssl.HAS_SNI is true). data can be an iterable object. Changed in version 3.3: cadefault was added. Changed in version 3.4.3: context was added. Changed in version 3.10: HTTPS connection now send an ALPN extension with protocol indicator http/1.1 when no context is given. Custom context should set ALPN protocols with set_alpn_protocols(). Changed in version 3.13: Remove cafile, capath and cadefault parameters: use the context parameter instead. urllib.request.install_opener(opener)¶ Install an OpenerDirector instance as the default global opener. Installing an opener is only necessary if you want urlopen to use that opener; otherwise, simply call OpenerDirector.open() instead of urlopen(). The code does not check for a real OpenerDirector, and any class with the appropriate interface will work. urllib.request.build_opener([handler, ...])¶ Return an OpenerDirector instance, which chains the handlers in the order given. handlers can be either instances of BaseHandler, or subclasses of BaseHandler (in which case it must be possible to call the constructor without any parameters). Instances of the following classes will be in front of the handlers, unless the handlers contain them, instances of them or subclasses of them: ProxyHandler (if proxy settings are detected), UnknownHandler, HTTPHandler, HTTPDefaultErrorHandler, HTTPRedirectHandler, FTPHandler, FileHandler, HTTPErrorProcessor. If the Python installation has SSL support (i.e., if the ssl module can be imported), HTTPSHandler will also be added. A BaseHandler subclass may also change its handler_order attribute to modify its pos",
+    "scrapedAt": "2026-10-08 19:53:02.114716"
+  },
+  {
     "id": 1669,
     "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_NormalizeException",
     "title": "Exception Handling — Python 3.14.8 documentation",
@@ -11235,26 +11270,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1670,
-    "url": "https://docs.python.org/3/library/urllib.request.html#module-urllib.request"
-  },
-  {
-    "id": 1671,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#functools"
-  },
-  {
-    "id": 1672,
-    "url": "https://www.cve.org/CVERecord?id\u003dCVE-2025-4517"
-  },
-  {
-    "id": 1673,
-    "url": "https://github.com/python/cpython/issues/100926"
-  },
-  {
-    "id": 1674,
-    "url": "https://docs.python.org/3/library/datetime.html#datetime.time"
   },
   {
     "id": 1675,
@@ -250726,10 +250741,109 @@ window.searchData = [
     "id": 362018,
     "url": "https://github.com/python/cpython/pull/131919",
     "parentUrl": "https://github.com/python/cpython/issues/130167"
+  },
+  {
+    "id": 365692,
+    "url": "https://github.com/python/cpython/pull/133867",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365695,
+    "url": "https://github.com/python/cpython/pull/133843",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365697,
+    "url": "https://github.com/python/cpython/issues/100926#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365699,
+    "url": "https://github.com/python/cpython/pull/131282",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365700,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/100926",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365702,
+    "url": "https://github.com/python/cpython/issues/100926#issue-1527857014",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365704,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/100926",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365705,
+    "url": "https://github.com/python/cpython/issues/100926#top",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 365706,
+    "url": "https://github.com/earonesty",
+    "parentUrl": "https://github.com/python/cpython/issues/100926"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.time"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/datetime-inheritance.svg",
+    "alt": "timedelta, tzinfo, time, and date inherit from object; timezone inherits from tzinfo; and datetime inherits from date.",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.time"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "datetime — Basic date and time types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/datetime.html#datetime.time"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/50769?v\u003d4\u0026size\u003d48",
+    "alt": "@earonesty",
+    "pageTitle": "ctypes infinite pointer cache · Issue #100926 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "ctypes infinite pointer cache · Issue #100926 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#functools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#functools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#module-urllib.request"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#module-urllib.request"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
