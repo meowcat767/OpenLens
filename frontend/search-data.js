@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 659,
+    "url": "http://docs.python.org/3/library/",
+    "title": "The Python standard library — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library | Theme Auto Light Dark | The Python standard library¶ This library reference manual describes the standard library distributed with Python. It also describes some of the optional components that are commonly included in Python distributions. Elsewhere, The Python Language Reference describes the exact syntax and semantics of the Python language, and Python built-ins reference describes the built-in functions. Python’s standard library is extensive, offering a wide range of facilities as indicated by the long table of contents listed below. The library contains built-in modules (written in C) that provide access to system functionality such as file I/O that would otherwise be inaccessible to Python programmers, as well as modules written in Python that provide standardized solutions for many problems that occur in everyday programming. Some of these modules are explicitly designed to encourage and enhance the portability of Python programs by abstracting away platform-specifics into platform-neutral APIs. The Python installers for the Windows platform usually include the entire standard library and often also include many additional components. For Unix-like operating systems Python is normally provided as a collection of packages, so it may be necessary to use the packaging tools provided with the operating system to obtain some or all of the optional components. In addition to the standard library, there is an active collection of hundreds of thousands of components (from individual programs and modules to packages and entire application development frameworks), available from the Python Package Index. Introduction Notes on availability Text Processing Services string — Common string operations string.templatelib — Support for template string literals re — Regular expression operations difflib — Helpers for computing deltas textwrap — Text wrapping and filling unicodedata — Unicode Database stringprep — Internet String Preparation readline — GNU readline interface rlcompleter — Completion function for GNU readline Binary Data Services struct — Interpret bytes as packed binary data codecs — Codec registry and base classes Data Types datetime — Basic date and time types zoneinfo — IANA time zone support calendar — General calendar-related functions collections — Container datatypes collections.abc — Abstract Base Classes for Containers heapq — Heap queue algorithm bisect — Array bisection algorithm array — Efficient arrays of numeric values weakref — Weak references types — Dynamic type creation and names for built-in types copy — Shallow and deep copy operations pprint — Data pretty printer reprlib — Alternate repr() implementation enum — Support for enumerations graphlib — Functionality to operate with graph-like structures Numeric and Mathematical Modules numbers — Numeric abstract base classes math — Mathematical functions cmath — Mathematical functions for complex numbers decimal — Decimal fixed-point and floating-point arithmetic fractions — Rational numbers random — Generate pseudo-random numbers statistics — Mathematical statistics functions Functional Programming Modules itertools — Functions creating iterators for efficient looping functools — Higher-order functions and operations on callable objects operator — Standard operators as functions File and Directory Access pathlib — Object-oriented filesystem paths os.path — Common pathname manipulations stat — Interpreting stat() results filecmp — File and Directory Comparisons tempfile — Generate temporary files and directories glob — Unix style pathname pattern expansion fnmatch — Unix filename pattern matching linecache — Random access to text lines shutil — High-level file operations Data Persistence pickle — Python object serialization copyreg — Register pickle support functions shelve — Python object persistence marshal — Internal Python object serialization dbm — Interfaces to Unix “databases” sqlite3 — DB-API 2.0 interface for SQLite databases Data Compression and Archiving The compression package compression.zstd — Compression compatible with the Zstandard format zlib — Compression compatible with gzip gzip — Support for gzip files bz2 — Support for bzip2 compression lzma — Compression using the LZMA algorithm zipfile — Work with ZIP archives tarfile — Read and write tar archive files File Formats csv — CSV File Reading and Writing configparser — Configuration file parser tomllib — Parse TOML files netrc — netrc file processing plistlib — Generate and parse Apple .plist files Cryptographic Services hashlib — Secure hashes and message digests hmac — Keyed-Hashing for Message Authentication secrets — Generate secure random numbers for managing secrets Generic Operating System Services os — Miscellaneous operating system interfaces io — Core tools for working with streams time — Time access and conversions logging — Logging facility for Pytho",
+    "scrapedAt": "2026-10-08 19:09:09.924046"
+  },
+  {
+    "id": 658,
+    "url": "http://docs.python.org",
+    "title": "3.14.8 Documentation",
+    "content": "Navigation index modules | Python » 3.14.8 Documentation » | Theme Auto Light Dark | Python 3.14.8 documentation Welcome! This is the official documentation for Python 3.14.8. Documentation sections: What\u0027s new in Python 3.14? Or all \"What\u0027s new\" documents since Python 2.0 Tutorial Start here: a tour of Python\u0027s syntax and features Built-ins reference Built-in functions and classes Library reference Standard library modules Language reference Syntax and language elements Python setup and usage How to install, configure, and use Python Python HOWTOs In-depth topic manuals Installing Python modules Third-party modules and PyPI.org Extending and embedding For C/C++ programmers Python\u0027s C API C API reference FAQs Frequently asked questions (with answers!) Deprecations Deprecated functionality Other resources: Python developer\u0027s guide Information on contributing to Python Python Packaging User Guide Resources relating to Python packaging Audio/visual talks Podcasts, talks, and video presentations from the community Python Enhancement Proposals Index of proposed improvements to Python Static Typing with Python Information and guides about Python type safety Indices, glossary, and search: Global module index All modules and libraries General index All functions, classes, and terms Glossary Terms explained Search page Search this documentation Complete table of contents All sections and subsections Project information: Reporting issues Contributing to docs Download the documentation History and license of Python Copyright About the documentation Download Download these documents Docs by version Python 3.16 (in development) Python 3.15 (pre-release) Python 3.14 (stable) Python 3.13 (security-fixes) Python 3.12 (security-fixes) Python 3.11 (security-fixes) Python 3.10 (EOL) Python 3.9 (EOL) Python 3.8 (EOL) Python 3.7 (EOL) Python 3.6 (EOL) Python 3.5 (EOL) Python 3.4 (EOL) Python 3.3 (EOL) Python 3.2 (EOL) Python 3.1 (EOL) Python 3.0 (EOL) Python 2.7 (EOL) Python 2.6 (EOL) All versions Other resources PEP Index Beginner\u0027s Guide Book List Audio/Visual Talks Python Developer’s Guide « Navigation index modules | Python » 3.14.8 Documentation » | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:09:08.735504"
+  },
+  {
+    "id": 657,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Examples",
+    "title": "BeginnersGuide/Examples",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Python Examples and Sample Code When you\u0027re learning, small examples can be very helpful. The Python Standard Library (archived copy), an electronically published book by Fredrik Lundh, examines most of the modules in Python\u0027s standard library, describing what the module does and giving a short example of its use. Note that this book is now relatively old and so misses a lot of the developments of the last two decades. The Python Recipes, from ActiveState, is a very large collection of code snippets, some elementary and some advanced. 2026-02-14 16:07",
+    "scrapedAt": "2026-10-08 19:09:07.482732"
+  },
+  {
+    "id": 656,
+    "url": "http://wiki.python.org/moin/BeginnersGuide/Download",
+    "title": "BeginnersGuide/Download",
+    "content": "This wiki is in the process of being archived due to lack of usage and the resources necessary to serve it — predominately to bots, crawlers, and LLM companies. Edits are discouraged. Pages are preserved as they were at the time of archival. For current information, please visit python.org. If a change to this archive is absolutely needed, requests can be made via the infrastructure@python.org mailing list. Downloading Python The official download page for Python is python.org/downloads. On many systems Python comes pre-installed, you can try running the python command to start the Python interpreter to check and see if it is already installed. On windows you can try the py command which is a launcher which is more likely to work. If it is installed you will see a response which will include the version number, for example: Python 3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)] on win32\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information. If you don\u0027t see this, you will need to install Python on your system. If the version number is Python 2.x.y (where x and y are any number) you are using Python 2 which is no longer supported and is not a good choice for development. You can try running python3 to see if there is also a Python 3.x.y version installed, if not you\u0027ll want to install the latest version of Python. If you do not have Python installed or need a newer version you can go to: https://www.python.org/downloads/ which will provide a button to download an installer for your particular system. The Python documentation also has a detailed guide on how to install and setup Python here: https://docs.python.org/3/using/index.html Below are some system specific notes to keep in mind. Windows On Windows the most stable build is available from the official download page https://www.python.org/downloads/ You should download and run the installer from that page to get the latest version of Python for your system. You can refer to the Python documentation for more details on the installation process and getting started: https://docs.python.org/3/using/windows.html Mac For macOS 10.9 (Jaguar) up until 12.3 (Catalina) the operating system includes Python 2, which is no longer supported and is not a good choice for development. You should go to do the downloads page: https://www.python.org/downloads/ and download the installer. For newer versions of macOS, Python is no longer included by default and you will have to download and install it. You can refer to the Python documentation for more details on the installation process and getting started: https://docs.python.org/3/using/mac.html Linux On most Linux distributions Python comes pre-installed and/or available via the distribution\u0027s package managers. Below are some common examples, but refer to your specific distribution\u0027s documentation and package list to get the most up to date instructions. If you\u0027d like to download and build Python from source (or your distribution\u0027s package manager does not include a version of Python you need) you can download a source tarball from the general download page: https://www.python.org/downloads/ Red Hat, CentOS, or Fedora dnf install python3 python3-devel Debian or Ubuntu apt-get install python3 python3-dev Gentoo emerge dev-lang/python Arch Linux pacman -S python3 2026-02-14 16:07",
+    "scrapedAt": "2026-10-08 19:09:06.16469"
+  },
+  {
+    "id": 655,
+    "url": "http://us.pycon.org",
+    "title": "PyCon US 2026 - PyCon US 2026",
+    "content": "Translations available: español Presenting PyCon US 2026 May 13 - May 19, 2026 Long Beach, California Registration - Now Open! Find more information and register today via the Registration Information page. Register Today! Where? Long Beach Convention Center 18 S Pine Ave Long Beach, CA 90802 This address will take you to the correct Pine Avenue entrance. Conference breakdown: Tutorials: May 13 - 14, 2026 Sponsor Presentations: May 14 - May 15, 2026 Main Conference: May 15 - 17, 2026 Job Fair \u0026 Community Showcase: May 17, 2026 Sprints: May 18 - May 19, 2026 We are so excited to welcome our community to our new host city of Long Beach, California, for PyCon US 2026! Mark your calendars and be sure to read the About PyCon US page for more details. We can’t wait to see you all at the Long Beach Convention and Entertainment Center! The PyCon US Schedule is now live! Start planning your talks, meet the keynote speakers, and register for tutorials, summits \u0026 events! Head to the schedule page to see this year\u0027s stellar lineup. Please note: PyCon US 2026 will take place fully in-person in Long Beach, California with no live streaming of the main conference days. PyCon US will record all Talk tracks, Keynotes and Lightning Talks on the main days of the conference (Friday - Sunday) and publish them to the PyCon US YouTube Channel. PyCon US continues to keep the safety of our community as our top priority and wants PyCon US to be an event that everyone feels safe attending. With that in mind, PyCon US 2026 will have Health and Safety Guidelines in place again this year. For full details, read the PyCon US 2026 Health \u0026 Safety Guidelines here. To stay informed on details and announcements be sure to create an account here on this website and opt-in to receive PyCon US News. Also, follow us on Bluesky, X, and Mastodon, and subscribe to the PyCon US Blog. Tutorials May 13 - 14, 2026 Sponsor Presentations May 14 - 15, 2026 Main Conference May 15 - 17, 2026 Job Fair \u0026 Community Showcase May 17, 2026 Sprints May 18 - May 19, 2026 Search Search Search ESC",
+    "scrapedAt": "2026-10-08 19:09:04.456752"
+  },
+  {
     "id": 654,
     "url": "https://www.python.org/psf/annual-report/",
     "title": "2024 PSF Annual Impact Report | Python Software Foundation",
@@ -4290,26 +4325,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 655,
-    "url": "http://us.pycon.org"
-  },
-  {
-    "id": 656,
-    "url": "http://wiki.python.org/moin/BeginnersGuide/Download"
-  },
-  {
-    "id": 657,
-    "url": "http://wiki.python.org/moin/BeginnersGuide/Examples"
-  },
-  {
-    "id": 658,
-    "url": "http://docs.python.org"
-  },
-  {
-    "id": 659,
-    "url": "http://docs.python.org/3/library/"
   },
   {
     "id": 660,
@@ -101963,10 +101978,1247 @@ window.searchData = [
     "id": 71696,
     "url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/2024_PSF_Annual_Impact_Report.pdf",
     "parentUrl": "https://www.python.org/psf/annual-report/"
+  },
+  {
+    "id": 71719,
+    "url": "https://python.org/downloads",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Download"
+  },
+  {
+    "id": 71720,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/FrontPage.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Download"
+  },
+  {
+    "id": 71721,
+    "url": "https://code.activestate.com/recipes/langs/python/",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "id": 71722,
+    "url": "https://web.archive.org/web/20201017142948/http://effbot.org/zone/librarybook-index.htm",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "id": 71724,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/ActiveState.html",
+    "parentUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "id": 71785,
+    "url": "https://docs.python.org/3/library/dialog.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71786,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71787,
+    "url": "https://docs.python.org/3/library/argparse.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71788,
+    "url": "https://docs.python.org/3/library/code.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71789,
+    "url": "https://docs.python.org/3/library/keyword.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71791,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support.socket_helper",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71793,
+    "url": "https://docs.python.org/3/library/functional.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71794,
+    "url": "https://docs.python.org/3/library/audit_events.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71796,
+    "url": "https://docs.python.org/3/library/archiving.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71797,
+    "url": "https://docs.python.org/3/library/signal.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71799,
+    "url": "https://docs.python.org/3/library/math.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71801,
+    "url": "https://docs.python.org/3/library/binascii.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71803,
+    "url": "https://docs.python.org/3/library/cmdlinelibs.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71804,
+    "url": "https://docs.python.org/3/library/colorsys.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71805,
+    "url": "https://docs.python.org/3/library/windows.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71807,
+    "url": "https://docs.python.org/3/library/tkinter.ttk.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71808,
+    "url": "https://docs.python.org/3/library/secrets.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71809,
+    "url": "https://docs.python.org/3/library/pkgutil.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71810,
+    "url": "https://docs.python.org/3/library/sqlite3.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71812,
+    "url": "https://docs.python.org/3/library/__main__.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71815,
+    "url": "https://docs.python.org/3/library/importlib.resources.abc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71816,
+    "url": "https://docs.python.org/3/library/abc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71817,
+    "url": "https://docs.python.org/3/library/python.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71818,
+    "url": "https://docs.python.org/3/library/curses.ascii.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71819,
+    "url": "https://docs.python.org/3/library/getpass.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71820,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support.import_helper",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71821,
+    "url": "https://docs.python.org/3/library/dis.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71822,
+    "url": "https://docs.python.org/3/library/ssl.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71823,
+    "url": "https://docs.python.org/3/library/debug.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71824,
+    "url": "https://docs.python.org/3/library/compileall.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71826,
+    "url": "https://docs.python.org/3/library/copyreg.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71827,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71828,
+    "url": "https://docs.python.org/3/library/contextvars.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71831,
+    "url": "https://docs.python.org/3/library/bisect.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71832,
+    "url": "https://docs.python.org/3/library/tokenize.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71833,
+    "url": "https://docs.python.org/3/library/filecmp.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71834,
+    "url": "https://docs.python.org/3/library/fileinput.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71836,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support.warnings_helper",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71837,
+    "url": "https://docs.python.org/3/library/idle.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71838,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/index.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71839,
+    "url": "https://docs.python.org/3/builtins/time-complexity.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71840,
+    "url": "https://docs.python.org/3/library/token.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71841,
+    "url": "https://docs.python.org/3/library/tkinter.scrolledtext.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71842,
+    "url": "https://docs.python.org/3/library/crypto.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71843,
+    "url": "https://docs.python.org/3/library/multiprocessing.shared_memory.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71847,
+    "url": "https://docs.python.org/3/library/struct.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71848,
+    "url": "https://docs.python.org/3/library/itertools.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71849,
+    "url": "https://docs.python.org/3/library/sched.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71850,
+    "url": "https://docs.python.org/3/library/fcntl.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71852,
+    "url": "https://docs.python.org/3/library/unicodedata.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71854,
+    "url": "https://docs.python.org/3/library/mm.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71855,
+    "url": "https://docs.python.org/3/library/atexit.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71856,
+    "url": "https://docs.python.org/3/library/importlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71857,
+    "url": "https://docs.python.org/3/library/time.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71858,
+    "url": "https://docs.python.org/3/library/tempfile.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71860,
+    "url": "https://docs.python.org/3/library/cmath.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71861,
+    "url": "https://docs.python.org/3/library/tkinter.dnd.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71862,
+    "url": "https://docs.python.org/3/library/curses.html#module-curses.textpad",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71864,
+    "url": "https://docs.python.org/3/library/unix.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71865,
+    "url": "https://docs.python.org/3/library/language.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71866,
+    "url": "https://docs.python.org/3/library/weakref.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71867,
+    "url": "https://docs.python.org/3/library/tomllib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71868,
+    "url": "https://docs.python.org/3/library/reprlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71869,
+    "url": "https://docs.python.org/3/library/hashlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71870,
+    "url": "https://docs.python.org/3/library/grp.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71871,
+    "url": "https://docs.python.org/3/library/binary.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71872,
+    "url": "https://docs.python.org/3/library/pty.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71874,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support.bytecode_helper",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71875,
+    "url": "https://docs.python.org/3/library/msvcrt.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71876,
+    "url": "https://docs.python.org/3/library/mimetypes.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71877,
+    "url": "https://docs.python.org/3/library/sysconfig.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71878,
+    "url": "https://docs.python.org/3/library/inspect.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71879,
+    "url": "https://docs.python.org/3/library/asyncio.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71880,
+    "url": "https://docs.python.org/3/library/logging.handlers.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71881,
+    "url": "https://docs.python.org/3/library/numeric.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71882,
+    "url": "https://docs.python.org/3/library/cmdline.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71883,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71884,
+    "url": "https://docs.python.org/3/library/persistence.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71885,
+    "url": "https://docs.python.org/3/library/turtle.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71886,
+    "url": "https://docs.python.org/3/library/test.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71887,
+    "url": "https://docs.python.org/3/library/ctypes.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71888,
+    "url": "https://docs.python.org/3/library/i18n.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71889,
+    "url": "https://docs.python.org/3/library/timeit.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71890,
+    "url": "https://docs.python.org/3/library/stringprep.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71891,
+    "url": "https://docs.python.org/3/library/graphlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71893,
+    "url": "https://docs.python.org/3/library/annotationlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71894,
+    "url": "https://docs.python.org/3/library/socket.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71895,
+    "url": "https://docs.python.org/3/library/compression.zstd.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71898,
+    "url": "https://docs.python.org/3/library/statistics.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71900,
+    "url": "https://docs.python.org/3/library/string.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71901,
+    "url": "https://docs.python.org/3/library/pdb.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71902,
+    "url": "https://docs.python.org/3/library/configparser.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71903,
+    "url": "https://docs.python.org/3/library/pathlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71905,
+    "url": "https://docs.python.org/3/library/dbm.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71906,
+    "url": "https://docs.python.org/3/library/intro.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71907,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support.script_helper",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71908,
+    "url": "https://docs.python.org/3/library/symtable.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71909,
+    "url": "https://docs.python.org/3/library/contextlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71910,
+    "url": "https://docs.python.org/3/library/calendar.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71911,
+    "url": "https://docs.python.org/3/library/fileformats.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71912,
+    "url": "https://docs.python.org/3/library/faulthandler.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71913,
+    "url": "https://docs.python.org/3/library/sys_path_init.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71914,
+    "url": "https://docs.python.org/3/library/typing.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71915,
+    "url": "https://docs.python.org/3/library/",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71916,
+    "url": "https://docs.python.org/3/library/posix.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71917,
+    "url": "https://docs.python.org/3/library/collections.abc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71918,
+    "url": "https://docs.python.org/3/library/tarfile.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71919,
+    "url": "https://docs.python.org/3/library/codecs.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71920,
+    "url": "https://docs.python.org/3/library/queue.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71921,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support.threading_helper",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71922,
+    "url": "https://docs.python.org/3/library/runpy.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71923,
+    "url": "https://docs.python.org/3/library/curses.panel.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71925,
+    "url": "https://docs.python.org/3/library/difflib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71926,
+    "url": "https://docs.python.org/3/library/py_compile.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71927,
+    "url": "https://docs.python.org/3/library/shutil.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71928,
+    "url": "https://docs.python.org/3/library/compression.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71929,
+    "url": "https://docs.python.org/3/library/enum.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71930,
+    "url": "https://docs.python.org/3/library/superseded.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71931,
+    "url": "https://docs.python.org/3/library/collections.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71933,
+    "url": "https://docs.python.org/3/library/zlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71934,
+    "url": "https://docs.python.org/3/library/threading.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71935,
+    "url": "https://docs.python.org/3/library/selectors.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71938,
+    "url": "https://docs.python.org/3/library/curses.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71939,
+    "url": "https://docs.python.org/3/library/ipc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71941,
+    "url": "https://docs.python.org/3/library/unittest.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71943,
+    "url": "https://docs.python.org/3/library/operator.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71944,
+    "url": "https://docs.python.org/3/library/modules.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71945,
+    "url": "https://docs.python.org/3/library/intro.html#notes-on-availability",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71946,
+    "url": "https://docs.python.org/3/library/tk.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71947,
+    "url": "https://docs.python.org/3/library/numbers.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71948,
+    "url": "https://docs.python.org/3/library/types.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71950,
+    "url": "https://docs.python.org/3/library/zoneinfo.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71951,
+    "url": "https://docs.python.org/3/library/logging.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71952,
+    "url": "https://docs.python.org/3/library/cmd.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71953,
+    "url": "https://docs.python.org/3/library/hmac.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71954,
+    "url": "https://docs.python.org/3/library/base64.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71955,
+    "url": "https://docs.python.org/3/library/datatypes.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71957,
+    "url": "https://docs.python.org/3/library/venv.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71958,
+    "url": "https://docs.python.org/3/library/lzma.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71959,
+    "url": "https://docs.python.org/3/library/errno.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71960,
+    "url": "https://docs.python.org/3/library/security_warnings.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71961,
+    "url": "https://docs.python.org/3/library/decimal.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71962,
+    "url": "https://docs.python.org/3/library/gc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71963,
+    "url": "https://docs.python.org/3/library/pickletools.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71964,
+    "url": "https://docs.python.org/3/library/pprint.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71965,
+    "url": "https://docs.python.org/3/library/tkinter.messagebox.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71966,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support.os_helper",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71968,
+    "url": "https://docs.python.org/3/library/unittest.mock.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71969,
+    "url": "https://docs.python.org/3/library/string.templatelib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71970,
+    "url": "https://docs.python.org/3/library/importlib.resources.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71972,
+    "url": "https://docs.python.org/3/library/wave.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71973,
+    "url": "https://docs.python.org/3/library/#the-python-standard-library",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71974,
+    "url": "https://docs.python.org/3/library/netrc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71975,
+    "url": "https://docs.python.org/3/library/development.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71976,
+    "url": "https://docs.python.org/3/library/pydoc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71977,
+    "url": "https://docs.python.org/3/library/shelve.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71978,
+    "url": "https://docs.python.org/3/library/winreg.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71979,
+    "url": "https://docs.python.org/3/library/re.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71980,
+    "url": "https://docs.python.org/3/library/multiprocessing.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71981,
+    "url": "https://docs.python.org/3/library/doctest.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71982,
+    "url": "https://docs.python.org/3/library/bdb.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71983,
+    "url": "https://docs.python.org/3/library/resource.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71984,
+    "url": "https://docs.python.org/3/library/filesys.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71985,
+    "url": "https://docs.python.org/3/library/logging.config.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71986,
+    "url": "https://docs.python.org/3/library/tracemalloc.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71987,
+    "url": "https://docs.python.org/3/library/stat.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71989,
+    "url": "https://docs.python.org/3/library/textwrap.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71990,
+    "url": "https://docs.python.org/3/library/termios.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71991,
+    "url": "https://docs.python.org/3/library/glob.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71992,
+    "url": "https://docs.python.org/3/library/tabnanny.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71993,
+    "url": "https://docs.python.org/3/library/concurrent.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71996,
+    "url": "https://docs.python.org/3/library/pwd.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71997,
+    "url": "https://docs.python.org/3/library/custominterp.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71998,
+    "url": "https://docs.python.org/3/library/io.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 71999,
+    "url": "https://docs.python.org/3/library/random.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72000,
+    "url": "https://docs.python.org/3/library/marshal.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72002,
+    "url": "https://docs.python.org/3/library/site.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72003,
+    "url": "https://docs.python.org/3/library/syslog.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72004,
+    "url": "https://docs.python.org/3/library/unittest.mock-examples.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72005,
+    "url": "https://docs.python.org/3/library/getopt.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72007,
+    "url": "https://docs.python.org/3/library/rlcompleter.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72008,
+    "url": "https://docs.python.org/3/library/fnmatch.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72009,
+    "url": "https://docs.python.org/3/library/locale.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72010,
+    "url": "https://docs.python.org/3/library/tty.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72011,
+    "url": "https://docs.python.org/3/library/heapq.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72012,
+    "url": "https://docs.python.org/3/library/trace.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72013,
+    "url": "https://docs.python.org/3/library/text.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72014,
+    "url": "https://docs.python.org/3/library/copy.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72016,
+    "url": "https://docs.python.org/3/library/profile.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72018,
+    "url": "https://docs.python.org/3/library/warnings.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72019,
+    "url": "https://docs.python.org/3/library/zipfile.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72020,
+    "url": "https://docs.python.org/3/library/os.path.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72021,
+    "url": "https://docs.python.org/3/library/subprocess.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72022,
+    "url": "https://docs.python.org/3/library/mmap.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72023,
+    "url": "https://docs.python.org/3/library/os.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72024,
+    "url": "https://docs.python.org/3/library/select.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72026,
+    "url": "https://docs.python.org/3/library/concurrency.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72027,
+    "url": "https://docs.python.org/3/library/traceback.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72028,
+    "url": "https://docs.python.org/3/library/shlex.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72030,
+    "url": "https://docs.python.org/3/library/fractions.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72031,
+    "url": "https://docs.python.org/3/library/ensurepip.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72033,
+    "url": "https://docs.python.org/3/library/platform.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72034,
+    "url": "https://docs.python.org/3/library/gzip.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72038,
+    "url": "https://docs.python.org/3/library/zipapp.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72039,
+    "url": "https://docs.python.org/3/library/__future__.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72040,
+    "url": "https://docs.python.org/3/library/test.html#module-test.support",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72041,
+    "url": "https://docs.python.org/3/library/builtins.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72042,
+    "url": "https://docs.python.org/3/library/devmode.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72043,
+    "url": "https://docs.python.org/3/library/zipimport.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72044,
+    "url": "https://docs.python.org/3/library/readline.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72045,
+    "url": "https://docs.python.org/3/library/gettext.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72047,
+    "url": "https://docs.python.org/3/library/optparse.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72048,
+    "url": "https://docs.python.org/3/library/allos.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72049,
+    "url": "https://docs.python.org/3/library/importlib.metadata.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72050,
+    "url": "https://docs.python.org/3/library/tkinter.colorchooser.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72051,
+    "url": "https://docs.python.org/3/builtins/index.html#builtins-index",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72052,
+    "url": "https://docs.python.org/3/library/sys.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72054,
+    "url": "https://docs.python.org/3/library/bz2.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72056,
+    "url": "https://docs.python.org/3/library/linecache.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72057,
+    "url": "https://docs.python.org/3/library/plistlib.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72058,
+    "url": "https://docs.python.org/3/library/ast.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72059,
+    "url": "https://docs.python.org/3/library/removed.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72061,
+    "url": "https://docs.python.org/3/library/distribution.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72062,
+    "url": "https://docs.python.org/3/library/winsound.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72063,
+    "url": "https://docs.python.org/3/library/codeop.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72064,
+    "url": "https://docs.python.org/3/library/tkinter.font.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72068,
+    "url": "https://docs.python.org/3/library/array.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72069,
+    "url": "https://docs.python.org/3/library/modulefinder.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72070,
+    "url": "https://docs.python.org/3/library/_thread.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72072,
+    "url": "https://docs.python.org/3/library/pickle.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72073,
+    "url": "https://docs.python.org/3/library/pyclbr.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72074,
+    "url": "https://docs.python.org/3/library/functools.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72075,
+    "url": "https://docs.python.org/3/library/datetime.html",
+    "parentUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "id": 72076,
+    "url": "https://docs.python.org/3/library/csv.html",
+    "parentUrl": "http://docs.python.org/3/library/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python standard library — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "The Python standard library — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/3/library/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3.14.8 Documentation",
+    "pageUrl": "http://docs.python.org"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3.14.8 Documentation",
+    "pageUrl": "http://docs.python.org"
+  },
+  {
+    "src": "https://wiki.python.org/moin/BeginnersGuide/logo.png",
+    "alt": "",
+    "pageTitle": "BeginnersGuide/Examples",
+    "pageUrl": "http://wiki.python.org/moin/BeginnersGuide/Examples"
+  },
+  {
+    "src": "https://wiki.python.org/moin/BeginnersGuide/logo.png",
+    "alt": "",
+    "pageTitle": "BeginnersGuide/Download",
+    "pageUrl": "http://wiki.python.org/moin/BeginnersGuide/Download"
+  },
+  {
+    "src": "https://us.pycon.org/2026/static/images/theme/logo.25d1b5ccb097.svg",
+    "alt": "PyCon US 2026",
+    "pageTitle": "PyCon US 2026 - PyCon US 2026",
+    "pageUrl": "http://us.pycon.org"
+  },
   {
     "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9b7Xn98N0VpTwRN2Pu2Jk0q7sfPY_jBway6IkdspPV4vtGpWu4xp8H7Ef2L2K73jc0IC03AYWSP1sJAuKqdOBpKREuvNiYCG0oIM8MZLMeP1p0wLlHUYU1XpnApUMKy26u12RdSIa84wjTThbxk-6hxHA3y1gjy7pfHW6YZd_BfNBgytl_w/w400-h266/_image.png",
     "alt": "Group photo of the attendees of the 2026 Python Language Summit Photo by EuroPython (CC BY-NC-SA 4.0)",
