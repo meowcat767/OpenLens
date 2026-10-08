@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1285,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Fetch",
+    "title": "Exception Handling — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Exception Handling | Theme Auto Light Dark | Exception Handling¶ The functions described in this chapter will let you handle and raise Python exceptions. It is important to understand some of the basics of Python exception handling. It works somewhat like the POSIX errno variable: there is a global indicator (per thread) of the last error that occurred. Most C API functions don’t clear this on success, but will set it to indicate the cause of the error on failure. Most C API functions also return an error indicator, usually NULL if they are supposed to return a pointer, or -1 if they return an integer (exception: the PyArg_* functions return 1 for success and 0 for failure). Concretely, the error indicator consists of three object pointers: the exception’s type, the exception’s value, and the traceback object. Any of those pointers can be NULL if non-set (although some combinations are forbidden, for example you can’t have a non-NULL traceback if the exception type is NULL). When a function must fail because some function it called failed, it generally doesn’t set the error indicator; the function it called already set it. It is responsible for either handling the error and clearing the exception or returning after cleaning up any resources it holds (such as object references or memory allocations); it should not continue normally if it is not prepared to handle the error. If returning due to an error, it is important to indicate to the caller that an error has been set. If the error is not handled or carefully propagated, additional calls into the Python/C API may not behave as intended and may fail in mysterious ways. Note The error indicator is not the result of sys.exc_info(). The former corresponds to an exception that is not yet caught (and is therefore still propagating), while the latter returns an exception after it is caught (and has therefore stopped propagating). Printing and clearing¶ void PyErr_Clear()¶ Part of the Stable ABI. Clear the error indicator. If the error indicator is not set, there is no effect. void PyErr_PrintEx(int set_sys_last_vars)¶ Part of the Stable ABI. Print a standard traceback to sys.stderr and clear the error indicator. Unless the error is a SystemExit, in that case no traceback is printed and the Python process will exit with the error code specified by the SystemExit instance. Call this function only when the error indicator is set. Otherwise it will cause a fatal error! If set_sys_last_vars is nonzero, the variable sys.last_exc is set to the printed exception. For backwards compatibility, the deprecated variables sys.last_type, sys.last_value and sys.last_traceback are also set to the type, value and traceback of this exception, respectively. Changed in version 3.12: The setting of sys.last_exc was added. void PyErr_Print()¶ Part of the Stable ABI. Alias for PyErr_PrintEx(1). void PyErr_WriteUnraisable(PyObject *obj)¶ Part of the Stable ABI. Call sys.unraisablehook() using the current exception and obj argument. This utility function prints a warning message to sys.stderr when an exception has been set but it is impossible for the interpreter to actually raise the exception. It is used, for example, when an exception occurs in an __del__() method. The function is called with a single argument obj that identifies the context in which the unraisable exception occurred. If possible, the repr of obj will be printed in the warning message. If obj is NULL, only the traceback is printed. An exception must be set when calling this function. Changed in version 3.4: Print a traceback. Print only traceback if obj is NULL. Changed in version 3.8: Use sys.unraisablehook(). void PyErr_FormatUnraisable(const char *format, ...)¶ Similar to PyErr_WriteUnraisable(), but the format and subsequent parameters help format the warning message; they have the same meaning and values as in PyUnicode_FromFormat(). PyErr_WriteUnraisable(obj) is roughly equivalent to PyErr_FormatUnraisable(\"Exception ignored in: %R\", obj). If format is NULL, only the traceback is printed. Added in version 3.13. void PyErr_DisplayException(PyObject *exc)¶ Part of the Stable ABI since version 3.12. Print the standard traceback display of exc to sys.stderr, including chained exceptions and notes. Added in version 3.12. void PyErr_Display(PyObject *unused, PyObject *value, PyObject *tb)¶ Part of the Stable ABI. Legacy variant of PyErr_DisplayException(). Print the exception value with its traceback to sys.stderr. If value has no traceback set, tb is used as its traceback. The first argument is ignored. If sys.stderr is None, nothing is printed. If sys.stderr is not set, the exception is dumped to the C stderr stream instead. Deprecated since version 3.12: Use PyErr_DisplayException() instead. Raising exceptions¶ These functions help you set the current thread’s error indicator. For convenience, some of these ",
+    "scrapedAt": "2026-10-08 19:35:15.016425"
+  },
+  {
+    "id": 1284,
+    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.set_trace",
+    "title": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Debugging and Profiling » pdb — The Python Debugger | Theme Auto Light Dark | pdb — The Python Debugger¶ Source code: Lib/pdb.py The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control. The debugger is extensible – it is actually defined as the class Pdb. This is currently undocumented but easily understood by reading the source. The extension interface uses the modules bdb and cmd. See also Module faulthandler Used to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal. Module traceback Standard interface to extract, format and print stack traces of Python programs. The typical usage to break into the debugger is to insert: import pdb; pdb.set_trace()\n Or: breakpoint()\n at the location you want to break into the debugger, and then run the program. You can then step through the code following this statement, and continue running without the debugger using the continue command. Changed in version 3.7: The built-in breakpoint(), when called with defaults, can be used instead of import pdb; pdb.set_trace(). def double(x):\n   breakpoint()\n   return x * 2\nval \u003d 3\nprint(f\"{val} * 2 is {double(val)}\")\n The debugger’s prompt is (Pdb), which is the indicator that you are in debug mode: \u003e ...(2)double()\n-\u003e breakpoint()\n(Pdb) p x\n3\n(Pdb) continue\n3 * 2 is 6\n Changed in version 3.3: Tab-completion via the readline module is available for commands and command arguments, e.g. the current global and local names are offered as arguments of the p command. Command-line interface¶ You can also invoke pdb from the command line to debug other scripts. For example: python -m pdb [-c command] (-m module | -p pid | pyfile) [args ...]\n When invoked as a module, pdb will automatically enter post-mortem debugging if the program being debugged exits abnormally. After post-mortem debugging (or after normal exit of the program), pdb will restart the program. Automatic restarting preserves pdb’s state (such as breakpoints) and in most cases is more useful than quitting the debugger upon program’s exit. -c, --command \u003ccommand\u003e¶ To execute commands as if given in a .pdbrc file; see Debugger commands. Changed in version 3.2: Added the -c option. -m \u003cmodule\u003e¶ To execute modules similar to the way python -m does. As with a script, the debugger will pause execution just before the first line of the module. Changed in version 3.7: Added the -m option. -p, --pid \u003cpid\u003e¶ Attach to the process with the specified PID. Added in version 3.14. To attach to a running Python process for remote debugging, use the -p or --pid option with the target process’s PID: python -m pdb -p 1234\n Note Attaching to a process that is blocked in a system call or waiting for I/O will only work once the next bytecode instruction is executed or when the process receives a signal. Typical usage to execute a statement under control of the debugger is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n\u003e\u003e\u003e pdb.run(\"f(2)\")\n\u003e \u003cstring\u003e(1)\u003cmodule\u003e()\n(Pdb) continue\n0.5\n\u003e\u003e\u003e\n The typical usage to inspect a crashed program is: \u003e\u003e\u003e import pdb\n\u003e\u003e\u003e def f(x):\n...     print(1 / x)\n...\n\u003e\u003e\u003e f(0)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"\u003cstdin\u003e\", line 2, in f\nZeroDivisionError: division by zero\n\u003e\u003e\u003e pdb.pm()\n\u003e \u003cstdin\u003e(2)f()\n(Pdb) p x\n0\n(Pdb)\n Changed in version 3.13: The implementation of PEP 667 means that name assignments made via pdb will immediately affect the active scope, even when running inside an optimized scope. The module defines the following functions; each enters the debugger in a slightly different way: pdb.run(statement, globals\u003dNone, locals\u003dNone)¶ Execute the statement (given as a string or a code object) under debugger control. The debugger prompt appears before any code is executed; you can set breakpoints and type continue, or you can step through the statement using step or next (all these commands are explained below). The optional globals and locals arguments specify the environment in which the code is executed; by default the dictionary of the module __main__ is used. (See the explanation of the built-in exec() or eval() functions.) pdb.runeval(expression, globals\u003dNone, locals\u003dNone)¶ Evaluate the expression (given as a string or a code object) under debugger control. When runeval() returns, it returns the value of the expression. Otherwise this function is similar to run(). pdb.runcall(function, *args, **kwds)¶ Call the function (a function or method object, not a string) with the given arguments. When runcall() returns, it returns whatever the function call returned. The debugger",
+    "scrapedAt": "2026-10-08 19:35:13.689034"
+  },
+  {
+    "id": 1283,
+    "url": "https://docs.python.org/3/library/sys.html#sys.path",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:35:12.388687"
+  },
+  {
+    "id": 1282,
+    "url": "https://github.com/python/cpython/issues/66436",
+    "title": "argparse support for \"python -m module\" in help · Issue #66436 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} argparse support for \"python -m module\" in help #66436 New issue Copy link New issue Copy link Closed Closed argparse support for \"python -m module\" in help#66436 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description tebeka mannequin opened on Aug 20, 2014 Issue body actions BPO 22240 Nosy @tebeka, @ncoghlan, @jwilk, @zertrin, @SamuelMarks, @septatrix Files prog.diff: Patch prog2.diff: Patch prog3.diff: Patch prog3.diff: Patch prog-module-name-handler.patch: Patch for handling python -m syntax in argument parser ouptut patch.diff Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2014-08-20.19:59:11.381\u003e\nlabels \u003d [\u0027type-feature\u0027, \u0027library\u0027]\ntitle \u003d \u0027argparse support for \"python -m module\" in help\u0027\nupdated_at \u003d \u003cDate 2021-08-08.22:41:00.591\u003e\nuser \u003d \u0027https://github.com/tebeka\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-08-08.22:41:00.591\u003e\nactor \u003d \u0027Nils Kattenbeck\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2014-08-20.19:59:11.381\u003e\ncreator \u003d \u0027tebeka\u0027\ndependencies \u003d []\nfiles \u003d [\u002736424\u0027, \u002736453\u0027, \u002736461\u0027, \u002736476\u0027, \u002748643\u0027, \u002750174\u0027]\nhgrepos \u003d []\nissue_num \u003d 22240\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 23.0\nmessages \u003d [\u0027225586\u0027, \u0027225608\u0027, \u0027225669\u0027, \u0027225831\u0027, \u0027225834\u0027, \u0027225838\u0027, \u0027225862\u0027, \u0027225863\u0027, \u0027225865\u0027, \u0027225911\u0027, \u0027225913\u0027, \u0027226578\u0027, \u0027226606\u0027, \u0027226622\u0027, \u0027226697\u0027, \u0027226706\u0027, \u0027226707\u0027, \u0027353987\u0027, \u0027353989\u0027, \u0027397764\u0027, \u0027398076\u0027, \u0027398698\u0027, \u0027399244\u0027]\nnosy_count \u003d 9.0\nnosy_names \u003d [\u0027tebeka\u0027, \u0027ncoghlan\u0027, \u0027peter.otten\u0027, \u0027bethard\u0027, \u0027jwilk\u0027, \u0027paul.j3\u0027, \u0027zertrin\u0027, \u0027samuelmarks\u0027, \u0027Nils Kattenbeck\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue22240\u0027\nversions \u003d [\u0027Python 3.5\u0027] Linked PRs gh-66436: Improved prog default value for argparse.ArgumentParser #124799 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees serhiy-storchaka Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Argparse issues Status Doc issues Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:35:11.025672"
+  },
+  {
+    "id": 1281,
+    "url": "https://github.com/python/cpython/issues/82909",
+    "title": "Update PC/pyconfig.h to support disabling auto linking · Issue #82909 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Update PC/pyconfig.h to support disabling auto linking #82909 New issue Copy link New issue Copy link Closed Closed Update PC/pyconfig.h to support disabling auto linking#82909 Copy link Labels OS-windowsbuildThe build process and cross-buildThe build process and cross-buildtype-featureA feature request or enhancementA feature request or enhancement Description jcfr mannequin opened on Nov 6, 2019 Issue body actions BPO 38728 Nosy @pfmoore, @tjguk, @zware, @zooba, @mathstuf, @jcfr PRs gh-82909: Update PC/pyconfig.h to allow disabling pragma based auto-linking #19740 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2019-11-06.22:41:31.365\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-feature\u0027, \u00273.7\u0027, \u00273.9\u0027, \u0027OS-windows\u0027]\ntitle \u003d \u0027Update PC/pyconfig.h to support disabling auto linking\u0027\nupdated_at \u003d \u003cDate 2020-05-12.23:29:17.552\u003e\nuser \u003d \u0027https://github.com/jcfr\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-05-12.23:29:17.552\u003e\nactor \u003d \u0027mathstuf\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Windows\u0027]\ncreation \u003d \u003cDate 2019-11-06.22:41:31.365\u003e\ncreator \u003d \u0027Jean-Christophe Fillion-Robin\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 38728\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 6.0\nmessages \u003d [\u0027356158\u0027, \u0027356310\u0027, \u0027356365\u0027, \u0027368474\u0027, \u0027368744\u0027, \u0027368749\u0027]\nnosy_count \u003d 7.0\nnosy_names \u003d [\u0027paul.moore\u0027, \u0027tim.golden\u0027, \u0027python-dev\u0027, \u0027zach.ware\u0027, \u0027steve.dower\u0027, \u0027mathstuf\u0027, \u0027Jean-Christophe Fillion-Robin\u0027]\npr_nums \u003d [\u002719740\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue38728\u0027\nversions \u003d [\u0027Python 3.6\u0027, \u0027Python 3.7\u0027, \u0027Python 3.8\u0027, \u0027Python 3.9\u0027] Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels OS-windowsbuildThe build process and cross-buildThe build process and cross-buildtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:35:08.708064"
+  },
+  {
     "id": 1280,
     "url": "https://docs.python.org/3/library/mailbox.html#module-mailbox",
     "title": "mailbox — Manipulate mailboxes in various formats — Python 3.14.8 documentation",
@@ -8575,26 +8610,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1281,
-    "url": "https://github.com/python/cpython/issues/82909"
-  },
-  {
-    "id": 1282,
-    "url": "https://github.com/python/cpython/issues/66436"
-  },
-  {
-    "id": 1283,
-    "url": "https://docs.python.org/3/library/sys.html#sys.path"
-  },
-  {
-    "id": 1284,
-    "url": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.set_trace"
-  },
-  {
-    "id": 1285,
-    "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Fetch"
   },
   {
     "id": 1286,
@@ -230086,10 +230101,232 @@ window.searchData = [
     "id": 256676,
     "url": "https://docs.python.org/3/library/mailbox.html#mailbox.MaildirMessage.set_subdir",
     "parentUrl": "https://docs.python.org/3/library/mailbox.html#module-mailbox"
+  },
+  {
+    "id": 256678,
+    "url": "https://bugs.python.org/issue38728",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256679,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22build%22",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256680,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/82909",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256681,
+    "url": "https://github.com/mathstuf",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256682,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/82909",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256683,
+    "url": "https://github.com/python/cpython/pull/19740",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256685,
+    "url": "https://github.com/python/cpython/issues/82909#top",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256687,
+    "url": "https://github.com/python/cpython/issues/82909#issue-1199023504",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256689,
+    "url": "https://github.com/python/cpython/issues/82909#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256691,
+    "url": "https://github.com/pfmoore",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256692,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-windows%22",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256693,
+    "url": "https://github.com/tjguk",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256694,
+    "url": "https://github.com/jcfr",
+    "parentUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "id": 256695,
+    "url": "https://github.com/tebeka",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256696,
+    "url": "https://github.com/SamuelMarks",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256697,
+    "url": "https://bugs.python.org/file36453/prog2.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256699,
+    "url": "https://github.com/python/cpython/issues/66436#top",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256700,
+    "url": "https://bugs.python.org/file36424/prog.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256701,
+    "url": "https://bugs.python.org/file36461/prog3.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256703,
+    "url": "https://github.com/python/cpython/issues/66436#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256705,
+    "url": "https://bugs.python.org/file48643/prog-module-name-handler.patch",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256706,
+    "url": "https://github.com/zertrin",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256707,
+    "url": "https://github.com/python/cpython/issues/66436#issue-1198924813",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256710,
+    "url": "https://github.com/jwilk",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256712,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/66436",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256713,
+    "url": "https://bugs.python.org/file36476/prog3.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256714,
+    "url": "https://bugs.python.org/file50174/patch.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256715,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/66436",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256716,
+    "url": "https://github.com/python/cpython/pull/124799",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "id": 256717,
+    "url": "https://bugs.python.org/issue22240",
+    "parentUrl": "https://github.com/python/cpython/issues/66436"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Fetch"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Exception Handling — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_Fetch"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.set_trace"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pdb — The Python Debugger — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pdb.html#pdb.Pdb.set_trace"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.path"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.path"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "argparse support for \"python -m module\" in help · Issue #66436 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/92819612?v\u003d4\u0026size\u003d48",
+    "alt": "@tebeka",
+    "pageTitle": "argparse support for \"python -m module\" in help · Issue #66436 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "argparse support for \"python -m module\" in help · Issue #66436 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "argparse support for \"python -m module\" in help · Issue #66436 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/66436"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93803429?v\u003d4\u0026size\u003d48",
+    "alt": "@jcfr",
+    "pageTitle": "Update PC/pyconfig.h to support disabling auto linking · Issue #82909 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/82909"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Update PC/pyconfig.h to support disabling auto linking · Issue #82909 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/82909"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
