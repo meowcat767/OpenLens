@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1416,
+    "url": "https://docs.python.org/3/library/gc.html#gc.get_stats",
+    "title": "gc — Garbage Collector interface — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » gc — Garbage Collector interface | Theme Auto Light Dark | gc — Garbage Collector interface¶ This module provides an interface to the optional garbage collector. It provides the ability to disable the collector, tune the collection frequency, and set debugging options. It also provides access to unreachable objects that the collector found but cannot free. Since the collector supplements the reference counting already used in Python, you can disable the collector if you are sure your program does not create reference cycles. Automatic collection can be disabled by calling gc.disable(). To debug a leaking program call gc.set_debug(gc.DEBUG_LEAK). Notice that this includes gc.DEBUG_SAVEALL, causing garbage-collected objects to be saved in gc.garbage for inspection. The gc module provides the following functions: gc.enable()¶ Enable automatic garbage collection. gc.disable()¶ Disable automatic garbage collection. gc.isenabled()¶ Return True if automatic collection is enabled. gc.collect(generation\u003d2)¶ With no arguments, run a full collection. The optional argument generation may be an integer specifying which generation to collect (from 0 to 2). A ValueError is raised if the generation number is invalid. The sum of collected objects and uncollectable objects is returned. The free lists maintained for a number of built-in types are cleared whenever a full collection or collection of the highest generation (2) is run. Not all items in some free lists may be freed due to the particular implementation, in particular float. The effect of calling gc.collect() while the interpreter is already performing a collection is undefined. Changed in version 3.14: generation\u003d1 performs an increment of collection. Changed in version 3.14.5: generation\u003d1 performs collection of the middle generation. gc.set_debug(flags)¶ Set the garbage collection debugging flags. Debugging information will be written to sys.stderr. See below for a list of debugging flags which can be combined using bit operations to control debugging. gc.get_debug()¶ Return the debugging flags currently set. gc.get_objects(generation\u003dNone)¶ Returns a list of all objects tracked by the collector, excluding the list returned. If generation is not None, return only the objects tracked by the collector that are in that generation. Changed in version 3.8: New generation parameter. Changed in version 3.14: Generation 1 is removed Changed in version 3.14.5: Generation 1 is reintroduced to maintain GC behavior from 3.13. Raises an auditing event gc.get_objects with argument generation. gc.get_stats()¶ Return a list of three per-generation dictionaries containing collection statistics since interpreter start. The number of keys may change in the future, but currently each dictionary will contain the following items: collections is the number of times this generation was collected; collected is the total number of objects collected inside this generation; uncollectable is the total number of objects which were found to be uncollectable (and were therefore moved to the garbage list) inside this generation. Added in version 3.4. gc.set_threshold(threshold0[, threshold1[, threshold2]])¶ Set the garbage collection thresholds (the collection frequency). Setting threshold0 to zero disables collection. The GC classifies objects into three generations depending on how many collection sweeps they have survived. New objects are placed in the youngest generation (generation 0). If an object survives a collection it is moved into the next older generation. Since generation 2 is the oldest generation, objects in that generation remain there after a collection. In order to decide when to run, the collector keeps track of the number object allocations and deallocations since the last collection. When the number of allocations minus the number of deallocations exceeds threshold0, collection starts. Initially only generation 0 is examined. If generation 0 has been examined more than threshold1 times since generation 1 has been examined, then generation 1 is examined as well. With the third generation, things are a bit more complicated, see Collecting the oldest generation for more information. In the free-threaded build, the increase in process memory usage is also checked before running the collector. If the memory usage has not increased by 10% since the last collection and the net number of object allocations has not exceeded 40 times threshold0, the collection is not run. See Garbage collector design for more information. Changed in version 3.14: threshold2 is ignored Changed in version 3.14.5: threshold2 is restored to match Python 3.13 behavior. gc.get_count()¶ Return the current collection counts as a tuple of (count0, count1, count2). gc.get_threshold()¶ Return the current collection thresholds as a tuple of (threshold0, threshold1, threshold2). gc.g",
+    "scrapedAt": "2026-10-08 19:41:05.688451"
+  },
+  {
+    "id": 1415,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:41:04.410877"
+  },
+  {
+    "id": 1414,
+    "url": "https://github.com/python/cpython/issues/101552",
+    "title": "The builtin `help(...)` should unstringify (and \"unforwardref\") annotations · Issue #101552 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} The builtin help(...) should unstringify (and \"unforwardref\") annotations #101552 New issue Copy link New issue Copy link Closed Closed The builtin help(...) should unstringify (and \"unforwardref\") annotations#101552 Copy link Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Description SimpleArt opened on Feb 3, 2023 Issue body actions Feature or enhancement When using help(...), annotations should be unstringified and displayed without typing.ForwardRef. Pitch Current behavior displays string annotations with quotes as follows: def foo(x: List[\"A\"], y: \"B\") -\u003e None:\n    ...\n\nhelp(foo)\n\"\"\"\nHelp on function foo in module ...:\n\nfoo(x: List[ForwardRef(\u0027A\u0027)], y: \u0027B\u0027) -\u003e None\n\n\"\"\" It should be fairly obvious how clunky this is to users, and that the desirable behavior should be something like: help(foo)\n\"\"\"\nHelp on function foo in module ...:\n\nfoo(x: List[A], y: B) -\u003e None\n\n\"\"\" #84171 is related, but whereas the suggestion there is to actually evaluate the annotations using typing.get_type_hints or similar, this proposal aims to only remove quotations and typing.ForwardRef(...) from the outputted documentation. This means that the resulting documentation may not be 100% accurate but will not require evaluating the annotation, which can avoid issues such as annotations which cannot be evaluated for some reason. For example: import typing\n\nif typing.TYPE_CHECKING:\n    import numpy as np\n\ndef foo(x: \"np.ndarray\") -\u003e None:\n    ...\n\nhelp(foo)\n\"\"\"\nHelp on function foo in module ...:\n\nfoo(x: np.ndarray) -\u003e None\n\n\"\"\" Note that the np.ndarray is not expanded out into its fully qualified name numpy.ndarray. There are also some additional edge cases to consider, such as \"ForwardRef(\u0027A\u0027)\". Ideally this should be changed to A, but I don\u0027t think there\u0027s much impact if it is purposefully left as that, and leaving it as-is avoids other problems e.g. ForwardRef is not actually typing.ForwardRef in that example. Linked PRs gh-101552: Allow pydoc to display signatures in source format #124669 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:41:03.130169"
+  },
+  {
+    "id": 1413,
+    "url": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:41:00.835055"
+  },
+  {
+    "id": 1412,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph",
+    "title": "Call graph introspection — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Call graph introspection | Theme Auto Light Dark | Call graph introspection¶ Source code: Lib/asyncio/graph.py asyncio has powerful runtime call graph introspection utilities to trace the entire call graph of a running coroutine or task, or a suspended future. These utilities and the underlying machinery can be used from within a Python program or by external profilers and debuggers. See also Command-line introspection tools Command-line tools for inspecting tasks in another running Python process. Added in version 3.14. asyncio.print_call_graph(future\u003dNone, /, *, file\u003dNone, depth\u003d1, limit\u003dNone)¶ Print the async call graph for the current task or the provided Task or Future. This function prints entries starting from the top frame and going down towards the invocation point. The function receives an optional future argument. If not passed, the current running task will be used. If the function is called on the current task, the optional keyword-only depth argument can be used to skip the specified number of frames from top of the stack. If the optional keyword-only limit argument is provided, each call stack in the resulting graph is truncated to include at most abs(limit) entries. If limit is positive, the entries left are the closest to the invocation point. If limit is negative, the topmost entries are left. If limit is omitted or None, all entries are present. If limit is 0, the call stack is not printed at all, only “awaited by” information is printed. If file is omitted or None, the function will print to sys.stdout. Example: The following Python code: import asyncio\n\nasync def test():\n    asyncio.print_call_graph()\n\nasync def main():\n    async with asyncio.TaskGroup() as g:\n        g.create_task(test(), name\u003d\u0027test\u0027)\n\nasyncio.run(main())\n will print: * Task(name\u003d\u0027test\u0027, id\u003d0x1039f0fe0)\n+ Call stack:\n|   File \u0027t2.py\u0027, line 4, in async test()\n+ Awaited by:\n   * Task(name\u003d\u0027Task-1\u0027, id\u003d0x103a5e060)\n      + Call stack:\n      |   File \u0027taskgroups.py\u0027, line 107, in async TaskGroup.__aexit__()\n      |   File \u0027t2.py\u0027, line 7, in async main()\n asyncio.format_call_graph(future\u003dNone, /, *, depth\u003d1, limit\u003dNone)¶ Like print_call_graph(), but returns a string. If future is None and there’s no current task, the function returns an empty string. asyncio.capture_call_graph(future\u003dNone, /, *, depth\u003d1, limit\u003dNone)¶ Capture the async call graph for the current task or the provided Task or Future. The function receives an optional future argument. If not passed, the current running task will be used. If there’s no current task, the function returns None. If the function is called on the current task, the optional keyword-only depth argument can be used to skip the specified number of frames from top of the stack. Returns a FutureCallGraph data class object: FutureCallGraph(future, call_stack, awaited_by) Where future is a reference to a Future or a Task (or their subclasses.) call_stack is a tuple of FrameCallGraphEntry objects. awaited_by is a tuple of FutureCallGraph objects. FrameCallGraphEntry(frame) Where frame is a frame object of a regular Python function in the call stack. Low level utility functions¶ To introspect an async call graph asyncio requires cooperation from control flow structures, such as shield() or TaskGroup. Any time an intermediate Future object with low-level APIs like Future.add_done_callback() is involved, the following two functions should be used to inform asyncio about how exactly such intermediate future objects are connected with the tasks they wrap or control. asyncio.future_add_to_awaited_by(future, waiter, /)¶ Record that future is awaited on by waiter. Both future and waiter must be instances of Future or Task or their subclasses, otherwise the call would have no effect. A call to future_add_to_awaited_by() must be followed by an eventual call to the future_discard_from_awaited_by() function with the same arguments. asyncio.future_discard_from_awaited_by(future, waiter, /)¶ Record that future is no longer awaited on by waiter. Both future and waiter must be instances of Future or Task or their subclasses, otherwise the call would have no effect. Table of Contents Call graph introspection Low level utility functions Previous topic Exceptions Next topic Command-line introspection tools This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Call graph introspection | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History ",
+    "scrapedAt": "2026-10-08 19:40:59.513746"
+  },
+  {
     "id": 1411,
     "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_LegacyWindowsStdioFlag",
     "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
@@ -9450,26 +9485,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1412,
-    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
-  },
-  {
-    "id": 1413,
-    "url": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding"
-  },
-  {
-    "id": 1414,
-    "url": "https://github.com/python/cpython/issues/101552"
-  },
-  {
-    "id": 1415,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag"
-  },
-  {
-    "id": 1416,
-    "url": "https://docs.python.org/3/library/gc.html#gc.get_stats"
   },
   {
     "id": 1417,
@@ -238196,10 +238211,145 @@ window.searchData = [
     "id": 292117,
     "url": "https://github.com/python/cpython/pull/127592#ref-commit-c5da367",
     "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 293533,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/asyncio-graph.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 293536,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/graph.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 293538,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#call-graph-introspection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 293540,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.format_call_graph",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 293544,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.future_discard_from_awaited_by",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 293549,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.future_add_to_awaited_by",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 293550,
+    "url": "https://docs.python.org/3/library/asyncio-graph.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "id": 293895,
+    "url": "https://github.com/python/cpython/issues/101552#top",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 293897,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/101552",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 293898,
+    "url": "https://github.com/SimpleArt",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 293899,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/101552",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 293901,
+    "url": "https://github.com/python/cpython/issues/101552#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 293902,
+    "url": "https://github.com/python/cpython/pull/124669",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 293903,
+    "url": "https://github.com/python/cpython/issues/101552#issue-1570578423",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "id": 293904,
+    "url": "https://github.com/python/cpython/issues/84171",
+    "parentUrl": "https://github.com/python/cpython/issues/101552"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_stats"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gc — Garbage Collector interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gc.html#gc.get_stats"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_UnbufferedStdioFlag"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/71458112?v\u003d4\u0026size\u003d48",
+    "alt": "@SimpleArt",
+    "pageTitle": "The builtin `help(...)` should unstringify (and \"unforwardref\") annotations · Issue #101552 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "The builtin `help(...)` should unstringify (and \"unforwardref\") annotations · Issue #101552 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/101552"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._enablelegacywindowsfsencoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Call graph introspection — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Call graph introspection — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-graph.html#asyncio.print_call_graph"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
