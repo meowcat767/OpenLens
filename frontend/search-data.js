@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 540,
+    "url": "https://www.python.org/success-stories/python-for-collaborative-robots/",
+    "title": "Python for Collaborative Robots | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Collaborative Robots Written by Ilya Grozov, Rozum Robotics At Rozum Robotics our mission is to create safe and easy to use collaborative robotic arms. We are striving to make robots that could be integrated into different workspaces and industries as quickly as possible. Moreover, the goal is not only for the end-users to be able to use robots with the help of UI, but also to develop complex industrial-grade applications that could take advantage of the full potential of the robot and auxiliary devices. When there was a discussion in the company about what programming language to use for such purposes, there were plenty of strong and mature competitors (e.g. Java and C/C++), but the advantages of Python beat all other options. The process of designing, implementing, and making Python API for the Pulse robotic arm public was our first successful experience. The simplicity of development and setup which, in basic cases, include installation of the interpreter, running one pip install command, and writing several lines of code to get access to the robot functionality, led to the intensive expansion of the language into the company’s processes and codebase. For example, our QA team started creating automated testing pipelines using the open-source tooling provided by the community. This reduced the time needed to test the systems from days to hours. But, of course, the main benefit was that we created an opportunity to develop high-level applications that use our robot for everyone who owns one. After achieving promising results with the robot API, we chose the next milestone. Robotic arms are not the only product of the company ― we have our servo-motors, and we wanted to control them using Python, too. The motors API is written in C, so it was not a problem to wrap it with Python. And again, this tiny library and wide choice of open-source libraries helped us to build diverse infrastructure. For instance: various testing stands with auto-generated reports and automatic notification of the results, as well as research applications gave us a possibility to make our hardware and software even better. Needless to say, it helped to establish a “plug and play” experience for the end-users. And here comes the next story where Python plays a crucial role in our Rozum Cafe project. It started as a fun project for the evening but has grown into an industrial application. The language has become the glue that combined all the parts, including robotic arm control, payment processing, system state monitoring, etc. The future plans for Python expansion in our company include several topics. First of all, we are building custom execution runtimes for user programs. It should provide a safe (from the robotics perspective) and easy to use environment that would have access both to the rich Python functionality and packages and to the robotic arm facilities. Secondly, we continue the automation of the research and development activities in order to reduce the time and effort needed to perform necessary computations and analysis. Thirdly, our integration team is working on robotic solutions for different industries, and Python has become their best friend that helps during prototyping and industrial integration. Conclusion The stories that are set out in this article are just some of the examples of how Python influences the robotics field. The Python community deserves an honorable mention for the wonderful packages and language it is creating and improving. Here is a shortlist of the ones that we use: NumPy, Matplotlib, Pandas, PyTorch, Jupyter, Flask, FastAPI, SQLAlchemy, Gunicorn, Requests, PyTest, Cookiecutter, ROS libraries, and many many others. The people standing behind the Python ecosystem are truly amazing, and we wish them (and us) to continue their productive work to make the world better! About the Author Ilya Grozov is a Software Engineer and Robotics researcher at Rozum Robotics. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:05:49.62849"
+  },
+  {
+    "id": 539,
+    "url": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/",
+    "title": "Reimagining data science with Python-based operators in Einblick’s visual canvas | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Reimagining data science with Python-based operators in Einblick’s visual canvas Written by Becca Weng, Einblick Currently, data scientists are siloed from their teammates and relevant stakeholders. First, data scientists need to gather raw data or work with data engineers through the ETL or ELT pipeline. Then begins the process of cleaning the data and doing exploratory data analysis for the particular task or project at hand. This step can be quite time-consuming as it is iterative in nature. Only then can data scientists begin to build and tune machine learning models. Einblick: collaborative data science at the speed of thought At Einblick, one of our goals is to remove barriers for data scientists so you can spend less time on tedious setup and repetitive tasks, and more time extracting meaningful insights. In pursuit of our goals, Einblick reimagines the modern data science workflow in a collaborative data science canvas, rather than a linear notebook. Working in a canvas environment offers many advantages including live collaboration, an expansive visual interface, and a progressive computation engine. In this article, we’ll highlight one of the key ways we’re saving data scientists time–our operators. We’ll go through a couple of our core operators, why Python is such a crucial part of our software solution, and how we augmented our offerings with a user operator interface. The latter allows users to customize and use their own operators, which can be used in any Einblick canvas, and shared with other Einblick users. Operators in a data science canvas One of the main inefficiencies for data scientists now is that there are certain tasks or code snippets that get run all the time, like data exploration or feature engineering. Even though these tasks can be mundane and repetitive, they are critical to the data science workflow. A core part of our platform are our operators. Einblick operators all capture a defined set of steps in analysis, and don\u0027t have to be arranged linearly in the canvas environment. The space then allows users to work according to how their thought process might flow naturally. A few of our core operators include: Python cells have traditionally been the only operator available to data scientists. Write code and reproduce your Jupyter notebook 1:1 in a browser-accessed Python runtime. Chart operators create different visualizations, including scatter plots, histograms, bar charts, line charts, and heat maps Expression operators support Python 3 syntax, take in a dataframe and add a new column based on a logical expression. We currently support many operations, including arithmetic, comparison, and bitwise operators, as well as mathematical functions AutoML operators build more accurate predictive models in much less time than it would take to hand-tune. You just have to select the target and feature columns from a dataframe, as well as the training and testing datasets. Given Python\u0027s many libraries and frameworks for data science, statistics, and machine learning, such as statsmodels and sklearn, Python is an easy choice for modern data scientists. As such, Einblick utilizes Python in various parts of our codebase. Additionally, our Python cell operator is critical to our user experience, and connects the experience of working in a Python notebook with working in a data science canvas. We value the flexibility that Python gives to our users to not only augment Einblick\u0027s functionality, but also make the data science process more efficient and accessible. Creating shareable user-defined operators As we worked to make the data science process smoother and faster, we created user operators. Through an editor or by linking to a Git repository, our users can create their own Einblick operators, so they can easily and efficiently re-use their own code and processes. Given how important collaboration and communication are to the data science process, operators created by Einblick users are able to be shared easily, so that someone who might know what they want to do, such as convert a text column to a date-time column, can do so without needing to know the Python syntax to do so. For example, our linear regression and k-means clustering operators were both created through our user operator editor. The user operator editor is accessible through our Operators Menu, which can be toggled on and off from the User Settings menu. In celebration of the roots of data science, and as a nod to shared experiences in the data science community, we created an operator to visualize a simple linear regression model. This user operator is an extension of our linear regression operator, which is built-in, and accessible to everyone, that will allow us to create a nicely formatted linear regression graph. To illustrate the operator, we\u0027re us",
+    "scrapedAt": "2026-10-08 19:05:48.396119"
+  },
+  {
+    "id": 538,
+    "url": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/",
+    "title": "Elementary school education: Is it love or just Python? | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Elementary school education: Is it love or just Python? Written by Ivana Vezjak, Elementary School August Šenoa Osijek Author: Ivana Vezjak (ICT teacher at Elementary school August Šenoa Osijek, Croatia) Date: May 2020 Python is the main programming language we use in our school to teach students basic programming concepts and algorithms. Our students love Python - with Python they can create their own apps, websites, quizzes, solve different problems and much more. Students use different modules like Pygame, Matplotlib, Numpy, Tkinter etc. to turn their ideas into reality and develop skills like computational thinking, creativity and problem solving. Last year (October, 2019) approx. 90 students from our school (Elementary School August Šenoa, Osijek, Croatia), grades 5-8, participated in the EU Code Week. Students made their own chatbots and love calculators in the programming language Python, created virtual worlds which they experienced themselves later, and explored them with VR glasses etc. 8th grade students have developed an application in Python, which we called the Love Calculator. It is something you should definitely try out. The application allows the entry of a male or female name and clicking the button the “love percentage” is written on the screen. Students first created their own backgrounds and pictures for the application. There are a lot of drawing tools available online, such as https://sketch.io/sketchpad. Making their own graphic materials is much more interesting to students than just downloading finished drawings from the internet. After creating the drawings, students have learnt how to use Python’s module Tkinter to create the basic graphic window. This was in a way the design - they had to determine the background picture or colour, set the fields for entry of text and buttons, choose colours and fonts for their application etc. When they were satisfied with the visual look of the application, they started the coding. The main part of the programme was comprised of writing two programming functions - one which generated a random number (the so-called love percentage) and another, which checked the entry of the user into the field for text and written out the love percentage to the screen. This was somewhat a more demanding part. Students are expected to think about the way in which the programme functions, to create a good algorithm and write it all down in Python. We can find plenty of these kinds of programmes online, in the form of calculators or quizzes which actually only return a random number, text or percentage. Students have seen themselves various programmes on the internet which function in a similar way, and by creating such a programme they realised how they actually function. Through this project they learnt that online love calculators have nothing to do with love, but that behind them there exists a good algorithm in a certain programme language, and that the love percentage is nothing else but a randomly generated number! The students had great fun working on this project, but also learnt that you should not trust everything you see online. This activity has also motivated them to actively create digital content, develop computer and logical thinking and learn the ways in which technology functions, and not just to be passive users of technology. This simple project is intended to students who already have a basic experience in programming. The whole project can be seen on this link: https://repl.it/join/rirepnnq-ivanav For the design of the project students can use some of the online Python editors which support work with Tkinter module (such as https://repl.it/) or they can work locally on their computers. Tkinter module is a part of a standard Python library and it is not necessary to separately install it if Python is already installed on your computer. Few images: https://carnet-my.sharepoint.com/:f:/g/personal/ivana_duranic_skole_hr/ElktGdXhmRJMp0O1xrK21rAB1VfjDFlrliJS9r742PAHww?e\u003dlmE7Bm Happy Pythoning! Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:05:47.150477"
+  },
+  {
+    "id": 537,
+    "url": "https://www.python.org/success-stories/category/business/",
+    "title": "Business | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Business Business Using Python to build a solution for instant tokenized real estate redemptions Lincoln Loop: Building a sustainable business inspired by Python’s ethos Using Python for commercial cloud backup Using Python to make unstable APIs reliable Python for Financial Machine Learning at Union Investment Python in a classic enterprise setting - hand-rolled microservices for supply chain / ERP Making our new website and admin work together using Python Using Python scripts to analyse SEO and broken links on your site Python to Control CD/DVD Packaging Hardware Carmanah Lights the Way with Python Python On Guard Python Powers Journyx Timesheet Python is Rackspace\u0027s CORE Technology WordStream Uses Python as Their Platform of Choice D-Link Australia Uses Python to Control Firmware Updates Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:05:45.917789"
+  },
+  {
+    "id": 536,
+    "url": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/",
+    "title": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Using Python to Automate Tedious Tasks Written by Nat Dunn, Webucator We began using Python at Webucator in 2015. As most of our larger programming projects have to do with building web-based applications and we had long ago decided on our web stack, we haven\u0027t needed Python for any large scale projects. However, we use it regularly to quickly solve problems and to automate manual tasks. In this article, I\u0027ll describe how we used Python to automate a problem that occurred infrequently, but was a huge nuisance when it did occur. As an IT training company, we write a lot of courseware with many code examples, which are both included in the class files and embedded in the course manual. To avoid having to maintain the code both in the file and the manual, our build system, which is XML-based, reads the class files into the manual. To make that work, we have to mark up each class file with XML before committing it. Here is a sample of a marked-up courseware file: The XML here is simple. It includes a root element (cw:File) and a few emphasis elements (cw:Em). The build parses this XML and, using XSL:FO, pulls it into the manual to create this: When this works as expected, it works beautifully. But sometimes an author will commit a file that isn\u0027t well-formed XML, which breaks the build. The person building the courseware is often not the same person as the person writing the courseware, so there can be a lag between the time the error occurs and the time it gets fixed. Furthermore, our home-grown build system doesn\u0027t handle the error well. Rather than reporting it, it spins and spins. (We need to fix that eventually, but for reasons not relevant to this article, that\u0027s not going to happen any time soon.) The person building the courseware then has to let the author know that one of the XML files is poorly formed, but she doesn\u0027t know which one. The author then has to check each XML file until he finds the one that is poorly formed. Done one file at a time with a tool like XMLSPY, this is a laborious process. Enter Python! The last time I had to go through this process, I realized that Python could solve this problem very quickly. The Python program simply has to loop through the directories finding all the files that need checking, based on their locations and extensions, check whether the file begins with \"\u003ccw:\" as not all files are marked up as XML, and use lxml.etree to attempt to parse the file. On failure, it should report the file name. This program took less than 15 minutes to write and saved more than that the first time I used it. I\u0027ve copied it below to show how simple it is: This is just one of many examples in which we use Python at Webucator to quickly and easily automate time-intensive, manual tasks. Webucator provides live online and customized onsite Python training. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:05:44.673473"
+  },
+  {
     "id": 535,
     "url": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/",
     "title": "Building Robust Codebases with Python\u0027s Type Annotations | Our Success Stories | Python.org",
@@ -3680,26 +3715,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 536,
-    "url": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
-  },
-  {
-    "id": 537,
-    "url": "https://www.python.org/success-stories/category/business/"
-  },
-  {
-    "id": 538,
-    "url": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
-  },
-  {
-    "id": 539,
-    "url": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
-  },
-  {
-    "id": 540,
-    "url": "https://www.python.org/success-stories/python-for-collaborative-robots/"
   },
   {
     "id": 541,
@@ -96950,10 +96965,240 @@ window.searchData = [
     "id": 68255,
     "url": "https://www.hudsonrivertrading.com/hrtbeat/building-robust-codebases-with-pythons-type-annotations/",
     "parentUrl": "https://www.python.org/success-stories/building-robust-codebases-with-pythons-type-annotations/"
+  },
+  {
+    "id": 68263,
+    "url": "https://www.webucator.com/programming-training/python-training.cfm",
+    "parentUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "id": 68273,
+    "url": "https://www.python.org/success-stories/d-link-australia/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68274,
+    "url": "https://www.python.org/success-stories/making-our-new-website-and-admin-work-together-using-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68278,
+    "url": "https://www.python.org/success-stories/python-is-rackspaces-core-technology/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68281,
+    "url": "https://www.python.org/success-stories/carmanah-lights-the-way-with-python/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68282,
+    "url": "https://www.python.org/success-stories/python-seo-link-analyzer/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68287,
+    "url": "https://www.python.org/success-stories/wordstream-uses-python-as-their-platform-of-choice/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68288,
+    "url": "https://www.python.org/success-stories/python-on-guard/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68289,
+    "url": "https://www.python.org/success-stories/python-in-a-classic-enterprise-setting-hand-rolled-microservices-for-supply-chain-erp/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68291,
+    "url": "https://www.python.org/success-stories/python-to-control-cddvd-packaging-hardware/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68294,
+    "url": "https://www.python.org/success-stories/python-powers-journyx-timesheet/",
+    "parentUrl": "https://www.python.org/success-stories/category/business/"
+  },
+  {
+    "id": 68298,
+    "url": "https://carnet-my.sharepoint.com/:f:/g/personal/ivana_duranic_skole_hr/ElktGdXhmRJMp0O1xrK21rAB1VfjDFlrliJS9r742PAHww?e\u003dlmE7Bm",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 68300,
+    "url": "http://os-asenoa-os.skole.hr/",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 68302,
+    "url": "https://sketch.io/sketchpad",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 68303,
+    "url": "https://repl.it/",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 68307,
+    "url": "https://repl.it/join/rirepnnq-ivanav",
+    "parentUrl": "https://www.python.org/success-stories/elementary-school-education-is-it-love-or-just-python/"
+  },
+  {
+    "id": 68310,
+    "url": "https://www.einblick.ai/blog/notebook-feature-release/",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68311,
+    "url": "https://seaborn.pydata.org/index.html",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68312,
+    "url": "https://scikit-learn.org/stable/index.html",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68314,
+    "url": "https://www.einblick.ai/blog/data-exploration-techniques/",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68315,
+    "url": "https://www.einblick.ai/learn/docs/operators/code/expression",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68316,
+    "url": "https://www.statsmodels.org/stable/index.html",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68318,
+    "url": "https://www.einblick.ai/learn/docs/operators/user-defined-operators/cell-type-operators#creating-cell-type-user-operators",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68319,
+    "url": "https://www.einblick.ai/",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68320,
+    "url": "https://www.einblick.ai/learn/docs/introduction/fundamentals/operators",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68321,
+    "url": "https://www.einblick.ai/learn/docs/operators/visualization/chart",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68324,
+    "url": "https://www.einblick.ai/learn/docs/operators/user-defined-operators/introduction",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68326,
+    "url": "https://www.einblick.ai/blog/problems-with-notebooks-msftpaper/",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68329,
+    "url": "https://www.einblick.ai/learn/docs/operators/code/python-cell",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68330,
+    "url": "https://seaborn.pydata.org/generated/seaborn.load_dataset.html",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68331,
+    "url": "http://savvastjortjoglou.com/nba-shot-sharts.html#Plotting-the-Shot-Chart-Data",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68332,
+    "url": "https://www.einblick.ai/learn/docs/operators/user-defined-operators/introduction#linear-regression",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68334,
+    "url": "https://www.einblick.ai/learn/docs/operators/machine-learning/auto-ml/",
+    "parentUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "id": 68342,
+    "url": "https://rozum.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-robots/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/rozum-robotics-success-story_8FZ050p.png",
+    "alt": "",
+    "pageTitle": "Python for Collaborative Robots | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-collaborative-robots/"
+  },
+  {
+    "src": "https://sanity.einblick.ai/images/1xvnv7n3/production/171e7a3dd9c4a0b880ec5f12437c96bd24e16dc2-2740x1544.png",
+    "alt": "Einblick canvas",
+    "pageTitle": "Reimagining data science with Python-based operators in Einblick’s visual canvas | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "src": "https://sanity.einblick.ai/images/1xvnv7n3/production/f4257e4f547aa26e1cd17eb74b2ba7d857ea29d9-1914x1406.png",
+    "alt": "Einblick canvas with user-defined linear regression operators",
+    "pageTitle": "Reimagining data science with Python-based operators in Einblick’s visual canvas | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "src": "https://sanity.einblick.ai/images/1xvnv7n3/production/2580930b3e123c0e03e0beafb9909fcd6c024885-1824x990.png",
+    "alt": "Einblick user operator interface",
+    "pageTitle": "Reimagining data science with Python-based operators in Einblick’s visual canvas | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "src": "https://sanity.einblick.ai/images/1xvnv7n3/production/4e7b78f81d8d8022abe34e8fc07f32f6efa068d2-1720x1032.png",
+    "alt": "Code for regression visualization operator",
+    "pageTitle": "Reimagining data science with Python-based operators in Einblick’s visual canvas | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "src": "https://sanity.einblick.ai/images/1xvnv7n3/production/fb54de5cb29ff23e2cac3b1dec0f833f1b3e21c5-1926x1330.png",
+    "alt": "Einblick operator focus on input, output",
+    "pageTitle": "Reimagining data science with Python-based operators in Einblick’s visual canvas | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "src": "https://sanity.einblick.ai/images/1xvnv7n3/production/b4e24d35f9c09c9f82f1373854acbdb266e43a23-1396x1718.png",
+    "alt": "Einblick NBA shot chart operator",
+    "pageTitle": "Reimagining data science with Python-based operators in Einblick’s visual canvas | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/reimagining-data-science-with-python-based-operators-in-einblicks-visual-canvas/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/code-sample-class-file.png",
+    "alt": "Code Sample - Class File",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/code-sample-pdf.png",
+    "alt": "",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
+  {
+    "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/successstories/webucator/check-xml.png",
+    "alt": "Check XML Python Program",
+    "pageTitle": "Using Python to Automate Tedious Tasks | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/using-python-to-automate-tedious-tasks/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/Mypy_example.png",
     "alt": "Mypy examples",
