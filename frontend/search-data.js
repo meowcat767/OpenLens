@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 17,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)",
+    "title": "Method (computer programming) - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Function that is tied to a particular instance or class A method in object-oriented programming (OOP) is a procedure associated with an object, and generally also a message. An object consists of state data and behavior; these compose an interface, which specifies how the object may be used. A method is a behavior of an object parametrized by a user. Data is represented as properties of the object, and behaviors are represented as methods. For example, a Window object could have methods such as open and close, while its state (whether it is open or closed at any given point in time) would be a property. In class-based programming, methods are defined within a class, and objects are instances of a given class. One of the most important capabilities that a method provides is method overriding - the same name (e.g., area) can be used for multiple different kinds of classes. This allows the sending objects to invoke behaviors and to delegate the implementation of those behaviors to the receiving object. A method in Java programming sets the behavior of a class object. For example, an object can send an area message to another object and the appropriate formula is invoked whether the receiving object is a Rectangle, Circle, Triangle, etc. Methods also provide the interface that other classes use to access and modify the properties of an object; this is known as encapsulation. Encapsulation and overriding are the two primary distinguishing features between methods and procedure calls.[1] Overriding and overloading [edit] Method overriding and overloading are two of the most significant ways that a method differs from a conventional procedure or function call. Overriding refers to a subclass redefining the implementation of a method of its superclass. For example, findArea may be a method defined on a shape class,[2] Triangle, etc. would each define the appropriate formula to calculate their area. The idea is to look at objects as \"black boxes\" so that changes to the internals of the object can be made with minimal impact on the other objects that use it. This is known as encapsulation and is meant to make code easier to maintain and re-use. Method overloading, on the other hand, refers to differentiating the code used to handle a message based on the parameters of the method. If one views the receiving object as the first parameter in any method then overriding is just a special case of overloading where the selection is based only on the first argument. Accessor, mutator and manager methods [edit] Accessor methods are used to read the data values of an object. Mutator methods are used to modify the data of an object. Manager methods are used to initialize and destroy objects of a class, e.g. constructors and destructors. These methods provide an abstraction layer that facilitates encapsulation and modularity. For example, if a bank-account class provides a getBalance() accessor method to retrieve the current balance (rather than directly accessing the balance data fields), then later revisions of the same code can implement a more complex mechanism for balance retrieval (e.g., a database fetch), without the dependent code needing to be changed. The concepts of encapsulation and modularity are not unique to object-oriented programming. Indeed, in many ways the object-oriented approach is simply the logical extension of previous paradigms such as abstract data types and structured programming.[3] Constructors [edit] Main article: Constructor (computer science) A constructor is a method that is called at the beginning of an object\u0027s lifetime to create and initialize the object, a process called construction (or instantiation). Initialization may include an acquisition of resources. Constructors may have parameters but usually do not return values in most languages. See the following example in Java: public class Person {\n    private String name;\n    private int age;\n\n    // constructor method\n    public Person(String name, int age) {\n        this.name \u003d name;\n        this.age \u003d age;\n    }\n}\n Destructor [edit] Main article: Destructor (computer science) A Destructor is a method that is called automatically at the end of an object\u0027s lifetime, a process called destruction. Destruction in most languages does not allow destructor method arguments nor return values. Destructors can be implemented so as to perform cleanup chores and other tasks at object destruction. Finalizers [edit] In garbage-collected languages, such as Java,[4]: 26, 29  C#,[5]: 208–209  and Python, destructors are known as finalizers. They have a similar purpose and function to destructors, but because of the differences between languages that utilize garbage-collection and languages with manual memory management, the sequence in which they are called is different. Abstract methods [edit] An abstract method is one with only a signature and no implementation body. It is often used to specify that a",
+    "scrapedAt": "2026-10-08 18:47:39.18093"
+  },
+  {
+    "id": 16,
+    "url": "https://en.wikipedia.org/wiki/BlueJ",
+    "title": "BlueJ - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia IDE for Java Programming Language BlueJ Screenshot of BlueJ Original authors Michael Kölling and John Rosenberg Developer BlueJ Team Stable release 6.0.0 / July 1, 2026; 3 months ago (2026-07-01) Written in Java Operating system Cross-platform Platform Java Available in Multilingual Type Integrated development environment License GPL-2.0-or-later with the Classpath exception Website bluej.org BlueJ is an integrated development environment (IDE) for the Java programming language, developed mainly for educational purposes, but also suitable for small-scale software development. It runs with the help of Java Development Kit (JDK). BlueJ was developed to support the learning and teaching of object-oriented programming, and its design differs from other development environments as a result.[1] The main screen graphically shows the class structure of an application under development (in a UML-like diagram), and objects can be interactively created and tested. This interaction facility, combined with a clean, simple user interface, allows easy experimentation with objects under development. Object-oriented concepts (classes, objects, communication through method calls) are represented visually and in its interaction design in the interface. History [edit] The development of BlueJ was started in 1999 by Michael Kölling and John Rosenberg at Monash University, as a successor to the Blue[2] system. Blue was an integrated system with its own programming language and environment, and was a relative of the Eiffel language. BlueJ implements the Blue environment design for the Java programming language. In March 2009, the BlueJ project became free and open source software, and licensed under GPL-2.0-or-later with the Classpath exception. BlueJ is currently being maintained by a team at King\u0027s College London, England, where Kölling works. Supported language [edit] BlueJ supports programming in Java and in Stride.[3] Java support has been provided in BlueJ since its inception, while Stride support was added in 2017. See also [edit] Free and open-source software portal Computer programming portal Greenfoot DrJava Educational programming language References [edit] ↑ Kölling, M. (2008). \"Using BlueJ to Introduce Programming\" (PDF). In Bennedsen, J.; Caspersen, M.E; Kölling, M. (eds.). Reflections on the Teaching of Programming. Lecture Notes in Computer Science. Vol. 4821. Springer. pp. 182–196. ISBN 978-3-540-77933-9. ↑ Kölling, M.; Rosenberg, J. (1996). \"An Object-Oriented Program Development Environment for the First Programming Course\" (PDF). Proceedings of the 27th SIGCSE Technical Symposiumon Computer Science Education. ACM. pp. 83–87. doi:10.1145/236462.236514. ISBN 0-89791-757-X. ↑ Stride Bibliography [edit] Barnes, David J.; Kölling, Michael (May 12, 2011). Objects First with Java: A Practical Introduction Using BlueJ (5th ed.). Prentice Hall. p. 560. ISBN 978-0-13-249266-9. Kölling, Michael; Quig, Bruce; Patterson, Andrew; Rosenberg, John (Aug 9, 2010). \"The BlueJ System and its Pedagogy\". Computer Science Education. 13 (4): 249–268. CiteSeerX 10.1.1.22.3975. doi:10.1076/csed.13.4.249.17496. S2CID 2805887. {{cite journal}}: Cite uses deprecated parameter |citeseerx\u003d (help) External links [edit] Official website BlueJ textbook v t e Integrated development environments C, C++ Open source Arduino Code::Blocks CodeLite Dev-C++ Eclipse Emacs Geany GNOME Builder Kakoune KDevelop NetBeans QDevelop Qt Creator TheIDE Vi–Vim OpenWatcom Freeware DevEco Studio Oracle Developer Studio Visual Studio Code Visual Studio Community Xcode Retail C++Builder Eclipse-based CodeWarrior MyEclipse Visual Studio By JetBrains IntelliJ IDEA CLion LabWindows/CVI IBM Rational Software Architect Understand SlickEdit Discontinued Anjuta By JetBrains AppCode VisualAge Visual C++ Express MonoDevelop SharpDevelop Turbo C, C++ QuickC Java Open source Anjuta BlueJ DrJava Eclipse Geany Greenfoot IntelliJ IDEA Community Edition Android Studio NetBeans DevEco Studio Freeware jGRASP JDeveloper Retail JCreator MyEclipse JetBrains IntelliJ IDEA SlickEdit Understand Discontinued Metrowerks CodeWarrior Pro for Java JBuilder Sun Java Studio Creator (superseded by NetBeans) VisualAge (superseded by Eclipse) Visual Café (aka Espresso, superseded by JBuilder) Visual J++ Xelfi (became NetBeans) JavaScript Open source Vim Visual Studio Code Atom Chromium DevEco Studio Haxe IntelliJ IDEA VS Code Sublime Text Powerflasher FDT CLI (.NET) Open source Visual Studio Code PascalABC.NET Freeware Visual Studio Community Retail Visual Studio Rider Understand Discontinued Xamarin Studio MonoDevelop SharpDevelop Visual Basic Express Visual Web Developer Express Visual J# Express Visual Studio Express for Windows Phone Visual C++ Express Visual C# Express Express for Desktop Express for Web Express for Windows Flash Adobe Flash Builder FlashDevelop Powerflasher FDT PHP Open source Aptana NetBeans Komodo Edit Komodo IDE KDevelo",
+    "scrapedAt": "2026-10-08 18:47:37.989682"
+  },
+  {
+    "id": 15,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+    "title": "Java (programming language) - Wikipedia",
+    "content": "Jump to content From Wikipedia, the free encyclopedia Object-oriented programming language Not to be confused with JavaScript. \"Java language\" redirects here. For the language spoken by people from the island of Java, see Javanese language. Java Paradigm Multi-paradigm: generic, object-oriented (class-based), functional, imperative, reflective, concurrent Family JVM-hosted Designed by James Gosling Developer Oracle Corporation First appeared May 23, 1995; 31 years ago (1995-05-23)[1] Stable release Java SE 26[2] / 17 March 2026; 6 months ago (17 March 2026) Typing discipline Static, strong, safe, nominative, manifest Memory management Garbage-collected Filename extensions .java, .class, .jar, .jmod, .war Website oracle.com/java/ java.com dev.java Influenced by CLU,[3] Simula 67,[3] Lisp,[3] Smalltalk,[3] Ada 83, C++,[4] C#,[5] Eiffel,[6] Mesa,[7] Modula-3,[8] Oberon,[9] Objective-C,[10] UCSD Pascal,[11][12] Object Pascal[13] Influenced Ada 2005, ArkTS, BeanShell, C#, Chapel,[14] Clojure, Dart, ECMAScript, Fantom, Gambas,[15] Groovy, Hack,[16] Haxe, J#, JavaScript, JS++, Kotlin, PHP, Python, Scala, Vala Java Programming at Wikibooks This article is part of a series on the Java programming language Frameworks AppFuse Akka Apache Camel Apache Click Apache Cocoon Apache CXF Apache Felix Apache Mina Apache Pivot Apache Shiro Apache Sling Apache Struts Apache Tapestry Apache Wicket Barracuda CodeName One Direct Web Remoting EclipseLink FreeMarker Template GeoApi GeoTools Google Guice Google Web Toolkit (GWT) Grails Hibernate iBatis JAX-RS JAX-WS JBoss Seam Jersey JHipster JSF Keycloak Micronaut MyBatis Oracle Application Development Framework Play PrimeFaces Quarkus Spring Integration Spring Roo Spring Security Thymeleaf Vaadin Vertx ZKoss Libraries Apache Accumulo Apache ActiveMQ Apache Ant Apache Avro Apache Axis Apache Commons Apache Empire DB Apache Flume Apache Geronimo Apache Giraph Apache Hadoop Apache HBase Apache Hive Apache JackRabbit Apache Jena Apache Kafka Apache Log4j Apache Lucene Apache Mahout Apache Mesos Apache Nutch Apache OODT Apache Oozie Apache OpenNLP Apache PDFBox Apache Pig Apache POI Apache Qpid Apache River (Jini) Apache Samza Apache Solr Apache Spark Apache Xerces Apache Storm Apache Tika Apache Tomcat Apache Uima Apache Velocity Apache Xerces Apache Zookeeper BioJava BlueCove Bouncy Castle Cascading CruiseControl Deeplearning4j Drools ELKI EHCache EJML Elasticsearch Google Gson Google Guava H2 Database Engine HSQLDB Infinispan IText Jackson Jasper Reports Java Astrodynamics Toolkit Java Collections Framework JavaFX Java Media Framework Java Topology Suite JAXB JaxP Jetty JFreeChart JProfiler JSoup JUNG JUnit LibGDX LiquiBase LWJGL Netty Neuroph ObjectWeb ASM Oracle WebLogic OrientDB ORMLite Parallel Colt Quartz Selenium SLF4J SonarQube Standard Widget Toolkit Spock TestNG Wildfly XStream Machine learning and AI Apache Mahout Apache MXNet Apache OpenNLP Deeplearning4j Encog LIBSVM Mallet MLlib Neuroph Weka Math and scientific libraries Colt Efficient Java Matrix Library Easy Java Simulations Exp4j GroovyLab JAMA Jblas Java Astrodynamics Toolkit Matrix Toolkit Java OjAlgo OptimJ Parallel Colt SuanShu IDEs Android Studio BlueJ DrJava Eclipse IDE Greenfoot IntelliJ IDEA JDeveloper jGRASP MyEclipse NetBeans IDE Visual Studio Code Application servers Apache Geronimo Apache MINA Apache Tomcat Apache TomEE Borland Enterprise Server ColdFusion GlassFish IBM WebSphere Application Server IBM WebSphere Application Server Community Edition JBoss Enterprise Application Platform JEUS Jetty Lucee Oracle Containers for J2EE Oracle WebLogic Server Orion Application Server Payara Server Resin SAP NetWeaver Application Server WildFly See also Apache Commons and Google Guava Comparison of Java virtual machines List of Java virtual machines List of JVM languages List of Java compilers List of Java software and tools List of Kotlin software and tools List of unit testing frameworks for Java Outline of the Java programming language Computer programming portal Java programming (Wikibooks) v t e Java is a high-level, general-purpose, memory-safe, object-oriented programming language. It is intended to let programmers write once, run anywhere (WORA),[17] meaning that compiled Java code can run on all platforms that support Java without the need to recompile.[18] Java applications are usually compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture.[19] The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. The Java runtime provides dynamic abilities (such as reflective programming (reflection) and runtime code modification) usually unavailable in traditional compiled languages. Java gained popularity shortly after its release, and has been a popular programming language since then.[20] Java was the third most popular programming language in 2022[update] according to GitHub.[21] Although still widely popula",
+    "scrapedAt": "2026-10-08 18:47:36.872281"
+  },
+  {
+    "id": 14,
+    "url": "https://tweakers.net",
+    "title": "DPG Media Privacy Gate",
+    "content": "",
+    "scrapedAt": "2026-10-08 18:47:35.618844"
+  },
+  {
+    "id": 13,
+    "url": "https://shortlinus.com",
+    "title": "dbrand » Official Shop",
+    "content": "Skip to content dbrand, Official Shop The Non-Folding One iPhone 18 Pro No hinge. No crease. No \"innovation.\" Just the iPhone everyone actually bought, and a series of cases, screen protectors, and skins to go with it. Shipping now for the 18 Pro \u0026 Max. Shop Now minimalist cases MNML Introducing: the minimalist phone case.™ Available for twelve devices across Apple, Samsung, and Google. Nothing fancy, just a nice sandstone texture and four colorways. Also, a magnetic wallet. Shop Now Samsung Z8 Series Flip. Fold. Ultra. Three foldables and a naming scheme seemingly decided by a coin flip. Whichever one you talked yourself into, our cases, screen protectors, and skins are ready - even for the new wide version. Shop Now Now for AirPods Tank Case When we launched the Tank Case, people had many questions, like \"when are you making it for my phone?\" and \"why does it look so ugly?\" Naturally, we ignored them and made Tank for AirPods Pro 3. Shop Now ultimate protection Killswitch Killswitch is the holy grail of gaming cases: crush-proof travel cover, ergonomic handles, grippy texture, customizable, and a setup designed to protect everything but your wallet. Shop Now Hey Google Pixel 11 Series Stop us if you\u0027ve heard this before: four new Pixels. A base model, a pro model, an extra-large pro model, and a foldable. Our cases are ready and available on day one. Some things never change. Shop Now Killswitch \u0026 Glass Xbox Ally X20 We\u0027ve once again worked directly with ASUS and Microsoft to bring our cases and screen protectors to the new ROG Xbox Ally X20. Shipping in October, alongside the device. Shop Now Featuring New Designs Steam Machine Skins An all-new range of custom designs exclusive to the Steam Machine. Grab the new Everything Kit to bundle in a matching Steam Controller skin at a discount. Shop Now peak ergonomics Joy-Lock™ Controller Holder Make your Switch 2 Joy-Cons more comfortable than a Pro Controller... for a fraction of the cost. Features an adjustable hinge with a super-satisfying ratchet mechanism. Shop Now zero-yellowing Clear Cases Every clear case you’ve ever owned promised anti-yellowing. Unsurprisingly, they all failed. We’re so confident that Ghost 2.0 will never yellow, we have a lifetime free replacement guarantee. Shop Now idiot-proof Screen Protectors With Prism 2.0, it couldn’t be any easier. Our meticulously precise installer tray guarantees a flawless installation, every time. Zero bubbles, zero dust, zero misalignment. Oh, and we include two. Shop Now Popular Devices Switch 2 Want to use your Switch 2 on the go without the debilitating hand cramps? Good news: we made an ultra-protective case called the Killswitch. It’s the #1 selling handheld gaming case worldwide. iPhone Protect your fruit-themed smartphone with a customizable Grip Case, zero-yellowing Ghost, ultra-rugged Tank, idiot-proof Prism, or a custom-fitted skin. Don’t forget to cancel your AppleCare. Galaxy Samsung barely changes the industrial design from year to year. That might lead you to believe that it’s easy to design cases, screen protectors, and skins for Galaxy devices. You would be correct. AirPods Have you ever wished you could make your AirPods look less like the world’s most expensive dental floss? Perfect. We’ve got a customizable AirPods case for you. Yes, it comes in black. Pixel There’s a program called “Made for Google” that ensures accessory compatibility with Pixels. We were the first ones in it. Not sure what you could possibly do with this information, but there it is. MacBook Despite all odds, Apple’s MacBook continues to be the world\u0027s best-selling laptop. That\u0027s fine by us - we\u0027ve been making perfect-fitting, premium MacBook skins for well over a decade. Checkmate, Tim. View all Over 23 Million Customers Worldwide Amitoj Singh @_bazingaa95 Thanks for taking my money! @dbrand Here\u0027s some free marketing...\u2028Obsidian #dbrand Eddie ( ) @edmundetotheipi great job, @dbrand @ZacksJerryRig My Switch is now at least 23 times cooler (And apparently the illuminati are still among us.😱) eSIM Mexico @eSIM_Mx Te recomiendo la Ghost de @dbrand Jade 💀🌹⏳ @PsychoticJinx My @dbrand Grip case and Warzone Damascus skin for it came in…. I’M IN LOVE! It pairs great with my actual Damascus skin in Warzone! 😇😍 2Duo @LGA775 Thanks @dbrand @ZacksJerryRig for this Teardown Case! It’s the best case for my daily driver S23Ultra TechnicallyTee u/TechnicallyTeeYT ...after using it for some time, I can’t pull myself to take it off…. Out of Galaxy @OutofGalaxyy Just picked up Prism 2.0 from @dbrand I will be honest. The packaging is fucking GORGEOUS. The unboxing of the protective glasses felt more premium than of my S24 itself 😭 The fit is PERFECT. I have never seen a glass of such good quality in my life. TechPulse Daily @DailyTechpulse I tested a top Nintendo Switch 2 screen protector – now my console feels bulletproof EckoTheFox @EckoTheFox FINALLY got my Tank case from @dbrand , I love it! I put on the orange buttons to m",
+    "scrapedAt": "2026-10-08 18:47:34.4113"
+  },
+  {
     "id": 12,
     "url": "https://lttstore.nl",
     "title": "Floatplane",
@@ -80,26 +115,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 13,
-    "url": "https://shortlinus.com"
-  },
-  {
-    "id": 14,
-    "url": "https://tweakers.net"
-  },
-  {
-    "id": 15,
-    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)"
-  },
-  {
-    "id": 16,
-    "url": "https://en.wikipedia.org/wiki/BlueJ"
-  },
-  {
-    "id": 17,
-    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
   },
   {
     "id": 18,
@@ -9857,10 +9872,9109 @@ window.searchData = [
     "id": 6940,
     "url": "https://www.gaspedaal.nl/auto/peugeot/208",
     "parentUrl": "https://gaspedaal.nl"
+  },
+  {
+    "id": 6941,
+    "url": "https://dbrand.com/search?productTypes\u003dskins\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6942,
+    "url": "https://dbrand.com/shop/mnml/iphone-18-pro-max-cases",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6943,
+    "url": "https://dbrand.com/search?deviceTypes\u003dgaming\u0026productTypes\u003dskins\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6944,
+    "url": "https://dbrand.com/shop/limited-edition",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6945,
+    "url": "https://dbrand.com/shop/ghost/iphone-18-pro-max-clear-cases?addons\u003dprism\u0026design\u003dghost-brg",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6946,
+    "url": "https://dbrand.com/search?brands\u003dapple\u0026deviceTypes\u003dairpods\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6947,
+    "url": "https://dbrand.com/shop/grip/iphone-18-pro-max-cases?addons\u003dprism",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6948,
+    "url": "https://dbrand.com/shop/limited-edition/ps5?category\u003dslim-disc",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6949,
+    "url": "https://dbrand.com/search?deviceTypes\u003dtablets\u0026productTypes\u003dskins\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6950,
+    "url": "https://dbrand.com/search?brands\u003dsony\u0026deviceTypes\u003dgaming\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6951,
+    "url": "https://dbrand.com/shop/killswitch/rog-xbox-ally-x20-cases",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6952,
+    "url": "https://dbrand.com/search?productTypes\u003dscreen-protector\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6953,
+    "url": "https://dbrand.com/shop/gift-card",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6954,
+    "url": "https://dbrand.com/shop/skins/dbrand-cube-skins",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6955,
+    "url": "https://dbrand.com/search?deviceSeries\u003dclaw\u0026deviceSeries\u003dlegion-go\u0026deviceSeries\u003dlegion-go-s\u0026deviceSeries\u003dps-portal\u0026deviceSeries\u003drog-ally\u0026deviceSeries\u003drog-ally-x\u0026deviceSeries\u003drog-xbox-ally-x\u0026deviceSeries\u003dsteam-deck\u0026deviceSeries\u003dsteam-deck-oled\u0026deviceSeries\u003dswitch\u0026deviceSeries\u003dswitch-2\u0026deviceSeries\u003dswitch-lite\u0026deviceSeries\u003dswitch-oled\u0026deviceTypes\u003dgaming\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6956,
+    "url": "https://dbrand.com/shop/tank/apple-airpods-pro-3-cases",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6957,
+    "url": "https://dbrand.com/shop/artifacts/playing-cards",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6958,
+    "url": "https://dbrand.com/shop/artifacts/luxury-sticker-pack",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6959,
+    "url": "https://dbrand.com/search?brands\u003dsamsung\u0026deviceTypes\u003dsmartphones\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6960,
+    "url": "https://dbrand.com/shop/killswitch/nintendo-switch-2-joy-con-grips",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6961,
+    "url": "https://dbrand.com/shop/killswitch/nintendo-switch-2-cases",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6962,
+    "url": "https://dbrand.com/search?deviceSeries\u003dpixel-11\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6963,
+    "url": "https://dbrand.com/search?deviceSeries\u003diphone-18\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6964,
+    "url": "https://dbrand.com/search",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6965,
+    "url": "https://dbrand.com/search?brands\u003dgoogle\u0026deviceTypes\u003dsmartphones\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6966,
+    "url": "https://dbrand.com/shop/artifacts/coloring-book",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6967,
+    "url": "https://dbrand.com/search?productTypes\u003dgrip\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6968,
+    "url": "https://dbrand.com/search?deviceTypes\u003dgaming\u0026productTypes\u003dscreen-protector\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6969,
+    "url": "https://dbrand.com/?utm_medium\u003dinfluencer\u0026utm_campaign\u003d/linus\u0026utm_source\u003dyoutube\u0026utm_term\u003dshortlinus#main",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6970,
+    "url": "https://dbrand.com/shop/prism/iphone-18-pro-max-tempered-glass-screen-protectors",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6971,
+    "url": "https://dbrand.com/shop/artifacts",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6972,
+    "url": "https://dbrand.com/search?deviceSeries\u003dgalaxy-z-fold\u0026deviceSeries\u003dgalaxy-z-flip\u0026query\u003d8\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6973,
+    "url": "https://dbrand.com/shop/tank/iphone-18-pro-max-cases",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6974,
+    "url": "https://dbrand.com/search?brands\u003dapple\u0026deviceTypes\u003dlaptops\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6975,
+    "url": "https://dbrand.com/shop/artifacts/puzzle",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6976,
+    "url": "https://dbrand.com/shop/tank/iphone-18-pro-max-cases?addons\u003dprism",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6977,
+    "url": "https://dbrand.com/search?deviceTypes\u003dlaptops\u0026productTypes\u003dskins\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6978,
+    "url": "https://dbrand.com/shop/skins/steam-machine-skins",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6979,
+    "url": "https://dbrand.com/shop/ghost/iphone-18-pro-max-clear-cases",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6980,
+    "url": "https://dbrand.com/shop/artifacts/manifesto",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6981,
+    "url": "https://dbrand.com/search?deviceTypes\u003dsmartphones\u0026productTypes\u003dskins\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6982,
+    "url": "https://dbrand.com/search?productTypes\u003dghost\u0026productTypes\u003dgrip\u0026productTypes\u003dkillswitch\u0026productTypes\u003dtank\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6983,
+    "url": "https://dbrand.com/search?brands\u003dvalve\u0026deviceTypes\u003dgaming\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6984,
+    "url": "https://dbrand.com/shop/ghost/iphone-18-pro-max-clear-cases?design\u003dghost-brg",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6985,
+    "url": "https://dbrand.com/search/device/nintendo-switch-2",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6986,
+    "url": "https://dbrand.com/search?deviceTypes\u003dgaming\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6987,
+    "url": "https://dbrand.com/search?brands\u003dmicrosoft\u0026deviceTypes\u003dgaming\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6988,
+    "url": "https://dbrand.com/search?brands\u003dapple\u0026deviceTypes\u003dsmartphones\u0026sort\u003dnew",
+    "parentUrl": "https://shortlinus.com"
+  },
+  {
+    "id": 6989,
+    "url": "https://en.wikipedia.org/wiki/ALGOL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6990,
+    "url": "https://en.wikipedia.org/wiki/Forth_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6991,
+    "url": "https://web.archive.org/web/20141231132540/http://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6992,
+    "url": "https://en.wikipedia.org/wiki/JDeveloper",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6993,
+    "url": "https://en.wikipedia.org/wiki/File:Duke_(Java_mascot)_waving.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6994,
+    "url": "https://en.wikipedia.org/wiki/Non-English-based_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6995,
+    "url": "https://en.wikipedia.org/wiki/Apache_Oozie",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6996,
+    "url": "https://web.archive.org/web/20080828111808/http://www.javalobby.org/nl/archive/jlnews_20071113o.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6997,
+    "url": "https://en.wikipedia.org/wiki/Apache_POI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6998,
+    "url": "https://en.wikipedia.org/wiki/Sun_Fire_T2000",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 6999,
+    "url": "https://en.wikipedia.org/wiki/GTK+",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7000,
+    "url": "https://en.wikipedia.org/wiki/Spring_Integration",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7001,
+    "url": "https://en.wikipedia.org/wiki/ZK_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7002,
+    "url": "https://en.wikipedia.org/wiki/ORMLite",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7003,
+    "url": "https://www.google.com/search?as_eq\u003dwikipedia\u0026q\u003d%22Java%22+programming+language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7004,
+    "url": "https://www.oracle.com/technetwork/java/embedded/javacard/overview/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7005,
+    "url": "https://en.wikipedia.org/wiki/NeWS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7006,
+    "url": "https://java.sun.com/docs/books/jls/second_edition/html/intro.doc.html#237601",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7007,
+    "url": "https://en.wikipedia.org/wiki/Apache_Camel",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7008,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-javadoc_comments_88-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7009,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-FOOTNOTEBloch201826-28§Item_7:_Eliminate_obsolete_object_references-58",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7010,
+    "url": "https://en.wikipedia.org/wiki/Common_Development_and_Distribution_License",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7011,
+    "url": "https://en.wikipedia.org/wiki/JAX-RS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7012,
+    "url": "https://en.wikipedia.org/wiki/Log4j",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7013,
+    "url": "https://en.wikipedia.org/wiki/Java_Heterogeneous_Distributed_Computing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7014,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-i18n_87-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7015,
+    "url": "https://en.wikipedia.org/wiki/Sun_Fire_E25K",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7016,
+    "url": "https://en.wikipedia.org/wiki/JUnit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7017,
+    "url": "https://en.wikipedia.org/wiki/Linux",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7018,
+    "url": "https://en.wikipedia.org/wiki/Operator_overloading",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7019,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Java_(software_platform)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7020,
+    "url": "https://en.wikipedia.org/wiki/MIDlet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7021,
+    "url": "https://en.wikipedia.org/wiki/Sun_Fire_15K",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7022,
+    "url": "https://en.wikipedia.org/wiki/Video_game_console",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7023,
+    "url": "https://en.wikipedia.org/wiki/\"Hello,_World!\"_program",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7024,
+    "url": "https://en.wikipedia.org/wiki/Ehcache",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7025,
+    "url": "https://en.wikipedia.org/wiki/Java_Web_Start",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7026,
+    "url": "https://en.wikipedia.org/wiki/Apache_CXF",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7027,
+    "url": "https://en.wikipedia.org/wiki/Library_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7028,
+    "url": "https://en.wikipedia.org/wiki/Jack_Kemp",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7029,
+    "url": "https://en.wikipedia.org/wiki/H._Raymond_Bingham?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7030,
+    "url": "https://en.wikipedia.org/wiki/Selenium_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7031,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Solaris",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7032,
+    "url": "https://en.wikipedia.org/wiki/James_Gosling",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7033,
+    "url": "https://en.wikipedia.org/wiki/MyEclipse",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7034,
+    "url": "https://www.wikidata.org/wiki/Q251",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7035,
+    "url": "https://www.oracle.com/technetwork/java/langenv-140151.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7036,
+    "url": "https://en.wikipedia.org/wiki/Android_Runtime",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7037,
+    "url": "https://en.wikipedia.org/wiki/Server-side",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7038,
+    "url": "https://en.wikipedia.org/wiki/JD_Edwards",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7039,
+    "url": "https://en.wikipedia.org/wiki/Apache_TomEE",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7040,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Labs",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7041,
+    "url": "https://en.wikipedia.org/wiki/Android_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7042,
+    "url": "https://en.wikipedia.org/wiki/Visual_Basic_(classic)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7043,
+    "url": "https://en.wikipedia.org/wiki/Apache_ActiveMQ",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7044,
+    "url": "https://web.archive.org/web/20201201054813/http://www.delphikingdom.com/asp/viewitem.asp?catalogid\u003d1155",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7045,
+    "url": "https://www.infoworld.com/article/3846172/jdk-25-the-new-features-in-java-25.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7046,
+    "url": "https://en.wikipedia.org/wiki/VirtualBox",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7047,
+    "url": "https://en.wikipedia.org/wiki/Sun_Blade",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7048,
+    "url": "https://en.wikipedia.org/wiki/Jini",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7049,
+    "url": "https://en.wikipedia.org/wiki/Software_developer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7050,
+    "url": "https://en.wikipedia.org/wiki/Graphical_user_interface",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7051,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-:0_22-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7052,
+    "url": "https://en.wikipedia.org/wiki/Web_browser",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7053,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-91",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7054,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-90",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7055,
+    "url": "https://web.archive.org/web/20101229090912/http://www.fscript.org/prof/javapassport.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7056,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-jdk25_46-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7057,
+    "url": "https://en.wikipedia.org/wiki/Donald_L._Lucas?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7058,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-92",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7059,
+    "url": "https://en.wikipedia.org/wiki/PicoJava",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7060,
+    "url": "https://en.wikipedia.org/wiki/Gridware",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7061,
+    "url": "https://en.wikipedia.org/wiki/OC4J",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7062,
+    "url": "https://en.wikipedia.org/wiki/GlassFish",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7063,
+    "url": "https://en.wikipedia.org/wiki/Mobile_operating_system",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7064,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-95",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7065,
+    "url": "https://www.theguardian.com/technology/2016/may/26/google-wins-copyright-lawsuit-oracle-java-code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7066,
+    "url": "https://en.wikipedia.org/wiki/Application_programming_interface",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7067,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-94",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7068,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-97",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7069,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-96",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7070,
+    "url": "https://en.wikipedia.org/wiki/Acquisition_of_Sun_Microsystems_by_Oracle_Corporation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7071,
+    "url": "https://en.wikipedia.org/wiki/Apache_Tapestry",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7072,
+    "url": "https://en.wikipedia.org/wiki/Larry_Ellison",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7073,
+    "url": "https://en.wikipedia.org/wiki/Sun-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7074,
+    "url": "https://en.wikipedia.org/wiki/Sun-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7075,
+    "url": "https://en.wikipedia.org/wiki/Java_annotation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7076,
+    "url": "https://en.wikipedia.org/wiki/Dart_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7077,
+    "url": "https://en.wikipedia.org/wiki/Sun-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7078,
+    "url": "https://en.wikipedia.org/wiki/Ultra_5/10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7079,
+    "url": "https://en.wikipedia.org/wiki/EclipseLink",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7080,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-321-24678-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7081,
+    "url": "https://en.wikipedia.org/wiki/Sun-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7082,
+    "url": "https://web.archive.org/web/20120627043929/http://java.sun.com/docs/white/delegates.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7083,
+    "url": "https://en.wikipedia.org/wiki/Android_(operating_system)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7084,
+    "url": "https://lux.collections.yale.edu/view/concept/5e93ea92-26de-42c8-8528-42446566516f",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7085,
+    "url": "https://en.wikipedia.org/wiki/Hardware_virtualization",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7086,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-jdk24-45",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7087,
+    "url": "https://en.wikipedia.org/wiki/SOAP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7088,
+    "url": "https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7089,
+    "url": "https://en.wikipedia.org/wiki/IPlanet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7090,
+    "url": "https://en.wikipedia.org/wiki/List_of_Kotlin_software_and_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7091,
+    "url": "https://id.loc.gov/authorities/sh95008574",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7092,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7093,
+    "url": "https://en.wikipedia.org/wiki/JAX-WS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7094,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#CITEREFBloch2018",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7095,
+    "url": "https://en.wikipedia.org/wiki/Java_remote_method_invocation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7096,
+    "url": "https://commons.wikimedia.org/wiki/Category:Java%20(programming%20language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7097,
+    "url": "https://en.wikipedia.org/wiki/Jsoup",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7098,
+    "url": "https://www.wired.com/2013/01/java-no-longer-a-favorite/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7099,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-javadoc_comments-88",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7100,
+    "url": "https://en.wikipedia.org/wiki/Oberon_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7101,
+    "url": "https://www.infoworld.com/article/2074908/sun-microsoft-settle-java-lawsuit.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7102,
+    "url": "https://web.archive.org/web/20120921140402/http://blogs.technet.com/b/mmpc/archive/2010/10/18/have-you-checked-the-java.aspx",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7103,
+    "url": "https://github.com/readme/featured/java-programming-language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7104,
+    "url": "https://en.wikipedia.org/wiki/Eiffel_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7105,
+    "url": "https://web.archive.org/web/20090121152332/http://www.artima.com/designtechniques/exceptions.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7106,
+    "url": "https://en.wikipedia.org/wiki/Mark_Hurd",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7107,
+    "url": "https://en.wikipedia.org/wiki/Project_Jersey",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7108,
+    "url": "https://web.archive.org/web/20110805051057/http://java.sun.com/docs/books/jls/second_edition/html/intro.doc.html#237601",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7109,
+    "url": "https://web.archive.org/web/20200713234202/https://www.infoworld.com/article/2077265/so-why-did-they-decide-to-call-it-java-.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7110,
+    "url": "https://en.wikipedia.org/wiki/Bootstrapping_(compilers)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7111,
+    "url": "https://web.archive.org/web/20100915162748/http://onjava.com/pub/a/onjava/2002/04/17/evangelism.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7112,
+    "url": "https://en.wikipedia.org/wiki/List_of_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7113,
+    "url": "https://web.archive.org/web/20150104210546/http://www.oracle.com/technetwork/java/embedded/javame/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7114,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-security_86-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7115,
+    "url": "https://en.wikipedia.org/wiki/XStream",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7116,
+    "url": "https://en.wikipedia.org/wiki/IBM_WebSphere_Application_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7117,
+    "url": "https://en.wikipedia.org/wiki/Sun_Java_Workstation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7118,
+    "url": "http://www.open-std.org/JTC1/SC22/JSG/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7119,
+    "url": "https://en.wikipedia.org/wiki/JProfiler",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7120,
+    "url": "https://en.wikipedia.org/wiki/Java_servlet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7121,
+    "url": "https://web.archive.org/web/20160316164325/https://blogs.oracle.com/java-platform-group/entry/moving_to_a_plugin_free",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7122,
+    "url": "https://en.wikipedia.org/wiki/UltraSPARC_IV",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7123,
+    "url": "https://en.wikipedia.org/wiki/Image_Packaging_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7124,
+    "url": "https://web.archive.org/web/20141109034520/https://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7125,
+    "url": "https://en.wikipedia.org/wiki/Oracle_TopLink",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7126,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Sun_Microsystems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7127,
+    "url": "https://en.wikipedia.org/wiki/Category:Pages_using_Sister_project_links_with_wikidata_namespace_mismatch",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7128,
+    "url": "https://en.wikipedia.org/wiki/C++",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7129,
+    "url": "https://en.wikipedia.org/wiki/SLF4J",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7130,
+    "url": "https://en.wikipedia.org/wiki/Wired.com",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7131,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-44",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7132,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Oracle",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7133,
+    "url": "https://en.wikipedia.org/wiki/UltraSPARC_II",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7134,
+    "url": "https://en.wikipedia.org/wiki/Category:JVM_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7135,
+    "url": "https://en.wikipedia.org/wiki/Nominal_type_system",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7136,
+    "url": "https://en.wikipedia.org/wiki/FreeMarker",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7137,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-55",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7138,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-40",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7139,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-41",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7140,
+    "url": "https://en.wikipedia.org/wiki/QFS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7141,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-57",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7142,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-42",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7143,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-56",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7144,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-43",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7145,
+    "url": "https://en.wikipedia.org/wiki/Gephi",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7146,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-53",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7147,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-52",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7148,
+    "url": "https://en.wikipedia.org/wiki/Héctor_García-Molina",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7149,
+    "url": "https://en.wikipedia.org/wiki/Pascal_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7150,
+    "url": "https://en.wikipedia.org/wiki/Java_Community_Process",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7151,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-59",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7152,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Windows",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7153,
+    "url": "http://www.infoworld.com/article/2610885/facebook-q-a--hack-brings-static-typing-to-php-world.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7154,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-37",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7155,
+    "url": "https://en.wikipedia.org/wiki/Category:All_Wikipedia_articles_in_need_of_updating",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7156,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-38",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7157,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-60",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7158,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-39",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7159,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-33",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7160,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-34",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7161,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-35",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7162,
+    "url": "https://en.wikipedia.org/wiki/JVM_bytecode",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7163,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-36",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7164,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-66",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7165,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-30",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7166,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-68",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7167,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-31",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7168,
+    "url": "https://en.wikipedia.org/wiki/Compiler",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7169,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-67",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7170,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-FOOTNOTEBloch20181–4§\u0026nbsp;1_Introduction-81",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7171,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-32",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7172,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-62",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7173,
+    "url": "https://en.wikipedia.org/wiki/Borland_Enterprise_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7174,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-61",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7175,
+    "url": "https://en.wikipedia.org/wiki/Help:Category",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7176,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-63",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7177,
+    "url": "https://web.archive.org/web/20140506215226/http://www.zdnet.com/news/what-is-ecma-and-why-microsoft-cares/298821",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7178,
+    "url": "https://en.wikipedia.org/wiki/Adoptium#Eclipse_Temurin",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7179,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-69",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7180,
+    "url": "https://en.wikipedia.org/wiki/Apache_PDFBox",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7181,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-19",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7182,
+    "url": "https://en.wikipedia.org/wiki/Micronaut_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7183,
+    "url": "https://en.wikipedia.org/wiki/Java_Astrodynamics_Toolkit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7184,
+    "url": "https://en.wikipedia.org/wiki/Object_Oriented_Data_Technology",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7185,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-27",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7186,
+    "url": "https://en.wikipedia.org/wiki/WebSocket",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7187,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-71",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7188,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-28",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7189,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-70",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7190,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-29",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7191,
+    "url": "https://en.wikipedia.org/wiki/Infinispan",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7192,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-23",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7193,
+    "url": "https://en.wikipedia.org/wiki/Netty_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7194,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-24",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7195,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-25",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7196,
+    "url": "https://en.wikipedia.org/wiki/File:Wikibooks-logo.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7198,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-77",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7199,
+    "url": "https://en.wikipedia.org/wiki/File:Commons-logo.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7200,
+    "url": "https://en.wikipedia.org/wiki/ECMAScript",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7201,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-76",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7202,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-79",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7203,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7204,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-78",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7205,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-21",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7206,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-73",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7207,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-72",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7208,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-75",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7209,
+    "url": "https://en.wikipedia.org/wiki/List_of_compilers#Java_compilers",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7210,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-74",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7211,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-i18n-87",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7212,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-gambas-15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7213,
+    "url": "https://en.wikipedia.org/wiki/PersonalJava",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7214,
+    "url": "https://aleph.nkp.cz/F/?func\u003dfind-c\u0026local_base\u003daut\u0026ccl_term\u003dica\u003dph117027\u0026CON_LNG\u003dENG",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7215,
+    "url": "https://www.infoworld.com/article/2077265/so-why-did-they-decide-to-call-it-java-.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7216,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Corporation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7217,
+    "url": "https://en.wikipedia.org/wiki/MicroSPARC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7218,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-80",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7219,
+    "url": "https://en.wikipedia.org/wiki/Java_Platform_Module_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7220,
+    "url": "https://en.wikipedia.org/wiki/Generics_in_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7221,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-16",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7222,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-82",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7223,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-17",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7224,
+    "url": "https://en.wikipedia.org/wiki/CruiseControl",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7225,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7226,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7227,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-13",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7228,
+    "url": "https://openjdk.org/projects/jdk/21/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7229,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Coherence",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7230,
+    "url": "https://en.wikipedia.org/wiki/Exception_handling",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7231,
+    "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7232,
+    "url": "https://web.archive.org/web/20060825082008/http://www.open-std.org/JTC1/SC22/JSG/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7233,
+    "url": "https://web.archive.org/web/20120905004527/http://www.cs.berkeley.edu/~wkahan/JAVAhurt.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7234,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-89",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7235,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7236,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-84",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7237,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-83",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7238,
+    "url": "http://www.jcp.org/en/home/index",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7239,
+    "url": "https://en.wikipedia.org/wiki/Andy_Bechtolsheim",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7240,
+    "url": "https://en.wikipedia.org/wiki/ARM_architecture_family",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7241,
+    "url": "https://en.wikipedia.org/wiki/Proprietary_license",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7242,
+    "url": "https://en.wikipedia.org/wiki/ZFS+",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7243,
+    "url": "https://web.archive.org/web/20190423084450/https://arstechnica.com/tech-policy/2019/01/google-asks-supreme-court-to-overrule-disastrous-ruling-on-api-copyrights/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7244,
+    "url": "https://en.wikipedia.org/wiki/Assembly_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7245,
+    "url": "https://en.wikipedia.org/wiki/Apache_Solr",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7246,
+    "url": "https://en.wikipedia.org/wiki/JAXB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7247,
+    "url": "https://en.wikipedia.org/wiki/List_(abstract_data_type)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7248,
+    "url": "https://en.wikipedia.org/wiki/OptimJ",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7249,
+    "url": "https://en.wikipedia.org/wiki/Encog",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7250,
+    "url": "https://openjdk.org/projects/jdk/24/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7251,
+    "url": "https://en.wikipedia.org/wiki/JavaStation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7252,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-89",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7253,
+    "url": "https://en.wikipedia.org/wiki/Apache_Shiro",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7254,
+    "url": "https://en.wikipedia.org/wiki/Apache_Geronimo",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7255,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-java_ee-51",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7256,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7257,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-84",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7258,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7259,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-13",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7260,
+    "url": "https://en.wikipedia.org/wiki/Graphical_control_element",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7261,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7262,
+    "url": "https://arstechnica.com/tech/2012/05/google-wins-crucial-api-ruling-oracles-case-decimated/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7263,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Application_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7264,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-80",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7265,
+    "url": "https://en.wikipedia.org/wiki/Free_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7266,
+    "url": "https://en.wikipedia.org/wiki/Java_Collections_Framework",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7267,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-82",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7268,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-83",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7269,
+    "url": "https://en.wikipedia.org/wiki/Sun_Fire_12K",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7270,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-19",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7271,
+    "url": "https://en.wikipedia.org/wiki/Sun_Visualization_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7272,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-17",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7273,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-16",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7274,
+    "url": "https://en.wikipedia.org/wiki/Dalvik_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7275,
+    "url": "https://en.wikipedia.org/wiki/John_Guttag",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7276,
+    "url": "http://www.informit.com/articles/article.aspx?p\u003d2832404\u0026seqNum\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7277,
+    "url": "https://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7278,
+    "url": "https://en.wikipedia.org/wiki/Apache_Harmony",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7279,
+    "url": "https://en.wikipedia.org/wiki/Fantom_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7280,
+    "url": "https://en.wikipedia.org/wiki/Solaris_(operating_system)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7281,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-77",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7282,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-78",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7283,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-79",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7284,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-73",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7285,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-21",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7286,
+    "url": "https://en.wikipedia.org/wiki/Java_applet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7287,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-74",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7288,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-24",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7289,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-75",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7290,
+    "url": "https://en.wikipedia.org/wiki/Java_(software_platform)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7291,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-23",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7292,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-76",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7293,
+    "url": "https://en.wikipedia.org/wiki/Cobalt_Networks",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7294,
+    "url": "http://www.artima.com/designtechniques/exceptions.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7295,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-70",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7296,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7297,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-71",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7298,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-72",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7299,
+    "url": "https://en.wikipedia.org/wiki/Javadoc",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7300,
+    "url": "http://queue.acm.org/detail.cfm?id\u003d1017013",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7301,
+    "url": "https://en.wikipedia.org/wiki/Sun_Constellation_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7302,
+    "url": "https://en.wikipedia.org/wiki/Akka_(toolkit)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7303,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-29",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7304,
+    "url": "https://web.archive.org/web/20080211111923/http://www.jelovic.com/articles/why_java_is_slow.htm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7305,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-25",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7306,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_March_2026",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7307,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-28",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7308,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Verifiability#Burden_of_evidence",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7309,
+    "url": "https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7310,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-27",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7311,
+    "url": "https://en.wikipedia.org/wiki/Fortran",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7312,
+    "url": "https://inside.java/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7313,
+    "url": "https://books.google.com/books?id\u003d0rUtBAAAQBAJ\u0026pg\u003dPAPA133",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7314,
+    "url": "https://en.wikipedia.org/wiki/Orion_Application_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7315,
+    "url": "https://en.wikipedia.org/wiki/Category:CS1:_unfit_URL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7316,
+    "url": "https://en.wikipedia.org/wiki/Google_Web_Toolkit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7317,
+    "url": "https://openjdk.org/projects/jdk/26/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7318,
+    "url": "https://en.wikipedia.org/wiki/Essbase",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7319,
+    "url": "https://en.wikipedia.org/wiki/Java_8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7320,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-66",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7321,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-67",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7322,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-68",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7323,
+    "url": "https://en.wikipedia.org/wiki/S2CID_(identifier)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7324,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-69",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7325,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-33",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7326,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-62",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7327,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-32",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7328,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-63",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7329,
+    "url": "https://en.wikipedia.org/wiki/Oracle_ZFS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7330,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-35",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7331,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-34",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7332,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-31",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7333,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-60",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7334,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-30",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7335,
+    "url": "https://web.archive.org/web/20150107034738/http://www.oracle.com/technetwork/java/embedded/javacard/overview/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7336,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-61",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7337,
+    "url": "https://web.archive.org/web/20110925050249/http://java.sun.com/docs/books/vmspec/2nd-edition/html/VMSpecTOC.doc.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7338,
+    "url": "https://en.wikipedia.org/wiki/Java_Platform,_Standard_Edition",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7339,
+    "url": "https://en.wikipedia.org/wiki/Sun_Neptune",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7340,
+    "url": "https://en.wikipedia.org/wiki/Concurrent_computing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7341,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-37",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7342,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-BarbaraLiskov_3-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7343,
+    "url": "https://arxiv.org/pdf/1908.11685",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7344,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-36",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7345,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-BarbaraLiskov_3-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7346,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-39",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7347,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-BarbaraLiskov_3-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7348,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Java_sidebar?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7349,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-38",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7350,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-BarbaraLiskov_3-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7351,
+    "url": "https://en.wikipedia.org/wiki/Bill_Joy",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7352,
+    "url": "https://en.wikipedia.org/wiki/Bouncy_Castle_(cryptography)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7353,
+    "url": "https://en.wikipedia.org/wiki/Spock_(testing_framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7354,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_October_2025",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7355,
+    "url": "https://en.wikipedia.org/wiki/Associative_array",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7356,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-59",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7357,
+    "url": "https://www.supremecourt.gov/opinions/20pdf/18-956_d18f.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7358,
+    "url": "https://en.wikipedia.org/wiki/Open_Source_University_Meetup",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7359,
+    "url": "https://openjdk.org/projects/jdk/25/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7360,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-55",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7361,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-56",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7362,
+    "url": "https://en.wikipedia.org/wiki/Objective-C",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7363,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-57",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7364,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-44",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7365,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-43",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7366,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-jdk26-47",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7367,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-52",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7368,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-53",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7369,
+    "url": "https://blogs.oracle.com/java-platform-group/entry/moving_to_a_plugin_free",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7370,
+    "url": "https://en.wikipedia.org/wiki/Jena_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7371,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-40",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7372,
+    "url": "https://en.wikipedia.org/wiki/Java_package",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7373,
+    "url": "https://en.wikipedia.org/wiki/Curriki",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7374,
+    "url": "https://en.wikipedia.org/wiki/Category:Wikipedia_articles_in_need_of_updating_from_February_2026",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7375,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-42",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7376,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-41",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7377,
+    "url": "https://en.wikipedia.org/wiki/Client_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7378,
+    "url": "https://web.archive.org/web/20200802033524/https://docs.oracle.com/javase/7/docs/api/java/applet/Applet.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7379,
+    "url": "https://en.wikipedia.org/wiki/High-level_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7380,
+    "url": "https://en.wikipedia.org/wiki/SavaJe",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7381,
+    "url": "https://en.wikipedia.org/wiki/Java_platform",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7382,
+    "url": "https://en.wikipedia.org/wiki/Elasticsearch",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7383,
+    "url": "https://en.wikipedia.org/wiki/Fair_use",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7384,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Wikimedia_sister_projects",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7385,
+    "url": "https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7386,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_software_and_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7387,
+    "url": "https://en.wikipedia.org/wiki/C_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7388,
+    "url": "https://en.wikipedia.org/wiki/Arthur_van_Hoff",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7389,
+    "url": "https://en.wikipedia.org/wiki/Java_Development_Kit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7390,
+    "url": "https://en.wikipedia.org/wiki/Lambda_(programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7391,
+    "url": "https://web.archive.org/web/20211028165746/https://www.baeldung.com/graal-java-jit-compiler",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7392,
+    "url": "https://en.wikipedia.org/wiki/Vala_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7393,
+    "url": "https://en.wikipedia.org/wiki/Haskell",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7394,
+    "url": "http://onjava.com/pub/a/onjava/2002/04/17/evangelism.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7395,
+    "url": "https://en.wikipedia.org/wiki/Eclipse_Foundation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7396,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#Android",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7397,
+    "url": "https://datos.bne.es/resource/XX540033",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7398,
+    "url": "http://www.zdnet.com/news/what-is-ecma-and-why-microsoft-cares/298821",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7399,
+    "url": "https://en.wikipedia.org/wiki/Help:Maintenance_template_removal",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7400,
+    "url": "https://en.wikipedia.org/wiki/CLU_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7401,
+    "url": "https://en.wikipedia.org/wiki/Java_Naming_and_Directory_Interface",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7402,
+    "url": "https://en.wikipedia.org/wiki/Java_Media_Framework",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7403,
+    "url": "https://blogs.oracle.com/java-platform-group/introducing-java-se-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7404,
+    "url": "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7405,
+    "url": "https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7406,
+    "url": "https://web.archive.org/web/20150119144223/http://www.programmerinterview.com/index.php/java-questions/jvm-platform-dependent/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7407,
+    "url": "https://en.wikiversity.org/wiki/Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7408,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-jdk24_45-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7409,
+    "url": "https://en.wikipedia.org/wiki/Hibernate_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7410,
+    "url": "https://web.archive.org/web/20200916092332/https://blogs.oracle.com/java-platform-group/the-arrival-of-java-15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7411,
+    "url": "https://en.wikipedia.org/wiki/Oracle_NoSQL_Database",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7412,
+    "url": "https://en.wikipedia.org/wiki/Open-source_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7413,
+    "url": "https://en.wikipedia.org/wiki/Project_Looking_Glass",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7414,
+    "url": "https://en.wikipedia.org/wiki/Indonesia",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7415,
+    "url": "https://en.wikipedia.org/wiki/UltraSPARC_III",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7416,
+    "url": "https://en.wikipedia.org/wiki/Apache_Kafka",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7417,
+    "url": "https://en.wikipedia.org/wiki/Category:All_articles_needing_additional_references",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7418,
+    "url": "http://msdn.microsoft.com/en-us/library/ms228498%28v\u003dvs.90%29.aspx",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7419,
+    "url": "https://en.wikipedia.org/wiki/Network_File_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7420,
+    "url": "https://www.oracle.com/technetwork/articles/java/index-137868.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7421,
+    "url": "https://days2011.scala-lang.org/sites/days2011/files/ws3-1-Hundt.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7422,
+    "url": "https://en.wikipedia.org/wiki/HotSpot_(virtual_machine)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7423,
+    "url": "https://web.archive.org/web/20190619200811/https://www.oracle.com/technetwork/java/javase/9-deprecated-features-3745636.html#JDK-8074165",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7424,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Certification_Program",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7425,
+    "url": "http://blogs.technet.com/b/mmpc/archive/2010/10/18/have-you-checked-the-java.aspx",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7426,
+    "url": "https://en.wikipedia.org/wiki/Oracle_iPlanet_Web_Proxy_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7427,
+    "url": "https://java.sun.com/features/1998/05/birthday.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7428,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-wikidata-69fd77bc6aa38460e2a59627bbc7a62101f8fa61-v20_2-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7429,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-FOOTNOTEBloch20181–4§\u0026nbsp;1_Introduction_81-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7430,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-FOOTNOTEBloch20181–4§\u0026nbsp;1_Introduction_81-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7431,
+    "url": "https://en.wikipedia.org/wiki/Adoptium",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7432,
+    "url": "https://docs.oracle.com/javafx/2/get_started/hello_world.htm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7434,
+    "url": "https://en.wikipedia.org/wiki/End_user",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7435,
+    "url": "https://en.wikipedia.org/wiki/Manifest_typing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7436,
+    "url": "https://en.wikipedia.org/wiki/Apache_Flume",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7437,
+    "url": "https://en.wikipedia.org/wiki/Colt_(libraries)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7438,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Java_platforms",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7439,
+    "url": "https://en.wikipedia.org/wiki/Apache_HBase",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7440,
+    "url": "https://en.wikipedia.org/wiki/ColdFusion",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7441,
+    "url": "https://web.archive.org/web/20140506214653/http://www.oracle.com/technetwork/java/langenv-140151.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7442,
+    "url": "https://en.wikipedia.org/wiki/PHP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7443,
+    "url": "https://en.wikipedia.org/wiki/Memory_leak",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7444,
+    "url": "https://en.wikipedia.org/wiki/Variadic_function",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7445,
+    "url": "https://en.wikipedia.org/wiki/File:James_Gosling_2008.jpg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7446,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7447,
+    "url": "https://en.wikipedia.org/wiki/Java_compiler",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7448,
+    "url": "https://en.wikipedia.org/wiki/Generational_list_of_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7449,
+    "url": "https://en.wikipedia.org/wiki/Apache_Sling",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7450,
+    "url": "https://en.wikipedia.org/wiki/Java_class_file",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7451,
+    "url": "https://en.wikipedia.org/wiki/Ultra_1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7452,
+    "url": "https://docs.oracle.com/javase/7/docs/api/java/applet/Applet.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7453,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7454,
+    "url": "https://en.wikipedia.org/wiki/Ultra_80",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7455,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7456,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7457,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7458,
+    "url": "https://en.wikipedia.org/wiki/Ultra_2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7459,
+    "url": "https://en.wikipedia.org/wiki/Dynamic_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7460,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7461,
+    "url": "https://en.wikipedia.org/wiki/Java_Database_Connectivity",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7462,
+    "url": "https://www.oracle.com/java/technologies/java-se-support-roadmap.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7463,
+    "url": "https://en.wikipedia.org/wiki/StarOffice",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7464,
+    "url": "https://www.wikidata.org/wiki/Q251?uselang\u003den#P348",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7465,
+    "url": "https://en.wikipedia.org/wiki/COBOL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7466,
+    "url": "https://en.wikipedia.org/wiki/Class-based_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7467,
+    "url": "https://en.wikipedia.org/wiki/JEUS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7468,
+    "url": "https://en.wikipedia.org/wiki/List_of_acquisitions_by_Oracle",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7469,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_short_description",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7470,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7471,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7472,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Fusion_Middleware",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7473,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7474,
+    "url": "https://en.wikipedia.org/wiki/Apache_Samza",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7475,
+    "url": "https://en.wikipedia.org/wiki/Category:Sun_Microsystems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7476,
+    "url": "https://en.wikipedia.org/wiki/JavaOne",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7477,
+    "url": "https://en.wikipedia.org/wiki/Apache_Giraph",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7478,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-msdn_operator_overloading_64-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7479,
+    "url": "https://en.wikipedia.org/wiki/GroovyLab",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7480,
+    "url": "https://en.wikipedia.org/wiki/Category:Multi-paradigm_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7481,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-cnet_appeals-93",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7482,
+    "url": "https://oracle.com/java/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7483,
+    "url": "https://en.wikipedia.org/wiki/Apple_Inc.",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7484,
+    "url": "https://en.wikipedia.org/wiki/Jakarta_Faces",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7485,
+    "url": "https://en.wikipedia.org/wiki/SBus",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7486,
+    "url": "https://en.wikipedia.org/wiki/NIS+",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7487,
+    "url": "https://en.wikipedia.org/wiki/JAR_(file_format)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7488,
+    "url": "https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7489,
+    "url": "https://en.wikipedia.org/wiki/Sun_Java_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7490,
+    "url": "https://en.wikipedia.org/wiki/Jakarta_Server_Pages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7491,
+    "url": "http://www.jelovic.com/articles/why_java_is_slow.htm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7492,
+    "url": "https://en.wikipedia.org/wiki/Syntax_(programming_languages)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7493,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-design_goals_18-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7494,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-design_goals_18-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7495,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-design_goals_18-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7496,
+    "url": "https://en.wikipedia.org/wiki/Category:Short_description_matches_Wikidata",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7497,
+    "url": "https://www.oracle.com/technetwork/java/intro-141325.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7498,
+    "url": "https://en.wikipedia.org/wiki/SuperSPARC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7499,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-java_ee_51-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7500,
+    "url": "https://en.wikipedia.org/wiki/Ultra_60",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7501,
+    "url": "https://en.wikipedia.org/wiki/SPARC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7502,
+    "url": "http://www.computer.org/csdl/proceedings/hicss/2001/0981/05/09815015.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7503,
+    "url": "https://www.cnet.com/news/court-sides-with-oracle-over-android-in-java-patent-appeal/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7504,
+    "url": "https://adoptium.net/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7505,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-cnet_appeals_93-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7506,
+    "url": "https://en.wikipedia.org/wiki/Memory_management",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7507,
+    "url": "https://en.wikipedia.org/wiki/File:Sun-Logo.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7508,
+    "url": "https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7509,
+    "url": "https://web.archive.org/web/20141231053232/http://docs.oracle.com/javase/tutorial/i18n/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7510,
+    "url": "https://en.wikipedia.org/wiki/Barracuda_(web_framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7511,
+    "url": "https://en.wikipedia.org/wiki/Lucee",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7512,
+    "url": "https://www.oracle.com/technetwork/java/embedded/javame/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7513,
+    "url": "https://en.wikipedia.org/wiki/Google_Guava",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7514,
+    "url": "https://en.wikipedia.org/wiki/GeoTools",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7515,
+    "url": "https://web.archive.org/web/20100131091008/http://www.oracle.com/us/technologies/java/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7516,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-java_se_50-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7517,
+    "url": "http://dev.java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7518,
+    "url": "https://en.wikipedia.org/wiki/Drools",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7519,
+    "url": "https://en.wikipedia.org/wiki/Ultra_30",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7520,
+    "url": "https://web.archive.org/web/20180926093144/https://blogs.oracle.com/java-platform-group/introducing-java-se-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7521,
+    "url": "https://en.wikipedia.org/wiki/Template:Cite_web",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7522,
+    "url": "https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/HttpClient.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7523,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Exalogic",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7524,
+    "url": "https://en.wikipedia.org/wiki/Template:Java_sidebar",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7525,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Rdb",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7526,
+    "url": "https://en.wikipedia.org/wiki/Sun_xVM",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7527,
+    "url": "https://adoptium.net/support/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7528,
+    "url": "https://en.wikipedia.org/wiki/Gilad_Bracha",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7529,
+    "url": "https://en.wikipedia.org/wiki/PL/SQL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7530,
+    "url": "https://en.wikipedia.org/wiki/Grails_(framework)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7531,
+    "url": "https://en.wikipedia.org/wiki/HotSpot",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7532,
+    "url": "https://www.wikidata.org/wiki/Q251#identifiers",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7533,
+    "url": "http://oracle.com/java/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7534,
+    "url": "https://www.infoworld.com/article/3305073/removed-from-jdk-11-javafx-11-arrives-as-a-standalone-module.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7535,
+    "url": "https://en.wikipedia.org/wiki/Execution_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7536,
+    "url": "https://en.wikipedia.org/wiki/Matrix_Toolkit_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7537,
+    "url": "https://en.wikipedia.org/wiki/MyBatis",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7538,
+    "url": "https://en.wikipedia.org/wiki/Hyperion_Solutions",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7539,
+    "url": "https://arstechnica.com/tech-policy/2018/03/googles-use-of-the-java-api-packages-was-not-fair-appeals-court-rules/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7540,
+    "url": "https://java.sun.com/docs/books/jls/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7541,
+    "url": "https://en.wikipedia.org/wiki/Category:Class-based_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7542,
+    "url": "https://en.wikipedia.org/wiki/Apache_Xerces",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7543,
+    "url": "https://en.wikipedia.org/wiki/IntelliJ_IDEA",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7544,
+    "url": "https://en.wikipedia.org/wiki/Apache_OpenNLP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7545,
+    "url": "https://web.archive.org/web/20190924081919/https://arstechnica.com/tech-policy/2018/03/googles-use-of-the-java-api-packages-was-not-fair-appeals-court-rules/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7546,
+    "url": "https://en.wikipedia.org/wiki/Apache_Felix",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7547,
+    "url": "https://web.archive.org/web/20150716194245/http://queue.acm.org/detail.cfm?id\u003d1017013",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7548,
+    "url": "https://en.wikipedia.org/wiki/Chapel_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7549,
+    "url": "https://en.wikipedia.org/wiki/Google_LLC_v._Oracle_America,_Inc.",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7550,
+    "url": "https://en.wikipedia.org/wiki/Category:Statically_typed_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7551,
+    "url": "http://java.sun.com/docs/white/delegates.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7552,
+    "url": "https://en.wikipedia.org/wiki/HTML",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7553,
+    "url": "https://web.archive.org/web/20160314102242/http://www.forbes.com/sites/oracle/2015/05/20/javas-20-years-of-innovation/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7554,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7555,
+    "url": "https://en.wikipedia.org/wiki/APL_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7556,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-Jelovic-54",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7557,
+    "url": "https://en.wikipedia.org/wiki/Javanese_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7558,
+    "url": "https://en.wikipedia.org/wiki/Barbara_Liskov",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7559,
+    "url": "https://en.wikipedia.org/wiki/Low-level_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7560,
+    "url": "https://en.wikipedia.org/wiki/Interpreter_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7561,
+    "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7562,
+    "url": "https://en.wikipedia.org/wiki/Vert.x",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7563,
+    "url": "https://web.archive.org/web/20110319065438/http://www.barrycornelius.com/papers/java5/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7565,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-java_card_48-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7566,
+    "url": "https://web.archive.org/web/20210813193857/https://www.computerweekly.com/feature/Write-once-run-anywhere",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7567,
+    "url": "https://en.wikipedia.org/wiki/Ceylon_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7568,
+    "url": "https://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7569,
+    "url": "https://en.wikipedia.org/wiki/Sun_Modular_Datacenter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7570,
+    "url": "https://en.wikipedia.org/wiki/OjAlgo",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7571,
+    "url": "https://en.wikipedia.org/wiki/Ultra_24",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7572,
+    "url": "https://en.wikipedia.org/wiki/ML_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7573,
+    "url": "https://en.wikipedia.org/wiki/Filename_extension",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7574,
+    "url": "https://web.archive.org/web/20171009041815/http://gambaswiki.org/wiki/doc/intro?nh\u0026l\u003den",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7575,
+    "url": "https://en.wikipedia.org/wiki/Java_Card",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7576,
+    "url": "https://en.wikipedia.org/wiki/Comparison_of_C_Sharp_and_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7577,
+    "url": "https://en.wikipedia.org/wiki/ObjectWeb_ASM",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7578,
+    "url": "https://en.wikipedia.org/wiki/Internationalization_and_localization",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7579,
+    "url": "https://en.wikipedia.org/wiki/History_of_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7580,
+    "url": "https://en.wikipedia.org/wiki/System_Service_Processor",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7581,
+    "url": "https://en.wikipedia.org/wiki/Michael_Boskin",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7582,
+    "url": "https://en.wikipedia.org/wiki/Type_system",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7583,
+    "url": "https://en.wikipedia.org/wiki/Comparison_of_Java_and_C++",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7584,
+    "url": "https://en.wikipedia.org/wiki/JS++",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7585,
+    "url": "https://en.wikipedia.org/wiki/Association_for_Computing_Machinery",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7586,
+    "url": "https://en.wikipedia.org/wiki/Apache_Nutch",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7587,
+    "url": "https://en.wikipedia.org/wiki/Software_portability",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7588,
+    "url": "https://en.wikipedia.org/wiki/Play_Framework",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7589,
+    "url": "https://web.archive.org/web/20111124090716/http://www.java.com/en/about/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7590,
+    "url": "https://en.wikipedia.org/wiki/Pack200",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7591,
+    "url": "https://en.wikipedia.org/wiki/Category:Webarchive_template_wayback_links",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7592,
+    "url": "https://web.archive.org/web/20170120164551/http://arstechnica.com/tech-policy/2016/05/google-wins-trial-against-oracle-as-jury-finds-android-is-fair-use/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7593,
+    "url": "https://en.wikipedia.org/wiki/WAR_(file_format)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7594,
+    "url": "https://web.archive.org/web/20101105031239/http://nighthacks.com/roller/jag/entry/time_to_move_on",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7595,
+    "url": "https://en.wikipedia.org/wiki/HTTP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7596,
+    "url": "https://en.wikipedia.org/wiki/StorageTek",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7597,
+    "url": "https://en.wikipedia.org/wiki/Parallel_Colt",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7598,
+    "url": "https://en.wikipedia.org/wiki/Boolean_data_type",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7599,
+    "url": "https://en.wikipedia.org/wiki/Pig_(programming_tool)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7600,
+    "url": "https://web.archive.org/web/20070413072630/http://www.artima.com/weblogs/viewpost.jsp?thread\u003d7555",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7601,
+    "url": "https://en.wikipedia.org/wiki/Processing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7602,
+    "url": "https://en.wikipedia.org/wiki/Apache_Accumulo",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7603,
+    "url": "https://web.archive.org/web/20090220171410/http://darksleep.com/player/JavaAndUnsignedTypes.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7604,
+    "url": "http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7605,
+    "url": "https://en.wikipedia.org/wiki/Sun4d",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7606,
+    "url": "https://en.wikipedia.org/wiki/SAP_NetWeaver_Application_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7607,
+    "url": "https://en.wikipedia.org/wiki/Network_Information_Service",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7608,
+    "url": "https://en.wikipedia.org/wiki/Foreach_loop",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7609,
+    "url": "https://en.wikipedia.org/wiki/Apache_Cocoon",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7610,
+    "url": "https://en.wikipedia.org/wiki/O\u0027Reilly_Media",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7611,
+    "url": "https://en.wikipedia.org/wiki/Object_lifetime",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7612,
+    "url": "https://web.archive.org/web/20201014141716/https://www.infoworld.com/article/3305073/removed-from-jdk-11-javafx-11-arrives-as-a-standalone-module.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7613,
+    "url": "https://en.wikipedia.org/wiki/GitHub",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7614,
+    "url": "https://www.oracle.com/technetwork/java/javase/overview/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7615,
+    "url": "https://en.wikipedia.org/wiki/Ecma_International",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7616,
+    "url": "https://en.wikipedia.org/wiki/Computer_security",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7617,
+    "url": "https://en.wikipedia.org/wiki/Java_API_for_XML_Processing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7618,
+    "url": "https://en.wikipedia.org/wiki/Logical_address",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7619,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-13-468599-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7620,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7621,
+    "url": "https://en.wikipedia.org/wiki/UltraSPARC_T1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7622,
+    "url": "https://en.wikipedia.org/wiki/User_agent",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7623,
+    "url": "https://en.wikipedia.org/wiki/ISBN_(identifier)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7624,
+    "url": "https://en.wikipedia.org/wiki/UltraSPARC_T2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7625,
+    "url": "https://docs.oracle.com/javase/tutorial/uiswing/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7626,
+    "url": "https://en.wikipedia.org/wiki/Mesa_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7627,
+    "url": "https://en.wikipedia.org/wiki/Vinod_Khosla",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7628,
+    "url": "https://en.wikipedia.org/wiki/PeopleSoft",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7629,
+    "url": "https://en.wikipedia.org/wiki/H2_Database_Engine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7630,
+    "url": "https://en.wikipedia.org/wiki/Montalvo_Systems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7631,
+    "url": "https://en.wikipedia.org/wiki/Visual_Studio_Code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7632,
+    "url": "https://en.wikipedia.org/wiki/Apache_Tika",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7633,
+    "url": "https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7634,
+    "url": "https://octoverse.github.com/2022/top-programming-languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7635,
+    "url": "https://en.wikipedia.org/wiki/Template:Programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7636,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_frameworks",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7637,
+    "url": "https://docs.oracle.com/javaee/5/tutorial/doc/bnagy.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7638,
+    "url": "https://en.wikipedia.org/wiki/File:Wikiversity_logo_2017.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7639,
+    "url": "https://en.wikipedia.org/wiki/Patrick_Naughton?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7640,
+    "url": "https://en.wikipedia.org/wiki/Java_syntax",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7641,
+    "url": "https://en.wikipedia.org/wiki/Machine_code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7642,
+    "url": "https://en.wikipedia.org/wiki/Tree_structure",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7643,
+    "url": "https://web.archive.org/web/20160205114946/http://chapel.cray.com/spec/spec-0.98.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7644,
+    "url": "https://en.wikipedia.org/wiki/Computing_platform",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7645,
+    "url": "http://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7646,
+    "url": "https://en.wikipedia.org/wiki/Jblas:_Linear_Algebra_for_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7647,
+    "url": "https://en.wikipedia.org/wiki/OpenSolaris",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7648,
+    "url": "https://en.wikipedia.org/wiki/SPARC_T_series",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7649,
+    "url": "https://en.wikipedia.org/wiki/Codename_One",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7650,
+    "url": "https://en.wikipedia.org/wiki/Apache_Lucene",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7651,
+    "url": "https://en.wikipedia.org/wiki/Lua",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7652,
+    "url": "https://en.wikipedia.org/wiki/Smalltalk",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7653,
+    "url": "https://en.wikipedia.org/wiki/Cerner",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7654,
+    "url": "https://en.wikipedia.org/wiki/Debugger",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7655,
+    "url": "https://en.wikipedia.org/wiki/OpenOffice.org",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7656,
+    "url": "https://en.wikipedia.org/wiki/Application_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7657,
+    "url": "https://en.wikipedia.org/wiki/UCSD_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7658,
+    "url": "https://en.wikipedia.org/wiki/UltraSPARC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7659,
+    "url": "https://en.wikipedia.org/wiki/Virtual_Iron",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7660,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Application_Development_Framework",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7661,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_software_and_tools#Math_and_scientific_libraries",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7662,
+    "url": "https://en.wikipedia.org/wiki/Android_application",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7663,
+    "url": "https://en.wikipedia.org/wiki/Apache_ZooKeeper",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7664,
+    "url": "https://en.wikipedia.org/wiki/Perl",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7665,
+    "url": "https://web.archive.org/web/20070310235103/http://www.sun.com/smi/Press/sunflash/1996-01/sunflash.960123.10561.xml",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7666,
+    "url": "https://en.wikipedia.org/wiki/Java_ConcurrentMap",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7667,
+    "url": "https://en.wikipedia.org/wiki/Swift_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7668,
+    "url": "https://en.wikipedia.org/wiki/TOPS_(file_server)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7669,
+    "url": "https://en.wikipedia.org/wiki/Set_(abstract_data_type)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7670,
+    "url": "https://en.wikipedia.org/wiki/Apache_Wicket",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7671,
+    "url": "https://en.wikipedia.org/wiki/XML",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7672,
+    "url": "https://en.wikipedia.org/wiki/Cobalt_RaQ",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7673,
+    "url": "https://en.wikipedia.org/wiki/Java_coffee",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7674,
+    "url": "https://en.wikipedia.org/wiki/MySQL_AB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7675,
+    "url": "https://en.wikipedia.org/wiki/Caml",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7676,
+    "url": "https://en.wikipedia.org/wiki/Sun_Ray",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7677,
+    "url": "https://search.worldcat.org/issn/1084-4309",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7678,
+    "url": "https://en.wikipedia.org/wiki/Functional_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7679,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dJava_(programming_language)\u0026oldid\u003d1375186425",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7680,
+    "url": "http://darksleep.com/player/JavaAndUnsignedTypes.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7681,
+    "url": "https://en.wikipedia.org/wiki/Comment_(computer_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7682,
+    "url": "https://en.wikipedia.org/wiki/Wayback_Machine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7683,
+    "url": "https://en.wikipedia.org/wiki/Doi_(identifier)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7684,
+    "url": "https://www.forbes.com/sites/oracle/2015/05/20/javas-20-years-of-innovation/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7685,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-jdk25-46",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7686,
+    "url": "https://en.wikipedia.org/wiki/BASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7687,
+    "url": "https://en.wikipedia.org/wiki/Jakarta_EE",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7688,
+    "url": "https://en.wikipedia.org/wiki/Category:C_programming_language_family",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7689,
+    "url": "https://en.wikipedia.org/wiki/Apache_Avro",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7690,
+    "url": "https://en.wikipedia.org/wiki/SunOS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7691,
+    "url": "https://web.archive.org/web/20230802203718/https://octoverse.github.com/2022/top-programming-languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7692,
+    "url": "https://en.wikipedia.org/wiki/Apache_Mesos",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7693,
+    "url": "https://en.wikipedia.org/wiki/Cascading_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7694,
+    "url": "https://en.wikipedia.org/wiki/Pixo",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7695,
+    "url": "https://en.wikipedia.org/wiki/Lighthouse_Design",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7696,
+    "url": "https://en.wikipedia.org/wiki/Thymeleaf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7697,
+    "url": "https://en.wikipedia.org/wiki/File:Java_programming_language_logo.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7698,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-201-65768-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7699,
+    "url": "https://web.archive.org/web/20170312065520/https://arstechnica.com/tech-policy/2012/05/google-wins-crucial-api-ruling-oracles-case-decimated/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7700,
+    "url": "https://en.wikipedia.org/wiki/Liquibase",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7701,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-FOOTNOTEBloch201826-28§Item_7:_Eliminate_obsolete_object_references_58-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7702,
+    "url": "https://en.wikipedia.org/wiki/OpenJ9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7703,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-gambas_15-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7704,
+    "url": "https://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7705,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-FOOTNOTEBloch201826-28§Item_7:_Eliminate_obsolete_object_references_58-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7706,
+    "url": "https://en.wikipedia.org/wiki/Category:Programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7707,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-FOOTNOTEBloch201826-28§Item_7:_Eliminate_obsolete_object_references_58-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7708,
+    "url": "https://web.archive.org/web/20090105145818/http://www.computerworld.com.au/index.php/id%3B1422447371%3Bpp%3B3%3Bfp%3B4194304%3Bfpid%3B1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7709,
+    "url": "https://en.wikipedia.org/wiki/Timeline_of_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7710,
+    "url": "https://en.wikipedia.org/wiki/Software_release_life_cycle",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7711,
+    "url": "https://en.wikipedia.org/wiki/Urs_Hölzle",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7712,
+    "url": "https://en.wikipedia.org/wiki/Java_API_for_XML_Web_Services",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7713,
+    "url": "https://en.wikipedia.org/wiki/Web_Service",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7714,
+    "url": "https://en.wiktionary.org/wiki/Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7715,
+    "url": "https://en.wikipedia.org/wiki/PrimeFaces",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7716,
+    "url": "https://en.wikipedia.org/wiki/ZDNet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7717,
+    "url": "https://en.wikipedia.org/wiki/Guy_L._Steele,_Jr.",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7718,
+    "url": "https://en.wikipedia.org/wiki/BeanShell",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7719,
+    "url": "https://web.archive.org/web/20141218182906/http://www.oracle.com/technetwork/articles/java/index-137868.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7720,
+    "url": "https://en.wikipedia.org/wiki/Computer_network",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7721,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-oracle_multiple_inheritance-65",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7722,
+    "url": "https://en.wikipedia.org/wiki/Jython",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7723,
+    "url": "https://en.wikipedia.org/wiki/Input/output",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7724,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-chplspec-14",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7725,
+    "url": "https://en.wikipedia.org/wiki/Category:Oracle_Corporation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7726,
+    "url": "https://en.wikipedia.org/wiki/SuanShu_numerical_library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7727,
+    "url": "https://wiki.openjdk.org/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7728,
+    "url": "https://en.wikipedia.org/wiki/Clojure",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7729,
+    "url": "https://en.wikipedia.org/wiki/Programming_paradigm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7730,
+    "url": "https://en.wikipedia.org/wiki/Object_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7731,
+    "url": "https://en.wikipedia.org/wiki/De_facto_standard",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7732,
+    "url": "https://en.wikipedia.org/wiki/Scratch_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7733,
+    "url": "https://en.wikipedia.org/wiki/Memory_safety",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7734,
+    "url": "https://en.wikipedia.org/wiki/OpenJDK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7735,
+    "url": "https://web.archive.org/web/20100628171748/http://www.symantec.com/about/news/release/article.jsp?prid\u003d19970407_03",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7736,
+    "url": "https://en.wikipedia.org/wiki/UIMA",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7737,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#bodyContent",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7738,
+    "url": "https://en.wikipedia.org/wiki/Scala_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7739,
+    "url": "https://en.wikipedia.org/wiki/List_of_computer_books#Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7740,
+    "url": "http://www.java.com/en/about/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7741,
+    "url": "https://en.wikipedia.org/wiki/Safra_Catz",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7742,
+    "url": "https://en.wikipedia.org/wiki/NetSuite",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7743,
+    "url": "https://en.wikipedia.org/wiki/IText",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7744,
+    "url": "https://en.wikipedia.org/wiki/Motif_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7745,
+    "url": "https://en.wikipedia.org/wiki/Rich_web_application",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7746,
+    "url": "https://www.baeldung.com/graal-java-jit-compiler",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7747,
+    "url": "https://en.wikipedia.org/wiki/OpenSPARC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7748,
+    "url": "https://en.wikipedia.org/wiki/JavaFX",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7749,
+    "url": "https://en.wikipedia.org/wiki/Sun_SPOT",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7750,
+    "url": "https://en.wikipedia.org/wiki/JavaServer_Pages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7751,
+    "url": "https://en.wikipedia.org/wiki/Free_Java_implementations",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7752,
+    "url": "https://en.wikipedia.org/wiki/Category:Programming_languages_created_in_1995",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7753,
+    "url": "https://en.wikipedia.org/wiki/Android_SDK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7754,
+    "url": "https://en.wikipedia.org/wiki/ACM_Queue",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7755,
+    "url": "https://en.wikipedia.org/wiki/Outline_of_the_Java_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7756,
+    "url": "https://en.wikipedia.org/wiki/SunView",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7757,
+    "url": "https://docs.oracle.com/javase/specs/jls/se8/jls8.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7758,
+    "url": "https://en.wikipedia.org/wiki/Template:Oracle",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7759,
+    "url": "https://en.wikipedia.org/wiki/Jeffrey_Berg?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7760,
+    "url": "https://en.wikipedia.org/wiki/Beta_version",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7761,
+    "url": "https://en.wikipedia.org/wiki/File:Wiktionary-logo-en-v2.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7762,
+    "url": "https://en.wikipedia.org/wiki/Storm_(event_processor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7763,
+    "url": "https://docs.oracle.com/javase/8/docs/api/java/nio/package-summary.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7764,
+    "url": "https://en.wikipedia.org/wiki/NetBeans_IDE",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7765,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Grid_Engine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7766,
+    "url": "https://en.wikipedia.org/wiki/Lustre_(file_system)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7767,
+    "url": "https://en.wikipedia.org/wiki/Jeffrey_O._Henley",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7768,
+    "url": "https://en.wikipedia.org/wiki/JRuby",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7769,
+    "url": "https://en.wikipedia.org/wiki/ISO/IEC_JTC_1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7770,
+    "url": "https://en.wikipedia.org/wiki/Exp4j",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7771,
+    "url": "https://en.wikipedia.org/wiki/StorageTek_SL8500",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7772,
+    "url": "https://en.wikipedia.org/wiki/DTrace",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7773,
+    "url": "http://docs.oracle.com/javase/tutorial/i18n/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7774,
+    "url": "https://en.wikipedia.org/wiki/Primitive_data_type",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7775,
+    "url": "https://en.wikipedia.org/wiki/Desktop_computer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7776,
+    "url": "https://www.oracle.com/technetwork/java/javaee/overview/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7777,
+    "url": "https://www.nli.org.il/en/authorities/987007561288105171",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7778,
+    "url": "https://web.archive.org/web/20110713014816/http://cs.gmu.edu/~sean/stuff/java-objc.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7779,
+    "url": "https://en.wikipedia.org/wiki/LibGDX",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7780,
+    "url": "https://en.wikipedia.org/wiki/Reference_implementation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7781,
+    "url": "https://en.wikipedia.org/wiki/Lock-free",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7782,
+    "url": "https://en.wikipedia.org/wiki/JTS_Topology_Suite",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7783,
+    "url": "https://en.wikipedia.org/wiki/Thread_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7784,
+    "url": "https://en.wikipedia.org/wiki/Certiorari",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7785,
+    "url": "https://en.wikipedia.org/wiki/Generic_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7786,
+    "url": "https://en.wikipedia.org/wiki/Jetty_(web_server)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7787,
+    "url": "https://en.wikipedia.org/wiki/ISSN_(identifier)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7788,
+    "url": "https://en.wikipedia.org/wiki/Queue_(abstract_data_type)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7789,
+    "url": "https://en.wikipedia.org/wiki/Write_once,_run_anywhere",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7790,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Linux",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7791,
+    "url": "https://web.archive.org/web/20141217155326/http://www.oracle.com/technetwork/java/javaee/overview/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7792,
+    "url": "https://en.wikipedia.org/wiki/Category:CS1_maint:_url-status",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7793,
+    "url": "https://web.archive.org/web/20140527220942/http://grnlight.net/index.php/programming-articles/115-javaone-sun-the-bulk-of-java-is-open-sourced",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7794,
+    "url": "http://www.cs.berkeley.edu/~wkahan/JAVAhurt.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7795,
+    "url": "https://en.wikipedia.org/wiki/Java_Native_Interface",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7796,
+    "url": "https://en.wikipedia.org/wiki/Easy_Java_Simulations",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7797,
+    "url": "http://www.barrycornelius.com/papers/java5/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7798,
+    "url": "https://en.wikipedia.org/wiki/Apache_Spark#MLlib_machine_learning_library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7799,
+    "url": "https://en.wikipedia.org/wiki/Erlang_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7800,
+    "url": "https://en.wikipedia.org/wiki/MBus_(SPARC)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7801,
+    "url": "https://en.wikipedia.org/wiki/Prolog",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7802,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_compilers",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7803,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-Jelovic_54-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7804,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-Jelovic_54-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7805,
+    "url": "https://en.wikipedia.org/wiki/Ars_Technica",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7806,
+    "url": "https://web.archive.org/web/20150103045031/http://docs.oracle.com/javase/8/docs/technotes/guides/security/overview/jsoverview.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7807,
+    "url": "https://en.wikipedia.org/wiki/Duke_(mascot)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7808,
+    "url": "https://en.wikipedia.org/wiki/Java_collections_framework",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7809,
+    "url": "https://en.wikipedia.org/wiki/Siebel_Systems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7810,
+    "url": "https://en.wikipedia.org/wiki/IDG_News_Service",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7811,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Developer_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7812,
+    "url": "https://en.wikipedia.org/wiki/Java_virtual_machine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7813,
+    "url": "http://www.symantec.com/about/news/release/article.jsp?prid\u003d19970407_03",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7814,
+    "url": "https://en.wikipedia.org/wiki/SAS_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7815,
+    "url": "https://en.wikipedia.org/wiki/GraalVM",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7816,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-BarbaraLiskov-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7817,
+    "url": "https://en.wikipedia.org/wiki/Category:Java_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7818,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Java_sidebar",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7819,
+    "url": "https://en.wikipedia.org/wiki/Long-term_support",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7820,
+    "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/net/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7821,
+    "url": "https://en.wikipedia.org/wiki/Software_design",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7822,
+    "url": "https://en.wikipedia.org/wiki/Gosu_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7823,
+    "url": "https://en.wikipedia.org/wiki/Java_Desktop_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7824,
+    "url": "https://java.sun.com/docs/books/vmspec/2nd-edition/html/VMSpecTOC.doc.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7825,
+    "url": "https://en.wikipedia.org/wiki/JavaServer_Faces",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7826,
+    "url": "https://en.wikipedia.org/wiki/MySQL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7827,
+    "url": "https://en.wikipedia.org/wiki/Raku_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7828,
+    "url": "https://en.wikipedia.org/wiki/Lightweight_Java_Game_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7829,
+    "url": "https://en.wikipedia.org/wiki/Pluggable_look_and_feel",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7830,
+    "url": "https://en.wikipedia.org/wiki/Soundness",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7831,
+    "url": "https://en.wikipedia.org/wiki/Sun_Enterprise_10000",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7832,
+    "url": "https://en.wikipedia.org/wiki/Sun_Enterprise",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7833,
+    "url": "https://en.wikipedia.org/wiki/Apache_MINA",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7834,
+    "url": "https://en.wikipedia.org/wiki/Haxe",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7835,
+    "url": "https://en.wikipedia.org/wiki/William_Alsup",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7836,
+    "url": "https://en.wikipedia.org/wiki/Supreme_Court_of_the_United_States",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7837,
+    "url": "https://web.archive.org/web/20050420081440/http://java.sun.com/features/1998/05/birthday.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7838,
+    "url": "http://chapel.cray.com/spec/spec-0.98.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7839,
+    "url": "https://en.wikipedia.org/wiki/Pointer_(computer_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7840,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Verifiability",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7841,
+    "url": "https://en.wikipedia.org/wiki/MAJC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7842,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-collections_85-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7843,
+    "url": "https://www.oracle.com/technetwork/java/javase/9-deprecated-features-3745636.html#JDK-8074165",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7844,
+    "url": "https://en.wikipedia.org/wiki/Comparison_of_Java_virtual_machines",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7845,
+    "url": "https://en.wikipedia.org/wiki/Interface_(Java)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7846,
+    "url": "http://cs.gmu.edu/~sean/stuff/java-objc.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7847,
+    "url": "https://en.wikipedia.org/wiki/Sun_Open_Storage",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7848,
+    "url": "https://en.wikipedia.org/wiki/General-purpose_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7849,
+    "url": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7850,
+    "url": "https://en.wikipedia.org/wiki/Programming_paradigm#Multi-paradigm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7851,
+    "url": "https://en.wikipedia.org/wiki/Apache_Empire-db",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7852,
+    "url": "https://en.wikipedia.org/wiki/Apache_Ant",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7853,
+    "url": "https://en.wikipedia.org/wiki/VisualVM",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7854,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-:0-22",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7855,
+    "url": "https://en.wikipedia.org/wiki/Category:American_inventions",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7856,
+    "url": "https://en.wikipedia.org/wiki/Objective-C#Protocols",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7857,
+    "url": "https://en.wikipedia.org/wiki/Sun_Netra",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7858,
+    "url": "https://en.wikipedia.org/wiki/Payara_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7859,
+    "url": "https://web.archive.org/web/20130123204103/http://www.oracle.com/technetwork/java/intro-141325.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7860,
+    "url": "https://en.wikipedia.org/wiki/Afara_Websystems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7861,
+    "url": "https://en.wikiversity.org/wiki/Java%20Platform,%20Enterprise%20Edition/Java%20EE%20Tutorial",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7862,
+    "url": "https://en.wikipedia.org/wiki/Berkeley_DB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7863,
+    "url": "https://web.archive.org/web/20210405140150/https://www.supremecourt.gov/opinions/20pdf/18-956_d18f.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7864,
+    "url": "https://en.wikipedia.org/wiki/Devoxx",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7865,
+    "url": "https://en.wikipedia.org/wiki/Standard_library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7866,
+    "url": "https://en.wikipedia.org/wiki/Spring_Security",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7867,
+    "url": "https://en.wikipedia.org/wiki/IBATIS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7868,
+    "url": "https://en.wikipedia.org/wiki/Category:Object-oriented_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7869,
+    "url": "https://en.wikipedia.org/wiki/Class_(programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7870,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-oracle_multiple_inheritance_65-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7871,
+    "url": "https://search.worldcat.org/issn/0261-3077",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7872,
+    "url": "https://en.wikipedia.org/wiki/Android_software_development#SDK",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7873,
+    "url": "https://en.wikipedia.org/wiki/Sun_Fire",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7874,
+    "url": "https://en.wikipedia.org/wiki/JavaScript",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7875,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_software_and_tools#Libraries",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7876,
+    "url": "https://en.wikipedia.org/wiki/Tablet_computer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7877,
+    "url": "https://en.wikipedia.org/wiki/Criticism_of_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7878,
+    "url": "https://web.archive.org/web/20210813193850/https://www.informit.com/articles/article.aspx?p\u003d2832404\u0026seqNum\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7879,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Java_platforms",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7880,
+    "url": "https://en.wikipedia.org/wiki/Double-ended_queue",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7881,
+    "url": "https://en.wikipedia.org/wiki/Apache_Jackrabbit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7882,
+    "url": "https://web.archive.org/web/20230825195416/https://github.com/readme/featured/java-programming-language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7883,
+    "url": "https://en.wikipedia.org/wiki/Template:Java_platforms",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7884,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Secure_Global_Desktop",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7885,
+    "url": "https://en.wikipedia.org/wiki/JBoss_Seam",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7886,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7887,
+    "url": "https://en.wikipedia.org/wiki/IBM_WebSphere_Application_Server_Community_Edition",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7888,
+    "url": "https://en.wikipedia.org/wiki/Oracle_SOA_Suite",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7889,
+    "url": "https://en.wikipedia.org/wiki/JasperReports",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7890,
+    "url": "https://en.wikipedia.org/wiki/Oracle_WebLogic_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7891,
+    "url": "https://en.wikipedia.org/wiki/Java_Class_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7892,
+    "url": "https://en.wikipedia.org/wiki/Category:Compiled_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7893,
+    "url": "https://en.wikipedia.org/wiki/Efficient_Java_Matrix_Library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7894,
+    "url": "https://en.wikipedia.org/wiki/Joseph_Grundfest",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7895,
+    "url": "https://en.wikipedia.org/wiki/Java_Management_Extensions",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7896,
+    "url": "https://en.wikipedia.org/wiki/Apache_Hadoop",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7897,
+    "url": "https://weblogs.java.net/blog/arnold/archive/2005/06/generics_consid_1.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7898,
+    "url": "https://en.wikipedia.org/wiki/Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7899,
+    "url": "https://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7900,
+    "url": "https://en.wikipedia.org/wiki/IcedTea",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7901,
+    "url": "https://en.wikipedia.org/wiki/Resin_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7902,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-java_me-49",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7903,
+    "url": "https://en.wikipedia.org/wiki/Microsoft",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7904,
+    "url": "https://en.wikipedia.org/wiki/Computer_Weekly",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7905,
+    "url": "https://en.wikipedia.org/wiki/JFreeChart",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7906,
+    "url": "https://en.wikipedia.org/wiki/Quartz_(scheduler)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7907,
+    "url": "https://en.wikipedia.org/wiki/Oak",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7908,
+    "url": "https://en.wikipedia.org/wiki/JHipster",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7909,
+    "url": "https://en.wikipedia.org/wiki/Cobalt_Qube",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7910,
+    "url": "https://en.wikipedia.org/wiki/Escape_analysis",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7911,
+    "url": "https://d-nb.info/gnd/4401313-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7912,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Citation_needed",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7913,
+    "url": "https://web.archive.org/web/20150107190007/http://msdn.microsoft.com/en-us/library/ms228498(v\u003dvs.90).aspx",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7914,
+    "url": "https://en.wikipedia.org/wiki/Rock_(processor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7915,
+    "url": "https://web.archive.org/web/20120508134916/http://arstechnica.com/tech-policy/news/2012/05/jury-rules-google-violated-copyright-law-google-moves-for-mistrial.ars",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7916,
+    "url": "https://en.wikipedia.org/wiki/Delimiter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7917,
+    "url": "https://www.java.com/en/download/faq/remove_olderversions.xml",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7919,
+    "url": "https://en.wikipedia.org/wiki/Standard_ML",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7920,
+    "url": "https://en.wikipedia.org/wiki/Oracle_VDI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7921,
+    "url": "https://en.wikipedia.org/wiki/DrJava",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7922,
+    "url": "https://en.wikipedia.org/wiki/Vaadin",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7923,
+    "url": "https://web.archive.org/web/20240329061257/https://adoptium.net/support/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7924,
+    "url": "https://en.wikipedia.org/wiki/Apache_Groovy",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7925,
+    "url": "http://java.com",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7926,
+    "url": "https://en.wikipedia.org/wiki/Apache_Software_Foundation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7927,
+    "url": "https://en.wikipedia.org/wiki/Apache_Hive",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7928,
+    "url": "https://en.wikipedia.org/wiki/Portal:Computer_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7929,
+    "url": "https://en.wikipedia.org/wiki/Fortress_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7930,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_software_and_tools#Machine_learning_and_AI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7931,
+    "url": "https://en.wikipedia.org/wiki/Oracle_WebCenter",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7932,
+    "url": "https://en.wikipedia.org/wiki/Elixir_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7933,
+    "url": "https://en.wikipedia.org/wiki/Oracle_SQL_Developer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7934,
+    "url": "https://en.wikipedia.org/wiki/Julia_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7935,
+    "url": "https://en.wikipedia.org/wiki/Multiple_inheritance",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7936,
+    "url": "https://en.wikipedia.org/wiki/Storage_Technology_Corporation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7937,
+    "url": "https://en.wikipedia.org/wiki/Spring_Roo",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7938,
+    "url": "https://web.archive.org/web/20230920173515/https://openjdk.org/projects/jdk/21/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7939,
+    "url": "https://en.wikipedia.org/wiki/Help:Authority_control",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7940,
+    "url": "https://elmcip.net/node/10259",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7941,
+    "url": "https://web.archive.org/web/20150213220946/http://www.infoworld.com/article/2610885/facebook-q-a--hack-brings-static-typing-to-php-world.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7942,
+    "url": "https://en.wikipedia.org/wiki/SonarQube",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7943,
+    "url": "https://en.wikipedia.org/wiki/JAMA_(numerical_linear_algebra_library)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7944,
+    "url": "https://en.wikipedia.org/wiki/JGRASP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7945,
+    "url": "https://en.wikipedia.org/wiki/JavaWorld",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7946,
+    "url": "https://en.wikipedia.org/wiki/Ruby_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7947,
+    "url": "https://en.wikipedia.org/wiki/MacOS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7948,
+    "url": "https://en.wikipedia.org/wiki/Niklaus_Wirth",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7949,
+    "url": "https://en.wikipedia.org/wiki/Visual_Instruction_Set",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7950,
+    "url": "https://en.wikipedia.org/wiki/Sun_Cloud",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7951,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Big_Data_Appliance",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7952,
+    "url": "https://en.wikipedia.org/wiki/ArkTS",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7953,
+    "url": "http://www.programmerinterview.com/index.php/java-questions/jvm-platform-dependent/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7954,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_LX",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7955,
+    "url": "https://web.archive.org/web/20170529071720/http://docs.oracle.com/javase/7/docs/technotes/guides/vm/performance-enhancements-7.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7956,
+    "url": "https://en.wikipedia.org/wiki/SPARC_Enterprise",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7957,
+    "url": "http://www.computerworld.com.au/index.php/id;1422447371;pp;3;fp;4194304;fpid;1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7958,
+    "url": "https://en.wikipedia.org/wiki/Weka",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7959,
+    "url": "https://web.archive.org/web/20200802003029/https://docs.oracle.com/javaee/5/tutorial/doc/bnagy.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7960,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-90",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7961,
+    "url": "https://web.archive.org/web/20200429104302/https://docs.oracle.com/javase/tutorial/uiswing/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7962,
+    "url": "https://en.wikipedia.org/wiki/LOM_port",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7963,
+    "url": "https://en.wikipedia.org/wiki/Spring_Framework",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7964,
+    "url": "https://en.wikipedia.org/wiki/Java_version_history",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7965,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Exadata",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7966,
+    "url": "https://en.wikipedia.org/wiki/AppFuse",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7967,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-java_se-50",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7968,
+    "url": "https://en.wikipedia.org/wiki/Oracle_VM_Server_for_x86",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7969,
+    "url": "https://en.wikipedia.org/wiki/OpenWindows",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7970,
+    "url": "https://en.wikipedia.org/wiki/OCaml",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7971,
+    "url": "https://en.wikipedia.org/wiki/Virtual_machine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7972,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-95",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7973,
+    "url": "https://en.wikipedia.org/wiki/Wildfly",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7974,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-96",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7975,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_example_Java_code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7976,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-97",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7977,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-91",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7978,
+    "url": "https://en.wikiquote.org/wiki/Java%20(programming%20language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7979,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-92",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7980,
+    "url": "https://en.wikipedia.org/wiki/Just-in-time_compilation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7981,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-94",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7982,
+    "url": "https://en.wikipedia.org/wiki/Simula",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7983,
+    "url": "https://web.archive.org/web/20161128174902/https://raw.githubusercontent.com/namin/unsound/master/doc/unsound-oopsla16.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7984,
+    "url": "https://www.jcp.org/en/home/index",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7985,
+    "url": "https://en.wikipedia.org/wiki/Blackdown_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7986,
+    "url": "https://en.wikipedia.org/wiki/Template:Sun_Microsystems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7987,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_May_2019",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7988,
+    "url": "https://en.wikipedia.org/wiki/Smartphone",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7989,
+    "url": "https://doi.org/10.1145%2F3073416",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7990,
+    "url": "https://web.archive.org/web/20200802013650/https://docs.oracle.com/javafx/2/get_started/hello_world.htm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7991,
+    "url": "https://en.wikipedia.org/wiki/Procom_Technology",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7992,
+    "url": "https://en.wikipedia.org/wiki/Memory_(storage_engine)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7993,
+    "url": "https://web.archive.org/web/20200714001541/https://www.infoworld.com/article/2074908/sun-microsoft-settle-java-lawsuit.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7994,
+    "url": "https://en.wikipedia.org/wiki/Memory_management#HEAP",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7995,
+    "url": "https://en.wikipedia.org/wiki/Lisp_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7996,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Forms",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7997,
+    "url": "https://en.wikipedia.org/wiki/WildFly",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7998,
+    "url": "https://arstechnica.com/tech-policy/2019/01/google-asks-supreme-court-to-overrule-disastrous-ruling-on-api-copyrights/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 7999,
+    "url": "https://en.wikipedia.org/wiki/Visual_J_Sharp",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8000,
+    "url": "https://en.wikipedia.org/wiki/BEA_Systems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8001,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Java_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8002,
+    "url": "https://en.wikipedia.org/wiki/Object-oriented_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8003,
+    "url": "https://en.wikipedia.org/wiki/Robustness_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8004,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Java_(software_platform)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8005,
+    "url": "https://en.wikipedia.org/wiki/Category:Concurrent_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8006,
+    "url": "https://en.wikipedia.org/wiki/Apache_Spark",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8007,
+    "url": "https://en.wikipedia.org/wiki/Java_(software_platform)#History",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8008,
+    "url": "https://en.wikipedia.org/wiki/Linux_kernel",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8009,
+    "url": "https://en.wikipedia.org/wiki/Non-blocking_I/O_(Java)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8010,
+    "url": "https://en.wikipedia.org/wiki/User_interface",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8011,
+    "url": "https://en.wikipedia.org/wiki/Visual_Basic_(.NET)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8012,
+    "url": "https://catalogue.bnf.fr/ark:/12148/cb12533207m",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8013,
+    "url": "https://en.wikipedia.org/wiki/List_of_application_servers#Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8014,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_virtual_machines",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8015,
+    "url": "https://en.wikipedia.org/wiki/Proprietary_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8016,
+    "url": "https://en.wikipedia.org/wiki/Programmer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8017,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8018,
+    "url": "https://www.google.com/search?tbs\u003dbks:1\u0026q\u003d%22Java%22+programming+language+-wikipedia",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8019,
+    "url": "https://en.wikipedia.org/wiki/Integrated_development_environment",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8020,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8021,
+    "url": "https://en.wikipedia.org/wiki/Java_APIs_for_Bluetooth",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8022,
+    "url": "https://web.archive.org/web/20060808070528/http://www.jcp.org/en/home/index",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8023,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8024,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8025,
+    "url": "https://en.wikipedia.org/wiki/Oak_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8026,
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#semi",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8027,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8028,
+    "url": "https://en.wikipedia.org/wiki/OCFS2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8029,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8030,
+    "url": "https://web.archive.org/web/20060107162045/http://www.levenez.com/lang/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8031,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8032,
+    "url": "https://en.wikipedia.org/wiki/Direct_Web_Remoting",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8033,
+    "url": "https://books.google.com/books?id\u003drXGMFYXFDwMC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8034,
+    "url": "https://en.wikipedia.org/wiki/Template:Java_(software_platform)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8035,
+    "url": "https://en.wikipedia.org/wiki/Sun_Fire_X4500",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8036,
+    "url": "http://www.sun.com/smi/Press/sunflash/1996-01/sunflash.960123.10561.xml",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8037,
+    "url": "https://en.wikipedia.org/wiki/Tuxedo_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8038,
+    "url": "https://en.wikipedia.org/wiki/Abstract_Window_Toolkit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8039,
+    "url": "https://web.archive.org/web/20230929040943/https://books.google.com/books?id\u003d0rUtBAAAQBAJ\u0026pg\u003dPAPA133#v\u003donepage\u0026q\u0026f\u003dfalse",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8040,
+    "url": "https://en.wikipedia.org/wiki/GeoAPI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8041,
+    "url": "https://en.wikipedia.org/wiki/Aqua_(user_interface)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8042,
+    "url": "https://en.wikipedia.org/wiki/Category:Java_specification_requests",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8043,
+    "url": "https://en.wikipedia.org/wiki/Apache_Qpid",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8044,
+    "url": "https://en.wikipedia.org/wiki/Sun_Ultra",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8045,
+    "url": "https://en.wikipedia.org/wiki/The_Network_is_the_Computer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8046,
+    "url": "https://en.wikipedia.org/wiki/Standard_Widget_Toolkit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8047,
+    "url": "https://web.archive.org/web/20140113101235/http://www.computer.org/csdl/proceedings/hicss/2001/0981/05/09815015.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8048,
+    "url": "https://en.wikipedia.org/wiki/SQL",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8049,
+    "url": "https://en.wikipedia.org/wiki/List_of_programming_languages_by_type",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8050,
+    "url": "https://en.wikipedia.org/wiki/Go_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8051,
+    "url": "https://web.archive.org/web/20111116151424/https://days2011.scala-lang.org/sites/days2011/files/ws3-1-Hundt.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8052,
+    "url": "https://en.wikipedia.org/wiki/Apache_Axis",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8053,
+    "url": "https://en.wikipedia.org/wiki/Tiered_compilation?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8054,
+    "url": "http://www.levenez.com/lang/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8055,
+    "url": "https://en.wikibooks.org/wiki/Java%20Programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8056,
+    "url": "https://www.google.com/search?tbm\u003dnws\u0026q\u003d%22Java%22+programming+language+-wikipedia\u0026tbs\u003dar:1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8057,
+    "url": "https://www.oracle.com/us/technologies/java/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8058,
+    "url": "https://web.archive.org/web/20180212011608/https://java.com/en/download/faq/remove_olderversions.xml",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8059,
+    "url": "https://en.wikipedia.org/wiki/OrientDB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8060,
+    "url": "https://web.archive.org/web/20120214061826/http://java.sun.com/docs/books/jls/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8061,
+    "url": "https://en.wikipedia.org/wiki/Programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8062,
+    "url": "https://en.wikipedia.org/wiki/Computer_architecture",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8063,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-security-86",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8064,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_IPX",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8065,
+    "url": "https://en.wikipedia.org/wiki/Fireplane",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8066,
+    "url": "https://en.wikipedia.org/wiki/Jakarta_Servlet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8067,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_June_2026",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8068,
+    "url": "https://en.wikipedia.org/wiki/Help:Referencing_for_beginners",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8069,
+    "url": "https://en.wikipedia.org/wiki/SPARC_T4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8070,
+    "url": "https://en.wikipedia.org/wiki/Gson",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8071,
+    "url": "https://en.wikipedia.org/wiki/GNU_Classpath",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8072,
+    "url": "https://en.wikipedia.org/wiki/SPARC_T3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8073,
+    "url": "http://www.delphikingdom.com/asp/viewitem.asp?catalogid\u003d1155",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8074,
+    "url": "https://en.wikipedia.org/wiki/SPARC_T5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8075,
+    "url": "https://en.wikipedia.org/wiki/Sun_Blade_(workstation)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8076,
+    "url": "https://en.wikipedia.org/wiki/Category:Pages_using_Sister_project_links_with_hidden_wikidata",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8077,
+    "url": "https://en.wikipedia.org/wiki/Apache_MXNet",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8078,
+    "url": "https://en.wikipedia.org/wiki/Ultra_Port_Architecture",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8079,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_IPC",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8080,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2022",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8081,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-wikidata-69fd77bc6aa38460e2a59627bbc7a62101f8fa61-v20-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8082,
+    "url": "https://en.wikipedia.org/wiki/Stack-based_memory_allocation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8083,
+    "url": "https://en.wikipedia.org/wiki/Category:Java_(software_platform)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8084,
+    "url": "https://en.wikipedia.org/wiki/Hack_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8085,
+    "url": "https://en.wikipedia.org/wiki/SPARCclassic",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8086,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-collections-85",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8087,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-jdk26_47-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8088,
+    "url": "https://en.wikipedia.org/wiki/R_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8089,
+    "url": "https://web.archive.org/web/20260601000855/https://www.oracle.com/java/technologies/java-se-support-roadmap.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8090,
+    "url": "https://en.wikipedia.org/wiki/List_of_Sun_Microsystems_employees",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8091,
+    "url": "https://en.wikipedia.org/wiki/Comparison_of_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8092,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-201-43294-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8093,
+    "url": "https://en.wikipedia.org/wiki/Reflective_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8094,
+    "url": "https://api.semanticscholar.org/CorpusID:11150290",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8095,
+    "url": "https://web.archive.org/web/20140506214735/http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8096,
+    "url": "https://en.wikipedia.org/wiki/Null_pointer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8097,
+    "url": "https://en.wikipedia.org/wiki/Neuroph",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8098,
+    "url": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/System.html#gc()",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8099,
+    "url": "http://www.artima.com/weblogs/viewpost.jsp?thread\u003d7555",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8100,
+    "url": "https://en.wikipedia.org/wiki/Modula-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8101,
+    "url": "https://en.wikipedia.org/wiki/Mallet_(software_project)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8102,
+    "url": "https://en.wikipedia.org/wiki/Stack_(abstract_data_type)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8103,
+    "url": "https://en.wikipedia.org/wiki/Boxing_(computer_programming)#Autoboxing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8104,
+    "url": "https://en.wikipedia.org/wiki/Apache_Tomcat",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8105,
+    "url": "https://en.wikipedia.org/wiki/Oracle_Database",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8106,
+    "url": "https://arstechnica.com/tech-policy/news/2012/05/jury-rules-google-violated-copyright-law-google-moves-for-mistrial.ars",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8107,
+    "url": "https://en.wikipedia.org/wiki/Google_Guice",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8108,
+    "url": "https://web.archive.org/web/20190326203847/https://www.theguardian.com/technology/2016/may/26/google-wins-copyright-lawsuit-oracle-java-code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8109,
+    "url": "https://en.wikipedia.org/wiki/BioJava",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8110,
+    "url": "https://en.wikipedia.org/wiki/Java_performance",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8111,
+    "url": "https://en.wikipedia.org/wiki/Sun_StorageTek_5800_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8112,
+    "url": "https://scholar.google.com/scholar?q\u003d%22Java%22+programming+language",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8113,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-msdn_operator_overloading-64",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8114,
+    "url": "https://en.wikipedia.org/wiki/Software_relicensing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8115,
+    "url": "https://data.bnf.fr/ark:/12148/cb12533207m",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8116,
+    "url": "https://en.wikipedia.org/wiki/JBoss_Enterprise_Application_Platform",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8117,
+    "url": "https://en.wikipedia.org/wiki/File:Octicons-terminal.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8118,
+    "url": "https://en.wikipedia.org/wiki/Unreachable_memory",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8119,
+    "url": "http://gambaswiki.org/wiki/doc/intro?nh\u0026l\u003den",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8120,
+    "url": "https://en.wikipedia.org/wiki/TimesTen",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8121,
+    "url": "https://web.archive.org/web/20071010002142/http://weblogs.java.net/blog/arnold/archive/2005/06/generics_consid_1.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8122,
+    "url": "https://en.wikipedia.org/wiki/Apache_Click",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8123,
+    "url": "https://en.wikipedia.org/wiki/Linux_distribution",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8124,
+    "url": "https://web.archive.org/web/20141224184532/http://www.oracle.com/technetwork/java/javase/overview/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8125,
+    "url": "https://en.wikipedia.org/wiki/Java_2_Enterprise_Edition",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8126,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-java_card-48",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8127,
+    "url": "https://en.wikipedia.org/wiki/Executable",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8128,
+    "url": "https://en.wikipedia.org/wiki/Jazelle",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8129,
+    "url": "https://en.wikipedia.org/wiki/Apache_Struts",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8130,
+    "url": "https://en.wikipedia.org/wiki/File:Question_book-new.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8131,
+    "url": "https://en.wikipedia.org/wiki/RightNow_Technologies",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8132,
+    "url": "https://en.wikipedia.org/wiki/List_of_Java_APIs",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8133,
+    "url": "https://web.archive.org/web/20141021061951/http://docs.oracle.com/javase/specs/jls/se8/jls8.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8134,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-oraclejavahistory_26-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8135,
+    "url": "https://en.wikipedia.org/wiki/MB86900",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8136,
+    "url": "https://en.wikipedia.org/wiki/Sun_Microsystems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8137,
+    "url": "http://www.fscript.org/prof/javapassport.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8138,
+    "url": "https://en.wikipedia.org/wiki/InnoDB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8139,
+    "url": "https://en.wikipedia.org/wiki/File:JavaUniverse.png",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8140,
+    "url": "https://en.wikipedia.org/wiki/Imperative_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8141,
+    "url": "https://en.wikipedia.org/wiki/SUN_workstation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8142,
+    "url": "https://en.wikipedia.org/wiki/Garbage-first_collector",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8143,
+    "url": "https://www.jstor.org/action/doBasicSearch?Query\u003d%22Java%22+programming+language\u0026acc\u003don\u0026wc\u003don",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8144,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-chplspec_14-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8145,
+    "url": "https://en.wikipedia.org/wiki/Quarkus",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8146,
+    "url": "https://en.wikipedia.org/wiki/GNU_General_Public_License",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8147,
+    "url": "https://en.wikipedia.org/wiki/Free_and_open-source_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8148,
+    "url": "https://arstechnica.com/tech-policy/2016/05/google-wins-trial-against-oracle-as-jury-finds-android-is-fair-use/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8149,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8150,
+    "url": "https://web.archive.org/web/20170215115409/https://www.wired.com/2013/01/java-no-longer-a-favorite/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8151,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8152,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8153,
+    "url": "https://en.wikipedia.org/wiki/LIBSVM",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8154,
+    "url": "https://en.wikipedia.org/wiki/Sun386i",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8155,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8156,
+    "url": "https://en.wikipedia.org/wiki/NetBeans",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8157,
+    "url": "https://en.wikipedia.org/wiki/Kotlin",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8158,
+    "url": "https://en.wikipedia.org/wiki/Apache_Velocity",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8159,
+    "url": "https://en.wikipedia.org/wiki/SPARCstation_ZX",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8160,
+    "url": "https://en.wikipedia.org/wiki/TestNG",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8161,
+    "url": "https://www.google.com/search?\u0026q\u003d%22Java%22+programming+language\u0026tbs\u003dbkt:s\u0026tbm\u003dbks",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8162,
+    "url": "https://en.wikipedia.org/wiki/Category:Use_mdy_dates_from_August_2017",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8163,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_September_2023",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8164,
+    "url": "https://en.wikipedia.org/wiki/Apache_Commons",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8165,
+    "url": "https://en.wikipedia.org/wiki/Type_safety",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8166,
+    "url": "https://en.wikipedia.org/wiki/Keycloak",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8167,
+    "url": "https://en.wikipedia.org/wiki/Legacy_system",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8168,
+    "url": "https://en.wikipedia.org/wiki/Category:Wikipedia_indefinitely_semi-protected_pages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8169,
+    "url": "https://en.wikipedia.org/wiki/HSQLDB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8170,
+    "url": "https://en.wikipedia.org/wiki/Free_Java_implementations#Class_library",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8171,
+    "url": "https://en.wikipedia.org/wiki/Tarantella,_Inc.",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8172,
+    "url": "https://en.wikipedia.org/wiki/Maxine_Virtual_Machine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8173,
+    "url": "https://openjdk.org/jeps/512",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8174,
+    "url": "https://en.wikipedia.org/wiki/Deeplearning4j",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8175,
+    "url": "https://en.wikipedia.org/wiki/List_of_JVM_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8176,
+    "url": "https://en.wikipedia.org/wiki/Sunopsis?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8177,
+    "url": "https://raw.githubusercontent.com/namin/unsound/master/doc/unsound-oopsla16.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8178,
+    "url": "https://en.wikipedia.org/wiki/Java_Platform,_Micro_Edition",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8179,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Oracle",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8180,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Sun_Microsystems",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8181,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dJava_(programming_language)\u0026action\u003dedit",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8182,
+    "url": "https://web.archive.org/web/20140510203805/http://www.cnet.com/news/court-sides-with-oracle-over-android-in-java-patent-appeal/",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8183,
+    "url": "https://en.wikipedia.org/wiki/Apache_Mahout",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8184,
+    "url": "https://en.wikipedia.org/wiki/Smart_pointer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8185,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-oraclejavahistory-26",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8186,
+    "url": "https://en.wikipedia.org/wiki/Data_center",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8187,
+    "url": "http://docs.oracle.com/javase/8/docs/technotes/guides/security/overview/jsoverview.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8188,
+    "url": "https://en.wikipedia.org/wiki/Greenfoot",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8189,
+    "url": "http://www.computerweekly.com/Articles/2002/05/02/186793/write-once-run-anywhere.htm",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8190,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_ref-java_me_49-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8191,
+    "url": "https://en.wikipedia.org/wiki/Jackson_(API)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8192,
+    "url": "http://nighthacks.com/roller/jag/entry/time_to_move_on",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8193,
+    "url": "https://en.wikipedia.org/wiki/Supercomputer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8194,
+    "url": "https://en.wikipedia.org/wiki/Oxygene_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8195,
+    "url": "https://en.wikipedia.org/wiki/Native_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8196,
+    "url": "https://docs.oracle.com/javase/7/docs/technotes/guides/vm/performance-enhancements-7.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8197,
+    "url": "https://en.wikipedia.org/wiki/Gambas",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8198,
+    "url": "https://en.wikipedia.org/wiki/Eclipse_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8199,
+    "url": "https://en.wikipedia.org/wiki/Scott_McNealy",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8200,
+    "url": "https://en.wikipedia.org/wiki/MATLAB",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8201,
+    "url": "https://en.wikipedia.org/wiki/Java_(programming_language)#cite_note-design_goals-18",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8202,
+    "url": "https://en.wikipedia.org/wiki/Squawk_virtual_machine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8203,
+    "url": "https://en.wikipedia.org/wiki/Ada_(programming_language)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8204,
+    "url": "https://en.wikipedia.org/wiki/ELKI",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8205,
+    "url": "https://blogs.oracle.com/java-platform-group/the-arrival-of-java-15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8206,
+    "url": "https://en.wikipedia.org/wiki/JUNG",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8207,
+    "url": "https://en.wikipedia.org/wiki/Swing_(Java)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8208,
+    "url": "https://en.wikipedia.org/wiki/Oracle_iPlanet_Web_Server",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8209,
+    "url": "https://en.wikipedia.org/wiki/Data_structure",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8210,
+    "url": "https://en.wikipedia.org/wiki/Visual_Basic",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8211,
+    "url": "https://en.wikipedia.org/wiki/Shell_script",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8212,
+    "url": "https://en.wikipedia.org/wiki/Apache_Pivot",
+    "parentUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "id": 8213,
+    "url": "https://en.wikipedia.org/wiki/Xamarin_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8214,
+    "url": "https://en.wikipedia.org/wiki/Code::Blocks",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8215,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8216,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d2",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8217,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d3",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8218,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8219,
+    "url": "https://en.wikipedia.org/wiki/RapidQ",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8220,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d5",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8222,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026action\u003dedit\u0026section\u003d6",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8225,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_Web_Developer_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8231,
+    "url": "https://en.wikipedia.org/wiki/Java_(Sun)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8232,
+    "url": "https://en.wikipedia.org/wiki/PyDev",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8234,
+    "url": "https://en.wikipedia.org/wiki/Category:Free_integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8235,
+    "url": "https://en.wikipedia.org/wiki/Help:CS1_errors#deprecated_params",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8236,
+    "url": "https://en.wikipedia.org/wiki/Class_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8237,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_note-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8239,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_note-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8240,
+    "url": "https://en.wikipedia.org/wiki/Liberty_BASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8242,
+    "url": "https://en.wikipedia.org/wiki/Special:EditPage/Template:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8245,
+    "url": "https://en.wikipedia.org/wiki/C++Builder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8248,
+    "url": "https://en.wikipedia.org/wiki/Anjuta",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8250,
+    "url": "https://en.wikipedia.org/wiki/Adobe_Flash_Builder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8251,
+    "url": "https://bluej.org/",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8252,
+    "url": "https://en.wikipedia.org/wiki/Category:1999_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8253,
+    "url": "https://en.wikipedia.org/wiki/Multilingual",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8255,
+    "url": "https://en.wikipedia.org/wiki/Category:Cross-platform_free_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8256,
+    "url": "https://en.wikipedia.org/wiki/Portal:Free_and_open-source_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8258,
+    "url": "https://en.wikipedia.org/wiki/Prentice_Hall",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8259,
+    "url": "https://en.wikipedia.org/wiki/Turbo_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8261,
+    "url": "https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8262,
+    "url": "https://en.wikipedia.org/wiki/EiffelStudio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8263,
+    "url": "https://en.wikipedia.org/wiki/Blue_programming_language?action\u003dedit\u0026redlink\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8266,
+    "url": "https://en.wikipedia.org/wiki/CodeWarrior",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8267,
+    "url": "https://en.wikipedia.org/wiki/JetBrains#GoLand",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8269,
+    "url": "https://en.wikipedia.org/wiki/Thonny",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8272,
+    "url": "https://en.wikipedia.org/wiki/GLBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8273,
+    "url": "https://en.wikipedia.org/wiki/Xojo",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8274,
+    "url": "https://doi.org/10.1076%2Fcsed.13.4.249.17496",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8275,
+    "url": "https://en.wikipedia.org/wiki/FutureBASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8277,
+    "url": "https://en.wikipedia.org/wiki/JBuilder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8279,
+    "url": "https://en.wikipedia.org/wiki/QuickC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8280,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#2015-2017_products",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8281,
+    "url": "https://en.wikipedia.org/wiki/Monash_University",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8287,
+    "url": "https://en.wikipedia.org/wiki/NS_Basic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8288,
+    "url": "https://en.wikipedia.org/wiki/Xelfi",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8289,
+    "url": "https://en.wikipedia.org/wiki/Emacs",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8293,
+    "url": "https://en.wikipedia.org/wiki/File:20210807_13_06_03-BlueJ_FIX.png",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8295,
+    "url": "https://en.wikipedia.org/wiki/Visual_Eiffel",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8296,
+    "url": "https://en.wikipedia.org/wiki/Category:Free_software_programmed_in_Java",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8297,
+    "url": "https://en.wikipedia.org/wiki/Category:Short_description_is_different_from_Wikidata",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8298,
+    "url": "https://en.wikipedia.org/wiki/Retail_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8299,
+    "url": "https://en.wikipedia.org/wiki/Cloud9_IDE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8301,
+    "url": "https://en.wikipedia.org/wiki/Arduino",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8303,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-13-249266-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8304,
+    "url": "https://en.wikipedia.org/wiki/SlickEdit",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8305,
+    "url": "http://stride-lang.net",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8306,
+    "url": "http://www.bluej.org/objects-first/",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8308,
+    "url": "https://api.semanticscholar.org/CorpusID:2805887",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8310,
+    "url": "https://en.wikipedia.org/wiki/RStudio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8316,
+    "url": "https://en.wikipedia.org/wiki/Qt_Creator",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8317,
+    "url": "https://en.wikipedia.org/wiki/GNOME_Builder",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8321,
+    "url": "https://en.wikipedia.org/wiki/John_Rosenberg_(academic)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8322,
+    "url": "https://en.wikipedia.org/wiki/JetBrains",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8323,
+    "url": "https://en.wikipedia.org/wiki/Online_integrated_development_environment",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8324,
+    "url": "https://en.wikipedia.org/wiki/Light_Table_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8325,
+    "url": "https://en.wikipedia.org/wiki/PythonAnywhere",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8327,
+    "url": "https://en.wikipedia.org/wiki/Category:MacOS_programming_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8328,
+    "url": "https://en.wikipedia.org/wiki/PureBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8329,
+    "url": "https://en.wikipedia.org/wiki/AppCode",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8331,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-89791-757-X",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8336,
+    "url": "https://en.wikipedia.org/wiki/Operating_system",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8337,
+    "url": "https://en.wikipedia.org/wiki/Xcode",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8338,
+    "url": "https://en.wikipedia.org/wiki/Adobe_Flash",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8339,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Small_Basic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8342,
+    "url": "https://en.wikipedia.org/wiki/Vim_(text_editor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8343,
+    "url": "https://en.wikipedia.org/wiki/Category:Linux_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8345,
+    "url": "https://en.wikipedia.org/wiki/QuickBASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8346,
+    "url": "https://en.wikipedia.org/wiki/Visual_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8352,
+    "url": "https://en.wikipedia.org/wiki/JetBrains#Rider",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8356,
+    "url": "https://en.wikipedia.org/wiki/Object_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8359,
+    "url": "https://en.wikipedia.org/wiki/Template:Cite_journal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8364,
+    "url": "https://en.wikipedia.org/wiki/Dev-C++",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8365,
+    "url": "https://en.wikipedia.org/wiki/Visual_Studio#Community",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8367,
+    "url": "https://en.wikipedia.org/wiki/Common_Language_Infrastructure",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8369,
+    "url": "https://en.wikipedia.org/wiki/CiteSeerX_(identifier)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8370,
+    "url": "http://www.bluej.org",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8371,
+    "url": "https://en.wikipedia.org/wiki/Rational_Software_Architect",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8375,
+    "url": "https://en.wikipedia.org/wiki/Turbo_C++",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8378,
+    "url": "https://en.wikipedia.org/wiki/Turbo_Delphi",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8380,
+    "url": "https://en.wikipedia.org/wiki/Category:Java_development_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8381,
+    "url": "https://en.wikipedia.org/wiki/Category:Software_using_the_GNU_General_Public_License",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8382,
+    "url": "https://en.wikipedia.org/wiki/Dev-Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8383,
+    "url": "https://en.wikipedia.org/wiki/Category:CS1_errors:_deprecated_parameters",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8385,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8387,
+    "url": "https://en.wikipedia.org/wiki/PyCharm",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8394,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-3-540-77933-9",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8397,
+    "url": "https://en.wikipedia.org/wiki/Poplog",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8399,
+    "url": "https://en.wikipedia.org/wiki/Chromium_(web_browser)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8400,
+    "url": "https://en.wikipedia.org/wiki/Category:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8402,
+    "url": "https://en.wikipedia.org/wiki/Unified_Modeling_Language",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8403,
+    "url": "https://en.wikipedia.org/wiki/Sublime_Text",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8405,
+    "url": "https://en.wikipedia.org/wiki/POP-11",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8406,
+    "url": "https://en.wikipedia.org/wiki/Eclipse_Che",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8414,
+    "url": "https://en.wikipedia.org/wiki/Vi_(text_editor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8415,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_C#_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8416,
+    "url": "https://en.wikipedia.org/wiki/SharpDevelop",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8417,
+    "url": "https://en.wikipedia.org/wiki/Kakoune",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8418,
+    "url": "https://en.wikipedia.org/wiki/Komodo_Edit",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8420,
+    "url": "https://en.wikipedia.org/wiki/Delphi_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8423,
+    "url": "https://en.wikipedia.org/wiki/Category:Software_development_kits",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8426,
+    "url": "https://en.wikipedia.org/wiki/DevEco_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8428,
+    "url": "https://en.wikipedia.org/wiki/PhpStorm",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8431,
+    "url": "https://en.wikipedia.org/wiki/King\u0027s_College_London",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8432,
+    "url": "https://en.wikipedia.org/wiki/VisualAge",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8434,
+    "url": "http://www.pearsonhighered.com/pearsonhigheredus/educator/product/products_detail.page?isbn\u003d9780132492669",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8435,
+    "url": "https://en.wikipedia.org/wiki/Visual_Café",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8436,
+    "url": "https://en.wikipedia.org/wiki/Komodo_IDE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8438,
+    "url": "https://en.wikipedia.org/wiki/SourceLair",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8441,
+    "url": "https://en.wikipedia.org/wiki/QBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8442,
+    "url": "https://en.wikipedia.org/wiki/LabWindows/CVI",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8450,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dBlueJ\u0026oldid\u003d1364850107",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8452,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_C++_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8453,
+    "url": "https://en.wikipedia.org/wiki/Michael_Kölling",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8454,
+    "url": "https://en.wikipedia.org/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8455,
+    "url": "https://en.wikipedia.org/wiki/JetBrains#RustRover",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8456,
+    "url": "https://en.wikipedia.org/wiki/LibertyEiffel",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8457,
+    "url": "https://en.wikipedia.org/wiki/Aptana",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8458,
+    "url": "https://en.wikipedia.org/wiki/SdlBasic",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8459,
+    "url": "https://en.wikipedia.org/wiki/Lazarus_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8460,
+    "url": "https://en.wikipedia.org/wiki/Category:Pedagogic_integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8461,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_ref-Ref_2-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8462,
+    "url": "https://en.wikipedia.org/wiki/Software_license",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8464,
+    "url": "https://en.wikipedia.org/wiki/Zend_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8466,
+    "url": "https://en.wikipedia.org/wiki/Visual_J++",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8467,
+    "url": "https://en.wikipedia.org/wiki/Eric_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8468,
+    "url": "https://en.wikipedia.org/wiki/Template:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8470,
+    "url": "https://en.wikipedia.org/wiki/Freeware",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8471,
+    "url": "https://en.wikipedia.org/wiki/Cross-platform",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8472,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#2005–2010_products",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8473,
+    "url": "https://en.wikipedia.org/wiki/VS_Code",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8475,
+    "url": "https://en.wikipedia.org/wiki/MonoDevelop",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8476,
+    "url": "https://en.wikipedia.org/wiki/PascalABC.NET",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8477,
+    "url": "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio_Express#Visual_Basic_Express",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8481,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_note-Ref_-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8482,
+    "url": "https://en.wikipedia.org/wiki/Wing_IDE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8483,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8485,
+    "url": "https://en.wikipedia.org/wiki/Free_and_open_source_software",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8488,
+    "url": "https://en.wikipedia.org/wiki/Template_talk:Integrated_development_environments",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8493,
+    "url": "https://en.wikipedia.org/wiki/Delphi_(software)#Embarcadero_Delphi_10.2_Tokyo_(Community_Edition)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8495,
+    "url": "https://en.wikipedia.org/wiki/Turbo_C",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8499,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_ref-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8500,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#cite_ref-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8501,
+    "url": "https://en.wikipedia.org/wiki/PHPEdit",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8503,
+    "url": "https://en.wikipedia.org/wiki/IDLE",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8506,
+    "url": "https://en.wikipedia.org/wiki/Powerflasher_FDT",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8508,
+    "url": "https://en.wikipedia.org/wiki/Category:Linux_programming_tools",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8511,
+    "url": "https://en.wikipedia.org/wiki/Software_development",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8512,
+    "url": "https://en.wikipedia.org/wiki/Ultimate++",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8513,
+    "url": "https://en.wikipedia.org/wiki/Basic-256",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8515,
+    "url": "https://en.wikipedia.org/wiki/Understand_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8517,
+    "url": "https://en.wikipedia.org/wiki/Spyder_(software)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8518,
+    "url": "https://en.wikipedia.org/wiki/CLion",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8520,
+    "url": "https://en.wikipedia.org/wiki/Geany",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8524,
+    "url": "https://en.wikipedia.org/wiki/Firebase_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8527,
+    "url": "https://en.wikipedia.org/wiki/Category:Programming_tools_for_Windows",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8532,
+    "url": "https://en.wikipedia.org/wiki/Software_categories#Categorization_approaches",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8533,
+    "url": "https://en.wikipedia.org/wiki/Free_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8535,
+    "url": "http://www.cs.kent.ac.uk/pubs/2008/2697/content.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8537,
+    "url": "https://en.wikipedia.org/wiki/CA-Realizer",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8538,
+    "url": "https://en.wikipedia.org/wiki/Category:Educational_programming_languages",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8540,
+    "url": "https://en.wikipedia.org/wiki/FreeBASIC",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8541,
+    "url": "https://en.wikipedia.org/wiki/Borland_Kylix",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8542,
+    "url": "https://en.wikipedia.org/wiki/QB64",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8544,
+    "url": "https://en.wikipedia.org/wiki/BlueJ#bodyContent",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8550,
+    "url": "https://en.wikipedia.org/wiki/R_Tools_for_Visual_Studio",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8553,
+    "url": "https://en.wikipedia.org/wiki/.NET",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8554,
+    "url": "https://en.wikipedia.org/wiki/Sun_Java_Studio_Creator",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8556,
+    "url": "https://en.wikipedia.org/wiki/Codelobster",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8557,
+    "url": "https://en.wikipedia.org/wiki/Basic4GL",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8558,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8561,
+    "url": "https://en.wikipedia.org/wiki/GPL_linking_exception#The_classpath_exception",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8562,
+    "url": "https://en.wikipedia.org/wiki/Atom_(text_editor)",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8563,
+    "url": "https://en.wikipedia.org/wiki/Watcom_C/C++",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8566,
+    "url": "https://citeseerx.ist.psu.edu/viewdoc/summary?doi\u003d10.1.1.22.3975",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8570,
+    "url": "https://en.wikipedia.org/wiki/CodeLite",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8571,
+    "url": "https://en.wikipedia.org/wiki/KDevelop",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8573,
+    "url": "https://doi.org/10.1145%2F236462.236514",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8575,
+    "url": "https://kar.kent.ac.uk/21392/1/ObjectKolling.pdf",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8581,
+    "url": "https://en.wikipedia.org/wiki/File:BlueJ_Logo.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8584,
+    "url": "https://en.wikipedia.org/wiki/Educational_programming_language",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8585,
+    "url": "https://en.wikipedia.org/wiki/Virtual_Pascal",
+    "parentUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "id": 8588,
+    "url": "https://en.wikipedia.org/wiki/Structured_programming",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8589,
+    "url": "https://en.wikipedia.org/wiki/Subroutine",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8590,
+    "url": "https://en.wikipedia.org/wiki/Accessor_method",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8591,
+    "url": "https://en.wikipedia.org/wiki/Virtual_function",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8592,
+    "url": "https://en.wikipedia.org/wiki/Dynamic_dispatch",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8593,
+    "url": "https://en.wikipedia.org/wiki/Property_(programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8594,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-098-12195-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8596,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-1-259-02993-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8597,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8598,
+    "url": "https://en.wikipedia.org/wiki/Abstraction_layer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8599,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8600,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-7668-3894-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8601,
+    "url": "https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8602,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-203-3085-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8603,
+    "url": "https://en.wikipedia.org/wiki/Function_overloading",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8604,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-Albahari_5-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8607,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8608,
+    "url": "https://en.wikipedia.org/wiki/Category:Articles_with_example_C%2B%2B_code",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8609,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8610,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0134685991",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8611,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-7357-1434-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8612,
+    "url": "https://en.wikipedia.org/wiki/Interface_(computing)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8613,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8614,
+    "url": "https://en.wikipedia.org/wiki/Destructor_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8616,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8618,
+    "url": "https://en.wikipedia.org/wiki/Object_model",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8620,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8621,
+    "url": "https://en.wikipedia.org/wiki/Polymorphism_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8622,
+    "url": "https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8623,
+    "url": "https://en.wikipedia.org/wiki/Revision_control",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8624,
+    "url": "https://en.wikipedia.org/wiki/Method_signature",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8625,
+    "url": "https://en.wikipedia.org/wiki/Procedure_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8627,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-7637-1817-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8628,
+    "url": "https://books.google.com/books?id\u003dMiq73i_J1i4C\u0026pg\u003dPA36",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8629,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8630,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d7",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8632,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8633,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8635,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8636,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8637,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8638,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8639,
+    "url": "https://en.wikipedia.org/wiki/Common_Lisp_Object_System",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8640,
+    "url": "https://books.google.com/books?id\u003dfgGLZ7WYxCMC\u0026pg\u003dPA97",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8641,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d9",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8642,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-929306-10-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8643,
+    "url": "https://en.wikipedia.org/wiki/Manual_memory_management",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8644,
+    "url": "https://en.wikipedia.org/wiki/Static_member_function",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8645,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-Bloch_4-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8646,
+    "url": "https://books.google.com/books?id\u003d-yhuY0Wg_QcC\u0026pg\u003dPA181",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8647,
+    "url": "https://en.wikipedia.org/wiki/Database",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8648,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-Bloch-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8649,
+    "url": "https://books.google.com/books?id\u003dDnsM0WD-6iMC\u0026pg\u003dPA131",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8650,
+    "url": "https://en.wikipedia.org/wiki/Robert_Cecil_Martin",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8651,
+    "url": "https://en.wikipedia.org/wiki/Abstract_data_types",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8652,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d18",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8653,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d19",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8654,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d16",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8655,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-:0_2-1",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8656,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d17",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8657,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_ref-:0_2-0",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8659,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d14",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8660,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d15",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8661,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d12",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8662,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d13",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8663,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d10",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8664,
+    "url": "https://books.google.com/books?id\u003dZLzt5WtsdzIC\u0026pg\u003dPA50",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8665,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d11",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8666,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-7758-910-8",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8667,
+    "url": "https://en.wikipedia.org/wiki/Balance_(accounting)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8668,
+    "url": "https://en.wikipedia.org/wiki/Object_creation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8669,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d20",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8670,
+    "url": "https://books.google.com/books?id\u003dfxUVrhjD4k0C\u0026pg\u003dPA78",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8671,
+    "url": "https://en.wikipedia.org/wiki/Meta-object_protocol",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8672,
+    "url": "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8673,
+    "url": "https://en.wikipedia.org/wiki/Message_passing",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8674,
+    "url": "https://en.wikipedia.org/wiki/Derived_class",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8676,
+    "url": "https://books.google.com/books?id\u003dWCHZAgAAQBAJ\u0026pg\u003dPA74",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8677,
+    "url": "http://docs.oracle.com/javase/tutorial/java/concepts/object.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8678,
+    "url": "https://en.wikipedia.org/wiki/Category:Method_(computer_programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8679,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026action\u003dedit\u0026section\u003d21",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8681,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dMethod_(computer_programming)\u0026oldid\u003d1361304777",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8682,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-0-13-235088-4",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8683,
+    "url": "http://docs.oracle.com/javase/tutorial/java/IandI/abstract.html",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8685,
+    "url": "https://en.wikipedia.org/wiki/Remote_method_invocation",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8688,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-203-1258-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8689,
+    "url": "https://books.google.com/books?id\u003dNXVkcCjPblcC\u0026pg\u003dPA18",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8691,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/0-13-629049-3",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8692,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#bodyContent",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8693,
+    "url": "https://en.wikipedia.org/wiki/Instance_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8695,
+    "url": "https://en.wikipedia.org/wiki/Method_body",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8696,
+    "url": "https://en.wikipedia.org/wiki/Compile_time",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8698,
+    "url": "https://books.google.com/books?id\u003d1F6ipojt7DcC\u0026pg\u003dPA79",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8699,
+    "url": "https://en.wikipedia.org/wiki/Special:BookSources/978-81-203-2871-6",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8700,
+    "url": "https://en.wikipedia.org/wiki/Meta-model",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8701,
+    "url": "https://en.wikipedia.org/wiki/File:UML_abstract_methods.svg",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8702,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-:0-2",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8703,
+    "url": "https://en.wikipedia.org/wiki/Method_(computer_programming)#cite_note-Albahari-5",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8704,
+    "url": "https://en.wikipedia.org/wiki/Modularity_(programming)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8705,
+    "url": "https://en.wikipedia.org/wiki/Method_overriding",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8706,
+    "url": "https://en.wikipedia.org/wiki/Constructor_(computer_science)",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8707,
+    "url": "https://en.wikipedia.org/wiki/Class_(programming)#Abstract_and_concrete",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8708,
+    "url": "https://en.wikipedia.org/wiki/Static_variable",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "id": 8709,
+    "url": "https://en.wikipedia.org/wiki/Finalizer",
+    "parentUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/UML_abstract_methods.svg/330px-UML_abstract_methods.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Method (computer programming) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Method (computer programming) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Method_(computer_programming)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/BlueJ_Logo.svg/120px-BlueJ_Logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/20210807_13_06_03-BlueJ_FIX.png/250px-20210807_13_06_03-BlueJ_FIX.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/40px-Free_and_open-source_software_logo_%282009%29.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/40px-Octicons-terminal.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "icon",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Sun-Logo.svg/250px-Sun-Logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Sun Microsystems logo",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "BlueJ - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/BlueJ"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Page semi-protected",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/250px-Java_programming_language_logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Edit this on Wikidata",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/20px-Wikibooks-logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Wikibooks logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/20px-Octicons-terminal.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/250px-Duke_%28Java_mascot%29_waving.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/James_Gosling_2008.jpg/250px-James_Gosling_2008.jpg?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/60px-Duke_%28Java_mascot%29_waving.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/JavaUniverse.png/250px-JavaUniverse.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/60px-Question_book-new.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Ambox_current_red_Asia_Australia.svg/60px-Ambox_current_red_Asia_Australia.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/40px-Octicons-terminal.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/40px-Wiktionary-logo-en-v2.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Wiktionary logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Wikimedia Commons logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/40px-Wikiquote-logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/40px-Wikibooks-logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Wikibooks logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/40px-Wikiversity_logo_2017.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Wikiversity logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/40px-Wikidata-logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikiversity_logo_2017.svg/40px-Wikiversity_logo_2017.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Wikiversity logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/120px-Duke_%28Java_mascot%29_waving.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Octicons-terminal.svg/40px-Octicons-terminal.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "icon",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Sun-Logo.svg/250px-Sun-Logo.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Sun Microsystems logo",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/20px-Symbol_list_class.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/Symbol_category_class.svg/20px-Symbol_category_class.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source\u003den.wikipedia.org\u0026utm_campaign\u003dparser\u0026utm_content\u003dthumbnail",
+    "alt": "Edit this at Wikidata",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat\u003ddesktop\u0026type\u003d1x1\u0026usesul3\u003d1",
+    "alt": "",
+    "pageTitle": "Java (programming language) - Wikipedia",
+    "pageUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)"
+  },
+  {
+    "src": "https://myprivacy-static.dpgmedia.net/consent/resources/logos/logo-dpgmedia.svg",
+    "alt": "dpg media logo",
+    "pageTitle": "DPG Media Privacy Gate",
+    "pageUrl": "https://tweakers.net"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/9411cd19d157816c51f2952c2efe76dd173bb445-2048x1366.jpg",
+    "alt": "iPhone 18 Pro in Black with a dbrand Ghost Case applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e4f36a1e4cd51affdcb468591c4bec00f094fb7e-2048x1366.jpg",
+    "alt": "Four cases stacked on a 45-degree angle in four different colorways: Burgundy, Navy, Tan, and Black.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/5fea1414bdec7ee9a34e647a536a070b51af335c-1013x675.jpg",
+    "alt": "A Galaxy Z Fold 8 with a Grip Case installed shown at an angle in matte black. ",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f1459f5b21198586a5215037a280ac66c6116e74-1024x683.jpg",
+    "alt": "An AirPods Pro 3 charging case with a Tank Case applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/8e560f81d7af9ff5f2979518d77ed4593194ac5f-1013x675.jpg",
+    "alt": "A Switch 2 with two Joy-Cons displayed, detached on the sides. The main body of the Switch 2 has our Killswitch Case applied to it, and the Joy-Cons have our Joy-Lock Grips installed on them. ",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/35640da09a91aa18632f196e128a99d6e9f9d991-1024x683.jpg",
+    "alt": "A Pixel 11 Pro XL with a Tank Case installed, shown at an angle.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/5ca6a80a330dc4b10105a74644895cd87e2d9c9a-4096x2733.png",
+    "alt": "An Xbox Ally X20 with a dbrand Killswitch Case applied.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d6b5f7c568b617a630e116bba24c741158c750d6-1013x675.jpg",
+    "alt": "An assortment of new Steam Machine skin designs: Basketbox, Package, Terminal, Black Dice, White Dice, Flat Earth, and Bricks",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d675d77d55adbe941c733f7c63d4a1160145df91-1013x675.jpg",
+    "alt": "A pair of Joy-Cons with our Joy-Lock Grips attached, shown next to our Joy-Lock Controller Holder.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0e5a4bed39dd0c3f8b63eb6585a25abbb1272929-1013x676.jpg",
+    "alt": "Two iPhone 18 Pro Maxes - the left has our original Black Ghost Case installed, while the right has our Burgundy Ghost Case installed.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/c3031a0838ddaef97362b2a1767ce5be5eeee613-1013x675.jpg",
+    "alt": "A Prism 2.0 installation tray, with a pull tab at the bottom.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/c6d63e03e07113967bedfcfe721de33a5abe1c69-512x512.jpg",
+    "alt": "Nintendo Switch 2",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/aea86508617a0451a1bc5b9cf3cb45308705eed3-512x512.jpg",
+    "alt": "Apple iPhone",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/9dc66bdb30a3683c6a8c9a283688753d40339267-512x512.jpg",
+    "alt": "Samsung Galaxy",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/7d54e2c7e66148babc2cbae55fa7607b3598598c-512x512.jpg",
+    "alt": "Apple AirPods",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/19af6755045ad449a00d65e8b985f94f4916df26-512x512.jpg",
+    "alt": "Google Pixel",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0879ef054c0f27a369ade18f9820c6ee7fd9abdc-512x512.jpg",
+    "alt": "Apple MacBook",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero-fill/play.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0337c86ec2ab846222be7219ea30542b1d4ec788-1080x1080.jpg",
+    "alt": "A Samsung Galaxy smartphone with an Obsidian skin",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/35e588f6a676ecddf903d9707c9d96226e024bb0-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d79d2de2fc408db3356684ee1d65b58e91954216-1080x1080.jpg",
+    "alt": "A Nintendo Switch with a Teardown skin",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d44e194a6fad29694a577282f7d025637dba3515-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/4dc70e3d2341fc6eb404839703819a4364330feb-1080x1080.jpg",
+    "alt": "A Ghost Case on a Cosmic Orange iPhone 17 Pro Max",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/8679fe62bef505d4b3ce8ae8be78987d12bc2ad9-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/a13f0547cb1c110852a4d86a739dc948f8a2b973-1080x1080.jpg",
+    "alt": "A Grip Case with a Warzone Skin on an iPhone",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/43cbeb12f36b339c46d09a5806b42261b109424a-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/fb597217b38d0b5d3d5858f804c8f63d5912f066-1080x1080.jpg",
+    "alt": "A Grip Case with a Teardown skin on an S23 Ultra",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0889700cacdb07e46653b12df18bcec51e25820c-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e8cb6a62895114d066c884f4b549c35c285bcc09-1080x1080.jpg",
+    "alt": "A Tank Case on an iPhone 17 Pro Max",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/00c6fc683234ce39840c14c58f7e44302d548c6c-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/95b71815385b9028e97d918fe6fb327c5ba26722-1080x1080.jpg",
+    "alt": "A hand holding two Prism 2.0 boxes",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/74f8a551221b5da102c9a976e74bfc5773c502d6-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/3bfa647bd219d98f85c38add1fff205a81d1c7a0-1080x1080.jpg",
+    "alt": "A hand applying a Prism screen protector to a Nintendo Switch 2",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/ce288e1575334c700581405b24c4ffa0e60e6de2-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/c0ca98886a818771ace57d8b17aa1e4d41482376-1080x1080.jpg",
+    "alt": "An iPhone 17 Pro Max with a Tank Case applied, held in-hand",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/10df770be5f23b9edde90efbd2e48bfe19010616-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/872ebf662e6e4095fb7b33907f088d8c2eb6176a-1080x1080.jpg",
+    "alt": "A Warzone Skin applied to an iPad Magic Keyboard with an Apple Pencil laying atop it",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/9d90eb1d76aa389b04c893ac672c1816de2dc164-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/ac13c56e5dd09ebd5474e4e7d608046b2edde8fa-1080x1080.jpg",
+    "alt": "A Cosmic Orange iPhone 17 Pro held in-hand with a Short Circuit skin applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/b3d014e4d455c2d4b9acae0f00949bf525d23948-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/2c87165bc153b202834d59a96009a5a0c8496367-1080x1080.jpg",
+    "alt": "A hand holding an iPhone 15 Pro Max in a Grip Case with a Teardown Skin applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/a332955056c6654afdd380702c7ec354a0a8bfa2-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/8143f7b96261947a78ce6b0fe31c81d32a86662f-1080x1080.jpg",
+    "alt": "A Prism 2.0 box being held open by the photographer\u0027s index finger",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/14ba345113c51bd89531d3b5c42d3c8e441f3361-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/7291c0273a310e8c6f16a03cb9348328dc69e4ad-1080x1080.jpg",
+    "alt": "An iPhone 17 Pro Max Tank Case, being held up in front of the camera while seated at a soccer stadium",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/13dd6d44e97ca08cbc92547c4ba9915278a4a796-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/85a8352b55f02d657afaf3270cc6433359ab556e-1080x1080.jpg",
+    "alt": "A Holo White Damascus skin applied to a MacBook Pro",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/19f070f5ad9626cec2ef60c698ba3a971c41ea59-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/b07d76f2bd745057ad8e291c5e2a10dce730392a-1080x1080.jpg",
+    "alt": "A Switch 2 with a Killswitch applied, with Area 51 (Classified) skins on on the Joy-Cons",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/cc577901cf34cd2519f5c3223a872c5a0668fd16-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f77b2e2cdece974c40230eba625e6853629745ac-1080x1080.jpg",
+    "alt": "A Cosmic Orange iPhone 17 Pro Max with a Ghost Case applied, being held up for a first-person view photo",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f8c365d2ff261200175540ebde8d3fd5a69164a9-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/097729f0b7de7b28f05bd9acef6cd7b14bd14461-1080x1080.jpg",
+    "alt": "A pair of Nintendo Switch 2s with Prism Screen Protectors applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/771eab5ccf3e22b352d2d5e67767f0e476e22bb9-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/717d1c4bb193ca83be7471c012894c4a57a1c3ed-1080x1080.jpg",
+    "alt": "A OnePlus Grip Case that\u0027s suffered minor cosmetic damage after a motorcycle accident",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/90d2c6aa4ca56945c802a81ed7db393eb6790185-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e52abffa994dcd926d643a320558c6e2c34b80ca-1080x1080.png",
+    "alt": "A Switch 2 with a Killswitch Case applied and Area 51 (Hazard) skins on the Joy-Cons. The Switch 2 is seated in the Killswitch Dock Adapter",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d85ba64c5067ffa47185b0d5f737dccf8a1ce54b-4000x3000.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e3ee0bfd454f2eda9745e743c7d20ce4e2200349-1080x1080.jpg",
+    "alt": "An Xbox Series X with Glow Circuit skins applied. The photo is taken in a dark room, so the skin\u0027s glow-in-the-dark feature is active and visible",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/c1e7f24bef5809a8e6d4c3a2f537ad3fd7cabb5f-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/28c359e893765c01f775b2ee885f2c6acbe50ab9-1080x1080.jpg",
+    "alt": "A hand holding a Cosmic Orange iPhone 17 Pro Max with a Tank Case applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/11532a8424c53ca5113b61ac739c874699d6e01f-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/648a3952621f162fc3f81138f8437cd50070814d-1080x1080.jpg",
+    "alt": "The contents of a Prism 2.0 box, unpackaged and laid out on a surface: an installation tray, a bubble removal squeegee, a microfiber cloth, and a cleaning kit box",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f75f678f18a0ded6662352822261388057955889-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/9a7dee35b495ee512aaba45307c793a55bfbf285-1080x1080.jpg",
+    "alt": "A Pixel 10 Pro with a Grip Case applied. An Area 51 (Classified) skin has been applied to the Grip Case",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d77aca92fa022b85688171c56b9cef1ec29cb819-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/98802b19f142cb9f6cc4edb399eedd9450aa9cc1-1024x768.jpg",
+    "alt": "A Steam Deck being held while in the driver\u0027s seat of a car. The Steam Deck has a Killswitch Case applied, with a Teardown Skin.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/99afc1d23ca55b57ff4f0715051a5737f6971068-400x400.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/449e5d0d8d54b1f8b1ab2a6ad0f318127081aa47-1080x1080.jpg",
+    "alt": "A MacBook Pro, with the lid slightly lifted, on a table beside a Pixel 9 Pro inside a Grip Case. Both the MacBook and the Grip Case have Area 51 (Hazard) skins applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/4d3c05275ad0eefebadccef109acf76ba11acdaf-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f9fed0f3fcc3d9e9c0e1a78acd50273bd61b8a8a-1080x1080.jpg",
+    "alt": "A Pixel 9 Pro with a Ghost Case applied, held in-hand by the photographer",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/772a8c5cb7abc4a75a542b13cd755351a1bd9c15-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0337c86ec2ab846222be7219ea30542b1d4ec788-1080x1080.jpg",
+    "alt": "A Samsung Galaxy smartphone with an Obsidian skin",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/35e588f6a676ecddf903d9707c9d96226e024bb0-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d79d2de2fc408db3356684ee1d65b58e91954216-1080x1080.jpg",
+    "alt": "A Nintendo Switch with a Teardown skin",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d44e194a6fad29694a577282f7d025637dba3515-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/4dc70e3d2341fc6eb404839703819a4364330feb-1080x1080.jpg",
+    "alt": "A Ghost Case on a Cosmic Orange iPhone 17 Pro Max",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/8679fe62bef505d4b3ce8ae8be78987d12bc2ad9-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/a13f0547cb1c110852a4d86a739dc948f8a2b973-1080x1080.jpg",
+    "alt": "A Grip Case with a Warzone Skin on an iPhone",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/43cbeb12f36b339c46d09a5806b42261b109424a-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/fb597217b38d0b5d3d5858f804c8f63d5912f066-1080x1080.jpg",
+    "alt": "A Grip Case with a Teardown skin on an S23 Ultra",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0889700cacdb07e46653b12df18bcec51e25820c-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e8cb6a62895114d066c884f4b549c35c285bcc09-1080x1080.jpg",
+    "alt": "A Tank Case on an iPhone 17 Pro Max",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/00c6fc683234ce39840c14c58f7e44302d548c6c-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/95b71815385b9028e97d918fe6fb327c5ba26722-1080x1080.jpg",
+    "alt": "A hand holding two Prism 2.0 boxes",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/74f8a551221b5da102c9a976e74bfc5773c502d6-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/3bfa647bd219d98f85c38add1fff205a81d1c7a0-1080x1080.jpg",
+    "alt": "A hand applying a Prism screen protector to a Nintendo Switch 2",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/ce288e1575334c700581405b24c4ffa0e60e6de2-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/c0ca98886a818771ace57d8b17aa1e4d41482376-1080x1080.jpg",
+    "alt": "An iPhone 17 Pro Max with a Tank Case applied, held in-hand",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/10df770be5f23b9edde90efbd2e48bfe19010616-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/872ebf662e6e4095fb7b33907f088d8c2eb6176a-1080x1080.jpg",
+    "alt": "A Warzone Skin applied to an iPad Magic Keyboard with an Apple Pencil laying atop it",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/9d90eb1d76aa389b04c893ac672c1816de2dc164-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/ac13c56e5dd09ebd5474e4e7d608046b2edde8fa-1080x1080.jpg",
+    "alt": "A Cosmic Orange iPhone 17 Pro held in-hand with a Short Circuit skin applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/b3d014e4d455c2d4b9acae0f00949bf525d23948-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/2c87165bc153b202834d59a96009a5a0c8496367-1080x1080.jpg",
+    "alt": "A hand holding an iPhone 15 Pro Max in a Grip Case with a Teardown Skin applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/a332955056c6654afdd380702c7ec354a0a8bfa2-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/8143f7b96261947a78ce6b0fe31c81d32a86662f-1080x1080.jpg",
+    "alt": "A Prism 2.0 box being held open by the photographer\u0027s index finger",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/14ba345113c51bd89531d3b5c42d3c8e441f3361-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/7291c0273a310e8c6f16a03cb9348328dc69e4ad-1080x1080.jpg",
+    "alt": "An iPhone 17 Pro Max Tank Case, being held up in front of the camera while seated at a soccer stadium",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/13dd6d44e97ca08cbc92547c4ba9915278a4a796-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/85a8352b55f02d657afaf3270cc6433359ab556e-1080x1080.jpg",
+    "alt": "A Holo White Damascus skin applied to a MacBook Pro",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/19f070f5ad9626cec2ef60c698ba3a971c41ea59-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/b07d76f2bd745057ad8e291c5e2a10dce730392a-1080x1080.jpg",
+    "alt": "A Switch 2 with a Killswitch applied, with Area 51 (Classified) skins on on the Joy-Cons",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/cc577901cf34cd2519f5c3223a872c5a0668fd16-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f77b2e2cdece974c40230eba625e6853629745ac-1080x1080.jpg",
+    "alt": "A Cosmic Orange iPhone 17 Pro Max with a Ghost Case applied, being held up for a first-person view photo",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f8c365d2ff261200175540ebde8d3fd5a69164a9-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/097729f0b7de7b28f05bd9acef6cd7b14bd14461-1080x1080.jpg",
+    "alt": "A pair of Nintendo Switch 2s with Prism Screen Protectors applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/771eab5ccf3e22b352d2d5e67767f0e476e22bb9-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/717d1c4bb193ca83be7471c012894c4a57a1c3ed-1080x1080.jpg",
+    "alt": "A OnePlus Grip Case that\u0027s suffered minor cosmetic damage after a motorcycle accident",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/90d2c6aa4ca56945c802a81ed7db393eb6790185-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e52abffa994dcd926d643a320558c6e2c34b80ca-1080x1080.png",
+    "alt": "A Switch 2 with a Killswitch Case applied and Area 51 (Hazard) skins on the Joy-Cons. The Switch 2 is seated in the Killswitch Dock Adapter",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d85ba64c5067ffa47185b0d5f737dccf8a1ce54b-4000x3000.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e3ee0bfd454f2eda9745e743c7d20ce4e2200349-1080x1080.jpg",
+    "alt": "An Xbox Series X with Glow Circuit skins applied. The photo is taken in a dark room, so the skin\u0027s glow-in-the-dark feature is active and visible",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/c1e7f24bef5809a8e6d4c3a2f537ad3fd7cabb5f-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/28c359e893765c01f775b2ee885f2c6acbe50ab9-1080x1080.jpg",
+    "alt": "A hand holding a Cosmic Orange iPhone 17 Pro Max with a Tank Case applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/11532a8424c53ca5113b61ac739c874699d6e01f-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/648a3952621f162fc3f81138f8437cd50070814d-1080x1080.jpg",
+    "alt": "The contents of a Prism 2.0 box, unpackaged and laid out on a surface: an installation tray, a bubble removal squeegee, a microfiber cloth, and a cleaning kit box",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f75f678f18a0ded6662352822261388057955889-60x60.png",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/9a7dee35b495ee512aaba45307c793a55bfbf285-1080x1080.jpg",
+    "alt": "A Pixel 10 Pro with a Grip Case applied. An Area 51 (Classified) skin has been applied to the Grip Case",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/d77aca92fa022b85688171c56b9cef1ec29cb819-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/98802b19f142cb9f6cc4edb399eedd9450aa9cc1-1024x768.jpg",
+    "alt": "A Steam Deck being held while in the driver\u0027s seat of a car. The Steam Deck has a Killswitch Case applied, with a Teardown Skin.",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/99afc1d23ca55b57ff4f0715051a5737f6971068-400x400.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/449e5d0d8d54b1f8b1ab2a6ad0f318127081aa47-1080x1080.jpg",
+    "alt": "A MacBook Pro, with the lid slightly lifted, on a table beside a Pixel 9 Pro inside a Grip Case. Both the MacBook and the Grip Case have Area 51 (Hazard) skins applied",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/4d3c05275ad0eefebadccef109acf76ba11acdaf-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f9fed0f3fcc3d9e9c0e1a78acd50273bd61b8a8a-1080x1080.jpg",
+    "alt": "A Pixel 9 Pro with a Ghost Case applied, held in-hand by the photographer",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/772a8c5cb7abc4a75a542b13cd755351a1bd9c15-60x60.jpg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero-fill/play.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/33e92650cd065fe7d7afd5e793e2825d6951c914-512x512.jpg",
+    "alt": "dbrand Ghost Case",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/a68649b151fa01f87a6f792893a7f6b6c1ee6ad0-512x512.jpg",
+    "alt": "Ghost Case 2.0 and Prism Screen Protector Bundle",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0bf50500af6f5178fff8c1a9423ec119244b0ece-512x512.png",
+    "alt": "dbrand Tank Case",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e6154358363fc5aefc84306750e22044542693fc-512x512.png",
+    "alt": "Tank Case and Prism Screen Protector Bundle",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/0081dc15e5d9d3d0d186a37adc80c8ab1623f4cc-512x512.png",
+    "alt": "dbrand Grip Case",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/69b1eb6f646cd879b1ac923ac680679d4df59a64-512x512.png",
+    "alt": "Grip Case and Prism Screen Protector Bundle",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/c74e500b3e96f89ba6e9733d7c30e68a52ae11d4-512x512.png",
+    "alt": "dbrand Killswitch Case",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/f55ae65f7d6193d1690ac743505a9a85aa022452-512x512.png",
+    "alt": "dbrand Darkplates 2.0 for PS5 Slim",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/b052cc38ec78749040d430fc8c99932cb9244f3f-512x512.png",
+    "alt": "dbrand Skins for Switch 2",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/3ddcc00692cd79dcc8cc8fb258b7e6b395964e68-512x512.png",
+    "alt": "dbrand Gaming Handheld Accessories",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/2e43217e6c0e7492723f6aaac819ccac5f6715c5-512x512.png",
+    "alt": "dbrand Switch 2 Screen Protector",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/06cfcf031d13e26b4546c4d2e6b1a226c0749e1a-512x512.png",
+    "alt": "Valve Steam Deck Accessories",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/9553f46ec1b9473268f9d935126a6982bbb845a9-512x512.png",
+    "alt": "dbrand Xbox Accessories",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/856b6046173bcd0541bd0272183dedb746601230-512x512.png",
+    "alt": "dbrand PlayStation Accessories",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/397d24dabdfe6bb3d73c3cd881af614015d94413-512x512.jpg",
+    "alt": "Prism Screen Protector",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/dd9a50636e4d7f793c30479bce9c6542dd6a63c2-512x512.jpg",
+    "alt": "Ghost Case 2.0 and Prism Screen Protector Bundle",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/69b1eb6f646cd879b1ac923ac680679d4df59a64-512x512.png",
+    "alt": "Grip Case and Prism Screen Protector Bundle",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e6154358363fc5aefc84306750e22044542693fc-512x512.png",
+    "alt": "Tank Case and Prism Screen Protector Bundle",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/03cb1f2436a91d4e09ac71c20379e557d122d25b-512x512.png",
+    "alt": "Switch 2 Screen Protector",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/06591e1bbab2143db802967bc6e90bc4fef02608-512x512.jpg",
+    "alt": "dbrand Limited Edition Skins",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/49760b523ea15a51f00465c0c6646fcd574e2f3b-512x512.png",
+    "alt": "dbrand Phone Skins",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e9ec7065787cfeb9d86a2734e06bc10fc67a7102-512x512.png",
+    "alt": "dbrand Laptop Skins",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/5d6c0f678c2a8ffd8ab1cbe416d4f81a02b1f82c-512x512.png",
+    "alt": "dbrand Gaming Skins",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/e372c247679c502d8b3eb68fbd6f76142bee11c8-512x512.png",
+    "alt": "dbrand Tablet Skins",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/41f63e0a35bb39d423175529ec1605ac421bca80-512x512.png",
+    "alt": "dbrand Manifesto",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/20ef018edbf1e34b8ad278fac759917c027b1b31-512x512.png",
+    "alt": "dbrand Playing Cards",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/02281165da750538780d5b074e175ce19810e64f-512x512.png",
+    "alt": "dbrand Jigsaw Puzzle",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/eb3fed26a09628cd906882b5594fa98b0fe8a278-512x512.png",
+    "alt": "dbrand Coloring Book",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/5458f5f9c32deddee9b1a360a04aafd5284639de-512x512.png",
+    "alt": "dbrand Cube",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/90ac14c07156ade4227e51bd4e0eabb70d0d99ce-512x512.png",
+    "alt": "dbrand Gift Cards",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/images/dlg3xw1d/production/220b40829b7577bf433f1856c2707b10a50b29c0-512x512.png",
+    "alt": "dbrand Sticker Pack",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
+  {
+    "src": "https://cdn.db.io/icons/hero/arrow-right.svg",
+    "alt": "",
+    "pageTitle": "dbrand » Official Shop",
+    "pageUrl": "https://shortlinus.com"
+  },
   {
     "src": "https://www.gaspedaal.nl/cms/images/tesla_model_3_hero_22a2818260.jpeg?width\u003d1200\u0026height\u003d1200",
     "alt": "Tesla Model 3 RWD",
