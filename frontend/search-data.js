@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 814,
+    "url": "https://github.com/python/cpython/issues/120600",
+    "title": "[C API] Make Py_TYPE() opaque in limited C API 3.14 · Issue #120600 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} [C API] Make Py_TYPE() opaque in limited C API 3.14 #120600 New issue Copy link New issue Copy link Closed Closed [C API] Make Py_TYPE() opaque in limited C API 3.14#120600 Copy link Labels topic-C-API Description vstinner opened on Jun 16, 2024 Issue body actions In the limited C API 3.14 and newer, I propose to change Py_TYPE() and Py_SET_TYPE() implementation to opaque function calls to hide implementation details. I made a similar change for Py_REFCNT() and Py_SET_REFCNT() in Python 3.12. The problem is that with Free Threading (PEP 703), the implementation of these functions become less trivial than just getting/setting an object member: static inline PyTypeObject* Py_TYPE(PyObject *ob) {\n    return (PyTypeObject *)_Py_atomic_load_ptr_relaxed(\u0026ob-\u003eob_type);\n}\n\nstatic inline void Py_SET_TYPE(PyObject *ob, PyTypeObject *type) {\n    _Py_atomic_store_ptr(\u0026ob-\u003eob_type, type);\n} _Py_atomic_load_ptr_relaxed() and _Py_atomic_store_ptr() must now be called. But I would prefer to not \"leak\" such implementation detail into the limited C API. cc @colesbury @Fidget-Spinner Linked PRs gh-120600: Make Py_TYPE() opaque in limited C API 3.14 #120601 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-C-API Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:15:22.097144"
+  },
+  {
+    "id": 813,
+    "url": "https://docs.python.org/3/library/itertools.html#module-itertools",
+    "title": "itertools — Functions creating iterators for efficient looping — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Functional Programming Modules » itertools — Functions creating iterators for efficient looping | Theme Auto Light Dark | itertools — Functions creating iterators for efficient looping¶ This module implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML. Each has been recast in a form suitable for Python. The module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination. Together, they form an “iterator algebra” making it possible to construct specialized tools succinctly and efficiently in pure Python. For instance, SML provides a tabulation tool: tabulate(f) which produces a sequence f(0), f(1), .... The same effect can be achieved in Python by combining map() and count() to form map(f, count()). General iterators: Iterator Arguments Results Example accumulate() p [,func] p0, p0+p1, p0+p1+p2, … accumulate([1,2,3,4,5]) → 1 3 6 10 15 batched() p, n (p0, p1, …, p_n-1), … batched(\u0027ABCDEFG\u0027, n\u003d3) → ABC DEF G chain() p, q, … p0, p1, … plast, q0, q1, … chain(\u0027ABC\u0027, \u0027DEF\u0027) → A B C D E F chain.from_iterable() iterable p0, p1, … plast, q0, q1, … chain.from_iterable([\u0027ABC\u0027, \u0027DEF\u0027]) → A B C D E F compress() data, selectors (d[0] if s[0]), (d[1] if s[1]), … compress(\u0027ABCDEF\u0027, [1,0,1,0,1,1]) → A C E F count() [start[, step]] start, start+step, start+2*step, … count(10) → 10 11 12 13 14 ... cycle() p p0, p1, … plast, p0, p1, … cycle(\u0027ABCD\u0027) → A B C D A B C D ... dropwhile() predicate, seq seq[n], seq[n+1], starting when predicate fails dropwhile(lambda x: x\u003c5, [1,4,6,3,8]) → 6 3 8 filterfalse() predicate, seq elements of seq where predicate(elem) fails filterfalse(lambda x: x\u003c5, [1,4,6,3,8]) → 6 8 groupby() iterable[, key] sub-iterators grouped by value of key(v) groupby([\u0027A\u0027,\u0027B\u0027,\u0027DEF\u0027], len) → (1, A B) (3, DEF) islice() seq, [start,] stop [, step] elements from seq[start:stop:step] islice(\u0027ABCDEFG\u0027, 2, None) → C D E F G pairwise() iterable (p[0], p[1]), (p[1], p[2]) pairwise(\u0027ABCDEFG\u0027) → AB BC CD DE EF FG repeat() elem [,n] elem, elem, elem, … endlessly or up to n times repeat(10, 3) → 10 10 10 starmap() func, seq func(*seq[0]), func(*seq[1]), … starmap(pow, [(2,5), (3,2), (10,3)]) → 32 9 1000 takewhile() predicate, seq seq[0], seq[1], until predicate fails takewhile(lambda x: x\u003c5, [1,4,6,3,8]) → 1 4 tee() it, n it1, it2, … itn splits one iterator into n tee(\u0027ABC\u0027, 2) → A B C, A B C zip_longest() p, q, … (p[0], q[0]), (p[1], q[1]), … zip_longest(\u0027ABCD\u0027, \u0027xy\u0027, fillvalue\u003d\u0027-\u0027) → Ax By C- D- Combinatoric iterators: Iterator Arguments Results product() p, q, … [repeat\u003d1] cartesian product, equivalent to a nested for-loop permutations() p[, r] r-length tuples, all possible orderings, no repeated elements combinations() p, r r-length tuples, in sorted order, no repeated elements combinations_with_replacement() p, r r-length tuples, in sorted order, with repeated elements Examples Results product(\u0027ABCD\u0027, repeat\u003d2) AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD permutations(\u0027ABCD\u0027, 2) AB AC AD BA BC BD CA CB CD DA DB DC combinations(\u0027ABCD\u0027, 2) AB AC AD BC BD CD combinations_with_replacement(\u0027ABCD\u0027, 2) AA AB AC AD BB BC BD CC CD DD Itertool Functions¶ The following functions all construct and return iterators. Some provide streams of infinite length, so they should only be accessed by functions or loops that truncate the stream. itertools.accumulate(iterable[, function, *, initial\u003dNone])¶ Make an iterator that returns accumulated sums or accumulated results from other binary functions. The function defaults to addition. The function should accept two arguments, an accumulated total and a value from the iterable. If an initial value is provided, the accumulation will start with that value and the output will have one more element than the input iterable. Roughly equivalent to: def accumulate(iterable, function\u003doperator.add, *, initial\u003dNone):\n    \u0027Return running totals\u0027\n    # accumulate([1,2,3,4,5]) → 1 3 6 10 15\n    # accumulate([1,2,3,4,5], initial\u003d100) → 100 101 103 106 110 115\n    # accumulate([1,2,3,4,5], operator.mul) → 1 2 6 24 120\n\n    iterator \u003d iter(iterable)\n    total \u003d initial\n    if initial is None:\n        try:\n            total \u003d next(iterator)\n        except StopIteration:\n            return\n\n    yield total\n    for element in iterator:\n        total \u003d function(total, element)\n        yield total\n To compute a running minimum, set function to min(). For a running maximum, set function to max(). Or for a running product, set function to operator.mul(). To build an amortization table, accumulate the interest and apply payments: \u003e\u003e\u003e data \u003d [3, 4, 6, 2, 1, 9, 0, 7, 5, 8]\n\u003e\u003e\u003e list(accumulate(data, max))              # running maximum\n[3, 4, 6, 6, 6, 9, 9, 9, 9, 9]\n\u003e\u003e\u003e list(accumulate(data, operator.mul))     # running product\n[3, 12, 72, 144, 144, 1296, 0, 0, 0, 0]\n\n# Amortize a 5% loan of 1000 with 10 annual payments of 90\n",
+    "scrapedAt": "2026-10-08 19:15:19.916641"
+  },
+  {
+    "id": 812,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number",
+    "title": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Numeric and Mathematical Modules » decimal — Decimal fixed-point and floating-point arithmetic | Theme Auto Light Dark | decimal — Decimal fixed-point and floating-point arithmetic¶ Source code: Lib/decimal.py The decimal module provides support for fast correctly rounded decimal floating-point arithmetic. It offers several advantages over the float datatype: Decimal “is based on a floating-point model which was designed with people in mind, and necessarily has a paramount guiding principle – computers must provide an arithmetic that works in the same way as the arithmetic that people learn at school.” – excerpt from the decimal arithmetic specification. Decimal numbers can be represented exactly. In contrast, numbers like 1.1 and 2.2 do not have exact representations in binary floating point. End users typically would not expect 1.1 + 2.2 to display as 3.3000000000000003 as it does with binary floating point. The exactness carries over into arithmetic. In decimal floating point, 0.1 + 0.1 + 0.1 - 0.3 is exactly equal to zero. In binary floating point, the result is 5.5511151231257827e-017. While near to zero, the differences prevent reliable equality testing and differences can accumulate. For this reason, decimal is preferred in accounting applications which have strict equality invariants. The decimal module incorporates a notion of significant places so that 1.30 + 1.20 is 2.50. The trailing zero is kept to indicate significance. This is the customary presentation for monetary applications. For multiplication, the “schoolbook” approach uses all the figures in the multiplicands. For instance, 1.3 * 1.2 gives 1.56 while 1.30 * 1.20 gives 1.5600. Unlike hardware based binary floating point, the decimal module has a user alterable precision (defaulting to 28 places) which can be as large as needed for a given problem: \u003e\u003e\u003e from decimal import *\n\u003e\u003e\u003e getcontext().prec \u003d 6\n\u003e\u003e\u003e Decimal(1) / Decimal(7)\nDecimal(\u00270.142857\u0027)\n\u003e\u003e\u003e getcontext().prec \u003d 28\n\u003e\u003e\u003e Decimal(1) / Decimal(7)\nDecimal(\u00270.1428571428571428571428571429\u0027)\n Both binary and decimal floating point are implemented in terms of published standards. While the built-in float type exposes only a modest portion of its capabilities, the decimal module exposes all required parts of the standard. When needed, the programmer has full control over rounding and signal handling. This includes an option to enforce exact arithmetic by using exceptions to block any inexact operations. The decimal module was designed to support “without prejudice, both exact unrounded decimal arithmetic (sometimes called fixed-point arithmetic) and rounded floating-point arithmetic.” – excerpt from the decimal arithmetic specification. The module design is centered around three concepts: the decimal number, the context for arithmetic, and signals. A decimal number is immutable. It has a sign, coefficient digits, and an exponent. To preserve significance, the coefficient digits do not truncate trailing zeros. Decimals also include special values such as Infinity, -Infinity, and NaN. The standard also differentiates -0 from +0. The context for arithmetic is an environment specifying precision, rounding rules, limits on exponents, flags indicating the results of operations, and trap enablers which determine whether signals are treated as exceptions. Rounding options include ROUND_CEILING, ROUND_DOWN, ROUND_FLOOR, ROUND_HALF_DOWN, ROUND_HALF_EVEN, ROUND_HALF_UP, ROUND_UP, and ROUND_05UP. Signals are groups of exceptional conditions arising during the course of computation. Depending on the needs of the application, signals may be ignored, considered as informational, or treated as exceptions. The signals in the decimal module are: Clamped, InvalidOperation, DivisionByZero, Inexact, Rounded, Subnormal, Overflow, Underflow and FloatOperation. For each signal there is a flag and a trap enabler. When a signal is encountered, its flag is set to one, then, if the trap enabler is set to one, an exception is raised. Flags are sticky, so the user needs to reset them before monitoring a calculation. See also IBM’s General Decimal Arithmetic Specification, The General Decimal Arithmetic Specification. Quick-start tutorial¶ The usual start to using decimals is importing the module, viewing the current context with getcontext() and, if necessary, setting new values for precision, rounding, or enabled traps: \u003e\u003e\u003e from decimal import *\n\u003e\u003e\u003e getcontext()\nContext(prec\u003d28, rounding\u003dROUND_HALF_EVEN, Emin\u003d-999999, Emax\u003d999999,\n        capitals\u003d1, clamp\u003d0, flags\u003d[], traps\u003d[Overflow, DivisionByZero,\n        InvalidOperation])\n\n\u003e\u003e\u003e getcontext().prec \u003d 7       # Set a new precision\n Decimal instances can be constructed from integers, strings, floats, or tuples. Construction from an integer or a float performs an exact conversion of the value of that integer or float. Decimal numbers include special values such as",
+    "scrapedAt": "2026-10-08 19:15:18.732009"
+  },
+  {
+    "id": 811,
+    "url": "https://docs.python.org/3/library/builtins.html#module-builtins",
+    "title": "builtins — Built-in objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » builtins — Built-in objects | Theme Auto Light Dark | builtins — Built-in objects¶ This module provides direct access to all ‘built-in’ identifiers of Python; for example, builtins.open is the full name for the built-in function open(). This module is not normally accessed explicitly by most applications, but can be useful in modules that provide objects with the same name as a built-in value, but in which the built-in of that name is also needed. For example, in a module that wants to implement an open() function that wraps the built-in open(), this module can be used directly: import builtins\n\ndef open(path):\n    f \u003d builtins.open(path, \u0027r\u0027)\n    return UpperCaser(f)\n\nclass UpperCaser:\n    \u0027\u0027\u0027Wrapper around a file that converts output to uppercase.\u0027\u0027\u0027\n\n    def __init__(self, f):\n        self._f \u003d f\n\n    def read(self, count\u003d-1):\n        return self._f.read(count).upper()\n\n    # ...\n As an implementation detail, most modules have the name __builtins__ made available as part of their globals. The value of __builtins__ is normally either this module or the value of this module’s __dict__ attribute. Since this is an implementation detail, it may not be used by alternate implementations of Python. See also Built-in Constants Built-in Exceptions Built-in Functions Built-in Types Previous topic sysconfig — Provide access to Python’s configuration information Next topic __main__ — Top-level code environment This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » builtins — Built-in objects | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:15:17.536519"
+  },
+  {
+    "id": 810,
+    "url": "https://docs.python.org/3/library/sys.html#sys.exit",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:15:16.356551"
+  },
+  {
     "id": 809,
     "url": "https://docs.python.org/3/glossary.html#term-GIL",
     "title": "Glossary — Python 3.14.8 documentation",
@@ -5350,26 +5385,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 810,
-    "url": "https://docs.python.org/3/library/sys.html#sys.exit"
-  },
-  {
-    "id": 811,
-    "url": "https://docs.python.org/3/library/builtins.html#module-builtins"
-  },
-  {
-    "id": 812,
-    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
-  },
-  {
-    "id": 813,
-    "url": "https://docs.python.org/3/library/itertools.html#module-itertools"
-  },
-  {
-    "id": 814,
-    "url": "https://github.com/python/cpython/issues/120600"
   },
   {
     "id": 815,
@@ -139105,10 +139120,1180 @@ window.searchData = [
     "id": 105056,
     "url": "https://docs.python.org/3/library/string.html#format-string-syntax",
     "parentUrl": "https://docs.python.org/3/library/string.html#module-string"
+  },
+  {
+    "id": 105839,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#bltin-types",
+    "parentUrl": "https://docs.python.org/3/library/builtins.html#module-builtins"
+  },
+  {
+    "id": 105840,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/builtins.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/builtins.html#module-builtins"
+  },
+  {
+    "id": 105858,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.clear_flags",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105859,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.compare_total",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105860,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_subnormal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105863,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.quantize",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105864,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.getcontext",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105865,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.copy_abs",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105866,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.setcontext",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105867,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.localcontext",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105869,
+    "url": "https://www.bytereef.org/mpdecimal/doc/libmpdec/index.html",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105870,
+    "url": "https://docs.python.org/3/library/decimal.html#constants",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105871,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.as_integer_ratio",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105872,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.compare_total",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105873,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.InvalidOperation",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105874,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.logical_invert",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105875,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.remainder_near",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105876,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.scaleb",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105877,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.rotate",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105878,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.compare_total_mag",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105879,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.next_minus",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105881,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.compare",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105883,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.minus",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105886,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.logical_xor",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105887,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_nan",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105888,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.flags",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105889,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.log10",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105890,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_normal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105891,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.prec",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105892,
+    "url": "https://docs.python.org/3/library/decimal.html#floating-point-notes",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105893,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.DefaultContext",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105894,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.canonical",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105895,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_qnan",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105897,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.traps",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105898,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_infinite",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105899,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.min_mag",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105901,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.logical_or",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105902,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.min_mag",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105905,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.logical_xor",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105906,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-without-decimal-contextvar",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105907,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.HAVE_CONTEXTVAR",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105908,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.power",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105909,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Inexact",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105910,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105912,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_finite",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105913,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.same_quantum",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105915,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_canonical",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105916,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_infinite",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105917,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.logb",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105918,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.next_plus",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105919,
+    "url": "https://docs.python.org/3/library/decimal.html#signals",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105920,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.compare_signal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105921,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.divmod",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105922,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.FloatOperation",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105923,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.BasicContext",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105924,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.create_decimal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105925,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.shift",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105926,
+    "url": "https://speleotrove.com/decimal/damodel.html#refnumber",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105927,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.copy_negate",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105928,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_05UP",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105929,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.compare",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105930,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_signed",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105932,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_HALF_UP",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105933,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_qnan",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105934,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.max",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105935,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.rotate",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105936,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.scaleb",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105937,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.to_integral",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105938,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.to_integral_exact",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105940,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.next_toward",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105941,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.max",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105943,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.as_tuple",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105944,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.divide_int",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105945,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.same_quantum",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105947,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.DivisionByZero",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105948,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.next_toward",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105949,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.number_class",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105950,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.capitals",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105951,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.Etiny",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105952,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_canonical",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105953,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.Emax",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105954,
+    "url": "https://docs.python.org/3/library/decimal.html#",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105955,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal-objects",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105957,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.log10",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105958,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.ln",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105959,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.Etop",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105961,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.adjusted",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105962,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.subtract",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105963,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_zero",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105964,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.radix",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105965,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.remainder",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105966,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.number_class",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105967,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.copy_sign",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105968,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.copy_negate",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105969,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/decimal.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105970,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_snan",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105971,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.max_mag",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105972,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_nan",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105973,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.sqrt",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105975,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.to_eng_string",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105976,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/decimal.py",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105977,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ExtendedContext",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105978,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_HALF_DOWN",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105979,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.copy_abs",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105980,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.copy_decimal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105981,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.IEEE_CONTEXT_MAX_BITS",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105982,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.copy",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105984,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Overflow",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105985,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.next_minus",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105986,
+    "url": "https://docs.python.org/3/library/decimal.html#special-values",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105987,
+    "url": "https://speleotrove.com/decimal/decarith.html",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105990,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.MIN_EMIN",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105991,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.quantize",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105992,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.conjugate",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105993,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_float",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105994,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.rounding",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105995,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.normalize",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105996,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.sqrt",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105997,
+    "url": "https://docs.python.org/3/library/decimal.html#working-with-threads",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105998,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_subnormal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 105999,
+    "url": "https://en.wikipedia.org/wiki/Discrete_Fourier_transform_(general)#Number-theoretic_transform",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106000,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.divide",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106001,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.DecimalException",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106002,
+    "url": "https://docs.python.org/3/library/decimal.html#logical-operands",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106003,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.MIN_ETINY",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106004,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_FLOOR",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106005,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.create_decimal_from_float",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106006,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.compare_total_mag",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106007,
+    "url": "https://docs.python.org/3/library/decimal.html#recipes",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106008,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.exp",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106010,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.radix",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106013,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_DOWN",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106014,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.shift",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106015,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal-faq",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106016,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.logical_or",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106017,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.canonical",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106018,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.max_mag",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106019,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Subnormal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106020,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.to_eng_string",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106021,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.to_integral_exact",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106022,
+    "url": "https://docs.python.org/3/library/decimal.html#rounding-modes",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106023,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.clamp",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106024,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.logical_invert",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106026,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.ln",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106027,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.MAX_EMAX",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106028,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_UP",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106031,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.fma",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106032,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.normalize",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106033,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_HALF_EVEN",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106034,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Underflow",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106035,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Rounded",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106036,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.multiply",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106037,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.MAX_PREC",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106040,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.to_sci_string",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106041,
+    "url": "https://docs.python.org/3/library/decimal.html#quick-start-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106043,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.min",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106044,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.ROUND_CEILING",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106045,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.min",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106046,
+    "url": "https://docs.python.org/3/library/decimal.html#logical-operands-label",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106048,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_normal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106049,
+    "url": "https://en.wikipedia.org/wiki/Karatsuba_algorithm",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106050,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.logical_and",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106051,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_signed",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106052,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.fma",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106053,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.logb",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106055,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Clamped",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106056,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.abs",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106057,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.plus",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106058,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.is_snan",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106060,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.to_integral_value",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106061,
+    "url": "https://docs.python.org/3/library/decimal.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106062,
+    "url": "https://docs.python.org/3/library/decimal.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106063,
+    "url": "https://docs.python.org/3/library/decimal.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106064,
+    "url": "https://docs.python.org/3/library/decimal.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106065,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.copy_sign",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106066,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.remainder_near",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106068,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_zero",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106069,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.exp",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106071,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.compare_signal",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106073,
+    "url": "https://docs.python.org/3/library/decimal.html#context-objects",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106074,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.Emin",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106075,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.logical_and",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106076,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.next_plus",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106077,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.clear_traps",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106078,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.is_finite",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106080,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.Context.add",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106081,
+    "url": "https://docs.python.org/3/library/decimal.html#mitigating-round-off-error-with-increased-precision",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106082,
+    "url": "https://docs.python.org/3/library/decimal.html#decimal.HAVE_THREADS",
+    "parentUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "id": 106086,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.dropwhile",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106087,
+    "url": "https://docs.python.org/3/library/itertools.html#itertool-functions",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106095,
+    "url": "https://docs.python.org/3/library/operator.html#operator.mul",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106097,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.batched",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106098,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.cycle",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106102,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.tee",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106104,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools-recipes",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106105,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.permutations",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106108,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.combinations",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106109,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.compress",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106112,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.count",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106113,
+    "url": "https://en.wikipedia.org/wiki/Cartesian_product",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106115,
+    "url": "https://pypi.org/project/more-itertools/",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106116,
+    "url": "https://docs.python.org/3/library/operator.html#module-operator",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106118,
+    "url": "https://www.britannica.com/science/permutation",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106123,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/itertools.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106124,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106125,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.repeat",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106127,
+    "url": "https://docs.python.org/3/library/math.html#math.perm",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106128,
+    "url": "https://docs.python.org/3/library/itertools.html#",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106129,
+    "url": "https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106130,
+    "url": "https://more-itertools.readthedocs.io/en/stable/api.html#more_itertools.before_and_after",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106132,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.combinations_with_replacement",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106137,
+    "url": "https://docs.python.org/3/library/math.html#math.comb",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106139,
+    "url": "https://www.ramseysolutions.com/real-estate/amortization-schedule",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106142,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.takewhile",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106143,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.product",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106144,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.pairwise",
+    "parentUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "id": 106146,
+    "url": "https://github.com/python/cpython/issues/120600#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 106148,
+    "url": "https://github.com/python/cpython/pull/120601",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 106149,
+    "url": "https://github.com/python/cpython/issues/120600#issue-2355975533",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 106151,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/120600",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 106153,
+    "url": "https://github.com/python/cpython/issues/120600#top",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 106154,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/120600",
+    "parentUrl": "https://github.com/python/cpython/issues/120600"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Make Py_TYPE() opaque in limited C API 3.14 · Issue #120600 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "[C API] Make Py_TYPE() opaque in limited C API 3.14 · Issue #120600 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "itertools — Functions creating iterators for efficient looping — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "itertools — Functions creating iterators for efficient looping — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/itertools.html#module-itertools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/decimal.html#decimal.Decimal.from_number"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "builtins — Built-in objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/builtins.html#module-builtins"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "builtins — Built-in objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/builtins.html#module-builtins"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.exit"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.exit"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
