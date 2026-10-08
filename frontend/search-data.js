@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 778,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#urllib",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:13:59.546578"
+  },
+  {
+    "id": 777,
+    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning",
+    "title": "Built-in Exceptions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current fram",
+    "scrapedAt": "2026-10-08 19:13:58.229874"
+  },
+  {
+    "id": 776,
+    "url": "https://github.com/python/cpython/issues/131952",
+    "title": "Color in json.tool CLI · Issue #131952 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Color in json.tool CLI #131952 New issue Copy link New issue Copy link Closed Closed Color in json.tool CLI#131952 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description raztd opened on Mar 31, 2025 Issue body actions Feature or enhancement Proposal: apologies if this is not the right place to ask for enhancement requests. since python3.13 added support for colorization in repl, i was wondering if some basic colorization could be added for the python\u0027s cli json tool? jq[0] does this, the keys are bolded and have a different color from the values. if this gets implemented i think a lot of people will be happy to just use python and not have to install yet another library to fulfill their needs :-) [0] https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2020/01/5-7.png Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-131952: Add color to the json CLI #132126 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects JSON issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:13:56.981095"
+  },
+  {
+    "id": 775,
+    "url": "https://github.com/python/cpython/issues/125286",
+    "title": "test_audit_subinterpreter crashes with tracerefs enabled · Issue #125286 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} test_audit_subinterpreter crashes with tracerefs enabled #125286 New issue Copy link New issue Copy link Closed Closed test_audit_subinterpreter crashes with tracerefs enabled#125286 Copy link Labels topic-subinterpreterstype-crashA hard crash of the interpreter, possibly with a core dumpA hard crash of the interpreter, possibly with a core dump Description nascheme opened on Oct 10, 2024 Issue body actions Crash report What happened? To run test: Programs/_testembed test_audit_subinterpreter. The program crashes with an assert failure: _testembed: ../Objects/object.c:196: _PyRefchain_Remove: Assertion `value \u003d\u003d REFCHAIN_VALUE\u0027 failed.\n Stack trace: #5  0x00007fbd32045eb2 in __GI___assert_fail (\n    assertion\u003dassertion@entry\u003d0x55f8c78ecded \"value \u003d\u003d REFCHAIN_VALUE\", \n    file\u003dfile@entry\u003d0x55f8c78ecd93 \"../Objects/object.c\", line\u003dline@entry\u003d196, \n    function\u003dfunction@entry\u003d0x55f8c78edba0 \u003c__PRETTY_FUNCTION__.13\u003e \"_PyRefchain_Remove\")\n    at ./assert/assert.c:101\n#6  0x000055f8c76c9999 in _PyRefchain_Remove (interp\u003d\u003coptimized out\u003e, obj\u003dobj@entry\u003d0x7fbd3183d710)\n    at ../Objects/object.c:196\n#7  0x000055f8c76cb6c3 in _Py_ForgetReference (op\u003dop@entry\u003d0x7fbd3183d710) at ../Objects/object.c:2548\n#8  0x000055f8c76ca91d in _Py_Dealloc (op\u003dop@entry\u003d0x7fbd3183d710) at ../Objects/object.c:2923\n#9  0x000055f8c76b2ad4 in Py_DECREF (filename\u003dfilename@entry\u003d0x55f8c78b4f72 \"../Include/refcount.h\", \n    lineno\u003dlineno@entry\u003d476, op\u003d0x7fbd3183d710) at ../Include/refcount.h:367\n#10 0x000055f8c76b2af3 in Py_XDECREF (op\u003d\u003coptimized out\u003e) at ../Include/refcount.h:476\n#11 0x000055f8c76b2c0f in dictkeys_decref (interp\u003dinterp@entry\u003d0x7fbd31f6e020, \n    dk\u003ddk@entry\u003d0x55f8c9b29030, use_qsbr\u003duse_qsbr@entry\u003dfalse) at ../Objects/dictobject.c:459\n#12 0x000055f8c76bca24 in dict_dealloc (self\u003d0x7fbd31765070) at ../Objects/dictobject.c:3187\n#13 0x000055f8c76ca923 in _Py_Dealloc (op\u003dop@entry\u003d0x7fbd31765070) at ../Objects/object.c:2925\n#14 0x000055f8c76c67ab in Py_DECREF (\n    filename\u003dfilename@entry\u003d0x55f8c78ec613 \"../Objects/moduleobject.c\", lineno\u003dlineno@entry\u003d1118, \n    op\u003d0x7fbd31765070) at ../Include/refcount.h:367\n#15 0x000055f8c76c6bdb in module_clear (self\u003d0x7fbd31764110) at ../Objects/moduleobject.c:1118\n#16 0x000055f8c77e604a in delete_garbage (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18, \n    gcstate\u003dgcstate@entry\u003d0x7fbd31f6fd08, collectable\u003dcollectable@entry\u003d0x7ffd93cac500, \n    old\u003dold@entry\u003d0x7fbd31f6fd50) at ../Python/gc.c:1126\n#17 0x000055f8c77e62f7 in gc_collect_region (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18, \n    from\u003dfrom@entry\u003d0x7fbd31f6fd50, to\u003dto@entry\u003d0x7fbd31f6fd50, untrack\u003duntrack@entry\u003d3, \n    stats\u003dstats@entry\u003d0x7ffd93cac5e0) at ../Python/gc.c:1585\n#18 0x000055f8c77e6790 in gc_collect_full (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18, \n    stats\u003dstats@entry\u003d0x7ffd93cac5e0) at ../Python/gc.c:1498\n#19 0x000055f8c77e7070 in _PyGC_Collect (tstate\u003d0x7fbd31fa4d18, generation\u003dgeneration@entry\u003d2, \n    reason\u003dreason@entry\u003d_Py_GC_REASON_SHUTDOWN) at ../Python/gc.c:1862\n#20 0x000055f8c77e70ce in _PyGC_CollectNoFail (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18)\n    at ../Python/gc.c:1903\n#21 0x000055f8c7818408 in finalize_modules (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18)\n    at ../Python/pylifecycle.c:1716\n#22 0x000055f8c781e9f4 in Py_EndInterpreter (tstate\u003dtstate@entry\u003d0x7fbd31fa4d18)\n    at ../Python/pylifecycle.c:2409\n#23 0x000055f8c781ec3a in finalize_subinterpreters () at ../Python/pylifecycle.c:2484\n#24 0x000055f8c781edc3 in _Py_Finalize (runtime\u003druntime@entry\u003d0x55f8c7b1e000 \u003c_PyRuntime\u003e)\n    at ../Python/pylifecycle.c:2088\n#25 0x000055f8c781ef34 in Py_Finalize () at ../Python/pylifecycle.c:2216\n#26 0x000055f8c75e90ec in test_audit_subinterpreter () at ../Programs/_testembed.c:1431\n#27 0x000055f8c75ece41 in main (argc\u003d\u003coptimized out\u003e, argv\u003d0x7ffd93cac888)\n    at ../Programs/_testembed.c:2520\n The object is a string that has been interned but not immortalized. Likely it is shared between sub-interpreters, using basic single-phase init and is therefore shared between multiple sub-interpreters. (rr) p *op\n$3 \u003d {{ob_refcnt \u003d 0, ob_refcnt_split \u003d {0, 0}}, ob_type \u003d 0x55f8c7b00c40 \u003cPyUnicode_Type\u003e}\n(rr) p op\n$4 \u003d \u0027time_ns\u0027\n The value of _PyRefchain_IsTraced() is false since it is ref-traced in a different interpreter. Quick and dirty fix for the crash: --- a/Objects/object.c\n+++ b/Objects/object.c\n@@ -2537,6 +2537,13 @@ _Py_ForgetReference(PyObject *op)\n \n     PyInterpreterState *interp \u003d _PyInterpreterState_GET();\n \n+    if (!_PyRefchain_IsTraced(interp, op) \u0026\u0026\n+        PyUnicode_Check(op) \u0026\u0026\n+        PyUnicode_CHECK_INTERNED(op) \u0026\u0026\n+        interp !\u003d _PyInterpreterState_Main()) {\n+        return;\n+    }\n+\n #ifdef SLOW_UNREF_CHECK\n     if (!_PyRefchain_Get(interp, op)) {\n         /* Not found */",
+    "scrapedAt": "2026-10-08 19:13:54.761194"
+  },
+  {
+    "id": 774,
+    "url": "https://github.com/python/cpython/issues/128317",
+    "title": "Highlight today in colour in calendar\u0027s CLI output · Issue #128317 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Highlight today in colour in calendar\u0027s CLI output #128317 New issue Copy link New issue Copy link Closed Closed Highlight today in colour in calendar\u0027s CLI output#128317 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Dec 28, 2024 Issue body actions Feature or enhancement In Python 3.13 we added colour output to the new REPL, tracebacks and doctest, and in 3.14 to unittest and test.regrtest, which can also be controlled with the PYTHON_COLORS, NO_COLOR and FORCE_COLOR environment variables: https://docs.python.org/3.14/whatsnew/3.14.html#unittest https://docs.python.org/3.14/using/cmdline.html#using-on-controlling-color On macOS, the cal utility does something similar, but highlights today. The calendar module has a CLI to print out a calendar to the terminal, but with no highlighting. Let\u0027s add it. Linked PRs gh-128317: Highlight today in colour in calendar CLI output #128318 gh-128317: Document calendar.TextCalendar.formatweek #128353 [3.13] gh-128317: Document calendar.TextCalendar.formatweek (GH-128353) #128357 [3.12] gh-128317: Document calendar.TextCalendar.formatweek (GH-128353) #128358 gh-128317: Move CLI calendar highlighting to private class #129625 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:13:52.217482"
+  },
+  {
     "id": 773,
     "url": "https://github.com/python/cpython/issues/129889",
     "title": "Support context manager protocol by contextvars.Token · Issue #129889 · python/cpython · GitHub",
@@ -5100,26 +5135,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 774,
-    "url": "https://github.com/python/cpython/issues/128317"
-  },
-  {
-    "id": 775,
-    "url": "https://github.com/python/cpython/issues/125286"
-  },
-  {
-    "id": 776,
-    "url": "https://github.com/python/cpython/issues/131952"
-  },
-  {
-    "id": 777,
-    "url": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
-  },
-  {
-    "id": 778,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#urllib"
   },
   {
     "id": 779,
@@ -132599,10 +132614,510 @@ window.searchData = [
     "id": 95976,
     "url": "https://github.com/python/cpython/pull/129888",
     "parentUrl": "https://github.com/python/cpython/issues/129889"
+  },
+  {
+    "id": 95977,
+    "url": "https://github.com/python/cpython/pull/128357",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95978,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128317",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95979,
+    "url": "https://github.com/python/cpython/pull/128353",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95980,
+    "url": "https://github.com/python/cpython/issues/128317#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95982,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128317",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95986,
+    "url": "https://docs.python.org/3.14/whatsnew/3.14.html#unittest",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95987,
+    "url": "https://github.com/python/cpython/issues/128317#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95988,
+    "url": "https://github.com/python/cpython/issues/128317#issue-2762004198",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95989,
+    "url": "https://github.com/python/cpython/pull/128318",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95990,
+    "url": "https://github.com/python/cpython/pull/129625",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95991,
+    "url": "https://docs.python.org/3.14/using/cmdline.html#using-on-controlling-color",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95992,
+    "url": "https://github.com/python/cpython/pull/128358",
+    "parentUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "id": 95993,
+    "url": "https://github.com/nascheme",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 95994,
+    "url": "https://github.com/python/cpython/issues/125286#issue-2579941882",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 95996,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-subinterpreters%22",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 95997,
+    "url": "https://github.com/python/cpython/pull/125709",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 95998,
+    "url": "https://github.com/orgs/python/projects/3",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 95999,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125286",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96000,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22type-crash%22",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96001,
+    "url": "https://github.com/python/cpython/issues/125286#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96002,
+    "url": "https://github.com/python/cpython/issues/125286#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96003,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/125286",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96004,
+    "url": "https://github.com/python/cpython/pull/125314",
+    "parentUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "id": 96005,
+    "url": "https://github.com/python/cpython/issues/131952#top",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96007,
+    "url": "https://github.com/python/cpython/issues/131952#issue-2961246667",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96009,
+    "url": "https://github.com/python/cpython/issues/131952#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96010,
+    "url": "https://github.com/orgs/python/projects/6",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96011,
+    "url": "https://github.com/raztd",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96012,
+    "url": "https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2020/01/5-7.png",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96013,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/131952",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96014,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/131952",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96016,
+    "url": "https://github.com/python/cpython/pull/132126",
+    "parentUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "id": 96018,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeError.reason",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96021,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseExceptionGroup.subgroup",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96024,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseExceptionGroup.derive",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96029,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseExceptionGroup.exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96034,
+    "url": "https://docs.python.org/3/library/warnings.html#warning-categories",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96039,
+    "url": "https://peps.python.org/pep-0475/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96040,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#base-classes",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96041,
+    "url": "https://docs.python.org/3/library/os.html#os.fork",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96044,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException.with_traceback",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96052,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#EnvironmentError",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96053,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#AttributeError.obj",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96055,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseExceptionGroup.message",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96062,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#concrete-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96064,
+    "url": "https://docs.python.org/3/tutorial/errors.html#tut-userexceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96065,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException.add_note",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96070,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#exception-hierarchy",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96073,
+    "url": "https://docs.python.org/3/builtins/threadsafety.html",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96075,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.lookup",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96081,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SyntaxError.end_offset",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96083,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#exception-context",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96088,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SyntaxError.end_lineno",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96094,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#OSError.filename",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96095,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SyntaxError.offset",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96096,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BlockingIOError.characters_written",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96123,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#IOError",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96141,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/builtins/exceptions.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96145,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96152,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#os-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96158,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SyntaxError.text",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96159,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#OSError.filename2",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96160,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#exception-groups",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96162,
+    "url": "https://github.com/python/cpython/tree/3.14/Objects/exceptions.c",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96171,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#NameError.name",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96172,
+    "url": "https://peps.python.org/pep-0565/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96173,
+    "url": "https://docs.python.org/3/library/os.html#os._exit",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96176,
+    "url": "https://docs.python.org/3/builtins/functions.html",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96180,
+    "url": "https://docs.python.org/3/library/socket.html#socket.error",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96181,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SystemExit.code",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96183,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ImportError.path",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96187,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SyntaxError.filename",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96191,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.proxy",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96193,
+    "url": "https://docs.python.org/3/library/select.html#select.error",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96195,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#inheriting-from-built-in-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96200,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#warnings",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96202,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeError.encoding",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96203,
+    "url": "https://docs.python.org/3/builtins/exceptions.html",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96207,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseException.__notes__",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96208,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#AttributeError.name",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96212,
+    "url": "https://peps.python.org/pep-0479/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96214,
+    "url": "https://docs.python.org/3/library/signal.html#handlers-and-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96216,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#BaseExceptionGroup.split",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96217,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#built-in-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96222,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#ImportError.name",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96227,
+    "url": "https://peps.python.org/pep-3134/",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96237,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#SyntaxError.lineno",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "id": 96241,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#OSError.errno",
+    "parentUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#urllib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#urllib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#SyntaxWarning"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6805609?v\u003d4\u0026size\u003d48",
+    "alt": "@raztd",
+    "pageTitle": "Color in json.tool CLI · Issue #131952 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Color in json.tool CLI · Issue #131952 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131952"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/690853?u\u003de678e0834db5c4fd7dcb9f3b37055641c26edc3b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@nascheme",
+    "pageTitle": "test_audit_subinterpreter crashes with tracerefs enabled · Issue #125286 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "test_audit_subinterpreter crashes with tracerefs enabled · Issue #125286 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125286"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Highlight today in colour in calendar\u0027s CLI output · Issue #128317 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128317"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Highlight today in colour in calendar\u0027s CLI output · Issue #128317 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128317"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/356399?u\u003d125a08b2fa30b0f4629efa1e16b7cc9ca02c285e\u0026v\u003d4\u0026size\u003d48",
     "alt": "@asvetlov",
