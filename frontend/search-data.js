@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 232,
+    "url": "https://www.android.com/google-messages/",
+    "title": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "content": "Versleutelde gesprekken, ongeacht de telefoon. Meer informatie Chat met wie je maar wilt. Nu RCS is aangezet op Android en iOS, kunnen jij en je iPhone-vrienden onder andere foto\u0027s en video\u0027s van hoge kwaliteit delen en je groepschats verbeteren. Probeer Berichten voor mobiel Probeer Berichten voor het web Stille video op loop afspelen Stille video op loop pauzeren Hoogtepunten Functies Veelgestelde vragen Meer informatie over Berichten Hoogtepunten Uit jezelf in elke chat. Stille video op loop afspelen Stille video op loop pauzeren Remix Je kunt nu tijdens het chatten je verbeelding gebruiken. Je kunt nu elke foto bewerken en omtoveren met Remix in Google Berichten, dat ons Gemini-afbeeldingsmodel Nano Banana gebruikt.1 Van superheldhuisdieren tot een foto uit een jaarboek uit de jaren 80: je kunt je geremixte afbeelding naar elke telefoon sturen, zelfs naar je vrienden met een iPhone. Als jullie allebei Google Berichten gebruiken, kunnen jullie dezelfde afbeelding steeds opnieuw remixen zonder de app te verlaten. En dit kan alleen op Android. Probeer nu Stille video op loop afspelen Stille video op loop pauzeren RCS Nu kun je nog effectiever berichten uitwisselen tussen Android en iOS. Deel je favoriete Google Berichten-functies, zoals media delen in hoge resolutie, typindicatoren, leesbevestigingen en betere groepschatopties, met vrienden en familie, zelfs als ze andere apparaten gebruiken. *In ondersteunde gesprekken als RCS-chats beschikbaar zijn en aanstaan. *De beschikbaarheid van RCS verschilt per regio en provider. Ontdek meer functies Stille video op loop afspelen Stille video op loop pauzeren Media in hoge resolutie delen Deel foto\u0027s en video\u0027s van hoge kwaliteit. Geen wazige foto\u0027s en video\u0027s meer. Stuur media van hoge kwaliteit naar je iPhone-vrienden en de rest als RCS aanstaat. Stille video op loop afspelen Stille video op loop pauzeren Indicatoren en leesbevestigingen Krijg realtime tekstmeldingen. RCS laat het je weten als iemand je bericht heeft gelezen of een reactie typt. Stille video op loop afspelen Stille video op loop pauzeren Betere groepschats Groepschats die voor iedereen werken. Chatten met iPhone-vrienden is nu nog makkelijker. Met RCS kun je groepschats een naam geven, mensen toevoegen of verwijderen en chats verlaten, ongeacht welk apparaat jij en je vrienden gebruiken. Kosteloos voor iedereen, zelfs in het buitenland RCS is altijd kosteloos. RCS-chats kosten gebruikers meestal niets extra. Providers gebruiken je wifi- of mobiele data-abonnement. *De beschikbaarheid van RCS verschilt per regio en provider. Stille video op loop afspelen Stille video op loop pauzeren Selfie-gif\u0027s Lachen en versturen maar. Geef je chats een leuk persoonlijk tintje door een animatievideo van 3 seconden op te nemen en te delen. Ontdek hoe het werkt Stille video op loop afspelen Stille video op loop pauzeren Selfie-gif\u0027s Deel makkelijk je mooiste selfies. Houd gewoon je vinger lang op het galerij-icoon, poseer en neem een video op. Tevreden? Deel de video dan met je vrienden. Stille video op loop afspelen Stille video op loop pauzeren Aanpassing Ga voor iets anders en kies zelf je kleuren. Pas je functionaliteit aan met verschillende kleuren, emoji\u0027s en thema\u0027s en voeg aan elk gesprek extra effecten toe. Ontdek meer functies Stille video op loop afspelen Stille video op loop pauzeren Aangepaste thema\u0027s Kies de kleuren van je bubbels. Pas voor elke chat de kleur van de tekstbubbel en achtergrond aan en geef elk gesprek een unieke look. Stille video op loop afspelen Stille video op loop pauzeren Geanimeerde emoji\u0027s en reacties Unieke reacties. Geef elk bericht iets extra\u0027s met opvallende visuele effecten, zoals geanimeerde emoji\u0027s die om de bubbels verschijnen. Stille video op loop afspelen Stille video op loop pauzeren Stemstemmingen Breng je spraakberichten tot leven. Als je een spraakbericht stuurt, kun je je stemming ook uiten met een visueel effect. Stille video op loop afspelen Stille video op loop pauzeren Fotomoji Maak en deel je eigen aangepaste emoji\u0027s. Transformeer je favoriete afbeeldingen snel en makkelijk in emoji\u0027s die je in je chats kunt delen. Ontdek hoe het werkt Stille video op loop afspelen Stille video op loop pauzeren Fotomoji Reageer op heel nieuwe manieren. Stappen: 1 Maak een nieuwe reactie rechtstreeks in het chatvenster. 2. Kies gewoon een afbeelding uit je filmrol. Stille video op loop afspelen Stille video op loop pauzeren Fotomoji Van filmrol naar aangepaste emoji. Het onderwerp van de afbeelding wordt op magische wijze gemarkeerd en automatisch in een reactie omgezet. Stille video op loop afspelen Stille video op loop pauzeren Fotomoji Elke chat verdient een aangepaste reactie. Stop nog meer van je persoonlijkheid in je chats door zoveel gepersonaliseerde reacties te maken als je wilt. Functies Alles wat je nodig hebt. Gewoon ingebouwd. Privacy en beveiliging Bescherm je chats tegen spammers. Beveilig je berichten met privacyopties, spambeveiliging en gegevensversleuteli",
+    "scrapedAt": "2026-10-08 18:54:38.556492"
+  },
+  {
+    "id": 231,
+    "url": "https://android.com/ai/more/",
+    "title": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "content": "AI op je apparaten Je dagelijkse leven, nu nog makkelijker. Van je telefoon tot je smartwatch en smartbril: AI van Google helpt je om creatief te zijn, productiever te werken en makkelijker en veiliger te communiceren. Stille video op loop afspelen Stille video op loop pauzeren Creativiteit Communicatie Beveiliging Veelgestelde vragen Bewerkingen van professionele kwaliteit\u2028die magisch voelen. AI van Google verandert je afbeeldingen en video\u0027s van goed naar geweldig. Zo kun je je beelden van momenten en herinneringen verfijnen tot exact zoals je ze wilt onthouden. Stille video op loop afspelen Stille video op loop pauzeren Vraag het Foto\u0027s Met Google Foto\u0027s kun je makkelijker dan ooit de bewerkingen maken die je wilt. \u2028Je hoeft het alleen maar te vragen. Nu proberen Stille video op loop afspelen Stille video op loop pauzeren Magische gum voor audio Vermindert storende videogeluiden zoals auto\u0027s en wind. Magische gum voor audio uitproberen Stille video op loop afspelen Stille video op loop pauzeren Magische gum Verwijder ongewenste objecten op de achtergrond met een paar tikken. Google Foto\u0027s openen Stille video op loop afspelen Stille video op loop pauzeren Magische editor Complexe bewerkingen makkelijk gemaakt. Tik op of omcirkel objecten om ze te verplaatsen of knijp om het formaat aan te passen. Google Foto\u0027s openen Stille video op loop afspelen Stille video op loop pauzeren Voeg mij toe Zet iedereen op je foto\u0027s. Maak de foto. En sta er zelf ook op.2 Open de Pixel Camera AI-gegenereerde achtergrond Laat je zelfexpressie en oneindige verbeelding samenkomen in een aangepaste achtergrond. Achtergrond genereren Vraag het Foto\u0027s Magische gum voor audio Magische gum Magische editor Voeg mij toe AI-gegenereerde achtergrond Vraag het Foto\u0027s Stille video op loop afspelen Stille video op loop pauzeren Met Google Foto\u0027s kun je makkelijker dan ooit de bewerkingen maken die je wilt. \u2028Je hoeft het alleen maar te vragen. Nu proberen Magische gum voor audio Stille video op loop afspelen Stille video op loop pauzeren Vermindert storende videogeluiden zoals auto\u0027s en wind. Magische gum voor audio uitproberen Magische gum Stille video op loop afspelen Stille video op loop pauzeren Verwijder ongewenste objecten op de achtergrond met een paar tikken. Google Foto\u0027s openen Magische editor Stille video op loop afspelen Stille video op loop pauzeren Complexe bewerkingen makkelijk gemaakt. Tik op of omcirkel objecten om ze te verplaatsen of knijp om het formaat aan te passen. Google Foto\u0027s openen Voeg mij toe Stille video op loop afspelen Stille video op loop pauzeren Zet iedereen op je foto\u0027s. Maak de foto. En sta er zelf ook op. Google Foto\u0027s openen AI-gegenereerde achtergrond Laat je zelfexpressie en oneindige verbeelding samenkomen in een aangepaste achtergrond. Achtergrond genereren Nieuwe manieren om jezelf uit te drukken. Vind je eigen stem met berichtentools waarmee je concepten kunt opstellen, onderweg kunt reageren en je gesprekken kunt personaliseren met aangepaste emoji\u0027s. Magisch opstellen Vind de juiste woorden. Herschrijf je berichten in verschillende stijlen. Google Berichten openen Fotomoji Van filmrol naar aangepaste emoji: maak een nieuwe emoji van je eigen foto\u0027s. Fotomoji maken Slimme antwoorden in Auto Beantwoord met één tik om het gesprek veilig aan de gang te houden. Google Foto\u0027s openen Overzichten voor Auto Krijg samenvattingen van lange groepschats en laat berichten hardop voorlezen. Nu proberen AI-gestuurde bescherming. Android gebruikt de beste AI van Google (en expertise op het gebied van machine learning) om je te beschermen tegen spammers, fraudeurs en dieven. Diefstaldetectie Bescherm je telefoon tegen dieven. Kijken hoe het werkt Scam- en spamdetectie Vermijd scammers en spammers. Kijken hoe het werkt Vind de antwoorden die je nodig hebt. Hoe gebruik ik de Google Assistent op Android Auto? Stap 1: Als Android Auto actief is, kun je de Google Assistent activeren door \u0027Hey Google\u0027 te zeggen, op het microfoontje op het display van de auto te tikken, of door op het stuur de knop voor \u0027drukken om te praten\u0027 in te drukken (als die beschikbaar is). Stap 2: Stel daarna een vraag of geef een opdracht, zoals \u0027breng me naar de dichtstbijzijnde koffiebar\u0027 of \u0027speel wat jazz af\u0027. Hoe zorg ik dat Android Auto op het scherm van mijn auto komt te staan? Bij de meeste geschikte auto\u0027s of aftermarket-stereosets kun je je telefoon aansluiten via een USB-kabel. Als het scherm van je auto geschikt is voor draadloze verbindingen, koppel je je telefoon via bluetooth met je auto. Afhankelijk van je auto maakt je telefoon na het koppelen automatisch verbinding of verschijnt het app-icoon van Android Auto op het scherm van je auto. Hoe schrijf ik een bericht met Magisch opstellen? Stap 1: Open Google Berichten op je Android-telefoon en begin een gesprek. Tip: Zorg dat de opstelregel van het bericht ook het woord \u0027bericht\u0027 bevat. Stap 2: Selecteer het icoon voor Magisch opstellen om opties voor schrijfstijl te tonen. Stap",
+    "scrapedAt": "2026-10-08 18:54:37.459169"
+  },
+  {
+    "id": 230,
+    "url": "https://www.android.com/",
+    "title": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "content": "Beleef de toekomst als eerste op Android. De innovatie van Android bepaalt de standaard. Dat betekent nuttige AI, meer nieuwe functies, regelmatige upgrades en allerlei manieren om je telefoon te personaliseren zodat die bij je stijl past. Gemini proberen Telefoons kopen Stille video op loop afspelen Stille video op loop pauzeren Stille video op loop afspelen Stille video op loop pauzeren Het beste van Google op Android. Gemini Live De AI-assistent die je helpt te maken, te leren en meer te doen. Gemini proberen Meer informatie Circle to Search Zoek naar wat je maar wilt op je telefoon. Tik, krabbel of markeer gewoon. Slimmer zoeken Je beste foto\u0027s en video\u0027s tot nu toe. Schoon de achtergrond op, verbeter de belichting en bewerk de audio met AI. AI van Google ontdekken Stille video op loop afspelen Stille video op loop pauzeren Quick Share Deel foto\u0027s en video\u0027s in hoge resolutie meteen met apparaten in de buurt.1 Meer informatie Vind-plek Vind verloren items en leg snel en beveiligd contact met vrienden. Vind-plek gebruiken Meer informatie over Vind-plek Stille video op loop afspelen Stille video op loop pauzeren Meer keuze. Meer van jou. \u2028 Meer gebruiksplezier. Telefoons kopen Stille video op loop afspelen Stille video op loop pauzeren Meer keuze. Meer van jou. Meer gebruiksplezier. Telefoons kopen Haal alles uit je Android-apparaat. Verbonden apparaten Je favoriete apparaten, naadloos verbonden. Verbinding maken Proactieve beveiliging Krachtige beveiliging die altijd aanstaat. Verkennen Privacy op jouw voorwaarden Ontdek manieren om controle te houden over je privacy Meer informatie Haal alles uit je Android-apparaat. Verbonden apparaten Je favoriete apparaten, naadloos verbonden. Verbinding maken Proactieve beveiliging Krachtige beveiliging die altijd aanstaat. Verkennen Privacy op jouw voorwaarden Ontdek manieren om controle te houden over je privacy Meer informatie Android wordt steeds beter. Android 16 ontdekken Nieuwste functies bekijken Stille video op loop afspelen Stille video op loop pauzeren 1Apparaten moeten dichtbij genoeg zijn voor delen via bluetooth en wifi moet aanstaan. Werkt met compatibele apparaten. De beschikbaarheid, functies en specificaties van producten variëren per regio, provider en apparaat. Niet alle apparaten of functies op deze pagina zijn in alle markten beschikbaar. Neem contact op met je lokale verkoper of mobiele provider voor de huidige beschikbaarheid en compatibiliteit in jouw regio. Android is een handelsmerk van Google LLC. Alle andere handelsmerken zijn eigendom van de respectieve eigenaren. Stille video op loop afspelen Stille video op loop pauzeren",
+    "scrapedAt": "2026-10-08 18:54:36.264571"
+  },
+  {
+    "id": 229,
+    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini",
+    "title": "‎Google Gemini",
+    "content": "Sign in Google apps",
+    "scrapedAt": "2026-10-08 18:54:35.162356"
+  },
+  {
+    "id": 228,
+    "url": "https://android.com/ai/",
+    "title": "AI op Android: functies, apps en je AI-assistent | Android",
+    "content": "Studeer met Gemini: claim 1 jaar kosteloos voor studenten. Aanbieding loopt tot 31-12. Op deze aanbieding zijn voorwaarden van toepassing.* Stille video op loop afspelen Stille video op loop pauzeren Stille video op loop afspelen Stille video op loop pauzeren Maak dagelijkse taken makkelijker. Of je nu decoratieadvies wilt of hulp nodig hebt om een recept na te maken, AI-ondersteuning is veelzijdiger dan ooit. Gemini proberen Meer informatie Stille video op loop afspelen Stille video op loop pauzeren Zoek meteen alles. Van shoppen tot vertalen: de nieuwe zoekfunctie is ontworpen om natuurlijker en sneller te werken.1 Circle to Search ontdekken Stille video op loop afspelen Stille video op loop pauzeren Meer functies, meer mogelijkheden. Maak, communiceer en druk je uit als nooit tevoren met onze AI-gestuurde functies. Meer AI-functies verkennen Koop de nieuwste Android-telefoons. Telefoons kopen *Alleen voor in aanmerking komende studenten. De Aanbiedingsvoorwaarden zijn van toepassing. Inwisselbaar tot 31 december 2026. Bij aanmelding is een geldige betaalmethode vereist. Als u niet eerder opzegt, wordt er na het einde van de proefperiode automatisch 4,99€ per maand in rekening gebracht voor Google AI Plus. Altijd opzegbaar. De resultaten zijn bedoeld ter illustratie en kunnen variëren. Controleer of de reacties kloppen. Je hebt misschien een Google One AI Premium-abonnement nodig. Je hebt internet nodig. Compatibel met bepaalde functies en accounts. Beschikbaar op bepaalde apparaten en in bepaalde landen en talen, en voor gebruikers van 18+. 1Compatibel met bepaalde functies en bepaalde accounts. Je hebt een internetverbinding nodig. Beschikbaar op bepaalde apparaten en in bepaalde talen en landen. De resultaten zijn bedoeld ter illustratie en kunnen variëren. Controleer of de reacties kloppen. De beschikbaarheid, functies en specificaties van producten variëren per regio, provider en apparaat. Niet alle apparaten of functies op deze pagina zijn in alle markten beschikbaar. Neem contact op met je lokale verkoper of mobiele provider voor de huidige beschikbaarheid en compatibiliteit in jouw regio. Android is een handelsmerk van Google LLC. Alle andere handelsmerken zijn eigendom van de respectieve eigenaren. Stille video op loop afspelen Stille video op loop pauzeren",
+    "scrapedAt": "2026-10-08 18:54:33.7693"
+  },
+  {
     "id": 227,
     "url": "https://android.com/ai/gemini/",
     "title": "Probeer Gemini, je persoonlijke AI-assistent | Android",
@@ -1575,26 +1610,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 228,
-    "url": "https://android.com/ai/"
-  },
-  {
-    "id": 229,
-    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
-  },
-  {
-    "id": 230,
-    "url": "https://www.android.com/"
-  },
-  {
-    "id": 231,
-    "url": "https://android.com/ai/more/"
-  },
-  {
-    "id": 232,
-    "url": "https://www.android.com/google-messages/"
   },
   {
     "id": 233,
@@ -42087,10 +42102,411 @@ window.searchData = [
     "id": 17382,
     "url": "https://gemini.google/subscriptions/",
     "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17385,
+    "url": "https://www.android.com/ai/",
+    "parentUrl": "https://android.com/ai/"
+  },
+  {
+    "id": 17391,
+    "url": "https://www.google.nl/intl/en/about/products",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17392,
+    "url": "https://accounts.google.com/ServiceLogin?passive\u003d1209600\u0026continue\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26amp;ios-min-version%3D322.0%26amp;is_sa%3D1%26amp;campaign_id%3Dandroid_web_gemini%26amp;utm_medium%3Dxpa%26amp;utm_source%3Dandroid_web%26amp;utm_campaign%3Dandroid_web_gemini%26amp;pt%3D9008%26amp;mt%3D8%26amp;ct%3Dandroid_web_gemini\u0026followup\u003dhttps://gemini.google.com/?android-min-version%3D301356232%26amp;ios-min-version%3D322.0%26amp;is_sa%3D1%26amp;campaign_id%3Dandroid_web_gemini%26amp;utm_medium%3Dxpa%26amp;utm_source%3Dandroid_web%26amp;utm_campaign%3Dandroid_web_gemini%26amp;pt%3D9008%26amp;mt%3D8%26amp;ct%3Dandroid_web_gemini\u0026ec\u003dGAZAkgU",
+    "parentUrl": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026amp;ios-min-version\u003d322.0\u0026amp;is_sa\u003d1\u0026amp;campaign_id\u003dandroid_web_gemini\u0026amp;utm_medium\u003dxpa\u0026amp;utm_source\u003dandroid_web\u0026amp;utm_campaign\u003dandroid_web_gemini\u0026amp;pt\u003d9008\u0026amp;mt\u003d8\u0026amp;ct\u003dandroid_web_gemini"
+  },
+  {
+    "id": 17405,
+    "url": "https://www.android.com/ai/more/#communicatie",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17406,
+    "url": "https://www.android.com/ai/more/#beveiliging",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17407,
+    "url": "https://support.google.com/messages/answer/14295463",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17409,
+    "url": "https://www.android.com/intl/nl_nl/safety/security/#advanced-intelligent-theft-protection",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17410,
+    "url": "https://www.android.com/intl/nl_nl/google-messages/",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17411,
+    "url": "https://www.android.com/intl/nl_nl/safety/security/#ascam-protection",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17412,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.projection.gearhead",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17413,
+    "url": "https://www.android.com/ai/more/#creativiteit",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17414,
+    "url": "https://www.android.com/ai/more/#veelgestelde-vragen",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17415,
+    "url": "https://www.android.com/intl/nl_nl/articles/how-to-use-circle-to-search/",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17416,
+    "url": "https://pixel.withgoogle.com/Pixel_8a/edit-videos-audio-magic-eraser",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17417,
+    "url": "https://www.android.com/articles/gemini-on-android/",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17418,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.photos",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17420,
+    "url": "https://support.google.com/pixelphone/answer/14853283",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17421,
+    "url": "https://www.android.com/articles/how-do-you-scan-qr-codes-on-android/",
+    "parentUrl": "https://android.com/ai/more/"
+  },
+  {
+    "id": 17422,
+    "url": "https://messages.google.com/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17424,
+    "url": "https://blog.google/products/messages/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17425,
+    "url": "https://www.android.com/google-messages/#highlights",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17426,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.messaging",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17427,
+    "url": "https://workspace.google.com/intl/nl/products/meet/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17428,
+    "url": "https://www.android.com/get-the-message/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17429,
+    "url": "https://www.android.com/google-messages/#more",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17430,
+    "url": "https://messages.google.com/web/",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17431,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.messaging\u0026referrer\u003dutm_source%3Dwebsite",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17432,
+    "url": "https://www.android.com/google-messages/#features",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17433,
+    "url": "https://www.android.com/google-messages/#faqs",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17434,
+    "url": "https://blog.google/products-and-platforms/platforms/android/android-ios-end-to-end-encrypted-rcs-messaging",
+    "parentUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "id": 17435,
+    "url": "https://messages.google.com/install",
+    "parentUrl": "https://www.android.com/google-messages/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/14/33/c34a2892461e863c25410759173f/rcs-free.webp\u003dn-w543-h678-fcrop64\u003d1,0000199affffe666-rw",
+    "alt": "Een jonge volwassene zit aan een bureau en glimlacht terwijl die naar een Pixel 9-apparaat kijkt.",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/34/26/89554c0743f2ab48eaa376520984/00-card-desk.png\u003dn-w743-h543-fcrop64\u003d1,22810000dd7fffff-rw",
+    "alt": "Een afbeelding van een persoon die naar hun Android-apparaat kijkt met een schildicoon en een hangslot.",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c7/7c/ed72775d40eca4a8a77b34763976/00-card-desktop.png\u003dn-w743-h543-fcrop64\u003d1,22810000dd7fffff-rw",
+    "alt": "Een afbeelding van 2 mensen die naast elkaar liggen en naar een Android kijken. Links onderin staat het icoon van een kat en rechts staan 2 chatbubbels.",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/2a/6f/70c5b6624bf2a1c140e5065f0e9a/00-card-desktop.png\u003dn-w743-h543-fcrop64\u003d1,22810000dd7fffff-rw",
+    "alt": "Een afbeelding van een persoon die achter een computer zit.",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/cf/09/ce859a5b4f3584448af20cbbe3aa/00-card-desktop.png\u003dn-w743-h543-fcrop64\u003d1,22810000dd7fffff-rw",
+    "alt": "Een afbeelding van 3 mensen die buiten zitten. Een van hen toont de anderen een Android-scherm. Links onderin staan chatbubbels in een overlay en rechts onderin is er een overlay van een hart-emoji.",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/64/7f/7b53bb734a46bb93a6bc93b8708c/00-card-desktop.png\u003dn-w743-h543-fcrop64\u003d1,22810000dd7fffff-rw",
+    "alt": "Een afbeelding van 2 mensen die naar een Android-tablet kijken met onderaan een antwoordherinnering in een overlay.",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/5e/ed/83dec83f4f9e8cc7e2eadcf80e82/messages-icon.svg",
+    "alt": "Why Android - Switch - Messages Icon",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/6a/75/d675e06b406a9ffb5df392d2a8bb/messages-for-android.png\u003dn-w29-h32-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "messages-for-android.png",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/94/d0/d861940343b39bbd4f3e706a8a72/google-meet.png\u003ds32-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "google-meet.png",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/58/c2/c9c2505447b1b0a9a0ecc2141260/bot.png\u003dn-w55-h32-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "bot.png",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/a3/d4/8c2974a44b0f8751d7215c54cead/blog-icon.webp\u003ds32-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "google-blog.png",
+    "pageTitle": "Probeer Google Berichten. Bewaar wat belangrijk is.",
+    "pageUrl": "https://www.android.com/google-messages/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/ea/4e/2dc301b440bf810d919099c9041b/wallpaper.png\u003dn-w1086-h724-fcrop64\u003d1,40140000c013ffff-rw",
+    "alt": "Een telefoon met daarop bloemen tegen een blauwe achtergrond wordt gebruikt als voorbeeld om te tonen hoe de functie voor AI-gegenereerde achtergronden werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/ea/4e/2dc301b440bf810d919099c9041b/wallpaper.png\u003dn-w1690-h1126-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een telefoon met daarop bloemen tegen een blauwe achtergrond wordt gebruikt als voorbeeld om te tonen hoe de functie voor AI-gegenereerde achtergronden werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/a8/74/c538542147bfb6ca08fb5c7fc4e7/magic-compose.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Verschillende emoji\u0027s met stergezichten zweven rond de omtrek van een telefoon om te tonen hoe Magisch opstellen werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/0d/60/97b29b2d44b884965f916b79168d/photomoji.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een foto van een teckel die op het gras ligt, wordt gebruikt als voorbeeld om te tonen hoe de functie Fotomoji werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/39/c5/cc2a0062413997588ad35c3acb80/smart-replies.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een Smart Reply-melding toont hoe slimme antwoorden werken in Android Auto.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c2/33/5e1049fc47d8a94a1bf3451261c0/summaries.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een voorbeeld van hoe Overzichten voor Auto verschijnt boven een dashboard van een auto met een wit interieur.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/bf/4d/f3fcd842432a8aa1558718e220d0/theft.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een illustratie van een hand die een telefoon vasthoudt met een blauw hangsloticoon en schild tegen een zwarte achtergrond.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b1/00/e4040a8b42f79c5b8148454891a2/spam.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een voorbeeld van een spammelding staat voor een zwarte telefoon op een blauwe achtergrond.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/76/6f/f5a3f1724d178aaeb1d68ac22490/qr-code.png\u003dn-w610-h407-fcrop64\u003d1,0e2b0000f1d5ffff-rw",
+    "alt": "Een man zit buiten en kijkt glimlachend op een smartphone.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/3f/d0/f9d6f90e4673ae9bac30f5ec65a0/live.png\u003dn-w610-h407-fcrop64\u003d1,0e2b0000f1d5ffff-rw",
+    "alt": "Een telefoon toont het startscherm van Gemini.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/f7/33/4e81b11541e1a6a86eac90ca7ebe/cts.png\u003dn-w610-h407-fcrop64\u003d1,0e2b0000f1d5ffff-rw",
+    "alt": "Iemand omcirkelt een afbeelding op hun telefoon als voorbeeld van hoe Circle to Search werkt.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/7a/e4/d87f33c947e7ab1b483c924ee4ee/recirculation-gemini-4x.webp\u003dn-w723-h407-fcrop64\u003d1,1ff30000e00dffff-rw",
+    "alt": "Een vooraanzicht van een Android-telefoon met de Gemini-prompt ervoor.",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/18/0e/86e28b224e0e8a453a52acbf5422/circle-to-search-2x.webp\u003dn-w723-h407-fcrop64\u003d1,20000000e035ffff-rw",
+    "alt": "Een Android-telefoonscherm met daarop een outfit die wordt omcirkeld met onderaan het scherm een zoekresultaat voor elk item. ",
+    "pageTitle": "AI op Android: ontdek functies, apps en tools voor je telefoon en apparaten | Android",
+    "pageUrl": "https://android.com/ai/more/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/22/63/f25fc2a746fa9f79d2c80acc8449/features-gemini-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "The phone screen shows an image of an espresso machine to use as an example of how Gemini Live\u0027s newest feature works highlighting information you need on your phone screen.",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/f9/24/c139be3447278c2a7189c7209646/features-cts-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A luxury purse on an Android phone screen is being circled to show how the Circle to Search feature works. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/5e/d3/a0a6d005483991c968422c40fd7f/features-quickshare-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A Quick Share window on an Android phone screen shows a picture of a bouquet of flowers surrounded by kitchen items on a wooden table. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b2/42/d2f004824075bd66252b49f82565/features-findhub-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "ROW - Features - Find Hub",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c3/d7/71d634dd481ba89150df442afc43/b214fec71154aa607416689e3af9906e75d234da.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an Iris Pixel Watch 4 is tapping their Iris Pixel Buds that’s in their ear. A devices icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b0/8b/b87b73dd41ad8f7889a0df8db155/4482e21a15601af0f6b4f123aeb593815fb9ce64.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an orange beanie is happily talking on their moonstone Pixel 10 phone outside a train station.  A green security shield icon is right above the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/62/42/1ecf7ab44fc6b021f898ce02d5c9/f5ccfd8227d7981b3f69143b6edcbe157978c5c3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing a light blue peacoat is inside a car talking on their Pixel phone. A lock icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/c3/d7/71d634dd481ba89150df442afc43/b214fec71154aa607416689e3af9906e75d234da.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an Iris Pixel Watch 4 is tapping their Iris Pixel Buds that’s in their ear. A devices icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/b0/8b/b87b73dd41ad8f7889a0df8db155/4482e21a15601af0f6b4f123aeb593815fb9ce64.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing an orange beanie is happily talking on their moonstone Pixel 10 phone outside a train station.  A green security shield icon is right above the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/62/42/1ecf7ab44fc6b021f898ce02d5c9/f5ccfd8227d7981b3f69143b6edcbe157978c5c3.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "A person wearing a light blue peacoat is inside a car talking on their Pixel phone. A lock icon is right below the image. ",
+    "pageTitle": "Android | Meer gedaan krijgen met Google op Android-telefoons en apparaten",
+    "pageUrl": "https://www.android.com/"
+  },
+  {
+    "src": "https://www.android.com/ai/",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://www.android.com/ai/",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://www.android.com/ai/",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://www.android.com/ai/",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://www.android.com/ai/",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://www.android.com/ai/",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
+  {
+    "src": "https://www.android.com/ai/",
+    "alt": "",
+    "pageTitle": "AI op Android: functies, apps en je AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/"
+  },
   {
     "src": "https://www.gstatic.com/marketing-cms/assets/images/17/0e/d7f6bfa34653a66c99909d1680b4/gemini-screencontext-4x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
     "alt": "Een mobiele telefoon toont een foto van een berglandschap met een Google Gemini-overlay met de vraag \u0027Hallo Google Gemini, wat is de geschiedenis hiervan?\u0027",
