@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1531,
+    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.name",
+    "title": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » threading — Thread-based parallelism | Theme Auto Light Dark | threading — Thread-based parallelism¶ Source code: Lib/threading.py This module constructs higher-level threading interfaces on top of the lower level _thread module. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Introduction¶ The threading module provides a way to run multiple threads (smaller units of a process) concurrently within a single process. It allows for the creation and management of threads, making it possible to execute tasks in parallel, sharing memory space. Threads are particularly useful when tasks are I/O bound, such as file operations or making network requests, where much of the time is spent waiting for external resources. A typical use case for threading includes managing a pool of worker threads that can process multiple tasks concurrently. Here’s a basic example of creating and starting threads using Thread: import threading\nimport time\n\ndef crawl(link, delay\u003d3):\n    print(f\"crawl started for {link}\")\n    time.sleep(delay)  # Blocking I/O (simulating a network request)\n    print(f\"crawl ended for {link}\")\n\nlinks \u003d [\n    \"https://python.org\",\n    \"https://docs.python.org\",\n    \"https://peps.python.org\",\n]\n\n# Start threads for each link\nthreads \u003d []\nfor link in links:\n    # Using `args` to pass positional arguments and `kwargs` for keyword arguments\n    t \u003d threading.Thread(target\u003dcrawl, args\u003d(link,), kwargs\u003d{\"delay\": 2})\n    threads.append(t)\n\n# Start each thread\nfor t in threads:\n    t.start()\n\n# Wait for all threads to finish\nfor t in threads:\n    t.join()\n Changed in version 3.7: This module used to be optional, it is now always available. See also concurrent.futures.ThreadPoolExecutor offers a higher level interface to push tasks to a background thread without blocking execution of the calling thread, while still being able to retrieve their results when needed. queue provides a thread-safe interface for exchanging data between running threads. asyncio offers an alternative approach to achieving task level concurrency without requiring the use of multiple operating system threads. Note In the Python 2.x series, this module contained camelCase names for some methods and functions. These are deprecated as of Python 3.10, but they are still supported for compatibility with Python 2.5 and lower. CPython implementation detail: In CPython, due to the Global Interpreter Lock, only one thread can execute Python code at once (even though certain performance-oriented libraries might overcome this limitation). If you want your application to make better use of the computational resources of multi-core machines, you are advised to use multiprocessing or concurrent.futures.ProcessPoolExecutor. However, threading is still an appropriate model if you want to run multiple I/O-bound tasks simultaneously. GIL and performance considerations¶ Unlike the multiprocessing module, which uses separate processes to bypass the global interpreter lock (GIL), the threading module operates within a single process, meaning that all threads share the same memory space. However, the GIL limits the performance gains of threading when it comes to CPU-bound tasks, as only one thread can execute Python bytecode at a time. Despite this, threads remain a useful tool for achieving concurrency in many scenarios. As of Python 3.13, free-threaded builds can disable the GIL, enabling true parallel execution of threads, but this feature is not available by default (see PEP 703). Reference¶ This module defines the following functions: threading.active_count()¶ Return the number of Thread objects currently alive. The returned count is equal to the length of the list returned by enumerate(). The function activeCount is a deprecated alias for this function. threading.current_thread()¶ Return the current Thread object, corresponding to the caller’s thread of control. If the caller’s thread of control was not created through the threading module, a dummy thread object with limited functionality is returned. The function currentThread is a deprecated alias for this function. threading.excepthook(args, /)¶ Handle uncaught exception raised by Thread.run(). The args argument has the following attributes: exc_type: Exception type. exc_value: Exception value, can be None. exc_traceback: Exception traceback, can be None. thread: Thread which raised the exception, can be None. If exc_type is SystemExit, the exception is silently ignored. Otherwise, the exception is printed out on sys.stderr. If this function raises an exception, sys.excepthook() is called to handle it. threading.excepthook() can be overridden to control how uncaught exceptions raised by Thread.run() are handled. Storing exc_value using a custom hook can create a reference cycle. It should be cle",
+    "scrapedAt": "2026-10-08 19:46:27.665345"
+  },
+  {
+    "id": 1530,
+    "url": "https://peps.python.org/pep-0684/",
+    "title": "PEP 684 – A Per-Interpreter GIL | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 684 – A Per-Interpreter GIL PEP 684 – A Per-Interpreter GIL Author: Eric Snow \u003cericsnowcurrently at gmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Requires: 683 Created: 08-Mar-2022 Python-Version: 3.12 Post-History: 08-Mar-2022, 29-Sep-2022, 28-Oct-2022 Resolution: Discourse message Table of Contents Abstract High-Level Summary The GIL CPython Runtime State Other Isolation Considerations Depending on Immortal Objects Motivation Indirect Benefits Existing Use of Multiple Interpreters PEP 554 (Multiple Interpreters in the Stdlib) Rationale Specification Per-Interpreter State Memory Allocators C-API PyInterpreterConfig.own_gil PyInterpreterConfig.strict_extensions_compat Restricting Extension Modules Extension Module Compatibility Extension Module Thread Safety Documentation Impact Backwards Compatibility Extension Modules Extension Module Maintainers Alternate Python Implementations Security Implications Maintainability Performance How to Teach This Reference Implementation Open Issues Deferred Functionality Rejected Ideas Extra Context Sharing Global Objects Objects Exposed in the C-API Consolidating Runtime Global State Benefits to Consolidation Scale of Work State To Be Moved Already Completed Work Tooling Global Objects References Copyright Abstract Since Python 1.5 (1997), CPython users can run multiple interpreters in the same process. However, interpreters in the same process have always shared a significant amount of global state. This is a source of bugs, with a growing impact as more and more people use the feature. Furthermore, sufficient isolation would facilitate true multi-core parallelism, where interpreters no longer share the GIL. The changes outlined in this proposal will result in that level of interpreter isolation. High-Level Summary At a high level, this proposal changes CPython in the following ways: stops sharing the GIL between interpreters, given sufficient isolation adds several new interpreter config options for isolation settings keeps incompatible extensions from causing problems The GIL The GIL protects concurrent access to most of CPython’s runtime state. So all that GIL-protected global state must move to each interpreter before the GIL can. (In a handful of cases, other mechanisms can be used to ensure thread-safe sharing instead, such as locks or “immortal” objects.) CPython Runtime State Properly isolating interpreters requires that most of CPython’s runtime state be stored in the PyInterpreterState struct. Currently, only a portion of it is; the rest is found either in C global variables or in _PyRuntimeState. Most of that will have to be moved. This directly coincides with an ongoing effort (of many years) to greatly reduce internal use of global variables and consolidate the runtime state into _PyRuntimeState and PyInterpreterState. (See Consolidating Runtime Global State below.) That project has significant merit on its own and has faced little controversy. So, while a per-interpreter GIL relies on the completion of that effort, that project should not be considered a part of this proposal–only a dependency. Other Isolation Considerations CPython’s interpreters must be strictly isolated from each other, with few exceptions. To a large extent they already are. Each interpreter has its own copy of all modules, classes, functions, and variables. The CPython C-API docs explain further. However, aside from what has already been mentioned (e.g. the GIL), there are a couple of ways in which interpreters still share some state. First of all, some process-global resources (e.g. memory, file descriptors, environment variables) are shared. There are no plans to change this. Second, some isolation is faulty due to bugs or implementations that did not take multiple interpreters into account. This includes CPython’s runtime and the stdlib, as well as extension modules that rely on global variables. Bugs should be opened in these cases, as some already have been. Depending on Immortal Objects PEP 683 introduces immortal objects as a CPython-internal feature. With immortal objects, we can share any otherwise immutable global objects between all interpreters. Consequently, this PEP does not need to address how to deal with the various objects exposed in the public C-API. It also simplifies the question of what to do about the builtin static types. (See Global Objects below.) Both issues have alternate solutions, but everything is simpler with immortal objects. If PEP 683 is not accepted then this one will be updated with the alternatives. This lets us reduce noise in this proposal. Motivation The fundamental problem we’re solving here is a lack of true multi-core parallelism (for Python code) in the CPython runtime. The GIL is the cause. While it usually isn’t a problem in practice, at the very least it makes Python’s multi-core story murky, which makes the GIL a",
+    "scrapedAt": "2026-10-08 19:46:26.357278"
+  },
+  {
+    "id": 1529,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection",
+    "title": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread states and the global interpreter lock | Theme Auto Light Dark | Thread states and the global interpreter lock¶ Unless on a free-threaded build of CPython, the Python interpreter is generally not thread-safe. In order to support multi-threaded Python programs, there’s a global lock, called the global interpreter lock or GIL, that must be held by a thread before accessing Python objects. Without the lock, even the simplest operations could cause problems in a multi-threaded program: for example, when two threads simultaneously increment the reference count of the same object, the reference count could end up being incremented only once instead of twice. As such, only a thread that holds the GIL may operate on Python objects or invoke Python’s C API. In order to emulate concurrency, the interpreter regularly tries to switch threads between bytecode instructions (see sys.setswitchinterval()). This is why locks are also necessary for thread-safety in pure-Python code. Additionally, the global interpreter lock is released around blocking I/O operations, such as reading or writing to a file. From the C API, this is done by detaching the thread state. The Python interpreter keeps some thread-local information inside a data structure called PyThreadState, known as a thread state. Each thread has a thread-local pointer to a PyThreadState; a thread state referenced by this pointer is considered to be attached. A thread can only have one attached thread state at a time. An attached thread state is typically analogous with holding the GIL, except on free-threaded builds. On builds with the GIL enabled, attaching a thread state will block until the GIL can be acquired. However, even on builds with the GIL disabled, it is still required to have an attached thread state, as the interpreter needs to keep track of which threads may access Python objects. Note Even on the free-threaded build, attaching a thread state may block, as the GIL can be re-enabled or threads might be temporarily suspended (such as during a garbage collection). Generally, there will always be an attached thread state when using Python’s C API, including during embedding and when implementing methods, so it’s uncommon to need to set up a thread state on your own. Only in some specific cases, such as in a Py_BEGIN_ALLOW_THREADS block or in a fresh thread, will the thread not have an attached thread state. If uncertain, check if PyThreadState_GetUnchecked() returns NULL. If it turns out that you do need to create a thread state, call PyThreadState_New() followed by PyThreadState_Swap(), or use the dangerous PyGILState_Ensure() function. Detaching the thread state from extension code¶ Most extension code manipulating the thread state has the following simple structure: Save the thread state in a local variable.\n... Do some blocking I/O operation ...\nRestore the thread state from the local variable.\n This is so common that a pair of macros exists to simplify it: Py_BEGIN_ALLOW_THREADS\n... Do some blocking I/O operation ...\nPy_END_ALLOW_THREADS\n The Py_BEGIN_ALLOW_THREADS macro opens a new block and declares a hidden local variable; the Py_END_ALLOW_THREADS macro closes the block. The block above expands to the following code: PyThreadState *_save;\n\n_save \u003d PyEval_SaveThread();\n... Do some blocking I/O operation ...\nPyEval_RestoreThread(_save);\n Here is how these functions work: The attached thread state implies that the GIL is held for the interpreter. To detach it, PyEval_SaveThread() is called and the result is stored in a local variable. By detaching the thread state, the GIL is released, which allows other threads to attach to the interpreter and execute while the current thread performs blocking I/O. When the I/O operation is complete, the old thread state is reattached by calling PyEval_RestoreThread(), which will wait until the GIL can be acquired. Note Performing blocking I/O is the most common use case for detaching the thread state, but it is also useful to call it over long-running native code that doesn’t need access to Python objects or Python’s C API. For example, the standard zlib and hashlib modules detach the thread state when compressing or hashing data. On a free-threaded build, the GIL is usually out of the question, but detaching the thread state is still required, because the interpreter periodically needs to block all threads to get a consistent view of Python objects without the risk of race conditions. For example, CPython currently suspends all threads for a short period of time while running the garbage collector. Warning Detaching the thread state can lead to unexpected behavior during interpreter finalization. See Cautions regarding runtime finalization for more details. APIs¶ The following macros are normally used without a trailing semicolon; look for example usage in the Python source distribution. Note These ",
+    "scrapedAt": "2026-10-08 19:46:24.780987"
+  },
+  {
+    "id": 1528,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle",
+    "title": "imaplib — IMAP4 protocol client — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » imaplib — IMAP4 protocol client | Theme Auto Light Dark | imaplib — IMAP4 protocol client¶ Source code: Lib/imaplib.py This module defines three classes, IMAP4, IMAP4_SSL and IMAP4_stream, which encapsulate a connection to an IMAP4 server and implement a large subset of the IMAP4rev1 client protocol as defined in RFC 3501. It is backward compatible with IMAP4 (RFC 1730) servers, but note that the STATUS command is not supported in IMAP4. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Three classes are provided by the imaplib module, IMAP4 is the base class: class imaplib.IMAP4(host\u003d\u0027\u0027, port\u003dIMAP4_PORT, timeout\u003dNone)¶ This class implements the actual IMAP4 protocol. The connection is created and protocol version (IMAP4 or IMAP4rev1) is determined when the instance is initialized. If host is not specified, \u0027\u0027 (the local host) is used. If port is omitted, the standard IMAP4 port (143) is used. The optional timeout parameter specifies a timeout in seconds for the connection attempt. If timeout is not given or is None, the global default socket timeout is used. The IMAP4 class supports the with statement. When used like this, the IMAP4 LOGOUT command is issued automatically when the with statement exits. E.g.: \u003e\u003e\u003e from imaplib import IMAP4\n\u003e\u003e\u003e with IMAP4(\"domain.org\") as M:\n...     M.noop()\n...\n(\u0027OK\u0027, [b\u0027Nothing Accomplished. d25if65hy903weo.87\u0027])\n Changed in version 3.5: Support for the with statement was added. Changed in version 3.9: The optional timeout parameter was added. Three exceptions are defined as attributes of the IMAP4 class: exception IMAP4.error¶ Exception raised on any errors. The reason for the exception is passed to the constructor as a string. exception IMAP4.abort¶ IMAP4 server errors cause this exception to be raised. This is a sub-class of IMAP4.error. Note that closing the instance and instantiating a new one will usually allow recovery from this exception. exception IMAP4.readonly¶ This exception is raised when a writable mailbox has its status changed by the server. This is a sub-class of IMAP4.error. Some other client now has write permission, and the mailbox will need to be re-opened to re-obtain write permission. There’s also a subclass for secure connections: class imaplib.IMAP4_SSL(host\u003d\u0027\u0027, port\u003dIMAP4_SSL_PORT, *, ssl_context\u003dNone, timeout\u003dNone)¶ This is a subclass derived from IMAP4 that connects over an SSL encrypted socket (to use this class you need a socket module that was compiled with SSL support). If host is not specified, \u0027\u0027 (the local host) is used. If port is omitted, the standard IMAP4-over-SSL port (993) is used. ssl_context is a ssl.SSLContext object which allows bundling SSL configuration options, certificates and private keys into a single (potentially long-lived) structure. Please read Security considerations for best practices. Note With the default ssl_context, the connection is encrypted but the server certificate and hostname are not verified. To verify them, pass a context created by ssl.create_default_context(). The optional timeout parameter specifies a timeout in seconds for the connection attempt. If timeout is not given or is None, the global default socket timeout is used. Changed in version 3.3: ssl_context parameter was added. Changed in version 3.4: The class now supports hostname check with ssl.SSLContext.check_hostname and Server Name Indication (see ssl.HAS_SNI). Changed in version 3.9: The optional timeout parameter was added. Changed in version 3.12: The deprecated keyfile and certfile parameters have been removed. The second subclass allows for connections created by a child process: class imaplib.IMAP4_stream(command)¶ This is a subclass derived from IMAP4 that connects to the stdin/stdout file descriptors created by passing command to subprocess.Popen(). The following utility functions are defined: imaplib.Internaldate2tuple(resp)¶ Parse a bytes-like object containing an IMAP4 INTERNALDATE response and return the corresponding local time. The return value is a time.struct_time tuple or None if the input has wrong format. imaplib.Int2AP(num)¶ Converts an integer into a bytes representation using characters from the set [A .. P]. imaplib.ParseFlags(resp)¶ Converts a bytes-like object containing an IMAP4 FLAGS response to a tuple of individual flags as bytes. The return value is an empty tuple if the input has wrong format. imaplib.Time2Internaldate(date_time)¶ Convert date_time to an IMAP4 INTERNALDATE representation. The return value is a string in the form: \"DD-Mmm-YYYY HH:MM:SS +HHMM\" (including double-quotes). The date_time argument can be a number (int or float) representing seconds since epoch (as returned by time.time()), a 9-tuple representing local time an instance of time.struct_time (as returned by time.localtim",
+    "scrapedAt": "2026-10-08 19:46:23.500986"
+  },
+  {
+    "id": 1527,
+    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-experimental-jit",
+    "title": "3. Configure Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python Setup and Usage » 3. Configure Python | Theme Auto Light Dark | 3. Configure Python¶ 3.1. Build Requirements¶ To build CPython, you will need: A C11 compiler. Optional C11 features are not required. On Windows, Microsoft Visual Studio 2017 or later is required. Support for IEEE 754 floating-point numbers and floating-point Not-a-Number (NaN). Support for threads. Changed in version 3.5: On Windows, Visual Studio 2015 or later is now required. Changed in version 3.6: Selected C99 features, like \u003cstdint.h\u003e and static inline functions, are now required. Changed in version 3.7: Thread support is now required. Changed in version 3.11: C11 compiler, IEEE 754 and NaN support are now required. On Windows, Visual Studio 2017 or later is required. See also PEP 7 “Style Guide for C Code” and PEP 11 “CPython platform support”. 3.1.1. Requirements for optional modules¶ Some optional modules of the standard library require third-party libraries installed for development (for example, header files must be available). Missing requirements are reported in the configure output. Modules that are missing due to missing dependencies are listed near the end of the make output, sometimes using an internal name, for example, _ctypes for ctypes module. If you distribute a CPython interpreter without optional modules, it’s best practice to advise users, who generally expect that standard library modules are available. Dependencies to build optional modules are: Dependency Minimum version Python module libbz2 bz2 libffi 3.3.0 recommended ctypes liblzma lzma libmpdec 2.5.0 decimal [1] libreadline or libedit [2] readline libuuid _uuid [3] ncurses [4] curses OpenSSL [6] ssl, hashlib [5] SQLite 3.15.2 sqlite3 Tcl/Tk 8.5.12 tkinter, IDLE, turtle zlib 1.2.2.1 zlib, gzip, ensurepip zstd 1.4.5 compression.zstd [1] If libmpdec is not available, the decimal module will use a pure-Python implementation. See --with-system-libmpdec for details. [2] See --with-readline for choosing the backend for the readline module. [3] The uuid module uses _uuid to generate “safe” UUIDs. See the module documentation for details. [4] The curses module requires the libncurses or libncursesw library. The curses.panel module additionally requires the libpanel or libpanelw library. [5] If OpenSSL is not available, the hashlib module will use bundled implementations of several hash functions. See --with-builtin-hashlib-hashes for forcing usage of OpenSSL. [6] OpenSSL 1.1.1 is the minimum possible version to build against, but the series is end-of-life and no longer receives public security fixes. Use the latest patch release of a currently supported LTS release series (see the OpenSSL Roadmap), or the package provided by your operating system if available. Other libraries that offer an API compatible with OpenSSL 1.1.1 or later may work, but are not officially supported. Note that the table does not include all optional modules; in particular, platform-specific modules like winreg are not listed here. See also The devguide includes a full list of dependencies required to build all modules and instructions on how to install them on common platforms. --with-system-expat allows building with an external libexpat library. Options for third-party dependencies Changed in version 3.1: Tcl/Tk version 8.3.1 is now required for tkinter. Changed in version 3.5: Tcl/Tk version 8.4 is now required for tkinter. Changed in version 3.7: OpenSSL 1.0.2 is now required for hashlib and ssl. Changed in version 3.10: OpenSSL 1.1.1 is now required for hashlib and ssl. SQLite 3.7.15 is now required for sqlite3. Changed in version 3.11: Tcl/Tk version 8.5.12 is now required for tkinter. Changed in version 3.13: SQLite 3.15.2 is now required for sqlite3. 3.2. Generated files¶ To reduce build dependencies, Python source code contains multiple generated files. Commands to regenerate all generated files: make regen-all\nmake regen-stdlib-module-names\nmake regen-limited-abi\nmake regen-configure\n The Makefile.pre.in file documents generated files, their inputs, and tools used to regenerate them. Search for regen-* make targets. 3.2.1. configure script¶ The make regen-configure command regenerates the aclocal.m4 file and the configure script using the Tools/build/regen-configure.sh shell script which uses an Ubuntu container to get the same tools versions and have a reproducible output. The container is optional, the following command can be run locally: autoreconf -ivf -Werror\n The generated files can change depending on the exact versions of the tools used. The container that CPython uses has Autoconf 2.72, aclocal from Automake 1.16.5, and pkg-config 1.8.1. Changed in version 3.13: Autoconf 2.71 and aclocal 1.16.5 and are now used to regenerate configure. Changed in version 3.14: Autoconf 2.72 is now used to regenerate configure. 3.3. Configure Options¶ List all configure script options using: ./configure --help\n ",
+    "scrapedAt": "2026-10-08 19:46:22.156712"
+  },
+  {
     "id": 1526,
     "url": "https://docs.python.org/3/c-api/init_config.html#pyinitconfig-api",
     "title": "Python Initialization Configuration — Python 3.14.8 documentation",
@@ -10255,26 +10290,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1527,
-    "url": "https://docs.python.org/3/using/configure.html#cmdoption-enable-experimental-jit"
-  },
-  {
-    "id": 1528,
-    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
-  },
-  {
-    "id": 1529,
-    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection"
-  },
-  {
-    "id": 1530,
-    "url": "https://peps.python.org/pep-0684/"
-  },
-  {
-    "id": 1531,
-    "url": "https://docs.python.org/3/library/threading.html#threading.Thread.name"
   },
   {
     "id": 1532,
@@ -244626,10 +244641,738 @@ window.searchData = [
     "id": 326229,
     "url": "https://datatracker.ietf.org/wg/fax/about/",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3950.html"
+  },
+  {
+    "id": 328583,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/imaplib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328584,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.Idler.burst",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328586,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.setacl",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328588,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.socket",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328590,
+    "url": "https://github.com/uw-imap/imap",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328591,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.Int2AP",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328592,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.enable",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328595,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.rename",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328596,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getacl",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328597,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.xatom",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328598,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.ParseFlags",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328599,
+    "url": "https://docs.python.org/3/library/imaplib.html#",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328600,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.setannotation",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328602,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.fetch",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328603,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.send",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328604,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.unsubscribe",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328605,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.response",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328607,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.logout",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328609,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.read",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328610,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.recent",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328611,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.sort",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328612,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.list",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328613,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.search",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328618,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.readonly",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328619,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.starttls",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328623,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.close",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328625,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.namespace",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328627,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getannotation",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328628,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.error",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328629,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.login",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328631,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.subscribe",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328633,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.check",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328634,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.abort",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328635,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.partial",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328636,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.unselect",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328638,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.Internaldate2tuple",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328641,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.setquota",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328643,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.myrights",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328644,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getquota",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328646,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.create",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328647,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.uid",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328649,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.deleteacl",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328650,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328654,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.proxyauth",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328656,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/imaplib.py",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328658,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.Time2Internaldate",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328659,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4_SSL",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328660,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.delete",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328661,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3501.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328663,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.debug",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328666,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.readline",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328667,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.store",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328668,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.login_cram_md5",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328670,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.authenticate",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328671,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5161.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328672,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.getquotaroot",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328673,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.status",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328675,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6855.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328676,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2342.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328679,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.PROTOCOL_VERSION",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328680,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.append",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328682,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328683,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.capabilities",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328684,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1730.html",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328685,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.select",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328686,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.open",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328688,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4_stream",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328689,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.utf8_enabled",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328691,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.copy",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328692,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.lsub",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328694,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.expunge",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328695,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.thread",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328696,
+    "url": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.noop",
+    "parentUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "id": 328809,
+    "url": "https://peps.python.org/pep-0684/#memory-allocators",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328810,
+    "url": "https://peps.python.org/pep-0684/#depending-on-immortal-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328811,
+    "url": "https://peps.python.org/pep-0684/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328812,
+    "url": "https://instagram-engineering.com/copy-on-write-friendly-python-garbage-collection-ad6ed5233ddf",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328813,
+    "url": "https://peps.python.org/pep-0684/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328814,
+    "url": "https://peps.python.org/pep-0684/#capi-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328815,
+    "url": "https://peps.python.org/pep-0684/#already-completed-work",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328816,
+    "url": "https://github.com/GrahamDumpleton/mod_wsgi",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328817,
+    "url": "https://peps.python.org/pep-0684/#pyinterpreterconfig-strict-extensions-compat",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328818,
+    "url": "https://peps.python.org/pep-0684/#extra-context",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328819,
+    "url": "https://discuss.python.org/t/pep-684-a-per-interpreter-gil/19583/19/",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328820,
+    "url": "https://github.com/ceph/ceph/pull/14971",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328821,
+    "url": "https://peps.python.org/pep-0684/#indirect-benefits",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328822,
+    "url": "https://peps.python.org/pep-0684/#performance",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328823,
+    "url": "https://peps.python.org/pep-0684/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328824,
+    "url": "https://peps.python.org/pep-0684/#per-interpreter-state",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328826,
+    "url": "https://peps.python.org/pep-0445/#gil-free-pymem-malloc",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328827,
+    "url": "https://peps.python.org/pep-0684/#scale-of-work",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328829,
+    "url": "https://github.com/pyca/cryptography/issues/2299",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328830,
+    "url": "https://mail.python.org/archives/list/python-dev@python.org/thread/CF7B7FMACFYDAHU6NPBEVEY6TOSGICXU/",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328831,
+    "url": "https://docs.python.org/3/c-api/init.html#sub-interpreter-support",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328832,
+    "url": "https://peps.python.org/pep-0684/#pyinterpreterconfig-own-gil",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328833,
+    "url": "https://peps.python.org/pep-0684/#state-to-be-moved",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328834,
+    "url": "https://github.com/faster-cpython/ideas",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328835,
+    "url": "https://peps.python.org/pep-0684/#benefits-to-consolidation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328836,
+    "url": "https://peps.python.org/pep-0684/#tooling",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328837,
+    "url": "https://peps.python.org/pep-0684/#deferred-functionality",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328838,
+    "url": "https://peps.python.org/pep-0684/#consolidating-runtime-global-state",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328839,
+    "url": "https://peps.python.org/pep-0684/#documentation",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328840,
+    "url": "https://peps.python.org/pep-0684/#extension-modules",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328841,
+    "url": "https://github.com/ninia/jep",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328842,
+    "url": "https://github.com/xbmc/xbmc",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328843,
+    "url": "https://peps.python.org/pep-0684/#pep-554-multiple-interpreters-in-the-stdlib",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328844,
+    "url": "https://peps.python.org/pep-0684/#global-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328845,
+    "url": "https://peps.python.org/pep-0684/#high-level-summary",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328846,
+    "url": "https://peps.python.org/pep-0684/#maintainability",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328847,
+    "url": "https://peps.python.org/pep-0684/#extension-module-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328848,
+    "url": "https://peps.python.org/pep-0684/#sharing-global-objects",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328849,
+    "url": "https://peps.python.org/pep-0684/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328850,
+    "url": "https://peps.python.org/pep-0684/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328851,
+    "url": "https://peps.python.org/pep-0684/ConsolidatingRuntimeGlobalState",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328852,
+    "url": "https://peps.python.org/pep-0684/#restricting-extension-modules",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328853,
+    "url": "https://peps.python.org/pep-0684/#references",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328854,
+    "url": "https://peps.python.org/pep-0684/#the-gil",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328855,
+    "url": "https://peps.python.org/pep-0684/#proposed-capi",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328856,
+    "url": "https://discuss.python.org/t/pep-684-a-per-interpreter-gil/19583",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328857,
+    "url": "https://github.com/ericsnowcurrently/cpython/tree/try-per-interpreter-alloc",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328860,
+    "url": "https://peps.python.org/pep-0684/#impact",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328862,
+    "url": "https://peps.python.org/pep-0684/#extension-module-maintainers",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328863,
+    "url": "https://peps.python.org/pep-0684/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328864,
+    "url": "https://discuss.python.org/t/19583/42",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328865,
+    "url": "https://peps.python.org/pep-0684/#specification",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328866,
+    "url": "https://peps.python.org/pep-0684/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328867,
+    "url": "https://peps.python.org/pep-0684/#existing-use-of-multiple-interpreters",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328868,
+    "url": "https://peps.python.org/pep-0684/#c-api",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328870,
+    "url": "https://peps.python.org/pep-0684/#objects-exposed-in-the-c-api",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328873,
+    "url": "https://peps.python.org/pep-0684/#extension-module-thread-safety",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328874,
+    "url": "https://peps.python.org/pep-0684/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328876,
+    "url": "https://peps.python.org/pep-0684/#alternate-python-implementations",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328877,
+    "url": "https://peps.python.org/pep-0684/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328878,
+    "url": "https://peps.python.org/pep-0684/#cpython-runtime-state",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328879,
+    "url": "https://peps.python.org/pep-0684/#other-isolation-considerations",
+    "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 328880,
+    "url": "https://peps.python.org/pep-0684/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0684/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.name"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "threading — Thread-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/threading.html#threading.Thread.name"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_SetStackProtection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "imaplib — IMAP4 protocol client — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "imaplib — IMAP4 protocol client — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/imaplib.html#imaplib.IMAP4.idle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-enable-experimental-jit"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Configure Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/configure.html#cmdoption-enable-experimental-jit"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
