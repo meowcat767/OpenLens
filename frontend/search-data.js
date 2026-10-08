@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 551,
+    "url": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/",
+    "title": "Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association Written by Roy Hyunjin Han, CrossCompute Overview The American Public Power Association eReliability Tracker is an award-winning Pyramid web application that helps electric utilities track performance metrics. As part of their subscription benefits, utilities receive a Reliability Benchmarking Report that is custom tailored to each utility using eReliability Tracker data. In this case study, we show how the American Public Power Association used Python + Markdown + CSS + JupyterLab + CrossCompute to transform a three to six month labor intensive process into a highly flexible automated PDF report that can leverage the full analytical power of Python. The outcome is that over five hundred utilities can now receive valuable reliability metrics more frequently to improve their services. The eReliability Tracker Team uses the time saved to innovate new analytics that help utilities deliver power to their communities. Challenge The Reliability Benchmarking Report was originally developed in Microsoft Access and had been faithfully and successfully delivered for many years to eReliability Tracker subscribers. However, as the number of subscriptions multiplied, the semi-manual click intensive process to generate a custom report for each utility became increasingly arduous. Changes in the underlying data could trigger a cascade of tedious updates to the tables and charts in each utility\u0027s report and significantly delay the iterative inter-departmental review process. Solution In 2021, an analyst in the APPA Office of Data Analytics decided to recreate the eReliability Tracker Benchmarking Report using Python. Within the next two months, she was able to automate all ten sections of the report in JupyterLab using the CrossCompute Report Automation Framework. She used numpy and pandas to compute the various statistics and matplotlib and seaborn to generate the plots. To style the report, the analyst used standard Markdown + CSS. Outcome For every change in the underlying dataset or downstream computation, the analyst is now able to regenerate custom PDF reports for all 500 utilities in about an hour, which means she can iterate and innovate faster. Subsequent iterations of the report can take advantage of the rich library of free and open source computational and visualization packages available in Python. All ten sections of the report are also deployed internally as web-based CrossCompute tools so that non-technical users can drag and drop new data and regenerate the report\u0027s tables and charts without touching code. Acknowledgments Thank you to the American Public Power Association, U.S. Department of Energy, Python Software Foundation, Tampa Bay Innovation Center and CrossCompute for making this work possible. Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:06:12.110822"
+  },
+  {
+    "id": 550,
+    "url": "https://www.python.org/success-stories/category/engineering/",
+    "title": "Engineering | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Engineering Engineering Python for Collaborative Robots Abridging clinical conversations using Python Getting to Know Python Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:06:10.961894"
+  },
+  {
+    "id": 549,
+    "url": "https://www.python.org/success-stories/category/government/",
+    "title": "Government | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e Success Stories\u003e\u003e\u003e Government Government Python Powered CrossCompute Report Automation for eReliability Tracker Leads to Cost and Time Savings for the American Public Power Association Saving the world with Open Data and Python Frequentis TAPtools® - Python in Air Traffic Control Success stories home Arts Business Data Science Education Engineering Government Scientific Software Development Submit Yours!",
+    "scrapedAt": "2026-10-08 19:06:09.740811"
+  },
+  {
+    "id": 548,
+    "url": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/",
+    "title": "Python for Collaborative Drug Discovery | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python for Collaborative Drug Discovery Written by Scott Boyer, Andrew Dalke, and Pierre Bruneau, AstraZeneca Introduction AstraZeneca is one of the world\u0027s leading pharmaceutical companies. With over 54,000 employees world-wide, it provides innovative, effective medicines designed to fight cancer, provide pain control, heal infection, and fight diseases of the cardiovascular, central nervous, gastrointestinal, and respiratory systems. Finding a new drug often takes over a decade and more than $800 million. A big problem early in the process is identifying those candidates more likely to be good drugs from the vast universe of possible molecules. Computational chemists have developed many techniques to predict molecular properties. These can be used to evaluate the likelihood that a molecule will be stable in the stomach (for pills that are swallowed), and that it can travel through the blood stream, cross the cell membrane, and eventually be broken down and eliminated, all without being too toxic to the body. If these computational techniques were good enough there would be no need to do actual experiments. But today\u0027s computer models cannot fully characterize a molecule\u0027s behavior in the body, nor replace the intuition of a skilled pharmaceutical chemist. Real molecules must still be tested in the laboratory to see how they react. To save time and money on laboratory work, experimental chemists use computational models to narrow the field of good drug candidates, while also verifying that the candidates to be tested are not simple variations of each other\u0027s basic chemical structure. Process Improvements Needed Much of the work on drug identification actually takes place through collaboration between many research groups scattered around the world. As part of this process, experimental chemists send a list of compounds to the computational chemist, who works on the data set and sends back the results. Historically, experimental chemists were forced to rely on computational chemists and other staff to run computer predictions. Each prediction technique required running a separate program, some commercial and others developed in-house by different groups around the company, and each program had its own set of inputs, options, configurations, and failure behaviors. An experimental chemist usually didn\u0027t have the training to work with them, which meant that the computational chemists were forced to take time out of their work on developing new techniques to run routine models. In 2000, AstraZeneca wanted to improve this process so that experimental chemists could make better computational predictions on their own, and so that the research of the computational chemists could progress at a faster rate, and make its way into the lab more quickly. Pierre Bruneau, a Principal Scientist at AstraZeneca, had worked on this problem while at Zeneca, which merged to form AstraZeneca. He developed a web-based interface called H2X, named after the allied navigation systems used during the second world war. H2X was based on an in-house molecular property calculator called Drone. This system used a Perl script which computed some of the simpler molecular properties by calling the appropriate prediction program, usually through a wrapper written in Perl, csh, or a domain specific control language. Python Chosen H2X using Drone was a successful experiment and it was used by many people. In 2001 AstraZeneca decided to develop it further and brought in Andrew Dalke as a consultant, to improve the back-end code by making it more robust, extensible, and maintainable. Andrew, a well-known advocate for Python in computational chemistry and biology, convinced the group that Python was the appropriate language for the next generation back-end, which was named PyDrone. Python was chosen for this work because it is one of the best languages available for physical scientists, that is, for people who do not have a computer science background. Many other powerful and expressive high level languages exist, including Perl, Lisp, Scheme, Ruby, CAML, and Haskell. Of all these, Python is one of the few that is based on research into usability and the factors that make a programming language easy to learn and use. Yet Python was also designed to solve real-world problems faced by an expert programmer. The result is a language that scales well from small scripts written by a chemist to large packages written by a software developer. Python\u0027s Error Handling Improves Robustness The first iteration of PyDrone refactored the existing Perl code into more appropriate functions, classes, and modules while translating the code base into Python. Refactoring the Perl code without moving to Python would have produced comparable architectural results, but Python\u0027s explicit error handling and str",
+    "scrapedAt": "2026-10-08 19:06:08.482245"
+  },
+  {
+    "id": 546,
+    "url": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/",
+    "title": "Why Python Matters for the VR Community | Our Success Stories | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Why Python Matters for the VR Community Written by Andrew Beall, WorldViz Why Python Matters for the VR Community Andrew Beall, Chief Scientist, WorldViz Believe it or not, Python was first released 30 years ago and for nearly that long we\u0027ve made it the cornerstone of our Vizard virtual reality (VR) development platform. You may also be surprised to know that VR has been around for nearly twice that long! How we came to choose Python so long ago is a story in itself, but what is remarkable is that even after so many years Python has only continued to become more and more valuable to us and our customers. For us, Python has shaped our product development lifecycle, and we firmly believe it’s the world’s most accessible and powerful scripting language. You can\u0027t help but embrace the rapid application development paradigm, which has enabled us to overcome challenges such as quickly building hardware drivers for a rapidly evolving VR industry. We cater to a scientifically inclined customer base, and Python\u0027s rich community with shared libraries provides ready-built functionality that is beyond compare. As it said by others, we build in Python whenever we can and only use C++ when we must. For our customers, Python plays a central role in their daily experience with our product. One of the core values we provide is wrapping up all the complexity of a sophisticated 3D render engine capable of low-level graphics control needed by researchers all into a friendly Python interface. The fact that Python was purposely designed to be an enjoyable language shows how quickly novice programmers across the board can begin coding projects of their own. Unlike Java and C++, Python is inherently obvious in how to do things, and that single characteristic has led our customers to feel self-empowered and confident enough to explore projects and make discoveries that they would otherwise have felt was beyond their programming expertise. Three reasons capture why Python is so great for scientists: 1) Python is easy to learn We think this is the most important reason why Python is a great choice for scientific research. We\u0027ve seen hundreds of researchers with no Python experience gain fluency in a matter of one or two months and successfully build virtual reality experiments. For our customers, the world of 3D graphics and real-time virtual reality environments is suddenly cracked up and ready to be used for research. It gets even more exciting when our customers see how easy Python makes it to collect data from the sensors, save it to files, and then use Python libraries like numpy and matplotlib to add a data analysis and visualization pipeline. 2) Python is easy to read Unless you\u0027ve worked with collections of code before this point may not fully resonate but trust us when we say this is critical. We\u0027ve heard countless claims by customers who say they are relieved to now feel that they can read, understand, and even tweak projects built by others in the lab. Alex Martelli, a Fellow at the Python Software Foundation writes that \"To describe something as \u0027clever\u0027 is not considered a compliment in the Python culture. Clever programming is often unreadable by anyone except an expert. Python is meant to be easily readable and immediately useful. 3) Python has a huge scientific community It\u0027s no joke when we say you can almost always find a useful library by googling \"python\" plus your target keyword. There are simply thousands of libraries available for scientific research, nearly all being open-source and freely shared amongst an amazing community. Scientists across numerous domains have adopted Python as the goto language for analysis, so it\u0027s easy to lean on the accomplishments of others when beginning new projects. Try a similar search in other languages and you\u0027ll see a huge difference. Or, compare the effort it takes to incorporate external libraries into Python compared to other languages and you\u0027ll be amazed. What about the performance penalty for using Python? We get this question sometimes and it\u0027s usually a red herring. Sure, Python and C compiled code are in different categories and if you pick the right computing problem, you can show C/C++ to be much faster. However, time to crunch numbers or similar isn\u0027t what most of our users care about. GPUs and CPUs are so fast today that it\u0027s rare that Python\u0027s efficiency is an issue. Not rare, though, is how often projects can be completed faster in Python. Identify what matters most to you and measure speed accordingly. In conclusion, whether you\u0027re developing code to immerse a person in a tightly controlled virtual world to study their reactions to stimuli, or you\u0027re using machine learning to model the spread of COVID-19, you owe it to yourself to try Python. You won\u0027t regret it. Success stories home Arts Business",
+    "scrapedAt": "2026-10-08 19:06:07.24853"
+  },
+  {
     "id": 545,
     "url": "https://www.python.org/success-stories/category/arts/",
     "title": "Arts | Our Success Stories | Python.org",
@@ -3750,26 +3785,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 546,
-    "url": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/"
-  },
-  {
-    "id": 548,
-    "url": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
-  },
-  {
-    "id": 549,
-    "url": "https://www.python.org/success-stories/category/government/"
-  },
-  {
-    "id": 550,
-    "url": "https://www.python.org/success-stories/category/engineering/"
-  },
-  {
-    "id": 551,
-    "url": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
   },
   {
     "id": 552,
@@ -97355,10 +97370,46 @@ window.searchData = [
     "id": 68429,
     "url": "https://github.com/python/cpython/pull/121001",
     "parentUrl": "https://www.python.org/success-stories/python-on-arm-2025-update/"
+  },
+  {
+    "id": 68444,
+    "url": "https://worldviz.com",
+    "parentUrl": "https://www.python.org/success-stories/why-python-matters-for-the-vr-community/"
+  },
+  {
+    "id": 68452,
+    "url": "http://www.astrazeneca.com/",
+    "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
+  {
+    "id": 68462,
+    "url": "https://www.python.org/m/about/success/astra/property_manager.jpg",
+    "parentUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
+  {
+    "id": 68496,
+    "url": "https://crosscompute.com",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 68498,
+    "url": "https://www.publicpower.org/reliability-tracking",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
+  },
+  {
+    "id": 68499,
+    "url": "https://github.com/crosscompute",
+    "parentUrl": "https://www.python.org/success-stories/python-powered-crosscompute-report-automation-for-ereliability-tracker-leads-to-cost-and-time-savings-for-the-american-public-power-association-updated-20210526-0900/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.python.org/m/about/success/astra/property_manager_web.gif",
+    "alt": "Architecture of the Property Manager",
+    "pageTitle": "Python for Collaborative Drug Discovery | Our Success Stories | Python.org",
+    "pageUrl": "https://www.python.org/success-stories/python-for-collaborative-drug-discovery/"
+  },
   {
     "src": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/successstories/ep-sponsor-1.png",
     "alt": "EuroPython Arm Sponsor",
