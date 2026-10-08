@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1100,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:27:13.73883"
+  },
+  {
+    "id": 1099,
+    "url": "https://github.com/python/cpython/issues/118798",
+    "title": "Remove isdst parameter from `email.utils.localtime` · Issue #118798 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Remove isdst parameter from email.utils.localtime #118798 New issue Copy link New issue Copy link Closed Closed Remove isdst parameter from email.utils.localtime#118798 Copy link Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-email Description hugovk opened on May 8, 2024 Issue body actions It was deprecated in 3.12 and set for removal in 3.14. Deprecate isdst argument in email.utils.localtime #72346 gh-72346: Added isdst deprecation warning to email.utils.localtime #91450 Linked PRs gh-118798: Remove deprecated isdst parameter from email.utils.localtime #118799 gh-118875: Update tarfile.extractall and friends to use filter\u003d\"data\" by default #118940 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.14bugs and security fixesbugs and security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-email Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:27:12.419773"
+  },
+  {
+    "id": 1098,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#tarfile",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:27:10.489391"
+  },
+  {
+    "id": 1097,
+    "url": "https://github.com/python/cpython/issues/130080",
+    "title": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Implement PEP 765 #130080 New issue Copy link New issue Copy link Closed Closed Implement PEP 765#130080 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description iritkatriel opened on Feb 13, 2025 Issue body actions This issue serves as a tracker for implementing PEP-765. Linked PRs gh-130080: return in finally in subprocess.py #130081 gh-130080: implement PEP 765 #130087 gh-130080: move _Py_EnsureArrayLargeEnough to a separate header so it can be used outside of the compiler #130930 gh-130080: fix warnings in tests #131400 gh-130080: fix warnings in tests #131471 gh-130080: do not fold match case constants in unoptimized AST #131577 gh-130080: Remove unnecessary memset for _PyASTOptimizeState initializing #131745 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees iritkatriel Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:27:09.151233"
+  },
+  {
+    "id": 1096,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_HashRandomizationFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:27:06.742867"
+  },
+  {
     "id": 1095,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-multiple-interpreters",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -7315,26 +7350,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1096,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_HashRandomizationFlag"
-  },
-  {
-    "id": 1097,
-    "url": "https://github.com/python/cpython/issues/130080"
-  },
-  {
-    "id": 1098,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#tarfile"
-  },
-  {
-    "id": 1099,
-    "url": "https://github.com/python/cpython/issues/118798"
-  },
-  {
-    "id": 1100,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers"
   },
   {
     "id": 1101,
@@ -198426,10 +198441,197 @@ window.searchData = [
     "id": 187529,
     "url": "https://github.com/python/cpython/issues/122213#issue-2426642161",
     "parentUrl": "https://github.com/python/cpython/issues/122213"
+  },
+  {
+    "id": 191449,
+    "url": "https://github.com/python/cpython/pull/130930",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191450,
+    "url": "https://github.com/python/cpython/pull/131745",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191451,
+    "url": "https://github.com/python/cpython/issues/130080#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191453,
+    "url": "https://peps.python.org/765",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191454,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/130080",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191455,
+    "url": "https://github.com/python/cpython/pull/131471",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191456,
+    "url": "https://github.com/python/cpython/pull/130087",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191457,
+    "url": "https://github.com/python/cpython/pull/131400",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191458,
+    "url": "https://github.com/python/cpython/pull/131577",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191459,
+    "url": "https://github.com/python/cpython/issues/130080#issue-2851033188",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191461,
+    "url": "https://github.com/python/cpython/pull/130081",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191462,
+    "url": "https://github.com/python/cpython/issues/130080#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 191464,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/130080",
+    "parentUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "id": 192703,
+    "url": "https://github.com/python/cpython/issues/118798#top",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192705,
+    "url": "https://github.com/python/cpython/issues/118798#issue-2286369906",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192706,
+    "url": "https://github.com/python/cpython/pull/91450",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192707,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/118798",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192708,
+    "url": "https://github.com/python/cpython/issues/118798#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192712,
+    "url": "https://github.com/python/cpython/pull/118940",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192713,
+    "url": "https://github.com/python/cpython/pull/118799",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192714,
+    "url": "https://github.com/python/cpython/issues/72346",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192715,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/118798",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "id": 192716,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-email%22",
+    "parentUrl": "https://github.com/python/cpython/issues/118798"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#logging-handlers"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Remove isdst parameter from `email.utils.localtime` · Issue #118798 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Remove isdst parameter from `email.utils.localtime` · Issue #118798 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118798"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#tarfile"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#tarfile"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Implement PEP 765 · Issue #130080 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130080"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_HashRandomizationFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_HashRandomizationFlag"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
