@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 227,
+    "url": "https://android.com/ai/gemini/",
+    "title": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "content": "Studeer met Gemini: claim 1 jaar kosteloos voor studenten. Aanbieding loopt tot 31-12. Op deze aanbieding zijn voorwaarden van toepassing.* Gemini Je AI-assistent van Google. Maak kennis met Gemini, je persoonlijke AI-assistent die altijd klaarstaat om je te helpen met schrijven, creëren, plannen en leren.1 Gemini proberen Stille video op loop afspelen Stille video op loop pauzeren Activering Met één druk op de knop. Houd gewoon de aan/uit-knop op je Android-apparaat lang ingedrukt of zeg \u0027Hey Google\u0027 om Gemini te activeren. Praat daarna met Gemini door te typen, te praten of content bij te voegen. Schermcontext Vraag naar wat je ziet. Gemini kan je scherm als context gebruiken. Of je nu een afbeelding of pdf bekijkt, een video kijkt of een artikel leest: je kunt Gemini meteen vragen stellen over de content die je ziet. Gemini Live Bespreek het met Gemini Live. Gemini Live is een natuurlijkere manier om met Gemini te praten. Brainstorm en orden je gedachten, of deel je camera of scherm en krijg realtime gesproken reacties.2 Probeer nu Stille video op loop afspelen Stille video op loop pauzeren Stille video op loop afspelen Stille video op loop pauzeren Nano Banana Apps Personal Intelligence Gemini Live Audio-overzicht Nano Banana Stille video op loop afspelen Stille video op loop pauzeren Beeldbewerking in Gemini heeft een grote upgrade gekregen. Maak van één foto talloze nieuwe creaties of upload meerdere foto\u0027s om scènes en ideeën te combineren.3 Probeer nu Apps Stille video op loop afspelen Stille video op loop pauzeren Gemini werkt met Google-apps zoals Gmail en Maps zodat je bijvoorbeeld herinneringen kunt instellen en lijsten kunt maken.4 Probeer nu Personal Intelligence Stille video op loop afspelen Stille video op loop pauzeren Krijg persoonlijke hulp bij alles, van vakantie-ideeën tot projectplannen.5 Probeer nu Gemini Live Stille video op loop afspelen Stille video op loop pauzeren Van ritten boeken tot je koelkast vullen. Gemini kan je dagelijkse digitale klusjes doen.6 Probeer nu Audio-overzicht Stille video op loop afspelen Stille video op loop pauzeren Met Audio-overzichten zet je je documenten, presentaties en zelfs Deep Research-rapporten om in boeiende audiodiscussies in podcastvorm.7 Probeer nu Stille video op loop afspelen Stille video op loop pauzeren Beeldbewerking in Gemini heeft een grote upgrade gekregen. Maak van één foto talloze nieuwe creaties of upload meerdere foto\u0027s om scènes en ideeën te combineren.3 Probeer nu Stille video op loop afspelen Stille video op loop pauzeren Gemini werkt met Google-apps zoals Gmail en Maps zodat je bijvoorbeeld herinneringen kunt instellen en lijsten kunt maken.4 Probeer nu Stille video op loop afspelen Stille video op loop pauzeren Krijg persoonlijke hulp bij alles, van vakantie-ideeën tot projectplannen.5 Probeer nu Stille video op loop afspelen Stille video op loop pauzeren Van ritten boeken tot je koelkast vullen. Gemini kan je dagelijkse digitale klusjes doen.6 Probeer nu Stille video op loop afspelen Stille video op loop pauzeren Met Audio-overzichten zet je je documenten, presentaties en zelfs Deep Research-rapporten om in boeiende audiodiscussies in podcastvorm.7 Probeer nu Meer toegang Doe meer in minder tijd. Stille video op loop afspelen Stille video op loop pauzeren Google AI-abonnementen AI die bij je behoeften past. Gemini heeft meer abonnementen dan alleen de kosteloze oplossing. Of je nu dagelijkse hulp wilt of de meest exclusieve AI-functies van Google wilt ontgrendelen: er is altijd wel een abonnement dat bij je behoeften past. Abonnementen bekijken Google Gemini Krijg een kosteloos studentenabonnement van 1 jaar.* Studeer met Gemini en krijg onbeperkte uploads van je eigen lesmateriaal, studienotebooks, interactieve visualisaties en Gemini Live. Aanbieding claimen Gemini in actie. Laat je inspireren door leuke en handige manieren om Gemini te gebruiken. Mute Unmute Stille video op loop afspelen Stille video op loop pauzeren Mute Unmute Stille video op loop afspelen Stille video op loop pauzeren Mute Unmute Stille video op loop afspelen Stille video op loop pauzeren Mute Unmute Stille video op loop afspelen Stille video op loop pauzeren AI-ondersteuning waar en wanneer je die nodig hebt. Gemini op XR De Galaxy XR is de eerste headset die is mogelijk gemaakt door Android XR. Deze headset brengt je echte en digitale wereld dichter bij elkaar dan ooit. Gemini op Android Auto Of je nu een routebeschrijving nodig hebt of naar je favoriete podcast wilt luisteren, je krijgt handsfree hulp van Gemini. Gemini op Wear OS Gemini op Wear OS is je AI-assistent. Spreek op een natuurlijke manier om taken uit te voeren. Gemini op Google TV Spreek op een natuurlijke manier om de volgende serie, film of YouTube-video te vinden waar je met het gezin in wilt duiken. Vind de antwoorden die je nodig hebt. Hoe gebruik ik Gemini op Android? Op sommige Android-apparaten wordt Gemini als de primaire assistent geleverd. Als je op deze apparaten aan de slag ",
+    "scrapedAt": "2026-10-08 18:54:29.094287"
+  },
+  {
+    "id": 226,
+    "url": "https://www.android.com/better-together/",
+    "title": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "content": "Stille video op loop afspelen Stille video op loop pauzeren Alles werkt samen beter. Met Android kun je kiezen uit een hele wereld van apparaten die samen beter werken.1 Aan de slag Functies Updates Ecosysteem Stille video op loop afspelen Stille video op loop pauzeren Quick Share Deel makkelijk bestanden tussen Android-apparaten. Deel bijvoorbeeld foto\u0027s, documenten, video\u0027s en links met Android-apparaten, Chromebooks of Windows-pc\u0027s in de buurt, ongeacht het merk.2 Het is snel, beter beveiligd en gebruiksvriendelijk. Ontdek hoe het werkt Stille video op loop afspelen Stille video op loop pauzeren Google Cast Ga van het kleine scherm naar het grote. Cast bijvoorbeeld films, muziek en tv-series van je telefoon naar je tv met Google Cast. Met meer dan 3000 apps die met Google Cast werken, zoals Netflix, Spotify en TikTok, kun je eindeloos entertainment afspelen.3 Bekijk apps die werken met Cast Ontdek hoe het werkt Ondersteunde apps die werken met Cast. Stream onder andere films en muziek via meer dan 5000 apps die werken met Cast. Hieronder vind je een paar van de beste apps die je op je grote scherm kunt gebruiken. Ondersteunde apps die werken met Cast. Films / series Netflix Prime Video Disney + HBO Max Hulu Video YouTube Sling TV Paramount+ Muziek Spotify SXM Pandora Deezer Tidal Radio / podcasts TuneIn Ondersteunde tv\u0027s. Sony Hisense TCL Xiaomi LG Vizio Samsung *De tv\u0027s hierboven zijn maar een paar van de vele modellen die werken met Cast. Veel tv\u0027s die na 2020 zijn uitgebracht, ondersteunen Cast. Sommige oudere modellen doen dat ook. Neem contact op met de fabrikant voor informatie over de compatibiliteit. Beschikbaar op bepaalde apparaten. Ondersteunde speakers en koptelefoons. Harman / JBL Samsung Bose LG Bang en Olufsen *Naast de vermelde merken zijn veel andere speakers gecertificeerd voor Google Cast. Ga naar de supportsite van de fabrikant van je speaker voor een volledige lijst met compatibele apparaten. Stille video op loop afspelen Stille video op loop pauzeren Snel koppelen Koppel je apparaten met één tik aan elkaar. Koppel je koptelefoon, speakers en zelfs een compatibele auto met één tik aan je Android-apparaten met Snel koppelen.4 *Reeksen ingekort en gesimuleerd ter illustratie. Bekijk ondersteunde merken Ontdek hoe het werkt Ondersteunde merken. Ervaar premium geluid met de topmerken hieronder. Dit zijn slechts enkele van de vele speakers en koptelefoons die Snel koppelen ondersteunen. Koptelefoons en speakers. 1More Boat HK Jlab Motorola Philips Skullcandy Anker Bose Jabra JBL Sony Xiaomi Beats Cleer Jaybird LG Oneplus SoundCore Oppo Auto\u0027s met Snel koppelen. BMW Ford Hyundai Kia Stille video op loop afspelen Stille video op loop pauzeren Quick Share Deel makkelijk bestanden tussen Android-apparaten. Deel bijvoorbeeld foto\u0027s, documenten, video\u0027s en links met Android-apparaten, Chromebooks of Windows-pc\u0027s in de buurt, ongeacht het merk.2 Het is snel, beter beveiligd en gebruiksvriendelijk. Ontdek hoe het werkt Stille video op loop afspelen Stille video op loop pauzeren Google Cast Ga van het kleine scherm naar het grote. Cast bijvoorbeeld films, muziek en tv-series van je telefoon naar je tv met Google Cast. Met meer dan 3000 apps die met Google Cast werken, zoals Netflix, Spotify en TikTok, kun je eindeloos entertainment afspelen.3 Bekijk apps die werken met Cast Ontdek hoe het werkt Ondersteunde apps die werken met Cast. Stream onder andere films en muziek via meer dan 5000 apps die werken met Cast. Hieronder vind je een paar van de beste apps die je op je grote scherm kunt gebruiken. Ondersteunde apps die werken met Cast. Films / series Netflix Prime Video Disney + HBO Max Hulu Video YouTube Sling TV Paramount+ Muziek Spotify SXM Pandora Deezer Tidal Radio / podcasts TuneIn Ondersteunde tv\u0027s. Sony Hisense TCL Xiaomi LG Vizio Samsung *De tv\u0027s hierboven zijn maar een paar van de vele modellen die werken met Cast. Veel tv\u0027s die na 2020 zijn uitgebracht, ondersteunen Cast. Sommige oudere modellen doen dat ook. Neem contact op met de fabrikant voor informatie over de compatibiliteit. Beschikbaar op bepaalde apparaten. Ondersteunde speakers en koptelefoons. Harman / JBL Samsung Bose LG Bang en Olufsen *Naast de vermelde merken zijn veel andere speakers gecertificeerd voor Google Cast. Ga naar de supportsite van de fabrikant van je speaker voor een volledige lijst met compatibele apparaten. Stille video op loop afspelen Stille video op loop pauzeren Snel koppelen Koppel je apparaten met één tik aan elkaar. Koppel je koptelefoon, speakers en zelfs een compatibele auto met één tik aan je Android-apparaten met Snel koppelen. 4 *Reeksen ingekort en gesimuleerd ter illustratie. Bekijk ondersteunde merken Ontdek hoe het werkt Ondersteunde merken. Ervaar premium geluid met de topmerken hieronder. Dit zijn slechts enkele van de vele speakers en koptelefoons die Snel koppelen ondersteunen. Koptelefoons en speakers. 1More Boat HK Jlab Motorola Philips Skullcandy Anker Bose Jabra JBL Sony Xiaomi Beats ",
+    "scrapedAt": "2026-10-08 18:54:27.879801"
+  },
+  {
+    "id": 225,
+    "url": "https://trac.edgewall.org/",
+    "scrapedAt": "2026-10-08 18:54:26.78953"
+  },
+  {
+    "id": 224,
+    "url": "https://huggingface.co/docs/transformers/",
+    "title": "Transformers · Hugging Face",
+    "content": "Transformers documentation Transformers Transformers 🏡 View all docsAWS Trainium \u0026 InferentiaAccelerateArgillaAutoTrainBitsandbytesCLIChat UIDataset viewerDatasetsDeploying on AWSDiffusersDistilabelEvaluateGoogle CloudGoogle TPUsGradioHubHub Python LibraryHuggingface.jsInference Endpoints (dedicated)Inference ProvidersKernelsLeRobotLeaderboardsLightevalMicrosoft AzureOpenEnvOptimumPEFTReachy MiniSafetensorsSentence TransformersTRLTasksText Embeddings InferenceText Generation InferenceTokenizersTrackioTransformersTransformers.jsXetsmolagentstimm Search documentation mainv5.19.0v5.17.0v5.15.1v5.14.0v5.13.1v5.12.0v5.11.0v5.10.4v5.9.0v5.8.1v5.7.0v5.6.2v5.5.4v5.4.0v5.3.0v5.2.0v5.1.0v5.0.0v4.57.6v4.56.2v4.55.4v4.53.3v4.52.3v4.51.3v4.50.0v4.49.0v4.48.2v4.47.1v4.46.3v4.45.2v4.44.2v4.43.4v4.42.4v4.41.2v4.40.2v4.39.3v4.38.2v4.37.2v4.36.1v4.35.2v4.34.1v4.33.3v4.32.1v4.31.0v4.30.0v4.29.1v4.28.1v4.27.2v4.26.1v4.25.1v4.24.0v4.23.1v4.22.2v4.21.3v4.20.1v4.19.4v4.18.0v4.17.0v4.16.2v4.15.0v4.14.1v4.13.0v4.12.5v4.11.3v4.10.1v4.9.2v4.8.2v4.7.0v4.6.0v4.5.1v4.4.2v4.3.3v4.2.2v4.1.1v4.0.1v3.5.1v3.4.0v3.3.1v3.2.0v3.1.0v3.0.2v2.11.0v2.10.0v2.9.1v2.8.0v2.7.0v2.6.0v2.5.1v2.4.1v2.3.0v2.2.2v2.1.1v2.0.0v1.2.0v1.1.0v1.0.0doc-builder-html ARDEENESFRHIITJAKOPTROTRZH Join the Hugging Face community and get access to the augmented documentation experience Collaborate on models, datasets and Spaces Faster examples with accelerated inference Switch between documentation themes Sign Up to get started Copy page Transformers Transformers acts as the model-definition framework for state-of-the-art machine learning models in text, computer vision, audio, video, and multimodal models, for both inference and training. It centralizes the model definition so that this definition is agreed upon across the ecosystem. transformers is the pivot across frameworks: if a model definition is supported, it will be compatible with the majority of training frameworks (Axolotl, Unsloth, DeepSpeed, FSDP, PyTorch-Lightning, …), inference engines (vLLM, SGLang, TGI, …), and adjacent modeling libraries (llama.cpp, mlx, …) which leverage the model definition from transformers. We pledge to help support new state-of-the-art models and democratize their usage by having their model definition be simple, customizable, and efficient. There are over 1M+ Transformers model checkpoints on the Hugging Face Hub you can use. Explore the Hub today to find a model and use Transformers to help you get started right away. Explore the Models Timeline to discover the latest text, vision, audio and multimodal model architectures in Transformers. Features Transformers provides everything you need for inference or training with state-of-the-art pretrained models. Some of the main features include: Pipeline: Simple and optimized inference class for many machine learning tasks like text generation, image segmentation, automatic speech recognition, document question answering, and more. Trainer: A comprehensive trainer that supports features such as mixed precision, torch.compile, and FlashAttention for training and distributed training for PyTorch models. generate: Fast text generation with large language models (LLMs) and vision language models (VLMs), including support for streaming and multiple decoding strategies. Design Read our Philosophy to learn more about Transformers’ design principles. Transformers is designed for developers and machine learning engineers and researchers. Its main design principles are: Fast and easy to use: Every model is implemented from only three main classes (configuration, model, and preprocessor) and can be quickly used for inference or training with Pipeline or Trainer. Pretrained models: Reduce your carbon footprint, compute cost and time by using a pretrained model instead of training an entirely new one. Each pretrained model is reproduced as closely as possible to the original model and offers state-of-the-art performance. Learn If you’re new to Transformers or want to learn more about transformer models, we recommend starting with the LLM course. This comprehensive course covers everything from the fundamentals of how transformer models work to practical applications across various tasks. You’ll learn the complete workflow, from curating high-quality datasets to fine-tuning large language models and implementing reasoning capabilities. The course contains both theoretical and hands-on exercises to build a solid foundational knowledge of transformer models as you learn. Update on GitHub Installation→",
+    "scrapedAt": "2026-10-08 18:54:25.589097"
+  },
+  {
+    "id": 223,
+    "url": "https://www.python.org/about/gettingstarted/",
+    "title": "Python For Beginners | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python\u003e\u003e\u003e About\u003e\u003e\u003e Getting Started Welcome! Are you completely new to programming? If not then we presume you will be looking for information about why and how to get started with Python. Fortunately an experienced programmer in any programming language (whatever it may be) can pick up Python very quickly. It\u0027s also easy for beginners to use and learn, so jump in! Installing Installing Python is generally easy, and nowadays many Linux and UNIX distributions include a recent Python. Even some Windows computers (notably those from HP) now come with Python already installed. If you do need to install Python and aren\u0027t confident about the task you can find a few notes on the BeginnersGuide/Download wiki page, but installation is unremarkable on most platforms. Learning Before getting started, you may want to find out which IDEs and text editors are tailored to make Python editing easy, browse the list of introductory books, or look at code samples that you might find helpful. There is a list of tutorials suitable for experienced programmers on the BeginnersGuide/Tutorials page. There is also a list of resources in other languages which might be useful if English is not your first language. The online documentation is your first port of call for definitive information. There is a fairly brief tutorial that gives you basic information about the language and gets you started. You can follow this by looking at the library reference for a full description of Python\u0027s many libraries and the language reference for a complete (though somewhat dry) explanation of Python\u0027s syntax. If you are looking for common Python recipes and patterns, you can browse the ActiveState Python Cookbook Looking for Something Specific? If you want to know whether a particular application, or a library with particular functionality, is available in Python there are a number of possible sources of information. The Python web site provides a Python Package Index (also known as the Cheese Shop, a reference to the Monty Python script of that name). There is also a search page for a number of sources of Python-related information. Failing that, just Google for a phrase including the word \u0027\u0027python\u0027\u0027 and you may well get the result you need. If all else fails, ask on the python newsgroup and there\u0027s a good chance someone will put you on the right track. Frequently Asked Questions If you have a question, it\u0027s a good idea to try the FAQ, which answers the most commonly asked questions about Python. Looking to Help? If you want to help to develop Python, take a look at the developer area for further information. Please note that you don\u0027t have to be an expert programmer to help. The documentation is just as important as the compiler, and still needs plenty of work! The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-10-08 18:54:24.048325"
+  },
+  {
+    "id": 222,
+    "url": "https://wiki.qt.io/Qt_for_Python",
+    "title": "Qt for Python - Qt Wiki",
+    "content": "Jump to content From Qt Wiki En Ar Bg De El Es Fa Fi Fr Hi Hu It Ja Kn Ko Ms Nl Pl Pt Ru Sq Th Tr Uk Zh Qt for Python Documentation Check on PyPI Qt for Python official logo. The Qt for Python project aims to provide a complete port of the PySide module to Qt. The development started on GitHub in May 2015. The project managed to port PySide to Qt 5.3, 5.4 \u0026 5.5. During April 2016 The Qt Company decided to properly support the port (see details ). The module was released mid June 2018 as a Technical Preview (supporting Qt 5.11), and it was officially released without the Technical Preview tag, in December 2018 for Qt 5.12. In December 2020, the module was released for Qt6, which is the latest available version, which has the following differences: It doesn\u0027t support Python 2.7, Check the Compatibility Matrix for the supported Python version per each PySide version. This wiki page tracks the progress of the Qt for Python project development and provides further information concerning the effort. Qt for Python is available under LGPLv3/GPLv2 and commercial license for the following platforms: Linux macOS Windows Android iOS WebAssembly amd64 aarch64 Apple Silicon 64bit arm64 armv8 arm64 (simulator, device) x86_64 (simulator) - Python 3.10+ Please notice i386/32bit architecture is not supported. Get PySide6 via pip by running: pip install pyside6 What does it look like? Code Application import sys\nfrom PySide6.QtCore import Qt\nfrom PySide6.QtWidgets import QApplication, QLabel\n                                                     \nif __name__ \u003d\u003d \"__main__\":\n    app \u003d QApplication(sys.argv)\n    label \u003d QLabel(\"Hello World\", alignment\u003dQt.Alignment.AlignCenter)\n    label.show()\n    sys.exit(app.exec())\n More examples can be found in the project\u0027s repository inside the examples directory. Python compatibility matrix 2.7 3.5 3.6 3.7 3.8 3.9 3.10 3.11 3.12 3.13 3.14 3.15 5.15.0 o o o o o x x x x x x x 5.15.1-7 o o o o o o x x x x x x 5.15.8 o o o o o o o x x x x x 5.15.9-10 x o o o o o o x x x x x 5.15.11-15 x x o o o o o o x x x x 6.0.x x x o o o o x x x x x x 6.1.x x x o o o o x x x x x x 6.2.x x x o o o o o x x x x x 6.3.x x x o o o o o x x x x x 6.4.x x x x o o o o o x x x x 6.5.x x x x o o o o o x x x x 6.6.x x x x x o o o o o x x x 6.7.x x x x x x o o o o x x x 6.8.x x x x x x o o o o o x x 6.9.x x x x x x o o o o o x x 6.10.x x x x x x o o o o o o x 6.11.x x x x x x x o o o o o x 6.12.x x x x x x x o o o o o x 6.13.x x x x x x x x o o o o o o Free Threaded Python is not fully supported. Getting Started Refer to the official documentation over the wiki for guides on getting started, tutorials, and more!. Getting started | wiki: download, build and install instructions. Porting docs | wiki: Porting an existing Qt/C++ application to Qt/Python the porting process. Tutorials | wiki: get started developing PySide applications. Shiboken | wiki: general information about the Python binding generator. Development: Getting started: guidelines to start contributing to the project. Considerations and known issues Reporting Bugs: report any issue related PySide6 or Shiboken6. Git repository (Code review) (dev branch is the branch currently worked on for PySide6) and PySide6 open patches Community Official Mailing list Qt Forum: Qt for Python Subcategory Have an idea? share it with us! The following chat platforms are connected via a bridge, so independent of the one you join, you will get the messages from the other ones. Official IRC channel on Libera.chat #qt-pyside Gitter: gitter.im/PySide/pyside2 (even if the url contains \u0027pyside2\u0027 it includes \u0027pyside6\u0027 discussion as well) Matrix/Riot: #qt-pyside:kde.org Telegram Group: Qt for Python Development Status Development Notes by date: the summary of the development progress. Qt for Python Development Progress Notes The most current view of the progress can be found in Jira: Unresolved issues and All issues (including resolved). The second link is useful to monitor the progress of the backlog. The best way to achieve this is to sort the list by the \"Updated\" column. Larger backlog/feature items are filed as \"User Stories\" in Jira. Missing PySide6 bindings: the list of the current missing bindings. Contributing to the Qt for Python Wiki This Wiki is a community area where you can easily contribute, and which may contain rapidly changing information. Please put any wiki pages related to Qt for Python into the \"QtForPython\" category by adding the following text to the top of the page: [[Category:Qt for Python]] When creating a new wiki page, please start the name with the prefix Qt_for_Python/, so all the wiki page names will have the same structure and breadcrumbs are generated for easier navigation. Retrieved from \"https://wiki.qt.io/index.php?title\u003dQt_for_Python\u0026oldid\u003d46277\" Category: Qt for Python",
+    "scrapedAt": "2026-10-08 18:54:22.932758"
+  },
+  {
     "id": 221,
     "url": "https://dearpygui.readthedocs.io/en/latest/",
     "title": "Dear PyGui’s Documentation — Dear PyGui documentation",
@@ -1535,30 +1575,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 222,
-    "url": "https://wiki.qt.io/Qt_for_Python"
-  },
-  {
-    "id": 223,
-    "url": "https://www.python.org/about/gettingstarted/"
-  },
-  {
-    "id": 224,
-    "url": "https://huggingface.co/docs/transformers/"
-  },
-  {
-    "id": 225,
-    "url": "https://trac.edgewall.org/"
-  },
-  {
-    "id": 226,
-    "url": "https://www.android.com/better-together/"
-  },
-  {
-    "id": 227,
-    "url": "https://android.com/ai/gemini/"
   },
   {
     "id": 228,
@@ -41526,10 +41542,783 @@ window.searchData = [
     "id": 17250,
     "url": "https://dearpygui.readthedocs.io/en/latest/extra/video-tutorials.html",
     "parentUrl": "https://dearpygui.readthedocs.io/en/latest/"
+  },
+  {
+    "id": 17251,
+    "url": "https://wiki.qt.io/File:Qtforpython2023.png",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17252,
+    "url": "https://wiki.qt.io/File:Pyside6_install.gif",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17253,
+    "url": "https://wiki.qt.io/Qt_for_Python/Development_Getting_Started",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17254,
+    "url": "https://wiki.qt.io/Category:Qt_for_Python",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17255,
+    "url": "https://webchat.kde.org/#/room/#qt-pyside:kde.org",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17256,
+    "url": "https://www.qt.io/download",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17257,
+    "url": "https://doc.qt.io/qtforpython/",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17258,
+    "url": "https://bugreports.qt.io/secure/IssueNavigator.jspa?mode\u003dhide\u0026requestId\u003d17825",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17259,
+    "url": "https://libera.chat/",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17260,
+    "url": "https://wiki.qt.io/Qt_for_Python/es",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17261,
+    "url": "https://wiki.qt.io/Qt_for_Python/zh",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17262,
+    "url": "https://doc.qt.io/qtforpython-6/gettingstarted/index.html",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17263,
+    "url": "https://doc.qt.io/qtforpython/tutorials/index.html",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17264,
+    "url": "https://wiki.qt.io/index.php?title\u003dQt_for_Python\u0026oldid\u003d46277",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17265,
+    "url": "https://wiki.qt.io/Qt_for_Python/Porting_guide",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17266,
+    "url": "http://code.qt.io/cgit/pyside/pyside-setup.git/",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17267,
+    "url": "https://github.com/PySide",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17268,
+    "url": "https://codereview.qt-project.org/#/q/project:%255Epyside.%252B,n,z",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17269,
+    "url": "http://code.qt.io/cgit/pyside/pyside-setup.git/tree/examples",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17270,
+    "url": "https://forum.qt.io/category/58/qt-for-python",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17271,
+    "url": "https://doc.qt.io/qtforpython/tutorials/portingguide/index.html",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17272,
+    "url": "https://wiki.qt.io/Qt_for_Python_Development_Notes",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17273,
+    "url": "https://wiki.qt.io/File:2020-12-16-101334_305x245_scrot.png",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17274,
+    "url": "https://wiki.qt.io/Qt_for_Python/Suggestions",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17275,
+    "url": "https://wiki.qt.io/Qt_for_Python_Missing_Bindings",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17276,
+    "url": "https://wiki.qt.io/PySide",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17277,
+    "url": "https://wiki.qt.io/Qt_for_Python/Reporting_Bugs",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17278,
+    "url": "https://wiki.qt.io/Qt_for_Python/Tutorial",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17279,
+    "url": "https://wiki.qt.io/Special:Categories",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17280,
+    "url": "https://wiki.qt.io/Qt_for_Python/fr",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17281,
+    "url": "https://www.qt.io/qt-for-python",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17282,
+    "url": "https://wiki.qt.io/Qt_for_Python/Considerations",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17283,
+    "url": "https://wiki.qt.io/Qt_for_Python/ru",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17284,
+    "url": "https://tldrlegal.com/license/gnu-general-public-license-v2",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17285,
+    "url": "https://wiki.qt.io/Qt_for_Python#Python_compatibility_matrix",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17286,
+    "url": "https://bugreports.qt.io/secure/IssueNavigator.jspa?mode\u003dhide\u0026requestId\u003d18025",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17287,
+    "url": "https://wiki.qt.io/Qt_for_Python/pt",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17288,
+    "url": "http://lists.qt-project.org/mailman/listinfo/pyside",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17289,
+    "url": "https://groups.google.com/forum/#!topic/pyside-dev/pqwzngAGLWE",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17290,
+    "url": "https://wiki.qt.io/Qt_for_Python#bodyContent",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17291,
+    "url": "https://doc.qt.io/qtforpython/shiboken6/",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17292,
+    "url": "https://wiki.qt.io/Qt_for_Python/GettingStarted",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17293,
+    "url": "https://t.me/qtforpython",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17294,
+    "url": "https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3)",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17295,
+    "url": "http://gitter.im/PySide/pyside2",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17296,
+    "url": "https://wiki.qt.io/Qt_for_Python/Shiboken",
+    "parentUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "id": 17317,
+    "url": "https://huggingface.co/docs/transformers/pipeline_tutorial",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17318,
+    "url": "https://huggingface.co/support",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17319,
+    "url": "https://github.com/huggingface/transformers/blob/main/docs/source/en/index.md",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17320,
+    "url": "https://github.com/huggingface/transformers",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17321,
+    "url": "https://huggingface.co/docs/transformers/models_timeline",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17322,
+    "url": "https://huggingface.co/docs/transformers/philosophy",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17323,
+    "url": "https://huggingface.co/docs/transformers/v5.19.0/en/main_classes/pipelines#transformers.Pipeline",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17324,
+    "url": "https://huggingface.co/docs/transformers/v5.19.0/en/main_classes/trainer#transformers.Trainer",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17325,
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1?fw\u003dpt",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17326,
+    "url": "https://huggingface.co/join",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17327,
+    "url": "https://huggingface.co/docs/transformers/index#design",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17328,
+    "url": "https://huggingface.co/docs/transformers/installation",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17329,
+    "url": "https://huggingface.co/docs/transformers/index#transformers",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17330,
+    "url": "https://huggingface.com/models",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17331,
+    "url": "https://huggingface.com/",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17332,
+    "url": "https://huggingface.co/docs/transformers/trainer",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17333,
+    "url": "https://huggingface.co/models?library\u003dtransformers\u0026sort\u003dtrending",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17334,
+    "url": "https://huggingface.co/docs/transformers/llm_tutorial",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17335,
+    "url": "https://huggingface.co/docs/transformers/index#features",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17336,
+    "url": "https://huggingface.co/docs/transformers/index#learn",
+    "parentUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "id": 17337,
+    "url": "https://www.samsung.com/nl/tvs/all-tvs/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17338,
+    "url": "https://www.android.com/intl/nl_nl/tablets/#explore-tablets",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17339,
+    "url": "https://wearos.google.com/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17340,
+    "url": "https://www.android.com/intl/nl_nl/better-together/#features",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17341,
+    "url": "https://www.android.com/better-together/#ecosysteem-jumplink",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17342,
+    "url": "https://www.jbl.com/speakers/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17343,
+    "url": "https://www.android.com/better-together/#functies",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17344,
+    "url": "https://www.android.com/intl/nl_nl/quick-share/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17345,
+    "url": "https://www.android.com/intl/nl_nl/auto/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17346,
+    "url": "https://www.mi.com/global/product-list/tv-media/tv/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17347,
+    "url": "https://store.google.com/category/earbuds?utm_source\u003dandroid\u0026utm_medium\u003dgoogle_oo\u0026utm_campaign\u003dGS107529\u0026utm_content\u003dweb\u0026utm_term\u003d4",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17348,
+    "url": "https://www.google.com/intl/nl_nl/chromebook/discover/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17349,
+    "url": "https://blog.google/products/android/le-audio-auracast-support",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17350,
+    "url": "https://www.hisense.com/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17351,
+    "url": "https://www.vizio.com/en/shop/tv",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17352,
+    "url": "https://www.android.com/new-features-on-android/?category\u003dconnectivity/#gms-filter",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17353,
+    "url": "https://tv.google/products/#smarttv",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17354,
+    "url": "https://www.android.com/better-together/#updates",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17355,
+    "url": "https://www.bang-olufsen.com/en/nl/speakers",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17356,
+    "url": "https://www.lg.com/sound-bars",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17357,
+    "url": "https://support.google.com/wearos/answer/11532572",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17358,
+    "url": "https://sony.com/electronics/tv",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17359,
+    "url": "https://www.android.com/intl/nl_nl/safety/physical-safety/#unknown-tracker-alerts",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17360,
+    "url": "https://www.lg.com/nl/televisies-soundbars/alle-tv-soundbars/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17361,
+    "url": "https://www.bose.com/c/speakers",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17362,
+    "url": "https://store.google.com/category/connected_home?utm_source\u003dandroid\u0026utm_medium\u003dgoogle_oo\u0026utm_campaign\u003dGS107529\u0026utm_content\u003dweb\u0026utm_term\u003d4",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17363,
+    "url": "https://www.android.com/intl/nl_nl/better-together/google-cast/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17364,
+    "url": "https://blog.google/feed/samsung-unpacked-hearing-aid-talkback-updates/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17365,
+    "url": "https://www.android.com/intl/nl_nl/phones/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17366,
+    "url": "https://www.android.com/intl/nl_nl/better-together/fast-pair/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17367,
+    "url": "http://www.tcl.com/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17368,
+    "url": "https://www.android.com/intl/nl_nl/better-together/fast-pair/#fast-pair-modal",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17369,
+    "url": "https://support.google.com/chromebook/answer/9212313",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17370,
+    "url": "https://www.android.com/intl/nl_nl/learn-find-hub/compatible-devices/?device-types\u003dtags",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17371,
+    "url": "https://www.samsung.com/nl/audio-devices/all-audio-devices/",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17372,
+    "url": "https://support.google.com/android/answer/12060041",
+    "parentUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "id": 17373,
+    "url": "https://gemini.google.com/app/download/mobile?android-min-version\u003d301356232\u0026ios-min-version\u003d322.0\u0026is_sa\u003d1\u0026campaign_id\u003dweb_gemlive\u0026utm_source\u003dgemini-live\u0026utm_medium\u003dweb\u0026utm_campaign\u003dweb_gemlive\u0026pt\u003d9008\u0026mt\u003d8\u0026ct\u003dweb-ct\u0026target\u003dlive",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17375,
+    "url": "https://one.google.com/ai-student?plans\u003d1%2C2",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17376,
+    "url": "https://play.google.com/store/apps/details?id\u003dcom.google.android.apps.bard",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17377,
+    "url": "https://policies.google.com/terms/generative-ai/use-policy",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17378,
+    "url": "https://support.google.com/gemini/answer/14554984?sjid\u003d7227518821100474866-NA#back_to_gemini",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17381,
+    "url": "https://one.google.com/offer/studentoffer8?g1_landing_page\u003d0",
+    "parentUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "id": 17382,
+    "url": "https://gemini.google/subscriptions/",
+    "parentUrl": "https://android.com/ai/gemini/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/17/0e/d7f6bfa34653a66c99909d1680b4/gemini-screencontext-4x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een mobiele telefoon toont een foto van een berglandschap met een Google Gemini-overlay met de vraag \u0027Hallo Google Gemini, wat is de geschiedenis hiervan?\u0027",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/bd/c9/064f68c444c395e78836442825dd/bts-gemini-promo.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "2 mensen aan een bureau, de een kijkt naar een laptop, de ander schrijft in een notitieboekje.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/29/ec/8416e9914cec80451dc609066dd3/xr-gemini.webp\u003dn-w562-h543-fcrop64\u003d1,047f0000fb9cffff-rw",
+    "alt": "Een zijaanzicht van een grijze Galaxy XR-bril met het Gemini-stericoon onderaan.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/4f/fb/41a15e364a65b12d4baf17bb378c/02-android-auto-2x.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een scherm in een auto toont Google Maps en Gemini",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/d9/33/4355a6144af0900c42ee85938548/gemini.webp\u003dn-w562-h543-fcrop64\u003d1,047f0000fb9cffff-rw",
+    "alt": "Een Pixel Watch 4 in de kleur Iris met Gemini op de wijzerplaat.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/ec/eb/2a5e8dd74cfbb49f681a7ec0923b/tv.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een Gemini-prompt waarin wordt gevraagd om het zonnestelsel uit te leggen aan een kind uit groep 3 wordt voor het startscherm van Google TV weergegeven.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/18/0e/86e28b224e0e8a453a52acbf5422/circle-to-search-2x.webp\u003dn-w543-h305-fcrop64\u003d1,00000000ffffffa1-rw",
+    "alt": "Een Android-telefoonscherm met daarop een outfit die wordt omcirkeld met onderaan het scherm een zoekresultaat voor elk item. ",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/0f/c3/38a7d2a24214b792495089f2aea8/recirculation-moreai-4x.webp\u003dn-w543-h305-fcrop64\u003d1,00000030ffffffd0-rw",
+    "alt": "Het scherm van een Android-telefoon toont een vrouw die op een strand staat met een gloeiende witte omtrek om haar heen.",
+    "pageTitle": "Probeer Gemini, je persoonlijke AI-assistent | Android",
+    "pageUrl": "https://android.com/ai/gemini/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/59/3d/c79929ee4afeb2c6411f177eceae/audio-sharing-1.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een Android-telefoon wordt getoond met bluetooth aan op het startscherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/58/3a/c27350c148a5a4762795d17a24d9/oticon.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Android-telefooninstellingen met bedieningselementen voor hoortoestellen, waaronder aanpasbare voorinstellingen voor buitensituaties en het laadniveau van het linker- en rechtertoestel.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/71/4f/121c9b704efa9709945085549a68/unnamed-2.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een auto, smartwatch en telefoon lichten elk op in een andere kleur, wat aangeeft dat ze zijn verbonden en ontgrendeld.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/9b/38/72d9210d4a2ca189629797d5e012/wearos.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een smartwatch met een afbeelding van 3 glimlachende vrienden op het scherm, plus een cameraknop en zoomopties.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/11/0c/81acb333461eb79c97736db16062/unnamed-6.webp\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Een Chromebook en een telefoon staan naast elkaar en tonen beide een melding van een tekstbericht van \u0027Rachel\u0027.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/d5/af/710b41a14294b0659d3307f838f4/00-desktop-2x.png\u003ds543-fcrop64\u003d1,00000000ffffffff-rw",
+    "alt": "Op het vergrendelscherm van een telefoon staat het bericht dat een tracker met de gebruiker meereist.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/66/52/46a1f20f4c0b8c4401175e513369/beto-phones.webp\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een Android-telefoon met een abstract blauw scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/fd/d7/50b4ea24456bb394ba8bedf96f53/02-hearables-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een paar oordopjes waarvan er één uit de geopende case steekt.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/20/2f/7fff83554d33968e5b412aa9fa92/03-tablets-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een zwarte tablet met erbovenop een pen. Op het scherm staat een kleurrijke abstracte afbeelding.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/3b/bf/f63aee9a471a86f4a85b5a1e9aee/04-laptops-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een geopende Chromebook met een abstracte rood met blauwe afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/01/a8/8b7375b94c899a94207f79d58d51/05-auto-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een vooraanzicht van een witte auto.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/05/69/bc1bdb4c43c7b06aaab831b4da76/06-wearables-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een smartwatch met een lichtgroen bandje en de tijd prominent aangegeven op de wijzerplaat.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/11/0c/22e91b484208bec37a40cceede87/07-smarthome-desktop-2x.png\u003dn-w641-h362-fcrop64\u003d1,139d0000ec63ffff-rw",
+    "alt": "Een langwerpige witte Nest Doorbell met een cameralens.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/a1/e0/c66b9b70419bb9cf5f4deaf91aa9/08-tvs-desktop-2x.png\u003dn-w641-h362-fcrop64\u003d1,139d0000ec63ffff-rw",
+    "alt": "Een tv met een kleurrijke abstracte afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/17/26/09c3156a46719cc600abbd65761c/09-trackingtabs-desktop-2x.png\u003dn-w641-h362-fcrop64\u003d1,139d0000ec63ffff-rw",
+    "alt": "Een ronde, zwarte tracker.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/66/52/46a1f20f4c0b8c4401175e513369/beto-phones.webp\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een Android-telefoon met een abstract blauw scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/fd/d7/50b4ea24456bb394ba8bedf96f53/02-hearables-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een paar oordopjes waarvan er één uit de geopende case steekt.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/20/2f/7fff83554d33968e5b412aa9fa92/03-tablets-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een zwarte tablet met erbovenop een pen. Op het scherm staat een kleurrijke abstracte afbeelding.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/3b/bf/f63aee9a471a86f4a85b5a1e9aee/04-laptops-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een geopende Chromebook met een abstracte rood met blauwe afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/01/a8/8b7375b94c899a94207f79d58d51/05-auto-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een vooraanzicht van een witte auto.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/05/69/bc1bdb4c43c7b06aaab831b4da76/06-wearables-desktop-2x.png\u003dn-w644-h362-fcrop64\u003d1,144d0000ec0bffff-rw",
+    "alt": "Een smartwatch met een lichtgroen bandje en de tijd prominent aangegeven op de wijzerplaat.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/11/0c/22e91b484208bec37a40cceede87/07-smarthome-desktop-2x.png\u003dn-w641-h362-fcrop64\u003d1,139d0000ec63ffff-rw",
+    "alt": "Een langwerpige witte Nest Doorbell met een cameralens.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/a1/e0/c66b9b70419bb9cf5f4deaf91aa9/08-tvs-desktop-2x.png\u003dn-w641-h362-fcrop64\u003d1,139d0000ec63ffff-rw",
+    "alt": "Een tv met een kleurrijke abstracte afbeelding op het scherm.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://www.gstatic.com/marketing-cms/assets/images/17/26/09c3156a46719cc600abbd65761c/09-trackingtabs-desktop-2x.png\u003dn-w641-h362-fcrop64\u003d1,139d0000ec63ffff-rw",
+    "alt": "Een ronde, zwarte tracker.",
+    "pageTitle": "Ontdek hoe je met Android je apparaten koppelt | Android",
+    "pageUrl": "https://www.android.com/better-together/"
+  },
+  {
+    "src": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "alt": "Hugging Face\u0027s logo",
+    "pageTitle": "Transformers · Hugging Face",
+    "pageUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "src": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png",
+    "alt": "",
+    "pageTitle": "Transformers · Hugging Face",
+    "pageUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "src": "https://hf.co/datasets/huggingface/documentation-images/resolve/81d7d9201fd4ceb537fc4cebc22c29c37a2ed216/transformers/transformers-index.png",
+    "alt": "HuggingFace Expert Acceleration Program",
+    "pageTitle": "Transformers · Hugging Face",
+    "pageUrl": "https://huggingface.co/docs/transformers/"
+  },
+  {
+    "src": "https://qt-wiki-uploads.s3.amazonaws.com/images/e/ed/Qtforpython2023.png",
+    "alt": "",
+    "pageTitle": "Qt for Python - Qt Wiki",
+    "pageUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "src": "https://qt-wiki-uploads.s3.amazonaws.com/images/8/8a/Pyside6_install.gif",
+    "alt": "",
+    "pageTitle": "Qt for Python - Qt Wiki",
+    "pageUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
+  {
+    "src": "https://qt-wiki-uploads.s3.amazonaws.com/images/f/fa/2020-12-16-101334_305x245_scrot.png",
+    "alt": "",
+    "pageTitle": "Qt for Python - Qt Wiki",
+    "pageUrl": "https://wiki.qt.io/Qt_for_Python"
+  },
   {
     "src": "https://flask.palletsprojects.com/en/stable/_images/flask-name.svg",
     "alt": "_images/flask-name.svg",
