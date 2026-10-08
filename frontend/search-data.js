@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1536,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#for",
+    "title": "8. Compound statements — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those vari",
+    "scrapedAt": "2026-10-08 19:46:40.408521"
+  },
+  {
+    "id": 1535,
+    "url": "https://docs.python.org/3/library/base64.html#module-base64",
+    "title": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Data Handling » base64 — Base16, Base32, Base64, Base85 Data Encodings | Theme Auto Light Dark | base64 — Base16, Base32, Base64, Base85 Data Encodings¶ Source code: Lib/base64.py This module provides functions for encoding binary data to printable ASCII characters and decoding such encodings back to binary data. This includes the encodings specified in RFC 4648 (Base64, Base32 and Base16), the Base85 encoding specified in PDF 2.0, and non-standard variants of Base85 used elsewhere. There are two interfaces provided by this module. The modern interface supports encoding bytes-like objects to ASCII bytes, and decoding bytes-like objects or strings containing ASCII to bytes. Both base-64 alphabets defined in RFC 4648 (normal, and URL- and filesystem-safe) are supported. The legacy interface does not support decoding from strings, but it does provide functions for encoding and decoding to and from file objects. It only supports the Base64 standard alphabet, and it adds newlines every 76 characters as per RFC 2045. Note that if you are looking for RFC 2045 support you probably want to be looking at the email package instead. Changed in version 3.3: ASCII-only Unicode strings are now accepted by the decoding functions of the modern interface. Changed in version 3.4: Any bytes-like objects are now accepted by all encoding and decoding functions in this module. Ascii85/Base85 support added. RFC 4648 Encodings¶ The RFC 4648 encodings are suitable for encoding binary data so that it can be safely sent by email, used as parts of URLs, or included as part of an HTTP POST request. base64.b64encode(s, altchars\u003dNone)¶ Encode the bytes-like object s using Base64 and return the encoded bytes. Optional altchars must be a bytes-like object of length 2 which specifies an alternative alphabet for the + and / characters. This allows an application to e.g. generate URL or filesystem safe Base64 strings. The default is None, for which the standard Base64 alphabet is used. May assert or raise a ValueError if the length of altchars is not 2. Raises a TypeError if altchars is not a bytes-like object. base64.b64decode(s, altchars\u003dNone, validate\u003dFalse)¶ Decode the Base64 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional altchars must be a bytes-like object or ASCII string of length 2 which specifies the alternative alphabet used instead of the + and / characters. A binascii.Error exception is raised if s is incorrectly padded. If validate is False (the default), characters that are neither in the normal base-64 alphabet nor the alternative alphabet are discarded prior to the padding check. If validate is True, these non-alphabet characters in the input result in a binascii.Error. For more information about the strict base64 check, see binascii.a2b_base64() May assert or raise a ValueError if the length of altchars is not 2. base64.standard_b64encode(s)¶ Encode bytes-like object s using the standard Base64 alphabet and return the encoded bytes. base64.standard_b64decode(s)¶ Decode bytes-like object or ASCII string s using the standard Base64 alphabet and return the decoded bytes. base64.urlsafe_b64encode(s)¶ Encode bytes-like object s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the encoded bytes. The result can still contain \u003d. base64.urlsafe_b64decode(s)¶ Decode bytes-like object or ASCII string s using the URL- and filesystem-safe alphabet, which substitutes - instead of + and _ instead of / in the standard Base64 alphabet, and return the decoded bytes. base64.b32encode(s)¶ Encode the bytes-like object s using Base32 and return the encoded bytes. base64.b32decode(s, casefold\u003dFalse, map01\u003dNone)¶ Decode the Base32 encoded bytes-like object or ASCII string s and return the decoded bytes. Optional casefold is a flag specifying whether a lowercase alphabet is acceptable as input. For security purposes, the default is False. RFC 4648 allows for optional mapping of the digit 0 (zero) to the letter O (oh), and for optional mapping of the digit 1 (one) to either the letter I (eye) or letter L (el). The optional argument map01 when not None, specifies which letter the digit 1 should be mapped to (when map01 is not None, the digit 0 is always mapped to the letter O). For security purposes the default is None, so that 0 and 1 are not allowed in the input. A binascii.Error is raised if s is incorrectly padded or if there are non-alphabet characters present in the input. base64.b32hexencode(s)¶ Similar to b32encode() but uses the Extended Hex Alphabet, as defined in RFC 4648. Added in version 3.10. base64.b32hexdecode(s, casefold\u003dFalse)¶ Similar to b32decode() but uses the Extended Hex Alphabet, as defined in RFC 4648. This version does not allow the digit 0 (zero) to the letter O (oh) and digit 1 (one) to",
+    "scrapedAt": "2026-10-08 19:46:39.078856"
+  },
+  {
+    "id": 1534,
+    "url": "https://docs.python.org/3/library/os.html#os.environb",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_Read",
+    "scrapedAt": "2026-10-08 19:46:37.722569"
+  },
+  {
+    "id": 1533,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:46:36.344973"
+  },
+  {
+    "id": 1532,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK",
+    "title": "difflib — Helpers for computing deltas — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Text Processing Services » difflib — Helpers for computing deltas | Theme Auto Light Dark | difflib — Helpers for computing deltas¶ Source code: Lib/difflib.py This module provides classes and functions for comparing sequences. Most of them compare sequences of text lines (for example lists of strings, or file objects) and produce diffs – reports on the differences. Diffs can be produced in various formats, including HTML and context and unified diffs – formats produced by tools like diff and git diff. Comparisons are done using a matching algorithm implemented in SequenceMatcher – a flexible class for comparing pairs of sequences of any type, not just text, so long as the sequence elements are hashable. Junk heuristic¶ difflib uses a junk heuristic: some items are deemed to be junk, and ignored when searching for similarities. Ideally, these are uninteresting or common items, such as blank lines or whitespace. This heuristic can speed the algorithm up (because it reduces the number of possible combinations) and it can produce results that are more understandable for humans (typically breaking on whitespace). But it can also cause pathological cases: Inappropriately chosen junk items can cause an unexpectedly large (but still correct) result. The default heuristic is asymmetric: only the second sequence is inspected when determining what is considered junk, so comparing A to B can give different results than comparing B to A and reversing the result. By default, if the second input sequence is at least 200 items long, items that account for more than 1% it are considered junk. Depending on your data, you should consider turning this heuristic off (setting SequenceMatcher’s autojunk argument to False) or tuning it (using the isjunk argument, perhaps to one of the predefined functions). The difflib algorithm¶ The algorithm used in SequenceMatcher predates, and is a little fancier than, an algorithm published in the late 1980s by Ratcliff and Obershelp under the hyperbolic name “gestalt pattern matching.” The idea is to find the longest contiguous subsequence common to both inputs, then recursively handle the pieces of the sequences to the left and to the right of the matching subsequence. See also Pattern Matching: The Gestalt Approach Discussion of a similar algorithm by John W. Ratcliff and D. E. Metzener. This was published in Dr. Dobb’s Journal in July, 1988. As an extension to the Ratcliff and Obershelp algorithm, difflib searches for the longest junk-free contiguous subsequence. See the Junk heuristic section for details. CPython implementation detail: Timing The basic Ratcliff-Obershelp algorithm is cubic time in the worst case and quadratic time in the expected case. difflib’s algorithm is quadratic time for the worst case and has expected-case behavior dependent in a complicated way on how many elements the sequences have in common; best case time is linear. Diff generation¶ class difflib.Differ¶ This is a class for comparing sequences of lines of text, and producing human-readable differences or deltas. Differ uses SequenceMatcher both to compare sequences of lines, and to compare sequences of characters within similar (near-matching) lines. Each line of a Differ delta begins with a two-letter code: Code Meaning \u0027- \u0027 line unique to sequence 1 \u0027+ \u0027 line unique to sequence 2 \u0027 \u0027 line common to both sequences \u0027? \u0027 line not present in either input sequence Lines beginning with ‘?’ attempt to guide the eye to intraline differences, and were not present in either input sequence. These lines can be confusing if the sequences contain whitespace characters, such as spaces, tabs or line breaks. Note that Differ-generated deltas make no claim to be minimal diffs. To the contrary, minimal diffs are often counter-intuitive for humans, because they synch up anywhere possible, sometimes at accidental matches 100 pages apart. Restricting synch points to contiguous matches preserves some notion of locality, at the occasional cost of producing a longer diff. The Differ class has this constructor: __init__(linejunk\u003dNone, charjunk\u003dNone)¶ Optional keyword parameters linejunk and charjunk are for filter functions (or None): linejunk: A function that accepts a single string argument, and returns true if the string is junk. The default is None, meaning that no line is considered junk. charjunk: A function that accepts a single character argument (a string of length 1), and returns true if the character is junk. The default is None, meaning that no character is considered junk. These junk-filtering functions speed up matching to find differences and do not cause any differing lines or characters to be ignored. Read the description of the find_longest_match() method’s isjunk parameter for an explanation. Differ objects are used (deltas generated) via a single method: compare(a, b)¶ Compare two sequences of lines, and ge",
+    "scrapedAt": "2026-10-08 19:46:34.916437"
+  },
+  {
     "id": 1531,
     "url": "https://docs.python.org/3/library/threading.html#threading.Thread.name",
     "title": "threading — Thread-based parallelism — Python 3.14.8 documentation",
@@ -10290,26 +10325,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1532,
-    "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
-  },
-  {
-    "id": 1533,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging"
-  },
-  {
-    "id": 1534,
-    "url": "https://docs.python.org/3/library/os.html#os.environb"
-  },
-  {
-    "id": 1535,
-    "url": "https://docs.python.org/3/library/base64.html#module-base64"
-  },
-  {
-    "id": 1536,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#for"
   },
   {
     "id": 1537,
@@ -245321,10 +245336,250 @@ window.searchData = [
     "id": 328880,
     "url": "https://peps.python.org/pep-0684/#security-implications",
     "parentUrl": "https://peps.python.org/pep-0684/"
+  },
+  {
+    "id": 329014,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.ratio",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329017,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.ndiff",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329018,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.context_diff",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329021,
+    "url": "https://github.com/python/cpython/issues/71896",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329024,
+    "url": "https://manpages.debian.org/diff(1)",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329026,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.unified_diff",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329027,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib-isjunk-functions",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329028,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.Differ.__init__",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329029,
+    "url": "https://manpages.debian.org/git-diff(1)",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329031,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.HtmlDiff.make_file",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329032,
+    "url": "https://docs.python.org/3/library/difflib.html#",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329033,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.HtmlDiff.__init__",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329036,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/difflib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329037,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.IS_CHARACTER_JUNK",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329038,
+    "url": "https://jacobfilipp.com/DrDobbs/articles/DDJ/1988/8807/8807c/8807c.htm",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329039,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.set_seqs",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329042,
+    "url": "https://docs.python.org/3/library/difflib.html#module-difflib",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329043,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.diff_bytes",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329044,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.quick_ratio",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329049,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.find_longest_match",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329050,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/difflib.py",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329051,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.HtmlDiff.make_table",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329054,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.get_close_matches",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329055,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.real_quick_ratio",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329057,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.get_grouped_opcodes",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329058,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.get_opcodes",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329059,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.get_matching_blocks",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329060,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.Differ.compare",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329064,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.Differ",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329065,
+    "url": "https://code.activestate.com/recipes/576729-simple-version-control/",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329074,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.restore",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329076,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329078,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib-junk",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329079,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib-interface",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329080,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.set_seq2",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "id": 329081,
+    "url": "https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher.set_seq1",
+    "parentUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#for"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#for"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#module-base64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "base64 — Base16, Base32, Base64, Base85 Data Encodings — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/base64.html#module-base64"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.environb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.environb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-remote-debugging"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "difflib — Helpers for computing deltas — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "difflib — Helpers for computing deltas — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/difflib.html#difflib.IS_LINE_JUNK"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
