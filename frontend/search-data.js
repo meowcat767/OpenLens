@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 932,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-refcount",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:20:08.937085"
+  },
+  {
+    "id": 931,
+    "url": "https://docs.python.org/3/library/cmd.html#module-cmd",
+    "title": "cmd — Support for line-oriented command interpreters — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Command-line interface libraries » cmd — Support for line-oriented command interpreters | Theme Auto Light Dark | cmd — Support for line-oriented command interpreters¶ Source code: Lib/cmd.py The Cmd class provides a simple framework for writing line-oriented command interpreters. These are often useful for test harnesses, administrative tools, and prototypes that will later be wrapped in a more sophisticated interface. class cmd.Cmd(completekey\u003d\u0027tab\u0027, stdin\u003dNone, stdout\u003dNone)¶ A Cmd instance or subclass instance is a line-oriented interpreter framework. There is no good reason to instantiate Cmd itself; rather, it’s useful as a superclass of an interpreter class you define yourself in order to inherit Cmd’s methods and encapsulate action methods. The optional argument completekey is the readline name of a completion key; it defaults to Tab. If completekey is not None and readline is available, command completion is done automatically. The default, \u0027tab\u0027, is treated specially, so that it refers to the Tab key on every readline.backend. Specifically, if readline.backend is editline, Cmd will use \u0027^I\u0027 instead of \u0027tab\u0027. Note that other values are not treated this way, and might only work with a specific backend. The optional arguments stdin and stdout specify the input and output file objects that the Cmd instance or subclass instance will use for input and output. If not specified, they will default to sys.stdin and sys.stdout. If you want a given stdin to be used, make sure to set the instance’s use_rawinput attribute to False, otherwise stdin will be ignored. Changed in version 3.13: completekey\u003d\u0027tab\u0027 is replaced by \u0027^I\u0027 for editline. Cmd Objects¶ A Cmd instance has the following methods: Cmd.cmdloop(intro\u003dNone)¶ Repeatedly issue a prompt, accept input, parse an initial prefix off the received input, and dispatch to action methods, passing them the remainder of the line as argument. The optional argument is a banner or intro string to be issued before the first prompt (this overrides the intro class attribute). If the readline module is loaded, input will automatically inherit bash-like history-list editing (e.g. Control-P scrolls back to the last command, Control-N forward to the next one, Control-F moves the cursor to the right non-destructively, Control-B moves the cursor to the left non-destructively, etc.). An end-of-file on input is passed back as the string \u0027EOF\u0027. An interpreter instance will recognize a command name foo if and only if it has a method do_foo(). As a special case, a line beginning with the character \u0027?\u0027 is dispatched to the method do_help(). As another special case, a line beginning with the character \u0027!\u0027 is dispatched to the method do_shell() (if such a method is defined). This method will return when the postcmd() method returns a true value. The stop argument to postcmd() is the return value from the command’s corresponding do_*() method. If completion is enabled, completing commands will be done automatically, and completing of commands args is done by calling complete_foo() with arguments text, line, begidx, and endidx. text is the string prefix we are attempting to match: all returned matches must begin with it. line is the current input line with leading whitespace removed, begidx and endidx are the beginning and ending indexes of the prefix text, which could be used to provide different completion depending upon which position the argument is in. Cmd.do_help(arg)¶ All subclasses of Cmd inherit a predefined do_help(). This method, called with an argument \u0027bar\u0027, invokes the corresponding method help_bar(), and if that is not present, prints the docstring of do_bar(), if available. With no argument, do_help() lists all available help topics (that is, all commands with corresponding help_*() methods or commands that have docstrings), and also lists any undocumented commands. Cmd.onecmd(str)¶ Interpret the argument as though it had been typed in response to the prompt. This may be overridden, but should not normally need to be; see the precmd() and postcmd() methods for useful execution hooks. The return value is a flag indicating whether interpretation of commands by the interpreter should stop. If there is a do_*() method for the command str, the return value of that method is returned, otherwise the return value from the default() method is returned. Cmd.emptyline()¶ Method called when an empty line is entered in response to the prompt. If this method is not overridden, it repeats the last nonempty command entered. Cmd.default(line)¶ Method called on an input line when the command prefix is not recognized. If this method is not overridden, it prints an error message and returns. Cmd.completedefault(text, line, begidx, endidx)¶ Method called to complete an input line when no command-specific complete_*() method is available. By default, it returns an empty list. Cmd.columniz",
+    "scrapedAt": "2026-10-08 19:20:07.643419"
+  },
+  {
+    "id": 930,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.map",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait_on",
+    "scrapedAt": "2026-10-08 19:20:06.357534"
+  },
+  {
+    "id": 929,
+    "url": "https://docs.python.org/3/library/subprocess.html#module-subprocess",
+    "title": "subprocess — Subprocess management — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » subprocess — Subprocess management | Theme Auto Light Dark | subprocess — Subprocess management¶ Source code: Lib/subprocess.py The subprocess module allows you to spawn new processes, connect to their input/output/error pipes, and obtain their return codes. This module intends to replace several older modules and functions: os.system\nos.spawn*\n Information about how the subprocess module can be used to replace these modules and functions can be found in the following sections. See also PEP 324 – PEP proposing the subprocess module Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Using the subprocess Module¶ The recommended approach to invoking subprocesses is to use the run() function for all use cases it can handle. For more advanced use cases, the underlying Popen interface can be used directly. subprocess.run(args, *, stdin\u003dNone, input\u003dNone, stdout\u003dNone, stderr\u003dNone, capture_output\u003dFalse, shell\u003dFalse, cwd\u003dNone, timeout\u003dNone, check\u003dFalse, encoding\u003dNone, errors\u003dNone, text\u003dNone, env\u003dNone, universal_newlines\u003dNone, **other_popen_kwargs)¶ Run the command described by args. Wait for command to complete, then return a CompletedProcess instance. The arguments shown above are merely the most common ones, described below in Frequently Used Arguments (hence the use of keyword-only notation in the abbreviated signature). The full function signature is largely the same as that of the Popen constructor - most of the arguments to this function are passed through to that interface. (timeout, input, check, and capture_output are not.) If capture_output is true, stdout and stderr will be captured. When used, the internal Popen object is automatically created with stdout and stderr both set to PIPE. The stdout and stderr arguments may not be supplied at the same time as capture_output. If you wish to capture and combine both streams into one, set stdout to PIPE and stderr to STDOUT, instead of using capture_output. A timeout may be specified in seconds, it is internally passed on to Popen.communicate(). If the timeout expires, the child process will be killed and waited for. The TimeoutExpired exception will be re-raised after the child process has terminated. The initial process creation itself cannot be interrupted on many platform APIs so you are not guaranteed to see a timeout exception until at least after however long process creation takes. The input argument is passed to Popen.communicate() and thus to the subprocess’s stdin. If used it must be a byte sequence, or a string if encoding or errors is specified or text is true. When used, the internal Popen object is automatically created with stdin set to PIPE, and the stdin argument may not be used as well. If check is true, and the process exits with a non-zero exit code, a CalledProcessError exception will be raised. Attributes of that exception hold the arguments, the exit code, and stdout and stderr if they were captured. If encoding or errors are specified, or text is true, file objects for stdin, stdout and stderr are opened in text mode using the specified encoding and errors or the io.TextIOWrapper default. The universal_newlines argument is equivalent to text and is provided for backwards compatibility. By default, file objects are opened in binary mode. If env is not None, it must be a mapping that defines the environment variables for the new process; these are used instead of the default behavior of inheriting the current process’ environment. It is passed directly to Popen. This mapping can be str to str on any platform or bytes to bytes on POSIX platforms much like os.environ or os.environb. Examples: \u003e\u003e\u003e subprocess.run([\"ls\", \"-l\"])  # doesn\u0027t capture output\nCompletedProcess(args\u003d[\u0027ls\u0027, \u0027-l\u0027], returncode\u003d0)\n\n\u003e\u003e\u003e subprocess.run(\"exit 1\", shell\u003dTrue, check\u003dTrue)\nTraceback (most recent call last):\n  ...\nsubprocess.CalledProcessError: Command \u0027exit 1\u0027 returned non-zero exit status 1\n\n\u003e\u003e\u003e subprocess.run([\"ls\", \"-l\", \"/dev/null\"], capture_output\u003dTrue)\nCompletedProcess(args\u003d[\u0027ls\u0027, \u0027-l\u0027, \u0027/dev/null\u0027], returncode\u003d0,\nstdout\u003db\u0027crw-rw-rw- 1 root root 1, 3 Jan 23 16:23 /dev/null\\n\u0027, stderr\u003db\u0027\u0027)\n Added in version 3.5. Changed in version 3.6: Added encoding and errors parameters Changed in version 3.7: Added the text parameter, as a more understandable alias of universal_newlines. Added the capture_output parameter. Changed in version 3.12: Changed Windows shell search order for shell\u003dTrue. The current directory and %PATH% are replaced with %COMSPEC% and %SystemRoot%\\System32\\cmd.exe. As a result, dropping a malicious program named cmd.exe into a current directory no longer works. class subprocess.CompletedProcess¶ The return value from run(), representing a process that has finished. args¶ The arguments used to launch the process. This may be a list or a string. retur",
+    "scrapedAt": "2026-10-08 19:20:05.034658"
+  },
+  {
+    "id": 928,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_hash_seed",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:20:03.803665"
+  },
+  {
     "id": 927,
     "url": "https://docs.python.org/3/library/getpass.html#getpass.getpass",
     "title": "getpass — Portable password input — Python 3.14.8 documentation",
@@ -6160,26 +6195,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 928,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_hash_seed"
-  },
-  {
-    "id": 929,
-    "url": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
-  },
-  {
-    "id": 930,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.map"
-  },
-  {
-    "id": 931,
-    "url": "https://docs.python.org/3/library/cmd.html#module-cmd"
-  },
-  {
-    "id": 932,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-refcount"
   },
   {
     "id": 933,
@@ -160231,10 +160246,735 @@ window.searchData = [
     "id": 137354,
     "url": "https://github.com/python/cpython/tree/3.14/Lib/getpass.py",
     "parentUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "id": 137665,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CREATE_NEW_CONSOLE",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137667,
+    "url": "https://docs.python.org/3/library/subprocess.html#replacing-os-system",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137668,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError.returncode",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137669,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.stdout",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137670,
+    "url": "https://docs.python.org/3/library/subprocess.html#replacing-shell-pipeline",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137674,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.check_output",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137676,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/subprocess.py",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137678,
+    "url": "https://docs.python.org/3/library/fnmatch.html#module-fnmatch",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137679,
+    "url": "https://docs.python.org/3/library/subprocess.html#frequently-used-arguments",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137680,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError.output",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137681,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.terminate",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137682,
+    "url": "https://docs.python.org/3/library/subprocess.html#timeout-behavior",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137683,
+    "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/ms686880(v\u003dvs.85).aspx",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137685,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.BELOW_NORMAL_PRIORITY_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137687,
+    "url": "https://docs.python.org/3/library/subprocess.html#converting-argument-sequence",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137689,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CREATE_NEW_PROCESS_GROUP",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137692,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.DETACHED_PROCESS",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137693,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.getstatusoutput",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137694,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError.stderr",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137696,
+    "url": "https://docs.python.org/3/library/subprocess.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137697,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.TimeoutExpired.stdout",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137698,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.which",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137699,
+    "url": "https://docs.python.org/3/library/subprocess.html#using-the-subprocess-module",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137700,
+    "url": "https://docs.python.org/3/library/subprocess.html#popen-objects",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137701,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CREATE_BREAKAWAY_FROM_JOB",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137703,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137704,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.ABOVE_NORMAL_PRIORITY_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137705,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTUPINFO",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137706,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.args",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137707,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError.stdout",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137708,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.HIGH_PRIORITY_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137710,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.getoutput",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137712,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CREATE_DEFAULT_ERROR_MODE",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137713,
+    "url": "https://msdn.microsoft.com/en-us/library/ms633548(v\u003dvs.85).aspx",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137714,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTUPINFO.hStdOutput",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137716,
+    "url": "https://docs.python.org/3/library/subprocess.html#replacing-os-popen",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137717,
+    "url": "https://docs.python.org/3/library/subprocess.html#older-high-level-api",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137718,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.call",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137720,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.stderr",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137722,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTF_USESHOWWINDOW",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137726,
+    "url": "https://docs.python.org/3/library/subprocess.html#converting-an-argument-sequence-to-a-string-on-windows",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137727,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess.stdout",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137728,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.TimeoutExpired.output",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137729,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#asyncio.create_subprocess_exec",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137731,
+    "url": "https://en.wikipedia.org/wiki/Shell_injection#Shell_injection",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137732,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.TimeoutExpired.stderr",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137734,
+    "url": "https://peps.python.org/pep-0324/",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137735,
+    "url": "https://docs.python.org/3/library/subprocess.html#notes",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137736,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.TimeoutExpired.cmd",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137738,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex-quote-warning",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137739,
+    "url": "https://docs.python.org/3/library/subprocess.html#legacy-shell-invocation-functions",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137740,
+    "url": "https://github.com/python/cpython/issues/114539",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137742,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.send_signal",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137744,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.communicate",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137746,
+    "url": "https://docs.python.org/3/library/subprocess.html#replacing-bin-sh-shell-command-substitution",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137747,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STD_INPUT_HANDLE",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137749,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.returncode",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137752,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess.stderr",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137754,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.check_call",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137755,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.IDLE_PRIORITY_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137758,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137759,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess.args",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137760,
+    "url": "https://docs.python.org/3/library/subprocess.html#disable-use-of-posix-spawn",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137761,
+    "url": "https://docs.python.org/3/library/pwd.html#pwd.getpwnam",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137764,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTUPINFO.dwFlags",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137765,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CalledProcessError.cmd",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137767,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.poll",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137769,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.stdin",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137772,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.split",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137773,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.NORMAL_PRIORITY_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137774,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/subprocess.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137776,
+    "url": "https://docs.python.org/3/library/subprocess.html#windows-popen-helpers",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137777,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.SW_HIDE",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137779,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.DEVNULL",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137781,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.SubprocessError",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137782,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.TimeoutExpired.timeout",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137785,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTF_FORCEOFFFEEDBACK",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137787,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.pid",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137788,
+    "url": "https://docs.python.org/3/library/subprocess.html#windows-constants",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137790,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.wait",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137791,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.TimeoutExpired",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137792,
+    "url": "https://en.wikipedia.org/wiki/Side-by-Side_Assembly",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137796,
+    "url": "https://docs.python.org/3/library/subprocess.html#replacing-older-functions-with-the-subprocess-module",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137798,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTUPINFO.hStdError",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137799,
+    "url": "https://docs.python.org/3/library/subprocess.html#replacing-the-os-spawn-family",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137801,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen.kill",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137803,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess.check_returncode",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137804,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STD_OUTPUT_HANDLE",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137806,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTF_FORCEONFEEDBACK",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137808,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTUPINFO.hStdInput",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137809,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.PIPE",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137810,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CREATE_NO_WINDOW",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137811,
+    "url": "https://docs.python.org/3/library/subprocess.html#",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137812,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTUPINFO.lpAttributeList",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137813,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTUPINFO.wShowWindow",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137816,
+    "url": "https://docs.python.org/3/library/subprocess.html#security-considerations",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137817,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess.returncode",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137819,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STARTF_USESTDHANDLES",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137821,
+    "url": "https://docs.python.org/3/library/shlex.html#shlex.quote",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137822,
+    "url": "https://docs.python.org/3/library/grp.html#grp.getgrnam",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137823,
+    "url": "https://msdn.microsoft.com/en-us/library/ms686331(v\u003dvs.85).aspx",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137824,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STDOUT",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137825,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.expandvars",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137826,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.STD_ERROR_HANDLE",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137827,
+    "url": "https://docs.python.org/3/library/subprocess.html#popen-constructor",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137828,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.REALTIME_PRIORITY_CLASS",
+    "parentUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "id": 137928,
+    "url": "https://docs.python.org/3/library/readline.html#readline.backend",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137929,
+    "url": "https://docs.python.org/3/library/cmd.html#",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137930,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.undoc_header",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137933,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.emptyline",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137937,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/cmd.py",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137939,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.preloop",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137941,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.lastcmd",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137942,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/cmd.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137943,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.misc_header",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137946,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd-example",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137948,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.intro",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137950,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.ruler",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137951,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.doc_header",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137952,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.precmd",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137953,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.use_rawinput",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137955,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.onecmd",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137959,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.identchars",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137960,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.cmdloop",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137961,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.columnize",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137962,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.postloop",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137964,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.postcmd",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137966,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.default",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137967,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd-objects",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137968,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.completedefault",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137976,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.prompt",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137977,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.do_help",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 137978,
+    "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.cmdqueue",
+    "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-refcount"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-refcount"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "cmd — Support for line-oriented command interpreters — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "cmd — Support for line-oriented command interpreters — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.map"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.map"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "subprocess — Subprocess management — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "subprocess — Subprocess management — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/subprocess.html#module-subprocess"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_hash_seed"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.use_hash_seed"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
