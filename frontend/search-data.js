@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1369,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#typing",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:39:01.56003"
+  },
+  {
+    "id": 1368,
+    "url": "https://peps.python.org/pep-0779/",
+    "title": "PEP 779 – Criteria for supported status for free-threaded Python | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 779 – Criteria for supported status for free-threaded Python PEP 779 – Criteria for supported status for free-threaded Python Author: Thomas Wouters \u003cthomas at python.org\u003e, Matt Page \u003cmpage at python.org\u003e, Sam Gross \u003ccolesbury at gmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 13-Mar-2025 Python-Version: 3.14 Post-History: 13-Mar-2025 Resolution: 16-Jun-2025 Table of Contents Abstract Motivation Rationale Specification Open Issues Copyright Note The Steering Council accepts PEP 779 with a non-exhaustive list of requirements to be addressed during phase II. See the acceptance for details. Abstract The acceptance of PEP 703 (Making the Global Interpreter Lock Optional in CPython), as announced by the Steering Council, describes three phases of development for the work to remove the Global Interpreter Lock. Phase I started early in the development of Python 3.13, and includes making the free-threaded (GIL-less) Python build available but explicitly experimental. Phase II would make the free-threaded build officially supported but still optional, and phase III would make the free-threaded build the default. Because of the number of unknowns at the time, the criteria for moving to the next phase were left deliberately vague at the time. This PEP establishes clear expectations and requirements for moving to Phase II, making the free-threaded Python build officially supported. Note Eagle-eyed readers may have noticed an overlap in authors of this PEP and the Steering Council at the time of PEP 703 acceptance. The SC makeup has since changed, but just to make it explicit: this PEP as proposed, while based on criteria set forth by the SC, does not come from the Steering Council itself. Motivation Whether to move forward with PEP 703 (as well as ultimately making it the default) is a question of whether the costs outweigh the benefits. Making free-threaded Python an officially supported build is important to signal that we’re now at a stage where the design is finalised, the APIs are usable and stable, and we’re satisfied the performance and complexity cost is not prohibitive. Moving to the “officially supported” stage is an important step towards making free-threaded Python the default build, and eventually the only one. Before we can decide we’re ready to make it the default, we need a much better picture of the costs and the benefits, and we can only get there if more of the Python ecosystem starts supporting free-threaded Python. We currently have enough packages and tools supporting PEP 703 that it’s clear we’re on the right path, but not enough to make the final decision. In addition to giving the Python community time to make the changes necessary to support free-threaded Python, we expect to use phase II to show clear benefits in real-world applications, as well as clearly define the cost in terms of performance, support burden, and ecosystem complexity. Rationale In order for PEP 703 to be acceptable it should be desirable, stable, maintainable, performant (in CPU and memory), and ideally it should have Stable ABI so the same wheels can be used for free-threaded and with-GIL builds. Desirability: from various experiments it’s very clear free-threaded Python has tremendous potential benefit. It’s not a simple drop-in solution – some code will have to be redesigned to make the most of the new capability, as well as avoid performance pitfalls – but it can achieve higher performance, significantly lower latency and new thread-based functionality when embraced. Stability: the majority of the new API design is in 3.13, and is being successfully used to support free-threaded Python in a number of third-party packages (see for example https://py-free-threading.github.io/tracking/). There’s been some more development in 3.14 to add more convenience functions, and to replace APIs that previously relied on the GIL for thread-safety, but we have not had to break the 3.13 APIs for free-threaded Python. Maintainability: the majority of PEP 703’s design is relatively simple, with most complexity hidden away behind CPython’s existing C APIs. The implementation details of, for example, lockless list and dict APIs, which rely on QSBR, and deadlock-avoiding critical sections, may be complex and difficult to get right, but gives us easy to use APIs without too many pitfalls. Making more of CPython free-threading-safe is a relatively simple process, although we do probably need more documentation on the basic guarantees the new APIs provide (https://github.com/python/cpython/issues/128642). Performance: the performance penalty on linear performance, comparing a free-threaded build against a with-GIL build, as measured by the pyperformance benchmarks (for example as run by Microsoft’s Faster CPython team, or Meta’s Python Runtime team), is currently around 10% (except on macOS, where it’s more like ",
+    "scrapedAt": "2026-10-08 19:39:00.205279"
+  },
+  {
+    "id": 1367,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.Py_BuildValue",
+    "title": "Parsing arguments and building values — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Parsing arguments and building values | Theme Auto Light Dark | Parsing arguments and building values¶ These functions are useful when creating your own extension functions and methods. Additional information and examples are available in Extending and Embedding the Python Interpreter. The first three of these functions described, PyArg_ParseTuple(), PyArg_ParseTupleAndKeywords(), and PyArg_Parse(), all use format strings which are used to tell the function about the expected arguments. The format strings use the same syntax for each of these functions. Parsing arguments¶ A format string consists of zero or more “format units.” A format unit describes one Python object; it is usually a single character or a parenthesized sequence of format units. With a few exceptions, a format unit that is not a parenthesized sequence normally corresponds to a single address argument to these functions. In the following description, the quoted form is the format unit; the entry in (round) parentheses is the Python object type that matches the format unit; and the entry in [square] brackets is the type of the C variable(s) whose address should be passed. Strings and buffers¶ Note On Python 3.12 and older, the macro PY_SSIZE_T_CLEAN must be defined before including Python.h to use all # variants of formats (s#, y#, etc.) explained below. This is not necessary on Python 3.13 and later. These formats allow accessing an object as a contiguous chunk of memory. You don’t have to provide raw storage for the returned unicode or bytes area. Unless otherwise stated, buffers are not NUL-terminated. There are three ways strings and buffers can be converted to C: Formats such as y* and s* fill a Py_buffer structure. This locks the underlying buffer so that the caller can subsequently use the buffer even inside a Py_BEGIN_ALLOW_THREADS block without the risk of mutable data being resized or destroyed. As a result, you have to call PyBuffer_Release() after you have finished processing the data (or in any early abort case). The es, es#, et and et# formats allocate the result buffer. You have to call PyMem_Free() after you have finished processing the data (or in any early abort case). Other formats take a str or a read-only bytes-like object, such as bytes, and provide a const char * pointer to its buffer. In this case the buffer is “borrowed”: it is managed by the corresponding Python object, and shares the lifetime of this object. You won’t have to release any memory yourself. To ensure that the underlying buffer may be safely borrowed, the object’s PyBufferProcs.bf_releasebuffer field must be NULL. This disallows common mutable objects such as bytearray, but also some read-only objects such as memoryview of bytes. Besides this bf_releasebuffer requirement, there is no check to verify whether the input object is immutable (e.g. whether it would honor a request for a writable buffer, or whether another thread can mutate the data). s (str) [const char *] Convert a Unicode object to a C pointer to a character string. A pointer to an existing string is stored in the character pointer variable whose address you pass. The C string is NUL-terminated. The Python string must not contain embedded null code points; if it does, a ValueError exception is raised. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. If this conversion fails, a UnicodeError is raised. Note This format does not accept bytes-like objects. If you want to accept filesystem paths and convert them to C character strings, it is preferable to use the O\u0026 format with PyUnicode_FSConverter() as converter. Changed in version 3.5: Previously, TypeError was raised when embedded null code points were encountered in the Python string. s* (str or bytes-like object) [Py_buffer] This format accepts Unicode objects as well as bytes-like objects. It fills a Py_buffer structure provided by the caller. In this case the resulting C string may contain embedded NUL bytes. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. s# (str, read-only bytes-like object) [const char *, Py_ssize_t] Like s*, except that it provides a borrowed buffer. The result is stored into two C variables, the first one a pointer to a C string, the second one its length. The string may contain embedded null bytes. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. z (str or None) [const char *] Like s, but the Python object may also be None, in which case the C pointer is set to NULL. z* (str, bytes-like object or None) [Py_buffer] Like s*, but the Python object may also be None, in which case the buf member of the Py_buffer structure is set to NULL. z# (str, read-only bytes-like object or None) [const char *, Py_ssize_t] Like s#, but the Python object may also be None, in which case the C pointer is set to NULL. y (read-only bytes-like object) [const char *]",
+    "scrapedAt": "2026-10-08 19:38:58.740116"
+  },
+  {
+    "id": 1366,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extract",
+    "title": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » tarfile — Read and write tar archive files | Theme Auto Light Dark | tarfile — Read and write tar archive files¶ Source code: Lib/tarfile.py The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil. Some facts and figures: reads and writes gzip, bz2, compression.zstd, and lzma compressed archives if the respective modules are available. If any of these optional modules are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. read/write support for the POSIX.1-1988 (ustar) format. read/write support for the GNU tar format including longname and longlink extensions, read-only support for all variants of the sparse extension including restoration of sparse files. read/write support for the POSIX.1-2001 (pax) format. handles directories, regular files, hardlinks, symbolic links, fifos, character devices and block devices and is able to acquire and restore file information like timestamp, access permissions and owner. Changed in version 3.3: Added support for lzma compression. Changed in version 3.12: Archives are extracted using a filter, which makes it possible to either limit surprising/dangerous features, or to acknowledge that they are expected and the archive is fully trusted. Changed in version 3.14: Set the default extraction filter to data, which disallows some dangerous features such as links to absolute paths or paths outside of the destination. Previously, the filter strategy was equivalent to fully_trusted. Changed in version 3.14: Added support for Zstandard compression using compression.zstd. tarfile.open(name\u003dNone, mode\u003d\u0027r\u0027, fileobj\u003dNone, bufsize\u003d10240, **kwargs)¶ Return a TarFile object for the pathname name. For detailed information on TarFile objects and the keyword arguments that are allowed, see TarFile Objects. mode has to be a string of the form \u0027filemode[:compression]\u0027, it defaults to \u0027r\u0027. Here is a full list of mode combinations: mode action \u0027r\u0027 or \u0027r:*\u0027 Open for reading with transparent compression (recommended). \u0027r:\u0027 Open for reading exclusively without compression. \u0027r:gz\u0027 Open for reading with gzip compression. \u0027r:bz2\u0027 Open for reading with bzip2 compression. \u0027r:xz\u0027 Open for reading with lzma compression. \u0027r:zst\u0027 Open for reading with Zstandard compression. \u0027x\u0027 or \u0027x:\u0027 Create a tarfile exclusively without compression. Raise a FileExistsError exception if it already exists. \u0027x:gz\u0027 Create a tarfile with gzip compression. Raise a FileExistsError exception if it already exists. \u0027x:bz2\u0027 Create a tarfile with bzip2 compression. Raise a FileExistsError exception if it already exists. \u0027x:xz\u0027 Create a tarfile with lzma compression. Raise a FileExistsError exception if it already exists. \u0027x:zst\u0027 Create a tarfile with Zstandard compression. Raise a FileExistsError exception if it already exists. \u0027a\u0027 or \u0027a:\u0027 Open for appending with no compression. The file is created if it does not exist. \u0027w\u0027 or \u0027w:\u0027 Open for uncompressed writing. \u0027w:gz\u0027 Open for gzip compressed writing. \u0027w:bz2\u0027 Open for bzip2 compressed writing. \u0027w:xz\u0027 Open for lzma compressed writing. \u0027w:zst\u0027 Open for Zstandard compressed writing. Note that \u0027a:gz\u0027, \u0027a:bz2\u0027 or \u0027a:xz\u0027 is not possible. If mode is not suitable to open a certain (compressed) file for reading, ReadError is raised. Use mode \u0027r\u0027 to avoid this. If a compression method is not supported, CompressionError is raised. If fileobj is specified, it is used as an alternative to a file object opened in binary mode for name. It is supposed to be at position 0. For modes \u0027w:gz\u0027, \u0027x:gz\u0027, \u0027w|gz\u0027, \u0027w:bz2\u0027, \u0027x:bz2\u0027, \u0027w|bz2\u0027, tarfile.open() accepts the keyword argument compresslevel (default 9) to specify the compression level of the file. For modes \u0027w:xz\u0027, \u0027x:xz\u0027 and \u0027w|xz\u0027, tarfile.open() accepts the keyword argument preset to specify the compression level of the file. For modes \u0027w:zst\u0027, \u0027x:zst\u0027 and \u0027w|zst\u0027, tarfile.open() accepts the keyword argument level to specify the compression level of the file. The keyword argument options may also be passed, providing advanced Zstandard compression parameters described by CompressionParameter. The keyword argument zstd_dict can be passed to provide a ZstdDict, a Zstandard dictionary used to improve compression of smaller amounts of data. For special purposes, there is a second format for mode: \u0027filemode|[compression]\u0027. tarfile.open() will return a TarFile object that processes its data as a stream of blocks. No random seeking will be done on the file. If given, fileobj may be any object that has a read() or write() method (depending on the mode) that works with bytes. bufsize specifies the blocksize and defaults to ",
+    "scrapedAt": "2026-10-08 19:38:57.454015"
+  },
+  {
+    "id": 1365,
+    "url": "https://docs.python.org/3/library/ast.html#ast.Constant",
+    "title": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » ast — Abstract syntax trees | Theme Auto Light Dark | ast — Abstract syntax trees¶ Source code: Lib/ast.py The ast module helps Python applications to process trees of the Python abstract syntax grammar. The abstract syntax itself might change with each Python release; this module helps to find out programmatically what the current grammar looks like. An abstract syntax tree can be generated by passing ast.PyCF_ONLY_AST as a flag to the compile() built-in function, or using the parse() helper provided in this module. The result will be a tree of objects whose classes all inherit from ast.AST. An abstract syntax tree can be compiled into a Python code object using the built-in compile() function. Abstract grammar¶ The abstract grammar is currently defined as follows: -- ASDL\u0027s 4 builtin types are:\n-- identifier, int, string, constant\n\nmodule Python\n{\n    mod \u003d Module(stmt* body, type_ignore* type_ignores)\n        | Interactive(stmt* body)\n        | Expression(expr body)\n        | FunctionType(expr* argtypes, expr returns)\n\n    stmt \u003d FunctionDef(identifier name, arguments args,\n                       stmt* body, expr* decorator_list, expr? returns,\n                       string? type_comment, type_param* type_params)\n          | AsyncFunctionDef(identifier name, arguments args,\n                             stmt* body, expr* decorator_list, expr? returns,\n                             string? type_comment, type_param* type_params)\n\n          | ClassDef(identifier name,\n             expr* bases,\n             keyword* keywords,\n             stmt* body,\n             expr* decorator_list,\n             type_param* type_params)\n          | Return(expr? value)\n\n          | Delete(expr* targets)\n          | Assign(expr* targets, expr value, string? type_comment)\n          | TypeAlias(expr name, type_param* type_params, expr value)\n          | AugAssign(expr target, operator op, expr value)\n          -- \u0027simple\u0027 indicates that we annotate simple name without parens\n          | AnnAssign(expr target, expr annotation, expr? value, int simple)\n\n          -- use \u0027orelse\u0027 because else is a keyword in target languages\n          | For(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | While(expr test, stmt* body, stmt* orelse)\n          | If(expr test, stmt* body, stmt* orelse)\n          | With(withitem* items, stmt* body, string? type_comment)\n          | AsyncWith(withitem* items, stmt* body, string? type_comment)\n\n          | Match(expr subject, match_case* cases)\n\n          | Raise(expr? exc, expr? cause)\n          | Try(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | TryStar(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | Assert(expr test, expr? msg)\n\n          | Import(alias* names)\n          | ImportFrom(identifier? module, alias* names, int? level)\n\n          | Global(identifier* names)\n          | Nonlocal(identifier* names)\n          | Expr(expr value)\n          | Pass | Break | Continue\n\n          -- col_offset is the byte offset in the utf8 string the parser uses\n          attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)\n\n          -- BoolOp() can use left \u0026 right?\n    expr \u003d BoolOp(boolop op, expr* values)\n         | NamedExpr(expr target, expr value)\n         | BinOp(expr left, operator op, expr right)\n         | UnaryOp(unaryop op, expr operand)\n         | Lambda(arguments args, expr body)\n         | IfExp(expr test, expr body, expr orelse)\n         | Dict(expr?* keys, expr* values)\n         | Set(expr* elts)\n         | ListComp(expr elt, comprehension* generators)\n         | SetComp(expr elt, comprehension* generators)\n         | DictComp(expr key, expr value, comprehension* generators)\n         | GeneratorExp(expr elt, comprehension* generators)\n         -- the grammar constrains where yield expressions can occur\n         | Await(expr value)\n         | Yield(expr? value)\n         | YieldFrom(expr value)\n         -- need sequences for compare to distinguish between\n         -- x \u003c 4 \u003c 3 and (x \u003c 4) \u003c 3\n         | Compare(expr left, cmpop* ops, expr* comparators)\n         | Call(expr func, expr* args, keyword* keywords)\n         | FormattedValue(expr value, int conversion, expr? format_spec)\n         | Interpolation(expr value, constant str, int conversion, expr? format_spec)\n         | JoinedStr(expr* values)\n         | TemplateStr(expr* values)\n         | Constant(constant value, string? kind)\n\n         -- the following expression can appear in assignment context\n         | Attribute(expr value, identifier attr, expr_context ctx)\n         | Subscript(expr value, expr slice, expr_context ctx)\n         | Starred(expr value, expr_context ctx)\n         | Name(identif",
+    "scrapedAt": "2026-10-08 19:38:56.142189"
+  },
+  {
     "id": 1364,
     "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotHasAttr",
     "title": "unittest — Unit testing framework — Python 3.14.8 documentation",
@@ -9135,26 +9170,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1365,
-    "url": "https://docs.python.org/3/library/ast.html#ast.Constant"
-  },
-  {
-    "id": 1366,
-    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extract"
-  },
-  {
-    "id": 1367,
-    "url": "https://docs.python.org/3/c-api/arg.html#c.Py_BuildValue"
-  },
-  {
-    "id": 1368,
-    "url": "https://peps.python.org/pep-0779/"
-  },
-  {
-    "id": 1369,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#typing"
   },
   {
     "id": 1370,
@@ -235656,10 +235671,118 @@ window.searchData = [
     "id": 272393,
     "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/101588",
     "parentUrl": "https://github.com/python/cpython/issues/101588"
+  },
+  {
+    "id": 276649,
+    "url": "https://peps.python.org/pep-0779/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276650,
+    "url": "https://github.com/facebookexperimental/free-threading-benchmarking",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276651,
+    "url": "https://py-free-threading.github.io/tracking/",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276653,
+    "url": "https://github.com/python/cpython/issues/115103",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276655,
+    "url": "https://peps.python.org/pep-0779/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276656,
+    "url": "https://peps.python.org/pep-0779/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276658,
+    "url": "https://github.com/python/cpython/issues/128642",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276659,
+    "url": "https://discuss.python.org/t/84319",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276660,
+    "url": "https://peps.python.org/pep-0779/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276662,
+    "url": "https://peps.python.org/pep-0779/#specification",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276663,
+    "url": "https://github.com/faster-cpython/benchmarking-public/",
+    "parentUrl": "https://peps.python.org/pep-0779/"
+  },
+  {
+    "id": 276664,
+    "url": "https://peps.python.org/pep-0779/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0779/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#typing"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#typing"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Parsing arguments and building values — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/arg.html#c.Py_BuildValue"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Parsing arguments and building values — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/arg.html#c.Py_BuildValue"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extract"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extract"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#ast.Constant"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#ast.Constant"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
