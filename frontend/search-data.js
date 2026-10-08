@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1405,
+    "url": "https://docs.python.org/3/glossary.html#term-provisional-API",
+    "title": "Glossary — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A callable that can be called to retrieve the annotations of an object. Annotate functions are usually functions, automatically generated as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ Informally used to mean either an asynchronous generator function or an asynchronous generator iterator, depending on context. The formal terms asynchronous generator function and asynchronous generator iterator are uncommon in practice; “asynchronous generator” alone is almost always sufficient. asynchronous generator function¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. See PEP 525. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous ",
+    "scrapedAt": "2026-10-08 19:40:39.811339"
+  },
+  {
+    "id": 1404,
+    "url": "https://github.com/python/cpython/issues/127592",
+    "title": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation freakboy3742 commented Dec 4, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Xcode 16 deprecated the xcresultool tool we were using to gather test results after an iOS test run. This tool was less than ideal anyway, as it didn\u0027t provide a way to see test results as the test suite was running. As a result, we had intermittent CI test failures that manifested as \"test suite didn\u0027t finish\", with no runtime debugging possible. This PR adds a new configuration item (config-\u003euse_system_logger) for Apple platforms, providing the option to redirect stdout and stderr to the system log. This mirrors how Android operates - the implementation is strongly influenced by the Android implementation, but is just different enough that refactoring into a common base class is more trouble than it\u0027s worth IMHO. This PR also adds a new test runner for iOS projects. This test runner uses the iOS testbed as a template, installing the compiled framework into copy generated from the template; and then building and running the test project in parallel with a log streamer that captures the system log from the iOS simulator as it runs. This allows us to observe test output as the test suite runs. The test runner also includes options to allows the installation of app code. This means the testbed project can be used to test arbitrary Python code, in addition to the core CPython test suite. Although this feature is primarily useful for iOS apps, the same code can be used for macOS apps - something that is useful when embedding Python in to a GUI app (where stdout/stderr isn\u0027t visible). This PR resolves both #126925 and #126821; Resolving #126821 was a pre-requisite for fixing #126925 (and is the first commit in this PR), but by itself, there\u0027s very little opportunity to evaluate that it\u0027s working. You need an updated test runner to be able to observe that stdout/err redirection is working. Fixes #126925 Fixes #126821 Issue: \"make testios\" fails with Xcode 16+ due to changes in xcresulttool #126925 📚 Documentation preview 📚: https://cpython-previews--127592.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ❤️ 1 gy-mate reacted with heart emoji All reactions ❤️ 1 reaction freakboy3742 added 3 commits December 4, 2024 13:05 Add use_system_log config item, with redirection for Apple platforms. 9385e89 Add a testbed runner script with log streaming. db31721 Add NEWS entries. 60584e0 freakboy3742 added tests Tests in the Lib/test dir OS-mac stdlib Standard Library Python modules in the Lib/ directory 3.13 only security fixes OS-ios 3.14 bugs and security fixes needs backport to 3.13 only security fixes labels Dec 4, 2024 freakboy3742 requested a review from ned-deily December 4, 2024 07:17 freakboy3742 requested review from FFY00, ericsnowcurrently and erlend-aasland as code owners December 4, 2024 07:17 bedevere-app Bot mentioned this pull request Dec 4, 2024 \"make testios\" fails with Xcode 16+ due to changes in xcresulttool #126925 Closed bedevere-app Bot added the awaiting core review label Dec 4, 2024 freakboy3742 commented Dec 4, 2024 Copy link Copy Markdown Contributor Author !buildbot iOS All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot commented Dec 4, 2024 Copy link Copy Markdown 🤖 New build scheduled with the buildbot fleet by @freakboy3742 for commit 60584e0 🤖 The command will test the builders whose names match following regular expression: iOS The builders matched are: iOS ARM64 Simulator PR All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Add timestamp to track when simulator is detected. 68253aa freakboy3742 commented Dec 4, 2024 Copy link Copy Markdown Contributor Author Moving to draft because of the test failures on macOS buils All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. freakboy3742 marked this pull request as draft December 4, 2024 07:34 bedevere-app Bot removed the awaiting core review label Dec 4, 2024 freakboy3742 added 3 commits December 5, 2024 11:24 Add use_system_logger support to the embed tests. 3dc0d71 Modifications to make testbed runner more flexible and robust. 0b9baa1 Add documentation for using the testbed runner. 89bb435 freakboy3742 commented Dec 5, 2024 Copy link Copy Markdown Contributor Author !buildbot iOS All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot commented Dec 5, 2024 Copy link Copy Markdown 🤖 New build ",
+    "scrapedAt": "2026-10-08 19:40:38.391118"
+  },
+  {
+    "id": 1403,
+    "url": "https://github.com/python/cpython/issues/127350",
+    "title": "_Py_wfopen no longer exported · Issue #127350 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} _Py_wfopen no longer exported #127350 New issue Copy link New issue Copy link Closed Closed _Py_wfopen no longer exported#127350 Copy link Labels OS-windowstopic-C-APItype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description PlanetCNC opened on Nov 27, 2024 Issue body actions Bug report Bug description: _Py_wfopen in no longer exported since 3.13. I\u0027m using embed version and I can not use fopen or _wfopen. Please reconsider decision to remove _Py_wfopen since it is only way to open file when used in embed mode and fopen/_wfopen is not available. Without it PyRun_FileExFlags is useless to me and my application can no longer call external scripts. CPython versions tested on: 3.13 Operating systems tested on: Windows Linked PRs gh-127350: Add Py_fopen() function #127821 gh-127350: Add more tests for Py_fopen() #128587 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels OS-windowstopic-C-APItype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:40:35.398252"
+  },
+  {
+    "id": 1402,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.bytes_warning",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:40:33.244861"
+  },
+  {
+    "id": 1401,
+    "url": "https://peps.python.org/pep-0688/#current-options",
+    "title": "PEP 688 – Making the buffer protocol accessible in Python | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 688 – Making the buffer protocol accessible in Python PEP 688 – Making the buffer protocol accessible in Python Author: Jelle Zijlstra \u003cjelle.zijlstra at gmail.com\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Topic: Typing Created: 23-Apr-2022 Python-Version: 3.12 Post-History: 23-Apr-2022, 25-Apr-2022, 06-Oct-2022, 26-Oct-2022 Resolution: 07-Mar-2023 Table of Contents Abstract Motivation Rationale Current options Kinds of buffers Specification Python-level buffer protocol inspect.BufferFlags collections.abc.Buffer Example Equivalent for older Python versions No special meaning for bytes Backwards Compatibility __buffer__ and __release_buffer__ attributes Removal of the bytes special case How to Teach This Reference Implementation Rejected Ideas types.Buffer Keep bytearray compatible with bytes Distinguish between mutable and immutable buffers Acknowledgments Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Emulating buffer types. × See PEP 1 for how to propose changes. Abstract This PEP proposes a Python-level API for the buffer protocol, which is currently accessible only to C code. This allows type checkers to evaluate whether objects implement the protocol. Motivation The CPython C API provides a versatile mechanism for accessing the underlying memory of an object—the buffer protocol introduced in PEP 3118. Functions that accept binary data are usually written to handle any object implementing the buffer protocol. For example, at the time of writing, there are around 130 functions in CPython using the Argument Clinic Py_buffer type, which accepts the buffer protocol. Currently, there is no way for Python code to inspect whether an object supports the buffer protocol. Moreover, the static type system does not provide a type annotation to represent the protocol. This is a common problem when writing type annotations for code that accepts generic buffers. Similarly, it is impossible for a class written in Python to support the buffer protocol. A buffer class in Python would give users the ability to easily wrap a C buffer object, or to test the behavior of an API that consumes the buffer protocol. Granted, this is not a particularly common need. However, there has been a CPython feature request for supporting buffer classes written in Python that has been open since 2012. Rationale Current options There are two known workarounds for annotating buffer types in the type system, but neither is adequate. First, the current workaround for buffer types in typeshed is a type alias that lists well-known buffer types in the standard library, such as bytes, bytearray, memoryview, and array.array. This approach works for the standard library, but it does not extend to third-party buffer types. Second, the documentation for typing.ByteString currently states: This type represents the types bytes, bytearray, and memoryview of byte sequences. As a shorthand for this type, bytes can be used to annotate arguments of any of the types mentioned above. Although this sentence has been in the documentation since 2015, the use of bytes to include these other types is not specified in any of the typing PEPs. Furthermore, this mechanism has a number of problems. It does not include all possible buffer types, and it makes the bytes type ambiguous in type annotations. After all, there are many operations that are valid on bytes objects, but not on memoryview objects, and it is perfectly possible for a function to accept bytes but not memoryview objects. A mypy user reports that this shortcut has caused significant problems for the psycopg project. Kinds of buffers The C buffer protocol supports many options, affecting strides, contiguity, and support for writing to the buffer. Some of these options would be useful in the type system. For example, typeshed currently provides separate type aliases for writable and read-only buffers. However, in the C buffer protocol, most of these options cannot be queried directly on the type object. The only way to figure out whether an object supports a particular flag is to actually ask for the buffer. For some types, such as memoryview, the supported flags depend on the instance. As a result, it would be difficult to represent support for these flags in the type system. Specification Python-level buffer protocol We propose to add two Python-level special methods, __buffer__ and __release_buffer__. Python classes that implement these methods are usable as buffers from C code. Conversely, classes implemented in C that support the buffer protocol acquire synthesized methods accessible from Python code. The __buffer__ method is called to create a buffer from a Python object, for example by the memoryview() constructor. It corresponds to the bf_getbuffer C slot. The Python signature for this method is def __buffer__(self",
+    "scrapedAt": "2026-10-08 19:40:31.915381"
+  },
+  {
     "id": 1400,
     "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-forkserver",
     "title": "multiprocessing — Process-based parallelism — Python 3.14.8 documentation",
@@ -9380,26 +9415,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1401,
-    "url": "https://peps.python.org/pep-0688/#current-options"
-  },
-  {
-    "id": 1402,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.bytes_warning"
-  },
-  {
-    "id": 1403,
-    "url": "https://github.com/python/cpython/issues/127350"
-  },
-  {
-    "id": 1404,
-    "url": "https://github.com/python/cpython/issues/127592"
-  },
-  {
-    "id": 1405,
-    "url": "https://docs.python.org/3/glossary.html#term-provisional-API"
   },
   {
     "id": 1407,
@@ -237406,10 +237421,1172 @@ window.searchData = [
     "id": 290078,
     "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.12.1",
     "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 291625,
+    "url": "https://peps.python.org/pep-0688/#equivalent-for-older-python-versions",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291627,
+    "url": "https://github.com/python/typing/issues/593",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291628,
+    "url": "https://peps.python.org/pep-0688/#no-special-meaning-for-bytes",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291629,
+    "url": "https://peps.python.org/pep-0688/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291630,
+    "url": "https://peps.python.org/pep-0688/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291631,
+    "url": "https://peps.python.org/pep-0688/#buffer-and-release-buffer-attributes",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291632,
+    "url": "https://docs.python.org/3.10/library/typing.html#typing.ByteString",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291634,
+    "url": "https://peps.python.org/pep-0688/#types-buffer",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291635,
+    "url": "https://mail.python.org/archives/list/typing-sig@python.org/thread/XH5ZK2MSZIQLL62PYZ6I5532SQKKVCBL/",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291636,
+    "url": "https://peps.python.org/pep-0688/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291637,
+    "url": "https://github.com/numpy/numpy/pull/13049",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291638,
+    "url": "https://github.com/python/mypy/pull/12661",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291639,
+    "url": "https://mail.python.org/archives/list/typing-sig@python.org/thread/CX7GPSIYQEL23RXMYL66GAKGP4RLUD7P/",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291640,
+    "url": "https://peps.python.org/pep-0688/#inspect-bufferflags",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291641,
+    "url": "https://github.com/python/cpython/issues/58006",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291642,
+    "url": "https://github.com/python/typeshed/pull/7677",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291643,
+    "url": "https://github.com/python/typeshed/pull/7678",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291644,
+    "url": "https://peps.python.org/pep-0688/#specification",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291645,
+    "url": "https://github.com/python/typeshed/pull/7679",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291646,
+    "url": "https://github.com/python/mypy/issues/12643#issuecomment-1105914159",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291647,
+    "url": "https://peps.python.org/pep-0688/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291648,
+    "url": "https://peps.python.org/pep-0688/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291649,
+    "url": "https://doc.pypy.org/en/latest/__pypy__-module.html#generally-available-functionality",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291650,
+    "url": "https://github.com/python/typeshed/issues/9006",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291652,
+    "url": "https://github.com/python/typeshed/pull/7631",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291653,
+    "url": "https://peps.python.org/pep-0688/#collections-abc-buffer",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291654,
+    "url": "https://discuss.python.org/t/15265",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291655,
+    "url": "https://github.com/zeromq/pyzmq/blob/fe18dc55516ef50d168fc02f8550a67ff5b5633d/zmq/backend/cffi/message.py#L190",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291656,
+    "url": "https://peps.python.org/pep-0688/#kinds-of-buffers",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291658,
+    "url": "https://peps.python.org/pep-0688/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291659,
+    "url": "https://discuss.python.org/t/pep-688-making-the-buffer-protocol-accessible-in-python/15265/35",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291660,
+    "url": "https://peps.python.org/pep-0688/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291661,
+    "url": "https://docs.python.org/3/reference/datamodel.html#python-buffer-protocol",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291662,
+    "url": "https://discuss.python.org/t/pep-688-making-the-buffer-protocol-accessible-in-python/15265/34",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291663,
+    "url": "https://discuss.python.org/t/introspection-and-mutable-xor-shared-semantics-for-pybuffer/20314",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291664,
+    "url": "https://github.com/python/typeshed/blob/2a0fc1b582ef84f7a82c0beb39fa617de2539d3d/stdlib/_typeshed/__init__.pyi#L194",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291665,
+    "url": "https://github.com/python/cpython/compare/main...JelleZijlstra:pep688v2?expand\u003d1",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291666,
+    "url": "https://peps.python.org/pep-0688/#keep-bytearray-compatible-with-bytes",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291669,
+    "url": "https://peps.python.org/pep-0688/#removal-of-the-bytes-special-case",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291672,
+    "url": "https://github.com/python/cpython/commit/2a19d956ab92fc9084a105cc11292cb0438b322f",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291673,
+    "url": "https://discuss.python.org/t/19756",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291674,
+    "url": "https://github.com/mpi4py/mpi4py/blob/453b87d0da37c5914b91afb511b188556dff2a9c/src/mpi4py/typing.py#L66",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291675,
+    "url": "https://peps.python.org/pep-0688/#python-level-buffer-protocol",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291676,
+    "url": "https://peps.python.org/pep-0688/#acknowledgments",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291678,
+    "url": "https://peps.python.org/pep-0688/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291679,
+    "url": "https://peps.python.org/pep-0688/#example",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291680,
+    "url": "https://peps.python.org/pep-0688/#distinguish-between-mutable-and-immutable-buffers",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291681,
+    "url": "https://docs.python.org/3.10/c-api/buffer.html#buffer-request-types",
+    "parentUrl": "https://peps.python.org/pep-0688/#current-options"
+  },
+  {
+    "id": 291991,
+    "url": "https://github.com/python/cpython/issues/127350#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 291992,
+    "url": "https://github.com/python/cpython/pull/128587",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 291993,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/127350",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 291994,
+    "url": "https://github.com/python/cpython/issues/127350#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 291996,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/127350",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 291997,
+    "url": "https://github.com/python/cpython/issues/127350#issue-2700166703",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 291998,
+    "url": "https://github.com/python/cpython/pull/127821",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 292002,
+    "url": "https://github.com/PlanetCNC",
+    "parentUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "id": 292003,
+    "url": "https://github.com/freakboy3742/cpython/commit/5306ce732ddf567290feba71894bbfd1be6f7816",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292004,
+    "url": "https://github.com/python/cpython/commit/89bb4359af2ae3abe5d4e39681b1c8c280dd4551",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292005,
+    "url": "https://github.com/freakboy3742/cpython/commit/39fe324c9d297a545438701f2acdb606cd3452f3",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292006,
+    "url": "https://github.com/python/cpython/pull/127592#ref-issue-2902563456",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292007,
+    "url": "https://github.com/freakboy3742/cpython/commit/93b37bcd18d8b2dc4f97c8f4f20d462bcfc2633e",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292008,
+    "url": "https://github.com/python/cpython/blob/7f882c88cfda486947974cb82c20a1ae7047edfc/.github/CODEOWNERS#L86",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292009,
+    "url": "https://github.com/python/cpython/commit/60584e005d5a55631dfc80b7cb40fb16e40c808c",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292010,
+    "url": "https://github.com/python/cpython/pull/127592#ref-issue-2665400447",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292011,
+    "url": "https://github.com/freakboy3742/cpython/commit/8e1b662b88f44a8c2c23d6e025edf6987495a470",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292012,
+    "url": "https://github.com/python/cpython/pull/127592#commits-pushed-3dc0d71",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292013,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-075c41d",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292014,
+    "url": "https://github.com/python/cpython/pull/127592#event-15577481841",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292015,
+    "url": "https://github.com/python/cpython/commit/075c41d5f5b16701bda1140e7de5c2d5f90eebf8",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292016,
+    "url": "https://github.com/srinivasreddy/cpython/commit/c5da36710228210bc66c4389c677d81dc9b65e3a",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292017,
+    "url": "https://github.com/python/cpython/pull/127592#commits-pushed-9385e89",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292018,
+    "url": "https://github.com/python/cpython/pull/127592/commits/db317219993d24cb68243072bd5db3fad99b6b23",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292019,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3Atests",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292021,
+    "url": "https://github.com/python/cpython/pull/127592/commits/3dc0d71211c40f7093f56c821f99882aa4181ca9",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292023,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-a112710",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292024,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2527032396",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292026,
+    "url": "https://github.com/python/cpython/pull/127592#event-15536973190",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292027,
+    "url": "https://github.com/freakboy3742/cpython/commit/461c6e1ac92af28b17ad102794129f715c635837",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292029,
+    "url": "https://github.com/python/cpython/pull/128165",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292030,
+    "url": "https://github.com/python/cpython/pull/127592",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292034,
+    "url": "https://github.com/freakboy3742/cpython/commit/a1127109aab53f891c308e8b892d94a80c94c08b",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292035,
+    "url": "https://github.com/python/cpython/pull/127592#issue-2716763407",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292036,
+    "url": "https://github.com/freakboy3742/cpython/commit/4ce5998a8d51e88f225b2942332f44c49cfb7e4c",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292037,
+    "url": "https://github.com/python/cpython/pull/131172",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292038,
+    "url": "https://cpython-previews--127592.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292039,
+    "url": "https://github.com/apps/miss-islington-app",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292040,
+    "url": "https://github.com/freakboy3742/cpython/commit/5d77ca78ec7d42053f9e216ad92bd5bc261925b1",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292043,
+    "url": "https://github.com/python/cpython/pull/127755",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292044,
+    "url": "https://github.com/python/cpython/pull/127754",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292045,
+    "url": "https://github.com/python/cpython/pull/127592#event-15520277366",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292046,
+    "url": "https://github.com/python/cpython/pull/127592#ref-issue-4556342224",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292047,
+    "url": "https://github.com/ned-deily",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292048,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-f05542d",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292049,
+    "url": "https://github.com/python/cpython/pull/127592#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292050,
+    "url": "https://github.com/python/cpython/pull/127592/commits/68253aac4e8aae6fc0954e475031a383c4d0f31e",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292051,
+    "url": "https://github.com/python/cpython/pull/127592#ref-issue-3335703630",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292052,
+    "url": "https://github.com/freakboy3742/cpython/commit/5a0ea23dc8ff66040af655f265f8e7eb2e615819",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292053,
+    "url": "https://github.com/python/cpython/pull/127592/commits/9385e89b26d040347dd8d9d0444e18ec420963ad",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292054,
+    "url": "https://github.com/python/cpython/pull/127592/files/89bb4359af2ae3abe5d4e39681b1c8c280dd4551",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292056,
+    "url": "https://github.com/freakboy3742/cpython/commit/f9e482fdbd30302a604d7280dfc43727a7f8ae05",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292057,
+    "url": "https://github.com/python/cpython/pull/127592#event-15520446562",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292058,
+    "url": "https://github.com/python/cpython/pull/127592/commits/89bb4359af2ae3abe5d4e39681b1c8c280dd4551",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292059,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2516387376",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292060,
+    "url": "https://github.com/python/cpython/pull/127592#ref-pullrequest-2754426124",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292061,
+    "url": "https://github.com/python/cpython/pull/127592/commits/60584e005d5a55631dfc80b7cb40fb16e40c808c",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292062,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-5a0ea23",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292063,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2519329648",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292064,
+    "url": "https://github.com/davidhewitt",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292065,
+    "url": "https://github.com/freakboy3742/cpython/commit/3b28c45801441cae8ca0a06bc2712d5b5c2235b2",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292066,
+    "url": "https://github.com/omz/Pythonista-Issues/issues/792",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292067,
+    "url": "https://github.com/cclauss",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292068,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2519252788",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292070,
+    "url": "https://github.com/python/cpython/pull/127592#ref-pullrequest-2726115853",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292071,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3AOS-ios",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292072,
+    "url": "https://github.com/python/cpython/tree/3.13",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292073,
+    "url": "https://github.com/freakboy3742/cpython/commit/adb8c59efd9eb30a44c45e18af27275fa048575d",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292074,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-8e1b662",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292076,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2526967830",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292077,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-461c6e1",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292078,
+    "url": "https://pypi.org/project/cherry-picker/",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292079,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-adb8c59",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292081,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-3b28c45",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292082,
+    "url": "https://github.com/freakboy3742/cpython/commit/f05542d52789d266d6dd0ea731f6e088507faf23",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292083,
+    "url": "https://github.com/freakboy3742/cpython/commit/2041a95e68ebf6d13f867e214ada28affa830669",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292084,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-5306ce7",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292085,
+    "url": "https://github.com/python/cpython/pull/127592#event-15536971761",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292087,
+    "url": "https://github.com/python/cpython/pull/127592#ref-issue-2657824284",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292088,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-93b37bc",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292089,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2516412563",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292090,
+    "url": "https://github.com/python/cpython/issues/150644",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292092,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A3.13",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292093,
+    "url": "https://github.com/python/cpython/pull/127592#event-15577481912",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292094,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-4ce5998",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292095,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-b2be118",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292097,
+    "url": "https://github.com/python/cpython/pull/127592#event-15520446990",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292098,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F127592",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292099,
+    "url": "https://github.com/python/cpython/pull/127592#ref-issue-2808142826",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292100,
+    "url": "https://github.com/python/cpython/pull/131129",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292101,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2519252728",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292102,
+    "url": "https://github.com/freakboy3742/cpython/commit/b2be118d5e7834dd830e2fd7cedaad66a23170d3",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292104,
+    "url": "https://github.com/python/cpython/pull/127592#event-15520276078",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292105,
+    "url": "https://github.com/python/cpython/pull/127592#event-15520276232",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292106,
+    "url": "https://github.com/python/cpython/pull/127592#event-15577862259",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292107,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-5d77ca7",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292108,
+    "url": "https://github.com/python/cpython/pull/127592#issuecomment-2516387306",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292109,
+    "url": "https://github.com/python/cpython/pull/127592#event-15520276119",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292111,
+    "url": "https://github.com/python/cpython/commit/2041a95e68ebf6d13f867e214ada28affa830669",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292112,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-f9e482f",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292113,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-39fe324",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292114,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3AOS-mac",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292116,
+    "url": "https://github.com/python/cpython/pull/127592/commits/0b9baa1daad39e26ba46c76f4b4123cc23b718c6",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "id": 292117,
+    "url": "https://github.com/python/cpython/pull/127592#ref-commit-c5da367",
+    "parentUrl": "https://github.com/python/cpython/issues/127592"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-provisional-API"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-provisional-API"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d48\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d80\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/409059?s\u003d80\u0026v\u003d4",
+    "alt": "@miss-islington-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/409059?s\u003d40\u0026v\u003d4",
+    "alt": "@miss-islington-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/198396?s\u003d40\u0026v\u003d4",
+    "alt": "@srinivasreddy",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1939362?s\u003d40\u0026v\u003d4",
+    "alt": "@davidhewitt",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3709715?s\u003d40\u0026v\u003d4",
+    "alt": "@cclauss",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5833005?s\u003d40\u0026v\u003d4",
+    "alt": "@ned-deily",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718923?s\u003d40\u0026v\u003d4",
+    "alt": "@FFY00",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13780613?s\u003d40\u0026v\u003d4",
+    "alt": "@erlend-aasland",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d52\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5833005?s\u003d52\u0026v\u003d4",
+    "alt": "@ned-deily",
+    "pageTitle": "gh-126925: Modify how iOS test results are gathered by freakboy3742 · Pull Request #127592 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127592"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5664034?v\u003d4\u0026size\u003d48",
+    "alt": "@PlanetCNC",
+    "pageTitle": "_Py_wfopen no longer exported · Issue #127350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "_Py_wfopen no longer exported · Issue #127350 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127350"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.bytes_warning"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.bytes_warning"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
