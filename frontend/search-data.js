@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 902,
+    "url": "https://github.com/python/cpython/issues/58032",
+    "title": "argparse.FileType opens a file and never closes it · Issue #58032 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} argparse.FileType opens a file and never closes it #58032 New issue Copy link New issue Copy link Closed #124664 Closed argparse.FileType opens a file and never closes it#58032 #124664 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description DavidLayton mannequin opened on Jan 19, 2012 Issue body actions BPO 13824 Nosy @merwok, @mitar, @matrixise, @MojoVampire, @remilapeyre, @septatrix Files patch_3.diff Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2012-01-19.12:25:39.321\u003e\nlabels \u003d [\u0027type-bug\u0027, \u0027library\u0027]\ntitle \u003d \u0027argparse.FileType opens a file and never closes it\u0027\nupdated_at \u003d \u003cDate 2021-07-25.09:27:11.812\u003e\nuser \u003d \u0027https://bugs.python.org/DavidLayton\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-07-25.09:27:11.812\u003e\nactor \u003d \u0027Nils Kattenbeck\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2012-01-19.12:25:39.321\u003e\ncreator \u003d \u0027David.Layton\u0027\ndependencies \u003d []\nfiles \u003d [\u002731852\u0027]\nhgrepos \u003d []\nissue_num \u003d 13824\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 15.0\nmessages \u003d [\u0027151615\u0027, \u0027152518\u0027, \u0027152519\u0027, \u0027152530\u0027, \u0027166068\u0027, \u0027198336\u0027, \u0027198376\u0027, \u0027215298\u0027, \u0027341670\u0027, \u0027341761\u0027, \u0027341764\u0027, \u0027341852\u0027, \u0027342153\u0027, \u0027342503\u0027, \u0027398184\u0027]\nnosy_count \u003d 13.0\nnosy_names \u003d [\u0027bethard\u0027, \u0027eric.araujo\u0027, \u0027mitar\u0027, \u0027Paolo.Elvati\u0027, \u0027manveru\u0027, \u0027Stefan.Pfeiffer\u0027, \u0027paul.j3\u0027, \u0027David.Layton\u0027, \u0027matrixise\u0027, \u0027josh.r\u0027, \u0027remi.lapeyre\u0027, \u0027sebix\u0027, \u0027Nils Kattenbeck\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue13824\u0027\nversions \u003d [\u0027Python 2.7\u0027] Linked PRs gh-58032: Do not use argparse.FileType in module CLIs and scripts #113649 gh-58032: Deprecate the argparse.FileType type converter #124664 gh-58032: Docs: Sort argparse alphabetically #125871 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees serhiy-storchaka Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Argparse issues Status Doc issues Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:18:58.23242"
+  },
+  {
+    "id": 901,
+    "url": "https://docs.python.org/3/library/sys.html#sys.prefix",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:18:56.019109"
+  },
+  {
+    "id": 900,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.fill",
+    "title": "turtle — Turtle graphics — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Graphical user interfaces with Tk » turtle — Turtle graphics | Theme Auto Light Dark | turtle — Turtle graphics¶ Source code: Lib/turtle.py Turtle star Turtle can draw intricate shapes using programs that repeat simple moves. Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an import turtle, give it the command turtle.forward(15), and it moves (on-screen!) 15 pixels in the direction it is facing, drawing a line as it moves. Give it the command turtle.right(25), and it rotates in-place 25 degrees clockwise. Turtle graphics is an implementation of the drawing tools introduced in Logo in 1967. It was created as an educational tool, and its instant, visible feedback makes it an effective way for learners to encounter programming concepts. It is also a convenient way to produce simple graphical output without bringing in external libraries. This document includes four main sections: Tutorial teaches the basics of turtle drawing. Reference describes the functions, methods and classes this module defines. How-to guides detail how to handle specific tasks. Explanation provides background on the object-oriented interface. Note Turtle graphics requires the tkinter optional module. The python.org installers for Windows and macOS include it, but some Linux distributions and other platforms may package it separately. If import turtle fails with an error mentioning _tkinter, look for documentation from your distributor (that is, whoever provided Python to you). Check this in advance if you’re planning to use turtle graphics with a learner. Tutorial¶ New users should start here. In this tutorial we’ll explore some of the basics of turtle drawing. Starting a turtle environment¶ In a Python shell, import all the objects of the turtle module: from turtle import *\n If you run into a No module named \u0027_tkinter\u0027 error, you’ll have to install the Tk interface package on your system. Basic drawing¶ Send the turtle forward 100 steps: forward(100)\n You should see (most likely, in a new window on your display) a line drawn by the turtle, heading East. Change the direction of the turtle, so that it turns 120 degrees left (anti-clockwise): left(120)\n Let’s continue by drawing a triangle: forward(100)\nleft(120)\nforward(100)\n Notice how the turtle, represented by an arrow, points in different directions as you steer it. Experiment with those commands, and also with backward() and right(). Many commands also have shorter aliases, such as fd() for forward(). Pen control¶ Try changing the color - for example, color(\u0027blue\u0027) - and width of the line - for example, width(3) - and then drawing again. You can also move the turtle around without drawing, by lifting up the pen: up() before moving. To start drawing again, use down(). The turtle’s position¶ Send your turtle back to its starting-point (useful if it has disappeared off-screen): home()\n The home position is at the center of the turtle’s screen. If you ever need to know them, get the turtle’s x-y coordinates with: pos()\n Home is at (0, 0). And after a while, it will probably help to clear the window so we can start anew: clearscreen()\n Making algorithmic patterns¶ Using loops, it’s possible to build up geometric patterns: for steps in range(100):\n    for c in (\u0027blue\u0027, \u0027red\u0027, \u0027green\u0027):\n        color(c)\n        forward(steps)\n        right(30)\n - which of course, are limited only by the imagination! Let’s draw the star shape at the top of this page. We want red lines, filled in with yellow: color(\u0027red\u0027)\nfillcolor(\u0027yellow\u0027)\n Just as up() and down() determine whether lines will be drawn, filling can be turned on and off: begin_fill()\n Next we’ll create a loop: start \u003d pos()\n\nwhile True:\n    forward(200)\n    left(170)\n    if distance(start) \u003c 1:\n        break\n distance(start) \u003c 1 is a good way to know when the turtle is back at its start position. Finally, complete the filling: end_fill()\n (Note that filling only actually takes place when you give the end_fill() command.) Reference¶ Turtle methods and functions¶ Most of the examples in this section refer to a Turtle instance called turtle. Move and draw¶ turtle.forward(distance)¶ turtle.fd(distance)¶ Parameters: distance – a number Move the turtle forward by the specified distance, in the direction the turtle is headed. \u003e\u003e\u003e turtle.position()\n(0.00,0.00)\n\u003e\u003e\u003e turtle.forward(25)\n\u003e\u003e\u003e turtle.position()\n(25.00,0.00)\n\u003e\u003e\u003e turtle.forward(-75)\n\u003e\u003e\u003e turtle.position()\n(-50.00,0.00)\n turtle.back(distance)¶ turtle.bk(distance)¶ turtle.backward(distance)¶ Parameters: distance – a number Move the turtle backward by distance, opposite to the direction the turtle is headed. The turtle’s heading does not change. \u003e\u003e\u003e turtle.position()\n(0.00,0.00)\n\u003e\u003e\u003e turtle.backward(30)\n\u003e\u003e\u003e turtle.position()\n(-30.00,0.00)\n turtle.right(angle)¶ turtle.rt(angle)¶ Parameters: angle – a number Turn the turtle right by the specified angle. The angle is measured",
+    "scrapedAt": "2026-10-08 19:18:54.775221"
+  },
+  {
+    "id": 898,
+    "url": "https://peps.python.org/pep-0784/",
+    "title": "PEP 784 – Adding Zstandard to the standard library | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 784 – Adding Zstandard to the standard library PEP 784 – Adding Zstandard to the standard library Author: Emma Harper Smith \u003cemma at python.org\u003e Sponsor: Gregory P. Smith \u003cgreg at krypto.org\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 06-Apr-2025 Python-Version: 3.14 Post-History: 07-Apr-2025 Resolution: 25-Apr-2025 Table of Contents Abstract Motivation Rationale Introduction of a compression package Implementation based on pyzstd Minimum supported Zstandard version Specification The compression namespace The compression.zstd module libzstd optional dependency Other compression modules Backwards Compatibility Security Implications How to Teach This Reference Implementation Rejected Ideas Name the module zstdlib and do not make a new compression namespace Introduce an experimental _zstd package in Python 3.14 Introduce a standard library namespace instead of compression Include zipfile and tarfile in compression Do not include gzip under compression Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at compression.zstd. × See PEP 1 for how to propose changes. Abstract Zstandard is a widely adopted, mature, and highly efficient compression standard. This PEP proposes adding a new module to the Python standard library containing a Python wrapper around Meta’s zstd library, the default implementation. Additionally, to avoid name collisions with packages on PyPI and to present a unified interface to Python users, compression modules in the standard library will be moved under a compression.* package. Motivation CPython has modules for several different compression formats, such as zlib (DEFLATE), gzip, bzip2, and lzma, each widely used. Including popular compression algorithms matches Python’s “batteries included” philosophy of incorporating widely useful standards and utilities. lzma is the most recent such module, added in Python 3.3. Since then, Zstandard has become the modern de facto preferred compression library for both high performance compression and decompression attaining high compression ratios at reasonable CPU and memory cost. Zstandard achieves a much higher compression ratio than bzip2 or zlib (DEFLATE) while decompressing significantly faster than LZMA. Zstandard has seen widespread adoption in many different areas of computing. The numerous hardware implementations demonstrate long-term commitment to Zstandard and an expectation that Zstandard will stay the de facto choice for compression for years to come. This is further evidenced by Zstandard’s IETF standardization in RFC 8478. Zstandard compression is also implemented in both the ZFS and Btrfs filesystems. Zstandard’s highly efficient compression has supplanted other modern compression formats, such as brotli, lzo, and ucl due to its highly efficient compression. While LZ4 is still used in very high throughput scenarios, Zstandard can also be used in some of these contexts. While inclusion of LZ4 is out of scope, it would be a compelling future addition to the compression namespace introduced by this PEP. There are several bindings to Zstandard for Python available on PyPI, each with different APIs and choices of how to bind the zstd library. One goal with introducing an official module in the standard library is to reduce confusion for Python users who want simple compression/decompression APIs for Zstandard. The existing packages can continue providing extended APIs or integrate features from newer Zstandard versions. Another reason to add Zstandard support to the standard library is to resolve a long standing open issue (python/cpython#81276) requesting Zstandard support in the tarfile module. This issue has the 5th most “thumbs up” of open issues on the CPython tracker, and has garnered a significant amount of discussion and interest. Additionally, the ZIP format standardizes a Zstandard compression format ID, and integration with the zipfile module would allow opening ZIP archives using Zstandard compression. The reference implementation for this PEP contains integration with the zipfile, tarfile, and shutil modules. Zstandard compression could also be used to make Python wheel packages smaller and significantly faster to install. Anaconda found a sizeable speedup when adopting Zstandard for the conda package format: Conda’s download sizes are reduced ~30-40%, and extraction is dramatically faster. […] We see approximately a 2.5x overall speedup, almost all thanks to the dramatically faster extraction speed of the zstd compression used in the new file format. —Anaconda blog on Zstandard adoption Zstandard has a significantly higher compression ratio compared to wheel’s existing zlib-based compression, according to lzbench, a comprehensive benchmark of many different compression libraries and formats. While this PEP does not prescribe any changes to th",
+    "scrapedAt": "2026-10-08 19:18:53.557471"
+  },
+  {
+    "id": 897,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-modules",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:18:52.167517"
+  },
+  {
     "id": 896,
     "url": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime",
     "title": "email.utils: Miscellaneous utilities — Python 3.14.8 documentation",
@@ -5950,26 +5985,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 897,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#new-modules"
-  },
-  {
-    "id": 898,
-    "url": "https://peps.python.org/pep-0784/"
-  },
-  {
-    "id": 900,
-    "url": "https://docs.python.org/3/library/turtle.html#turtle.fill"
-  },
-  {
-    "id": 901,
-    "url": "https://docs.python.org/3/library/sys.html#sys.prefix"
-  },
-  {
-    "id": 902,
-    "url": "https://github.com/python/cpython/issues/58032"
   },
   {
     "id": 903,
@@ -153716,10 +153731,1306 @@ window.searchData = [
     "id": 129259,
     "url": "https://docs.python.org/3/library/email.utils.html#email.utils.decode_params",
     "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 130498,
+    "url": "https://peps.python.org/pep-0784/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130499,
+    "url": "https://github.com/python/cpython-source-deps",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130500,
+    "url": "https://facebook.github.io/zstd/#references",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130501,
+    "url": "https://discuss.python.org/t/87377",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130502,
+    "url": "https://brotli.org/",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130503,
+    "url": "https://www.oberhumer.com/opensource/lzo/",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130504,
+    "url": "https://peps.python.org/pep-0784/#libzstd-optional-dependency",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130506,
+    "url": "https://www.php.net/manual/en/function.gzcompress.php",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130507,
+    "url": "https://peps.python.org/pep-0784/#name-the-module-zstdlib-and-do-not-make-a-new-compression-namespace",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130508,
+    "url": "https://github.com/rust-lang/flate2-rs",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130509,
+    "url": "https://peps.python.org/pep-0784/#do-not-include-gzip-under-compression",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130510,
+    "url": "https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.gzipstream",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130511,
+    "url": "https://peps.python.org/pep-0784/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130512,
+    "url": "https://github.com/facebook/zstd/blob/dev/SECURITY.md",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130513,
+    "url": "https://nodejs.org/api/zlib.html",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130514,
+    "url": "https://www.oberhumer.com/opensource/ucl/",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130515,
+    "url": "https://github.com/python/cpython/issues/81276#issuecomment-1093824963",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130516,
+    "url": "https://github.com/python/cpython/commit/f9bedb630e8a0b7d94e1c7e609b20dfaa2b22231",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130517,
+    "url": "https://perldoc.perl.org/IO::Compress::Gzip",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130518,
+    "url": "https://peps.python.org/pep-0784/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130519,
+    "url": "https://peps.python.org/pep-0784/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130520,
+    "url": "https://peps.python.org/pep-0784/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130522,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8478.html",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130523,
+    "url": "https://github.com/emmatyping/cpython/tree/zstd",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130524,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Compression_Streams_API",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130525,
+    "url": "https://github.com/inikep/lzbench#benchmarks",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130526,
+    "url": "https://discuss.python.org/t/87377/138",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130528,
+    "url": "https://peps.python.org/pep-0784/#introduce-a-standard-library-namespace-instead-of-compression",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130529,
+    "url": "https://github.com/python/cpython/issues/81276",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130530,
+    "url": "https://peps.python.org/pep-0784/#introduction-of-a-compression-package",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130531,
+    "url": "https://peps.python.org/pep-0784/#the-compression-namespace",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130532,
+    "url": "https://docs.oracle.com/javase/8/docs/api/java/util/zip/package-summary.html",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130534,
+    "url": "https://peps.python.org/pep-0784/#specification",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130535,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1952.html",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130536,
+    "url": "https://pkwaredownloads.blob.core.windows.net/pkware-general/Documentation/APPNOTE-6.3.8.TXT",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130538,
+    "url": "https://peps.python.org/pep-0775/",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130539,
+    "url": "https://www.anaconda.com/blog/how-we-made-conda-faster-4-7",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130540,
+    "url": "https://peps.python.org/pep-0784/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130542,
+    "url": "https://pypi.org/project/lz4/",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130544,
+    "url": "https://github.com/Rogdham/pyzstd",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130545,
+    "url": "https://peps.python.org/pep-0784/#include-zipfile-and-tarfile-in-compression",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130546,
+    "url": "https://docs.ruby-lang.org/en/master/Zlib/GzipFile.html",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130547,
+    "url": "https://peps.python.org/pep-0784/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130548,
+    "url": "https://hackage.haskell.org/package/zlib",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130549,
+    "url": "https://peps.python.org/pep-0784/#introduce-an-experimental-zstd-package-in-python-3-14",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130550,
+    "url": "https://en.wikipedia.org/wiki/ZFS",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130551,
+    "url": "https://peps.python.org/pep-0784/#implementation-based-on-pyzstd",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130552,
+    "url": "https://peps.python.org/pep-0784/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130553,
+    "url": "https://peps.python.org/pep-0784/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130555,
+    "url": "https://btrfs.readthedocs.io/",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130557,
+    "url": "https://peps.python.org/pep-0784/#minimum-supported-zstandard-version",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130559,
+    "url": "https://pkg.go.dev/compress/gzip",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130560,
+    "url": "https://peps.python.org/pep-0784/#the-compression-zstd-module",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130561,
+    "url": "https://peps.python.org/pep-0784/#other-compression-modules",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130562,
+    "url": "https://lz4.org/",
+    "parentUrl": "https://peps.python.org/pep-0784/"
+  },
+  {
+    "id": 130563,
+    "url": "https://docs.python.org/3/library/turtle.html#reference",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130565,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.end_fill",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130567,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.tiltangle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130568,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.ondrag",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130569,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.pu",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130570,
+    "url": "https://docs.python.org/3/library/turtle.html#using-screen-events",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130571,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.turtles",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130572,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.get_shapepoly",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130573,
+    "url": "https://docs.python.org/3/library/turtle.html#module-turtledemo",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130574,
+    "url": "https://docs.python.org/3/library/turtle.html#drawing-state",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130575,
+    "url": "https://docs.python.org/3/library/turtle.html#making-algorithmic-patterns",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130576,
+    "url": "https://docs.python.org/3/library/turtle.html#using-events",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130577,
+    "url": "https://docs.python.org/3/library/turtle.html#tutorial",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130578,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.circle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130579,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.clearscreen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130581,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.penup",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130582,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.rt",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130583,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle-state",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130584,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.shape",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130585,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.end_poly",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130586,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.pendown",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130587,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/turtle.py",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130588,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.filling",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130589,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.shapetransform",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130590,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.onscreenclick",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130591,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.bk",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130592,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.tilt",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130593,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.bgpic",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130594,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.window_width",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130595,
+    "url": "https://docs.python.org/3/library/turtle.html#visibility",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130596,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.screensize",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130597,
+    "url": "https://docs.python.org/3/library/turtle.html#compoundshapes",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130599,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.window_height",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130600,
+    "url": "https://docs.python.org/3/library/turtle.html#pen-control",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130601,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.setposition",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130602,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.begin_fill",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130603,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.st",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130604,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.speed",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130605,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.home",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130606,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.clone",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130608,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.back",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130609,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.pos",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130611,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle-methods-and-functions",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130612,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.undo",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130613,
+    "url": "https://docs.python.org/3/library/turtle.html#how-to-use-help",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130614,
+    "url": "https://docs.python.org/3/library/turtle.html#how-to-guides",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130615,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.backward",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130616,
+    "url": "https://docs.python.org/3/library/turtle.html#screenspecific",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130617,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.showturtle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130619,
+    "url": "https://docs.python.org/3/library/turtle.html#filling",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130620,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.title",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130621,
+    "url": "https://docs.python.org/3/library/turtle.html#use-the-turtle-module-namespace",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130622,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.bgcolor",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130623,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.radians",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130624,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.shapesize",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130625,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.lt",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130626,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.bye",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130627,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.RawPen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130628,
+    "url": "https://docs.python.org/3/library/turtle.html#use-object-oriented-turtle-graphics",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130629,
+    "url": "https://docs.python.org/3/library/turtle.html#explanation",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130630,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.pencolor",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130631,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.down",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130632,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.Shape",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130633,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.addshape",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130634,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.clearstamps",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130635,
+    "url": "https://docs.python.org/3/library/turtle.html#input-methods",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130636,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.Turtle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130637,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.pen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130638,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.TurtleGraphicsError",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130639,
+    "url": "https://docs.python.org/3/library/turtle.html#special-turtle-methods",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130640,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle-explanation",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130641,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.seth",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130642,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.write",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130643,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.textinput",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130645,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.fillcolor",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130646,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.sety",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130647,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.getshapes",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130648,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.setx",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130649,
+    "url": "https://en.wikipedia.org/wiki/Turtle_(robot)",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130650,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.right",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130651,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.width",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130652,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.ScrolledCanvas",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130653,
+    "url": "https://docs.python.org/3/library/turtle.html#tell-turtle-s-state",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130654,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.colormode",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130655,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.onclick",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130656,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.stamp",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130658,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.pd",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130659,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.shearfactor",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130660,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.get_poly",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130661,
+    "url": "https://docs.python.org/3/library/turtle.html#settings-for-measurement",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130662,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.onkey",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130663,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.clearstamp",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130664,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.ycor",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130665,
+    "url": "https://docs.python.org/3/library/turtle.html#move-and-draw",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130666,
+    "url": "https://docs.python.org/3/library/turtle.html#",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130667,
+    "url": "https://docs.python.org/3/library/turtle.html#window-control",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130668,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.position",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130669,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.setheading",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130670,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.resetscreen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130671,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.TurtleScreen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130672,
+    "url": "https://docs.python.org/3/library/turtle.html#basic-drawing",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130673,
+    "url": "https://docs.python.org/3/library/turtle.html#screen-methods-and-functions",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130674,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.ht",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130675,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.forward",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130676,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.left",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130678,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle-howtos",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130679,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.pensize",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130681,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.xcor",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130682,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.RawTurtle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130684,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.onkeypress",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130685,
+    "url": "https://docs.python.org/3/library/turtle.html#settings-and-special-methods",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130686,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/turtle.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130687,
+    "url": "https://docs.python.org/3/library/turtle.html#more-drawing-control",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130688,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.degrees",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130689,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.distance",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130690,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.update",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130691,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.towards",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130693,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.setpos",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130694,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.mainloop",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130695,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.hideturtle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130697,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.isvisible",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130698,
+    "url": "https://docs.python.org/3/library/turtle.html#use-turtle-graphics-in-a-script",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130700,
+    "url": "https://docs.python.org/3/library/turtle.html#translation-of-docstrings-into-different-languages",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130701,
+    "url": "https://docs.python.org/3/library/turtle.html#module-turtle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130702,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.setup",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130703,
+    "url": "https://docs.python.org/3/library/turtle.html#starting-a-turtle-environment",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130704,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.undobufferentries",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130706,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.isdown",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130707,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.resizemode",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130708,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.turtlesize",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130709,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.clear",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130710,
+    "url": "https://docs.python.org/3/library/turtle.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130711,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.getpen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130712,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.register_shape",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130713,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.dot",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130715,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.Vec2D",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130716,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.reset",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130718,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.ontimer",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130719,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.getturtle",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130720,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.setundobuffer",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130721,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.done",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130722,
+    "url": "https://docs.python.org/3/library/turtle.html#animation-control",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130723,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.delay",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130724,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.numinput",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130725,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.tracer",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130726,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.save",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130727,
+    "url": "https://docs.python.org/3/library/turtle.html#compound-shapes",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130729,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.up",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130730,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.color",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130731,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.Shape.addcomponent",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130732,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.mode",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130733,
+    "url": "https://docs.python.org/3/library/turtle.html#screen-only-methods",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130734,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.write_docstringdict",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130735,
+    "url": "https://docs.python.org/3/library/turtle.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130736,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.exitonclick",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130737,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.teleport",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130738,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.onrelease",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130739,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.getscreen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130741,
+    "url": "https://docs.python.org/3/library/turtle.html#appearance",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130742,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.heading",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130743,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.Screen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130744,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle-reference",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130745,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle-tutorial",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130746,
+    "url": "https://docs.python.org/3/library/turtle.html#public-classes",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130747,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.getcanvas",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130748,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.fd",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130750,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.setworldcoordinates",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130751,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.onkeyrelease",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130752,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.goto",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130753,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.begin_poly",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130756,
+    "url": "https://docs.python.org/3/library/turtle.html#the-turtle-s-position",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130757,
+    "url": "https://docs.python.org/3/library/turtle.html#how-to-configure-screen-and-turtles",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130758,
+    "url": "https://docs.python.org/3/library/turtle.html#turtle.listen",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130759,
+    "url": "https://docs.python.org/3/library/turtle.html#color-control",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 130760,
+    "url": "https://docs.python.org/3/library/turtle.html#automatically-begin-and-end-filling",
+    "parentUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "id": 131102,
+    "url": "https://github.com/matrixise",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131103,
+    "url": "https://github.com/septatrix",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131104,
+    "url": "https://github.com/python/cpython/pull/125871",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131105,
+    "url": "https://bugs.python.org/issue13824",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131107,
+    "url": "https://github.com/python/cpython/issues/58032#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131108,
+    "url": "https://github.com/python/cpython/issues/58032#issue-1198876711",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131109,
+    "url": "https://github.com/python/cpython/pull/113649",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131110,
+    "url": "https://github.com/merwok",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131111,
+    "url": "https://github.com/MojoVampire",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131114,
+    "url": "https://github.com/python/cpython/issues/58032#top",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131116,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/58032",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131117,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/58032",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131118,
+    "url": "https://github.com/remilapeyre",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131120,
+    "url": "https://bugs.python.org/file31852/patch_3.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131121,
+    "url": "https://github.com/mitar",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "id": 131122,
+    "url": "https://github.com/python/cpython/pull/124664",
+    "parentUrl": "https://github.com/python/cpython/issues/58032"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "argparse.FileType opens a file and never closes it · Issue #58032 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101774846?v\u003d4\u0026size\u003d48",
+    "alt": "@DavidLayton",
+    "pageTitle": "argparse.FileType opens a file and never closes it · Issue #58032 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "argparse.FileType opens a file and never closes it · Issue #58032 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "argparse.FileType opens a file and never closes it · Issue #58032 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/58032"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.prefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.prefix"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "turtle — Turtle graphics — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/turtle-star.png",
+    "alt": "A yellow starburst of thin spikes with a red outline, drawn by turtle.",
+    "pageTitle": "turtle — Turtle graphics — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "turtle — Turtle graphics — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/turtle.html#turtle.fill"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#new-modules"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#new-modules"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
