@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 436,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#incompatible-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:02:03.891088"
+  },
+  {
+    "id": 435,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-arm64.zip.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzjCCAlSgAwIBAgIUOxhs90R8VTYKb0YSzmx1WcOLRwwwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODQ0WhcNMjYwNDA3MTc1ODQ0WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjmK07v+IJnsuPw3HJaDog0XKEkpia+OBp+tCIvy5V4FGxuRQpZaAP3l+1Nv9JV/nXXKokDKpo5xLYw6UKRpN66OCAXMwggFvMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQU3TsAId3rhG3x7rbHfWcbC7ozXhMwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBigYKKwYBBAHWeQIEAgR8BHoAeAB2AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPnOgAAAQDAEcwRQIgCnGc1U+EYgQQYu0XTcd7Sihs+59phHH15ank8r7JmdECIQDvcY4OljUg4lUPngFN9xBo/M9Y7GQsaLDCk0D3rTJaoDAKBggqhkjOPQQDAwNoADBlAjEA8/rfONU5R+e1144F73z/4gWeQSQXTUcaBbJvU2XqmU2S6tJj2XGHLsAlkcIZa5ZiAjBjCbmRG5Boky5Wz5U2MfLjXvABP0QRgRx89horJzLIQs3Rv97z6VNofqtl/W39L64\u003d\"}, \"tlogEntries\": [{\"logIndex\": \"1247676325\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584124\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEUCIHWFLoTx9Z2Sazr0ape7+Wk5AEOtqw1l00j6Trt18umsAiEAz0jCDusvgctnre91GL/n2omBi9pjN2fsB8c/aznVlJ8\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125772063\", \"rootHash\": \"cYq66U+6aGuCjifkIoZtqbNjcnpgCvbPZ27crSnMie8\u003d\", \"treeSize\": \"1125772066\", \"hashes\": [\"PjWMYIxnRaB7w5L6OrTo562Az32fX0G0B8gUhIe+tFg\u003d\", \"vwm9MeAAWj3LYxDNmTioeMgEvgut55dTg7fIjfGi8C4\u003d\", \"nMLQPlNHC0ALgHkPt91ihEWHItazvYS5A+lFhNimR5A\u003d\", \"IBBmYj75bIJyFUnUhl476Z6ANaXLgX7Ry+ZsdjOkDbw\u003d\", \"4vwuPBZuh9D6dK+JzMd0bbLhVLTB9tj9fvSrYCzaFCE\u003d\", \"eWxORBWrJhFW2yfx09ZRgPJ8VVwvEn/HiuRgw2qKY1A\u003d\", \"D8oBImywij7355j0NzbcVyK6zepoR6IzraPf3JJDeJU\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125772066\\ncYq66U+6aGuCjifkIoZtqbNjcnpgCvbPZ27crSnMie8\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBFAiAW8C1UMzmMOddK8g+VE9iIQOEjjMmj6L2xpiD/iq/lFgIhAOZjH8h+3WXSCRLHVZOxPo8jCcdCldrpgrIG3ZDTl7mF\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiI1NWJjMGQyMzJmMTZhODQ1MGU2YzM3Yzc3NGU0Y2YzOTdmNTIxMmQ1ZTQ2MDNlNWI5MmJkMWZlODU0NTFlZWFkIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FWUNJUUNZc1pReStta3dhbzExRTZrd3dMNmVZbUVpK3U2YUg5dXFYbjlDVjNXNjFBSWhBT1dBRDNuazUvUmdDYUdobHZjUnFORXFVamx4QTJQS2dkcmZvUUt5RllIeCIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZha05EUVd4VFowRjNTVUpCWjBsVlQzaG9jemt3VWpoV1ZGbExZakJaVTNwdGVERlhZMDlNVW5kM2QwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJSTUZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkZFd1YycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVZxYlVzd04zWXJTVXB1YzNWUWR6TklTbUZFYjJjd1dFdEZhM0JwWVN0UFFuQXJkRU1LU1haNU5WWTBSa2Q0ZFZKUmNGcGhRVkF6YkNzeFRuWTVTbFl2YmxoWVMyOXJSRXR3YnpWNFRGbDNObFZMVW5CT05qWlBRMEZZVFhkblowWjJUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlV6VkhOQkNrbGtNM0pvUnpONE4zSmlTR1pYWTJKRE4yOTZXR2hOZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVdkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWpnS1FraHZRV1ZCUWpKQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRYms5blFRcEJRVkZFUVVWamQxSlJTV2REYmtkak1WVXJSVmxuVVZGWmRUQllWR05rTjFOcGFITXJOVGx3YUVoSU1UVmhibXM0Y2pkS2JXUkZRMGxSUkhaaldUUlBDbXhxVldjMGJGVlFibWRHVGpsNFFtOHZUVGxaTjBkUmMyRk1SRU5yTUVRemNsUktZVzlFUVV0Q1oyZHhhR3RxVDFCUlVVUkJkMDV2UVVSQ2JFRnFSVUVLT0M5eVprOU9WVFZTSzJVeE1UUTBSamN6ZWk4MFoxZGxVVk5SV0ZSVlkyRkNZa3AyVlRKWWNXMVZNbE0yZEVwcU1saEhTRXh6UVd4clkwbGFZVFZhYVFwQmFrSnFRMkp0VWtjMVFtOXJlVFZYZWpWVk1rMW1UR3BZZGtGQ1VEQlJVbWRTZURnNWFHOXlTbnBNU1ZGek0xSjJPVGQ2TmxaT2IyWnhkR3d2VnpNNUNrdzJORDBLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"tim",
+    "scrapedAt": "2026-10-08 19:02:02.649397"
+  },
+  {
+    "id": 433,
+    "url": "https://peps.python.org/pep-0745/",
+    "title": "PEP 745 – Python 3.14 Release Schedule | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 745 – Python 3.14 Release Schedule PEP 745 – Python 3.14 Release Schedule Author: Hugo van Kemenade Status: Active Type: Informational Topic: Release Created: 24-Apr-2024 Python-Version: 3.14 Table of Contents Abstract Release manager and crew Release schedule 3.14.0 schedule Bugfix releases Source-only security fix releases 3.14 lifespan Copyright Abstract This document describes the development and release schedule for Python 3.14. Release manager and crew 3.14 release manager: Hugo van Kemenade Windows installers: Steve Dower Mac installers: Ned Deily Documentation: Julien Palard Release schedule 3.14.0 schedule The dates below use a 17-month development period that results in a 12-month release cadence between feature versions, as defined by PEP 602. Actual: 3.14 development begins: Wednesday, 2024-05-08 3.14.0 alpha 1: Tuesday, 2024-10-15 3.14.0 alpha 2: Tuesday, 2024-11-19 3.14.0 alpha 3: Tuesday, 2024-12-17 3.14.0 alpha 4: Tuesday, 2025-01-14 3.14.0 alpha 5: Tuesday, 2025-02-11 3.14.0 alpha 6: Friday, 2025-03-14 3.14.0 alpha 7: Tuesday, 2025-04-08 3.14.0 beta 1: Wednesday, 2025-05-07 (No new features beyond this point.) 3.14.0 beta 2: Monday, 2025-05-26 3.14.0 beta 3: Tuesday, 2025-06-17 3.14.0 beta 4: Tuesday, 2025-07-08 3.14.0 candidate 1: Tuesday, 2025-07-22 3.14.0 candidate 2: Thursday, 2025-08-14 3.14.0 candidate 3: Thursday, 2025-09-18 3.14.0 final: Tuesday, 2025-10-07 Bugfix releases Actual: 3.14.1: Tuesday, 2025-12-02 3.14.2: Friday, 2025-12-05 3.14.3: Tuesday, 2026-02-03 3.14.4: Tuesday, 2026-04-07 3.14.5 candidate 1: Monday, 2026-05-04 3.14.5: Sunday, 2026-05-10 3.14.6: Wednesday, 2026-06-10 3.14.7: Wednesday, 2026-08-05 3.14.8: Thursday, 2026-10-01 Expected: 3.14.9: Tuesday, 2026-12-01 3.14.10: Tuesday, 2027-02-02 3.14.11: Tuesday, 2027-04-06 3.14.12: Tuesday, 2027-06-01 3.14.13: Tuesday, 2027-08-03 3.14.14: Tuesday, 2027-10-05 (Final regular bugfix release with binary installers) Source-only security fix releases Provided irregularly on an as-needed basis until October 2030. 3.14 lifespan Python 3.14 will receive bugfix updates approximately every two months for approximately 24 months. Around the time of the release of 3.16.0 final, the final 3.14 bugfix update will be released. After that, it is expected that security updates (source only) will be released until five years after the release of 3.14.0 final, so until approximately October 2030. Copyright This document is placed in the public domain or under the CC0-1.0-Universal license, whichever is more permissive.",
+    "scrapedAt": "2026-10-08 19:02:01.431777"
+  },
+  {
+    "id": 432,
+    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-arm64.exe.sigstore",
+    "title": "",
+    "content": "{\"mediaType\": \"application/vnd.dev.sigstore.bundle.v0.3+json\", \"verificationMaterial\": {\"certificate\": {\"rawBytes\": \"MIICzjCCAlSgAwIBAgIUX8M2CN/zFaYQP+XU7iXUv2i2B2QwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwNDA3MTc0ODM4WhcNMjYwNDA3MTc1ODM4WjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE9xiyfWWFnQiJrQgZNycELfGQDbX//cdFWiJb+BTVEP2yN88LrMrRGSrONwZCyBGQVXpyxFR43ROZT/KuM3OdKKOCAXMwggFvMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUYXVmThBiieCbmRXOMZgaDlVOG4IwHwYDVR0jBBgwFoAU39Ppz1YkEZb5qNjpKFWixi4YZD8wHQYDVR0RAQH/BBMwEYEPaHVnb0BweXRob24ub3JnMCwGCisGAQQBg78wAQEEHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDAuBgorBgEEAYO/MAEIBCAMHmh0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aDCBigYKKwYBBAHWeQIEAgR8BHoAeAB2AN09MGrGxxEyYxkeHJlnNwKiSl643jyt/4eKcoAvKe6OAAABnWkPh9IAAAQDAEcwRQIgA8OeD73DfdzecBUr4n/RLCbDj4WQzPTvu76AFK02UJcCIQCXM94QXnXOcYuVSDaqqSZ3I/xVQeftdbcpzV0DJTwcejAKBggqhkjOPQQDAwNoADBlAjBBzo4Fq/J3gEggQvCfdHQTB6PImScc8KDM67pL4atfp1HJdQUXrUO4vXYXFmkzKiACMQCaT9KGrObJ0t3xBiDK2CtR5fhe2nNeRZfTJMWH0B4TRo2w+WPOCxiFuNXGGb0J6o4\u003d\"}, \"tlogEntries\": [{\"logIndex\": \"1247676239\", \"logId\": {\"keyId\": \"wNI9atQGlz+VWfO6LRygH4QUfY/8W4RFwiT5i5WRgB0\u003d\"}, \"kindVersion\": {\"kind\": \"hashedrekord\", \"version\": \"0.0.1\"}, \"integratedTime\": \"1775584119\", \"inclusionPromise\": {\"signedEntryTimestamp\": \"MEQCIFLZIstFI6AolS0oEBfYvzXsV0orEO3hSrMUR2aurl8wAiByerdXeyulfAf0yDa5SQlkiMUWyTlNO840LPj9W46qfA\u003d\u003d\"}, \"inclusionProof\": {\"logIndex\": \"1125771977\", \"rootHash\": \"u5ECbzlnuUp/pKgbocbYm0NtISqzJ6ig2N2NyuJBFNQ\u003d\", \"treeSize\": \"1125771981\", \"hashes\": [\"aENrD44+NpR9YDBh+76qXSd4qt4g3L9NEk0NiqyV84Y\u003d\", \"5QF1v0oV1hJ6m0vP9h29fwmDaBQy7DUwJpMIo8XF4XU\u003d\", \"QwLWeQOV1x3qc7s8gJpJzYFtNlaX8BD6RToT+wHc+iU\u003d\", \"n/T4QEoh03GwDhscPR61Qu1bU3QgKp72Dpvq0KUJlm4\u003d\", \"D6MWIbClKGzg9eRySzhshly5kzSpd8+hd7oWozjhKsw\u003d\", \"+akx/a+4mk/fwt1VE0D7K8JZteVx3dEs1/ZtCt5Khno\u003d\", \"dJtu8pJ3yhn0rC0EFdgoebJF3MldcpHMX00y2eHPYDY\u003d\", \"81dr9W/Ax/UfYIsxNTxjBYK7sYU/az3TPo6rdJosDO0\u003d\", \"4rt9/yEt1Zy95yQxSCxpoOu6E3CWDDxpGd37aEEFadg\u003d\", \"+wrWv/cO9uKKpjC+BMIC/Fv2Ipe50C7wL0wd+YlH5Kw\u003d\", \"ZxCK8NmXD/qxQEyqBRFYo8WOz/kUHRHA+BXOPC6789o\u003d\", \"civ0dM20+gns15I1mfWo9Jt0YBzbex5QVYwaGjqgcs4\u003d\", \"2v7+H4Fejl7qkIhG2G79UQH+wJ0QpPreOZwulFGWzLI\u003d\", \"vXMaHYsu3vXUFKr78h1vCtaZWhgh1OwZh5O05RGwxkw\u003d\", \"WbswTMpSfvjDqroD6lDGb2VDeljBPlMsAchJ+0L+3U4\u003d\", \"psQ1PrYXqFtm6T3uF1q91rl1dhNiykO58GpOdq1ZaKI\u003d\", \"DOCeoSMovIvLExkhIvisow9AuNXgeWs4ECkyR6EcqYU\u003d\"], \"checkpoint\": {\"envelope\": \"rekor.sigstore.dev - 1193050959916656506\\n1125771981\\nu5ECbzlnuUp/pKgbocbYm0NtISqzJ6ig2N2NyuJBFNQ\u003d\\n\\n\\u2014 rekor.sigstore.dev wNI9ajBEAiAbl5gGhC3Hp6vYBwt8bLlvaNMFsI1sE1OK0x9Rq+TEIQIgFEsEhG3RGpS0OAWcO4DSVDss3QWsS8MONekMfeKYqaY\u003d\\n\"}}, \"canonicalizedBody\": \"eyJhcGlWZXJzaW9uIjoiMC4wLjEiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJkYXRhIjp7Imhhc2giOnsiYWxnb3JpdGhtIjoic2hhMjU2IiwidmFsdWUiOiJjMWFlZTRkZmU1NmVmMzJhMGM1ZWJmNThmNmZiMWM5N2RjZjAzNzY4M2Q2NTllZTE2ZWU1Yjg2NDEyMDQ3NjZhIn19LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FUUNJQTlVc1plRVp6S0RmTTc2bkpmNTVaejl3V2l1S0Nmek9tMGdORGlvOUpnT0FpQjd5dm95Mmp0R1RmRnkyL3ZHRWtDWDEyYVh6amFRUUJsb3ZtK1d6TmhtQ2c9PSIsInB1YmxpY0tleSI6eyJjb250ZW50IjoiTFMwdExTMUNSVWRKVGlCRFJWSlVTVVpKUTBGVVJTMHRMUzB0Q2sxSlNVTjZha05EUVd4VFowRjNTVUpCWjBsVldEaE5Na05PTDNwR1lWbFJVQ3RZVlRkcFdGVjJNbWt5UWpKUmQwTm5XVWxMYjFwSmVtb3dSVUYzVFhjS1RucEZWazFDVFVkQk1WVkZRMmhOVFdNeWJHNWpNMUoyWTIxVmRWcEhWakpOVWpSM1NFRlpSRlpSVVVSRmVGWjZZVmRrZW1SSE9YbGFVekZ3WW01U2JBcGpiVEZzV2tkc2FHUkhWWGRJYUdOT1RXcFpkMDVFUVROTlZHTXdUMFJOTkZkb1kwNU5hbGwzVGtSQk0wMVVZekZQUkUwMFYycEJRVTFHYTNkRmQxbElDa3R2V2tsNmFqQkRRVkZaU1V0dldrbDZhakJFUVZGalJGRm5RVVU1ZUdsNVpsZFhSbTVSYVVweVVXZGFUbmxqUlV4bVIxRkVZbGd2TDJOa1JsZHBTbUlLSzBKVVZrVlFNbmxPT0RoTWNrMXlVa2RUY2s5T2QxcERlVUpIVVZaWWNIbDRSbEkwTTFKUFdsUXZTM1ZOTTA5a1MwdFBRMEZZVFhkblowWjJUVUUwUndwQk1WVmtSSGRGUWk5M1VVVkJkMGxJWjBSQlZFSm5UbFpJVTFWRlJFUkJTMEpuWjNKQ1owVkdRbEZqUkVGNlFXUkNaMDVXU0ZFMFJVWm5VVlZaV0ZadENsUm9RbWxwWlVOaWJWSllUMDFhWjJGRWJGWlBSelJKZDBoM1dVUldVakJxUWtKbmQwWnZRVlV6T1ZCd2VqRlphMFZhWWpWeFRtcHdTMFpYYVhocE5Ga0tXa1E0ZDBoUldVUldVakJTUVZGSUwwSkNUWGRGV1VWUVlVaFdibUl3UW5kbFdGSnZZakkwZFdJelNtNU5RM2RIUTJselIwRlJVVUpuTnpoM1FWRkZSUXBJYldnd1pFaENlazlwT0haYU1td3dZVWhXYVV4dFRuWmlVemx6WWpKa2NHSnBPWFpaV0ZZd1lVUkJkVUpuYjNKQ1owVkZRVmxQTDAxQlJVbENRMEZOQ2todGFEQmtTRUo2VDJrNGRsb3liREJoU0ZacFRHMU9kbUpUT1hOaU1tUndZbWs1ZGxsWVZqQmhSRU5DYVdkWlMwdDNXVUpDUVVoWFpWRkpSVUZuVWpnS1FraHZRV1ZCUWpKQlRqQTVUVWR5UjNoNFJYbFplR3RsU0Vwc2JrNTNTMmxUYkRZME0ycDVkQzgwWlV0amIwRjJTMlUyVDBGQlFVSnVWMnRRYURsSlFRcEJRVkZFUVVWamQxSlJTV2RCT0U5bFJEY3pSR1prZW1WalFsVnlORzR2VWt4RFlrUnFORmRSZWxCVWRuVTNOa0ZHU3pBeVZVcGpRMGxSUTFoTk9UUlJDbGh1V0U5aldYVldVMFJoY1hGVFdqTkpMM2hXVVdWbWRHUmlZM0I2VmpCRVNsUjNZMlZxUVV0Q1oyZHhhR3RxVDFCUlVVUkJkMDV2UVVSQ2JFRnFRa0lLZW04MFJuRXZTak5uUldkblVYWkRabVJJVVZSQ05sQkpiVk5qWXpoTFJFMDJOM0JNTkdGMFpuQXhTRXBrVVZWWWNsVlBOSFpZV1ZoR2JXdDZTMmxCUXdwTlVVTmhWRGxMUjNKUFlrb3dkRE40UW1sRVN6SkRkRkkxWm1obE1tNU9aVkphWmxSS1RWZElNRUkwVkZKdk1uY3JWMUJQUTNocFJuVk9XRWRIWWpCS0NqWnZORDBLTFMwdExTMUZUa1FnUTBWU1ZFbEdTVU5CVkVVdExTMHRMUW89In19fX0\u003d\"}], \"timestampVerificationData\": {}}, \"messageSignature\"",
+    "scrapedAt": "2026-10-08 19:02:00.102773"
+  },
+  {
+    "id": 431,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#deprecated",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:01:58.867942"
+  },
+  {
     "id": 430,
     "url": "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz.sigstore",
     "title": "",
@@ -2990,26 +3025,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 431,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#deprecated"
-  },
-  {
-    "id": 432,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-arm64.exe.sigstore"
-  },
-  {
-    "id": 433,
-    "url": "https://peps.python.org/pep-0745/"
-  },
-  {
-    "id": 435,
-    "url": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-arm64.zip.sigstore"
-  },
-  {
-    "id": 436,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#incompatible-changes"
   },
   {
     "id": 437,
@@ -88640,10 +88655,84 @@ window.searchData = [
     "id": 52350,
     "url": "https://www.python.org/ftp/python/pymanager/python-manager-26.3.msix",
     "parentUrl": "https://www.python.org/downloads/latest/pymanager/"
+  },
+  {
+    "id": 54886,
+    "url": "https://peps.python.org/pep-0745/#bugfix-releases",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54887,
+    "url": "https://peps.python.org/pep-0745/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54888,
+    "url": "https://peps.python.org/pep-0745/#source-only-security-fix-releases",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54889,
+    "url": "https://peps.python.org/pep-0745/#schedule",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54890,
+    "url": "https://peps.python.org/pep-0602/",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54891,
+    "url": "https://peps.python.org/pep-0745/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54892,
+    "url": "https://peps.python.org/pep-0745/#release-manager-and-crew",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54893,
+    "url": "https://peps.python.org/topic/release/",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54894,
+    "url": "https://peps.python.org/pep-0745/#release-schedule",
+    "parentUrl": "https://peps.python.org/pep-0745/"
+  },
+  {
+    "id": 54895,
+    "url": "https://peps.python.org/pep-0745/#lifespan",
+    "parentUrl": "https://peps.python.org/pep-0745/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#incompatible-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#incompatible-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#deprecated"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#deprecated"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
