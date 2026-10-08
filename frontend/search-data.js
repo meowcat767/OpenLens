@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 621,
+    "url": "https://www.meetup.com/python-stlouis/events/313870807",
+    "title": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "content": "Skip to content Python for (Almost) Everything Hosted by Kevin L. Super Organizer PySTL Thursday, Jun 18, 4:00 PM to Thursday, Jun 18, 7:00 PM CDT TRex, 911 Washington Ave. St. Louis, MO 63101, Saint Louis, MO 911 Washington Ave. · Saint Louis, MO Python for (Almost) Everything Hosted by Kevin L. Super Organizer PySTL Details Join us at Downtown TREX as we celebrate the 1 year anniversary of PySTL! In this mini conference, we will bring in speakers from industry, researchers, and students to talk about the various ways Python is used. We will cover a broad array of topics such as Web Development, Geospatial, and AI. There will be free pizza and beer! Schedule of Events: 4:00 - 4:45 PM - Open Networking 4:45 - 5:00 PM - Mini Keynote Talk -- Session 1 Talks: 5:00 - 5:45 PM -- Python For Cloud Data Engineering Scott Anderson - Data Architect at 66 Degrees This talk goes over how to apply python skills in the Data Engineering Domain From Bits to Qubits - Python\u0027s Role in Hybrid Computing - Aayush Gauba - Quantum Researcher at SIUE This talk explores why Python has become the dominant language for quantum and hybrid computing and how it enables developers to work with quantum systems without needing a background in physics Literate Programming Daniel Shown - Director of Open Source at SLU MyST Markdown is a Markdown flavor + parser system that extends standard Markdown with Sphinx-style reStructuredText features. It is comonly used in Jupyter Notebooks -- Session 2 Talks 6:00 - 6:45 PM -- Python Observability with Open Telemetry David Hoover - Senior Software Engineer at University of Arizona We cover how to integrate metrics and telemetry into your python web app using the OpenTelemetry SDK. Learn how you can get insights into your applications with zero code needed and figure out WTH your code is doing. Geospatial Computer Vision Kevin Lai - Software Developer II, US Geological Survey contractor This talk goes over techniques for developing computer vision models and pipelines to create training data and run inference at scale. We go over tools like GDAL to process raster data, PDAL for point cloud data, as well as PyTorch for building custom models and data loaders. Partners and Sponsors We are sponsored by Python Software Foundation Manning Publishing We partner with St. Louis Code and Coffee, Bourbon Friday Tech Lunch STL PyData St. Louis Related topics Events in Saint Louis, MO Computer Vision Data Analytics Geospatial Python Web Development Report event You may also like See all",
+    "scrapedAt": "2026-10-08 19:08:19.936722"
+  },
+  {
+    "id": 620,
+    "url": "https://www.python.org/events/python-events/1843/",
+    "title": "GeoPython 2025 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2025 Basel, Switzerland From 24 Feb. through 26 Feb., 2025 GeoPython 2025 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-10-08 19:08:18.313117"
+  },
+  {
+    "id": 619,
+    "url": "https://www.python.org/events/python-events/608/",
+    "title": "GeoPython 2018 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2018 Basel, Switzerland From 07 May through 09 May, 2018 GeoPython 2018 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-10-08 19:08:17.064193"
+  },
+  {
+    "id": 618,
+    "url": "https://www.python.org/events/python-events/1263/",
+    "title": "EuroSciPy 2022 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. EuroSciPy 2022 Basel, Switzerland From 29 Aug. through 02 Sept., 2022 EuroSciPy 2022 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-10-08 19:08:15.715291"
+  },
+  {
+    "id": 617,
+    "url": "https://www.python.org/events/python-events/748/",
+    "title": "GeoPython 2019 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2019 Basel, Switzerland From 24 June through 26 June, 2019 GeoPython 2019 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-10-08 19:08:14.463988"
+  },
+  {
     "id": 615,
     "url": "https://www.python.org/events/python-events/796/",
     "title": "EuroPython 2019 | Python.org",
@@ -4145,26 +4180,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 617,
-    "url": "https://www.python.org/events/python-events/748/"
-  },
-  {
-    "id": 618,
-    "url": "https://www.python.org/events/python-events/1263/"
-  },
-  {
-    "id": 619,
-    "url": "https://www.python.org/events/python-events/608/"
-  },
-  {
-    "id": 620,
-    "url": "https://www.python.org/events/python-events/1843/"
-  },
-  {
-    "id": 621,
-    "url": "https://www.meetup.com/python-stlouis/events/313870807"
   },
   {
     "id": 625,
@@ -99512,10 +99527,134 @@ window.searchData = [
     "id": 70843,
     "url": "https://www.europython.eu",
     "parentUrl": "https://www.python.org/events/python-events/796/"
+  },
+  {
+    "id": 70857,
+    "url": "http://2019.geopython.net",
+    "parentUrl": "https://www.python.org/events/python-events/748/"
+  },
+  {
+    "id": 70872,
+    "url": "https://www.euroscipy.org/2022/",
+    "parentUrl": "https://www.python.org/events/python-events/1263/"
+  },
+  {
+    "id": 70880,
+    "url": "http://2018.geopython.net/",
+    "parentUrl": "https://www.python.org/events/python-events/608/"
+  },
+  {
+    "id": 70888,
+    "url": "https://2025.geopython.net/",
+    "parentUrl": "https://www.python.org/events/python-events/1843/"
+  },
+  {
+    "id": 70898,
+    "url": "https://www.meetup.com/python-stlouis/events/313870807/#main",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70899,
+    "url": "https://www.meetup.com/bourbonfridays/",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70900,
+    "url": "https://www.python.org/psf/community-partners/#psf-community-partners",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70901,
+    "url": "https://www.meetup.com/python-stlouis/events/313870807/attendees/",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70902,
+    "url": "https://www.meetup.com/python-stlouis/",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70903,
+    "url": "https://www.meetup.com/find/us--mo--saint-louis/",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70904,
+    "url": "https://www.meetup.com/code-and-coffee-st-louis/",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70905,
+    "url": "https://www.heylo.com/g/c45b7312-6acc-4b4f-bc31-a0d92fb74b59",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70906,
+    "url": "https://www.manning.com/",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "id": 70907,
+    "url": "https://www.meetup.com/pydata-st-louis/",
+    "parentUrl": "https://www.meetup.com/python-stlouis/events/313870807"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://www.facebook.com/tr?id\u003d792405807634160\u0026ev\u003dPageView\u0026noscript\u003d1",
+    "alt": "",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/photos/member/3/8/e/4/thumb_323594564.jpeg?w\u003d64",
+    "alt": "Photo of the user Kevin Lai",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/next/images/avatar/super-organizer.webp?w\u003d32",
+    "alt": "Badge for Kevin Lai",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/photos/event/7/4/8/9/event_533429833.jpeg?w\u003d3840",
+    "alt": "Photo of PySTL group",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/next/images/complex-icons/branded/calendar.webp?w\u003d64",
+    "alt": "calendar icon",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/next/images/complex-icons/branded/pin.webp?w\u003d64",
+    "alt": "pin icon",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/photos/member/3/8/e/4/thumb_323594564.jpeg?w\u003d64",
+    "alt": "Photo of the user Kevin Lai",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/next/images/avatar/super-organizer.webp?w\u003d32",
+    "alt": "Badge for Kevin Lai",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
+  {
+    "src": "https://secure.meetupstatic.com/photos/event/7/4/8/9/event_533429833.jpeg?w\u003d3840",
+    "alt": "Photo of PySTL group",
+    "pageTitle": "Python for (Almost) Everything, Thu, Jun 18, 2026, 4:00 PM | Meetup",
+    "pageUrl": "https://www.meetup.com/python-stlouis/events/313870807"
+  },
   {
     "src": "https://us.pycon.org/2026/static/images/theme/logo.25d1b5ccb097.svg",
     "alt": "PyCon US 2026",
