@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 712,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#fnmatch",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:11:14.739771"
+  },
+  {
+    "id": 711,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key",
+    "title": "Thread-local storage support — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int key",
+    "scrapedAt": "2026-10-08 19:11:13.514398"
+  },
+  {
+    "id": 710,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#improved-modules",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:11:12.270712"
+  },
+  {
+    "id": 709,
+    "url": "https://peps.python.org/pep-0659/",
+    "title": "PEP 659 – Specializing Adaptive Interpreter | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 659 – Specializing Adaptive Interpreter PEP 659 – Specializing Adaptive Interpreter Author: Mark Shannon \u003cmark at hotpy.org\u003e Status: Final Type: Informational Created: 13-Apr-2021 Post-History: 11-May-2021 Table of Contents Abstract Motivation Rationale Performance Implementation Overview Quickening Adaptive instructions Specialization Ancillary data Example families of instructions LOAD_ATTR LOAD_GLOBAL Compatibility Costs Memory use Comparing memory use to 3.10 Security Implications Rejected Ideas Storing data caches before the bytecode. References Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Specializing Adaptive Interpreter. × See PEP 1 for how to propose changes. Abstract In order to perform well, virtual machines for dynamic languages must specialize the code that they execute to the types and values in the program being run. This specialization is often associated with “JIT” compilers, but is beneficial even without machine code generation. A specializing, adaptive interpreter is one that speculatively specializes on the types or values it is currently operating on, and adapts to changes in those types and values. Specialization gives us improved performance, and adaptation allows the interpreter to rapidly change when the pattern of usage in a program alters, limiting the amount of additional work caused by mis-specialization. This PEP proposes using a specializing, adaptive interpreter that specializes code aggressively, but over a very small region, and is able to adjust to mis-specialization rapidly and at low cost. Adding a specializing, adaptive interpreter to CPython will bring significant performance improvements. It is hard to come up with meaningful numbers, as it depends very much on the benchmarks and on work that has not yet happened. Extensive experimentation suggests speedups of up to 50%. Even if the speedup were only 25%, this would still be a worthwhile enhancement. Motivation Python is widely acknowledged as slow. Whilst Python will never attain the performance of low-level languages like C, Fortran, or even Java, we would like it to be competitive with fast implementations of scripting languages, like V8 for Javascript or luajit for lua. Specifically, we want to achieve these performance goals with CPython to benefit all users of Python including those unable to use PyPy or other alternative virtual machines. Achieving these performance goals is a long way off, and will require a lot of engineering effort, but we can make a significant step towards those goals by speeding up the interpreter. Both academic research and practical implementations have shown that a fast interpreter is a key part of a fast virtual machine. Typical optimizations for virtual machines are expensive, so a long “warm up” time is required to gain confidence that the cost of optimization is justified. In order to get speed-ups rapidly, without noticeable warmup times, the VM should speculate that specialization is justified even after a few executions of a function. To do that effectively, the interpreter must be able to optimize and de-optimize continually and very cheaply. By using adaptive and speculative specialization at the granularity of individual virtual machine instructions, we get a faster interpreter that also generates profiling information for more sophisticated optimizations in the future. Rationale There are many practical ways to speed-up a virtual machine for a dynamic language. However, specialization is the most important, both in itself and as an enabler of other optimizations. Therefore it makes sense to focus our efforts on specialization first, if we want to improve the performance of CPython. Specialization is typically done in the context of a JIT compiler, but research shows specialization in an interpreter can boost performance significantly, even outperforming a naive compiler [1]. There have been several ways of doing this proposed in the academic literature, but most attempt to optimize regions larger than a single bytecode [1] [2]. Using larger regions than a single instruction requires code to handle de-optimization in the middle of a region. Specialization at the level of individual bytecodes makes de-optimization trivial, as it cannot occur in the middle of a region. By speculatively specializing individual bytecodes, we can gain significant performance improvements without anything but the most local, and trivial to implement, de-optimizations. The closest approach to this PEP in the literature is “Inline Caching meets Quickening” [3]. This PEP has the advantages of inline caching, but adds the ability to quickly de-optimize making the performance more robust in cases where specialization fails or is not stable. Performance The speedup from specialization is hard to determine, as many specializations depend on othe",
+    "scrapedAt": "2026-10-08 19:11:11.009795"
+  },
+  {
+    "id": 708,
+    "url": "https://github.com/python/cpython/issues/59705",
+    "title": "Python should support exporting thread names to the OS · Issue #59705 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Python should support exporting thread names to the OS #59705 New issue Copy link New issue Copy link Closed Closed Python should support exporting thread names to the OS#59705 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description bra mannequin opened on Jul 30, 2012 Issue body actions BPO 15500 Nosy @jcea, @pitrou, @vstinner, @tiran, @bitdancer, @asvetlov, @florentx, @socketpair, @eryksun, @ZackerySpytz, @arhadthedev PRs gh-59705: Export threading.Thread() names to the OS #14578 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2012-07-30.12:19:30.305\u003e\nlabels \u003d [\u0027type-feature\u0027, \u0027library\u0027, \u00273.10\u0027, \u00273.11\u0027]\ntitle \u003d \u0027Python should support exporting thread names to the OS\u0027\nupdated_at \u003d \u003cDate 2022-01-18.21:32:45.293\u003e\nuser \u003d \u0027https://bugs.python.org/bra\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-01-18.21:32:45.293\u003e\nactor \u003d \u0027pitrou\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2012-07-30.12:19:30.305\u003e\ncreator \u003d \u0027bra\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 15500\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 10.0\nmessages \u003d [\u0027166890\u0027, \u0027167166\u0027, \u0027167459\u0027, \u0027167552\u0027, \u0027167560\u0027, \u0027230736\u0027, \u0027377332\u0027, \u0027406336\u0027, \u0027410896\u0027, \u0027410898\u0027]\nnosy_count \u003d 14.0\nnosy_names \u003d [\u0027jcea\u0027, \u0027pitrou\u0027, \u0027vstinner\u0027, \u0027christian.heimes\u0027, \u0027Arfrever\u0027, \u0027r.david.murray\u0027, \u0027asvetlov\u0027, \u0027flox\u0027, \u0027bra\u0027, \u0027kovid\u0027, \u0027socketpair\u0027, \u0027eryksun\u0027, \u0027ZackerySpytz\u0027, \u0027arhadthedev\u0027]\npr_nums \u003d [\u002714578\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue15500\u0027\nversions \u003d [\u0027Python 3.10\u0027, \u0027Python 3.11\u0027] Linked PRs gh-59705: Add _thread.set_name() function #127338 gh-59705: Set OS thread name when Thread.name is changed #127702 gh-59705: Implement _thread.set_name() on Windows #128675 gh-59705: Document OS thread name change #128800 gh-59705: Make PYTHREAD_NAME_MAXLEN macro private #128945 gh-59705: Fix solaris detection in test_set_name #132012 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Threading issues 🧵 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:11:09.64551"
+  },
+  {
     "id": 707,
     "url": "https://peps.python.org/pep-0768/",
     "title": "PEP 768 – Safe external debugger interface for CPython | peps.python.org",
@@ -4645,26 +4680,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 708,
-    "url": "https://github.com/python/cpython/issues/59705"
-  },
-  {
-    "id": 709,
-    "url": "https://peps.python.org/pep-0659/"
-  },
-  {
-    "id": 710,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#improved-modules"
-  },
-  {
-    "id": 711,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
-  },
-  {
-    "id": 712,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#fnmatch"
   },
   {
     "id": 713,
@@ -117259,10 +117274,443 @@ window.searchData = [
     "id": 80280,
     "url": "https://peps.python.org/pep-0768/#attachment-protocol",
     "parentUrl": "https://peps.python.org/pep-0768/"
+  },
+  {
+    "id": 80281,
+    "url": "https://github.com/arhadthedev",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80283,
+    "url": "https://github.com/asvetlov",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80284,
+    "url": "https://github.com/jcea",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80285,
+    "url": "https://github.com/socketpair",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80286,
+    "url": "https://github.com/ZackerySpytz",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80287,
+    "url": "https://github.com/python/cpython/pull/14578",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80288,
+    "url": "https://github.com/python/cpython/issues/59705#issue-1198886247",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80289,
+    "url": "https://github.com/python/cpython/issues/59705#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80290,
+    "url": "https://github.com/python/cpython/pull/128945",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80291,
+    "url": "https://github.com/python/cpython/pull/127338",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80292,
+    "url": "https://github.com/python/cpython/pull/128800",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80293,
+    "url": "https://github.com/python/cpython/pull/128675",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80294,
+    "url": "https://github.com/pitrou",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80295,
+    "url": "https://github.com/tiran",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80296,
+    "url": "https://github.com/python/cpython/pull/132012",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80297,
+    "url": "https://github.com/orgs/python/projects/12",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80298,
+    "url": "https://github.com/python/cpython/issues/59705#top",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80299,
+    "url": "https://bugs.python.org/issue15500",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80303,
+    "url": "https://github.com/bitdancer",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80304,
+    "url": "https://github.com/eryksun",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80305,
+    "url": "https://github.com/python/cpython/pull/127702",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80306,
+    "url": "https://github.com/florentx",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80307,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/59705",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80308,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/59705",
+    "parentUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "id": 80309,
+    "url": "https://peps.python.org/pep-0659/#implementation",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80310,
+    "url": "https://peps.python.org/pep-0659/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80311,
+    "url": "https://peps.python.org/pep-0659/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80312,
+    "url": "https://peps.python.org/pep-0659/#specialization",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80313,
+    "url": "https://peps.python.org/pep-0659/#ancillary-data",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80314,
+    "url": "https://peps.python.org/pep-0659/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80315,
+    "url": "https://peps.python.org/pep-0659/#memory-use",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80316,
+    "url": "https://peps.python.org/pep-0659/#comparing-memory-use-to-3-10",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80317,
+    "url": "https://peps.python.org/pep-0659/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80318,
+    "url": "https://peps.python.org/pep-0659/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80319,
+    "url": "https://peps.python.org/pep-0659/#overview",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80320,
+    "url": "https://peps.python.org/pep-0659/#id6",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80321,
+    "url": "https://peps.python.org/pep-0659/#id5",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80322,
+    "url": "https://peps.python.org/pep-0659/#id8",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80323,
+    "url": "https://peps.python.org/pep-0659/#id7",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80324,
+    "url": "https://peps.python.org/pep-0659/#id2",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80325,
+    "url": "https://peps.python.org/pep-0659/#id1",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80326,
+    "url": "https://peps.python.org/pep-0659/#id4",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80327,
+    "url": "https://peps.python.org/pep-0659/#references",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80328,
+    "url": "https://peps.python.org/pep-0659/#id3",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80329,
+    "url": "https://peps.python.org/pep-0659/#id9",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80330,
+    "url": "https://peps.python.org/pep-0659/#load-attr",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80331,
+    "url": "https://peps.python.org/pep-0659/#compatibility",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80332,
+    "url": "https://peps.python.org/pep-0659/#quickening",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80333,
+    "url": "https://www.unibw.de/ucsrl/pubs/ecoop10.pdf/view",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80334,
+    "url": "https://peps.python.org/pep-0659/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80335,
+    "url": "https://peps.python.org/pep-0659/#performance",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80336,
+    "url": "https://docs.python.org/3/whatsnew/3.11.html#whatsnew311-pep659",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80337,
+    "url": "https://theses.gla.ac.uk/2975/1/2011shannonphd.pdf",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80339,
+    "url": "https://peps.python.org/pep-0659/#adaptive-instructions",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80340,
+    "url": "https://peps.python.org/pep-0659/#costs",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80341,
+    "url": "https://www.scss.tcd.ie/publications/tech-reports/reports.09/TCD-CS-2009-37.pdf",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80342,
+    "url": "https://github.com/python/cpython/blob/main/Python/specialize.c",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80343,
+    "url": "https://peps.python.org/pep-0659/#storing-data-caches-before-the-bytecode",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80344,
+    "url": "https://peps.python.org/pep-0659/#example-families-of-instructions",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80345,
+    "url": "https://github.com/python/cpython/blob/main/Python/ceval.c",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 80346,
+    "url": "https://peps.python.org/pep-0659/#load-global",
+    "parentUrl": "https://peps.python.org/pep-0659/"
+  },
+  {
+    "id": 81585,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.Py_tss_t",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81590,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_create",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81592,
+    "url": "https://docs.python.org/3/glossary.html#term-thread-state",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81599,
+    "url": "https://docs.python.org/3/library/threading.html#threading.local",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81602,
+    "url": "https://docs.python.org/3/c-api/tls.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81603,
+    "url": "https://docs.python.org/3/c-api/tls.html#thread-local-storage-support",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81604,
+    "url": "https://docs.python.org/3/c-api/tls.html#legacy-apis",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81607,
+    "url": "https://docs.python.org/3/c-api/tls.html#thread-specific-storage-api",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81609,
+    "url": "https://docs.python.org/3/c-api/tls.html#dynamic-allocation",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81610,
+    "url": "https://docs.python.org/3/c-api/tls.html#methods",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81611,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81612,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/tls.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81617,
+    "url": "https://docs.python.org/3/c-api/synchronization.html",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81618,
+    "url": "https://peps.python.org/pep-0539/",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81623,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.Py_tss_NEEDS_INIT",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "id": 81626,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_is_created",
+    "parentUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#fnmatch"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#fnmatch"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_delete_key"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#improved-modules"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#improved-modules"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101771427?v\u003d4\u0026size\u003d48",
+    "alt": "@bra",
+    "pageTitle": "Python should support exporting thread names to the OS · Issue #59705 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/59705"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Python should support exporting thread names to the OS · Issue #59705 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/59705"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
     "alt": "@vstinner",
