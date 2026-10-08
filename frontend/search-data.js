@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1085,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.relative_to",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:26:30.683457"
+  },
+  {
+    "id": 1084,
+    "url": "https://github.com/python/cpython/issues/105499",
+    "title": "Merge `typing.Union` and `types.UnionType` · Issue #105499 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Merge typing.Union and types.UnionType #105499 New issue Copy link New issue Copy link Closed Closed Merge typing.Union and types.UnionType#105499 Copy link Assignees Labels 3.13only security fixesonly security fixestopic-typingtype-featureA feature request or enhancementA feature request or enhancement Description JelleZijlstra opened on Jun 8, 2023 Issue body actions Currently, unions created through typing.Union[A, B] and through the PEP-604 syntax A | B are at runtime instances of completely different types, and they differ in exactly what elements they accept. This is confusing and makes it harder for users to detect unions at runtime. I propose to proceed in two steps: Make typing.Union an alias for types.UnionType and make it so types.UnionType[A, B] works, accepting the same types Union accepts now. Loosen the rules for what the | operator accepts to accept more types that are commonly used in unions. Linked PRs gh-105499: Merge typing.Union and types.UnionType #105511 gh-105499: Defer \"import warnings\" in typing #132061 gh-105499: Avoid using functools.reduce() to reconstruct Union objects #155280 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees JelleZijlstra Labels 3.13only security fixesonly security fixestopic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:26:29.443595"
+  },
+  {
+    "id": 1083,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop",
+    "title": "Event loop — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Event loop | Theme Auto Light Dark | Event loop¶ Source code: Lib/asyncio/events.py, Lib/asyncio/base_events.py Preface The event loop is the core of every asyncio application. Event loops run asynchronous tasks and callbacks, perform network IO operations, and run subprocesses. Application developers should typically use the high-level asyncio functions, such as asyncio.run(), and should rarely need to reference the loop object or call its methods. This section is intended mostly for authors of lower-level code, libraries, and frameworks, who need finer control over the event loop behavior. Obtaining the Event Loop The following low-level functions can be used to get, set, or create an event loop: asyncio.get_running_loop()¶ Return the running event loop in the current OS thread. Raise a RuntimeError if there is no running event loop. This function can only be called from a coroutine or a callback. Added in version 3.7. asyncio.get_event_loop()¶ Get the current event loop. When called from a coroutine or a callback (e.g. scheduled with call_soon or similar API), this function will always return the running event loop. If there is no running event loop set, the function will return the result of the get_event_loop_policy().get_event_loop() call. Because this function has rather complex behavior (especially when custom event loop policies are in use), using the get_running_loop() function is preferred to get_event_loop() in coroutines and callbacks. As noted above, consider using the higher-level asyncio.run() function, instead of using these lower level functions to manually create and close an event loop. Changed in version 3.14: Raises a RuntimeError if there is no current event loop. Note The asyncio policy system is deprecated and will be removed in Python 3.16; from there on, this function will return the current running event loop if present else it will return the loop set by set_event_loop(). asyncio.set_event_loop(loop)¶ Set loop as the current event loop for the current OS thread. asyncio.new_event_loop()¶ Create and return a new event loop object. Note that the behaviour of get_event_loop(), set_event_loop(), and new_event_loop() functions can be altered by setting a custom event loop policy. Contents This documentation page contains the following sections: The Event Loop Methods section is the reference documentation of the event loop APIs; The Callback Handles section documents the Handle and TimerHandle instances which are returned from scheduling methods such as loop.call_soon() and loop.call_later(); The Server Objects section documents types returned from event loop methods like loop.create_server(); The Event Loop Implementations section documents the SelectorEventLoop and ProactorEventLoop classes; The Examples section showcases how to work with some event loop APIs. Event loop methods¶ Event loops have low-level APIs for the following: Running and stopping the loop¶ loop.run_until_complete(future)¶ Run until the future (an instance of Future) has completed. If the argument is a coroutine object it is implicitly scheduled to run as a asyncio.Task. Return the Future’s result or raise its exception. loop.run_forever()¶ Run the event loop until stop() is called. If stop() is called before run_forever() is called, the loop will poll the I/O selector once with a timeout of zero, run all callbacks scheduled in response to I/O events (and those that were already scheduled), and then exit. If stop() is called while run_forever() is running, the loop will run the current batch of callbacks and then exit. Note that new callbacks scheduled by callbacks will not run in this case; instead, they will run the next time run_forever() or run_until_complete() is called. loop.stop()¶ Stop the event loop. loop.is_running()¶ Return True if the event loop is currently running. loop.is_closed()¶ Return True if the event loop was closed. loop.close()¶ Close the event loop. The loop must not be running when this function is called. Any pending callbacks will be discarded. This method clears all queues and shuts down the executor, but does not wait for the executor to finish. This method is idempotent and irreversible. No other methods should be called after the event loop is closed. async loop.shutdown_asyncgens()¶ Schedule all currently open asynchronous generator objects to close with an aclose() call. After calling this method, the event loop will issue a warning if a new asynchronous generator is iterated. This should be used to reliably finalize all scheduled asynchronous generators. Note that there is no need to call this function when asyncio.run() is used. Example: try:\n    loop.run_forever()\nfinally:\n    loop.run_until_complete(loop.shutdown_asyncgens())\n    loop.close()\n Added in version 3.6. async loop.shutdown_default_execut",
+    "scrapedAt": "2026-10-08 19:26:27.166142"
+  },
+  {
+    "id": 1082,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-BINARY_OP",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code obje",
+    "scrapedAt": "2026-10-08 19:26:25.840421"
+  },
+  {
+    "id": 1081,
+    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-optimize",
+    "title": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » ast — Abstract syntax trees | Theme Auto Light Dark | ast — Abstract syntax trees¶ Source code: Lib/ast.py The ast module helps Python applications to process trees of the Python abstract syntax grammar. The abstract syntax itself might change with each Python release; this module helps to find out programmatically what the current grammar looks like. An abstract syntax tree can be generated by passing ast.PyCF_ONLY_AST as a flag to the compile() built-in function, or using the parse() helper provided in this module. The result will be a tree of objects whose classes all inherit from ast.AST. An abstract syntax tree can be compiled into a Python code object using the built-in compile() function. Abstract grammar¶ The abstract grammar is currently defined as follows: -- ASDL\u0027s 4 builtin types are:\n-- identifier, int, string, constant\n\nmodule Python\n{\n    mod \u003d Module(stmt* body, type_ignore* type_ignores)\n        | Interactive(stmt* body)\n        | Expression(expr body)\n        | FunctionType(expr* argtypes, expr returns)\n\n    stmt \u003d FunctionDef(identifier name, arguments args,\n                       stmt* body, expr* decorator_list, expr? returns,\n                       string? type_comment, type_param* type_params)\n          | AsyncFunctionDef(identifier name, arguments args,\n                             stmt* body, expr* decorator_list, expr? returns,\n                             string? type_comment, type_param* type_params)\n\n          | ClassDef(identifier name,\n             expr* bases,\n             keyword* keywords,\n             stmt* body,\n             expr* decorator_list,\n             type_param* type_params)\n          | Return(expr? value)\n\n          | Delete(expr* targets)\n          | Assign(expr* targets, expr value, string? type_comment)\n          | TypeAlias(expr name, type_param* type_params, expr value)\n          | AugAssign(expr target, operator op, expr value)\n          -- \u0027simple\u0027 indicates that we annotate simple name without parens\n          | AnnAssign(expr target, expr annotation, expr? value, int simple)\n\n          -- use \u0027orelse\u0027 because else is a keyword in target languages\n          | For(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | AsyncFor(expr target, expr iter, stmt* body, stmt* orelse, string? type_comment)\n          | While(expr test, stmt* body, stmt* orelse)\n          | If(expr test, stmt* body, stmt* orelse)\n          | With(withitem* items, stmt* body, string? type_comment)\n          | AsyncWith(withitem* items, stmt* body, string? type_comment)\n\n          | Match(expr subject, match_case* cases)\n\n          | Raise(expr? exc, expr? cause)\n          | Try(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | TryStar(stmt* body, excepthandler* handlers, stmt* orelse, stmt* finalbody)\n          | Assert(expr test, expr? msg)\n\n          | Import(alias* names)\n          | ImportFrom(identifier? module, alias* names, int? level)\n\n          | Global(identifier* names)\n          | Nonlocal(identifier* names)\n          | Expr(expr value)\n          | Pass | Break | Continue\n\n          -- col_offset is the byte offset in the utf8 string the parser uses\n          attributes (int lineno, int col_offset, int? end_lineno, int? end_col_offset)\n\n          -- BoolOp() can use left \u0026 right?\n    expr \u003d BoolOp(boolop op, expr* values)\n         | NamedExpr(expr target, expr value)\n         | BinOp(expr left, operator op, expr right)\n         | UnaryOp(unaryop op, expr operand)\n         | Lambda(arguments args, expr body)\n         | IfExp(expr test, expr body, expr orelse)\n         | Dict(expr?* keys, expr* values)\n         | Set(expr* elts)\n         | ListComp(expr elt, comprehension* generators)\n         | SetComp(expr elt, comprehension* generators)\n         | DictComp(expr key, expr value, comprehension* generators)\n         | GeneratorExp(expr elt, comprehension* generators)\n         -- the grammar constrains where yield expressions can occur\n         | Await(expr value)\n         | Yield(expr? value)\n         | YieldFrom(expr value)\n         -- need sequences for compare to distinguish between\n         -- x \u003c 4 \u003c 3 and (x \u003c 4) \u003c 3\n         | Compare(expr left, cmpop* ops, expr* comparators)\n         | Call(expr func, expr* args, keyword* keywords)\n         | FormattedValue(expr value, int conversion, expr? format_spec)\n         | Interpolation(expr value, constant str, int conversion, expr? format_spec)\n         | JoinedStr(expr* values)\n         | TemplateStr(expr* values)\n         | Constant(constant value, string? kind)\n\n         -- the following expression can appear in assignment context\n         | Attribute(expr value, identifier attr, expr_context ctx)\n         | Subscript(expr value, expr slice, expr_context ctx)\n         | Starred(expr value, expr_context ctx)\n         | Name(identif",
+    "scrapedAt": "2026-10-08 19:26:24.563265"
+  },
+  {
     "id": 1080,
     "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join",
     "title": "Bytes Objects — Python 3.14.8 documentation",
@@ -7210,26 +7245,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1081,
-    "url": "https://docs.python.org/3/library/ast.html#cmdoption-ast-optimize"
-  },
-  {
-    "id": 1082,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-BINARY_OP"
-  },
-  {
-    "id": 1083,
-    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop"
-  },
-  {
-    "id": 1084,
-    "url": "https://github.com/python/cpython/issues/105499"
-  },
-  {
-    "id": 1085,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.relative_to"
   },
   {
     "id": 1086,
@@ -198251,10 +198266,133 @@ window.searchData = [
     "id": 185272,
     "url": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromFormat",
     "parentUrl": "https://docs.python.org/3/c-api/bytes.html#c.PyBytes_Join"
+  },
+  {
+    "id": 186053,
+    "url": "https://github.com/python/cpython/pull/105511",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186054,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/105499",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186055,
+    "url": "https://github.com/python/cpython/issues/105499#issue-1747969149",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186058,
+    "url": "https://peps.python.org/604",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186060,
+    "url": "https://github.com/python/cpython/issues/105499#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186061,
+    "url": "https://github.com/python/cpython/issues/105499#top",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186063,
+    "url": "https://github.com/python/cpython/pull/155280",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186065,
+    "url": "https://github.com/python/cpython/pull/132061",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "id": 186066,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/105499",
+    "parentUrl": "https://github.com/python/cpython/issues/105499"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.relative_to"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.relative_to"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.relative_to"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "JelleZijlstra",
+    "pageTitle": "Merge `typing.Union` and `types.UnionType` · Issue #105499 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Merge `typing.Union` and `types.UnionType` · Issue #105499 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d64\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Merge `typing.Union` and `types.UnionType` · Issue #105499 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Merge `typing.Union` and `types.UnionType` · Issue #105499 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/105499"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Event loop — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Event loop — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.SelectorEventLoop"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BINARY_OP"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-BINARY_OP"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#cmdoption-ast-optimize"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ast — Abstract syntax trees — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ast.html#cmdoption-ast-optimize"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
