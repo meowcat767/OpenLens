@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 937,
+    "url": "https://github.com/python/cpython/issues/128715",
+    "title": "Untangle ctypes bitfield size and expose field information · Issue #128715 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Untangle ctypes bitfield size and expose field information #128715 New issue Copy link New issue Copy link Open Open Untangle ctypes bitfield size and expose field information#128715 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-ctypestype-featureA feature request or enhancementA feature request or enhancement Description encukou opened on Jan 10, 2025 Issue body actions Feature or enhancement Currently, the internal representation of bitfields in ctypes is a bit-packed number containing the size and offset. This is rather cumbersome to deal with. (As far as I can tell, the reason is that getters/setters take a single argument. But, these are internal so the signature can be changed.) My plan is to break the CField size/offset information out into more wordy but explicit fields: byte_size \u0026 byte_offset, which describe the byte-aligned field within a struct. (This has the same size as the underlying type, and must be fully contained in the struct \u0026 readable/writable.) bit_size \u0026 bit_offset, which identify the bits within that chunk Also, I intend to add corresponding attributes an the Python level, and expose _CField publicly as ctypes.CField, mainly for typing purposes. At this point I don\u0027t plan to make the type instantiable. Something like: \u003e\u003e\u003e class Color(Structure):\n...     _fields_ \u003d (\n...         (\u0027red\u0027, c_uint8),\n...         (\u0027green\u0027, c_uint8),\n...         (\u0027blue\u0027, c_uint8),\n...         (\u0027intense\u0027, c_bool, 1),\n...         (\u0027blinking\u0027, c_bool, 1),\n...    )\n...\n\u003e\u003e\u003e Color.red\n\u003cctypes.CField \u0027red\u0027 type\u003dc_ubyte, ofs\u003d0, size\u003d1\u003e\n\u003e\u003e\u003e Color.green.type\n\u003cclass \u0027ctypes.c_ubyte\u0027\u003e\n\u003e\u003e\u003e Color.blue.byte_offset\n2\n\u003e\u003e\u003e Color.intense\n\u003cctypes.CField \u0027intense\u0027 type\u003dc_bool, ofs\u003d3, bit_size\u003d1, bit_offset\u003d0\u003e\n\u003e\u003e\u003e Color.blinking.bit_offset\n1 Linked PRs gh-128715: Expose ctypes.CField, with info attributes #128950 gh-128715: CTypeField: Put intness, signedness and pointerness in flags #138541 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-ctypestype-featureA feature request or enhancementA feature request or enhancement Projects Ctypes issues Status No status Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:20:22.781262"
+  },
+  {
+    "id": 936,
+    "url": "https://github.com/python/cpython/issues/133079",
+    "title": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining #133079 New issue Copy link New issue Copy link Closed Closed Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining#133079 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description encukou opened on Apr 28, 2025 Issue body actions Both were added in 3.13, are undocumented, and don\u0027t make sense in 3.14 due to changes in the stack overflow detection machinery. (On current main they contain dummy values.) SC exception for removal without deprecation: python/steering-council#288 Linked PRs gh-133079: Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining #133080 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees encukou Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:20:20.684253"
+  },
+  {
+    "id": 935,
+    "url": "https://docs.python.org/3/copyright.html",
+    "title": "Copyright — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Copyright | Theme Auto Light Dark | Copyright¶ Python and this documentation is: Copyright © 2001 Python Software Foundation. All rights reserved. Copyright © 2000 BeOpen.com. All rights reserved. Copyright © 1995-2000 Corporation for National Research Initiatives. All rights reserved. Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved. See History and License for complete license and permissions information. Previous topic Dealing with Bugs Next topic History and License This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » Copyright | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:20:18.603721"
+  },
+  {
+    "id": 934,
+    "url": "https://github.com/python/cpython/issues/91279",
+    "title": "ZipFile.writestr should respect SOURCE_DATE_EPOCH · Issue #91279 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} ZipFile.writestr should respect SOURCE_DATE_EPOCH #91279 New issue Copy link New issue Copy link Closed Closed ZipFile.writestr should respect SOURCE_DATE_EPOCH#91279 Copy link Labels 3.10 (EOL)end of lifeend of life3.11only security fixesonly security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description SomberNight mannequin opened on Mar 25, 2022 Issue body actions BPO 47123 Nosy @SomberNight Files zipfile_respect_sourcedate.diff: change the ZipFile.writestr to respect SOURCE_DATE_EPOCH Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\nlabels \u003d [\u0027type-feature\u0027, \u0027library\u0027, \u00273.9\u0027, \u00273.10\u0027, \u00273.11\u0027]\ntitle \u003d \u0027ZipFile.writestr should respect SOURCE_DATE_EPOCH\u0027\nupdated_at \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\nuser \u003d \u0027https://github.com/SomberNight\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\nactor \u003d \u0027ghost43\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2022-03-25.19:47:10.113\u003e\ncreator \u003d \u0027ghost43\u0027\ndependencies \u003d []\nfiles \u003d [\u002750702\u0027]\nhgrepos \u003d []\nissue_num \u003d 47123\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 1.0\nmessages \u003d [\u0027416015\u0027]\nnosy_count \u003d 1.0\nnosy_names \u003d [\u0027ghost43\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue47123\u0027\nversions \u003d [\u0027Python 3.9\u0027, \u0027Python 3.10\u0027, \u0027Python 3.11\u0027] Linked PRs gh-91279: ZipFile.writestr now respect SOURCE_DATE_EPOCH #124435 gh-91279: Note SOURCE_DATE_EPOCH support in ZipFile.writestr() #139396 [3.14] gh-91279: Note SOURCE_DATE_EPOCH support in ZipFile.writestr() doc (GH-139396) #146222 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.10 (EOL)end of lifeend of life3.11only security fixesonly security fixes3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Zipfile issues 📦 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:20:17.313764"
+  },
+  {
+    "id": 933,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:20:15.203729"
+  },
+  {
     "id": 932,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-refcount",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -6195,26 +6230,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 933,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo"
-  },
-  {
-    "id": 934,
-    "url": "https://github.com/python/cpython/issues/91279"
-  },
-  {
-    "id": 935,
-    "url": "https://docs.python.org/3/copyright.html"
-  },
-  {
-    "id": 936,
-    "url": "https://github.com/python/cpython/issues/133079"
-  },
-  {
-    "id": 937,
-    "url": "https://github.com/python/cpython/issues/128715"
   },
   {
     "id": 938,
@@ -160911,10 +160926,248 @@ window.searchData = [
     "id": 137978,
     "url": "https://docs.python.org/3/library/cmd.html#cmd.Cmd.cmdqueue",
     "parentUrl": "https://docs.python.org/3/library/cmd.html#module-cmd"
+  },
+  {
+    "id": 139419,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.9%20(EOL)%22",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139420,
+    "url": "https://github.com/python/cpython/issues/91279#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139423,
+    "url": "https://github.com/python/cpython/issues/91279#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139424,
+    "url": "https://github.com/SomberNight",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139427,
+    "url": "https://github.com/python/cpython/issues/91279#issue-1199077658",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139428,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/91279",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139429,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/91279",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139430,
+    "url": "https://github.com/python/cpython/pull/139396",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139431,
+    "url": "https://github.com/orgs/python/projects/7",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139432,
+    "url": "https://bugs.python.org/issue47123",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139433,
+    "url": "https://bugs.python.org/file50702/zipfile_respect_sourcedate.diff",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139434,
+    "url": "https://github.com/python/cpython/pull/124435",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139435,
+    "url": "https://github.com/python/cpython/pull/146222",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139436,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.10%20(EOL)%22",
+    "parentUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "id": 139438,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/copyright.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139443,
+    "url": "https://docs.python.org/3/copyright.html#",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139448,
+    "url": "https://docs.python.org/3/copyright.html#copyright",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139452,
+    "url": "https://docs.python.org/3/license.html#history-and-license",
+    "parentUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "id": 139454,
+    "url": "https://github.com/python/cpython/pull/133080",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139455,
+    "url": "https://github.com/python/cpython/issues/133079#top",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139456,
+    "url": "https://github.com/python/cpython/issues/133079#issue-3024621056",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139457,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/133079",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139458,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/133079",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139461,
+    "url": "https://github.com/python/steering-council/issues/288",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139464,
+    "url": "https://github.com/python/cpython/issues/133079#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "id": 139465,
+    "url": "https://github.com/python/cpython/pull/128950",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139467,
+    "url": "https://github.com/python/cpython/issues/128715#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139470,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128715",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139473,
+    "url": "https://github.com/python/cpython/pull/138541",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139474,
+    "url": "https://github.com/python/cpython/issues/128715#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139476,
+    "url": "https://github.com/python/cpython/issues/128715#issue-2780697483",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "id": 139478,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128715",
+    "parentUrl": "https://github.com/python/cpython/issues/128715"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@encukou",
+    "pageTitle": "Untangle ctypes bitfield size and expose field information · Issue #128715 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Untangle ctypes bitfield size and expose field information · Issue #128715 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128715"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "encukou",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@encukou",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d64\u0026u\u003d7f95514f77f2141670224b63de2bec2c9d7d514f\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Remove Py_C_RECURSION_LIMIT \u0026 PyThreadState.c_recursion_remaining · Issue #133079 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133079"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Copyright — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Copyright — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/copyright.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93805517?v\u003d4\u0026size\u003d48",
+    "alt": "@SomberNight",
+    "pageTitle": "ZipFile.writestr should respect SOURCE_DATE_EPOCH · Issue #91279 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "ZipFile.writestr should respect SOURCE_DATE_EPOCH · Issue #91279 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91279"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
