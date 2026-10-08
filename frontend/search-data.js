@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 285,
+    "url": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij",
+    "title": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
+    "content": "NOS Wielrennen•vrijdag 8 mei 2026, 16:30 Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij Deel dit artikel Paul Magnier heeft de eerste etappe in de Giro d\u0027Italia gewonnen. De Fransman van Soudal Quick-Step won de sprint, die zwaar ontregeld werd door een massale valpartij in de laatste kilometer. Tobias Lund Andresen werd tweede, voor Ethan Vernon. Dylan Groenewegen van Unibet Rose Rockets was één van de slachtoffers van de valpartij en kon zich niet mengen in de sprint. Unibet Rose Rockets@rockets_cycling A crash in the final made it impossible to sprint for our team. Dylan Groenewegen was involved in the crash. 🙏 We hope everyone is well. https://t.co/16xVQA9ucm 16:348 mei 2026(opent in nieuw venster) De eindsprint ging slechts tussen een klein groepje renners, dat voor de massale val zat. Doordat de crash in de laatste kilometer plaatsvond, kreeg iedereen dezelfde tijd als de winnaar. Start in Bulgarije De Giro begon dit jaar met drie etappes in Bulgarije. Vandaag werd het peloton over overwegend vlakke wegen van Nessebar naar Burgas geleid. De Italiaan Manuele Tarozzi en de Spanjaard Diego Pablo Sevilla gingen er vanaf de start met z\u0027n tweeën vandoor, maar konden een massasprint niet voorkomen. Op 22 kilometer van de finish zat hun avontuur erop. De Spanjaard hield er wel de eerste bergtrui aan over. Massale valpartij Het tempo en de nervositeit nam flink toe in de laatste kilometers. Op drie kilometer van het einde ging het al bijna mis toen Simone Consonni, de lead-out van topfavoriet Jonathan Milan, bijna een bocht miste. Op 600 meter van de finish werd er over de volledige breedte van de weg gevallen en er bleven slechts twaalf renners vooraan over. De rest van het peloton moest voet aan de grond zetten. De Noor Erlend Blikra van Uno-X Mobility leek met zijn wiel in contact te komen met de dranghekken en ging als eerste onderuit. Kaden Groves vloog vervolgens hard in de hekken en zijn fiets stuiterde het sprintende peloton in. Ook Groenewegen kon een val niet meer vermijden en ging tegen de grond. Alpecin - Premier Tech@AlpecinPT Not the way we wanted to start our @giroditalia 🫠 After a first medical check, @kaden_groves , the biggest victim of the crash in the finale seems okay. It is what it is… 20 more stages to go. 📸 Mr. Pinko #AlpecinPremierTech https://t.co/TCkXQrpqhQ 17:038 mei 2026(opent in nieuw venster) Zijn ploeg Unibet Rose Rockets meldde na een medisch onderzoek bij het hotel dat Groenewegen morgen gewoon van start zal gaan. Maximilian Walscheid, een teamgenoot van Milan, vond zich vervolgens ineens alleen op kop. De ploegmakkers van Magnier wisten het gat echter te dichten. Lund Andresen zette als eerste aan, maar de 22-jarige Fransman kwam er nog overheen en is morgen de eerste drager van de roze trui. Magnier: \"Het was een makkelijke dag, waardoor iedereen nog fris was in de finale. We wisten dat de smalle wegen aan het einde listig zouden zijn, dus we moesten goed in positie zitten. Het team deed dat uitstekend en ik kon het afmaken, dus ik ben heel trots.\" AFP Paul Magnier in de roze trui Sla over Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:42.662506"
+  },
+  {
+    "id": 284,
+    "url": "https://nos.nl/artikel/2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op",
+    "title": "Wapens en stapels geld: Belgische politie rolt Turkse maffiabende op",
+    "content": "VRT NOS Nieuws•vrijdag 8 mei 2026, 15:31 Wapens en stapels geld: Belgische politie rolt Turkse maffiabende op Deel dit artikel Met 26 huiszoekingen en 18 aanhoudingen denkt de Belgische politie een netwerk van de Turkse maffia te hebben opgerold. De bende zou op grote schaal geld hebben verdiend met bedreiging, afpersing en witwassen. Wie niet betaalde, werd geconfronteerd met zwaar geweld. De politie vermoedt dat jonge mannen met de Turkse nationaliteit een knokploeg vormden. Bij de huiszoekingen werden naast stapels contant geld meerdere vuurwapens gevonden, waaronder een kalasjnikov. Daarnaast zijn er auto\u0027s en dure horloges in beslag genomen. Veel van de afpersingen vonden plaats in Belgisch Limburg. De hoofdofficier van justitie die het onderzoek leidt, zegt hierover: \"We wisten al dat we te maken hebben met de aanwezigheid van Italiaanse maffia, maar nu blijkt duidelijk dat we ook te maken hebben met de aanwezigheid van Turkse maffia binnen onze provincie.\" Het Belgische Openbaar Ministerie meldt dat het onderzoek vorig jaar is begonnen naar aanleiding van meerdere gewelddadige incidenten in het \"Turkse milieu\". De aangehouden personen, allen mannen, zijn tussen de 22 en 40 jaar oud. Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:41.398122"
+  },
+  {
+    "id": 283,
+    "url": "https://stories.nos.nl/",
+    "title": "Nieuws voor jongeren | NOS Stories",
+    "content": "Ga naar de inhoud NOS Stories Kort Lang Net binnen Nieuws Op straat Explainer Rewind Onderzoek Laatste korte video\u0027s Nieuws Zojuist 1m 33s Politiegeweld bij protesten in Frankrijk: \u0027Ongelofelijk\u0027 Op straat 6 uur geleden 1m 44s Les over democratie: \u0027Wat doen we met Roxy Dekker?\u0027 Nieuws 10 uur geleden 27s Groepen wilde dieren worden steeds kleiner Op straat Gisteren 1m 45s Drie jaar na 7 oktober blijft Deel de Duif verbinding zoeken Nieuws Gisteren 54s Je gaat weer meer rente betalen over je studieschuld Nieuws Gisteren 43s Gezondheidsorganisatie WHO wil duidelijkheid over pest Nieuws Gisteren 31s Dit zijn de grappigste dierenfoto\u0027s van het jaar Nieuws Gisteren 1m 11s Argentijnen in tranen bij laatste wedstrijd Messi Nieuws Gisteren 59s Pike bij bewustzijn en kan praten na mislukte executie Nieuws Dinsdag 1m 28s Wéér grote protesten hier, dagenlang geen lessen Nieuws Dinsdag 1m 0s Studenten Cornell University demonstreren voor \u0027Jane Doe\u0027 Nieuws Dinsdag 1m 21s Scholen omringd door snackbars en fastfood Nieuws Dinsdag 47s Hier zijn 12.000 boeken verboden op scholen Op straat Dinsdag 59s Dit is de Leraar van het Jaar: \u0027s werelds goedste meester\u0027 Op straat Dinsdag 1m 30s Op alle scholen telefoon hele dag in de kluis: \u0027Echt onzin\u0027 Nieuws Dinsdag 47s Britse politie: Tate-broers gebruikten loverboy-trucs Nieuws Maandag 50s Je schoolboek digitaal én op papier? \u0027Niet de bedoeling\u0027 Nieuws Maandag 1m 29s Faas (17) fietst solo naar Japan Nieuws Maandag 47s Er wordt minder geleend om te studeren Nieuws Maandag 55s 500 Franse scholen dicht na gewelddadige protesten Alle Stories Laatste lange video\u0027s Rewind 5 september 15m 40s Hoe 9/11 de wereld veranderde Onderzoek 25 juli 7m 20s Niet veilig thuis omdat je lhbti+\u0027er bent Rewind 2 juli 12m 43s Zó werden Molukkers naar Nederland gehaald: ‘Mijn oma hoort op de Molukken’ Onderzoek 18 februari 14m 53s Veel jongeren maken seksuele intimidatie mee op school Onderzoek 4 februari 24m 17s Artsen in shock: meiden voor HEFTIGE buikoperaties naar Spanje Rewind 25 november 2025 14m 18s Zo kwam Suriname vrij: ‘Je kreeg klappen als je Surinaams sprak’ Onderzoek 26 september 2025 10m 39s ChatGPT als therapeut: \u0027Is mijn beste vriend\u0027 Onderzoek 9 september 2025 14m 17s Meer vrouwen voelen zich onveilig na moord op Lisa Onderzoek 21 augustus 2025 10m 30s Stiekem gefilmd op het strand: \u0027Ze noemen me h*er\u0027 Rewind 4 juli 2025 14m 21s Hoe deze VLIEGRAMP heel veel levens VERWOESTTE | Rewind: de MH17-ramp Rewind 4 juli 2025 15m 19s Vermoord, verkracht, gedeporteerd: de genocide in Srebrenica Onderzoek 8 mei 2025 17m 28s 50.000 DODEN in GAZA maar SCHOOF vindt het \u0027NIET TE LAAT\u0027 Alle Stories",
+    "scrapedAt": "2026-10-08 18:56:40.12343"
+  },
+  {
+    "id": 282,
+    "url": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack",
+    "title": "Universiteiten en hogescholen blokkeren studie-app Canvas na hack",
+    "content": "NOS NOS Nieuws•vrijdag 8 mei 2026, 11:47•Aangepast vrijdag 8 mei 2026, 14:53 Universiteiten en hogescholen blokkeren studie-app Canvas na hack Deel dit artikel Indy Scholtensredacteur Online Meerdere Nederlandse onderwijsinstellingen hebben de studie-app Canvas geblokkeerd voor hun studenten en medewerkers. De app werd gisteravond opnieuw gekraakt door hackersgroep ShinyHunters. Door systemen van Canvas los te koppelen hopen onderwijsinstellingen dat de toegang tot gegevens van studenten en medewerkers beperkt blijft. De hackersgroep meldde maandag dat het de gegevens van miljoenen studenten, docenten en onderwijsmedewerkers in handen hadden gekregen via Canvas. Studenten gebruiken Canvas om onder meer opdrachten in te leveren en lesmateriaal of cijfers in te zien. Gisteravond kraakte de hackgroep de studie-app dus opnieuw, ondanks extra beveiligingsmaatregelen van moederbedrijf Instructure. De hackers plaatsten een bericht in Canvas, waarop een nieuw ultimatum van 12 mei werd gegeven om contact op te nemen en te onderhandelen, anders dreigt de organisatie de buitgemaakte gegevens openbaar te maken. Tweede hack Jochem Vreeman, woordvoerder van de Universiteit Twente zegt dat de universiteit vanmorgen alle studenten en medewerkers heeft geïnformeerd dat Canvas voorlopig niet beschikbaar is. Het onderwijs op de universiteit gaat wel door, maar via alternatieve wegen. Ook wordt er een onderzoek naar het lek ingesteld. Ook de Erasmus Universiteit in Rotterdam, de Fontys Hogeschool, en de Vrije Universiteit Amsterdam haalden Canvas uit voorzorg offline. \"We zijn de mogelijke gevolgen aan het inventariseren, en kijken of er eventuele maatregelen genomen moeten worden\", zegt Wim Pleunis, woordvoerder van Fontys Hogeschool. Mbo-instelling Deltion heeft het Canvas-systeem sinds 09.00 uur vanmorgen wel weer online gezet. Volgens een woordvoerder is het systeem weer veilig te gebruiken, \"maar die afweging is voor iedere school anders\". De woordvoerder van Universiteit Twente zegt dat ze na de vorige hack een crisisorganisatie hebben opgetuigd. \"Maar we hadden niet verwacht dat het Canvas-systeem meteen weer gehackt zou worden.\" Wereldwijd getroffen Niet alleen Nederlandse onderwijsinstellingen zijn de dupe van de hack. Volgens moederbedrijf Instructure heeft Canvas wereldwijd meer dan 30 miljoen gebruikers. Amerikaanse universiteiten zijn gehackt, zoals de prestigieuze Harvard- en Columbia-universiteit, evenals middelbare scholen. De hack komt voor vele Amerikaanse studenten midden in een tentamenweek, waardoor sommige universiteiten de tentamens hebben uitgesteld(opent in nieuw venster). Hoe nu verder? Welke aanvullende maatregelen Nederlandse onderwijsinstellingen zullen treffen, is nog niet duidelijk. Veel Nederlandse universiteiten en hogescholen zitten in crisisoverleg en doen nog onderzoek. De universiteiten waarschuwen studenten en medewerkers voor mogelijke phishingmails naar aanleiding van het datalek. Dit zijn mails die van een officiële instantie lijken te zijn, maar zijn nagemaakt zijn door criminelen. Daarmee proberen ze de ontvanger te overtuigen om online gegevens in te voeren, waarmee diegene vervolgens opgelicht kan worden. Hoe herken ik een phishingmail? Controleer het adres van de afzender: vaak is het gebruikte e-mailadres vaag of een afgeleide versie van een echte bedrijfsnaam of naam van een instantie. Controleer ook of het mailadres ook echt overeenkomt met het echte websiteadres van de instantie. Controleer de aanhef: word je met heel algemene termen, zoals \u0027Geachte heer/mevrouw\u0027 of \u0027Beste klant\u0027, aangesproken, let dan op. Wees alert als er om gegevens wordt gevraagd: in veel nepmails staat het verzoek om je persoonsgegevens \u0027te controleren\u0027, \u0027bij te werken\u0027 of \u0027aan te vullen\u0027. Wees alert op waarschuwingen: veel valse mailtjes proberen je onder druk te zetten door gebruik te maken van laatste waarschuwingen of spoedmeldingen. Bron: Digital Trust Center(opent in nieuw venster) van ministerie van Economische Zaken en Klimaat Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:38.972658"
+  },
+  {
+    "id": 281,
+    "url": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt",
+    "title": "Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt",
+    "content": "Reuters NOS Nieuws•vrijdag 8 mei 2026, 15:19•Aangepast vrijdag 8 mei 2026, 18:15 Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt Deel dit artikel De gijzeling in een bank in de Duitse plaats Sinzig, zo\u0027n 25 kilometer ten zuiden van Bonn, is voorbij. De politie is het bankgebouw binnengegaan en heeft het doorzocht. Daarbij zijn twee mensen die waren opgesloten in een afgesloten ruimte vrijgelaten. Zij zijn ongedeerd, meldt de politie. De dader of daders lijken te zijn ontkomen. De politie heeft ze niet gesproken en denkt dat ze zijn gevlucht. Via welke route is nog niet duidelijk. Kist met geld buitgemaakt Er is een signalement van één verdachte verspreid: een man van zo\u0027n 1,80 meter lang, gekleed in een witte overall die lijkt op een imkerpak. Die man heeft een kist met geld meegenomen, maar hoeveel daarin zit is nog niet duidelijk. Over eventuele andere verdachten is niets bekendgemaakt, wat de vraag oproept of er überhaupt meerdere daders waren. Vanochtend rond 09.00 uur kwam er een melding dat er een gijzeling gaande was en werd vermoed dat het ging om meerdere gijzelaars en gijzelnemers. Een van de gegijzelden is de chauffeur van een geldtransport. Of er echt sprake was van een gijzeling staat nog ter discussie, zegt een woordvoerder van de politie tegen publieke omroep SWR(opent in nieuw venster). Mogelijk moet het niet bestempeld worden als gijzeling, maar als \"wederrechtelijke vrijheidsberoving\". Dat wordt nog vastgesteld. Opluchting De binnenstad van Sinzig werd direct afgesloten en ook werd een helikopter ingezet om de situatie vanuit de lucht in de gaten te houden. Omdat de gijzelnemers zelf het nieuws ook volgden deelde de politie tijdens de operatie beperkt informatie. Het centrum van de stad bleef nog afgesloten tot de hulpdiensten weg waren. De locoburgemeester van de plaats, Hans-Werner Adams, is opgelucht en spreekt van \"een nachtmerrie die voorbij is\". Hij baalt ervan dat de daders nog niet gepakt zijn en gaat komend weekend met inwoners van Sinzig in gesprek over het gebeurde. Deel artikel: X (opent in nieuw venster) E-mail (opent in nieuw venster) Facebook (opent in nieuw venster) WhatsApp (opent in nieuw venster) Link gekopieerd! Advertentie via Ster.nl(opent in nieuw venster)",
+    "scrapedAt": "2026-10-08 18:56:37.768832"
+  },
+  {
     "id": 280,
     "url": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/link.html",
     "title": "De laatste klassenfoto / NOS",
@@ -1940,26 +1975,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 281,
-    "url": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
-  },
-  {
-    "id": 282,
-    "url": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
-  },
-  {
-    "id": 283,
-    "url": "https://stories.nos.nl/"
-  },
-  {
-    "id": 284,
-    "url": "https://nos.nl/artikel/2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op"
-  },
-  {
-    "id": 285,
-    "url": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
   },
   {
     "id": 286,
@@ -46445,10 +46460,567 @@ window.searchData = [
     "id": 18503,
     "url": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/index.html",
     "parentUrl": "https://app.nos.nl/shorthand/de-laatste-klassenfoto/link.html"
+  },
+  {
+    "id": 18504,
+    "url": "https://api.whatsapp.com/send?text\u003dGijzelnemers+Duitse+bank+gevlucht%2C+kist+met+geld+buitgemaakt+https%3A%2F%2Fnos.nl%2Fartikel%2F2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "id": 18505,
+    "url": "https://twitter.com/intent/tweet?text\u003dGijzelnemers+Duitse+bank+gevlucht%2C+kist+met+geld+buitgemaakt\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "id": 18506,
+    "url": "https://www.swr.de/swraktuell/rheinland-pfalz/koblenz/liveticker-zu-geiselnahme-bank-sinzig-polizei-grosseinsatz-100.html",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "id": 18508,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt",
+    "parentUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "id": 18509,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack",
+    "parentUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "id": 18510,
+    "url": "https://nos.nl/artikel/2613123-odido-hackers-maken-ook-gegevens-van-miljoenen-docenten-en-studenten-buit",
+    "parentUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "id": 18511,
+    "url": "https://api.whatsapp.com/send?text\u003dUniversiteiten+en+hogescholen+blokkeren+studie-app+Canvas+na+hack+https%3A%2F%2Fnos.nl%2Fartikel%2F2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack",
+    "parentUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "id": 18512,
+    "url": "https://twitter.com/intent/tweet?text\u003dUniversiteiten+en+hogescholen+blokkeren+studie-app+Canvas+na+hack\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "id": 18513,
+    "url": "https://www.digitaltrustcenter.nl/informatie-advies/phishing/hoe-herken-ik-een-phishing-e-mail",
+    "parentUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "id": 18514,
+    "url": "https://nos.nl/artikel/2613522-hackers-kraken-opnieuw-studie-app-canvas-dreigen-met-publicatie-gegevens",
+    "parentUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "id": 18515,
+    "url": "https://www.jmu.edu/computing/security/canvas_outage.shtml",
+    "parentUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "id": 18517,
+    "url": "https://stories.nos.nl/video/2621322",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18518,
+    "url": "https://stories.nos.nl/kort",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18519,
+    "url": "https://stories.nos.nl/nieuws",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18520,
+    "url": "https://stories.nos.nl/op-straat",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18521,
+    "url": "https://stories.nos.nl/#content",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18522,
+    "url": "https://stories.nos.nl/lang",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18523,
+    "url": "https://stories.nos.nl/video/2600924",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18524,
+    "url": "https://stories.nos.nl/video/2634024",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18525,
+    "url": "https://stories.nos.nl/video/2634025",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18526,
+    "url": "https://stories.nos.nl/video/2634128",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18527,
+    "url": "https://stories.nos.nl/alle-stories",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18528,
+    "url": "https://stories.nos.nl/video/2633711",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18529,
+    "url": "https://stories.nos.nl/video/2633932",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18530,
+    "url": "https://stories.nos.nl/video/2633779",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18531,
+    "url": "https://stories.nos.nl/explainer",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18532,
+    "url": "https://stories.nos.nl/video/2624394",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18533,
+    "url": "https://stories.nos.nl/video/2591958",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18534,
+    "url": "https://stories.nos.nl/video/2579390",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18535,
+    "url": "https://stories.nos.nl/video/2584142",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18536,
+    "url": "https://stories.nos.nl/video/2589212",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18537,
+    "url": "https://stories.nos.nl/video/2589213",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18538,
+    "url": "https://stories.nos.nl/video/2634093",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18539,
+    "url": "https://stories.nos.nl/video/2589214",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18541,
+    "url": "https://stories.nos.nl/video/2634173",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18542,
+    "url": "https://stories.nos.nl/video/2634010",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18543,
+    "url": "https://stories.nos.nl/video/2634011",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18544,
+    "url": "https://stories.nos.nl/video/2634056",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18545,
+    "url": "https://stories.nos.nl/video/2633881",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18546,
+    "url": "https://stories.nos.nl/video/2634037",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18547,
+    "url": "https://stories.nos.nl/rewind",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18548,
+    "url": "https://stories.nos.nl/video/2633888",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18549,
+    "url": "https://stories.nos.nl/video/2633745",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18550,
+    "url": "https://stories.nos.nl/video/2633902",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18551,
+    "url": "https://stories.nos.nl/onderzoek",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18552,
+    "url": "https://stories.nos.nl/video/2633826",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18553,
+    "url": "https://stories.nos.nl/video/2633804",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18554,
+    "url": "https://stories.nos.nl/video/2633849",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18555,
+    "url": "https://stories.nos.nl/video/2603025",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18556,
+    "url": "https://stories.nos.nl/video/2589211",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18557,
+    "url": "https://stories.nos.nl/video/2629751",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18558,
+    "url": "https://stories.nos.nl/video/2633908",
+    "parentUrl": "https://stories.nos.nl/"
+  },
+  {
+    "id": 18559,
+    "url": "https://twitter.com/intent/tweet?text\u003dWapens+en+stapels+geld%3A+Belgische+politie+rolt+Turkse+maffiabende+op\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op\u0026via\u003dNOS",
+    "parentUrl": "https://nos.nl/artikel/2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op"
+  },
+  {
+    "id": 18560,
+    "url": "https://api.whatsapp.com/send?text\u003dWapens+en+stapels+geld%3A+Belgische+politie+rolt+Turkse+maffiabende+op+https%3A%2F%2Fnos.nl%2Fartikel%2F2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op",
+    "parentUrl": "https://nos.nl/artikel/2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op"
+  },
+  {
+    "id": 18561,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op",
+    "parentUrl": "https://nos.nl/artikel/2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op"
+  },
+  {
+    "id": 18563,
+    "url": "https://x.com/rockets_cycling/status/2052758942422315318",
+    "parentUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "id": 18564,
+    "url": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij#external-content-iframe-end-91020156",
+    "parentUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "id": 18565,
+    "url": "https://x.com/AlpecinPT/status/2052766339937284388",
+    "parentUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "id": 18566,
+    "url": "https://twitter.com/intent/tweet?text\u003dMagnier+wint+openingsetappe+Giro%2C+Groenewegen+onderuit+bij+massale+valpartij\u0026url\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij\u0026via\u003dNOSSport",
+    "parentUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "id": 18567,
+    "url": "https://www.facebook.com/sharer/sharer.php?u\u003dhttps%3A%2F%2Fnos.nl%2Fartikel%2F2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij",
+    "parentUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "id": 18569,
+    "url": "https://api.whatsapp.com/send?text\u003dMagnier+wint+openingsetappe+Giro%2C+Groenewegen+onderuit+bij+massale+valpartij+https%3A%2F%2Fnos.nl%2Fartikel%2F2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij",
+    "parentUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://images.cdn.nos.nl/8/6/t/r/Y/c/JBBBijikRnpDMFKB5qjJmGStmEeEifSQ6WbiCvw/0x0x4000x2250-1024x576.webp",
+    "alt": "Magnier wint door valpartij ontsierde openingsetappe in Giro",
+    "pageTitle": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
+    "pageUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "src": "https://pbs.twimg.com/profile_images/2049510452980498432/Yk_X_9-S_normal.jpg",
+    "alt": "",
+    "pageTitle": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
+    "pageUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "src": "https://pbs.twimg.com/media/HHzdYCXXoAAPlj7.jpg?format\u003djpg\u0026name\u003dmedium",
+    "alt": "",
+    "pageTitle": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
+    "pageUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "src": "https://pbs.twimg.com/profile_images/2006519730715201536/JCD_Bofb_normal.jpg",
+    "alt": "",
+    "pageTitle": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
+    "pageUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "src": "https://pbs.twimg.com/media/HHzkFsTWIAAPd2J.jpg?format\u003djpg\u0026name\u003dlarge",
+    "alt": "",
+    "pageTitle": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
+    "pageUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/D/5/B/3/r/AdMYSofoV17h3YNjR4XoakzU1N3bASbkpVxzeLL/0x26x4000x2250-1024x576.webp",
+    "alt": "",
+    "pageTitle": "Magnier wint openingsetappe Giro, Groenewegen onderuit bij massale valpartij",
+    "pageUrl": "https://nos.nl/artikel/2613604-magnier-wint-openingsetappe-giro-groenewegen-onderuit-bij-massale-valpartij"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/s/4/U/Q/r/tJ4rxZrHKJXZWRM7LNdCdG78EBoycToGqLBjMg/0x0x1200x675-640x360.webp",
+    "alt": "De politie vond bij de huiszoekingen onder meer een kruisboog",
+    "pageTitle": "Wapens en stapels geld: Belgische politie rolt Turkse maffiabende op",
+    "pageUrl": "https://nos.nl/artikel/2613600-wapens-en-stapels-geld-belgische-politie-rolt-turkse-maffiabende-op"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/C/z/u/e/m/vhWofCvSWmro5i65H3S4uLhSBNQcG7VGe4JNPUL/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/D/H/2/2/k/HMWL66q5a8XbpEJvYdyP7Rh8yUYeAgXkQoP9Qzz/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/G/1/7/6/w/FyrV5TZwxrRHLwk72FL52euRkiyXgXfxvnjeeKB/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/H/F/r/h/U/tyMukPj3GBSDwfn4UDbn5cifU8vJJNXfv9DX5yv/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/C/N/8/q/b/tsmoTycB6JZpBGbPW74DH4Y5uE8L15W7ruhJ6W1/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/2/A/k/T/u/8PevvxLPvi6JL5h6nu8ReQKCrnVyJZ43R5bdRGK/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/3/d/9/h/n/E2czFJ7vGVufyM5cRdoCtxdAqBEGv5Lx8XTyK4m/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/4/d/A/i/o/gZWwNo2NfCoeToZ6ndbHNFWBB3bPPjykYaoCkA9/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/2/Y/D/m/H/YeeNXzeiiosXpDNFKHfMgUREh3cy946H59GxGK3/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/E/K/9/B/6/NKf18LqJ71MSucbpLtxzBfytYCZ3MfNg8nVQqQt/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/F/N/N/t/c/MBieKycrWh6RQGLmHvfDWUc21e9xGyJfG8MRmyJ/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/6/P/7/M/h/jx3oqJX3WtGXVbMHqso9FtmTUTvWkYo8wJdFeAy/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/E/3/7/i/S/vSBhoGtTgJLHAMuQX9zFr8pKUY193hw5AQUMpte/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/A/W/7/a/y/je8BXrynimrygWLzJwNE7xXPMATLDJEXex5zh2p/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/8/5/o/u/2/y/cZFEQ9FdyACFZbnzytmM4abfSNMmbmRxPbDb1fk/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/F/1/F/B/6/GW4syXKXc3ffmpT8VzorKvMqjDpEAaoJVaUYpPv/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/B/H/h/3/M/zC1XhphmgGTRMhPd3eVdDncp2zUptuuHmDnes5i/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/2/J/2/g/v/vdHxxMJ76fG97AZXdzorE6KpRr2ZVZWMMVZwWvH/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/F/n/r/e/B/QECNZTQry3XotaSvxBcPoM7E5zhrcuqWDjfdZuq/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/H/A/v/S/D/AaAfoDTjyw6NFChjSxRKYmq7VZnhAgiDW8SVxB9/2x4x603x1072-360x640.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/G/j/6/x/W/CdEUV3ZppGpcRDn9P8KuSK6F4XwjDzDhJ1Yw6uv/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/1/4/n/v/K/3/8dfmgJhZwoCcHbPkTBmnLDDf9RjoAmQjcyQEzZj/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/6/H/h/F/D/E9fp7HjoSE3PH1b3KohvShnvnJNdUSv6pKXP3Pf/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/C/k/K/r/A/X8vDXKXiMfV2yANFAhbENT5gMU3BPabkr3VEYdW/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/C/a/o/H/w/vP4hym5iz6hh5Y7iEs4uJXc1PLEqsKobx2fNajs/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/2/H/o/o/K/e/kLe9QB8XjuBaWcz9tmPq5B88CDXsvqAV6PaaSAE/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/5/D/A/p/E/j/7rpRiC8yiaxG9YDLmPudh55XcPEAerLaJnMKdK5/0x0x1920x1080-768x432.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/H/v/1/R/W/rWaT8gfNQrxYxLzTVwnfJoNbPfu4muZxEmPKNTE/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/3/F/g/9/c/b/Eg1D7bKwMFcYp2GQgWfmFy1X87ZHFkbshWXy3Ds/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/C/k/p/o/J/Kq6uW2kM8x8GvBLpGk5jxTcsAY4qq1dR15q9GUv/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/E/t/c/S/t/pghWbswHbiFPPVpsnsXVWnZZWYASp59AznGEtiA/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/C/8/s/R/i/rAcviAc3rkRNS2WmX9h5a724Hpu5tXTwjXes3Ha/0x0x1280x720-640x360.webp",
+    "alt": "",
+    "pageTitle": "Nieuws voor jongeren | NOS Stories",
+    "pageUrl": "https://stories.nos.nl/"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/7/7/u/5/c/1/QT9wRCwR2oPkRsmVBehT52HwcEk1o1RJfFq4HRe/203x2x1520x855-640x360.webp",
+    "alt": "De Canvas-app en het bericht wat ShinyHunters op de app plaatste",
+    "pageTitle": "Universiteiten en hogescholen blokkeren studie-app Canvas na hack",
+    "pageUrl": "https://nos.nl/artikel/2613564-universiteiten-en-hogescholen-blokkeren-studie-app-canvas-na-hack"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/4/8/G/Y/C/q/KJ9k6zUbt9AaaoiMWnEyiUZ389VTD71P4Bz3ajF/3x1x3680x2070-1024x576.webp",
+    "alt": "Duitse politie bij het bankgebouw",
+    "pageTitle": "Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt",
+    "pageUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
+  {
+    "src": "https://images.cdn.nos.nl/6/H/1/j/p/K/YNd5edtrfEfpC2wt66KQ19ScrCtrFkeDVDDmyfd/4x2x1584x891-768x432.webp",
+    "alt": "Zwaarbewapende politie voor bank in Sinzig",
+    "pageTitle": "Gijzelnemers Duitse bank gevlucht, kist met geld buitgemaakt",
+    "pageUrl": "https://nos.nl/artikel/2613598-gijzelnemers-duitse-bank-gevlucht-kist-met-geld-buitgemaakt"
+  },
   {
     "src": "https://app.nos.nl/shorthand/thumbs/de-laatste-klassenfoto/LINK_NOS_WEBSITE.webp",
     "alt": "De laatste klassenfoto / NOS",
