@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1486,
+    "url": "https://docs.python.org/3/whatsnew/index.html",
+    "title": "What’s New in Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python | Theme Auto Light Dark | What’s New in Python¶ The “What’s New in Python” series of essays takes tours through the most important changes between major Python versions. They are a “must read” for anyone wishing to stay up-to-date after a new release. What’s new in Python 3.14 Summary – Release highlights New features Other language changes New modules Improved modules Optimizations Removed Deprecated CPython bytecode changes C API changes Build changes Porting to Python 3.14 Notable changes in 3.14.1 Notable changes in 3.14.5 What’s New In Python 3.13 Summary – Release Highlights New Features Other Language Changes New Modules Improved Modules Optimizations Removed Modules And APIs New Deprecations CPython Bytecode Changes C API Changes Build Changes Porting to Python 3.13 Regression Test Changes What’s New In Python 3.12 Summary – Release highlights New Features New Features Related to Type Hints Other Language Changes New Modules Improved Modules Optimizations CPython bytecode changes Demos and Tools Deprecated Removed Porting to Python 3.12 Build Changes C API Changes What’s New In Python 3.11 Summary – Release highlights New Features New Features Related to Type Hints Other Language Changes Other CPython Implementation Changes New Modules Improved Modules Optimizations Faster CPython CPython bytecode changes Deprecated Pending Removal in Python 3.12 Removed Porting to Python 3.11 Build Changes C API Changes Notable changes in 3.11.4 Notable changes in 3.11.5 What’s New In Python 3.10 Summary – Release highlights New Features New Features Related to Type Hints Other Language Changes New Modules Improved Modules Optimizations Deprecated Removed Porting to Python 3.10 CPython bytecode changes Build Changes C API Changes Notable security feature in 3.10.7 Notable security feature in 3.10.8 Notable changes in 3.10.12 What’s New In Python 3.9 Summary – Release highlights You should check for DeprecationWarning in your code New Features Other Language Changes New Modules Improved Modules Optimizations Deprecated Removed Porting to Python 3.9 Build Changes C API Changes Notable changes in Python 3.9.1 Notable changes in Python 3.9.2 Notable changes in Python 3.9.3 Notable changes in Python 3.9.5 Notable security feature in 3.9.14 Notable changes in 3.9.17 What’s New In Python 3.8 Summary – Release highlights New Features Other Language Changes New Modules Improved Modules Optimizations Build and C API Changes Deprecated API and Feature Removals Porting to Python 3.8 Notable changes in Python 3.8.1 Notable changes in Python 3.8.2 Notable changes in Python 3.8.3 Notable changes in Python 3.8.8 Notable changes in Python 3.8.9 Notable changes in Python 3.8.10 Notable changes in Python 3.8.10 Notable changes in Python 3.8.12 Notable security feature in 3.8.14 Notable changes in 3.8.17 What’s New In Python 3.7 Summary – Release Highlights New Features Other Language Changes New Modules Improved Modules C API Changes Build Changes Optimizations Other CPython Implementation Changes Deprecated Python Behavior Deprecated Python modules, functions and methods Deprecated functions and types of the C API Platform Support Removals API and Feature Removals Module Removals Windows-only Changes Porting to Python 3.7 Notable changes in Python 3.7.1 Notable changes in Python 3.7.2 Notable changes in Python 3.7.6 Notable changes in Python 3.7.10 Notable changes in Python 3.7.11 Notable security feature in 3.7.14 What’s New In Python 3.6 Summary – Release highlights New Features Other Language Changes New Modules Improved Modules Optimizations Build and C API Changes Other Improvements Deprecated Removed Porting to Python 3.6 Notable changes in Python 3.6.2 Notable changes in Python 3.6.4 Notable changes in Python 3.6.5 Notable changes in Python 3.6.7 Notable changes in Python 3.6.10 Notable changes in Python 3.6.13 Notable changes in Python 3.6.14 What’s New In Python 3.5 Summary – Release highlights New Features Other Language Changes New Modules Improved Modules Other module-level changes Optimizations Build and C API Changes Deprecated Removed Porting to Python 3.5 Notable changes in Python 3.5.4 What’s New In Python 3.4 Summary – Release Highlights New Features New Modules Improved Modules CPython Implementation Changes Deprecated Removed Porting to Python 3.4 Changed in 3.4.3 What’s New In Python 3.3 Summary – Release highlights PEP 405: Virtual Environments PEP 420: Implicit Namespace Packages PEP 3118: New memoryview implementation and buffer protocol documentation PEP 393: Flexible String Representation PEP 397: Python Launcher for Windows PEP 3151: Reworking the OS and IO exception hierarchy PEP 380: Syntax for Delegating to a Subgenerator PEP 409: Suppressing exception context PEP 414: Explicit Unicode literals PEP 3155: Qualified name for classes and functions PEP 412: Key-Sharing Dictionary PEP 362: Function Signature Obj",
+    "scrapedAt": "2026-10-08 19:44:19.623018"
+  },
+  {
+    "id": 1485,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.as_uri",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:44:18.311851"
+  },
+  {
+    "id": 1484,
+    "url": "https://docs.python.org/3/library/os.html#os.register_at_fork",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_Read",
+    "scrapedAt": "2026-10-08 19:44:17.010945"
+  },
+  {
+    "id": 1483,
+    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getmarkers",
+    "title": "wave — Read and write WAV files — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Multimedia Services » wave — Read and write WAV files | Theme Auto Light Dark | wave — Read and write WAV files¶ Source code: Lib/wave.py The wave module provides a convenient interface to the Waveform Audio “WAVE” (or “WAV”) file format. Only uncompressed PCM encoded wave files are supported. Changed in version 3.12: Support for WAVE_FORMAT_EXTENSIBLE headers was added, provided that the extended format is KSDATAFORMAT_SUBTYPE_PCM. The wave module defines the following function and exception: wave.open(file, mode\u003dNone)¶ If file is a string, open the file by that name, otherwise treat it as a file-like object. mode can be: \u0027rb\u0027 Read only mode. \u0027wb\u0027 Write only mode. Note that it does not allow read/write WAV files. A mode of \u0027rb\u0027 returns a Wave_read object, while a mode of \u0027wb\u0027 returns a Wave_write object. If mode is omitted and a file-like object is passed as file, file.mode is used as the default value for mode. If you pass in a file-like object, the wave object will not close it when its close() method is called; it is the caller’s responsibility to close the file object. The open() function may be used in a with statement. When the with block completes, the Wave_read.close() or Wave_write.close() method is called. Changed in version 3.4: Added support for unseekable files. exception wave.Error¶ An error raised when something is impossible because it violates the WAV specification or hits an implementation deficiency. Wave_read Objects¶ class wave.Wave_read¶ Read a WAV file. Wave_read objects, as returned by open(), have the following methods: close()¶ Close the stream if it was opened by wave, and make the instance unusable. This is called automatically on object collection. getnchannels()¶ Returns number of audio channels (1 for mono, 2 for stereo). getsampwidth()¶ Returns sample width in bytes. getframerate()¶ Returns sampling frequency. getnframes()¶ Returns number of audio frames. getcomptype()¶ Returns compression type (\u0027NONE\u0027 is the only supported type). getcompname()¶ Human-readable version of getcomptype(). Usually \u0027not compressed\u0027 parallels \u0027NONE\u0027. getparams()¶ Returns a namedtuple() (nchannels, sampwidth, framerate, nframes, comptype, compname), equivalent to output of the get*() methods. readframes(n)¶ Reads and returns at most n frames of audio, as a bytes object. rewind()¶ Rewind the file pointer to the beginning of the audio stream. The following two methods are defined for compatibility with the old aifc module, and don’t do anything interesting. getmarkers()¶ Returns None. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. getmark(id)¶ Raise an error. Deprecated since version 3.13, will be removed in version 3.15: The method only existed for compatibility with the aifc module which has been removed in Python 3.13. The following two methods define a term “position” which is compatible between them, and is otherwise implementation dependent. setpos(pos)¶ Set the file pointer to the specified position. tell()¶ Return current file pointer position. Wave_write Objects¶ class wave.Wave_write¶ Write a WAV file. Wave_write objects, as returned by open(). For seekable output streams, the wave header will automatically be updated to reflect the number of frames actually written. For unseekable streams, the nframes value must be accurate when the first frame data is written. An accurate nframes value can be achieved either by calling setnframes() or setparams() with the number of frames that will be written before close() is called and then using writeframesraw() to write the frame data, or by calling writeframes() with all of the frame data to be written. In the latter case writeframes() will calculate the number of frames in the data and set nframes accordingly before writing the frame data. Changed in version 3.4: Added support for unseekable files. Wave_write objects have the following methods: close()¶ Make sure nframes is correct, and close the file if it was opened by wave. This method is called upon object collection. It will raise an exception if the output stream is not seekable and nframes does not match the number of frames actually written. setnchannels(n)¶ Set the number of channels. getnchannels()¶ Return the number of channels. setsampwidth(n)¶ Set the sample width to n bytes. getsampwidth()¶ Return the sample width in bytes. setframerate(n)¶ Set the frame rate to n. Changed in version 3.2: A non-integral input to this method is rounded to the nearest integer. getframerate()¶ Return the frame rate. setnframes(n)¶ Set the number of frames to n. This will be changed later if the number of frames actually written is different (this update attempt will raise an error if the output stream is not seekable). getnframes()¶ Return the number of audio frames written so far. s",
+    "scrapedAt": "2026-10-08 19:44:15.643759"
+  },
+  {
+    "id": 1482,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html",
+    "title": "RFC 8081 - The \"font\" Top-Level Media Type",
+    "content": "Light Dark Auto Internet Engineering Task Force (IETF)                         C. Lilley\nRequest for Comments: 8081                                           W3C\nCategory: Standards Track                                  February 2017\nISSN: 2070-1721\n\n\n                    The \"font\" Top-Level Media Type \n\nAbstract\n\n   This memo serves to register and document the \"font\" top-level media\n   type, under which subtypes for representation formats for fonts may\n   be registered.  This document also serves as a registration\n   application for a set of intended subtypes, which are representative\n   of some existing subtypes already in use, and currently registered\n   under the \"application\" tree by their separate registrations.\n\nStatus of This Memo\n\n   This is an Internet Standards Track document.\n\n   This document is a product of the Internet Engineering Task Force\n   (IETF).  It represents the consensus of the IETF community.  It has\n   received public review and has been approved for publication by the\n   Internet Engineering Steering Group (IESG).  Further information on\n   Internet Standards is available in Section 2 of RFC 7841.\n\n   Information about the current status of this document, any errata,\n   and how to provide feedback on it may be obtained at\n   http://www.rfc-editor.org/info/rfc8081.\n\nCopyright Notice\n\n   Copyright (c) 2017 IETF Trust and the persons identified as the\n   document authors.  All rights reserved.\n\n   This document is subject to BCP 78 and the IETF Trust\u0027s Legal\n   Provisions Relating to IETF Documents\n   (http://trustee.ietf.org/license-info) in effect on the date of\n   publication of this document.  Please review these documents\n   carefully, as they describe your rights and restrictions with respect\n   to this document.  Code Components extracted from this document must\n   include Simplified BSD License text as described in Section 4.e of\n   the Trust Legal Provisions and are provided without warranty as\n   described in the Simplified BSD License.\n\n\n\n\n\n\nLilley                       Standards Track                    [Page 1] RFC 8081                The \u0027font\u0027 Top-Level Type          February 2017\n\n\nTable of Contents\n\n   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2\n   2.  Background and Justification  . . . . . . . . . . . . . . . .   3\n   3.  Security Considerations . . . . . . . . . . . . . . . . . . .   4\n   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5\n     4.1.  Definition and Encoding . . . . . . . . . . . . . . . . .   5\n     4.2.  Fragment Identifiers for Font Collections . . . . . . . .   5\n     4.3.  Registration Procedure  . . . . . . . . . . . . . . . . .   6\n     4.4.  Subtype Registrations . . . . . . . . . . . . . . . . . .   6\n       4.4.1.  Generic SFNT Font Type  . . . . . . . . . . . . . . .   6\n       4.4.2.  TTF Font Type . . . . . . . . . . . . . . . . . . . .   9\n       4.4.3.  OpenType Layout (OTF) Font Type . . . . . . . . . . .  10\n       4.4.4.  Collection Font Type  . . . . . . . . . . . . . . . .  12\n       4.4.5.  WOFF 1.0  . . . . . . . . . . . . . . . . . . . . . .  14\n       4.4.6.  WOFF 2.0  . . . . . . . . . . . . . . . . . . . . . .  15\n   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  16\n     5.1.  Normative References  . . . . . . . . . . . . . . . . . .  16\n     5.2.  Informative References  . . . . . . . . . . . . . . . . .  17\n   Author\u0027s Address  . . . . . . . . . . . . . . . . . . . . . . . .  18\n\n 1.  Introduction \n\n   The process of setting type in computer systems and other forms of\n   text presentation systems uses fonts in order to provide visual\n   representations of the glyphs.  Just as with images, for example,\n   there are a number of ways to represent the visual information of the\n   glyphs.  Early font formats often used bitmaps, as these could have\n   been carefully tuned for maximum readability at a given size on low-\n   resolution displays.  More recently, scalable vector outline fonts\n   have come into widespread use.  In these fonts, the outlines of the\n   glyphs are described, and the presentation system renders the outline\n   in the desired position and size.\n\n   Over time, a number of standard formats for recording font\n   descriptions have evolved.  Internet Media Types [RFC6838] are used\n   to label content carried over Internet protocols.  This document\n   defines a new top-level type \"font\" according to Section 4.2.7 of\n   [RFC6838].  This top-level type indicates that the content specifies\n   font data.  Under this top-level type, different representation\n   formats of fonts may be registered.\n\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in RFC 2119 [RFC2119].\n\n\n\n\n\n\nLilley                       Standards Track                    [Page 2] RFC 8081                The \u0027font\u0027 Top-Level Type          February 2",
+    "scrapedAt": "2026-10-08 19:44:14.308463"
+  },
+  {
     "id": 1481,
     "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.quiet",
     "title": "Python Initialization Configuration — Python 3.14.8 documentation",
@@ -9940,26 +9975,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1482,
-    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html"
-  },
-  {
-    "id": 1483,
-    "url": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getmarkers"
-  },
-  {
-    "id": 1484,
-    "url": "https://docs.python.org/3/library/os.html#os.register_at_fork"
-  },
-  {
-    "id": 1485,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.as_uri"
-  },
-  {
-    "id": 1486,
-    "url": "https://docs.python.org/3/whatsnew/index.html"
   },
   {
     "id": 1487,
@@ -241836,10 +241851,466 @@ window.searchData = [
     "id": 307645,
     "url": "https://github.com/python/cpython/pull/127237",
     "parentUrl": "https://github.com/python/cpython/issues/123599"
+  },
+  {
+    "id": 308262,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-06",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308263,
+    "url": "https://www.w3.org/Fonts/WG/track/actions/164",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308264,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-04",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308265,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-W3C.CR-WOFF2-20150414",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308267,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-05",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308268,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-02",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308269,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-03",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308270,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308271,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308272,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308273,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308274,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308275,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308276,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308277,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-W3C.REC-WOFF-20121213",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308278,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308279,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308280,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308281,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-ISO.14496-22.2015",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308282,
+    "url": "http://www.w3.org/TR/2013/CR-css-fonts-3-20131003",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308283,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308284,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-justfont-toplevel-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308286,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-W3C.CR-css-fonts-3-20131003",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308287,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dScalable_Vector_Graphics\u0026oldid\u003d763136508",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308288,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-truetype-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308289,
+    "url": "http://httparchive.org/trends",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308291,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-Font-Media-Type-Analysis",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308292,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308293,
+    "url": "http://www.rfc-editor.org/info/rfc8081",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308294,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-5.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308296,
+    "url": "http://standards.iso.org/ittf/PubliclyAvailableStandards/c066391_ISO_IEC_14496-22_2015.zip",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308297,
+    "url": "http://www.w3.org/TR/2012/REC-WOFF-20121213",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308298,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-Media-Type-Registration",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308299,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-svg-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308300,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-opentype-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308301,
+    "url": "https://www.w3.org/TR/2016/CR-WOFF2-20160315/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308303,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-5.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308304,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-WG-tlt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308305,
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-justfont-toplevel/06/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308306,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-HTTP-Archive-Trends",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308307,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7841#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308308,
+    "url": "https://datatracker.ietf.org/person/chris@w3.org",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308309,
+    "url": "http://www.rfc-editor.org/info/rfc6838",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308311,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308312,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6838#section-4.2.7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308314,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308315,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308316,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308317,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308318,
+    "url": "https://goo.gl/zbDhUN",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308319,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dTrueType\u0026oldid\u003d759367886",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308323,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6838",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308324,
+    "url": "https://www.rfc-editor.org/rfc/rfc8081.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308325,
+    "url": "https://datatracker.ietf.org/doc/rfc8081/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308326,
+    "url": "https://mailarchive.ietf.org/arch/browse/justfont/?q\u003drfc8081 OR %22draft-ietf-justfont-toplevel%22",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308327,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308328,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dPostScript_fonts\u0026oldid\u003d747740863",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308329,
+    "url": "https://datatracker.ietf.org/doc/rfc8081/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308330,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308331,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308332,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308333,
+    "url": "https://datatracker.ietf.org/wg/justfont/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308334,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-12",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308335,
+    "url": "http://www.iana.org/form/media-types",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308336,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308337,
+    "url": "https://en.wikipedia.org/w/index.php?title\u003dOpenType\u0026oldid\u003d763528773",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308338,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-16",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308339,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-17",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308340,
+    "url": "https://www.rfc-editor.org/rfc/rfc8081.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308341,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-14",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308342,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-15",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308343,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#ref-cff-wiki",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308344,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308345,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#page-18",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 308346,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8081.html#section-4.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "id": 309488,
+    "url": "https://github.com/python/cpython/tree/3.14/Misc/NEWS.d",
+    "parentUrl": "https://docs.python.org/3/whatsnew/index.html"
+  },
+  {
+    "id": 309624,
+    "url": "https://docs.python.org/3/whatsnew/index.html#what-s-new-in-python",
+    "parentUrl": "https://docs.python.org/3/whatsnew/index.html"
+  },
+  {
+    "id": 309725,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/whatsnew/index.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/whatsnew/index.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s New in Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/index.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s New in Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/index.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.as_uri"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.as_uri"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.as_uri"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.register_at_fork"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.register_at_fork"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getmarkers"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wave — Read and write WAV files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wave.html#wave.Wave_read.getmarkers"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 8081 - The \"font\" Top-Level Media Type",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 8081 - The \"font\" Top-Level Media Type",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc8081.html"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
