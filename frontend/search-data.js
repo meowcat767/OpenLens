@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1023,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module",
+    "title": "zipimport — Import modules from Zip archives — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Importing Modules » zipimport — Import modules from Zip archives | Theme Auto Light Dark | zipimport — Import modules from Zip archives¶ Source code: Lib/zipimport.py This module adds the ability to import Python modules (*.py, *.pyc) and packages from ZIP-format archives. It is usually not needed to use the zipimport module explicitly; it is automatically used by the built-in import mechanism for sys.path items that are paths to ZIP archives. Typically, sys.path is a list of directory names as strings. This module also allows an item of sys.path to be a string naming a ZIP file archive. The ZIP archive can contain a subdirectory structure to support package imports, and a path within the archive can be specified to only import from a subdirectory. For example, the path example.zip/lib/ would only import from the lib/ subdirectory within the archive. Any files may be present in the ZIP archive, but importers are only invoked for .py and .pyc files. ZIP import of dynamic modules (.pyd, .so) is disallowed. Note that if an archive only contains .py files, Python will not attempt to modify the archive by adding the corresponding .pyc file, meaning that if a ZIP archive doesn’t contain .pyc files, importing may be rather slow. Changed in version 3.13: ZIP64 is supported Changed in version 3.8: Previously, ZIP archives with an archive comment were not supported. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. PEP 273 - Import Modules from Zip Archives Written by James C. Ahlstrom, who also provided an implementation. Python 2.3 follows the specification in PEP 273, but uses an implementation written by Just van Rossum that uses the import hooks described in PEP 302. importlib - The implementation of the import machinery Package providing the relevant protocols for all importers to implement. This module defines an exception: exception zipimport.ZipImportError¶ Exception raised by zipimporter objects. It’s a subclass of ImportError, so it can be caught as ImportError, too. zipimporter Objects¶ zipimporter is the class for importing ZIP files. class zipimport.zipimporter(archivepath)¶ Create a new zipimporter instance. archivepath must be a path to a ZIP file, or to a specific path within a ZIP file. For example, an archivepath of foo/bar.zip/lib will look for modules in the lib directory inside the ZIP file foo/bar.zip (provided that it exists). ZipImportError is raised if archivepath doesn’t point to a valid ZIP archive. Changed in version 3.12: Methods find_loader() and find_module(), deprecated in 3.10 are now removed. Use find_spec() instead. create_module(spec)¶ Implementation of importlib.abc.Loader.create_module() that returns None to explicitly request the default semantics. Added in version 3.10. exec_module(module)¶ Implementation of importlib.abc.Loader.exec_module(). Added in version 3.10. find_spec(fullname, target\u003dNone)¶ An implementation of importlib.abc.PathEntryFinder.find_spec(). Added in version 3.10. get_code(fullname)¶ Return the code object for the specified module. Raise ZipImportError if the module couldn’t be imported. get_data(pathname)¶ Return the data associated with pathname. Raise OSError if the file wasn’t found. Changed in version 3.3: IOError used to be raised, it is now an alias of OSError. get_filename(fullname)¶ Return the value __file__ would be set to if the specified module was imported. Raise ZipImportError if the module couldn’t be imported. Added in version 3.1. get_source(fullname)¶ Return the source code for the specified module. Raise ZipImportError if the module couldn’t be found, return None if the archive does contain the module, but has no source for it. is_package(fullname)¶ Return True if the module specified by fullname is a package. Raise ZipImportError if the module couldn’t be found. load_module(fullname)¶ Load the module specified by fullname. fullname must be the fully qualified (dotted) module name. Returns the imported module on success, raises ZipImportError on failure. Deprecated since version 3.10, will be removed in version 3.15: Use exec_module() instead. invalidate_caches()¶ Clear out the internal cache of information about files found within the ZIP archive. Added in version 3.10. archive¶ The file name of the importer’s associated ZIP file, without a possible subpath. prefix¶ The subpath within the ZIP file where modules are searched. This is the empty string for zipimporter objects which point to the root of the ZIP file. The archive and prefix attributes, when combined with a slash, equal the original archivepath argument given to the zipimporter constructor. Examples¶ Here is an example that imports a module from a ZIP archive - note that the zipimport module is not explicitly used. $ unzip -l example_archive.zip\nArchive:  example_archive.zip\n  Length     Date",
+    "scrapedAt": "2026-10-08 19:23:58.793419"
+  },
+  {
+    "id": 1022,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING",
+    "title": "os.path — Common pathname manipulations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » os.path — Common pathname manipulations | Theme Auto Light Dark | os.path — Common pathname manipulations¶ Source code: Lib/genericpath.py, Lib/posixpath.py (for POSIX) and Lib/ntpath.py (for Windows). This module implements some useful functions on pathnames. To read or write files see open(), and for accessing the filesystem see the os module. The path parameters can be passed as strings, or bytes, or any object implementing the os.PathLike protocol. Unlike a Unix shell, Python does not do any automatic path expansions. Functions such as expanduser() and expandvars() can be invoked explicitly when an application desires shell-like path expansion. (See also the glob module.) See also The pathlib module offers high-level path objects. Note All of these functions accept either only bytes or only string objects as their parameters. The result is an object of the same type, if a path or file name is returned. Note Since different operating systems have different path name conventions, there are several versions of this module in the standard library. The os.path module is always the path module suitable for the operating system Python is running on, and therefore usable for local paths. However, you can also import and use the individual modules if you want to manipulate a path that is always in one of the different formats. They all have the same interface: posixpath for UNIX-style paths ntpath for Windows paths Changed in version 3.8: exists(), lexists(), isdir(), isfile(), islink(), and ismount() now return False instead of raising an exception for paths that contain characters or bytes unrepresentable at the OS level. os.path.abspath(path)¶ Return a normalized absolutized version of the pathname path. On most platforms, this is equivalent to calling normpath(join(os.getcwd(), path)). On Windows the path is normalized by the operating system, therefore the result can differ from normpath(join(os.getcwd(), path)). A drive-relative path is resolved against the current directory of the specified drive, and the drive letter is capitalized. Trailing dots and spaces are stripped. For example: \u003e\u003e\u003e os.path.abspath(\u0027c:spam\u0027)\n\u0027C:\\\\Temp\\\\spam\u0027\n\u003e\u003e\u003e os.path.abspath(\u0027c:/temp/spam. . .\u0027)\n\u0027c:\\\\temp\\\\spam\u0027\n See also os.path.join() and os.path.normpath(). Changed in version 3.6: Accepts a path-like object. os.path.basename(path, /)¶ Return the base name of pathname path. This is the second element of the pair returned by passing path to the function split(). Note that the result of this function is different from the Unix basename program; where basename for \u0027/foo/bar/\u0027 returns \u0027bar\u0027, the basename() function returns an empty string (\u0027\u0027). Changed in version 3.6: Accepts a path-like object. os.path.commonpath(paths)¶ Return the longest common sub-path of each pathname in the iterable paths. Raise ValueError if paths contain both absolute and relative pathnames, if paths are on different drives, or if paths is empty. Unlike commonprefix(), this returns a valid path. Added in version 3.5. Changed in version 3.6: Accepts a sequence of path-like objects. Changed in version 3.13: Any iterable can now be passed, rather than just sequences. os.path.commonprefix(list, /)¶ Return the longest string prefix (taken character-by-character) that is a prefix of all strings in list. If list is empty, return the empty string (\u0027\u0027). Warning This function may return invalid paths because it works a character at a time. If you need a common path prefix, then the algorithm implemented in this function is not secure. Use commonpath() for finding a common path prefix. \u003e\u003e\u003e os.path.commonprefix([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr/l\u0027\n\n\u003e\u003e\u003e os.path.commonpath([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr\u0027\n Changed in version 3.6: Accepts a path-like object. os.path.dirname(path, /)¶ Return the directory name of pathname path. This is the first element of the pair returned by passing path to the function split(). Changed in version 3.6: Accepts a path-like object. os.path.exists(path)¶ Return True if path refers to an existing path or an open file descriptor. Returns False for broken symbolic links. On some platforms, this function may return False if permission is not granted to execute os.stat() on the requested file, even if the path physically exists. Changed in version 3.3: path can now be an integer: True is returned if it is an open file descriptor, False otherwise. Changed in version 3.6: Accepts a path-like object. os.path.lexists(path)¶ Return True if path refers to an existing path, including broken symbolic links. Equivalent to exists() on platforms lacking os.lstat(). Changed in version 3.6: Accepts a path-like object. os.path.expanduser(path)¶ On Unix and Windows, return the argument with an initial component of ~ or ~user replaced by that user’s home directory. On Unix, an initial ~ is replaced by the environment v",
+    "scrapedAt": "2026-10-08 19:23:57.56388"
+  },
+  {
+    "id": 1021,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_Export",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:23:56.295357"
+  },
+  {
+    "id": 1020,
+    "url": "https://github.com/python/cpython/issues/61103",
+    "title": "Add support for C99 complex type (_Complex) as ctypes.c_complex · Issue #61103 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add support for C99 complex type (_Complex) as ctypes.c_complex #61103 New issue Copy link New issue Copy link Closed #121248 Closed Add support for C99 complex type (_Complex) as ctypes.c_complex#61103 #121248 Copy link Labels topic-ctypestype-featureA feature request or enhancementA feature request or enhancement Description rutsky mannequin opened on Jan 8, 2013 Issue body actions BPO 16899 Nosy @arigo, @amauryfa, @mdickinson, @meadori Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2013-01-08.22:06:03.435\u003e\nlabels \u003d [\u0027ctypes\u0027, \u0027type-feature\u0027, \u00273.7\u0027]\ntitle \u003d \u0027Add support for C99 complex type (_Complex) as ctypes.c_complex\u0027\nupdated_at \u003d \u003cDate 2018-07-04.15:01:25.648\u003e\nuser \u003d \u0027https://bugs.python.org/rutsky\u0027 bugs.python.org fields: activity \u003d \u003cDate 2018-07-04.15:01:25.648\u003e\nactor \u003d \u0027arigo\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027ctypes\u0027]\ncreation \u003d \u003cDate 2013-01-08.22:06:03.435\u003e\ncreator \u003d \u0027rutsky\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 16899\nkeywords \u003d []\nmessage_count \u003d 10.0\nmessages \u003d [\u0027179378\u0027, \u0027179459\u0027, \u0027179609\u0027, \u0027179646\u0027, \u0027180759\u0027, \u0027285961\u0027, \u0027285998\u0027, \u0027286453\u0027, \u0027321046\u0027, \u0027321049\u0027]\nnosy_count \u003d 8.0\nnosy_names \u003d [\u0027arigo\u0027, \u0027amaury.forgeotdarc\u0027, \u0027mark.dickinson\u0027, \u0027Arfrever\u0027, \u0027meador.inge\u0027, \u0027rutsky\u0027, \u0027Tom Krauss\u0027, \u0027rkmountainguy\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027test needed\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue16899\u0027\nversions \u003d [\u0027Python 3.7\u0027] Linked PRs gh-61103: support double complex (_Complex) type in ctypes #120894 gh-61103: Support float and long double complex types in ctypes module #121248 gh-61103: Add What\u0027s New entry for complex types in ctypes #129129 gh-61103: don\u0027t use native complex types in ctypes #133237 gh-61103: drop unused Py_HAVE_C_COMPLEX define #133435 gh-61103: use PEP 3118 codes in the ctypes #149344 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-ctypestype-featureA feature request or enhancementA feature request or enhancement Projects Ctypes issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:23:55.066224"
+  },
+  {
+    "id": 1019,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen",
+    "title": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.request — Extensible library for opening URLs | Theme Auto Light Dark | urllib.request — Extensible library for opening URLs¶ Source code: Lib/urllib/request.py The urllib.request module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. See also The Requests package is recommended for a higher-level HTTP client interface. Warning On macOS it is unsafe to use this module in programs using os.fork() because the getproxies() implementation for macOS uses a higher-level system API. Set the environment variable no_proxy to * to avoid this problem (e.g. os.environ[\"no_proxy\"] \u003d \"*\"). Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The urllib.request module defines the following functions: urllib.request.urlopen(url, data\u003dNone, [timeout, ]*, context\u003dNone)¶ Open url, which can be either a string containing a valid, properly encoded URL, or a Request object. data must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details. urllib.request module uses HTTP/1.1 and includes Connection:close header in its HTTP requests. The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections. If context is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details. This function always returns an object which can work as a context manager and has the properties url, headers, and status. See urllib.response.addinfourl for more detail on these properties. For HTTP and HTTPS URLs, this function returns a http.client.HTTPResponse object slightly modified. In addition to the three new methods above, the msg attribute contains the same information as the reason attribute — the reason phrase returned by server — instead of the response headers as it is specified in the documentation for HTTPResponse. For FTP, file, and data URLs, this function returns a urllib.response.addinfourl object. Raises URLError on protocol errors. Note that None may be returned if no handler handles the request (though the default installed global OpenerDirector uses UnknownHandler to ensure this never happens). In addition, if proxy settings are detected (for example, when a *_proxy environment variable like http_proxy is set), ProxyHandler is default installed and makes sure the requests are handled through the proxy. The legacy urllib.urlopen function from Python 2.6 and earlier has been discontinued; urllib.request.urlopen() corresponds to the old urllib2.urlopen. Proxy handling, which was done by passing a dictionary parameter to urllib.urlopen, can be obtained by using ProxyHandler objects. The default opener raises an auditing event urllib.Request with arguments fullurl, data, headers, method taken from the request object. Changed in version 3.2: cafile and capath were added. HTTPS virtual hosts are now supported if possible (that is, if ssl.HAS_SNI is true). data can be an iterable object. Changed in version 3.3: cadefault was added. Changed in version 3.4.3: context was added. Changed in version 3.10: HTTPS connection now send an ALPN extension with protocol indicator http/1.1 when no context is given. Custom context should set ALPN protocols with set_alpn_protocols(). Changed in version 3.13: Remove cafile, capath and cadefault parameters: use the context parameter instead. urllib.request.install_opener(opener)¶ Install an OpenerDirector instance as the default global opener. Installing an opener is only necessary if you want urlopen to use that opener; otherwise, simply call OpenerDirector.open() instead of urlopen(). The code does not check for a real OpenerDirector, and any class with the appropriate interface will work. urllib.request.build_opener([handler, ...])¶ Return an OpenerDirector instance, which chains the handlers in the order given. handlers can be either instances of BaseHandler, or subclasses of BaseHandler (in which case it must be possible to call the constructor without any parameters). Instances of the following classes will be in front of the handlers, unless the handlers contain them, instances of them or subclasses of them: ProxyHandler (if proxy settings are detected), UnknownHandler, HTTPHandler, HTTPDefaultErrorHandler, HTTPRedirectHandler, FTPHandler, FileHandler, HTTPErrorProcessor. If the Python installation has SSL support (i.e., if the ssl module can be imported), HTTPSHandler will also be added. A BaseHandler subclass may also change its handler_order attribute to modify its pos",
+    "scrapedAt": "2026-10-08 19:23:52.851716"
+  },
+  {
     "id": 1018,
     "url": "https://docs.python.org/3/library/symtable.html#symtable.Symbol.is_comp_cell",
     "title": "symtable — Access to the compiler’s symbol tables — Python 3.14.8 documentation",
@@ -6790,26 +6825,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1019,
-    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"
-  },
-  {
-    "id": 1020,
-    "url": "https://github.com/python/cpython/issues/61103"
-  },
-  {
-    "id": 1021,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_Export"
-  },
-  {
-    "id": 1022,
-    "url": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
-  },
-  {
-    "id": 1023,
-    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
   },
   {
     "id": 1024,
@@ -190236,10 +190251,310 @@ window.searchData = [
     "id": 163523,
     "url": "https://docs.python.org/3/c-api/memory.html#allocator-domains",
     "parentUrl": "https://docs.python.org/3/contents.html"
+  },
+  {
+    "id": 164107,
+    "url": "https://github.com/meadori",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164108,
+    "url": "https://github.com/amauryfa",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164109,
+    "url": "https://github.com/python/cpython/issues/61103#issue-1198892946",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164110,
+    "url": "https://github.com/python/cpython/pull/149344",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164111,
+    "url": "https://github.com/python/cpython/issues/61103#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164113,
+    "url": "https://bugs.python.org/issue16899",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164114,
+    "url": "https://github.com/arigo",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164115,
+    "url": "https://github.com/python/cpython/pull/133237",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164116,
+    "url": "https://github.com/python/cpython/pull/133435",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164117,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/61103",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164118,
+    "url": "https://github.com/python/cpython/issues/61103#top",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164120,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/61103",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164123,
+    "url": "https://github.com/python/cpython/pull/121248",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164124,
+    "url": "https://github.com/python/cpython/pull/120894",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164125,
+    "url": "https://github.com/python/cpython/pull/129129",
+    "parentUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "id": 164240,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/posixpath.py",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164245,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.splitdrive",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164252,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/ntpath.py",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164253,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.getctime",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164260,
+    "url": "https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_13",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164267,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.getmtime",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164268,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.sameopenfile",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164273,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.commonprefix",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164282,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.splitroot",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164287,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.getsize",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164290,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/genericpath.py",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164291,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.supports_unicode_filenames",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164296,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isdevdrive",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164298,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/os.path.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164299,
+    "url": "https://learn.microsoft.com/windows/dev-drive/",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164309,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.lexists",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164311,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.getatime",
+    "parentUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "id": 164313,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.find_spec",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164314,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.invalidate_caches",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164316,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.get_filename",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164321,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.get_data",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164324,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164326,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.create_module",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164333,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/zipimport.py",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164335,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.prefix",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164337,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/zipimport.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164345,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.get_source",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164349,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.get_code",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164353,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.ZipImportError",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164355,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.is_package",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164356,
+    "url": "https://docs.python.org/3/library/zipimport.html#",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164357,
+    "url": "https://peps.python.org/pep-0273/",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "id": 164358,
+    "url": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.archive",
+    "parentUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipimport — Import modules from Zip archives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipimport — Import modules from Zip archives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipimport.html#zipimport.zipimporter.load_module"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.ALLOW_MISSING"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_Export"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_Export"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/101770897?v\u003d4\u0026size\u003d48",
+    "alt": "@rutsky",
+    "pageTitle": "Add support for C99 complex type (_Complex) as ctypes.c_complex · Issue #61103 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add support for C99 complex type (_Complex) as ctypes.c_complex · Issue #61103 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/61103"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
