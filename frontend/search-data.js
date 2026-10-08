@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 722,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:11:37.929875"
+  },
+  {
+    "id": 721,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_FALSE",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code obje",
+    "scrapedAt": "2026-10-08 19:11:36.695282"
+  },
+  {
+    "id": 720,
+    "url": "https://docs.python.org/3/library/types.html#module-types",
+    "title": "types — Dynamic type creation and names for built-in types — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Types » types — Dynamic type creation and names for built-in types | Theme Auto Light Dark | types — Dynamic type creation and names for built-in types¶ Source code: Lib/types.py This module defines utility functions to assist in dynamic creation of new types. It also defines names for some object types that are used by the standard Python interpreter, but not exposed as builtins like int or str are. Finally, it provides some additional type-related utility classes and functions that are not fundamental enough to be builtins. Dynamic Type Creation¶ types.new_class(name, bases\u003d(), kwds\u003dNone, exec_body\u003dNone)¶ Creates a class object dynamically using the appropriate metaclass. The first three arguments are the components that make up a class definition header: the class name, the base classes (in order), the keyword arguments (such as metaclass). The exec_body argument is a callback that is used to populate the freshly created class namespace. It should accept the class namespace as its sole argument and update the namespace directly with the class contents. If no callback is provided, it has the same effect as passing in lambda ns: None. Added in version 3.3. types.prepare_class(name, bases\u003d(), kwds\u003dNone)¶ Calculates the appropriate metaclass and creates the class namespace. The arguments are the components that make up a class definition header: the class name, the base classes (in order) and the keyword arguments (such as metaclass). The return value is a 3-tuple: metaclass, namespace, kwds metaclass is the appropriate metaclass, namespace is the prepared class namespace and kwds is an updated copy of the passed in kwds argument with any \u0027metaclass\u0027 entry removed. If no kwds argument is passed in, this will be an empty dict. Added in version 3.3. Changed in version 3.6: The default value for the namespace element of the returned tuple has changed. Now an insertion-order-preserving mapping is used when the metaclass does not have a __prepare__ method. See also Metaclasses Full details of the class creation process supported by these functions PEP 3115 - Metaclasses in Python 3000 Introduced the __prepare__ namespace hook types.resolve_bases(bases)¶ Resolve MRO entries dynamically as specified by PEP 560. This function looks for items in bases that are not instances of type, and returns a tuple where each such object that has an __mro_entries__() method is replaced with an unpacked result of calling this method. If a bases item is an instance of type, or it doesn’t have an __mro_entries__() method, then it is included in the return tuple unchanged. Added in version 3.7. types.get_original_bases(cls, /)¶ Return the tuple of objects originally given as the bases of cls before the __mro_entries__() method has been called on any bases (following the mechanisms laid out in PEP 560). This is useful for introspecting Generics. For classes that have an __orig_bases__ attribute, this function returns the value of cls.__orig_bases__. For classes without the __orig_bases__ attribute, cls.__bases__ is returned. Examples: from typing import TypeVar, Generic, NamedTuple, TypedDict\n\nT \u003d TypeVar(\"T\")\nclass Foo(Generic[T]): ...\nclass Bar(Foo[int], float): ...\nclass Baz(list[str]): ...\nEggs \u003d NamedTuple(\"Eggs\", [(\"a\", int), (\"b\", str)])\nSpam \u003d TypedDict(\"Spam\", {\"a\": int, \"b\": str})\n\nassert Bar.__bases__ \u003d\u003d (Foo, float)\nassert get_original_bases(Bar) \u003d\u003d (Foo[int], float)\n\nassert Baz.__bases__ \u003d\u003d (list,)\nassert get_original_bases(Baz) \u003d\u003d (list[str],)\n\nassert Eggs.__bases__ \u003d\u003d (tuple,)\nassert get_original_bases(Eggs) \u003d\u003d (NamedTuple,)\n\nassert Spam.__bases__ \u003d\u003d (dict,)\nassert get_original_bases(Spam) \u003d\u003d (TypedDict,)\n\nassert int.__bases__ \u003d\u003d (object,)\nassert get_original_bases(int) \u003d\u003d (object,)\n Added in version 3.12. See also PEP 560 - Core support for typing module and generic types Standard Interpreter Types¶ This module provides names for many of the types that are required to implement a Python interpreter. It deliberately avoids including some of the types that arise only incidentally during processing such as the listiterator type. Typical use of these names is for isinstance() or issubclass() checks. If you instantiate any of these types, note that signatures may vary between Python versions. Standard names are defined for the following types: class types.NoneType¶ The type of None. Added in version 3.10. class types.FunctionType¶ class types.LambdaType¶ The type of user-defined functions and functions created by lambda expressions. Raises an auditing event function.__new__ with argument code. The audit event only occurs for direct instantiation of function objects, and is not raised for normal compilation. class types.GeneratorType¶ The type of generator-iterator objects, created by generator functions. class types.CoroutineType¶ The type of coroutine objects, created by async def functions. Added in version 3.5.",
+    "scrapedAt": "2026-10-08 19:11:35.511623"
+  },
+  {
+    "id": 719,
+    "url": "https://github.com/python/cpython/issues/92332",
+    "title": "Deprecate `typing.Text` · Issue #92332 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate typing.Text #92332 New issue Copy link New issue Copy link Closed #92351 Closed Deprecate typing.Text#92332 #92351 Copy link Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Description AlexWaygood opened on May 5, 2022 Issue body actions Feature or enhancement The typing module has a huge API, and new features continue to be added in each version of Python. Deprecations should be done carefully and slowly, to minimise disruption for users, but we should nonetheless aim to shrink the API where features are no longer needed, so as to make the sheer size of the module less overwhelming for newcomers to Python typing. Python 2.7 is now end-of-life, so typing.Text has no use anymore (its sole purpose was to provide backwards compatibility with Python 2). I propose that we should now deprecate typing.Text, with a view to eventually removing it. Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-typingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:11:34.253914"
+  },
+  {
+    "id": 718,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsNegative",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:11:31.97583"
+  },
+  {
     "id": 717,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#tkinter",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -4715,26 +4750,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 718,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsNegative"
-  },
-  {
-    "id": 719,
-    "url": "https://github.com/python/cpython/issues/92332"
-  },
-  {
-    "id": 720,
-    "url": "https://docs.python.org/3/library/types.html#module-types"
-  },
-  {
-    "id": 721,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_FALSE"
-  },
-  {
-    "id": 722,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union"
   },
   {
     "id": 723,
@@ -121424,10 +121439,325 @@ window.searchData = [
     "id": 84134,
     "url": "https://github.com/python/cpython/issues/126585#issue-2644273575",
     "parentUrl": "https://github.com/python/cpython/issues/126585"
+  },
+  {
+    "id": 85487,
+    "url": "https://github.com/python/cpython/issues/92332#top",
+    "parentUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 85489,
+    "url": "https://github.com/python/cpython/pull/92351",
+    "parentUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 85491,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/92332",
+    "parentUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 85492,
+    "url": "https://github.com/python/cpython/issues/92332#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 85493,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-typing%22",
+    "parentUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 85494,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/92332",
+    "parentUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 85495,
+    "url": "https://github.com/python/cpython/issues/92332#issue-1226527349",
+    "parentUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "id": 85500,
+    "url": "https://docs.python.org/3/library/types.html#types.ClassMethodDescriptorType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85501,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#types-union",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85503,
+    "url": "https://docs.python.org/3/library/types.html#types.MethodType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85504,
+    "url": "https://docs.python.org/3/library/types.html#types.BuiltinFunctionType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85508,
+    "url": "https://docs.python.org/3/library/types.html#types.prepare_class",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85511,
+    "url": "https://docs.python.org/3/library/types.html#types.MappingProxyType.keys",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85512,
+    "url": "https://docs.python.org/3/library/types.html#types.CellType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85514,
+    "url": "https://docs.python.org/3/library/types.html#types.MappingProxyType.items",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85516,
+    "url": "https://docs.python.org/3/reference/datamodel.html#module-objects",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85517,
+    "url": "https://docs.python.org/3/library/types.html#types.MappingProxyType.get",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85518,
+    "url": "https://docs.python.org/3/library/types.html#types.NoneType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85521,
+    "url": "https://docs.python.org/3/library/types.html#types.NotImplementedType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85522,
+    "url": "https://peps.python.org/pep-0584/",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85531,
+    "url": "https://docs.python.org/3/library/types.html#types.LambdaType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85534,
+    "url": "https://docs.python.org/3/library/types.html#types.GetSetDescriptorType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85535,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/types.py",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85536,
+    "url": "https://docs.python.org/3/library/types.html#",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85540,
+    "url": "https://docs.python.org/3/library/types.html#coroutine-utility-functions",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85541,
+    "url": "https://docs.python.org/3/library/enum.html#enum.Enum",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85544,
+    "url": "https://docs.python.org/3/c-api/capsule.html#capsules",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85546,
+    "url": "https://docs.python.org/3/library/types.html#types.MemberDescriptorType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85547,
+    "url": "https://docs.python.org/3/library/types.html#types.MappingProxyType.values",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85551,
+    "url": "https://docs.python.org/3/library/types.html#types.DynamicClassAttribute",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85553,
+    "url": "https://docs.python.org/3/library/types.html#additional-utility-classes-and-functions",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85554,
+    "url": "https://docs.python.org/3/library/types.html#dynamic-type-creation",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85557,
+    "url": "https://docs.python.org/3/library/types.html#types.AsyncGeneratorType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85558,
+    "url": "https://docs.python.org/3/library/types.html#types.CapsuleType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85560,
+    "url": "https://docs.python.org/3/library/types.html#types.SimpleNamespace",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85565,
+    "url": "https://docs.python.org/3/library/collections.abc.html#collections.abc.Generator",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85573,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/types.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85574,
+    "url": "https://docs.python.org/3/library/types.html#types.BuiltinMethodType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85578,
+    "url": "https://docs.python.org/3/library/types.html#types.GenericAlias",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85581,
+    "url": "https://docs.python.org/3/library/types.html#types.MethodWrapperType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85582,
+    "url": "https://docs.python.org/3/library/types.html#types.CoroutineType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85583,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.join",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85585,
+    "url": "https://docs.python.org/3/library/types.html#types.WrapperDescriptorType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85586,
+    "url": "https://docs.python.org/3/library/types.html#types.MethodDescriptorType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85593,
+    "url": "https://docs.python.org/3/library/types.html#types.GeneratorType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85596,
+    "url": "https://docs.python.org/3/library/types.html#types.EllipsisType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85597,
+    "url": "https://docs.python.org/3/library/types.html#types.FrameType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85600,
+    "url": "https://docs.python.org/3/library/types.html#types.FunctionType",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85602,
+    "url": "https://docs.python.org/3/library/types.html#types.MappingProxyType.copy",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85605,
+    "url": "https://docs.python.org/3/library/types.html#types.new_class",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "id": 85616,
+    "url": "https://docs.python.org/3/library/types.html#standard-interpreter-types",
+    "parentUrl": "https://docs.python.org/3/library/types.html#module-types"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-typing-union"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_FALSE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-JUMP_IF_FALSE"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#module-types"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/66076021?u\u003dfc4602f3e8770bf2b4ce2b2f244159c10b1174d3\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@AlexWaygood",
+    "pageTitle": "Deprecate `typing.Text` · Issue #92332 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate `typing.Text` · Issue #92332 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/92332"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsNegative"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsNegative"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
