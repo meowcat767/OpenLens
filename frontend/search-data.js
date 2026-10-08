@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1476,
+    "url": "https://docs.python.org/3/library/fcntl.html#module-fcntl",
+    "title": "fcntl — The fcntl and ioctl system calls — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Unix-specific services » fcntl — The fcntl and ioctl system calls | Theme Auto Light Dark | fcntl — The fcntl and ioctl system calls¶ This module performs file and I/O control on file descriptors. It is an interface to the fcntl() and ioctl() Unix routines. See the fcntl(2) and ioctl(2) Unix manual pages for full details. Availability: Unix, not WASI. All functions in this module take a file descriptor fd as their first argument. This can be an integer file descriptor, such as returned by sys.stdin.fileno(), or an io.IOBase object, such as sys.stdin itself, which provides a fileno() that returns a genuine file descriptor. Changed in version 3.3: Operations in this module used to raise an IOError where they now raise an OSError. Changed in version 3.8: The fcntl module now contains F_ADD_SEALS, F_GET_SEALS, and F_SEAL_* constants for sealing of os.memfd_create() file descriptors. Changed in version 3.9: On macOS, the fcntl module exposes the F_GETPATH constant, which obtains the path of a file from a file descriptor. On Linux(\u003e\u003d3.15), the fcntl module exposes the F_OFD_GETLK, F_OFD_SETLK and F_OFD_SETLKW constants, which are used when working with open file description locks. Changed in version 3.10: On Linux \u003e\u003d 2.6.11, the fcntl module exposes the F_GETPIPE_SZ and F_SETPIPE_SZ constants, which allow to check and modify a pipe’s size respectively. Changed in version 3.11: On FreeBSD, the fcntl module exposes the F_DUP2FD and F_DUP2FD_CLOEXEC constants, which allow to duplicate a file descriptor, the latter setting FD_CLOEXEC flag in addition. Changed in version 3.12: On Linux \u003e\u003d 4.5, the fcntl module exposes the FICLONE and FICLONERANGE constants, which allow to share some data of one file with another file by reflinking on some filesystems (e.g., btrfs, OCFS2, and XFS). This behavior is commonly referred to as “copy-on-write”. Changed in version 3.13: On Linux \u003e\u003d 2.6.32, the fcntl module exposes the F_GETOWN_EX, F_SETOWN_EX, F_OWNER_TID, F_OWNER_PID, F_OWNER_PGRP constants, which allow to direct I/O availability signals to a specific thread, process, or process group. On Linux \u003e\u003d 4.13, the fcntl module exposes the F_GET_RW_HINT, F_SET_RW_HINT, F_GET_FILE_RW_HINT, F_SET_FILE_RW_HINT, and RWH_WRITE_LIFE_* constants, which allow to inform the kernel about the relative expected lifetime of writes on a given inode or via a particular open file description. On Linux \u003e\u003d 5.1 and NetBSD, the fcntl module exposes the F_SEAL_FUTURE_WRITE constant for use with F_ADD_SEALS and F_GET_SEALS operations. On FreeBSD, the fcntl module exposes the F_READAHEAD, F_ISUNIONSTACK, and F_KINFO constants. On macOS and FreeBSD, the fcntl module exposes the F_RDAHEAD constant. On NetBSD and AIX, the fcntl module exposes the F_CLOSEM constant. On NetBSD, the fcntl module exposes the F_MAXFD constant. On macOS and NetBSD, the fcntl module exposes the F_GETNOSIGPIPE and F_SETNOSIGPIPE constant. Changed in version 3.14: On Linux \u003e\u003d 6.1, the fcntl module exposes the F_DUPFD_QUERY to query a file descriptor pointing to the same file. The module defines the following functions: fcntl.fcntl(fd, cmd, arg\u003d0, /)¶ Perform the operation cmd on file descriptor fd (file objects providing a fileno() method are accepted as well). The values used for cmd are operating system dependent, and are available as constants in the fcntl module, using the same names as used in the relevant C header files. The argument arg can either be an integer value, a bytes-like object, or a string. The type and size of arg must match the type and size of the argument of the operation as specified in the relevant C documentation. When arg is an integer, the function returns the integer return value of the C fcntl() call. When the argument is bytes-like object, it represents a binary structure, for example, created by struct.pack(). A string value is encoded to binary using the UTF-8 encoding. The binary data is copied to a buffer whose address is passed to the C fcntl() call. The return value after a successful call is the contents of the buffer, converted to a bytes object. The length of the returned object will be the same as the length of the arg argument. This is limited to 1024 bytes. If the fcntl() call fails, an OSError is raised. Note If the type or the size of arg does not match the type or size of the argument of the operation (for example, if an integer is passed when a pointer is expected, or the information returned in the buffer by the operating system is larger than 1024 bytes), this is most likely to result in a segmentation violation or a more subtle data corruption. Raises an auditing event fcntl.fcntl with arguments fd, cmd, arg. Changed in version 3.14: Add support of arbitrary bytes-like objects, not only bytes. fcntl.ioctl(fd, request, arg\u003d0, mutate_flag\u003dTrue, /)¶ This function is identical to the fcntl() function, except that the argument handling",
+    "scrapedAt": "2026-10-08 19:43:54.001348"
+  },
+  {
+    "id": 1475,
+    "url": "https://github.com/python/cpython/issues/127949",
+    "title": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate asyncio policy system #127949 New issue Copy link New issue Copy link Closed Closed Deprecate asyncio policy system#127949 Copy link Assignees Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-asynciotype-featureA feature request or enhancementA feature request or enhancement Description kumaraditya303 opened on Dec 14, 2024 Issue body actions asyncio\u0027s policy system deprecation asyncio\u0027s policy system1 has been a source of confusion and problems in asyncio for a very long time. The policies no longer serve a real purpose. Loops are always per thread, there is no need to have a \"current loop\" when no loop is currently running. This issue discusses the changes to deprecate it in Python 3.14 and schedule its removal in 3.16 or later. The usual user applications would use the runner APIs (see flowchart) while those who want more control like Jupyter project can create an event loop and manage it themselves, the difference would be that instead of them first getting the policy then event loop then can directly create it like loop \u003d MyCustomEventLoop()\nloop.run_until_complete(task) rather than currently asyncio.set_event_loop_policy(MyPolicy())\npolicy \u003d asyncio.get_event_loop_policy()\nloop \u003d policy.new_event_loop()\nloop.run_until_complete(task) See these discussions for more background: Deprecate get_event_loop() #83710 (comment) Finish deprecation in asyncio.get_event_loop() #93453 (comment) deprecate the asyncio child watchers system #94597 (comment) deprecate the asyncio child watchers system #94597 Functions and classes to be deprecated and later removed asyncio.get_event_loop_policy asyncio.set_event_loop_policy asyncio.AbstractEventLoopPolicy asyncio.DefaultEventLoopPolicy asyncio.WindowsSelectorEventLoopPolicy asyncio.WindowsProactorEventLoopPolicy asyncio.set_event_loop Functions to be modified asyncio.get_event_loop - In 3.16 or later this will become an alias to get_running_loop. asyncio.new_event_loop - In 3.16 or later this will ignore custom policies and will be an alias to asyncio.EventLoop asyncio.run \u0026 asyncio.Runner - In 3.16 or later this will be modified to not use policy system as that will be gone and rely solely on loop_factory. The Grand Plan To minimize changes, all the deprecated functions will be underscored i.e. set_event_loop -\u003e _set_event_loop and set_event_loop will emit the warning then call _set_event_loop as its underlying implementation. This way internally asyncio can still call these functions until they are removed without need of many ignore warnings and the tests too can easily be adapted. The deprecated classes will emit warnings when they are subclassed as it was done for child watchers. The runner APIs will be remain unmodified but making sure that correct warnings are emitted internally when policy system is used. The Future ---\ntitle: Flowchart for asyncio.run\n---\nflowchart TD\n    A[\"asyncio.run(coro, loop_factory\u003d...)\"] --\u003e B{loop_factory}\n    B --\u003e|loop_factory is None| D{platform}\n    B --\u003e|loop_factory is not None| E[\"loop \u003d loop_factory()\"]\n    D --\u003e |Unix| F[\"loop \u003d SelectorEventLoop()\"]\n    D --\u003e |Windows| G[\"loop \u003d ProactorEventLoop()\"]\n    E --\u003e H\n    F --\u003e H\n    G --\u003e H \n    H[\"loop.run_until_complete(coro)\"]\n Loading Linked PRs gh-127949: deprecate asyncio.set_event_loop_policy #128024 gh-127949: deprecate asyncio.get_event_loop_policy #128053 gh-127949: fix resource warnings in test_tasks.py due to avoiding a call to get_event_loop() #128172 gh-127949: fix DeprecationWarning in test_inspect.py #128215 gh-127949: deprecate asyncio policy classes #128216 gh-127949: deprecate asyncio.set_event_loop #128218 gh-127949: add docs for asyncio policy deprecation #128269 gh-127949: make deprecation of policy system more prominent #128290 [3.13] gh-127949: fix resource warnings in test_tasks.py (GH-128172) #131805 [3.12] gh-127949: fix resource warnings in test_tasks.py (GH-128172) #131806 gh-127949: remove asyncio policy system #150310 Footnotes https://docs.python.org/3.14/library/asyncio-policy.html ↩ Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees kumaraditya303 Labels extension-modulesC modules in the Modules dirC modules in the Modules dirstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-asynciotype-featureA feature request or enhancementA feature request or enhancement Projects asyncio Status Done Show more project fields Milestone No milestone Relation",
+    "scrapedAt": "2026-10-08 19:43:52.63357"
+  },
+  {
+    "id": 1474,
+    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith",
+    "title": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » unittest — Unit testing framework | Theme Auto Light Dark | unittest — Unit testing framework¶ Source code: Lib/unittest/__init__.py (If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods.) The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework. To achieve this, unittest supports some important concepts in an object-oriented way: test fixture A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process. test case A test case is the individual unit of testing. It checks for a specific response to a particular set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases. test suite A test suite is a collection of test cases, test suites, or both. It is used to aggregate tests that should be executed together. test runner A test runner is a component which orchestrates the execution of tests and provides the outcome to the user. The runner may use a graphical interface, a textual interface, or return a special value to indicate the results of executing the tests. See also Module doctest Another test-support module with a very different flavor. Simple Smalltalk Testing: With Patterns Kent Beck’s original paper on testing frameworks using the pattern shared by unittest. pytest Third-party unittest framework with a lighter-weight syntax for writing tests. For example, assert func(10) \u003d\u003d 42. The Python Testing Tools Taxonomy An extensive list of Python testing tools including functional testing frameworks and mock object libraries. Testing in Python Mailing List A special-interest-group for discussion of testing, and testing tools, in Python. The script Tools/unittestgui/unittestgui.py in the Python source distribution is a GUI tool for test discovery and execution. This is intended largely for ease of use for those new to unit testing. For production environments it is recommended that tests be driven by a continuous integration system such as Buildbot, Jenkins, GitHub Actions, or AppVeyor. Basic example¶ The unittest module provides a rich set of tools for constructing and running tests. This section demonstrates that a small subset of the tools suffice to meet the needs of most users. Here is a short script to test three string methods: import unittest\n\nclass TestStringMethods(unittest.TestCase):\n\n    def test_upper(self):\n        self.assertEqual(\u0027foo\u0027.upper(), \u0027FOO\u0027)\n\n    def test_isupper(self):\n        self.assertTrue(\u0027FOO\u0027.isupper())\n        self.assertFalse(\u0027Foo\u0027.isupper())\n\n    def test_split(self):\n        s \u003d \u0027hello world\u0027\n        self.assertEqual(s.split(), [\u0027hello\u0027, \u0027world\u0027])\n        # check that s.split fails when the separator is not a string\n        with self.assertRaises(TypeError):\n            s.split(2)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    unittest.main()\n A test case is created by subclassing unittest.TestCase. The three individual tests are defined with methods whose names start with the letters test. This naming convention informs the test runner about which methods represent tests. The crux of each test is a call to assertEqual() to check for an expected result; assertTrue() or assertFalse() to verify a condition; or assertRaises() to verify that a specific exception gets raised. These methods are used instead of the assert statement so the test runner can accumulate all test results and produce a report. The setUp() and tearDown() methods allow you to define instructions that will be executed before and after each test method. They are covered in more detail in the section Organizing test code. The final block shows a simple way to run the tests. unittest.main() provides a command-line interface to the test script. When run from the command line, the above script produces an output that looks like this: ...\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n Passing the -v option to your test script will instruct unittest.main() to enable a higher level of verbosity, and produce the following output: test_isupper (__main__.TestStringMethods.test_isupper) ... ok\ntest_split (__main__.TestStringMethods.test_split) ... ok\ntest_upper (__main__.TestStringMethods.test_upper) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n The above examples show the most commonly used unittest features which are sufficient to meet many everyday testing needs. The remain",
+    "scrapedAt": "2026-10-08 19:43:50.42751"
+  },
+  {
+    "id": 1473,
+    "url": "https://github.com/python/cpython/issues/127945",
+    "title": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} ctypes thread safety auditing (and fixing) #127945 New issue Copy link New issue Copy link Closed #134332 Closed ctypes thread safety auditing (and fixing)#127945 #134332 Copy link Assignees Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-free-threadingtype-featureA feature request or enhancementA feature request or enhancement Description ZeroIntensity opened on Dec 14, 2024 Issue body actions Feature or enhancement This is a tracking issue for all thread safety problems related to ctypes. I\u0027ll be working on this, but others can feel free to give me some help. First of all, we need to find where the thread safety problems are. ### Auditing\n- [x] Audit `_ctypes.c`\n- [ ] Audit `_ctypes_test.c` (and probably the generated file too)\n- [ ] Audit `callbacks.c`\n- [ ] Audit `callproc.c`\n- [ ] Audit `cfield.c`\n- [x] Audit `malloc_closure.c`\n- [ ] Audit `stgdict.c`\n I\u0027ll be tracking the issues that get found when auditing here. The plan is to just create a new issue and link to it for each new problem instead of flooding this issue with PRs. Generally, the workflow for fixes should follow most of the rules from #116738, but I suspect we\u0027ll need recursive mutexes for quite a few things related to callbacks, because it\u0027s difficult to tell what might be re-entrant, and we can\u0027t use critical sections for arbitrary function pointers. ### Known Issues\n- [ ] https://github.com/python/cpython/issues/127946\n- [ ] https://github.com/python/cpython/issues/128182\n- [ ] https://github.com/python/cpython/issues/128485\n- [ ] https://github.com/python/cpython/issues/128567\n- [ ] https://github.com/python/cpython/issues/128570\n- [ ] https://github.com/python/cpython/issues/131974\n cc @encukou, as the ctypes genius, and @colesbury as the free-threading mastermind. Linked PRs gh-127945: add locking to malloc closure in free-threading #131662 gh-127945: fix thread safety of ctypes state #131710 gh-127945: fix thread safety of creating instances of ctypes structures #131716 gh-127945: make initialization of error_object_name thread safe #131896 gh-127945: acquire critical section around PyCFuncPtr_call #131898 gh-127945: mark TestLocalization as thread unsafe in ctypes #131899 gh-127945: fix thread safety and add lock held assertions to paramfunc in ctypes #132473 gh-127945: move initialization of field desc to module exec in ctypes #132552 gh-127945: change _ctypes_test static globals to thread local #132575 gh-127945: fix critical sections around ctypes array #132646 gh-127945: skip more tests in ctypes when using parallel threads #132682 gh-127945: add lock held assertions in ctypes arrays #132720 gh-127945: add test_ctypes to free-threading TSAN CI #132727 gh-127945: Update What\u0027s New in Python 3.14 for free-threaded ctypes #134332 [3.14] gh-127945: Update What\u0027s New in Python 3.14 for free-threaded ctypes (GH-134332) #134364 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees kumaraditya303 Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtopic-ctypestopic-free-threadingtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:43:49.081127"
+  },
+  {
+    "id": 1472,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy",
+    "title": "Policies — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | Policies¶ Warning Policies are deprecated and will be removed in Python 3.16. Users are encouraged to use the asyncio.run() function or the asyncio.Runner with loop_factory to use the desired loop implementation. An event loop policy is a global object used to get and set the current event loop, as well as create new event loops. The default policy can be replaced with built-in alternatives to use different event loop implementations, or substituted by a custom policy that can override these behaviors. The policy object gets and sets a separate event loop per context. This is per-thread by default, though custom policies could define context differently. Custom event loop policies can control the behavior of get_event_loop(), set_event_loop(), and new_event_loop(). Policy objects should implement the APIs defined in the AbstractEventLoopPolicy abstract base class. Getting and Setting the Policy¶ The following functions can be used to get and set the policy for the current process: asyncio.get_event_loop_policy()¶ Return the current process-wide policy. Deprecated since version 3.14: The get_event_loop_policy() function is deprecated and will be removed in Python 3.16. asyncio.set_event_loop_policy(policy)¶ Set the current process-wide policy to policy. If policy is set to None, the default policy is restored. Deprecated since version 3.14: The set_event_loop_policy() function is deprecated and will be removed in Python 3.16. Policy Objects¶ The abstract event loop policy base class is defined as follows: class asyncio.AbstractEventLoopPolicy¶ An abstract base class for asyncio policies. get_event_loop()¶ Get the event loop for the current context. Return an event loop object implementing the AbstractEventLoop interface. This method should never return None. Changed in version 3.6. set_event_loop(loop)¶ Set the event loop for the current context to loop. new_event_loop()¶ Create and return a new event loop object. This method should never return None. Deprecated since version 3.14: The AbstractEventLoopPolicy class is deprecated and will be removed in Python 3.16. asyncio ships with the following built-in policies: class asyncio.DefaultEventLoopPolicy¶ The default asyncio policy. Uses SelectorEventLoop on Unix and ProactorEventLoop on Windows. There is no need to install the default policy manually. asyncio is configured to use the default policy automatically. Changed in version 3.8: On Windows, ProactorEventLoop is now used by default. Changed in version 3.14: The get_event_loop() method of the default asyncio policy now raises a RuntimeError if there is no set event loop. Deprecated since version 3.14: The DefaultEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsSelectorEventLoopPolicy¶ An alternative event loop policy that uses the SelectorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsSelectorEventLoopPolicy class is deprecated and will be removed in Python 3.16. class asyncio.WindowsProactorEventLoopPolicy¶ An alternative event loop policy that uses the ProactorEventLoop event loop implementation. Availability: Windows. Deprecated since version 3.14: The WindowsProactorEventLoopPolicy class is deprecated and will be removed in Python 3.16. Custom Policies¶ To implement a new event loop policy, it is recommended to subclass DefaultEventLoopPolicy and override the methods for which custom behavior is wanted, e.g.: class MyEventLoopPolicy(asyncio.DefaultEventLoopPolicy):\n\n    def get_event_loop(self):\n        \"\"\"Get the event loop.\n\n        This may be None or an instance of EventLoop.\n        \"\"\"\n        loop \u003d super().get_event_loop()\n        # Do something with loop ...\n        return loop\n\nasyncio.set_event_loop_policy(MyEventLoopPolicy())\n Table of Contents Policies Getting and Setting the Policy Policy Objects Custom Policies Previous topic Transports and Protocols Next topic Platform Support This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Policies | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:43:46.435798"
+  },
+  {
     "id": 1471,
     "url": "https://github.com/python/cpython/issues/125767",
     "title": "Support pickling of super object · Issue #125767 · python/cpython · GitHub",
@@ -9870,26 +9905,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1472,
-    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy"
-  },
-  {
-    "id": 1473,
-    "url": "https://github.com/python/cpython/issues/127945"
-  },
-  {
-    "id": 1474,
-    "url": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith"
-  },
-  {
-    "id": 1475,
-    "url": "https://github.com/python/cpython/issues/127949"
-  },
-  {
-    "id": 1476,
-    "url": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
   },
   {
     "id": 1477,
@@ -241481,10 +241496,354 @@ window.searchData = [
     "id": 306893,
     "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125767",
     "parentUrl": "https://github.com/python/cpython/issues/125767"
+  },
+  {
+    "id": 306941,
+    "url": "https://github.com/python/cpython/pull/131899",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306942,
+    "url": "https://github.com/python/cpython/pull/131710",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306943,
+    "url": "https://github.com/python/cpython/pull/131898",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306944,
+    "url": "https://github.com/python/cpython/pull/132646",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306945,
+    "url": "https://github.com/python/cpython/issues/127945#issue-2739960980",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306946,
+    "url": "https://github.com/python/cpython/pull/131716",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306947,
+    "url": "https://github.com/python/cpython/pull/132727",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306950,
+    "url": "https://github.com/python/cpython/pull/132682",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306951,
+    "url": "https://github.com/python/cpython/pull/134364",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306952,
+    "url": "https://github.com/python/cpython/pull/132720",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306953,
+    "url": "https://github.com/python/cpython/pull/131896",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306955,
+    "url": "https://github.com/python/cpython/issues/127945#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306958,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/127945",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306960,
+    "url": "https://github.com/python/cpython/pull/132552",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306961,
+    "url": "https://github.com/python/cpython/pull/134332",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306962,
+    "url": "https://github.com/python/cpython/pull/132473",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306963,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/127945",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306964,
+    "url": "https://github.com/python/cpython/pull/131662",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306965,
+    "url": "https://github.com/python/cpython/pull/132575",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 306969,
+    "url": "https://github.com/python/cpython/issues/127945#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "id": 307220,
+    "url": "https://github.com/python/cpython/pull/128269",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307221,
+    "url": "https://github.com/python/cpython/pull/150310",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307222,
+    "url": "https://github.com/python/cpython/pull/128024",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307223,
+    "url": "https://github.com/python/cpython/issues/127949#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307226,
+    "url": "https://github.com/python/cpython/issues/127949#user-content-fnref-1-21cb7f2cf27b18bcbeca6586dd7f3fb6",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307228,
+    "url": "https://github.com/python/cpython/issues/83710#issuecomment-1093855411",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307229,
+    "url": "https://github.com/python/cpython/pull/131806",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307230,
+    "url": "https://docs.python.org/3.14/library/asyncio-policy.html",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307231,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/127949",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307233,
+    "url": "https://github.com/python/cpython/issues/93453#issue-1259542498",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307234,
+    "url": "https://github.com/python/cpython/pull/131805",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307235,
+    "url": "https://github.com/python/cpython/pull/128053",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307236,
+    "url": "https://github.com/python/cpython/issues/127949#issue-2739981235",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307237,
+    "url": "https://github.com/python/cpython/pull/128172",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307239,
+    "url": "https://github.com/python/cpython/pull/128290",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307242,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/127949",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307243,
+    "url": "https://github.com/python/cpython/issues/127949#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307244,
+    "url": "https://github.com/python/cpython/issues/127949#user-content-fn-1-21cb7f2cf27b18bcbeca6586dd7f3fb6",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307246,
+    "url": "https://github.com/python/cpython/issues/94597#issuecomment-1270840197",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307247,
+    "url": "https://github.com/python/cpython/pull/128218",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307248,
+    "url": "https://github.com/python/cpython/pull/128216",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307249,
+    "url": "https://github.com/python/cpython/pull/128215",
+    "parentUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "id": 307251,
+    "url": "https://manpages.debian.org/flock(2)",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307257,
+    "url": "https://manpages.debian.org/ioctl(2)",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307264,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.flock",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307271,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/fcntl.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307272,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_SH",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307284,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_NB",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307285,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_EX",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307291,
+    "url": "https://manpages.debian.org/fcntl(2)",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307296,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.LOCK_UN",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "id": 307298,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.lockf",
+    "parentUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fcntl — The fcntl and ioctl system calls — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "fcntl — The fcntl and ioctl system calls — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/fcntl.html#module-fcntl"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate asyncio policy system · Issue #127949 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127949"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "unittest — Unit testing framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertEndsWith"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "kumaraditya303",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/59607654?s\u003d64\u0026u\u003d978e39582c8a6ba97ba75af78aa59ad7f7b73d0c\u0026v\u003d4",
+    "alt": "@kumaraditya303",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "`ctypes` thread safety auditing (and fixing) · Issue #127945 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127945"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Policies — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-policy.html#asyncio.AbstractEventLoopPolicy"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
     "alt": "serhiy-storchaka",
