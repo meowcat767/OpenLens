@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 191,
+    "url": "https://www.python.org/psf/membership/",
+    "title": "Become a Member of the PSF | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. By becoming a member, you tell us and the world that you are a part of the PSF and support our work, and as one of the classes of voting members, you add your voice to the future direction of the Foundation. We\u0027re so happy to have you! Voting Memberships As core stakeholders of the Python Software Foundation community, Supporting Members, Contributing Members, and PSF Fellows are all eligible to vote in PSF Board Elections. 1. Sign up as a Supporting Member here! Supporting Members donate an annual membership fee of $99 to the PSF to sustain the Foundation and support the Python community. We have also introduced a sliding scale rate for Supporting Membership, which you can sign up for here. Your support is crucial to the PSF\u0027s ability to do our work making Python available and supporting our community. More details are available on our Supporting Membership page. 2. Self-Certify as a Contributing Member here! Contributing Members qualify because of their work for the Python community and ecosystem. Fill out the short form linked above to sign up! You qualify as a Contributing Member if you dedicate at least five hours per month volunteering on projects which advance the mission of the PSF by creating or maintaining open source software available to the public at no charge, organizing Python events, participating in one of the PSF\u0027s working groups, etc. 3. Fellows Fellows are members who have been nominated for their extraordinary efforts and impact upon Python, the community, and the broader Python ecosystem. Visit this page to nominate a Fellow or learn more about the process. Basic Membership Sign up as a Basic Member here! Signing up as a Basic Member is free, and simply declares that you are part of the Python language community and agree to the community Code of Conduct. Thank you for being with us! Questions? Check out our Membership FAQ page. If you can\u0027t find the answer to your questions in our FAQ, please email psf-donations@python.org. The PSF The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission.",
+    "scrapedAt": "2026-10-08 18:53:15.702248"
+  },
+  {
+    "id": 190,
+    "url": "https://scikit-learn.org/",
+    "title": "scikit-learn: machine learning in Python — scikit-learn 0.16.1 documentation",
+    "content": "",
+    "scrapedAt": "2026-10-08 18:53:14.512643"
+  },
+  {
+    "id": 189,
+    "url": "https://www.roundup-tracker.org/",
+    "title": "Roundup Issue Tracker - Roundup 2.6.0 documentation",
+    "content": "Skip to main content Roundup Issue Tracker Download: Build Status: Roundup is an issue-tracking system that boasts a user-friendly interface and easy installation process. It offers a range of interfaces, including command-line, web, REST, XML-RPC, and e-mail, making it a versatile solution for issue tracking. The system is based on the award-winning design by Ka-Ping Yee, which emerged victorious in the Software Carpentry “Track” design competition. Roundup is highly customizable, allowing users to tailor the system to their specific needs and preferences. The latest stable version of Roundup is 2.6.0, which includes bug fixes and additional features compared to the previous 2.5.0 release. Roundup is compatible with Python 3.10+. Python 2 Support Python 2 support ended with release 2.4.0 (July 2024). Use Python 3 for the deployment of new trackers. Existing trackers should be upgraded to use Python 3. Release Highlights Some improvements from the 2.6.0 release are: Fix for missing CSRF protection for PATCH method The REST interface does not apply CSRF checks when using the PATCH command. See request still in progress at time of release. Filter history entries where permissions are handled by check function The history of a property change was always shown if the property permissions included a check function. The permissions are now properly checked using the check function. CVE request still in progress at time of release. Modern CSRF prevention method without CSRF tokens available This release implements CSRF protection using Cross-Site Request Forgery by Filippo Valsorda. This is an effective method for CSRF protection and is much simpler as well. There are no configurable options unlike the 8 options for the older method. Require reauthentication when making changes to sensitive fields You can trigger a reauthentication when the user changes particular fields. For example you can require a password be entered before the user changes their password. Classic UI interface modernization. The classic tracker has basic responsive support for mobile. The table based layout was removed and HTML 5 landmarks (main, nav …) are used along with flex and grid layouts. The left hand menu now collapses to a grid layout in a single column when on a smaller display. This can be retrofitted to existing classic trackers. When you moved from one page to the next on an index, the query/search name was lost. This release now preserves the search name. Queries triggered from the query edit page now include the query name in the index view. The web UI now allows users to log in without a password. Before the password field was required which prevented completing the login action. The user.item.html template now generates valid javascript. The jinja2 template got an updated copy of bootstrap. More info on the 49 changes can be found in the change notes. Roundup Use Cases For more information on Roundup see the features list, design overview, and all the other documentation. Roundup has been deployed for: bug tracking and TODO list management (the classic installation) customer help desk support (with a wizard for the phone answerers, linking to networking, system and development issue trackers) issue management for IETF working groups sales lead tracking conference paper submission and double-blind referee management weblogging (well, almost :) thing management using the GTD methodology. …and so on. It’s been designed with flexibility in mind - it’s not merely another bug tracker. Try It Out Roundup ships with a demo tracker to play with - you don’t need to install Roundup. After you’ve unpacked the source, just run “python demo.py” and load up the URL it prints out! Follow the source gratification mode with these steps (change the -2.6.0 version identifier to match the version of Roundup you want to use). python3 -m pip download roundup tar -xzvf roundup-2.6.0.tar.gz if you don’t have a tar command (e.g windows), use: python -c \"import tarfile, sys; tarfile.open(sys.argv[1]).extractall();\" roundup-2.6.0.tar.gz\n cd roundup-2.6.0 python3 demo.py (The source download can also be used to create a custom Docker image.) Alternatively, you can install using a virtual environment with pip by: create a virtual environment with: python3 -m venv roundup\n activate the environment with (assuming your shell is sh/bash/zsh/ksh like): . roundup/bin/activate\n install the latest release of Roundup with: python3 -m pip install roundup\n create a demo tracker with: roundup-demo\n using ./demo as the directory and the classic tracker. load the URL printed by the demo tracker when you are done, use deactivate to return your shell to using the system python. Both of these methods produce the same result. Origin Story Roundup was originally released as version 0.1.1 in late August, 2001. The first change note written said: Needed a bug tracking system. Looked around. Tried to install many Perl-based systems, to no avail. Got tired of waiting for Roundu",
+    "scrapedAt": "2026-10-08 18:53:13.259648"
+  },
+  {
+    "id": 188,
+    "url": "https://ipython.org/",
+    "title": "Home | IPython",
+    "content": "Productive Interactive Computing IPython provides a rich architecture for interactive computing with a powerful shell, Jupyter kernel support, and flexible tools for parallel and distributed computing. Install IPython Get Started $ ipython Powerful Features Smart Tab Completion Context-aware completion powered by Jedi. Complete attributes, methods, and filenames with intelligent suggestions. Magic Commands Built-in commands for profiling, debugging, timing, and running external code. %timeit, %debug, %run, and many more. Object Introspection Explore objects with ? and ?? to view docstrings, signatures, and source code instantly. Rich History Powerful command history system with search, scrollback, and persistence across sessions. System Integration Execute shell commands directly with !, access system information, and manipulate the environment seamlessly. Jupyter Kernel Powers the Jupyter Notebook and JupyterLab, enabling interactive computing in web-based environments. Who Uses IPython? 📊 Data Scientists Explore datasets, prototype algorithms, and share findings with rich visualizations. 👨‍💻 Developers Debug code, test ideas interactively, and rapidly develop Python applications. 🎓 Educators Teach programming and data analysis interactively with immediate feedback and visualization. 🔧 System Admins Automate tasks, monitor systems, and manage infrastructure with Python scripts. Ready to Get Started? Install IPython today and boost your interactive computing experience. Install Now",
+    "scrapedAt": "2026-10-08 18:53:11.557036"
+  },
+  {
+    "id": 187,
+    "url": "https://litestar.dev/",
+    "title": "Litestar: The Modern Python ASGI Framework",
+    "content": "New website \u0026 v3 The Modern Python ASGI Framework Built to scale Fast APIs with automatic OpenAPI documentation, dependency injection, type safety, and a lot of batteries included. Litestar makes designing complex web apps simpler Get started View on Github pipuv MinimalRoutingWebsocketsDTOs main.py pyproject.toml main.py import uvicorn\nfrom litestar import Litestar, get\n\n@get(\"/\")\nasync def hello() -\u003e dict[str, str]:\n    return {\"message\": \"Hello, World!\"}\n\napp \u003d Litestar(route_handlers\u003d[hello])\n\nif __name__ \u003d\u003d \"__main__\":\n    uvicorn.run(app)\n controllers main.py pyproject.toml main.py import uvicorn\nfrom litestar import Litestar\nfrom controllers.class_controller import MyController\nfrom controllers.router_controller import router\n\napp \u003d Litestar(route_handlers\u003d[MyController, router])\n\nif __name__ \u003d\u003d \"__main__\":\n    uvicorn.run(app)\n main_ws_listener.py main_ws_stream.py pyproject.toml main_ws_listener.py import dataclasses\nimport datetime\n\nfrom litestar import Litestar, websocket_listener\n\n@dataclasses.dataclass()\nclass Message:\n    data: dict[str, str]\n    timestamp: datetime.datetime\n\n@websocket_listener(\"/echo\")\nasync def echo_handler(data: dict[str, str]) -\u003e Message:\n    \"\"\"\n    Accept WebSocket connections on \u0027/echo\u0027, and then for \n    every incoming message:\n    - Parse its content as JSON\n    - Call \u0027echo_handler\u0027, passing the data to the \u0027data\u0027 parameter\n    - Serialize the returned \u0027Message\u0027 dataclass to JSON\n    - Send a WebSocket message back\n    \"\"\"\n    return Message(data\u003ddata, timestamp\u003ddatetime.datetime.now())\n\napp \u003d Litestar([echo_handler])\n main.py pyproject.toml schema.py main.py import uvicorn\nfrom litestar import Litestar, post\nfrom schema import User, UserResponseDTO\n\n@post(\"/users\", return_dto\u003dUserResponseDTO)\nasync def create_user(data: User) -\u003e User:\n    return User(name\u003ddata.name, email\u003ddata.email, password\u003ddata.password)\n\napp \u003d Litestar(route_handlers\u003d[create_user], debug\u003dTrue)\n\nif __name__ \u003d\u003d \"__main__\":\n    uvicorn.run(app)\n Focused on development experience Modern batteries included Comprehensive optional features available out-of-the-box - authentication, validation, ORM integration, caching, middleware, and more. Use what you need, when you need it. Strict \u0026 opinionated design Thoughtful defaults and clear conventions guide you toward best practices, reducing decision fatigue and ensuring consistent, maintainable code. Hierarchical configuration Layered configuration system allows easy modularization. Override settings at any level - application, controller, or route - for maximum flexibility. Powerful plugin system Extend functionality seamlessly with official and community plugins. Build reusable components that integrate naturally with Litestar\u0027s architecture. Explore documentation Press enter or space to select a node. You can then use the arrow keys to move the node around. You can then use the arrow keys to move the node around, press delete to remove it and press escape to cancel. Press enter or space to select an edge. You can then press delete to remove it or press escape to cancel. Everything you need to build modern APIs Litestar provides all the tools you need out of the box, with minimal configuration required. Data Validation And Parsing Leverage the power of type hints to define how data should be validated, parsed and serialized. Open Ecosystem Define schemas and models for validation with standard types such as dataclasses, libraries like Pydantic, msgspec, attr, or integrate your own. OpenAPI Automatically generated OpenAPI schemas help to document APIs and integrate with the frontend via TypeScript schema generation. Interactive API Documentation Interactively explore your APIs through Swagger, Redoc or Stoplight Elements, powered by OpenAPI. Middlewares Handle rate-limiting, CORS, CSRF, compression, logging and many more common tasks with Litestar\u0027s built-in middlewares. Data Stores Interfaces for various key/value stores that seamlessly integrate with your application and third party extensions. ORM Integration First-class SQLAlchemy support let\u0027s you use your models for validation and serialization directly, reducing code duplication. Dependency Injection Powerful dependency injection on all application layers, aides in code decoupling and reduces repetition. Caching Response caching with minimal configuration and overhead to speed up response times. WebSockets Easy to use WebSockets integration, featuring high- and low-level APIs and support for automatic data validation and serialization. Authentication And Authorization Session and JWT based authentication and utilities at your disposal to start building your authentication layer with ease. Explore Litestar now Start reading docs Extend Litestar with plugins Litestar has a rich module ecosystem, with both official and community-driven plugins. This accelerates development by providing ready-to-use solutions for common needs. Explore all plugins Advanced Alchemy Ready-to-go SQLAlchemy concoctions. 70",
+    "scrapedAt": "2026-10-08 18:53:10.285089"
+  },
+  {
     "id": 186,
     "url": "https://www.python.org/success-stories/",
     "title": "Our Success Stories | Python.org",
@@ -1290,26 +1325,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 187,
-    "url": "https://litestar.dev/"
-  },
-  {
-    "id": 188,
-    "url": "https://ipython.org/"
-  },
-  {
-    "id": 189,
-    "url": "https://www.roundup-tracker.org/"
-  },
-  {
-    "id": 190,
-    "url": "https://scikit-learn.org/"
-  },
-  {
-    "id": 191,
-    "url": "https://www.python.org/psf/membership/"
   },
   {
     "id": 192,
@@ -33331,10 +33346,551 @@ window.searchData = [
     "id": 14892,
     "url": "https://blog.tensorflow.org/2023/10/simulated-spotify-listening-experiences-reinforcement-learning-tensorflow-tf-agents.html",
     "parentUrl": "https://www.tensorflow.org/"
+  },
+  {
+    "id": 14929,
+    "url": "https://litestar.dev/plugins/litestar-email",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14930,
+    "url": "https://docs.litestar.dev/2/usage/dependency-injection.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14931,
+    "url": "https://pypi.org/project/litestar-mcp",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14932,
+    "url": "https://docs.litestar.dev/2/usage/applications.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14933,
+    "url": "https://litestar.dev/blog/new-website-and-v3",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14934,
+    "url": "https://github.com/litestar-org/litestar-saq",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14935,
+    "url": "https://docs.litestar.dev/2/usage/security/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14936,
+    "url": "https://litestar.dev/plugins/litestar-queues",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14937,
+    "url": "https://github.com/litestar-org/litestar-email",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14938,
+    "url": "https://pypi.org/project/advanced-alchemy",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14939,
+    "url": "https://litestar.dev/plugins/litestar-oracledb",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14940,
+    "url": "https://litestar.dev/plugins/litestar-granian",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14941,
+    "url": "https://litestar.dev/plugins/litestar-saq",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14942,
+    "url": "https://pypi.org/project/litestar/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14943,
+    "url": "https://yaml.org/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14944,
+    "url": "https://docs.litestar.dev/2/usage/caching.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14945,
+    "url": "https://docs.pydantic.dev/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14946,
+    "url": "https://docs.litestar.dev/2/usage/dto/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14947,
+    "url": "https://litestar.dev/plugins/advanced-alchemy",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14948,
+    "url": "https://pypi.org/project/litestar-oracledb",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14949,
+    "url": "https://github.com/litestar-org/litestar/graphs/contributors",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14950,
+    "url": "https://github.com/litestar-org/litestar-vite",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14952,
+    "url": "https://github.com/litestar-org/litestar",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14953,
+    "url": "https://pypi.org/project/litestar-asyncpg",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14954,
+    "url": "https://docs.litestar.dev/2/usage/databases/sqlalchemy/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14955,
+    "url": "https://github.com/Redocly/redoc",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14956,
+    "url": "https://litestar.dev/plugins",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14957,
+    "url": "https://pypi.org/project/litestar-htmx",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14958,
+    "url": "https://pypi.org/project/sqlspec",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14959,
+    "url": "https://litestar.dev/plugins/litestar-vite",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14960,
+    "url": "https://github.com/cofin/litestar-autowire",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14961,
+    "url": "https://github.com/rapi-doc/RapiDoc",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14962,
+    "url": "https://docs.litestar.dev/2/usage/openapi/index.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14963,
+    "url": "https://github.com/litestar-org/litestar-asyncpg",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14964,
+    "url": "https://docs.litestar.dev/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14965,
+    "url": "https://scalar.com/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14966,
+    "url": "https://pypi.org/project/litestar-vite",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14967,
+    "url": "https://docs.litestar.dev/2/usage/openapi/ui_plugins.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14968,
+    "url": "https://pypi.org/project/litestar-granian",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14969,
+    "url": "https://github.com/litestar-org/advanced-alchemy",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14970,
+    "url": "https://github.com/cofin/litestar-granian",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14971,
+    "url": "https://litestar.dev/plugins/litestar-mcp",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14972,
+    "url": "https://github.com/stoplightio/elements",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14973,
+    "url": "https://pypi.org/project/litestar-saq",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14974,
+    "url": "https://telemetrysports.com/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14975,
+    "url": "https://pypi.org/project/litestar-queues",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14976,
+    "url": "https://github.com/cofin/litestar-mcp",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14977,
+    "url": "https://github.com/litestar-org/litestar-oracledb",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14978,
+    "url": "https://github.com/swagger-api/swagger-ui",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14979,
+    "url": "https://github.com/cofin/litestar-queues",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14980,
+    "url": "https://docs.python.org/3/library/dataclasses.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14981,
+    "url": "https://discord.gg/litestar",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14982,
+    "url": "https://github.com/litestar-org/sqlspec",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14983,
+    "url": "https://litestar.dev/plugins/litestar-asyncpg",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14984,
+    "url": "https://litestar.dev/plugins/sqlspec",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14985,
+    "url": "https://docs.litestar.dev/2/usage/websockets.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14986,
+    "url": "https://pypi.org/project/litestar-autowire",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14987,
+    "url": "https://github.com/scalar/scalar",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14988,
+    "url": "https://litestar.dev/plugins/litestar-autowire",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14989,
+    "url": "https://pypi.org/project/litestar-email",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14990,
+    "url": "https://github.com/litestar-org/litestar-htmx",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14991,
+    "url": "https://docs.litestar.dev/2/usage/middleware/builtin-middleware.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14992,
+    "url": "https://litestar.dev/plugins/litestar-htmx",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14993,
+    "url": "https://msgspec.dev/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14994,
+    "url": "https://opencollective.com/litestar",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14995,
+    "url": "https://docs.litestar.dev/2/usage/stores.html",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14996,
+    "url": "https://www.attrs.org/",
+    "parentUrl": "https://litestar.dev/"
+  },
+  {
+    "id": 14997,
+    "url": "https://ipython.org/ipython.github.com/get-started",
+    "parentUrl": "https://ipython.org/"
+  },
+  {
+    "id": 14998,
+    "url": "https://ipython.org/ipython.github.com/install",
+    "parentUrl": "https://ipython.org/"
+  },
+  {
+    "id": 14999,
+    "url": "https://www.roundup-tracker.org/docs/upgrading.html#python-3-support-info",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15000,
+    "url": "https://gettingthingsdone.com/",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15001,
+    "url": "https://pypistats.org/packages/roundup",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15002,
+    "url": "https://www.roundup-tracker.org/#main",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15003,
+    "url": "https://hub.docker.com/r/rounduptracker/roundup",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15004,
+    "url": "https://www.roundup-tracker.org/docs/customizing.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15005,
+    "url": "https://www.roundup-tracker.org/docs/design.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15006,
+    "url": "https://github.com/roundup-tracker/roundup/actions?query\u003dworkflow%3Aroundup-ci++",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15007,
+    "url": "https://sourceforge.net/p/roundup/code/ci/tip/tree/CHANGES.txt",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15008,
+    "url": "https://www.roundup-tracker.org/docs/installation.html#docker-support",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15009,
+    "url": "https://pypi.org/project/roundup/#files",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15010,
+    "url": "https://words.filippo.io/csrf/",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15011,
+    "url": "https://www.roundup-tracker.org/docs/features.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "id": 15012,
+    "url": "https://www.roundup-tracker.org/docs.html",
+    "parentUrl": "https://www.roundup-tracker.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://img.shields.io/pypi/v/roundup?color\u003dblue\u0026label\u003dCurrent%20Version\u0026cacheSeconds\u003d86400",
+    "alt": "Display current version of Roundup on PyPI.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.6.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://img.shields.io/badge/dynamic/json?color\u003dblue\u0026label\u003dDownloads%2FMonth\u0026cacheSeconds\u003d86400\u0026query\u003ddata.last_month\u0026url\u003dhttps%3A%2F%2Fpypistats.org%2Fapi%2Fpackages%2Froundup%2Frecent",
+    "alt": "Badge displaying number of downloads per month.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.6.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://img.shields.io/docker/image-size/rounduptracker/roundup?label\u003dDocker%20Size",
+    "alt": "Graphic displaying size of newest docker image on hub.docker.com.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.6.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://github.com/roundup-tracker/roundup/actions/workflows/ci-test.yml/badge.svg",
+    "alt": "Status of primary regression test job on github.",
+    "pageTitle": "Roundup Issue Tracker - Roundup 2.6.0 documentation",
+    "pageUrl": "https://www.roundup-tracker.org/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/advanced-alchemy.png",
+    "alt": "Advanced Alchemy",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-asyncpg.svg",
+    "alt": "Litestar AsyncPG",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-autowire.svg",
+    "alt": "Litestar Autowire",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/litestar-blue.svg",
+    "alt": "",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/litestar-white.svg",
+    "alt": "",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-granian.png",
+    "alt": "Litestar Granian",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-htmx.svg",
+    "alt": "Litestar HTMX",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-mcp.svg",
+    "alt": "Litestar MCP",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-oracledb.svg",
+    "alt": "Litestar OracleDB",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-queues.svg",
+    "alt": "Litestar Queues",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/litestar-blue.svg",
+    "alt": "",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/litestar-white.svg",
+    "alt": "",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://raw.githubusercontent.com/litestar-org/plugin-registry/main/icons/litestar-vite.svg",
+    "alt": "Litestar Vite",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/litestar-blue.svg",
+    "alt": "",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/litestar-white.svg",
+    "alt": "",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/sponsors/scalar.png",
+    "alt": "Description of image",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
+  {
+    "src": "https://litestar.dev/_ipx/s_40x40/sponsors/telemetry_sports.jpg",
+    "alt": "Description of image",
+    "pageTitle": "Litestar: The Modern Python ASGI Framework",
+    "pageUrl": "https://litestar.dev/"
+  },
   {
     "src": "https://www.gstatic.com/devrel-devsite/prod/vc572093a046b25fad0d22bd3210637939b9c971bea06a064d6f48a166bf893c5/tensorflow/images/lockup.svg",
     "alt": "TensorFlow",
