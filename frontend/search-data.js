@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1506,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id2",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:45:23.87283"
+  },
+  {
+    "id": 1505,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:45:22.492085"
+  },
+  {
+    "id": 1504,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id3",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:45:21.085617"
+  },
+  {
+    "id": 1503,
+    "url": "https://github.com/python/cpython/issues/124456",
+    "title": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation savannahostrowski commented Sep 24, 2024 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member This PR carries #99773 forward with the original author\u0027s go-ahead (thanks @abdulrafey38!). This adds the ability for ArgumentParser to offer suggestions for mistyped argument choices or subparser names. This PR adds this as an optional feature via the suggest_on_error param (default: False). I have opted to not make this configurable at the subparser or argument level and instead at the parser level to keep this simple. We could consider additional granularity but I\u0027m not convinced that this is required at this time. Issue: Add “maybe you meant” in argparse choices argument #99749 📚 Documentation preview 📚: https://cpython-previews--124456.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 👀 1 danielhollas reacted with eyes emoji All reactions 👀 1 reaction abdulrafey38 and others added 28 commits November 25, 2022 17:07 Add closet choice if exists in argparser if wrong choice picked ef8e4fc 📜🤖 Added by blurb_it. 7e8dcf8 Fix documentation 8c754cd Added EOL 🔨 4fb8ce6 Test cases updated for argparser 2f197b3 Fixed typo errors 🔨 940a66e Test case fix 🔨 badc5ed Fixed test cse error msg 🔨 2588ef1 Fixed error test case assert msg 🔨 ee05c1e assertion fix 🔨 4a36406 assertion test case fix fe169bc Test Case fix 9fe0d95 Reveet to assertRegex from assertEqual d12e1c4 Remove unused imports 🔨 35f0961 assertion msg fixed 🔨 087895c test cases fixed 🔨 6eeae5c assert fix 9965694 assertion fix 4ef218a revert testing e63a01c test: hammer: bfc9262 fixed b3b4a9e PR review changes 🔨 b8bc465 test case fix 🔨 ade070f test case fixation assertIn 3753a0d Merge branch \u0027main\u0027 into pythongh-99773 2b802ec Rework to add tests and make optional f516bb4 Add to docs c9b40f5 Add implicit test case 981bacd savannahostrowski added stdlib Standard Library Python modules in the Lib/ directory 3.14 bugs and security fixes labels Sep 24, 2024 40 hidden items Load more… add pr comment 8e4793c serhiy-storchaka approved these changes Sep 26, 2024 View reviewed changes serhiy-storchaka left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. This PR slightly conflicts with #117766. After merging one of them, the other one should be updated. I am not sure what of them should be merged first. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions rindeal commented Sep 26, 2024 Copy link Copy Markdown Contributor This PR slightly conflicts with #117766. After merging one of them, the other one should be updated. I am not sure what of them should be merged first. A fix should definitely precede a new feature. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. savannahostrowski added 5 commits October 11, 2024 16:41 merge main b782fbc fix merge conflict 73c4bd3 Merge branch \u0027main\u0027 into pythongh-99773 d2c665d Appease linter d1daff1 Merge branch \u0027pythongh-99773\u0027 of https://github.com/savannahostrowski… … f57b4dc …/cpython into pythongh-99773 savannahostrowski added the type-feature A feature request or enhancement label Oct 12, 2024 Merge branch \u0027main\u0027 into pythongh-99773 f2f67e7 serhiy-storchaka reviewed Oct 16, 2024 View reviewed changes Comment thread Lib/test/test_argparse.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. serhiy-storchaka reviewed Oct 16, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2024-09-24-18-49-16.gh-issue-99749.gBDJX7.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. savannahostrowski and others added 5 commits October 16, 2024 20:03 Update Misc/NEWS.d/next/Library/2024-09-24-18-49-16.gh-issue-99749.gB… … 3d9bbb4 …DJX7.rst\n\nCo-authored-by: Serhiy Storchaka \u003cstorchaka@gmail.com\u003e Merge branch \u0027main\u0027 into pythongh-99773 c494469 Test whole line 05dc55c Merge branch \u0027pythongh-99773\u0027 of https://github.com/savannahostrowski… … 68b9383 …/cpython into pythongh-99773 Fix line length f2781cc serhiy-storchaka approved these changes Oct 17, 2024 View reviewed changes serhiy-storchaka left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to",
+    "scrapedAt": "2026-10-08 19:45:19.679624"
+  },
+  {
+    "id": 1502,
+    "url": "https://github.com/python/cpython/issues/129902",
+    "title": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation swfarnsworth commented Feb 9, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Previously, having an elif block after an else block would raise a standard syntax error. This PR implements a special syntax error saying \"elif not allowed after else\". I compiled cpython with this version of the parser and confirmed that it doesn\u0027t conflict with other special syntax or indentation errors. Issue: Special syntax error for elif after else #129858 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Special syntax error for elif block after else … 883ada9 Previously, having an elif block after an else block would raise a standard syntax error. swfarnsworth requested review from lysnikolaou and pablogsal as code owners February 9, 2025 15:01 bedevere-app Bot added the awaiting review label Feb 9, 2025 bedevere-app Bot mentioned this pull request Feb 9, 2025 Special syntax error for elif after else #129858 Closed swfarnsworth commented Feb 9, 2025 Copy link Copy Markdown Contributor Author @pablogsal I see that you\u0027ve been tagged for review. Please see the associated issue for discussion about whether an even more sophisticated error message is possible. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. picnixz reviewed Feb 9, 2025 View reviewed changes Comment thread Grammar/python.gram Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. picnixz commented Feb 9, 2025 Copy link Copy Markdown Member I compiled cpython with this version of the parser and confirmed that it doesn\u0027t conflict with other special syntax or indentation errors. Please add a test. There should be tests in some test_syntax.py file or test_parser.py files (I don\u0027t remember where we put them). Just Ctrl+F some error message to find the file. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. swfarnsworth commented Feb 9, 2025 Copy link Copy Markdown Contributor Author @picnixz No problem--will do. 🚀 1 picnixz reacted with rocket emoji All reactions 🚀 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. swfarnsworth commented Feb 10, 2025 Copy link Copy Markdown Contributor Author I\u0027ve implemented a test as requested, though I\u0027ll hold off on committing or pushing it until we decide on the exact wording of the error message. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ghost commented Feb 11, 2025 • edited by ghost Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown All commit authors signed the Contributor License Agreement. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. swfarnsworth commented Feb 11, 2025 Copy link Copy Markdown Contributor Author Those last two commits should appear as being from this GitHub account. Let me see if I can delete them and try again. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. picnixz commented Feb 11, 2025 Copy link Copy Markdown Member In general, we avoid force-pushing, but you can do it in this case and amend the commit author and put the correct email address. (Not sure if it could help in this though) All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. swfarnsworth force-pushed the elif-error-message branch from 62996a0 to 883ada9 Compare February 11, 2025 23:54 swfarnsworth added 2 commits February 11, 2025 19:04 Change elif-after-else error wording to mirror patma errors fe17ada Test for special syntax error for elif following else 345964a swfarnsworth commented Feb 12, 2025 Copy link Copy Markdown Contributor Author The force push seems to have fixed the problem without any issues. The usernames for my work and personal email differ by one letter, which is occasionally inconvenient. 👍 1 picnixz reacted with thumbs up emoji All reactions 👍 1 reaction Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. picnixz commented Feb 12, 2025 Copy link Copy Markdown Member For the detection issue, you should just merge main into that branch with the Update branch button! A NEWS entry and a What\u0027s New entry could be added in order to indicate that we have an improved message now. I don\u0027t have a good wording here though so maybe @hugovk may hav",
+    "scrapedAt": "2026-10-08 19:45:15.809861"
+  },
+  {
     "id": 1501,
     "url": "https://github.com/python/cpython/issues/97514",
     "title": "Linux specific local privilege escalation via the multiprocessing forkserver start method - CVE-2022-42919 · Issue #97514 · python/cpython · GitHub",
@@ -10080,26 +10115,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1502,
-    "url": "https://github.com/python/cpython/issues/129902"
-  },
-  {
-    "id": 1503,
-    "url": "https://github.com/python/cpython/issues/124456"
-  },
-  {
-    "id": 1504,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id3"
-  },
-  {
-    "id": 1505,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages"
-  },
-  {
-    "id": 1506,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id2"
   },
   {
     "id": 1507,
@@ -243346,10 +243361,1834 @@ window.searchData = [
     "id": 312763,
     "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22release-blocker%22",
     "parentUrl": "https://github.com/python/cpython/issues/97514"
+  },
+  {
+    "id": 312765,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2619367751",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312766,
+    "url": "https://github.com/python/cpython/pull/129902/files/883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312767,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652308773",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312768,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F129902",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312769,
+    "url": "https://github.com/python/cpython/pull/129902/files/e1333c160e2fdb970d7bfb90c1fb795f872b1c96#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312772,
+    "url": "https://github.com/python/cpython/pull/129902/commits/384c876df4ebb7254fd13e6927c47d3c52da5626",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312773,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652425328",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312774,
+    "url": "https://github.com/python/cpython/commit/99b71efe8e9d59ce04b6d59ed166b57dff3e84d8",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312775,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2604325660",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312776,
+    "url": "https://github.com/python/cpython/pull/129902#event-16238497340",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312777,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2826151158",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312778,
+    "url": "https://github.com/python/cpython/pull/129902/commits/fe17ada5f72d9c98d2aeb6d8e61e969cae80a361",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312779,
+    "url": "https://github.com/python/cpython/pull/129902/files/090f7e1699c559449276bf9af7a70939f19177a2#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312780,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646346603",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312781,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652413968",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312782,
+    "url": "https://github.com/python/cpython/pull/129902/files/bf777a2b189d1edd16de72998d987f0b5a8b42ab",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312783,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2611583292",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312785,
+    "url": "https://github.com/python/cpython/pull/129902#event-16238497190",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312786,
+    "url": "https://github.com/python/cpython/pull/129902#discussion_r1957170225",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312788,
+    "url": "https://github.com/python/cpython/pull/129902/commits/6ca3def7650d883581ba6f012bffd5435b65a306",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312789,
+    "url": "https://github.com/python/cpython/compare/62996a0b75088fcd78ffbe475721a7e8dc3705bb..883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312791,
+    "url": "https://github.com/python/cpython/pull/129902#discussion_r1957079410",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312793,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691718212",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312794,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652423683",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312797,
+    "url": "https://github.com/python/cpython/commit/62996a0b75088fcd78ffbe475721a7e8dc3705bb",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312798,
+    "url": "https://github.com/python/cpython/pull/129902/commits/e1333c160e2fdb970d7bfb90c1fb795f872b1c96",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312801,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652338613",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312802,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652421821",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312803,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2816731607",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312804,
+    "url": "https://github.com/python/cpython/blob/f7c7decc4c7c10084ab3c1473e1a590666d3ea17/.github/CODEOWNERS#L171",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312805,
+    "url": "https://www.youtube.com/watch?v\u003d_Q1U1bDM13Y",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312806,
+    "url": "https://github.com/python/cpython/pull/129902/commits/dee5f1e4c1cf6c1d8db30b755f03580597b3dc3a",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312807,
+    "url": "https://github.com/python/cpython/pull/129902/commits/345964a7687cb5ed8b7de512fb7249571bc0a9a1",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312811,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652436404",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312812,
+    "url": "https://github.com/python/cpython/pull/129902#discussion_r1957079245",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312813,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646440109",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312814,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2829176949",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312815,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399112652",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312816,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652444650",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312817,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652403868",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312818,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2816863911",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312819,
+    "url": "https://github.com/python/cpython/pull/129902/files/bf777a2b189d1edd16de72998d987f0b5a8b42ab#diff-f73e16df2e80f34839f002f3afdf82c3ebd9a41ef44a4bff51f085d709cef4da",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312820,
+    "url": "https://github.com/python/cpython/pull/129902/files/e1333c160e2fdb970d7bfb90c1fb795f872b1c96",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312821,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2815320252",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312822,
+    "url": "https://github.com/python/cpython/pull/129902#commits-pushed-49b41b7",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312823,
+    "url": "https://github.com/python/cpython/pull/129902/commits/bf777a2b189d1edd16de72998d987f0b5a8b42ab",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312825,
+    "url": "https://github.com/python/cpython/pull/129902/files/090f7e1699c559449276bf9af7a70939f19177a2",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312826,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691717382",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312827,
+    "url": "https://github.com/python/cpython/pull/129902#commits-pushed-116d785",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312828,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2792805521",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312829,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399113253",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312831,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652407019",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312833,
+    "url": "https://github.com/python/cpython/pull/129902/commits/883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312834,
+    "url": "https://github.com/python/cpython/pull/129902#pullrequestreview-2614578311",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312835,
+    "url": "https://github.com/python/cpython/pull/129902#ref-issue-2840178324",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312836,
+    "url": "https://github.com/python/cpython/pull/129902/files/384c876df4ebb7254fd13e6927c47d3c52da5626",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312837,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399113675",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312838,
+    "url": "https://github.com/python/cpython/pull/129902/commits/49b41b738db43c7f4f65ede0fd613dd0ab820a52",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312839,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691684257",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312840,
+    "url": "https://github.com/python/cpython/pull/129902#event-17328828210",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312841,
+    "url": "https://github.com/python/cpython/pull/129902",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312842,
+    "url": "https://github.com/python/cpython/pull/129902/commits/ab2224cfe06e2c058dd8c9991d4f27559d20359a",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312843,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2815073798",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312844,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646771880",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312845,
+    "url": "https://github.com/swfarnsworth",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312846,
+    "url": "https://github.com/python/cpython/commit/883ada95e129bec660f55da7b1422deec3871979",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312847,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2661035742",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312849,
+    "url": "https://github.com/python/cpython/pull/129902/files/883ada95e129bec660f55da7b1422deec3871979#diff-2973ca53337859793077e9bdc1a1623063379f0fdfcb788836fd82ebb66b763b",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312850,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2691724340",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312852,
+    "url": "https://github.com/python/cpython/pull/129902#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312853,
+    "url": "https://github.com/python/cpython/pull/129902#commits-pushed-fe17ada",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312854,
+    "url": "https://github.com/python/cpython/pull/129902#event-16272773427",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312855,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2646440657",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312857,
+    "url": "https://github.com/python/cpython/pull/129902/files/090f7e1699c559449276bf9af7a70939f19177a2#diff-f73e16df2e80f34839f002f3afdf82c3ebd9a41ef44a4bff51f085d709cef4da",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312858,
+    "url": "https://github.com/python/cpython/pull/129902#event-17399113891",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312859,
+    "url": "https://github.com/python/cpython/pull/129902#issue-2840739338",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312860,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652315260",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312861,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2661034121",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312862,
+    "url": "https://github.com/python/cpython/pull/129902/files/e1333c160e2fdb970d7bfb90c1fb795f872b1c96#diff-f73e16df2e80f34839f002f3afdf82c3ebd9a41ef44a4bff51f085d709cef4da",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312863,
+    "url": "https://github.com/python/cpython/pull/129902/commits/090f7e1699c559449276bf9af7a70939f19177a2",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312865,
+    "url": "https://github.com/python/cpython/pull/129902/commits/116d78573a6423d8f94de5d9163c7afa2f00020c",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312866,
+    "url": "https://github.com/python/cpython/pull/129902#issuecomment-2652311900",
+    "parentUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "id": 312867,
+    "url": "https://github.com/python/cpython/pull/124456/commits/7e8dcf87908e012a64cc56ff3275893d87cf9307",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312868,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F124456",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312869,
+    "url": "https://github.com/python/cpython/pull/124456#event-14693952550",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312871,
+    "url": "https://github.com/ebonnal/cpython/commit/7fb9a9042b9df901afb99413c3c42730fc4d2790",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312872,
+    "url": "https://github.com/python/cpython/pull/124456/commits/3d9bbb4c5f45296b6c3b1f443a58ed004a4cefa6",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312873,
+    "url": "https://github.com/python/cpython/pull/124456/commits/087895c645157587d53f1069fa9658008f65af3a",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312875,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2f67e702be3e2d09feddb47287cf2f3388845d3",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312876,
+    "url": "https://github.com/python/cpython/pull/124456#commits-pushed-3d9bbb4",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312878,
+    "url": "https://github.com/abdulrafey38",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312879,
+    "url": "https://github.com/python/cpython/pull/124456/commits/68b9383a7c50a6ee6873016f49a5d4c13899ba89",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312880,
+    "url": "https://github.com/python/cpython/pull/124456#ref-issue-2681696371",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312881,
+    "url": "https://github.com/python/cpython/issues/127134",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312882,
+    "url": "https://cpython-previews--124456.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312883,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-7fb9a90",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312884,
+    "url": "https://github.com/python/cpython/pull/124456/commits/ade070fc575613d6d2a9eb7a7b75f954026c0800",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312885,
+    "url": "https://github.com/ebonnal/cpython/commit/925417c3dab8f1a138cec112d99bf4c798f1a9b9",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312886,
+    "url": "https://github.com/python/cpython/pull/124456/commits/b8bc465b07d5bce0361c6d62dd427e07fce7ab22",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312888,
+    "url": "https://github.com/python/cpython/pull/124456#ref-pullrequest-3041253992",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312889,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2f67e702be3e2d09feddb47287cf2f3388845d3#diff-c7651634d84a017884451f95f6535a1d2efbeacee1cca7cc1e27fdc748804aa1",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312891,
+    "url": "https://github.com/mmingyu/typeshed/commit/fc6a13f78d7a6b5311f9eb95fa6e954c97427d56",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312893,
+    "url": "https://github.com/python/cpython/pull/124456/commits/c9b40f57d3cc9f177247a8202c3a8fad6966c2e2",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312895,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2365673742",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312896,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2332029484",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312897,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-fc6a13f",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312898,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f2f67e702be3e2d09feddb47287cf2f3388845d3",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312899,
+    "url": "https://github.com/python/cpython/pull/124456/commits/981bacdc72c4d4da4636b09a4c60268ad0507e65",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312900,
+    "url": "https://github.com/python/cpython/pull/124456/commits/05dc55c2149c1599e84ae8b01a7f3e87974980db",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312901,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-84074a4",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312902,
+    "url": "https://github.com/python/cpython/pull/124456/commits/73c4bd31027f8cec011ce594821c16c4d6f0e6a0",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312903,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-925417c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312907,
+    "url": "https://github.com/python/cpython/pull/124456/commits/9965694e969de8fbf9fe1279ddf5fed2207170a7",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312910,
+    "url": "https://github.com/python/cpython/pull/124456/commits/8c754cd701eadd65ac7a92d4d917644acd42563d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312911,
+    "url": "https://github.com/python/cpython/pull/124456/commits/2f197b37c5b57942a78fa74eb1c659d11b7b9974",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312912,
+    "url": "https://github.com/python/cpython/pull/124456/commits/e63a01c1fe01813770119ad826f44d8579805ddf",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312913,
+    "url": "https://github.com/python/cpython/pull/124456/files/8e4793c3c0b73de105b109775e08238e2b17b13c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312914,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2373319623",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312915,
+    "url": "https://github.com/hingebase/mahoraga/issues/1",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312916,
+    "url": "https://github.com/python/cpython/pull/99773",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312917,
+    "url": "https://github.com/hingebase",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312918,
+    "url": "https://github.com/python/cpython/pull/124456/commits/badc5ed65e5d2aac27676968f54efa53c32c26db",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312919,
+    "url": "https://github.com/python/cpython/pull/124456/commits/35f09613333de90602eb1e91034a2ef5799bfa4d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312920,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f2781cce05d2d89f4f0d28d921ce00a426e7190d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312921,
+    "url": "https://github.com/python/cpython/pull/124456/commits/d2c665d8f812400bac933c2ca3f432a34f6c633d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312922,
+    "url": "https://github.com/python/cpython/pull/144985",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312924,
+    "url": "https://github.com/python/cpython/pull/124456/commits/9fe0d95ff5014ed84cdf354a5367f5b3fd23b2c1",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312925,
+    "url": "https://github.com/python/cpython/pull/125671",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312926,
+    "url": "https://github.com/python/cpython/pull/124456#commits-pushed-b782fbc",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312928,
+    "url": "https://github.com/python/cpython/pull/124456/commits/4a364068c21f84e4629b24b65a0e0f2163d27f5f",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312929,
+    "url": "https://github.com/python/typeshed/pull/13947",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312930,
+    "url": "https://github.com/python/cpython/pull/124456#issuecomment-2378103501",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312931,
+    "url": "https://github.com/python/cpython/pull/124456/commits/ef8e4fc483f28890bbc52235c5b08499bee93d39",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312932,
+    "url": "https://github.com/python/cpython/pull/124456/commits/d12e1c4fe64d3ea2ebb2b32a14652b78de4f8edd",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312933,
+    "url": "https://github.com/python/cpython/pull/124456#ref-commit-3f8a48f",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312934,
+    "url": "https://github.com/python/cpython/pull/124456/commits/b782fbccb91e89be5a94f9c2a084ed95366c35d0",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312935,
+    "url": "https://github.com/python/cpython/pull/124456/commits/4fb8ce670e23962abf459dbfef554ee2aa3d7460",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312936,
+    "url": "https://github.com/python/cpython/pull/124456/commits/8e4793c3c0b73de105b109775e08238e2b17b13c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312939,
+    "url": "https://github.com/python/cpython/pull/124456/commits/4ef218a17fd0c6614be04735235195cb3a9697ce",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312940,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f57b4dc84ff3918b591fadbda9d43d9d58c77c0d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312941,
+    "url": "https://github.com/python/cpython/pull/124456#ref-issue-3048455043",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312942,
+    "url": "https://github.com/python/cpython/pull/124456/commits/c49446929ba1935251e693d2e64e8f54462caecf",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312943,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2781cce05d2d89f4f0d28d921ce00a426e7190d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312944,
+    "url": "https://github.com/python/cpython/pull/124456/commits/2b802eca6e3d24133ff1adb2de086e5c7c4cc0a9",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312945,
+    "url": "https://github.com/python/typeshed/commit/3f8a48f6cc8c8b2a85f7e4a2a87e20f7d15e51ef",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312946,
+    "url": "https://github.com/python/cpython/commit/84074a4fd810948350cec5500e77dc974cb5433d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312947,
+    "url": "https://github.com/python/cpython/pull/124456#ref-issue-2921677483",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312949,
+    "url": "https://github.com/savannahostrowski",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312950,
+    "url": "https://github.com/python/cpython/pull/124456/commits/6eeae5cd964da52025e0ad95c726c9a60bef67bb",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312951,
+    "url": "https://github.com/python/cpython/pull/117766",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312952,
+    "url": "https://github.com/python/cpython/pull/124456/files/2c3986645cafbaf8db2244ee0f90c3f93f3da33d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312953,
+    "url": "https://github.com/python/cpython/pull/124456#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312954,
+    "url": "https://github.com/python/cpython/pull/124456",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312955,
+    "url": "https://github.com/python/cpython/commit/624be8699aec22bef137041478078c6fafaf032e",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312956,
+    "url": "https://github.com/python/cpython/pull/124456/commits/bfc926239a0d48999bbbf2a0fc5d1df128366d9d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312958,
+    "url": "https://github.com/python/cpython/pull/124456/files/f2f67e702be3e2d09feddb47287cf2f3388845d3#diff-ae287815c86ff59083609ee2809fcf31d35117025b4c4f255a57e01bfc07d60a",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312959,
+    "url": "https://github.com/python/cpython/pull/124456/commits/940a66ed25b22cec7a281e86e09a7690fc7d60bd",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312962,
+    "url": "https://github.com/python/cpython/pull/124456#commits-pushed-ef8e4fc",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312963,
+    "url": "https://github.com/python/cpython/pull/124456/commits/3753a0d524e951a7bb30d25f8599698ae176c46d",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312964,
+    "url": "https://github.com/python/cpython/pull/124456#pullrequestreview-2374340198",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312965,
+    "url": "https://github.com/python/cpython/pull/124456#event-14693951889",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312966,
+    "url": "https://github.com/python/cpython/pull/124456/commits/f516bb499272cf6a8951d2881ea469ca3e70f184",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312967,
+    "url": "https://github.com/python/cpython/pull/124456/commits/ee05c1eae9b20b99a6d3940aee932f25b0c778b5",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312969,
+    "url": "https://github.com/python/cpython/pull/124456/commits/d1daff155d72c0106526d1a6da9df7ca147ba17a",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312970,
+    "url": "https://github.com/python/cpython/pull/124456#issue-2546111203",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312971,
+    "url": "https://github.com/savannahostrowski/cpython",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312972,
+    "url": "https://github.com/python/cpython/pull/124456#event-14386384825",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312974,
+    "url": "https://github.com/python/cpython/pull/124456/commits/fe169bc396481ac318d40b2d95fa0e7b4108e577",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312975,
+    "url": "https://github.com/python/cpython/pull/124456/commits/b3b4a9eb460160d262517d967e6d3e7c5734910c",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312976,
+    "url": "https://github.com/python/cpython/pull/124456#ref-pullrequest-3961013690",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312978,
+    "url": "https://github.com/python/cpython/pull/124456/commits/2588ef10fc193f28b19b584e011daaefc92203ab",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312979,
+    "url": "https://github.com/python/cpython/pull/133302",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312980,
+    "url": "https://github.com/python/cpython/pull/124456#event-14617804276",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "id": 312981,
+    "url": "https://github.com/rindeal",
+    "parentUrl": "https://github.com/python/cpython/issues/124456"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id2"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id2"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-improved-error-messages"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id3"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id3"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d80\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d48\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d40\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d48\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5360877?s\u003d80\u0026u\u003d3c78c7be3dad2767e2d72b2f9534e7a976da26d1\u0026v\u003d4",
+    "alt": "@rindeal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d48\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16805946?s\u003d40\u0026v\u003d4",
+    "alt": "@edgarrmondragon",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16805946?s\u003d40\u0026u\u003ddde7567f343903d9994a7ae6a4f3e4032f9fd0f5\u0026v\u003d4",
+    "alt": "@edgarrmondragon",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16805946?s\u003d40\u0026u\u003ddde7567f343903d9994a7ae6a4f3e4032f9fd0f5\u0026v\u003d4",
+    "alt": "@edgarrmondragon",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/52799?s\u003d40\u0026u\u003d048676ee3ad484075aa54bdfd7e5d4a8e988e6c0\u0026v\u003d4",
+    "alt": "@srittau",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://github.githubassets.com/images/gravatars/gravatar-user-420.png",
+    "alt": "mingyu.park",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/200205501?s\u003d40\u0026v\u003d4",
+    "alt": "@hingebase",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?s\u003d40\u0026v\u003d4",
+    "alt": "@rhettinger",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?s\u003d40\u0026v\u003d4",
+    "alt": "@rhettinger",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d52\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9539441?s\u003d52\u0026v\u003d4",
+    "alt": "@danielhollas",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/5360877?s\u003d52\u0026v\u003d4",
+    "alt": "@rindeal",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1623689?s\u003d52\u0026v\u003d4",
+    "alt": "@rhettinger",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d52\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/41017154?s\u003d52\u0026v\u003d4",
+    "alt": "@abdulrafey38",
+    "pageTitle": "GH-99749: Add optional feature to suggest correct names (ArgumentParser) by savannahostrowski · Pull Request #124456 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/124456"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d48\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10137?s\u003d80\u0026v\u003d4",
+    "alt": "@ghost",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/68870d968496bce047e3fa048dd4dcea846616f952ec14481efffa6e1ba845e6/68747470733a2f2f63707974686f6e2d636c61626f742e6865726f6b756170702e636f6d2f636c612d7369676e65642e737667",
+    "alt": "CLA signed",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d60\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d48\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d48\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/1203010?s\u003d80\u0026v\u003d4",
+    "alt": "@python-cla-bot",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/1c7e7ec4141b7323ee376d8a3a48e6acfaa33577216949150bd85c32e231b8db/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f434c412532305369676e65642d4641453038353f7374796c653d666c61742d737175617265266c6f676f3d507974686f6e",
+    "alt": "CLA signed",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d40\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d80\u0026u\u003d4b6ce9704a3202302a9ed3b1492b8bbc7fb1075c\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d60\u0026v\u003d4",
+    "alt": "pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d80\u0026u\u003d9f515ab8f7274f9e934ac1a7ff3ad3fd4c0e94e8\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/20306270?s\u003d40\u0026v\u003d4",
+    "alt": "@lysnikolaou",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32915757?s\u003d52\u0026v\u003d4",
+    "alt": "@swfarnsworth",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d52\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d52\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-129858: Special syntax error for `elif` block after `else` by swfarnsworth · Pull Request #129902 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129902"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/55281?s\u003d64\u0026u\u003da7ec460a666172941079e6ddb7b9134e0e0b2b39\u0026v\u003d4",
     "alt": "ambv",
