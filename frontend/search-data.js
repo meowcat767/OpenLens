@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 896,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime",
+    "title": "email.utils: Miscellaneous utilities — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Data Handling » email — An email and MIME handling package » email.utils: Miscellaneous utilities | Theme Auto Light Dark | email.utils: Miscellaneous utilities¶ Source code: Lib/email/utils.py There are a couple of useful utilities provided in the email.utils module: email.utils.localtime(dt\u003dNone)¶ Return local time as an aware datetime object. If called without arguments, return current time. Otherwise dt argument should be a datetime instance, and it is converted to the local time zone according to the system time zone database. If dt is naive (that is, dt.tzinfo is None), it is assumed to be in local time. Added in version 3.3. Deprecated since version 3.12, removed in version 3.14: The isdst parameter. email.utils.make_msgid(idstring\u003dNone, domain\u003dNone)¶ Returns a string suitable for an RFC 2822-compliant Message-ID header. Optional idstring if given, is a string used to strengthen the uniqueness of the message id. Optional domain if given provides the portion of the msgid after the ‘@’. The default is the local hostname. It is not normally necessary to override this default, but may be useful certain cases, such as a constructing distributed system that uses a consistent domain name across multiple hosts. Changed in version 3.2: Added the domain keyword. The remaining functions are part of the legacy (Compat32) email API. There is no need to directly use these with the new API, since the parsing and formatting they provide is done automatically by the header parsing machinery of the new API. email.utils.quote(str)¶ Return a new string with backslashes in str replaced by two backslashes, and double quotes replaced by backslash-double quote. email.utils.unquote(str)¶ Return a new string which is an unquoted version of str. If str ends and begins with double quotes, they are stripped off. Likewise if str ends and begins with angle brackets, they are stripped off. email.utils.parseaddr(address, *, strict\u003dTrue)¶ Parse address – which should be the value of some address-containing field such as To or Cc – into its constituent realname and email address parts. Returns a tuple of that information, unless the parse fails, in which case a 2-tuple of (\u0027\u0027, \u0027\u0027) is returned. If strict is true, use a strict parser which rejects malformed inputs. Changed in version 3.13: Add strict optional parameter and reject malformed inputs by default. email.utils.formataddr(pair, charset\u003d\u0027utf-8\u0027)¶ The inverse of parseaddr(), this takes a 2-tuple of the form (realname, email_address) and returns the string value suitable for a To or Cc header. If the first element of pair is false, then the second element is returned unmodified. Optional charset is the character set that will be used in the RFC 2047 encoding of the realname if the realname contains non-ASCII characters. Can be an instance of str or a Charset. Defaults to utf-8. Changed in version 3.3: Added the charset option. email.utils.getaddresses(fieldvalues, *, strict\u003dTrue)¶ This method returns a list of 2-tuples of the form returned by parseaddr(). fieldvalues is a sequence of header field values as might be returned by Message.get_all. If strict is true, use a strict parser which rejects malformed inputs. Here’s a simple example that gets all the recipients of a message: from email.utils import getaddresses\n\ntos \u003d msg.get_all(\u0027to\u0027, [])\nccs \u003d msg.get_all(\u0027cc\u0027, [])\nresent_tos \u003d msg.get_all(\u0027resent-to\u0027, [])\nresent_ccs \u003d msg.get_all(\u0027resent-cc\u0027, [])\nall_recipients \u003d getaddresses(tos + ccs + resent_tos + resent_ccs)\n Changed in version 3.13: Add strict optional parameter and reject malformed inputs by default. email.utils.parsedate(date)¶ Attempts to parse a date according to the rules in RFC 2822. however, some mailers don’t follow that format as specified, so parsedate() tries to guess correctly in such cases. date is a string containing an RFC 2822 date, such as \"Mon, 20 Nov 1995 19:12:08 -0500\". If it succeeds in parsing the date, parsedate() returns a 9-tuple that can be passed directly to time.mktime(); otherwise None will be returned. Note that indexes 6, 7, and 8 of the result tuple are not usable. email.utils.parsedate_tz(date)¶ Performs the same function as parsedate(), but returns either None or a 10-tuple; the first 9 elements make up a tuple that can be passed directly to time.mktime(), and the tenth is the offset of the date’s timezone from UTC (which is the official term for Greenwich Mean Time) [1]. If the input string has no timezone, the last element of the tuple returned is 0, which represents UTC. Note that indexes 6, 7, and 8 of the result tuple are not usable. email.utils.parsedate_to_datetime(date)¶ The inverse of format_datetime(). Performs the same function as parsedate(), but on success returns a datetime; otherwise ValueError is raised if date contains an invalid value such as an hour greater than 23 or a timezone offset not between -24 ",
+    "scrapedAt": "2026-10-08 19:18:46.348897"
+  },
+  {
+    "id": 895,
+    "url": "https://docs.python.org/3/library/socket.html#module-socket",
+    "title": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » socket — Low-level networking interface | Theme Auto Light Dark | socket — Low-level networking interface¶ Source code: Lib/socket.py This module provides access to the BSD socket interface. It is available on all modern Unix systems, Windows, MacOS, and probably additional platforms. Note Some behavior may be platform dependent, since calls are made to the operating system socket APIs. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The Python interface is a straightforward transliteration of the Unix system call and library interface for sockets to Python’s object-oriented style: the socket() function returns a socket object whose methods implement the various socket system calls. Parameter types are somewhat higher-level than in the C interface: as with read() and write() operations on Python files, buffer allocation on receive operations is automatic, and buffer length is implicit on send operations. See also Module socketserver Classes that simplify writing network servers. Module ssl A TLS/SSL wrapper for socket objects. Socket families¶ Depending on the system and the build options, various socket families are supported by this module. The address format required by a particular socket object is automatically selected based on the address family specified when the socket object was created. Socket addresses are represented as follows: The address of an AF_UNIX socket bound to a file system node is represented as a string, using the file system encoding and the \u0027surrogateescape\u0027 error handler (see PEP 383). An address in Linux’s abstract namespace is returned as a bytes-like object with an initial null byte; note that sockets in this namespace can communicate with normal file system sockets, so programs intended to run on Linux may need to deal with both types of address. A string or bytes-like object can be used for either type of address when passing it as an argument. Changed in version 3.3: Previously, AF_UNIX socket paths were assumed to use UTF-8 encoding. Changed in version 3.5: Writable bytes-like object is now accepted. A pair (host, port) is used for the AF_INET address family, where host is a string representing either a hostname in internet domain notation like \u0027daring.cwi.nl\u0027 or an IPv4 address like \u0027100.50.200.5\u0027, and port is an integer. For IPv4 addresses, two special forms are accepted instead of a host address: \u0027\u0027 represents INADDR_ANY, which is used to bind to all interfaces, and the string \u0027\u003cbroadcast\u003e\u0027 represents INADDR_BROADCAST. This behavior is not compatible with IPv6, therefore, you may want to avoid these if you intend to support IPv6 with your Python programs. For AF_INET6 address family, a four-tuple (host, port, flowinfo, scope_id) is used, where flowinfo and scope_id represent the sin6_flowinfo and sin6_scope_id members in struct sockaddr_in6 in C. For socket module methods, flowinfo and scope_id can be omitted just for backward compatibility. Note, however, omission of scope_id can cause problems in manipulating scoped IPv6 addresses. Changed in version 3.7: For multicast addresses (with scope_id meaningful) address may not contain %scope_id (or zone id) part. This information is superfluous and may be safely omitted (recommended). AF_NETLINK sockets are represented as pairs (pid, groups). Linux-only support for TIPC is available using the AF_TIPC address family. TIPC is an open, non-IP based networked protocol designed for use in clustered computer environments. Addresses are represented by a tuple, and the fields depend on the address type. The general tuple form is (addr_type, v1, v2, v3 [, scope]), where: addr_type is one of TIPC_ADDR_NAMESEQ, TIPC_ADDR_NAME, or TIPC_ADDR_ID. scope is one of TIPC_ZONE_SCOPE, TIPC_CLUSTER_SCOPE, and TIPC_NODE_SCOPE. If addr_type is TIPC_ADDR_NAME, then v1 is the server type, v2 is the port identifier, and v3 should be 0. If addr_type is TIPC_ADDR_NAMESEQ, then v1 is the server type, v2 is the lower port number, and v3 is the upper port number. If addr_type is TIPC_ADDR_ID, then v1 is the node, v2 is the reference, and v3 should be set to 0. A tuple (interface, ) is used for the AF_CAN address family, where interface is a string representing a network interface name like \u0027can0\u0027. The network interface name \u0027\u0027 can be used to receive packets from all network interfaces of this family. CAN_ISOTP protocol requires a tuple (interface, rx_addr, tx_addr) where both additional parameters are unsigned long integer that represent a CAN identifier (standard or extended). CAN_J1939 protocol requires a tuple (interface, name, pgn, addr) where additional parameters are 64-bit unsigned integer representing the ECU name, a 32-bit unsigned integer representing the Parameter Group Number (PGN), and an 8-bit integer repres",
+    "scrapedAt": "2026-10-08 19:18:45.021181"
+  },
+  {
+    "id": 894,
+    "url": "https://github.com/python/cpython/issues/133038",
+    "title": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation methane commented Apr 27, 2025 • edited by github-actions Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Issue: Deprecate codecs.open() #133036 📚 Documentation preview 📚: https://cpython-previews--133038.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions pythongh-133036: deprecate codecs.open 655759b methane added the stdlib Standard Library Python modules in the Lib/ directory label Apr 27, 2025 methane requested review from malemburg and vstinner April 27, 2025 06:24 methane added this to Codecs and encodings issues Apr 27, 2025 bedevere-app Bot added the awaiting core review label Apr 27, 2025 bedevere-app Bot mentioned this pull request Apr 27, 2025 Deprecate codecs.open() #133036 Closed vstinner approved these changes Apr 27, 2025 View reviewed changes vstinner left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Lib/test/test_codecs.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added awaiting merge and removed awaiting core review labels Apr 27, 2025 hugovk reviewed Apr 27, 2025 View reviewed changes Comment thread Lib/test/test_codecs.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. StanFromIreland reviewed Apr 27, 2025 View reviewed changes Comment thread Doc/library/codecs.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. StanFromIreland reviewed Apr 27, 2025 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2025-04-27-15-21-05.gh-issue-133036.HCNYA7.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. vstinner commented Apr 27, 2025 Copy link Copy Markdown Member Aha, 2 tests failed on the CI: test_multibytecodec and test_sax. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. malemburg requested changes Apr 27, 2025 View reviewed changes malemburg left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Thanks for the PR. You are still missing a few places which need to be updated: Lib/test/test_multibytecodec.py uses codecs.open() Lib/test/test_sax.py uses codecs.open() Lib/_pyio.py references codecs.open() for non-text encodings Modules/_io/textio.c mentions codecs.open() as an alternative command There may be more places. I have only searched for \"codecs.open\". Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-app Bot added awaiting changes and removed awaiting merge labels Apr 27, 2025 bedevere-app Bot commented Apr 27, 2025 Copy link Copy Markdown When you\u0027re done making the requested changes, leave the comment: I have made the requested changes; please review again. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. methane added 2 commits April 28, 2025 16:40 codecs_open_nowarn -\u003e codecs_open_no_warn 47ebf4f fix tests ff0d25d vstinner commented Apr 28, 2025 Copy link Copy Markdown Member Tests fail on Windows: ERROR: test_code_page_decode_flags (test.test_codecs.CodePageTest.test_code_page_decode_flags)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\a\\cpython\\cpython\\Lib\\test\\test_codecs.py\", line 3466, in test_code_page_decode_flags\n    if is_code_page_present(cp):\n       ~~~~~~~~~~~~~~~~~~~~^^^^\n  File \"D:\\a\\cpython\\cpython\\Lib\\test\\test_codecs.py\", line 44, in is_code_page_present\n    class CPINFOEXW(ctypes.Structure):\n                    ^^^^^^\nNameError: name \u0027ctypes\u0027 is not defined. Did you mean: \u0027type\u0027? Or did you forget to import \u0027ctypes\u0027?\n All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. remove codecs.open from error message cba4e03 vstinner commented Apr 28, 2025 Copy link Copy Markdown Member To fix test_codecs on Window",
+    "scrapedAt": "2026-10-08 19:18:43.747224"
+  },
+  {
+    "id": 893,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb",
+    "title": "bdb — Debugger framework — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Debugging and Profiling » bdb — Debugger framework | Theme Auto Light Dark | bdb — Debugger framework¶ Source code: Lib/bdb.py The bdb module handles basic debugger functions, like setting breakpoints or managing execution via the debugger. The following exception is defined: exception bdb.BdbQuit¶ Exception raised by the Bdb class for quitting the debugger. The bdb module also defines two classes: class bdb.Breakpoint(self, file, line, temporary\u003dFalse, cond\u003dNone, funcname\u003dNone)¶ This class implements temporary breakpoints, ignore counts, disabling and (re-)enabling, and conditionals. Breakpoints are indexed by number through a list called bpbynumber and by (file, line) pairs through bplist. The former points to a single instance of class Breakpoint. The latter points to a list of such instances since there may be more than one breakpoint per line. When creating a breakpoint, its associated file name should be in canonical form. If a funcname is defined, a breakpoint hit will be counted when the first line of that function is executed. A conditional breakpoint always counts a hit. Breakpoint instances have the following methods: deleteMe()¶ Delete the breakpoint from the list associated to a file/line. If it is the last breakpoint in that position, it also deletes the entry for the file/line. enable()¶ Mark the breakpoint as enabled. disable()¶ Mark the breakpoint as disabled. bpformat()¶ Return a string with all the information about the breakpoint, nicely formatted: Breakpoint number. Temporary status (del or keep). File/line position. Break condition. Number of times to ignore. Number of times hit. Added in version 3.2. bpprint(out\u003dNone)¶ Print the output of bpformat() to the file out, or if it is None, to standard output. Breakpoint instances have the following attributes: file¶ File name of the Breakpoint. line¶ Line number of the Breakpoint within file. temporary¶ True if a Breakpoint at (file, line) is temporary. cond¶ Condition for evaluating a Breakpoint at (file, line). funcname¶ Function name that defines whether a Breakpoint is hit upon entering the function. enabled¶ True if Breakpoint is enabled. bpbynumber¶ Numeric index for a single instance of a Breakpoint. bplist¶ Dictionary of Breakpoint instances indexed by (file, line) tuples. ignore¶ Number of times to ignore a Breakpoint. hits¶ Count of the number of times a Breakpoint has been hit. class bdb.Bdb(skip\u003dNone, backend\u003d\u0027settrace\u0027)¶ The Bdb class acts as a generic Python debugger base class. This class takes care of the details of the trace facility; a derived class should implement user interaction. The standard debugger class (pdb.Pdb) is an example. The skip argument, if given, must be an iterable of glob-style module name patterns. The debugger will not step into frames that originate in a module that matches one of these patterns. Whether a frame is considered to originate in a certain module is determined by the __name__ in the frame globals. The backend argument specifies the backend to use for Bdb. It can be either \u0027settrace\u0027 or \u0027monitoring\u0027. \u0027settrace\u0027 uses sys.settrace() which has the best backward compatibility. The \u0027monitoring\u0027 backend uses the new sys.monitoring that was introduced in Python 3.12, which can be much more efficient because it can disable unused events. We are trying to keep the exact interfaces for both backends, but there are some differences. The debugger developers are encouraged to use the \u0027monitoring\u0027 backend to achieve better performance. Changed in version 3.1: Added the skip parameter. Changed in version 3.14: Added the backend parameter. The following methods of Bdb normally don’t need to be overridden. canonic(filename)¶ Return canonical form of filename. For real file names, the canonical form is an operating-system-dependent, case-normalized absolute path. A filename with angle brackets, such as \"\u003cstdin\u003e\" generated in interactive mode, is returned unchanged. start_trace(self)¶ Start tracing. For \u0027settrace\u0027 backend, this method is equivalent to sys.settrace(self.trace_dispatch) Added in version 3.14. stop_trace(self)¶ Stop tracing. For \u0027settrace\u0027 backend, this method is equivalent to sys.settrace(None) Added in version 3.14. reset()¶ Set the botframe, stopframe, returnframe and quitting attributes with values ready to start debugging. trace_dispatch(frame, event, arg)¶ This function is installed as the trace function of debugged frames. Its return value is the new trace function (in most cases, that is, itself). The default implementation decides how to dispatch a frame, depending on the type of event (passed as a string) that is about to be executed. event can be one of the following: \"line\": A new line of code is going to be executed. \"call\": A function is about to be called, or another code block entered. \"return\": A function or other code block is about to return. \"exception\": An exception ha",
+    "scrapedAt": "2026-10-08 19:18:40.750727"
+  },
+  {
+    "id": 892,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html",
+    "title": "RFC 3362 - Real-time Facsimile (T.38) - image/t38 MIME Sub-type Registration",
+    "content": "Light Dark Auto Network Working Group                                         G. Parsons\nRequest for Comments: 3362                               Nortel Networks\nCategory: Standards Track                                    August 2002\n\n\n                Real-time Facsimile (T.38) - image/t38 \n                      MIME Sub-type Registration \n\nStatus of this Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\nCopyright Notice\n\n   Copyright (C) The Internet Society (2002).  All Rights Reserved.\n\nAbstract\n\n   This document describes the registration of the MIME sub-type\n   image/t38.  The encoding is defined by ITU Recommendation T.38 and is\n   intended for use as an Session Description Protocol (SDP) media\n   descriptor.\n\n 1.  Conventions used in this document \n\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in BCP 14, RFC 2119\n   [REQ].\n\n 2.  Overview \n\n   This document describes the registration of the MIME sub-type\n   image/t38.  The encoding is defined by [T.38] and is intended for use\n   as an SDP media descriptor.\n\n 3.  T.38 Definition \n\n   ITU-T Recommendation T.38 [T.38] describes the technical features\n   necessary to transfer facsimile documents in real-time between two\n   standard Group 3 facsimile terminals over the Internet or other\n   networks using IP protocols.  The Recommendation allows the use of\n   either TCP or UDP depending on the service environment.\n\n\n\n\nParsons                     Standards Track                     [Page 1] RFC 3362                MIME Sub-type image/t38              August 2002\n\n\n   ITU-T Recommendation T.38 [T.38] Annex D describes system level\n   requirements and procedures for internet aware facsimile\n   implementations and internet aware facsimile gateways conforming to\n   ITU-T T.38 to establish calls with other ITU-T T.38 implementations\n   using the procedures defined in IETF RFC 2543 [SIP-99] and IETF RFC\n   2327 [SDP].\n\n   Note that ITU-T T.38 Recommendation T.38 (04/02) [T.38] is an\n   aggregation of the original ITU-T Recommendation T.38 (06/98) [T.38-\n   98] and all of the subsequent Amendments and Corrigendum including\n   [T.38D-00].  While [T.38] and [T.38D-00] describe SIP procedures per\n   [SIP-99], the procedures can also be applied to the revised Session\n   Initiation Protocol specification [SIP].\n\n 3.1  image/t38 Usage \n\n   Annex D of [T.38] describes that the image/t38 media type is intended\n   to indicate a T.38 media stream in SDP.\n\n   This media type registration is not intended for email usage.\n\n 4.  IANA Registration \n\n      To: ietf-types@iana.org\n      Subject: Registration of Standard MIME media type image/t38\n\n      MIME media type name: image\n\n      MIME subtype name: t38\n\n      Required parameters: none\n\n      Optional parameters: none\n\n      Encoding considerations: Binary\n\n      Security considerations:\n\n         This content denotes a facsimile bit stream that may or\n         may not be encrypted.\n\n      Interoperability considerations :\n\n         This MIME media subtype is intended to be used as a\n         parameter by SDP in SIP call setup for T.38 as described in\n         ITU-T Rec. T.38 Annex D.  Any use of this media type by\n         email applications is not defined and as a result is not\n         guaranteed to interoperate with a T.38 stream.\n\n\n\nParsons                     Standards Track                     [Page 2] RFC 3362                MIME Sub-type image/t38              August 2002\n\n\n\n      Published specification:\n\n         ITU-T Recommendation T.38, \u0027Procedures for real-time\n         Group 3 facsimile communication over IP networks\u0027, April\n         2002.\n\n         A copy of the T.38 specifications can be found at:\n\n         http://www.itu.int/rec/recommendation.asp?type\u003dfolders\u0026\n         lang\u003de\u0026parent\u003dT-REC-T.38\n\n      Applications which use this media type:\n\n         Real-time facsimile (fax)\n\n      Additional information:\n\n         Magic number(s):\n              II (little-endian):\n              MM (big-endian):\n         File extension(s): .T38\n         Macintosh File Type Code(s): T38\n\n      Person \u0026 email address to contact for further information:\n\n         Glenn W. Parsons\n         gparsons@nortelnetworks.com\n\n      Intended usage: COMMON\n\n      Change controller: Glenn Parsons\n\n 5. Security Considerations \n\n   Security considerations for this media type are discussed in the MIME\n   type registration that appears in section 4.\n\n 6. References \n\n   [REQ]      Bradner, S., \"Key words for use in RFCs to Indicate\n              Requirement Levels\", BCP 14, RFC 2119, March 1997",
+    "scrapedAt": "2026-10-08 19:18:39.520494"
+  },
+  {
     "id": 891,
     "url": "https://docs.python.org/3/library/ctypes.html#ctypes.POINTER",
     "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
@@ -5915,26 +5950,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 892,
-    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html"
-  },
-  {
-    "id": 893,
-    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
-  },
-  {
-    "id": 894,
-    "url": "https://github.com/python/cpython/issues/133038"
-  },
-  {
-    "id": 895,
-    "url": "https://docs.python.org/3/library/socket.html#module-socket"
-  },
-  {
-    "id": 896,
-    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
   },
   {
     "id": 897,
@@ -151881,10 +151896,2226 @@ window.searchData = [
     "id": 127423,
     "url": "https://www.python.org/ftp/python/3.15.0/python-3.15.0a1-x86_64-linux-android.tar.gz",
     "parentUrl": "https://www.python.org/downloads/android/"
+  },
+  {
+    "id": 128744,
+    "url": "https://datatracker.ietf.org/group/app/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128745,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-3.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128746,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-T.38",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128748,
+    "url": "https://datatracker.ietf.org/doc/draft-parsons-itu-t38-reg/00/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128749,
+    "url": "https://datatracker.ietf.org/doc/rfc3362/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128750,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-REQ",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128754,
+    "url": "https://www.rfc-editor.org/rfc/rfc3362.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128755,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128756,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3261",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128757,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-SIP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128758,
+    "url": "https://datatracker.ietf.org/doc/rfc3362/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128759,
+    "url": "https://datatracker.ietf.org/doc/html/draft-parsons-itu-t38-reg-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128761,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-SIP-99",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128762,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128763,
+    "url": "https://www.rfc-editor.org/rfc/rfc3362.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128764,
+    "url": "https://datatracker.ietf.org/person/glenn.parsons@ericsson.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128765,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-T.38D-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128766,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128767,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128768,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128769,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#ref-SDP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128770,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128771,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128772,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128773,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2327",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128774,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3362.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128775,
+    "url": "http://www.itu.int/rec/recommendation",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128776,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2543",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128777,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2048",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc3362.html"
+  },
+  {
+    "id": 128779,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.disable",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128781,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_step",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128782,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.normcase",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128783,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.run",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128786,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.user_return",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128787,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.clear_break",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128790,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/bdb.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128791,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_break",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128792,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.cond",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128795,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.deleteMe",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128796,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.file",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128797,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.get_break",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128798,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.get_file_breaks",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128799,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.format_stack_entry",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128800,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.temporary",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128802,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.user_line",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128803,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.stop_here",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128804,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.disable_current_event",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128805,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.line",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128806,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.ignore",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128807,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.get_bpbynumber",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128809,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.runctx",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128810,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.bplist",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128811,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.bpbynumber",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128815,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.get_breaks",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128816,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128818,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.get_all_breaks",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128819,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.reset",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128820,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.runeval",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128821,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.do_clear",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128822,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.clear_all_file_breaks",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128823,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.dispatch_line",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128824,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.enable",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128825,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/bdb.py",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128827,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_return",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128828,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_trace",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128829,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.user_exception",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128831,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.start_trace",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128832,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.break_anywhere",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128834,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.set_trace",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128835,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.get_stack",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128836,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.checkfuncname",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128837,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.bpprint",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128838,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_next",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128839,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.restart_events",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128841,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.bpformat",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128842,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.user_call",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128845,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_continue",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128846,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.funcname",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128847,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.dispatch_call",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128848,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.is_skipped_module",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128850,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.trace_dispatch",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128851,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.hits",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128854,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.clear_bpbynumber",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128855,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.effective",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128859,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.canonic",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128860,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.dispatch_return",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128861,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_quit",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128863,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.stop_trace",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128864,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.runcall",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128865,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.break_here",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128866,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.clear_all_breaks",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128867,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.dispatch_exception",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128868,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Breakpoint.enabled",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128869,
+    "url": "https://docs.python.org/3/library/bdb.html#bdb.Bdb.set_until",
+    "parentUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "id": 128870,
+    "url": "https://github.com/python/cpython/pull/133038#event-17423870045",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128871,
+    "url": "https://github.com/python/cpython/pull/133038/commits/cba4e03829d96bd1f91b66e148c96a22c170a7f5",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128872,
+    "url": "https://github.com/python/cpython/pull/133038#event-17445647630",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128873,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2797577648",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128874,
+    "url": "https://github.com/python/cpython/pull/133038/commits/655759b8b6ad2db338fdd53b140b2cc987329a14",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128875,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2833476432",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128876,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2834537444",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128877,
+    "url": "https://github.com/python/cpython/pull/133038/files/744eff063a04e837a6dc4df224a9d2e405534f28",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128878,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2797567520",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128880,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2834563816",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128881,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2837184649",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128883,
+    "url": "https://github.com/python/cpython/pull/133038#event-17464813030",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128884,
+    "url": "https://github.com/python/cpython/pull/133038/files/655759b8b6ad2db338fdd53b140b2cc987329a14#diff-a71f034c62318430dc94a9f744b5333e7d8eec577d3a23ab0b76a781872c9b96",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128885,
+    "url": "https://github.com/python/cpython/pull/133038#event-17422149740",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128886,
+    "url": "https://github.com/python/cpython/pull/133038#issue-3022821258",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128887,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2797571151",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128888,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2802689087",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128889,
+    "url": "https://github.com/python/cpython/pull/133038/commits/b2dced556fd4c6bab1838a2f15f0ff4fd5a2af19",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128891,
+    "url": "https://github.com/python/cpython/pull/133038/commits/744eff063a04e837a6dc4df224a9d2e405534f28",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128892,
+    "url": "https://github.com/python/cpython/pull/133038#event-17422149957",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128893,
+    "url": "https://github.com/python/cpython/pull/133038#event-17455316783",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128894,
+    "url": "https://github.com/python/cpython/pull/133038#event-17464812961",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128895,
+    "url": "https://github.com/zensical/zensical/issues/429",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128896,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F133038",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128897,
+    "url": "https://github.com/python/cpython/pull/133038#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128898,
+    "url": "https://github.com/python/cpython/pull/133038/files/655759b8b6ad2db338fdd53b140b2cc987329a14#diff-190e75a7d61eeac945b2802a8a7984cc20950fb0f4af08cfb17b590d50f86ca0",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128899,
+    "url": "https://github.com/python/cpython/pull/133038#event-17445647882",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128900,
+    "url": "https://github.com/python/cpython/pull/133038#ref-issue-3022753563",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128901,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2837184732",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128903,
+    "url": "https://github.com/python/cpython/pull/133038/commits/c8af536acd65403e68d7a891493e36022557b7f4",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128904,
+    "url": "https://github.com/python/cpython/pull/133038/commits/ce5c94b0f150b9e2b6adbb96736eab05f9d18949",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128906,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2802221145",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128907,
+    "url": "https://github.com/python/cpython/pull/133038/files/744eff063a04e837a6dc4df224a9d2e405534f28#diff-b2c5030abde92d948bf9b2989322f20f948fa46b93bf3b499e86bdd66507f985",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128908,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2797578171",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128909,
+    "url": "https://github.com/python/cpython/pull/133038/files/655759b8b6ad2db338fdd53b140b2cc987329a14",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128910,
+    "url": "https://github.com/zensical/zensical/issues/427",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128911,
+    "url": "https://github.com/python/cpython/pull/133038#event-17451343634",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128912,
+    "url": "https://github.com/python/cpython/commit/4e294f6feb3193854d23e0e8be487213a80b232f",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128913,
+    "url": "https://github.com/python/cpython/pull/133038/commits/ff0d25d9d14c4a476fd44d41b05d7545eead88fe",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128914,
+    "url": "https://github.com/python/cpython/pull/133038/files/655759b8b6ad2db338fdd53b140b2cc987329a14#diff-4881d089cff18885276fc44ff4648a79602cb2c74183e2411a7bee3584d33a38",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128915,
+    "url": "https://github.com/python/cpython/pull/133038#commits-pushed-b2dced5",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128916,
+    "url": "https://github.com/python/cpython/pull/133038#event-17464812759",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128922,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2835197754",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128923,
+    "url": "https://github.com/python/cpython/pull/133038#commits-pushed-47ebf4f",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128928,
+    "url": "https://github.com/apps/github-project-automation",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128929,
+    "url": "https://github.com/python/cpython/pull/133038#event-17422149880",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128930,
+    "url": "https://github.com/zensical/zensical/pull/428",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128934,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2841477080",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128935,
+    "url": "https://github.com/python/cpython/pull/133038#event-17422149737",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128937,
+    "url": "https://github.com/python/cpython/pull/133038/commits/47ebf4f4e203b5e772dfddbfe4efef3f9b384bfb",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128938,
+    "url": "https://github.com/python/cpython/pull/133038/commits/c2a52e390f092ca051a465ce87aaaccf961c0b8e",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128939,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3Astdlib",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128940,
+    "url": "https://github.com/python/cpython/pull/133038#event-17423041596",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128941,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2833468863",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128942,
+    "url": "https://github.com/python/cpython/pull/133038/files/744eff063a04e837a6dc4df224a9d2e405534f28#diff-a71f034c62318430dc94a9f744b5333e7d8eec577d3a23ab0b76a781872c9b96",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128943,
+    "url": "https://github.com/python/cpython/pull/133038/files/ce5c94b0f150b9e2b6adbb96736eab05f9d18949",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128945,
+    "url": "https://cpython-previews--133038.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128946,
+    "url": "https://github.com/python/cpython/pull/133038#issuecomment-2841305291",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128947,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2797650577",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128948,
+    "url": "https://github.com/python/cpython/pull/133038#event-17464813161",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128949,
+    "url": "https://github.com/python/cpython/pull/133038#pullrequestreview-2803469762",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128950,
+    "url": "https://github.com/python/cpython/blob/main/Doc/deprecations/pending-removal-in-future.rst",
+    "parentUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "id": 128952,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3542.html",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128953,
+    "url": "https://docs.python.org/3/library/socket.html#",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128954,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socketpair",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128955,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BDADDR_LE_PUBLIC",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128958,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HV_GUID_BROADCAST",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128959,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOL_ALG",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128960,
+    "url": "https://docs.python.org/3/library/socket.html#socket.CAN_ISOTP",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128961,
+    "url": "https://docs.python.org/3/library/socket.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128963,
+    "url": "https://manpages.debian.org/vsock(7)",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128964,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HV_GUID_LOOPBACK",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128965,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SHUT_RD",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128966,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BDADDR_LOCAL",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128967,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BDADDR_LE_RANDOM",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128968,
+    "url": "https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.txt",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128970,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.recvfrom_into",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128971,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HV_GUID_CHILDREN",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128972,
+    "url": "https://docs.python.org/3/library/socket.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128973,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_CHANNEL_MONITOR",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128974,
+    "url": "https://docs.python.org/3/library/socket.html#socket.inet_ntop",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128976,
+    "url": "https://docs.python.org/3/library/socket.html#socket.LOCAL_CREDS",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128977,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.proto",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128978,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SocketType",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128980,
+    "url": "https://docs.python.org/3/library/socket.html#socket.ETHERTYPE_IPV6",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128981,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOL_L2CAP",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128982,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_BLUETOOTH",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128984,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SO_HCI_EVT_FILTER",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128988,
+    "url": "https://manpages.debian.org/packet(7)",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128989,
+    "url": "https://docs.python.org/3/library/socket.html#socket.inet_ntoa",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128991,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SHUT_RDWR",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128993,
+    "url": "https://docs.python.org/3/library/asyncio-threading.html",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128995,
+    "url": "https://docs.python.org/3/library/socket.html#socket-unix-constants",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128996,
+    "url": "https://docs.python.org/3/library/socket.html#socket.CMSG_SPACE",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 128997,
+    "url": "https://docs.python.org/3/library/socket.html#socket.gethostbyname_ex",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129000,
+    "url": "https://docs.python.org/3/library/socket.html#socket.htonl",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129001,
+    "url": "https://docs.python.org/3/library/socket.html#socket.gaierror",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129003,
+    "url": "https://docs.python.org/3/library/socket.html#socket.PF_RDS",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129005,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HVSOCKET_CONNECT_TIMEOUT",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129006,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HVSOCKET_CONNECTED_SUSPEND",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129007,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HVSOCKET_CONNECT_TIMEOUT_MAX",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129008,
+    "url": "https://docs.python.org/3/library/socket.html#timeouts-and-the-connect-method",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129009,
+    "url": "https://docs.python.org/3/library/socket.html#socket.htons",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129011,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.getblocking",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129012,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_UNIX",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129013,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BTPROTO_RFCOMM",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129014,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.dup",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129015,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.family",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129016,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOCK_CLOEXEC",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129017,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.get_inheritable",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129018,
+    "url": "https://docs.python.org/3/library/socket.html#socket.recv_fds",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129019,
+    "url": "https://docs.python.org/3/library/socket.html#socket.getaddrinfo",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129020,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HV_GUID_PARENT",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129025,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_FILTER",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129028,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.ioctl",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129029,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.sendto",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129031,
+    "url": "https://docs.python.org/3/library/socket.html#creating-sockets",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129032,
+    "url": "https://docs.python.org/3/library/socket.html#timeouts-and-the-accept-method",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129033,
+    "url": "https://docs.python.org/3/library/socket.html#socket-ethernet-types",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129035,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_PACKET",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129036,
+    "url": "https://docs.python.org/3/library/socket.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129037,
+    "url": "https://docs.python.org/3/library/socket.html#socket.CAN_RAW_JOIN_FILTERS",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129038,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SO_REUSEPORT_LB",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129039,
+    "url": "https://docs.python.org/3/library/socket.html#socket.CMSG_LEN",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129040,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.recvmsg_into",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129042,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOL_SCO",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129043,
+    "url": "https://manpages.debian.org/recv(2)",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129044,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_RDS",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129045,
+    "url": "https://docs.python.org/3/library/socket.html#socket.PF_CAN",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129046,
+    "url": "https://docs.python.org/3/library/socket.html#socket.create_connection",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129047,
+    "url": "https://docs.python.org/3/library/socket.html#socket.fromfd",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129050,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_CHANNEL_RAW",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129051,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOCK_SEQPACKET",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129052,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_CHANNEL_LOGGING",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129053,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HV_PROTOCOL_RAW",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129054,
+    "url": "https://docs.python.org/3/library/socket.html#socket.LOCAL_CREDS_PERSISTENT",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129057,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.share",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129058,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_DATA_DIR",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129059,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_QIPCRTR",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129061,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.Popen",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129062,
+    "url": "https://docs.python.org/3/library/socket.html#socket.gethostname",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129063,
+    "url": "https://docs.python.org/3/library/socket.html#socket.getservbyport",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129064,
+    "url": "https://docs.python.org/3/library/socket.html#socket.PF_DIVERT",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129065,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_DEV_NONE",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129066,
+    "url": "https://docs.python.org/3/library/socket.html#socket.sethostname",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129067,
+    "url": "https://manpages.debian.org/getsockopt(2)",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129068,
+    "url": "https://docs.python.org/3/library/socket.html#socket.getprotobyname",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129070,
+    "url": "https://docs.python.org/3/library/socket.html#socket.L2CAP_LM",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129072,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SO_INCOMING_CPU",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129073,
+    "url": "https://manpages.debian.org/setsockopt(2)",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129075,
+    "url": "https://docs.python.org/3/library/socket.html#socket.getservbyname",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129077,
+    "url": "https://docs.python.org/3/library/socket.html#other-functions",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129079,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.connect_ex",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129081,
+    "url": "https://docs.python.org/3/library/socketserver.html#module-socketserver",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129082,
+    "url": "https://en.wikipedia.org/wiki/Happy_Eyeballs",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129083,
+    "url": "https://docs.python.org/3/library/socket.html#constants",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129084,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SIO_RCVALL",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129085,
+    "url": "https://docs.python.org/3/library/os.html#os.sysconf",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129087,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BDADDR_BREDR",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129088,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOMAXCONN",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129089,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HV_GUID_ZERO",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129090,
+    "url": "https://docs.python.org/3/library/socket.html#socket.getfqdn",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129091,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/socket.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129094,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_CHANNEL_CONTROL",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129095,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SIO_KEEPALIVE_VALS",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129096,
+    "url": "https://msdn.microsoft.com/en-us/library/ms741621%28VS.85%29.aspx",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129098,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_INET6",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129099,
+    "url": "https://docs.python.org/3/library/socket.html#socket.if_nametoindex",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129100,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOL_RFCOMM",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129101,
+    "url": "https://docs.python.org/3/library/os.html#os.close",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129102,
+    "url": "https://docs.python.org/3/library/socket.html#socket.CAN_BCM",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129104,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOL_RDS",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129105,
+    "url": "https://docs.python.org/3/library/socket.html#socket.send_fds",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129106,
+    "url": "https://docs.python.org/3/library/socket.html#socket-addresses",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129109,
+    "url": "https://docs.python.org/3/library/socket.html#socket.fromshare",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129111,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOCK_DGRAM",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129113,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.set_inheritable",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129114,
+    "url": "https://docs.python.org/3/library/socket.html#socket.ETHERTYPE_VLAN",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129115,
+    "url": "https://docs.python.org/3/library/socket.html#socket.ETH_P_ALL",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129116,
+    "url": "https://manpages.debian.org/inet(3)",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129117,
+    "url": "https://docs.python.org/3/library/socket.html#socket.ETHERTYPE_IP",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129118,
+    "url": "https://docs.python.org/3/library/socket.html#socket.gethostbyname",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129119,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.recvfrom",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129120,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_INET",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129122,
+    "url": "https://docs.python.org/3/library/socket.html#socket-timeouts",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129124,
+    "url": "https://docs.python.org/3/library/fcntl.html#fcntl.fcntl",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129126,
+    "url": "https://docs.python.org/3/library/socket.html#socket.getnameinfo",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129127,
+    "url": "https://docs.python.org/3/library/socket.html#socket.close",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129130,
+    "url": "https://docs.python.org/3/library/socket.html#socket.inet_pton",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129131,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.sendmsg",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129134,
+    "url": "https://docs.python.org/3/library/socket.html#socket.setdefaulttimeout",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129135,
+    "url": "https://docs.python.org/3/library/socket.html#socket.IOCTL_VM_SOCKETS_GET_LOCAL_CID",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129136,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SHUT_WR",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129137,
+    "url": "https://manpages.debian.org/getnameinfo(3)",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129138,
+    "url": "https://docs.python.org/3/library/socket.html#socket.getdefaulttimeout",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129139,
+    "url": "https://docs.python.org/3/library/socket.html#socket.BDADDR_ANY",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129142,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_CHANNEL_USER",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129143,
+    "url": "https://docs.python.org/3/howto/sockets.html#socket-howto",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129145,
+    "url": "https://docs.python.org/3/library/socket.html#example",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129147,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOL_BLUETOOTH",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129148,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HVSOCKET_ADDRESS_FLAG_PASSTHRU",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129149,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.recvmsg",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129152,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_UNSPEC",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129154,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.ioctl",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129155,
+    "url": "https://docs.python.org/3/library/socket.html#socket.PF_PACKET",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129158,
+    "url": "https://docs.python.org/3/library/socket.html#socket.ETHERTYPE_ARP",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129160,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/socket.py",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129161,
+    "url": "https://docs.python.org/3/library/socket.html#socket.CAN_RAW_FD_FRAMES",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129162,
+    "url": "https://docs.python.org/3/library/socket.html#socket.herror",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129164,
+    "url": "https://docs.python.org/3/library/socket.html#socket.if_nameindex",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129166,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_VSOCK",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129168,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_ALG",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129170,
+    "url": "https://docs.python.org/3/library/socket.html#socket.create_server",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129171,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOCK_NONBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129172,
+    "url": "https://docs.python.org/3/library/socket.html#socket.if_indextoname",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129176,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOCK_RDM",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129177,
+    "url": "https://docs.python.org/3/library/socket.html#socket.ntohl",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129178,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HV_GUID_WILDCARD",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129180,
+    "url": "https://docs.python.org/3/library/socket.html#socket.ntohs",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129181,
+    "url": "https://docs.python.org/3/library/socket.html#socket.CAN_J1939",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129183,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SO_HCI_PKT_FILTER",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129184,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SIO_LOOPBACK_FAST_PATH",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129185,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3493.html",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129186,
+    "url": "https://docs.python.org/3/library/socket.html#socket-families",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129187,
+    "url": "https://docs.python.org/3/library/socket.html#socket.has_dualstack_ipv6",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129188,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.type",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129189,
+    "url": "https://docs.python.org/3/library/socket.html#socket.HCI_TIME_STAMP",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129191,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOL_HCI",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129193,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOCK_RAW",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129194,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_CAN",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129195,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.sendmsg_afalg",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129196,
+    "url": "https://docs.python.org/3/library/socket.html#socket.gethostbyaddr",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129197,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_DIVERT",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129198,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_LINK",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129199,
+    "url": "https://docs.python.org/3/library/socket.html#socket.AF_HYPERV",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129200,
+    "url": "https://docs.python.org/3/library/socket.html#notes-on-socket-timeouts",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129202,
+    "url": "https://docs.python.org/3/library/socket.html#socket.timeout",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129203,
+    "url": "https://docs.python.org/3/library/socket.html#socket.has_ipv6",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129204,
+    "url": "https://docs.python.org/3/library/socket.html#socket.inet_aton",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129205,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SCM_CREDS2",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129206,
+    "url": "https://udrepper.livejournal.com/20407.html",
+    "parentUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "id": 129208,
+    "url": "https://docs.python.org/3/library/email.utils.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129209,
+    "url": "https://docs.python.org/3/library/email.utils.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129211,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.formatdate",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129212,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2822.html",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129214,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.tzinfo",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129218,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.make_msgid",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129219,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.parsedate",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129220,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.quote",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129222,
+    "url": "https://docs.python.org/3/library/time.html#time.gmtime",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129223,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.collapse_rfc2231_value",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129226,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.parsedate_tz",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129227,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.encode_rfc2231",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129228,
+    "url": "https://docs.python.org/3/library/email.charset.html#email.charset.Charset",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129229,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.decode_rfc2231",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129232,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/email.utils.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129234,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/email/utils.py",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129236,
+    "url": "https://docs.python.org/3/library/email.compat32-message.html#email.message.Message.get_param",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129237,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.format_datetime",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129238,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.mktime_tz",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129241,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.parseaddr",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129242,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.formataddr",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129243,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.getaddresses",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129244,
+    "url": "https://docs.python.org/3/library/time.html#time.mktime",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129245,
+    "url": "https://docs.python.org/3/library/email.compat32-message.html#email.message.Message.get_all",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129249,
+    "url": "https://docs.python.org/3/library/email.utils.html#module-email.utils",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129254,
+    "url": "https://docs.python.org/3/library/datetime.html#datetime.timezone",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129256,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.unquote",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129258,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.parsedate_to_datetime",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "id": 129259,
+    "url": "https://docs.python.org/3/library/email.utils.html#email.utils.decode_params",
+    "parentUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "email.utils: Miscellaneous utilities — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "email.utils: Miscellaneous utilities — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/email.utils.html#email.utils.localtime"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "socket — Low-level networking interface — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/socket.html#module-socket"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d80\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d48\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d60\u0026v\u003d4",
+    "alt": "vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d48\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d60\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/89152624?s\u003d60\u0026v\u003d4",
+    "alt": "StanFromIreland",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/89152624?s\u003d60\u0026v\u003d4",
+    "alt": "StanFromIreland",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6735498?s\u003d60\u0026v\u003d4",
+    "alt": "malemburg",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6735498?s\u003d48\u0026v\u003d4",
+    "alt": "@malemburg",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d80\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d80\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d60\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d60\u0026v\u003d4",
+    "alt": "vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d48\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d60\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/235829?s\u003d40\u0026v\u003d4",
+    "alt": "@github-project-automation",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d80\u0026u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6735498?s\u003d80\u0026u\u003ddaa85ae74fd076240aa141e74870c87bc4c487ed\u0026v\u003d4",
+    "alt": "@malemburg",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/89152624?s\u003d40\u0026v\u003d4",
+    "alt": "@StanFromIreland",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6735498?s\u003d40\u0026v\u003d4",
+    "alt": "@malemburg",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d52\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d52\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d52\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6735498?s\u003d52\u0026v\u003d4",
+    "alt": "@malemburg",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d52\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/89152624?s\u003d52\u0026v\u003d4",
+    "alt": "@StanFromIreland",
+    "pageTitle": "gh-133036: Deprecate codecs.open by methane · Pull Request #133038 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/133038"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "bdb — Debugger framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "bdb — Debugger framework — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/bdb.html#bdb.Bdb"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
