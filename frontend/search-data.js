@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1491,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:44:32.981463"
+  },
+  {
+    "id": 1490,
+    "url": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses",
+    "title": "dataclasses — Data Classes — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » dataclasses — Data Classes | Theme Auto Light Dark | dataclasses — Data Classes¶ Source code: Lib/dataclasses.py This module provides a decorator and functions for automatically adding generated special methods such as __init__() and __repr__() to user-defined classes. It was originally described in PEP 557. The member variables to use in these generated methods are defined using PEP 526 type annotations. For example, this code: from dataclasses import dataclass\n\n@dataclass\nclass InventoryItem:\n    \"\"\"Class for keeping track of an item in inventory.\"\"\"\n    name: str\n    unit_price: float\n    quantity_on_hand: int \u003d 0\n\n    def total_cost(self) -\u003e float:\n        return self.unit_price * self.quantity_on_hand\n will add, among other things, a __init__() that looks like: def __init__(self, name: str, unit_price: float, quantity_on_hand: int \u003d 0):\n    self.name \u003d name\n    self.unit_price \u003d unit_price\n    self.quantity_on_hand \u003d quantity_on_hand\n Note that this method is automatically added to the class: it is not directly specified in the InventoryItem definition shown above. Added in version 3.7. Module contents¶ @dataclasses.dataclass(*, init\u003dTrue, repr\u003dTrue, eq\u003dTrue, order\u003dFalse, unsafe_hash\u003dFalse, frozen\u003dFalse, match_args\u003dTrue, kw_only\u003dFalse, slots\u003dFalse, weakref_slot\u003dFalse)¶ This function is a decorator that is used to add generated special methods to classes, as described below. The @dataclass decorator examines the class to find fields. A field is defined as a class variable that has a type annotation. With two exceptions described below, nothing in @dataclass examines the type specified in the variable annotation. The order of the fields in all of the generated methods is the order in which they appear in the class definition. The @dataclass decorator will add various “dunder” methods to the class, described below. If any of the added methods already exist in the class, the behavior depends on the parameter, as documented below. The decorator returns the same class that it is called on; no new class is created. If @dataclass is used just as a simple decorator with no parameters, it acts as if it has the default values documented in this signature. That is, these three uses of @dataclass are equivalent: @dataclass\nclass C:\n    ...\n\n@dataclass()\nclass C:\n    ...\n\n@dataclass(init\u003dTrue, repr\u003dTrue, eq\u003dTrue, order\u003dFalse, unsafe_hash\u003dFalse, frozen\u003dFalse,\n           match_args\u003dTrue, kw_only\u003dFalse, slots\u003dFalse, weakref_slot\u003dFalse)\nclass C:\n    ...\n The parameters to @dataclass are: init: If true (the default), a __init__() method will be generated. If the class already defines __init__(), this parameter is ignored. repr: If true (the default), a __repr__() method will be generated. The generated repr string will have the class name and the name and repr of each field, in the order they are defined in the class. Fields that are marked as being excluded from the repr are not included. For example: InventoryItem(name\u003d\u0027widget\u0027, unit_price\u003d3.0, quantity_on_hand\u003d10). If the class already defines __repr__(), this parameter is ignored. eq: If true (the default), an __eq__() method will be generated. This method compares the class by comparing each field in order. Both instances in the comparison must be of the identical type. If the class already defines __eq__(), this parameter is ignored. Changed in version 3.13: The generated __eq__ method now compares each field individually (for example, self.a \u003d\u003d other.a and self.b \u003d\u003d other.b), rather than comparing tuples of fields as in previous versions. This change makes the comparison faster but it may alter results in cases where attributes compare equal by identity but not by value (such as float(\u0027nan\u0027)). In Python 3.12 and earlier, the comparison was performed by creating tuples of the fields and comparing them (for example, (self.a, self.b) \u003d\u003d (other.a, other.b)). order: If true (the default is False), __lt__(), __le__(), __gt__(), and __ge__() methods will be generated. These compare the class as if it were a tuple of its fields, in order. Both instances in the comparison must be of the identical type. If order is true and eq is false, a ValueError is raised. If the class already defines any of __lt__(), __le__(), __gt__(), or __ge__(), then TypeError is raised. unsafe_hash: If true, force dataclasses to create a __hash__() method, even though it may not be safe to do so. Otherwise, generate a __hash__() method according to how eq and frozen are set. The default value is False. __hash__() is used by built-in hash(), and when objects are added to hashed collections such as dictionaries and sets. Having a __hash__() implies that instances of the class are immutable. Mutability is a complicated property that depends on the programmer’s intent, the existence and behavior of __eq__(), and the values of the eq and frozen flags in the @dataclass dec",
+    "scrapedAt": "2026-10-08 19:44:31.679753"
+  },
+  {
+    "id": 1489,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#configparser",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:44:30.378195"
+  },
+  {
+    "id": 1488,
+    "url": "https://github.com/python/cpython/issues/84852",
+    "title": "Add missing mimetypes for fonts · Issue #84852 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add missing mimetypes for fonts #84852 New issue Copy link New issue Copy link Closed #20199 Closed Add missing mimetypes for fonts#84852 #20199 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Description sahil290791 mannequin opened on May 19, 2020 Issue body actions BPO 40675 Nosy @sahil290791 PRs gh-84852: Add MIME types for .eot, ,otf, .ttf, .woff and .woff2 fonts #20199 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\nlabels \u003d [\u0027library\u0027]\ntitle \u003d \u0027Add missing mimetypes for fonts\u0027\nupdated_at \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\nuser \u003d \u0027https://github.com/sahil290791\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\nactor \u003d \u0027sahil.prajapati\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2020-05-19.01:08:13.333\u003e\ncreator \u003d \u0027sahil.prajapati\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 40675\nkeywords \u003d []\nmessage_count \u003d 1.0\nmessages \u003d [\u0027369312\u0027]\nnosy_count \u003d 1.0\nnosy_names \u003d [\u0027sahil.prajapati\u0027]\npr_nums \u003d [\u002720199\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue40675\u0027\nversions \u003d [] Linked PRs gh-84852: Add basic font MIME types #113592 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:44:28.992852"
+  },
+  {
+    "id": 1487,
+    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-count",
+    "title": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » uuid — UUID objects according to RFC 9562 | Theme Auto Light Dark | uuid — UUID objects according to RFC 9562¶ Source code: Lib/uuid.py This module provides immutable UUID objects (the UUID class) and functions for generating UUIDs corresponding to a specific UUID version as specified in RFC 9562 (which supersedes RFC 4122), for example, uuid1() for UUID version 1, uuid3() for UUID version 3, and so on. Note that UUID version 2 is deliberately omitted as it is outside the scope of the RFC. If all you want is a unique ID, you should probably call uuid1() or uuid4(). Note that uuid1() may compromise privacy since it creates a UUID containing the computer’s network address. uuid4() creates a random UUID. Depending on support from the underlying platform, uuid1() may or may not return a “safe” UUID. A safe UUID is one which is generated using synchronization methods that ensure no two processes can obtain the same UUID. All instances of UUID have an is_safe attribute which relays any information about the UUID’s safety, using this enumeration: class uuid.SafeUUID¶ Added in version 3.7. safe¶ The UUID was generated by the platform in a multiprocessing-safe way. unsafe¶ The UUID was not generated in a multiprocessing-safe way. unknown¶ The platform does not provide information on whether the UUID was generated safely or not. class uuid.UUID(hex\u003dNone, bytes\u003dNone, bytes_le\u003dNone, fields\u003dNone, int\u003dNone, version\u003dNone, *, is_safe\u003dSafeUUID.unknown)¶ Create a UUID from either a string of 32 hexadecimal digits, a 16-byte bytes object in big-endian order as the bytes argument, a 16-byte bytes object in little-endian order as the bytes_le argument, a tuple of six integers (32-bit time_low, 16-bit time_mid, 16-bit time_hi_version, 8-bit clock_seq_hi_variant, 8-bit clock_seq_low, 48-bit node) as the fields argument, or a single 128-bit integer as the int argument. When a string of hex digits is given, curly braces, hyphens, and a URN prefix are all optional. For example, these expressions all yield the same UUID: UUID(\u0027{12345678-1234-5678-1234-567812345678}\u0027)\nUUID(\u002712345678123456781234567812345678\u0027)\nUUID(\u0027urn:uuid:12345678-1234-5678-1234-567812345678\u0027)\nUUID(bytes\u003db\u0027\\x12\\x34\\x56\\x78\u0027*4)\nUUID(bytes_le\u003db\u0027\\x78\\x56\\x34\\x12\\x34\\x12\\x78\\x56\u0027 +\n              b\u0027\\x12\\x34\\x56\\x78\\x12\\x34\\x56\\x78\u0027)\nUUID(fields\u003d(0x12345678, 0x1234, 0x5678, 0x12, 0x34, 0x567812345678))\nUUID(int\u003d0x12345678123456781234567812345678)\n Exactly one of hex, bytes, bytes_le, fields, or int must be given. The version argument is optional; if given, the resulting UUID will have its variant and version number set according to RFC 9562, overriding bits in the given hex, bytes, bytes_le, fields, or int. Comparison of UUID objects are made by way of comparing their UUID.int attributes. Comparison with a non-UUID object raises a TypeError. str(uuid) returns a string in the form 12345678-1234-5678-1234-567812345678 where the 32 hexadecimal digits represent the UUID. UUID instances have these read-only attributes: UUID.bytes¶ The UUID as a 16-byte bytes object (containing the six integer fields in big-endian byte order). UUID.bytes_le¶ The UUID as a 16-byte bytes object (with time_low, time_mid, and time_hi_version in little-endian byte order). UUID.fields¶ A tuple of the six integer fields of the UUID, which are also available as six individual attributes and two derived attributes: Field Meaning UUID.time_low¶ The first 32 bits of the UUID. Only relevant to version 1. UUID.time_mid¶ The next 16 bits of the UUID. Only relevant to version 1. UUID.time_hi_version¶ The next 16 bits of the UUID. Only relevant to version 1. UUID.clock_seq_hi_variant¶ The next 8 bits of the UUID. Only relevant to versions 1 and 6. UUID.clock_seq_low¶ The next 8 bits of the UUID. Only relevant to versions 1 and 6. UUID.node¶ The last 48 bits of the UUID. Only relevant to version 1. UUID.time¶ The 60-bit timestamp as a count of 100-nanosecond intervals since Gregorian epoch (1582-10-15 00:00:00) for versions 1 and 6, or the 48-bit timestamp in milliseconds since Unix epoch (1970-01-01 00:00:00) for version 7. UUID.clock_seq¶ The 14-bit sequence number. Only relevant to versions 1 and 6. UUID.hex¶ The UUID as a 32-character lowercase hexadecimal string. UUID.int¶ The UUID as a 128-bit integer. UUID.urn¶ The UUID as a URN as specified in RFC 9562. UUID.variant¶ The UUID variant, which determines the internal layout of the UUID. This will be one of the constants RESERVED_NCS, RFC_4122, RESERVED_MICROSOFT, or RESERVED_FUTURE. UUID.version¶ The UUID version number (1 through 8, meaningful only when the variant is RFC_4122). Changed in version 3.14: Added UUID versions 6, 7 and 8. UUID.is_safe¶ An enumeration of SafeUUID which indicates whether the platform generated the UUID in a multiprocessing-safe way. Added in version 3.7. The uuid module defines the following",
+    "scrapedAt": "2026-10-08 19:44:26.485532"
+  },
+  {
     "id": 1486,
     "url": "https://docs.python.org/3/whatsnew/index.html",
     "title": "What’s New in Python — Python 3.14.8 documentation",
@@ -9975,26 +10010,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1487,
-    "url": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-count"
-  },
-  {
-    "id": 1488,
-    "url": "https://github.com/python/cpython/issues/84852"
-  },
-  {
-    "id": 1489,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#configparser"
-  },
-  {
-    "id": 1490,
-    "url": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
-  },
-  {
-    "id": 1491,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
   },
   {
     "id": 1492,
@@ -242241,10 +242256,211 @@ window.searchData = [
     "id": 309725,
     "url": "https://github.com/python/cpython/blob/3.14/Doc/whatsnew/index.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/whatsnew/index.html"
+  },
+  {
+    "id": 309974,
+    "url": "https://github.com/python/cpython/pull/20199",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309975,
+    "url": "https://github.com/python/cpython/pull/113592",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309976,
+    "url": "https://github.com/python/cpython/issues/84852#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309977,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/84852",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309978,
+    "url": "https://github.com/python/cpython/issues/84852#issue-1199036725",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309979,
+    "url": "https://github.com/sahil290791",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309980,
+    "url": "https://bugs.python.org/issue40675",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309981,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/84852",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 309982,
+    "url": "https://github.com/python/cpython/issues/84852#top",
+    "parentUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "id": 311224,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.asdict",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311231,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.MISSING",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311232,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/dataclasses.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311241,
+    "url": "https://docs.python.org/3/reference/datamodel.html#datamodel-note-slots",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311244,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.FrozenInstanceError",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311253,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.KW_ONLY",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311256,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.astuple",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311257,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.fields",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311258,
+    "url": "https://docs.python.org/3/library/dataclasses.html#",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311261,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.replace",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311265,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses-init-only-variables",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311272,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/dataclasses.py",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311282,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses-frozen",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311283,
+    "url": "https://docs.python.org/3/library/weakref.html#weakref.ref",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311288,
+    "url": "https://github.com/python/cpython/issues/91126",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311292,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.is_dataclass",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311300,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.__post_init__",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "id": 311307,
+    "url": "https://docs.python.org/3/library/dataclasses.html#dataclasses.InitVar",
+    "parentUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.iterdir"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dataclasses — Data Classes — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dataclasses — Data Classes — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dataclasses.html#module-dataclasses"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#configparser"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#configparser"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93806311?v\u003d4\u0026size\u003d48",
+    "alt": "@sahil290791",
+    "pageTitle": "Add missing mimetypes for fonts · Issue #84852 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add missing mimetypes for fonts · Issue #84852 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84852"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-count"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/uuid.html#cmdoption-uuid-count"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
