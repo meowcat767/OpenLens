@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 608,
+    "url": "https://www.python.org/events/python-events/1728/",
+    "title": "GeoPython 2024 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. GeoPython 2024 Basel, Switzerland From 27 May through 28 May, 2024 GeoPython 2024 Explore events -- Change your date range More events at Basel, Switzerland GeoPython 2026 GeoPython 2025 GeoPython 2024 EuroSciPy 2023 GeoPython 2023 EuroSciPy 2022 EuroPython 2019 GeoPython 2019 GeoPython 2018 GeoPython 2017",
+    "scrapedAt": "2026-10-08 19:07:57.584181"
+  },
+  {
+    "id": 607,
+    "url": "https://2026.geopython.net/",
+    "scrapedAt": "2026-10-08 19:07:56.480057"
+  },
+  {
+    "id": 605,
+    "url": "https://www.python.org/events/python-events/2166/",
+    "title": "North Bay Python 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. North Bay Python 2026 Petaluma, California, USA From 25 April through 26 April, 2026 North Bay Python 2026 Explore events -- Change your date range More events at Petaluma, California, USA North Bay Python 2026 North Bay Python North Bay Python 2018 North Bay Python 2017",
+    "scrapedAt": "2026-10-08 19:07:55.189631"
+  },
+  {
+    "id": 604,
+    "url": "https://us.pycon.org/",
+    "title": "PyCon US 2026 - PyCon US 2026",
+    "content": "Translations available: español Presenting PyCon US 2026 May 13 - May 19, 2026 Long Beach, California Registration - Now Open! Find more information and register today via the Registration Information page. Register Today! Where? Long Beach Convention Center 18 S Pine Ave Long Beach, CA 90802 This address will take you to the correct Pine Avenue entrance. Conference breakdown: Tutorials: May 13 - 14, 2026 Sponsor Presentations: May 14 - May 15, 2026 Main Conference: May 15 - 17, 2026 Job Fair \u0026 Community Showcase: May 17, 2026 Sprints: May 18 - May 19, 2026 We are so excited to welcome our community to our new host city of Long Beach, California, for PyCon US 2026! Mark your calendars and be sure to read the About PyCon US page for more details. We can’t wait to see you all at the Long Beach Convention and Entertainment Center! The PyCon US Schedule is now live! Start planning your talks, meet the keynote speakers, and register for tutorials, summits \u0026 events! Head to the schedule page to see this year\u0027s stellar lineup. Please note: PyCon US 2026 will take place fully in-person in Long Beach, California with no live streaming of the main conference days. PyCon US will record all Talk tracks, Keynotes and Lightning Talks on the main days of the conference (Friday - Sunday) and publish them to the PyCon US YouTube Channel. PyCon US continues to keep the safety of our community as our top priority and wants PyCon US to be an event that everyone feels safe attending. With that in mind, PyCon US 2026 will have Health and Safety Guidelines in place again this year. For full details, read the PyCon US 2026 Health \u0026 Safety Guidelines here. To stay informed on details and announcements be sure to create an account here on this website and opt-in to receive PyCon US News. Also, follow us on Bluesky, X, and Mastodon, and subscribe to the PyCon US Blog. Tutorials May 13 - 14, 2026 Sponsor Presentations May 14 - 15, 2026 Main Conference May 15 - 17, 2026 Job Fair \u0026 Community Showcase May 17, 2026 Sprints May 18 - May 19, 2026 Search Search Search ESC",
+    "scrapedAt": "2026-10-08 19:07:53.846383"
+  },
+  {
+    "id": 602,
+    "url": "https://www.python.org/events/python-events/locations/1667/",
+    "title": "Our Events | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Upcoming Events Python Event Subscriptions Subscribe to Python Event Calendars: Events in iCal format Python Events Calendars For Python events near you, please have a look at the Python events map. The Python events calendars are maintained by the events calendar team. Please see the events calendar project page for details on how to submit events, subscribe to the calendars, get Twitter feeds or embed them. Thank you.",
+    "scrapedAt": "2026-10-08 19:07:52.537069"
+  },
+  {
+    "id": 601,
+    "url": "https://www.python.org/psf/sponsorship/",
+    "title": "Sponsor the PSF | Python Software Foundation",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PSF\u003e\u003e\u003e Sponsorship The Python Software Foundation Sponsorship Program The PSF offers an all-in-one sponsorship program: all PSF sponsorships support the full scope of the PSF’s work, including PyCon US as well as PyPI (Python Package Index), CPython, and more. PSF sponsors receive an array of benefits that include a broad selection of promotional opportunities during PyCon US and also year-round. Join us as a sponsor to help make a difference and stand out in the Python ecosystem! See Sponsorship Options and Apply ABOUT THE PSF The PSF is the charitable organization behind the Python programming language and PyCon US. In addition to hosting PyCon US each year, we provide critical support for the Python language, ecosystem, and community: PYTHON: We hold Python’s IP; we host python.org where Python is downloaded millions of times daily; and we contribute directly to the language’s continuous improvement through our team of three CPython Developers-in-Residence. PYPI: We run the Python Package Index, a public service utilized by millions of users– supported by a full-time PyPI Support Specialist. On average pypi.org receives 6 million unique visitors per month, who download billions of files per day. SECURITY: We proactively maintain and improve security for the full Python ecosystem through our Security Developer-in-Residence and PyPI Safety \u0026 Security Engineer. COMMUNITY GRANTS: We support the most events and groups in the thriving global Python community, providing grants to local Python groups around the world as well as travel grants to individuals to attend PyCon US. In 2024, we disbursed a record $952,000 in grants to 174 groups across 52 countries. ABOUT PYCON US PyCon US is the largest, longest-running global Python gathering, with a diverse, unique, and highly engaged audience. At PyCon US, you’ll find a program filled with tutorials and sponsor presentations, 90+ of our community’s best talks, high-profile keynote speakers, a lively Expo Hall, our famed lightning talks, and two days of onsite development sprints. With all Python core developers gathering for the Language Summit, major Python projects hosting open sprints, and the unique blend of Python coders, maintainers and leaders, PyCon US is where the future of Python happens–and you can be part of it. WHY SPONSOR PYCON US MAKE AN IMPRESSION: Get meaningful and high-impact visibility for your brand. CONNECT: Reach a unique audience–many of our attendees don’t go to other, corporate events. RECRUIT: Most PyCon US attendees are developers, many of whom are seeking or open to opportunities, from entry-level to senior. Python developers often tell us they look at our sponsor page when deciding where to work, and frequently they’ve met their employer at PyCon US. SHOW YOUR SUPPORT: Sponsoring the PSF is a powerful way to show you are giving back to the Python community. We hear over and over that our community highly values companies that sponsor the PSF \u0026 PyCon US. STAY AHEAD OF THE CURVE: Engage directly with the developers building cutting-edge innovations in AI, data science, and more. Be part of the future of Python where it’s made. DRIVE THE CONVERSATION: Take part in the critical conversations that direct the future of the language \u0026 ecosystem, which happen exclusively at PyCon US. The PSF is recognized by the IRS as a 501(c)(3) non-profit charitable organization, and donations are tax-deductible for organizations that pay taxes in the United States. We hope you’ll join us as a sponsor and help make a difference in the Python ecosystem. We’d love to talk with you. Please get in touch by contacting: sponsors@python.org.",
+    "scrapedAt": "2026-10-08 19:07:51.050256"
+  },
+  {
     "id": 600,
     "url": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html",
     "title": "Python Software Foundation News: Join the Python Security Response Team!",
@@ -4070,30 +4110,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 601,
-    "url": "https://www.python.org/psf/sponsorship/"
-  },
-  {
-    "id": 602,
-    "url": "https://www.python.org/events/python-events/locations/1667/"
-  },
-  {
-    "id": 604,
-    "url": "https://us.pycon.org/"
-  },
-  {
-    "id": 605,
-    "url": "https://www.python.org/events/python-events/2166/"
-  },
-  {
-    "id": 607,
-    "url": "https://2026.geopython.net/"
-  },
-  {
-    "id": 608,
-    "url": "https://www.python.org/events/python-events/1728/"
   },
   {
     "id": 609,
@@ -99431,10 +99447,46 @@ window.searchData = [
     "id": 70731,
     "url": "https://github.com/python/steering-council",
     "parentUrl": "https://pyfound.blogspot.com/2026/02/join-the-python-security-response-team.html"
+  },
+  {
+    "id": 70777,
+    "url": "https://www.python.org/events/python-events/556/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 70778,
+    "url": "http://2026.northbaypython.org/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 70779,
+    "url": "https://www.python.org/events/python-events/657/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 70780,
+    "url": "https://www.python.org/events/python-events/locations/694/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 70782,
+    "url": "https://www.python.org/events/python-events/1504/",
+    "parentUrl": "https://www.python.org/events/python-events/2166/"
+  },
+  {
+    "id": 70785,
+    "url": "https://2024.geopython.net/",
+    "parentUrl": "https://www.python.org/events/python-events/1728/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://us.pycon.org/2026/static/images/theme/logo.25d1b5ccb097.svg",
+    "alt": "PyCon US 2026",
+    "pageTitle": "PyCon US 2026 - PyCon US 2026",
+    "pageUrl": "https://us.pycon.org/"
+  },
   {
     "src": "https://resources.blogblog.com/img/icon18_edit_allbkg.gif",
     "alt": "",
