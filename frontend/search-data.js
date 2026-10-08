@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1172,
+    "url": "https://docs.python.org/3/library/sys.html#sys._clear_internal_caches",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:30:17.040553"
+  },
+  {
+    "id": 1171,
+    "url": "https://github.com/python/cpython/issues/74033",
+    "title": "Path takes and ignores **kwargs · Issue #74033 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Path takes and ignores **kwargs #74033 New issue Copy link New issue Copy link Closed Closed Path takes and ignores **kwargs#74033 Copy link Labels 3.10 (EOL)end of lifeend of life3.7 (EOL)end of lifeend of life3.8 (EOL)end of lifeend of life3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-pathlibtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description JelleZijlstra opened on Mar 18, 2017 Issue body actions BPO 29847 Nosy @brettcannon, @pitrou, @serhiy-storchaka, @jstasiak, @JelleZijlstra, @DimitrisJim, @remilapeyre, @uriyyo PRs bpo-29847: Path subclasses raise TypeError given kwargs #13399 gh-74033: Fix bug when Path takes and ignores **kwargs #19632 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2017-03-18.15:22:47.434\u003e\nlabels \u003d [\u0027type-bug\u0027, \u00273.8\u0027, \u00273.9\u0027, \u00273.10\u0027, \u00273.7\u0027, \u0027library\u0027]\ntitle \u003d \u0027Path takes and ignores **kwargs\u0027\nupdated_at \u003d \u003cDate 2020-06-10.22:05:47.572\u003e\nuser \u003d \u0027https://github.com/JelleZijlstra\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-06-10.22:05:47.572\u003e\nactor \u003d \u0027remi.lapeyre\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2017-03-18.15:22:47.434\u003e\ncreator \u003d \u0027JelleZijlstra\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 29847\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 9.0\nmessages \u003d [\u0027289817\u0027, \u0027289896\u0027, \u0027289897\u0027, \u0027289902\u0027, \u0027289944\u0027, \u0027289945\u0027, \u0027289946\u0027, \u0027289998\u0027, \u0027369520\u0027]\nnosy_count \u003d 8.0\nnosy_names \u003d [\u0027brett.cannon\u0027, \u0027pitrou\u0027, \u0027serhiy.storchaka\u0027, \u0027jstasiak\u0027, \u0027JelleZijlstra\u0027, \u0027Jim Fasarakis-Hilliard\u0027, \u0027remi.lapeyre\u0027, \u0027uriyyo\u0027]\npr_nums \u003d [\u002713399\u0027, \u002719632\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue29847\u0027\nversions \u003d [\u0027Python 3.7\u0027, \u0027Python 3.8\u0027, \u0027Python 3.9\u0027, \u0027Python 3.10\u0027] Linked PRs GH-74033: Drop deprecated pathlib.Path keyword arguments #118793 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.10 (EOL)end of lifeend of life3.7 (EOL)end of lifeend of life3.8 (EOL)end of lifeend of life3.9 (EOL)end of lifeend of lifestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-pathlibtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:30:15.762457"
+  },
+  {
+    "id": 1170,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#id12",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:30:13.681322"
+  },
+  {
+    "id": 1169,
+    "url": "https://github.com/python/cpython/issues/129205",
+    "title": "Add os.readinto API for reading data into a caller provided buffer · Issue #129205 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add os.readinto API for reading data into a caller provided buffer #129205 New issue Copy link New issue Copy link Closed Closed Add os.readinto API for reading data into a caller provided buffer#129205 Copy link Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Description cmaloney opened on Jan 22, 2025 Issue body actions Feature or enhancement Proposal: Code reading data in pure python tends to make a buffer variable, call os.read() which returns a separate newly allocated buffer of data, then copy/append that data onto the pre-allocated buffer[0]. That creates unnecessary extra buffer objects, as well as unnecessary copies. Provide os.readinto for directly filling a Buffer Protocol object. os.readinto should closely mirror _Py_read which underlies os.read in order to get the same behaviors around retries as well as well-tested cross-platform support. Move simple cases that use os.read (ex. [0]) to use the new API when it makes code simpler and more efficient. Potentially adding readinto to more readable/writeable file-like proxy objects or objects which transform the data (ex. Lib/_compression) is out of scope for this issue. [0] cpython/Lib/subprocess.py Lines 1914 to 1921 in 298dda5 # Wait for exec to fail or succeed; possibly raising an # exception (limited in size) errpipe_data \u003d bytearray() while True: part \u003d os.read(errpipe_read, 50000) errpipe_data +\u003d part if not part or len(errpipe_data) \u003e 50000: break cpython/Lib/multiprocessing/forkserver.py Lines 384 to 392 in 298dda5 def read_signed(fd): data \u003d b\u0027\u0027 length \u003d SIGNED_STRUCT.size while len(data) \u003c length: s \u003d os.read(fd, length - len(data)) if not s: raise EOFError(\u0027unexpected EOF\u0027) data +\u003d s return SIGNED_STRUCT.unpack(data)[0] cpython/Lib/_pyio.py Lines 1695 to 1701 in 298dda5 def readinto(self, b): \"\"\"Same as RawIOBase.readinto().\"\"\" m \u003d memoryview(b).cast(\u0027B\u0027) data \u003d self.read(len(m)) n \u003d len(data) m[:n] \u003d data return n os.read loops to migrate Well contained os.read loops multiprocessing.forkserver read_signed - @cmaloney - gh-129205: Update multiprocessing.forkserver to use os.readinto #129425 [x] subprocess Popen._execute_child - @cmaloney - gh-129205: Use os.readinto() in subprocess errpipe_read #129498 os.read loop interleaved with other code _pyio FileIO.read FileIO.readall FileIO.readinto see, Reduce copies when reading files in pyio, match behavior of _io #129005 -- @cmaloney _pyrepl.unix_console UnixConsole.input_buffer -- fixed length underlying buffer with \"pos\" / window on top. pty _copy. Operates around a \"high waterlevel\" / attempt to have a fixed-ish size buffer. Wraps os.read with a _read function. subprocess Popen.communicate. Note, this feels like something non-contiguous Py_buffer would be really good for, particularly in self.text_mode where currently all the bytes are \"copied\" into a contiguous bytes to turn then turn into text... tarfile _Stream._read and _Stream.__read. Note, builds _LowLevelFile around os.read, but other read methods also available. Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: #129005 (comment) Linked PRs gh-129205: Add os.readinto API for reading data into a caller provided buffer #129211 gh-129205: Modernize test_eintr #129316 gh-129205: Update multiprocessing.forkserver to use os.readinto #129425 gh-129205: Use os.readinto() in subprocess errpipe_read #129498 gh-129205: Experiment BytesIO._readfrom() #130098 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels extension-modulesC modules in the Modules dirC modules in the Modules dirtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:30:12.340998"
+  },
+  {
+    "id": 1168,
+    "url": "https://docs.python.org/3/library/platform.html#platform.java_ver",
+    "title": "platform — Access to underlying platform’s identifying data — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » platform — Access to underlying platform’s identifying data | Theme Auto Light Dark | platform — Access to underlying platform’s identifying data¶ Source code: Lib/platform.py Note Specific platforms listed alphabetically, with Linux included in the Unix section. Cross platform¶ platform.architecture(executable\u003dsys.executable, bits\u003d\u0027\u0027, linkage\u003d\u0027\u0027)¶ Queries the given executable (defaults to the Python interpreter binary) for various architecture information. Returns a tuple (bits, linkage) which contain information about the bit architecture and the linkage format used for the executable. Both values are returned as strings. Values that cannot be determined are returned as given by the parameter presets. If bits is given as \u0027\u0027, the sizeof(pointer) (or sizeof(long) on Python version \u003c 1.5.2) is used as indicator for the supported pointer size. The function relies on the system’s file command to do the actual work. This is available on most if not all Unix platforms and some non-Unix platforms and then only if the executable points to the Python interpreter. Reasonable defaults are used when the above needs are not met. Note On macOS (and perhaps other platforms), executable files may be universal files containing multiple architectures. To get at the “64-bitness” of the current interpreter, it is more reliable to query the sys.maxsize attribute: is_64bits \u003d sys.maxsize \u003e 2**32\n platform.machine()¶ Returns the machine type, e.g. \u0027AMD64\u0027. An empty string is returned if the value cannot be determined. The output is platform-dependent and may differ in casing and naming conventions. platform.node()¶ Returns the computer’s network name (may not be fully qualified!). An empty string is returned if the value cannot be determined. platform.platform(aliased\u003dFalse, terse\u003dFalse)¶ Returns a single string identifying the underlying platform with as much useful information as possible. The output is intended to be human readable rather than machine parseable. It may look different on different platforms and this is intended. If aliased is true, the function will use aliases for various platforms that report system names which differ from their common names, for example SunOS will be reported as Solaris. The system_alias() function is used to implement this. Setting terse to true causes the function to return only the absolute minimum information needed to identify the platform. Changed in version 3.8: On macOS, the function now uses mac_ver(), if it returns a non-empty release string, to get the macOS version rather than the darwin version. platform.processor()¶ Returns the (real) processor name, e.g. \u0027amdk6\u0027. An empty string is returned if the value cannot be determined. Note that many platforms do not provide this information or simply return the same value as for machine(). NetBSD does this. platform.python_build()¶ Returns a tuple (buildno, builddate) stating the Python build number and date as strings. platform.python_compiler()¶ Returns a string identifying the compiler used for compiling Python. platform.python_branch()¶ Returns a string identifying the Python implementation SCM branch. platform.python_implementation()¶ Returns a string identifying the Python implementation. Possible return values are: ‘CPython’, ‘IronPython’, ‘Jython’, ‘PyPy’. platform.python_revision()¶ Returns a string identifying the Python implementation SCM revision. platform.python_version()¶ Returns the Python version as string \u0027major.minor.patchlevel\u0027. Note that unlike the Python sys.version, the returned value will always include the patchlevel (it defaults to 0). platform.python_version_tuple()¶ Returns the Python version as tuple (major, minor, patchlevel) of strings. Note that unlike the Python sys.version, the returned value will always include the patchlevel (it defaults to \u00270\u0027). platform.release()¶ Returns the system’s release, e.g. \u00272.2.0\u0027 or \u0027NT\u0027. An empty string is returned if the value cannot be determined. On iOS and Android, this is the user-facing OS release. To obtain the Darwin or Linux kernel release, use os.uname(). platform.system()¶ Returns the system/OS name, such as \u0027Linux\u0027, \u0027Darwin\u0027, \u0027Java\u0027, \u0027Windows\u0027. An empty string is returned if the value cannot be determined. On iOS and Android, this returns the user-facing OS name (i.e, \u0027iOS, \u0027iPadOS\u0027 or \u0027Android\u0027). To obtain the kernel name (\u0027Darwin\u0027 or \u0027Linux\u0027), use os.uname(). platform.system_alias(system, release, version)¶ Returns (system, release, version) aliased to common marketing names used for some systems. It also does some reordering of the information in some cases where it would otherwise cause confusion. platform.version()¶ Returns the system’s release version, e.g. \u0027#3 on degas\u0027. An empty string is returned if the value cannot be determined. platform.uname()¶ Fairly portable uname interface. Returns a namedtuple() contain",
+    "scrapedAt": "2026-10-08 19:30:10.147243"
+  },
+  {
     "id": 1167,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#id11",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -7805,26 +7840,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1168,
-    "url": "https://docs.python.org/3/library/platform.html#platform.java_ver"
-  },
-  {
-    "id": 1169,
-    "url": "https://github.com/python/cpython/issues/129205"
-  },
-  {
-    "id": 1170,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#id12"
-  },
-  {
-    "id": 1171,
-    "url": "https://github.com/python/cpython/issues/74033"
-  },
-  {
-    "id": 1172,
-    "url": "https://docs.python.org/3/library/sys.html#sys._clear_internal_caches"
   },
   {
     "id": 1173,
@@ -221326,10 +221341,250 @@ window.searchData = [
     "id": 216630,
     "url": "https://www.freedesktop.org/software/systemd/man/os-release.html",
     "parentUrl": "https://docs.python.org/3/library/platform.html#platform.invalidate_caches"
+  },
+  {
+    "id": 221653,
+    "url": "https://github.com/python/cpython/blob/298dda57709c45cbcb44831e0d682dc071af5293/Lib/subprocess.py#L1914-L1921",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221654,
+    "url": "https://github.com/python/cpython/blob/9abbb58e3f023555473d9e8b82738ef44077cfa8/Lib/subprocess.py#L1916-L1921",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221655,
+    "url": "https://github.com/python/cpython/pull/129498",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221656,
+    "url": "https://github.com/python/cpython/pull/129211",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221657,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/129205",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221658,
+    "url": "https://github.com/python/cpython/blob/9abbb58e3f023555473d9e8b82738ef44077cfa8/Lib/subprocess.py#L2093-L2153",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221659,
+    "url": "https://github.com/python/cpython/blob/9abbb58e3f023555473d9e8b82738ef44077cfa8/Lib/_pyio.py#L1636-L1701",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221660,
+    "url": "https://github.com/python/cpython/issues/129205#issue-2805550147",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221661,
+    "url": "https://github.com/python/cpython/commit/298dda57709c45cbcb44831e0d682dc071af5293",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221664,
+    "url": "https://github.com/python/cpython/issues/129205#top",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221665,
+    "url": "https://github.com/python/cpython/pull/129316",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221666,
+    "url": "https://github.com/python/cpython/blob/9abbb58e3f023555473d9e8b82738ef44077cfa8/Lib/multiprocessing/forkserver.py#L384-L392",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221667,
+    "url": "https://github.com/python/cpython/issues/129205#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221668,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/129205",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221669,
+    "url": "https://github.com/python/cpython/pull/130098",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221670,
+    "url": "https://github.com/python/cpython/blob/9abbb58e3f023555473d9e8b82738ef44077cfa8/Lib/pty.py#L93-L156",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221673,
+    "url": "https://github.com/python/cpython/blob/9abbb58e3f023555473d9e8b82738ef44077cfa8/Lib/tarfile.py#L530-L571",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221674,
+    "url": "https://github.com/python/cpython/blob/298dda57709c45cbcb44831e0d682dc071af5293/Lib/_compression.py#L66-L70",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221676,
+    "url": "https://github.com/python/cpython/blob/9abbb58e3f023555473d9e8b82738ef44077cfa8/Lib/_pyrepl/unix_console.py#L202-L217",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221678,
+    "url": "https://github.com/python/cpython/blob/298dda57709c45cbcb44831e0d682dc071af5293/Lib/_pyio.py#L1695-L1701",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221679,
+    "url": "https://github.com/python/cpython/blob/298dda57709c45cbcb44831e0d682dc071af5293/Python/fileutils.c#L1857-L1927",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221680,
+    "url": "https://github.com/python/cpython/blob/298dda57709c45cbcb44831e0d682dc071af5293/Lib/multiprocessing/forkserver.py#L384-L392",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221681,
+    "url": "https://github.com/python/cpython/issues/129005#issuecomment-2608196581",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 221682,
+    "url": "https://github.com/python/cpython/pull/129425",
+    "parentUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "id": 222922,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/74033",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222923,
+    "url": "https://github.com/python/cpython/issues/74033#top",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222925,
+    "url": "https://github.com/python/cpython/pull/19632",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222927,
+    "url": "https://github.com/jstasiak",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222929,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/74033",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222930,
+    "url": "https://github.com/python/cpython/issues/74033#issue-1198970270",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222932,
+    "url": "https://bugs.python.org/issue29847",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222935,
+    "url": "https://github.com/uriyyo",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222936,
+    "url": "https://github.com/python/cpython/pull/118793",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222940,
+    "url": "https://github.com/python/cpython/pull/13399",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222943,
+    "url": "https://github.com/python/cpython/issues/74033#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "id": 222944,
+    "url": "https://github.com/DimitrisJim",
+    "parentUrl": "https://github.com/python/cpython/issues/74033"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._clear_internal_caches"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._clear_internal_caches"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?u\u003d76694abe83255d3b572212e2cf21bad971fabd2c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "Path takes and ignores **kwargs · Issue #74033 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Path takes and ignores **kwargs · Issue #74033 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/74033"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id12"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#id12"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/751088?u\u003d8ed8e97d49d6a9a76ea95ff26adc2d6c51b247dc\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@cmaloney",
+    "pageTitle": "Add os.readinto API for reading data into a caller provided buffer · Issue #129205 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add os.readinto API for reading data into a caller provided buffer · Issue #129205 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/129205"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "platform — Access to underlying platform’s identifying data — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/platform.html#platform.java_ver"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "platform — Access to underlying platform’s identifying data — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/platform.html#platform.java_ver"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
