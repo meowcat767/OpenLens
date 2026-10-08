@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1679,
+    "url": "https://docs.python.org/3/reference/compound_stmts.html#except-star",
+    "title": "8. Compound statements — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 8. Compound statements | Theme Auto Light Dark | 8. Compound statements¶ Compound statements contain (groups of) other statements; they affect or control the execution of those other statements in some way. In general, compound statements span multiple lines, although in simple incarnations a whole compound statement may be contained in one line. The if, while and for statements implement traditional control flow constructs. try specifies exception handlers and/or cleanup code for a group of statements, while the with statement allows the execution of initialization and finalization code around a block of code. Function and class definitions are also syntactically compound statements. A compound statement consists of one or more ‘clauses.’ A clause consists of a header and a ‘suite.’ The clause headers of a particular compound statement are all at the same indentation level. Each clause header begins with a uniquely identifying keyword and ends with a colon. A suite is a group of statements controlled by a clause. A suite can be one or more semicolon-separated simple statements on the same line as the header, following the header’s colon, or it can be one or more indented statements on subsequent lines. Only the latter form of a suite can contain nested compound statements; the following is illegal, mostly because it wouldn’t be clear to which if clause a following else clause would belong: if test1: if test2: print(x)\n Also note that the semicolon binds tighter than the colon in this context, so that in the following example, either all or none of the print() calls are executed: if x \u003c y \u003c z: print(x); print(y); print(z)\n Summarizing: compound_stmt: if_stmt\n               | while_stmt\n               | for_stmt\n               | try_stmt\n               | with_stmt\n               | match_stmt\n               | funcdef\n               | classdef\n               | async_with_stmt\n               | async_for_stmt\n               | async_funcdef\nsuite:         stmt_list NEWLINE | NEWLINE INDENT statement+ DEDENT\nstatement:     stmt_list NEWLINE | compound_stmt\nstmt_list:     simple_stmt (\";\" simple_stmt)* [\";\"]\n Note that statements always end in a NEWLINE possibly followed by a DEDENT. Also note that optional continuation clauses always begin with a keyword that cannot start a statement, thus there are no ambiguities (the ‘dangling else’ problem is solved in Python by requiring nested if statements to be indented). The formatting of the grammar rules in the following sections places each clause on a separate line for clarity. 8.1. The if statement¶ The if statement is used for conditional execution: if_stmt: \"if\" assignment_expression \":\" suite\n         (\"elif\" assignment_expression \":\" suite)*\n         [\"else\" \":\" suite]\n It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed. 8.2. The while statement¶ The while statement is used for repeated execution as long as an expression is true: while_stmt: \"while\" assignment_expression \":\" suite\n            [\"else\" \":\" suite]\n This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression. 8.3. The for statement¶ The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object: for_stmt: \"for\" target_list \"in\" starred_expression_list \":\" suite\n          [\"else\" \":\" suite]\n The starred_expression_list expression is evaluated once; it should yield an iterable object. An iterator is created for that iterable. The first item provided by the iterator is then assigned to the target list using the standard rules for assignments (see Assignment statements), and the suite is executed. This repeats for each item provided by the iterator. When the iterator is exhausted, the suite in the else clause, if present, is executed, and the loop terminates. A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and continues with the next item, or with the else clause if there is no next item. The for-loop makes assignments to the variables in the target list. This overwrites all previous assignments to those vari",
+    "scrapedAt": "2026-10-08 19:53:24.487115"
+  },
+  {
+    "id": 1678,
+    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_GetIndicesEx",
+    "title": "Slice Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Slice Objects | Theme Auto Light Dark | Slice Objects¶ PyTypeObject PySlice_Type¶ Part of the Stable ABI. The type object for slice objects. This is the same as slice in the Python layer. int PySlice_Check(PyObject *ob)¶ Return true if ob is a slice object; ob must not be NULL. This function always succeeds. PyObject *PySlice_New(PyObject *start, PyObject *stop, PyObject *step)¶ Return value: New reference. Part of the Stable ABI. Return a new slice object with the given values. The start, stop, and step parameters are used as the values of the slice object attributes of the same names. Any of the values may be NULL, in which case the None will be used for the corresponding attribute. Return NULL with an exception set if the new object could not be allocated. int PySlice_GetIndices(PyObject *slice, Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)¶ Part of the Stable ABI. Retrieve the start, stop and step indices from the slice object slice, assuming a sequence of length length. Treats indices greater than length as errors. Returns 0 on success and -1 on error with no exception set (unless one of the indices was not None and failed to be converted to an integer, in which case -1 is returned with an exception set). You probably do not want to use this function. Changed in version 3.2: The parameter type for the slice parameter was PySliceObject* before. int PySlice_GetIndicesEx(PyObject *slice, Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step, Py_ssize_t *slicelength)¶ Part of the Stable ABI. Usable replacement for PySlice_GetIndices(). Retrieve the start, stop, and step indices from the slice object slice assuming a sequence of length length, and store the length of the slice in slicelength. Out of bounds indices are clipped in a manner consistent with the handling of normal slices. length must not be negative. Return 0 on success and -1 on error with an exception set. Note This function is considered not safe for resizable sequences. Its invocation should be replaced by a combination of PySlice_Unpack() and PySlice_AdjustIndices() where if (PySlice_GetIndicesEx(slice, length, \u0026start, \u0026stop, \u0026step, \u0026slicelength) \u003c 0) {\n    // return error\n}\n is replaced by if (PySlice_Unpack(slice, \u0026start, \u0026stop, \u0026step) \u003c 0) {\n    // return error\n}\nslicelength \u003d PySlice_AdjustIndices(length, \u0026start, \u0026stop, step);\n Changed in version 3.2: The parameter type for the slice parameter was PySliceObject* before. Changed in version 3.6.1: If Py_LIMITED_API is not set or set to the value between 0x03050400 and 0x03060000 (not including) or 0x03060100 or higher PySlice_GetIndicesEx() is implemented as a macro using PySlice_Unpack() and PySlice_AdjustIndices(). Arguments start, stop and step are evaluated more than once. Deprecated since version 3.6.1: If Py_LIMITED_API is set to the value less than 0x03050400 or between 0x03060000 and 0x03060100 (not including) PySlice_GetIndicesEx() is a deprecated function. int PySlice_Unpack(PyObject *slice, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)¶ Part of the Stable ABI since version 3.7. Extract the start, stop and step data members from a slice object as C integers. Silently reduce values larger than PY_SSIZE_T_MAX to PY_SSIZE_T_MAX, silently boost the start and stop values less than PY_SSIZE_T_MIN to PY_SSIZE_T_MIN, and silently boost the step values less than -PY_SSIZE_T_MAX to -PY_SSIZE_T_MAX. Return -1 with an exception set on error, 0 on success. Added in version 3.6.1. Py_ssize_t PySlice_AdjustIndices(Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t step)¶ Part of the Stable ABI since version 3.7. Adjust start/end slice indices assuming a sequence of the specified length. Out of bounds indices are clipped in a manner consistent with the handling of normal slices. length must not be negative. step must not be zero and must not be less than -PY_SSIZE_T_MAX, as guaranteed by PySlice_Unpack(). Return the length of the slice. Always successful. Doesn’t call Python code. Added in version 3.6.1. Ellipsis Object¶ PyTypeObject PyEllipsis_Type¶ Part of the Stable ABI. The type of Python Ellipsis object. Same as types.EllipsisType in the Python layer. PyObject *Py_Ellipsis¶ The Python Ellipsis object. This object has no methods. Like Py_None, it is an immortal singleton object. Changed in version 3.12: Py_Ellipsis is immortal. Table of Contents Slice Objects Ellipsis Object Previous topic Descriptor Objects Next topic MemoryView objects This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Slice Objects | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examp",
+    "scrapedAt": "2026-10-08 19:53:23.164924"
+  },
+  {
+    "id": 1677,
+    "url": "https://github.com/python/cpython/issues/60191",
+    "title": "Provide a way to compare AST nodes for equality recursively · Issue #60191 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Provide a way to compare AST nodes for equality recursively #60191 New issue Copy link New issue Copy link Closed Closed Provide a way to compare AST nodes for equality recursively#60191 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description Julian mannequin opened on Sep 20, 2012 Issue body actions BPO 15987 Nosy @benjaminp, @Julian, @serhiy-storchaka, @ilevkivskyi, @mlouielu, @tonybaloney, @tonybaloney, @isidentical PRs bpo-15987: Add ast.AST class richcompare methods #1368 bpo-15987: Add ast.AST richcompare methods #1375 bpo-15987: Add ast.AST class richcompare methods #14970 gh-60191: Implement ast.compare #19211 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2012-09-20.18:43:56.747\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-feature\u0027, \u0027library\u0027]\ntitle \u003d \u0027Provide a way to compare AST nodes for equality recursively\u0027\nupdated_at \u003d \u003cDate 2020-03-28.18:12:54.152\u003e\nuser \u003d \u0027https://github.com/Julian\u0027 bugs.python.org fields: activity \u003d \u003cDate 2020-03-28.18:12:54.152\u003e\nactor \u003d \u0027BTaskaya\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2012-09-20.18:43:56.747\u003e\ncreator \u003d \u0027Julian\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 15987\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 17.0\nmessages \u003d [\u0027170826\u0027, \u0027170907\u0027, \u0027170909\u0027, \u0027171000\u0027, \u0027185288\u0027, \u0027185289\u0027, \u0027292656\u0027, \u0027292665\u0027, \u0027292717\u0027, \u0027341541\u0027, \u0027341546\u0027, \u0027341555\u0027, \u0027342118\u0027, \u0027348545\u0027, \u0027349185\u0027, \u0027365213\u0027, \u0027365215\u0027]\nnosy_count \u003d 9.0\nnosy_names \u003d [\u0027benjamin.peterson\u0027, \u0027Julian\u0027, \u0027serhiy.storchaka\u0027, \u0027levkivskyi\u0027, \u0027louielu\u0027, \u0027anthonypjshaw\u0027, \u0027anthony shaw\u0027, \u0027BTaskaya\u0027, \u0027Philip Dye\u0027]\npr_nums \u003d [\u00271368\u0027, \u00271375\u0027, \u002714970\u0027, \u002719211\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027enhancement\u0027\nurl \u003d \u0027https://bugs.python.org/issue15987\u0027\nversions \u003d [\u0027Python 3.8\u0027] Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees Eclips4 Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:53:21.839842"
+  },
+  {
+    "id": 1676,
+    "url": "https://github.com/python/cpython/issues/97879",
+    "title": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation brettcannon commented Oct 5, 2022 • edited by bedevere-bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Also remove importlib.util.set_package() which was already slated for removal. Issue: update the import machinery to only use __spec__ #65961 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions pythongh-65961: Raise DeprecationWarning when __package__ differs… … fa3ac86 … from `__spec__.parent`\n\nAlso remove `importlib.util.set_package()` which was already slated for removal. brettcannon requested review from encukou, ericsnowcurrently, ncoghlan and warsaw as code owners October 5, 2022 00:47 brettcannon self-assigned this Oct 5, 2022 bedevere-bot added the awaiting core review label Oct 5, 2022 Merge branch \u0027main\u0027 into deprecate-__package__ a5bae06 brettcannon mentioned this pull request Oct 5, 2022 update the import machinery to only use __spec__ #65961 Open brettcannon added 2 commits October 4, 2022 17:51 List the removal of __package__ in What\u0027s New 380a20b Merge branch \u0027deprecate-__package__\u0027 of https://github.com/brettcanno… … 820e677 …n/cpython into deprecate-__package__ sobolevn commented Oct 5, 2022 Copy link Copy Markdown Member Oh, I\u0027ve missed this PR while working on #97898 I think I will have to revert set_package from it 🤔 All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. ericsnowcurrently approved these changes Oct 5, 2022 View reviewed changes ericsnowcurrently left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM I left one minor comment. Take the suggestion or not. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Misc/NEWS.d/next/Core and Builtins/2022-10-05-00-37-27.gh-issue-65961.z0Ys0y.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. bedevere-bot added awaiting merge and removed awaiting core review labels Oct 5, 2022 warsaw requested changes Oct 5, 2022 View reviewed changes warsaw left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment A few suggestions, especially around being clearer around the module attributes in general. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Doc/reference/import.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/reference/import.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. bedevere-bot added awaiting changes and removed awaiting merge labels Oct 5, 2022 bedevere-bot commented Oct 5, 2022 Copy link Copy Markdown When you\u0027re done making the requested changes, leave the comment: I have made the requested changes; please review again. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. brettcannon and others added 2 commits October 5, 2022 13:17 Update Misc/NEWS.d/next/Core and Builtins/2022-10-05-00-37-27.gh-issu… … e4e2f26 …e-65961.z0Ys0y.rst\n\nCo-authored-by: Eric Snow \u003cericsnowcurrently@gmail.com\u003e Make a strong recommendation to use __spec__ cb558bd brettcannon commented Oct 5, 2022 Copy link Copy Markdown Member Author I have made the requested changes; please review again All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot added awaiting change review and removed awaiting changes labels Oct 5, 2022 bedevere-bot commented Oct 5, 2022 Copy link Copy Markdown Thanks for making the requested changes! @warsaw, @ericsnowcurrently: please review the changes made to this pull request. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-bot requested review from ericsnowcurrently and warsaw October 5, 2022 20:32 warsaw approved these changes Oct 5, 2022 View reviewed changes bedevere-bot added awaiting merge and removed awaiting change review labels Oct 5, 2022 brettcannon merged commit c206e53 into python:main Oc",
+    "scrapedAt": "2026-10-08 19:53:19.633844"
+  },
+  {
+    "id": 1675,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() and",
+    "scrapedAt": "2026-10-08 19:53:16.343353"
+  },
+  {
     "id": 1674,
     "url": "https://docs.python.org/3/library/datetime.html#datetime.time",
     "title": "datetime — Basic date and time types — Python 3.14.8 documentation",
@@ -11270,26 +11305,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1675,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING"
-  },
-  {
-    "id": 1676,
-    "url": "https://github.com/python/cpython/issues/97879"
-  },
-  {
-    "id": 1677,
-    "url": "https://github.com/python/cpython/issues/60191"
-  },
-  {
-    "id": 1678,
-    "url": "https://docs.python.org/3/c-api/slice.html#c.PySlice_GetIndicesEx"
-  },
-  {
-    "id": 1679,
-    "url": "https://docs.python.org/3/reference/compound_stmts.html#except-star"
   },
   {
     "id": 1680,
@@ -250786,10 +250801,929 @@ window.searchData = [
     "id": 365706,
     "url": "https://github.com/earonesty",
     "parentUrl": "https://github.com/python/cpython/issues/100926"
+  },
+  {
+    "id": 366026,
+    "url": "https://github.com/python/cpython/commit/c206e53bb726fa795d10cfb0e8d1d1a1a5d1aaa7",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366027,
+    "url": "https://github.com/python/cpython/issues/88968",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366028,
+    "url": "https://github.com/python/cpython/pull/96610",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366029,
+    "url": "https://github.com/python/cpython/pull/97879#event-7521008504",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366031,
+    "url": "https://github.com/python/cpython/pull/97662",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366033,
+    "url": "https://github.com/python/cpython/pull/97879#event-7527645962",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366034,
+    "url": "https://github.com/python/cpython/pull/97879/commits/cb558bd03447e68929c82a1a05f21d3e6bdd97af",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366035,
+    "url": "https://github.com/python/cpython/pull/97826",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366036,
+    "url": "https://github.com/python/cpython/pull/97879/commits/e4e2f26867302d544e5ba14c7985ced56c078144",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366037,
+    "url": "https://github.com/python/cpython/pull/97944",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366039,
+    "url": "https://github.com/python/cpython/pull/91566",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366040,
+    "url": "https://github.com/python/cpython/pull/97701",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366041,
+    "url": "https://github.com/python/cpython/pull/97879/files/cb558bd03447e68929c82a1a05f21d3e6bdd97af",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366042,
+    "url": "https://github.com/python/cpython/pull/97879#pullrequestreview-1132072923",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366043,
+    "url": "https://github.com/python/cpython/pull/32073",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366044,
+    "url": "https://github.com/python/cpython/pull/95926",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366045,
+    "url": "https://github.com/moreati",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366046,
+    "url": "https://github.com/python/cpython/pull/97879#event-7528807308",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366047,
+    "url": "https://github.com/youknowone/pyre/pull/713",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366048,
+    "url": "https://github.com/python/cpython/pull/97879#event-7528336471",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366049,
+    "url": "https://github.com/henryiii",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366050,
+    "url": "https://github.com/python/cpython/pull/97896",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366051,
+    "url": "https://github.com/python/cpython/pull/97774",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366052,
+    "url": "https://github.com/python/cpython/blob/0ceafa7fa408b64377ea31dd5386152da19ef38a/.github/CODEOWNERS#L61",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366053,
+    "url": "https://github.com/python/cpython/pull/97936",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366054,
+    "url": "https://github.com/python/cpython/pull/97898",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366055,
+    "url": "https://github.com/python/cpython/pull/97778",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366056,
+    "url": "https://github.com/python/cpython/pull/97879#ref-issue-3068775961",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366058,
+    "url": "https://github.com/python/cpython/pull/97879/files/820e677ac8322d21f1a08a54449c192ea73fe2c1#diff-9627a7c32e51c17a215fa7a884a23d483b20f9b731a101ff3fd4ab88d338e704",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366060,
+    "url": "https://github.com/python/cpython/pull/97879#ref-issue-2416832716",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366062,
+    "url": "https://github.com/python/cpython/pull/97879#ref-commit-4bb5d9d",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366063,
+    "url": "https://github.com/python/cpython/pull/97879#commits-pushed-380a20b",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366064,
+    "url": "https://github.com/python/cpython/pull/97644",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366065,
+    "url": "https://github.com/python/cpython/pull/97879#event-7521008404",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366066,
+    "url": "https://github.com/python/cpython/issues/134088",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366068,
+    "url": "https://github.com/python/cpython/pull/94251",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366069,
+    "url": "https://github.com/python/cpython/pull/96671",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366070,
+    "url": "https://github.com/python/cpython/pull/97926",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366071,
+    "url": "https://github.com/python/cpython/pull/95989",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366073,
+    "url": "https://github.com/python/cpython/pull/97528",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366075,
+    "url": "https://github.com/python/cpython/pull/97768",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366077,
+    "url": "https://github.com/brettcannon/cpython",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366078,
+    "url": "https://github.com/python/cpython/pull/97879#issue-1397019827",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366079,
+    "url": "https://github.com/python/cpython/pull/97879#ref-issue-2829849555",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366082,
+    "url": "https://github.com/python/cpython/pull/97879#event-7528807165",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366083,
+    "url": "https://github.com/python/cpython/pull/97879/files/820e677ac8322d21f1a08a54449c192ea73fe2c1#diff-a691e0a2b6cd3161c948365aa7aa3f73719c0a77724240331f9ce03e1a816c1d",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366084,
+    "url": "https://github.com/python/cpython/pull/97879/files/820e677ac8322d21f1a08a54449c192ea73fe2c1",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366085,
+    "url": "https://github.com/python/cpython/pull/96383",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366086,
+    "url": "https://github.com/python/cpython/pull/97759",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366087,
+    "url": "https://github.com/python/cpython/pull/97879",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366090,
+    "url": "https://github.com/python/cpython/pull/97879#ref-commit-351eda5",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366091,
+    "url": "https://github.com/python/cpython/issues/95691",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366092,
+    "url": "https://github.com/python/cpython/pull/97879#issuecomment-1268941982",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366093,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F97879",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366094,
+    "url": "https://github.com/python/cpython/pull/97879#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366095,
+    "url": "https://github.com/python/cpython/issues/94808",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366096,
+    "url": "https://github.com/python/cpython/pull/97879#ref-pullrequest-4943586025",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366099,
+    "url": "https://github.com/swig/swig/issues/2967",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366100,
+    "url": "https://github.com/python/cpython/issues/96704",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366101,
+    "url": "https://github.com/python/cpython/issues/97758",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366104,
+    "url": "https://github.com/python/cpython/issues/95986",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366105,
+    "url": "https://github.com/mitogen-hq/mitogen/issues/1242",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366106,
+    "url": "https://github.com/python/cpython/pull/97879/commits/820e677ac8322d21f1a08a54449c192ea73fe2c1",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366107,
+    "url": "https://github.com/python/cpython/pull/97879#issuecomment-1268942043",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366108,
+    "url": "https://github.com/python/cpython/pull/97879#event-7528669946",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366109,
+    "url": "https://github.com/python/cpython/pull/95172",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366111,
+    "url": "https://github.com/carljm/cpython/commit/1af2a98c52cbe69d40b6c22f16c94701cb8e7247",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366112,
+    "url": "https://github.com/python/cpython/pull/97879#event-7528807101",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366113,
+    "url": "https://github.com/python/cpython/pull/97879#ref-commit-1af2a98",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366114,
+    "url": "https://github.com/carljm/cpython/commit/4bb5d9ddf2d426d9ed8ca642a5c250e5d71f96bb",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366116,
+    "url": "https://github.com/python/cpython/issues/97897",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366117,
+    "url": "https://github.com/mpage/cpython/commit/351eda54145b220329ed967a4133634276610725",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366118,
+    "url": "https://github.com/python/cpython/pull/96929",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366120,
+    "url": "https://github.com/python/cpython/issues/95196",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366121,
+    "url": "https://github.com/python/cpython/pull/97962",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366122,
+    "url": "https://github.com/python/cpython/pull/95703",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366123,
+    "url": "https://github.com/python/cpython/pull/97879#pullrequestreview-1131835317",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366125,
+    "url": "https://github.com/python/cpython/issues/93738",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366126,
+    "url": "https://github.com/python/cpython/pull/96756",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366127,
+    "url": "https://github.com/python/cpython/issues/87092",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366129,
+    "url": "https://github.com/python/cpython/pull/97879#pullrequestreview-1131829569",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366130,
+    "url": "https://github.com/python/cpython/issues/97661",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366131,
+    "url": "https://github.com/python/cpython/pull/97951",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366132,
+    "url": "https://github.com/python/cpython/pull/97879#event-7521008558",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366133,
+    "url": "https://github.com/python/cpython/pull/97879/commits/a5bae06b34c30bb1901fc6866fe2090cc75a08a6",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366135,
+    "url": "https://github.com/python/cpython/pull/97879/commits/380a20b36f92eeee4d92fff0eb9acae4fb58d7d1",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366136,
+    "url": "https://github.com/python/cpython/issues/97825",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366137,
+    "url": "https://github.com/python/cpython/pull/97879#issuecomment-1268583216",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366138,
+    "url": "https://github.com/python/cpython/pull/97678",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366139,
+    "url": "https://github.com/python/cpython/pull/97879#event-7527348541",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366140,
+    "url": "https://github.com/python/cpython/issues/88050",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366141,
+    "url": "https://github.com/python/cpython/pull/97879#ref-issue-1198922271",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366142,
+    "url": "https://github.com/python/cpython/pull/97879#event-7528336166",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366143,
+    "url": "https://github.com/python/cpython/issues/74696",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366144,
+    "url": "https://github.com/python/cpython/issues/93357",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366145,
+    "url": "https://github.com/python/cpython/issues/96865",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366146,
+    "url": "https://github.com/python/cpython/pull/97879/commits/fa3ac866300de39a0d9d4706da3533fe9c21b1d2",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366147,
+    "url": "https://github.com/python/cpython/pull/97879#commits-pushed-e4e2f26",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366148,
+    "url": "https://github.com/python/cpython/pull/97879#issuecomment-1268815069",
+    "parentUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "id": 366149,
+    "url": "https://github.com/python/cpython/pull/1368",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366150,
+    "url": "https://github.com/mlouielu",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366151,
+    "url": "https://github.com/python/cpython/pull/1375",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366152,
+    "url": "https://bugs.python.org/issue15987",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366153,
+    "url": "https://github.com/python/cpython/pull/14970",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366156,
+    "url": "https://github.com/python/cpython/issues/60191#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366159,
+    "url": "https://github.com/python/cpython/pull/19211",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366163,
+    "url": "https://github.com/ilevkivskyi",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366164,
+    "url": "https://github.com/tonybaloney",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366165,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/60191",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366166,
+    "url": "https://github.com/python/cpython/issues/60191#top",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366167,
+    "url": "https://github.com/isidentical",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366168,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/60191",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "id": 366169,
+    "url": "https://github.com/python/cpython/issues/60191#issue-1198888613",
+    "parentUrl": "https://github.com/python/cpython/issues/60191"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#except-star"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "8. Compound statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/compound_stmts.html#except-star"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Slice Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_GetIndicesEx"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Slice Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/slice.html#c.PySlice_GetIndicesEx"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d64\u0026u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4",
+    "alt": "Eclips4",
+    "pageTitle": "Provide a way to compare AST nodes for equality recursively · Issue #60191 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/92881988?v\u003d4\u0026size\u003d48",
+    "alt": "@Julian",
+    "pageTitle": "Provide a way to compare AST nodes for equality recursively · Issue #60191 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d64\u0026u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "Provide a way to compare AST nodes for equality recursively · Issue #60191 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Provide a way to compare AST nodes for equality recursively · Issue #60191 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/60191"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d80\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d48\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d80\u0026u\u003d42e203a9264267ffda774112d4edabc153981c9f\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d60\u0026v\u003d4",
+    "alt": "ericsnowcurrently",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d48\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d60\u0026v\u003d4",
+    "alt": "warsaw",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d48\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d80\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d60\u0026v\u003d4",
+    "alt": "warsaw",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/61586?s\u003d40\u0026v\u003d4",
+    "alt": "@carljm",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/61586?s\u003d40\u0026v\u003d4",
+    "alt": "@carljm",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026u\u003d5fee810e3ef9706c1ef483a91d048cdbf8aa8397\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/577841?s\u003d40\u0026v\u003d4",
+    "alt": "@mpage",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4616906?s\u003d40\u0026v\u003d4",
+    "alt": "@henryiii",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/174450?s\u003d40\u0026v\u003d4",
+    "alt": "@moreati",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/347564?s\u003d40\u0026v\u003d4",
+    "alt": "@coderabbitai",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d40\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/302922?s\u003d40\u0026v\u003d4",
+    "alt": "@encukou",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d52\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/4660275?s\u003d52\u0026v\u003d4",
+    "alt": "@sobolevn",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d52\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d52\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-65961: Raise `DeprecationWarning` when `__package__` differs from `__spec__.parent` by brettcannon · Pull Request #97879 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/97879"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.STRING"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
