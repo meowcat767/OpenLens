@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1618,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_delete",
+    "title": "Thread-local storage support — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int key",
+    "scrapedAt": "2026-10-08 19:50:26.464091"
+  },
+  {
+    "id": 1617,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.inspect",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:50:25.140292"
+  },
+  {
+    "id": 1616,
+    "url": "https://docs.python.org/3/library/os.html#os.putenv",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_Read",
+    "scrapedAt": "2026-10-08 19:50:23.811813"
+  },
+  {
+    "id": 1615,
+    "url": "https://docs.python.org/3/library/linecache.html#linecache.getline",
+    "title": "linecache — Random access to text lines — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » linecache — Random access to text lines | Theme Auto Light Dark | linecache — Random access to text lines¶ Source code: Lib/linecache.py The linecache module allows one to get any line from a Python source file, while attempting to optimize internally, using a cache, the common case where many lines are read from a single file. This is used by the traceback module to retrieve source lines for inclusion in the formatted traceback. The tokenize.open() function is used to open files. This function uses tokenize.detect_encoding() to get the encoding of the file; in the absence of an encoding token, the file encoding defaults to UTF-8. The linecache module defines the following functions: linecache.getline(filename, lineno, module_globals\u003dNone)¶ Get line lineno from file named filename. This function will never raise an exception — it will return \u0027\u0027 on errors (the terminating newline character will be included for lines that are found). If filename indicates a frozen module (starting with \u0027\u003cfrozen \u0027), the function will attempt to get the real file name from module_globals[\u0027__file__\u0027] if module_globals is not None. If a file named filename is not found, the function first checks for a PEP 302 __loader__ in module_globals. If there is such a loader and it defines a get_source method, then that determines the source lines (if get_source() returns None, then \u0027\u0027 is returned). Finally, if filename is a relative filename, it is looked up relative to the entries in the module search path, sys.path. Changed in version 3.14: Support filename of frozen modules. linecache.clearcache()¶ Clear the cache. Use this function if you no longer need lines from files previously read using getline(). linecache.checkcache(filename\u003dNone)¶ Check the cache for validity. Use this function if files in the cache may have changed on disk, and you require the updated version. If filename is omitted, it will check all the entries in the cache. linecache.lazycache(filename, module_globals)¶ Capture enough detail about a non-file-based module to permit getting its lines later via getline() even if module_globals is None in the later call. This avoids doing I/O until a line is actually needed, without having to carry the module globals around indefinitely. Added in version 3.5. Example: \u003e\u003e\u003e import linecache\n\u003e\u003e\u003e linecache.getline(linecache.__file__, 8)\n\u0027import sys\\n\u0027\n Previous topic fnmatch — Unix filename pattern matching Next topic shutil — High-level file operations This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » linecache — Random access to text lines | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:50:22.440236"
+  },
+  {
+    "id": 1614,
+    "url": "https://github.com/python/cpython/issues/90817",
+    "title": "Deprecate locale.getdefaultlocale() function · Issue #90817 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate locale.getdefaultlocale() function #90817 New issue Copy link New issue Copy link Closed Closed Deprecate locale.getdefaultlocale() function#90817 Copy link Labels 3.11only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Description vstinner opened on Feb 6, 2022 Issue body actions BPO 46659 Nosy @malemburg, @vstinner, @serhiy-storchaka, @eryksun PRs bpo-46659: calendar uses locale.getlocale() #31166 bpo-46659: test.support avoids locale.getdefaultlocale() #31167 bpo-46659: Update the test on the mbcs codec alias #31168 bpo-46659: Deprecate locale.getdefaultlocale() #31206 bpo-46659: Enhance LocaleTextCalendar for C locale #31214 bpo-46659: Fix the MBCS codec alias on Windows #31218 Files cal_locale.py Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d \u003cDate 2022-02-24.13:41:35.585\u003e\ncreated_at \u003d \u003cDate 2022-02-06.17:33:14.432\u003e\nlabels \u003d [\u0027library\u0027, \u00273.11\u0027]\ntitle \u003d \u0027Deprecate locale.getdefaultlocale() function\u0027\nupdated_at \u003d \u003cDate 2022-02-24.14:53:20.800\u003e\nuser \u003d \u0027https://github.com/vstinner\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-02-24.14:53:20.800\u003e\nactor \u003d \u0027lemburg\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d True\nclosed_date \u003d \u003cDate 2022-02-24.13:41:35.585\u003e\ncloser \u003d \u0027vstinner\u0027\ncomponents \u003d [\u0027Library (Lib)\u0027]\ncreation \u003d \u003cDate 2022-02-06.17:33:14.432\u003e\ncreator \u003d \u0027vstinner\u0027\ndependencies \u003d []\nfiles \u003d [\u002750606\u0027]\nhgrepos \u003d []\nissue_num \u003d 46659\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 19.0\nmessages \u003d [\u0027412647\u0027, \u0027412652\u0027, \u0027412664\u0027, \u0027412666\u0027, \u0027412667\u0027, \u0027412668\u0027, \u0027412687\u0027, \u0027412800\u0027, \u0027412819\u0027, \u0027412825\u0027, \u0027412826\u0027, \u0027412827\u0027, \u0027412829\u0027, \u0027412842\u0027, \u0027413744\u0027, \u0027413745\u0027, \u0027413907\u0027, \u0027413910\u0027, \u0027413915\u0027]\nnosy_count \u003d 4.0\nnosy_names \u003d [\u0027lemburg\u0027, \u0027vstinner\u0027, \u0027serhiy.storchaka\u0027, \u0027eryksun\u0027]\npr_nums \u003d [\u002731166\u0027, \u002731167\u0027, \u002731168\u0027, \u002731206\u0027, \u002731214\u0027, \u002731218\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d \u0027fixed\u0027\nstage \u003d \u0027resolved\u0027\nstatus \u003d \u0027closed\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue46659\u0027\nversions \u003d [\u0027Python 3.11\u0027] Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.11only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directory Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:50:21.03212"
+  },
+  {
     "id": 1613,
     "url": "https://docs.python.org/3/library/zipimport.html#module-zipimport",
     "title": "zipimport — Import modules from Zip archives — Python 3.14.8 documentation",
@@ -10850,26 +10885,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1614,
-    "url": "https://github.com/python/cpython/issues/90817"
-  },
-  {
-    "id": 1615,
-    "url": "https://docs.python.org/3/library/linecache.html#linecache.getline"
-  },
-  {
-    "id": 1616,
-    "url": "https://docs.python.org/3/library/os.html#os.putenv"
-  },
-  {
-    "id": 1617,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.inspect"
-  },
-  {
-    "id": 1618,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_delete"
   },
   {
     "id": 1619,
@@ -248066,10 +248081,175 @@ window.searchData = [
     "id": 350090,
     "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/129393",
     "parentUrl": "https://github.com/python/cpython/issues/129393"
+  },
+  {
+    "id": 350440,
+    "url": "https://github.com/python/cpython/pull/31218",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350441,
+    "url": "https://github.com/python/cpython/pull/31206",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350443,
+    "url": "https://github.com/python/cpython/pull/31214",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350444,
+    "url": "https://github.com/python/cpython/pull/31168",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350447,
+    "url": "https://github.com/python/cpython/pull/31166",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350448,
+    "url": "https://github.com/python/cpython/pull/31167",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350450,
+    "url": "https://github.com/python/cpython/issues/90817#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350451,
+    "url": "https://bugs.python.org/issue46659",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350452,
+    "url": "https://github.com/python/cpython/issues/90817#issue-1199074753",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350454,
+    "url": "https://bugs.python.org/file50606/cal_locale.py",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350455,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/90817",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350456,
+    "url": "https://github.com/python/cpython/issues/90817#top",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350457,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/90817",
+    "parentUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "id": 350460,
+    "url": "https://docs.python.org/3/library/tokenize.html#tokenize.detect_encoding",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 350464,
+    "url": "https://docs.python.org/3/library/linecache.html#linecache.checkcache",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 350467,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/linecache.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 350468,
+    "url": "https://docs.python.org/3/library/linecache.html#linecache.lazycache",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 350470,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/linecache.py",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 350471,
+    "url": "https://docs.python.org/3/library/linecache.html#linecache.clearcache",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 350474,
+    "url": "https://docs.python.org/3/library/linecache.html#module-linecache",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "id": 350477,
+    "url": "https://docs.python.org/3/library/tokenize.html#tokenize.open",
+    "parentUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_delete"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_delete"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.inspect"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.inspect"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.putenv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.putenv"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "linecache — Random access to text lines — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "linecache — Random access to text lines — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/linecache.html#linecache.getline"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "Deprecate locale.getdefaultlocale() function · Issue #90817 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90817"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate locale.getdefaultlocale() function · Issue #90817 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90817"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
