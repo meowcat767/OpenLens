@@ -1,5 +1,45 @@
 window.searchData = [
   {
+    "id": 493,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/",
+    "title": "How to Think Like a Computer Scientist — How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation",
+    "content": "Navigation index next | How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation » How to Think Like a Computer Scientist¶ Learning with Python¶ 2nd Edition (Using Python 2.x) by Jeffrey Elkner, Allen B. Downey, and Chris Meyers Last Updated: 21 April 2012 Copyright Notice Foreword Preface Contributor List Chapter 1 The way of the program Chapter 2 Variables, expressions, and statements Chapter 3 Functions Chapter 4 Conditionals Chapter 5 Fruitful functions Chapter 6 Iteration Chapter 7 Strings Chapter 8 Case Study: Catch Chapter 9 Lists Chapter 10 Modules and files Chapter 11 Recursion and exceptions Chapter 12 Dictionaries Chapter 13 Classes and objects Chapter 14 Classes and functions Chapter 15 Classes and methods Chapter 16 Sets of Objects Chapter 17 Inheritance Chapter 18 Linked Lists Chapter 19 Stacks Chapter 20 Queues Chapter 21 Trees Appendix A Debugging Appendix B GASP Appendix c Configuring Ubuntu for Python Development Appendix D Customizing and Contributing to the Book GNU Free Document License Search Page Navigation index next | How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation » © Copyright 2010, Jeffrey Elkner, Allen B. Downey and Chris Meyers. Created using Sphinx 1.2.2.",
+    "scrapedAt": "2026-10-08 19:04:06.051806"
+  },
+  {
+    "id": 492,
+    "url": "http://docs.python.org/library/json.html",
+    "title": "json — JSON encoder and decoder — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Data Handling » json — JSON encoder and decoder | Theme Auto Light Dark | json — JSON encoder and decoder¶ Source code: Lib/json/__init__.py JSON (JavaScript Object Notation), specified by RFC 7159 (which obsoletes RFC 4627) and by ECMA-404, is a lightweight data interchange format inspired by JavaScript object literal syntax (although it is not a strict subset of JavaScript [1] ). Note The term “object” in the context of JSON processing in Python can be ambiguous. All values in Python are objects. In JSON, an object refers to any data wrapped in curly braces, similar to a Python dictionary. Warning Be cautious when parsing JSON data from untrusted sources. A malicious JSON string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended. This module exposes an API familiar to users of the standard library marshal and pickle modules. Encoding basic Python object hierarchies: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([\u0027foo\u0027, {\u0027bar\u0027: (\u0027baz\u0027, None, 1.0, 2)}])\n\u0027[\"foo\", {\"bar\": [\"baz\", null, 1.0, 2]}]\u0027\n\u003e\u003e\u003e print(json.dumps(\"\\\"foo\\bar\"))\n\"\\\"foo\\bar\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\u1234\u0027))\n\"\\u1234\"\n\u003e\u003e\u003e print(json.dumps(\u0027\\\\\u0027))\n\"\\\\\"\n\u003e\u003e\u003e print(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys\u003dTrue))\n{\"a\": 0, \"b\": 0, \"c\": 0}\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO()\n\u003e\u003e\u003e json.dump([\u0027streaming API\u0027], io)\n\u003e\u003e\u003e io.getvalue()\n\u0027[\"streaming API\"]\u0027\n Compact encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.dumps([1, 2, 3, {\u00274\u0027: 5, \u00276\u0027: 7}], separators\u003d(\u0027,\u0027, \u0027:\u0027))\n\u0027[1,2,3,{\"4\":5,\"6\":7}]\u0027\n Pretty printing: \u003e\u003e\u003e import json\n\u003e\u003e\u003e print(json.dumps({\u00276\u0027: 7, \u00274\u0027: 5}, sort_keys\u003dTrue, indent\u003d4))\n{\n    \"4\": 5,\n    \"6\": 7\n}\n Customizing JSON object encoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def custom_json(obj):\n...     if isinstance(obj, complex):\n...         return {\u0027__complex__\u0027: True, \u0027real\u0027: obj.real, \u0027imag\u0027: obj.imag}\n...     raise TypeError(f\u0027Cannot serialize object of {type(obj)}\u0027)\n...\n\u003e\u003e\u003e json.dumps(1 + 2j, default\u003dcustom_json)\n\u0027{\"__complex__\": true, \"real\": 1.0, \"imag\": 2.0}\u0027\n Decoding JSON: \u003e\u003e\u003e import json\n\u003e\u003e\u003e json.loads(\u0027[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]\u0027)\n[\u0027foo\u0027, {\u0027bar\u0027: [\u0027baz\u0027, None, 1.0, 2]}]\n\u003e\u003e\u003e json.loads(\u0027\"\\\\\"foo\\\\bar\"\u0027)\n\u0027\"foo\\x08ar\u0027\n\u003e\u003e\u003e from io import StringIO\n\u003e\u003e\u003e io \u003d StringIO(\u0027[\"streaming API\"]\u0027)\n\u003e\u003e\u003e json.load(io)\n[\u0027streaming API\u0027]\n Customizing JSON object decoding: \u003e\u003e\u003e import json\n\u003e\u003e\u003e def as_complex(dct):\n...     if \u0027__complex__\u0027 in dct:\n...         return complex(dct[\u0027real\u0027], dct[\u0027imag\u0027])\n...     return dct\n...\n\u003e\u003e\u003e json.loads(\u0027{\"__complex__\": true, \"real\": 1, \"imag\": 2}\u0027,\n...     object_hook\u003das_complex)\n(1+2j)\n\u003e\u003e\u003e import decimal\n\u003e\u003e\u003e json.loads(\u00271.1\u0027, parse_float\u003ddecimal.Decimal)\nDecimal(\u00271.1\u0027)\n Extending JSONEncoder: \u003e\u003e\u003e import json\n\u003e\u003e\u003e class ComplexEncoder(json.JSONEncoder):\n...     def default(self, obj):\n...         if isinstance(obj, complex):\n...             return [obj.real, obj.imag]\n...         # Let the base class default method raise the TypeError\n...         return super().default(obj)\n...\n\u003e\u003e\u003e json.dumps(2 + 1j, cls\u003dComplexEncoder)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e ComplexEncoder().encode(2 + 1j)\n\u0027[2.0, 1.0]\u0027\n\u003e\u003e\u003e list(ComplexEncoder().iterencode(2 + 1j))\n[\u0027[2.0\u0027, \u0027, 1.0\u0027, \u0027]\u0027]\n Using json from the shell to validate and pretty-print: $ echo \u0027{\"json\":\"obj\"}\u0027 | python -m json\n{\n    \"json\": \"obj\"\n}\n$ echo \u0027{1.2:3.4}\u0027 | python -m json\nExpecting property name enclosed in double quotes: line 1 column 2 (char 1)\n See Command-line interface for detailed documentation. Note JSON is a subset of YAML 1.2. The JSON produced by this module’s default settings (in particular, the default separators value) is also a subset of YAML 1.0 and 1.1. This module can thus also be used as a YAML serializer. Note This module’s encoders and decoders preserve input and output order by default. Order is only lost if the underlying containers are unordered. Basic Usage¶ json.dump(obj, fp, *, skipkeys\u003dFalse, ensure_ascii\u003dTrue, check_circular\u003dTrue, allow_nan\u003dTrue, cls\u003dNone, indent\u003dNone, separators\u003dNone, default\u003dNone, sort_keys\u003dFalse, **kw)¶ Serialize obj as a JSON formatted stream to fp (a .write()-supporting file-like object) using this Python-to-JSON conversion table. Note Unlike pickle and marshal, JSON is not a framed protocol, so trying to serialize multiple objects with repeated calls to dump() using the same fp will result in an invalid JSON file. Parameters: obj (object) – The Python object to be serialized. fp (file-like object) – The file-like object obj will be serialized to. The json module always produces str objects, not bytes objects, therefore fp.write() must support str input. skipkeys (bool) – If True, keys that are not of a basic type (str, int, float, bool, None) will be skipped instead of raising a TypeError. Default False. ensure_ascii (bool) – If True (the default), the output is guaranteed to have all incoming non-ASCII and non-printable characters escaped. If False, all characters will be",
+    "scrapedAt": "2026-10-08 19:04:04.641856"
+  },
+  {
+    "id": 491,
+    "url": "http://buildbot.sourceforge.net/",
+    "scrapedAt": "2026-10-08 19:04:03.472317"
+  },
+  {
+    "id": 490,
+    "url": "http://www.wxpython.org/",
+    "title": "Welcome to wxPython! | wxPython",
+    "content": "Skip to main content This website is all about wxPython, the cross-platform GUI toolkit for the Python language. With wxPython software developers can create truly native user interfaces for their Python applications, that run with little or no modifications on Windows, Macs and Linux or other unix-like systems. Learn more Latest News wxPython 4.3.1 is now available at PyPI, with some additional files at GitHub Release This is a quick follow-up release to v4.3.0 to fix a couple of significant bugs. New and improved in this release: * Fix setting RPATH to $ORIGIN when building wxWidgets on Linux (fixes wx.richtext import) Restore removed wx.propgrid defines wxPython 4.3.0 is now available at PyPI, with some additional files at GitHub Release Starting with this release wxPython has switched to tracking the wxWidgets master branch (version 3.3.x) for the wxWidgets source code, which wxPython is built upon, and which is included in the wxPython source archives. Do note that the wxWidgets 3.3.x releases are API/ABI unstable, so there may be API changes/instability between wxPython 4.3.x releases. New and improved in this release: * Fix wx.svg to work with cython 3.1 generated code. Populate wx.svg with _nanosvg enum values Bugfix in hypertreelist. Add missing attribute _x_maincol to constructor of TreeListMainWindow. Replace md5 with sha256 when validating downloaded waf and doxygen build tools Migrate to build with wxWidgets 3.3 branch Fix compile warning in ListClass contains methods Fix build with setuptools 81+ Modernize/update documentation theme Flatmenu: remove the unnecessary \"mcPopupWindow\" class used only for MacOS Add several methods to FlatMenu and FlatMenuItem to mimic wx better Make flatmenu\u0027s repositioning logic multi-monitor aware Remove no-op code from aui for deleting panes created referring to inexistent windows that were created in the process of loading a perspective. Rationale: All panes that refer to inexistent windows created when loading a perspective that is otherwise valid are already removed during update. Fix SuperToolTip window too small when footerBmp is used Fix incorrect module paths in TipProvider documentation Expose MSWEnableDarkMode/wxDarkModeSettings on all platforms at compile time show CB_READONLY in BitmapComboBox demo Set rpath in link arguments rather than LD_RUN_PATH Use builtin libwebp on macOS wxWidgets builds Lower macOS deployment target to 10.10 on Intel Enable --cairo option when building wheels on Windows Add cairo build for Windows ARM64 Fix unbalanced Freeze/Thaw in ButtonPanel Remove support for outdated wxPython version in ButtonPanel Add missing transfer attributes for SetArtProvider wxPython 4.2.5 is now available at PyPI, with some additional files at Extras Changes in this release: This release was built using the wxWidgets\u0027 v3.2.9 release tag. The only exception is that libtiff and pcre2 bundled with wxWidgets are updated to the versions from the wxWidgets master branch (libtiff 4.7.0 and pcre2 10.44). Fix build/wheel installation using setuptools 81+ Replace md5 with sha256 when validating downloaded waf and doxygen build tools (#2830) Add missing attribute _x_maincol to constructor of TreeListMainWindow (#2828) Fix wx.svg to work with cython 3.1 generated code More news Quick Links Hello World API Reference wxPython Wiki Report a Bug GitHub Repository Discuss wxPython More wx Goodies wxWidgets wxFormBuilder wxGlade Friends of wxPython wxWidgets Blog Mouse vs. Python Find My Electric Follow News feed Blog feed Tags Archive",
+    "scrapedAt": "2026-10-08 19:04:02.228157"
+  },
+  {
+    "id": 489,
+    "url": "https://www.python.org/community/sigs/current/edu-sig",
+    "title": "EDU-SIG: Python in Education | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. EDU-SIG: Python in Education More and more, Python is making inroads at all levels in education. Python offers an interactive environment in which to explore procedural, functional and object oriented approaches to problem solving. Its high level data structures and clear syntax make it an ideal first language, while the large number of existing libraries make it suitable to tackle almost any programming tasks. Edu-sig, through its mailing list, provides an informal venue for comparing notes and discussing future possibilities for Python in education. Its origins trace to Guido van Rossum\u0027s pioneering Computer Programming for Everybody (CP4E), a grant proposal accepted by DARPA, and which provided a modicum of funding in 1999. Membership includes, but is not limited to, educators using Python in their courses, independent developers, and authors of educational materials. Discussion focuses on Python use at all levels, from beginning to advanced applications. Python 2 or Python 3 ? Several years ago, a new version of Python (3) was introduced. This new version has some small but significant changes from the previous one. The most visible change for beginners is that print which used to be a Python keyword \u003e\u003e\u003e print \"Hello World!\"   # for Python 2\n is now a function: \u003e\u003e\u003e print(\"Hello World!\")   # for Python 3\n As a result of the changes, programs written for Python 2 are likely to be incompatible with Python 3 (and vice-versa). Some of you may have not control over which Python version is made available to the students. If that is the case, you should not despair too much if you and your students do not have access to the best/latest version of Python: Python is a fantastic choice as a first language and the relatively minor changes between versions do not change this fact. If you have some control over which version of Python is made available to the students, then you have a choice to make. In this case, we would like to offer the following: Use Python 3, and more specifically version 3.4, if you can, making use of the growing number of third-party libraries available for it. This is especially true if you plan to teach Python as an introductory language (say in a CS-1 course), since Python 3 is the future of Python. Also, if you teach Python in languages other than English, where non-ascii characters could be put to good use in writing identifiers, then Python 3 should definitely be your choice. Use Python 2, and more specifically version 2.7, if you need third-party modules which have not yet been porteded to Python 3. Resources Mailing lists Free books Textbooks Learning environments Learning resources Videos Specialized packages Academic papers Game time! Miscellaneous SIG administrivia Mailing lists, etc. As mentioned above, the Edu-Sig community has its own mailing list. Two other mailing lists are of potential interest to educators: the python tutor and the general python-list. All three are available in a searchable archive on the ActiveState site which is also hosting the famous Python Cookbook. The python tutor mailing list is useful to beginners learning the language and looking for answers to their programming problems; educators are welcome to join as volunteers; the edu-sig mailing list is more for discussions about uses of Python in educational settings. Free books and tutorials for educators There are a number of freely available tutorials for Python. For example, there is a collection of Beginner\u0027s Guide to Python available on the Python wiki. In addition, the following may be of particular interest to educators: Think Python, by Allen B. Downey, is a substantially revised version of How to Think Like a Computer Scientist Learning with Python. It is available for free in various formats; printed copies can be purchased as well. Python for Informatics: Exploring Information, by Charles Severance, is another book derived from the freely available How to Think Like a Computer Scientist Learning with Python mentioned above. As of January 2010, this book is only partially completed, with chapters available freely as pdf files. Dave Kuhlman\u0027s free book and other collection of tutorials is also a very good resource for educators. Andrew Harrington\u0027s hands-on tutorial is suitable for high school and university-level CS-0 students. Dr. Harrington teaches at Loyola University Chicago. Textbooks and other non-free books While there are a number of free books and tutorials available, some people prefer to have an actual copy on paper. If you are among this group, you might be surprised to learn that there are close to one hundred books that have been written about Python programming. Here, we will focus only on a subset that are of potential interest for educators who teach introductory courses in programming. More books can be found here ",
+    "scrapedAt": "2026-10-08 19:04:00.933561"
+  },
+  {
+    "id": 488,
+    "url": "http://docs.python.org/library/ftplib.html",
+    "title": "ftplib — FTP protocol client — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » ftplib — FTP protocol client | Theme Auto Light Dark | ftplib — FTP protocol client¶ Source code: Lib/ftplib.py This module defines the class FTP and a few related items. The FTP class implements the client side of the FTP protocol. You can use this to write Python programs that perform a variety of automated FTP jobs, such as mirroring other FTP servers. It is also used by the module urllib.request to handle URLs that use FTP. For more information on FTP (File Transfer Protocol), see internet RFC 959. The default encoding is UTF-8, following RFC 2640. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Here’s a sample session using the ftplib module: \u003e\u003e\u003e from ftplib import FTP\n\u003e\u003e\u003e ftp \u003d FTP(\u0027ftp.us.debian.org\u0027)  # connect to host, default port\n\u003e\u003e\u003e ftp.login()                     # user anonymous, passwd anonymous@\n\u0027230 Login successful.\u0027\n\u003e\u003e\u003e ftp.cwd(\u0027debian\u0027)               # change into \"debian\" directory\n\u0027250 Directory successfully changed.\u0027\n\u003e\u003e\u003e ftp.retrlines(\u0027LIST\u0027)           # list directory contents\n-rw-rw-r--    1 1176     1176         1063 Jun 15 10:18 README\n...\ndrwxr-sr-x    5 1176     1176         4096 Dec 19  2000 pool\ndrwxr-sr-x    4 1176     1176         4096 Nov 17  2008 project\ndrwxr-xr-x    3 1176     1176         4096 Oct 10  2012 tools\n\u0027226 Directory send OK.\u0027\n\u003e\u003e\u003e with open(\u0027README\u0027, \u0027wb\u0027) as fp:\n\u003e\u003e\u003e     ftp.retrbinary(\u0027RETR README\u0027, fp.write)\n\u0027226 Transfer complete.\u0027\n\u003e\u003e\u003e ftp.quit()\n\u0027221 Goodbye.\u0027\n Reference¶ FTP objects¶ class ftplib.FTP(host\u003d\u0027\u0027, user\u003d\u0027\u0027, passwd\u003d\u0027\u0027, acct\u003d\u0027\u0027, timeout\u003dNone, source_address\u003dNone, *, encoding\u003d\u0027utf-8\u0027)¶ Return a new instance of the FTP class. Parameters: host (str) – The hostname to connect to. If given, connect(host) is implicitly called by the constructor. user (str) – The username to log in with (default: \u0027anonymous\u0027). If given, login(host, passwd, acct) is implicitly called by the constructor. passwd (str) – The password to use when logging in. If not given, and if passwd is the empty string or \"-\", a password will be automatically generated. acct (str) – Account information to be used for the ACCT FTP command. Few systems implement this. See RFC-959 for more details. timeout (float | None) – A timeout in seconds for blocking operations like connect() (default: the global default timeout setting). source_address (tuple | None) – A 2-tuple (host, port) for the socket to bind to as its source address before connecting. encoding (str) – The encoding for directories and filenames (default: \u0027utf-8\u0027). The FTP class supports the with statement, e.g.: \u003e\u003e\u003e from ftplib import FTP\n\u003e\u003e\u003e with FTP(\"ftp1.at.proftpd.org\") as ftp:\n...     ftp.login()\n...     ftp.dir()\n...\n\u0027230 Anonymous login ok, restrictions apply.\u0027\ndr-xr-xr-x   9 ftp      ftp           154 May  6 10:43 .\ndr-xr-xr-x   9 ftp      ftp           154 May  6 10:43 ..\ndr-xr-xr-x   5 ftp      ftp          4096 May  6 10:43 CentOS\ndr-xr-xr-x   3 ftp      ftp            18 Jul 10  2008 Fedora\n\u003e\u003e\u003e\n Changed in version 3.2: Support for the with statement was added. Changed in version 3.3: source_address parameter was added. Changed in version 3.9: If the timeout parameter is set to be zero, it will raise a ValueError to prevent the creation of a non-blocking socket. The encoding parameter was added, and the default was changed from Latin-1 to UTF-8 to follow RFC 2640. Several FTP methods are available in two flavors: one for handling text files and another for binary files. The methods are named for the command which is used followed by lines for the text version or binary for the binary version. FTP instances have the following methods: set_debuglevel(level)¶ Set the instance’s debugging level as an int. This controls the amount of debugging output printed. The debug levels are: 0 (default): No debug output. 1: Produce a moderate amount of debug output, generally a single line per request. 2 or higher: Produce the maximum amount of debugging output, logging each line sent and received on the control connection. connect(host\u003d\u0027\u0027, port\u003d0, timeout\u003dNone, source_address\u003dNone)¶ Connect to the given host and port. This function should be called only once for each instance; it should not be called if a host argument was given when the FTP instance was created. All other FTP methods can only be called after a connection has successfully been made. Parameters: host (str) – The host to connect to. port (int) – The TCP port to connect to (default: 21, as specified by the FTP protocol specification). It is rarely needed to specify a different port number. timeout (float | None) – A timeout in seconds for the connection attempt (default: the global default timeout setting). source_address (tuple | None) – A 2-tuple (host, port) for the socket to bind to as its source address before connecting. Raises an auditing ev",
+    "scrapedAt": "2026-10-08 19:03:59.582788"
+  },
+  {
     "id": 487,
     "url": "http://bottlepy.org/",
     "title": "Bottle: Python Web Framework — Bottle 0.14-dev documentation",
@@ -3375,30 +3415,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 488,
-    "url": "http://docs.python.org/library/ftplib.html"
-  },
-  {
-    "id": 489,
-    "url": "https://www.python.org/community/sigs/current/edu-sig"
-  },
-  {
-    "id": 490,
-    "url": "http://www.wxpython.org/"
-  },
-  {
-    "id": 491,
-    "url": "http://buildbot.sourceforge.net/"
-  },
-  {
-    "id": 492,
-    "url": "http://docs.python.org/library/json.html"
-  },
-  {
-    "id": 493,
-    "url": "http://www.openbookproject.net/thinkcs/python/english2e/"
   },
   {
     "id": 494,
@@ -89655,10 +89671,1345 @@ window.searchData = [
     "id": 66009,
     "url": "https://www.odoo.sh",
     "parentUrl": "https://www.odoo.com/"
+  },
+  {
+    "id": 66168,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.size",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66170,
+    "url": "https://docs.python.org/3/glossary.html#term-callable",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66171,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stdout",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66173,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/ftplib.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66174,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_reply",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66175,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_temp",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66177,
+    "url": "https://docs.python.org/3/library/internet.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66178,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/ftplib.py",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66179,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.storbinary",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66180,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.retrbinary",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66181,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_perm",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66182,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.cwd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66183,
+    "url": "https://docs.python.org/3/library/ftplib.html#reference",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66184,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.ssl_version",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66187,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.delete",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66188,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.abort",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66189,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66190,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftp-objects",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66191,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.readline",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66192,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.all_errors",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66193,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.close",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66194,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.set_debuglevel",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66196,
+    "url": "https://docs.python.org/3/library/intro.html#wasm-availability",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66198,
+    "url": "https://docs.python.org/3/library/poplib.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66199,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.getwelcome",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66200,
+    "url": "https://docs.python.org/3/library/http.client.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66201,
+    "url": "https://docs.python.org/3/library/ftplib.html#module-ftplib",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66203,
+    "url": "https://docs.python.org/3/library/sys.html#auditing",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66204,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.login",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66205,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.transfercmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66208,
+    "url": "https://docs.python.org/3/library/ftplib.html#",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66210,
+    "url": "https://docs.python.org/3/library/ftplib.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66211,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.storlines",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66212,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3659.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66213,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.pwd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66214,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4217.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66217,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.voidcmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66218,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl-security",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66219,
+    "url": "https://docs.python.org/3/library/ftplib.html#module-variables",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66220,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.quit",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66221,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.ntransfercmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66223,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66224,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.check_hostname",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66226,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_SSLv23",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66227,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.sendcmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66228,
+    "url": "https://docs.python.org/3/library/io.html#io.RawIOBase.read",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66229,
+    "url": "https://docs.python.org/3/library/intro.html#availability",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66230,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.nlst",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66231,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.error_proto",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66232,
+    "url": "https://datatracker.ietf.org/doc/html/rfc959.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66233,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.prot_c",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66234,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.rename",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66235,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#tuple",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66238,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.prot_p",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66239,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2640.html",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66240,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#EOFError",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66244,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.retrlines",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66245,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.set_pasv",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66246,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.mlsd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66247,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66248,
+    "url": "https://docs.python.org/3/glossary.html#term-file-object",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66249,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.dir",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66250,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_SNI",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66251,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.connect",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66252,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.rmd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66253,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftp-tls-objects",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66254,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.ccc",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66255,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP.mkd",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66256,
+    "url": "https://docs.python.org/3/library/netrc.html#module-netrc",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66257,
+    "url": "https://docs.python.org/3/library/ftplib.html#ftplib.FTP_TLS.auth",
+    "parentUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "id": 66259,
+    "url": "http://docs.python.org/library/turtle.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66261,
+    "url": "http://wiki.python.org/moin/PythonBooks",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66262,
+    "url": "http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-30292-3",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66263,
+    "url": "http://www.4dsolutions.net/ocn/cp4e.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66264,
+    "url": "https://code.google.com/p/rur-ple/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66265,
+    "url": "http://www.pgbovine.net/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66266,
+    "url": "http://software-carpentry.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66267,
+    "url": "http://www.springer.com/mathematics/numerical+and+computational+mathematics/book/978-3-540-73915-9",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66268,
+    "url": "http://www.amazon.com/Scientific-Programming-Computational-Science-Engineering/dp/3642024742/ref\u003dsr_1_2?ie\u003dUTF8\u0026s\u003dbooks\u0026qid\u003d1252223300\u0026sr\u003d8-2",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66269,
+    "url": "http://wiki.python.org/moin/PythonForSecretaries",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66270,
+    "url": "http://code.google.com/p/sympy/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66271,
+    "url": "http://mcsp.wartburg.edu/zelle/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66272,
+    "url": "http://live.codenode.org/accounts/login/?next\u003d/bookshelf/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66273,
+    "url": "http://reeborg.ca",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66274,
+    "url": "http://vpython.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66275,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#game-time",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66276,
+    "url": "http://www.pearsonhighered.com/educator/product/Practice-of-Computing-using-Python-The/9780136110675.page",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66277,
+    "url": "http://www.python.org/mailman/listinfo/edu-sig",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66278,
+    "url": "http://www.pythontutor.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66279,
+    "url": "http://www.onlamp.com/pub/a/python/2000/10/04/pythonnews.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66280,
+    "url": "http://pyglet.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66281,
+    "url": "https://fbeedle.com/content/python-programming-introduction-computer-science%E2%80%942nd-edition",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66282,
+    "url": "http://pypi.python.org/pypi",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66284,
+    "url": "http://blip.tv/file/1947495",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66285,
+    "url": "http://cs.slu.edu/~goldwasser/publications/ITiCSE2008_Abstract.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66286,
+    "url": "http://www.oreilly.com/frank/elkner_0300.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66287,
+    "url": "http://www.oreillynet.com/pub/a/network/2000/01/31/hacktrack/index.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66288,
+    "url": "http://www.ifi.uio.no/~hpl/scripting/all-nosplit/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66290,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#learning-environments",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66291,
+    "url": "http://cs.slu.edu/~goldwasser/publications/SIGCSE2009_Abstract.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66292,
+    "url": "http://pygame.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66293,
+    "url": "http://www.libsdl.org/index.php",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66294,
+    "url": "http://ftp.ntua.gr/mirror/python/sigs/edu-sig/miller-dissertation.pdf",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66295,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#sig-administrivia",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66296,
+    "url": "http://mail.python.org/mailman/listinfo/tutor",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66297,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#academic-papers",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66298,
+    "url": "http://numpy.scipy.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66299,
+    "url": "http://www.rexx.com/~dkuhlman/#a-python-book",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66300,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#id1",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66301,
+    "url": "http://sagemath.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66302,
+    "url": "http://ipython.scipy.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66303,
+    "url": "http://codenode.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66304,
+    "url": "http://pgbovine.net/python-teaching.htm",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66305,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#specialized-packages",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66306,
+    "url": "http://interactivepython.org",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66307,
+    "url": "http://www.cs1graphics.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66308,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#videos",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66309,
+    "url": "http://www.handysoftware.com/cpif/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66310,
+    "url": "http://arxiv.org/ftp/arxiv/papers/0809/0809.1437.pdf",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66311,
+    "url": "http://www.openbookproject.net/pybiblio/papers/pyyhs/year01/pyyhs.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66312,
+    "url": "http://www.linuxjournal.com/articles/conversations/005.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66313,
+    "url": "http://en.wikipedia.org/wiki/IDLE_%28Python%29",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66314,
+    "url": "http://openopt.org/Welcome",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66315,
+    "url": "http://matplotlib.sourceforge.net/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66316,
+    "url": "http://showmedo.com/videos/video?name\u003d1430000\u0026fromSeriesID\u003d143",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66317,
+    "url": "http://aspn.activestate.com/ASPN/Cookbook/Python/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66318,
+    "url": "http://gvr-online.appspot.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66319,
+    "url": "http://www.pythonware.com/products/pil/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66320,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#textbooks",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66321,
+    "url": "http://www.openbookproject.net/py4fun/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66322,
+    "url": "http://cp4k.blogspot.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66323,
+    "url": "http://code.google.com/p/crunchy/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66324,
+    "url": "http://prenhall.com/goldwasser/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66325,
+    "url": "https://fbeedle.com/content/data-structures-and-algorithms-using-python-and-c",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66326,
+    "url": "http://svn.python.org/view/python/trunk/Lib/lib-tk/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66327,
+    "url": "http://www.jbpub.com/catalog/9780763746025/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66328,
+    "url": "http://www1.chapman.edu/~radenski/research/abstracts/python-iticse06.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66329,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#mailing-lists",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66331,
+    "url": "http://wiki.python.org/moin/EduSig/DataResources",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66332,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#free-books",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66334,
+    "url": "http://www.reportlab.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66335,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#learning-resources",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66336,
+    "url": "http://wiki.python.org/moin/SchoolsUsingPython",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66337,
+    "url": "http://gvr.sourceforge.net/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66338,
+    "url": "http://webpages.cs.luc.edu/~anh/python/hands-on",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66339,
+    "url": "http://emergent.brynmawr.edu/%7Edblank/pyro/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66340,
+    "url": "http://webpages.cs.luc.edu/~anh/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66341,
+    "url": "https://www.python.org/doc/essays/cp4e/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66342,
+    "url": "http://www.scipy.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66343,
+    "url": "http://pykata.org/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66344,
+    "url": "http://aspn.activestate.com/ASPN/Python/Mail/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66346,
+    "url": "http://pragprog.com/titles/gwpy2/practical-programming",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66347,
+    "url": "http://aspn.activestate.com",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66348,
+    "url": "http://mail.python.org/mailman/listinfo/python-list",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66349,
+    "url": "https://www.python.org/community/sigs/current/edu-sig/#miscellaneous",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66350,
+    "url": "http://www.py4inf.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66351,
+    "url": "http://www.amazon.com/Python-Programming-Absolute-Beginner-Second/dp/1598631128",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66352,
+    "url": "http://www.blender3d.com/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66353,
+    "url": "http://www.greenteapress.com/thinkpython/thinkpython.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66354,
+    "url": "https://code.google.com/p/pynguin/",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66355,
+    "url": "http://www.skylit.com/mathandpython.html",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66356,
+    "url": "http://www.python.org/pipermail/edu-sig",
+    "parentUrl": "https://www.python.org/community/sigs/current/edu-sig"
+  },
+  {
+    "id": 66384,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder.raw_decode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66386,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-no-ensure-ascii",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66391,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.default",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66393,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66395,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-h",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66396,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.msg",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66397,
+    "url": "https://docs.python.org/3/library/json.html#rfc-errata",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66400,
+    "url": "https://docs.python.org/3/library/json.html#basic-usage",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66403,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.pos",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66404,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#RecursionError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66405,
+    "url": "https://ecma-international.org/publications-and-standards/standards/ecma-404/",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66407,
+    "url": "https://docs.python.org/3/glossary.html#term-file-like-object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66409,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.lineno",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66410,
+    "url": "https://docs.python.org/3/library/json.html#module-json.tool",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66411,
+    "url": "https://docs.python.org/3/library/marshal.html#module-marshal",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66412,
+    "url": "https://docs.python.org/3/library/json.html#encoders-and-decoders",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66413,
+    "url": "https://docs.python.org/3/library/netdata.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66414,
+    "url": "https://docs.python.org/3/library/json.html#standard-compliance-and-interoperability",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66415,
+    "url": "https://docs.python.org/3/builtins/exceptions.html#UnicodeDecodeError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66417,
+    "url": "https://docs.python.org/3/library/json.html#json.loads",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66419,
+    "url": "https://docs.python.org/3/library/json.html#json.load",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66420,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#int-max-str-digits",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66421,
+    "url": "https://docs.python.org/3/library/json.html#exceptions",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66422,
+    "url": "https://docs.python.org/3/library/json.html#character-encodings",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66423,
+    "url": "https://docs.python.org/3/library/json.html#json.dump",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66425,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7159.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66427,
+    "url": "https://docs.python.org/3/library/json.html#",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66430,
+    "url": "https://docs.python.org/3/library/json.html#id1",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66432,
+    "url": "https://docs.python.org/3/glossary.html#term-binary-file",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66435,
+    "url": "https://docs.python.org/3/library/mailbox.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66437,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/json/__init__.py",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66438,
+    "url": "https://www.jsonrpc.org",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66439,
+    "url": "https://docs.python.org/3/library/json.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66440,
+    "url": "https://json.org",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66441,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/json.rst?plain\u003d1",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66442,
+    "url": "https://docs.python.org/3/glossary.html#keyword-only-parameter",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66443,
+    "url": "https://docs.python.org/3/library/json.html#implementation-limitations",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66444,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-arg-infile",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66445,
+    "url": "https://docs.python.org/3/library/json.html#py-to-json-table",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66446,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/json/tool.py",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66447,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-json-lines",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66448,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.colno",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66450,
+    "url": "https://docs.python.org/3/library/json.html#top-level-non-object-non-array-values",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66451,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-sort-keys",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66452,
+    "url": "https://docs.python.org/3/library/json.html#repeated-names-within-an-object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66453,
+    "url": "https://docs.python.org/3/library/json.html#command-line-options",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66454,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError.doc",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66455,
+    "url": "https://docs.python.org/3/library/json.html#json-to-py-table",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66459,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4627.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66460,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66464,
+    "url": "https://docs.python.org/3/library/sys.html#sys.stdin",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66465,
+    "url": "https://docs.python.org/3/builtins/functions.html#object",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66466,
+    "url": "https://docs.python.org/3/library/email.iterators.html",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66467,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-arg-outfile",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66468,
+    "url": "https://docs.python.org/3/glossary.html#term-text-file",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66469,
+    "url": "https://docs.python.org/3/library/json.html#cmdoption-json-indent",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66470,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecoder.decode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66471,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.iterencode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66472,
+    "url": "https://www.rfc-editor.org/errata_search.php?rfc\u003d7159",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66473,
+    "url": "https://docs.python.org/3/library/json.html#json.dumps",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66474,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONEncoder.encode",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66475,
+    "url": "https://docs.python.org/3/library/json.html#infinite-and-nan-number-values",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66476,
+    "url": "https://docs.python.org/3/library/json.html#json.JSONDecodeError",
+    "parentUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "id": 66477,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/genindex.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66478,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_c.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66479,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch07.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66480,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/preface.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66481,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch16.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66482,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch18.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66483,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch10.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66484,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/copyright.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66485,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/foreword.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66486,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch21.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66487,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch05.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66488,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch13.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66489,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/fdl-1.3.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66490,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/search.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66491,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#how-to-think-like-a-computer-scientist",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66492,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch02.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66493,
+    "url": "http://sphinx-doc.org/",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66494,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/contrib.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66495,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_d.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66496,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch06.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66497,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_a.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66498,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch09.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66499,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch17.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66500,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch14.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66501,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch03.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66502,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch11.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66503,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch08.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66504,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch12.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66505,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch20.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66506,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch19.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66507,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/app_b.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66508,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66509,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch15.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66510,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch01.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66511,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/ch04.html",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66512,
+    "url": "http://www.openbookproject.net/thinkcs/python/english2e/#learning-with-python",
+    "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "http://www.openbookproject.net/thinkcs/python/english2e/_images/gasp_lessons.png",
+    "alt": "GASP Logo",
+    "pageTitle": "How to Think Like a Computer Scientist — How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation",
+    "pageUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "json — JSON encoder and decoder — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/library/json.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ftplib — FTP protocol client — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/library/ftplib.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ftplib — FTP protocol client — Python 3.14.8 documentation",
+    "pageUrl": "http://docs.python.org/library/ftplib.html"
+  },
   {
     "src": "https://bottlepy.org/docs/dev/_static/logo_nav.png",
     "alt": "Logo of Bottle",
