@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 819,
+    "url": "https://docs.python.org/3/library/re.html#module-re",
+    "title": "re — Regular expression operations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Text Processing Services » re — Regular expression operations | Theme Auto Light Dark | re — Regular expression operations¶ Source code: Lib/re/ This module provides regular expression matching operations similar to those found in Perl. Both patterns and strings to be searched can be Unicode strings (str) as well as 8-bit strings (bytes). However, Unicode strings and 8-bit strings cannot be mixed: that is, you cannot match a Unicode string with a bytes pattern or vice-versa; similarly, when asking for a substitution, the replacement string must be of the same type as both the pattern and the search string. Regular expressions use the backslash character (\u0027\\\u0027) to indicate special forms or to allow special characters to be used without invoking their special meaning. This collides with Python’s usage of the same character for the same purpose in string literals; for example, to match a literal backslash, one might have to write \u0027\\\\\\\\\u0027 as the pattern string, because the regular expression must be \\\\, and each backslash must be expressed as \\\\ inside a regular Python string literal. Also, please note that any invalid escape sequences in Python’s usage of the backslash in string literals now generate a SyntaxWarning and in the future this will become a SyntaxError. This behaviour will happen even if it is a valid escape sequence for a regular expression. The solution is to use Python’s raw string notation for regular expression patterns; backslashes are not handled in any special way in a string literal prefixed with \u0027r\u0027. So r\"\\n\" is a two-character string containing \u0027\\\u0027 and \u0027n\u0027, while \"\\n\" is a one-character string containing a newline. Usually patterns will be expressed in Python code using this raw string notation. It is important to note that most regular expression operations are available as module-level functions and methods on compiled regular expressions. The functions are shortcuts that don’t require you to compile a regex object first, but miss some fine-tuning parameters. See also The third-party regex module, which has an API compatible with the standard library re module, but offers additional functionality and a more thorough Unicode support. Regular Expression Syntax¶ A regular expression (or RE) specifies a set of strings that matches it; the functions in this module let you check if a particular string matches a given regular expression (or if a given regular expression matches a particular string, which comes down to the same thing). Regular expressions can be concatenated to form new regular expressions; if A and B are both regular expressions, then AB is also a regular expression. In general, if a string p matches A and another string q matches B, the string pq will match AB. This holds unless A or B contain low precedence operations; boundary conditions between A and B; or have numbered group references. Thus, complex expressions can easily be constructed from simpler primitive expressions like the ones described here. For details of the theory and implementation of regular expressions, consult the Friedl book [Frie09], or almost any textbook about compiler construction. A brief explanation of the format of regular expressions follows. For further information and a gentler presentation, consult the Regular expression HOWTO. Regular expressions can contain both special and ordinary characters. Most ordinary characters, like \u0027A\u0027, \u0027a\u0027, or \u00270\u0027, are the simplest regular expressions; they simply match themselves. You can concatenate ordinary characters, so last matches the string \u0027last\u0027. (In the rest of this section, we’ll write RE’s in this special style, usually without quotes, and strings to be matched \u0027in single quotes\u0027.) Some characters, like \u0027|\u0027 or \u0027(\u0027, are special. Special characters either stand for classes of ordinary characters, or affect how the regular expressions around them are interpreted. Repetition operators or quantifiers (*, +, ?, {m,n}, etc) cannot be directly nested. This avoids ambiguity with the non-greedy modifier suffix ?, and with other modifiers in other implementations. To apply a second repetition to an inner repetition, parentheses may be used. For example, the expression (?:a{6})* matches any multiple of six \u0027a\u0027 characters. The special characters are: . (Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline. (?s:.) matches any character regardless of flags. ^ (Caret.) Matches the start of the string, and in MULTILINE mode also matches immediately after each newline. $ Matches the end of the string or just before the newline at the end of the string, and in MULTILINE mode also matches before a newline. foo matches both ‘foo’ and ‘foobar’, while the regular expression foo$ matches only ‘foo’. More interestingly, searching for foo.$ in \u0027foo1\\nfoo2\\n\u0027 matches ‘fo",
+    "scrapedAt": "2026-10-08 19:15:33.033906"
+  },
+  {
+    "id": 818,
+    "url": "https://peps.python.org/pep-0630/#type-checking",
+    "title": "PEP 630 – Isolating Extension Modules | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 630 – Isolating Extension Modules PEP 630 – Isolating Extension Modules Author: Petr Viktorin \u003cencukou at gmail.com\u003e Discussions-To: Capi-SIG list Status: Final Type: Informational Created: 25-Aug-2020 Post-History: 16-Jul-2020 Table of Contents Abstract About This Document Motivation Rationale for Per-module State Goal: Easy-to-Use Module State Non-goals: Speedups and the GIL Making Modules Safe with Multiple Interpreters Isolated Module Objects Surprising Edge Cases Managing Global State Managing Per-Module State Opt-Out: Limiting to One Module Object per Process Module State Access from Functions Heap Types Defining Heap Types Garbage Collection Protocol Module State Access from Classes Module State Access from Regular Methods Module State Access from Slot Methods, Getters and Setters Lifetime of the Module State Open Issues Type Checking Metaclasses Per-Class Scope Lossless Conversion to Heap Types Copyright Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Isolating Extension Modules HOWTO. × See PEP 1 for how to propose changes. Abstract Traditionally, state belonging to Python extension modules was kept in C static variables, which have process-wide scope. This document describes problems of such per-process state and efforts to make per-module state—a better default—possible and easy to use. The document also describes how to switch to per-module state where possible. This transition involves allocating space for that state, potentially switching from static types to heap types, and—perhaps most importantly—accessing per-module state from code. About This Document As an informational PEP, this document does not introduce any changes; those should be done in their own PEPs (or issues, if small enough). Rather, it covers the motivation behind an effort that spans multiple releases, and instructs early adopters on how to use the finished features. Once support is reasonably complete, this content can be moved to Python’s documentation as a HOWTO. Meanwhile, in the spirit of documentation-driven development, gaps identified in this PEP can show where to focus the effort, and it can be updated as new features are implemented. Whenever this PEP mentions extension modules, the advice also applies to built-in modules. Note This PEP contains generic advice. When following it, always take into account the specifics of your project. For example, while much of this advice applies to the C parts of Python’s standard library, the PEP does not factor in stdlib specifics (unusual backward compatibility issues, access to private API, etc.). PEPs related to this effort are: PEP 384 – Defining a Stable ABI, which added a C API for creating heap types PEP 489 – Multi-phase extension module initialization PEP 573 – Module State Access from C Extension Methods This document is concerned with Python’s public C API, which is not offered by all implementations of Python. However, nothing in this PEP is specific to CPython. As with any Informational PEP, this text does not necessarily represent a Python community consensus or recommendation. Motivation An interpreter is the context in which Python code runs. It contains configuration (e.g. the import path) and runtime state (e.g. the set of imported modules). Python supports running multiple interpreters in one process. There are two cases to think about—users may run interpreters: in sequence, with several Py_InitializeEx/Py_FinalizeEx cycles, and in parallel, managing “sub-interpreters” using Py_NewInterpreter/Py_EndInterpreter. Both cases (and combinations of them) would be most useful when embedding Python within a library. Libraries generally shouldn’t make assumptions about the application that uses them, which includes assuming a process-wide “main Python interpreter”. Currently, CPython doesn’t handle this use case well. Many extension modules (and even some stdlib modules) use per-process global state, because C static variables are extremely easy to use. Thus, data that should be specific to an interpreter ends up being shared between interpreters. Unless the extension developer is careful, it is very easy to introduce edge cases that lead to crashes when a module is loaded in more than one interpreter in the same process. Unfortunately, per-interpreter state is not easy to achieve—extension authors tend to not keep multiple interpreters in mind when developing, and it is currently cumbersome to test the behavior. Rationale for Per-module State Instead of focusing on per-interpreter state, Python’s C API is evolving to better support the more granular per-module state. By default, C-level data will be attached to a module object. Each interpreter will then create its own module object, keeping the data separate. For testing the isolation, multiple module objects corresponding to a single extension can even be loaded in a",
+    "scrapedAt": "2026-10-08 19:15:31.806719"
+  },
+  {
+    "id": 817,
+    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring",
+    "title": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Unicode Objects and Codecs | Theme Auto Light Dark | Unicode Objects and Codecs¶ Unicode Objects¶ Since the implementation of PEP 393 in Python 3.3, Unicode objects internally use a variety of representations, in order to allow handling the complete range of Unicode characters while staying memory efficient. There are special cases for strings where all code points are below 128, 256, or 65536; otherwise, code points must be below 1114112 (which is the full Unicode range). UTF-8 representation is created on demand and cached in the Unicode object. Note The Py_UNICODE representation has been removed since Python 3.12 with deprecated APIs. See PEP 623 for more information. Unicode Type¶ These are the basic Unicode object types used for the Unicode implementation in Python: PyTypeObject PyUnicode_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode type. It is exposed to Python code as str. PyTypeObject PyUnicodeIter_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python Unicode iterator type. It is used to iterate over Unicode string objects. type Py_UCS4¶ type Py_UCS2¶ type Py_UCS1¶ Part of the Stable ABI. These types are typedefs for unsigned integer types wide enough to contain characters of 32 bits, 16 bits and 8 bits, respectively. When dealing with single Unicode characters, use Py_UCS4. Added in version 3.3. type PyASCIIObject¶ type PyCompactUnicodeObject¶ type PyUnicodeObject¶ These subtypes of PyObject represent a Python Unicode object. In almost all cases, they shouldn’t be used directly, since all API functions that deal with Unicode objects take and return PyObject pointers. Added in version 3.3. The structure of a particular object can be determined using the following macros. The macros cannot fail; their behavior is undefined if their argument is not a Python Unicode object. PyUnicode_IS_COMPACT(o)¶ True if o uses the PyCompactUnicodeObject structure. Added in version 3.3. PyUnicode_IS_COMPACT_ASCII(o)¶ True if o uses the PyASCIIObject structure. Added in version 3.3. The following APIs are C macros and static inlined functions for fast checks and access to internal read-only data of Unicode objects: int PyUnicode_Check(PyObject *obj)¶ Return true if the object obj is a Unicode object or an instance of a Unicode subtype. This function always succeeds. int PyUnicode_CheckExact(PyObject *obj)¶ Return true if the object obj is a Unicode object, but not an instance of a subtype. This function always succeeds. Py_ssize_t PyUnicode_GET_LENGTH(PyObject *unicode)¶ Return the length of the Unicode string, in code points. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. Py_UCS1 *PyUnicode_1BYTE_DATA(PyObject *unicode)¶ Py_UCS2 *PyUnicode_2BYTE_DATA(PyObject *unicode)¶ Py_UCS4 *PyUnicode_4BYTE_DATA(PyObject *unicode)¶ Return a pointer to the canonical representation cast to UCS1, UCS2 or UCS4 integer types for direct character access. No checks are performed if the canonical representation has the correct character size; use PyUnicode_KIND() to select the right function. Added in version 3.3. PyUnicode_1BYTE_KIND¶ PyUnicode_2BYTE_KIND¶ PyUnicode_4BYTE_KIND¶ Return values of the PyUnicode_KIND() macro. Added in version 3.3. Changed in version 3.12: PyUnicode_WCHAR_KIND has been removed. int PyUnicode_KIND(PyObject *unicode)¶ Return one of the PyUnicode kind constants (see above) that indicate how many bytes per character this Unicode object uses to store its data. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void *PyUnicode_DATA(PyObject *unicode)¶ Return a void pointer to the raw Unicode buffer. unicode has to be a Unicode object in the “canonical” representation (not checked). Added in version 3.3. void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)¶ Write the code point value to the given zero-based index in a string. The kind value and data pointer must have been obtained from a string using PyUnicode_KIND() and PyUnicode_DATA() respectively. You must hold a reference to that string while calling PyUnicode_WRITE(). All requirements of PyUnicode_WriteChar() also apply. The function performs no checks for any of its requirements, and is intended for usage in loops. Added in version 3.3. Py_UCS4 PyUnicode_READ(int kind, void *data, Py_ssize_t index)¶ Read a code point from a canonical representation data (as obtained with PyUnicode_DATA()). No checks or ready calls are performed. Added in version 3.3. Py_UCS4 PyUnicode_READ_CHAR(PyObject *unicode, Py_ssize_t index)¶ Read a character from a Unicode object unicode, which must be in the “canonical” representation. This is less efficient than PyUnicode_READ() if you do multiple consecutive reads. Added in version 3.3. Py_UCS4",
+    "scrapedAt": "2026-10-08 19:15:30.44783"
+  },
+  {
+    "id": 816,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Warning ctypes provides low-level access to native libraries and the process’s memory, bypassing Python’s safety mechanisms and allowing execution of arbitrary native code. Incorrect use can corrupt data and objects, reveal sensitive information, cause crashes, or otherwise compromise the running process. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most re",
+    "scrapedAt": "2026-10-08 19:15:29.216986"
+  },
+  {
+    "id": 815,
+    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free",
+    "title": "Thread-local storage support — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread-local storage support | Theme Auto Light Dark | Thread-local storage support¶ The Python interpreter provides low-level support for thread-local storage (TLS) which wraps the underlying native TLS implementation to support the Python-level thread-local storage API (threading.local). The CPython C level APIs are similar to those offered by pthreads and Windows: use a thread key and functions to associate a void* value per thread. A thread state does not need to be attached when calling these functions; they supply their own locking. Note that Python.h does not include the declaration of the TLS APIs, you need to include pythread.h to use thread-local storage. Note None of these API functions handle memory management on behalf of the void* values. You need to allocate and deallocate them yourself. If the void* values happen to be PyObject*, these functions don’t do refcount operations on them either. Thread-specific storage API¶ The thread-specific storage (TSS) API was introduced to supersede the use of the existing TLS API within the CPython interpreter. This API uses a new type Py_tss_t instead of int to represent thread keys. Added in version 3.7. See also “A New C-API for Thread-Local Storage in CPython” (PEP 539) type Py_tss_t¶ This data structure represents the state of a thread key, the definition of which may depend on the underlying TLS implementation, and it has an internal field representing the key’s initialization state. There are no public members in this structure. When Py_LIMITED_API is not defined, static allocation of this type by Py_tss_NEEDS_INIT is allowed. Py_tss_NEEDS_INIT¶ This macro expands to the initializer for Py_tss_t variables. Note that this macro won’t be defined with Py_LIMITED_API. Dynamic allocation¶ Dynamic allocation of the Py_tss_t, required in extension modules built with Py_LIMITED_API, where static allocation of this type is not possible due to its implementation being opaque at build time. Py_tss_t *PyThread_tss_alloc()¶ Part of the Stable ABI since version 3.7. Return a value which is the same state as a value initialized with Py_tss_NEEDS_INIT, or NULL in the case of dynamic allocation failure. void PyThread_tss_free(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Free the given key allocated by PyThread_tss_alloc(), after first calling PyThread_tss_delete() to ensure any associated thread locals have been unassigned. This is a no-op if the key argument is NULL. Note A freed key becomes a dangling pointer. You should reset the key to NULL. Methods¶ The parameter key of these functions must not be NULL. Moreover, the behaviors of PyThread_tss_set() and PyThread_tss_get() are undefined if the given Py_tss_t has not been initialized by PyThread_tss_create(). int PyThread_tss_is_created(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a non-zero value if the given Py_tss_t has been initialized by PyThread_tss_create(). int PyThread_tss_create(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return a zero value on successful initialization of a TSS key. The behavior is undefined if the value pointed to by the key argument is not initialized by Py_tss_NEEDS_INIT. This function can be called repeatedly on the same key – calling it on an already initialized key is a no-op and immediately returns success. void PyThread_tss_delete(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Destroy a TSS key to forget the values associated with the key across all threads, and change the key’s initialization state to uninitialized. A destroyed key is able to be initialized again by PyThread_tss_create(). This function can be called repeatedly on the same key – calling it on an already destroyed key is a no-op. int PyThread_tss_set(Py_tss_t *key, void *value)¶ Part of the Stable ABI since version 3.7. Return a zero value to indicate successfully associating a void* value with a TSS key in the current thread. Each thread has a distinct mapping of the key to a void* value. void *PyThread_tss_get(Py_tss_t *key)¶ Part of the Stable ABI since version 3.7. Return the void* value associated with a TSS key in the current thread. This returns NULL if no value is associated with the key in the current thread. Legacy APIs¶ Deprecated since version 3.7: This API is superseded by the thread-specific storage (TSS) API. Note This version of the API does not support platforms where the native TLS key is defined in a way that cannot be safely cast to int. On such platforms, PyThread_create_key() will return immediately with a failure status, and the other TLS functions will all be no-ops on such platforms. Due to the compatibility problem noted above, this version of the API should not be used in new code. int PyThread_create_key()¶ Part of the Stable ABI. void PyThread_delete_key(int key)¶ Part of the Stable ABI. int PyThread_set_key_value(int key",
+    "scrapedAt": "2026-10-08 19:15:28.001072"
+  },
+  {
     "id": 814,
     "url": "https://github.com/python/cpython/issues/120600",
     "title": "[C API] Make Py_TYPE() opaque in limited C API 3.14 · Issue #120600 · python/cpython · GitHub",
@@ -5385,26 +5420,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 815,
-    "url": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free"
-  },
-  {
-    "id": 816,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
-  },
-  {
-    "id": 817,
-    "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
-  },
-  {
-    "id": 818,
-    "url": "https://peps.python.org/pep-0630/#type-checking"
-  },
-  {
-    "id": 819,
-    "url": "https://docs.python.org/3/library/re.html#module-re"
   },
   {
     "id": 820,
@@ -140230,10 +140245,698 @@ window.searchData = [
     "id": 106154,
     "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/120600",
     "parentUrl": "https://github.com/python/cpython/issues/120600"
+  },
+  {
+    "id": 106706,
+    "url": "https://peps.python.org/pep-0630/#opt-out-limiting-to-one-module-object-per-process",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106708,
+    "url": "https://peps.python.org/pep-0630/#lifetime-of-the-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106709,
+    "url": "https://peps.python.org/pep-0630/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106710,
+    "url": "https://peps.python.org/pep-0630/#about-this-document",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106711,
+    "url": "https://peps.python.org/pep-0630/#goal-easy-to-use-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106712,
+    "url": "https://peps.python.org/pep-0630/#rationale-for-per-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106714,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-functions",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106715,
+    "url": "https://peps.python.org/pep-0001/#pep-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106717,
+    "url": "https://peps.python.org/pep-0630/#isolated-module-objects",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106718,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-slot-methods-getters-and-setters",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106720,
+    "url": "https://docs.python.org/3.11/howto/isolating-extensions.html",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106722,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#Py_TPFLAGS_HAVE_GC",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106723,
+    "url": "https://peps.python.org/pep-0630/#garbage-collection-protocol",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106724,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-classes",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106725,
+    "url": "https://peps.python.org/pep-0630/#lossless-conversion-to-heap-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106726,
+    "url": "https://peps.python.org/pep-0630/#heap-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106728,
+    "url": "https://peps.python.org/pep-0630/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106729,
+    "url": "https://peps.python.org/pep-0630/#making-modules-safe-with-multiple-interpreters",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106730,
+    "url": "https://docs.python.org/3/c-api/module.html#multi-phase-initialization",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106732,
+    "url": "https://peps.python.org/pep-0630/#per-class-scope",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106735,
+    "url": "https://mail.python.org/archives/list/capi-sig@python.org/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106736,
+    "url": "https://peps.python.org/pep-0573/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106737,
+    "url": "https://peps.python.org/pep-0630/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106738,
+    "url": "https://peps.python.org/pep-0630/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106741,
+    "url": "https://peps.python.org/pep-0630/#managing-global-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106742,
+    "url": "https://peps.python.org/pep-0630/#defining-heap-types",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106743,
+    "url": "https://peps.python.org/pep-0630/#metaclasses",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106746,
+    "url": "https://peps.python.org/pep-0630/#module-state-access-from-regular-methods",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106747,
+    "url": "https://peps.python.org/pep-0630/#surprising-edge-cases",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106749,
+    "url": "https://peps.python.org/pep-0630/#managing-per-module-state",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106750,
+    "url": "https://peps.python.org/pep-0630/#non-goals-speedups-and-the-gil",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106751,
+    "url": "https://mail.python.org/mailman3/lists/capi-sig.python.org/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106752,
+    "url": "https://peps.python.org/pep-0384/",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106753,
+    "url": "https://docs.python.org/3/c-api/typeobj.html",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106754,
+    "url": "https://docs.python.org/3/c-api/typeobj.html#c.PyType_GetModuleByDef",
+    "parentUrl": "https://peps.python.org/pep-0630/#type-checking"
+  },
+  {
+    "id": 106755,
+    "url": "https://docs.python.org/3/library/re.html#frie09",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106758,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.groups",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106760,
+    "url": "https://pypi.org/project/regex/",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106761,
+    "url": "https://docs.python.org/3/library/re.html#finding-all-adverbs",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106762,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/re/",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106764,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.pattern",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106765,
+    "url": "https://docs.python.org/3/library/re.html#re.finditer",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106766,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.groupdict",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106768,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.isalnum",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106769,
+    "url": "https://docs.python.org/3/library/re.html#regular-expression-objects",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106770,
+    "url": "https://docs.python.org/3/library/re.html#re.Match",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106772,
+    "url": "https://docs.python.org/3/library/re.html#re.search",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106773,
+    "url": "https://docs.python.org/3/library/re.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106776,
+    "url": "https://docs.python.org/3/library/re.html#writing-a-tokenizer",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106779,
+    "url": "https://docs.python.org/3/library/re.html#re.RegexFlag",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106780,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.__getitem__",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106781,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.start",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106782,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.re",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106783,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.pattern",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106785,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.groupindex",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106786,
+    "url": "https://docs.python.org/3/library/re.html#re.A",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106787,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.lastgroup",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106789,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.finditer",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106790,
+    "url": "https://docs.python.org/3/library/re.html#re.L",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106791,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.expand",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106792,
+    "url": "https://docs.python.org/3/library/re.html#re.I",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106794,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.pos",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106795,
+    "url": "https://docs.python.org/3/library/re.html#re.DOTALL",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106796,
+    "url": "https://docs.python.org/3/library/re.html#re.S",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106797,
+    "url": "https://docs.python.org/3/library/re.html#re.LOCALE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106798,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/re.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106799,
+    "url": "https://docs.python.org/3/library/re.html#re.M",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106800,
+    "url": "https://www.unicode.org/versions/Unicode15.0.0/ch04.pdf#G134153",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106801,
+    "url": "https://docs.python.org/3/library/re.html#re.NOFLAG",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106802,
+    "url": "https://docs.python.org/3/library/re.html#flags",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106803,
+    "url": "https://docs.python.org/3/library/re.html#text-munging",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106804,
+    "url": "https://docs.python.org/3/library/re.html#re.X",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106805,
+    "url": "https://docs.python.org/3/library/re.html#checking-for-a-pair",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106806,
+    "url": "https://docs.python.org/3/library/re.html#re.U",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106807,
+    "url": "https://docs.python.org/3/library/re.html#regular-expression-examples",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106809,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.pos",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106810,
+    "url": "https://docs.python.org/3/library/re.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106811,
+    "url": "https://docs.python.org/3/library/re.html#re.fullmatch",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106814,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.search",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106815,
+    "url": "https://docs.python.org/3/library/copy.html#copy.deepcopy",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106816,
+    "url": "https://docs.python.org/3/library/re.html#re.VERBOSE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106817,
+    "url": "https://en.wikipedia.org/wiki/Lexical_analysis",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106818,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.findall",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106819,
+    "url": "https://docs.python.org/3/library/re.html#search-vs-match",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106820,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106821,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.string",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106824,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.msg",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106825,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.flags",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106826,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.lastindex",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106827,
+    "url": "https://docs.python.org/3/library/re.html#re.subn",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106828,
+    "url": "https://docs.python.org/3/library/re.html#re.split",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106829,
+    "url": "https://docs.python.org/3/howto/regex.html#regex-howto",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106830,
+    "url": "https://docs.python.org/3/reference/lexical_analysis.html#escape-sequences",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106831,
+    "url": "https://docs.python.org/3/library/re.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106833,
+    "url": "https://docs.python.org/3/library/re.html#re.sub",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106836,
+    "url": "https://docs.python.org/3/library/re.html#re.IGNORECASE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106838,
+    "url": "https://docs.python.org/3/library/re.html#regular-expression-syntax",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106839,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.fullmatch",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106840,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.match",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106841,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.endpos",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106842,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106843,
+    "url": "https://docs.python.org/3/library/re.html#simulating-scanf",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106844,
+    "url": "https://docs.python.org/3/library/re.html#match-objects",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106846,
+    "url": "https://docs.python.org/3/library/re.html#re.MULTILINE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106847,
+    "url": "https://unicode.org/reports/tr18/",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106848,
+    "url": "https://docs.python.org/3/library/re.html#",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106849,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.lineno",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106850,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#str.isspace",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106851,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.subn",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106852,
+    "url": "https://docs.python.org/3/library/re.html#re-objects",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106854,
+    "url": "https://docs.python.org/3/library/re.html#re.PatternError.colno",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106855,
+    "url": "https://docs.python.org/3/library/re.html#re.findall",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106856,
+    "url": "https://docs.python.org/3/library/re.html#re.UNICODE",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106857,
+    "url": "https://docs.python.org/3/library/re.html#module-contents",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106859,
+    "url": "https://docs.python.org/3/library/re.html#re.DEBUG",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106861,
+    "url": "https://docs.python.org/3/library/re.html#re.purge",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106863,
+    "url": "https://docs.python.org/3/library/re.html#raw-string-notation",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106864,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.end",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106865,
+    "url": "https://docs.python.org/3/library/re.html#finding-all-adverbs-and-their-positions",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106867,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.span",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106868,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.split",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106870,
+    "url": "https://docs.python.org/3/library/re.html#re.ASCII",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106871,
+    "url": "https://docs.python.org/3/library/copy.html#copy.copy",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106874,
+    "url": "https://docs.python.org/3/library/re.html#making-a-phonebook",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106875,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.sub",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106876,
+    "url": "https://docs.python.org/3/library/re.html#re.Match.group",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106877,
+    "url": "https://docs.python.org/3/library/re.html#contents-of-module-re",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106878,
+    "url": "https://docs.python.org/3/library/re.html#re.Pattern.groups",
+    "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "re — Regular expression operations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "re — Regular expression operations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Unicode Objects and Codecs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteSubstring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.c_longdouble_complex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread-local storage support — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/tls.html#c.PyThread_tss_free"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
     "alt": "@vstinner",
