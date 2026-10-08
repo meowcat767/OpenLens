@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1065,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl",
+    "title": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.parse — Parse URLs into components | Theme Auto Light Dark | urllib.parse — Parse URLs into components¶ Source code: Lib/urllib/parse.py This module defines a standard interface to break Uniform Resource Locator (URL) strings up in components (addressing scheme, network location, path etc.), to combine the components back into a URL string, and to convert a “relative URL” to an absolute URL given a “base URL.” The module has been designed to match the internet RFC on Relative Uniform Resource Locators. It supports the following URL schemes: file, ftp, gopher, hdl, http, https, imap, itms-services, mailto, mms, news, nntp, prospero, rsync, rtsp, rtsps, rtspu, sftp, shttp, sip, sips, snews, svn, svn+ssh, telnet, wais, ws, wss. CPython implementation detail: The inclusion of the itms-services URL scheme can prevent an app from passing Apple’s App Store review process for the macOS and iOS App Stores. Handling for the itms-services scheme is always removed on iOS; on macOS, it may be removed if CPython has been built with the --with-app-store-compliance option. The urllib.parse module defines functions that fall into two broad categories: URL parsing and URL quoting. These are covered in detail in the following sections. This module’s functions use the deprecated term netloc (or net_loc), which was introduced in RFC 1808. However, this term has been obsoleted by RFC 3986, which introduced the term authority as its replacement. The use of netloc is continued for backward compatibility. URL Parsing¶ The URL parsing functions focus on splitting a URL string into its components, or on combining URL components into a URL string. urllib.parse.urlsplit(urlstring, scheme\u003dNone, allow_fragments\u003dTrue)¶ Parse a URL into five components, returning a 5-item named tuple SplitResult or SplitResultBytes. This corresponds to the general structure of a URL: scheme://netloc/path?query#fragment. Each tuple item is a string, possibly empty. The delimiters as shown above are not part of the result, except for a leading slash in the path component, which is retained if present. Additionally, the netloc property is broken down into these additional attributes added to the returned object: username, password, hostname, and port. Percent-encoded sequences are not decoded. For example: \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\"scheme://netloc/path?query#fragment\")\nSplitResult(scheme\u003d\u0027scheme\u0027, netloc\u003d\u0027netloc\u0027, path\u003d\u0027/path\u0027,\n            query\u003d\u0027query\u0027, fragment\u003d\u0027fragment\u0027)\n\u003e\u003e\u003e o \u003d urlsplit(\"http://docs.python.org:80/3/library/urllib.parse.html?\"\n...              \"highlight\u003dparams#url-parsing\")\n\u003e\u003e\u003e o\nSplitResult(scheme\u003d\u0027http\u0027, netloc\u003d\u0027docs.python.org:80\u0027,\n            path\u003d\u0027/3/library/urllib.parse.html\u0027,\n            query\u003d\u0027highlight\u003dparams\u0027, fragment\u003d\u0027url-parsing\u0027)\n\u003e\u003e\u003e o.scheme\n\u0027http\u0027\n\u003e\u003e\u003e o.netloc\n\u0027docs.python.org:80\u0027\n\u003e\u003e\u003e o.hostname\n\u0027docs.python.org\u0027\n\u003e\u003e\u003e o.port\n80\n\u003e\u003e\u003e o._replace(fragment\u003d\"\").geturl()\n\u0027http://docs.python.org:80/3/library/urllib.parse.html?highlight\u003dparams\u0027\n Following the syntax specifications in RFC 1808, urlsplit() recognizes a netloc only if it is properly introduced by ‘//’. Otherwise the input is presumed to be a relative URL and thus to start with a path component. \u003e\u003e\u003e from urllib.parse import urlsplit\n\u003e\u003e\u003e urlsplit(\u0027//www.cwi.nl:80/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027www.cwi.nl:80\u0027, path\u003d\u0027/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027www.cwi.nl/%7Eguido/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027www.cwi.nl/%7Eguido/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n\u003e\u003e\u003e urlsplit(\u0027help/Python.html\u0027)\nSplitResult(scheme\u003d\u0027\u0027, netloc\u003d\u0027\u0027, path\u003d\u0027help/Python.html\u0027,\n            query\u003d\u0027\u0027, fragment\u003d\u0027\u0027)\n The scheme argument gives the default addressing scheme, to be used only if the URL does not specify one. It should be the same type (text or bytes) as urlstring, except that the default value \u0027\u0027 is always allowed, and is automatically converted to b\u0027\u0027 if appropriate. If the allow_fragments argument is false, fragment identifiers are not recognized. Instead, they are parsed as part of the path, parameters or query component, and fragment is set to the empty string in the return value. The return value is a named tuple, which means that its items can be accessed by index or as named attributes, which are: Attribute Index Value Value if not present scheme 0 URL scheme specifier scheme parameter netloc 1 Network location part empty string path 2 Hierarchical path empty string query 3 Query component empty string fragment 4 Fragment identifier empty string username User name None password Password None hostname Host name (lower case) None port Port number as integer, if present None Reading the port attribute will raise a ValueError if an invalid port is specified in the URL. See section Structured Parse Results for more information ",
+    "scrapedAt": "2026-10-08 19:25:39.591312"
+  },
+  {
+    "id": 1064,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop",
+    "title": "Event loop — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Event loop | Theme Auto Light Dark | Event loop¶ Source code: Lib/asyncio/events.py, Lib/asyncio/base_events.py Preface The event loop is the core of every asyncio application. Event loops run asynchronous tasks and callbacks, perform network IO operations, and run subprocesses. Application developers should typically use the high-level asyncio functions, such as asyncio.run(), and should rarely need to reference the loop object or call its methods. This section is intended mostly for authors of lower-level code, libraries, and frameworks, who need finer control over the event loop behavior. Obtaining the Event Loop The following low-level functions can be used to get, set, or create an event loop: asyncio.get_running_loop()¶ Return the running event loop in the current OS thread. Raise a RuntimeError if there is no running event loop. This function can only be called from a coroutine or a callback. Added in version 3.7. asyncio.get_event_loop()¶ Get the current event loop. When called from a coroutine or a callback (e.g. scheduled with call_soon or similar API), this function will always return the running event loop. If there is no running event loop set, the function will return the result of the get_event_loop_policy().get_event_loop() call. Because this function has rather complex behavior (especially when custom event loop policies are in use), using the get_running_loop() function is preferred to get_event_loop() in coroutines and callbacks. As noted above, consider using the higher-level asyncio.run() function, instead of using these lower level functions to manually create and close an event loop. Changed in version 3.14: Raises a RuntimeError if there is no current event loop. Note The asyncio policy system is deprecated and will be removed in Python 3.16; from there on, this function will return the current running event loop if present else it will return the loop set by set_event_loop(). asyncio.set_event_loop(loop)¶ Set loop as the current event loop for the current OS thread. asyncio.new_event_loop()¶ Create and return a new event loop object. Note that the behaviour of get_event_loop(), set_event_loop(), and new_event_loop() functions can be altered by setting a custom event loop policy. Contents This documentation page contains the following sections: The Event Loop Methods section is the reference documentation of the event loop APIs; The Callback Handles section documents the Handle and TimerHandle instances which are returned from scheduling methods such as loop.call_soon() and loop.call_later(); The Server Objects section documents types returned from event loop methods like loop.create_server(); The Event Loop Implementations section documents the SelectorEventLoop and ProactorEventLoop classes; The Examples section showcases how to work with some event loop APIs. Event loop methods¶ Event loops have low-level APIs for the following: Running and stopping the loop¶ loop.run_until_complete(future)¶ Run until the future (an instance of Future) has completed. If the argument is a coroutine object it is implicitly scheduled to run as a asyncio.Task. Return the Future’s result or raise its exception. loop.run_forever()¶ Run the event loop until stop() is called. If stop() is called before run_forever() is called, the loop will poll the I/O selector once with a timeout of zero, run all callbacks scheduled in response to I/O events (and those that were already scheduled), and then exit. If stop() is called while run_forever() is running, the loop will run the current batch of callbacks and then exit. Note that new callbacks scheduled by callbacks will not run in this case; instead, they will run the next time run_forever() or run_until_complete() is called. loop.stop()¶ Stop the event loop. loop.is_running()¶ Return True if the event loop is currently running. loop.is_closed()¶ Return True if the event loop was closed. loop.close()¶ Close the event loop. The loop must not be running when this function is called. Any pending callbacks will be discarded. This method clears all queues and shuts down the executor, but does not wait for the executor to finish. This method is idempotent and irreversible. No other methods should be called after the event loop is closed. async loop.shutdown_asyncgens()¶ Schedule all currently open asynchronous generator objects to close with an aclose() call. After calling this method, the event loop will issue a warning if a new asynchronous generator is iterated. This should be used to reliably finalize all scheduled asynchronous generators. Note that there is no need to call this function when asyncio.run() is used. Example: try:\n    loop.run_forever()\nfinally:\n    loop.run_until_complete(loop.shutdown_asyncgens())\n    loop.close()\n Added in version 3.6. async loop.shutdown_default_execut",
+    "scrapedAt": "2026-10-08 19:25:38.350761"
+  },
+  {
+    "id": 1062,
+    "url": "https://github.com/python/cpython/issues/125951",
+    "title": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation gaogaotiantian commented Oct 25, 2024 Copy link Copy Markdown Member We removed pdb.Pdb.curframe_locals in #124369, but there are 3rd party libraries depending on it. We add it back but give a deprecation warning so we can really remove it in the future. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Provide curframe_locals for backward compatibility but deprecate it 697f0eb gaogaotiantian added skip issue skip news labels Oct 25, 2024 gaogaotiantian requested a review from ncoghlan October 25, 2024 01:52 bedevere-app Bot added the awaiting core review label Oct 25, 2024 Add curframe_locals to test_pyclbr 6741706 ncoghlan reviewed Oct 25, 2024 View reviewed changes ncoghlan left a comment Copy link Copy Markdown Contributor There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Couple of suggestions inline for the exact deprecation warning wording, but I think we do need to mention this in NEWS and the What\u0027s New docs: It\u0027s a backwards compatibility fix relative to 3.13.0 and 3.14.0a1 (hence NEWS) It\u0027s a new deprecation warning relative to 3.12.x (hence inclusion in the What\u0027s New deprecation listings) Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Lib/pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. ncoghlan removed the skip news label Oct 25, 2024 gaogaotiantian and others added 4 commits November 23, 2024 16:15 Apply suggestions from code review … cc66f83 Co-authored-by: Alyssa Coghlan \u003cncoghlan@gmail.com\u003e 📜🤖 Added by blurb_it. ddd76c9 Merge branch \u0027main\u0027 into add-back-curframe 36c6381 Update whatsnew 295e299 gaogaotiantian commented Nov 23, 2024 Copy link Copy Markdown Member Author @ncoghlan I gave myself some vacation from CPython a few weeks ago. Now I\u0027m picking up the unfinished stuff. I added the news to explain the deprecation. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. gabifalk mentioned this pull request Dec 17, 2024 Fix pdb issues in Python 3.13.1 ipython/ipython#14598 Merged gabifalk added a commit to gabifalk/gentoo that referenced this pull request Dec 17, 2024 dev-python/ipython: Backport upstream fix for python 3.13 regression … 72ba3ef The regression was detected by ipython\u0027s own testsuite.\n\nThis part of the IPython code is expected to break again with python 3.14,\nbecause the curframe_locals attribute was removed in the PR cpython#124369.\nHowever, there are plans to restore this attribute for backward compatibility in\nPR cpython#125951 before the CPython 3.14 release.\n\nUrl: ipython/ipython#14598\nUrl: ipython/ipython@c1e945b\nUrl: python/cpython#124369\nUrl: python/cpython#125951\nUrl: ipython/ipython#14620\nCloses: https://bugs.gentoo.org/946568\nSigned-off-by: Gabi Falk \u003cgabifalk@gmx.com\u003e gabifalk added a commit to gabifalk/gentoo that referenced this pull request Dec 17, 2024 dev-python/ipython: Backport upstream fix for python 3.13 regression … 662c4ea The regression was detected by ipython\u0027s own testsuite.\n\nThis part of the IPython code is expected to break again with python 3.14,\nbecause the curframe_locals attribute was removed in the PR cpython#124369.\nHowever, there are plans to restore this attribute for backward compatibility in\nPR cpython#125951 before the CPython 3.14 release.\n\nUrl: ipython/ipython#14598\nUrl: ipython/ipython@c1e945b\nUrl: python/cpython#124369\nUrl: python/cpython#125951\nUrl: ipython/ipython#14620\nCloses: https://bugs.gentoo.org/946568\nSigned-off-by: Gabi Falk \u003cgabifalk@gmx.com\u003e gentoo-bot pushed a commit to gentoo/gentoo that referenced this pull request Dec 20, 2024 dev-python/ipython: Backport upstream fix for python 3.13 regression … 404bee8 The regression was detected by ipython\u0027s own testsuite.\n\nThis part of the IPython code is expected to break again with python 3.14,\nbecause the curframe_locals attribute was removed in the PR cpython#124369.\nHowever, there are plans to restore this attribute for backward compatibility in\nPR cpython#125951 before the CPython 3.14 release.\n\nUrl: ipython/ipython#14598\nUrl: ipython/ipython@c1e945b\nUrl: python/cpython#124369\nUrl: python/cpython#125951\nUrl: ipython/ipython#14620\nCloses: https://bugs.gentoo.org/946568\nSigned-off-by: Gabi Falk \u003cgabifalk@gmx.com\u003e\nCloses: #3974",
+    "scrapedAt": "2026-10-08 19:25:37.065428"
+  },
+  {
+    "id": 1061,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.pathname2url",
+    "title": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » urllib.request — Extensible library for opening URLs | Theme Auto Light Dark | urllib.request — Extensible library for opening URLs¶ Source code: Lib/urllib/request.py The urllib.request module defines functions and classes which help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. See also The Requests package is recommended for a higher-level HTTP client interface. Warning On macOS it is unsafe to use this module in programs using os.fork() because the getproxies() implementation for macOS uses a higher-level system API. Set the environment variable no_proxy to * to avoid this problem (e.g. os.environ[\"no_proxy\"] \u003d \"*\"). Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The urllib.request module defines the following functions: urllib.request.urlopen(url, data\u003dNone, [timeout, ]*, context\u003dNone)¶ Open url, which can be either a string containing a valid, properly encoded URL, or a Request object. data must be an object specifying additional data to be sent to the server, or None if no such data is needed. See Request for details. urllib.request module uses HTTP/1.1 and includes Connection:close header in its HTTP requests. The optional timeout parameter specifies a timeout in seconds for blocking operations like the connection attempt (if not specified, the global default timeout setting will be used). This actually only works for HTTP, HTTPS and FTP connections. If context is specified, it must be a ssl.SSLContext instance describing the various SSL options. See HTTPSConnection for more details. This function always returns an object which can work as a context manager and has the properties url, headers, and status. See urllib.response.addinfourl for more detail on these properties. For HTTP and HTTPS URLs, this function returns a http.client.HTTPResponse object slightly modified. In addition to the three new methods above, the msg attribute contains the same information as the reason attribute — the reason phrase returned by server — instead of the response headers as it is specified in the documentation for HTTPResponse. For FTP, file, and data URLs, this function returns a urllib.response.addinfourl object. Raises URLError on protocol errors. Note that None may be returned if no handler handles the request (though the default installed global OpenerDirector uses UnknownHandler to ensure this never happens). In addition, if proxy settings are detected (for example, when a *_proxy environment variable like http_proxy is set), ProxyHandler is default installed and makes sure the requests are handled through the proxy. The legacy urllib.urlopen function from Python 2.6 and earlier has been discontinued; urllib.request.urlopen() corresponds to the old urllib2.urlopen. Proxy handling, which was done by passing a dictionary parameter to urllib.urlopen, can be obtained by using ProxyHandler objects. The default opener raises an auditing event urllib.Request with arguments fullurl, data, headers, method taken from the request object. Changed in version 3.2: cafile and capath were added. HTTPS virtual hosts are now supported if possible (that is, if ssl.HAS_SNI is true). data can be an iterable object. Changed in version 3.3: cadefault was added. Changed in version 3.4.3: context was added. Changed in version 3.10: HTTPS connection now send an ALPN extension with protocol indicator http/1.1 when no context is given. Custom context should set ALPN protocols with set_alpn_protocols(). Changed in version 3.13: Remove cafile, capath and cadefault parameters: use the context parameter instead. urllib.request.install_opener(opener)¶ Install an OpenerDirector instance as the default global opener. Installing an opener is only necessary if you want urlopen to use that opener; otherwise, simply call OpenerDirector.open() instead of urlopen(). The code does not check for a real OpenerDirector, and any class with the appropriate interface will work. urllib.request.build_opener([handler, ...])¶ Return an OpenerDirector instance, which chains the handlers in the order given. handlers can be either instances of BaseHandler, or subclasses of BaseHandler (in which case it must be possible to call the constructor without any parameters). Instances of the following classes will be in front of the handlers, unless the handlers contain them, instances of them or subclasses of them: ProxyHandler (if proxy settings are detected), UnknownHandler, HTTPHandler, HTTPDefaultErrorHandler, HTTPRedirectHandler, FTPHandler, FileHandler, HTTPErrorProcessor. If the Python installation has SSL support (i.e., if the ssl module can be imported), HTTPSHandler will also be added. A BaseHandler subclass may also change its handler_order attribute to modify its pos",
+    "scrapedAt": "2026-10-08 19:25:33.295754"
+  },
+  {
+    "id": 1060,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:25:32.047929"
+  },
+  {
     "id": 1059,
     "url": "https://github.com/python/cpython/issues/87790",
     "title": "Add underscore as a decimal separator for string formatting · Issue #87790 · python/cpython · GitHub",
@@ -7070,26 +7105,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1060,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions"
-  },
-  {
-    "id": 1061,
-    "url": "https://docs.python.org/3/library/urllib.request.html#urllib.request.pathname2url"
-  },
-  {
-    "id": 1062,
-    "url": "https://github.com/python/cpython/issues/125951"
-  },
-  {
-    "id": 1064,
-    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
-  },
-  {
-    "id": 1065,
-    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
   },
   {
     "id": 1066,
@@ -196626,10 +196641,1277 @@ window.searchData = [
     "id": 176897,
     "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/87790",
     "parentUrl": "https://github.com/python/cpython/issues/87790"
+  },
+  {
+    "id": 178324,
+    "url": "https://github.com/python/cpython/pull/125951#event-16236802044",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178325,
+    "url": "https://github.com/python/cpython/pull/125951#ref-pullrequest-3004557277",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178326,
+    "url": "https://github.com/python/cpython/pull/125951/files/295e29989c3572dad84763eb0ba0119487a71259#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178327,
+    "url": "https://github.com/python/cpython/pull/125951/commits/a11105ca4ba8ad95a75050a1a2865921261d6493",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178329,
+    "url": "https://github.com/python/cpython/pull/125951#event-14860651633",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178330,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-28c8d78",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178334,
+    "url": "https://github.com/python/cpython/pull/125951/commits/697f0eb690a9accb6da479ede467b556d7dcbfdd",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178336,
+    "url": "https://github.com/python/cpython/pull/125951#issue-2612881760",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178337,
+    "url": "https://github.com/python/cpython/pull/125951#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178339,
+    "url": "https://github.com/python/cpython/pull/125951/commits/295e29989c3572dad84763eb0ba0119487a71259",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178340,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-662c4ea",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178341,
+    "url": "https://github.com/python/cpython/pull/125951#event-16236903299",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178343,
+    "url": "https://github.com/python/cpython/pull/125951/files/6741706e591f47ad16b1d344460557532acffa88",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178345,
+    "url": "https://github.com/python/cpython/pull/125951#event-16236773753",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178346,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-4317cef",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178349,
+    "url": "https://github.com/python/cpython/pull/125951#event-16005790860",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178350,
+    "url": "https://github.com/python/cpython/pull/125951/commits/5678d104a88958d5d5bd30f3d0a658134480998b",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178351,
+    "url": "https://github.com/python/cpython/pull/125951/commits/cc66f838750a5ac5ebb2bb2d08ea3ff08d354d10",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178353,
+    "url": "https://github.com/python/cpython/pull/125951#pullrequestreview-2563295820",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178354,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-72ba3ef",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178355,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-5a5eb26",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178357,
+    "url": "https://github.com/python/cpython/pull/125951/commits/36c63816f5d7c0898b5157fa93885b4976b9a6aa",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178359,
+    "url": "https://github.com/python/cpython/commit/29f8a67ae00081a36fdc97f2f2f96f971393a22a",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178361,
+    "url": "https://github.com/python/cpython/pull/125951/commits/ddd76c96c1ec619bd9d5c99d6fe5c5492acbf672",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178362,
+    "url": "https://github.com/python/cpython/pull/125951#ref-pullrequest-2725108483",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178363,
+    "url": "https://github.com/python/cpython/pull/125951#event-16005028225",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178365,
+    "url": "https://github.com/python/cpython/pull/125951/commits/6741706e591f47ad16b1d344460557532acffa88",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178367,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-e4d8273",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178370,
+    "url": "https://github.com/python/cpython/pull/125951#event-14864479491",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178372,
+    "url": "https://github.com/python/cpython/pull/125951/files/295e29989c3572dad84763eb0ba0119487a71259",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178375,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-404bee8",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178376,
+    "url": "https://github.com/python/cpython/pull/125951#discussion_r1922953514",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178384,
+    "url": "https://github.com/python/cpython/pull/125951#pullrequestreview-2394299541",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178386,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-6725fb2",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178387,
+    "url": "https://github.com/python/cpython/pull/125951#discussion_r1924359722",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178389,
+    "url": "https://github.com/python/cpython/pull/125951#commits-pushed-cc66f83",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178390,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F125951",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178391,
+    "url": "https://github.com/python/cpython/pull/125951#ref-commit-3d12b00",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178392,
+    "url": "https://github.com/python/cpython/pull/125951#event-14860652057",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178393,
+    "url": "https://github.com/python/cpython/pull/125951#issuecomment-2495658618",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178394,
+    "url": "https://github.com/python/cpython/pull/125951/files/6741706e591f47ad16b1d344460557532acffa88#diff-98d47941a1bfadcfdfe02973122c83be2940ca6f3b1c32ca8898e7f594d2669d",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178395,
+    "url": "https://github.com/python/cpython/pull/125951#event-16236801909",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178398,
+    "url": "https://github.com/python/cpython/pull/125951#event-14860651609",
+    "parentUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "id": 178404,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.subprocess_shell",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178405,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.remove_signal_handler",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178408,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#event-loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178412,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.call_later",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178413,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.add_signal_handler",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178415,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.start_tls",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178417,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_datagram_endpoint",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178418,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.call_soon",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178422,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html#asyncio-platform-support",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178423,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.getnameinfo",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178424,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.get_debug",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178425,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.SubprocessProtocol",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178426,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_recv_into",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178427,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_sendto",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178430,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio-udp-echo-server-protocol",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178431,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sendfile",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178432,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-safe-main-import",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178433,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.default_exception_handler",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178434,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.connect_accepted_socket",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178437,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.get_task_factory",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178438,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_exception_handler",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178439,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Handle.cancel",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178440,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio.start_unix_server",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178446,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.start_serving",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178447,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_accept",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178451,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.time",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178453,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.sockets",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178454,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Handle.get_context",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178455,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_server",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178462,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.close",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178464,
+    "url": "https://docs.python.org/3/library/asyncio-policy.html#asyncio-policies",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178473,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio-protocol",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178474,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.wait_closed",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178477,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.remove_writer",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178481,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.is_serving",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178483,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.getaddrinfo",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178488,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_future",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178489,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio-transport",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178492,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.WriteTransport",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178493,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio.open_connection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178494,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_unix_connection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178495,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.WriteTransport.abort",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178496,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.is_closed",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178498,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.add_reader",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178499,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.TimerHandle",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178502,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.shutdown_asyncgens",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178505,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio.start_server",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178506,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.SendfileNotAvailableError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178508,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.abort_clients",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178510,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_connection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178513,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_debug",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178515,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.remove_reader",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178519,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8305.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178520,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.connect_read_pipe",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178524,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-event-loop-methods",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178525,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.TimerHandle.when",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178528,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.call_at",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178529,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.serve_forever",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178530,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.is_running",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178537,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.close",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178539,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio.StreamWriter",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178541,
+    "url": "https://docs.python.org/3/library/asyncio-platforms.html#asyncio-windows-subprocess",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178544,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.SubprocessTransport",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178552,
+    "url": "https://learn.microsoft.com/windows/win32/fileio/i-o-completion-ports",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178553,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.BaseTransport.close",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178554,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio-example-create-connection",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178559,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_forever",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178560,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_unix_server",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178565,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178566,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_sendall",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178570,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_sendfile",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178572,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.get_exception_handler",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178574,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio.StreamReader",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178576,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-pipe-objects",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178578,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178579,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178581,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178583,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178584,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178586,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178587,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/events.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178588,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178589,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178590,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178591,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio-example-create-connection-streams",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178592,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio-example-sleep",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178597,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_recvfrom",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178598,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6555",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178599,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.slow_callback_duration",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178601,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178602,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.connect_write_pipe",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178603,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio-udp-echo-client-protocol",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178604,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id11",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178605,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.get_loop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178606,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id14",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178607,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id15",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178608,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id12",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178610,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id13",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178613,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id16",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178614,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#id17",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178615,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.BaseProtocol.connection_made",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178617,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Handle.cancelled",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178618,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.stop",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178621,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.call_soon_threadsafe",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178626,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_default_executor",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178632,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html#asyncio.create_subprocess_shell",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178637,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Handle",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178639,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_recvfrom_into",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178640,
+    "url": "https://docs.python.org/3/library/asyncio-protocol.html#asyncio.ReadTransport",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178641,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/asyncio-eventloop.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178643,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_recv",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178646,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server.close_clients",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178647,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.subprocess_exec",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178648,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-pass-keywords",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178649,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.call_exception_handler",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178650,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.add_writer",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178652,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_until_complete",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178654,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.Server",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178655,
+    "url": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.sock_connect",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "id": 178663,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.quote_plus",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178666,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unwrap",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178670,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.DefragResult",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178671,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlunparse",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178674,
+    "url": "https://url.spec.whatwg.org/#concept-basic-url-parser",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178676,
+    "url": "https://docs.python.org/3/library/urllib.request.html#urllib-examples",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178677,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.SplitResultBytes",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178680,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2732.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178681,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urllib.parse.SplitResult.geturl",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178683,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.DefragResultBytes",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178687,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1808.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178690,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urldefrag",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178691,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2368.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178692,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_to_bytes",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178693,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.SplitResult",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178700,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlsplit",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178701,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178702,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178706,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlunsplit",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178707,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/urllib/parse.py",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178709,
+    "url": "https://url.spec.whatwg.org/",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178710,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urlparse-result-object",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178714,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/urllib.parse.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178722,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.ParseResult",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178723,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urljoin",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178726,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2396.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178727,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.ParseResultBytes",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178728,
+    "url": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.quote_from_bytes",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "id": 178729,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1738.html",
+    "parentUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.parse — Parse URLs into components — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qsl"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Event loop — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Event loop — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_event_loop"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d60\u0026v\u003d4",
+    "alt": "ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d48\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026u\u003d0d25ddfb5f320a9f4a88a6cb3f866aa27546b17b\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/151769504?s\u003d40\u0026v\u003d4",
+    "alt": "@gabifalk",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11667869?s\u003d40\u0026v\u003d4",
+    "alt": "@thesamesam",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d60\u0026v\u003d4",
+    "alt": "ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d48\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d48\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://github.githubassets.com/images/gravatars/gravatar-user-420.png",
+    "alt": "bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026u\u003ddf2b7ab6dfa49edf82557e9c6722f37226d0409d\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://github.githubassets.com/images/gravatars/gravatar-user-420.png",
+    "alt": "bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://github.githubassets.com/images/gravatars/gravatar-user-420.png",
+    "alt": "bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://github.githubassets.com/images/gravatars/gravatar-user-420.png",
+    "alt": "bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://github.githubassets.com/images/gravatars/gravatar-user-420.png",
+    "alt": "bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://github.githubassets.com/images/gravatars/gravatar-user-420.png",
+    "alt": "bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8560118?s\u003d40\u0026v\u003d4",
+    "alt": "@bretello",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d52\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "Provide curframe_locals for backward compatibility but deprecate it by gaogaotiantian · Pull Request #125951 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125951"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.pathname2url"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "urllib.request — Extensible library for opening URLs — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/urllib.request.html#urllib.request.pathname2url"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pending-removal-in-future-versions"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/93804312?v\u003d4\u0026size\u003d48",
     "alt": "@TerryDavis",
