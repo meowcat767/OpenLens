@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 365,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a3/",
+    "title": "Audi A3 - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Audi Audi A3 Audi A3 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Dynamisch design Complete uitvoering Ook leverbaar als snelle en sportieve S3 en RS3 Zwakke punten Duur in aanschaf Prijzige opties Matige (hoofd)ruimte Toon aanbod Toon aanbod Audi A3: premium hatchback met subtiel vernieuwd gezicht De A3 is een van Audi’s bestverkopende modellen. Dankzij zijn compacte formaat, motorenaanbod en zakelijke uitstraling valt hij goed in de smaak. Audi produceert de A3 sinds 1996 en in 2020 kwam de vierde generatie op de markt. Deze intern 8Y genoemde modelgeneratie is voor 2024 subtiel gefacelift. Lees meer Audi A3 : een overzicht Bekijk hier de actuele prijzen voor de Audi A3 : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 32.369,-* Occasions vanaf:€ 652,-* *Laagste prijs op AutoScout24 in de afgelopen maand Audi A3 aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Audi A3Sportback 1.4 TFSI Ambition Pro Line Business € 3.950 09/2009 248.363 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8401 DTGorredijk Audi A3Sportback 1.6 TDI ultra Edition - Stoelverwarming € 6.495 12/2013 285.937 km Diesel - (l/100 km) 2,8 Autobedrijf NL 4131 NRVianen Audi A3Cabriolet 2.0 TFSI|200PK|3XS-LINE|AUT|XENON|LEDER| € 6.850 07/2008 156.051 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3812 RJAmersfoort Audi A3Sportback 30 TFSI Pro Line / 116pk / Trekhaak / NA € 16.000 04/2019 57.057 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3421 GVOudewater Audi A3Sportback 1.4 TFSI Attr. Cruise Navi Clima Pdc Lmv € 3.990 02/2009 231.178 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4624 BLBergen Op Zoom Audi A3Sportback 1.0 TFSI Pro Line | PDC A | Cruise Contr € 12.445 05/2017 113.800 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5144 MBWaalwijk Audi A3Limousine 2.0 TFSI quattro 3x S-Line Pano NAP Virt € 24.990 09/2017 103.400 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1921 CXAkersloot Audi A3Sportback 1.4 TFSI S-Line GARANTIE|Automaat|Pano|C € 14.495 08/2013 148.322 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5145 NVWaalwijk Audi A3Sportback 1.4 TFSI S Line Pano | LED | Navi € 13.990 04/2016 178.846 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5258 BLBerlicum Audi A31.4 TFSI S-Line | Pano | Harman Kardon € 9.999 € 10.499,- 05/2016 221.958 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 5463 XGVeghel Audi A3Sportback 35 TFSI S edition El.Stoelen El.Achterkl € 20.999 07/2020 119.241 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1506 SZZaandam Audi A3Limousine 2.0 TFSI Quattro Panorama B\u0026O Virtual Co € 19.999 06/2017 123.753 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1506 SZZaandam Audi A3Limousine 1.0 TFSI Sport Pro Line S | S-LINE | KEY € 13.850 12/2016 158.620 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3921 AHElst Audi A3Limousine 30TFSI S-Line 116pk Ascariblau Camera El € 37.9491 01/2026 9.244 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8444 DCHeerenveen Audi A31.4 TSI S-Line | AUT | Clima | 103DKM | € 9.999 01/2011 99.789 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7317 AKApeldoorn Audi A3Sportback 1.6 FSI Attraction | NIEUWE APK | AIRCO € 1.750 08/2005 268.062 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3843 WNHarderwijk Audi A3Sportback 40 TFSI e | Matrix | Cam | Carplay | Sto € 24.4951 06/2021 119.929 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 4153 XMBeesd Audi A3Limousine 1.4 TFSI CoD Ambiente Pro Line Airco ECC € 11.995 € 12.795,- 08/2015 155.958 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 7825 AMEmmen Audi A3Sportback 30 TFSI Advanced edition | Camera | PDC € 22.9451 04/2022 53.233 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 4851 SNUlvenhout Audi A3Limousine 30 TFSI S edition AUTOMAAT / S-LINE / NA € 16.8881 10/2021 177.126 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8711 HPWorkum Audi A3 occasions bekijkenAudi A3 nieuwe auto\u0027s bekijken Audi A3 in Amsterdam bekijkenAudi A3 in Rotterdam bekijkenAudi A3 in Den Haag bekijkenAudi A3 in Utrecht bekijkenAudi A3 in Eindhoven bekijkenAudi A3 in Groningen bekijken Bouwjaar2027 - 2000 Actuele advertenties2.852 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2013 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 9.971 en er zijn 142 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2022. Er staan 298 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2027 € 52.681 7 advertenties 2026 € 45.807 213 advertenties 2025 € 38.498 210 advertenties 2024 € 31.950 103 advertenties 2023 € 27.383 185 advertenties 2022 € 23.800 298 advertenties 2021 € 22.870 267 advertenties 2020 € 21.001 179 advertenties 2019 € 17.950 125 advertenties 2018 € 15.927 121 advertenties 2017 € 14.397 173 advertenties 2016 € 13.765 136 advertenties 2015 € 11.889 193 advertenties 2014 € 10.978 114 advertenties 2013 € 9.971 142 advertent",
+    "scrapedAt": "2026-10-08 18:59:30.680033"
+  },
+  {
+    "id": 364,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/",
+    "title": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Volvo Volvo EX30 Volvo EX30 1 / 4 btnLabelPrevbtnLabelNext Sterke punten Aantrekkelijk design Gebruik van duurzame materialen Veel keuze in aandrijflijnen Zwakke punten Afwerking niet des Volvo’s Hoog gewicht voor het formaat auto Afwezigheid van fysieke knoppen Toon aanbod Toon aanbod Volvo EX30: de populaire, compacte, volledig elektrische SUV uit Zweden De EX30 is de kleinste elektrische auto in het aanbod van de Zweedse autofabrikant. Hij biedt een aantrekkelijk pakket in de compacte klasse en is populair vanwege zijn gunstige prijs. Een sterk punt van de EX30 is de mogelijkheid van individuele aanpassingen. Lees meer Volvo EX30 : een overzicht Bekijk hier de actuele prijzen voor de Volvo EX30 : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 33.100,-* Occasions vanaf:€ 27.945,-* *Laagste prijs op AutoScout24 in de afgelopen maand Volvo EX30 aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Volvo EX30Single Motor Extended Range Ultra 69 kWh Semi elek € 34.840 12/2024 33.068 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5831 ALBoxmeer Volvo EX30Single Motor Extended Range Plus 69 kWh|94% SOH|47 € 31.7851 10/2024 53.698 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5741 TVBeek En Donk Volvo EX30P5 Ext. Range Plus Black Edition Europa 69 kWh / A € 41.5951 01/2026 1 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5928 NZVenlo Volvo EX30Single Motor Core 51 kWh | Navigatie | Climate Con € 28.9351 07/2024 23.645 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7333 NXApeldoorn Volvo EX30Single Motor Core 51 kWh | SOH 97,4% | Navigatie | € 28.9351 05/2024 21.825 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 9403 DLAssen Volvo EX30Cross Country 428PK Twin Performance Ultra AWD / C € 44.8401 06/2026 2.426 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 6101 WREcht Volvo EX30Single Motor Extended Range Plus 69 kWh Google Ser € 38.8401 01/2026 12.731 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5831 ALBoxmeer Volvo EX30Single Motor Extended Range Plus Europa 69 kWh / E € 39.8401 05/2026 4.421 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5928 NZVenlo Volvo EX30272PK Automaat Single Motor Ext. Range Plus Europa € 38.8401 03/2026 7.831 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5928 NZVenlo Volvo EX30Cross Country P5 272PK Automaat Long Range Plus Eu € 42.7851 01/2026 5 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5928 NZVenlo Volvo EX30P5 Ext. Range Plus Black Edition Europa 69 kWh / A € 41.5951 01/2026 1 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 6101 WREcht Volvo EX30Cross Country 428PK Automaat Twin Motor Performanc € 43.8401 11/2025 4.485 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5928 NZVenlo Volvo EX30P5 Long Range Plus Europa 69 kWh € 42.5751 01/2027 10 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 6101 WREcht Volvo EX30P3 150PK Automaat Long Range Plus Europa 69 kWh € 40.5751 01/2026 1 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5928 NZVenlo Volvo EX30P5 Long Range Plus Europa 69 kWh € 43.0701 01/2026 10 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 6101 WREcht Volvo EX30272PK Automaat Single Motor Ext. Range Plus Europa € 41.8551 01/2026 5 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5928 NZVenlo Volvo EX30Single Motor Extended Range Core 69 kWh € 28.450 06/2024 29.700 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 1442 LBPurmerend Volvo EX30EXTENDED CORE 69 KWH / soh90% / Trekhaak 1600KG / € 26.9451 06/2024 102.801 km Elektrisch 0 2,8 Autobedrijf NL 7437 BEBathmen Volvo EX30P3 Long Range Plus Europa € 34.9001 01/2026 7 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 4462 GTGoes Volvo EX30P3 Long Range Plus Europa 69 kWh | Stoel \u0026 stuurve € 37.9001 06/2026 2.000 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7821 CBEmmen Volvo EX30 occasions bekijkenVolvo EX30 nieuwe auto\u0027s bekijken Volvo EX30 in Amsterdam bekijkenVolvo EX30 in Rotterdam bekijkenVolvo EX30 in Den Haag bekijkenVolvo EX30 in Utrecht bekijkenVolvo EX30 in Eindhoven bekijkenVolvo EX30 in Groningen bekijken Bouwjaar2026 - 2024 Actuele advertenties416 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2024 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 30.940 en er zijn 65 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2026. Er staan 262 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2026 € 42.035 262 advertenties 2025 € 35.950 82 advertenties 2024 € 30.940 65 advertenties Goede redenen Zeer acceptabele actieradius Uitgebreide personalisatiemogelijkheden Aantrekkelijk design Ondanks compacte afmetingen prima ruimte in het interieur Technische gegevens Motorisatie Voor de Volvo EX30 zijn er drie aandrijfvarianten: twee versies met achterwielaandrijving en één versie met vierwielaandrijving. De EX30 is enkel leverb",
+    "scrapedAt": "2026-10-08 18:59:29.482268"
+  },
+  {
+    "id": 363,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-ev9/",
+    "title": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Kia Kia EV9 Kia EV9 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Ruim dankzij zeer lange wielbasis Tot zeven zitplaatsen Snelle 800 volt laadtechnologie Zwakke punten Zwaar en hoog energieverbruik Design waarvan je moet houden Instapversie met weinig vermogen Toon aanbod Toon aanbod Kia EV9: grote, elektrische SUV met zeven zitplaatsen De Kia EV9 is een grote, puur elektrisch aangedreven SUV. Hij biedt tot zeven zitplaatsen en een actieradius van maximaal 563 kilometer (WLTP). De Kia EV9 heeft een versie met achterwielaandrijving met één elektromotor en een AWD-versie met twee elektromotoren. Lees meer. Kia EV9 aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Kia Picanto1.0 CVVT EconomyPlusLine | Bluetooth| Airco | Radi € 8.195 05/2019 54.009 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 4851 SNUlvenhout Kia Picanto1.2 CVVT BusinessLine STOELVERWARMING € 5.999 04/2014 116.114 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7602 PWAlmelo Kia Ceed / cee\u0027d1.0 T-GDi DynamicLine | Camera | Carplay | Navigat € 8.885 01/2020 188.950 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7711 EPNieuwleusen Kia Picanto1.0 MPi DynamicLine CARPLAY | TOPSTAAT € 8.999 03/2020 82.691 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7602 PWAlmelo Kia Picanto1.1 4-Cilinder | Airco | APK 07-2027 | 180.090 km € 1.249 03/2005 179.998 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 5406 XPUden Kia Picanto1.0 CVVT EconomyPlusLine | NL auto | Elek. ramen € 5.850 06/2018 168.731 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8356 VSBlokzijl Kia Picanto1.0 CVVT EconomyPlusLine € 7.9501 € 8.950,- 12/2017 38.729 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 3861 SNNijkerk Kia Picanto1.0 CVVT Airco 3DRS AIRCO HANDEL / EXPORT PRIJS NA € 1.595 06/2012 256.093 km Benzine 4,20 l/100 km (gem.) 2,8 Autobedrijf NL 3076 JARotterdam Kia Picanto1.0 CVVT Comfort Pack | Airco | APK | Onderhoud € 3.650 08/2012 156.058 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2371 DZRoelofarendsveen Kia Picanto1.0 Design Edition rood leer stoel+stuurverw. € 5.750 06/2014 99.461 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7321 BAApeldoorn Kia Venga1.4 CVVT World Cup Edition 1e Eigenaar Schuif/kant € 8.694 06/2015 86.455 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 2803 PAGouda Kia Picanto1.2 CVVT ISG Comfort Pack | Carplay |Nieuwe APK| € 3.995 08/2012 162.843 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4817 BLBreda Kia Picanto1.0 CVVT DynamicLine|1e Eigenaar|HalfLeder|Climate € 6.949 02/2016 87.846 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8223 EHLelystad Kia Stonic1.0 T-GDi MHEV ComfortLine , carplay 83.000 KM € 12.6501 08/2021 83.838 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1231 KSLoosdrecht Kia Sportage1.6 GDI Comfort Pack 1e Eigenaar Navigatie Android € 7.744 07/2013 186.777 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 2803 PAGouda Kia Rio1.0 TGDI ComfortPlusLine Navigator 100PK | Camera € 7.950 09/2017 169.789 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7161 LCNeede Kia Stonic1.0 T-GDi DynamicLine | Apple Carplay/Android | Na € 13.6451 02/2020 57.595 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2761 BNZevenhuizen Kia Picanto1.0 Seven | Apk 05-2027 | Airco | 5 Deurs | 2e Eig € 2.100 05/2010 133.270 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2465 AARijnsaterwoude Kia ProCeed / pro_cee\u0027d1.6 GDI Super Pack Navi-Pdc v+a-Camera-Clima-Cruis € 6.745 04/2013 145.321 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1906 NWLimmen Kia Rio1.4 CVVT Plus Pack/AIRCO/LM VELGEN/RADIO/ € 6.250 01/2013 100.141 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7345 DNWenum-wiesel Kia EV9 occasions bekijkenKia EV9 nieuwe auto\u0027s bekijken Kia EV9 in Amsterdam bekijkenKia EV9 in Rotterdam bekijkenKia EV9 in Den Haag bekijkenKia EV9 in Utrecht bekijkenKia EV9 in Eindhoven bekijkenKia EV9 in Groningen bekijken Goede redenen Ruim door lange wielbasis, tot zeven zitplaatsen Duurzaam, zowel qua techniek als materialen 99,8 kWh batterij voor grote actieradius (tot 563 km, WLTP) Functies van de auto steeds uit te breiden en te updaten Technische gegevens Motorisatie Bij de Kia EV9 is te kiezen uit twee verschillende aandrijflijnen. Beide varianten beschikken over hetzelfde accupakket met een grootte van 99,8 kWh. De eerste versie is uitgerust met een enkele elektromotor die alleen de achterwielen aandrijft. Dit is dan ook de minst krachtige variant, met een vermogen van 149,5 kW (203 pk) en een koppel van 350 Nm. Deze RWD-versie accelereert van 0 naar 100 km/u in 9,4 seconden en de topsnelheid bedraagt 185 km/u. Daar staat wel een riante actieradius tegenover: Kia geeft voor deze EV9 een rijbereik op tot 563 kilometer (WLTP). De tweede versie heeft twee elektromotoren, waarvan een op de vooras en een op de achteras. Daarmee heeft hij dus vierwielaandrijving (AWD). Dankzij de extra elektromotor biedt de Kia EV9 AWD Dual Motor een vermogen van 282 kW (383 pk) en een koppel van 600 Nm. Deze uitvoering sprint van 0 naar 100 km/u i",
+    "scrapedAt": "2026-10-08 18:59:28.278402"
+  },
+  {
+    "id": 362,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/",
+    "title": "Het laatste autonieuws - AutoScout24",
+    "content": "Ga naar hoofdinhoud Autonieuws Autonieuws: Alle artikelen Waarom de échte 911-fan baalt dat-ie in Nederland woont – en dat heeft niks met bpm te maken AutoScout24 · 08-10-2026 · 2 min. Leestijd Lees meer Waarom de échte 911-fan baalt dat-ie in Nederland woont – en dat heeft niks met bpm te maken Dankzij deze Zweedse uitvinding gaan EV-batterijen langer mee AutoScout24 · 08-10-2026 · 2 min. Leestijd Lees meer Dankzij deze Zweedse uitvinding gaan EV-batterijen langer mee Hoe botsingen met een lage snelheid toch voor meer letsel zorgen AutoScout24 · 08-10-2026 · 2 min. Leestijd Lees meer Hoe botsingen met een lage snelheid toch voor meer letsel zorgen Zonder deze auto was Skoda eeuwig in zijn Oostblok-imago blijven hangen Dertig jaar geleden begon Skoda met de productie van zijn eerste volledig nieuwe 20ste-eeuwse model dat compleet op Volkswagen-leest was geschoeid. Dat klinkt als een aardig jubileum, maar voor het Tsjechische merk betekende deze auto veel meer. AutoScout24 · 08-10-2026 · 4 min. Leestijd Lees meer Zonder deze auto was Skoda eeuwig in zijn Oostblok-imago blijven hangen Onderzoek: EV-rijders veel blijer met hun auto dan benzinerijders Wie in een elektrische auto rijdt, is gelukkiger met zijn nieuwe aankoop dan iemand met een auto op benzine of diesel. Dat blijkt uit een grootschalig Amerikaans onderzoek van JD Power. AutoScout24 · 07-10-2026 · 2 min. Leestijd Lees meer Onderzoek: EV-rijders veel blijer met hun auto dan benzinerijders Deze geweldige auto durfde Audi niet te bouwen Porsche 911-geld betalen voor een sportwagentje met slechts 172 pk en een Audi-badge? Nadat 3.000 potentiële klanten in 1991 oog in oog stonden met de - toegegeven oogverblindend mooie - Audi quattro Spyder op de autobeurs van Frankfurt, plaatsten ze een pre-order. AutoScout24 · 07-10-2026 · 2 min. Leestijd Lees meer Deze geweldige auto durfde Audi niet te bouwen Range Rover Electric: de beste elektrische terreinwagen ooit? De Range Rover Electric is na jaren \u0027rijpen\u0027 officieel onthuld. Hij krijgt 550 pk, een 118,5 kWh-accu en een WLTP-actieradius van 600 kilometer. Maar het belangrijkste nieuws zit misschien wel onder de auto: ook elektrisch blijft de luxe-SUV geschikt voor serieus terreinwerk. AutoScout24 · 07-10-2026 · 3 min. Leestijd Lees meer Range Rover Electric: de beste elektrische terreinwagen ooit? Zelfrijdende Mercedes naar Nederland: \"De auto is er klaar voor, wij wachten op de regels\" Terwijl de Tesla\u0027s in Nederland beschikbaar zijn met Full Self-Driving Mode, staat Mercedes formeel nog op niveau twee. Toch is de techniek er volgens afzwaaiend Chief Software Officer Magnus Östberg allang. AutoScout24 · 07-10-2026 · 3 min. Leestijd Lees meer Zelfrijdende Mercedes naar Nederland: \"De auto is er klaar voor, wij wachten op de regels\" Ford wil zijn spraakassistent op een wel heel bijzondere manier verbeteren Ford werkt aan een opvallende oplossing voor een bekend probleem: spraakbediening die jou niet verstaat. Als het te rumoerig wordt in de auto, moet een slim systeem straks je gezicht kunnen aflezen. AutoScout24 · 01-10-2026 · 2 min. Leestijd Lees meer Ford wil zijn spraakassistent op een wel heel bijzondere manier verbeteren Duurste garantieclaim EV was 12.000 euro - en niet eens voor het accupakket Wie een tweedehands elektrische auto zoekt, is vooral benieuwd naar de staat van het accupakket. Logisch, want dat is het duurste onderdeel. Toch blijkt dat de meeste claims bij EV’s niets met de batterij te maken hebben. AutoScout24 · 01-10-2026 · 3 min. Leestijd Lees meer Duurste garantieclaim EV was 12.000 euro - en niet eens voor het accupakket Naar boven",
+    "scrapedAt": "2026-10-08 18:59:27.060918"
+  },
+  {
+    "id": 361,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/",
+    "title": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "content": "Ga naar hoofdinhoud Homepage Nederland Zuid-Holland Den Haag Occasions vinden in Den Haag Aanbod in jouw omgeving Toon meer Tweedehands auto’s in Den Haag Hyundai i10 1.25i Active Automaat/El.ramen/Apk € 4.999,- 75.756 km 06/2010 57 kW (77 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 139 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2288 JA RIJSWIJK Ford Ka/Ka+ 1.2 Comfort start/stop Airco € 1.450,- 231.521 km 05/2011 51 kW (69 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 115 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2371 BP ROELOFARENDSVEEN Fiat Panda 0.9 TwinAir Easy | AIRCO | ELEK PAKKET | VOLL ONDE € 2.400,- 161.906 km 12/2012 63 kW (86 PK) Gebruikt 3 vorige eigenaren Handgeschakeld Benzine - (l/100 km) 99 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2952 AD ALBLASSERDAM Volkswagen Polo 1.2 TDI BlueMotion Comfortline CLIMA PDC LMV EXPOR € 1.695,- 276.618 km 12/2010 55 kW (75 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Diesel 3,4 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 89 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3076 JA ROTTERDAM Mitsubishi Space Star 1.0 Bright CLIMA LMV INRUIL KOOPJE RIJDT GOED NAP € 1.995,- 249.779 km 02/2015 52 kW (71 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine 4,0 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 92 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3076 JA ROTTERDAM Opel Astra 1.0 Edition 5 Deurs Airco PDC € 7.250,- 102.204 km 11/2016 77 kW (105 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 102 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2521 RL DEN HAAG Citroen C4 1.6 VTi Collection AIRCO LMV NETTE AUTO RIJDT GOED € 4.695,- 99.985 km 11/2013 88 kW (120 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine 6,2 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 143 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3076 JA ROTTERDAM Citroen C1 1.0i Attraction Android 9\" scherm APK 14-04-2027 G € 2.194,- 216.216 km 02/2012 50 kW (68 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 103 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2803 PA GOUDA Kia Picanto 1.0 CVVT Airco 3DRS AIRCO HANDEL / EXPORT PRIJS NA € 1.595,- 256.093 km 06/2012 51 kW (69 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine 4,2 l/100 km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl 99 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3076 JA ROTTERDAM Hyundai i10 1.25i Active Automaat/El.ramen/Apk € 4.999,- 75.756 km 06/2010 57 kW (77 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 139 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2288 JA RIJSWIJK Ford Ka/Ka+ 1.2 Comfort start/stop Airco € 1.450,- 231.521 km 05/2011 51 kW (69 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 115 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2371 BP ROELOFARENDSVEEN Fiat Panda 0.9 TwinAir Easy | AIRCO | ELEK PAKKET | VOLL ONDE € 2.400,- 161.906 km 12/2012 63 kW (86 PK) Gebruikt 3 vorige eigenaren Handgeschakeld Benzine - (l/100 km) 99 g/km (gem.) Me",
+    "scrapedAt": "2026-10-08 18:59:25.680162"
+  },
+  {
     "id": 360,
     "url": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/",
     "title": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
@@ -2500,26 +2535,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 361,
-    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
-  },
-  {
-    "id": 362,
-    "url": "https://www.autoscout24.nl/informeren/autonieuws/"
-  },
-  {
-    "id": 363,
-    "url": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
-  },
-  {
-    "id": 364,
-    "url": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
-  },
-  {
-    "id": 365,
-    "url": "https://www.autoscout24.nl/auto/audi/audi-a3/"
   },
   {
     "id": 366,
@@ -58180,10 +58195,1166 @@ window.searchData = [
     "id": 22023,
     "url": "https://www.autoscout24.nl/lst/skoda/enyaq/cit_rotterdam",
     "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22024,
+    "url": "https://www.autoscout24.nl/autobedrijven/cito-automobielbedrijf-b-v#contact-data",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22025,
+    "url": "https://www.autoscout24.nl/autobedrijven/vakgarage-roberts-kerketuinen-b-v#contact-data",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22027,
+    "url": "https://www.autoscout24.nl/autobedrijven/vakgarage-roberts-kerketuinen-b-v",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22028,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/voorburg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22030,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/honselersdijk/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22031,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/monster/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22032,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/rijswijk/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22033,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22034,
+    "url": "https://www.autoscout24.nl/autobedrijven/vakgarage-wassink#contact-data",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22036,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/ypenburg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22037,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/poeldijk/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22038,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/strijp/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22039,
+    "url": "https://www.autoscout24.nl/autobedrijven/suzuki-leiden",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22040,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/scheveningen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22041,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/kwintsheul/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22042,
+    "url": "https://www.autoscout24.nl/autobedrijven/borgdorff-auto-s#contact-data",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22043,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/westland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22044,
+    "url": "https://www.autoscout24.nl/autobedrijven/cito-automobielbedrijf-b-v",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22045,
+    "url": "https://www.autoscout24.nl/autobedrijven/suzuki-leiden#contact-data",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22046,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/leidschendam-voorburg/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22047,
+    "url": "https://www.autoscout24.nl/autobedrijven/vakgarage-wassink",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22048,
+    "url": "https://www.autoscout24.nl/autobedrijven/regio/zuid-holland/den-haag/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22049,
+    "url": "https://www.autoscout24.nl/autobedrijven/borgdorff-auto-s",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "id": 22050,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22051,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/ford-wil-zijn-spraakassistent-op-een-wel-heel-bijzondere-manier-verbeteren/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22054,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/duurste-garantieclaim-ev-was-12-000-euro-en-niet-eens-voor-het-accupakket/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22055,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/hoe-botsingen-met-een-lagere-snelheid-toch-voor-schrikbarend-meer-letsel-zorgen/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22056,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/deze-geweldige-auto-durfde-audi-niet-te-bouwen/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22057,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/is-dit-de-beste-elektrische-terreinwagen-ooit/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22058,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/zelfrijdende-mercedes-naar-nederland-de-auto-is-er-klaar-voor-wij-wachten-op-de-regels/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22059,
+    "url": "https://www.autoscout24.nl/informeren/autonieuws/onderzoek-ev-rijders-veel-blijer-met-hun-auto-dan-benzinerijders/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "id": 22071,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-e-5008/",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "id": 22087,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-ev9/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "id": 22090,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-ev9/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "id": 22092,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/hyundai-santa-fe-daagt-premium-plug-in-hybrides-uit-bmw-x3-land-rover-discovery-sport-volvo-xc60/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22093,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volvo/xc90/review-volvo-xc90-2025-zweedse-familiebunker/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22098,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22099,
+    "url": "https://www.autoscout24.nl/lst/polestar/2",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22101,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22102,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volvo/ex60/volvo-ex60-2026-test/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22103,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volvo/xc40/review-volvo-xc40-compacte-premium-suv-met-vele-gezichten/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22104,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volvo/xc60/zo-verplettert-de-volvo-xc60-de-bmw-x3-hyundai-santa-fe-en-land-rover-discovery-sport/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22106,
+    "url": "https://www.autoscout24.nl/auto/opel/opel-mokka/opel-mokka-e/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22107,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volvo/ex30/review-volvo-ex30-2025-prettig-totaalpakket/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22109,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22110,
+    "url": "https://www.autoscout24.nl/auto/mg/mg-zs/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22111,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22112,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22114,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22115,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22116,
+    "url": "https://www.autoscout24.nl/auto/jeep/jeep-avenger/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22118,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22119,
+    "url": "https://www.autoscout24.nl/lst/volvo/ex30?atype\u003dC\u0026cy\u003dNL\u0026desc\u003d0\u0026sort\u003dstandard\u0026source\u003dhomepage_search-mask\u0026ustate\u003dN%2CU",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22120,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22122,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-scenic/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22124,
+    "url": "https://www.autoscout24.nl/lst/volvo/xc40",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22126,
+    "url": "https://www.autoscout24.nl/auto/mini/mini-countryman/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "id": 22128,
+    "url": "https://www.autoscout24.nl/lst/audi/a3/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22132,
+    "url": "https://www.autoscout24.nl/lst/audi/s3",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22134,
+    "url": "https://www.autoscout24.nl/lst/audi/a3/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22140,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a3/audi-a3-e-tron/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22142,
+    "url": "https://www.autoscout24.nl/lst/audi/a3/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22148,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a3/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22159,
+    "url": "https://www.autoscout24.nl/lst/audi/a4",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22165,
+    "url": "https://www.autoscout24.nl/lst/bmw/118",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22172,
+    "url": "https://www.autoscout24.nl/lst/audi/a3/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22179,
+    "url": "https://www.autoscout24.nl/lst/audi/a3/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "id": 22181,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a3/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4doYOPGs6jVGktqfoQW3Bu/d39b4f6ea92007da0062de3d483094e3/Audi-A3_Sportback-2025-1.jpg?w\u003d1100",
+    "alt": "Audi-A3_Sportback-2025-1",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4doYOPGs6jVGktqfoQW3Bu/d39b4f6ea92007da0062de3d483094e3/Audi-A3_Sportback-2025-1.jpg?w\u003d1100",
+    "alt": "Audi-A3_Sportback-2025-1",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/73wcDxf8Jz3aucwADQVGk5/12a57a90ad5309f23a46e4425c001c3e/Audi-A3_Sportback-2025-2.jpg?w\u003d1100",
+    "alt": "Audi-A3_Sportback-2025-2",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4KugoieoC2CXlJuExV3MCM/5159e60ee8fd2f54540592641f4060f2/Audi-A3_Sportback-2025-3.jpg?w\u003d1100",
+    "alt": "Audi-A3_Sportback-2025-3",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3482b4d0-150e-4b3c-87e5-2c90079654d9_9667d210-65fc-4f03-acfb-6b980cdd5555.jpg/360x270.jpg",
+    "alt": "Sportback 1.4 TFSI Ambition Pro Line Business",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7f8d9e84-3d85-4e21-9c56-9fb2e30854da_332b35b4-e724-4e0c-94e4-22d6284b66ed.jpg/360x270.jpg",
+    "alt": "Sportback 1.6 TDI ultra Edition - Stoelverwarming",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9261bcc1-9cac-455a-b773-4c836f75b9a8_86db5b9f-9c03-4f60-9b27-5d0b20870061.jpg/360x270.jpg",
+    "alt": "Cabriolet 2.0 TFSI|200PK|3XS-LINE|AUT|XENON|LEDER|",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9502e060-5796-49a7-9c2e-9b46cf131d4f_2d8eac1d-c0de-4bb8-9ce2-2bfbf6ca1e09.jpg/360x270.jpg",
+    "alt": "Sportback 30 TFSI Pro Line / 116pk / Trekhaak / NA",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c45c4ab3-8d34-423f-8d8a-4e558bf94a44_693d6c31-ef8a-4eda-a973-3e6a1b2801dc.jpg/360x270.jpg",
+    "alt": "Sportback 1.4 TFSI Attr. Cruise Navi Clima Pdc Lmv",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5471f09d-b20b-417b-963f-b5789ded1f0e_9ec66ce7-d6b6-4ed5-83e8-27c082fe0303.jpg/360x270.jpg",
+    "alt": "Sportback 1.0 TFSI Pro Line | PDC A | Cruise Contr",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b31e142a-fea7-4823-b5e1-9c4314ed4cdf_92bad6a9-3802-4cbc-b5d3-55c0d91df413.jpg/360x270.jpg",
+    "alt": "Limousine 2.0 TFSI quattro 3x S-Line Pano NAP Virt",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4eae881b-852f-4e8c-9112-3f06789c0b5c_f38a2778-a927-46fb-a632-d759d2918526.jpg/360x270.jpg",
+    "alt": "Sportback 1.4 TFSI S-Line GARANTIE|Automaat|Pano|C",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d144127e-5998-47b4-aa64-ac23872757bd_9bf2312c-4a00-4d63-9ed8-6873eeed6d7c.jpg/360x270.jpg",
+    "alt": "Sportback 1.4 TFSI S Line Pano | LED | Navi",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f32dfffb-7e5c-4019-9c40-0a6b3049efd9_a840c307-af5a-4934-a631-d28e42526e4b.jpg/360x270.jpg",
+    "alt": "1.4 TFSI S-Line | Pano | Harman Kardon",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dbbc68c7-9f62-4a14-a1d1-bd03eebd47e8_d593b543-a86f-47c8-b80c-26f0c08854e7.jpg/360x270.jpg",
+    "alt": "Sportback 35 TFSI S edition El.Stoelen El.Achterkl",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9c18708d-c5e1-43b8-a01e-53ecda9d000c_cc1e1380-c856-4b55-a0c1-eaa1427dd7de.jpg/360x270.jpg",
+    "alt": "Limousine 2.0 TFSI Quattro Panorama B\u0026O Virtual Co",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f33e7595-8bd3-4c27-ab7c-f148071c27ed_b2aca84e-ba72-4b4c-b597-789015b3d663.jpg/360x270.jpg",
+    "alt": "Limousine 1.0 TFSI Sport Pro Line S | S-LINE | KEY",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4b85e1fa-8d6e-4b48-9231-fb9dcdfaa660_4d07bc1b-f153-4564-b3e4-2a2f4aa25878.jpg/360x270.jpg",
+    "alt": "Limousine 30TFSI S-Line 116pk Ascariblau Camera El",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/33568fbb-2a54-47da-b387-f06ade26a8d4_360fec0a-4b63-4b07-8fb3-bf6017f0b542.jpg/360x270.jpg",
+    "alt": "1.4 TSI S-Line | AUT | Clima | 103DKM |",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6266ab82-c669-4b70-acf5-3a586d20c736_5dc0c793-306f-47ae-93a3-825e5f281f87.jpg/360x270.jpg",
+    "alt": "Sportback 1.6 FSI Attraction | NIEUWE APK | AIRCO",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cd4fd4ae-dab8-46ed-a5b0-0518deda7092_b96d091d-083d-4997-8ee8-02f1b3544e36.jpg/360x270.jpg",
+    "alt": "Sportback 40 TFSI e | Matrix | Cam | Carplay | Sto",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/048e4397-bfc9-4901-b7a1-ef4cfa0bfb62_8fede065-65d4-47de-9929-8b04c2c16e28.jpg/360x270.jpg",
+    "alt": "Limousine 1.4 TFSI CoD Ambiente Pro Line Airco ECC",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4350c86d-5e90-4459-abfc-3e8d81a821ad_76d5fefc-71d7-4335-82e7-1f503dd6916f.jpg/360x270.jpg",
+    "alt": "Sportback 30 TFSI Advanced edition | Camera | PDC",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a9187013-2f87-4468-b7c8-89ef9402abb9_48a1ab3e-0e2d-4721-97da-53d82dc8ee85.jpg/360x270.jpg",
+    "alt": "Limousine 30 TFSI S edition AUTOMAAT / S-LINE / NA",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/hl7Pc7ohywiqIzWsXiXnM/ab13457e67d1f1212381fd145062b616/Audi-A4-Avant-2021-Hero.png?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A4 Avant",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2bHes2Wc8TRnNVj8uDKy2q/a7be1eb2e3001d7ba5e928a789e49616/Audi-A1-Front-Side.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A1",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6cP9ciJSTMqBl7nS0gONSV/e1c6ca6170e833f5425c259c5950b7d2/vw-golf-l-01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Golf",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6HYMOLSBNkMLpMCDwChawT/d16943cb18f3008b4443fda4267a1bb5/Audi_S3_frontview.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi S3",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1nqYRYHbEa6sBHGNm0fQTl/43e31888b4cde3c512ec8c7875ef9251/MMP-24_Audi_A5_Avant_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A5 Avant",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5KGgLJrputHCSAPJrLdESl/3f7f174236f3e856f4f6de4deb181cff/bmw-1er-f20-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "BMW 116",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3TOqYFkYfHCWe2GRYBffAh/8d3bbf6383a3d69cf99dad7a1bdc44a1/Audi-RS3_2.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi RS 3",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6E2DFCoSEWAMA8wn8jFBK8/73472d9a61f3f2d0fee1ddff940f7aed/Mercedes-Benz-A-Class-2016-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Mercedes-Benz A 160",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3kkdEUt2EWmaCJPVju3jXN/99efc1d1a324a2b8a2ccb4d82794a07d/bmw-118i-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "BMW 118",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/aWx6gpOLYLd5aX9x682qr/7858f13b6111a435866372c241202cd4/Volkswagen-Polo_GTI-2022-1280-08.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Polo",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/012ILYaqYbxYb5iRsLgbKE/d119060df57457deb9caf1a2b1972ba1/audi-q4-etron-2026.jpg?w\u003d1100",
+    "alt": "Audi Q4 e-tron Facelift (2026): Eerste indruk, meer actieradius en nieuwe Digital Stage",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rZf7ZBcZJTfK9bfHP8ksO/d0aec57170687bc819249f34cfcdbd3e/Audi_A6_Avant_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi A6 Avant e-tron (2025): elektrische stationwagen met premium flair",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6GrNuhCdk6OUcKerAQQRj6/c5b306af8fce1429d7a3c8da9c4d3de1/Audi_Q3_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q3 (2025): compacte SUV met een volwassen karakter",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/74ohGiWKbkJYWEGdrM9Oq1/33e5e1fbcf4782f3f14360ad6e4a66ac/audi-tt-toyota-gr-supra-2023-1.jpg?w\u003d1100",
+    "alt": "TEST Audi TT vs",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Jjx5gIxNMbtJmblUubHrU/3af2d0e1f13497249344d2e556397cb7/audi-a8-l-2022-8-1.jpg?w\u003d1100",
+    "alt": "Review: zo verpest Mercedes het feestje van de plug-in hybride Audi A8 60 TFSI e",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5gnWDSiDpiVTvxmso92fJo/d0614d95cf5bd31d6b24a64f0b1df330/Audi_Q6_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q6 e-tron (2025): elektrische SUV met sportieve roots",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Audi A3 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-a3/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1xrZGV2gMGUtboQDqgAzx5/85b0000cb2e90659caf23f746aa93366/Volvo-EX30-1.jpg?w\u003d1100",
+    "alt": "Volvo-EX30-1",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1xrZGV2gMGUtboQDqgAzx5/85b0000cb2e90659caf23f746aa93366/Volvo-EX30-1.jpg?w\u003d1100",
+    "alt": "Volvo-EX30-1",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1j9zY7j0WXMyrcq0kcbuHy/572aee38bf0e8313eca333f4c98d8ead/Volvo-EX30-2.jpg?w\u003d1100",
+    "alt": "Volvo-EX30-2",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2ixrloK4dZrT8nRtZgPZWM/a8390cc7bf426c101d04010cfee600ae/Volvo-EX30-3.jpg?w\u003d1100",
+    "alt": "Volvo-EX30-3",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://img.youtube.com/vi/U4yczzOni78/maxresdefault.jpg",
+    "alt": "Bekijk de Volvo EX30 op YouTube",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/41b5a802-147c-4a25-acd0-a93ce595be46_b45e8c73-97fb-4e44-9c9a-b43fb58a2aed.jpg/360x270.jpg",
+    "alt": "Single Motor Extended Range Ultra 69 kWh Semi elek",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/252d20c5-2591-4e8d-96fa-bcfaee66d59e_7c6871cf-5dd9-4c97-b9d1-eab2c8777b82.jpg/360x270.jpg",
+    "alt": "Single Motor Extended Range Plus 69 kWh|94% SOH|47",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d4ae14a3-ecb7-442f-a611-7f5ae121fbe1_23bbab89-f720-4fb7-93f8-ed45abc39abc.jpg/360x270.jpg",
+    "alt": "P5 Ext. Range Plus Black Edition Europa 69 kWh / A",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eaa69d4e-4f13-43fc-81d7-ce73a7cd7ef9_81f4c257-36fb-4aeb-81f1-403b632ce702.jpg/360x270.jpg",
+    "alt": "Single Motor Core 51 kWh | Navigatie | Climate Con",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/52ed02e0-6052-418b-a4bd-e15ef2224ead_5973a744-31a6-4d09-a3c1-c6aa80a7f11c.jpg/360x270.jpg",
+    "alt": "Single Motor Core 51 kWh | SOH 97,4% | Navigatie |",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8171b8ca-2208-4836-962e-7c0cc9fdf6ac_7f224741-9404-4ded-ba2b-0d68c6fe1408.jpg/360x270.jpg",
+    "alt": "Cross Country 428PK Twin Performance Ultra AWD / C",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a35656e6-a4aa-433f-a79d-172cde64e965_8e8cc696-325f-4547-9cf2-9483a5933889.jpg/360x270.jpg",
+    "alt": "Single Motor Extended Range Plus 69 kWh Google Ser",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/773c7d58-d9af-4fd2-a048-b89523a5cad9_fc7421f7-ea4b-44c7-8f53-ef9e47beed15.jpg/360x270.jpg",
+    "alt": "Single Motor Extended Range Plus Europa 69 kWh / E",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/61f0d5fe-a794-4152-b34f-d13243287cf2_d45dc056-7e55-4469-959a-fc2cb6747285.jpg/360x270.jpg",
+    "alt": "272PK Automaat Single Motor Ext. Range Plus Europa",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1f6ad420-1904-43f4-860b-a8ba2d134246_543890af-c6a4-4529-a8f0-8295019686cf.jpg/360x270.jpg",
+    "alt": "Cross Country P5 272PK Automaat Long Range Plus Eu",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7906b984-3aff-4fd0-a8b7-e8fb812309ab_bf6b02b7-49ec-4752-a382-8c737cef9126.jpg/360x270.jpg",
+    "alt": "P5 Ext. Range Plus Black Edition Europa 69 kWh / A",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0dab778f-3bed-4123-b47b-d4b56a2147f7_2490f6f5-0659-45a7-b9e5-d0a66ab79199.jpg/360x270.jpg",
+    "alt": "Cross Country 428PK Automaat Twin Motor Performanc",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2084b13e-cc89-4a62-9a2b-0f0167c978c5_b6c5bc03-778e-4b96-848e-b39f9af6ac2d.jpg/360x270.jpg",
+    "alt": "P5 Long Range Plus Europa 69 kWh",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2295fa97-8243-4923-84e9-b3268a05b30c_55df3e19-b901-4efe-b0d5-4e712e31dae0.jpg/360x270.jpg",
+    "alt": "P3 150PK Automaat Long Range Plus Europa 69 kWh",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2c0d2aa4-444d-40f7-bdcc-4f6ac321da55_726f2a0a-1b3d-46a2-9409-bee36b70b2b7.jpg/360x270.jpg",
+    "alt": "P5 Long Range Plus Europa 69 kWh",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2771fca2-d7d0-481a-bd7e-f48ff86187a4_4ba2b2b5-8a57-4621-b867-865832ea8bdf.jpg/360x270.jpg",
+    "alt": "272PK Automaat Single Motor Ext. Range Plus Europa",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8f578f61-2c94-4581-b075-712fdd690185_ce411b11-2517-46cc-b4ac-1aee04cba65f.jpg/360x270.jpg",
+    "alt": "Single Motor Extended Range Core 69 kWh",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5901ac3b-4463-461f-a8cb-1e291818e9b8_9f009c15-9265-4988-b912-31656e3c633c.jpg/360x270.jpg",
+    "alt": "EXTENDED CORE 69 KWH / soh90% / Trekhaak 1600KG /",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4077a8b2-9e0b-4781-bf4f-200caee20033_13dc398a-bbf4-45ea-b590-260a3fb8f0ca.jpg/360x270.jpg",
+    "alt": "P3 Long Range Plus Europa",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8da1deb1-193d-465e-8bd9-a17f1c5e881f_5bdc858c-8b83-4a6b-bd60-c8844729e528.jpg/360x270.jpg",
+    "alt": "P3 Long Range Plus Europa 69 kWh | Stoel \u0026 stuurve",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6fiCMvQEiPmoyifExjZ1WO/1e74ebbad5c547586a26e59a879b914a/Volvo-XC40-Recharge-Front-Side-Hero.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volvo XC40",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2LL3F60IwIpbQxM0CeBY6f/e67176b344a67bc662b91ad4dc364b4a/polestar-2-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Polestar 2",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1e3UFZeoqtSMzisiUjM0cJ/bb389a2c6b01e20688ffe9795e007f9c/Q4_Sportback_ETron.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q4 Sportback e-tron",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2t0qIdvw7I2KjWISPwlAvC/4c92065deb7459b9051da1c3ed655246/Volvo_EX30_header.jpg?w\u003d1100",
+    "alt": "Review – Volvo EX30 (2025): prettig totaalpakket",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6xD6Sql7FUU3CMm2irl4ZH/1712c0255ae52dddb1d1a54d8aab6ad0/CR-57_-_AutoScout24_-_Volvo_XC90_2025_foto4.jpg?w\u003d1100",
+    "alt": "Review – Volvo XC90 (2025): Zweedse familiebunker",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4Dw91NLOUor0lwxG8HYOW5/7e7825247306e5773aa037a720b10409/Volvo_XC40_1.jpg?w\u003d1100",
+    "alt": "Review – Volvo XC40: compacte premium SUV met vele gezichten",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3Kf0kM8JaIYOlQ3x7QFEgH/940426f662dd589df51b4ae93fe3f897/Volvo_EX60_header.jpg?w\u003d1100",
+    "alt": "Review – Volvo EX60: hét tegenoffensief uit Zweden",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2lCl144VQgYlkqdkag69u1/6110c24139b3e80a0f762003905868d4/volvo-xc60-2022-1.jpg?w\u003d1100",
+    "alt": "Zo verplettert de Volvo XC60 de BMW X3, Hyundai Santa Fe en Land Rover Discovery Sport",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6yvABq9L4uRwrKRVXxxHrB/5163f5879a8e8b9f1d356afad8214208/bezltyc-2022-1.jpg?w\u003d1100",
+    "alt": "Hyundai Santa Fe daagt premium plug-in hybrides uit: BMW X3 - Land Rover Discovery Sport - Volvo XC60",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Volvo EX30 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/volvo/volvo-ex30/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1GCgsx3i9GjBHQJ6OLL4E7/942589c631d6a1515bc19f078c73a7b8/kia-ev9-elektrische-suv-2023-1.jpg?w\u003d1100",
+    "alt": "kia-ev9-front",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1GCgsx3i9GjBHQJ6OLL4E7/942589c631d6a1515bc19f078c73a7b8/kia-ev9-elektrische-suv-2023-1.jpg?w\u003d1100",
+    "alt": "kia-ev9-front",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Pzm01uF37Ac7InQYcc3HQ/12efee276fbadbf0b8287b51801d221a/kia-ev9-side.jpeg?w\u003d1100",
+    "alt": "kia-ev9-side",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7th6bk1DXpvxGtfeT1o3wy/088f2f6665d2e60c1b3091f3656d04af/kia-ev9-elektrische-suv-2023-3.jpg?w\u003d1100",
+    "alt": "kia-ev9-back",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/346163cd-83b8-435e-87df-4e9c872544ac_e7d9aead-b0a1-4842-a9c3-49e715ef393b.jpg/360x270.jpg",
+    "alt": "1.0 CVVT EconomyPlusLine | Bluetooth| Airco | Radi",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8457047a-09c1-4887-8b96-049c1ce1b766_1dcee1bd-f87f-48ae-82cf-3a77f834b117.jpg/360x270.jpg",
+    "alt": "1.2 CVVT BusinessLine STOELVERWARMING",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7fe9bc7e-a4af-4b4d-9131-9e052ca2d9ea_4e2bd363-137d-498b-9e40-4418630cfbd9.jpg/360x270.jpg",
+    "alt": "1.0 T-GDi DynamicLine | Camera | Carplay | Navigat",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c796c5a0-791a-47f7-a2ff-2acaf71f46ab_f355e949-c273-4d96-8741-181448ec37f7.jpg/360x270.jpg",
+    "alt": "1.0 MPi DynamicLine CARPLAY | TOPSTAAT",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/93550738-71ad-4cd3-a656-e936b2386faf_086e85a5-21fc-4987-8461-5cb80e30b619.jpg/360x270.jpg",
+    "alt": "1.1 4-Cilinder | Airco | APK 07-2027 | 180.090 km",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/85b7259b-33ca-4d27-83ec-5d2d6a2fcd9b_0de08aac-958b-4e5c-a236-0b8abd755825.jpg/360x270.jpg",
+    "alt": "1.0 CVVT EconomyPlusLine | NL auto | Elek. ramen",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bafce07e-58b9-46d9-a326-58f531671c1e_1b5b3240-65de-4744-bf42-cbb5a353d985.jpg/360x270.jpg",
+    "alt": "1.0 CVVT EconomyPlusLine",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0ab94073-0cb0-4ea1-a015-09e2b84b6981_6a9a0cd8-1335-482e-abb1-d35cb3261613.jpg/360x270.jpg",
+    "alt": "1.0 CVVT Airco 3DRS AIRCO HANDEL / EXPORT PRIJS NA",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/70557855-14a2-478f-a631-faaea3021258_b33ed774-7cc8-4e67-92ab-d8354c080e9f.jpg/360x270.jpg",
+    "alt": "1.0 CVVT Comfort Pack | Airco | APK | Onderhoud",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/97beac2a-bb9a-4f8f-8797-f7c0813c607b_6c03d207-2329-429c-bc29-f0dc40e852bb.jpg/360x270.jpg",
+    "alt": "1.0 Design Edition rood leer stoel+stuurverw.",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fe60ff73-814b-4ffd-b934-122ce10e4395_d9db3ee4-a4ce-497d-a9c5-e0904f78e912.jpg/360x270.jpg",
+    "alt": "1.4 CVVT World Cup Edition 1e Eigenaar Schuif/kant",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c6e4ca76-fcd9-4250-ab5f-b2be11fe71f2_73799083-4ffa-40f2-b9ee-30743b4f553c.jpg/360x270.jpg",
+    "alt": "1.2 CVVT ISG Comfort Pack | Carplay |Nieuwe APK|",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1fba357a-1991-4da8-b293-eac418bf4119_9b04aef0-681d-49a2-92ac-391d051c6556.jpg/360x270.jpg",
+    "alt": "1.0 CVVT DynamicLine|1e Eigenaar|HalfLeder|Climate",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/41b749af-ac33-466f-afe9-758bc42457d8_b147b961-53b4-42e9-88a3-6b94b3ef7a02.jpg/360x270.jpg",
+    "alt": "1.0 T-GDi MHEV ComfortLine , carplay 83.000 KM",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e60925ac-52e3-4cfa-834d-f122f98f0d9d_e1e24a2f-52d9-4f0f-957b-78744537a430.jpg/360x270.jpg",
+    "alt": "1.6 GDI Comfort Pack 1e Eigenaar Navigatie Android",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/95b1a3c7-3f3f-4261-b46e-57f00c629f13_b92a3d94-9fb5-42ae-8e33-0644b1b0a711.jpg/360x270.jpg",
+    "alt": "1.0 TGDI ComfortPlusLine Navigator 100PK | Camera",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/85eed938-2b9f-4711-948b-9315bc484e2f_587a2e77-15b5-441a-86b5-c55e05b437f0.jpg/360x270.jpg",
+    "alt": "1.0 T-GDi DynamicLine | Apple Carplay/Android | Na",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7397171f-0eb1-45a0-9d34-9ea7330abda5_40277a1f-1514-4cf8-b2e4-d0d5b7816ef0.jpg/360x270.jpg",
+    "alt": "1.0 Seven | Apk 05-2027 | Airco | 5 Deurs | 2e Eig",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/030a030b-8e12-4ed5-973c-228a8c1c8d33_176f4925-db48-4555-a9aa-d6cc08a363dc.jpg/360x270.jpg",
+    "alt": "1.6 GDI Super Pack Navi-Pdc v+a-Camera-Clima-Cruis",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8cc67ad4-a4cf-40ec-a7a6-bc381e3414b2_337cc3cc-40be-4d4c-abba-22301052c8b0.jpg/360x270.jpg",
+    "alt": "1.4 CVVT Plus Pack/AIRCO/LM VELGEN/RADIO/",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Kia EV9 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/kia/kia-ev9/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5i5yDkuiK0AtMPlne3Fzd/960b6613b24697beec3e9690b051b144/339237-6000x3376-676d88.webp?w\u003d1100",
+    "alt": "339237-6000x3376-676d88",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1VZUQG3tReQyWXuqm1uf8b/b5b12b4ba95f23ce3d18a24f01f8b684/batterij-recycling-1-5d19f7-1-8968d2.webp?w\u003d460",
+    "alt": "batterij-recycling-1-5d19f7-1-8968d2",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1m5xWfrQuGZBugGdK9Hz79/9f0d541ed3ad66f58fcd5d373d07c190/1920-23c0350-004-7eb205.webp?w\u003d460",
+    "alt": "1920-23c0350-004-7eb205",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2BwyaEgc5cr2rfZMNhbQrK/f776ea604c1a7ca3c825bc6488ac8f10/skoda-octavia-turns-30-three-decades-of-a-brand-icon-1-13c0f605-17e2b0.webp?w\u003d460",
+    "alt": "skoda-octavia-turns-30-three-decades-of-a-brand-icon-1-13c0f605-17e2b0",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/483K0egNmQLQdk47D5JrRg/8a956e86b4abbce6ee0bebd97215f2a3/modelystandard-72-107ab4.webp?w\u003d460",
+    "alt": "modelystandard-72-107ab4",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5jH9Aclq2ltAjARzO9kNxD/40dc469855804f2c7879a86df2195079/a161618-large-f60484.webp?w\u003d460",
+    "alt": "a161618-large-f60484",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/49fNrdj8pRocJsWpv58vdv/c5b48ef7ea31ed94f5479702505df0db/range-rover-electric-wading-020926-2ef71c.webp?w\u003d460",
+    "alt": "range-rover-electric-wading-020926-2ef71c",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/57df0TGi8PF6IearILVQBl/29407fab0ab6130292a6050e86272e1f/26c0063-052-0-56f4d5.webp?w\u003d460",
+    "alt": "26c0063-052-0-56f4d5",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/pte05TGjesH84Od3luHHT/18aaac82e39ca62b3706f01724a93b90/ford-focus-turnier-15-ecoboast-1022-loof-40-62fd27-1569ed-d5cf73.webp?w\u003d460",
+    "alt": "ford-focus-turnier-15-ecoboast-1022-loof-40-62fd27-1569ed-d5cf73",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7dgtIwYsNMRdwfpxIKGCXi/9de3e9fd39ce7b5aa57373f76afaf37a/byd-atto-3-garage-edb2c5-edb2c5-2.webp?w\u003d460",
+    "alt": "byd-atto-3-garage-edb2c5-edb2c5-2",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Het laatste autonieuws - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/informeren/autonieuws/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3eadeaa8-6f91-4ab3-b24f-7bd220d0b31a_ab5e1040-3aca-4f12-a95b-2f3092f0dfb2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/421bcec4-a4e2-433d-988c-b6be78e12347_d19e63f5-dd86-449e-bef2-f34a72c64855.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/32fbac52-f2d3-4668-97a5-d27bd308c174_6e298588-d9d8-43fe-9bd9-c3ef0a42443d.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9f196b38-af72-4fa3-89ab-1192a48e2918_8abcbdf2-0cca-4044-a8a4-a232059aea75.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/311da6d3-d87f-4016-a1ec-09b8e97c0f29_72ec78e0-dfd5-4bd8-a734-7c79096013cf.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3ce4e462-4f09-4730-8d72-578fe5745a5f_f4878cad-25ed-4401-9270-7d3375fe84a0.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bf21e25e-ebec-4720-81a7-2c2fe9de4b45_9402d6e2-3a28-42ce-a788-2dafe4d00adc.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9fa187ac-d90e-4b22-bc16-e353ea822e16_5f50e109-f29e-4212-8884-7ee0298a7b4c.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0ab94073-0cb0-4ea1-a015-09e2b84b6981_6a9a0cd8-1335-482e-abb1-d35cb3261613.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3eadeaa8-6f91-4ab3-b24f-7bd220d0b31a_ab5e1040-3aca-4f12-a95b-2f3092f0dfb2.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/421bcec4-a4e2-433d-988c-b6be78e12347_d19e63f5-dd86-449e-bef2-f34a72c64855.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/32fbac52-f2d3-4668-97a5-d27bd308c174_6e298588-d9d8-43fe-9bd9-c3ef0a42443d.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9f196b38-af72-4fa3-89ab-1192a48e2918_8abcbdf2-0cca-4044-a8a4-a232059aea75.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/311da6d3-d87f-4016-a1ec-09b8e97c0f29_72ec78e0-dfd5-4bd8-a734-7c79096013cf.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3ce4e462-4f09-4730-8d72-578fe5745a5f_f4878cad-25ed-4401-9270-7d3375fe84a0.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bf21e25e-ebec-4720-81a7-2c2fe9de4b45_9402d6e2-3a28-42ce-a788-2dafe4d00adc.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9fa187ac-d90e-4b22-bc16-e353ea822e16_5f50e109-f29e-4212-8884-7ee0298a7b4c.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0ab94073-0cb0-4ea1-a015-09e2b84b6981_6a9a0cd8-1335-482e-abb1-d35cb3261613.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Occasions Den Haag: tweedehands auto kopen in Den Haag",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/zuid-holland/den-haag/"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
