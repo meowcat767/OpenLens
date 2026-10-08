@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 753,
+    "url": "https://github.com/python/cpython/issues/91417",
+    "title": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} RFC: Clarify usage of macros for PySequence_Fast within the Limited C API #91417 New issue Copy link New issue Copy link Closed Closed RFC: Clarify usage of macros for PySequence_Fast within the Limited C API#91417 Copy link Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtopic-C-API Description HaoZeke mannequin opened on Apr 8, 2022 Issue body actions BPO 47261 Nosy @HaoZeke Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2022-04-08.15:14:46.053\u003e\nlabels \u003d [\u0027expert-C-API\u0027, \u0027docs\u0027]\ntitle \u003d \u0027RFC: Clarify usage of macros for PySequence_Fast within the Limited C API\u0027\nupdated_at \u003d \u003cDate 2022-04-08.15:19:49.541\u003e\nuser \u003d \u0027https://github.com/HaoZeke\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-04-08.15:19:49.541\u003e\nactor \u003d \u0027rgoswami\u0027\nassignee \u003d \u0027docs@python\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027Documentation\u0027, \u0027C API\u0027]\ncreation \u003d \u003cDate 2022-04-08.15:14:46.053\u003e\ncreator \u003d \u0027rgoswami\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 47261\nkeywords \u003d []\nmessage_count \u003d 2.0\nmessages \u003d [\u0027416989\u0027, \u0027416990\u0027]\nnosy_count \u003d 2.0\nnosy_names \u003d [\u0027docs@python\u0027, \u0027rgoswami\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d None\nurl \u003d \u0027https://bugs.python.org/issue47261\u0027\nversions \u003d [] Linked PRs gh-91417: Remove PySequence_Fast() from the limited C API #129398 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels docsDocumentation in the Doc dirDocumentation in the Doc dirtopic-C-API Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:12:59.061243"
+  },
+  {
+    "id": 752,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:12:56.987593"
+  },
+  {
+    "id": 751,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:12:55.800285"
+  },
+  {
+    "id": 750,
+    "url": "https://github.com/python/cpython/issues/103636",
+    "title": "Convert calendar constants to enums and add months · Issue #103636 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Convert calendar constants to enums and add months #103636 New issue Copy link New issue Copy link Closed Closed Convert calendar constants to enums and add months#103636 Copy link Labels 3.12only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description ethanfurman opened on Apr 19, 2023 Issue body actions From this discuss thread: The calendar module already defines constants e.g. MONDAY (0), TUESDAY (1), etc. for the [days of the week] https://docs.python.org/3/library/calendar.html#calendar.MONDAY). Since these are likely to be commonly needed too, would it make sense for the calendar module to also export constants for all of JANUARY (1), FEBRUARY (2), …, DECEMBER (12)? This would allow one to write from calendar import APRIL and then e.g. use APRIL instead of 4 when building a datetime.date object. Related: datetime - Python module defining constants for month numbers? - Stack Overflow Linked PRs gh-103636: add enums for days and months in calendar module #103642 gh-103636: issue warning for deprecated calendar constants #103833 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.12only security fixesonly security fixesstdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Date and time issues 🕰️ Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:12:54.586344"
+  },
+  {
+    "id": 749,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode",
+    "title": "Codec registry and support functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Codec registry and support functions | Theme Auto Light Dark | Codec registry and support functions¶ int PyCodec_Register(PyObject *search_function)¶ Part of the Stable ABI. Register a new codec search function. As a side effect, this tries to load the encodings package, if not yet done, to make sure that it is always first in the list of search functions. int PyCodec_Unregister(PyObject *search_function)¶ Part of the Stable ABI since version 3.10. Unregister a codec search function and clear the registry’s cache. If the search function is not registered, do nothing. Return 0 on success. Raise an exception and return -1 on error. Added in version 3.10. int PyCodec_KnownEncoding(const char *encoding)¶ Part of the Stable ABI. Return 1 or 0 depending on whether there is a registered codec for the given encoding. This function always succeeds. PyObject *PyCodec_Encode(PyObject *object, const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Generic codec based encoding API. object is passed through the encoder function found for the given encoding using the error handling method defined by errors. errors may be NULL to use the default method defined for the codec. Raises a LookupError if no encoder can be found. PyObject *PyCodec_Decode(PyObject *object, const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Generic codec based decoding API. object is passed through the decoder function found for the given encoding using the error handling method defined by errors. errors may be NULL to use the default method defined for the codec. Raises a LookupError if no decoder can be found. Codec lookup API¶ In the following functions, the encoding string is looked up converted to all lower-case characters, which makes encodings looked up through this mechanism effectively case-insensitive. If no codec is found, a KeyError is set and NULL returned. PyObject *PyCodec_Encoder(const char *encoding)¶ Return value: New reference. Part of the Stable ABI. Get an encoder function for the given encoding. PyObject *PyCodec_Decoder(const char *encoding)¶ Return value: New reference. Part of the Stable ABI. Get a decoder function for the given encoding. PyObject *PyCodec_IncrementalEncoder(const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get an IncrementalEncoder object for the given encoding. PyObject *PyCodec_IncrementalDecoder(const char *encoding, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get an IncrementalDecoder object for the given encoding. PyObject *PyCodec_StreamReader(const char *encoding, PyObject *stream, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get a StreamReader factory function for the given encoding. PyObject *PyCodec_StreamWriter(const char *encoding, PyObject *stream, const char *errors)¶ Return value: New reference. Part of the Stable ABI. Get a StreamWriter factory function for the given encoding. Registry API for Unicode encoding error handlers¶ int PyCodec_RegisterError(const char *name, PyObject *error)¶ Part of the Stable ABI. Register the error handling callback function error under the given name. This callback function will be called by a codec when it encounters unencodable characters/undecodable bytes and name is specified as the error parameter in the call to the encode/decode function. The callback gets a single argument, an instance of UnicodeEncodeError, UnicodeDecodeError or UnicodeTranslateError that holds information about the problematic sequence of characters or bytes and their offset in the original string (see Unicode Exception Objects for functions to extract this information). The callback must either raise the given exception, or return a two-item tuple containing the replacement for the problematic sequence, and an integer giving the offset in the original string at which encoding/decoding should be resumed. Return 0 on success, -1 on error. PyObject *PyCodec_LookupError(const char *name)¶ Return value: New reference. Part of the Stable ABI. Lookup the error handling callback function registered under name. As a special case NULL can be passed, in which case the error handling callback for “strict” will be returned. PyObject *PyCodec_StrictErrors(PyObject *exc)¶ Return value: Always NULL. Part of the Stable ABI. Raise exc as an exception. PyObject *PyCodec_IgnoreErrors(PyObject *exc)¶ Return value: New reference. Part of the Stable ABI. Ignore the unicode error, skipping the faulty input. PyObject *PyCodec_ReplaceErrors(PyObject *exc)¶ Return value: New reference. Part of the Stable ABI. Replace the unicode encode error with ? or U+FFFD. PyObject *PyCodec_XMLCharRefReplaceErrors(PyObject *exc)¶ Return value: New reference. Part of the Stable ABI. Replace the unicode encode error wi",
+    "scrapedAt": "2026-10-08 19:12:52.265838"
+  },
+  {
     "id": 748,
     "url": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION",
     "title": "API and ABI Versioning — Python 3.14.8 documentation",
@@ -4925,26 +4960,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 749,
-    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
-  },
-  {
-    "id": 750,
-    "url": "https://github.com/python/cpython/issues/103636"
-  },
-  {
-    "id": 751,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
-  },
-  {
-    "id": 752,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag"
-  },
-  {
-    "id": 753,
-    "url": "https://github.com/python/cpython/issues/91417"
   },
   {
     "id": 754,
@@ -129334,10 +129349,1066 @@ window.searchData = [
     "id": 91491,
     "url": "https://docs.python.org/3/c-api/apiabiversion.html#build-time-version-constants",
     "parentUrl": "https://docs.python.org/3/c-api/apiabiversion.html#c.Py_PACK_VERSION"
+  },
+  {
+    "id": 91494,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_StrictErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91496,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_StreamReader",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91498,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamWriter",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91505,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Decoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91506,
+    "url": "https://docs.python.org/3/c-api/codec.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91507,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_RegisterError",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91510,
+    "url": "https://docs.python.org/3/c-api/codec.html#codec-lookup-api",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91512,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Unregister",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91514,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.Py_hexdigits",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91517,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_ReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91518,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalEncoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91519,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_StreamWriter",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91521,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91523,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.IncrementalDecoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91526,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_LookupError",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91527,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_IgnoreErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91528,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_IncrementalDecoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91530,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/codec.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91531,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_KnownEncoding",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91532,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_XMLCharRefReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91533,
+    "url": "https://docs.python.org/3/c-api/codec.html#codec-utility-variables",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91534,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_NameReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91535,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_BackslashReplaceErrors",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91539,
+    "url": "https://docs.python.org/3/c-api/codec.html#registry-api-for-unicode-encoding-error-handlers",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91542,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_IncrementalEncoder",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91543,
+    "url": "https://docs.python.org/3/c-api/codec.html#codec-registry-and-support-functions",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91544,
+    "url": "https://docs.python.org/3/c-api/time.html",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91545,
+    "url": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Register",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91546,
+    "url": "https://docs.python.org/3/library/codecs.html#codecs.StreamReader",
+    "parentUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "id": 91547,
+    "url": "https://github.com/python/cpython/pull/103642",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91548,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/103636",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91549,
+    "url": "https://discuss.python.org/t/define-constants-for-month-numbers-in-calendar-module/25999?u\u003dstoneleaf",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91550,
+    "url": "https://github.com/python/cpython/pull/103833",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91551,
+    "url": "https://github.com/python/cpython/issues/103636#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91552,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.MONDAY",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91553,
+    "url": "https://github.com/orgs/python/projects/21",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91554,
+    "url": "https://stackoverflow.com/q/76028482/359178",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91555,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.12%22",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91558,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/103636",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91560,
+    "url": "https://github.com/python/cpython/issues/103636#issue-1675629942",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91561,
+    "url": "https://github.com/python/cpython/issues/103636#top",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91562,
+    "url": "https://github.com/ethanfurman",
+    "parentUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "id": 91565,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.symlink_to",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91568,
+    "url": "https://docs.python.org/3/library/os.html#os.readlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91569,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.joinpath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91571,
+    "url": "https://docs.python.org/3/library/pathlib.html#general-properties",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91572,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.suffix",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91573,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.write_text",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91574,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.expanduser",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91575,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.rmdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91576,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91577,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91578,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.mkdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91579,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isabs",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91581,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.exists",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91582,
+    "url": "https://docs.python.org/3/library/pathlib.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91583,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_junction",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91585,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.rename",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91587,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.islink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91588,
+    "url": "https://docs.python.org/3/library/pathlib.html#id10",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91589,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.as_posix",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91590,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.ismount",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91591,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePosixPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91593,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_stem",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91594,
+    "url": "https://docs.python.org/3/library/pathlib.html#concrete-paths",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91595,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91596,
+    "url": "https://docs.python.org/3/library/os.html#os.sep",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91597,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.is_symlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91598,
+    "url": "https://docs.python.org/3/library/pathlib.html#pure-paths",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91599,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parts",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91600,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.samefile",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91601,
+    "url": "https://docs.python.org/3/library/pathlib.html#reading-and-writing-files",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91602,
+    "url": "https://docs.python.org/3/library/pathlib.html#accessing-individual-parts",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91603,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91605,
+    "url": "https://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap04.html#tag_04_11",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91606,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_suffix",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91608,
+    "url": "https://docs.python.org/3/library/pwd.html#module-pwd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91609,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/pathlib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91610,
+    "url": "https://docs.python.org/3/library/pathlib.html#methods-and-properties",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91611,
+    "url": "https://docs.python.org/3/library/os.html#os.lchmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91612,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_file",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91614,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_name",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91617,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.exists",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91618,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.absolute",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91619,
+    "url": "https://docs.python.org/3/library/os.html#os.listdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91620,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.splitext",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91622,
+    "url": "https://docs.python.org/3/library/os.html#os.chmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91623,
+    "url": "https://docs.python.org/3/library/os.html#dir-fd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91624,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.cwd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91625,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.lchmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91626,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parent",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91627,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.relpath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91628,
+    "url": "https://docs.python.org/3/library/pathlib.html#pattern-language",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91629,
+    "url": "https://peps.python.org/pep-0428/",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91630,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.touch",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91631,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PureWindowsPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91633,
+    "url": "https://docs.python.org/3/library/pathlib.html#module-pathlib.types",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91635,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.group",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91636,
+    "url": "https://datatracker.ietf.org/doc/html/rfc8089.html",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91637,
+    "url": "https://docs.python.org/3/library/pathlib.html#comparison-to-the-os-and-os-path-modules",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91638,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isfile",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91639,
+    "url": "https://docs.python.org/3/library/pathlib.html#",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91641,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.chmod",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91644,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.name",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91645,
+    "url": "https://docs.python.org/3/library/os.html#os.makedirs",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91648,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.replace",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91650,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.exists",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91652,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.is_file",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91653,
+    "url": "https://docs.python.org/3/library/os.html#os.replace",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91654,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.walk",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91656,
+    "url": "https://docs.python.org/3/library/grp.html#module-grp",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91657,
+    "url": "https://docs.python.org/3/library/glob.html#glob.glob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91658,
+    "url": "https://docs.python.org/3/library/pathlib.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91659,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_symlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91660,
+    "url": "https://docs.python.org/3/library/pathlib.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91661,
+    "url": "https://docs.python.org/3/library/pathlib.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91663,
+    "url": "https://docs.python.org/3/library/pathlib.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91664,
+    "url": "https://docs.python.org/3/library/pathlib.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91666,
+    "url": "https://docs.python.org/3/library/pathlib.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91667,
+    "url": "https://docs.python.org/3/library/pathlib.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91668,
+    "url": "https://docs.python.org/3/library/os.html#os.unlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91669,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_char_device",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91670,
+    "url": "https://docs.python.org/3/library/pathlib.html#operators",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91671,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.UnsupportedOperation",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91672,
+    "url": "https://docs.python.org/3/library/pathlib.html#copying-moving-and-deleting",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91673,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.stem",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91676,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.root",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91677,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_socket",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91678,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91679,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.unlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91680,
+    "url": "https://docs.python.org/3/library/pathlib.html#comparison-to-the-glob-module",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91681,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parser",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91682,
+    "url": "https://docs.python.org/3/library/pathlib.html#expanding-and-resolving-paths",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91683,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.hardlink_to",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91684,
+    "url": "https://docs.python.org/3/library/os.html#os.walk",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91685,
+    "url": "https://docs.python.org/3/library/os.html#os.altsep",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91686,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.full_match",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91687,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/pathlib/",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91689,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.suffixes",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91690,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.samefile",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91691,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.readlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91693,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.match",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91695,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91696,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.stat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91698,
+    "url": "https://docs.python.org/3/library/pathlib.html#parsing-and-generating-uris",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91699,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_block_device",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91702,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91703,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.open",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91705,
+    "url": "https://docs.python.org/3/library/pathlib.html#creating-files-and-directories",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91707,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parents",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91708,
+    "url": "https://docs.python.org/3/library/os.html#os.rename",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91710,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_mount",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91711,
+    "url": "https://docs.python.org/3/library/pathlib.html#querying-file-type-and-status",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91712,
+    "url": "https://docs.python.org/3/library/os.html#os.link",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91713,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.join",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91714,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.WindowsPath",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91715,
+    "url": "https://en.wikipedia.org/wiki/Path_(computing)#UNC",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91716,
+    "url": "https://docs.python.org/3/library/os.html#os.symlink",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91719,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.lstat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91720,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_text",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91721,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_fifo",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91722,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.types.PathInfo.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91723,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_absolute",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91724,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.samestat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91725,
+    "url": "https://docs.python.org/3/library/os.html#os.rmdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91726,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.drive",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91727,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.anchor",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91729,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.dirname",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91731,
+    "url": "https://docs.python.org/3/library/pathlib.html#permissions-and-ownership",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91733,
+    "url": "https://docs.python.org/3/library/os.html#os.mkdir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91736,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.from_uri",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91737,
+    "url": "https://docs.python.org/3/library/pathlib.html#corresponding-tools",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91738,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.rglob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91739,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.expanduser",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91741,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.isjunction",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91742,
+    "url": "https://docs.python.org/3/library/os.html#os.remove",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91743,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib-pattern-language",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91744,
+    "url": "https://docs.python.org/3/library/glob.html#module-glob",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91746,
+    "url": "https://docs.python.org/3/library/pathlib.html#basic-use",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91752,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.owner",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91753,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.basename",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91754,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.write_bytes",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91755,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.home",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91756,
+    "url": "https://docs.python.org/3/library/os.html#os.lstat",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91757,
+    "url": "https://docs.python.org/3/library/os.path.html#module-os.path",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91758,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.with_segments",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91759,
+    "url": "https://docs.python.org/3/library/os.html#os.getcwd",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91760,
+    "url": "https://docs.python.org/3/library/os.html#filesystem-encoding",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91762,
+    "url": "https://docs.python.org/3/library/pathlib.html#reading-directories",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91763,
+    "url": "https://docs.python.org/3/library/os.html#os.scandir",
+    "parentUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "id": 91953,
+    "url": "https://github.com/python/cpython/issues/91417#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 91954,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/91417",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 91955,
+    "url": "https://github.com/python/cpython/issues/91417#issue-1199078444",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 91956,
+    "url": "https://bugs.python.org/issue47261",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 91957,
+    "url": "https://github.com/python/cpython/pull/129398",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 91959,
+    "url": "https://github.com/python/cpython/issues/91417#top",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 91960,
+    "url": "https://github.com/HaoZeke",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "id": 91962,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/91417",
+    "parentUrl": "https://github.com/python/cpython/issues/91417"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/103280611?v\u003d4\u0026size\u003d48",
+    "alt": "@HaoZeke",
+    "pageTitle": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "RFC: Clarify usage of macros for PySequence_Fast within the Limited C API · Issue #91417 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/91417"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_NoSiteFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/7659890?v\u003d4\u0026size\u003d48",
+    "alt": "@ethanfurman",
+    "pageTitle": "Convert calendar constants to enums and add months · Issue #103636 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Convert calendar constants to enums and add months · Issue #103636 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/103636"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Codec registry and support functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Codec registry and support functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/codec.html#c.PyCodec_Encode"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
