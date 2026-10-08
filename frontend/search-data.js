@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 738,
+    "url": "https://github.com/python/cpython/issues/127683",
+    "title": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation hoodmane commented Dec 6, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Issue: Emscripten: Add ctypes to the Emscripten build #127629 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions pythongh-127629: Add ctypes to the Emscripten build d9b6e9b hoodmane requested review from brettcannon and freakboy3742 as code owners December 6, 2024 11:46 bedevere-app Bot mentioned this pull request Dec 6, 2024 Emscripten: Add ctypes to the Emscripten build #127629 Closed bedevere-app Bot added the awaiting review label Dec 6, 2024 hoodmane removed the request for review from brettcannon December 6, 2024 11:47 hoodmane added the OS-emscripten label Dec 6, 2024 hoodmane and others added 2 commits December 6, 2024 12:47 Add news 8172368 Merge branch \u0027main\u0027 into emscripten-ctypes 91a70b3 freakboy3742 requested changes Dec 9, 2024 View reviewed changes freakboy3742 left a comment Copy link Copy Markdown Contributor There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Functionally, this works fine; a couple of questions inline about documentation and gross structure. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Tools/wasm/emscripten/__main__.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Tools/wasm/emscripten/__main__.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Tools/wasm/emscripten/__main__.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added awaiting changes and removed awaiting review labels Dec 9, 2024 bedevere-app Bot commented Dec 9, 2024 Copy link Copy Markdown A Python core developer has requested some changes be made to your pull request before we can consider merging it. If you could please address their requests along with any other requests in other reviews from core developers that would be appreciated. Once you have made the requested changes, please leave a comment on this pull request containing the phrase I have made the requested changes; please review again. I will then notify any core developers who have left a review that you\u0027re ready for them to take another look at this pull request. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. hoodmane added 3 commits December 9, 2024 19:39 Use release libffi a3f4891 Distinguish between build and prefix directories 556de1e Add separate make-libffi step to readme f670c21 hoodmane commented Dec 9, 2024 Copy link Copy Markdown Contributor Author I have made the requested changes; please review again. Thanks @freakboy3742! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added awaiting change review and removed awaiting changes labels Dec 9, 2024 bedevere-app Bot commented Dec 9, 2024 Copy link Copy Markdown Thanks for making the requested changes! @freakboy3742: please review the changes made to this pull request. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot requested a review from freakboy3742 December 9, 2024 19:06 freakboy3742 approved these changes Dec 10, 2024 View reviewed changes freakboy3742 left a comment Copy link Copy Markdown Contributor There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment 👍 Thanks for those fixes - this looks great! Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions bedevere-app Bot added awaiting merge and removed awaiting change review labels Dec 10, 2024 freakboy3742 merged commit 3b18af9 into python:main Dec 10, 2024 bedevere-app Bot removed the awaiting merge label Dec 10, 2024 srinivasreddy pushed a commit to srinivasreddy/cpython that referenced this pull request Jan 8, 2025 pythongh-127629: Add ctypes to the Emscripten build (python#127683) … 655b380 Adds tooling to build libffi and add ctypes to the stdlib for Emscripten. MichaelBuhler reviewed Apr 8, 2025 View r",
+    "scrapedAt": "2026-10-08 19:12:18.485267"
+  },
+  {
+    "id": 737,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo",
+    "title": "zipfile — Work with ZIP archives — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » zipfile — Work with ZIP archives | Theme Auto Light Dark | zipfile — Work with ZIP archives¶ Source code: Lib/zipfile/ The ZIP file format is a common archive and compression standard. This module provides tools to create, read, write, append, and list a ZIP file. Any advanced use of this module will require an understanding of the format, as defined in PKZIP Application Note. This module does not handle multipart ZIP files. It can handle ZIP files that use the ZIP64 extensions (that is ZIP files that are more than 4 GiB in size). It supports decryption of encrypted files in ZIP archives, but it cannot create an encrypted file. Decryption is extremely slow as it is implemented in native Python rather than C. Handling compressed archives requires optional modules such as zlib, bz2, lzma, and compression.zstd. If any of them are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. The module defines the following items: exception zipfile.BadZipFile¶ The error raised for bad ZIP files. Added in version 3.2. exception zipfile.BadZipfile¶ Alias of BadZipFile, for compatibility with older Python versions. Deprecated since version 3.2. exception zipfile.LargeZipFile¶ The error raised when a ZIP file would require ZIP64 functionality but that has not been enabled. class zipfile.ZipFile The class for reading and writing ZIP files. See section ZipFile objects for constructor details. class zipfile.Path Class that implements a subset of the interface provided by pathlib.Path, including the full importlib.resources.abc.Traversable interface. Added in version 3.8. class zipfile.PyZipFile Class for creating ZIP archives containing Python libraries. class zipfile.ZipInfo(filename\u003d\u0027NoName\u0027, date_time\u003d(1980, 1, 1, 0, 0, 0))¶ Class used to represent information about a member of an archive. Instances of this class are returned by the getinfo() and infolist() methods of ZipFile objects. Most users of the zipfile module will not need to create these, but only use those created by this module. filename should be the full name of the archive member, and date_time should be a tuple containing six fields which describe the time of the last modification to the file; the fields are described in section ZipInfo objects. Changed in version 3.13: A public compress_level attribute has been added to expose the formerly protected _compresslevel. The older protected name continues to work as a property for backwards compatibility. _for_archive(archive)¶ Resolve the date_time, compression attributes, and external attributes to suitable defaults as used by ZipFile.writestr(). Returns self for chaining. Added in version 3.14. zipfile.is_zipfile(filename)¶ Returns True if filename is a valid ZIP file based on its magic number, otherwise returns False. filename may be a file or file-like object too. Changed in version 3.1: Support for file and file-like objects. zipfile.ZIP_STORED¶ The numeric constant for an uncompressed archive member. zipfile.ZIP_DEFLATED¶ The numeric constant for the usual ZIP compression method. This requires the zlib module. zipfile.ZIP_BZIP2¶ The numeric constant for the BZIP2 compression method. This requires the bz2 module. Added in version 3.3. zipfile.ZIP_LZMA¶ The numeric constant for the LZMA compression method. This requires the lzma module. Added in version 3.3. zipfile.ZIP_ZSTANDARD¶ The numeric constant for Zstandard compression. This requires the compression.zstd module. Note In APPNOTE 6.3.7, the method ID 20 was assigned to Zstandard compression. This was changed in APPNOTE 6.3.8 to method ID 93 to avoid conflicts, with method ID 20 being deprecated. For compatibility, the zipfile module reads both method IDs but will only write data with method ID 93. Added in version 3.14. Note The ZIP file format specification has included support for bzip2 compression since 2001, for LZMA compression since 2006, and Zstandard compression since 2020. However, some tools (including older Python releases) do not support these compression methods, and may either refuse to process the ZIP file altogether, or fail to extract individual files. See also PKZIP Application Note Documentation on the ZIP file format by Phil Katz, the creator of the format and algorithms used. Info-ZIP Home Page Information about the Info-ZIP project’s ZIP archive programs and development libraries. ZipFile objects¶ class zipfile.ZipFile(file, mode\u003d\u0027r\u0027, compression\u003dZIP_STORED, allowZip64\u003dTrue, compresslevel\u003dNone, *, strict_timestamps\u003dTrue, metadata_encoding\u003dNone)¶ Open a ZIP file, where file can be a path to a file (a string), a file-like object or a path-like object. The mode parameter should be \u0027r\u0027 to read an existing file, \u0027w\u0027 to truncate and write a new file, \u0027a\u0027 to append t",
+    "scrapedAt": "2026-10-08 19:12:13.895261"
+  },
+  {
+    "id": 736,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF",
+    "title": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » annotationlib — Functionality for introspecting annotations | Theme Auto Light Dark | annotationlib — Functionality for introspecting annotations¶ Added in version 3.14. Source code: Lib/annotationlib.py The annotationlib module provides tools for introspecting annotations on modules, classes, and functions. Annotations are lazily evaluated and often contain forward references to objects that are not yet defined when the annotation is created. This module provides a set of low-level tools that can be used to retrieve annotations in a reliable way, even in the presence of forward references and other edge cases. This module supports retrieving annotations in three main formats (see Format), each of which works best for different use cases: VALUE evaluates the annotations and returns their value. This is most straightforward to work with, but it may raise errors, for example if the annotations contain references to undefined names. FORWARDREF returns ForwardRef objects for annotations that cannot be resolved, allowing you to inspect the annotations without evaluating them. This is useful when you need to work with annotations that may contain unresolved forward references. STRING returns the annotations as a string, similar to how it would appear in the source file. This is useful for documentation generators that want to display annotations in a readable way. The get_annotations() function is the main entry point for retrieving annotations. Given a function, class, or module, it returns an annotations dictionary in the requested format. This module also provides functionality for working directly with the annotate function that is used to evaluate annotations, such as get_annotate_from_class_namespace() and call_annotate_function(), as well as the call_evaluate_function() function for working with evaluate functions. Caution Most functionality in this module can execute arbitrary code; see the security section for more information. See also PEP 649 proposed the current model for how annotations work in Python. PEP 749 expanded on various aspects of PEP 649 and introduced the annotationlib module. Annotations Best Practices provides best practices for working with annotations. typing-extensions provides a backport of get_annotations() that works on earlier versions of Python. Annotation semantics¶ The way annotations are evaluated has changed over the history of Python 3, and currently still depends on a future import. There have been execution models for annotations: Stock semantics (default in Python 3.0 through 3.13; see PEP 3107 and PEP 526): Annotations are evaluated eagerly, as they are encountered in the source code. Stringified annotations (used with from __future__ import annotations in Python 3.7 and newer; see PEP 563): Annotations are stored as strings only. Deferred evaluation (default in Python 3.14 and newer; see PEP 649 and PEP 749): Annotations are evaluated lazily, only when they are accessed. As an example, consider the following program: def func(a: Cls) -\u003e None:\n    print(a)\n\nclass Cls: pass\n\nprint(func.__annotations__)\n This will behave as follows: Under stock semantics (Python 3.13 and earlier), it will throw a NameError at the line where func is defined, because Cls is an undefined name at that point. Under stringified annotations (if from __future__ import annotations is used), it will print {\u0027a\u0027: \u0027Cls\u0027, \u0027return\u0027: \u0027None\u0027}. Under deferred evaluation (Python 3.14 and later), it will print {\u0027a\u0027: \u003cclass \u0027Cls\u0027\u003e, \u0027return\u0027: None}. Stock semantics were used when function annotations were first introduced in Python 3.0 (by PEP 3107) because this was the simplest, most obvious way to implement annotations. The same execution model was used when variable annotations were introduced in Python 3.6 (by PEP 526). However, stock semantics caused problems when using annotations as type hints, such as a need to refer to names that are not yet defined when the annotation is encountered. In addition, there were performance problems with executing annotations at module import time. Therefore, in Python 3.7, PEP 563 introduced the ability to store annotations as strings using the from __future__ import annotations syntax. The plan at the time was to eventually make this behavior the default, but a problem appeared: stringified annotations are more difficult to process for those who introspect annotations at runtime. An alternative proposal, PEP 649, introduced the third execution model, deferred evaluation, and was implemented in Python 3.14. Stringified annotations are still used if from __future__ import annotations is present, but this behavior will eventually be removed. Classes¶ class annotationlib.Format¶ An IntEnum describing the formats in which annotations can be returned. Members of the enum, or their equivalent integer values, can be passed to get_annotations() and",
+    "scrapedAt": "2026-10-08 19:12:12.726302"
+  },
+  {
+    "id": 735,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:12:11.528389"
+  },
+  {
+    "id": 734,
+    "url": "https://peps.python.org/pep-0744/",
+    "title": "PEP 744 – JIT Compilation | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 744 – JIT Compilation PEP 744 – JIT Compilation Author: Brandt Bucher \u003cbrandt at python.org\u003e, Savannah Ostrowski \u003csavannah at python.org\u003e Discussions-To: Discourse thread Status: Draft Type: Informational Created: 11-Apr-2024 Python-Version: 3.13 Post-History: 11-Apr-2024 Table of Contents Abstract Motivation Rationale Specification Support Backwards Compatibility Debugging Security Implications Apple Silicon How to Teach This Reference Implementation Rejected Ideas Maintain it outside of CPython Turn it on by default Support multiple compiler toolchains Compile the base interpreter’s bytecode Add GPU support Open Issues Speed Memory Dependencies Footnotes Copyright Abstract Earlier this year, an experimental “just-in-time” compiler was merged into CPython’s main development branch. While recent CPython releases have included other substantial internal changes, this addition represents a particularly significant departure from the way CPython has traditionally executed Python code. As such, it deserves wider discussion. This PEP aims to summarize the design decisions behind this addition, the current state of the implementation, and future plans for making the JIT a permanent, non-experimental part of CPython. It does not seek to provide a comprehensive overview of how the JIT works, instead focusing on the particular advantages and disadvantages of the chosen approach, as well as answering many questions that have been asked about the JIT since its introduction. Readers interested in learning more about the new JIT are encouraged to consult the following resources: The presentation which first introduced the JIT at the 2023 CPython Core Developer Sprint. It includes relevant background, a light technical introduction to the “copy-and-patch” technique used, and an open discussion of its design amongst the core developers present. Slides for this talk can be found on GitHub. The open access paper originally describing copy-and-patch. The blog post by the paper’s author detailing the implementation of a copy-and-patch JIT compiler for Lua. While this is a great low-level explanation of the approach, note that it also incorporates other techniques and makes implementation decisions that are not particularly relevant to CPython’s JIT. The implementation itself. Motivation Until this point, CPython has always executed Python code by compiling it to bytecode, which is interpreted at runtime. This bytecode is a more-or-less direct translation of the source code: it is untyped, and largely unoptimized. Since the Python 3.11 release, CPython has used a “specializing adaptive interpreter” (PEP 659), which rewrites these bytecode instructions in-place with type-specialized versions as they run. This new interpreter delivers significant performance improvements, despite the fact that its optimization potential is limited by the boundaries of individual bytecode instructions. It also collects a wealth of new profiling information: the types flowing though a program, the memory layout of particular objects, and what paths through the program are being executed the most. In other words, what to optimize, and how to optimize it. Since the Python 3.12 release, CPython has generated this interpreter from a C-like domain-specific language (DSL). In addition to taming some of the complexity of the new adaptive interpreter, the DSL also allows CPython’s maintainers to avoid hand-writing tedious boilerplate code in many parts of the interpreter, compiler, and standard library that must be kept in sync with the instruction definitions. This ability to generate large amounts of runtime infrastructure from a single source of truth is not only convenient for maintenance; it also unlocks many possibilities for expanding CPython’s execution in new ways. For instance, it makes it feasible to automatically generate tables for translating a sequence of instructions into an equivalent sequence of smaller “micro-ops”, generate an optimizer for sequences of these micro-ops, and even generate an entire second interpreter for executing them. In fact, since early in the Python 3.13 release cycle, all CPython builds have included this exact micro-op translation, optimization, and execution machinery. However, it is disabled by default; the overhead of interpreting even optimized traces of micro-ops is just too large for most code. Heavier optimization probably won’t improve the situation much either, since any efficiency gains made by new optimizations will likely be offset by the interpretive overhead of even smaller, more complex micro-ops. The most obvious strategy to overcome this new bottleneck is to statically compile these optimized traces. This presents opportunities to avoid several sources of indirection and overhead introduced by interpretation. In particular, it allows the removal of dispatch overhead between micro-ops (by replacing a generic",
+    "scrapedAt": "2026-10-08 19:12:10.20343"
+  },
+  {
     "id": 733,
     "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException",
     "title": "Exception Handling — Python 3.14.8 documentation",
@@ -4820,26 +4855,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 734,
-    "url": "https://peps.python.org/pep-0744/"
-  },
-  {
-    "id": 735,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory"
-  },
-  {
-    "id": 736,
-    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
-  },
-  {
-    "id": 737,
-    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
-  },
-  {
-    "id": 738,
-    "url": "https://github.com/python/cpython/issues/127683"
   },
   {
     "id": 739,
@@ -125039,10 +125054,1432 @@ window.searchData = [
     "id": 89369,
     "url": "https://docs.python.org/3/c-api/exceptions.html#c.PyExc_NameError",
     "parentUrl": "https://docs.python.org/3/c-api/exceptions.html#c.PyErr_GetRaisedException"
+  },
+  {
+    "id": 89370,
+    "url": "https://peps.python.org/pep-0744/#footnotes",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89371,
+    "url": "https://github.com/faster-cpython/benchmarking-public/blob/main/memory_configs.svg",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89372,
+    "url": "https://github.com/python/cpython/blob/main/Tools/jit/_targets.py",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89373,
+    "url": "https://peps.python.org/pep-0744/#debugging",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89374,
+    "url": "https://peps.python.org/pep-0744/#add-gpu-support",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89375,
+    "url": "https://gist.github.com/brandtbucher/9d3cc396dcb15d13f7e971175e987f3a",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89376,
+    "url": "https://developer.apple.com/documentation/apple-silicon/porting-just-in-time-compilers-to-apple-silicon#Enable-the-JIT-Entitlement-for-the-Hardened-Runtime",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89377,
+    "url": "https://peps.python.org/pep-0744/#untested",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89378,
+    "url": "https://peps.python.org/pep-0744/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89379,
+    "url": "https://peps.python.org/pep-0744/#compile-the-base-interpreter-s-bytecode",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89380,
+    "url": "https://youtu.be/HxSHIpEQRjs",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89381,
+    "url": "https://github.com/python/cpython/blob/main/.github/workflows/jit.yml",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89382,
+    "url": "https://peps.python.org/pep-0744/#id3",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89383,
+    "url": "https://peps.python.org/pep-0744/#id2",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89384,
+    "url": "https://peps.python.org/pep-0744/#id1",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89385,
+    "url": "https://github.com/python/cpython/blob/main/Python/jit.c",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89386,
+    "url": "https://peps.python.org/pep-0744/#security-implications",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89387,
+    "url": "https://peps.python.org/pep-0744/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89389,
+    "url": "https://peps.python.org/pep-0744/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89390,
+    "url": "https://peps.python.org/pep-0744/#support-multiple-compiler-toolchains",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89391,
+    "url": "https://peps.python.org/pep-0744/#maintain-it-outside-of-cpython",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89392,
+    "url": "https://peps.python.org/pep-0744/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89393,
+    "url": "https://github.com/brandtbucher/brandtbucher/blob/master/2023/10/10/a_jit_compiler_for_cpython.pdf",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89395,
+    "url": "https://en.wikipedia.org/wiki/Continuation-passing_style#Tail_calls",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89397,
+    "url": "https://en.wikipedia.org/wiki/W%5EX",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89398,
+    "url": "https://discuss.python.org/t/pep-744-jit-compilation/50756",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89400,
+    "url": "https://github.com/python/cpython/pull/113465",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89401,
+    "url": "https://peps.python.org/pep-0387/",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89402,
+    "url": "https://sillycross.github.io/2023/05/12/2023-05-12",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89403,
+    "url": "https://github.com/python/cpython/blob/main/Tools/jit/README.md",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89404,
+    "url": "https://github.com/python/cpython/blob/main/Tools/jit/template.c",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89405,
+    "url": "https://dl.acm.org/doi/10.1145/3485513",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89406,
+    "url": "https://github.com/python/cpython/blob/main/Python/bytecodes.c",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89407,
+    "url": "https://peps.python.org/pep-0744/#turn-it-on-by-default",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89408,
+    "url": "https://peps.python.org/pep-0744/#emulated",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89409,
+    "url": "https://peps.python.org/pep-0744/#dependencies",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89410,
+    "url": "https://github.com/faster-cpython/benchmarking-public/blob/main/configs.svg",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89411,
+    "url": "https://numba.pydata.org/numba-doc/latest/cuda/overview.html",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89412,
+    "url": "https://peps.python.org/pep-0744/#apple-silicon",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89413,
+    "url": "https://youtu.be/shQtrn1v7sQ",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89414,
+    "url": "https://www.pypy.org",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89415,
+    "url": "https://peps.python.org/pep-0744/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89416,
+    "url": "https://peps.python.org/pep-0744/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89417,
+    "url": "https://peps.python.org/pep-0744/#specification",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89418,
+    "url": "https://peps.python.org/pep-0744/#speed",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89419,
+    "url": "https://peps.python.org/pep-0744/#memory",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89420,
+    "url": "https://en.wikipedia.org/wiki/Just-in-time_compilation#Security",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89421,
+    "url": "https://peps.python.org/pep-0744/#support",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89422,
+    "url": "https://clang.llvm.org/docs/AttributeReference.html#musttail",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89423,
+    "url": "https://peps.python.org/pep-0744/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89424,
+    "url": "https://peps.python.org/pep-0744/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89426,
+    "url": "https://peps.python.org/pep-0744/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0744/"
+  },
+  {
+    "id": 89740,
+    "url": "https://docs.python.org/3/library/functools.html#functools.update_wrapper",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89742,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib-security",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89745,
+    "url": "https://docs.python.org/3/library/annotationlib.html#recipes",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89749,
+    "url": "https://peps.python.org/pep-0649/#the-stringizer-and-the-fake-globals-environment",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89751,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.ForwardRef",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89752,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.call_annotate_function",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89756,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.evaluate_constraints",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89759,
+    "url": "https://docs.python.org/3/library/annotationlib.html#creating-a-custom-callable-annotate-function",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89764,
+    "url": "https://docs.python.org/3/library/annotationlib.html#functions",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89765,
+    "url": "https://docs.python.org/3/library/annotationlib.html#classes",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89769,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ClassVar",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89771,
+    "url": "https://docs.python.org/3/library/annotationlib.html#using-annotations-in-a-metaclass",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89779,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/annotationlib.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89783,
+    "url": "https://docs.python.org/3/library/annotationlib.html#limitations-of-the-forwardref-format",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89787,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.evaluate_default",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89788,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.type_repr",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89790,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotation-semantics",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89795,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVarTuple.evaluate_default",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89796,
+    "url": "https://docs.python.org/3/library/annotationlib.html#security-implications-of-introspecting-annotations",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89800,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.ForwardRef.__forward_arg__",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89807,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.VALUE_WITH_FAKE_GLOBALS",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89824,
+    "url": "https://docs.python.org/3/library/enum.html#enum.IntEnum",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89825,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib-metaclass",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89826,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeVar.evaluate_bound",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89829,
+    "url": "https://peps.python.org/pep-3107/",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89832,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/annotationlib.py",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89838,
+    "url": "https://docs.python.org/3/library/annotationlib.html#",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89840,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.annotations_to_string",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89841,
+    "url": "https://docs.python.org/3/library/typing.html#typing.TypeAliasType.evaluate_value",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89849,
+    "url": "https://docs.python.org/3/library/typing.html#typing.ParamSpec.evaluate_default",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89850,
+    "url": "https://pypi.org/project/typing-extensions/",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89857,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.call_evaluate_function",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89858,
+    "url": "https://docs.python.org/3/library/inspect.html#inspect-types",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89862,
+    "url": "https://docs.python.org/3/library/annotationlib.html#limitations-of-the-string-format",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89863,
+    "url": "https://docs.python.org/3/library/annotationlib.html#annotationlib.ForwardRef.evaluate",
+    "parentUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "id": 89864,
+    "url": "https://docs.python.org/3/library/zipfile.html#interruption",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89865,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.BadZipfile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89867,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.read_bytes",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89869,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89871,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.abspath",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89873,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-test",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89876,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.open",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89877,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.iterdir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89878,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.is_file",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89880,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-list",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89882,
+    "url": "https://infozip.sourceforge.net/",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89883,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-extract",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89884,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.is_zipfile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89885,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.seek",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89886,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.header_offset",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89888,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_STORED",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89889,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.namelist",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89890,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.external_attr",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89891,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.LargeZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89896,
+    "url": "https://docs.python.org/3/library/zipfile.html#pyzipfile-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89897,
+    "url": "https://docs.python.org/3/library/bz2.html#bz2.BZ2File",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89898,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.mkdir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89899,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.tell",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89900,
+    "url": "https://docs.python.org/3/library/zipfile.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89901,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.read_text",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89902,
+    "url": "https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89904,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_ZSTANDARD",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89905,
+    "url": "https://docs.python.org/3/library/zipfile.html#path-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89906,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.BadZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89907,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_LZMA",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89908,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.comment",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89909,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.filename",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89910,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-create",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89911,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.printdir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89912,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.open",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89913,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.extract_version",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89914,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.close",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89915,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.extra",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89916,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.write",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89917,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.PyZipFile.writepy",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89919,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.create_version",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89920,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_DEFLATED",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89922,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/zipfile/",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89924,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.volume",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89925,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.is_symlink",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89927,
+    "url": "https://docs.python.org/3/library/zipfile.html#default-behaviors-of-extraction",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89929,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.file_size",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89930,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.compress_size",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89932,
+    "url": "https://docs.python.org/3/library/zipfile.html#from-file-itself",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89935,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#compression.zstd.CompressionParameter.compression_level",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89937,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.infolist",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89938,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#container.__iter__",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89939,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.exists",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89940,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.reserved",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89941,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.compressobj",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89942,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-metadata-encoding",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89944,
+    "url": "https://docs.python.org/3/library/io.html#io.IOBase.readlines",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89945,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89946,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-l",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89947,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89948,
+    "url": "https://docs.python.org/3/library/zipfile.html#",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89950,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.name",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89951,
+    "url": "https://en.wikipedia.org/wiki/Zip_bomb",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89953,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.extract",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89954,
+    "url": "https://docs.python.org/3/library/zipfile.html#command-line-options",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89955,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-t",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89958,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.comment",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89959,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89960,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.flag_bits",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89962,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-c",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89963,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.compress_type",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89967,
+    "url": "https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-e",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89968,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.CRC",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89969,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.internal_attr",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89970,
+    "url": "https://docs.python.org/3/library/zipfile.html#resources-limitations",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89971,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.create_system",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89972,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/zipfile.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89973,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.getinfo",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89974,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89976,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.filename",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89977,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.from_file",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89978,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZIP_BZIP2",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89979,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.commonpath",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89982,
+    "url": "https://docs.python.org/3/library/zipfile.html#decompression-pitfalls",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89984,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.read",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89986,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.testzip",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89987,
+    "url": "https://docs.python.org/3/library/zipfile.html#file-system-limitations",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89988,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.PyZipFile",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89989,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.suffixes",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89990,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipinfo-objects",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89991,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.suffix",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89992,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.stem",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89997,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.extractall",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 89999,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.Path.joinpath",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90001,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.setpassword",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90002,
+    "url": "https://pypi.org/project/zipp/",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90003,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.debug",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90005,
+    "url": "https://docs.python.org/3/library/io.html#io.BufferedIOBase.write",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90006,
+    "url": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo.date_time",
+    "parentUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "id": 90007,
+    "url": "https://github.com/python/cpython/pull/127683#ref-issue-2719846943",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90008,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F127683",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90009,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559137836",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90010,
+    "url": "https://github.com/python/cpython/pull/127683#issuecomment-2529128862",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90011,
+    "url": "https://github.com/python/cpython/pull/127683/commits/556de1e773839e63a1678630958dd9781b370f58",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90012,
+    "url": "https://github.com/brettcannon",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90013,
+    "url": "https://github.com/python/cpython/pull/127683#event-15593415165",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90015,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22awaiting%20change%20review%22",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90016,
+    "url": "https://github.com/python/cpython/pull/127683#pullrequestreview-2748935192",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90017,
+    "url": "https://github.com/python/cpython/pull/127683#event-15593428483",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90018,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559131619",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90019,
+    "url": "https://github.com/python/cpython/pull/127683#pullrequestreview-2490694397",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90020,
+    "url": "https://github.com/python/cpython/pull/127683#pullrequestreview-2487426099",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90021,
+    "url": "https://github.com/python/cpython/pull/127683",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90022,
+    "url": "https://github.com/python/cpython/pull/127683#event-15588828802",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90024,
+    "url": "https://github.com/python/cpython/pull/127683#discussion_r2032556066",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90025,
+    "url": "https://github.com/python/cpython/pull/127683/files/f670c2153cc6a70203ea96bf6504e6febf9a0255",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90026,
+    "url": "https://github.com/python/cpython/pull/127683#event-15593428112",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90027,
+    "url": "https://github.com/python/cpython/pull/127683#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90028,
+    "url": "https://github.com/python/cpython/pull/127683/commits/a3f4891d172264959e1025aed1c4b91007f3e8ff",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90029,
+    "url": "https://github.com/python/cpython/pull/127683/commits/d9b6e9bbf32110c38c6f2274079474ec495474bf",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90030,
+    "url": "https://github.com/python/cpython/pull/127683#ref-commit-655b380",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90031,
+    "url": "https://github.com/python/cpython/pull/127683#commits-pushed-a3f4891",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90032,
+    "url": "https://github.com/python/cpython/pull/127683/commits/91a70b385c6e38340c7495b87c6d15543cb83ba8",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90033,
+    "url": "https://github.com/python/cpython/pull/127683#issuecomment-2529129099",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90034,
+    "url": "https://github.com/python/cpython/blob/023b7d2141467017abc27de864f3f44677768cb3/.github/CODEOWNERS#L283",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90035,
+    "url": "https://github.com/srinivasreddy",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90037,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3AOS-emscripten",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90039,
+    "url": "https://github.com/freakboy3742",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90040,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22awaiting%20changes%22",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90041,
+    "url": "https://github.com/python/cpython/pull/127683#discussion_r2032628731",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90042,
+    "url": "https://github.com/python/cpython/pull/127683#issuecomment-2526675957",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90044,
+    "url": "https://github.com/MichaelBuhler",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90045,
+    "url": "https://github.com/python/cpython/pull/127683/files/91a70b385c6e38340c7495b87c6d15543cb83ba8#diff-033dac21c82169b95fb79a21efc43cd8fd720ff351cce2d6dc8d2a82caa9d293",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90046,
+    "url": "https://github.com/python/cpython/pull/127683/files/f670c2153cc6a70203ea96bf6504e6febf9a0255#diff-6be8b1f36800531461f921a13fabf5b6d7361abb5d78ec526c3a948334c176d7",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90048,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559133450",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90050,
+    "url": "https://github.com/srinivasreddy/cpython/commit/655b3808b8fac686d3d2098670032725eee7c576",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90051,
+    "url": "https://github.com/python/cpython/commit/3b18af964da9814474a5db9e502962c7e0593e8d",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90052,
+    "url": "https://github.com/python/cpython/pull/127683#event-15576061317",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90053,
+    "url": "https://github.com/python/cpython/pull/127683#issue-2722855313",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90056,
+    "url": "https://github.com/python/cpython/pull/127683/commits/f670c2153cc6a70203ea96bf6504e6febf9a0255",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90057,
+    "url": "https://github.com/python/cpython/pull/127683/files/8172368e9550aa054c4f1480dee2574e80019379#diff-033dac21c82169b95fb79a21efc43cd8fd720ff351cce2d6dc8d2a82caa9d293",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90058,
+    "url": "https://github.com/python/cpython/pull/127683#event-15588829917",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90059,
+    "url": "https://github.com/python/cpython/pull/127683#commits-pushed-8172368",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90060,
+    "url": "https://github.com/python/cpython/pull/127683#event-15559133042",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90061,
+    "url": "https://github.com/python/cpython/pull/127683/files/91a70b385c6e38340c7495b87c6d15543cb83ba8",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90062,
+    "url": "https://github.com/python/cpython/pull/127683/commits/8172368e9550aa054c4f1480dee2574e80019379",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "id": 90063,
+    "url": "https://github.com/hoodmane",
+    "parentUrl": "https://github.com/python/cpython/issues/127683"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d48\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d60\u0026v\u003d4",
+    "alt": "freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d48\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d80\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d80\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d60\u0026v\u003d4",
+    "alt": "freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d48\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026u\u003d06b637e2290f584cfed894b6692a5e1269049d3c\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d40\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/198396?s\u003d40\u0026v\u003d4",
+    "alt": "@srinivasreddy",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d60\u0026v\u003d4",
+    "alt": "MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d48\u0026v\u003d4",
+    "alt": "@MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d48\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d40\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d40\u0026v\u003d4",
+    "alt": "@MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739626?s\u003d52\u0026v\u003d4",
+    "alt": "@hoodmane",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/37345?s\u003d52\u0026v\u003d4",
+    "alt": "@freakboy3742",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9561039?s\u003d52\u0026v\u003d4",
+    "alt": "@MichaelBuhler",
+    "pageTitle": "gh-127629: Add ctypes to the Emscripten build by hoodmane · Pull Request #127683 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127683"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "zipfile — Work with ZIP archives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/zipfile.html#zipfile.ZipInfo"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "annotationlib — Functionality for introspecting annotations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/annotationlib.html#annotationlib.Format.FORWARDREF"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.user_site_directory"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
