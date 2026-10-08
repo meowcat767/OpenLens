@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1400,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-forkserver",
+    "title": "multiprocessing — Process-based parallelism — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » multiprocessing — Process-based parallelism | Theme Auto Light Dark | multiprocessing — Process-based parallelism¶ Source code: Lib/multiprocessing/ Availability: not Android, not iOS, not WASI. This module is not supported on mobile platforms or WebAssembly platforms. Introduction¶ multiprocessing is a package that supports spawning processes using an API similar to the threading module. The multiprocessing package offers both local and remote concurrency, effectively side-stepping the Global Interpreter Lock by using subprocesses instead of threads. Due to this, the multiprocessing module allows the programmer to fully leverage multiple processors on a given machine. It runs on both POSIX and Windows. The multiprocessing module also introduces the Pool object which offers a convenient means of parallelizing the execution of a function across multiple input values, distributing the input data across processes (data parallelism). The following example demonstrates the common practice of defining such functions in a module so that child processes can successfully import that module. This basic example of data parallelism using Pool, from multiprocessing import Pool\n\ndef f(x):\n    return x*x\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    with Pool(5) as p:\n        print(p.map(f, [1, 2, 3]))\n will print to standard output [1, 4, 9]\n The multiprocessing module also introduces APIs which do not have analogs in the threading module, like the ability to terminate, interrupt or kill a running process. See also concurrent.futures.ProcessPoolExecutor offers a higher level interface to push tasks to a background process without blocking execution of the calling process. Compared to using the Pool interface directly, the concurrent.futures API more readily allows the submission of work to the underlying process pool to be separated from waiting for the results. The Process class¶ In multiprocessing, processes are spawned by creating a Process object and then calling its start() method. Process follows the API of threading.Thread. A trivial example of a multiprocess program is from multiprocessing import Process\n\ndef f(name):\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n To show the individual process IDs involved, here is an expanded example: from multiprocessing import Process\nimport os\n\ndef info(title):\n    print(title)\n    print(\u0027module name:\u0027, __name__)\n    print(\u0027parent process:\u0027, os.getppid())\n    print(\u0027process id:\u0027, os.getpid())\n\ndef f(name):\n    info(\u0027function f\u0027)\n    print(\u0027hello\u0027, name)\n\nif __name__ \u003d\u003d \u0027__main__\u0027:\n    info(\u0027main line\u0027)\n    p \u003d Process(target\u003df, args\u003d(\u0027bob\u0027,))\n    p.start()\n    p.join()\n For an explanation of why the if __name__ \u003d\u003d \u0027__main__\u0027 part is necessary, see Programming guidelines. The arguments to Process usually need to be picklable so they can be passed to the child process. If you tried typing the above example directly into a REPL it could lead to an AttributeError in the child process trying to locate the f function in the __main__ module. Contexts and start methods¶ Depending on the platform, multiprocessing supports three ways to start a process. These start methods are spawn The parent process starts a fresh Python interpreter process. The child process will only inherit those resources necessary to run the process object’s run() method. In particular, unnecessary file descriptors and handles from the parent process will not be inherited. Starting a process using this method is rather slow compared to using fork or forkserver. Available on POSIX and Windows platforms. The default on Windows and macOS. fork The parent process uses os.fork() to fork the Python interpreter. The child process, when it begins, is effectively identical to the parent process. All resources of the parent are inherited by the child process. Note that safely forking a multithreaded process is problematic. Available on POSIX systems. Changed in version 3.14: This is no longer the default start method on any platform. Code that requires fork must explicitly specify that via get_context() or set_start_method(). Changed in version 3.12: If Python is able to detect that your process has multiple threads, the os.fork() function that this start method calls internally will raise a DeprecationWarning. Use a different start method. See the os.fork() documentation for further explanation. forkserver When the program starts and selects the forkserver start method, a server process is spawned. From then on, whenever a new process is needed, the parent process connects to the server and requests that it fork a new process. The fork server process is single threaded unless system libraries or preloaded imports spawn threads as a side-effect so it is generally safe for it to use os.fork(). No unnecessary resources are inherited. A",
+    "scrapedAt": "2026-10-08 19:40:25.003196"
+  },
+  {
+    "id": 1399,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#build-changes",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:40:23.669242"
+  },
+  {
+    "id": 1398,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html",
+    "title": "RFC 9512 - YAML Media Type",
+    "content": "Light Dark Auto RFC 9512 YAML Media Type February 2024 Polli, et al. Informational [Page] Stream: Internet Engineering Task Force (IETF) RFC: 9512 Category: Informational Published: February 2024 ISSN: 2070-1721 Authors: R. Polli DTD, Italian Government E. Wilde Axway E. Aro Mozilla RFC 9512 YAML Media Type Abstract This document registers the application/yaml media type and the +yaml structured syntax suffix with IANA. Both identify document components that are serialized according to the YAML specification.¶ Status of This Memo This document is not an Internet Standards Track specification; it is published for informational purposes.¶ This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Not all documents approved by the IESG are candidates for any level of Internet Standard; see Section 2 of RFC 7841.¶ Information about the current status of this document, any errata, and how to provide feedback on it may be obtained at https://www.rfc-editor.org/info/rfc9512.¶ Copyright Notice Copyright (c) 2024 IETF Trust and the persons identified as the document authors. All rights reserved.¶ This document is subject to BCP 78 and the IETF Trust\u0027s Legal Provisions Relating to IETF Documents (https://trustee.ietf.org/license-info) in effect on the date of publication of this document. Please review these documents carefully, as they describe your rights and restrictions with respect to this document. Code Components extracted from this document must include Revised BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Revised BSD License.¶ ▲ Table of Contents 1. Introduction YAML [YAML] is a data serialization format that is capable of conveying one or multiple documents in a single presentation stream (e.g., a file or a network resource). It is widely used on the Internet, including in the API sector (e.g., see [OAS]), but a corresponding media type and structured syntax suffix had not previously been registered by IANA.¶ To increase interoperability when exchanging YAML streams and leverage content negotiation mechanisms when exchanging YAML resources, this specification registers the application/yaml media type and the +yaml structured syntax suffix [MEDIATYPE].¶ Moreover, it provides security considerations and interoperability considerations related to [YAML], including its relation with [JSON].¶ 1.1. Notational Conventions The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here.¶ The terms \"content negotiation\" and \"resource\" in this document are to be interpreted as in [HTTP].¶ The terms \"fragment\" and \"fragment identifier\" in this document are to be interpreted as in [URI].¶ The terms \"presentation\", \"stream\", \"YAML document\", \"representation graph\", \"tag\", \"serialization detail\", \"node\", \"alias node\", \"anchor\", and \"anchor name\" in this document are to be interpreted as in [YAML].¶ Figures containing YAML code always start with the %YAML directive to improve readability.¶ 1.2. Fragment Identification A fragment identifies a node in a stream.¶ A fragment identifier starting with \"*\" is to be interpreted as a YAML alias node (see Section 1.2.1).¶ For single-document YAML streams, a fragment identifier that is empty or that starts with \"/\" is to be interpreted as a JSON Pointer [JSON-POINTER] and is evaluated on the YAML representation graph, traversing alias nodes; in particular, the empty fragment identifier references the root node. This syntax can only reference the YAML nodes that are on a path that is made up of nodes interoperable with the JSON data model (see Section 3.4).¶ A fragment identifier is not guaranteed to reference an existing node. Therefore, applications SHOULD define how an unresolved alias node ought to be handled.¶ 1.2.1. Fragment Identification via Alias Nodes This section describes how to use alias nodes (see Sections 3.2.2.2 and 7.1 of [YAML]) as fragment identifiers to designate nodes.¶ A YAML alias node can be represented in a URI fragment identifier by encoding it into bytes using UTF-8 [UTF-8], but percent-encoding of those characters is not allowed by the fragment rule in Section 3.5 of [URI].¶ If multiple nodes match a fragment identifier, the first occurrence of such a match is selected.¶ Users concerned with interoperability of fragment identifiers:¶ SHOULD limit alias nodes to a set of characters that do not require encoding to be expressed as URI fragment identifiers (this is generally possible since anchor names are a serialization detail), and¶ SHOULD NOT use alias nodes that matc",
+    "scrapedAt": "2026-10-08 19:40:22.286089"
+  },
+  {
+    "id": 1397,
+    "url": "https://docs.python.org/3/library/os.html#module-os",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_Read",
+    "scrapedAt": "2026-10-08 19:40:20.577663"
+  },
+  {
+    "id": 1396,
+    "url": "https://github.com/python/cpython/issues/128685",
+    "title": "`LOAD_CONST_IMMORTAL` doesn\u0027t survive being instrumented and de-instrumented. · Issue #128685 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} LOAD_CONST_IMMORTAL doesn\u0027t survive being instrumented and de-instrumented. #128685 New issue Copy link New issue Copy link Closed Closed LOAD_CONST_IMMORTAL doesn\u0027t survive being instrumented and de-instrumented.#128685 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description markshannon opened on Jan 9, 2025 Issue body actions Bug report Bug description: When instrumenting, instructions are first de-optimized to their base instruction. When instrumentation is removed we assume that specialization will restore the specialized instruction. However, that doesn\u0027t happen for LOAD_CONST_IMMORTAL because LOAD_CONST_IMMORTAL isn\u0027t a specialization form of LOAD_CONST, but a quickened form of it. The fix should be simple. Instead of quickening LOAD_CONST to LOAD_CONST_IMMORTAL, we add a LOAD_CONST_MORTAL and have LOAD_CONST specialize (rather than quicken) to either LOAD_CONST_MORTAL or LOAD_CONST_IMMORTAL. CPython versions tested on: CPython main branch Operating systems tested on: No response Linked PRs GH-128685: Specialize (rather than quicken) LOAD_CONST into LOAD_CONST_[IM]MORTAL #128708 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:40:19.158267"
+  },
+  {
     "id": 1395,
     "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CopyComPointer",
     "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
@@ -9345,26 +9380,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1396,
-    "url": "https://github.com/python/cpython/issues/128685"
-  },
-  {
-    "id": 1397,
-    "url": "https://docs.python.org/3/library/os.html#module-os"
-  },
-  {
-    "id": 1398,
-    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html"
-  },
-  {
-    "id": 1399,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#build-changes"
-  },
-  {
-    "id": 1400,
-    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-forkserver"
   },
   {
     "id": 1401,
@@ -236161,10 +236176,1300 @@ window.searchData = [
     "id": 282308,
     "url": "https://github.com/jab",
     "parentUrl": "https://github.com/python/cpython/issues/77065"
+  },
+  {
+    "id": 289084,
+    "url": "https://github.com/python/cpython/issues/128685#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "id": 289085,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128685",
+    "parentUrl": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "id": 289086,
+    "url": "https://github.com/python/cpython/pull/128708",
+    "parentUrl": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "id": 289087,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128685",
+    "parentUrl": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "id": 289088,
+    "url": "https://github.com/python/cpython/issues/128685#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "id": 289091,
+    "url": "https://github.com/python/cpython/issues/128685#issue-2778499091",
+    "parentUrl": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "id": 289832,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-a-cyclic-document",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289833,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#application-yaml-fragment",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289834,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#sec-yaml-exhaustion",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289835,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#fragment-alias-node",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289836,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289837,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-example-of-yaml-nodes-that-",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289838,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1-5.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289839,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.20.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289840,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1-5.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289841,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289843,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289844,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.24.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289845,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-6.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289847,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-6.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289848,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-normative-references",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289849,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC7464",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289851,
+    "url": "https://yaml.org/type/merge.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289852,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-examples-related-to-fragmen",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289853,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289854,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289855,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.12.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289856,
+    "url": "https://rfc-editor.org/rfc/rfc3986#section-3.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289857,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-fragment-identifiers",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289858,
+    "url": "https://www.rfc-editor.org/rfc/rfc9512.xml",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289859,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-yaml-streams",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289860,
+    "url": "https://www.rfc-editor.org/info/rfc7464",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289861,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289862,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#example-merge-keys",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289863,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#application-yaml",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289864,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-yaml-streams-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289865,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-introduction",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289866,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.22.2.10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289867,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC2119",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289868,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC6838",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289869,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-B-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289870,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-media-type-and-structured-s",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289871,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-media-type-application-yaml",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289872,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#int-yaml-filename-extension",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289873,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-B-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289874,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.18.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289875,
+    "url": "https://www.rfc-editor.org/info/rfc9512",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289876,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-example-of-a-json-pointer-t",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289877,
+    "url": "https://rfc-editor.org/rfc/rfc8259#section-8.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289878,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.10.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289879,
+    "url": "https://rfc-editor.org/rfc/rfc3986#section-4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289880,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-5-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289881,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-5-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289882,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-references",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289883,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289884,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289885,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289886,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-6.6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289887,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289888,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289889,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289890,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-6.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289891,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289892,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289893,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289894,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289895,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-6.7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289896,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-filename-extension",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289897,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-6.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289898,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-6.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289899,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-6.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289900,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-6.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289901,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-copyright-notice",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289902,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.26.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289903,
+    "url": "https://www.rfc-editor.org/info/rfc8259",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289904,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.8.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289905,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-boilerplate.2-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289906,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-boilerplate.2-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289907,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.4-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289908,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289909,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289910,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289911,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289912,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-unreferenceable-nodes",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289913,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289914,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289915,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2.1-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289916,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.14.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289917,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A.3-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289918,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A.3-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289919,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.1-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289920,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.1-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289921,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.1-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289922,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.1-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289923,
+    "url": "https://www.rfc-editor.org/rfc/rfc9512",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289924,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289925,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289926,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289927,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289928,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289929,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289930,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289931,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289932,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289933,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-notational-conventions",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289934,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#figure-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289935,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC9110",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289936,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#interoperability-considerations",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289937,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.3-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289938,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.3-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289939,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-yaml-and-json",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289940,
+    "url": "https://www.rfc-editor.org/rfc/rfc9512.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289941,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-table-of-contents",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289942,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-example-of-mapping-keys-and",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289943,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.5-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289944,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.16.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289945,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.5-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289946,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.5-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289947,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-iana-considerations",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289948,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.5-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289949,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289950,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC8259",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289951,
+    "url": "https://www.iana.org/assignments/media-types",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289952,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A.2-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289953,
+    "url": "https://datatracker.ietf.org/person/robipolli@gmail.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289955,
+    "url": "https://datatracker.ietf.org/doc/rfc9512/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289956,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.2-2.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289957,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.2-2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289958,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#suffix-yaml",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289959,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.28.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289960,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289961,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.20.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289962,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289963,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-representation-graph-with-a",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289964,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-a-yaml-stream-containing-tw",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289965,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.6.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289966,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.2-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289967,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.2-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289968,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.16.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289969,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-the-yaml-structured-syntax-",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289970,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289971,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289972,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289973,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-yaml-is-an-evolving-languag",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289974,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-status-of-this-memo",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289975,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.8.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289976,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289977,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#security-considerations",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289978,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289979,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#example-yaml-cyclic",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289980,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.2-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289981,
+    "url": "https://rfc-editor.org/rfc/rfc6838#section-4.6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289982,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A.1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289983,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-json-replaces-alias-nodes-w",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289984,
+    "url": "https://mailarchive.ietf.org/arch/browse/httpapi/?q\u003drfc9512 OR %22draft-ietf-httpapi-yaml-mediatypes%22",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289985,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#YAML",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289986,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-abstract-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289987,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289988,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-boilerplate.1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289989,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-interoperability-considerat",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289990,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289991,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-boilerplate.1-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289992,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-boilerplate.1-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289993,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.1-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289994,
+    "url": "https://www.iana.org/assignments/media-type-structured-suffix",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289995,
+    "url": "https://datatracker.ietf.org/person/eemeli@gmail.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289996,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-resource-exhaustion",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289997,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.22.2.6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289998,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#ex-fragid",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 289999,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.22.2.8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290000,
+    "url": "https://www.rfc-editor.org/rfc/rfc9512.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290002,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.22.2.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290003,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.3-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290004,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.22.2.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290005,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-fragment-identification",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290006,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-example-of-yaml-merge-keys",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290007,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC8174",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290008,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290009,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.30.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290010,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290011,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-1-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290012,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290013,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.14.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290014,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.1-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290015,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-authors-addresses",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290016,
+    "url": "https://datatracker.ietf.org/doc/rfc9512/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290017,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#int-yaml-and-json",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290018,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290019,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290020,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290021,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC6901",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290022,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290023,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290024,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-fragment-identification-via",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290025,
+    "url": "https://datatracker.ietf.org/person/erik.wilde@dret.net",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290026,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-expressing-booleans",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290027,
+    "url": "https://www.rfc-editor.org/info/rfc3629",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290028,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC3629",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290029,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#OAS",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290030,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.2-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290031,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.2-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290032,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.2-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290033,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.18.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290034,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-a-billion-laughs-document",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290035,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.6.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290036,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-arbitrary-code-execution",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290037,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-acknowledgements",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290038,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-4-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290039,
+    "url": "https://www.rfc-editor.org/rfc/rfc9512.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290040,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.10.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290041,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#RFC3986",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290042,
+    "url": "https://www.rfc-editor.org/info/rfc6901",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290043,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-09",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290044,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-07",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290045,
+    "url": "https://yaml.org/spec/1.2.2/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290046,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290048,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-08",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290049,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290050,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-05",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290051,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#appendix-A.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290052,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-06",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290053,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-03",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290054,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-04",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290055,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-01",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290057,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-02",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290058,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-00",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290059,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-example-of-a-cyclic-referen",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290060,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290061,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290062,
+    "url": "https://www.rfc-editor.org/info/rfc3986",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290063,
+    "url": "https://datatracker.ietf.org/wg/httpapi/about/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290064,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290065,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#abstract",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290066,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290067,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290068,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-informative-references",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290069,
+    "url": "https://datatracker.ietf.org/doc/draft-ietf-httpapi-yaml-mediatypes/10/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290070,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-referencing-a-missing-node",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290071,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#name-security-considerations",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290072,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.1-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290073,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.1-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290074,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-3.1-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290075,
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-yaml-mediatypes-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290076,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.1-2.32.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290077,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.12.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "id": 290078,
+    "url": "https://datatracker.ietf.org/doc/html/rfc9512.html#section-2.2-2.12.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-forkserver"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "multiprocessing — Process-based parallelism — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing-start-method-forkserver"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#build-changes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#build-changes"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 9512 - YAML Media Type",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 9512 - YAML Media Type",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc9512.html"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#module-os"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#module-os"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "`LOAD_CONST_IMMORTAL` doesn\u0027t survive being instrumented and de-instrumented. · Issue #128685 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128685"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "`LOAD_CONST_IMMORTAL` doesn\u0027t survive being instrumented and de-instrumented. · Issue #128685 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128685"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
