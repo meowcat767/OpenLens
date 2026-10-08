@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1556,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._pack_",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Warning ctypes provides low-level access to native libraries and the process’s memory, bypassing Python’s safety mechanisms and allowing execution of arbitrary native code. Incorrect use can corrupt data and objects, reveal sensitive information, cause crashes, or otherwise compromise the running process. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most re",
+    "scrapedAt": "2026-10-08 19:47:38.102545"
+  },
+  {
+    "id": 1555,
+    "url": "https://github.com/python/cpython/issues/125563",
+    "title": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation savannahostrowski commented Oct 16, 2024 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member 📚 Documentation preview 📚: https://cpython-previews--125563.org.readthedocs.build/ Issue: Deprecate prefix_chars in argument_group #125542 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions savannahostrowski added 2 commits October 15, 2024 21:46 Deprecate prefix_chars bd26604 Remove extraneous comment 0763efb savannahostrowski requested a review from serhiy-storchaka October 16, 2024 04:48 bedevere-app Bot added the awaiting review label Oct 16, 2024 savannahostrowski changed the title Deprecate prefix_chars in ArgumentParser.add_argument_group gh-125542: Deprecate prefix_chars in ArgumentParser.add_argument_group Oct 16, 2024 bedevere-app Bot mentioned this pull request Oct 16, 2024 Deprecate prefix_chars in argument_group #125542 Closed savannahostrowski and others added 5 commits October 15, 2024 21:49 Add GH number to whatsnew fd1cd64 📜🤖 Added by blurb_it. faf7699 Remove newline f105c3e Merge branch \u0027pythongh-125542\u0027 of https://github.com/savannahostrowsk… … d6b41c5 …i/cpython into pythongh-125542 Appease linter b5f2355 savannahostrowski commented Oct 16, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author @serhiy-storchaka I wasn\u0027t sure if this should be considered more of a soft deprecation (targeting slated removal in 3.16 or similar) since I\u0027m not really changing logic here to ignore this parameter/throw an error. Interested to hear your thoughts! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. savannahostrowski added 2 commits October 15, 2024 22:20 Fix reference 7c0c570 Update deprecation in docs for consistency 86d91ef savannahostrowski commented Oct 16, 2024 View reviewed changes Comment thread Doc/library/argparse.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Use func 5897e0a serhiy-storchaka reviewed Oct 16, 2024 View reviewed changes Comment thread Doc/library/argparse.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/argparse.rst Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/argparse.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_argparse.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_argparse.py Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/test/test_argparse.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Misc/NEWS.d/next/Library/2024-10-16-04-50-53.gh-issue-125542.vZJ-Ns.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. savannahostrowski added 2 commits October 16, 2024 19:45 Address PR comments 3d0ddf3 Use double backtick syntax d3a2f41 savannahostrowski commented Oct 17, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Author It looks like using :ref: for parameters doesn\u0027t work cross-file (e.g., in news entries). After looking at other examples, it seems the right thing to do here is to use `` instead. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. serhiy-storchaka reviewed Oct 17, 2024 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2024-10-16-04-50-53.gh-issue-125542.vZJ-Ns.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Update Misc/NEWS.d/next/Library/2024-10-16-04-50-53.gh-issue-125542.v… … f43f6f2 …ZJ-Ns.rst serhiy-storchaka approved these changes Oct 17, 2024 View reviewed changes serhiy-storchaka left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. Sorry, something went wrong. Uh oh! There",
+    "scrapedAt": "2026-10-08 19:47:36.729892"
+  },
+  {
+    "id": 1554,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-annotated-code",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:47:32.734926"
+  },
+  {
+    "id": 1553,
+    "url": "https://docs.python.org/3/library/calendar.html#calendar.JANUARY",
+    "title": "calendar — General calendar-related functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Types » calendar — General calendar-related functions | Theme Auto Light Dark | calendar — General calendar-related functions¶ Source code: Lib/calendar.py This module allows you to output calendars like the Unix cal program, and provides additional useful functions related to the calendar. By default, these calendars have Monday as the first day of the week, and Sunday as the last (the European convention). Use setfirstweekday() to set the first day of the week to Sunday (6) or to any other weekday. Parameters that specify dates are given as integers. For related functionality, see also the datetime and time modules. The functions and classes defined in this module use an idealized calendar, the current Gregorian calendar extended indefinitely in both directions. This matches the definition of the “proleptic Gregorian” calendar in Dershowitz and Reingold’s book “Calendrical Calculations”, where it’s the base calendar for all computations. Zero and negative years are interpreted as prescribed by the ISO 8601 standard. Year 0 is 1 BC, year -1 is 2 BC, and so on. class calendar.Calendar(firstweekday\u003d0)¶ Creates a Calendar object. firstweekday is an integer specifying the first day of the week. MONDAY is 0 (the default), SUNDAY is 6. A Calendar object provides several methods that can be used for preparing the calendar data for formatting. This class doesn’t do any formatting itself. This is the job of subclasses. Calendar instances have the following methods and attributes: firstweekday¶ The first weekday as an integer (0–6). This property can also be set and read using setfirstweekday() and getfirstweekday() respectively. getfirstweekday()¶ Return an int for the current first weekday (0–6). Identical to reading the firstweekday property. setfirstweekday(firstweekday)¶ Set the first weekday to firstweekday, passed as an int (0–6). Identical to setting the firstweekday property. iterweekdays()¶ Return an iterator for the weekday numbers that will be used for one week. The first value from the iterator will be the same as the value of the firstweekday property. itermonthdates(year, month)¶ Return an iterator for the month month (1–12) in the year year. This iterator will return all days (as datetime.date objects) for the month and all days before the start of the month or after the end of the month that are required to get a complete week. itermonthdays(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will simply be day of the month numbers. For the days outside of the specified month, the day number is 0. itermonthdays2(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a day of the month number and a weekday number. itermonthdays3(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a year, a month and a day of the month numbers. Added in version 3.7. itermonthdays4(year, month)¶ Return an iterator for the month month in the year year similar to itermonthdates(), but not restricted by the datetime.date range. Days returned will be tuples consisting of a year, a month, a day of the month, and a day of the week numbers. Added in version 3.7. monthdatescalendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven datetime.date objects. monthdays2calendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven tuples of day numbers and weekday numbers. monthdayscalendar(year, month)¶ Return a list of the weeks in the month month of the year as full weeks. Weeks are lists of seven day numbers. yeardatescalendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting. The return value is a list of month rows. Each month row contains up to width months (defaulting to 3). Each month contains between 4 and 6 weeks and each week contains 1–7 days. Days are datetime.date objects. yeardays2calendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting (similar to yeardatescalendar()). Entries in the week lists are tuples of day numbers and weekday numbers. Day numbers outside this month are zero. yeardayscalendar(year, width\u003d3)¶ Return the data for the specified year ready for formatting (similar to yeardatescalendar()). Entries in the week lists are day numbers. Day numbers outside this month are zero. class calendar.TextCalendar(firstweekday\u003d0)¶ This class can be used to generate plain text calendars. TextCalendar instances have the following methods: formatday(theday, weekday,",
+    "scrapedAt": "2026-10-08 19:47:31.369096"
+  },
+  {
+    "id": 1552,
+    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid3",
+    "title": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » uuid — UUID objects according to RFC 9562 | Theme Auto Light Dark | uuid — UUID objects according to RFC 9562¶ Source code: Lib/uuid.py This module provides immutable UUID objects (the UUID class) and functions for generating UUIDs corresponding to a specific UUID version as specified in RFC 9562 (which supersedes RFC 4122), for example, uuid1() for UUID version 1, uuid3() for UUID version 3, and so on. Note that UUID version 2 is deliberately omitted as it is outside the scope of the RFC. If all you want is a unique ID, you should probably call uuid1() or uuid4(). Note that uuid1() may compromise privacy since it creates a UUID containing the computer’s network address. uuid4() creates a random UUID. Depending on support from the underlying platform, uuid1() may or may not return a “safe” UUID. A safe UUID is one which is generated using synchronization methods that ensure no two processes can obtain the same UUID. All instances of UUID have an is_safe attribute which relays any information about the UUID’s safety, using this enumeration: class uuid.SafeUUID¶ Added in version 3.7. safe¶ The UUID was generated by the platform in a multiprocessing-safe way. unsafe¶ The UUID was not generated in a multiprocessing-safe way. unknown¶ The platform does not provide information on whether the UUID was generated safely or not. class uuid.UUID(hex\u003dNone, bytes\u003dNone, bytes_le\u003dNone, fields\u003dNone, int\u003dNone, version\u003dNone, *, is_safe\u003dSafeUUID.unknown)¶ Create a UUID from either a string of 32 hexadecimal digits, a 16-byte bytes object in big-endian order as the bytes argument, a 16-byte bytes object in little-endian order as the bytes_le argument, a tuple of six integers (32-bit time_low, 16-bit time_mid, 16-bit time_hi_version, 8-bit clock_seq_hi_variant, 8-bit clock_seq_low, 48-bit node) as the fields argument, or a single 128-bit integer as the int argument. When a string of hex digits is given, curly braces, hyphens, and a URN prefix are all optional. For example, these expressions all yield the same UUID: UUID(\u0027{12345678-1234-5678-1234-567812345678}\u0027)\nUUID(\u002712345678123456781234567812345678\u0027)\nUUID(\u0027urn:uuid:12345678-1234-5678-1234-567812345678\u0027)\nUUID(bytes\u003db\u0027\\x12\\x34\\x56\\x78\u0027*4)\nUUID(bytes_le\u003db\u0027\\x78\\x56\\x34\\x12\\x34\\x12\\x78\\x56\u0027 +\n              b\u0027\\x12\\x34\\x56\\x78\\x12\\x34\\x56\\x78\u0027)\nUUID(fields\u003d(0x12345678, 0x1234, 0x5678, 0x12, 0x34, 0x567812345678))\nUUID(int\u003d0x12345678123456781234567812345678)\n Exactly one of hex, bytes, bytes_le, fields, or int must be given. The version argument is optional; if given, the resulting UUID will have its variant and version number set according to RFC 9562, overriding bits in the given hex, bytes, bytes_le, fields, or int. Comparison of UUID objects are made by way of comparing their UUID.int attributes. Comparison with a non-UUID object raises a TypeError. str(uuid) returns a string in the form 12345678-1234-5678-1234-567812345678 where the 32 hexadecimal digits represent the UUID. UUID instances have these read-only attributes: UUID.bytes¶ The UUID as a 16-byte bytes object (containing the six integer fields in big-endian byte order). UUID.bytes_le¶ The UUID as a 16-byte bytes object (with time_low, time_mid, and time_hi_version in little-endian byte order). UUID.fields¶ A tuple of the six integer fields of the UUID, which are also available as six individual attributes and two derived attributes: Field Meaning UUID.time_low¶ The first 32 bits of the UUID. Only relevant to version 1. UUID.time_mid¶ The next 16 bits of the UUID. Only relevant to version 1. UUID.time_hi_version¶ The next 16 bits of the UUID. Only relevant to version 1. UUID.clock_seq_hi_variant¶ The next 8 bits of the UUID. Only relevant to versions 1 and 6. UUID.clock_seq_low¶ The next 8 bits of the UUID. Only relevant to versions 1 and 6. UUID.node¶ The last 48 bits of the UUID. Only relevant to version 1. UUID.time¶ The 60-bit timestamp as a count of 100-nanosecond intervals since Gregorian epoch (1582-10-15 00:00:00) for versions 1 and 6, or the 48-bit timestamp in milliseconds since Unix epoch (1970-01-01 00:00:00) for version 7. UUID.clock_seq¶ The 14-bit sequence number. Only relevant to versions 1 and 6. UUID.hex¶ The UUID as a 32-character lowercase hexadecimal string. UUID.int¶ The UUID as a 128-bit integer. UUID.urn¶ The UUID as a URN as specified in RFC 9562. UUID.variant¶ The UUID variant, which determines the internal layout of the UUID. This will be one of the constants RESERVED_NCS, RFC_4122, RESERVED_MICROSOFT, or RESERVED_FUTURE. UUID.version¶ The UUID version number (1 through 8, meaningful only when the variant is RFC_4122). Changed in version 3.14: Added UUID versions 6, 7 and 8. UUID.is_safe¶ An enumeration of SafeUUID which indicates whether the platform generated the UUID in a multiprocessing-safe way. Added in version 3.7. The uuid module defines the following",
+    "scrapedAt": "2026-10-08 19:47:30.079515"
+  },
+  {
     "id": 1551,
     "url": "https://docs.python.org/3/library/exceptions.html#BlockingIOError",
     "title": "Built-in Exceptions — Python 3.14.8 documentation",
@@ -10430,26 +10465,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1552,
-    "url": "https://docs.python.org/3/library/uuid.html#uuid.uuid3"
-  },
-  {
-    "id": 1553,
-    "url": "https://docs.python.org/3/library/calendar.html#calendar.JANUARY"
-  },
-  {
-    "id": 1554,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-annotated-code"
-  },
-  {
-    "id": 1555,
-    "url": "https://github.com/python/cpython/issues/125563"
-  },
-  {
-    "id": 1556,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._pack_"
   },
   {
     "id": 1557,
@@ -246191,10 +246206,561 @@ window.searchData = [
     "id": 333906,
     "url": "https://github.com/python/cpython/issues/132099#top",
     "parentUrl": "https://github.com/python/cpython/issues/132099"
+  },
+  {
+    "id": 335668,
+    "url": "https://github.com/python/cpython/pull/125563#event-14668145783",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335669,
+    "url": "https://github.com/python/cpython/pull/125563/files/5897e0ac5e9798be122585ab4658335554ecbca1#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335670,
+    "url": "https://github.com/python/cpython/pull/125563#commits-pushed-bd26604",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335672,
+    "url": "https://github.com/python/cpython/pull/125563#commits-pushed-fd1cd64",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335673,
+    "url": "https://github.com/python/cpython/pull/125563/commits/0763efbf6f7358ea3cb9a2128bb4360deb6f0278",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335674,
+    "url": "https://github.com/python/cpython/pull/125563#issuecomment-2415750803",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335675,
+    "url": "https://github.com/python/cpython/pull/125563/files/86d91eff3a627cf4bf3cebce3cc9b0c514f8de8c#diff-76a105efd5acb88546c093f1d7f5d22d1d7908060dc46aa3d7c4499142720ec7",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335676,
+    "url": "https://github.com/python/cpython/pull/125563/files/5897e0ac5e9798be122585ab4658335554ecbca1#diff-205ef24c9374465bf35c359abce9211d3aa113e986a1e3d41569eb29d07df479",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335677,
+    "url": "https://github.com/python/cpython/pull/125563/commits/3d0ddf3d2e50b73e2cb7065f6bdfa90f46340f73",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335678,
+    "url": "https://github.com/python/cpython/pull/125563#issuecomment-2418397791",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335679,
+    "url": "https://github.com/donbarbos/typeshed/commit/a1cab28debf9c9794bbded7123620ae4545abd28",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335680,
+    "url": "https://github.com/python/typeshed/pull/15175",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335681,
+    "url": "https://github.com/python/cpython/pull/125563/commits/b5f23552c5af6af6b55892b90b214655d4fce16f",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335682,
+    "url": "https://github.com/python/cpython/pull/125563#pullrequestreview-2371229955",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335683,
+    "url": "https://github.com/python/cpython/pull/125563#event-14695338386",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335684,
+    "url": "https://github.com/python/cpython/pull/125563#commits-pushed-3d0ddf3",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335685,
+    "url": "https://github.com/python/cpython/pull/125563/commits/bd26604e143f846669402243f5fd82e6805442ee",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335686,
+    "url": "https://github.com/python/cpython/pull/125563/files/d3a2f4105b010b0c3e91f84fab207f286057c433",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335687,
+    "url": "https://github.com/python/cpython/pull/125563/commits/d3a2f4105b010b0c3e91f84fab207f286057c433",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335688,
+    "url": "https://github.com/python/cpython/pull/125563/commits/f105c3e44d34a731a1d0e0949c895475ec13c50e",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335689,
+    "url": "https://github.com/python/cpython/pull/125563#event-14695327706",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335690,
+    "url": "https://github.com/python/cpython/pull/125563#commits-pushed-7c0c570",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335691,
+    "url": "https://github.com/python/cpython/pull/125563/commits/7c0c570fea96a0493a0a1cb2fbe6a5ef8ad6bd32",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335692,
+    "url": "https://github.com/python/cpython/pull/125563/files/5897e0ac5e9798be122585ab4658335554ecbca1#diff-c7651634d84a017884451f95f6535a1d2efbeacee1cca7cc1e27fdc748804aa1",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335693,
+    "url": "https://github.com/python/typeshed/pull/14428",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335694,
+    "url": "https://github.com/python/cpython/pull/125563/commits/f43f6f22bfa42fb4da52baea2eff6f570fb7b847",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335696,
+    "url": "https://github.com/python/cpython/pull/125563#pullrequestreview-2374567114",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335698,
+    "url": "https://github.com/python/cpython/pull/125563/commits/5897e0ac5e9798be122585ab4658335554ecbca1",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335699,
+    "url": "https://github.com/ebonnal/cpython/commit/2cefcd9b652ea93839ec1201bee0da59b9be2310",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335700,
+    "url": "https://github.com/python/cpython/pull/125563#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335703,
+    "url": "https://github.com/python/cpython/pull/125563/files/5897e0ac5e9798be122585ab4658335554ecbca1",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335704,
+    "url": "https://github.com/python/cpython/pull/125563#event-14668146841",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335705,
+    "url": "https://github.com/python/cpython/pull/125563/files/5897e0ac5e9798be122585ab4658335554ecbca1#diff-76a105efd5acb88546c093f1d7f5d22d1d7908060dc46aa3d7c4499142720ec7",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335706,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F125563",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335707,
+    "url": "https://github.com/python/cpython/pull/125563/files/f43f6f22bfa42fb4da52baea2eff6f570fb7b847",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335710,
+    "url": "https://github.com/python/cpython/pull/125563/files/5897e0ac5e9798be122585ab4658335554ecbca1#diff-616e4ed469ed702a183c3f8ce3c9be23af7d789cacd30c2bed96dd33a10a19a1",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335711,
+    "url": "https://github.com/python/cpython/pull/125563#event-14695689826",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335712,
+    "url": "https://github.com/python/cpython/pull/125563#ref-pullrequest-3243979936",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335714,
+    "url": "https://github.com/python/cpython/pull/125563#issue-2590607031",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335716,
+    "url": "https://github.com/python/cpython/pull/125563#pullrequestreview-2371780128",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335720,
+    "url": "https://github.com/python/cpython/pull/125563#pullrequestreview-2374555004",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335721,
+    "url": "https://github.com/python/cpython/pull/125563",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335723,
+    "url": "https://github.com/python/cpython/pull/125563/commits/d6b41c582cf1dbcefabb620fa3d7ef66317d1851",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335725,
+    "url": "https://github.com/python/cpython/pull/125563#ref-issue-2589339087",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335726,
+    "url": "https://github.com/python/cpython/pull/125563/commits/fd1cd64b11ecf176d1908de4a8388d313001dfb9",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335728,
+    "url": "https://github.com/python/cpython/pull/125563/commits/86d91eff3a627cf4bf3cebce3cc9b0c514f8de8c",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335729,
+    "url": "https://github.com/python/cpython/pull/125563#ref-commit-a1cab28",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335730,
+    "url": "https://github.com/python/cpython/pull/125563/files/86d91eff3a627cf4bf3cebce3cc9b0c514f8de8c",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335731,
+    "url": "https://github.com/python/cpython/pull/125563#ref-pullrequest-3762334150",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335733,
+    "url": "https://github.com/python/cpython/pull/125563#ref-commit-2cefcd9",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335734,
+    "url": "https://github.com/python/cpython/pull/125563/commits/faf7699799686d583938f16d663e20b929f82907",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335735,
+    "url": "https://github.com/python/cpython/pull/125563#event-14668145379",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335736,
+    "url": "https://cpython-previews--125563.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335737,
+    "url": "https://github.com/python/cpython/pull/125563/files/5897e0ac5e9798be122585ab4658335554ecbca1..d3a2f4105b010b0c3e91f84fab207f286057c433#diff-616e4ed469ed702a183c3f8ce3c9be23af7d789cacd30c2bed96dd33a10a19a1",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "id": 335738,
+    "url": "https://github.com/python/cpython/pull/125563#event-14695690626",
+    "parentUrl": "https://github.com/python/cpython/issues/125563"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._pack_"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.Structure._pack_"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d80\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d48\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d80\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d60\u0026v\u003d4",
+    "alt": "savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d80\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d48\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d40\u0026u\u003de4bb61b9ebaa406274d2f2629cd33179a432a2a7\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/32455369?s\u003d40\u0026v\u003d4",
+    "alt": "@ebonnal",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d40\u0026u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4",
+    "alt": "@donbarbos",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d40\u0026u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4",
+    "alt": "@donbarbos",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d40\u0026u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4",
+    "alt": "@donbarbos",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8949415?s\u003d52\u0026v\u003d4",
+    "alt": "@savannahostrowski",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d52\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-125542: Deprecate `prefix_chars` in `ArgumentParser.add_argument_group` by savannahostrowski · Pull Request #125563 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125563"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-annotated-code"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#implications-for-annotated-code"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "calendar — General calendar-related functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/calendar.html#calendar.JANUARY"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "calendar — General calendar-related functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/calendar.html#calendar.JANUARY"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/uuid.html#uuid.uuid3"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "uuid — UUID objects according to RFC 9562 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/uuid.html#uuid.uuid3"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
