@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 310,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/",
+    "title": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Mercedes-Benz Mercedes-Benz A-Klasse Mercedes-Benz A-Klasse 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Connectiviteit en smartphone-integratie (MBUX) Uitgebreid motoraanbod (van PHEV tot AMG) Dynamisch weggedrag Zwakke punten Hoge basisprijs Ellenlange optielijst Rijcomfort AMG Line Toon aanbod Toon aanbod Mercedes-Benz A-Klasse: Duitse kwaliteit en luxe De vierde generatie A-Klasse (W177) trekt sinds 2018 de dynamische lijn van zijn voorganger (W176) door. Voor het eerst is hij er ook als vierdeurs, de Sedan (V177). De compacte Duitser combineert premium met connectiviteit, en biedt veel keuze: van de plug-inhybride A 250 e tot de potente AMG A 45 S. Lees meer Mercedes-Benz A-Klasse : een overzicht Bekijk hier de actuele prijzen voor de Mercedes-Benz A-Klasse : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 39.950,-* Occasions vanaf:€ 597,-* *Laagste prijs op AutoScout24 in de afgelopen maand Mercedes-Benz A-Klasse aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Mercedes-Benz A 180Ambition Panoramadak Xenon Led Sportstoelen € 8.950 04/2014 226.326 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8401 DTGorredijk Mercedes-Benz A 180180 Ambition AMG PAKKET NETTE AUTO LEER RIJDT GOED € 9.995 03/2013 138.547 km Benzine 5,40 l/100 km (gem.) 2,8 Autobedrijf NL 3076 JARotterdam Mercedes-Benz A 180| Sportstoelen € 7.975 08/2013 190.923 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8629 EGScharnegoutum Mercedes-Benz A 250Premium Plus PANO VIRTUAL ACC SFEERVERL. KEYLESS 3 € 22.950 09/2018 166.982 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1314 ARAlmere Mercedes-Benz A 200Business Solution AMG | CAMERA | STOELVERW. | SFEE € 22.880 01/2021 96.807 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3421 TXOudewater Mercedes-Benz A 250Amg Automaat Leer Clima Xenon/Led € 10.950 € 11.750,- 08/2013 193.067 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 2521 RLDen Haag Mercedes-Benz A 180AMG NAP|Xenon|LED|Navi|Leder|Afneembaar Trekhaak|R € 7.990 05/2013 231.599 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7641 LHWierden Mercedes-Benz A 180EDITION AMG Panoramadak Night Camera € 17.950 01/2018 124.301 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8401 DTGorredijk Mercedes-Benz A 250AMG (PANO, ADAPTIVE CRUISE, LEDER, STOELV, PARKEER € 11.995 € 12.995,- 09/2012 182.718 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 4879 AHEtten-leur Mercedes-Benz A 250AMG BURMESTER PANO HUD SFEER € 22.899 09/2018 124.914 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7327 JZApeldoorn Mercedes-Benz A 250e Business Solution AMG | Beige Leder € 27.9501 08/2021 22.416 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 2665 JABleiswijk Mercedes-Benz A 180Ambition AMG | AMG-Styling | Xenon | € 16.900 11/2015 36.174 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1716 KJOpmeer Mercedes-Benz A 250e Premium, Black Pack, Leder, LED, Carplay! € 19.950 08/2020 123.845 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 8253 RDDronten Mercedes-Benz A 200Ambition Automaat Panoromadak € 10.950 € 11.950,- 10/2012 146.220 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 2521 RLDen Haag Mercedes-Benz A 180AMG Line BTW|GARANTIE|CAMERA|NIGHTPAKKET|DODEHOEK| € 28.9501 04/2024 47.383 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1175 KELijnden Mercedes-Benz A 160Business Solution Luxury AMG € 13.950 12/2019 178.347 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7091 ZZDinxperlo Mercedes-Benz A 180Urban Automaat LED|Groot Navi|Sportstoelen € 14.995 05/2017 129.995 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5813 EAYsselsteyn Mercedes-Benz A 180CDI |MAXTON|AIRCO|CRUISE|ELK.PAKKET|TREKHAAK|LM VE € 7.950 01/2014 215.561 km Diesel - (l/100 km) 2,8 Nieuw Autobedrijf NL 9403 AJAssen Mercedes-Benz A 220edition one|AMG|PANO|BOMVOL! € 23.250 02/2019 155.033 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3439 JENieuwegein Mercedes-Benz A 180Ambition Aut. Xenon Airco Cruise CarPlay Pdc € 12.900 10/2014 121.022 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4261 AGWijk En Aalburg Mercedes-Benz A-Klasse occasions bekijkenMercedes-Benz A-Klasse nieuwe auto\u0027s bekijken Mercedes-Benz A-Klasse in Amsterdam bekijkenMercedes-Benz A-Klasse in Rotterdam bekijkenMercedes-Benz A-Klasse in Den Haag bekijkenMercedes-Benz A-Klasse in Utrecht bekijkenMercedes-Benz A-Klasse in Eindhoven bekijkenMercedes-Benz A-Klasse in Groningen bekijken Bouwjaar2026 - 2000 Actuele advertenties2.439 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2013 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 10.055 en er zijn 141 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2019. Er staan 278 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2026 € 41.637 165 advertenties 2025 € 37.845 163 advertenties 2024 € 32.950 70 advertenties 2023 € 30.950 107 adver",
+    "scrapedAt": "2026-10-08 18:57:32.949041"
+  },
+  {
+    "id": 309,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-e-tron/",
+    "title": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Audi Audi e-tron Audi e-tron 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Enorm hoge kwaliteit Zeer comfortabel Krachtige elektromotoren Zwakke punten Duur in aanschaf Erg zwaar Te grote wielen doen afbreuk aan comfort Toon aanbod Toon aanbod Audi Q8 e-tron: luxueuze, elektrische familie-SUV De Audi e-tron was de naam van de eerste volledig elektrische Audi. Om de wereld kennis te laten maken met volledig elektrisch rijden, koos Audi voor een eenvoudige naam. Inmiddels is ‘e-tron’ uitgegroeid tot een label voor 100% elektrische modellen van Audi. Om die reden werd de naam van de Audi e-tron in 2022 omgedoopt in Audi Q8 e-tron. Lees meer Audi e-tron : een overzicht Bekijk hier de actuele prijzen voor de Audi e-tron : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Occasions vanaf:€ 15.878,-* *Laagste prijs op AutoScout24 in de afgelopen maand Audi e-tron aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Audi e-tronSportback S quattro 95 kWh, Leder, Pano, BodyKit, € 37.450 02/2021 111.952 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8253 RDDronten Audi e-trone-tron 50 quattro Launch edition plus 71 kWh | Pan € 24.4401 12/2019 104.101 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 4004 JVTiel Audi e-trone-tron 50 quattro Launch edition plus 71 kWh | Pan € 26.440 12/2019 93.384 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 4004 JVTiel Audi e-tron55 quattro Advanced edition 95 kWh | Pano | LMV | € 26.9501 12/2018 126.188 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8242 BALelystad Audi e-trone-tron 50 quattro Launch edition 71 kWh|Trekhaak|S € 19.995 12/2019 143.202 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 8831 ZMWinsum Fr Audi e-tronSportback 55 quattro Business edition Plus 95 kWh € 24.0001 € 25.000,- 05/2021 163.220 km Elektrisch - (kWh/100 km) 2,8 Prijsdaling Autobedrijf NL 2401 LJAlphen Aan Den Rijn Audi e-trone-tron 50 quattro Launch edition 71 kWh / CarPlay € 22.999 12/2019 61.955 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3911 RSRhenen Audi e-tron55 quattro 95 kWh 90%|Pano|Memory|360|Nachtzicht € 35.890 08/2019 82.728 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5628 CHEindhoven Audi e-tronSportback S quattro 503PK 95 kWh Aut. | 93% SOH | € 39.945 02/2021 64.225 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 6721 NGBennekom Audi e-tronSportback 55 quattro S edition 95 kWh | B\u0026O | Pano € 30.850 09/2020 120.948 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8356 VSBlokzijl Audi e-tron55 Quattro 95 kWh S-Line ✅ SOH 91% ✅ Pano ✅ B\u0026O ✅ € 25.890 € 28.930,- 09/2019 110.252 km Elektrisch - (kWh/100 km) 2,8 Prijsdaling Autobedrijf NL 1741 NASchagen Audi e-tron50 quattro Advanced edition Plus 71 kWh - S-Line l € 33.9401 12/2022 74.936 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1688 JHNibbixwoud Audi e-tronSportback 55 quattro Business edition 95 kWh € 24.950 12/2020 159.395 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7905 SEHoogeveen Audi e-tronSportback S Quattro 95 kWh 504PK | Pano | Matrix | € 38.980 10/2022 94.543 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5015 BMTilburg Audi e-tron50 quattro S edition S-Line | Trekhaak | Siambeige € 31.7001 03/2021 65.370 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1716 KJOpmeer Audi e-tron55 quattro Advanced 95 kWh | Trekhaak | Panoramada € 34.8951 11/2022 34.998 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3762 ECSoest Audi e-tronSportback 55 quattro S edition 95 kWh € 34.950 09/2022 84.500 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5688 HPOirschot Audi e-tron55 quattro Advanced edition Plus 95 kWh Automaat | € 28.8991 09/2022 141.007 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7944 HTMeppel Audi e-tronE-tron 50 quattro Launch edition 71 kWh Soh 84% I € 23.950 € 24.950,- 07/2020 104.799 km Elektrisch - (kWh/100 km) 2,8 Prijsdaling Autobedrijf NL 6732 DAHarskamp Audi e-tron55 quattro Business edition Plus 95 kWh | Pano | A € 25.8881 12/2018 105.356 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 9403 APAssen Audi e-tron occasions bekijkenAudi e-tron nieuwe auto\u0027s bekijken Audi e-tron in Amsterdam bekijkenAudi e-tron in Rotterdam bekijkenAudi e-tron in Den Haag bekijkenAudi e-tron in Utrecht bekijkenAudi e-tron in Eindhoven bekijkenAudi e-tron in Groningen bekijken Bouwjaar2023 - 2015 Actuele advertenties292 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2015 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 11.999 en er zijn 5 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2022. Er staan 73 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2023 € 38.940 25 advertenties 2022 € 35.990 73 advertenties 2021 € 33.900 54 advertenties 2020 € 27.950 63 advertenties 2019 € 24.950 61 advertenties 2018 € 26.900 9 advertenties 2017 Geen gegevens 0 advertenties ",
+    "scrapedAt": "2026-10-08 18:57:31.718322"
+  },
+  {
+    "id": 308,
+    "url": "https://www.autoscout24.nl/auto/bmw/",
+    "title": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "content": "Ga naar hoofdinhoud Homepage Auto BMW BMW Toon aanbod 1 / 12 btnLabelPrevbtnLabelNext Toon aanbod Toon aanbod Vraag iemand naar een Duits automerk en de kans is groot dat BMW wordt genoemd. Het merk wordt samen met Audi en Mercedes-Benz gerekend tot de ‘grote drie’. Al decennialang maakt BMW naam als het merk voor de liefhebber van de autorijder, die ook wat luxe wil. Lees verder. Meer tonen BMW BMW Z3 BMW 1 BMW 114 BMW 116 BMW 118 BMW 120 BMW 123BMW 125BMW 130BMW 2BMW 218BMW 3 Serie (G20)BMW 316BMW 318BMW 320BMW 323BMW 325BMW 328BMW 330BMW 335BMW 340BMW 4 SerieBMW 420BMW 428BMW 430BMW 435BMW 440BMW 5 SerieBMW 520BMW 523BMW 525BMW 528BMW 530BMW 535BMW 540BMW 550BMW 6 SerieBMW 635BMW 640BMW 645BMW 650BMW 7 SerieBMW 730BMW 735BMW 740BMW 745BMW 750BMW 760BMW 8 SerieBMW 840BMW 850BMW i3BMW i4BMW i5 TouringBMW i8BMW iXBMW iX1BMW iX2BMW iX3BMW M140iBMW M2BMW M3BMW M4 (G82/G83)BMW M5BMW M5 TouringBMW M6BMW M8BMW X SerieBMW X1BMW X2BMW X3BMW X3 MBMW X4 (G02)BMW X4 MBMW X5BMW X6BMW X7: het nieuwe BMW SUV-vlaggenschipBMW XMBMW Z1BMW Z3 MBMW Z4BMW Z4 MBMW Z8 Alles weergeven BMW aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen BMW 3183-serie 318i Executive € 1.950 09/2004 189.341 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3812 RJAmersfoort BMW 1181-serie 118i EDE Sport | Automaat | Navigatie | Xe € 7.945 12/2015 213.062 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 3781 VMVoorthuizen BMW 3203-serie 320i Automaat Clima € 6.650 05/2012 292.813 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2521 RLDen Haag BMW 2162-serie Active Tourer 216d Centennial High Executi € 4.950 08/2016 258.087 km Diesel - (l/100 km) 2,8 Autobedrijf NL 8401 DTGorredijk BMW X5xDrive30i Executive LEER GOED ONDERHOUDEN TREKHAAK € 7.995 07/2009 209.087 km Benzine 10,20 l/100 km (gem.) 2,8 Nieuw Autobedrijf NL 3076 JARotterdam BMW 3183-serie Touring 318i Automaat Sport Panoramadak St € 9.900 03/2018 150.524 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5738 AKMariahout BMW 1161-serie 116i Executive | Nieuwe APK | Pano | Navi € 6.495 02/2014 206.142 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4817 BLBreda BMW 5255-serie Touring 525i Executive |Pano|Stoelverw.| € 2.999 07/2004 424.345 km LPG - (l/100 km) 2,8 Autobedrijf NL 4905 AAOosterhout BMW 3183-serie 318i Business Line | Export | Clima | Crui € 1.400 02/2009 321.401 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9502 ECStadskanaal BMW 3203-serie 320i High Executive Edition | M-pakket | L € 22.975 07/2019 165.797 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8629 EGScharnegoutum BMW X1xDrive20i Business | EXPORT | ZO MEENEMEN | € 5.050 06/2012 195.492 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3843 WNHarderwijk BMW 5255-serie 525I High Executive Leder - Xenon - Groot € 3.990 02/2007 322.869 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7961 EDRuinerwold BMW 3183 Serie 318i LCI CARPLAY Xenon M-sport Clima Cruis € 8.999 05/2010 159.889 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7317 AZApeldoorn BMW 1161-serie 116i 5-DEURS INTRODUCTION-uitv|AIRCO|SCHUI € 2.950 01/2009 272.822 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8253 RBDronten BMW 3203-serie Gran Turismo 320i M Sport / Leer / Camera € 9.990 01/2016 274.000 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7008 ARDoetinchem BMW 3233-serie Cabrio 323Ci Executive/ 6-Cil./ Windscherm € 5.995 07/2000 226.145 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 9206 AGDrachten BMW X33.0i Automaat - leder - sportstoelen - YOUNGTIMER € 3.950 01/2004 278.968 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 8152 DNLemelerveld BMW 5355-serie Gran Turismo 535i High Executive|AUT|XENON € 7.450 03/2010 292.473 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3812 RJAmersfoort BMW 3303-serie 330e M Sport | HUD | Carplay | Leder | LED € 10.995 11/2016 280.507 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 7903 ASHoogeveen BMW 5205-serie 520i M-Pakket NAP ORIGINEEL NL TREKHAAK CL € 11.450 10/2013 191.256 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7327 JZApeldoorn BMW occasions bekijkenBMW nieuwe auto\u0027s bekijken BMW in Amsterdam bekijkenBMW in Rotterdam bekijkenBMW in Den Haag bekijkenBMW in Utrecht bekijkenBMW in Eindhoven bekijkenBMW in Groningen bekijken Bijzonderheden van het automerk BMW Echte rijdersauto’s, met bovenal een luxe uitrusting Topprestaties, maar ook innovatieve technologieën Voor ieder segment is wel een BMW beschikbaar, tegenwoordig ook elektrisch Historie BMW BMW ziet het jaar 1916 als het jaar van oprichting. In dat jaar werd de Bayerische Flugzeug Werke opgericht. De productie van vliegtuigmotoren werd in 1923 aangevuld met de productie van motorfietsen. Sinds 1928 is BMW ook autofabrikant. BMW en BMW Motorrad zijn strikt genomen overigens afzonderlijke merken binnen BMW Group. BMW begon in 1928 met licentiebouw van de Austin Seven onder eigen naam BMW Dixi, maar produceerde vanaf 1933 echt eigen modellen. Het merk bouwde al snel naam op met sportieve modellen, waarvan de 327 en 328 echte iconen zijn geworden. Na de Tweede Wereldoor",
+    "scrapedAt": "2026-10-08 18:57:30.482534"
+  },
+  {
+    "id": 307,
+    "url": "https://www.autoscout24.nl/lst/c/mpv",
+    "title": "MPV occasion kopen - AutoScout24",
+    "content": "Ga naar hoofdinhoud MPV occasion kopen Filteren Alles reset Merk en model Uitvoering Carrosserievorm MPV Bouwjaar Conditie Brandstof Prijs Locatie Nederland Kilometerstand Transmissie Vermogen Type verkoper Stoelen en deuren Opties Kleur exterieur Interieurkleur en bekleding Garantie en historie Energieverbruik Online sinds Filteren2 Nederland MPV Zoekopdracht opslaan Toyota Prius+ Prius Wagon 1.8 Dynamic Business-7pers-pano-uniek Bewaar 33 € 10.995 Nieuw 09/2012 191.630 km Elektro/Benzine 73 kW (99 PK) Panorama dak, Parkeerhulp met camera, Navigatiesysteem, LED dagrijverlichting, Nieuwe APK, Getinte ramen, Met onderhoudshistorie, Adaptieve Cruise Control Autobedrijf E.J. RooyNL-2921 LA KRIMPEN AAN DEN IJSSEL Peugeot 3008 1.6i Allure | Panorama | Head-up | Leder | 112dkm Bewaar 40 € 5.650 01/2014 112.758 km Benzine 115 kW (156 PK) Nieuwe APK, Trekhaak, Alarm, Radio, Getinte ramen, Parkeerhulp met camera, Navigatiesysteem, Lichtmetalen velgen Auto Centrum Stiphout B.V.NL-5708 EJ HELMOND + Meer voertuigen Honda Jazz 1.2 Cool nieuwe apk Bewaar 11 € 1.250 Nieuw 12/2004 210.910 km Benzine 57 kW (77 PK) Nieuwe APK, Met onderhoudshistorie, CD, Radio, Startonderbreker, Elektrisch verstelbare buitenspiegels, Centrale deurvergrendeling met afstandsbediening, Airconditioning Vakgarage Van der HoornNL-2343 XE OEGSTGEEST Citroen C4 Picasso 1.6 HDI Ambiance EB6V 5p. Bewaar 24 € 699 Nieuw 09/2007 339.709 km Diesel 80 kW (109 PK) Automobielbedrijf VeldNL-8345 HJ KALLENKOTE Mercedes-Benz B 150 Hoge instap / APK september 2027 Bewaar 14 € 1.999 Nieuw 06/2007 215.009 km Benzine 70 kW (95 PK) Voordeligeautos.nlNL-1607 MV HEM Ford S-Max 2.3 Titanium/Automaat/Airco/Cruise/Trekhaak Bewaar 30 € 1.945 Nieuw 10/2007 222.136 km Benzine 118 kW (160 PK) Met onderhoudshistorie, Trekhaak, Airconditioning, Getinte ramen, Regensensor, Voorruitverwarming, Radio, Parkeerhulp achter Easy Cars BredaNL-4825 AV BREDA Peugeot Partner Tepee 1.2 PureTech Active/ D-Riem verv: 95.000 KM! Bewaar 50 € 7.995 Nieuw 05/2018 142.769 km Benzine 82 kW (111 PK) Schuifdeur rechts, Alarm, Airconditioning, Antiblokkeersysteem, Trekhaak, Apple CarPlay, Bluetooth, Startonderbreker Vakgarage TerpstraNL-9206 AG DRACHTEN + Meer voertuigen BMW 216 2-serie Active Tourer 216d Centennial High Executi Bewaar 8 € 4.950 08/2016 258.087 km Diesel 85 kW (116 PK) Getinte ramen, Bluetooth, Trekhaak, Sportstoelen, Alarm, Stoelverwarming, LED verlichting, Lichtmetalen velgen Auto van der WoudeNL-8401 DT GORREDIJK + Meer voertuigen Renault Kangoo Family 1.2 TCe |CRUISE|CLIMA|PRAKTISCH|BLUETOOTH Bewaar 33 € 7.950 Nieuw 07/2017 155.780 km Benzine 85 kW (116 PK) Alarm, Schuifdeur rechts, Airconditioning, Schuifdeur links, Bluetooth, Cruisecontrol, Startonderbreker, Multifunctioneel stuurwiel Car Store AssenNL-9403 AJ ASSEN + Meer voertuigen BMW 225 2-serie Active Tourer 225xe iPerformance High Exec Bewaar 28 € 13.745 06/2017 86.905 km Elektro/Benzine 165 kW (224 PK) Open dak, Alarm, Keyless Entry, Stoelverwarming, 4x4, Head-up display, Stuurwielverwarming, LED verlichting van der Kolk auto\u0027sNL-7711 EP NIEUWLEUSEN Opel Corsa 1.4-16V Enjoy Bewaar 18 € 550 Nieuw 01/2008 224.000 km Benzine 66 kW (90 PK) ParticulierNL-9291 Noardeast-Fryslân Toyota Yaris Yaris 1.3 VVTi Luna Bewaar 16 € 2.250 Nieuw 05/2006 210.708 km Benzine 64 kW (87 PK) Met onderhoudshistorie, Radio, Automatische klimaatregeling, Apple CarPlay, Mistlampen, Airconditioning, Keyless Entry, Zomerbanden ParticulierNL-2729cx Zoetermeer Nissan E-NV200 Evalia 5 Persoons 2X Schuifdeur Stoel+Stuurverwarm Bewaar 39 € 9.8501 03/2015 48.636 km Elektrisch 80 kW (109 PK) Schuifdeur links, Schuifdeur rechts, Parkeerhulp met camera, Cruisecontrol, Lichtmetalen velgen, Getinte ramen, Mistlampen, Isofix Auto Corsten B.V.NL-5738 AK MARIAHOUT + Meer voertuigen Fiat Multipla 1.6 ELX Bewaar 20 € 3.400 05/2002 246.000 km Benzine 76 kW (103 PK) ParticulierNL-5758 Deurne Nissan Note 1.2 DIG-S Connect Edition - Voorschade, Rondom geb Bewaar 27 € 1.995 Nieuw 02/2015 115.006 km Benzine 72 kW (98 PK) Airbag bestuurder, Radio, Met onderhoudshistorie, Airconditioning, Elektrische ramen, Lichtmetalen velgen, Navigatiesysteem, Bluetooth Van der Ven Groep B.V.NL-4706 PB ROOSENDAAL Hyundai TUCSON Tucson 2.4 Bovag Garantie Automaat Bewaar 39 € 5.450 06/2011 210.250 km Benzine 121 kW (165 PK) Radio, Airconditioning, Airbag passagier, Electronic Stability Program, Cruisecontrol, Armsteun, Bluetooth, Lichtmetalen velgen Autobedrijf KelvinringNL-2952 BG ALBLASSERDAM Honda Jazz 1.4 Comfort Plus Airco Cruise Pdc Pas 72dkm! Bewaar 24 € 7.950 04/2013 72.333 km Benzine 74 kW (101 PK) Alarm, Elektrische ramen, Lichtmetalen velgen, Multifunctioneel stuurwiel, Getinte ramen, Mistlampen, Automatische klimaatregeling, Cruisecontrol Auto DonkersgoedNL-3851 ST ERMELO + Meer voertuigen Toyota Verso-S 1.3 VVT-i Aspiration AUTOMAAT / TREKHAAK / CAMERA Bewaar 17 € 6.444 11/2013 119.830 km Benzine 73 kW (99 PK) Trekhaak, Parkeerhulp met camera, Alarm, CD, Multifunctioneel stuur",
+    "scrapedAt": "2026-10-08 18:57:29.302295"
+  },
+  {
+    "id": 306,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/cabrio/",
+    "title": "Alle informatie over de cabriolet bij AutoScout24",
+    "content": "Ga naar hoofdinhoud Homepage Auto Autos per Carrosserie Cabrio Cabrio Toon aanbod 1 / 5 btnLabelPrevbtnLabelNext Toon aanbod Toon aanbod Alle informatie over de cabriolet Wie verlangt niet naar de vrijheid van een cabriolet? Met de wind in je haren en de zon op je gezicht biedt een cabrio een unieke rijervaring. In Nederland zijn er cabrio’s in soorten en maten, voor elk wat wils. Van klassiek tot modern, voor twee en vier personen, snel en sterk of meer bescheiden. Lees meer Overzicht van de populairste cabrios Deze modellen zijn ver vooruit Fiat 500 Cabrio Mazda MX-5 Peugeot 206 BMW Z4 Roadster Peugeot 207 Renault Megane Porsche 911 Volkswagen Golf Cabriolet Porsche Boxster Audi A5 Cabrio Cabrio aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Audi A5Cabriolet 2.0 TFSI quattro S-edition|AUT|NAVI|XENO € 7.900 03/2010 135.470 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3812 RJAmersfoort Audi A3Cabriolet 2.0 TFSI|200PK|3XS-LINE|AUT|XENON|LEDER| € 6.850 07/2008 156.051 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3812 RJAmersfoort Volvo C70Convertible 2.4 D5 Summum Leder - Xenon - Goed Ond € 3.790 03/2007 302.126 km Diesel - (l/100 km) 2,8 Autobedrijf NL 7961 EDRuinerwold Ferrari California4.3 V8 € 99.950 08/2009 93.946 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2361 HGWarmond BMW Z4Roadster SDrive23i 6 CILINDER XENON LEDER CLIMA € 15.899 09/2010 177.257 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7327 JZApeldoorn Volkswagen New BeetleCabriolet 2.0 Highline zwart leder airco nwe apk € 1.950 € 2.450,- 09/2004 187.429 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 2022 EAHaarlem Peugeot 308CC 1.6 THP Feline Lees Beschijving € 3.750 05/2010 182.129 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4623 ACBergen Op Zoom Daihatsu Copen0.7 Type S RHD Airco |Turbo|175.965KM| € 4.950 01/2005 175.965 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7963 ADRuinen Porsche BoxsterS 3.2 Topconditie. € 19.986 06/2003 114.084 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 2361 HGWarmond BMW 1181-serie Cabrio 118i 2.0 High Executive Clima/Cruis € 6.750 05/2009 155.537 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7772 TTHardenberg Suzuki Vitara1.6 JX 1998 Cabrio Verhoogd 4-Persoons € 3.450 02/1998 157.941 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7961 EARuinerwold Peugeot 206CC 1.6-16V Premium | NIEUWE APK | AUTOMAAT | AIRCO € 1.750 08/2003 217.016 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3843 WNHarderwijk Daihatsu Copen1.3-16V | 12MND GARANTIE | NIEUWE APK | LEDER | AI € 6.250 03/2007 133.262 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3843 WNHarderwijk Mercedes-Benz SLK 200Kompressor Leer 78.000km Dealer OH. € 12.950 06/2008 78.627 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6311 AWRansdaal BMW 3233-serie Cabrio 323Ci Executive/ 6-Cil./ Windscherm € 5.995 07/2000 226.145 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 9206 AGDrachten Audi R8Spyder 5.2 V10 FSI - Akrapovic | Keramisch | B\u0026O € 84.895 03/2012 68.979 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1689 ZSZwaag Volkswagen Golf Cabriolet1.6 TDI HIGHLINE STOELVERWM. CRUISE € 4.950 07/2012 216.487 km Diesel - (l/100 km) 2,8 Autobedrijf NL 7321 BAApeldoorn Peugeot 308CC 1.6 THP Sport Pack|PDC|AIRCO|STOEL VERWARMING|R € 7.450 € 7.950,- 04/2014 118.007 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 1507 CGZaandam Opel AstraTwinTop 1.8 Temptation Cabrio | Cruise | Climate | € 3.749 05/2007 169.699 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2675 BXHonselersdijk Volvo C70Convertible 2.4 ECC LMV CRUISE ORIG. NL AUTO € 5.950 € 6.499,- 08/2007 193.984 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 7821 ACEmmen Cabrio occasions bekijken Cabrio in Amsterdam bekijkenCabrio in Rotterdam bekijkenCabrio in Den Haag bekijkenCabrio in Utrecht bekijkenCabrio in Eindhoven bekijkenCabrio in Groningen bekijken Highlights van de cabriolet Cabriolets bieden een unieke rijervaring als je de opvouwbare kap omlaag doet De cabrio is er in diverse varianten: de ‘gewone’ cabriolet voor twee of vier personen, roadsters voor twee personen, découvrables met opstaande zijruiten; er zijn voor de cabriolet met softtop meestal ook afneembare hardtops leverbaar of leverbaar geweest Populaire cabrioletmodellen in Nederland zijn onder meer de Mazda MX-5, de Mini Cabriolet en de Volkswagen Golf Cabrio Populaire klassieke cabrio’s zijn onder veel meer de MG B en de Volkswagen Kever Cabriolet Het woord ‘cabriolet’ stamt af van het Franse werkwoord cabrer, dat onder meer steigeren en optrekken betekent – begrippen die je met enige fantasie kunt linken aan de beweging van een opgevouwen kap als die gesloten wordt. Het is oorspronkelijk de benaming voor een licht, open rijtuig met opvouwbare kap, getrokken door een paard. Kennelijk is de benaming in 1929 voor het eerst gebruikt voor een auto met een opvouwbaar stoffen dak. Een ander woord voor cabriolet is overigens het Amerikaanse convertible. De opkomst van de cabriolet in Nederland In Nederland wint de cabriolet in de jaren 50 e",
+    "scrapedAt": "2026-10-08 18:57:27.895239"
+  },
+  {
     "id": 305,
     "url": "https://www.autoscout24.nl/lst",
     "title": "Koop occasions op AutoScout24",
@@ -2115,26 +2150,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 306,
-    "url": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
-  },
-  {
-    "id": 307,
-    "url": "https://www.autoscout24.nl/lst/c/mpv"
-  },
-  {
-    "id": 308,
-    "url": "https://www.autoscout24.nl/auto/bmw/"
-  },
-  {
-    "id": 309,
-    "url": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
-  },
-  {
-    "id": 310,
-    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
   },
   {
     "id": 311,
@@ -48530,10 +48545,2450 @@ window.searchData = [
     "id": 19003,
     "url": "https://www.autoscout24.nl/lst/lucid/air",
     "parentUrl": "https://www.autoscout24.nl/lst"
+  },
+  {
+    "id": 19004,
+    "url": "https://www.autoscout24.nl/auto/mg/mg-f/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19005,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-4-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19006,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-barchetta/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19007,
+    "url": "https://www.autoscout24.nl/auto/nissan/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19008,
+    "url": "https://www.autoscout24.nl/auto/jaguar/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19010,
+    "url": "https://www.autoscout24.nl/auto/jaguar/jaguar-e-type/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19011,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/cabrio/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19012,
+    "url": "https://www.autoscout24.nl/auto/opel/opel-tigra/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19013,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-cabriolet/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19014,
+    "url": "https://www.autoscout24.nl/auto/mini/mini-cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19015,
+    "url": "https://www.autoscout24.nl/auto/saab/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19017,
+    "url": "https://www.autoscout24.nl/lst/porsche/boxster/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19018,
+    "url": "https://www.autoscout24.nl/auto/alfa-romeo/alfa-romeo-spider/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19019,
+    "url": "https://www.autoscout24.nl/auto/opel/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19020,
+    "url": "https://www.autoscout24.nl/auto/bmw/coupe/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19021,
+    "url": "https://www.autoscout24.nl/auto/volvo/volvo-c70/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19022,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-124-spider/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19023,
+    "url": "https://www.autoscout24.nl/auto/volvo/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19024,
+    "url": "https://www.autoscout24.nl/auto/peugeot/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19025,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-207/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19026,
+    "url": "https://www.autoscout24.nl/lst/citroen?atype\u003dC\u0026body\u003d2\u0026cy\u003dNL\u0026desc\u003d0\u0026powertype\u003dkw\u0026search_id\u003d2hu9rmogto\u0026sort\u003dstandard\u0026source\u003dautocatalog\u0026ustate\u003dN%2CU\u0026version0\u003dPluriel",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19027,
+    "url": "https://www.autoscout24.nl/auto/carrosserie/cabrio/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19028,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-slk-klasse/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19029,
+    "url": "https://www.autoscout24.nl/auto/renault/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19030,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-serie-z/bmw-z4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19031,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-focus/ford-focus-cc/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19032,
+    "url": "https://www.autoscout24.nl/auto/mini/roadster/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19033,
+    "url": "https://www.autoscout24.nl/auto/mg/mg-mgb/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19034,
+    "url": "https://www.autoscout24.nl/auto/porsche/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19035,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a5/audi-a5-cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19036,
+    "url": "https://www.autoscout24.nl/lst/renault/megane/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19037,
+    "url": "https://www.autoscout24.nl/lst/porsche/911/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19038,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19039,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-307/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19040,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-206/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19041,
+    "url": "https://www.autoscout24.nl/auto/nissan/nissan-micra/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19042,
+    "url": "https://www.autoscout24.nl/auto/citroen/citroen-2cv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19043,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/volkswagen-golf-cabriolet/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19044,
+    "url": "https://www.autoscout24.nl/lst/peugeot/207/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19045,
+    "url": "https://www.autoscout24.nl/auto/mini/mini-cooper/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19046,
+    "url": "https://www.autoscout24.nl/auto/mg/mg-midget/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19047,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-500/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19048,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-megane/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19049,
+    "url": "https://www.autoscout24.nl/lst/mazda/mx-5/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19050,
+    "url": "https://www.autoscout24.nl/auto/fiat/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19052,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-golf/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19053,
+    "url": "https://www.autoscout24.nl/auto/fiat/fiat-500/fiat-500-cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19054,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-205/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19055,
+    "url": "https://www.autoscout24.nl/auto/mg/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19056,
+    "url": "https://www.autoscout24.nl/auto/toyota/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19057,
+    "url": "https://www.autoscout24.nl/auto/bmw/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19058,
+    "url": "https://www.autoscout24.nl/auto/ford/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19059,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-306/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19060,
+    "url": "https://www.autoscout24.nl/auto/alfa-romeo/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19061,
+    "url": "https://www.autoscout24.nl/auto/jaguar/jaguar-f-type/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19062,
+    "url": "https://www.autoscout24.nl/lst/peugeot/206/bt_cabrio",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19063,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-eos/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19064,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19065,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/sl-280/ve_pagode?source\u003dautocatalog",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19066,
+    "url": "https://www.autoscout24.nl/auto/mazda/mazda-mx-5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19068,
+    "url": "https://www.autoscout24.nl/auto/mazda/cabrio/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19069,
+    "url": "https://www.autoscout24.nl/auto/mg/mg-tf/",
+    "parentUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "id": 19070,
+    "url": "https://www.autoscout24.nl/lst/c/mpv#main-target",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "id": 19071,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-centrum-stiphout-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "id": 19072,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-donkersgoed",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "id": 19074,
+    "url": "https://www.autoscout24.nl/autobedrijven/car-store-assen",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "id": 19075,
+    "url": "https://www.autoscout24.nl/autobedrijven/auto-van-der-woude",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "id": 19077,
+    "url": "https://www.autoscout24.nl/autobedrijven/galema-en-de-boer-auto-s-b-v",
+    "parentUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "id": 19080,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-2-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19081,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-520/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19084,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19085,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-ix1/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19086,
+    "url": "https://www.autoscout24.nl/autobedrijven/puur-bmw",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19087,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-335/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19088,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-323/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19089,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19090,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-6-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19091,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/bmw-m8/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19092,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-528/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19093,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-125/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19094,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19095,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-6-serie/bmw-635/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19096,
+    "url": "https://www.autoscout24.nl/auto/bmw/ez-2014/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19097,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-serie-z/bmw-z3/bmw-z3-m/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19098,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-xm/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19100,
+    "url": "https://www.autoscout24.nl/lst/bmw/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19101,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7-serie/bmw-730/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19102,
+    "url": "https://www.autoscout24.nl/lst/bmw/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19103,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-4-serie/bmw-440/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19104,
+    "url": "https://www.autoscout24.nl/auto/bmw/v8/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19106,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-8-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19107,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-6-serie/bmw-640/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19108,
+    "url": "https://www.autoscout24.nl/lst/oldtimer/bmw",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19109,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x2/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19110,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-2-serie/bmw-218/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19111,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-140/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19112,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-i5-touring/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19113,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7-serie/bmw-735/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19114,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-325/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19115,
+    "url": "https://www.autoscout24.nl/lst/bmw/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19116,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-serie-z/bmw-z3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19117,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-4-serie/bmw-428/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19118,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-123/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19119,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-340/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19120,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-i-serie/bmw-i3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19121,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19122,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-6-serie/bmw-645/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19123,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x4/bmw-x4-m/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19124,
+    "url": "https://www.autoscout24.nl/auto/bmw/turbo/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19125,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-ix/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19126,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7-serie/bmw-740/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19127,
+    "url": "https://www.autoscout24.nl/lst/bmw/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19128,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-4-serie/bmw-430/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19129,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-ix2/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19130,
+    "url": "https://www.autoscout24.nl/moto/bmw/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19131,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-6-serie/bmw-650/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19132,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-i-serie/bmw-i4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19133,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19134,
+    "url": "https://www.autoscout24.nl/auto/bmw/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19135,
+    "url": "https://www.autoscout24.nl/lst-moto/bmw/c1",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19136,
+    "url": "https://www.autoscout24.nl/auto/bmw/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19137,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19138,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7-serie/bmw-745/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19139,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-i-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19140,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-ix3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19141,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-8-serie/bmw-840/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19142,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-118/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19143,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/bmw-m4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19144,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x7/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19146,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-serie-z/bmw-z1/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19147,
+    "url": "https://www.autoscout24.nl/lst/bmw/m3/ot_oldtimer",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19148,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-330/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19149,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x3/bmw-x3-m/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19150,
+    "url": "https://www.autoscout24.nl/auto/bmw/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19151,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-535/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19153,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-523/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19154,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7-serie/bmw-750/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19155,
+    "url": "https://www.autoscout24.nl/autobedrijven/nobracars-uden-bmw",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19156,
+    "url": "https://www.autoscout24.nl/autobedrijven/regio/noord-brabant/breda/bmw/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19157,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-4-serie/bmw-420/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19158,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19159,
+    "url": "https://www.autoscout24.nl/auto/bmw/automaat/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19160,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-328/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19161,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/bmw-m3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19162,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-316/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19163,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/bmw-m2/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19164,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x6/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19165,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-120/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19166,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-550/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19167,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-serie-z/bmw-z8/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19168,
+    "url": "https://www.autoscout24.nl/lst/bmw/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19169,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-530/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19170,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-8-serie/bmw-850/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19171,
+    "url": "https://www.autoscout24.nl/lst/bmw/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19173,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-116/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19174,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/bmw-m6/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19175,
+    "url": "https://www.autoscout24.nl/auto/bmw/elektrische-bmw/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19176,
+    "url": "https://www.autoscout24.nl/auto/bmw/ez-2000/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19177,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-320/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19178,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-serie-z/bmw-z4/bmw-z4-m/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19179,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-x-serie/bmw-x1/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19180,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/bmw-m5-touring/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19181,
+    "url": "https://www.autoscout24.nl/lst/bmw/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19182,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-2002/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19183,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7-serie/bmw-760/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19185,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-525/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19186,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7er/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19187,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-m-serie/bmw-m5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19188,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-3-serie/bmw-318/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19189,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-114/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19190,
+    "url": "https://www.autoscout24.nl/autobedrijven/regio/limburg/maastricht/bmw/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19191,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-4-serie/bmw-435/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19192,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-7-serie/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19193,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-1-serie/bmw-130/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19194,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-i-serie/bmw-i8/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19195,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/bmw-540/",
+    "parentUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "id": 19196,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q2/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19197,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-r8/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19198,
+    "url": "https://www.autoscout24.nl/consulent-elektrische-auto/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19199,
+    "url": "https://www.autoscout24.nl/lst/audi/q4-e-tron",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19200,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a6-avant-e-tron/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19203,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-e-tron/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19207,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19208,
+    "url": "https://www.autoscout24.nl/informeren/autotests/audi/q4-e-tron/audi-q4-e-tron-2026-facelift-actieradius-prijzen-specificaties/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19209,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q4-sportback-e-tron/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19211,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19212,
+    "url": "https://www.autoscout24.nl/lst/land-rover/range-rover-velar",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19213,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/c-180",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19214,
+    "url": "https://www.autoscout24.nl/informeren/autotests/audi/a8/review-zo-verpest-mercedes-het-feestje-van-de-plug-in-hybride-audi-a8-60-tfsi-e/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19215,
+    "url": "https://www.autoscout24.nl/auto/hyundai/hyundai-ioniq-5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19216,
+    "url": "https://www.autoscout24.nl/lst/audi/q5",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19217,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q4/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19218,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19219,
+    "url": "https://www.autoscout24.nl/lst/audi/q3",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19220,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron-gt",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19222,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19223,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-e-tron/audi-e-tron-gt/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19225,
+    "url": "https://www.autoscout24.nl/lst/audi/q2",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19226,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-e-tron/audi-e-tron-s/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19227,
+    "url": "https://www.autoscout24.nl/lst/audi/a5",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19228,
+    "url": "https://www.autoscout24.nl/lst/audi/a6",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19229,
+    "url": "https://www.autoscout24.nl/informeren/autotests/audi/q3/review-audi-q3-2025-compacte-suv-met-een-volwassen-karakter/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19230,
+    "url": "https://www.autoscout24.nl/lst/audi/a3",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19231,
+    "url": "https://www.autoscout24.nl/auto/kia/kia-ev6/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19232,
+    "url": "https://www.autoscout24.nl/informeren/autotests/audi/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19233,
+    "url": "https://www.autoscout24.nl/consulent-elektrische-auto/elektrische-automodellen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19234,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19235,
+    "url": "https://www.autoscout24.nl/informeren/autotests/audi/q6-e-tron/review-audi-q6-e-tron-2025-elektrische-suv-met-sportieve-roots/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19236,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q3-sportback/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19237,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q3/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19238,
+    "url": "https://www.autoscout24.nl/consulent-elektrische-auto/elektrische-auto-kopen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19240,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19241,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19242,
+    "url": "https://www.autoscout24.nl/auto/audi/hybride/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19243,
+    "url": "https://www.autoscout24.nl/lst/audi/e-tron/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19244,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/test-audi-tt-vs-toyota-gr-supra-tussen-genot-en-hartverzakking/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19245,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-e-tron/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19246,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-e-tron/audi-e-tron-sportback/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19247,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-quattro/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19248,
+    "url": "https://www.autoscout24.nl/lst/audi/tt",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19249,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-eqc/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19251,
+    "url": "https://www.autoscout24.nl/informeren/autotests/audi/a6/review-audi-a6-avant-e-tron-2025-elektrische-stationwagen-met-premium-flair/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19252,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a5-avant/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19253,
+    "url": "https://www.autoscout24.nl/auto/audi/suv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19254,
+    "url": "https://www.autoscout24.nl/auto/land-rover/land-rover-velar/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19256,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-q5/audi-q5-sportback/",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "id": 19257,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19259,
+    "url": "https://www.autoscout24.nl/auto/ford/ford-focus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19262,
+    "url": "https://www.autoscout24.nl/auto/seat/seat-leon/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19263,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19264,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19267,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19270,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19271,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/mercedes-benz-a-200/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19273,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19274,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/mercedes-benz-a-220/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19276,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19279,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19280,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19281,
+    "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-308/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19283,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/mercedes-benz-a-140/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19284,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/mercedes-benz-a-160/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19286,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/mercedes-benz-a-150/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19287,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/mercedes-benz-a-180/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19288,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/mercedes-benz-a-170/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19292,
+    "url": "https://www.autoscout24.nl/informeren/autotests/mercedes-benz/cla-250/mercedes-benz-cla-shooting-brake-2026-test/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19293,
+    "url": "https://www.autoscout24.nl/lst/mercedes-benz/a-klasse-alle",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "id": 19296,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-a3/audi-a3-sportback/",
+    "parentUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4morhJstgTYZgYgJHZY1E3/fa975eb286e973c2fe6a218d5364914f/mercedes-w177-l-01.jpg?w\u003d1100",
+    "alt": "mercedes-w177-l-01",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4morhJstgTYZgYgJHZY1E3/fa975eb286e973c2fe6a218d5364914f/mercedes-w177-l-01.jpg?w\u003d1100",
+    "alt": "mercedes-w177-l-01",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/ALf4E5OnzcQpkCzSO3qn1/5597fae38d13d1888c13e81365ad39e1/mercedes-w177-l-02.jpg?w\u003d1100",
+    "alt": "mercedes-w177-l-02",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7HGWTyAyUP9Q74xt4HK6Yk/f92849956671ffd44956545d060b586f/mercedes-w177-l-03.jpg?w\u003d1100",
+    "alt": "mercedes-w177-l-03",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ca7ed708-0d6c-4db4-b967-93e1c35bd619_14e1cdd1-0c98-4655-b4ec-177adac4ba18.jpg/360x270.jpg",
+    "alt": "Ambition Panoramadak Xenon Led Sportstoelen",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/284acd06-5add-4438-8494-942cb3973c5e_a8dcdf3e-6b35-4e56-8c2e-8f3006b7167d.jpg/360x270.jpg",
+    "alt": "180 Ambition AMG PAKKET NETTE AUTO LEER RIJDT GOED",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c1364f08-61a8-4261-b713-15f00a7861ad_61c7f54a-7836-4761-bfe3-e77b162786b6.jpg/360x270.jpg",
+    "alt": "| Sportstoelen",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e3ef1947-9627-460d-8a07-f08f72bcd25b_0a018bee-b1ea-42b3-b1d3-36388b24f1ab.jpg/360x270.jpg",
+    "alt": "Premium Plus PANO VIRTUAL ACC SFEERVERL. KEYLESS 3",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6ed0062a-6501-4694-baf0-7aab64b6e448_6d8a965e-18d8-48cb-8301-b4406d0aecaa.jpg/360x270.jpg",
+    "alt": "Business Solution AMG | CAMERA | STOELVERW. | SFEE",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6cce3088-c31a-42f5-9768-1813489e05e1_93640cea-9102-47ac-8d61-cef99894659b.jpg/360x270.jpg",
+    "alt": "Amg Automaat Leer Clima Xenon/Led",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/729beff5-7433-492d-8eab-903497d103b9_3475cc29-280c-4461-be23-3b16f6719d10.jpg/360x270.jpg",
+    "alt": "AMG NAP|Xenon|LED|Navi|Leder|Afneembaar Trekhaak|R",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2bda33fd-195a-4cdc-8c1e-9eb5c609f724_0fde6d83-4058-47d9-b56c-4cd739618828.jpg/360x270.jpg",
+    "alt": "EDITION AMG Panoramadak Night Camera",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b7e13fe8-6e6b-4088-8487-7f5fc5851dcb_0cdf3579-20c6-426d-a8a0-d711cd5c8363.jpg/360x270.jpg",
+    "alt": "AMG (PANO, ADAPTIVE CRUISE, LEDER, STOELV, PARKEER",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2d0415b3-d065-4ed6-bdaf-cd749a397b65_4c32f833-c40f-4a69-be06-90337c2fe2a6.jpg/360x270.jpg",
+    "alt": "AMG BURMESTER PANO HUD SFEER",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bd3c31fd-dc7e-4f65-a67d-91662e78cae5_c1797d2e-993f-4c3d-80bc-9ff3aa7f58e5.jpg/360x270.jpg",
+    "alt": "e Business Solution AMG | Beige Leder",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ed92a9d8-0d42-487b-be3f-2b3d64007691_ac80414a-24b4-42c5-be35-4591bf2b41cf.jpg/360x270.jpg",
+    "alt": "Ambition AMG | AMG-Styling | Xenon |",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/077826ad-36ec-4f43-916f-667ca10f7866_98d92226-bec6-4b59-a480-8b56beb9ffa0.jpg/360x270.jpg",
+    "alt": "e Premium, Black Pack, Leder, LED, Carplay!",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/90ce786b-f268-43d4-8aa0-763db314b24d_407d002e-5f6b-4c02-9ee6-3dbae4f0338e.jpg/360x270.jpg",
+    "alt": "Ambition Automaat Panoromadak",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/85dc5bba-5c4f-49c2-884b-5fc6ca99b832_ab9c3434-f740-4ecd-8283-7cf25fe93447.jpg/360x270.jpg",
+    "alt": "AMG Line BTW|GARANTIE|CAMERA|NIGHTPAKKET|DODEHOEK|",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e2aee281-41ff-4237-b94c-69a2126fce0e_c89e455d-42c4-41d8-9a40-98e187c2baeb.jpg/360x270.jpg",
+    "alt": "Business Solution Luxury AMG",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f66d936f-4328-4631-a6b8-8903f36502a0_e592b26a-e284-49cb-837c-3e99e49bc444.jpg/360x270.jpg",
+    "alt": "Urban Automaat LED|Groot Navi|Sportstoelen",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d063df31-0624-4d35-81b8-7f58aea2319f_b13aa9dc-3ec5-48e7-925b-12dee98d9a9e.jpg/360x270.jpg",
+    "alt": "CDI |MAXTON|AIRCO|CRUISE|ELK.PAKKET|TREKHAAK|LM VE",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/292fd672-c56f-414a-a486-7bb6f8f349e4_55f5fd9a-665b-4c9a-85d6-91ddc32f2a8c.jpg/360x270.jpg",
+    "alt": "edition one|AMG|PANO|BOMVOL!",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/98999295-a775-4be7-9af4-8774f22400e0_c22499a2-b45e-4334-b47f-ef36fd871c5f.jpg/360x270.jpg",
+    "alt": "Ambition Aut. Xenon Airco Cruise CarPlay Pdc",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/MAjqAuW2n00N7X13WNaOB/17d8bf1507c5f84a0d0d2dc5844c8f7a/mercedes-w177-interior.jpg?w\u003d1100",
+    "alt": "mercedes-benz-a-klasse-interior",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3FNyatHVo0EH6CFEWQzOR2/bdc53b1477f86e7ea39c28b31326b9a1/mercedes-w177-trunk.jpg?w\u003d1100",
+    "alt": "mercedes-benz-a-klasse-trunk",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2pZTkbS4QIyHpqRK6OEbbK/f6ae7e87bf2f8b30e7ea011b466f6ed5/AutoScout24_Mercedes-Benz_GLB_1.jpg?w\u003d1100",
+    "alt": "Review – Mercedes-Benz GLB: veel ruimte, zeven zitplaatsen en elektrisch bereik",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4GBidDlqEvOyfGsIXAwP8/14460d31e3a70da4a827609185f35e8b/CR-40_-_AutoScout24_-_Mercedes-Benz_G_580_foto1.jpg?w\u003d1100",
+    "alt": "Review – Mercedes-Benz G 580 (2025): elektrisch zwaargewicht",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5k1FTVQ0goBjGyaaBJeh2S/7c9079c188f4e9f620e6bfdc41b83755/mercedes-eqs-suv-580-2023-1.jpg?w\u003d1100",
+    "alt": "Mercedes EQS SUV (2023) test: waarom hij de EQS sedan overbodig maakt",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4prQQKryuOEjY2edk87Q8h/e2a287ba9dfb25a4ca236aa78d60eeb6/mercedes-amg-eqe-43-4matic-2022-30-1.jpg?w\u003d1100",
+    "alt": "Mercedes-AMG EQE 43 4Matic review: ook de elektrische toekomst van AMG is bloedstollend",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2NEMrttVjwcxAhio9megWx/1aafffea25481733a5f67f8c0b3428fb/Mercedes_AMG_GT_4.jpg?w\u003d1100",
+    "alt": "Mercedes-AMG GT 4-deurs Coupé (2026): veel blingbling en 1",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/55ZXPPlqxsoNhkS6TM56N/28d122d3cafdca53cda44e5d1fd40d6a/AutoScout24_Mercedes-Benz_CLA_Shooting_Brake_1.jpg?w\u003d1100",
+    "alt": "Review – Mercedes-Benz CLA Shooting Brake: efficiëntie als sterkste wapen",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Mercedes-Benz A-Klasse - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-a-klasse/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/bmgPpBlwRjm1q29xoNJ4O/4a0096db0079126047ddc0caed715ffd/Audi-e-tron-2020-1.jpg?w\u003d1100",
+    "alt": "Audi-e-tron-2020-1",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/bmgPpBlwRjm1q29xoNJ4O/4a0096db0079126047ddc0caed715ffd/Audi-e-tron-2020-1.jpg?w\u003d1100",
+    "alt": "Audi-e-tron-2020-1",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2iitNl0yOp9bUebOykwi4t/d69f4141c71ff8161a6a365d064ea222/Audi-e-tron-2020-2.jpg?w\u003d1100",
+    "alt": "Audi-e-tron-2020-2",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6MPjBY27yv40KsNtSewIPs/96313cd12dfe6535ac686e6b489b7afd/Audi-e-tron-2020-3.jpg?w\u003d1100",
+    "alt": "Audi-e-tron-2020-3",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bf28abd1-9adc-46e6-a3ea-0d4f1904ea21_d3c5c2ec-84fe-40c0-ad08-a8431fddb3ca.jpg/360x270.jpg",
+    "alt": "Sportback S quattro 95 kWh, Leder, Pano, BodyKit,",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d88a78f0-5a3d-48a6-bbfb-005c04759cfe_66b06a62-3b0b-4b50-9eb3-fdbcc29aaa23.jpg/360x270.jpg",
+    "alt": "e-tron 50 quattro Launch edition plus 71 kWh | Pan",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c781059a-03c8-46e6-b703-1e989484e89d_9683673c-4124-42c2-9187-ec07acd18699.jpg/360x270.jpg",
+    "alt": "e-tron 50 quattro Launch edition plus 71 kWh | Pan",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6003bce7-8704-4988-933b-097624503f2c_f8ec896c-d818-4064-9944-3a4cfec84624.jpg/360x270.jpg",
+    "alt": "55 quattro Advanced edition 95 kWh | Pano | LMV |",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5f5a9530-7de1-40ab-a109-f143e8b2e44b_88054e25-128f-41b3-ac5d-7c0ee692a749.jpg/360x270.jpg",
+    "alt": "e-tron 50 quattro Launch edition 71 kWh|Trekhaak|S",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1fdc0ba4-f21d-4336-84b8-dbe26ec417fb_9cd4029a-6328-4b9c-ba44-c85cf3308baf.jpg/360x270.jpg",
+    "alt": "Sportback 55 quattro Business edition Plus 95 kWh",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/aec0d852-6ba7-4164-99be-ad6315a180f3_cb5609d0-63c8-4c55-81d7-2eeb46735ed9.jpg/360x270.jpg",
+    "alt": "e-tron 50 quattro Launch edition 71 kWh / CarPlay",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c32e0113-911c-4526-8d53-0f88fc55a885_0a8963a4-ff79-4124-81de-168e43d169a3.jpg/360x270.jpg",
+    "alt": "55 quattro 95 kWh 90%|Pano|Memory|360|Nachtzicht",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d83e1b7c-76d8-46b8-8fb7-490dcceb5ab6_ee923cd2-bb2d-424b-bc87-89b7dd26ec6c.jpg/360x270.jpg",
+    "alt": "Sportback S quattro 503PK 95 kWh Aut. | 93% SOH |",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/18f28603-6776-4074-bb2b-c8b2d67bbdad_3b84767e-10ce-456a-82b4-0fe33d353df7.jpg/360x270.jpg",
+    "alt": "Sportback 55 quattro S edition 95 kWh | B\u0026O | Pano",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dd6fd85a-bf54-48be-945a-a23a22565c27_fbc963d6-eec8-4137-b0cd-3fbd23b9e37b.jpg/360x270.jpg",
+    "alt": "55 Quattro 95 kWh S-Line ✅ SOH 91% ✅ Pano ✅ B\u0026O ✅",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a42044b6-ff5a-492c-8c07-0b294189936c_67146de0-ed88-4bc1-bd06-d00006568c66.jpg/360x270.jpg",
+    "alt": "50 quattro Advanced edition Plus 71 kWh - S-Line l",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dded96fb-b858-4703-af18-3b8f08a95c93_60812ff2-e50f-4b96-9a4d-c67f01034fb7.jpg/360x270.jpg",
+    "alt": "Sportback 55 quattro Business edition 95 kWh",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6045d782-e4a5-4995-adde-fc3c4930fb62_30de78c0-b3b2-4665-96ea-4e69f6449f91.jpg/360x270.jpg",
+    "alt": "Sportback S Quattro 95 kWh 504PK | Pano | Matrix |",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c7beb995-8305-4871-b706-a63a663b5904_e6122714-3147-40fe-b1fa-39c458a48500.jpg/360x270.jpg",
+    "alt": "50 quattro S edition S-Line | Trekhaak | Siambeige",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2b762658-d7fb-4e42-898a-76e334387325_6389d1ed-ac2a-4c6c-b69b-ad5d0c4cb515.jpg/360x270.jpg",
+    "alt": "55 quattro Advanced 95 kWh | Trekhaak | Panoramada",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1c224d72-eb0f-46f9-b4b6-72c8c36e0923_3fb5cf17-dbab-4eb7-83dc-5d17b8156c2c.jpg/360x270.jpg",
+    "alt": "Sportback 55 quattro S edition 95 kWh",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4a3dbc3e-acff-43cb-b4e5-403f4d9f745e_ec67e70f-e187-44bf-8d2f-59e23cd45845.jpg/360x270.jpg",
+    "alt": "55 quattro Advanced edition Plus 95 kWh Automaat |",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/56a8216a-c137-4e17-b864-cad52d525229_acfa936f-8d8c-4819-acec-133f84cd0909.jpg/360x270.jpg",
+    "alt": "E-tron 50 quattro Launch edition 71 kWh Soh 84% I",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/53a7794d-6991-4736-8458-c2a3c052dbe0_1dffc3cc-84cf-4f45-a90f-b61f0270497a.jpg/360x270.jpg",
+    "alt": "55 quattro Business edition Plus 95 kWh | Pano | A",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4doYOPGs6jVGktqfoQW3Bu/d39b4f6ea92007da0062de3d483094e3/Audi-A3_Sportback-2025-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A3",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1e3UFZeoqtSMzisiUjM0cJ/bb389a2c6b01e20688ffe9795e007f9c/Q4_Sportback_ETron.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q4 Sportback e-tron",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7saxguAI2JiZbijFJjC6Zm/53ace5b34324a88b62985d6bdd387774/Audi_Q5_Sportback_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q5 Sportback",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2x694cCCqHFLOqnYgk2oP6/6ed487f6ca29823c40f9ad9ec8e023a0/Audi_Q3_Sportback_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q3 Sportback",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1nqYRYHbEa6sBHGNm0fQTl/43e31888b4cde3c512ec8c7875ef9251/MMP-24_Audi_A5_Avant_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A5 Avant",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1NzPnFqY0otGznHsF6IzXZ/8e8bc35d029e89a6f8c79a463801037e/audi-q2-front.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi Q2",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1kQgGrrGkDh8CB21rGvHZI/849cf96d258bcc4cf060362784933f44/Land_Rover_Velar_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Land Rover Range Rover Velar",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1U7mR7StGwG9SdaRpQP8PB/a4f199ee256c0fc4c0de10990a20eaed/Audi_A6_Avant_e_tron3.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi A6 Avant e-tron",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3LHieHu6pksORtSkWs997L/c60b6a473d863abb189a607c7c75f317/Volkswagen_Tiguan_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Tiguan",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7yYJJSl5YxLfONZaR8ifgp/d4199743b5ac47a480f7cc6b3ae7bb75/mercedes-benz_c_180_5.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Mercedes-Benz C 180",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/012ILYaqYbxYb5iRsLgbKE/d119060df57457deb9caf1a2b1972ba1/audi-q4-etron-2026.jpg?w\u003d1100",
+    "alt": "Audi Q4 e-tron Facelift (2026): Eerste indruk, meer actieradius en nieuwe Digital Stage",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rZf7ZBcZJTfK9bfHP8ksO/d0aec57170687bc819249f34cfcdbd3e/Audi_A6_Avant_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi A6 Avant e-tron (2025): elektrische stationwagen met premium flair",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6GrNuhCdk6OUcKerAQQRj6/c5b306af8fce1429d7a3c8da9c4d3de1/Audi_Q3_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q3 (2025): compacte SUV met een volwassen karakter",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/74ohGiWKbkJYWEGdrM9Oq1/33e5e1fbcf4782f3f14360ad6e4a66ac/audi-tt-toyota-gr-supra-2023-1.jpg?w\u003d1100",
+    "alt": "TEST Audi TT vs",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Jjx5gIxNMbtJmblUubHrU/3af2d0e1f13497249344d2e556397cb7/audi-a8-l-2022-8-1.jpg?w\u003d1100",
+    "alt": "Review: zo verpest Mercedes het feestje van de plug-in hybride Audi A8 60 TFSI e",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5gnWDSiDpiVTvxmso92fJo/d0614d95cf5bd31d6b24a64f0b1df330/Audi_Q6_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q6 e-tron (2025): elektrische SUV met sportieve roots",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Audi e-tron - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-e-tron/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5UAcZkUWVRFmpH1BENunWw/df853fb73edb2fe291e9ed137641ab3c/bmw-4-series-cabrio-banner.jpeg?w\u003d1100",
+    "alt": "bmw-4-series-cabrio-banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5UAcZkUWVRFmpH1BENunWw/df853fb73edb2fe291e9ed137641ab3c/bmw-4-series-cabrio-banner.jpeg?w\u003d1100",
+    "alt": "bmw-4-series-cabrio-banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/24Ss0Fhd95GFeMrt383ne6/089eae477bb2d8f10d03c16dc3333180/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW X5 M \u0026 X6 M (2023) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5GoFLFfEaaemWTbEOVYtTX/f5d18da4256e4ef8d57886d985b9f629/bmw-1er-cabrio-banner.jpeg?w\u003d1100",
+    "alt": "bmw-1er-cabrio-banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2Ff2kiOsSaf1g3rWrw8WTP/a67eab68285b41440fb19d0e6ed6935d/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW i7 (2023) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/G7cKnOmxWV69jhuwIdfr6/539bbf0d8dd2037a136dfabf8a4fa1ce/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW 320e facelift (2023) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4JwxZckVUBkSIk3RpzYfbq/f4fb1f849cf21fea9ee5ddfb6d72c0ba/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW X5 (2023) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6eMpjWdLyryHel0QMnjFiD/21bfbda1918bbd812ed4cf9954e3998f/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW M2 (2022) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6iwo6pf03wY9hjA7dXVyJB/47d1129aedd2b5f0ec8e08cb48bbabe6/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW XM (2022) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3Jnr7UeLnh9cS98LAraqa0/9ef055480a3b2c88cc7ba55229b19a63/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW X1 (2022) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4z5DI5NyWBE4mftIrPuGtO/3616f0be50be32004002c906b18bcc43/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW i4 (2022) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3riyHLwGu9rCO3J1u5G1zX/baf9166cb7f2c87977110cab4da7f92a/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW 7 Reeks (2022) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5tFZLsnmsRgKd314hPl4AT/4aeedc2ba22d5bf4087902a53adc4c34/AS24-bmw_banner.jpg?w\u003d1100",
+    "alt": "BMW X7 facelift (2022) banner",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1FAs2eUjU8l5FJxsv3hREy/4159a2849db37b946dcdda48d6aa5e3d/bmw-z3-front.jpg?w\u003d1100",
+    "alt": " BMW Z3",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1K4rbaMsRpk5nLfCudavql/1ec7816881c09f904cf7dd8111896c60/BMW_1_Serie_1.jpg?w\u003d1100",
+    "alt": "BMW 1 ",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7KZUdrhuTwlT2Dxy4uv7q5/c26340c0b858dcb4d4eb35936d194a96/MMP62_-_BMW_114_-_AutoScout24_foto1.jpg?w\u003d1100",
+    "alt": "BMW 114",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5KGgLJrputHCSAPJrLdESl/3f7f174236f3e856f4f6de4deb181cff/bmw-1er-f20-front.jpeg?w\u003d1100",
+    "alt": "BMW 116",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3kkdEUt2EWmaCJPVju3jXN/99efc1d1a324a2b8a2ccb4d82794a07d/bmw-118i-front.jpeg?w\u003d1100",
+    "alt": "BMW 118",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7CcPOqANd4mWtEo1G4Ub8o/c8dcf67fd4be5e479b94362da48d18e0/bmw-120i-front.jpeg?w\u003d1100",
+    "alt": "BMW 120",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f235bf90-15a0-4c7f-bdf9-fdfe9aef5312_8bc64a8a-f475-4a32-9c31-dd965f97dc8a.jpg/360x270.jpg",
+    "alt": "3-serie 318i Executive",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6a842b0b-4cfc-487c-86a8-c2fbb109c568_c488210f-c928-4ad5-a2cb-c8b2743b7b79.jpg/360x270.jpg",
+    "alt": "1-serie 118i EDE Sport | Automaat | Navigatie | Xe",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fbbbb400-3b86-4e85-9762-995ac4ffc3b4_ad2317b4-7afb-4380-9d0a-67c8838c1761.jpg/360x270.jpg",
+    "alt": "3-serie 320i Automaat Clima",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3f490fbf-3d47-4daa-9c9c-60d88f877a7a_b41c120a-bfab-484e-bfaa-a89ea0541747.jpg/360x270.jpg",
+    "alt": "2-serie Active Tourer 216d Centennial High Executi",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0f0332df-7643-4aee-9070-628381974db1_083d6dde-e6b6-4aa1-b15f-81b8805d1c68.jpg/360x270.jpg",
+    "alt": "xDrive30i Executive LEER GOED ONDERHOUDEN TREKHAAK",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eac034af-b12a-41e5-a391-14ae5fafd77b_f691ebd9-c462-4432-b4b1-abaa0e75e142.jpg/360x270.jpg",
+    "alt": "3-serie Touring 318i Automaat Sport Panoramadak St",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/15679b1b-214f-4c2d-9872-0b757070ecd8_c5a4c627-c7e7-4c39-a7b4-f396ce93ee81.jpg/360x270.jpg",
+    "alt": "1-serie 116i Executive | Nieuwe APK | Pano | Navi",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/52e82ea6-f4aa-4e29-b53c-53302809f406_0b243335-9fe9-4c2f-8158-de4ed16da7f4.jpg/360x270.jpg",
+    "alt": "5-serie Touring 525i Executive |Pano|Stoelverw.|",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9c2d72f1-6aa7-4387-989f-3017340b98ea_e0517d4c-6bff-4638-bac3-6b735b2458b8.jpg/360x270.jpg",
+    "alt": "3-serie 318i Business Line | Export | Clima | Crui",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1c3fd20b-951d-4da2-b53e-4de7297fea92_89b8d67e-226c-406c-a345-cd2e97ae92e1.jpg/360x270.jpg",
+    "alt": "3-serie 320i High Executive Edition | M-pakket | L",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9db49234-3805-45af-95f5-6caf12092c10_9c954d67-c13e-4a73-947b-1af664a3495a.jpg/360x270.jpg",
+    "alt": "xDrive20i Business | EXPORT | ZO MEENEMEN |",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dea6fc2e-1db2-4b7f-b1c5-a8d9bda91790_c4c3806b-fc88-41d1-9eb5-706c58c8c3d0.jpg/360x270.jpg",
+    "alt": "5-serie 525I High Executive Leder - Xenon - Groot",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f7ec19cd-c31e-41a1-936d-d4491d326549_7b8c0670-d45a-46a3-89ec-31c9f2454e4d.jpg/360x270.jpg",
+    "alt": "3 Serie 318i LCI CARPLAY Xenon M-sport Clima Cruis",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/514cebce-cf66-4f2b-a648-0f8397344585_2e397bd8-e4fd-48ec-8d95-ec547103d4d4.jpg/360x270.jpg",
+    "alt": "1-serie 116i 5-DEURS INTRODUCTION-uitv|AIRCO|SCHUI",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f416aa24-d5ad-47f6-97e6-91cc8e5bd0e1_f09cdf70-855b-4362-b3ab-16a94681aa5b.jpg/360x270.jpg",
+    "alt": "3-serie Gran Turismo 320i M Sport / Leer / Camera",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/257162d9-8407-438a-b0b2-0d41e71f49a6_692b66a1-21d2-46a1-b57c-5b8a897322e0.jpg/360x270.jpg",
+    "alt": "3-serie Cabrio 323Ci Executive/ 6-Cil./ Windscherm",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/137422eb-142b-4b64-a1c6-28d93f76e4de_8026ee8b-a45b-464f-8360-e91978069be3.jpg/360x270.jpg",
+    "alt": "3.0i Automaat - leder - sportstoelen - YOUNGTIMER",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ef922cdf-ea51-48be-827e-c699b0f46b97_dd08a406-24f2-4dc0-b67a-244c57466015.jpg/360x270.jpg",
+    "alt": "5-serie Gran Turismo 535i High Executive|AUT|XENON",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7788e142-90b8-4e37-aa1a-8dc1aa092c30_695b9669-2bf9-4286-bd80-8eb86cfa4e5b.jpg/360x270.jpg",
+    "alt": "3-serie 330e M Sport | HUD | Carplay | Leder | LED",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b500bb86-74b4-4db5-b9b5-7a7426adab87_544f60be-3cea-49b1-90fc-f3beea3a166e.jpg/360x270.jpg",
+    "alt": "5-serie 520i M-Pakket NAP ORIGINEEL NL TREKHAAK CL",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3UzXHTT76JeD7NTaLebeMh/d778eea71e4373dd78887a1531e5ee2b/BMW-iX-2022-1280-1b.jpg?w\u003d1100",
+    "alt": "BMW-iX",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/vKSz0sh1S4BGcefyPF8B2/73e93b4cad6e3ac934c8a59deb12a267/BMW-Z4-Side-Rear.jpg?w\u003d1100",
+    "alt": "bmw-z4-g29-back",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over het automerk BMW bij AutoScout24.",
+    "pageUrl": "https://www.autoscout24.nl/auto/bmw/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
+    "alt": "Financing disclaimer",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0d860dcf-259c-4a2a-858d-d37c320016ab_159ab564-e870-47b2-b157-8b635db36913.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/3872001-original-860d3080-2d3c-4a40-9c8e-d6a55def6dd0.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d32b0968-537f-4dc2-933f-12f223abf885_aac3be79-9caa-4f6f-95f2-d16014e6e183.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/4589716-original-274a8915-a611-4386-9593-31aaf2931575.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/32ebd6f2-5825-43d6-b303-7bea6a6dce9b_71ad4301-ffaf-4bc1-a237-48e60cdd06c2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9881bbb8-855b-464a-9d58-9dd589ecad8d_e40c5744-dc7a-44a1-ba06-4e30ed67c9f2.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/beaaf86b-cb83-439d-917f-93a8c95aa57e_9f26f25d-e1be-4094-a590-31051e25423f.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/47249287-original-3d910ec5-a097-4f98-8bc4-edb1b4d0485b.jpeg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d0dc7b02-1dfa-4989-b8eb-b315abc44f57_fb5b117d-6be4-43c4-b7e7-b31c8cedae63.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/48805025-original-fd84e502-674c-4413-ae7f-76544306b625.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d1ee3ce5-82a6-4fa9-b31d-82ae1ecbdf12_d85c5ead-339c-49b5-8984-cc49343a2da3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/64021674-original-2e9449ec-46ee-4d1f-a7c4-a591b194052f.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3f490fbf-3d47-4daa-9c9c-60d88f877a7a_b41c120a-bfab-484e-bfaa-a89ea0541747.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/018aa2ec-a7cb-4984-94c7-1692aa58ff45_3ea47732-d92b-4f12-b5fb-754eee6856ff.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/31671518-original-e6b0cb69-c376-49d7-a435-9cc52d51b036.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/723623fd-473d-43d5-aa3b-7831afb1f6df_86f785d2-e883-4acc-8404-e3032996d204.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bf1323a6-d0bb-4703-975e-0f9759b6c83c_493ff9e5-3c1a-4cd4-99ce-e6a192dda3e4.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e555c263-3c9a-4a0f-b172-28ef5090a263_d61f492f-a43a-4739-9963-664dbd1d48f6.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/320d0572-3f00-4bb3-8ac9-d92f5af8e582_a9885a96-13ff-489e-8dc2-e69095cd9cd6.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/41801154-original-cc4066d3-ba74-4bde-acd0-3411c5e0fd47.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/91c9b7e2-d695-4d0b-9cdb-1164a0d5663e_c20cd73c-62cb-459b-abdf-15e64795852c.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bf64ce64-664a-46e2-982a-8c9367a82aaf_f90df433-62b0-40d6-abd4-69761953feda.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cebbdd29-d825-4fd3-b47b-780a0cfa349f_926085f8-d499-42ad-bd1d-20233234bec9.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/20374034-original-6e835fd9-3341-4e70-a4ac-32621825b3ce.PNG/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b25c4041-836d-498c-93b7-496c13060b96_11ac6172-0ee0-41bb-9d46-c7573a2cb553.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7b68210a-6498-4cd3-8991-d85ed7696cb5_b4b355d0-473b-4d8f-b27b-db3ce3fea6a8.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6eb94194-4e07-4708-ba4d-ea91f5ce9aab_a0e71463-8a43-4fd4-ad78-ea12f53be6f3.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/51036003-original-4eb7d248-ab67-481e-b3d3-41f247eb2482.png/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/seal-images/image/146/146.gif",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9a87c32c-0e7c-4c99-b016-a0f3a3bf7b26_cc0b04ff-d364-4182-b410-8db5b7e681b1.jpg/250x188.webp",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/dealer-info/33917270-original-106c10fc-9c23-4f4c-b672-df012cf434ca.jpg/resize/100x50%3E/quality/90",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "MPV occasion kopen - AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/lst/c/mpv"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7xj7DNGJX63XQDVXL9FpZF/02c262371081e38fc71305009609357c/cabrio-l-01.jpg?w\u003d1100",
+    "alt": "cabrio-l-01",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7xj7DNGJX63XQDVXL9FpZF/02c262371081e38fc71305009609357c/cabrio-l-01.jpg?w\u003d1100",
+    "alt": "cabrio-l-01",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1fbDRVAwAi9Q33D8DAnl5i/068d88489f139375447924922aedff12/Porsche-911-T-cabriolet-2024__4_.jpg?w\u003d1100",
+    "alt": "Porsche-911-T-cabriolet-2024 (4)",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2CREt3Ym0lcXuW4dFmoDcd/c3fb8c04ab9c51a85e5e61e8b099b829/Volkswagen-Golf_Cabriolet-1.jpg?w\u003d1100",
+    "alt": "Volkswagen-Golf_Cabriolet-1",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7705XBnPStM9AG1K4UWeEq/43f8c108674640064dbf96696e464b82/Research-porsche_911_carrera_s_cabriolet_48.jpg?w\u003d1100",
+    "alt": "Research-porsche 911 carrera s cabriolet 48",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6Wh2i6eDSpkG1vvtSzOU63/62811d53bbd303468652a013d69e14e5/Mercedes-Benz-CLE_Cabriolet-2024-1024-03.jpg?w\u003d1100",
+    "alt": "Mercedes-Benz-CLE Cabriolet-2024-1024-03",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/71HOxGg93IODVqry1oTFdD/26fab2c2d98596df635e23fd45e030db/fiat-500c-xs.jpg?w\u003d480",
+    "alt": "Fiat 500 Cabrio",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4wqsYzB3js3xQOflUurn8M/fd3426989b8baba170ce62e2d199a563/mazda-mx-5-xs-02.jpg?w\u003d480",
+    "alt": "Mazda MX-5",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2UBsf8gqmuzODOzsvQOMOT/758bed8a653407fac54ccda671daab0e/peugeot-206-xs-02.jpg?w\u003d480",
+    "alt": "Peugeot 206",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/50dZuA7L4I7cmXDyoYIyfp/9cdd6eebd336dfe3a004c1635f619234/bmw-z4-xs-02.jpg?w\u003d480",
+    "alt": "BMW Z4 Roadster",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2UhnMytnixc7Fyd3FJUROy/2fa8393d412769f6de3c55f303a8be2f/peugeot-207-xs-02.jpg?w\u003d480",
+    "alt": "Peugeot 207",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1Ks0h0GsWmJSdaqcnXY4wG/3dd339f6d0f30ba94ce51ae18654a087/renault-megane-cabrio-xs.jpg?w\u003d480",
+    "alt": "Renault Megane",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/75Wax9tztq2CH058ge6hxY/f563ed3b2471021da286d080a986ff51/porsche-911-cabrio-xs.jpg?w\u003d480",
+    "alt": "Porsche 911",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6f58CZRvCP8yM9cPkxjlTa/1a8fedc9cf5f6793df8566f713a5a555/vw-golf-cabrio-xs.jpg?w\u003d480",
+    "alt": "Volkswagen Golf Cabriolet",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2n8Aw7yvkZJHlfjvzz4QAM/8e77726e484d2341936b1a222a77e203/porsche-boxster-cabrio-xs.jpg?w\u003d480",
+    "alt": "Porsche Boxster",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/679JGfwLFdK4gdz1thjk0l/6e8745fb44719c952a6c2226dba815d4/audi-a5-cabrio-xs-02.jpg?w\u003d480",
+    "alt": "Audi A5 Cabrio",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b1366f65-0c9b-425c-a2f7-ccbbf52a378d_8da76a34-968d-431b-a7a2-2fb5c650c6ea.jpg/360x270.jpg",
+    "alt": "Cabriolet 2.0 TFSI quattro S-edition|AUT|NAVI|XENO",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9261bcc1-9cac-455a-b773-4c836f75b9a8_86db5b9f-9c03-4f60-9b27-5d0b20870061.jpg/360x270.jpg",
+    "alt": "Cabriolet 2.0 TFSI|200PK|3XS-LINE|AUT|XENON|LEDER|",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/24a1fcf7-5871-400b-888c-b62fb3fab28a_2feec825-8d0b-4a0e-b283-57da3ce0ab53.jpg/360x270.jpg",
+    "alt": "Convertible 2.4 D5 Summum Leder - Xenon - Goed Ond",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f9fc06c3-1016-4ceb-959b-232140aed16d_0a3d2769-87d9-4c65-97b7-8d0367a779fa.jpg/360x270.jpg",
+    "alt": "4.3 V8",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e85816a5-b389-4441-82d8-aee2a261ec42_c6e1238c-571d-453f-879b-069ee439fc5a.jpg/360x270.jpg",
+    "alt": "Roadster SDrive23i 6 CILINDER XENON LEDER CLIMA",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/12f95e2f-1240-4eab-8644-693a6f43e59b_ebaf4e97-31e3-49d0-a3f8-c91c1524f75e.jpg/360x270.jpg",
+    "alt": "Cabriolet 2.0 Highline zwart leder airco nwe apk",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/5fc89a94-d271-4768-a2e6-c4ce586a8d20_c091ee7a-e163-4acc-95c7-d46723bbc82f.jpg/360x270.jpg",
+    "alt": "CC 1.6 THP Feline Lees Beschijving",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d7b7b208-33b4-4458-9bd7-284cb790773a_d06d33f1-5221-49ba-b711-87c83032447f.jpg/360x270.jpg",
+    "alt": "0.7 Type S RHD Airco |Turbo|175.965KM|",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ebb1be6b-00e0-49fa-8891-d2e8f0565899_4e28243e-9acc-46e6-a0b1-3dc0ef695437.jpg/360x270.jpg",
+    "alt": "S 3.2 Topconditie.",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/46869ad5-5136-44d8-a93d-eefbd8358c81_0f8fafec-47d6-45d8-8930-85b8e4536199.jpg/360x270.jpg",
+    "alt": "1-serie Cabrio 118i 2.0 High Executive Clima/Cruis",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/59c6b20b-bdf6-410e-ac5a-5598f6e6ebf5_3e72a952-d207-43d3-aa31-a59e01286f7a.jpg/360x270.jpg",
+    "alt": "1.6 JX 1998 Cabrio Verhoogd 4-Persoons",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b0119b3f-1ea5-4f62-bd2d-af9d81bf8268_cf91d14d-0eb3-40a4-8035-b1c71b67f347.jpg/360x270.jpg",
+    "alt": "CC 1.6-16V Premium | NIEUWE APK | AUTOMAAT | AIRCO",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e13c0598-3fa2-4284-8e9b-43012147e92f_33b1a75c-c5dc-4675-b71f-1c9681fb9a83.jpg/360x270.jpg",
+    "alt": "1.3-16V | 12MND GARANTIE | NIEUWE APK | LEDER | AI",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ab6e17c1-9a52-4f05-b7dc-d928326104ed_e28c0d2b-1375-435b-96ac-56a953336247.jpg/360x270.jpg",
+    "alt": "Kompressor Leer 78.000km Dealer OH.",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/257162d9-8407-438a-b0b2-0d41e71f49a6_692b66a1-21d2-46a1-b57c-5b8a897322e0.jpg/360x270.jpg",
+    "alt": "3-serie Cabrio 323Ci Executive/ 6-Cil./ Windscherm",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/27445a90-f432-4317-99ed-ef9bfeb089df_1bb1a32f-bb3a-4a04-a563-00892f487d26.jpg/360x270.jpg",
+    "alt": "Spyder 5.2 V10 FSI - Akrapovic | Keramisch  | B\u0026O",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/aa367d7a-2939-42a1-ae1a-2bcb7c2b5138_e2ad7a24-f02c-4475-8164-db8bdfd22936.jpg/360x270.jpg",
+    "alt": "1.6 TDI HIGHLINE STOELVERWM. CRUISE",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4fb7f866-469b-408a-bb59-88cd16c9944f_89bb8acb-05ba-4005-9008-a92af1059dda.jpg/360x270.jpg",
+    "alt": "CC 1.6 THP Sport Pack|PDC|AIRCO|STOEL VERWARMING|R",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4056e646-827e-44c5-ab22-03eda0551315_52bcd4c8-03a5-44ec-9cfc-5d5dd5fd8d48.jpg/360x270.jpg",
+    "alt": "TwinTop 1.8 Temptation Cabrio | Cruise | Climate |",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1a817b47-5974-4f51-8c7c-058b687b7952_d6cbcf3e-7daf-4c4e-9444-d1f968eb3546.jpg/360x270.jpg",
+    "alt": "Convertible 2.4 ECC LMV CRUISE ORIG. NL AUTO",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over de cabriolet bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/carrosserie/cabrio/"
+  },
   {
     "src": "https://www.autoscout24.nl/assets/as24-search-funnel/icons/let_op_warning.svg",
     "alt": "Financing disclaimer",
