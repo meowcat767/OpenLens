@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1234,
+    "url": "https://github.com/python/cpython/issues/131799",
+    "title": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation XuehaiPan commented Mar 27, 2025 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor Set an upper-cased ABIFLAGS (previously not exist) to sysconfig.get_config_vars() on Windows. The lower-cased abiflags in sysconfig.get_config_vars() remains an empty string on Windows. See #127405 (comment). Issue: Set sys.abiflags on Windows #127405 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Add ABIFLAGS to sysconfig.get_config_vars() on Windows 31b7eab XuehaiPan requested a review from FFY00 as a code owner March 27, 2025 16:21 bedevere-app Bot added the awaiting review label Mar 27, 2025 bedevere-app Bot mentioned this pull request Mar 27, 2025 Set sys.abiflags on Windows #127405 Closed 📜🤖 Added by blurb_it. dc45897 XuehaiPan commented Mar 27, 2025 View reviewed changes Comment thread Lib/sysconfig/__init__.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Add tests 9a4586a ZeroIntensity added the OS-windows label Mar 27, 2025 zooba reviewed Mar 27, 2025 View reviewed changes Comment thread Lib/sysconfig/__init__.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/sysconfig/__init__.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Lib/sysconfig/__init__.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. XuehaiPan added 3 commits March 28, 2025 16:20 Move ABIFLAGS definition to C code 76c85bb Revert now unrelated changes b98419b Fix variable name 4729f76 XuehaiPan requested a review from zooba March 28, 2025 11:03 zooba reviewed Mar 28, 2025 View reviewed changes Comment thread Modules/_sysconfig.c Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Refactor string concatination 04cbb1c FFY00 reviewed Mar 28, 2025 View reviewed changes Comment thread Modules/_sysconfig.c Outdated Comment on lines +58 to +74 // On Unix, the `ABIFLAGS` key is defined via a different logic. // // Emulate `sys.abiflags` value on Unix for Windows. ABIFLAGS here is only // an emulated value. It is not present during build on Windows. if (add_string_value(config, \"ABIFLAGS\", # ifdef Py_GIL_DISABLED \"t\" # endif # ifdef _DEBUG \"d\" # endif \"\") \u003c 0) { Py_DECREF(config); return NULL; } FFY00 Mar 28, 2025 Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Instead of setting ABIFLAGS here, I\u0027d prefer to add Py_DEBUG and then construct ABIFLAGS in sysconfig._init_non_posix. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions zooba Mar 31, 2025 Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Agree with adding Py_DEBUG, but if anything we should construct ABIFLAGS further back in the build (e.g. in a .props file) and store that value here. We don\u0027t need or use it, though, so I don\u0027t see an issue with constructing it here. But I\u0027d rather have build variables be closer to the build rather than further away. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions FFY00 Apr 3, 2025 Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment IMO, Py_DEBUG and Py_GIL_DISABLED should be in pyconfig.h, removing the need for a native module in the first place. But ignoring that, I think it would be more maintainable to have all variables that need construction in the same place. Having part of them here, and part of them in the Python module should be avoidable if we can. Especially for Windows specific variables emulating POSIX ones, sysconfig._init_non_posix is the place I would expect them to be. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions XuehaiPan Apr 3, 2025 Copy link Copy Markdown Contributor Author There wa",
+    "scrapedAt": "2026-10-08 19:32:57.812829"
+  },
+  {
+    "id": 1233,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Warning ctypes provides low-level access to native libraries and the process’s memory, bypassing Python’s safety mechanisms and allowing execution of arbitrary native code. Incorrect use can corrupt data and objects, reveal sensitive information, cause crashes, or otherwise compromise the running process. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most re",
+    "scrapedAt": "2026-10-08 19:32:52.762526"
+  },
+  {
+    "id": 1232,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InitializeFromConfig",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:32:51.469597"
+  },
+  {
+    "id": 1231,
+    "url": "https://github.com/python/cpython/issues/109218",
+    "title": "Invalid \"equivalents\" of the complex type constructor in docs · Issue #109218 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Invalid \"equivalents\" of the complex type constructor in docs #109218 New issue Copy link New issue Copy link Closed Closed Invalid \"equivalents\" of the complex type constructor in docs#109218 Copy link Labels docsDocumentation in the Doc dirDocumentation in the Doc dir Description skirpichev opened on Sep 10, 2023 Issue body actions The sphinx docs says: class complex(real\u003d0, imag\u003d0)\n[...]\nReturn a complex number with the value real + imag*1j or convert a string or number to a complex number.\n[...]\n The docstring (btw it doesn\u0027t mention a string as an argument): \u003e\u003e\u003e print(complex.__doc__)\nCreate a complex number from a real part and an optional imaginary part.\n\nThis is equivalent to (real + imag*1j) where imag defaults to 0.\n That wrong, e.g.: \u003e\u003e\u003e complex(0.0, -0.0)\n-0j\n\u003e\u003e\u003e 0.0 + (-0.0)*1j\n0j\n\u003e\u003e\u003e complex(-0.0, -0.0)\n(-0-0j)\n\u003e\u003e\u003e -0.0 + (-0.0)*1j\n(-0+0j)\n\u003e\u003e\u003e complex(-0.0, 0.0)\n(-0+0j)\n\u003e\u003e\u003e -0.0 + 0.0*1j\n0j Here is an attempt (patch) to solve, let me know if this is worth a PR: diff --git a/Doc/library/functions.rst b/Doc/library/functions.rst\nindex d9974c6350..78b85658ef 100644\n--- a/Doc/library/functions.rst\n+++ b/Doc/library/functions.rst\n@@ -373,8 +373,8 @@ are always available.  They are listed here in alphabetical order.\n .. class:: complex(real\u003d0, imag\u003d0)\n            complex(string)\n\n-   Return a complex number with the value *real* + *imag*\\*1j or convert a string\n-   or number to a complex number.  If the first parameter is a string, it will\n+   Create a complex number from a real part and an optional imaginary part\n+   or convert a string to a complex number.  If the first parameter is a string, it will\n    be interpreted as a complex number and the function must be called without a\n    second parameter.  The second parameter can never be a string. Each argument\n    may be any numeric type (including complex).  If *imag* is omitted, it\ndiff --git a/Objects/complexobject.c b/Objects/complexobject.c\nindex 0e96f54584..336b703233 100644\n--- a/Objects/complexobject.c\n+++ b/Objects/complexobject.c\n@@ -886,9 +886,8 @@ complex.__new__ as complex_new\n     real as r: object(c_default\u003d\"NULL\") \u003d 0\n     imag as i: object(c_default\u003d\"NULL\") \u003d 0\n\n-Create a complex number from a real part and an optional imaginary part.\n-\n-This is equivalent to (real + imag*1j) where imag defaults to 0.\n+Create a complex number from a real part and an optional imaginary part\n+or convert a string to a complex number.\n [clinic start generated code]*/\n\n static PyObject * Edit: Another instance of this issue is in the cmath docs: A Python complex number ``z`` is stored internally using *rectangular*\nor *Cartesian* coordinates.  It is completely determined by its *real\npart* ``z.real`` and its *imaginary part* ``z.imag``.  In other\nwords::\n\n   z \u003d\u003d z.real + z.imag*1j E.g.: \u003e\u003e\u003e from cmath import inf\n\u003e\u003e\u003e complex(0.0, inf)\ninfj\n\u003e\u003e\u003e 0.0 + inf*1j\n(nan+infj) Linked PRs gh-109218: Deprecate weird cases in the complex() constructor #119620 gh-109218: Refactor tests for the complex() constructor #119635 gh-109218: Improve documentation for the complex() constructor #119687 [3.13] gh-109218: Refactor tests for the complex() constructor (GH-119635) #119795 [3.12] gh-109218: Refactor tests for the complex() constructor (GH-119635) #119796 [3.13] gh-109218: Improve documentation for the complex() constructor (GH-119687) #119803 [3.12] gh-109218: Improve documentation for the complex() constructor (GH-119687) #119805 gh-109218: announce removal of complex constructor deprecations in 3.19 #158212 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels docsDocumentation in the Doc dirDocumentation in the Doc dir Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:32:50.123745"
+  },
+  {
+    "id": 1230,
+    "url": "https://github.com/python/cpython/issues/130471",
+    "title": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation gaogaotiantian commented Feb 22, 2025 • edited by bedevere-app Bot Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member We supported multi-line input in pdb in 3.13, but the tab indentation does not work in its best shape. It inserts a \\t character, which means the first \u003ctab\u003e will introduce a 2-space (at least looks like it) indentation, and the next ones will introduce a 8-space one. This PR made it a bit smarter. Now a \u003ctab\u003e at the beginning of the line (before any non-space text) will auto-fill a 4-space indentation. For example, \\t and \\t will both create a 4-space indentation. This is not the smartest feature, it\u0027s not as good as pyrepl where the indentation is inserted when a new line is created. However, I think it\u0027s much better than what we have now. The ultimate goal is to use pyrepl for pdb, so I don\u0027t think duplication too much code to make pdb work slightly better now is that rewarding. Issue: Use 4 spaces for indentation in PDB #125377 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Improve tab indentation for pdb multi-line input 36723c7 bedevere-app Bot added the awaiting core review label Feb 22, 2025 bedevere-app Bot mentioned this pull request Feb 22, 2025 Use 4 spaces for indentation in PDB #125377 Closed 📜🤖 Added by blurb_it. cfda7ba gaogaotiantian requested a review from iritkatriel February 22, 2025 19:44 Fix lint issue 9293b21 tomasr8 reviewed Feb 22, 2025 View reviewed changes Comment thread Lib/test/test_pdb.py Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Use a single multi-line string input 41e37ec tomasr8 approved these changes Feb 23, 2025 View reviewed changes iritkatriel reviewed Mar 3, 2025 View reviewed changes Comment thread Misc/NEWS.d/next/Library/2025-02-22-19-44-00.gh-issue-125377.LFTK0H.rst @@ -0,0 +1 @@ ``\u003ctab\u003e`` at the beginning of the line in :mod:`pdb` multi-line input will fill in a 4-space indentation now, instead of inserting a ``\\t`` character. iritkatriel Mar 3, 2025 Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment I\u0027d add this to what\u0027s new in 3.14. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions gaogaotiantian Mar 4, 2025 Copy link Copy Markdown Member Author There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment Done. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions gaogaotiantian added 2 commits March 4, 2025 11:43 Merge branch \u0027main\u0027 into multiline-completion eaa8bd9 Add whatsnew entry 64965f3 iritkatriel approved these changes Mar 4, 2025 View reviewed changes bedevere-app Bot added awaiting merge and removed awaiting core review labels Mar 4, 2025 gaogaotiantian merged commit b6769e9 into python:main Mar 4, 2025 bedevere-app Bot removed the awaiting merge label Mar 4, 2025 gaogaotiantian deleted the multiline-completion branch March 5, 2025 01:29 This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters. Learn more about bidirectional Unicode characters Show hidden characters Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Reviewers iritkatriel iritkatriel approved these changes tomasr8 tomasr8 approved these changes Assignees No one assigned Labels None yet Projects None yet Milestone No milestone Development Successfully merging this pull request may close these issues. Uh oh! There was an error while loading. Please reload this page. 3 participants Add this suggestion to a batch that can be applied as a single commit.This suggestion is invalid because no changes were made to the code.Suggestions cannot be applied while the pull request is closed.Suggestions cannot be applied while viewing a subset of changes.Only one suggestion per line can be applied in a batch.Add this suggestion to a batch that can be applied as a single commit.Applying suggestions on deleted lines is not supported.You must change the existing code in this line in order to create a valid suggestion.Outdat",
+    "scrapedAt": "2026-10-08 19:32:47.6385"
+  },
+  {
     "id": 1229,
     "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child",
     "title": "Operating System Utilities — Python 3.14.8 documentation",
@@ -8225,26 +8260,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1230,
-    "url": "https://github.com/python/cpython/issues/130471"
-  },
-  {
-    "id": 1231,
-    "url": "https://github.com/python/cpython/issues/109218"
-  },
-  {
-    "id": 1232,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InitializeFromConfig"
-  },
-  {
-    "id": 1233,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes.CField"
-  },
-  {
-    "id": 1234,
-    "url": "https://github.com/python/cpython/issues/131799"
   },
   {
     "id": 1235,
@@ -224891,10 +224906,1363 @@ window.searchData = [
     "id": 241009,
     "url": "https://github.com/larryhastings/gilectomy/tree/gilectomy",
     "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 242575,
+    "url": "https://github.com/python/cpython/pull/130471#event-16575137231",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242577,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F130471",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242578,
+    "url": "https://github.com/python/cpython/pull/130471#event-16584105072",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242579,
+    "url": "https://github.com/python/cpython/pull/130471#event-16575137714",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242582,
+    "url": "https://github.com/python/cpython/pull/130471#event-16415355246",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242585,
+    "url": "https://github.com/python/cpython/pull/130471/files/9293b21363e63900c523042fae57c513022e0ee7#diff-62d496a5c437924e8e749b16d45e0b928917c424ba7deb45112f5a7a9450c6f5",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242586,
+    "url": "https://github.com/python/cpython/pull/130471/files/41e37ecaecf21a02f7ba2bd19630ce787143736a#diff-f1f7ed10a79afaf933b99823b28258dd171958f7e0b6f4299fe2f37b3d95426e",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242588,
+    "url": "https://github.com/python/cpython/pull/130471/files/64965f30c67b55098ec471096ebd979d79bbf848",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242590,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2655182847",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242591,
+    "url": "https://github.com/python/cpython/pull/130471/commits/9293b21363e63900c523042fae57c513022e0ee7",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242592,
+    "url": "https://github.com/python/cpython/pull/130471#commits-pushed-eaa8bd9",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242593,
+    "url": "https://github.com/python/cpython/pull/130471#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242594,
+    "url": "https://github.com/python/cpython/pull/130471/files/eaa8bd9473f4529bffb83b29ca154cc25415e4c2",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242595,
+    "url": "https://github.com/python/cpython/pull/130471#ref-issue-2583463219",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242596,
+    "url": "https://github.com/python/cpython/pull/130471/commits/41e37ecaecf21a02f7ba2bd19630ce787143736a",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242598,
+    "url": "https://github.com/python/cpython/pull/130471#discussion_r1978128307",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242599,
+    "url": "https://github.com/python/cpython/pull/130471#discussion_r1979846177",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242601,
+    "url": "https://github.com/python/cpython/pull/130471",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242602,
+    "url": "https://github.com/python/cpython/pull/130471#issue-2871247655",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242603,
+    "url": "https://github.com/python/cpython/pull/130471/files/41e37ecaecf21a02f7ba2bd19630ce787143736a",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242604,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2635336010",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242605,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2658917451",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242607,
+    "url": "https://github.com/python/cpython/pull/130471#pullrequestreview-2635487072",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242608,
+    "url": "https://github.com/python/cpython/pull/130471/files/9293b21363e63900c523042fae57c513022e0ee7",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242609,
+    "url": "https://github.com/python/cpython/pull/130471/commits/eaa8bd9473f4529bffb83b29ca154cc25415e4c2",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242610,
+    "url": "https://github.com/python/cpython/commit/b6769e9404646e38d9c786984ef308c8e9747b91",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242613,
+    "url": "https://github.com/python/cpython/pull/130471/commits/64965f30c67b55098ec471096ebd979d79bbf848",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242614,
+    "url": "https://github.com/python/cpython/pull/130471/commits/cfda7ba886982133454291e724f1557def5ee5dd",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242615,
+    "url": "https://github.com/python/cpython/pull/130471#event-16415364994",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242616,
+    "url": "https://github.com/python/cpython/pull/130471#event-16574970760",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242617,
+    "url": "https://github.com/python/cpython/pull/130471/commits/36723c72e335c98c0419d5a62182b82301c2772a",
+    "parentUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "id": 242618,
+    "url": "https://github.com/python/cpython/issues/109218#issue-1889054796",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242619,
+    "url": "https://github.com/python/cpython/issues/109218#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242622,
+    "url": "https://github.com/python/cpython/pull/158212",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242623,
+    "url": "https://github.com/python/cpython/pull/119795",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242625,
+    "url": "https://github.com/python/cpython/issues/109218#top",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242626,
+    "url": "https://github.com/python/cpython/pull/119687",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242627,
+    "url": "https://github.com/python/cpython/pull/119620",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242628,
+    "url": "https://github.com/python/cpython/pull/119796",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242629,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/109218",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242630,
+    "url": "https://github.com/python/cpython/pull/119635",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242631,
+    "url": "https://github.com/python/cpython/pull/119803",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242633,
+    "url": "https://github.com/python/cpython/pull/119805",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 242634,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/109218",
+    "parentUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "id": 243069,
+    "url": "https://github.com/python/cpython/pull/131799#event-17222099783",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243070,
+    "url": "https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F131799%2Fmerge",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243071,
+    "url": "https://github.com/python/cpython/pull/131799#discussion_r2027667480",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243072,
+    "url": "https://github.com/python/cpython/pull/131799/commits/9a4586a617cc738e7cf1f75ebd7a8451509b710d",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243074,
+    "url": "https://github.com/XuehaiPan",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243075,
+    "url": "https://github.com/python/cpython/pull/131799/commits/dc458977134f42475c646373e3115e7701a566a8",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243076,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3AOS-windows",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243077,
+    "url": "https://github.com/python/cpython/pull/131799#event-17174798541",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243078,
+    "url": "https://github.com/python/cpython/pull/131799/commits/76c85bbee5fb42b3936fc683f4709747a0737b33",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243079,
+    "url": "https://github.com/python/cpython/pull/131799/commits/584e0b056677cae93a1531a8f46e203707fd5cc2",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243080,
+    "url": "https://github.com/python/cpython/pull/131799/commits/4729f76217cc78a8ebd8c5364a10da53f22b984c",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243081,
+    "url": "https://github.com/python/cpython/pull/131799/files/23b6e6c77b3146362e4c7562d29ad7b04e70bb85",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243083,
+    "url": "https://github.com/python/cpython/pull/131799/files/fbb86f51ea027e353a723610b3d7ca3a41496c11",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243084,
+    "url": "https://github.com/python/cpython/pull/131799#discussion_r2019088295",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243085,
+    "url": "https://github.com/python/cpython/pull/131799/files/23b6e6c77b3146362e4c7562d29ad7b04e70bb85#diff-ff3de3c657b8e6d0d7071b2f0672c8a7b03c45b3176557a99fc39c7bdcb571b9",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243086,
+    "url": "https://github.com/python/cpython/pull/131799#event-17017329686",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243089,
+    "url": "https://github.com/python/cpython/pull/131799/commits/932386c6a3c554d6fd7cea778e6c53b80bca4118",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243090,
+    "url": "https://github.com/python/cpython/pull/131799#event-17225639727",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243091,
+    "url": "https://github.com/python/cpython/pull/131799/commits/31b7eab6ee6264912f61abde5e9f5a515c777eb6",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243092,
+    "url": "https://github.com/FFY00",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243097,
+    "url": "https://github.com/python/cpython/pull/131799#event-17225640602",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243098,
+    "url": "https://github.com/python/cpython/pull/131799#event-17222239552",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243099,
+    "url": "https://github.com/Arian-bee",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243101,
+    "url": "https://github.com/python/cpython/pull/131799#commits-pushed-b702ff9",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243102,
+    "url": "https://github.com/python/cpython/pull/131799#issuecomment-2797212887",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243103,
+    "url": "https://github.com/python/cpython/issues/127405#issuecomment-2758521892",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243105,
+    "url": "https://github.com/python/cpython/pull/131799#issue-2953639543",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243106,
+    "url": "https://github.com/python/cpython/pull/131799#discussion_r2039326799",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243108,
+    "url": "https://github.com/python/cpython/commit/d55b3e6717553e7caf2c01a2664a5e2e93c80a4e",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243109,
+    "url": "https://github.com/python/cpython/pull/131799#commits-pushed-75b6c51",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243110,
+    "url": "https://github.com/python/cpython/pull/131799/commits/f49067e5441925c330735c5aa8e6e5d137c0d251",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243111,
+    "url": "https://github.com/python/cpython/pull/131799/commits/30c7b56442cb29aa2c02e7beab96e25e3c69345a",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243113,
+    "url": "https://github.com/python/cpython/pull/131799/files/9a4586a617cc738e7cf1f75ebd7a8451509b710d",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243114,
+    "url": "https://github.com/python/cpython/blob/972a295fe34280aa3d16c573d6200025a1ce4ff0/.github/CODEOWNERS#L254",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243115,
+    "url": "https://github.com/python/cpython/pull/131799#ref-issue-2704896606",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243116,
+    "url": "https://github.com/python/cpython/pull/131799/files/dc458977134f42475c646373e3115e7701a566a8#diff-ff3de3c657b8e6d0d7071b2f0672c8a7b03c45b3176557a99fc39c7bdcb571b9",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243117,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2722997837",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243120,
+    "url": "https://github.com/python/cpython/pull/131799/files/04cbb1c2a860137190a6bcf64e2d46ce5252b8fc",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243121,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2751555846",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243122,
+    "url": "https://github.com/python/cpython/pull/131799/files/23b6e6c77b3146362e4c7562d29ad7b04e70bb85#diff-365f96442d242edc27cd09ce48da3cd6f81d1b47c9baf8f1b7bbbe5b1d2e7bda",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243123,
+    "url": "https://github.com/python/cpython/pull/131799/files/4729f76217cc78a8ebd8c5364a10da53f22b984c",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243124,
+    "url": "https://github.com/python/cpython/pull/131799",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243125,
+    "url": "https://github.com/python/cpython/pull/131717",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243126,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2759989322",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243127,
+    "url": "https://github.com/python/cpython/pull/131799/commits/a0840707ba6672ab629553b80ea540048ad64574",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243129,
+    "url": "https://github.com/python/cpython/pull/131799/commits/8fa952bab3b6352d34847b95068ad52e0f6ee2f2",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243130,
+    "url": "https://github.com/python/cpython/pull/131799/commits/b702ff95632d858268ebe995b8e840e9744cbf47",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243131,
+    "url": "https://github.com/python/cpython/pull/131799/commits/93257bec96a9c07945d4d05a1ea8535d87bc97a2",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243132,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2754472192",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243133,
+    "url": "https://github.com/python/cpython/pull/131799#event-17019858576",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243134,
+    "url": "https://github.com/python/cpython/pull/131799/files/04cbb1c2a860137190a6bcf64e2d46ce5252b8fc#diff-66bb02af25e30be35165d045a8b49c4f868c6219b059db61860a5dbeaa76001c",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243135,
+    "url": "https://github.com/python/cpython/pull/131799#discussion_r2021170021",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243136,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2726354015",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243137,
+    "url": "https://github.com/python/cpython/pull/131799/files/04cbb1c2a860137190a6bcf64e2d46ce5252b8fc#diff-ff3de3c657b8e6d0d7071b2f0672c8a7b03c45b3176557a99fc39c7bdcb571b9",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243138,
+    "url": "https://github.com/python/cpython/pull/131799/files/932386c6a3c554d6fd7cea778e6c53b80bca4118",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243139,
+    "url": "https://github.com/python/cpython/pull/131799/commits/23b6e6c77b3146362e4c7562d29ad7b04e70bb85",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243140,
+    "url": "https://github.com/python/cpython/pull/131799/commits/1c807f0c92848d4da56f8d96d1e7578cb309a41a",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243141,
+    "url": "https://github.com/python/cpython/pull/131799/commits/a6045ea23b599eead4e0c22b89bcf70995111ddf",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243142,
+    "url": "https://github.com/python/cpython/pull/131799/commits/3c9120122261487d0bc67275e04e692085a6ef91",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243143,
+    "url": "https://github.com/python/cpython/blob/00f0771e4dbd8c8b66b302ebc16bb21f5d46b304/.github/CODEOWNERS#L216",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243144,
+    "url": "https://github.com/python/cpython/pull/131799#event-17037262618",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243146,
+    "url": "https://github.com/python/cpython/pull/131799/files/dc458977134f42475c646373e3115e7701a566a8",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243147,
+    "url": "https://github.com/python/cpython/pull/131799/commits/fbb86f51ea027e353a723610b3d7ca3a41496c11",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243148,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2726268127",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243149,
+    "url": "https://github.com/python/cpython/pull/131799#event-17017328431",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243150,
+    "url": "https://github.com/python/cpython/pull/131799/commits/d55b3e6717553e7caf2c01a2664a5e2e93c80a4e",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243151,
+    "url": "https://github.com/python/cpython/pull/131799#commits-pushed-a084070",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243152,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2722577087",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243153,
+    "url": "https://github.com/python/cpython/pull/131799#issuecomment-2797210677",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243154,
+    "url": "https://github.com/python/cpython/pull/131799#event-20107598569",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243155,
+    "url": "https://github.com/python/cpython/pull/131799/commits/b98419b410d2a7f2a7a93f4351657f074e88a5d1",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243156,
+    "url": "https://github.com/python/cpython/pull/131799/commits/d2255e6102837abef67bfc37b2b6344e652289dd",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243157,
+    "url": "https://github.com/python/cpython/pull/131799/commits/917874cbd450583ecca6ad01c8be720f151c2074",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243158,
+    "url": "https://github.com/python/cpython/pull/131799#event-17195272380",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243159,
+    "url": "https://github.com/python/cpython/pull/131799#commits-pushed-a6045ea",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243161,
+    "url": "https://github.com/python/cpython/pull/131799/commits/97942b29fcf7d184a88793a3589da8aeb11f69b9",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243162,
+    "url": "https://github.com/python/cpython/pull/131799#discussion_r2027710059",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243163,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2726112428",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243164,
+    "url": "https://github.com/python/cpython/pull/131799/files/4729f76217cc78a8ebd8c5364a10da53f22b984c#diff-66bb02af25e30be35165d045a8b49c4f868c6219b059db61860a5dbeaa76001c",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243166,
+    "url": "https://github.com/python/cpython/pull/131799#commits-pushed-97942b2",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243167,
+    "url": "https://github.com/python/cpython/pull/131799/files/da2b4ce379463554bccdcb1c81dd93f5f644de6d#diff-365f96442d242edc27cd09ce48da3cd6f81d1b47c9baf8f1b7bbbe5b1d2e7bda",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243168,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2754243085",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243169,
+    "url": "https://github.com/python/cpython/pull/131799/commits/04cbb1c2a860137190a6bcf64e2d46ce5252b8fc",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243170,
+    "url": "https://github.com/python/cpython/pull/131799/files/fbb86f51ea027e353a723610b3d7ca3a41496c11#diff-365f96442d242edc27cd09ce48da3cd6f81d1b47c9baf8f1b7bbbe5b1d2e7bda",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243171,
+    "url": "https://github.com/python/cpython/pull/131799#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243172,
+    "url": "https://github.com/python/cpython/pull/131799#event-17222239080",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243173,
+    "url": "https://github.com/python/cpython/pull/131799#issuecomment-2796647452",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243174,
+    "url": "https://github.com/python/cpython/pull/131799/commits/75b6c51a74f678052ad3be567da578a162f884bc",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243175,
+    "url": "https://github.com/python/cpython/pull/131799/files/9a4586a617cc738e7cf1f75ebd7a8451509b710d#diff-ff3de3c657b8e6d0d7071b2f0672c8a7b03c45b3176557a99fc39c7bdcb571b9",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243176,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F131799",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243178,
+    "url": "https://github.com/python/cpython/pull/131799#commits-pushed-76c85bb",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243179,
+    "url": "https://github.com/python/cpython/pull/131799#event-17030466073",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243180,
+    "url": "https://github.com/python/cpython/pull/131799#discussion_r2027656433",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243181,
+    "url": "https://github.com/python/cpython/issues/133878",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243183,
+    "url": "https://github.com/python/cpython/pull/131799#pullrequestreview-2754467697",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243184,
+    "url": "https://github.com/python/cpython/pull/131799/files/932386c6a3c554d6fd7cea778e6c53b80bca4118#diff-365f96442d242edc27cd09ce48da3cd6f81d1b47c9baf8f1b7bbbe5b1d2e7bda",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243185,
+    "url": "https://github.com/python/cpython/commit/26ae05e95c7c5f1a646e8ec7fa690c0e7b4ab8b9",
+    "parentUrl": "https://github.com/python/cpython/issues/131799"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d80\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d48\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026u\u003df9f1459ea9036ce3d6479c266297b628a58c6870\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d60\u0026v\u003d4",
+    "alt": "XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d40\u0026u\u003d0568b9167030ebb2324349de0b47320def8f2f07\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d60\u0026v\u003d4",
+    "alt": "zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026u\u003df9f1459ea9036ce3d6479c266297b628a58c6870\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d60\u0026v\u003d4",
+    "alt": "zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718923?s\u003d60\u0026v\u003d4",
+    "alt": "FFY00",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718923?s\u003d48\u0026v\u003d4",
+    "alt": "@FFY00",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d48\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718923?s\u003d48\u0026v\u003d4",
+    "alt": "@FFY00",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d48\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d48\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026u\u003df9f1459ea9036ce3d6479c266297b628a58c6870\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026u\u003df9f1459ea9036ce3d6479c266297b628a58c6870\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d60\u0026v\u003d4",
+    "alt": "merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d48\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026u\u003d4bd26a095e7e8fe9efd67dc1793e8a5255309d90\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d60\u0026v\u003d4",
+    "alt": "zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d48\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d48\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026u\u003df9f1459ea9036ce3d6479c266297b628a58c6870\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d40\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d40\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d80\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d40\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d80\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d40\u0026u\u003df9f1459ea9036ce3d6479c266297b628a58c6870\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d40\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1152074?s\u003d40\u0026v\u003d4",
+    "alt": "@ericsnowcurrently",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/54418?s\u003d40\u0026v\u003d4",
+    "alt": "@brettcannon",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1026649?s\u003d40\u0026v\u003d4",
+    "alt": "@ncoghlan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/210184?s\u003d40\u0026v\u003d4",
+    "alt": "@warsaw",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718923?s\u003d40\u0026v\u003d4",
+    "alt": "@FFY00",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d40\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d52\u0026v\u003d4",
+    "alt": "@XuehaiPan",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1693688?s\u003d52\u0026v\u003d4",
+    "alt": "@zooba",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/635179?s\u003d52\u0026v\u003d4",
+    "alt": "@merwok",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718923?s\u003d52\u0026v\u003d4",
+    "alt": "@FFY00",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/49501366?s\u003d52\u0026v\u003d4",
+    "alt": "@ZeroIntensity",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/205300769?s\u003d52\u0026v\u003d4",
+    "alt": "@Arian-bee",
+    "pageTitle": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.CField"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes.CField"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InitializeFromConfig"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_InitializeFromConfig"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@skirpichev",
+    "pageTitle": "Invalid \"equivalents\" of the complex type constructor in docs · Issue #109218 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Invalid \"equivalents\" of the complex type constructor in docs · Issue #109218 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/109218"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1525981?s\u003d40\u0026v\u003d4",
+    "alt": "@blurb-it",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d60\u0026v\u003d4",
+    "alt": "tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d60\u0026v\u003d4",
+    "alt": "tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d48\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d48\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d60\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d40\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d40\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d40\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d52\u0026v\u003d4",
+    "alt": "@gaogaotiantian",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d52\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/8739637?s\u003d52\u0026v\u003d4",
+    "alt": "@tomasr8",
+    "pageTitle": "gh-125377: Improve tab indentation for pdb multi-line input by gaogaotiantian · Pull Request #130471 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130471"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
