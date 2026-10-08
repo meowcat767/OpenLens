@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 793,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures",
+    "title": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » concurrent.futures — Launching parallel tasks | Theme Auto Light Dark | concurrent.futures — Launching parallel tasks¶ Added in version 3.2. Source code: Lib/concurrent/futures/thread.py, Lib/concurrent/futures/process.py, and Lib/concurrent/futures/interpreter.py The concurrent.futures module provides a high-level interface for asynchronously executing callables. The asynchronous execution can be performed with threads, using ThreadPoolExecutor or InterpreterPoolExecutor, or separate processes, using ProcessPoolExecutor. Each implements the same interface, which is defined by the abstract Executor class. concurrent.futures.Future must not be confused with asyncio.Future, which is designed for use with asyncio tasks and coroutines. See the asyncio’s Future documentation for a detailed comparison of the two. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Executor Objects¶ class concurrent.futures.Executor¶ An abstract class that provides methods to execute calls asynchronously. It should not be used directly, but through its concrete subclasses. submit(fn, /, *args, **kwargs)¶ Schedules the callable, fn, to be executed as fn(*args, **kwargs) and returns a Future object representing the execution of the callable. with ThreadPoolExecutor(max_workers\u003d1) as executor:\n    future \u003d executor.submit(pow, 323, 1235)\n    print(future.result())\n map(fn, *iterables, timeout\u003dNone, chunksize\u003d1, buffersize\u003dNone)¶ Similar to map(fn, *iterables) except: The iterables are collected immediately rather than lazily, unless a buffersize is specified to limit the number of submitted tasks whose results have not yet been yielded. If the buffer is full, iteration over the iterables pauses until a result is yielded from the buffer. fn is executed asynchronously and several calls to fn may be made concurrently. The returned iterator raises a TimeoutError if __next__() is called and the result isn’t available after timeout seconds from the original call to Executor.map(). timeout can be an int or a float. If timeout is not specified or None, there is no limit to the wait time. If a fn call raises an exception, then that exception will be raised when its value is retrieved from the iterator. When using ProcessPoolExecutor, this method chops iterables into a number of chunks which it submits to the pool as separate tasks. The (approximate) size of these chunks can be specified by setting chunksize to a positive integer. For very long iterables, using a large value for chunksize can significantly improve performance compared to the default size of 1. With ThreadPoolExecutor and InterpreterPoolExecutor, chunksize has no effect. Changed in version 3.5: Added the chunksize parameter. Changed in version 3.14: Added the buffersize parameter. shutdown(wait\u003dTrue, *, cancel_futures\u003dFalse)¶ Signal the executor that it should free any resources that it is using when the currently pending futures are done executing. Calls to Executor.submit() and Executor.map() made after shutdown will raise RuntimeError. If wait is True then this method will not return until all the pending futures are done executing and the resources associated with the executor have been freed. If wait is False then this method will return immediately and the resources associated with the executor will be freed when all pending futures are done executing. Regardless of the value of wait, the entire Python program will not exit until all pending futures are done executing. If cancel_futures is True, this method will cancel all pending futures that the executor has not started running. Any futures that are completed or running won’t be cancelled, regardless of the value of cancel_futures. If both cancel_futures and wait are True, all futures that the executor has started running will be completed prior to this method returning. The remaining futures are cancelled. You can avoid having to call this method explicitly if you use the executor as a context manager via the with statement, which will shutdown the Executor (waiting as if Executor.shutdown() were called with wait set to True): import shutil\nwith ThreadPoolExecutor(max_workers\u003d4) as e:\n    e.submit(shutil.copy, \u0027src1.txt\u0027, \u0027dest1.txt\u0027)\n    e.submit(shutil.copy, \u0027src2.txt\u0027, \u0027dest2.txt\u0027)\n    e.submit(shutil.copy, \u0027src3.txt\u0027, \u0027dest3.txt\u0027)\n    e.submit(shutil.copy, \u0027src4.txt\u0027, \u0027dest4.txt\u0027)\n Changed in version 3.9: Added cancel_futures. ThreadPoolExecutor¶ ThreadPoolExecutor is an Executor subclass that uses a pool of threads to execute calls asynchronously. Deadlocks can occur when the callable associated with a Future waits on the results of another Future. For example: import time\ndef wait_on_b():\n    time.sleep(5)\n    print(b.result())  # b will never complete because it is waiting on a.\n    return 5\n\ndef wait_on",
+    "scrapedAt": "2026-10-08 19:14:35.751908"
+  },
+  {
+    "id": 792,
+    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref",
+    "title": "wsgiref — WSGI Utilities and Reference Implementation — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internet Protocols and Support » wsgiref — WSGI Utilities and Reference Implementation | Theme Auto Light Dark | wsgiref — WSGI Utilities and Reference Implementation¶ Source code: Lib/wsgiref Warning wsgiref is a reference implementation and is not recommended for production. The module only implements basic security checks. The Web Server Gateway Interface (WSGI) is a standard interface between web server software and web applications written in Python. Having a standard interface makes it easy to use an application that supports WSGI with a number of different web servers. Only authors of web servers and programming frameworks need to know every detail and corner case of the WSGI design. You don’t need to understand every detail of WSGI just to install a WSGI application or to write a web application using an existing framework. wsgiref is a reference implementation of the WSGI specification that can be used to add WSGI support to a web server or framework. It provides utilities for manipulating WSGI environment variables and response headers, base classes for implementing WSGI servers, a demo HTTP server that serves WSGI applications, types for static type checking, and a validation tool that checks WSGI servers and applications for conformance to the WSGI specification (PEP 3333). See wsgi.readthedocs.io for more information about WSGI, and links to tutorials and other resources. wsgiref.util – WSGI environment utilities¶ This module provides a variety of utility functions for working with WSGI environments. A WSGI environment is a dictionary containing HTTP request variables as described in PEP 3333. All of the functions taking an environ parameter expect a WSGI-compliant dictionary to be supplied; please see PEP 3333 for a detailed specification and WSGIEnvironment for a type alias that can be used in type annotations. wsgiref.util.guess_scheme(environ)¶ Return a guess for whether wsgi.url_scheme should be “http” or “https”, by checking for a HTTPS environment variable in the environ dictionary. The return value is a string. This function is useful when creating a gateway that wraps CGI or a CGI-like protocol such as FastCGI. Typically, servers providing such protocols will include a HTTPS variable with a value of “1”, “yes”, or “on” when a request is received via SSL. So, this function returns “https” if such a value is found, and “http” otherwise. wsgiref.util.request_uri(environ, include_query\u003dTrue)¶ Return the full request URI, optionally including the query string, using the algorithm found in the “URL Reconstruction” section of PEP 3333. If include_query is false, the query string is not included in the resulting URI. wsgiref.util.application_uri(environ)¶ Similar to request_uri(), except that the PATH_INFO and QUERY_STRING variables are ignored. The result is the base URI of the application object addressed by the request. wsgiref.util.shift_path_info(environ)¶ Shift a single name from PATH_INFO to SCRIPT_NAME and return the name. The environ dictionary is modified in-place; use a copy if you need to keep the original PATH_INFO or SCRIPT_NAME intact. If there are no remaining path segments in PATH_INFO, None is returned. Typically, this routine is used to process each portion of a request URI path, for example to treat the path as a series of dictionary keys. This routine modifies the passed-in environment to make it suitable for invoking another WSGI application that is located at the target URI. For example, if there is a WSGI application at /foo, and the request URI path is /foo/bar/baz, and the WSGI application at /foo calls shift_path_info(), it will receive the string “bar”, and the environment will be updated to be suitable for passing to a WSGI application at /foo/bar. That is, SCRIPT_NAME will change from /foo to /foo/bar, and PATH_INFO will change from /bar/baz to /baz. When PATH_INFO is just a “/”, this routine returns an empty string and appends a trailing slash to SCRIPT_NAME, even though empty path segments are normally ignored, and SCRIPT_NAME doesn’t normally end in a slash. This is intentional behavior, to ensure that an application can tell the difference between URIs ending in /x from ones ending in /x/ when using this routine to do object traversal. wsgiref.util.setup_testing_defaults(environ)¶ Update environ with trivial defaults for testing purposes. This routine adds various parameters required for WSGI, including HTTP_HOST, SERVER_NAME, SERVER_PORT, REQUEST_METHOD, SCRIPT_NAME, PATH_INFO, and all of the PEP 3333-defined wsgi.* variables. It only supplies default values, and does not replace any existing settings for these variables. This routine is intended to make it easier for unit tests of WSGI servers and applications to set up dummy environments. It should NOT be used by actual WSGI servers or applications, since the data is fake! Example usage (see also demo_",
+    "scrapedAt": "2026-10-08 19:14:34.544452"
+  },
+  {
+    "id": 791,
+    "url": "https://github.com/python/cpython/issues/90102",
+    "title": "Avoid calling isatty() for most open() calls · Issue #90102 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Avoid calling isatty() for most open() calls #90102 New issue Copy link New issue Copy link Closed Closed Avoid calling isatty() for most open() calls#90102 Copy link Labels 3.13only security fixesonly security fixesperformancePerformance or resource usagePerformance or resource usagetopic-IO Description collinanderson mannequin opened on Dec 1, 2021 Issue body actions BPO 45944 Nosy @pitrou, @benjaminp, @serhiy-storchaka, @eryksun, @collinanderson PRs bpo-45944: Avoid calling isatty() for most open() calls #29870 Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2021-12-01.05:08:15.763\u003e\nlabels \u003d [\u00273.11\u0027, \u0027expert-IO\u0027, \u0027performance\u0027]\ntitle \u003d \u0027Avoid calling isatty() for most open() calls\u0027\nupdated_at \u003d \u003cDate 2021-12-01.11:53:13.388\u003e\nuser \u003d \u0027https://github.com/collinanderson\u0027 bugs.python.org fields: activity \u003d \u003cDate 2021-12-01.11:53:13.388\u003e\nactor \u003d \u0027eryksun\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d [\u0027IO\u0027]\ncreation \u003d \u003cDate 2021-12-01.05:08:15.763\u003e\ncreator \u003d \u0027collinanderson\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 45944\nkeywords \u003d [\u0027patch\u0027]\nmessage_count \u003d 3.0\nmessages \u003d [\u0027407427\u0027, \u0027407434\u0027, \u0027407444\u0027]\nnosy_count \u003d 6.0\nnosy_names \u003d [\u0027pitrou\u0027, \u0027benjamin.peterson\u0027, \u0027stutzbach\u0027, \u0027serhiy.storchaka\u0027, \u0027eryksun\u0027, \u0027collinanderson\u0027]\npr_nums \u003d [\u002729870\u0027]\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d \u0027patch review\u0027\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027performance\u0027\nurl \u003d \u0027https://bugs.python.org/issue45944\u0027\nversions \u003d [\u0027Python 3.11\u0027] Linked PRs gh-90102: Optimize io.FileIO.isatty() #112495 gh-90102: Remove isatty call during regular open #124922 gh-90102: Fix pyio return value #125089 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels 3.13only security fixesonly security fixesperformancePerformance or resource usagePerformance or resource usagetopic-IO Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:14:33.355071"
+  },
+  {
+    "id": 790,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME",
+    "title": "1. Command line and environment — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located using the standard import mechanism and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Locate the module using the standard import mechanism and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, ",
+    "scrapedAt": "2026-10-08 19:14:31.365526"
+  },
+  {
+    "id": 789,
+    "url": "https://docs.python.org/3/library/functools.html#functools.reduce",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than @lru_cache with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to @property, with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of @cached_property are somewhat different from @property. A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to @cached_property can also be achieved by stacking @property on top of @lru_cache. See How do I cache method calls? for more details on how this differs from @cached_property. Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, @cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key function is a",
+    "scrapedAt": "2026-10-08 19:14:30.176415"
+  },
+  {
     "id": 788,
     "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree",
     "title": "xml.etree.ElementTree — The ElementTree XML API — Python 3.14.8 documentation",
@@ -5205,26 +5240,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 789,
-    "url": "https://docs.python.org/3/library/functools.html#functools.reduce"
-  },
-  {
-    "id": 790,
-    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
-  },
-  {
-    "id": 791,
-    "url": "https://github.com/python/cpython/issues/90102"
-  },
-  {
-    "id": 792,
-    "url": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
-  },
-  {
-    "id": 793,
-    "url": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
   },
   {
     "id": 794,
@@ -134889,10 +134904,810 @@ window.searchData = [
     "id": 100017,
     "url": "https://docs.python.org/3/library/xml.etree.elementtree.html#xml.etree.ElementTree.ParseError",
     "parentUrl": "https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree"
+  },
+  {
+    "id": 100029,
+    "url": "https://en.wikipedia.org/wiki/Fibonacci_number",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100030,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.args",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100031,
+    "url": "https://docs.python.org/3/library/functools.html#",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100032,
+    "url": "https://docs.python.org/3/library/functools.html#functools.cached_property",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100033,
+    "url": "https://docs.python.org/3/library/itertools.html#itertools.accumulate",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100036,
+    "url": "https://en.wikipedia.org/wiki/Memoization",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100037,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.func",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100044,
+    "url": "https://en.wikipedia.org/wiki/Dynamic_programming",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100049,
+    "url": "https://docs.python.org/3/library/abc.html#abc.abstractmethod",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100050,
+    "url": "https://docs.python.org/3/library/functools.html#functools.partial.keywords",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100055,
+    "url": "https://docs.python.org/3/library/functools.html#functools.singledispatch.register",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100056,
+    "url": "https://docs.python.org/3/faq/programming.html#faq-cache-method-calls",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100065,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/functools.py",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100074,
+    "url": "https://peps.python.org/pep-0412/",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100086,
+    "url": "https://docs.python.org/3/library/functools.html#functools.wraps",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100088,
+    "url": "https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_(LRU)",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100090,
+    "url": "https://docs.python.org/3/library/functools.html#functools.lru_cache",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100093,
+    "url": "https://docs.python.org/3/library/functools.html#functools.singledispatchmethod",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100097,
+    "url": "https://docs.python.org/3/library/functools.html#functools.cache",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100099,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d17482",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100105,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/functools.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "id": 100307,
+    "url": "https://github.com/python/cpython/pull/125089",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100309,
+    "url": "https://github.com/python/cpython/issues/90102#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100312,
+    "url": "https://github.com/python/cpython/issues/90102#top",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100313,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%223.13%22",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100314,
+    "url": "https://github.com/python/cpython/pull/112495",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100315,
+    "url": "https://github.com/python/cpython/issues/90102#issue-1199070274",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100317,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/90102",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100318,
+    "url": "https://bugs.python.org/issue45944",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100319,
+    "url": "https://github.com/benjaminp",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100320,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/90102",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100322,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-IO%22",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100323,
+    "url": "https://github.com/collinanderson",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100324,
+    "url": "https://github.com/python/cpython/pull/124922",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100325,
+    "url": "https://github.com/python/cpython/pull/29870",
+    "parentUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "id": 100327,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.headers.Headers.add_header",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100329,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.validate.validator",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100330,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.traceback_limit",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100331,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.application_uri",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100333,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.HTTPServer",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100334,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.IISCGIHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100335,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.get_scheme",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100336,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_file_wrapper",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100337,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.read_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100338,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.setup_testing_defaults",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100339,
+    "url": "https://docs.python.org/3/builtins/stdtypes.html#dict.get",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100340,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.make_server",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100343,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.add_cgi_vars",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100344,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.http_version",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100345,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler._flush",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100347,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIServer.get_app",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100348,
+    "url": "https://docs.python.org/3/library/wsgiref.html#",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100350,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler.get_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100351,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.WSGIEnvironment",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100352,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/wsgiref.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100353,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.WSGIApplication",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100355,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.get_stdin",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100357,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.headers.Headers",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100358,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.guess_scheme",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100359,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100360,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.request_uri",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100362,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_headers",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100367,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.server_software",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100368,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_status",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100369,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler.get_stderr",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100371,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.setup_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100372,
+    "url": "https://docs.python.org/3/library/http.server.html#http.server.BaseHTTPRequestHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100373,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.get_stderr",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100374,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.os_environ",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100375,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler._write",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100378,
+    "url": "https://peps.python.org/pep-3333/#optional-platform-specific-file-handling",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100379,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/wsgiref",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100384,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_output",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100389,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.SimpleHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100392,
+    "url": "https://peps.python.org/pep-3333/#input-and-error-streams",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100393,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIServer",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100394,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.FileWrapper",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100395,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.InputStream",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100397,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_run_once",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100398,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.log_exception",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100399,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.run",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100400,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_multithread",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100401,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseCGIHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100402,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.FileWrapper",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100403,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.wsgi_multiprocess",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100405,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100406,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.origin_server",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100407,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.error_body",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100408,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.BaseHandler.sendfile",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100409,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.handlers.CGIHandler",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100410,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.headers.Headers.get_all",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100413,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.is_hop_by_hop",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100414,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIServer.set_app",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100417,
+    "url": "https://peps.python.org/pep-3333/#the-start-response-callable",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100421,
+    "url": "https://wsgi.readthedocs.io/",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100422,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.util.shift_path_info",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100424,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2616.html",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100427,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.ErrorStream",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100428,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.demo_app",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100429,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.simple_server.WSGIRequestHandler.handle",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100431,
+    "url": "https://docs.python.org/3/library/wsgiref.html#wsgiref.types.StartResponse",
+    "parentUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "id": 100432,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.TimeoutError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100434,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.thread.BrokenThreadPool",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100435,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.add_done_callback",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100438,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.cancel",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100439,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#interpreterpoolexecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100441,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100443,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.process.BrokenProcessPool",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100445,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.set_result",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100448,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#exception-classes",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100449,
+    "url": "https://docs.python.org/3/library/os.html#os.pipe",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100456,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100458,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ALL_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100460,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#future-objects",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100461,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor-example",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100462,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.wait",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100466,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.ExecutionFailed",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100467,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.exception",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100468,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.submit",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100469,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.cancelled",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100472,
+    "url": "https://github.com/python/cpython/issues/115634",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100475,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.interpreter.BrokenInterpreterPool",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100477,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.done",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100478,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/futures/process.py",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100479,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#executor-objects",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100480,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#processpoolexecutor-example",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100484,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.set_exception",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100486,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#processpoolexecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100489,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.CancelledError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100492,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100493,
+    "url": "https://peps.python.org/pep-3148/",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100496,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.set_running_or_notify_cancel",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100497,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.BrokenExecutor",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100499,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.FIRST_COMPLETED",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100500,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/futures/thread.py",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100503,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.InvalidStateError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100504,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.FIRST_EXCEPTION",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100508,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/concurrent.futures.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100512,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100513,
+    "url": "https://docs.python.org/3/library/asyncio-future.html",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100514,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.terminate",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100515,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.result",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100517,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.as_completed",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100522,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#module-functions",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100523,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/futures/interpreter.py",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100524,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.running",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100527,
+    "url": "https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "id": 100529,
+    "url": "https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process.kill",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.futures — Launching parallel tasks — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.futures.html#module-concurrent.futures"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wsgiref — WSGI Utilities and Reference Implementation — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "wsgiref — WSGI Utilities and Reference Implementation — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/wsgiref.html#module-wsgiref"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/96538200?v\u003d4\u0026size\u003d48",
+    "alt": "@collinanderson",
+    "pageTitle": "Avoid calling isatty() for most open() calls · Issue #90102 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Avoid calling isatty() for most open() calls · Issue #90102 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/90102"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONHOME"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
