@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 482,
+    "url": "http://twistedmatrix.com/",
+    "title": "Twisted",
+    "content": "An event-driven networking engine Written in Python Licensed under the open source MIT License View Github View Documentation Check PyPi download page               \n                $ virtualenv try-twisted\n                $ . try-twisted/bin/activate\n                $ pip install twisted[tls]\n                $ twist --help\n              \n            Premium Sponsors Twisted makes it easy to implement custom network applications. Here\u0027s a TCP server that echoes back everything that\u0027s written to it:                   \nfrom twisted.internet import protocol, reactor, endpoints\n\nclass Echo(protocol.Protocol):\n    def dataReceived(self, data):\n        self.transport.write(data)\n\nclass EchoFactory(protocol.Factory):\n    def buildProtocol(self, addr):\n        return Echo()\n\nendpoints.serverFromString(reactor, \"tcp:1234\").listen(EchoFactory())\nreactor.run()\n                  \n                Learn more about writing servers, writing clients and the core networking libraries, including support for SSL, UDP, scheduled events, unit testing infrastructure, and much more. Twisted includes an event-driven web server. Here\u0027s a sample web application; notice how the resource object persists in memory, rather than being recreated on each request:                   \nfrom twisted.web import server, resource\nfrom twisted.internet import reactor, endpoints\n\nclass Counter(resource.Resource):\n    isLeaf \u003d True\n    numberRequests \u003d 0\n\n    def render_GET(self, request):\n        self.numberRequests +\u003d 1\n        request.setHeader(b\"content-type\", b\"text/plain\")\n        content \u003d u\"I am request #{}\\n\".format(self.numberRequests)\n        return content.encode(\"ascii\")\n\nendpoints.serverFromString(reactor, \"tcp:8080\").listen(server.Site(Counter()))\nreactor.run()\n                \n                Learn more about web application development, templates and Twisted\u0027 HTTP client. Here\u0027s a simple publish/subscribe server, where clients see all messages posted by other clients:                   \nfrom twisted.internet import reactor, protocol, endpoints\nfrom twisted.protocols import basic\n\nclass PubProtocol(basic.LineReceiver):\n    def __init__(self, factory):\n        self.factory \u003d factory\n\n    def connectionMade(self):\n        self.factory.clients.add(self)\n\n    def connectionLost(self, reason):\n        self.factory.clients.remove(self)\n\n    def lineReceived(self, line):\n        for c in self.factory.clients:\n            source \u003d u\"\u003c{}\u003e \".format(self.transport.getHost()).encode(\"ascii\")\n            c.sendLine(source + line)\n\nclass PubFactory(protocol.Factory):\n    def __init__(self):\n        self.clients \u003d set()\n\n    def buildProtocol(self, addr):\n        return PubProtocol(self)\n\nendpoints.serverFromString(reactor, \"tcp:1025\").listen(PubFactory())\nreactor.run()\n                  \n                You can test this out by opening two terminals and doing telnet localhost 1025 in each, then typing things. Twisted includes a sophisticated IMAP4 client library.                   \nimport sys\n\nfrom twisted.internet import protocol, defer, endpoints, task\nfrom twisted.mail import imap4\nfrom twisted.python import failure\n\n\nasync def main(\n    reactor, username\u003d\"alice\", password\u003d\"secret\", strport\u003d\"tls:example.com:993\"\n):\n    endpoint \u003d endpoints.clientFromString(reactor, strport)\n    factory \u003d protocol.Factory.forProtocol(imap4.IMAP4Client)\n    try:\n        client \u003d await endpoint.connect(factory)\n        await client.login(username.encode(\"utf-8\"),\n                           password.encode(\"utf-8\"))\n        await client.select(\"INBOX\")\n        info \u003d await client.fetchEnvelope(imap4.MessageSet(1))\n        print(\"First message subject:\", info[1][\"ENVELOPE\"][1])\n    except:\n        print(\"IMAP4 client interaction failed\")\n        print(failure.Failure().getTraceback())\n\n\ntask.react(lambda *a, **k: defer.ensureDeferred(main(*a, **k)), sys.argv[1:])\n                  \n                Give this a try, supplying your IMAP4 username, app password (generate one for gmail, generate one for fastmail), and client endpoint description for your IMAP4 server. You\u0027ll see the subject of the first message in your mailbox printed. See the TwistedMail documentation for more information. Twisted includes an SSH client \u0026 server, \"conch\" (i.e.: the Twisted Shell).                   \nimport sys, os\n\nfrom twisted.internet import protocol, defer, endpoints, task\nfrom twisted.conch.endpoints import SSHCommandClientEndpoint\n\nasync def main(reactor, username\u003d\"alice\", sshhost\u003d\"example.com\", portno\u003d\"22\"):\n    envAgent \u003d endpoints.UNIXClientEndpoint(reactor, os.environ[\"SSH_AUTH_SOCK\"])\n    endpoint \u003d SSHCommandClientEndpoint.newConnection(\n        reactor, \"echo \u0027hello world\u0027\", username, sshhost,\n        int(portno), agentEndpoint\u003denvAgent,\n    )\n\n    class ShowOutput(protocol.Protocol):\n        received \u003d b\"\"\n        def dataReceived(self, data):\n            self.received +\u003d data\n        def connectionLost(self, reason):\n            finished.callback(self.received)\n\n    finished",
+    "scrapedAt": "2026-10-08 19:03:42.151436"
+  },
+  {
+    "id": 481,
+    "url": "https://www.python.org/events/python-user-group/1518/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 07 June from 4pm UTC to 7pm UTC, 2023 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-10-08 19:03:40.775422"
+  },
+  {
+    "id": 480,
+    "url": "https://www.python.org/events/python-user-group/1322/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 18 Jan. from 5pm UTC to 8pm UTC, 2023 Python Meeting Düsseldorf Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-10-08 19:03:39.415304"
+  },
+  {
+    "id": 479,
+    "url": "https://www.python.org/events/python-user-group/130/",
+    "title": "Python Meeting Düsseldorf | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Python Meeting Düsseldorf Düsseldorf, Germany 16 July from 5pm UTC to 7pm UTC, 2013 http://pyddf.de/ Explore events -- Change your date range More events at Düsseldorf, Germany Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf - Python Herbst Sprint 2025 Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf: Sprint Sprint / Hackathon Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf Python Meeting Düsseldorf",
+    "scrapedAt": "2026-10-08 19:03:37.884355"
+  },
+  {
+    "id": 478,
+    "url": "https://www.python.org/events/python-user-group/2153/",
+    "title": "Django Girls Sogakope 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Django Girls Sogakope 2026 Sogakope, Ghana From 20 Nov. through 21 Nov., 2026 Django Girls Sogakope 2026 ← Previous Python Meeting Düsseldorf: Sprint in Düsseldorf, Germany Next → Python Meeting Düsseldorf in Düsseldorf, Germany Explore events -- Change your date range The next 7 days The next 30 days The next 90 days The next year More events at Sogakope, Ghana Django Girls Sogakope 2026",
+    "scrapedAt": "2026-10-08 19:03:36.537364"
+  },
+  {
     "id": 477,
     "url": "https://www.python.org/events/python-user-group/1431/",
     "title": "Python Meeting Düsseldorf | Python.org",
@@ -3305,26 +3340,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 478,
-    "url": "https://www.python.org/events/python-user-group/2153/"
-  },
-  {
-    "id": 479,
-    "url": "https://www.python.org/events/python-user-group/130/"
-  },
-  {
-    "id": 480,
-    "url": "https://www.python.org/events/python-user-group/1322/"
-  },
-  {
-    "id": 481,
-    "url": "https://www.python.org/events/python-user-group/1518/"
-  },
-  {
-    "id": 482,
-    "url": "http://twistedmatrix.com/"
   },
   {
     "id": 483,
@@ -88955,10 +88970,261 @@ window.searchData = [
     "id": 65472,
     "url": "https://www.egenix.com/company/news/PyDDF-Herbst-Sprint-2025",
     "parentUrl": "https://www.python.org/events/python-user-group/2123/"
+  },
+  {
+    "id": 65713,
+    "url": "https://www.python.org/events/python-user-group/locations/1677/",
+    "parentUrl": "https://www.python.org/events/python-user-group/2153/"
+  },
+  {
+    "id": 65715,
+    "url": "https://djangogirls.org/en/sogakope/",
+    "parentUrl": "https://www.python.org/events/python-user-group/2153/"
+  },
+  {
+    "id": 65825,
+    "url": "https://github.com/twisted",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65826,
+    "url": "https://docs.twisted.org/en/latest/community.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65827,
+    "url": "https://psfmember.org/civicrm/contribute/transact/?reset\u003d1\u0026id\u003d44",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65828,
+    "url": "https://docs.twisted.org/en/stable/core/howto/servers.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65829,
+    "url": "https://www.fastmail.com/help/clients/apppassword.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65830,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/TwistedMatrixLaboratories.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65831,
+    "url": "https://mail.python.org/mailman3/lists/twisted.python.org/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65832,
+    "url": "https://github.com/twisted/ldaptor",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65833,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/TwistedMail.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65834,
+    "url": "https://docs.twisted.org/en/stable/web/howto/web-in-60/index.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65835,
+    "url": "https://support.google.com/accounts/answer/185833?hl\u003den",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65836,
+    "url": "https://docs.twisted.org/en/stable/web/howto/client.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65837,
+    "url": "https://github.com/twisted/pydoctor",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65838,
+    "url": "https://www.sftpplus.com/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65839,
+    "url": "https://docs.twisted.org/en/stable/core/howto/index.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65840,
+    "url": "https://docs.twisted.org/en/latest/development/sponsorship.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65841,
+    "url": "https://pypi.org/project/Twisted/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65842,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/Windows.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65843,
+    "url": "https://github.com/twisted/constantly",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65844,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/ContributingToTwistedLabs.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65845,
+    "url": "https://docs.twisted.org/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65846,
+    "url": "https://thinkst.com/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65847,
+    "url": "https://labs.twistedmatrix.com/2020/03/twisted-drops-python-27-support.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65848,
+    "url": "https://github.com/twisted/towncrier",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65849,
+    "url": "https://docs.twisted.org/en/stable/api/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65850,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/ProjectsUsingTwisted.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65851,
+    "url": "https://docs.twisted.org/en/latest/community.html#mail-lists",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65852,
+    "url": "https://github.com/twisted/twisted/security/policy",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65853,
+    "url": "https://docs.twisted.org/en/stable/core/howto/endpoints.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65854,
+    "url": "https://docs.twisted.org/en/latest/community.html#real-time-chat",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65855,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/TwistedDevelopment.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65856,
+    "url": "https://github.com/twisted/txmongo",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65857,
+    "url": "https://stackoverflow.com/questions/tagged/twisted",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65859,
+    "url": "https://github.com/sponsors/twisted/",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65860,
+    "url": "https://github.com/twisted/incremental",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65861,
+    "url": "https://github.com/twisted/twisted",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65862,
+    "url": "https://github.com/twisted/trac-wiki-archive/blob/trunk/SuccessStories.mediawiki",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65863,
+    "url": "https://github.com/twisted/klein",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65864,
+    "url": "https://docs.twisted.org/en/stable/core/howto/clients.html",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65865,
+    "url": "https://github.com/twisted/treq",
+    "parentUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "id": 65866,
+    "url": "https://docs.twisted.org/en/stable/web/howto/twisted-templates.html",
+    "parentUrl": "http://twistedmatrix.com/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://twisted.org/assets/images/ribbon.svg",
+    "alt": "",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/sponsor-thinkst.svg",
+    "alt": "Thinkst Canary",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/divider.svg",
+    "alt": "divider graphic",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/sponsor-thinkst.svg",
+    "alt": "Thinkst Canary",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/sponsor-sftpplus.svg",
+    "alt": "",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
+  {
+    "src": "https://twisted.org/assets/images/deco-blob.svg",
+    "alt": "deco-blob decoration",
+    "pageTitle": "Twisted",
+    "pageUrl": "http://twistedmatrix.com/"
+  },
   {
     "src": "https://pyddf.de/content/images/2026/01/Python-Meeting-Blog-Cover-3.webp",
     "alt": "Python Meeting Düsseldorf",
