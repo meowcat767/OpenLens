@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1608,
+    "url": "https://docs.python.org/3/reference/expressions.html#await",
+    "title": "6. Expressions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 6. Expressions | Theme Auto Light Dark | 6. Expressions¶ This chapter explains the meaning of the elements of expressions in Python. Syntax Notes: In this and the following chapters, grammar notation will be used to describe syntax, not lexical analysis. When (one alternative of) a syntax rule has the form: name: othername\n and no semantics are given, the semantics of this form of name are the same as for othername. 6.1. Arithmetic conversions¶ When a description of an arithmetic operator below uses the phrase “the numeric arguments are converted to a common real type”, this means that the operator implementation for built-in numeric types works as described in the Numeric Types section of the standard library documentation. Some additional rules apply for certain operators and non-numeric operands (for example, a string as a left argument to the % operator). Extensions must define their own conversion behavior. 6.2. Atoms¶ Atoms are the most basic elements of expressions. The simplest atoms are names or literals. Forms enclosed in parentheses, brackets or braces are also categorized syntactically as atoms. Formally, the syntax for atoms is: atom:\n   | \u0027True\u0027\n   | \u0027False\u0027\n   | \u0027None\u0027\n   | \u0027...\u0027\n   | identifier\n   | literal\n   | enclosure\nenclosure:\n   | parenth_form\n   | list_display\n   | dict_display\n   | set_display\n   | generator_expression\n   | yield_atom\n 6.2.1. Built-in constants¶ The keywords True, False, and None name built-in constants. The token ... names the Ellipsis constant. Evaluation of these atoms yields the corresponding value. Note Several more built-in constants are available as global variables, but only the ones mentioned here are keywords. In particular, these names cannot be reassigned or used as attributes: \u003e\u003e\u003e False \u003d 123\n  File \"\u003cinput\u003e\", line 1\n   False \u003d 123\n   ^^^^^\nSyntaxError: cannot assign to False\n 6.2.2. Identifiers (Names)¶ An identifier occurring as an atom is a name. See section Names (identifiers and keywords) for lexical definition and section Naming and binding for documentation of naming and binding. When the name is bound to an object, evaluation of the atom yields that object. When a name is not bound, an attempt to evaluate it raises a NameError exception. 6.2.2.1. Private name mangling¶ When an identifier that textually occurs in a class definition begins with two or more underscore characters and does not end in two or more underscores, it is considered a private name of that class. See also The class specifications. More precisely, private names are transformed to a longer form before code is generated for them. If the transformed name is longer than 255 characters, implementation-defined truncation may happen. The transformation is independent of the syntactical context in which the identifier is used but only the following private identifiers are mangled: Any name used as the name of a variable that is assigned or read or any name of an attribute being accessed. The __name__ attribute of nested functions, classes, and type aliases is however not mangled. The name of imported modules, e.g., __spam in import __spam. If the module is part of a package (i.e., its name contains a dot), the name is not mangled, e.g., the __foo in import __foo.bar is not mangled. The name of an imported member, e.g., __f in from spam import __f. The transformation rule is defined as follows: The class name, with leading underscores removed and a single leading underscore inserted, is inserted in front of the identifier, e.g., the identifier __spam occurring in a class named Foo, _Foo or __Foo is transformed to _Foo__spam. If the class name consists only of underscores, the transformation is the identity, e.g., the identifier __spam occurring in a class named _ or __ is left as is. 6.2.3. Literals¶ A literal is a textual representation of a value. Python supports numeric, string and bytes literals. Format strings and template strings are treated as string literals. Numeric literals consist of a single NUMBER token, which names an integer, floating-point number, or an imaginary number. See the Numeric literals section in Lexical analysis documentation for details. String and bytes literals may consist of several tokens. See section String literal concatenation for details. Note that negative and complex numbers, like -3 or 3+4.2j, are syntactically not literals, but unary or binary arithmetic operations involving the - or + operator. Evaluation of a literal yields an object of the given type (int, float, complex, str, bytes, or Template) with the given value. The value may be approximated in the case of floating-point and imaginary literals. The formal grammar for literals is: literal: strings | NUMBER\n 6.2.3.1. Literals and object identity¶ All literals correspond to immutable data types, and hence the object’s identity is less important than its value. Multiple evaluations of",
+    "scrapedAt": "2026-10-08 19:49:57.883123"
+  },
+  {
+    "id": 1607,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#contextvars",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:49:56.530149"
+  },
+  {
+    "id": 1606,
+    "url": "https://github.com/python/cpython/issues/132554",
+    "title": "Use tagged ints for faster iteration · Issue #132554 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Use tagged ints for faster iteration #132554 New issue Copy link New issue Copy link Open Open Use tagged ints for faster iteration#132554 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Apr 15, 2025 Issue body actions Iteration over tuples and short lists is quite inefficient as we need to create an iterator object, only to have to destroy it again moments later. Not only that, fetching values from iterators involves additional indirection compared to fetching them from sequences. Instead we can push a pair of values to the stack. For common sequences, like tuple, list, strings, some ranges and a few others, we push the sequence and the integer index (initially 0) to the stack. For other iterables, we push the iterator and NULL. GET_ITER will have the signature: iterable -- iter, index_or_null FOR_ITER now has the signature: iter, index_or_null -- iter, index_or_null, next. What makes this efficient is tagged integers. By using tagged integers, no objects need to be created. Examples GET_ITER [ \u003ctuple at ...\u003e ] -\u003e [ \u003ctuple at ...\u003e, 0 ] [ \u003cfile at ...\u003e ] -\u003e [ \u003cfile iterator at ...\u003e, NULL ] FOR_ITER [ \u003ctuple at ...\u003e, 0 ] -\u003e [ \u003ctuple at ...\u003e, 1, item0 ] [ \u003cfile iterator at ...\u003e, NULL ] -\u003e [ \u003cfile iterator at ...\u003e, NULL, line ] Linked PRs GH-132554: \"Virtual\" iterators #132555 GH-132554: Add stats for GET_ITER #132592 GH-132554: Specialize GET_ITER and FOR_ITER for range #135063 GH-132554: Fix tier2 FOR_ITER implementation and optimizations #135137 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)performancePerformance or resource usagePerformance or resource usagetype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:49:55.167888"
+  },
+  {
+    "id": 1605,
+    "url": "https://docs.python.org/3/library/locale.html#locale.getencoding",
+    "title": "locale — Internationalization services — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Internationalization » locale — Internationalization services | Theme Auto Light Dark | locale — Internationalization services¶ Source code: Lib/locale.py The locale module opens access to the POSIX locale database and functionality. The POSIX locale mechanism allows programmers to deal with certain cultural issues in an application, without requiring the programmer to know all the specifics of each country where the software is executed. The locale module is implemented on top of the _locale module, which in turn uses an ANSI C locale implementation if available. The locale module defines the following exception and functions: exception locale.Error¶ Exception raised when the locale passed to setlocale() is not recognized. locale.setlocale(category, locale\u003dNone)¶ If locale is given and not None, setlocale() modifies the locale setting for the category. The available categories are listed in the data description below. locale may be a string, or a pair, language code and encoding. An empty string specifies the user’s default settings. If the modification of the locale fails, the exception Error is raised. If successful, the new locale setting is returned. If locale is a pair, it is converted to a locale name using the locale aliasing engine. The language code has the same format as a locale name, but without encoding and @-modifier. The language code and encoding can be None. If locale is omitted or None, the current setting for category is returned. Example: \u003e\u003e\u003e import locale\n\u003e\u003e\u003e loc \u003d locale.setlocale(locale.LC_ALL)  # get current locale\n# use German locale; name and availability varies with platform\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027de_DE.UTF-8\u0027)\n\u003e\u003e\u003e locale.strcoll(\u0027f\\xe4n\u0027, \u0027foo\u0027)  # compare a string containing an umlaut\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027\u0027)   # use user\u0027s preferred locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, \u0027C\u0027)  # use default (C) locale\n\u003e\u003e\u003e locale.setlocale(locale.LC_ALL, loc)  # restore saved locale\n setlocale() is not thread-safe on most systems. Applications typically start with a call of: import locale\nlocale.setlocale(locale.LC_ALL, \u0027\u0027)\n This sets the locale for all categories to the user’s default setting (typically specified in the LANG environment variable). If the locale is not changed thereafter, using multithreading should not cause problems. locale.localeconv()¶ Returns the database of the local conventions as a dictionary. This dictionary has the following strings as keys: Category Key Meaning LC_NUMERIC \u0027decimal_point\u0027 Decimal point character. \u0027grouping\u0027 Sequence of numbers specifying which relative positions the \u0027thousands_sep\u0027 is expected. If the sequence is terminated with CHAR_MAX, no further grouping is performed. If the sequence terminates with a 0, the last group size is repeatedly used. \u0027thousands_sep\u0027 Character used between groups. LC_MONETARY \u0027int_curr_symbol\u0027 International currency symbol. \u0027currency_symbol\u0027 Local currency symbol. \u0027p_cs_precedes/n_cs_precedes\u0027 Whether the currency symbol precedes the value (for positive resp. negative values). \u0027p_sep_by_space/n_sep_by_space\u0027 Whether the currency symbol is separated from the value by a space (for positive resp. negative values). \u0027mon_decimal_point\u0027 Decimal point used for monetary values. \u0027frac_digits\u0027 Number of fractional digits used in local formatting of monetary values. \u0027int_frac_digits\u0027 Number of fractional digits used in international formatting of monetary values. \u0027mon_thousands_sep\u0027 Group separator used for monetary values. \u0027mon_grouping\u0027 Equivalent to \u0027grouping\u0027, used for monetary values. \u0027positive_sign\u0027 Symbol used to annotate a positive monetary value. \u0027negative_sign\u0027 Symbol used to annotate a negative monetary value. \u0027p_sign_posn/n_sign_posn\u0027 The position of the sign (for positive resp. negative values), see below. All numeric values can be set to CHAR_MAX to indicate that there is no value specified in this locale. The possible values for \u0027p_sign_posn\u0027 and \u0027n_sign_posn\u0027 are given below. Value Explanation 0 Currency and value are surrounded by parentheses. 1 The sign should precede the value and currency symbol. 2 The sign should follow the value and currency symbol. 3 The sign should immediately precede the value. 4 The sign should immediately follow the value. CHAR_MAX Nothing is specified in this locale. The function temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale or the LC_MONETARY locale if locales are different and numeric or monetary strings are non-ASCII. This temporary change affects other threads. Changed in version 3.7: The function now temporarily sets the LC_CTYPE locale to the LC_NUMERIC locale in some cases. locale.nl_langinfo(option)¶ Return some locale-specific information as a string. This function is not available on all systems, and the set of possible options might also vary across platforms. The possible argument values are numbers, for which symbolic cons",
+    "scrapedAt": "2026-10-08 19:49:52.66722"
+  },
+  {
+    "id": 1604,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code obje",
+    "scrapedAt": "2026-10-08 19:49:51.357602"
+  },
+  {
     "id": 1603,
     "url": "https://github.com/python/cpython/issues/130139",
     "title": "ast.parse() without optimize\u003dTrue doesn\u0027t error on invalid AST type · Issue #130139 · python/cpython · GitHub",
@@ -10780,26 +10815,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1604,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW"
-  },
-  {
-    "id": 1605,
-    "url": "https://docs.python.org/3/library/locale.html#locale.getencoding"
-  },
-  {
-    "id": 1606,
-    "url": "https://github.com/python/cpython/issues/132554"
-  },
-  {
-    "id": 1607,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#contextvars"
-  },
-  {
-    "id": 1608,
-    "url": "https://docs.python.org/3/reference/expressions.html#await"
   },
   {
     "id": 1609,
@@ -247956,10 +247971,115 @@ window.searchData = [
     "id": 348102,
     "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/130139",
     "parentUrl": "https://github.com/python/cpython/issues/130139"
+  },
+  {
+    "id": 348512,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/132554",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348513,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/132554",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348514,
+    "url": "https://github.com/python/cpython/issues/132554#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348515,
+    "url": "https://github.com/python/cpython/issues/132554#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348516,
+    "url": "https://github.com/python/cpython/pull/132555",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348517,
+    "url": "https://github.com/python/cpython/pull/135137",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348521,
+    "url": "https://github.com/python/cpython/pull/132592",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348523,
+    "url": "https://github.com/python/cpython/pull/135063",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "id": 348525,
+    "url": "https://github.com/python/cpython/issues/132554#issue-2996605920",
+    "parentUrl": "https://github.com/python/cpython/issues/132554"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#await"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "6. Expressions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/expressions.html#await"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#contextvars"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#contextvars"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Use tagged ints for faster iteration · Issue #132554 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Use tagged ints for faster iteration · Issue #132554 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132554"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getencoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "locale — Internationalization services — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/locale.html#locale.getencoding"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST_BORROW"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
     "alt": "@iritkatriel",
