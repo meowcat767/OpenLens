@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1275,
+    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level",
+    "title": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Python Initialization Configuration | Theme Auto Light Dark | Python Initialization Configuration¶ PyInitConfig C API¶ Added in version 3.14. Python can be initialized with Py_InitializeFromInitConfig(). The Py_RunMain() function can be used to write a customized Python program. See also Initialization, Finalization, and Threads. See also PEP 741 “Python Configuration C API”. Example¶ Example of customized Python always running with the Python Development Mode enabled; return -1 on error: int init_python(void)\n{\n    PyInitConfig *config \u003d PyInitConfig_Create();\n    if (config \u003d\u003d NULL) {\n        printf(\"PYTHON INIT ERROR: memory allocation failed\\n\");\n        return -1;\n    }\n\n    // Enable the Python Development Mode\n    if (PyInitConfig_SetInt(config, \"dev_mode\", 1) \u003c 0) {\n        goto error;\n    }\n\n    // Initialize Python with the configuration\n    if (Py_InitializeFromInitConfig(config) \u003c 0) {\n        goto error;\n    }\n    PyInitConfig_Free(config);\n    return 0;\n\nerror:\n    {\n        // Display the error message.\n        //\n        // This uncommon braces style is used, because you cannot make\n        // goto targets point to variable declarations.\n        const char *err_msg;\n        (void)PyInitConfig_GetError(config, \u0026err_msg);\n        printf(\"PYTHON INIT ERROR: %s\\n\", err_msg);\n        PyInitConfig_Free(config);\n        return -1;\n    }\n}\n Create Config¶ struct PyInitConfig¶ Opaque structure to configure the Python initialization. PyInitConfig *PyInitConfig_Create(void)¶ Create a new initialization configuration using Isolated Configuration default values. It must be freed by PyInitConfig_Free(). Return NULL on memory allocation failure. void PyInitConfig_Free(PyInitConfig *config)¶ Free memory of the initialization configuration config. If config is NULL, no operation is performed. Error Handling¶ int PyInitConfig_GetError(PyInitConfig *config, const char **err_msg)¶ Get the config error message. Set *err_msg and return 1 if an error is set. Set *err_msg to NULL and return 0 otherwise. An error message is a UTF-8 encoded string. If config has an exit code, format the exit code as an error message. The error message remains valid until another PyInitConfig function is called with config. The caller doesn’t have to free the error message. int PyInitConfig_GetExitCode(PyInitConfig *config, int *exitcode)¶ Get the config exit code. Set *exitcode and return 1 if config has an exit code set. Return 0 if config has no exit code set. Only the Py_InitializeFromInitConfig() function can set an exit code if the parse_argv option is non-zero. An exit code can be set when parsing the command line failed (exit code 2) or when a command line option asks to display the command line help (exit code 0). Get Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. int PyInitConfig_HasOption(PyInitConfig *config, const char *name)¶ Test if the configuration has an option called name. Return 1 if the option exists, or return 0 otherwise. int PyInitConfig_GetInt(PyInitConfig *config, const char *name, int64_t *value)¶ Get an integer configuration option. Set *value, and return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_GetStr(PyInitConfig *config, const char *name, char **value)¶ Get a string configuration option as a null-terminated UTF-8 encoded string. Set *value, and return 0 on success. Set an error in config and return -1 on error. *value can be set to NULL if the option is an optional string and the option is unset. On success, the string must be released with free(value) if it’s not NULL. int PyInitConfig_GetStrList(PyInitConfig *config, const char *name, size_t *length, char ***items)¶ Get a string list configuration option as an array of null-terminated UTF-8 encoded strings. Set *length and *value, and return 0 on success. Set an error in config and return -1 on error. On success, the string list must be released with PyInitConfig_FreeStrList(length, items). void PyInitConfig_FreeStrList(size_t length, char **items)¶ Free memory of a string list created by PyInitConfig_GetStrList(). Set Options¶ The configuration option name parameter must be a non-NULL null-terminated UTF-8 encoded string. See Configuration Options. Some configuration options have side effects on other options. This logic is only implemented when Py_InitializeFromInitConfig() is called, not by the “Set” functions below. For example, setting dev_mode to 1 does not set faulthandler to 1. int PyInitConfig_SetInt(PyInitConfig *config, const char *name, int64_t value)¶ Set an integer configuration option. Return 0 on success. Set an error in config and return -1 on error. int PyInitConfig_SetStr(PyInitConfig *config, const char *name, const char *value)¶ Set a string configuration option from a null-terminated UTF-8 encoded strin",
+    "scrapedAt": "2026-10-08 19:34:46.883763"
+  },
+  {
+    "id": 1274,
+    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group",
+    "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Command-line interface libraries » argparse — Parser for command-line options, arguments and subcommands | Theme Auto Light Dark | argparse — Parser for command-line options, arguments and subcommands¶ Added in version 3.2. Source code: Lib/argparse.py Note While argparse is the default recommended standard library module for implementing basic command line applications, authors with more exacting requirements for exactly how their command line applications behave may find it doesn’t provide the necessary level of control. Refer to Choosing an argument parsing library for alternatives to consider when argparse doesn’t support behaviors that the application requires (such as entirely disabling support for interspersed options and positional arguments, or accepting option parameter values that start with - even when they correspond to another defined option). Tutorial This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The argparse module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments. The argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser. It is a container for argument specifications and has options that apply to the parser as whole: parser \u003d argparse.ArgumentParser(\n                    prog\u003d\u0027ProgramName\u0027,\n                    description\u003d\u0027What the program does\u0027,\n                    epilog\u003d\u0027Text at the bottom of help\u0027)\n The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept values, and on/off flags: parser.add_argument(\u0027filename\u0027)           # positional argument\nparser.add_argument(\u0027-c\u0027, \u0027--count\u0027)      # option that takes a value\nparser.add_argument(\u0027-v\u0027, \u0027--verbose\u0027,\n                    action\u003d\u0027store_true\u0027)  # on/off flag\n The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object: args \u003d parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n Note If you’re looking for a guide about how to upgrade optparse code to argparse, see Upgrading Optparse Code. ArgumentParser objects¶ class argparse.ArgumentParser(prog\u003dNone, usage\u003dNone, description\u003dNone, epilog\u003dNone, parents\u003d[], formatter_class\u003dargparse.HelpFormatter, prefix_chars\u003d\u0027-\u0027, fromfile_prefix_chars\u003dNone, argument_default\u003dNone, conflict_handler\u003d\u0027error\u0027, add_help\u003dTrue, allow_abbrev\u003dTrue, exit_on_error\u003dTrue, *, suggest_on_error\u003dFalse, color\u003dTrue)¶ Create a new ArgumentParser object. All parameters should be passed as keyword arguments. Each parameter has its own more detailed description below, but in short they are: prog - The name of the program (default: generated from the __main__ module attributes and sys.argv[0]) usage - The string describing the program usage (default: generated from arguments added to parser) description - Text to display before the argument help (by default, no text) epilog - Text to display after the argument help (by default, no text) parents - A list of ArgumentParser objects whose arguments should also be included formatter_class - A class for customizing the help output prefix_chars - The set of characters that prefix optional arguments (default: ‘-‘) fromfile_prefix_chars - The set of characters that prefix files from which additional arguments should be read (default: None) argument_default - The global default value for arguments (default: None) conflict_handler - The strategy for resolving conflicting optionals (usually unnecessary) add_help - Add a -h/--help option to the parser (default: True) allow_abbrev - Allows long options to be abbreviated if the abbreviation is unambiguous (default: True) exit_on_error - Determines whether or not ArgumentParser exits with error info when an error occurs. (default: True) suggest_on_error - Enables suggestions for mistyped argument choices and subparser names (default: False) color - Allow color output (default: True) Changed in version 3.5: allow_abbrev parameter was added. Changed in version 3.8: In previous versions, allow_abbrev also disabled grouping of short flags such as -vv to mean -v -v. Changed in version 3.9: exit_on_error parameter was added. Changed in version 3.14: suggest_on_error and color parameters were added. The following sections describe how each of these are used. prog¶ By default, ArgumentParser calculates the name of the program to display in help messages depending on the way the Python interpreter was run: The base name of sys.argv[0] if a file was passed a",
+    "scrapedAt": "2026-10-08 19:34:45.57658"
+  },
+  {
+    "id": 1273,
+    "url": "https://github.com/python/cpython/issues/132429",
+    "title": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Bluetooth socket support is disabled on NetBSD and DragonFly BSD #132429 New issue Copy link New issue Copy link Closed Closed Bluetooth socket support is disabled on NetBSD and DragonFly BSD#132429 Copy link Assignees Labels OS-freebsdOS-linuxOS-unsupportedextension-modulesC modules in the Modules dirC modules in the Modules dirtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Description serhiy-storchaka opened on Apr 12, 2025 Issue body actions Despite that there is a code to support Bluetooth sockets on NetBSD and DragonFly BSD, it did not work from 2010 (see 2501aca, 3e85dfd) due to error in conditional compilation. Condition (defined(HAVE_BLUETOOTH_H) || defined(HAVE_BLUETOOTH_BLUETOOTH_H)) \u0026\u0026 !defined(__NetBSD__) \u0026\u0026 !defined(__DragonFly__) is always false on NetBSD and DragonFly BSD, so USE_BLUETOOTH was not defined, and the code was omitted during compilation. cc @gpshead Linked PRs gh-132429: Fix support of Bluetooth sockets on NetBSD and DragonFly BSD #132431 [3.13] gh-132429: Fix support of Bluetooth sockets on NetBSD and DragonFly BSD #132458 gh-132429: Remove not working test for Bluetooth socket #132459 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees serhiy-storchaka Labels OS-freebsdOS-linuxOS-unsupportedextension-modulesC modules in the Modules dirC modules in the Modules dirtype-bugAn unexpected behavior, bug, or errorAn unexpected behavior, bug, or error Projects Unsupported platforms Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:34:44.249684"
+  },
+  {
+    "id": 1272,
+    "url": "https://github.com/python/cpython/issues/123958",
+    "title": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} codegen should ideally not need to know the optimization level #123958 New issue Copy link New issue Copy link Closed Closed codegen should ideally not need to know the optimization level#123958 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Description iritkatriel opened on Sep 11, 2024 Issue body actions Optimization level is used for things that can be done in ast_opt. I\u0027ll try to move them there. Linked PRs gh-123958: apply docstring removal optimization in ast_opt instead of codegen #123959 gh-123958: move assert optimization from codegen to ast_opt #124143 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees iritkatriel Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs) Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:34:42.092781"
+  },
+  {
+    "id": 1271,
+    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex",
+    "title": "Built-in Types — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer litera",
+    "scrapedAt": "2026-10-08 19:34:39.765692"
+  },
+  {
     "id": 1270,
     "url": "https://docs.python.org/3/library/warnings.html#warnings.catch_warnings",
     "title": "warnings — Warning control — Python 3.14.8 documentation",
@@ -8505,26 +8540,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1271,
-    "url": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex"
-  },
-  {
-    "id": 1272,
-    "url": "https://github.com/python/cpython/issues/123958"
-  },
-  {
-    "id": 1273,
-    "url": "https://github.com/python/cpython/issues/132429"
-  },
-  {
-    "id": 1274,
-    "url": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group"
-  },
-  {
-    "id": 1275,
-    "url": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level"
   },
   {
     "id": 1276,
@@ -229081,10 +229096,194 @@ window.searchData = [
     "id": 254768,
     "url": "https://github.com/AlanRockefeller/faststack/pull/84",
     "parentUrl": "https://github.com/python/cpython/issues/130010"
+  },
+  {
+    "id": 255470,
+    "url": "https://github.com/python/cpython/pull/123959",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 255471,
+    "url": "https://github.com/python/cpython/issues/123958#issue-2520106370",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 255472,
+    "url": "https://github.com/python/cpython/pull/124143",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 255473,
+    "url": "https://github.com/python/cpython/issues/123958#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 255474,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/123958",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 255476,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/123958",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 255478,
+    "url": "https://github.com/python/cpython/issues/123958#top",
+    "parentUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "id": 255480,
+    "url": "https://github.com/python/cpython/issues/132429#top",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255481,
+    "url": "https://github.com/python/cpython/pull/132458",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255482,
+    "url": "https://github.com/python/cpython/pull/132459",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255483,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-unsupported%22",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255484,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22OS-linux%22",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255485,
+    "url": "https://github.com/python/cpython/pull/132431",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255486,
+    "url": "https://github.com/python/cpython/commit/2501aca6281500ecc31cccdd4d78977c84c9e4f6",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255488,
+    "url": "https://github.com/orgs/python/projects/27",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255490,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/132429",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255493,
+    "url": "https://github.com/python/cpython/issues/132429#issue-2990373166",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255495,
+    "url": "https://github.com/python/cpython/commit/3e85dfd15e36b7d890fb70a6c9edf0b1e6bbff6c",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255496,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/132429",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "id": 255497,
+    "url": "https://github.com/python/cpython/issues/132429#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/132429"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Python Initialization Configuration — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/init_config.html#c.PyConfig.optimization_level"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser.add_argument_group"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Bluetooth socket support is disabled on NetBSD and DragonFly BSD · Issue #132429 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/132429"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "iritkatriel",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@iritkatriel",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1055913?s\u003d64\u0026u\u003dbd7f6cd5d9c24d45c154019042cdc3e9db610e36\u0026v\u003d4",
+    "alt": "@iritkatriel",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "codegen should ideally not need to know the optimization level · Issue #123958 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/123958"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#bytes.fromhex"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
