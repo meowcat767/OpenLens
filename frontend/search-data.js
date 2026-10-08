@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1122,
+    "url": "https://www.jython.org/",
+    "title": "Home | Jython",
+    "content": "What is Jython? The Jython project provides implementations of Python in Java, providing to Python the benefits of running on the JVM and access to classes written in Java. The current release (a Jython 2.7.x) only supports Python 2 (sorry). There is work towards a Python 3 in the project’s GitHub repository. Jython implementations are freely available for both commercial and non-commercial use. They are distributed with source code under the PSF License v2. Jython is complementary to Java and is especially suited for the following tasks: Embedded scripting - Java programmers can add the Jython libraries to their system to allow end users to write simple or complicated scripts that add functionality to the application. Interactive experimentation - Jython provides an interactive interpreter that can be used to interact with Java packages or with running Java applications. This allows programmers to experiment and debug any Java system using Jython. Rapid application development - Python programs are typically 2-10x shorter than the equivalent Java program. This translates directly to increased programmer productivity. The seamless interaction between Python and Java allows developers to freely mix the two languages both during development and in shipping products. Here is an example of running Python code inside a simple Java application import org.python.util.PythonInterpreter;\n\npublic class JythonHelloWorld {\n  public static void main(String[] args) {\n    try(PythonInterpreter pyInterp \u003d new PythonInterpreter()) {\n      pyInterp.exec(\"print(\u0027Hello Python World!\u0027)\");\n    }\n  }\n}\n Here is an example of using Java from Python code from java.lang import System # Java import\n\nprint(\u0027Running on Java version: \u0027 + System.getProperty(\u0027java.version\u0027))\nprint(\u0027Unix time from Java: \u0027 + str(System.currentTimeMillis()))\n Getting Started Ready to get started? Head over to Downloads. Or you could read a quick overview of features specific to Jython. A more detailed introduction and reference can be found in the Jython Book. Who uses Jython? Jython is embedded in lots of projects. See some from MVNRepository IBM Websphere - Use Jython to provide administrative scripting capabilities. Apache PIG - Use Jython to support user defined functions. ImageJ - Use Jython to provide scripted image processing. GDA - Use Jython to script scientific experiments. Robot Framework - A generic test automation framework for acceptance testing and acceptance test-driven development (ATDD) which runs on Jython. TigerJython - An educational programming environment that is based on Jython. JEM/JythonMusic - An environment for music making and creative programming using Jython.",
+    "scrapedAt": "2026-10-08 19:28:08.802419"
+  },
+  {
+    "id": 1121,
+    "url": "https://docs.python.org/3/library/sys.html#sys.warnoptions",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:28:07.341356"
+  },
+  {
+    "id": 1120,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_npn_protocols",
+    "title": "ssl — TLS/SSL wrapper for socket objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » ssl — TLS/SSL wrapper for socket objects | Theme Auto Light Dark | ssl — TLS/SSL wrapper for socket objects¶ Source code: Lib/ssl.py This module provides access to Transport Layer Security (often known as “Secure Sockets Layer”) encryption and peer authentication facilities for network sockets, both client-side and server-side. This module uses the OpenSSL library. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Note Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior. For example, TLSv1.3 comes with OpenSSL version 1.1.1. Warning Don’t use this module without reading the Security considerations. Doing so may lead to a false sense of security, as the default settings of the ssl module are not necessarily appropriate for your application. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. This section documents the objects and functions in the ssl module; for more general information about TLS, SSL, and certificates, the reader is referred to the documents in the “See Also” section at the bottom. This module provides a class, ssl.SSLSocket, which is derived from the socket.socket type, and provides a socket-like wrapper that also encrypts and decrypts the data going over the socket with SSL. It supports additional methods such as getpeercert(), which retrieves the certificate of the other side of the connection, cipher(), which retrieves the cipher being used for the secure connection or get_verified_chain(), get_unverified_chain() which retrieves certificate chain. For more sophisticated applications, the ssl.SSLContext class helps manage settings and certificates, which can then be inherited by SSL sockets created through the SSLContext.wrap_socket() method. Changed in version 3.5.3: Updated to support linking with OpenSSL 1.1.0 Changed in version 3.6: OpenSSL 0.9.8, 1.0.0 and 1.0.1 are deprecated and no longer supported. In the future the ssl module will require at least OpenSSL 1.0.2 or 1.1.0. Changed in version 3.10: PEP 644 has been implemented. The ssl module requires OpenSSL 1.1.1 or newer. Use of deprecated constants and functions result in deprecation warnings. Functions, constants, and exceptions¶ Socket creation¶ Instances of SSLSocket must be created using the SSLContext.wrap_socket() method. The helper function create_default_context() returns a new context with secure default settings. Client socket example with default context and IPv4/IPv6 dual stack: import socket\nimport ssl\n\nhostname \u003d \u0027www.python.org\u0027\ncontext \u003d ssl.create_default_context()\n\nwith socket.create_connection((hostname, 443)) as sock:\n    with context.wrap_socket(sock, server_hostname\u003dhostname) as ssock:\n        print(ssock.version())\n Client socket example with custom context and IPv4: hostname \u003d \u0027www.python.org\u0027\n# PROTOCOL_TLS_CLIENT requires valid cert chain and hostname\ncontext \u003d ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\ncontext.load_verify_locations(\u0027path/to/cabundle.pem\u0027)\n\nwith socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:\n    with context.wrap_socket(sock, server_hostname\u003dhostname) as ssock:\n        print(ssock.version())\n Server socket example listening on localhost IPv4: context \u003d ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)\ncontext.load_cert_chain(\u0027/path/to/certchain.pem\u0027, \u0027/path/to/private.key\u0027)\n\nwith socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:\n    sock.bind((\u0027127.0.0.1\u0027, 8443))\n    sock.listen(5)\n    with context.wrap_socket(sock, server_side\u003dTrue) as ssock:\n        conn, addr \u003d ssock.accept()\n        ...\n Context creation¶ A convenience function helps create SSLContext objects for common purposes. ssl.create_default_context(purpose\u003dPurpose.SERVER_AUTH, *, cafile\u003dNone, capath\u003dNone, cadata\u003dNone)¶ Return a new SSLContext object with default settings for the given purpose. The settings are chosen by the ssl module, and usually represent a higher security level than when calling the SSLContext constructor directly. cafile, capath, cadata represent optional CA certificates to trust for certificate verification, as in SSLContext.load_verify_locations(). If all three are None, this function can choose to trust the system’s default CA certificates instead. The settings are: PROTOCOL_TLS_CLIENT or PROTOCOL_TLS_SERVER, OP_NO_SSLv2, and OP_NO_SSLv3 with high encryption cipher suites without RC4 and without unauthenticated cipher suites. Passing SERVER_AUTH as purpose sets verify_mode to CERT_REQUIRED and either loads CA certificates (when at least one of cafile, capath or cadata ",
+    "scrapedAt": "2026-10-08 19:28:06.049722"
+  },
+  {
+    "id": 1119,
+    "url": "https://github.com/python/cpython/issues/115032",
+    "title": "Deprecate old backward compatible shims in configure_formatter()/handler(). · Issue #115032 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Deprecate old backward compatible shims in configure_formatter()/handler(). #115032 New issue Copy link New issue Copy link Closed Closed Deprecate old backward compatible shims in configure_formatter()/handler().#115032 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description felixxm opened on Feb 5, 2024 Issue body actions Feature or enhancement Proposal: DictConfigurator.configure_formatter() and configure_handler() contain workarounds for old configurations cpython/Lib/logging/config.py Lines 670 to 676 in bcccf1f #Name of parameter changed from fmt to format. #Retry with old name. #This is so that code can be used with older Python versions #(e.g. by Django) config[\u0027fmt\u0027] \u003d config.pop(\u0027format\u0027) config[\u0027()\u0027] \u003d factory result \u003d self.configure_custom(config) cpython/Lib/logging/config.py Lines 844 to 851 in bcccf1f if \"\u0027stream\u0027\" not in str(te): raise #The argument name changed from strm to stream #Retry with old name. #This is so that code can be used with older Python versions #(e.g. by Django) kwargs[\u0027strm\u0027] \u003d kwargs.pop(\u0027stream\u0027) result \u003d factory(**kwargs) Django doesn\u0027t use fmt and strm for many years. I think both can be deprecated and removed. I\u0027d like to prepare a patch, if accepted. Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-115032: Update DictConfigurator.configure_formatter() comment about fmt retry. #115303 gh-115032: Deprecate support for custom logging handlers with \u0027strm\u0027 argument. #115314 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Logging issues 🪵 Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:28:04.751344"
+  },
+  {
+    "id": 1118,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.realpath",
+    "title": "os.path — Common pathname manipulations — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » os.path — Common pathname manipulations | Theme Auto Light Dark | os.path — Common pathname manipulations¶ Source code: Lib/genericpath.py, Lib/posixpath.py (for POSIX) and Lib/ntpath.py (for Windows). This module implements some useful functions on pathnames. To read or write files see open(), and for accessing the filesystem see the os module. The path parameters can be passed as strings, or bytes, or any object implementing the os.PathLike protocol. Unlike a Unix shell, Python does not do any automatic path expansions. Functions such as expanduser() and expandvars() can be invoked explicitly when an application desires shell-like path expansion. (See also the glob module.) See also The pathlib module offers high-level path objects. Note All of these functions accept either only bytes or only string objects as their parameters. The result is an object of the same type, if a path or file name is returned. Note Since different operating systems have different path name conventions, there are several versions of this module in the standard library. The os.path module is always the path module suitable for the operating system Python is running on, and therefore usable for local paths. However, you can also import and use the individual modules if you want to manipulate a path that is always in one of the different formats. They all have the same interface: posixpath for UNIX-style paths ntpath for Windows paths Changed in version 3.8: exists(), lexists(), isdir(), isfile(), islink(), and ismount() now return False instead of raising an exception for paths that contain characters or bytes unrepresentable at the OS level. os.path.abspath(path)¶ Return a normalized absolutized version of the pathname path. On most platforms, this is equivalent to calling normpath(join(os.getcwd(), path)). On Windows the path is normalized by the operating system, therefore the result can differ from normpath(join(os.getcwd(), path)). A drive-relative path is resolved against the current directory of the specified drive, and the drive letter is capitalized. Trailing dots and spaces are stripped. For example: \u003e\u003e\u003e os.path.abspath(\u0027c:spam\u0027)\n\u0027C:\\\\Temp\\\\spam\u0027\n\u003e\u003e\u003e os.path.abspath(\u0027c:/temp/spam. . .\u0027)\n\u0027c:\\\\temp\\\\spam\u0027\n See also os.path.join() and os.path.normpath(). Changed in version 3.6: Accepts a path-like object. os.path.basename(path, /)¶ Return the base name of pathname path. This is the second element of the pair returned by passing path to the function split(). Note that the result of this function is different from the Unix basename program; where basename for \u0027/foo/bar/\u0027 returns \u0027bar\u0027, the basename() function returns an empty string (\u0027\u0027). Changed in version 3.6: Accepts a path-like object. os.path.commonpath(paths)¶ Return the longest common sub-path of each pathname in the iterable paths. Raise ValueError if paths contain both absolute and relative pathnames, if paths are on different drives, or if paths is empty. Unlike commonprefix(), this returns a valid path. Added in version 3.5. Changed in version 3.6: Accepts a sequence of path-like objects. Changed in version 3.13: Any iterable can now be passed, rather than just sequences. os.path.commonprefix(list, /)¶ Return the longest string prefix (taken character-by-character) that is a prefix of all strings in list. If list is empty, return the empty string (\u0027\u0027). Warning This function may return invalid paths because it works a character at a time. If you need a common path prefix, then the algorithm implemented in this function is not secure. Use commonpath() for finding a common path prefix. \u003e\u003e\u003e os.path.commonprefix([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr/l\u0027\n\n\u003e\u003e\u003e os.path.commonpath([\u0027/usr/lib\u0027, \u0027/usr/local/lib\u0027])\n\u0027/usr\u0027\n Changed in version 3.6: Accepts a path-like object. os.path.dirname(path, /)¶ Return the directory name of pathname path. This is the first element of the pair returned by passing path to the function split(). Changed in version 3.6: Accepts a path-like object. os.path.exists(path)¶ Return True if path refers to an existing path or an open file descriptor. Returns False for broken symbolic links. On some platforms, this function may return False if permission is not granted to execute os.stat() on the requested file, even if the path physically exists. Changed in version 3.3: path can now be an integer: True is returned if it is an open file descriptor, False otherwise. Changed in version 3.6: Accepts a path-like object. os.path.lexists(path)¶ Return True if path refers to an existing path, including broken symbolic links. Equivalent to exists() on platforms lacking os.lstat(). Changed in version 3.6: Accepts a path-like object. os.path.expanduser(path)¶ On Unix and Windows, return the argument with an initial component of ~ or ~user replaced by that user’s home directory. On Unix, an initial ~ is replaced by the environment v",
+    "scrapedAt": "2026-10-08 19:28:02.619497"
+  },
+  {
     "id": 1117,
     "url": "https://github.com/python/cpython/issues/133367",
     "title": "Improve `ast` CLI with new options: `--feature-version`, `--optimize`, and `--show-empty` · Issue #133367 · python/cpython · GitHub",
@@ -7455,26 +7490,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1118,
-    "url": "https://docs.python.org/3/library/os.path.html#os.path.realpath"
-  },
-  {
-    "id": 1119,
-    "url": "https://github.com/python/cpython/issues/115032"
-  },
-  {
-    "id": 1120,
-    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_npn_protocols"
-  },
-  {
-    "id": 1121,
-    "url": "https://docs.python.org/3/library/sys.html#sys.warnoptions"
-  },
-  {
-    "id": 1122,
-    "url": "https://www.jython.org/"
   },
   {
     "id": 1123,
@@ -199691,10 +199706,183 @@ window.searchData = [
     "id": 197162,
     "url": "https://github.com/python/cpython/issues/133367#top",
     "parentUrl": "https://github.com/python/cpython/issues/133367"
+  },
+  {
+    "id": 197237,
+    "url": "https://github.com/python/cpython/issues/115032#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197238,
+    "url": "https://github.com/python/cpython/issues/115032#issue-2119370654",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197239,
+    "url": "https://github.com/python/cpython/issues/115032#top",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197242,
+    "url": "https://github.com/python/cpython/blob/bcccf1fb63870c1b7f8abe246e27b7fff343abd7/Lib/logging/config.py#L844-L851",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197243,
+    "url": "https://github.com/python/cpython/pull/115303",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197244,
+    "url": "https://github.com/python/cpython/pull/115314",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197245,
+    "url": "https://github.com/orgs/python/projects/15",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197247,
+    "url": "https://github.com/python/cpython/blob/bcccf1fb63870c1b7f8abe246e27b7fff343abd7/Lib/logging/config.py#L670-L676",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197248,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/115032",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197249,
+    "url": "https://github.com/felixxm",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197250,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/115032",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197251,
+    "url": "https://github.com/python/cpython/commit/bcccf1fb63870c1b7f8abe246e27b7fff343abd7",
+    "parentUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "id": 197893,
+    "url": "http://imagej.net",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197894,
+    "url": "https://www.jython.org/jyspecific",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197895,
+    "url": "https://www.tigerjython.ch/en",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197897,
+    "url": "https://www.jython.org/download",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197898,
+    "url": "https://jython.readthedocs.io/en/latest/",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197899,
+    "url": "https://github.com/jython/jython/blob/master/LICENSE.txt",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197900,
+    "url": "https://pig.apache.org/",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197901,
+    "url": "https://mvnrepository.com/artifact/org.python/jython-standalone/usages",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197902,
+    "url": "http://www.opengda.org/",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197903,
+    "url": "https://jythonmusic.me/",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197904,
+    "url": "https://www.ibm.com/developerworks/websphere/library/techarticles/1004_gibson/1004_gibson.html",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197905,
+    "url": "http://robotframework.org/",
+    "parentUrl": "https://www.jython.org/"
+  },
+  {
+    "id": 197906,
+    "url": "https://go.java/index.html",
+    "parentUrl": "https://www.jython.org/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.warnoptions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys.warnoptions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ssl — TLS/SSL wrapper for socket objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_npn_protocols"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ssl — TLS/SSL wrapper for socket objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_npn_protocols"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2865885?u\u003d0df0a3d45b6dae54e1d08e5b4aeb70201aa5d31c\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@felixxm",
+    "pageTitle": "Deprecate old backward compatible shims in configure_formatter()/handler(). · Issue #115032 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Deprecate old backward compatible shims in configure_formatter()/handler(). · Issue #115032 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/115032"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.realpath"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os.path — Common pathname manipulations — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.path.html#os.path.realpath"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/47272787?s\u003d64\u0026u\u003d36477ac6e3201363227b586203419ed7458d13c4\u0026v\u003d4",
     "alt": "donbarbos",
