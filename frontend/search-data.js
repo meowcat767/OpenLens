@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 917,
+    "url": "https://docs.python.org/3/library/sys.html#sys._jit",
+    "title": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys — System-specific parameters and functions | Theme Auto Light Dark | sys — System-specific parameters and functions¶ This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only. sys.abiflags¶ On POSIX systems where Python was built with the standard configure script, this contains the ABI flags as specified by PEP 3149. Added in version 3.2. Changed in version 3.8: Default flags became an empty string (m flag for pymalloc has been removed). Availability: Unix. sys.addaudithook(hook)¶ Append the callable hook to the list of active auditing hooks for the current (sub)interpreter. When an auditing event is raised through the sys.audit() function, each hook will be called in the order it was added with the event name and the tuple of arguments. Native hooks added by PySys_AddAuditHook() are called first, followed by hooks added in the current (sub)interpreter. Hooks can then log the event, raise an exception to abort the operation, or terminate the process entirely. Note that audit hooks are primarily for collecting information about internal or otherwise unobservable actions, whether by Python or libraries written in Python. They are not suitable for implementing a “sandbox”. In particular, malicious code can trivially disable or bypass hooks added using this function. At a minimum, any security-sensitive hooks must be added using the C API PySys_AddAuditHook() before initialising the runtime, and any modules allowing arbitrary memory modification (such as ctypes) should be completely removed or closely monitored. Calling sys.addaudithook() will itself raise an auditing event named sys.addaudithook with no arguments. If any existing hooks raise an exception derived from RuntimeError, the new hook will not be added and the exception suppressed. As a result, callers cannot assume that their hook has been added unless they control all existing hooks. See the audit events table for all events raised by CPython, and PEP 578 for the original design discussion. Added in version 3.8. Changed in version 3.8.1: Exceptions derived from Exception but not RuntimeError are no longer suppressed. CPython implementation detail: When tracing is enabled (see settrace()), Python hooks are only traced if the callable has a __cantrace__ member that is set to a true value. Otherwise, trace functions will skip the hook. sys.argv¶ The list of command line arguments passed to a Python script. argv[0] is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the -c command line option to the interpreter, argv[0] is set to the string \u0027-c\u0027. If no script name was passed to the Python interpreter, argv[0] is the empty string. To loop over the standard input, or the list of files given on the command line, see the fileinput module. See also sys.orig_argv. Note On Unix, command line arguments are passed by bytes from OS. Python decodes them with filesystem encoding and “surrogateescape” error handler. When you need original bytes, you can get it by [os.fsencode(arg) for arg in sys.argv]. sys.audit(event, *args)¶ Raise an auditing event and trigger any active auditing hooks. event is a string identifying the event, and args may contain optional arguments with more information about the event. The number and types of arguments for a given event are considered a public and stable API and should not be modified between releases. For example, one auditing event is named os.chdir. This event has one argument called path that will contain the requested new working directory. sys.audit() will call the existing auditing hooks, passing the event name and arguments, and will re-raise the first exception from any hook. In general, if an exception is raised, it should not be handled and the process should be terminated as quickly as possible. This allows hook implementations to decide how to respond to particular events: they can merely log the event or abort the operation by raising an exception. Hooks are added using the sys.addaudithook() or PySys_AddAuditHook() functions. The native equivalent of this function is PySys_Audit(). Using the native function is preferred when possible. See the audit events table for all events raised by CPython. Added in version 3.8. sys.base_exec_prefix¶ Equivalent to exec_prefix, but referring to the base Python installation. When running under Virtual Environments, exec_prefix gets overwritten to the virtual environment prefix. base_exec_prefix, conversely, does not change, and always points to the base Python installation. Refer to Virtual Environments for more information. Added in version 3.3. sys.base_prefix¶ Equivalent to prefix, but referrin",
+    "scrapedAt": "2026-10-08 19:19:35.021575"
+  },
+  {
+    "id": 916,
+    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_OptimizeFlag",
+    "title": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Interpreter initialization and finalization | Theme Auto Light Dark | Interpreter initialization and finalization¶ See Python Initialization Configuration for details on how to configure the interpreter prior to initialization. Before Python initialization¶ In an application embedding Python, the Py_Initialize() function must be called before using any other Python/C API functions; with the exception of a few functions and the global configuration variables. The following functions can be safely called before Python is initialized: Functions that initialize the interpreter: Py_Initialize() Py_InitializeEx() Py_InitializeFromConfig() Py_BytesMain() Py_Main() the runtime pre-initialization functions covered in Python Initialization Configuration Configuration functions: PyImport_AppendInittab() PyImport_ExtendInittab() PyInitFrozenExtensions() PyMem_SetAllocator() PyMem_SetupDebugHooks() PyObject_SetArenaAllocator() Py_SetProgramName() Py_SetPythonHome() the configuration functions covered in Python Initialization Configuration Informative functions: Py_IsInitialized() PyMem_GetAllocator() PyObject_GetArenaAllocator() Py_GetBuildInfo() Py_GetCompiler() Py_GetCopyright() Py_GetPlatform() Py_GetVersion() Py_IsInitialized() Utilities: Py_DecodeLocale() the status reporting and utility functions covered in Python Initialization Configuration Memory allocators: PyMem_RawMalloc() PyMem_RawRealloc() PyMem_RawCalloc() PyMem_RawFree() Synchronization: PyMutex_Lock() PyMutex_Unlock() Note Despite their apparent similarity to some of the functions listed above, the following functions should not be called before the interpreter has been initialized: Py_EncodeLocale(), PyEval_InitThreads(), and Py_RunMain(). Global configuration variables¶ Python has variables for the global configuration to control different features and options. By default, these flags are controlled by command line options. When a flag is set by an option, the value of the flag is the number of times that the option was set. For example, -b sets Py_BytesWarningFlag to 1 and -bb sets Py_BytesWarningFlag to 2. int Py_BytesWarningFlag¶ This API is kept for backward compatibility: setting PyConfig.bytes_warning should be used instead, see Python Initialization Configuration. Issue a warning when comparing bytes or bytearray with str or bytes with int. Issue an error if greater or equal to 2. Set by the -b option. Deprecated since version 3.12, will be removed in version 3.15. int Py_DebugFlag¶ This API is kept for backward compatibility: setting PyConfig.parser_debug should be used instead, see Python Initialization Configuration. Turn on parser debugging output (for expert only, depending on compilation options). Set by the -d option and the PYTHONDEBUG environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_DontWriteBytecodeFlag¶ This API is kept for backward compatibility: setting PyConfig.write_bytecode should be used instead, see Python Initialization Configuration. If set to non-zero, Python won’t try to write .pyc files on the import of source modules. Set by the -B option and the PYTHONDONTWRITEBYTECODE environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_FrozenFlag¶ This API is kept for backward compatibility: setting PyConfig.pathconfig_warnings should be used instead, see Python Initialization Configuration. Private flag used by _freeze_module and frozenmain programs. Deprecated since version 3.12, will be removed in version 3.15. int Py_HashRandomizationFlag¶ This API is kept for backward compatibility: setting PyConfig.hash_seed and PyConfig.use_hash_seed should be used instead, see Python Initialization Configuration. Set to 1 if the PYTHONHASHSEED environment variable is set to a non-empty string. If the flag is non-zero, read the PYTHONHASHSEED environment variable to initialize the secret hash seed. Deprecated since version 3.12, will be removed in version 3.15. int Py_IgnoreEnvironmentFlag¶ This API is kept for backward compatibility: setting PyConfig.use_environment should be used instead, see Python Initialization Configuration. Ignore all PYTHON* environment variables, e.g. PYTHONPATH and PYTHONHOME, that might be set. Set by the -E and -I options. Deprecated since version 3.12, will be removed in version 3.15. int Py_InspectFlag¶ This API is kept for backward compatibility: setting PyConfig.inspect should be used instead, see Python Initialization Configuration. When a script is passed as first argument or the -c option is used, enter interactive mode after executing the script or the command, even when sys.stdin does not appear to be a terminal. Set by the -i option and the PYTHONINSPECT environment variable. Deprecated since version 3.12, will be removed in version 3.15. int Py_InteractiveFlag¶ This API is kept for backward compatibility: setting Py",
+    "scrapedAt": "2026-10-08 19:19:33.772362"
+  },
+  {
+    "id": 915,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetNativeLayout",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:19:32.561676"
+  },
+  {
+    "id": 914,
+    "url": "https://github.com/python/cpython/issues/122160",
+    "title": "Remove `BUILD_CONST_KEY_MAP` opcode · Issue #122160 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Remove BUILD_CONST_KEY_MAP opcode #122160 New issue Copy link New issue Copy link Closed Closed Remove BUILD_CONST_KEY_MAP opcode#122160 Copy link Description markshannon opened on Jul 23, 2024 Issue body actions According to our stats the BUILD_CONST_KEY_MAP represents fewer than 1 in 20_000 instructions executed. Presumably it is more common in startup code, but it has no real value there either. For run once code, turning the keys into a constant merely moves the cost of building the keys from the interpreter to unmarshalling. Linked PRs GH-122160: Remove BUILD_CONST_KEY_MAP opcode. #122164 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:19:31.289325"
+  },
+  {
+    "id": 913,
+    "url": "https://github.com/python/cpython/issues/84559",
+    "title": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} multiprocessing\u0027s default posix start method of \u0027fork\u0027 is broken: change to `\u0027forkserver\u0027 || \u0027spawn\u0027 #84559 New issue Copy link New issue Copy link Closed Closed multiprocessing\u0027s default posix start method of \u0027fork\u0027 is broken: change to `\u0027forkserver\u0027 || \u0027spawn\u0027#84559 Copy link Assignees Labels 3.14bugs and security fixesbugs and security fixestopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Description itamarst mannequin opened on Apr 24, 2020 Issue body actions BPO 40379 Nosy @pitrou, @mgorny, @Julian, @wimglenn, @applio, @itamarst Note: these values reflect the state of the issue at the time it was migrated and might not reflect the current state. Show more details GitHub fields: assignee \u003d None\nclosed_at \u003d None\ncreated_at \u003d \u003cDate 2020-04-24.18:22:23.389\u003e\nlabels \u003d [\u00273.8\u0027, \u0027type-bug\u0027, \u00273.7\u0027, \u00273.9\u0027]\ntitle \u003d \"multiprocessing\u0027s default start method of fork()-without-exec() is broken\"\nupdated_at \u003d \u003cDate 2022-02-11.16:13:53.872\u003e\nuser \u003d \u0027https://bugs.python.org/itamarst\u0027 bugs.python.org fields: activity \u003d \u003cDate 2022-02-11.16:13:53.872\u003e\nactor \u003d \u0027mgorny\u0027\nassignee \u003d \u0027none\u0027\nclosed \u003d False\nclosed_date \u003d None\ncloser \u003d None\ncomponents \u003d []\ncreation \u003d \u003cDate 2020-04-24.18:22:23.389\u003e\ncreator \u003d \u0027itamarst\u0027\ndependencies \u003d []\nfiles \u003d []\nhgrepos \u003d []\nissue_num \u003d 40379\nkeywords \u003d []\nmessage_count \u003d 11.0\nmessages \u003d [\u0027367210\u0027, \u0027367211\u0027, \u0027368173\u0027, \u0027380478\u0027, \u0027392358\u0027, \u0027392501\u0027, \u0027392503\u0027, \u0027392506\u0027, \u0027392507\u0027, \u0027392508\u0027, \u0027413081\u0027]\nnosy_count \u003d 8.0\nnosy_names \u003d [\u0027pitrou\u0027, \u0027mgorny\u0027, \u0027Julian\u0027, \u0027wim.glenn\u0027, \u0027itamarst\u0027, \u0027davin\u0027, \u0027itamarst2\u0027, \u0027aduncan\u0027]\npr_nums \u003d []\npriority \u003d \u0027normal\u0027\nresolution \u003d None\nstage \u003d None\nstatus \u003d \u0027open\u0027\nsuperseder \u003d None\ntype \u003d \u0027behavior\u0027\nurl \u003d \u0027https://bugs.python.org/issue40379\u0027\nversions \u003d [\u0027Python 3.5\u0027, \u0027Python 3.6\u0027, \u0027Python 3.7\u0027, \u0027Python 3.8\u0027, \u0027Python 3.9\u0027] Linked PRs GH-84559: Deprecate fork being the multiprocessing default. #100618 gh-84559: skip the test when no multiprocessing (wasm, etc) #101530 gh-84559: Remove the new multiprocessing warning, too disruptive. #101551 gh-84559: Change the multiprocessing start method default to forkserver #101556 gh-84559: gh-103134: Whats new 3.14 entries for multiprocessing. #126697 gh-84559: multiprocessing: detect if forkserver cannot work due to missing hmac-sha256 #127467 gh-84559: improve What\u0027s New entry for multiprocessing start method changes #128173 [3.13] gh-84559: improve What\u0027s New entry for multiprocessing startmethod changes (GH-128173) #137156 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees gpshead Labels 3.14bugs and security fixesbugs and security fixestopic-multiprocessingtype-featureA feature request or enhancementA feature request or enhancement Projects Multiprocessing issues Status Done Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:19:29.498864"
+  },
+  {
     "id": 912,
     "url": "https://docs.python.org/3/library/io.html#io.Writer",
     "title": "io — Core tools for working with streams — Python 3.14.8 documentation",
@@ -6055,26 +6090,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 913,
-    "url": "https://github.com/python/cpython/issues/84559"
-  },
-  {
-    "id": 914,
-    "url": "https://github.com/python/cpython/issues/122160"
-  },
-  {
-    "id": 915,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetNativeLayout"
-  },
-  {
-    "id": 916,
-    "url": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_OptimizeFlag"
-  },
-  {
-    "id": 917,
-    "url": "https://docs.python.org/3/library/sys.html#sys._jit"
   },
   {
     "id": 918,
@@ -156961,10 +156976,207 @@ window.searchData = [
     "id": 132474,
     "url": "https://docs.python.org/3/library/io.html#io.TextIOBase.write",
     "parentUrl": "https://docs.python.org/3/library/io.html#io.Writer"
+  },
+  {
+    "id": 132475,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/84559",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132476,
+    "url": "https://github.com/Julian",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132477,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/84559",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132478,
+    "url": "https://github.com/python/cpython/issues/84559#top",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132479,
+    "url": "https://github.com/applio",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132480,
+    "url": "https://github.com/python/cpython/pull/100618",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132481,
+    "url": "https://github.com/python/cpython/pull/137156",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132482,
+    "url": "https://github.com/python/cpython/issues/84559#issue-1199034942",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132483,
+    "url": "https://github.com/mgorny",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132485,
+    "url": "https://github.com/python/cpython/issues/84559#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132489,
+    "url": "https://github.com/python/cpython/pull/128173",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132493,
+    "url": "https://github.com/wimglenn",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132494,
+    "url": "https://github.com/itamarst",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132495,
+    "url": "https://bugs.python.org/issue40379",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132496,
+    "url": "https://github.com/python/cpython/pull/101556",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132497,
+    "url": "https://github.com/python/cpython/pull/101530",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132498,
+    "url": "https://github.com/python/cpython/pull/126697",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132499,
+    "url": "https://github.com/python/cpython/pull/127467",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132500,
+    "url": "https://github.com/python/cpython/pull/101551",
+    "parentUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "id": 132501,
+    "url": "https://github.com/python/cpython/issues/122160#top",
+    "parentUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "id": 132503,
+    "url": "https://github.com/python/cpython/pull/122164",
+    "parentUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "id": 132504,
+    "url": "https://github.com/python/cpython/issues/122160#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "id": 132505,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/122160",
+    "parentUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "id": 132506,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/122160",
+    "parentUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "id": 132507,
+    "url": "https://github.com/python/cpython/issues/122160#issue-2424849818",
+    "parentUrl": "https://github.com/python/cpython/issues/122160"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._jit"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys — System-specific parameters and functions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.html#sys._jit"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_OptimizeFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Interpreter initialization and finalization — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/interp-lifecycle.html#c.Py_OptimizeFlag"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetNativeLayout"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_GetNativeLayout"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Remove `BUILD_CONST_KEY_MAP` opcode · Issue #122160 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Remove `BUILD_CONST_KEY_MAP` opcode · Issue #122160 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/122160"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "gpshead",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/93802660?v\u003d4\u0026size\u003d48",
+    "alt": "@itamarst",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68491?s\u003d64\u0026v\u003d4",
+    "alt": "@gpshead",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "multiprocessing\u0027s default posix start method of `\u0027fork\u0027` is broken: change to ``\u0027forkserver\u0027 || \u0027spawn\u0027` · Issue #84559 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/84559"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
