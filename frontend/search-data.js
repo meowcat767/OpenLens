@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1426,
+    "url": "https://github.com/python/cpython/issues/118655",
+    "title": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation noahbkim commented May 6, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Contributor As mentioned in the issue: While -X importtime is incredibly useful for analyzing module import times, by design, it doesn\u0027t log anything if an imported module has already been loaded. -X importtime\u003d2 would provide additional output for every module that\u0027s already been loaded: The updated example (-Ximporttime\u003d2): \u003e\u003e\u003e import uuid\nimport time: cached    | cached     | builtins\nimport time: cached    | cached     | linecache\nimport time: cached    | cached     |   _io\nimport time: cached    | cached     |   os\nimport time: cached    | cached     |   sys\nimport time: cached    | cached     |   enum\nimport time:       594 |        594 |   _uuid\nimport time:      2428 |       3022 | uuid\n With -Ximporttime: \u003e\u003e\u003e import uuid\nimport time:       351 |        351 |   _uuid\nimport time:       843 |       1194 | uuid\n Discussion: https://discuss.python.org/t/x-importtrace-to-supplement-x-importtime-for-loaded-modules/23882/5 Prior email chain: https://mail.python.org/archives/list/python-ideas@python.org/thread/GEISYQ5BXWGKT33RWF77EOSOMMMFUBUS/ Issue: Add -X importtime\u003d2 for additional logging when an imported module is already loaded #102567 Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. 🚀 1 davidwitten reacted with rocket emoji All reactions 🚀 1 reaction noahbkim requested review from ericsnowcurrently and kumaraditya303 as code owners May 6, 2024 15:40 bedevere-app Bot added the awaiting review label May 6, 2024 bedevere-app Bot mentioned this pull request May 6, 2024 Add -X importtime\u003d2 for additional logging when an imported module is already loaded #102567 Closed Eclips4 commented May 6, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member Hello! This PR needs to add: A NEWS entry A whatsnew entry A new paragraph in the Doc/cmdline for the -X option. New test case in the Lib/test/test_cmd_line All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. noahbkim commented May 6, 2024 Copy link Copy Markdown Contributor Author Hello! This PR needs to add: A NEWS entry A whatsnew entry A new paragraph in the Doc/cmdline for the -X option. New test case in the Lib/test/test_cmd_line Thanks for the quick feedback. I\u0027ve committed a first pass of 1-3. As for tests: there appear to be no importtime tests (likely due to the fact that any simple implementation would be super noisy as other parts of the interpreter change). Would it be sufficient to do some rudimentary check i.e. import foo then ensure a corresponding foo row appears in the output? Thanks again! All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Eclips4 commented May 6, 2024 Copy link Copy Markdown Member Hello! This PR needs to add: A NEWS entry A whatsnew entry A new paragraph in the Doc/cmdline for the -X option. New test case in the Lib/test/test_cmd_line Thanks for the quick feedback. I\u0027ve committed a first pass of 1-3. As for tests: there appear to be no importtime tests (likely due to the fact that any simple implementation would be super noisy as other parts of the interpreter change). Would it be sufficient to do some rudimentary check i.e. import foo then ensure a corresponding foo row appears in the output? Thanks again! Yes, it would be sufficient :) All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Eclips4 commented May 6, 2024 Copy link Copy Markdown Member Also, there\u0027s a merge conflict. Can you resolve it? (I can do it myself, but it seems like you have turned off this option) All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. noahbkim commented May 7, 2024 Copy link Copy Markdown Contributor Author Also, there\u0027s a merge conflict. Can you resolve it? (I can do it myself, but it seems like you have turned off this option) Done, just added tests as well All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. noahbkim commented May 28, 2024 Copy link Copy Markdown Contributor Author @Eclips4 who should I ping to get final review? Is it alright if I @ the blamed reviewers? All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. Eclips4 commented May 28, 2024 Copy link Copy Markdown Member @Eclips4 who should I ping to get final review? Is it alright if I @ the blamed reviewers? I gu",
+    "scrapedAt": "2026-10-08 19:41:36.64808"
+  },
+  {
+    "id": 1425,
+    "url": "https://github.com/python/cpython/issues/119743",
+    "title": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Conversation mdickinson commented May 29, 2024 • edited Loading Uh oh! There was an error while loading. Please reload this page. Copy link Copy Markdown Member This PR removes the delegation of int to the __trunc__ special method: int will now only delegate to __int__ and __index__ (in that order). __trunc__ continues to exist, but its sole purpose is to support math.trunc. Issue: Remove deprecated delegation of the int built-in to __trunc__. #119740 📚 Documentation preview 📚: https://cpython-previews--119743.org.readthedocs.build/ Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions mdickinson added 3 commits May 29, 2024 18:46 Remove deprecated delegation of int to __trunc__ c02d01e Add news entry 07e24bb Add what\u0027s new entry c78d637 bedevere-app Bot added the awaiting core review label May 29, 2024 bedevere-app Bot mentioned this pull request May 29, 2024 Remove deprecated delegation of the int built-in to __trunc__. #119740 Closed mdickinson added 4 commits May 29, 2024 19:01 Fix PR number 0088603 Fix reST markup ca6af89 Regenerate includes 834d087 Remove unused variable 39e164d serhiy-storchaka reviewed May 29, 2024 View reviewed changes Comment thread Doc/library/functions.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/reference/datamodel.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/functions.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. mdickinson added 5 commits May 29, 2024 21:21 Use \u0027versionchanged\u0027, not \u0027deprecated-removed\u0027 c6a8f62 Change :class: to :func: in docs 7492da8 Fix one missed :class: to :func: change cd34a34 And one more missed :class: to :func: change 34899dd Revert unrelated spacing changes 8ff4651 serhiy-storchaka approved these changes May 30, 2024 View reviewed changes serhiy-storchaka left a comment Copy link Copy Markdown Member There was a problem hiding this comment. Choose a reason for hiding this comment The reason will be displayed to describe this comment to others. Learn more. Choose a reason Spam Abuse Off Topic Outdated Duplicate Resolved Low Quality Hide comment LGTM. But I would prefer to merge this after #119687, to make backporting of #119687 easier. Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. All reactions Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/functions.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. bedevere-app Bot added awaiting merge and removed awaiting core review labels May 30, 2024 picnixz reviewed May 30, 2024 View reviewed changes Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. Comment thread Doc/library/functions.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. mdickinson commented May 31, 2024 Copy link Copy Markdown Member Author Thanks for the comments; I\u0027ll address before merging (but it may take me a few days to get to it). All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. mdickinson commented May 31, 2024 Copy link Copy Markdown Member Author But I would prefer to merge this after #119687, to make backporting of #119687 easier. Definitely! Looks like #119687 has gone in now; I\u0027ll update for conflicts when I get the chance. All reactions Sorry, something went wrong. Uh oh! There was an error while loading. Please reload this page. mdickinson and others added 2 commits June 2, 2024 09:34 More direct wording … 1c2a638 Co-authored-by: Bénédikt Tran \u003c10796600+picnixz@users.noreply.github.com\u003e Grammar nit … 26d5833 Co-authored-by: Bénédikt Tran \u003c10796600+picnixz@users.noreply.github.com\u003e mdickinson commented Jun 2, 2024 View reviewed changes Comment thread Doc/whatsnew/3.14.rst Outdated Show resolved Hide resolved Uh oh! There was an error while loading. Please reload this page. mdickinson and others added 2 commits June 2, 2024 09:37 Fix reference to function when we really want a reference to a type … 03308ef Co-authored-by: Serhiy Storchaka \u003cstorchaka@gmail.com\u003e Cleaner wording. 506b821 mdickinson commented Jun 2, 2024 View re",
+    "scrapedAt": "2026-10-08 19:41:31.710616"
+  },
+  {
+    "id": 1424,
+    "url": "https://docs.python.org/3/library/typing.html#typing.get_args",
+    "title": "typing — Support for type hints — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Development Tools » typing — Support for type hints | Theme Auto Light Dark | typing — Support for type hints¶ Added in version 3.5. Source code: Lib/typing.py Note The Python runtime does not enforce function and variable type annotations. They can be used by third party tools such as type checkers, IDEs, linters, etc. This module provides runtime support for type hints. Consider the function below: def surface_area_of_cube(edge_length: float) -\u003e str:\n    return f\"The surface area of the cube is {6 * edge_length ** 2}.\"\n The function surface_area_of_cube takes an argument expected to be an instance of float, as indicated by the type hint edge_length: float. The function is expected to return an instance of str, as indicated by the -\u003e str hint. While type hints can be simple classes like float or str, they can also be more complex. The typing module provides a vocabulary of more advanced type hints. New features are frequently added to the typing module. The typing_extensions package provides backports of these new features to older versions of Python. See also Typing cheat sheet A quick overview of type hints (hosted at the mypy docs) Type System Reference section of the mypy docs The Python typing system is standardised via PEPs, so this reference should broadly apply to most Python type checkers. (Some parts may still be specific to mypy.) Static Typing with Python Type-checker-agnostic documentation written by the community detailing type system features, useful typing related tools and typing best practices. Specification for the Python Type System¶ The canonical, up-to-date specification of the Python type system can be found at Specification for the Python type system. Type aliases¶ A type alias is defined using the type statement, which creates an instance of TypeAliasType. In this example, Vector and list[float] will be treated equivalently by static type checkers: type Vector \u003d list[float]\n\ndef scale(scalar: float, vector: Vector) -\u003e Vector:\n    return [scalar * num for num in vector]\n\n# passes type checking; a list of floats qualifies as a Vector.\nnew_vector \u003d scale(2.0, [1.0, -4.2, 5.4])\n Type aliases are useful for simplifying complex type signatures. For example: from collections.abc import Sequence\n\ntype ConnectionOptions \u003d dict[str, str]\ntype Address \u003d tuple[str, int]\ntype Server \u003d tuple[Address, ConnectionOptions]\n\ndef broadcast_message(message: str, servers: Sequence[Server]) -\u003e None:\n    ...\n\n# The static type checker will treat the previous type signature as\n# being exactly equivalent to this one.\ndef broadcast_message(\n    message: str,\n    servers: Sequence[tuple[tuple[str, int], dict[str, str]]]\n) -\u003e None:\n    ...\n The type statement is new in Python 3.12. For backwards compatibility, type aliases can also be created through simple assignment: Vector \u003d list[float]\n Or marked with TypeAlias to make it explicit that this is a type alias, not a normal variable assignment: from typing import TypeAlias\n\nVector: TypeAlias \u003d list[float]\n NewType¶ Use the NewType helper to create distinct types: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\nsome_id \u003d UserId(524313)\n The static type checker will treat the new type as if it were a subclass of the original type. This is useful in helping catch logical errors: def get_user_name(user_id: UserId) -\u003e str:\n    ...\n\n# passes type checking\nuser_a \u003d get_user_name(UserId(42351))\n\n# fails type checking; an int is not a UserId\nuser_b \u003d get_user_name(-1)\n You may still perform all int operations on a variable of type UserId, but the result will always be of type int. This lets you pass in a UserId wherever an int might be expected, but will prevent you from accidentally creating a UserId in an invalid way: # \u0027output\u0027 is of type \u0027int\u0027, not \u0027UserId\u0027\noutput \u003d UserId(23413) + UserId(54341)\n Note that these checks are enforced only by the static type checker. At runtime, the statement Derived \u003d NewType(\u0027Derived\u0027, Base) will make Derived a callable that immediately returns whatever parameter you pass it. That means the expression Derived(some_value) does not create a new class or introduce much overhead beyond that of a regular function call. More precisely, the expression some_value is Derived(some_value) is always true at runtime. It is invalid to create a subtype of Derived: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\n# Fails at runtime and does not pass type checking\nclass AdminUserId(UserId): pass\n However, it is possible to create a NewType based on a ‘derived’ NewType: from typing import NewType\n\nUserId \u003d NewType(\u0027UserId\u0027, int)\n\nProUserId \u003d NewType(\u0027ProUserId\u0027, UserId)\n and typechecking for ProUserId will work as expected. See PEP 484 for more details. Note Recall that the use of a type alias declares two types to be equivalent to one another. Doing type Alias \u003d Original will make the static type checker treat Alias as b",
+    "scrapedAt": "2026-10-08 19:41:27.573187"
+  },
+  {
+    "id": 1423,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#struct",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:41:26.244651"
+  },
+  {
+    "id": 1422,
+    "url": "https://docs.python.org/3/library/argparse.html#prog",
+    "title": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Command-line interface libraries » argparse — Parser for command-line options, arguments and subcommands | Theme Auto Light Dark | argparse — Parser for command-line options, arguments and subcommands¶ Added in version 3.2. Source code: Lib/argparse.py Note While argparse is the default recommended standard library module for implementing basic command line applications, authors with more exacting requirements for exactly how their command line applications behave may find it doesn’t provide the necessary level of control. Refer to Choosing an argument parsing library for alternatives to consider when argparse doesn’t support behaviors that the application requires (such as entirely disabling support for interspersed options and positional arguments, or accepting option parameter values that start with - even when they correspond to another defined option). Tutorial This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The argparse module makes it easy to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments. The argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser. It is a container for argument specifications and has options that apply to the parser as whole: parser \u003d argparse.ArgumentParser(\n                    prog\u003d\u0027ProgramName\u0027,\n                    description\u003d\u0027What the program does\u0027,\n                    epilog\u003d\u0027Text at the bottom of help\u0027)\n The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept values, and on/off flags: parser.add_argument(\u0027filename\u0027)           # positional argument\nparser.add_argument(\u0027-c\u0027, \u0027--count\u0027)      # option that takes a value\nparser.add_argument(\u0027-v\u0027, \u0027--verbose\u0027,\n                    action\u003d\u0027store_true\u0027)  # on/off flag\n The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object: args \u003d parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n Note If you’re looking for a guide about how to upgrade optparse code to argparse, see Upgrading Optparse Code. ArgumentParser objects¶ class argparse.ArgumentParser(prog\u003dNone, usage\u003dNone, description\u003dNone, epilog\u003dNone, parents\u003d[], formatter_class\u003dargparse.HelpFormatter, prefix_chars\u003d\u0027-\u0027, fromfile_prefix_chars\u003dNone, argument_default\u003dNone, conflict_handler\u003d\u0027error\u0027, add_help\u003dTrue, allow_abbrev\u003dTrue, exit_on_error\u003dTrue, *, suggest_on_error\u003dFalse, color\u003dTrue)¶ Create a new ArgumentParser object. All parameters should be passed as keyword arguments. Each parameter has its own more detailed description below, but in short they are: prog - The name of the program (default: generated from the __main__ module attributes and sys.argv[0]) usage - The string describing the program usage (default: generated from arguments added to parser) description - Text to display before the argument help (by default, no text) epilog - Text to display after the argument help (by default, no text) parents - A list of ArgumentParser objects whose arguments should also be included formatter_class - A class for customizing the help output prefix_chars - The set of characters that prefix optional arguments (default: ‘-‘) fromfile_prefix_chars - The set of characters that prefix files from which additional arguments should be read (default: None) argument_default - The global default value for arguments (default: None) conflict_handler - The strategy for resolving conflicting optionals (usually unnecessary) add_help - Add a -h/--help option to the parser (default: True) allow_abbrev - Allows long options to be abbreviated if the abbreviation is unambiguous (default: True) exit_on_error - Determines whether or not ArgumentParser exits with error info when an error occurs. (default: True) suggest_on_error - Enables suggestions for mistyped argument choices and subparser names (default: False) color - Allow color output (default: True) Changed in version 3.5: allow_abbrev parameter was added. Changed in version 3.8: In previous versions, allow_abbrev also disabled grouping of short flags such as -vv to mean -v -v. Changed in version 3.9: exit_on_error parameter was added. Changed in version 3.14: suggest_on_error and color parameters were added. The following sections describe how each of these are used. prog¶ By default, ArgumentParser calculates the name of the program to display in help messages depending on the way the Python interpreter was run: The base name of sys.argv[0] if a file was passed a",
+    "scrapedAt": "2026-10-08 19:41:24.838946"
+  },
+  {
     "id": 1421,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#pathlib",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -9520,26 +9555,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1422,
-    "url": "https://docs.python.org/3/library/argparse.html#prog"
-  },
-  {
-    "id": 1423,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#struct"
-  },
-  {
-    "id": 1424,
-    "url": "https://docs.python.org/3/library/typing.html#typing.get_args"
-  },
-  {
-    "id": 1425,
-    "url": "https://github.com/python/cpython/issues/119743"
-  },
-  {
-    "id": 1426,
-    "url": "https://github.com/python/cpython/issues/118655"
   },
   {
     "id": 1427,
@@ -238911,10 +238926,1653 @@ window.searchData = [
     "id": 294993,
     "url": "https://peps.python.org/pep-0776/#javascript-foreign-function-interface-ffi",
     "parentUrl": "https://peps.python.org/pep-0776/"
+  },
+  {
+    "id": 297952,
+    "url": "https://github.com/python/cpython/commit/aa6ed802f20c1ddadf45942d350422d3d4e0bbea",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297953,
+    "url": "https://github.com/python/cpython/pull/119743/files/26d5833a7419fbc359034fec535020c8d1a5ab0f#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297956,
+    "url": "https://github.com/python/cpython/pull/119743/files/506b821784a1deacc1d2e1d25fcb824d65973ad8",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297957,
+    "url": "https://github.com/python/cpython/pull/119743#issue-2323926198",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297958,
+    "url": "https://github.com/python/cpython/pull/119743/files/39e164d3432ec5d8f0825b7236049a046e78d3ae#diff-6a7a07ac473fdd76734669b1b70626ad2176011129902f6add017810f54d0439",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297959,
+    "url": "https://github.com/barneygale/cpython/commit/c0c837a9b893c2e566d9c4eea6db2573206272ca",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297960,
+    "url": "https://github.com/python/cpython/pull/119743/commits/34899dd842a0f53be6eb23b3966edd968f7a1485",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297961,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-c0c837a",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297962,
+    "url": "https://cpython-previews--119743.org.readthedocs.build/",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297963,
+    "url": "https://github.com/python/cpython/pull/119743#pullrequestreview-2087690443",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297964,
+    "url": "https://github.com/python/cpython/pull/119743#pullrequestreview-2088459576",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297966,
+    "url": "https://github.com/python/cpython/pull/119743/commits/cd34a34c95fc13b76c3cd413370f65fd1ac76931",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297967,
+    "url": "https://github.com/python/cpython/pull/119743/commits/c6a8f626ae5e99e2d91d9cd105fd978557f9c634",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297968,
+    "url": "https://github.com/python/cpython/pull/119743#commits-pushed-03308ef",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297969,
+    "url": "https://github.com/python/cpython/pull/119743/commits/834d087eda48849de97209c75f7cb59a50cd59dd",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297970,
+    "url": "https://github.com/python/cpython/pull/119743/commits/26d5833a7419fbc359034fec535020c8d1a5ab0f",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297971,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-8bb4fb3",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297973,
+    "url": "https://github.com/python/cpython/pull/119743",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297975,
+    "url": "https://github.com/miss-islington/cpython/commit/288cdb872fe94882fd105d29dca3452193b67be7",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297976,
+    "url": "https://github.com/python/cpython/pull/119743/files/26d5833a7419fbc359034fec535020c8d1a5ab0f",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297977,
+    "url": "https://github.com/ljfp",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297978,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-345ac2a",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297980,
+    "url": "https://github.com/ljfp/cpython/commit/3a9df081e6cf358af5a334c7b560c5d0e742f5b1",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297981,
+    "url": "https://github.com/python/cpython/pull/119743/commits/39e164d3432ec5d8f0825b7236049a046e78d3ae",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297982,
+    "url": "https://github.com/python/cpython/pull/119743/commits/8ff4651eb8e4e02b9e12ad8c3c466c6fe63e5df6",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297983,
+    "url": "https://github.com/python/cpython/commit/f79ffc879b919604ed5de22ece83825006cf9a17",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297985,
+    "url": "https://github.com/python/cpython/pull/119743/commits/ca6af89c26091bb2823d86e85a5345315e0f2eda",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297986,
+    "url": "https://github.com/python/cpython/pull/119743/commits/03308ef6c615221d9c14fc23418c72ea6d1157b2",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297987,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-3a9df08",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297988,
+    "url": "https://github.com/python/cpython/pull/119743#commits-pushed-0088603",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297989,
+    "url": "https://github.com/python/cpython/pull/119743/commits/0088603860efe9d906a233b935dd15b07e2f5f2f",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297992,
+    "url": "https://github.com/python/cpython/pull/119743#event-12975457356",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297993,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-c9646df",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297994,
+    "url": "https://github.com/python/cpython/pull/119743#issuecomment-2143759560",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297995,
+    "url": "https://github.com/python/cpython/pull/119743/files/506b821784a1deacc1d2e1d25fcb824d65973ad8#diff-9125871b063a1ef80aa4bd3e46d7060921032c8437160c7cb8c1497756b02d61",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297996,
+    "url": "https://github.com/python/cpython/commit/c9646df6442aabc939716a462d354f052f48c263",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297997,
+    "url": "https://github.com/python/cpython/pull/119743#ref-pullrequest-3915957033",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 297999,
+    "url": "https://github.com/python/cpython/pull/119743/files/39e164d3432ec5d8f0825b7236049a046e78d3ae#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298000,
+    "url": "https://github.com/python/cpython/pull/119743/commits/af6793a2b02b97c52f5dbbcd68cfb845dc19e6ce",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298001,
+    "url": "https://github.com/python/cpython/pull/144624",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298002,
+    "url": "https://github.com/python/cpython/pull/119743#commits-pushed-1c2a638",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298003,
+    "url": "https://github.com/python/cpython/pull/119743/commits/506b821784a1deacc1d2e1d25fcb824d65973ad8",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298005,
+    "url": "https://github.com/python/cpython/pull/119743/commits/4a479abc44b9fbd88f9151e06943a2d22c63d65d",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298006,
+    "url": "https://github.com/skirpichev/cpython/commit/345ac2affc2534ec379e761cba3ff34e98fa4b98",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298007,
+    "url": "https://github.com/python/cpython/pull/144622",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298008,
+    "url": "https://github.com/python/cpython/pull/119743/commits/07e24bbe85e11374a3fef6593fecd1a2700fb8de",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298009,
+    "url": "https://github.com/python/cpython/pull/119743#pullrequestreview-2086198093",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298010,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-aa6ed80",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298011,
+    "url": "https://github.com/thunder-coding",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298012,
+    "url": "https://github.com/python/cpython/pull/119743#pullrequestreview-2092246691",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298013,
+    "url": "https://github.com/python/cpython/pull/119743#event-13011201989",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298014,
+    "url": "https://github.com/thunder-coding/cpython/commit/8dab2c014fa14171dd932823e29f0171f1dff08f",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298015,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-288cdb8",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298016,
+    "url": "https://github.com/estyxx",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298017,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F119743",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298018,
+    "url": "https://github.com/python/cpython/pull/119743#ref-pullrequest-3915106671",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298019,
+    "url": "https://github.com/python/cpython/pull/119743/commits/7492da8cb64922147227858e9ef5cd120632a8ba",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298020,
+    "url": "https://github.com/python/cpython/pull/119743#pullrequestreview-2092244424",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298021,
+    "url": "https://github.com/python/cpython/pull/119743/commits/1c2a638fc5b76a6f3223eec6609ee44d138bf800",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298022,
+    "url": "https://github.com/hudson-trading/cpython/commit/327e81df39be615524c05be655f3ad0199c0ee07",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298023,
+    "url": "https://github.com/estyxx/cpython/commit/8bb4fb3f0f68c8955a2af2214d10b814d3281534",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298024,
+    "url": "https://github.com/python/cpython/pull/119743/commits/c02d01e3d2a177785db5320b930f99c096ebdebc",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298025,
+    "url": "https://github.com/python/cpython/pull/119743#event-12982713560",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298026,
+    "url": "https://github.com/python/cpython/pull/119743#issuecomment-2141693577",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298027,
+    "url": "https://github.com/python/cpython/pull/119743#event-13011201914",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298029,
+    "url": "https://github.com/python/cpython/pull/119743#issuecomment-2141689471",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298030,
+    "url": "https://github.com/python/cpython/pull/119743/files/8ff4651eb8e4e02b9e12ad8c3c466c6fe63e5df6#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298031,
+    "url": "https://github.com/python/cpython/pull/119743/files/8ff4651eb8e4e02b9e12ad8c3c466c6fe63e5df6",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298033,
+    "url": "https://github.com/python/cpython/pull/119743/files/af6793a2b02b97c52f5dbbcd68cfb845dc19e6ce",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298034,
+    "url": "https://github.com/python/cpython/pull/119743#pullrequestreview-2092245105",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298035,
+    "url": "https://github.com/python/cpython/pull/119743#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298036,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-327e81d",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298037,
+    "url": "https://github.com/python/cpython/pull/119743#ref-commit-8dab2c0",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298040,
+    "url": "https://github.com/python/cpython/pull/119743#commits-pushed-c02d01e",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298041,
+    "url": "https://github.com/miss-islington/cpython/commit/aa6ed802f20c1ddadf45942d350422d3d4e0bbea",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298042,
+    "url": "https://github.com/python/cpython/pull/119743/files/8ff4651eb8e4e02b9e12ad8c3c466c6fe63e5df6#diff-6a7a07ac473fdd76734669b1b70626ad2176011129902f6add017810f54d0439",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298043,
+    "url": "https://github.com/python/cpython/pull/119743#ref-issue-2323910859",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298045,
+    "url": "https://github.com/python/cpython/pull/119743/files/39e164d3432ec5d8f0825b7236049a046e78d3ae#diff-9125871b063a1ef80aa4bd3e46d7060921032c8437160c7cb8c1497756b02d61",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298046,
+    "url": "https://github.com/noahbkim",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298047,
+    "url": "https://github.com/python/cpython/pull/119743/files/39e164d3432ec5d8f0825b7236049a046e78d3ae",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298048,
+    "url": "https://github.com/python/cpython/pull/119743#commits-pushed-c6a8f62",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298049,
+    "url": "https://github.com/python/cpython/pull/119743/commits/c78d6375ac84d348f950c20f975ac6253e32912c",
+    "parentUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "id": 298050,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2733350081",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298051,
+    "url": "https://github.com/python/cpython/blob/58e8cf2bb61f82df9eabd1209fe5e3d146e4c8cd/.github/CODEOWNERS#L233",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298052,
+    "url": "https://github.com/python/cpython/pull/118655#event-12716848941",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298053,
+    "url": "https://github.com/python/cpython/pull/118655/files#diff-5f4de3bbf22aa3cc7412333ded7d7729ae0ac23703551daecac350869768b4ef",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298054,
+    "url": "https://github.com/python/cpython/pull/118655/files#diff-24e6cbe61d91e61059c44a7cf5f712499a11eb47a82d5f1a8db16ec7f9023c31",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298055,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2848465702",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298056,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2135906384",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298057,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2587967299",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298058,
+    "url": "https://github.com/python/cpython/pull/118655/files/58d07bec9da1623e5fac34b4658f110d78b28aeb#diff-77cdde1442e2d3a5fe5ee852304d1af6d0a2033e718dc588552d61596cb72100",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298059,
+    "url": "https://github.com/python/cpython/pull/118655/commits/ee7a4a0e0d36a31ac0ce5f63710211276de180a2",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298060,
+    "url": "https://github.com/hudson-trading/cpython/pull/1",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298061,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2816461036",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298062,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2811180399",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298063,
+    "url": "https://github.com/python/cpython/pull/118655#issue-2281181492",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298064,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2809530128",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298065,
+    "url": "https://github.com/python/cpython/pull/118655#discussion_r2072312449",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298068,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2096541325",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298069,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2096764979",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298070,
+    "url": "https://github.com/python/cpython/pull/118655/files/4aae0ea6ae932fbc7df54283fe3bc985c0de81f7",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298071,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2745378820",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298072,
+    "url": "https://github.com/python/cpython/pull/118655",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298073,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2548082567",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298076,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2851385525",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298077,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2096661848",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298079,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2845704633",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298084,
+    "url": "https://github.com/chris-eibl",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298085,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2845345320",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298088,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2802390246",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298091,
+    "url": "https://discuss.python.org/t/x-importtrace-to-supplement-x-importtime-for-loaded-modules/23882/5",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298092,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2850435069",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298093,
+    "url": "https://github.com/python/cpython/pull/118655/files/0befb6ba9c7f50ddb852e6565e505950533e5204",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298095,
+    "url": "https://github.com/python/cpython/pull/118655/commits/f9c07ce7d9d5e36d9b974fa8d87d92531b2d2bf9",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298096,
+    "url": "https://github.com/python/cpython/pull/118655/files/6d50b0c7c0ca2545279a2dd9da11e1f7e1bad851#diff-bde30a9f2283aadeea54d703778ec8edf01c71bac3cfe6479035fc13ddc3296b",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298097,
+    "url": "https://github.com/python/cpython/pull/118655#commits-pushed-b081980",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298098,
+    "url": "https://github.com/pradyunsg",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298099,
+    "url": "https://github.com/python/cpython/pull/118655/commits/0b0c56d75d6d1e7b88e798843ebd44c3532ee045",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298101,
+    "url": "https://github.com/python/cpython/pull/118655/files",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298102,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2845349133",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298103,
+    "url": "https://github.com/python/cpython/pull/118655#discussion_r2190622463",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298104,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2588051638",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298105,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2845565193",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298106,
+    "url": "https://github.com/python/cpython/pull/118655/commits/0226aa171aaf5cad306bb79d9808ca2b54fcbf7a",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298107,
+    "url": "https://github.com/python/cpython/pull/118655/files/6d50b0c7c0ca2545279a2dd9da11e1f7e1bad851",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298108,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2135842106",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298111,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2098979823",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298112,
+    "url": "https://github.com/python/cpython/pull/118655/files/58d07bec9da1623e5fac34b4658f110d78b28aeb",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298113,
+    "url": "https://github.com/sethmlarson",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298114,
+    "url": "https://github.com/apps/python-cla-bot",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298115,
+    "url": "https://github.com/python/cpython/pull/118655/commits/b08198010441bb38fd0ad701e1ccc5b68f48f13c",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298116,
+    "url": "https://github.com/python/cpython/pull/118655#ref-pullrequest-3039856087",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298119,
+    "url": "https://github.com/python/cpython/pull/118655#event-13474382363",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298120,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2851378608",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298121,
+    "url": "https://github.com/python/cpython/pull/118655/files/12ab9298966b57b0a00c1ff849c55de20578891a",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298122,
+    "url": "https://github.com/python/cpython/pull/133443",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298124,
+    "url": "https://github.com/python/cpython/pull/136391",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298125,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2136023622",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298126,
+    "url": "https://github.com/python/cpython/pull/118655/commits/6d50b0c7c0ca2545279a2dd9da11e1f7e1bad851",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298127,
+    "url": "https://github.com/AA-Turner/cpython/commits/3.14-importtime%3D2/",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298128,
+    "url": "https://github.com/login?return_to\u003dhttps%3A%2F%2Fgithub.com%2Fpython%2Fcpython%2Fpull%2F118655",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298129,
+    "url": "https://github.com/python/cpython/pull/118655/files#diff-0e46521e64c67a83699619343508f4e57968fb450c9075139d47786e1ed89cb1",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298131,
+    "url": "https://github.com/python/cpython/commit/6d50b0c7c0ca2545279a2dd9da11e1f7e1bad851",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298132,
+    "url": "https://github.com/python/cpython/pull/118655#ref-pullrequest-3209678475",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298133,
+    "url": "https://github.com/python/cpython/pull/118655#ref-issue-1617969636",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298135,
+    "url": "https://github.com/python/cpython/pull/118655/commits/58d07bec9da1623e5fac34b4658f110d78b28aeb",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298136,
+    "url": "https://github.com/python/cpython/pull/118655#event-12716848049",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298137,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2813146684",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298138,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2096791571",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298144,
+    "url": "https://github.com/python/cpython/pull/118655#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298145,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2852794802",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298147,
+    "url": "https://github.com/python/cpython/pull/118655#pullrequestreview-2994679679",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298151,
+    "url": "https://mail.python.org/archives/list/python-ideas@python.org/thread/GEISYQ5BXWGKT33RWF77EOSOMMMFUBUS/",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298153,
+    "url": "https://buildbot.python.org/all/#/grid?branch\u003drefs%2Fpull%2F118655%2Fmerge",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298154,
+    "url": "https://github.com/python/cpython/pull/118655#issuecomment-2845686176",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298157,
+    "url": "https://cla.python.org/",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "id": 298159,
+    "url": "https://github.com/python/cpython/blob/709ca90a00e66cea432096a7ba61aa6459d2a9a7/.github/CODEOWNERS#L54",
+    "parentUrl": "https://github.com/python/cpython/issues/118655"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d48\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d40\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d80\u0026u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d80\u0026u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d80\u0026u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d80\u0026u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d80\u0026u\u003d146c847600262651770cdd4ff70fea44f380cc1d\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d40\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d80\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/1203010?s\u003d80\u0026v\u003d4",
+    "alt": "@python-cla-bot",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://camo.githubusercontent.com/1c7e7ec4141b7323ee376d8a3a48e6acfaa33577216949150bd85c32e231b8db/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f434c412532305369676e65642d4641453038353f7374796c653d666c61742d737175617265266c6f676f3d507974686f6e",
+    "alt": "CLA signed",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d80\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d80\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/138194463?s\u003d60\u0026v\u003d4",
+    "alt": "chris-eibl",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d40\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/138194463?s\u003d60\u0026v\u003d4",
+    "alt": "chris-eibl",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/138194463?s\u003d48\u0026v\u003d4",
+    "alt": "@chris-eibl",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d80\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d80\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d40\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d80\u0026u\u003df2faba5577c7b1b6359fed5b59f0c8906a7357c5\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d80\u0026u\u003d63eee11d3b5474c37a942e04a41607f58b3b0c3d\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d80\u0026u\u003d11cc18fe41c8b4216e490ec9b145ecf50128bac0\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d60\u0026v\u003d4",
+    "alt": "AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d48\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d60\u0026v\u003d4",
+    "alt": "hugovk",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d48\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d40\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d40\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/138194463?s\u003d40\u0026v\u003d4",
+    "alt": "@chris-eibl",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d40\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d40\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d40\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?s\u003d40\u0026v\u003d4",
+    "alt": "@vstinner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/11718525?s\u003d40\u0026v\u003d4",
+    "alt": "@pablogsal",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d40\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d52\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/80244920?s\u003d52\u0026v\u003d4",
+    "alt": "@Eclips4",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/9087854?s\u003d52\u0026v\u003d4",
+    "alt": "@AA-Turner",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28579281?s\u003d52\u0026v\u003d4",
+    "alt": "@bedevere-bot",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/55281?s\u003d52\u0026v\u003d4",
+    "alt": "@ambv",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/199592?s\u003d52\u0026v\u003d4",
+    "alt": "@methane",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/906600?s\u003d52\u0026v\u003d4",
+    "alt": "@JelleZijlstra",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?s\u003d52\u0026v\u003d4",
+    "alt": "@hugovk",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d52\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/138194463?s\u003d52\u0026v\u003d4",
+    "alt": "@chris-eibl",
+    "pageTitle": "gh-102567: Add -X importtime\u003d2 for logging an importtime message for already-loaded modules by noahbkim · Pull Request #118655 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/118655"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d80\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d48\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d48\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d60\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d80\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d80\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d60\u0026v\u003d4",
+    "alt": "mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d60\u0026v\u003d4",
+    "alt": "mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d60\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d80\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/in/388350?s\u003d40\u0026v\u003d4",
+    "alt": "@bedevere-app",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/960340?s\u003d40\u0026v\u003d4",
+    "alt": "@barneygale",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/6378925?s\u003d40\u0026v\u003d4",
+    "alt": "@noahbkim",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d40\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/28976199?s\u003d40\u0026v\u003d4",
+    "alt": "@estyxx",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31488909?s\u003d40\u0026u\u003d31ad766412aaeb40a51582d882e34d67f2fae635\u0026v\u003d4",
+    "alt": "@miss-islington",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31488909?s\u003d40\u0026v\u003d4",
+    "alt": "@miss-islington",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/31488909?s\u003d40\u0026u\u003d31ad766412aaeb40a51582d882e34d67f2fae635\u0026v\u003d4",
+    "alt": "@miss-islington",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/68849076?s\u003d40\u0026v\u003d4",
+    "alt": "@thunder-coding",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2155800?s\u003d40\u0026u\u003d6825f5af66a3126d92cee985f8b0a6925f9f64a8\u0026v\u003d4",
+    "alt": "@skirpichev",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/77253294?s\u003d40\u0026v\u003d4",
+    "alt": "@ljfp",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d40\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d40\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/662003?s\u003d52\u0026v\u003d4",
+    "alt": "@mdickinson",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d52\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d52\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "gh-119740: Remove deprecated trunc delegation by mdickinson · Pull Request #119743 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/119743"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.get_args"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "typing — Support for type hints — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/typing.html#typing.get_args"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#struct"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#struct"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#prog"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "argparse — Parser for command-line options, arguments and subcommands — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/argparse.html#prog"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
