@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1033,
+    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL",
+    "title": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Language Services » dis — Disassembler for Python bytecode | Theme Auto Light Dark | dis — Disassembler for Python bytecode¶ Source code: Lib/dis.py The dis module supports the analysis of CPython bytecode by disassembling it. The CPython bytecode which this module takes as an input is defined in the file Include/opcode.h and used by the compiler and the interpreter. CPython implementation detail: Bytecode is an implementation detail of the CPython interpreter. No guarantees are made that bytecode will not be added, removed, or changed between versions of Python. Use of this module should not be considered to work across Python VMs or Python releases. Changed in version 3.6: Use 2 bytes for each instruction. Previously the number of bytes varied by instruction. Changed in version 3.10: The argument of jump, exception handling and loop instructions is now the instruction offset rather than the byte offset. Changed in version 3.11: Some instructions are accompanied by one or more inline cache entries, which take the form of CACHE instructions. These instructions are hidden by default, but can be shown by passing show_caches\u003dTrue to any dis utility. Furthermore, the interpreter now adapts the bytecode to specialize it for different runtime conditions. The adaptive bytecode can be shown by passing adaptive\u003dTrue. Changed in version 3.12: The argument of a jump is the offset of the target instruction relative to the instruction that appears immediately after the jump instruction’s CACHE entries. As a consequence, the presence of the CACHE instructions is transparent for forward jumps but needs to be taken into account when reasoning about backward jumps. Changed in version 3.13: The output shows logical labels rather than instruction offsets for jump targets and exception handlers. The -O command line option and the show_offsets argument were added. Changed in version 3.14: The -P command-line option and the show_positions argument were added. The -S command-line option is added. Example: Given the function myfunc(): def myfunc(alist):\n    return len(alist)\n the following command can be used to display the disassembly of myfunc(): \u003e\u003e\u003e dis.dis(myfunc)\n  2           RESUME                   0\n\n  3           LOAD_GLOBAL              1 (len + NULL)\n              LOAD_FAST_BORROW         0 (alist)\n              CALL                     1\n              RETURN_VALUE\n (The “2” is a line number). Command-line interface¶ The dis module can be invoked as a script from the command line: python -m dis [-h] [-C] [-O] [-P] [-S] [infile]\n The following options are accepted: -h, --help¶ Display usage and exit. -C, --show-caches¶ Show inline caches. Added in version 3.13. -O, --show-offsets¶ Show offsets of instructions. Added in version 3.13. -P, --show-positions¶ Show positions of instructions in the source code. Added in version 3.14. -S, --specialized¶ Show specialized bytecode. Added in version 3.14. If infile is specified, its disassembled code will be written to stdout. Otherwise, disassembly is performed on compiled source code received from stdin. Bytecode analysis¶ Added in version 3.4. The bytecode analysis API allows pieces of Python code to be wrapped in a Bytecode object that provides easy access to details of the compiled code. class dis.Bytecode(x, *, first_line\u003dNone, current_offset\u003dNone, show_caches\u003dFalse, adaptive\u003dFalse, show_offsets\u003dFalse, show_positions\u003dFalse)¶ Analyse the bytecode corresponding to a function, generator, asynchronous generator, coroutine, method, string of source code, or a code object (as returned by compile()). This is a convenience wrapper around many of the functions listed below, most notably get_instructions(), as iterating over a Bytecode instance yields the bytecode operations as Instruction instances. If first_line is not None, it indicates the line number that should be reported for the first source line in the disassembled code. Otherwise, the source line information (if any) is taken directly from the disassembled code object. If current_offset is not None, it refers to an instruction offset in the disassembled code. Setting this means dis() will display a “current instruction” marker against the specified opcode. If show_caches is True, dis() will display inline cache entries used by the interpreter to specialize the bytecode. If adaptive is True, dis() will display specialized bytecode that may be different from the original bytecode. If show_offsets is True, dis() will include instruction offsets in the output. If show_positions is True, dis() will include instruction source code positions in the output. classmethod from_traceback(tb, *, show_caches\u003dFalse)¶ Construct a Bytecode instance from the given traceback, setting current_offset to the instruction responsible for the exception. codeobj¶ The compiled code object. first_line¶ The first source line of the code obje",
+    "scrapedAt": "2026-10-08 19:24:23.552173"
+  },
+  {
+    "id": 1032,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#graphlib",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:24:22.300835"
+  },
+  {
+    "id": 1031,
+    "url": "https://docs.python.org/3/c-api/arg.html#arg-parsing",
+    "title": "Parsing arguments and building values — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Parsing arguments and building values | Theme Auto Light Dark | Parsing arguments and building values¶ These functions are useful when creating your own extension functions and methods. Additional information and examples are available in Extending and Embedding the Python Interpreter. The first three of these functions described, PyArg_ParseTuple(), PyArg_ParseTupleAndKeywords(), and PyArg_Parse(), all use format strings which are used to tell the function about the expected arguments. The format strings use the same syntax for each of these functions. Parsing arguments¶ A format string consists of zero or more “format units.” A format unit describes one Python object; it is usually a single character or a parenthesized sequence of format units. With a few exceptions, a format unit that is not a parenthesized sequence normally corresponds to a single address argument to these functions. In the following description, the quoted form is the format unit; the entry in (round) parentheses is the Python object type that matches the format unit; and the entry in [square] brackets is the type of the C variable(s) whose address should be passed. Strings and buffers¶ Note On Python 3.12 and older, the macro PY_SSIZE_T_CLEAN must be defined before including Python.h to use all # variants of formats (s#, y#, etc.) explained below. This is not necessary on Python 3.13 and later. These formats allow accessing an object as a contiguous chunk of memory. You don’t have to provide raw storage for the returned unicode or bytes area. Unless otherwise stated, buffers are not NUL-terminated. There are three ways strings and buffers can be converted to C: Formats such as y* and s* fill a Py_buffer structure. This locks the underlying buffer so that the caller can subsequently use the buffer even inside a Py_BEGIN_ALLOW_THREADS block without the risk of mutable data being resized or destroyed. As a result, you have to call PyBuffer_Release() after you have finished processing the data (or in any early abort case). The es, es#, et and et# formats allocate the result buffer. You have to call PyMem_Free() after you have finished processing the data (or in any early abort case). Other formats take a str or a read-only bytes-like object, such as bytes, and provide a const char * pointer to its buffer. In this case the buffer is “borrowed”: it is managed by the corresponding Python object, and shares the lifetime of this object. You won’t have to release any memory yourself. To ensure that the underlying buffer may be safely borrowed, the object’s PyBufferProcs.bf_releasebuffer field must be NULL. This disallows common mutable objects such as bytearray, but also some read-only objects such as memoryview of bytes. Besides this bf_releasebuffer requirement, there is no check to verify whether the input object is immutable (e.g. whether it would honor a request for a writable buffer, or whether another thread can mutate the data). s (str) [const char *] Convert a Unicode object to a C pointer to a character string. A pointer to an existing string is stored in the character pointer variable whose address you pass. The C string is NUL-terminated. The Python string must not contain embedded null code points; if it does, a ValueError exception is raised. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. If this conversion fails, a UnicodeError is raised. Note This format does not accept bytes-like objects. If you want to accept filesystem paths and convert them to C character strings, it is preferable to use the O\u0026 format with PyUnicode_FSConverter() as converter. Changed in version 3.5: Previously, TypeError was raised when embedded null code points were encountered in the Python string. s* (str or bytes-like object) [Py_buffer] This format accepts Unicode objects as well as bytes-like objects. It fills a Py_buffer structure provided by the caller. In this case the resulting C string may contain embedded NUL bytes. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. s# (str, read-only bytes-like object) [const char *, Py_ssize_t] Like s*, except that it provides a borrowed buffer. The result is stored into two C variables, the first one a pointer to a C string, the second one its length. The string may contain embedded null bytes. Unicode objects are converted to C strings using \u0027utf-8\u0027 encoding. z (str or None) [const char *] Like s, but the Python object may also be None, in which case the C pointer is set to NULL. z* (str, bytes-like object or None) [Py_buffer] Like s*, but the Python object may also be None, in which case the buf member of the Py_buffer structure is set to NULL. z# (str, read-only bytes-like object or None) [const char *, Py_ssize_t] Like s#, but the Python object may also be None, in which case the C pointer is set to NULL. y (read-only bytes-like object) [const char *]",
+    "scrapedAt": "2026-10-08 19:24:20.991415"
+  },
+  {
+    "id": 1030,
+    "url": "https://docs.python.org/3/reference/simple_stmts.html#break",
+    "title": "7. Simple statements — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 7. Simple statements | Theme Auto Light Dark | 7. Simple statements¶ A simple statement is comprised within a single logical line. Several simple statements may occur on a single line separated by semicolons. The syntax for simple statements is: simple_stmt: expression_stmt\n             | assert_stmt\n             | assignment_stmt\n             | augmented_assignment_stmt\n             | annotated_assignment_stmt\n             | pass_stmt\n             | del_stmt\n             | return_stmt\n             | yield_stmt\n             | raise_stmt\n             | break_stmt\n             | continue_stmt\n             | import_stmt\n             | future_stmt\n             | global_stmt\n             | nonlocal_stmt\n             | type_stmt\n 7.1. Expression statements¶ Expression statements are used (mostly interactively) to compute and write a value, or (usually) to call a procedure (a function that returns no meaningful result; in Python, procedures return the value None). Other uses of expression statements are allowed and occasionally useful. The syntax for an expression statement is: expression_stmt: starred_expression\n An expression statement evaluates the expression list (which may be a single expression). In interactive mode, if the value is not None, it is converted to a string using the built-in repr() function and the resulting string is written to standard output on a line by itself (except if the result is None, so that procedure calls do not cause any output.) 7.2. Assignment statements¶ Assignment statements are used to (re)bind names to values and to modify attributes or items of mutable objects: assignment_stmt: (target_list \"\u003d\")+ (starred_expression | yield_expression)\ntarget_list:     target (\",\" target)* [\",\"]\ntarget:          identifier\n                 | \"(\" [target_list] \")\"\n                 | \"[\" [target_list] \"]\"\n                 | attributeref\n                 | subscription\n                 | \"*\" target\n (See section Primaries for the syntax definitions for attributeref and subscription.) An assignment statement evaluates the expression list (remember that this can be a single expression or a comma-separated list, the latter yielding a tuple) and assigns the single resulting object to each of the target lists, from left to right. Assignment is defined recursively depending on the form of the target (list). When a target is part of a mutable object (an attribute reference or subscription), the mutable object must ultimately perform the assignment and decide about its validity, and may raise an exception if the assignment is unacceptable. The rules observed by various types and the exceptions raised are given with the definition of the object types (see section The standard type hierarchy). Assignment of an object to a target list, optionally enclosed in parentheses or square brackets, is recursively defined as follows. If the target list is a single target with no trailing comma, optionally in parentheses, the object is assigned to that target. Else: If the target list contains one target prefixed with an asterisk, called a “starred” target: The object must be an iterable with at least as many items as there are targets in the target list, minus one. The first items of the iterable are assigned, from left to right, to the targets before the starred target. The final items of the iterable are assigned to the targets after the starred target. A list of the remaining items in the iterable is then assigned to the starred target (the list can be empty). Else: The object must be an iterable with the same number of items as there are targets in the target list, and the items are assigned, from left to right, to the corresponding targets. Assignment of an object to a single target is recursively defined as follows. If the target is an identifier (name): If the name does not occur in a global or nonlocal statement in the current code block: the name is bound to the object in the current local namespace. Otherwise: the name is bound to the object in the global namespace or the outer namespace determined by nonlocal, respectively. The name is rebound if it was already bound. This may cause the reference count for the object previously bound to the name to reach zero, causing the object to be deallocated and its destructor (if it has one) to be called. If the target is an attribute reference: The primary expression in the reference is evaluated. It should yield an object with assignable attributes; if this is not the case, TypeError is raised. That object is then asked to assign the assigned object to the given attribute; if it cannot perform the assignment, it raises an exception (usually but not necessarily AttributeError). Note: If the object is a class instance and the attribute reference occurs on both sides of the assignment operator, the right-hand side expression, a.x can access either an instanc",
+    "scrapedAt": "2026-10-08 19:24:19.680851"
+  },
+  {
+    "id": 1029,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection",
+    "title": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread states and the global interpreter lock | Theme Auto Light Dark | Thread states and the global interpreter lock¶ Unless on a free-threaded build of CPython, the Python interpreter is generally not thread-safe. In order to support multi-threaded Python programs, there’s a global lock, called the global interpreter lock or GIL, that must be held by a thread before accessing Python objects. Without the lock, even the simplest operations could cause problems in a multi-threaded program: for example, when two threads simultaneously increment the reference count of the same object, the reference count could end up being incremented only once instead of twice. As such, only a thread that holds the GIL may operate on Python objects or invoke Python’s C API. In order to emulate concurrency, the interpreter regularly tries to switch threads between bytecode instructions (see sys.setswitchinterval()). This is why locks are also necessary for thread-safety in pure-Python code. Additionally, the global interpreter lock is released around blocking I/O operations, such as reading or writing to a file. From the C API, this is done by detaching the thread state. The Python interpreter keeps some thread-local information inside a data structure called PyThreadState, known as a thread state. Each thread has a thread-local pointer to a PyThreadState; a thread state referenced by this pointer is considered to be attached. A thread can only have one attached thread state at a time. An attached thread state is typically analogous with holding the GIL, except on free-threaded builds. On builds with the GIL enabled, attaching a thread state will block until the GIL can be acquired. However, even on builds with the GIL disabled, it is still required to have an attached thread state, as the interpreter needs to keep track of which threads may access Python objects. Note Even on the free-threaded build, attaching a thread state may block, as the GIL can be re-enabled or threads might be temporarily suspended (such as during a garbage collection). Generally, there will always be an attached thread state when using Python’s C API, including during embedding and when implementing methods, so it’s uncommon to need to set up a thread state on your own. Only in some specific cases, such as in a Py_BEGIN_ALLOW_THREADS block or in a fresh thread, will the thread not have an attached thread state. If uncertain, check if PyThreadState_GetUnchecked() returns NULL. If it turns out that you do need to create a thread state, call PyThreadState_New() followed by PyThreadState_Swap(), or use the dangerous PyGILState_Ensure() function. Detaching the thread state from extension code¶ Most extension code manipulating the thread state has the following simple structure: Save the thread state in a local variable.\n... Do some blocking I/O operation ...\nRestore the thread state from the local variable.\n This is so common that a pair of macros exists to simplify it: Py_BEGIN_ALLOW_THREADS\n... Do some blocking I/O operation ...\nPy_END_ALLOW_THREADS\n The Py_BEGIN_ALLOW_THREADS macro opens a new block and declares a hidden local variable; the Py_END_ALLOW_THREADS macro closes the block. The block above expands to the following code: PyThreadState *_save;\n\n_save \u003d PyEval_SaveThread();\n... Do some blocking I/O operation ...\nPyEval_RestoreThread(_save);\n Here is how these functions work: The attached thread state implies that the GIL is held for the interpreter. To detach it, PyEval_SaveThread() is called and the result is stored in a local variable. By detaching the thread state, the GIL is released, which allows other threads to attach to the interpreter and execute while the current thread performs blocking I/O. When the I/O operation is complete, the old thread state is reattached by calling PyEval_RestoreThread(), which will wait until the GIL can be acquired. Note Performing blocking I/O is the most common use case for detaching the thread state, but it is also useful to call it over long-running native code that doesn’t need access to Python objects or Python’s C API. For example, the standard zlib and hashlib modules detach the thread state when compressing or hashing data. On a free-threaded build, the GIL is usually out of the question, but detaching the thread state is still required, because the interpreter periodically needs to block all threads to get a consistent view of Python objects without the risk of race conditions. For example, CPython currently suspends all threads for a short period of time while running the garbage collector. Warning Detaching the thread state can lead to unexpected behavior during interpreter finalization. See Cautions regarding runtime finalization for more details. APIs¶ The following macros are normally used without a trailing semicolon; look for example usage in the Python source distribution. Note These ",
+    "scrapedAt": "2026-10-08 19:24:18.447576"
+  },
+  {
     "id": 1028,
     "url": "https://docs.python.org/3/c-api/unicode.html#c.PyUnicodeWriter_WriteStr",
     "title": "Unicode Objects and Codecs — Python 3.14.8 documentation",
@@ -6860,26 +6895,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1029,
-    "url": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
-  },
-  {
-    "id": 1030,
-    "url": "https://docs.python.org/3/reference/simple_stmts.html#break"
-  },
-  {
-    "id": 1031,
-    "url": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
-  },
-  {
-    "id": 1032,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#graphlib"
-  },
-  {
-    "id": 1033,
-    "url": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL"
   },
   {
     "id": 1034,
@@ -190836,10 +190851,400 @@ window.searchData = [
     "id": 165699,
     "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/133306",
     "parentUrl": "https://github.com/python/cpython/issues/133306"
+  },
+  {
+    "id": 166089,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_AcquireThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166090,
+    "url": "https://docs.python.org/3/c-api/threads.html#detaching-thread-state",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166091,
+    "url": "https://docs.python.org/3/c-api/subinterpreters.html#c.PyInterpreterState_Get",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166093,
+    "url": "https://docs.python.org/3/c-api/profiling.html#c.PyEval_SetProfile",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166094,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_STATE",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166095,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_MakePendingCalls",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166097,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_Ensure",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166098,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_STATE.PyGILState_LOCKED",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166100,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetFrame",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166102,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_DeleteCurrent",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166103,
+    "url": "https://docs.python.org/3/c-api/reflection.html#c.PyEval_GetFrame",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166104,
+    "url": "https://manpages.debian.org/pthread_exit(3)",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166105,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetInterpreter",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166106,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_get_thread_native_id",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166110,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_BLOCK_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166114,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_LeaveTracing",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166117,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_init_thread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166122,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetDict",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166125,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_Release",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166128,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_ReleaseThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166129,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PYTHREAD_INVALID_THREAD_ID",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166130,
+    "url": "https://docs.python.org/3/c-api/threads.html#thread-states-and-the-global-interpreter-lock",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166131,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Get",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166132,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_AddPendingCall",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166133,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_END_ALLOW_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166139,
+    "url": "https://docs.python.org/3/c-api/exceptions.html#recursion",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166141,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_EnterTracing",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166144,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetID",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166145,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_New",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166148,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PY_HAVE_THREAD_NATIVE_ID",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166149,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_RestoreThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166151,
+    "url": "https://docs.python.org/3/c-api/threads.html#gilstate",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166152,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_BEGIN_ALLOW_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166154,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_get_thread_ident",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166156,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.Py_UNBLOCK_THREADS",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166159,
+    "url": "https://docs.python.org/3/c-api/profiling.html#c.PyEval_SetTrace",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166160,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Clear",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166164,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166165,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Swap",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166166,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_Check",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166168,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/threads.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166170,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState.interp",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166171,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyEval_SaveThread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166173,
+    "url": "https://docs.python.org/3/c-api/threads.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166176,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_get_stacksize",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166178,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_start_new_thread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166179,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_GetInfo",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166184,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_set_stacksize",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166185,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_STATE.PyGILState_UNLOCKED",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166187,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThread_exit_thread",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166188,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_Delete",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166196,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_SetAsyncExc",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166199,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyGILState_GetThisThreadState",
+    "parentUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "id": 166347,
+    "url": "https://docs.python.org/3/c-api/arg.html#",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166352,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.Py_VaBuildValue",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166368,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_Parse",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166375,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_VaParseTupleAndKeywords",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166377,
+    "url": "https://docs.python.org/3/c-api/structures.html#c.METH_VARARGS",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166379,
+    "url": "https://docs.python.org/3/c-api/arg.html#parsing-arguments-and-building-values",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166382,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_ParseTupleAndKeywords",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166383,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_UnpackTuple",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166390,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PY_CXX_CONST",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166397,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_ValidateKeywordArguments",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166402,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/c-api/arg.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166411,
+    "url": "https://docs.python.org/3/c-api/complex.html#c.Py_complex",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "id": 166412,
+    "url": "https://docs.python.org/3/c-api/arg.html#c.PyArg_VaParse",
+    "parentUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "dis — Disassembler for Python bytecode — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST_IMMORTAL"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#graphlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#graphlib"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Parsing arguments and building values — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Parsing arguments and building values — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/arg.html#arg-parsing"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#break"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "7. Simple statements — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/simple_stmts.html#break"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyUnstable_ThreadState_ResetStackProtection"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
