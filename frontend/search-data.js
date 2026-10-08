@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 181,
+    "url": "https://blog.python.org",
+    "title": "Python Insider",
+    "content": "News \u0026 updates from the Python core team 345 posts/27 authors/since 2011 RSS Latest Python 3.15.0 candidate 3 is here! Hugo van Kemenade·October 2, 2026 Following tradition, a surprise rc3! releases Recent All posts Python 3.10.22, 3.11.17, 3.12.15, 3.13.16 and 3.14.8 are now available! Pablo Galindo·October 1, 2026 Security updates across Python 3.10–3.14, the final maintenance release of 3.13, and a farewell to Python 3.10. Python Language Summit 2026 Seth Larson·September 30, 2026 The 2026 Python Language Summit was hosted in Kraków, Poland as part of EuroPython 2026. There were 15 talks covering free-threading, Rust, garbage collection, type annotations, and more. Lightning Talks (Python Language Summit 2026) Seth Larson·September 30, 2026 Lightning talks on a one-time ABI break, safer interruptions, EktuPy (Scratch but Python), an AGENTS.md file for CPython, and a call to read PEP 836. PEP 827: Type Manipulation (Python Language Summit 2026) Seth Larson·September 30, 2026 Michael J. Sullivan presents PEP 827 and discusses a key design decision: how to store type annotations? Free-Threaded Python Post-Era (Python Language Summit 2026) Seth Larson·September 30, 2026 Tobias Wrigstad, Fridtjof Stoldt, and Donghee Na propose a safe and performant, high-level concurrency model for free-threaded Python Developer-in-Residence Update \u0026 Future (Python Language Summit 2026) Seth Larson·September 30, 2026 Petr Viktorin gives an update on the Developer-in-Residence role and asks Python core developers for projects to prioritize Spicycrab (Python Language Summit 2026) Seth Larson·September 30, 2026 Kushal Das shows off Spicycrab, a Python-to-Rust transpiler for Python users who need performance without learning Rust or leaving Python Rust for CPython (Python Language Summit 2026) Seth Larson·September 30, 2026 David Hewitt shares a status update, first module, and potential acceptance criteria for the Rust for CPython project Browse all 345 posts ?",
+    "scrapedAt": "2026-10-08 18:52:51.810133"
+  },
+  {
+    "id": 180,
+    "url": "https://scipy.org/",
+    "title": "SciPy",
+    "content": "SciPy Fundamental algorithms for scientific computing in Python Get started SciPy 1.18.1 released! 2026-08-21 Fundamental algorithms SciPy provides algorithms for optimization, integration, interpolation, eigenvalue problems, algebraic equations, differential equations, statistics and many other classes of problems. Broadly applicable The algorithms and data structures provided by SciPy are broadly applicable across domains. Foundational Extends NumPy providing additional tools for array computing and provides specialized data structures, such as sparse matrices and k-dimensional trees. Performant SciPy wraps highly-optimized implementations written in low-level languages like Fortran, C, and C++. Enjoy the flexibility of Python with the speed of compiled code. Easy to use SciPy’s high level syntax makes it accessible and productive for programmers from any background or experience level. Open source Distributed under a liberal BSD license, SciPy is developed and maintained publicly on GitHub by a vibrant, responsive, and diverse community.",
+    "scrapedAt": "2026-10-08 18:52:50.576284"
+  },
+  {
+    "id": 179,
+    "url": "https://riverbankcomputing.com/software/pyqt/intro",
+    "title": "Riverbank Computing | Introduction",
+    "content": "What is PyQt? PyQt is a set of Python bindings for The Qt Company\u0027s Qt application framework. The bindings are implemented as a set of Python modules and contain over 1,000 classes. PyQt6 supports Qt6 and runs on Windows (Intel and ARM), macOS (Intel and Apple Silicon) and Linux (Intel and ARM). PyQt5 supports Qt5 and runs on Windows (Intel), macOS (Intel and Apple Silicon), Android, iOS and Linux (Intel). PyQt4 supports Qt v4 but both are no longer supported and no new releases will be made. License PyQt is dual licensed on all supported platforms under the GNU GPL v3 and the Riverbank Commercial License. Unlike Qt, PyQt is not available under the LGPL. You can purchase the commercial version of PyQt here. More information about licensing can be found in the License FAQ. PyQt does not include a copy of Qt. You must obtain a correctly licensed copy of Qt yourself. However, binary wheels of the GPL version of PyQt6 and PyQt5 are provided and these include a copy of the corresponding LGPL version of Qt. PyQt Components A description of the components of PyQt5 can be found in the PyQt5 Reference Guide. A description of the components of PyQt4 can be found in the PyQt4 Reference Guide. Why PyQt? PyQt brings together the Qt C++ cross-platform application framework and the cross-platform interpreted language Python. Qt is more than a GUI toolkit. It includes abstractions of network sockets, threads, Unicode, regular expressions, SQL databases, SVG, OpenGL, XML, a fully functional web browser, a help system, a multimedia framework, as well as a rich collection of GUI widgets. Qt classes employ a signal/slot mechanism for communicating between objects that is type safe but loosely coupled making it easy to create re-usable software components. Qt also includes Qt Designer, a graphical user interface designer. PyQt is able to generate Python code from Qt Designer. It is also possible to add new GUI controls written in Python to Qt Designer. Python is a simple but powerful object-orientated language. Its simplicity makes it easy to learn, but its power means that large and complex applications can be created. Its interpreted nature means that Python programmers are very productive because there is no edit/compile/link/run development cycle. Much of Python\u0027s power comes from its comprehensive set of extension modules providing a wide variety of functions including HTTP servers, XML parsers, database access, data compression tools and, of course, graphical user interfaces. Extension modules are usually implemented in either Python, C or C++. Using tools such as SIP it is relatively straight forward to create an extension module that encapsulates an existing C or C++ library. Used in this way, Python can then become the glue to create new applications from established libraries. PyQt combines all the advantages of Qt and Python. A programmer has all the power of Qt, but is able to exploit it with the simplicity of Python. Recent News SIP v6.17.0 Released PyQt-builder v1.20.0 Released SIP v6.16.1 Released SIP v6.16.0 Released PyQt v6.11.0 Released Downloads PyQt PyQt-3D PyQt-Charts PyQt-DataVisualization PyQt-Graphs PyQt-NetworkAuth PyQt-Purchasing PyQt-WebEngine SIP MetaSIP PyQt-builder pyqtdeploy QScintilla Documentation PyQt6 PyQt5 SIP MetaSIP PyQt-builder pyqtdeploy QScintilla PyQt4",
+    "scrapedAt": "2026-10-08 18:52:49.305737"
+  },
+  {
+    "id": 178,
+    "url": "https://buildbot.net/",
+    "title": "Buildbot",
+    "content": "Fork me on GitHub! Buildbot Basics Buildbot is an open-source framework for automating software build, test, and release processes. Learn more Automated Build, Test, and Release Buildbot can automate all aspects of the software development cycle: Continuous Integration, Continuous Deployment, Release Management ..and any other process you can imagine. Learn more A Framework with Batteries Included Buildbot is a framework in which you implement a system that matches your workflow and grows with your organization. Learn more Discord We have started a new Discord server for users and developers: Invite Link. Buildbot Basics Buildbot supports distributed, parallel execution of jobs across multiple platforms, flexible integration with version-control systems, extensive status reporting, and more. Buildbot in Action At its core, Buildbot is a job scheduling system: it queues jobs, executes the jobs when the required resources are available, and reports the results. Your Buildbot installation has one or more masters and a collection of workers. The masters monitor source-code repositories for changes, coordinate the activities of the workers, and report results to users and developers. Workers run on a variety of operating systems. You configure Buildbot by providing a Python configuration script to the master. This script can be very simple, configuring built-in components, but the full expressive power of Python is available. This allows dynamic generation of configuration, customized components, and anything else you can devise. The framework itself is implemented in Twisted Python, and compatible with all major operating systems. Learn More See the Buildbot Tutorial for a gentle introduction to running and configuring Buildbot. Automated Build, Test, and Release Buildbot supports not just continuous-integration testing, but automation of complex build systems, application deployment, and management of sophisticated software-release processes. Benefits of Automation When software development processes are automated, they are repeatable, reliable and can be run as frequently as available computing resources allow. Automating the build and test process gives developers immediate feedback on their work. Tests can run on multiple platforms, ensuring that code changes made on one platform do not cause failures on other platforms. Once a project is ready for use by users, it is either deployed (for hosted applications, such as web sites) or released (for packaged software such as desktop applications). Automating deployment makes the process predictable and lowers the risk involved with each push. Changes can be deployed to a staging environment first, then deployed to production using exactly the same procedure, eliminating failures due to human error. Deployments can occur many times every day, with only small changes between each deployment. Releasing packaged software, too, benefits from automation. The process can involve compiling and packaging on multiple platforms, signing builds, localizing strings, quality-assurance checks, and so on. When automated with a tool like Buildbot, all of this occurs repeatably and efficiently. A Framework with Batteries Included Just as web frameworks such as Django or Rails provide the structure and components to build websites, Buildbot provides the structure and components to automate your build, test, and release processes. Many CI tools, such as CruiseControl or Jenkins, are structured as ready-to-use applications. Users fill in specific details, such as version control information and build process, but the fundamental design is fixed and options are limited to those envisioned by the authors. This arrangement suits the common cases quite well: there are cookie-cutter tools to automatically build and test Java applications, Ruby gems, and so on. Such tools embody assumptions about the structure of the project and its processes. They are not well-suited to more complex cases, such as mixed-language applications or complex release tasks, where those assumptions are violated. Buildbot\u0027s design allows your installation to grow with your requirements, beginning with simple processes and growing to meet your unique needs. This flexibility has led to its use in a number of high-profile open-source projects, including WebKit, Python, and Twisted.",
+    "scrapedAt": "2026-10-08 18:52:47.978737"
+  },
+  {
+    "id": 177,
+    "url": "https://www.python.org/events/python-events/2036/",
+    "title": "PyCon Italia 2026 | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. PyCon Italia 2026 Bologna, Italy From 27 May through 30 May, 2026 PyCon Italia 2026 Explore events -- Change your date range More events at Bologna, Italy PyCon Italia 2026 PyCon Italia 2025",
+    "scrapedAt": "2026-10-08 18:52:45.792451"
+  },
+  {
     "id": 176,
     "url": "https://www.python.org/about/apps",
     "title": "Applications for Python | Python.org",
@@ -1220,26 +1255,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 177,
-    "url": "https://www.python.org/events/python-events/2036/"
-  },
-  {
-    "id": 178,
-    "url": "https://buildbot.net/"
-  },
-  {
-    "id": 179,
-    "url": "https://riverbankcomputing.com/software/pyqt/intro"
-  },
-  {
-    "id": 180,
-    "url": "https://scipy.org/"
-  },
-  {
-    "id": 181,
-    "url": "https://blog.python.org"
   },
   {
     "id": 182,
@@ -32141,10 +32156,352 @@ window.searchData = [
     "id": 14604,
     "url": "https://www.python.org/events/python-user-group/2220/",
     "parentUrl": "https://www.python.org/events/python-user-group/2104/"
+  },
+  {
+    "id": 14658,
+    "url": "https://github.com/buildbot/buildbot",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14659,
+    "url": "https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14660,
+    "url": "https://buildbot.net/#automation",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14661,
+    "url": "https://discord.gg/AMXBDUBTZV",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14662,
+    "url": "https://docs.buildbot.net/current/tutorial/",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14663,
+    "url": "https://buildbot.net/#framework",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14664,
+    "url": "https://buildbot.net/#basics",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14665,
+    "url": "https://cruisecontrol.sourceforge.net/gettingstarted.html",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14666,
+    "url": "https://github.com/buildbot/buildbot/wiki/SuccessStories",
+    "parentUrl": "https://buildbot.net/"
+  },
+  {
+    "id": 14667,
+    "url": "https://metasip.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14668,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.17.0_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14669,
+    "url": "https://riverbankcomputing.com/software/pyqtchart/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14670,
+    "url": "https://pypi.org/project/pyqtdeploy/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14671,
+    "url": "https://www.python.org",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14672,
+    "url": "https://riverbankcomputing.com/software/pyqtnetworkauth/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14673,
+    "url": "https://riverbankcomputing.com/software/pyqtpurchasing/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14674,
+    "url": "https://riverbankcomputing.com/software/qscintilla/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14675,
+    "url": "https://riverbankcomputing.com/news/PyQt_v6.11.0_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14676,
+    "url": "https://python-sip.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14677,
+    "url": "https://pypi.org/project/sip/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14678,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt4/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14679,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt6/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14680,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt5/introduction.html#pyqt5-components",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14681,
+    "url": "https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14682,
+    "url": "https://www.riverbankcomputing.com/static/Docs/QScintilla/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14683,
+    "url": "https://riverbankcomputing.com/software/pyqt3d/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14684,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.16.1_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14685,
+    "url": "https://www.qt.io",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14686,
+    "url": "https://pypi.org/project/PyQt-builder/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14687,
+    "url": "https://riverbankcomputing.com/commercial/license-faq",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14688,
+    "url": "https://riverbankcomputing.com/news/PyQt-builder_v1.20.0_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14689,
+    "url": "https://riverbankcomputing.com/software/pyqtdatavisualization/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14690,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt4/introduction.html#pyqt4-components",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14691,
+    "url": "https://riverbankcomputing.com/software/pyqtgraphs/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14692,
+    "url": "https://riverbankcomputing.com/software/pyqt/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14693,
+    "url": "https://github.com/Python-SIP/sip",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14694,
+    "url": "https://riverbankcomputing.com/news/SIP_v6.16.0_Released",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14695,
+    "url": "https://www.riverbankcomputing.com/static/Docs/PyQt5/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14696,
+    "url": "https://riverbankcomputing.com/commercial/buy",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14697,
+    "url": "https://PyQt-builder.readthedocs.io/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14698,
+    "url": "https://riverbankcomputing.com/software/pyqtwebengine/download",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14699,
+    "url": "https://pypi.org/project/metasip/",
+    "parentUrl": "https://riverbankcomputing.com/software/pyqt/intro"
+  },
+  {
+    "id": 14700,
+    "url": "https://github.com/scipy/scipy",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 14701,
+    "url": "https://scipy.org/install",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 14702,
+    "url": "https://scipy.org/news",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 14703,
+    "url": "https://scipy.org/community/",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 14704,
+    "url": "https://github.com/scipy/scipy/blob/main/LICENSE.txt",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 14705,
+    "url": "https://scipy.org/#",
+    "parentUrl": "https://scipy.org/"
+  },
+  {
+    "id": 14706,
+    "url": "https://blog.python.org/2026/09/language-summit-2026-developer-in-residence-update-and-future",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14707,
+    "url": "https://blog.python.org/2026/10/python-3150-rc3",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14708,
+    "url": "https://blog.python.org/2026/09/language-summit-2026",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14709,
+    "url": "https://blog.python.org/2026/09/language-summit-2026-pep-827-type-manipulation",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14710,
+    "url": "https://blog.python.org/tags/releases",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14711,
+    "url": "https://blog.python.org/2026/09/language-summit-2026-rust-for-cpython",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14712,
+    "url": "https://blog.python.org/2026/10/python-31022-31117",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14713,
+    "url": "https://blog.python.org/2026/09/language-summit-2026-lightning-talks",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14714,
+    "url": "https://blog.python.org/blog",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14715,
+    "url": "https://blog.python.org/2026/09/language-summit-2026-spicycrab",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14716,
+    "url": "https://blog.python.org/rss.xml",
+    "parentUrl": "https://blog.python.org"
+  },
+  {
+    "id": 14717,
+    "url": "https://blog.python.org/2026/09/language-summit-2026-free-threading-post-era",
+    "parentUrl": "https://blog.python.org"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://scipy.org/images/logo.svg",
+    "alt": "SciPy logo. A blue circle with a snake in the shape of the letter \u0027S\u0027.",
+    "pageTitle": "SciPy",
+    "pageUrl": "https://scipy.org/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot1.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot2.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/screenshoot3.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/overview.png",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/arrows_3_circular_interlocking.svg",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
+  {
+    "src": "https://buildbot.net/img/nut.svg",
+    "alt": "",
+    "pageTitle": "Buildbot",
+    "pageUrl": "https://buildbot.net/"
+  },
   {
     "src": "https://hugovk.dev/python-3.14.png",
     "alt": "Two snakes enjoying a pie with 3.14 on the top and π crimping",
