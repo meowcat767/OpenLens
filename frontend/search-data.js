@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 498,
+    "url": "http://docs.python.org/2/library/imaplib.html",
+    "title": "20.10. imaplib — IMAP4 protocol client — Python 2.7.18 documentation",
+    "content": "This document is for an old version of Python that is no longer supported. You should upgrade and read the Python documentation for the current stable release. Navigation index modules | next | previous | Python » Python 2.7.18 documentation » The Python Standard Library » 20. Internet Protocols and Support » 20.10. imaplib — IMAP4 protocol client¶ Source code: Lib/imaplib.py This module defines three classes, IMAP4, IMAP4_SSL and IMAP4_stream, which encapsulate a connection to an IMAP4 server and implement a large subset of the IMAP4rev1 client protocol as defined in RFC 2060. It is backward compatible with IMAP4 (RFC 1730) servers, but note that the STATUS command is not supported in IMAP4. Three classes are provided by the imaplib module, IMAP4 is the base class: class imaplib.IMAP4([host[, port]])¶ This class implements the actual IMAP4 protocol. The connection is created and protocol version (IMAP4 or IMAP4rev1) is determined when the instance is initialized. If host is not specified, \u0027\u0027 (the local host) is used. If port is omitted, the standard IMAP4 port (143) is used. Three exceptions are defined as attributes of the IMAP4 class: exception IMAP4.error¶ Exception raised on any errors. The reason for the exception is passed to the constructor as a string. exception IMAP4.abort¶ IMAP4 server errors cause this exception to be raised. This is a sub-class of IMAP4.error. Note that closing the instance and instantiating a new one will usually allow recovery from this exception. exception IMAP4.readonly¶ This exception is raised when a writable mailbox has its status changed by the server. This is a sub-class of IMAP4.error. Some other client now has write permission, and the mailbox will need to be re-opened to re-obtain write permission. There’s also a subclass for secure connections: class imaplib.IMAP4_SSL([host[, port[, keyfile[, certfile]]]])¶ This is a subclass derived from IMAP4 that connects over an SSL encrypted socket (to use this class you need a socket module that was compiled with SSL support). If host is not specified, \u0027\u0027 (the local host) is used. If port is omitted, the standard IMAP4-over-SSL port (993) is used. keyfile and certfile are also optional - they can contain a PEM formatted private key and certificate chain file for the SSL connection. The second subclass allows for connections created by a child process: class imaplib.IMAP4_stream(command)¶ This is a subclass derived from IMAP4 that connects to the stdin/stdout file descriptors created by passing command to os.popen2(). New in version 2.3. The following utility functions are defined: imaplib.Internaldate2tuple(datestr)¶ Parse an IMAP4 INTERNALDATE string and return corresponding local time. The return value is a time.struct_time instance or None if the string has wrong format. imaplib.Int2AP(num)¶ Converts an integer into a string representation using characters from the set [A .. P]. imaplib.ParseFlags(flagstr)¶ Converts an IMAP4 FLAGS response to a tuple of individual flags. imaplib.Time2Internaldate(date_time)¶ Convert date_time to an IMAP4 INTERNALDATE representation. The return value is a string in the form: \"DD-Mmm-YYYY HH:MM:SS +HHMM\" (including double-quotes). The date_time argument can be a number (int or float) representing seconds since epoch (as returned by time.time()), a 9-tuple representing local time (as returned by time.localtime()), or a double-quoted string. In the last case, it is assumed to already be in the correct format. Note that IMAP4 message numbers change as the mailbox changes; in particular, after an EXPUNGE command performs deletions the remaining messages are renumbered. So it is highly advisable to use UIDs instead, with the UID command. At the end of the module, there is a test section that contains a more extensive example of usage. See also Documents describing the protocol, and sources and binaries for servers implementing it, can all be found at the University of Washington’s IMAP Information Center (https://www.washington.edu/imap/). 20.10.1. IMAP4 Objects¶ All IMAP4rev1 commands are represented by methods of the same name, either upper-case or lower-case. All arguments to commands are converted to strings, except for AUTHENTICATE, and the last argument to APPEND which is passed as an IMAP4 literal. If necessary (the string contains IMAP4 protocol-sensitive characters and isn’t enclosed with either parentheses or double quotes) each string is quoted. However, the password argument to the LOGIN command is always quoted. If you want to avoid having an argument string quoted (eg: the flags argument to STORE) then enclose the string in parentheses (eg: r\u0027(\\Deleted)\u0027). Each command returns a tuple: (type, [data, ...]) where type is usually \u0027OK\u0027 or \u0027NO\u0027, and data is either the text from the command response, or mandated results from the command. Each data is either a string, or a tuple. If a tuple, then the first part is the header of the response, and the second part contains the data (ie: ‘lite",
+    "scrapedAt": "2026-10-08 19:04:18.241576"
+  },
+  {
+    "id": 497,
+    "url": "http://software-carpentry.org",
+    "title": "Software Carpentry",
+    "content": "I want to See upcoming workshops Request a workshop See the curriculum Donate to The Carpentries Software Carpentry is a lesson program within The Carpentries teaching basic lab skills for research computing.",
+    "scrapedAt": "2026-10-08 19:04:16.976355"
+  },
+  {
+    "id": 496,
+    "url": "http://gump.apache.org/",
+    "title": "Apache Gump™",
+    "content": "Apache \u003e Gump Home Object Model Python Gump Apache Gump Home Status Source Metadata FAQ License Results Nightly Community Mailing Lists Source Wiki Issues Get Involved Reporting Security Issues Who We Are Project Bylaws Privacy Policy Sponsorship Donate Thanks Apache Gump™ What is Apache Gump™? How does Gump work? Where is Gump? When does Gump run? Who is Gump? Why was Gump written? Trademarks What is Apache Gump™? The Apache Gump continuous integration tool was the first one developed at the Apache Software Foundation. It is written in Python and fully supports Apache Ant, Apache Maven (1.x to 3.x) and other build tools. Gump is unique in that it builds and compiles software against the latest development versions of those projects. This allows Gump to detect potentially incompatible changes to that software just a few hours after those changes are checked into the version control system. Notifications are sent to the project team as soon as such a change is detected, referencing more detailed reports available online. You can set up and run Gump on your own machine and run it on your own projects, however it is currently most famous for building many of Apache\u0027s projects and their dependencies. For this purpose, the Gump project maintains its own dedicated server. How does Gump work? With Gump, project definitions are mapped from XML into in memory objects for processing. Scripts execute SCM update commands for every module which contains a project being built, and invoke builds for each project in an order that ensures that dependencies are satisfied. Build outputs are processed and, if successful, dependent projects are then built on these outputs. The commands use the actual build.xml/Makefile/pom.xml files from the projects, but in general do not use the scripts or jar files checked into CVS/SVN. Instead, Gump tries to play several tricks in order to ensure that Gump\u0027s versions of files are used. In order to really build against the latest versions of everything, Gump will need support from the build process, the build tool or has to find its way around the build tool. The Apache HTTPd builds are an example for a build process that supports Gump. HTTPd needs APR and Gump can provide the path to the freshly built APR files as command line options to the buildconf and/or configure scripts. For builds using Apache Ant, Gump sets build.sysclasspath property of Ant to only and manages the system classpath: To quote Ant manual: Only the system classpath is used and classpaths specified in build files, etc are ignored. This situation could be considered as the person running the build file knows more about the environment than the person writing the build file. Note that Gump uses the lastest version of Ant (from tip of master branch in their Git repository) when building Ant projects. For Apache Maven 1.x builds, Gump runs Maven with the --offline switch and uses jar overrides. Sometimes the artifact ids expected by maven and Gump\u0027s names of the jars don\u0027t match, in which case \u003cproperty\u003e elements have to be used to get the correct artifact ids. So far Gump\u0027s support for Apache Maven 2.x and later uses the most complex approach, using a proxy server. For the full story see the section on the mvn2 builder. Support for Gradle hooks into the approach taken for Maven and uses the same local repositories and repository proxy. The net effect is that every project is built every day with the latest version of every dependency - including the latest Ant, latest JUnit, latest XML parser. The results are captured into html pages. An extensive amount of hypertext links are added to allow quick and easy navigation, and failures are color coded on the main build page. The \"official\" Gump run on vmgump will optionally send e-mails to various newsgroups upon build failures. Where is Gump? Source When does Gump run? Site JVM Comments Apache (vmgump - Ubuntu Linux 18.04) OpenJDK 11 up to 4 times daily Who is Gump? Gump was named after Forrest Gump, the title character in a movie. The process for building was to do a \"Generate\", followed by cvs \"Updates\", followed by a \"Build All\". This was repetitive, so a command was created to combine these operations - and it was named \"guba\". This sound this made when spoken reminded me of \"Bubba Gump\". This seemed oddly appropriate as much of the motivation for Gump derived from the frustrations building Cocoon. The FAQ for that project indicate that the project was named after a movie that the creator of that project was particularly fond of, so it seemed fitting that this effort would be named after a movie. A number of other fortunate coincidences proved this was the right choice for a name. From the role of the feather in the opening and closing scenes (something adapted to the Apache feature for the original Gump icon), to the catch phase of \"Stupid is as Stupid does\" - something that captures the spirit of a large number of build errors caught by this process. And most significant",
+    "scrapedAt": "2026-10-08 19:04:15.754962"
+  },
+  {
+    "id": 495,
+    "url": "http://ipython.org/",
+    "title": "Home | IPython",
+    "content": "Productive Interactive Computing IPython provides a rich architecture for interactive computing with a powerful shell, Jupyter kernel support, and flexible tools for parallel and distributed computing. Install IPython Get Started $ ipython Powerful Features Smart Tab Completion Context-aware completion powered by Jedi. Complete attributes, methods, and filenames with intelligent suggestions. Magic Commands Built-in commands for profiling, debugging, timing, and running external code. %timeit, %debug, %run, and many more. Object Introspection Explore objects with ? and ?? to view docstrings, signatures, and source code instantly. Rich History Powerful command history system with search, scrollback, and persistence across sessions. System Integration Execute shell commands directly with !, access system information, and manipulate the environment seamlessly. Jupyter Kernel Powers the Jupyter Notebook and JupyterLab, enabling interactive computing in web-based environments. Who Uses IPython? 📊 Data Scientists Explore datasets, prototype algorithms, and share findings with rich visualizations. 👨‍💻 Developers Debug code, test ideas interactively, and rapidly develop Python applications. 🎓 Educators Teach programming and data analysis interactively with immediate feedback and visualization. 🔧 System Admins Automate tasks, monitor systems, and manage infrastructure with Python scripts. Ready to Get Started? Install IPython today and boost your interactive computing experience. Install Now",
+    "scrapedAt": "2026-10-08 19:04:14.521183"
+  },
+  {
+    "id": 494,
+    "url": "https://www.python.org/about/",
+    "title": "About Python™ | Python.org",
+    "content": "Notice: This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets. Getting Started Python can be easy to pick up whether you\u0027re a first time programmer or you\u0027re experienced with other languages. The following pages are a useful first step to get on your way writing programs with Python! Beginner\u0027s Guide, Programmers Beginner\u0027s Guide, Non-Programmers Beginner\u0027s Guide, Download \u0026 Installation Code sample and snippets for Beginners Friendly \u0026 Easy to Learn The community hosts conferences and meetups, collaborates on code, and much more. Python\u0027s documentation will help you along the way, and the mailing lists will keep you in touch. Conferences and Workshops Python Documentation Mailing Lists and IRC channels Applications The Python Package Index (PyPI) hosts thousands of third-party modules for Python. Both Python\u0027s standard library and the community-contributed modules allow for endless possibilities. Web and Internet Development Database Access Desktop GUIs Scientific \u0026 Numeric Education Network Programming Software \u0026 Game Development Open-source Python is developed under an OSI-approved open source license, making it freely usable and distributable, even for commercial use. Python\u0027s license is administered by the Python Software Foundation. Learn more about the license Python license on OSI Learn more about the Foundation Can’t find what you’re looking for? Try our comprehensive Help section Latest News More news 2026-10-07 PSF News: Board \u0026 Inaugural Python Packaging Council Election Results, Strategic Plan, and PyPI Security 2026-10-02 Python 3.15.0 candidate 3 is here! 2026-10-01 Python 3.10.22, 3.11.17, 3.12.15, 3.13.16 and 3.14.8 are now available! 2026-09-30 Python Language Summit 2026 blog posts are now available 2026-09-30 Python Language Summit 2026 Upcoming Events More 2026-10-12 PyCon Greece 2026 2026-10-15 PyCon NL 2026 2026-10-17 PyCon Taiwan 2026-10-17 PyCon Ireland 2026 2026-10-22 PyCon Panamá 2026 \u003e\u003e\u003e Python Software Foundation The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. Learn more Become a Member Donate to the PSF",
+    "scrapedAt": "2026-10-08 19:04:13.067957"
+  },
+  {
     "id": 493,
     "url": "http://www.openbookproject.net/thinkcs/python/english2e/",
     "title": "How to Think Like a Computer Scientist — How to Think Like a Computer Scientist: Learning with Python 2nd Edition documentation",
@@ -3415,26 +3450,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 494,
-    "url": "https://www.python.org/about/"
-  },
-  {
-    "id": 495,
-    "url": "http://ipython.org/"
-  },
-  {
-    "id": 496,
-    "url": "http://gump.apache.org/"
-  },
-  {
-    "id": 497,
-    "url": "http://software-carpentry.org"
-  },
-  {
-    "id": 498,
-    "url": "http://docs.python.org/2/library/imaplib.html"
   },
   {
     "id": 499,
@@ -90976,10 +90991,799 @@ window.searchData = [
     "id": 66512,
     "url": "http://www.openbookproject.net/thinkcs/python/english2e/#learning-with-python",
     "parentUrl": "http://www.openbookproject.net/thinkcs/python/english2e/"
+  },
+  {
+    "id": 66515,
+    "url": "https://www.python.org/about/apps/#desktop-guis",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66517,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Examples",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66519,
+    "url": "https://opensource.org/license/pythonsoftfoundation-php/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66520,
+    "url": "https://www.python.org/about/apps/#education",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66521,
+    "url": "https://www.python.org/psf",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66522,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/NonProgrammers",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66524,
+    "url": "https://pypi.python.org",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66526,
+    "url": "https://www.python.org/community/irc/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66527,
+    "url": "https://www.python.org/about/apps/#database-access",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66530,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Programmers",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66531,
+    "url": "https://www.python.org/community/workshops/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66534,
+    "url": "https://wiki.python.org/moin/BeginnersGuide/Download",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66538,
+    "url": "https://www.python.org/about/help/",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66544,
+    "url": "https://www.python.org/about/apps/#scientific-and-numeric",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66545,
+    "url": "https://www.python.org/about/apps/#network-programming",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66546,
+    "url": "https://www.python.org/about/apps/#web-and-internet-development",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66547,
+    "url": "https://www.python.org/community/lists",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66548,
+    "url": "https://www.python.org/about/apps/#software-development",
+    "parentUrl": "https://www.python.org/about/"
+  },
+  {
+    "id": 66551,
+    "url": "https://www.apache.org/foundation/sponsorship.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66552,
+    "url": "http://vmgump.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66553,
+    "url": "https://gump.apache.org/metadata/builder.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66554,
+    "url": "http://vmgump.apache.org/apache-httpd/apache-httpd-buildconf/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66555,
+    "url": "https://svn.apache.org/repos/asf/gump/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66556,
+    "url": "https://ant.apache.org/manual/sysclasspath.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66557,
+    "url": "https://www.apache.org/foundation/thanks.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66558,
+    "url": "https://gump.apache.org/metadata/builder.html#mvn2",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66559,
+    "url": "https://issues.apache.org/jira/browse/GUMP/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66560,
+    "url": "https://gump.apache.org/whoweare.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66561,
+    "url": "https://gump.apache.org/#Who+is+Gump%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66562,
+    "url": "https://gump.apache.org/metadata/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66563,
+    "url": "https://www.apache.org/security/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66564,
+    "url": "https://gump.apache.org/python/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66565,
+    "url": "https://www.apache.org/events/current-event.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66566,
+    "url": "https://gump.apache.org/index.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66567,
+    "url": "https://www.apache.org/licenses/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66568,
+    "url": "https://gump.apache.org/index.html#Where+is+Gump%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66569,
+    "url": "https://www.apache.org/foundation/getinvolved.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66570,
+    "url": "https://svn.apache.org/viewcvs/gump/metadata/project",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66571,
+    "url": "https://forrest.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66572,
+    "url": "https://www.google.com/search?q\u003dForrest+Gump",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66573,
+    "url": "https://cwiki.apache.org/confluence/display/GUMP/FrequentlyAskedQuestions",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66574,
+    "url": "https://gump.apache.org/#What+is+Apache+Gump%E2%84%A2%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66575,
+    "url": "https://www.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66576,
+    "url": "https://svn.apache.org/repos/asf/gump/metadata",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66577,
+    "url": "https://gump.apache.org/mail.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66578,
+    "url": "https://gump.apache.org/#Why+was+Gump+written%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66579,
+    "url": "https://gump.apache.org/#How+does+Gump+work%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66580,
+    "url": "https://gump.apache.org/#Trademarks",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66581,
+    "url": "https://svn.apache.org/repos/asf/gump/live",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66582,
+    "url": "https://gump.apache.org/#When+does+Gump+run%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66583,
+    "url": "https://gump.apache.org/bylaws.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66584,
+    "url": "https://gump.apache.org/why.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66585,
+    "url": "http://validator.w3.org/check/referer",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66586,
+    "url": "http://jigsaw.w3.org/css-validator/check/referer",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66587,
+    "url": "https://privacy.apache.org/policies/privacy-policy-public.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66588,
+    "url": "https://gump.apache.org/",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66589,
+    "url": "https://gump.apache.org/#Where+is+Gump%3F",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66590,
+    "url": "https://cwiki.apache.org/confluence/display/GUMP",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66591,
+    "url": "https://gump.apache.org/status.html",
+    "parentUrl": "http://gump.apache.org/"
+  },
+  {
+    "id": 66592,
+    "url": "https://amy.carpentries.org/forms/workshop/",
+    "parentUrl": "http://software-carpentry.org"
+  },
+  {
+    "id": 66593,
+    "url": "https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-7497?utm_source\u003dsoftwarecarpentry",
+    "parentUrl": "http://software-carpentry.org"
+  },
+  {
+    "id": 66594,
+    "url": "https://software-carpentry.org/workshops/workshops-upcoming/",
+    "parentUrl": "http://software-carpentry.org"
+  },
+  {
+    "id": 66595,
+    "url": "https://software-carpentry.org/lessons/",
+    "parentUrl": "http://software-carpentry.org"
+  },
+  {
+    "id": 66596,
+    "url": "https://docs.python.org/2/library/internet.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66597,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.login",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66598,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.open",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66599,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.unsubscribe",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66600,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.error",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66601,
+    "url": "https://devguide.python.org/devcycle/#end-of-life-branches",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66602,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.expunge",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66603,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.getacl",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66604,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.response",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66605,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.socket",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66606,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.setquota",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66607,
+    "url": "https://docs.python.org/2/library/imaplib.html#",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66608,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.lsub",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66609,
+    "url": "https://docs.python.org/2/contents.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66610,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.getquota",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66611,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.partial",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66612,
+    "url": "https://docs.python.org/2/copyright.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66613,
+    "url": "https://docs.python.org/2/genindex.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66614,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.close",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66615,
+    "url": "https://docs.python.org/2/library/imaplib.html#imap4-example",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66616,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.noop",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66617,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.rename",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66618,
+    "url": "https://docs.python.org/2/library/time.html#time.struct_time",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66619,
+    "url": "https://docs.python.org/2/library/imaplib.html#module-imaplib",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66620,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.delete",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66621,
+    "url": "https://www.washington.edu/imap/",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66622,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.proxyauth",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66623,
+    "url": "https://tools.ietf.org/html/rfc1730.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66624,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.readonly",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66625,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.fetch",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66626,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.deleteacl",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66627,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.debug",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66628,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.logout",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66629,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.recent",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66630,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.search",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66631,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.authenticate",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66632,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.store",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66633,
+    "url": "https://docs.python.org/2/library/time.html#time.time",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66634,
+    "url": "https://docs.python.org/2/_sources/library/imaplib.rst.txt",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66635,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.send",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66636,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.xatom",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66637,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4_SSL.ssl",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66638,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.getannotation",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66639,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.getquotaroot",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66640,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.status",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66642,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.copy",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66643,
+    "url": "https://docs.python.org/2/library/poplib.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66644,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.myrights",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66645,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.namespace",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66646,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.readline",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66647,
+    "url": "http://sphinx.pocoo.org/",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66648,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.read",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66649,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.append",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66650,
+    "url": "https://tools.ietf.org/html/rfc2060.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66651,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.list",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66652,
+    "url": "https://docs.python.org/2/library/nntplib.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66653,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.sort",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66654,
+    "url": "https://docs.python.org/2/library/index.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66655,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.Internaldate2tuple",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66656,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4_SSL",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66657,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.Int2AP",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66658,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.check",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66659,
+    "url": "https://docs.python.org/2/py-modindex.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66660,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.login_cram_md5",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66661,
+    "url": "https://docs.python.org/2/bugs.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66662,
+    "url": "https://docs.python.org/3/library/imaplib.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66664,
+    "url": "https://docs.python.org/2/library/time.html#time.localtime",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66665,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.select",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66666,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66667,
+    "url": "https://docs.python.org/2/index.html",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66668,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4_stream",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66669,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.PROTOCOL_VERSION",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66670,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.Time2Internaldate",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66671,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.subscribe",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66672,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.create",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66673,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.shutdown",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66674,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.thread",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66675,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.uid",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66676,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.setannotation",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66677,
+    "url": "https://github.com/python/cpython/tree/2.7/Lib/imaplib.py",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66678,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.ParseFlags",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66679,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.setacl",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66680,
+    "url": "https://docs.python.org/2/library/imaplib.html#imaplib.IMAP4.abort",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "id": 66681,
+    "url": "https://docs.python.org/2/library/imaplib.html#imap4-objects",
+    "parentUrl": "http://docs.python.org/2/library/imaplib.html"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/2/_static/py.png",
+    "alt": "",
+    "pageTitle": "20.10. imaplib — IMAP4 protocol client — Python 2.7.18 documentation",
+    "pageUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "src": "https://docs.python.org/2/_static/py.png",
+    "alt": "",
+    "pageTitle": "20.10. imaplib — IMAP4 protocol client — Python 2.7.18 documentation",
+    "pageUrl": "http://docs.python.org/2/library/imaplib.html"
+  },
+  {
+    "src": "https://software-carpentry.org/images/hero-background.jpeg",
+    "alt": "",
+    "pageTitle": "Software Carpentry",
+    "pageUrl": "http://software-carpentry.org"
+  },
+  {
+    "src": "https://gump.apache.org/images/gump-logo-tm.png",
+    "alt": "Apache Gump™",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/skin/images/rc-b-l-15-1body-2menu-3menu.png",
+    "alt": "",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://www.apache.org/events/current-event-125x125.png",
+    "alt": "ApacheCon - logo",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/skin/images/valid-html401.png",
+    "alt": "Valid HTML 4.01!",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/skin/images/vcss.png",
+    "alt": "Valid CSS!",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
+  {
+    "src": "https://gump.apache.org/images/built-with-forrest-button.png",
+    "alt": "Built with Apache Forrest - logo",
+    "pageTitle": "Apache Gump™",
+    "pageUrl": "http://gump.apache.org/"
+  },
   {
     "src": "http://www.openbookproject.net/thinkcs/python/english2e/_images/gasp_lessons.png",
     "alt": "GASP Logo",
