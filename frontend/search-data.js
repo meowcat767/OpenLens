@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 768,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:13:34.240961"
+  },
+  {
+    "id": 767,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event",
+    "title": "Synchronization Primitives — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » asyncio — Asynchronous I/O » Synchronization Primitives | Theme Auto Light Dark | Synchronization Primitives¶ Source code: Lib/asyncio/locks.py asyncio synchronization primitives are designed to be similar to those of the threading module with two important caveats: asyncio primitives are not thread-safe, therefore they should not be used for OS thread synchronization (use threading for that); methods of these synchronization primitives do not accept the timeout argument; use the asyncio.wait_for() function to perform operations with timeouts. asyncio has the following basic synchronization primitives: Lock Event Condition Semaphore BoundedSemaphore Barrier Lock¶ class asyncio.Lock¶ Implements a mutex lock for asyncio tasks. Not thread-safe. An asyncio lock can be used to guarantee exclusive access to a shared resource. The preferred way to use a Lock is an async with statement: lock \u003d asyncio.Lock()\n\n# ... later\nasync with lock:\n    # access shared state\n which is equivalent to: lock \u003d asyncio.Lock()\n\n# ... later\nawait lock.acquire()\ntry:\n    # access shared state\nfinally:\n    lock.release()\n Changed in version 3.10: Removed the loop parameter. async acquire()¶ Acquire the lock. This method waits until the lock is unlocked, sets it to locked and returns True. When more than one coroutine is blocked in acquire() waiting for the lock to be unlocked, only one coroutine eventually proceeds. Acquiring a lock is fair: the coroutine that proceeds will be the first coroutine that started waiting on the lock. release()¶ Release the lock. When the lock is locked, reset it to unlocked and return. If the lock is unlocked, a RuntimeError is raised. locked()¶ Return True if the lock is locked. Event¶ class asyncio.Event¶ An event object. Not thread-safe. An asyncio event can be used to notify multiple asyncio tasks that some event has happened. An Event object manages an internal flag that can be set to true with the set() method and reset to false with the clear() method. The wait() method blocks until the flag is set to true. The flag is set to false initially. Changed in version 3.10: Removed the loop parameter. Example: async def waiter(event):\n    print(\u0027waiting for it ...\u0027)\n    await event.wait()\n    print(\u0027... got it!\u0027)\n\nasync def main():\n    # Create an Event object.\n    event \u003d asyncio.Event()\n\n    # Spawn a Task to wait until \u0027event\u0027 is set.\n    waiter_task \u003d asyncio.create_task(waiter(event))\n\n    # Sleep for 1 second and set the event.\n    await asyncio.sleep(1)\n    event.set()\n\n    # Wait until the waiter task is finished.\n    await waiter_task\n\nasyncio.run(main())\n async wait()¶ Wait until the event is set. If the event is set, return True immediately. Otherwise block until another task calls set(). set()¶ Set the event. All tasks waiting for event to be set will be immediately awakened. clear()¶ Clear (unset) the event. Subsequent tasks awaiting on wait() will now block until the set() method is called again. is_set()¶ Return True if the event is set. Condition¶ class asyncio.Condition(lock\u003dNone)¶ A Condition object. Not thread-safe. An asyncio condition primitive can be used by a task to wait for some event to happen and then get exclusive access to a shared resource. In essence, a Condition object combines the functionality of an Event and a Lock. It is possible to have multiple Condition objects share one Lock, which allows coordinating exclusive access to a shared resource between different tasks interested in particular states of that shared resource. The optional lock argument must be a Lock object or None. In the latter case a new Lock object is created automatically. Changed in version 3.10: Removed the loop parameter. The preferred way to use a Condition is an async with statement: cond \u003d asyncio.Condition()\n\n# ... later\nasync with cond:\n    await cond.wait()\n which is equivalent to: cond \u003d asyncio.Condition()\n\n# ... later\nawait cond.acquire()\ntry:\n    await cond.wait()\nfinally:\n    cond.release()\n async acquire()¶ Acquire the underlying lock. This method waits until the underlying lock is unlocked, sets it to locked and returns True. notify(n\u003d1)¶ Wake up n tasks (1 by default) waiting on this condition. If fewer than n tasks are waiting they are all awakened. The lock must be acquired before this method is called and released shortly after. If called with an unlocked lock a RuntimeError error is raised. locked()¶ Return True if the underlying lock is acquired. notify_all()¶ Wake up all tasks waiting on this condition. This method acts like notify(), but wakes up all waiting tasks. The lock must be acquired before this method is called and released shortly after. If called with an unlocked lock a RuntimeError error is raised. release()¶ Release the underlying lock. When invoked on an unlocked lock, a RuntimeError is raised. async wait()¶ Wait until",
+    "scrapedAt": "2026-10-08 19:13:33.04634"
+  },
+  {
+    "id": 766,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max",
+    "title": "heapq — Heap queue algorithm — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Types » heapq — Heap queue algorithm | Theme Auto Light Dark | heapq — Heap queue algorithm¶ Source code: Lib/heapq.py This module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Min-heaps are binary trees for which every parent node has a value less than or equal to any of its children. We refer to this condition as the heap invariant. For min-heaps, this implementation uses lists for which heap[k] \u003c\u003d heap[2*k+1] and heap[k] \u003c\u003d heap[2*k+2] for all k for which the compared elements exist. Elements are counted from zero. The interesting property of a min-heap is that its smallest element is always the root, heap[0]. Max-heaps satisfy the reverse invariant: every parent node has a value greater than any of its children. These are implemented as lists for which maxheap[2*k+1] \u003c\u003d maxheap[k] and maxheap[2*k+2] \u003c\u003d maxheap[k] for all k for which the compared elements exist. The root, maxheap[0], contains the largest element; heap.sort(reverse\u003dTrue) maintains the max-heap invariant. The heapq API differs from textbook heap algorithms in two aspects: (a) We use zero-based indexing. This makes the relationship between the index for a node and the indexes for its children slightly less obvious, but is more suitable since Python uses zero-based indexing. (b) Textbooks often focus on max-heaps, due to their suitability for in-place sorting. Our implementation favors min-heaps as they better correspond to Python lists. These two aspects make it possible to view the heap as a regular Python list without surprises: heap[0] is the smallest item, and heap.sort() maintains the heap invariant! Like list.sort(), this implementation uses only the \u003c operator for comparisons, for both min-heaps and max-heaps. In the API below, and in this documentation, the unqualified term heap generally refers to a min-heap. The API for max-heaps is named using a _max suffix. To create a heap, use a list initialized as [], or transform an existing list into a min-heap or max-heap using the heapify() or heapify_max() functions, respectively. The following functions are provided for min-heaps: heapq.heapify(x)¶ Transform list x into a min-heap, in-place, in linear time. heapq.heappush(heap, item)¶ Push the value item onto the heap, maintaining the min-heap invariant. heapq.heappop(heap)¶ Pop and return the smallest item from the heap, maintaining the min-heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0]. heapq.heappushpop(heap, item)¶ Push item on the heap, then pop and return the smallest item from the heap. The combined action runs more efficiently than heappush() followed by a separate call to heappop(). heapq.heapreplace(heap, item)¶ Pop and return the smallest item from the heap, and also push the new item. The heap size doesn’t change. If the heap is empty, IndexError is raised. This one step operation is more efficient than a heappop() followed by heappush() and can be more appropriate when using a fixed-size heap. The pop/push combination always returns an element from the heap and replaces it with item. The value returned may be larger than the item added. If that isn’t desired, consider using heappushpop() instead. Its push/pop combination returns the smaller of the two values, leaving the larger value on the heap. For max-heaps, the following functions are provided: heapq.heapify_max(x)¶ Transform list x into a max-heap, in-place, in linear time. Added in version 3.14. heapq.heappush_max(heap, item)¶ Push the value item onto the max-heap heap, maintaining the max-heap invariant. Added in version 3.14. heapq.heappop_max(heap)¶ Pop and return the largest item from the max-heap heap, maintaining the max-heap invariant. If the max-heap is empty, IndexError is raised. To access the largest item without popping it, use maxheap[0]. Added in version 3.14. heapq.heappushpop_max(heap, item)¶ Push item on the max-heap heap, then pop and return the largest item from heap. The combined action runs more efficiently than heappush_max() followed by a separate call to heappop_max(). Added in version 3.14. heapq.heapreplace_max(heap, item)¶ Pop and return the largest item from the max-heap heap and also push the new item. The max-heap size doesn’t change. If the max-heap is empty, IndexError is raised. The value returned may be smaller than the item added. Refer to the analogous function heapreplace() for detailed usage notes. Added in version 3.14. The module also offers three general purpose functions based on heaps. heapq.merge(*iterables, key\u003dNone, reverse\u003dFalse)¶ Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values. Similar to sorted(itertools.chain(*iterables)) but returns an iterable, does not pull the data",
+    "scrapedAt": "2026-10-08 19:13:31.847536"
+  },
+  {
+    "id": 765,
+    "url": "https://github.com/python/cpython/issues/127691",
+    "title": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Check for type consistency for PyUnicodeError API #127691 New issue Copy link New issue Copy link Closed Closed Check for type consistency for PyUnicodeError API#127691 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description picnixz opened on Dec 6, 2024 Issue body actions Feature or enhancement Proposal: This is a follow-up to #123380 (comment). The idea is to add assertion type-checks when calling helper functions on unicode objects:     assert(PyObject_TypeCheck(exc, (PyTypeObject*)\u0026PyExc_UnicodeError)); Has this already been discussed elsewhere? This is a minor feature, which does not need previous discussion elsewhere Links to previous discussion of this feature: No response Linked PRs gh-127691: add type checks when using PyUnicodeError objects #127694 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees picnixz Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:13:30.630463"
+  },
+  {
+    "id": 764,
+    "url": "https://docs.python.org/3/library/types.html#types.UnionType",
+    "title": "types — Dynamic type creation and names for built-in types — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Types » types — Dynamic type creation and names for built-in types | Theme Auto Light Dark | types — Dynamic type creation and names for built-in types¶ Source code: Lib/types.py This module defines utility functions to assist in dynamic creation of new types. It also defines names for some object types that are used by the standard Python interpreter, but not exposed as builtins like int or str are. Finally, it provides some additional type-related utility classes and functions that are not fundamental enough to be builtins. Dynamic Type Creation¶ types.new_class(name, bases\u003d(), kwds\u003dNone, exec_body\u003dNone)¶ Creates a class object dynamically using the appropriate metaclass. The first three arguments are the components that make up a class definition header: the class name, the base classes (in order), the keyword arguments (such as metaclass). The exec_body argument is a callback that is used to populate the freshly created class namespace. It should accept the class namespace as its sole argument and update the namespace directly with the class contents. If no callback is provided, it has the same effect as passing in lambda ns: None. Added in version 3.3. types.prepare_class(name, bases\u003d(), kwds\u003dNone)¶ Calculates the appropriate metaclass and creates the class namespace. The arguments are the components that make up a class definition header: the class name, the base classes (in order) and the keyword arguments (such as metaclass). The return value is a 3-tuple: metaclass, namespace, kwds metaclass is the appropriate metaclass, namespace is the prepared class namespace and kwds is an updated copy of the passed in kwds argument with any \u0027metaclass\u0027 entry removed. If no kwds argument is passed in, this will be an empty dict. Added in version 3.3. Changed in version 3.6: The default value for the namespace element of the returned tuple has changed. Now an insertion-order-preserving mapping is used when the metaclass does not have a __prepare__ method. See also Metaclasses Full details of the class creation process supported by these functions PEP 3115 - Metaclasses in Python 3000 Introduced the __prepare__ namespace hook types.resolve_bases(bases)¶ Resolve MRO entries dynamically as specified by PEP 560. This function looks for items in bases that are not instances of type, and returns a tuple where each such object that has an __mro_entries__() method is replaced with an unpacked result of calling this method. If a bases item is an instance of type, or it doesn’t have an __mro_entries__() method, then it is included in the return tuple unchanged. Added in version 3.7. types.get_original_bases(cls, /)¶ Return the tuple of objects originally given as the bases of cls before the __mro_entries__() method has been called on any bases (following the mechanisms laid out in PEP 560). This is useful for introspecting Generics. For classes that have an __orig_bases__ attribute, this function returns the value of cls.__orig_bases__. For classes without the __orig_bases__ attribute, cls.__bases__ is returned. Examples: from typing import TypeVar, Generic, NamedTuple, TypedDict\n\nT \u003d TypeVar(\"T\")\nclass Foo(Generic[T]): ...\nclass Bar(Foo[int], float): ...\nclass Baz(list[str]): ...\nEggs \u003d NamedTuple(\"Eggs\", [(\"a\", int), (\"b\", str)])\nSpam \u003d TypedDict(\"Spam\", {\"a\": int, \"b\": str})\n\nassert Bar.__bases__ \u003d\u003d (Foo, float)\nassert get_original_bases(Bar) \u003d\u003d (Foo[int], float)\n\nassert Baz.__bases__ \u003d\u003d (list,)\nassert get_original_bases(Baz) \u003d\u003d (list[str],)\n\nassert Eggs.__bases__ \u003d\u003d (tuple,)\nassert get_original_bases(Eggs) \u003d\u003d (NamedTuple,)\n\nassert Spam.__bases__ \u003d\u003d (dict,)\nassert get_original_bases(Spam) \u003d\u003d (TypedDict,)\n\nassert int.__bases__ \u003d\u003d (object,)\nassert get_original_bases(int) \u003d\u003d (object,)\n Added in version 3.12. See also PEP 560 - Core support for typing module and generic types Standard Interpreter Types¶ This module provides names for many of the types that are required to implement a Python interpreter. It deliberately avoids including some of the types that arise only incidentally during processing such as the listiterator type. Typical use of these names is for isinstance() or issubclass() checks. If you instantiate any of these types, note that signatures may vary between Python versions. Standard names are defined for the following types: class types.NoneType¶ The type of None. Added in version 3.10. class types.FunctionType¶ class types.LambdaType¶ The type of user-defined functions and functions created by lambda expressions. Raises an auditing event function.__new__ with argument code. The audit event only occurs for direct instantiation of function objects, and is not raised for normal compilation. class types.GeneratorType¶ The type of generator-iterator objects, created by generator functions. class types.CoroutineType¶ The type of coroutine objects, created by async def functions. Added in version 3.5.",
+    "scrapedAt": "2026-10-08 19:13:28.250837"
+  },
+  {
     "id": 763,
     "url": "https://peps.python.org/pep-0741/",
     "title": "PEP 741 – Python Configuration C API | peps.python.org",
@@ -5030,26 +5065,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 764,
-    "url": "https://docs.python.org/3/library/types.html#types.UnionType"
-  },
-  {
-    "id": 765,
-    "url": "https://github.com/python/cpython/issues/127691"
-  },
-  {
-    "id": 766,
-    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
-  },
-  {
-    "id": 767,
-    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
-  },
-  {
-    "id": 768,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
   },
   {
     "id": 769,
@@ -132114,10 +132129,427 @@ window.searchData = [
     "id": 93812,
     "url": "https://discuss.python.org/t/pep-741-python-configuration-c-api-second-version/45403",
     "parentUrl": "https://peps.python.org/pep-0741/"
+  },
+  {
+    "id": 93935,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/127691",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 93936,
+    "url": "https://github.com/python/cpython/pull/127694",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 93938,
+    "url": "https://github.com/python/cpython/issues/127691#issue-2723135260",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 93939,
+    "url": "https://github.com/python/cpython/issues/127691#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 93940,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/127691",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 93942,
+    "url": "https://github.com/python/cpython/issues/127691#top",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 93943,
+    "url": "https://github.com/python/cpython/pull/123380#discussion_r1865910020",
+    "parentUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "id": 93953,
+    "url": "https://en.wikipedia.org/wiki/Heapsort",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93954,
+    "url": "https://docs.python.org/3/library/heapq.html#",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93955,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappush",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93956,
+    "url": "https://en.wikipedia.org/wiki/Priority_queue",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93958,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/heapq.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93959,
+    "url": "https://docs.python.org/3/library/heapq.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93960,
+    "url": "https://docs.python.org/3/library/heapq.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93964,
+    "url": "https://docs.python.org/3/library/heapq.html#priority-queue-implementation-notes",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93966,
+    "url": "https://docs.python.org/3/library/heapq.html#other-applications",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93969,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapify",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93973,
+    "url": "https://en.wikipedia.org/wiki/Online_algorithm",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93974,
+    "url": "https://docs.python.org/3/library/heapq.html#theory",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93980,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93984,
+    "url": "https://docs.python.org/3/library/heapq.html#module-heapq",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93990,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappop",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93992,
+    "url": "https://en.wikipedia.org/wiki/Median",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93993,
+    "url": "https://docs.python.org/3/library/heapq.html#heapq.heappushpop",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93994,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/heapq.py",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93995,
+    "url": "https://docs.python.org/3/library/heapq.html#basic-examples",
+    "parentUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "id": 93997,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 93998,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 93999,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94001,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94002,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#barrier",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94003,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94004,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.wait",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94006,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.abort",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94009,
+    "url": "https://docs.python.org/3/library/asyncio-subprocess.html",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94010,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.notify",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94013,
+    "url": "https://docs.python.org/3/library/asyncio-task.html#asyncio.wait_for",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94015,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94016,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94017,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#condition",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94018,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/asyncio-sync.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94020,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.BrokenBarrierError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94024,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#synchronization-primitives",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94025,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94026,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.n_waiting",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94027,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94028,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94029,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#lock",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94031,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#boundedsemaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94034,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#event",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94035,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#semaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94037,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94039,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.parties",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94040,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94041,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.clear",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94042,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.BoundedSemaphore",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94043,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.wait_for",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94044,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94045,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/asyncio/locks.py",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94046,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event.is_set",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94047,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.locked",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94048,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94049,
+    "url": "https://docs.python.org/3/library/asyncio-exceptions.html#asyncio.CancelledError",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94050,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.reset",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94051,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Condition.notify_all",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94053,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Barrier.broken",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94055,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Lock.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94058,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.release",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "id": 94059,
+    "url": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Semaphore.acquire",
+    "parentUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLong_IsPositive"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Synchronization Primitives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Synchronization Primitives — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/asyncio-sync.html#asyncio.Event"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "heapq — Heap queue algorithm — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/heapq.html#heapq.heapreplace_max"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?v\u003d4\u0026size\u003d48",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Check for type consistency for `PyUnicodeError` API · Issue #127691 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/127691"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.UnionType"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "types — Dynamic type creation and names for built-in types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/types.html#types.UnionType"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
