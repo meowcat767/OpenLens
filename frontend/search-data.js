@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 825,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError",
+    "title": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » tarfile — Read and write tar archive files | Theme Auto Light Dark | tarfile — Read and write tar archive files¶ Source code: Lib/tarfile.py The tarfile module makes it possible to read and write tar archives, including those using gzip, bz2 and lzma compression. Use the zipfile module to read or write .zip files, or the higher-level functions in shutil. Some facts and figures: reads and writes gzip, bz2, compression.zstd, and lzma compressed archives if the respective modules are available. If any of these optional modules are missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. read/write support for the POSIX.1-1988 (ustar) format. read/write support for the GNU tar format including longname and longlink extensions, read-only support for all variants of the sparse extension including restoration of sparse files. read/write support for the POSIX.1-2001 (pax) format. handles directories, regular files, hardlinks, symbolic links, fifos, character devices and block devices and is able to acquire and restore file information like timestamp, access permissions and owner. Changed in version 3.3: Added support for lzma compression. Changed in version 3.12: Archives are extracted using a filter, which makes it possible to either limit surprising/dangerous features, or to acknowledge that they are expected and the archive is fully trusted. Changed in version 3.14: Set the default extraction filter to data, which disallows some dangerous features such as links to absolute paths or paths outside of the destination. Previously, the filter strategy was equivalent to fully_trusted. Changed in version 3.14: Added support for Zstandard compression using compression.zstd. tarfile.open(name\u003dNone, mode\u003d\u0027r\u0027, fileobj\u003dNone, bufsize\u003d10240, **kwargs)¶ Return a TarFile object for the pathname name. For detailed information on TarFile objects and the keyword arguments that are allowed, see TarFile Objects. mode has to be a string of the form \u0027filemode[:compression]\u0027, it defaults to \u0027r\u0027. Here is a full list of mode combinations: mode action \u0027r\u0027 or \u0027r:*\u0027 Open for reading with transparent compression (recommended). \u0027r:\u0027 Open for reading exclusively without compression. \u0027r:gz\u0027 Open for reading with gzip compression. \u0027r:bz2\u0027 Open for reading with bzip2 compression. \u0027r:xz\u0027 Open for reading with lzma compression. \u0027r:zst\u0027 Open for reading with Zstandard compression. \u0027x\u0027 or \u0027x:\u0027 Create a tarfile exclusively without compression. Raise a FileExistsError exception if it already exists. \u0027x:gz\u0027 Create a tarfile with gzip compression. Raise a FileExistsError exception if it already exists. \u0027x:bz2\u0027 Create a tarfile with bzip2 compression. Raise a FileExistsError exception if it already exists. \u0027x:xz\u0027 Create a tarfile with lzma compression. Raise a FileExistsError exception if it already exists. \u0027x:zst\u0027 Create a tarfile with Zstandard compression. Raise a FileExistsError exception if it already exists. \u0027a\u0027 or \u0027a:\u0027 Open for appending with no compression. The file is created if it does not exist. \u0027w\u0027 or \u0027w:\u0027 Open for uncompressed writing. \u0027w:gz\u0027 Open for gzip compressed writing. \u0027w:bz2\u0027 Open for bzip2 compressed writing. \u0027w:xz\u0027 Open for lzma compressed writing. \u0027w:zst\u0027 Open for Zstandard compressed writing. Note that \u0027a:gz\u0027, \u0027a:bz2\u0027 or \u0027a:xz\u0027 is not possible. If mode is not suitable to open a certain (compressed) file for reading, ReadError is raised. Use mode \u0027r\u0027 to avoid this. If a compression method is not supported, CompressionError is raised. If fileobj is specified, it is used as an alternative to a file object opened in binary mode for name. It is supposed to be at position 0. For modes \u0027w:gz\u0027, \u0027x:gz\u0027, \u0027w|gz\u0027, \u0027w:bz2\u0027, \u0027x:bz2\u0027, \u0027w|bz2\u0027, tarfile.open() accepts the keyword argument compresslevel (default 9) to specify the compression level of the file. For modes \u0027w:xz\u0027, \u0027x:xz\u0027 and \u0027w|xz\u0027, tarfile.open() accepts the keyword argument preset to specify the compression level of the file. For modes \u0027w:zst\u0027, \u0027x:zst\u0027 and \u0027w|zst\u0027, tarfile.open() accepts the keyword argument level to specify the compression level of the file. The keyword argument options may also be passed, providing advanced Zstandard compression parameters described by CompressionParameter. The keyword argument zstd_dict can be passed to provide a ZstdDict, a Zstandard dictionary used to improve compression of smaller amounts of data. For special purposes, there is a second format for mode: \u0027filemode|[compression]\u0027. tarfile.open() will return a TarFile object that processes its data as a stream of blocks. No random seeking will be done on the file. If given, fileobj may be any object that has a read() or write() method (depending on the mode) that works with bytes. bufsize specifies the blocksize and defaults to ",
+    "scrapedAt": "2026-10-08 19:15:46.377729"
+  },
+  {
+    "id": 824,
+    "url": "https://github.com/python/cpython/issues/126390",
+    "title": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Preserving order of options and nonoption arguments in gnu_getopt() #126390 New issue Copy link New issue Copy link Closed Closed Preserving order of options and nonoption arguments in gnu_getopt()#126390 Copy link Assignees Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description serhiy-storchaka opened on Nov 4, 2024 Issue body actions Feature or enhancement by default GNU getopt() permutes the contents of argv as it scans, so that eventually all the nonoptions are at the end. It supports two other scanning modes -- one compatible with Posix getopt() (stop at first nonoption argument), and other allows to return options and nonoption arguments in order. getopt.gnu_getopt() returns two lists -- the list of option-and-value pairs and the list of nonoption arguments. Thus, the relative order of options and nonoption arguments is lost. I propose to add support for the missed feature. If the first character of the option string is minus (\u0027-\u0027), non-option arguments that are followed by options will be added to the list of option-and-value pairs as a pair that has None as its first element and the list of non-option arguments as its second element. Non-option arguments that follow the last option will be returned as the second element of the gnu_getopt() result. For example: \u003e\u003e\u003e s \u003d \u0027a1 -x a2 a3 a4 --long a5 a6\u0027\n\u003e\u003e\u003e args \u003d s.split()\n\u003e\u003e\u003e args\n[\u0027a1\u0027, \u0027-x\u0027, \u0027a2\u0027, \u0027a3\u0027, \u0027a4\u0027, \u0027--long\u0027, \u0027a5\u0027, \u0027a6\u0027]\n\u003e\u003e\u003e optlist, args \u003d getopt.gnu_getopt(args, \u0027-x:\u0027, [\u0027long\u003d\u0027])\n\u003e\u003e\u003e optlist\n[(None, [\u0027a1\u0027]), (\u0027-x\u0027, \u0027a2\u0027), (None, [\u0027a3\u0027, \u0027a4\u0027]), (\u0027--long\u0027, \u0027a5\u0027)]\n\u003e\u003e\u003e args\n[\u0027a6\u0027] I considered also alternative options: Returning each nonoption argument as a separate (None, value) tuple instead of (None, list). But if you need a list of consequent arguments, it will be less convenient to build it from separate argument. And if you need separate arguments, you can simply iterate the list. Returning the last portion of nonoption arguments also as a (None, list) pair. This makes handling nonoption arguments followed and not followed by options in user code uniform. But then the second element of the gnu_getopt() result will always be an empty list. I am not sure about this. Add the third function (gnu_getopt_iter()?) which is a generator function and emits (option, value) or (None, list) pairs. Linked PRs gh-126390: Support for preserving order of options and nonoption arguments in gnu_getopt() #126393 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees serhiy-storchaka Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:15:45.092935"
+  },
+  {
+    "id": 822,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#linecache",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:15:42.398139"
+  },
+  {
+    "id": 821,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#pty",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:15:41.106098"
+  },
+  {
+    "id": 820,
+    "url": "https://github.com/python/cpython/issues/130645",
+    "title": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Add colour to argparse help #130645 New issue Copy link New issue Copy link Closed Closed Add colour to argparse help#130645 Copy link Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Description hugovk opened on Feb 27, 2025 Issue body actions Feature or enhancement In Python 3.13 we added colour output to the new REPL, traceback and doctest, and in 3.14 to unittest, test.regrtest and calendar, that can also be controlled with the PYTHON_COLORS, NO_COLOR and FORCE_COLOR environment variables: https://docs.python.org/3.14/whatsnew/3.14.html#unittest https://docs.python.org/3.14/using/cmdline.html#using-on-controlling-color Let\u0027s add colour to argparse help output. Survey First, here\u0027s a survey of some other CLIs that use colour: Survey uv cargo composer ruff lsd fd See also: bat, hyperfine, oxipng, zizmor gh rich-cli typer These fall into four groups: uv/cargo: green + cyan composer: yellow + green ruff/lsd/fd/gh: only bold typer/rich-cli: green + cyan + yellow Prototypes I\u0027ve made prototypes of two of these (uv/cargo style, typer/rich-cli style), and another with blue + magenta similar to the 3.13 REPL/traceback. Prototypes main uv/cargo style typer/rich-cli style REPL style I think I prefer the typer/rich-cli style: the extra colour makes it easier to pick out the (green) short options from the (cyan) long options, and from their (green) arguments. And it should also be somewhat familiar to Python users who have used typer-based CLIs. Linked PRs gh-130645: Add colour to argparse help #132323 gh-130645: Add color to stdlib argparse CLIs #133380 GH-130645: Default to color help in argparse #136809 [3.14] GH-130645: Default to color help in argparse (GH-136809) #136886 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels stdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytype-featureA feature request or enhancementA feature request or enhancement Projects Argparse issues Status Doc issues Show more project fields Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:15:39.835052"
+  },
+  {
     "id": 819,
     "url": "https://docs.python.org/3/library/re.html#module-re",
     "title": "re — Regular expression operations — Python 3.14.8 documentation",
@@ -5420,26 +5455,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 820,
-    "url": "https://github.com/python/cpython/issues/130645"
-  },
-  {
-    "id": 821,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#pty"
-  },
-  {
-    "id": 822,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#linecache"
-  },
-  {
-    "id": 824,
-    "url": "https://github.com/python/cpython/issues/126390"
-  },
-  {
-    "id": 825,
-    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
   },
   {
     "id": 826,
@@ -140885,10 +140900,1108 @@ window.searchData = [
     "id": 106878,
     "url": "https://docs.python.org/3/library/re.html#re.Pattern.groups",
     "parentUrl": "https://docs.python.org/3/library/re.html#module-re"
+  },
+  {
+    "id": 106879,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718783-b4722fca-1610-407e-8672-604e3de2baf5.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODc4My1iNDcyMmZjYS0xNjEwLTQwN2UtODY3Mi02MDRlM2RlMmJhZjUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MThmYWMxNDU5ZDlhYmQxMWMzZjY1ZDFlNDQzMDkzNDQ0ZWZmMjU2OWExYzhjZmNhOWNjNDgwYWQwNTY1Zjg5NCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.V7BYJyAF6JonMbW0qvXZrFIvYqXOzDptfnGhOSWGjj4",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106880,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417679964-e896f6e0-7112-482a-adba-21f1fdaa6dc1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTk2NC1lODk2ZjZlMC03MTEyLTQ4MmEtYWRiYS0yMWYxZmRhYTZkYzEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzM4NGM2MWQ0NGY5ODRlZjJkY2FhZDhjMDllYWMzMzk3MjYxODc5OWEzMDI4NzJmZGNmYzRhYTFiN2I2NmQ3MyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.MtoafrCb32nFPVT4SSCOmNRDZI9vwCKJAPxBDhtjDNE",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106881,
+    "url": "https://github.com/python/cpython/pull/136809",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106882,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719333-96b8b582-d40d-4a4e-be51-a04abb15c357.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTMzMy05NmI4YjU4Mi1kNDBkLTRhNGUtYmU1MS1hMDRhYmIxNWMzNTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZDUzYzZiNTE5Y2NmMDdjZGMxMjc4OTIxNmYwOTg5MjFhMTRiZTRjNzQ1NWQ0MTlhMzZmYjQ1Y2Q1MzBlODBkOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.SRF_CCBI3b8Is8hoVHxY_KAZK7TsPmmVGppCNYZhXAc",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106884,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417681990-a43c721b-0ad0-4087-b241-14bf86c96c9e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTk5MC1hNDNjNzIxYi0wYWQwLTQwODctYjI0MS0xNGJmODZjOTZjOWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NjFkNjJiNzA0NDA0ZWI1ZGQxNGQ3YjI3NDhjNGMyNmU5MmM2ODY2ZGFjMGNiNTJmYzI3YjE0NzZhNmFjNzNiZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.X82SAWmTUJibH4SFyU_ltcGfKvNvCSXjg92rHmaU0hk",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106885,
+    "url": "https://github.com/python/cpython/pull/132323",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106886,
+    "url": "https://github.com/python/cpython/pull/136886",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106887,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417682051-da4408e4-76c2-42c3-8fff-f1270c701d10.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MjA1MS1kYTQ0MDhlNC03NmMyLTQyYzMtOGZmZi1mMTI3MGM3MDFkMTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MDUzYjkxMTU0MDA3YzhlYjU4YmNlMTI5ZTJkNTViYTdiODg5MzVlMGRhMzI1MjkwOWRhY2JkZjVmNGRjYzRhNiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0._IP_OT5ezR9azaNPQ5m1Dz9Ex5D7pmCitPyuqYZf3lo",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106889,
+    "url": "https://github.com/orgs/python/projects/5",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106890,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719724-4e7dae32-2992-419f-9ddc-92ae735ec3b9.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTcyNC00ZTdkYWUzMi0yOTkyLTQxOWYtOWRkYy05MmFlNzM1ZWMzYjkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NGRmNGYyOWZhOGJmOWFhNGJiYTQ0NjhhZDdhODk5NDgyZDcxYmEwYmMyYWIyMmFiMjRiNDgxYTYzYTk3ZmFkYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.EO46ZkwOAAabMejvx3ugoAOOXHwsGPH2tuf-Uf0THcE",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106891,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719137-89f997ee-0a18-49f5-9039-1a5634503d90.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTEzNy04OWY5OTdlZS0wYTE4LTQ5ZjUtOTAzOS0xYTU2MzQ1MDNkOTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YWYyZWNjY2NiYjVlY2Y5Y2VjNDRjODU3ZjQzZGFmODExOWJmN2EwMGM5NzFhZDE4MjYzOTA3MmNkMGU1ZjFlZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.R8LGCWlUGO75qtwSOPrbsyxudx1z-FjJCuNqciVBZU4",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106892,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/130645",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106893,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718272-eea6349f-9590-4d2e-8cbe-9c0f27784cac.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODI3Mi1lZWE2MzQ5Zi05NTkwLTRkMmUtOGNiZS05YzBmMjc3ODRjYWMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODg2M2I4MzQ1OWE1ZGRmMTQ5NjQ2NWY0YWI4NmE4MTQxNDNhYjI0MDUxYjMwOGYyZjI4NzUzMjgwMTI2ZjNhOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.NRt4imIhI8W2DvAoc9Yefjni2AHtOBalEpIZobyFYtc",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106894,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719909-135643a7-7a1a-4786-ab96-3a2d69393b27.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTkwOS0xMzU2NDNhNy03YTFhLTQ3ODYtYWI5Ni0zYTJkNjkzOTNiMjcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MmRkYjc2YTc0YTBjZGFhODQwYjM3ZjZjNDgyYWQxNWQwNTBhNzYyNGYzMWI1NWY0MDY2NmU0YTUxZWI4NjdmMiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.Dh-G_Ihowo0fNJfTaEug5zpSXVtQxYVWZ-C07h62ews",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106895,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719649-2ef5971b-c322-440c-8179-08cce3b78b76.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTY0OS0yZWY1OTcxYi1jMzIyLTQ0MGMtODE3OS0wOGNjZTNiNzhiNzYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTY1Mzg4YTlmNTY4MGE2NTgzMzdkNmE2YWU3MmI5MjU0MDQ5OTBkYzIzZTI3OTJmYjMzZjIxY2ViZWMxZTg2MCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.hY0lT0Wchcfs9Ofe7PENJuIklOvPMfW5w0XQgfmTgjw",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106897,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719217-03ad0675-1845-43aa-8802-fb6f3edf6d99.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTIxNy0wM2FkMDY3NS0xODQ1LTQzYWEtODgwMi1mYjZmM2VkZjZkOTkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZjNlMDU4ZTU5NGUxZDBjZGMzZjI4Mzc4M2NjNmYwOWZkNTFmN2I4N2ZiZTNjNjkzNWYzZWQ2YmZkYjVjNjRiMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.irYu-LKLaZL4UMSUlxGu8KRD66EbcKawSKv6pxvTZo8",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106898,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719587-10be9e0e-3712-4ae5-98c5-7b2dcfe91908.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTU4Ny0xMGJlOWUwZS0zNzEyLTRhZTUtOThjNS03YjJkY2ZlOTE5MDgucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWEwMmM3YjE0MzQ3Mjc0ZWJlOTM0NWEyNGUxOThjNmY5YmU4OTE0NjY5OWRkMmNjMmY2ZDU3M2U1N2UzNGViOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.8V8-00KU88AJZt3a_C9zluDJd9tSJcOMBeZ9A9BfpJA",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106899,
+    "url": "https://github.com/python/cpython/issues/130645#top",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106900,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719518-c4eac0cf-b46d-478f-8604-86d666109e17.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTUxOC1jNGVhYzBjZi1iNDZkLTQ3OGYtODYwNC04NmQ2NjYxMDllMTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjQ1NTIyYzMyYWE0ZWViZjhhNDVlNjFjMjU3MWUyM2MzODI1Y2Y3OTNkMjRlMTE3YjdjZDJmNWU4OTA0Y2Y3OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.dE5IMACTo1ItoZvrCE04z5UwRch03n6MWpFCgev40Qs",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106901,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417717925-31869566-6580-4035-b1f4-d5695b77cfb1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxNzkyNS0zMTg2OTU2Ni02NTgwLTQwMzUtYjFmNC1kNTY5NWI3N2NmYjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NzM5Y2Y3Mzc1MjI2OGRlNzVlYzZmNGI3NDUwOGY2MDI2ZGVmYmY1YTJlNDYzM2UxMTY0YzhiZjUxMmNkMDAwYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.uWlSAOIRPusUqz0oQPXNAlMp4u9zpIC288N9BaiyQVE",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106902,
+    "url": "https://github.com/python/cpython/issues/130645#issue-2885049118",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106904,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/130645",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106905,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719413-cd5caa47-fbda-47f8-841b-c3386534e8e4.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTQxMy1jZDVjYWE0Ny1mYmRhLTQ3ZjgtODQxYi1jMzM4NjUzNGU4ZTQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjIwYmQwNWM3NmNiMWVhNjE2NzE5OWRlZmVkNjg2MGM1MGRmZGJjZmI5Yzg3MmJlNTNjM2QwZDk2ZDgwYzYyNyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.6ud79rAkDwvAdMGzNlW5dppI_nHfNgeWLKjSmOhh_aM",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106907,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417681405-ab5cdf6a-47a3-413b-bdf1-2dc885dc4c9a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTQwNS1hYjVjZGY2YS00N2EzLTQxM2ItYmRmMS0yZGM4ODVkYzRjOWEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9N2VmZWQ1YmEyMTdhZTM0OTkwZjkyZTBiZGU1Mjc1MzlkMjIyY2E3NjE5YTZkMzlhMTlhMDhmMmY2ZmYxYTFhNyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ar_tUsz4CFtIvzivSTZ21uJRMcruaTHbCphcGoy8gr0",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106908,
+    "url": "https://github.com/python/cpython/pull/133380",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106909,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719843-e32d0e16-8e2b-4597-97f2-43d9cdbd482f.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTg0My1lMzJkMGUxNi04ZTJiLTQ1OTctOTdmMi00M2Q5Y2RiZDQ4MmYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTFiMmM2N2Q4NmYwYTc5ZGU2MjhhNmU4NWJlOGJhZTBjMGMzZGIwY2U5MjZhOWNkOGM1YjNlN2I5YTY5M2Q2ZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.5ZopOl3KJ9_p1NXGBIKkJv4qSrBLQHeq5ckRFbLvoLs",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106911,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417676451-35bfe5e9-5985-4db1-bfe4-a06f0bcf999e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjQ1MS0zNWJmZTVlOS01OTg1LTRkYjEtYmZlNC1hMDZmMGJjZjk5OWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTQ1NjFmMDExMTBlYjYzOGM2MzNlYjIzMzkyODE0ZWU0NmE1Njk3NTQ2NWE2Y2RkNjk0OGUxYTliNWJlYmEyMiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.prKlqLcav3HJLJ55FtvsP69n8vK8I3QicTG-6-CfNKw",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106912,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417679896-21e21ab2-3e22-46ae-a10a-dd3dcc6c194d.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTg5Ni0yMWUyMWFiMi0zZTIyLTQ2YWUtYTEwYS1kZDNkY2M2YzE5NGQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NzVkY2NhZGM5MzFjMmNmM2IyZDk1OTZjYzhmYjlmZjJhNTk3YTc3YzQ1NGI0MDhmYzFmYzg2YTRhNTNlNmEyYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.GFcwcMc93rgo0XTPh_7F0bdZ8Eb6HIR55XhB7KsFk-8",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106913,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719044-42a962c3-33d9-4fa1-aa35-1ba5a55f650a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTA0NC00MmE5NjJjMy0zM2Q5LTRmYTEtYWEzNS0xYmE1YTU1ZjY1MGEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTAxNmRmZDQ4Y2JkNmNkNzRiZjUzOThhNzdmMTU5ZWI0ZjUwOWE3ZDBiZTE4OTkyNDViNjU2M2RjMjYwNTFkZCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ObcTAmU6IvV6D3D5Sr8eIcgJz-zCyQCS39voD-bXBGo",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106914,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417719779-abd1bebe-2dcf-4299-9295-de8da11a2500.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTc3OS1hYmQxYmViZS0yZGNmLTQyOTktOTI5NS1kZThkYTExYTI1MDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzVmYmVjMDNhYjc2YjQzZjMwM2E2NGFiODM4ODI5ZTg0ZjdhMzUxOGIxMGIyMjA4MzNhN2FiZWQ5OTI5ZWM5OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.PBZMXfss36iiQnDm7iWKStR3zaDHy5e-DJcF6OYRsuc",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106915,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417676070-20be44cc-ae36-49d1-9911-3b4a0d6ddee6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjA3MC0yMGJlNDRjYy1hZTM2LTQ5ZDEtOTkxMS0zYjRhMGQ2ZGRlZTYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDkwMzY2YWI2MzdlOWRkMjIwM2RmNGNlYTZhNjMxNTViNTFjZjU2ZmI0MWI2MDcwMjRlN2I2NThiMGJmYjgyYiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.x7QwWrJj1JNU72Wo1PQDumcG8_GWxU0ZCUL6zHTFO1Y",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106916,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417681197-3feb9a82-dfa8-4d29-8613-713db857bd00.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTE5Ny0zZmViOWE4Mi1kZmE4LTRkMjktODYxMy03MTNkYjg1N2JkMDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzU5MDY5M2IwMTAxY2Q0Njc4Yzc3Y2U0YjNmZDFjZDI5OTcwOWI1YWNlYmI3MTNmNTFmNDhkNjk3NGM0YjU5OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.XQVdK5lbqe7UFM2dR2vbU8LcgJVWrume3cCyai3LwnU",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106917,
+    "url": "https://github.com/python/cpython/issues/130645#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106918,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718855-ad691d30-918e-4f88-8ae0-ca5fc2bbd7d6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODg1NS1hZDY5MWQzMC05MThlLTRmODgtOGFlMC1jYTVmYzJiYmQ3ZDYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MGJkMWUyZWQzYTNmMGU5OTUzNDIwMjRlMmRhMjNlZTU0ZDE0MjQzZDJiZDZhNTA5YmNiNGQ1ZTZlY2E0YjFiNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.oseq3Z3wEBzc0TGmYR_3PiPHruH5O0DmNO77bxsUhy8",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106919,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718924-fcb522cc-b6a8-47c4-b784-d121b7acff3e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODkyNC1mY2I1MjJjYy1iNmE4LTQ3YzQtYjc4NC1kMTIxYjdhY2ZmM2UucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODExZTVhYWIwNGI5MWZmZTNkYzM2NjRkMTRhZTY2YjRkNjJmOGNjOTliNjE1NTI0MDk3NGM5MTc2YzRjMDA3NyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.KOvUJd-1oVg27ao0e13w76NJSS0BuWM-T3dqJxuvCCo",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 106920,
+    "url": "https://private-user-images.githubusercontent.com/1324225/417718705-3b6834c1-ca9d-4c97-a8c5-e9af660a8144.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODcwNS0zYjY4MzRjMS1jYTlkLTRjOTctYThjNS1lOWFmNjYwYTgxNDQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZTExNTU2MWUxNTgyMzlmNWZhZmUxOGY3MDZjMzI1MDc4Y2UzNDkyNjE1OTNkNDJkNDViYzZiYTExYzI1YTc3YiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.EsgkrKW6QlEiUL2vHCB1aaTX9iNsp7Zg31CEgsKB-ZE",
+    "parentUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "id": 109398,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/126390",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109399,
+    "url": "https://github.com/python/cpython/issues/126390#issue-2632508712",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109400,
+    "url": "https://github.com/python/cpython/pull/126393",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109401,
+    "url": "https://github.com/python/cpython/issues/126390#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109403,
+    "url": "https://github.com/python/cpython/issues/126390#top",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109406,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/126390",
+    "parentUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "id": 109407,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.SpecialFileError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109408,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isdir",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109409,
+    "url": "https://peps.python.org/pep-0706/",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109410,
+    "url": "https://docs.python.org/3/library/tempfile.html#tempfile.mkdtemp",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109412,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.type",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109415,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.REGTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109416,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IXGRP",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109417,
+    "url": "https://docs.python.org/3/library/tarfile.html#stateful-extraction-filter-example",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109419,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109420,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.add",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109423,
+    "url": "https://docs.python.org/3/library/tarfile.html#",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109425,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-objects",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109426,
+    "url": "https://docs.python.org/3/library/tarfile.html#supporting-older-python-versions",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109428,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNUTYPE_LONGLINK",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109430,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.pax_headers",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109431,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-extraction-filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109432,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.fully_trusted_filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109433,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extraction_filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109434,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.fromtarfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109435,
+    "url": "https://docs.python.org/3/library/tarfile.html#tar-formats",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109436,
+    "url": "https://docs.python.org/3/library/io.html#io.FileIO.name",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109438,
+    "url": "https://docs.python.org/3/library/tarfile.html#filter-errors",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109439,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isblk",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109440,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-create",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109441,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.frombuf",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109442,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.FilterError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109446,
+    "url": "https://www.gnu.org/software/tar/manual/html_node/Standard.html",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109447,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNUTYPE_SPARSE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109448,
+    "url": "https://docs.python.org/3/library/shutil.html#archiving-operations",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109449,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.issym",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109450,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.size",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109451,
+    "url": "https://docs.python.org/3/library/tarfile.html#writing-examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109452,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.USTAR_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109453,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-e",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109454,
+    "url": "https://docs.python.org/3/library/tarfile.html#reading-examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109456,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-c",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109457,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IXUSR",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109459,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNU_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109460,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/tarfile.py",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109461,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.uid",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109462,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.ischr",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109463,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#compression.zstd.CompressionParameter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109464,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarinfo-objects",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109465,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-t",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109466,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-v",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109467,
+    "url": "https://docs.python.org/3/library/tarfile.html#tar-examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109470,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.CHRTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109471,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109472,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IWOTH",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109475,
+    "url": "https://docs.python.org/3/library/tarfile.html#unicode-issues",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109476,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-l",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109477,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkOutsideDestinationError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109478,
+    "url": "https://docs.python.org/3/library/tarfile.html#extraction-filters",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109479,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_mtime",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109480,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.uname",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109482,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isreg",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109483,
+    "url": "https://docs.python.org/3/library/tarfile.html#default-named-filters",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109485,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.is_tarfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109487,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.tar_filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109489,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.linkname",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109490,
+    "url": "https://docs.python.org/3/library/tarfile.html#supported-tar-formats",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109493,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.AbsoluteLinkError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109494,
+    "url": "https://docs.python.org/3/library/compression.zstd.html#compression.zstd.ZstdDict",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109495,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.next",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109496,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.mode",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109498,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.open",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109499,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.CompressionError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109500,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.gname",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109501,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IRUSR",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109503,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.replace",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109504,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isfifo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109506,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109507,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-extraction-refuse",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109509,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.SYMTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109511,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.ExtractError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109513,
+    "url": "https://docs.python.org/3/library/tarfile.html#command-line-interface",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109514,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.mtime",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109515,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IWGRP",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109516,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.close",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109517,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.addfile",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109518,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.devmajor",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109519,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.devminor",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109520,
+    "url": "https://docs.python.org/3/library/tarfile.html#examples",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109521,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.ReadError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109522,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.AREGTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109525,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.FilterError.tarinfo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109526,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.offset_data",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109528,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.BLKTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109529,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.normpath",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109532,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.OutsideDestinationError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109533,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.getmembers",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109535,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.gettarinfo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109536,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.StreamError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109537,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.getnames",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109539,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.ENCODING",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109540,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.list",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109542,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109543,
+    "url": "https://docs.python.org/3/library/time.html#epoch",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109544,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IXOTH",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109546,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.DEFAULT_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109548,
+    "url": "https://docs.python.org/3/library/io.html#io.RawIOBase.write",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109549,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-list",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109553,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.sparse",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109554,
+    "url": "https://docs.python.org/3/library/tarfile.html#hints-for-further-verification",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109555,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.HeaderError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109556,
+    "url": "https://docs.python.org/3/library/tarfile.html#command-line-options",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109557,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/tarfile.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109560,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile-further-verification",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109562,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.gid",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109564,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.getmember",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109565,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.CONTTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109566,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-filter",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109567,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.open",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109569,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-extract",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109570,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.GNUTYPE_LONGNAME",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109571,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.pax_headers",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109572,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.name",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109573,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.chksum",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109574,
+    "url": "https://docs.python.org/3/library/tarfile.html#tar-unicode",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109576,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.AbsolutePathError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109577,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.islnk",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109579,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.LNKTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109581,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.DIRTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109583,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.PAX_FORMAT",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109584,
+    "url": "https://docs.python.org/3/library/tarfile.html#cmdoption-tarfile-test",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109585,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarError",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109587,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.tobuf",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109588,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.isdev",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109590,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IWUSR",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109591,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.FIFOTYPE",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109592,
+    "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarInfo.offset",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "id": 109593,
+    "url": "https://docs.python.org/3/library/os.html#os-filenames",
+    "parentUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "tarfile — Read and write tar archive files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/tarfile.html#tarfile.LinkFallbackError"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "serhiy-storchaka",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/3659035?s\u003d64\u0026u\u003d1a0dce9f648413b5aabad98594a79a0949cc5682\u0026v\u003d4",
+    "alt": "@serhiy-storchaka",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Preserving order of options and nonoption arguments in gnu_getopt() · Issue #126390 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/126390"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#linecache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#linecache"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pty"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#pty"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/1324225?u\u003dd7e2522cc357c1b8fed0f1c623c68c7331c70c56\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@hugovk",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417717925-31869566-6580-4035-b1f4-d5695b77cfb1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxNzkyNS0zMTg2OTU2Ni02NTgwLTQwMzUtYjFmNC1kNTY5NWI3N2NmYjEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NzM5Y2Y3Mzc1MjI2OGRlNzVlYzZmNGI3NDUwOGY2MDI2ZGVmYmY1YTJlNDYzM2UxMTY0YzhiZjUxMmNkMDAwYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.uWlSAOIRPusUqz0oQPXNAlMp4u9zpIC288N9BaiyQVE",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718272-eea6349f-9590-4d2e-8cbe-9c0f27784cac.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODI3Mi1lZWE2MzQ5Zi05NTkwLTRkMmUtOGNiZS05YzBmMjc3ODRjYWMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODg2M2I4MzQ1OWE1ZGRmMTQ5NjQ2NWY0YWI4NmE4MTQxNDNhYjI0MDUxYjMwOGYyZjI4NzUzMjgwMTI2ZjNhOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.NRt4imIhI8W2DvAoc9Yefjni2AHtOBalEpIZobyFYtc",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718705-3b6834c1-ca9d-4c97-a8c5-e9af660a8144.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODcwNS0zYjY4MzRjMS1jYTlkLTRjOTctYThjNS1lOWFmNjYwYTgxNDQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZTExNTU2MWUxNTgyMzlmNWZhZmUxOGY3MDZjMzI1MDc4Y2UzNDkyNjE1OTNkNDJkNDViYzZiYTExYzI1YTc3YiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.EsgkrKW6QlEiUL2vHCB1aaTX9iNsp7Zg31CEgsKB-ZE",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718783-b4722fca-1610-407e-8672-604e3de2baf5.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODc4My1iNDcyMmZjYS0xNjEwLTQwN2UtODY3Mi02MDRlM2RlMmJhZjUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MThmYWMxNDU5ZDlhYmQxMWMzZjY1ZDFlNDQzMDkzNDQ0ZWZmMjU2OWExYzhjZmNhOWNjNDgwYWQwNTY1Zjg5NCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.V7BYJyAF6JonMbW0qvXZrFIvYqXOzDptfnGhOSWGjj4",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718855-ad691d30-918e-4f88-8ae0-ca5fc2bbd7d6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODg1NS1hZDY5MWQzMC05MThlLTRmODgtOGFlMC1jYTVmYzJiYmQ3ZDYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MGJkMWUyZWQzYTNmMGU5OTUzNDIwMjRlMmRhMjNlZTU0ZDE0MjQzZDJiZDZhNTA5YmNiNGQ1ZTZlY2E0YjFiNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.oseq3Z3wEBzc0TGmYR_3PiPHruH5O0DmNO77bxsUhy8",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417718924-fcb522cc-b6a8-47c4-b784-d121b7acff3e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxODkyNC1mY2I1MjJjYy1iNmE4LTQ3YzQtYjc4NC1kMTIxYjdhY2ZmM2UucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODExZTVhYWIwNGI5MWZmZTNkYzM2NjRkMTRhZTY2YjRkNjJmOGNjOTliNjE1NTI0MDk3NGM5MTc2YzRjMDA3NyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.KOvUJd-1oVg27ao0e13w76NJSS0BuWM-T3dqJxuvCCo",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719044-42a962c3-33d9-4fa1-aa35-1ba5a55f650a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTA0NC00MmE5NjJjMy0zM2Q5LTRmYTEtYWEzNS0xYmE1YTU1ZjY1MGEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTAxNmRmZDQ4Y2JkNmNkNzRiZjUzOThhNzdmMTU5ZWI0ZjUwOWE3ZDBiZTE4OTkyNDViNjU2M2RjMjYwNTFkZCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ObcTAmU6IvV6D3D5Sr8eIcgJz-zCyQCS39voD-bXBGo",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719137-89f997ee-0a18-49f5-9039-1a5634503d90.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTEzNy04OWY5OTdlZS0wYTE4LTQ5ZjUtOTAzOS0xYTU2MzQ1MDNkOTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YWYyZWNjY2NiYjVlY2Y5Y2VjNDRjODU3ZjQzZGFmODExOWJmN2EwMGM5NzFhZDE4MjYzOTA3MmNkMGU1ZjFlZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.R8LGCWlUGO75qtwSOPrbsyxudx1z-FjJCuNqciVBZU4",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719217-03ad0675-1845-43aa-8802-fb6f3edf6d99.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTIxNy0wM2FkMDY3NS0xODQ1LTQzYWEtODgwMi1mYjZmM2VkZjZkOTkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZjNlMDU4ZTU5NGUxZDBjZGMzZjI4Mzc4M2NjNmYwOWZkNTFmN2I4N2ZiZTNjNjkzNWYzZWQ2YmZkYjVjNjRiMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.irYu-LKLaZL4UMSUlxGu8KRD66EbcKawSKv6pxvTZo8",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719333-96b8b582-d40d-4a4e-be51-a04abb15c357.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTMzMy05NmI4YjU4Mi1kNDBkLTRhNGUtYmU1MS1hMDRhYmIxNWMzNTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZDUzYzZiNTE5Y2NmMDdjZGMxMjc4OTIxNmYwOTg5MjFhMTRiZTRjNzQ1NWQ0MTlhMzZmYjQ1Y2Q1MzBlODBkOSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.SRF_CCBI3b8Is8hoVHxY_KAZK7TsPmmVGppCNYZhXAc",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719413-cd5caa47-fbda-47f8-841b-c3386534e8e4.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTQxMy1jZDVjYWE0Ny1mYmRhLTQ3ZjgtODQxYi1jMzM4NjUzNGU4ZTQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjIwYmQwNWM3NmNiMWVhNjE2NzE5OWRlZmVkNjg2MGM1MGRmZGJjZmI5Yzg3MmJlNTNjM2QwZDk2ZDgwYzYyNyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.6ud79rAkDwvAdMGzNlW5dppI_nHfNgeWLKjSmOhh_aM",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719518-c4eac0cf-b46d-478f-8604-86d666109e17.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTUxOC1jNGVhYzBjZi1iNDZkLTQ3OGYtODYwNC04NmQ2NjYxMDllMTcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjQ1NTIyYzMyYWE0ZWViZjhhNDVlNjFjMjU3MWUyM2MzODI1Y2Y3OTNkMjRlMTE3YjdjZDJmNWU4OTA0Y2Y3OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.dE5IMACTo1ItoZvrCE04z5UwRch03n6MWpFCgev40Qs",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719587-10be9e0e-3712-4ae5-98c5-7b2dcfe91908.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTU4Ny0xMGJlOWUwZS0zNzEyLTRhZTUtOThjNS03YjJkY2ZlOTE5MDgucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWEwMmM3YjE0MzQ3Mjc0ZWJlOTM0NWEyNGUxOThjNmY5YmU4OTE0NjY5OWRkMmNjMmY2ZDU3M2U1N2UzNGViOCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.8V8-00KU88AJZt3a_C9zluDJd9tSJcOMBeZ9A9BfpJA",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719649-2ef5971b-c322-440c-8179-08cce3b78b76.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTY0OS0yZWY1OTcxYi1jMzIyLTQ0MGMtODE3OS0wOGNjZTNiNzhiNzYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTY1Mzg4YTlmNTY4MGE2NTgzMzdkNmE2YWU3MmI5MjU0MDQ5OTBkYzIzZTI3OTJmYjMzZjIxY2ViZWMxZTg2MCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.hY0lT0Wchcfs9Ofe7PENJuIklOvPMfW5w0XQgfmTgjw",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719724-4e7dae32-2992-419f-9ddc-92ae735ec3b9.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTcyNC00ZTdkYWUzMi0yOTkyLTQxOWYtOWRkYy05MmFlNzM1ZWMzYjkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NGRmNGYyOWZhOGJmOWFhNGJiYTQ0NjhhZDdhODk5NDgyZDcxYmEwYmMyYWIyMmFiMjRiNDgxYTYzYTk3ZmFkYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.EO46ZkwOAAabMejvx3ugoAOOXHwsGPH2tuf-Uf0THcE",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719779-abd1bebe-2dcf-4299-9295-de8da11a2500.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTc3OS1hYmQxYmViZS0yZGNmLTQyOTktOTI5NS1kZThkYTExYTI1MDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzVmYmVjMDNhYjc2YjQzZjMwM2E2NGFiODM4ODI5ZTg0ZjdhMzUxOGIxMGIyMjA4MzNhN2FiZWQ5OTI5ZWM5OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.PBZMXfss36iiQnDm7iWKStR3zaDHy5e-DJcF6OYRsuc",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719843-e32d0e16-8e2b-4597-97f2-43d9cdbd482f.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTg0My1lMzJkMGUxNi04ZTJiLTQ1OTctOTdmMi00M2Q5Y2RiZDQ4MmYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTFiMmM2N2Q4NmYwYTc5ZGU2MjhhNmU4NWJlOGJhZTBjMGMzZGIwY2U5MjZhOWNkOGM1YjNlN2I5YTY5M2Q2ZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.5ZopOl3KJ9_p1NXGBIKkJv4qSrBLQHeq5ckRFbLvoLs",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417719909-135643a7-7a1a-4786-ab96-3a2d69393b27.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzcxOTkwOS0xMzU2NDNhNy03YTFhLTQ3ODYtYWI5Ni0zYTJkNjkzOTNiMjcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MmRkYjc2YTc0YTBjZGFhODQwYjM3ZjZjNDgyYWQxNWQwNTBhNzYyNGYzMWI1NWY0MDY2NmU0YTUxZWI4NjdmMiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.Dh-G_Ihowo0fNJfTaEug5zpSXVtQxYVWZ-C07h62ews",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417676070-20be44cc-ae36-49d1-9911-3b4a0d6ddee6.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjA3MC0yMGJlNDRjYy1hZTM2LTQ5ZDEtOTkxMS0zYjRhMGQ2ZGRlZTYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDkwMzY2YWI2MzdlOWRkMjIwM2RmNGNlYTZhNjMxNTViNTFjZjU2ZmI0MWI2MDcwMjRlN2I2NThiMGJmYjgyYiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.x7QwWrJj1JNU72Wo1PQDumcG8_GWxU0ZCUL6zHTFO1Y",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417676451-35bfe5e9-5985-4db1-bfe4-a06f0bcf999e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3NjQ1MS0zNWJmZTVlOS01OTg1LTRkYjEtYmZlNC1hMDZmMGJjZjk5OWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MTQ1NjFmMDExMTBlYjYzOGM2MzNlYjIzMzkyODE0ZWU0NmE1Njk3NTQ2NWE2Y2RkNjk0OGUxYTliNWJlYmEyMiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.prKlqLcav3HJLJ55FtvsP69n8vK8I3QicTG-6-CfNKw",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417679896-21e21ab2-3e22-46ae-a10a-dd3dcc6c194d.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTg5Ni0yMWUyMWFiMi0zZTIyLTQ2YWUtYTEwYS1kZDNkY2M2YzE5NGQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NzVkY2NhZGM5MzFjMmNmM2IyZDk1OTZjYzhmYjlmZjJhNTk3YTc3YzQ1NGI0MDhmYzFmYzg2YTRhNTNlNmEyYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.GFcwcMc93rgo0XTPh_7F0bdZ8Eb6HIR55XhB7KsFk-8",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417679964-e896f6e0-7112-482a-adba-21f1fdaa6dc1.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY3OTk2NC1lODk2ZjZlMC03MTEyLTQ4MmEtYWRiYS0yMWYxZmRhYTZkYzEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzM4NGM2MWQ0NGY5ODRlZjJkY2FhZDhjMDllYWMzMzk3MjYxODc5OWEzMDI4NzJmZGNmYzRhYTFiN2I2NmQ3MyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.MtoafrCb32nFPVT4SSCOmNRDZI9vwCKJAPxBDhtjDNE",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417681990-a43c721b-0ad0-4087-b241-14bf86c96c9e.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTk5MC1hNDNjNzIxYi0wYWQwLTQwODctYjI0MS0xNGJmODZjOTZjOWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NjFkNjJiNzA0NDA0ZWI1ZGQxNGQ3YjI3NDhjNGMyNmU5MmM2ODY2ZGFjMGNiNTJmYzI3YjE0NzZhNmFjNzNiZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.X82SAWmTUJibH4SFyU_ltcGfKvNvCSXjg92rHmaU0hk",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417682051-da4408e4-76c2-42c3-8fff-f1270c701d10.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MjA1MS1kYTQ0MDhlNC03NmMyLTQyYzMtOGZmZi1mMTI3MGM3MDFkMTAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MDUzYjkxMTU0MDA3YzhlYjU4YmNlMTI5ZTJkNTViYTdiODg5MzVlMGRhMzI1MjkwOWRhY2JkZjVmNGRjYzRhNiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0._IP_OT5ezR9azaNPQ5m1Dz9Ex5D7pmCitPyuqYZf3lo",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417681197-3feb9a82-dfa8-4d29-8613-713db857bd00.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTE5Ny0zZmViOWE4Mi1kZmE4LTRkMjktODYxMy03MTNkYjg1N2JkMDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzU5MDY5M2IwMTAxY2Q0Njc4Yzc3Y2U0YjNmZDFjZDI5OTcwOWI1YWNlYmI3MTNmNTFmNDhkNjk3NGM0YjU5OSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.XQVdK5lbqe7UFM2dR2vbU8LcgJVWrume3cCyai3LwnU",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://private-user-images.githubusercontent.com/1324225/417681405-ab5cdf6a-47a3-413b-bdf1-2dc885dc4c9a.png?jwt\u003deyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE0ODAwMzksIm5iZiI6MTc5MTQ3OTczOSwicGF0aCI6Ii8xMzI0MjI1LzQxNzY4MTQwNS1hYjVjZGY2YS00N2EzLTQxM2ItYmRmMS0yZGM4ODVkYzRjOWEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAwOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMDhUMTcxNTM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9N2VmZWQ1YmEyMTdhZTM0OTkwZjkyZTBiZGU1Mjc1MzlkMjIyY2E3NjE5YTZkMzlhMTlhMDhmMmY2ZmYxYTFhNyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ar_tUsz4CFtIvzivSTZ21uJRMcruaTHbCphcGoy8gr0",
+    "alt": "Image",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Add colour to `argparse` help · Issue #130645 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/130645"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
