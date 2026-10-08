@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 927,
+    "url": "https://docs.python.org/3/library/getpass.html#getpass.getpass",
+    "title": "getpass — Portable password input — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Command-line interface libraries » getpass — Portable password input | Theme Auto Light Dark | getpass — Portable password input¶ Source code: Lib/getpass.py Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. The getpass module provides two functions: getpass.getpass(prompt\u003d\u0027Password: \u0027, stream\u003dNone, *, echo_char\u003dNone)¶ Prompt the user for a password without echoing. The user is prompted using the string prompt, which defaults to \u0027Password: \u0027. On Unix, the prompt is written to the file-like object stream using the replace error handler if needed. stream defaults to the controlling terminal (/dev/tty) or if that is unavailable to sys.stderr (this argument is ignored on Windows). The echo_char argument controls how user input is displayed while typing. If echo_char is None (default), input remains hidden. Otherwise, echo_char must be a single printable ASCII character and each typed character is replaced by it. For example, echo_char\u003d\u0027*\u0027 will display asterisks instead of the actual input. If echo free input is unavailable getpass() falls back to printing a warning message to stream and reading from sys.stdin and issuing a GetPassWarning. Note If you call getpass from within IDLE, the input may be done in the terminal you launched IDLE from rather than the idle window itself. Note On Unix systems, when echo_char is set, the terminal will be configured to operate in noncanonical mode. In particular, this means that line editing shortcuts such as Ctrl+U will not work and may insert unexpected characters into the input. Changed in version 3.14: Added the echo_char parameter for keyboard feedback. exception getpass.GetPassWarning¶ A UserWarning subclass issued when password input may be echoed. getpass.getuser()¶ Return the “login name” of the user. This function checks the environment variables LOGNAME, USER, LNAME and USERNAME, in order, and returns the value of the first one which is set to a non-empty string. If none are set, the login name from the password database is returned on systems which support the pwd module, otherwise, an OSError is raised. In general, this function should be preferred over os.getlogin(). Changed in version 3.13: Previously, various exceptions beyond just OSError were raised. Previous topic optparse — Parser for command line options Next topic fileinput — Iterate over lines from multiple input streams This page Report a bug Improve this page Show source « Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Command-line interface libraries » getpass — Portable password input | Theme Auto Light Dark | © Copyright 2001 Python Software Foundation. This page is licensed under the Python Software Foundation License Version 2. Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License. See History and License for more information. The Python Software Foundation is a non-profit corporation. Please donate. Last updated on Oct 07, 2026 (09:18 UTC). Found a bug? Created using Sphinx 8.2.3.",
+    "scrapedAt": "2026-10-08 19:19:57.557187"
+  },
+  {
+    "id": 926,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#getpass",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:19:56.273275"
+  },
+  {
+    "id": 925,
+    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONLEGACYWINDOWSFSENCODING",
+    "title": "1. Command line and environment — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python Setup and Usage » 1. Command line and environment | Theme Auto Light Dark | 1. Command line and environment¶ The CPython interpreter scans the command line and the environment for various settings. CPython implementation detail: Other implementations’ command line schemes may differ. See Alternate Implementations for further resources. 1.1. Command line¶ When invoking Python, you may specify any of these options: python [-bBdEhiIOPqRsSuvVWx?] [-c command | -m module-name | script | - ] [args]\n The most common use case is, of course, a simple invocation of a script: python myscript.py\n 1.1.1. Interface options¶ The interpreter interface resembles that of the UNIX shell, but provides some additional methods of invocation: When called with standard input connected to a tty device, it prompts for commands and executes them until an EOF (an end-of-file character, you can produce that with Ctrl-D on UNIX or Ctrl-Z, Enter on Windows) is read. For more on interactive mode, see Interactive Mode. When called with a file name argument or with a file as standard input, it reads and executes a script from that file. When called with a directory name argument, it reads and executes an appropriately named script from that directory. When called with -c command, it executes the Python statement(s) given as command. Here command may contain multiple statements separated by newlines. Leading whitespace is significant in Python statements! When called with -m module-name, the given module is located using the standard import mechanism and executed as a script. In non-interactive mode, the entire input is parsed before it is executed. An interface option terminates the list of options consumed by the interpreter, all consecutive arguments will end up in sys.argv – note that the first element, subscript zero (sys.argv[0]), is a string reflecting the program’s source. -c \u003ccommand\u003e¶ Execute the Python code in command. command can be one or more statements separated by newlines, with significant leading whitespace as in normal module code. If this option is given, the first element of sys.argv will be \"-c\" and the current directory will be added to the start of sys.path (allowing modules in that directory to be imported as top level modules). Raises an auditing event cpython.run_command with argument command. Changed in version 3.14: command is automatically dedented before execution. -m \u003cmodule-name\u003e¶ Locate the module using the standard import mechanism and execute its contents as the __main__ module. Since the argument is a module name, you must not give a file extension (.py). The module name should be a valid absolute Python module name, but the implementation may not always enforce this (e.g. it may allow you to use a name that includes a hyphen). Package names (including namespace packages) are also permitted. When a package name is supplied instead of a normal module, the interpreter will execute \u003cpkg\u003e.__main__ as the main module. This behaviour is deliberately similar to the handling of directories and zipfiles that are passed to the interpreter as the script argument. Note This option cannot be used with built-in modules and extension modules written in C, since they do not have Python module files. However, it can still be used for precompiled modules, even if the original source file is not available. If this option is given, the first element of sys.argv will be the full path to the module file (while the module file is being located, the first element will be set to \"-m\"). As with the -c option, the current directory will be added to the start of sys.path. -I option can be used to run the script in isolated mode where sys.path contains neither the current directory nor the user’s site-packages directory. All PYTHON* environment variables are ignored, too. Many standard library modules contain code that is invoked on their execution as a script. An example is the timeit module: python -m timeit -s \"setup here\" \"benchmarked code here\"\npython -m timeit -h # for details\n Raises an auditing event cpython.run_module with argument module-name. See also runpy.run_module() Equivalent functionality directly available to Python code PEP 338 – Executing modules as scripts Changed in version 3.1: Supply the package name to run a __main__ submodule. Changed in version 3.4: namespace packages are also supported - Read commands from standard input (sys.stdin). If standard input is a terminal, -i is implied. If this option is given, the first element of sys.argv will be \"-\" and the current directory will be added to the start of sys.path. Raises an auditing event cpython.run_stdin with no arguments. \u003cscript\u003e Execute the Python code contained in script, which must be a filesystem path (absolute or relative) referring to either a Python file, a directory containing a __main__.py file, or a zipfile containing a __main__.py file. If this option is given, ",
+    "scrapedAt": "2026-10-08 19:19:54.926865"
+  },
+  {
+    "id": 924,
+    "url": "https://docs.python.org/3/library/os.html#os.stat",
+    "title": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » os — Miscellaneous operating system interfaces | Theme Auto Light Dark | os — Miscellaneous operating system interfaces¶ Source code: Lib/os.py This module provides a portable way of using operating system dependent functionality. If you just want to read or write a file see open(), if you want to manipulate paths, see the os.path module, and if you want to read all the lines in all the files on the command line see the fileinput module. For creating temporary files and directories see the tempfile module, and for high-level file and directory handling see the shutil module. Notes on the availability of these functions: The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface). Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability. All functions accepting path or file names accept both bytes and string objects, and result in an object of the same type, if a path or file name is returned. On VxWorks, os.popen, os.fork, os.execv and os.spawn*p* are not supported. On WebAssembly platforms, Android and iOS, large parts of the os module are not available or behave differently. APIs related to processes (e.g. fork(), execve()) and resources (e.g. nice()) are not available. Others like getuid() and getpid() are emulated or stubs. WebAssembly platforms also lack support for signals (e.g. kill(), wait()). Note All functions in this module raise OSError (or subclasses thereof) in the case of invalid or inaccessible file names and paths, or other arguments that have the correct type, but are not accepted by the operating system. exception os.error¶ An alias for the built-in OSError exception. os.name¶ The name of the operating system dependent module imported. The following names have currently been registered: \u0027posix\u0027, \u0027nt\u0027, \u0027java\u0027. See also sys.platform has a finer granularity. os.uname() gives system-dependent version information. The platform module provides detailed checks for the system’s identity. File Names, Command Line Arguments, and Environment Variables¶ In Python, file names, command line arguments, and environment variables are represented using the string type. On some systems, decoding these strings to and from bytes is necessary before passing them to the operating system. Python uses the filesystem encoding and error handler to perform this conversion (see sys.getfilesystemencoding()). The filesystem encoding and error handler are configured at Python startup by the PyConfig_Read() function: see filesystem_encoding and filesystem_errors members of PyConfig. Changed in version 3.1: On some systems, conversion using the file system encoding may fail. In this case, Python uses the surrogateescape encoding error handler, which means that undecodable bytes are replaced by a Unicode character U+DCxx on decoding, and these are again translated to the original byte on encoding. The file system encoding must guarantee to successfully decode all bytes below 128. If the file system encoding fails to provide this guarantee, API functions can raise UnicodeError. See also the locale encoding. Python UTF-8 Mode¶ Added in version 3.7: See PEP 540 for more details. The Python UTF-8 Mode ignores the locale encoding and forces the usage of the UTF-8 encoding: Use UTF-8 as the filesystem encoding. sys.getfilesystemencoding() returns \u0027utf-8\u0027. locale.getpreferredencoding() returns \u0027utf-8\u0027 (the do_setlocale argument has no effect). sys.stdin, sys.stdout, and sys.stderr all use UTF-8 as their text encoding, with the surrogateescape error handler being enabled for sys.stdin and sys.stdout (sys.stderr continues to use backslashreplace as it does in the default locale-aware mode) On Unix, os.device_encoding() returns \u0027utf-8\u0027 rather than the device encoding. Note that the standard stream settings in UTF-8 mode can be overridden by PYTHONIOENCODING (just as they can be in the default locale-aware mode). As a consequence of the changes in those lower level APIs, other higher level APIs also exhibit different default behaviours: Command line arguments, environment variables and filenames are decoded to text using the UTF-8 encoding. os.fsdecode() and os.fsencode() use the UTF-8 encoding. open(), io.open(), and codecs.open() use the UTF-8 encoding by default. However, they still use the strict error handler by default so that attempting to open a binary file in text mode is likely to raise an exception rather than producing nonsense data. The Python UTF-8 Mode is enabled if the LC_CTYPE locale is C or POSIX at Python startup (see the PyConfig_Read",
+    "scrapedAt": "2026-10-08 19:19:53.692951"
+  },
+  {
+    "id": 923,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:19:52.402878"
+  },
+  {
     "id": 922,
     "url": "https://docs.python.org/3/library/locale.html#locale.getdefaultlocale",
     "title": "locale — Internationalization services — Python 3.14.8 documentation",
@@ -6125,26 +6160,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 923,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control"
-  },
-  {
-    "id": 924,
-    "url": "https://docs.python.org/3/library/os.html#os.stat"
-  },
-  {
-    "id": 925,
-    "url": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONLEGACYWINDOWSFSENCODING"
-  },
-  {
-    "id": 926,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#getpass"
-  },
-  {
-    "id": 927,
-    "url": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
   },
   {
     "id": 928,
@@ -157566,10 +157581,2720 @@ window.searchData = [
     "id": 133467,
     "url": "https://docs.python.org/3/c-api/weakref.html#c.PyObject_ClearWeakRefs",
     "parentUrl": "https://docs.python.org/3/c-api/weakref.html#c.PyWeakref_GetRef"
+  },
+  {
+    "id": 135152,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IROTH",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135154,
+    "url": "https://docs.python.org/3/library/time.html#time.CLOCK_REALTIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135155,
+    "url": "https://docs.python.org/3/library/os.html#os.pardir",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135157,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_MANDLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135158,
+    "url": "https://docs.python.org/3/library/os.html#os.sync",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135160,
+    "url": "https://docs.python.org/3/library/os.html#os.execlpe",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135161,
+    "url": "https://docs.python.org/3/library/stat.html#stat.FILE_ATTRIBUTE_REPARSE_POINT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135162,
+    "url": "https://docs.python.org/3/library/os.html#os.pwrite",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135163,
+    "url": "https://manpages.debian.org/ptrace(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135164,
+    "url": "https://docs.python.org/3/library/os.html#os.getppid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135167,
+    "url": "https://docs.python.org/3/library/os.html#os.confstr",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135168,
+    "url": "https://docs.python.org/3/library/os.html#os.O_DSYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135169,
+    "url": "https://manpages.debian.org/timerfd_settime(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135170,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_2MB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135171,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_flags",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135173,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/os.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135174,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_file_attributes",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135175,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_PROTOCOL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135176,
+    "url": "https://docs.python.org/3/library/os.html#os.minor",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135177,
+    "url": "https://docs.python.org/3/library/os.html#os.O_TRUNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135178,
+    "url": "https://docs.python.org/3/library/stat.html#stat.UF_HIDDEN",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135180,
+    "url": "https://docs.python.org/3/library/os.html#os.device_encoding",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135181,
+    "url": "https://docs.python.org/3/library/stat.html#stat.SF_NOUNLINK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135182,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWCGROUP",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135183,
+    "url": "https://docs.python.org/3/library/os.html#os.extsep",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135184,
+    "url": "https://docs.python.org/3/library/os.html#os.F_ULOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135186,
+    "url": "https://docs.python.org/3/library/os.html#os.WCONTINUED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135190,
+    "url": "https://docs.python.org/3/library/os.html#os.fwalk",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135191,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_RELATIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135192,
+    "url": "https://manpages.debian.org/pidfd_open(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135193,
+    "url": "https://docs.python.org/3/library/os.html#os.getuid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135194,
+    "url": "https://docs.python.org/3/library/os.html#os.tcsetpgrp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135196,
+    "url": "https://docs.python.org/3/library/os.html#os.renames",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135197,
+    "url": "https://docs.python.org/3/library/os.html#os.supports_bytes_environ",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135199,
+    "url": "https://docs.python.org/3/library/os.html#os.terminal_size.columns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135200,
+    "url": "https://docs.python.org/3/library/os.html#os.removexattr",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135201,
+    "url": "https://docs.python.org/3/whatsnew/3.8.html#bpo-36085-whatsnew",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135203,
+    "url": "https://docs.python.org/3/library/os.html#python-utf-8-mode",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135204,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_RDONLY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135205,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_flag",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135206,
+    "url": "https://docs.python.org/3/library/os.html#file-object-creation",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135208,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_files",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135209,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_fstype",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135210,
+    "url": "https://docs.python.org/3/library/os.html#os.P_DETACH",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135211,
+    "url": "https://docs.python.org/3/library/os.html#os.O_NOATIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135212,
+    "url": "https://docs.python.org/3/library/os.html#os.chroot",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135213,
+    "url": "https://docs.python.org/3/library/resource.html#resource.getrusage",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135214,
+    "url": "https://docs.python.org/3/library/os.html#os.O_CREAT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135215,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_gen",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135216,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_1MB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135217,
+    "url": "https://docs.python.org/3/library/os.html#os.getgroups",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135218,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_creator",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135219,
+    "url": "https://docs.python.org/3/library/os.html#os.setpgrp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135220,
+    "url": "https://docs.python.org/3/library/os.html#os.O_CLOEXEC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135221,
+    "url": "https://docs.python.org/3/library/stat.html#module-stat",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135222,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_FADV_DONTNEED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135223,
+    "url": "https://docs.python.org/3/library/os.html#os.listvolumes",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135225,
+    "url": "https://docs.python.org/3/library/time.html#time.CLOCK_BOOTTIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135226,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_rsize",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135227,
+    "url": "https://docs.python.org/3/library/os.html#os.ctermid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135228,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Parent",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135230,
+    "url": "https://docs.python.org/3/library/os.html#os.setresuid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135231,
+    "url": "https://docs.python.org/3/library/os.html#os.O_SYMLINK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135232,
+    "url": "https://docs.python.org/3/library/os.html#os.get_blocking",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135233,
+    "url": "https://docs.python.org/3/library/os.html#os.P_PIDFD",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135234,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_64KB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135235,
+    "url": "https://docs.python.org/3/library/os.html#os.login_tty",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135236,
+    "url": "https://docs.python.org/3/library/os.html#querying-the-size-of-a-terminal",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135237,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_FADV_NOREUSE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135238,
+    "url": "https://docs.python.org/3/library/stat.html#stat.UF_NOUNLINK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135239,
+    "url": "https://docs.python.org/3/library/os.html#os.mkfifo",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135240,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnve",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135242,
+    "url": "https://docs.python.org/3/library/os.html#os.getgid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135243,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_NOTFOUND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135245,
+    "url": "https://docs.python.org/3/library/os.html#os.fchmod",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135249,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_reparse_tag",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135250,
+    "url": "https://docs.python.org/3/library/os.html#os.fstat",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135251,
+    "url": "https://discuss.python.org/t/33555",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135252,
+    "url": "https://docs.python.org/3/library/os.html#os.O_NDELAY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135253,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_256MB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135254,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnlpe",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135255,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_IOERR",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135256,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.move",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135257,
+    "url": "https://docs.python.org/3/library/os.html#process-management",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135258,
+    "url": "https://docs.python.org/3/library/os.html#os.F_TLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135259,
+    "url": "https://docs.python.org/3/library/os.html#os.P_OVERLAY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135261,
+    "url": "https://docs.python.org/3/library/os.html#os.getpriority",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135262,
+    "url": "https://docs.python.org/3/library/os.html#os.CLD_EXITED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135263,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.is_file",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135265,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_FADV_WILLNEED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135266,
+    "url": "https://docs.python.org/3/library/os.html#os.removedirs",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135267,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_atime_ns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135268,
+    "url": "https://docs.python.org/3/library/os.html#os.set_blocking",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135269,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_atime",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135270,
+    "url": "https://docs.python.org/3/library/os.html#os.timerfd_gettime",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135271,
+    "url": "https://docs.python.org/3/library/os.html#os.memfd_create",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135272,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnvp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135273,
+    "url": "https://peps.python.org/pep-0524/",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135275,
+    "url": "https://docs.python.org/3/library/os.html#follow-symlinks",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135276,
+    "url": "https://docs.python.org/3/library/stat.html#stat.SF_ARCHIVED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135277,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_NOUSER",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135279,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_size",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135280,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_frsize",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135281,
+    "url": "https://docs.python.org/3/library/os.html#os.F_TEST",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135284,
+    "url": "https://docs.python.org/3/library/os.html#os.execve",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135285,
+    "url": "https://docs.python.org/3/library/os.html#os.supports_dir_fd",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135286,
+    "url": "https://docs.python.org/3/library/os.html#os.RWF_HIPRI",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135287,
+    "url": "https://docs.python.org/3/library/os.html#os.fsync",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135288,
+    "url": "https://docs.python.org/3/library/os.html#os.posix_fadvise",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135290,
+    "url": "https://docs.python.org/3/library/random.html#random.SystemRandom",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135291,
+    "url": "https://docs.python.org/3/library/os.html#os.O_NOINHERIT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135292,
+    "url": "https://docs.python.org/3/library/os.html#os.execvp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135294,
+    "url": "https://docs.python.org/3/library/os.html#os.setxattr",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135295,
+    "url": "https://docs.python.org/3/library/os.html#os.timerfd_settime",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135297,
+    "url": "https://docs.python.org/3/library/os.html#os.PRIO_PROCESS",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135298,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_BeforeFork",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135299,
+    "url": "https://docs.python.org/3/library/os.html#os.nice",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135302,
+    "url": "https://docs.python.org/3/library/os.html#os.WIFEXITED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135303,
+    "url": "https://docs.python.org/3/library/os.html#interface-to-the-scheduler",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135304,
+    "url": "https://docs.python.org/3/library/os.html#os.setresgid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135306,
+    "url": "https://docs.python.org/3/library/os.html#os.curdir",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135307,
+    "url": "https://docs.python.org/3/library/os.html#os.get_terminal_size",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135308,
+    "url": "https://docs.python.org/3/library/secrets.html#module-secrets",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135309,
+    "url": "https://docs.python.org/3/library/os.html#os.eventfd_write",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135310,
+    "url": "https://docs.python.org/3/library/os.html#timer-file-descriptors",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135314,
+    "url": "https://manpages.debian.org/namespaces(7)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135315,
+    "url": "https://docs.python.org/3/library/os.html#os.RWF_APPEND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135316,
+    "url": "https://docs.python.org/3/library/os.html#os.dup",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135317,
+    "url": "https://docs.python.org/3/library/os.html#os.O_RSYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135319,
+    "url": "https://docs.python.org/3/library/os.html#os.P_NOWAITO",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135320,
+    "url": "https://docs.python.org/3/library/os.html#os.writev",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135321,
+    "url": "https://docs.python.org/3/library/os.html#os.uname_result.nodename",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135322,
+    "url": "https://docs.python.org/3/library/os.html#os.getcwdb",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135323,
+    "url": "https://docs.python.org/3/library/os.html#os.P_PID",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135324,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGCONT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135325,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_THREAD",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135326,
+    "url": "https://docs.python.org/3/library/os.html#os.O_DIRECTORY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135328,
+    "url": "https://docs.python.org/3/library/os.html#os.uname_result",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135330,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_fsid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135331,
+    "url": "https://docs.python.org/3/library/os.html#os.WSTOPSIG",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135332,
+    "url": "https://docs.python.org/3/library/os.html#os.RTLD_GLOBAL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135333,
+    "url": "https://docs.python.org/3/library/os.html#os.O_BINARY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135334,
+    "url": "https://docs.python.org/3/library/os.html#os.F_LOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135335,
+    "url": "https://docs.python.org/3/library/os.html#os.P_ALL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135337,
+    "url": "https://docs.python.org/3/library/os.html#os.uname_result.machine",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135338,
+    "url": "https://docs.python.org/3/library/os.html#os.chflags",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135339,
+    "url": "https://docs.python.org/3/library/os.html#os.listmounts",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135340,
+    "url": "https://docs.python.org/3/library/stat.html#stat.UF_NODUMP",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135343,
+    "url": "https://manpages.debian.org/waitid(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135344,
+    "url": "https://docs.python.org/3/library/os.html#os.getrandom",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135345,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_FADV_NORMAL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135346,
+    "url": "https://docs.python.org/3/library/os.html#os.WNOHANG",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135347,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_SIGHAND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135348,
+    "url": "https://docs.python.org/3/library/os.html#os.isatty",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135349,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_favail",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135350,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IWRITE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135351,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_NODIRATIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135352,
+    "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/aa364418(v\u003dvs.85).aspx",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135355,
+    "url": "https://manpages.debian.org/pathname(7)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135356,
+    "url": "https://docs.python.org/3/library/os.html#os.ttyname",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135357,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IEXEC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135358,
+    "url": "https://docs.python.org/3/library/os.html#os.setuid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135360,
+    "url": "https://docs.python.org/3/library/os.html#os.uname_result.release",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135363,
+    "url": "https://docs.python.org/3/library/os.html#os.O_FSYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135364,
+    "url": "https://docs.python.org/3/library/os.html#files-and-directories",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135366,
+    "url": "https://docs.python.org/3/library/os.html#os.O_RDONLY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135367,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_param.sched_priority",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135368,
+    "url": "https://docs.python.org/3/library/os.html#os.sysconf_names",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135370,
+    "url": "https://manpages.debian.org/unshare(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135371,
+    "url": "https://docs.python.org/3/library/os.html#os.CLD_DUMPED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135372,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_setscheduler",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135373,
+    "url": "https://docs.python.org/3/library/os.html#os.confstr_names",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135374,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/os.py",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135376,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_bfree",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135377,
+    "url": "https://docs.python.org/3/library/os.html#os.wait4",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135378,
+    "url": "https://docs.python.org/3/library/os.html#os.wait3",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135379,
+    "url": "https://docs.python.org/3/library/time.html#time-clock-id-constants",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135380,
+    "url": "https://docs.python.org/3/library/os.html#os.listxattr",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135381,
+    "url": "https://docs.python.org/3/library/os.html#os.RTLD_LOCAL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135382,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_ISVTX",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135383,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.is_symlink",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135384,
+    "url": "https://docs.python.org/3/library/os.html#os.CLD_STOPPED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135385,
+    "url": "https://docs.python.org/3/library/os.html#os.O_RDWR",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135387,
+    "url": "https://docs.python.org/3/library/os.html#os.WSTOPPED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135388,
+    "url": "https://docs.python.org/3/library/os.html#os.O_TEMPORARY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135389,
+    "url": "https://manpages.debian.org/statvfs(3)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135391,
+    "url": "https://docs.python.org/3/library/platform.html#platform.uname",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135392,
+    "url": "https://docs.python.org/3/library/os.html#os.getenv",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135393,
+    "url": "https://docs.python.org/3/library/os.html#",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135394,
+    "url": "https://msdn.microsoft.com/en-us/library/windows/desktop/aa364428(v\u003dvs.85).aspx",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135396,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_2GB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135397,
+    "url": "https://docs.python.org/3/library/os.html#os.posix_spawn",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135400,
+    "url": "https://docs.python.org/3/library/os.html#os.O_RANDOM",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135401,
+    "url": "https://docs.python.org/3/library/os.html#os.pathconf",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135402,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_SOFTWARE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135404,
+    "url": "https://docs.python.org/3/library/os.html#os.X_OK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135407,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_APPEND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135408,
+    "url": "https://docs.python.org/3/library/os.html#os.WEXITSTATUS",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135410,
+    "url": "https://docs.python.org/3/library/codecs.html#surrogateescape",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135413,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IRWXG",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135414,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.path",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135415,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_getparam",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135417,
+    "url": "https://docs.python.org/3/library/os.html#os.add_dll_directory",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135418,
+    "url": "https://docs.python.org/3/library/os.html#os.PRIO_DARWIN_BG",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135419,
+    "url": "https://docs.python.org/3/library/os.html#os.setsid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135420,
+    "url": "https://docs.python.org/3/library/os.html#os.TFD_TIMER_ABSTIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135421,
+    "url": "https://docs.python.org/3/library/getpass.html#getpass.getuser",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135422,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_32MB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135423,
+    "url": "https://docs.python.org/3/library/os.html#os.O_DIRECT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135424,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_RR",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135425,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGETLB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135426,
+    "url": "https://docs.python.org/3/library/os.html#os.EFD_CLOEXEC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135428,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_NOPERM",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135432,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWUTS",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135433,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_SYSVSEM",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135434,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_1GB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135436,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_OK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135437,
+    "url": "https://docs.python.org/3/library/os.html#os-file-dir",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135438,
+    "url": "https://docs.python.org/3/library/os.html#os.O_NONBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135439,
+    "url": "https://docs.python.org/3/library/os.html#os.fpathconf",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135440,
+    "url": "https://docs.python.org/3/library/os.html#os.terminal_size.lines",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135441,
+    "url": "https://docs.python.org/3/library/os.html#os.SPLICE_F_MORE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135444,
+    "url": "https://docs.python.org/3/library/os.html#os.O_TEXT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135445,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_NOEXEC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135449,
+    "url": "https://manpages.debian.org/splice(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135450,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.inode",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135451,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IRWXU",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135453,
+    "url": "https://docs.python.org/3/library/os.html#os.getsid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135454,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IRWXO",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135458,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_DATAERR",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135459,
+    "url": "https://docs.python.org/3/library/os.html#file-descriptor-operations",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135460,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_RESET_ON_FORK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135463,
+    "url": "https://docs.python.org/3/library/os.html#os.timerfd_gettime_ns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135465,
+    "url": "https://docs.python.org/3/library/os.html#linux-extended-attributes",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135466,
+    "url": "https://docs.python.org/3/library/os.html#os.abort",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135469,
+    "url": "https://pubs.opengroup.org/onlinepubs/009695399/functions/opendir.html",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135470,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_CONFIG",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135471,
+    "url": "https://docs.python.org/3/library/os.html#os.W_OK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135475,
+    "url": "https://docs.python.org/3/library/os.html#os.posix_fallocate",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135476,
+    "url": "https://docs.python.org/3/library/os.html#os.PRIO_USER",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135477,
+    "url": "https://docs.python.org/3/library/os.html#os.WUNTRACED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135479,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.get_terminal_size",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135481,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWNET",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135482,
+    "url": "https://docs.python.org/3/library/os.html#os.get_inheritable",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135485,
+    "url": "https://docs.python.org/3/library/stat.html#stat.UF_IMMUTABLE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135486,
+    "url": "https://docs.python.org/3/library/os.html#os.tcgetpgrp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135487,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnv",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135488,
+    "url": "https://docs.python.org/3/library/os.html#os.RTLD_DEEPBIND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135490,
+    "url": "https://docs.python.org/3/library/os.html#inheritance-of-file-descriptors",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135491,
+    "url": "https://docs.python.org/3/library/os.html#os.O_TMPFILE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135493,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWPID",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135494,
+    "url": "https://manpages.debian.org/date(1)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135496,
+    "url": "https://docs.python.org/3/library/os.html#os.getloadavg",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135499,
+    "url": "https://docs.python.org/3/library/stat.html#stat.SF_APPEND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135500,
+    "url": "https://docs.python.org/3/library/os.html#os.grantpt",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135501,
+    "url": "https://docs.python.org/3/library/os.html#os.preadv",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135503,
+    "url": "https://docs.python.org/3/library/os.html#mkdir-modebits",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135505,
+    "url": "https://docs.python.org/3/library/os.html#os.setpriority",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135506,
+    "url": "https://docs.python.org/3/library/os.html#os.makedev",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135507,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135508,
+    "url": "https://manpages.debian.org/uname(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135510,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.is_dir",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135511,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWUSER",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135512,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_mode",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135513,
+    "url": "https://docs.python.org/3/library/stat.html#stat.IO_REPARSE_TAG_SYMLINK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135514,
+    "url": "https://docs.python.org/3/library/os.html#os.getenvb",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135515,
+    "url": "https://docs.python.org/3/library/os.html#os.terminal_size",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135516,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess-replacements",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135517,
+    "url": "https://docs.python.org/3/library/stat.html#stat.SF_SNAPSHOT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135518,
+    "url": "https://docs.python.org/3/library/os.html#os.fchdir",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135519,
+    "url": "https://docs.python.org/3/library/os.html#os.chown",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135520,
+    "url": "https://docs.python.org/3/library/os.html#os.F_OK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135521,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_birthtime_ns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135522,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_get_priority_min",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135523,
+    "url": "https://docs.python.org/3/library/os.html#os.RWF_SYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135524,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_IMMUTABLE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135525,
+    "url": "https://docs.python.org/3/library/os.html#os.setregid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135528,
+    "url": "https://docs.python.org/3/library/os.html#os.get_handle_inheritable",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135529,
+    "url": "https://docs.python.org/3/library/os.html#os.major",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135531,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_MASK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135532,
+    "url": "https://docs.python.org/3/library/os.html#os.supports_fd",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135533,
+    "url": "https://docs.python.org/3/library/os.html#os.SPLICE_F_MOVE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135534,
+    "url": "https://docs.python.org/3/library/os.html#os.WNOWAIT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135535,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_SPAWN_CLOSEFROM",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135538,
+    "url": "https://docs.python.org/3/library/os.html#os.RWF_NOWAIT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135539,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_NOSUID",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135542,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_TEMPFAIL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135544,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_FIFO",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135546,
+    "url": "https://docs.python.org/3/library/os.html#os.plock",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135547,
+    "url": "https://manpages.debian.org/times(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135548,
+    "url": "https://docs.python.org/3/library/os.html#os.WIFSTOPPED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135549,
+    "url": "https://docs.python.org/3/library/subprocess.html#subprocess.run",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135552,
+    "url": "https://docs.python.org/3/library/os.html#os.getpgid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135553,
+    "url": "https://docs.python.org/3/library/os.html#os.pread",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135554,
+    "url": "https://docs.python.org/3/library/os.html#os.readv",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135555,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IRGRP",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135557,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_16MB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135558,
+    "url": "https://docs.python.org/3/library/os.html#os.WIFCONTINUED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135559,
+    "url": "https://docs.python.org/3/library/os.html#os.getegid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135560,
+    "url": "https://docs.python.org/3/library/shutil.html#shutil.chown",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135561,
+    "url": "https://docs.python.org/3/library/os.html#os.EFD_SEMAPHORE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135562,
+    "url": "https://docs.python.org/3/library/os.html#os.SF_SYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135563,
+    "url": "https://docs.python.org/3/library/os.html#os.setns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135564,
+    "url": "https://docs.python.org/3/library/stat.html#stat.UF_OPAQUE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135566,
+    "url": "https://docs.python.org/3/library/os.html#os.killpg",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135569,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_NOHOST",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135571,
+    "url": "https://docs.python.org/3/library/os.html#os.SF_NOCACHE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135572,
+    "url": "https://docs.python.org/3/library/os.html#os.unshare",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135573,
+    "url": "https://docs.python.org/3/library/os.html#os.O_NOFOLLOW",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135574,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWIPC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135575,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_ENFMT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135576,
+    "url": "https://docs.python.org/3/library/os.html#os.O_NOCTTY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135581,
+    "url": "https://docs.python.org/3/library/os.html#os.O_SEQUENTIAL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135582,
+    "url": "https://docs.python.org/3/library/os.html#os.pidfd_open",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135583,
+    "url": "https://docs.python.org/3/library/os.html#os.uname_result.version",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135585,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnle",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135586,
+    "url": "https://docs.python.org/3/library/os.html#os.O_ASYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135587,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_OTHER",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135591,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnlp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135593,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_ISDIR",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135596,
+    "url": "https://docs.python.org/3/library/os.html#os.setgid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135597,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_WRITE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135598,
+    "url": "https://docs.python.org/3/library/os.html#os.P_WAIT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135600,
+    "url": "https://docs.python.org/3/library/os.html#os.O_EXCL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135601,
+    "url": "https://docs.python.org/3/library/signal.html#signal.CTRL_BREAK_EVENT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135602,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_SPORADIC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135603,
+    "url": "https://docs.python.org/3/library/os.html#os.SF_MNOWAIT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135604,
+    "url": "https://docs.python.org/3/library/os.html#os.scandir.close",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135606,
+    "url": "https://manpages.debian.org/eventfd(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135607,
+    "url": "https://docs.python.org/3/library/os.html#os.posix_openpt",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135608,
+    "url": "https://manpages.debian.org/sched_yield(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135610,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_yield",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135611,
+    "url": "https://docs.python.org/3/library/os.html#process-parameters",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135613,
+    "url": "https://docs.python.org/3/library/os.html#os.PRIO_DARWIN_PROCESS",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135615,
+    "url": "https://docs.python.org/3/library/os.html#os.TFD_NONBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135616,
+    "url": "https://docs.python.org/3/library/os.html#os.O_EXLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135617,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_8MB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135618,
+    "url": "https://manpages.debian.org/open(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135619,
+    "url": "https://docs.python.org/3/library/os.html#os.GRND_RANDOM",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135620,
+    "url": "https://docs.python.org/3/library/os.html#os.WCOREDUMP",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135621,
+    "url": "https://docs.python.org/3/library/os.html#os.P_PGID",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135622,
+    "url": "https://docs.python.org/3/library/os.html#os.GRND_NONBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135623,
+    "url": "https://docs.python.org/3/library/os.html#os.PRIO_PGRP",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135624,
+    "url": "https://docs.python.org/3/library/os.html#os.devnull",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135625,
+    "url": "https://docs.python.org/3/library/time.html#time.CLOCK_MONOTONIC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135626,
+    "url": "https://docs.python.org/3/library/os.html#os.execvpe",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135629,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_blocks",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135630,
+    "url": "https://docs.python.org/3/library/os.html#os.O_PATH",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135631,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_ISUID",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135632,
+    "url": "https://docs.python.org/3/library/os.html#os.WIFSIGNALED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135633,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_FS",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135634,
+    "url": "https://docs.python.org/3/library/os.html#os.PRIO_DARWIN_NONUI",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135635,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_birthtime",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135636,
+    "url": "https://docs.python.org/3/library/os.html#os.timerfd_settime_ns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135637,
+    "url": "https://docs.python.org/3/library/os.html#os.posix_spawnp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135638,
+    "url": "https://docs.python.org/3/library/os.html#os.geteuid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135639,
+    "url": "https://docs.python.org/3/library/os.html#os.lchflags",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135641,
+    "url": "https://msdn.microsoft.com/44228cf2-6306-466c-8f16-f513cd3ba8b5",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135643,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_512KB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135644,
+    "url": "https://docs.python.org/3/library/os.html#os.defpath",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135646,
+    "url": "https://docs.python.org/3/library/os.html#os.TFD_CLOEXEC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135648,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_SPAWN_CLOSE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135649,
+    "url": "https://docs.python.org/3/library/os.html#os.PRIO_DARWIN_THREAD",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135650,
+    "url": "https://docs.python.org/3/library/os.html#os.P_NOWAIT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135652,
+    "url": "https://docs.python.org/3/library/os.html#os.wait",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135654,
+    "url": "https://pubs.opengroup.org/onlinepubs/009695399/functions/readdir_r.html",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135655,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_setparam",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135656,
+    "url": "https://docs.python.org/3/library/os.html#os.waitid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135657,
+    "url": "https://docs.python.org/3/library/os.html#os.eventfd_read",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135658,
+    "url": "https://docs.python.org/3/library/os.html#os.spawnvpe",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135659,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_FADV_SEQUENTIAL",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135661,
+    "url": "https://docs.python.org/3/library/os.html#os.RTLD_NODELETE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135662,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_USAGE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135663,
+    "url": "https://docs.python.org/3/library/os.html#os.error",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135667,
+    "url": "https://docs.python.org/3/library/os.html#os.execv",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135668,
+    "url": "https://docs.python.org/3/library/os.html#os.O_EVTONLY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135669,
+    "url": "https://manpages.debian.org/access(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135670,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_512MB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135672,
+    "url": "https://docs.python.org/3/library/os.html#os.execl",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135673,
+    "url": "https://docs.python.org/3/library/os.html#os.lchown",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135674,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135675,
+    "url": "https://docs.python.org/3/library/os.html#os.O_SHORT_LIVED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135677,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_getscheduler",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135678,
+    "url": "https://docs.python.org/3/library/os.html#os-unshare-clone-flags",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135679,
+    "url": "https://docs.python.org/3/library/os.html#os.copy_file_range",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135680,
+    "url": "https://docs.python.org/3/library/os.html#os.getpid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135681,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_OSFILE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135682,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_dev",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135684,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWNS",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135685,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_16GB",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135686,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_ISGID",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135687,
+    "url": "https://docs.python.org/3/library/os.html#os.getlogin",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135688,
+    "url": "https://docs.python.org/3/library/os.html#os.O_SHLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135689,
+    "url": "https://docs.python.org/3/library/os.html#path-fd",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135690,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.is_junction",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135691,
+    "url": "https://docs.python.org/3/using/windows.html#win-utf8-mode",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135692,
+    "url": "https://docs.python.org/3/library/os.html#os.seteuid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135693,
+    "url": "https://docs.python.org/3/library/os.html#os.chdir",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135694,
+    "url": "https://docs.python.org/3/library/os.html#os.fchown",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135696,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_NEWTIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135697,
+    "url": "https://docs.python.org/3/library/os.html#os.execle",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135700,
+    "url": "https://docs.python.org/3/library/os.html#os.ptsname",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135701,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_param",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135702,
+    "url": "https://docs.python.org/3/library/os.html#random-numbers",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135704,
+    "url": "https://docs.python.org/3/library/os.html#os.CLD_TRAPPED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135705,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_FADV_RANDOM",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135706,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.name",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135708,
+    "url": "https://bugs.python.org/issue?@action\u003dredirect\u0026bpo\u003d21082",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135709,
+    "url": "https://docs.python.org/3/library/os.html#os.SPLICE_F_NONBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135714,
+    "url": "https://docs.python.org/3/library/os.html#os.ftruncate",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135718,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_blocks",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135719,
+    "url": "https://manpages.debian.org/setns(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135723,
+    "url": "https://docs.python.org/3/library/os.html#os.pathconf_names",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135724,
+    "url": "https://docs.python.org/3/library/os.html#os.startfile",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135725,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_ino",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135727,
+    "url": "https://docs.python.org/3/library/os.html#os.WTERMSIG",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135728,
+    "url": "https://docs.python.org/3/library/os.html#os.umask",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135729,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_ffree",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135730,
+    "url": "https://man.freebsd.org/cgi/man.cgi?time(3)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135731,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_IDLE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135732,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_getaffinity",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135733,
+    "url": "https://docs.python.org/3/library/os.html#os.getresgid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135734,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_NOINPUT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135735,
+    "url": "https://docs.python.org/3/library/os.html#os.O_SYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135736,
+    "url": "https://docs.python.org/3/library/signal.html#signal.CTRL_C_EVENT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135737,
+    "url": "https://docs.python.org/3/library/os.html#os.O_NOFOLLOW_ANY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135739,
+    "url": "https://docs.python.org/3/library/os.html#os.fdatasync",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135741,
+    "url": "https://docs.python.org/3/library/os.html#os.closerange",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135742,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_CANTCREAT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135743,
+    "url": "https://docs.python.org/3/library/os.html#os.set_handle_inheritable",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135744,
+    "url": "https://docs.python.org/3/library/os.html#os.XATTR_CREATE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135745,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_CLOEXEC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135746,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_SYNCHRONOUS",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135747,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_VM",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135749,
+    "url": "https://docs.python.org/3/library/os.html#os.utime",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135750,
+    "url": "https://docs.python.org/3/library/os.html#os.pwritev",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135751,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_rdev",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135753,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_NOATIME",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135754,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_ALLOW_SEALING",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135755,
+    "url": "https://docs.python.org/3/library/os.html#os.EFD_NONBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135756,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_uid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135758,
+    "url": "https://docs.python.org/3/library/os.html#os.fstatvfs",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135759,
+    "url": "https://docs.python.org/3/library/os.html#os.O_APPEND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135760,
+    "url": "https://docs.python.org/3/using/windows.html#max-path",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135761,
+    "url": "https://docs.python.org/3/library/os.html#os.CLD_CONTINUED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135762,
+    "url": "https://docs.python.org/3/library/os.html#os.access",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135765,
+    "url": "https://docs.python.org/3/library/stat.html#stat.UF_APPEND",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135766,
+    "url": "https://docs.python.org/3/library/os.html#os.getpgrp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135768,
+    "url": "https://docs.python.org/3/library/os.html#os.SF_NODISKIO",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135769,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry.stat",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135770,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_get_priority_max",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135771,
+    "url": "https://docs.python.org/3/library/os.html#os.set_inheritable",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135773,
+    "url": "https://msdn.microsoft.com/en-us/library/aa363788",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135774,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_bavail",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135775,
+    "url": "https://docs.python.org/3/library/os.html#os.WEXITED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135776,
+    "url": "https://docs.python.org/3/library/os.html#miscellaneous-system-information",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135778,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_setaffinity",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135782,
+    "url": "https://docs.python.org/3/library/os.html#os.ST_NODEV",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135784,
+    "url": "https://docs.python.org/3/library/os.html#os.CLONE_FILES",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135785,
+    "url": "https://docs.python.org/3/library/os.html#os.pipe2",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135786,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_type",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135787,
+    "url": "https://docs.python.org/3/library/os.html#os.get_exec_path",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135788,
+    "url": "https://docs.python.org/3/library/os.html#os.RTLD_NOLOAD",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135790,
+    "url": "https://docs.microsoft.com/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135792,
+    "url": "https://docs.python.org/3/library/os.html#os.CLD_KILLED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135794,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_mtime_ns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135796,
+    "url": "https://docs.python.org/3/library/os.html#os.unlockpt",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135798,
+    "url": "https://docs.python.org/3/library/os.html#os.initgroups",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135800,
+    "url": "https://docs.python.org/3/library/contextlib.html#contextlib.chdir",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135804,
+    "url": "https://docs.python.org/3/library/os.html#os.setegid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135805,
+    "url": "https://docs.python.org/3/library/signal.html#signal.SIGCHLD",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135806,
+    "url": "https://docs.python.org/3/library/os.html#os.sched_rr_get_interval",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135810,
+    "url": "https://docs.python.org/3/library/os.html#os.getxattr",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135812,
+    "url": "https://docs.python.org/3/library/os.html#os.supports_follow_symlinks",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135813,
+    "url": "https://docs.python.org/3/library/os.html#os.supports_effective_ids",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135814,
+    "url": "https://docs.python.org/3/library/os.html#os.setgroups",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135815,
+    "url": "https://manpages.debian.org/clock_settime(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135816,
+    "url": "https://docs.python.org/3/library/os.html#os.PIDFD_NONBLOCK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135817,
+    "url": "https://docs.python.org/3/library/os.html#os.getgrouplist",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135819,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_namemax",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135820,
+    "url": "https://docs.python.org/3/library/os.html#os.RTLD_NOW",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135821,
+    "url": "https://docs.python.org/3/library/os.html#os.getresuid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135825,
+    "url": "https://docs.python.org/3/library/os.html#os.R_OK",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135826,
+    "url": "https://docs.python.org/3/library/os.html#os.lseek",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135827,
+    "url": "https://docs.python.org/3/library/os.html#os.O_WRONLY",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135829,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_ctime_ns",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135830,
+    "url": "https://docs.python.org/3/library/os.html#os.setreuid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135831,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_nlink",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135832,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_blksize",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135834,
+    "url": "https://docs.python.org/3/library/signal.html#signal.pthread_kill",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135836,
+    "url": "https://docs.python.org/3/library/os.html#os.setpgid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135837,
+    "url": "https://docs.python.org/3/library/os.html#os.XATTR_REPLACE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135839,
+    "url": "https://docs.python.org/3/library/os.html#os.forkpty",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135840,
+    "url": "https://docs.python.org/3/library/os.html#os.timerfd_create",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135841,
+    "url": "https://docs.python.org/3/library/stat.html#stat.SF_IMMUTABLE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135842,
+    "url": "https://docs.python.org/3/library/os.html#os.XATTR_SIZE_MAX",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135843,
+    "url": "https://docs.python.org/3/library/stat.html#stat.UF_COMPRESSED",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135845,
+    "url": "https://docs.python.org/3/library/os.html#os.splice",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135847,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_UNAVAILABLE",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135849,
+    "url": "https://docs.python.org/3/library/os.html#os.listdrives",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135852,
+    "url": "https://docs.python.org/3/library/os.html#file-names-command-line-arguments-and-environment-variables",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135853,
+    "url": "https://docs.python.org/3/library/os.html#os.SCHED_BATCH",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135855,
+    "url": "https://docs.python.org/3/library/os.html#os.mknod",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135856,
+    "url": "https://docs.python.org/3/library/os.html#os.statvfs_result.f_bsize",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135857,
+    "url": "https://docs.python.org/3/library/stat.html#stat.S_IREAD",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135860,
+    "url": "https://docs.python.org/3/library/os.html#os.write",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135861,
+    "url": "https://docs.python.org/3/library/os.html#os.TFD_TIMER_CANCEL_ON_SET",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135862,
+    "url": "https://manpages.debian.org/settimeofday(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135864,
+    "url": "https://docs.python.org/3/library/os.path.html#os.path.split",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135865,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_ctime",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135867,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_SPAWN_DUP2",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135868,
+    "url": "https://docs.python.org/3/library/os.html#os.EX_OSERR",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135869,
+    "url": "https://msdn.microsoft.com/en-us/library/z0kc8e3z.aspx",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135870,
+    "url": "https://manpages.debian.org/timerfd_create(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135871,
+    "url": "https://docs.python.org/3/library/os.html#os.stat_result.st_gid",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135873,
+    "url": "https://docs.python.org/3/library/os.html#os.RWF_DSYNC",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135874,
+    "url": "https://man7.org/linux/man-pages/man2/getrandom.2.html",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135875,
+    "url": "https://docs.python.org/3/library/os.html#os.lockf",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135876,
+    "url": "https://docs.python.org/3/library/os.html#os.MFD_HUGE_SHIFT",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135877,
+    "url": "https://docs.python.org/3/library/os.html#os.POSIX_SPAWN_OPEN",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135878,
+    "url": "https://docs.python.org/3/library/os.html#os.truncate",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135880,
+    "url": "https://docs.python.org/3/library/os.html#os.eventfd",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135886,
+    "url": "https://docs.python.org/3/library/os.html#os.execlp",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135888,
+    "url": "https://manpages.debian.org/timerfd_gettime(2)",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 135889,
+    "url": "https://docs.python.org/3/library/os.html#os.uname_result.sysname",
+    "parentUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "id": 137334,
+    "url": "https://manpages.debian.org/termios(3)#Canonical_and_noncanonical_mode",
+    "parentUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "id": 137340,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/getpass.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "id": 137344,
+    "url": "https://docs.python.org/3/library/getpass.html#module-getpass",
+    "parentUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "id": 137348,
+    "url": "https://docs.python.org/3/library/getpass.html#getpass.GetPassWarning",
+    "parentUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "id": 137354,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/getpass.py",
+    "parentUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "getpass — Portable password input — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "getpass — Portable password input — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/getpass.html#getpass.getpass"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#getpass"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#getpass"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONLEGACYWINDOWSFSENCODING"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "1. Command line and environment — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/using/cmdline.html#envvar-PYTHONLEGACYWINDOWSFSENCODING"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "os — Miscellaneous operating system interfaces — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/os.html#os.stat"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#whatsnew314-concurrent-warnings-control"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
