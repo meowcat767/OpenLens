@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1229,
+    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child",
+    "title": "Operating System Utilities — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Operating System Utilities | Theme Auto Light Dark | Operating System Utilities¶ PyObject *PyOS_FSPath(PyObject *path)¶ Return value: New reference. Part of the Stable ABI since version 3.6. Return the file system representation for path. If the object is a str or bytes object, then a new strong reference is returned. If the object implements the os.PathLike interface, then __fspath__() is returned as long as it is a str or bytes object. Otherwise TypeError is raised and NULL is returned. Added in version 3.6. int Py_FdIsInteractive(FILE *fp, const char *filename)¶ Return true (nonzero) if the standard I/O file fp with name filename is deemed interactive. This is the case for files for which isatty(fileno(fp)) is true. If the PyConfig.interactive is non-zero, this function also returns true if the filename pointer is NULL or if the name is equal to one of the strings \u0027\u003cstdin\u003e\u0027 or \u0027???\u0027. This function must not be called before Python is initialized. void PyOS_BeforeFork()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to prepare some internal state before a process fork. This should be called before calling fork() or any similar function that clones the current process. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_BeforeFork(). Added in version 3.7. void PyOS_AfterFork_Parent()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update some internal state after a process fork. This should be called from the parent process after calling fork() or any similar function that clones the current process, regardless of whether process cloning was successful. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Parent(). Added in version 3.7. void PyOS_AfterFork_Child()¶ Part of the Stable ABI on platforms with fork() since version 3.7. Function to update internal interpreter state after a process fork. This must be called from the child process after calling fork(), or any similar function that clones the current process, if there is any chance the process will call back into the Python interpreter. Only available on systems where fork() is defined. Warning The C fork() call should only be made from the “main” thread (of the “main” interpreter). The same is true for PyOS_AfterFork_Child(). Added in version 3.7. See also os.register_at_fork() allows registering custom Python functions to be called by PyOS_BeforeFork(), PyOS_AfterFork_Parent() and PyOS_AfterFork_Child(). void PyOS_AfterFork()¶ Part of the Stable ABI on platforms with fork(). Function to update some internal state after a process fork; this should be called in the new process if the Python interpreter will continue to be used. If a new executable is loaded into the new process, this function does not need to be called. Deprecated since version 3.7: This function is superseded by PyOS_AfterFork_Child(). int PyOS_CheckStack()¶ Part of the Stable ABI on platforms with USE_STACKCHECK since version 3.7. Return true when the interpreter runs out of stack space. This is a reliable check, but is only available when USE_STACKCHECK is defined (currently on certain versions of Windows using the Microsoft Visual C++ compiler). USE_STACKCHECK will be defined automatically; you should never change the definition in your own code. typedef void (*PyOS_sighandler_t)(int)¶ Part of the Stable ABI. PyOS_sighandler_t PyOS_getsig(int i)¶ Part of the Stable ABI. Return the current signal handler for signal i. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! PyOS_sighandler_t PyOS_setsig(int i, PyOS_sighandler_t h)¶ Part of the Stable ABI. Set the signal handler for signal i to be h; return the old signal handler. This is a thin wrapper around either sigaction() or signal(). Do not call those functions directly! int PyOS_InterruptOccurred(void)¶ Part of the Stable ABI. Check if a SIGINT signal has been received. Returns 1 if a SIGINT has occurred and clears the signal flag, or 0 otherwise. In most cases, you should prefer PyErr_CheckSignals() over this function. PyErr_CheckSignals() invokes the appropriate signal handlers for all pending signals, allowing Python code to handle the signal properly. This function only detects SIGINT and does not invoke any Python signal handlers. This function is async-signal-safe and this function cannot fail. The caller must hold an attached thread state. wchar_t *Py_DecodeLocale(const char *arg, size_t *size)¶ Part of the Stable ABI since version 3.7. Warning This function should not be called directly: use the PyConfig API with the PyConfig_SetBytesString()",
+    "scrapedAt": "2026-10-08 19:32:38.303894"
+  },
+  {
+    "id": 1228,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#turtle",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:32:36.989947"
+  },
+  {
+    "id": 1227,
+    "url": "https://docs.python.org/3/library/exceptions.html#NotImplementedError",
+    "title": "Built-in Exceptions — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Exceptions | Theme Auto Light Dark | Built-in Exceptions¶ In Python, all exceptions must be instances of a class that derives from BaseException. In a try statement with an except clause that mentions a particular class, that clause also handles any exception classes derived from that class (but not exception classes from which it is derived). Two exception classes that are not related via subclassing are never equivalent, even if they have the same name. The built-in exceptions listed in this chapter can be generated by the interpreter or built-in functions. Except where mentioned, they have an “associated value” indicating the detailed cause of the error. This may be a string or a tuple of several items of information (e.g., an error code and a string explaining the code). The associated value is usually passed as arguments to the exception class’s constructor. User code can raise built-in exceptions. This can be used to test an exception handler or to report an error condition “just like” the situation in which the interpreter raises the same exception; but beware that there is nothing to prevent user code from raising an inappropriate error. The built-in exception classes can be subclassed to define new exceptions; programmers are encouraged to derive new exceptions from the Exception class or one of its subclasses, and not from BaseException. More information on defining exceptions is available in the Python Tutorial under User-defined Exceptions. Exception context¶ Three attributes on exception objects provide information about the context in which the exception was raised: BaseException.__context__¶ BaseException.__cause__¶ BaseException.__suppress_context__¶ When raising a new exception while another exception is already being handled, the new exception’s __context__ attribute is automatically set to the handled exception. An exception may be handled when an except or finally clause, or a with statement, is used. This implicit exception context can be supplemented with an explicit cause by using from with raise: raise new_exc from original_exc\n The expression following from must be an exception or None. It will be set as __cause__ on the raised exception. Setting __cause__ also implicitly sets the __suppress_context__ attribute to True, so that using raise new_exc from None effectively replaces the old exception with the new one for display purposes (e.g. converting KeyError to AttributeError), while leaving the old exception available in __context__ for introspection when debugging. The default traceback display code shows these chained exceptions in addition to the traceback for the exception itself. An explicitly chained exception in __cause__ is always shown when present. An implicitly chained exception in __context__ is shown only if __cause__ is None and __suppress_context__ is false. In either case, the exception itself is always shown after any chained exceptions so that the final line of the traceback always shows the last exception that was raised. Inheriting from built-in exceptions¶ User code can create subclasses that inherit from an exception type. It’s recommended to only subclass one exception type at a time to avoid any possible conflicts between how the bases handle the args attribute, as well as due to possible memory layout incompatibilities. CPython implementation detail: Most built-in exceptions are implemented in C for efficiency, see: Objects/exceptions.c. Some have custom memory layouts which makes it impossible to create a subclass that inherits from multiple exception types. The memory layout of a type is an implementation detail and might change between Python versions, leading to new conflicts in the future. Therefore, it’s recommended to avoid subclassing multiple exception types altogether. Base classes¶ The following exceptions are used mostly as base classes for other exceptions. exception BaseException¶ The base class for all built-in exceptions. It is not meant to be directly inherited by user-defined classes (for that, use Exception). If str() is called on an instance of this class, the representation of the argument(s) to the instance are returned, or the empty string when there were no arguments. args¶ The tuple of arguments given to the exception constructor. Some built-in exceptions (like OSError) expect a certain number of arguments and assign a special meaning to the elements of this tuple, while others are usually called only with a single string giving an error message. with_traceback(tb)¶ This method sets tb as the new traceback for the exception and returns the exception object. It was more commonly used before the exception chaining features of PEP 3134 became available. The following example shows how we can convert an instance of SomeException into an instance of OtherException while preserving the traceback. Once raised, the current fram",
+    "scrapedAt": "2026-10-08 19:32:35.621829"
+  },
+  {
+    "id": 1226,
+    "url": "https://peps.python.org/pep-0703/",
+    "title": "PEP 703 – Making the Global Interpreter Lock Optional in CPython | peps.python.org",
+    "content": "Following system colour scheme Selected dark colour scheme Selected light colour scheme PEP 703 – Making the Global Interpreter Lock Optional in CPython PEP 703 – Making the Global Interpreter Lock Optional in CPython Author: Sam Gross \u003ccolesbury at gmail.com\u003e Sponsor: Łukasz Langa \u003clukasz at python.org\u003e Discussions-To: Discourse thread Status: Final Type: Standards Track Created: 09-Jan-2023 Python-Version: 3.13 Post-History: 09-Jan-2023, 04-May-2023 Resolution: 24-Oct-2023 Table of Contents Abstract Motivation The GIL Makes Many Types of Parallelism Difficult to Express The GIL Affects Python Library Usability GPU-Heavy Workloads Require Multi-Core Processing The GIL Makes Deploying Python AI Models Difficult Motivation Summary Specification Build Configuration Changes Overview of CPython Changes Reference Counting Immortalization Biased Reference Counting Default (0b00) Weakrefs (0b01) Queued (0b10) Merged (0b11) Reference counting pseudo-code Deferred Reference Counting Garbage Collector Modifications for Deferred Reference Counting Reference Counting Type Objects Memory Management CPython Free Lists Garbage Collection (Cycle Collection) Stop-the-World Thread States Generations Integration With Deferred and Biased Reference Counting Container Thread-Safety Borrowed References Python Critical Sections Optimistically Avoiding Locking Mimalloc Changes for Optimistic list and dict Access Mimalloc Page Reuse Optimistic dict and list Access Summary Specializing Interpreter Py_mod_gil Slot PYTHONGIL Environment Variable Rationale Non-Generational Garbage Collection Optimistic Avoiding Locking in dict and list Accesses Backwards Compatibility Distribution Performance Build Bots How to Teach This Reference Implementation Alternatives Multiprocessing Releasing the GIL in C-API Extensions Internal Parallelization Related Work Per-Interpreter GIL Gilectomy PyParallel python-safethread Greg Stein’s Free-Threading Patch Jython and IronPython PyPy-STM Rejected Ideas Why Not Use a Concurrent Garbage Collector? Why Not Deprecate PyDict_GetItem in Favor of PyDict_FetchItem? Why Not Use PEP 683 Immortalization? Open Issues Improved Specialization Python Build Modes Integration Mitigations for Single-Threaded Performance References Acknowledgments Copyright Note The Steering Council accepts PEP 703, but with clear proviso: that the rollout be gradual and break as little as possible, and that we can roll back any changes that turn out to be too disruptive – which includes potentially rolling back all of PEP 703 entirely if necessary (however unlikely or undesirable we expect that to be). Important This PEP is a historical document. The up-to-date, canonical documentation can now be found at Python support for free threading. × See PEP 1 for how to propose changes. Abstract CPython’s global interpreter lock (“GIL”) prevents multiple threads from executing Python code at the same time. The GIL is an obstacle to using multi-core CPUs from Python efficiently. This PEP proposes adding a build configuration (--disable-gil) to CPython to let it run Python code without the global interpreter lock and with the necessary changes needed to make the interpreter thread-safe. Motivation The GIL is a major obstacle to concurrency. For scientific computing tasks, this lack of concurrency is often a bigger issue than speed of executing Python code, since most of the processor cycles are spent in optimized CPU or GPU kernels. The GIL introduces a global bottleneck that can prevent other threads from making progress if they call any Python code. There are existing ways to enable parallelism in CPython today, but those techniques come with significant limitations (see Alternatives). This section focuses on the GIL’s impact on scientific computing, particular AI/ML workloads because that is the area with which this author has the most experience, but the GIL also affects other users of Python. The GIL Makes Many Types of Parallelism Difficult to Express Neural network-based AI models expose multiple opportunities for parallelism. For example, individual operations may be parallelized internally (“intra-operator”), multiple operations may be executed simultaneously (“inter-operator”), and requests (spanning multiple operations) may also be parallelized. Efficient execution requires exploiting multiple types of parallelism [1]. The GIL makes it difficult to express inter-operator parallelism, as well as some forms of request parallelism, efficiently in Python. In other programming languages, a system might use threads to run different parts of a neural network on separate CPU cores, but this is inefficient in Python due to the GIL. Similarly, latency-sensitive inference workloads frequently use threads to parallelize across requests, but face the same scaling bottlenecks in Python. The challenges the GIL poses to exploiting parallelism in Python frequently come up in reinforcement learning. Heinrich Kuttler, author of the NetHack Learning Environ",
+    "scrapedAt": "2026-10-08 19:32:34.257725"
+  },
+  {
+    "id": 1225,
+    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock",
+    "title": "Importing Modules — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Utilities » Importing Modules | Theme Auto Light Dark | Importing Modules¶ PyObject *PyImport_ImportModule(const char *name)¶ Return value: New reference. Part of the Stable ABI. This is a wrapper around PyImport_Import() which takes a const char* as an argument instead of a PyObject*. PyObject *PyImport_ImportModuleNoBlock(const char *name)¶ Return value: New reference. Part of the Stable ABI. This function is a deprecated alias of PyImport_ImportModule(). Changed in version 3.3: This function used to fail immediately when the import lock was held by another thread. In Python 3.3 though, the locking scheme switched to per-module locks for most purposes, so this function’s special behaviour isn’t needed anymore. Deprecated since version 3.13, will be removed in version 3.15: Use PyImport_ImportModule() instead. PyObject *PyImport_ImportModuleEx(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist)¶ Return value: New reference. Import a module. This is best described by referring to the built-in Python function __import__(). The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Failing imports remove incomplete module objects, like with PyImport_ImportModule(). PyObject *PyImport_ImportModuleLevelObject(PyObject *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI since version 3.7. Import a module. This is best described by referring to the built-in Python function __import__(), as the standard __import__() function calls this function directly. The return value is a new reference to the imported module or top-level package, or NULL with an exception set on failure. Like for __import__(), the return value when a submodule of a package was requested is normally the top-level package, unless a non-empty fromlist was given. Added in version 3.3. PyObject *PyImport_ImportModuleLevel(const char *name, PyObject *globals, PyObject *locals, PyObject *fromlist, int level)¶ Return value: New reference. Part of the Stable ABI. Similar to PyImport_ImportModuleLevelObject(), but the name is a UTF-8 encoded string instead of a Unicode object. Changed in version 3.3: Negative values for level are no longer accepted. PyObject *PyImport_Import(PyObject *name)¶ Return value: New reference. Part of the Stable ABI. This is a higher-level interface that calls the current “import hook function” (with an explicit level of 0, meaning absolute import). It invokes the __import__() function from the __builtins__ of the current globals. This means that the import is done using whatever import hooks are installed in the current environment. This function always uses absolute imports. PyObject *PyImport_ReloadModule(PyObject *m)¶ Return value: New reference. Part of the Stable ABI. Reload a module. Return a new reference to the reloaded module, or NULL with an exception set on failure (the module still exists in this case). PyObject *PyImport_AddModuleRef(const char *name)¶ Return value: New reference. Part of the Stable ABI since version 3.13. Return the module object corresponding to a module name. The name argument may be of the form package.module. First check the modules dictionary if there’s one there, and if not, create a new one and insert it in the modules dictionary. Return a strong reference to the module on success. Return NULL with an exception set on failure. The module name name is decoded from UTF-8. This function does not load or import the module; if the module wasn’t already loaded, you will get an empty module object. Use PyImport_ImportModule() or one of its variants to import a module. Package structures implied by a dotted name for name are not created if not already present. Added in version 3.13. PyObject *PyImport_AddModuleObject(PyObject *name)¶ Return value: Borrowed reference. Part of the Stable ABI since version 3.7. Similar to PyImport_AddModuleRef(), but return a borrowed reference and name is a Python str object. Added in version 3.3. PyObject *PyImport_AddModule(const char *name)¶ Return value: Borrowed reference. Part of the Stable ABI. Similar to PyImport_AddModuleRef(), but return a borrowed reference. PyObject *PyImport_ExecCodeModule(const char *name, PyObject *co)¶ Return value: New reference. Part of the Stable ABI. Given a module name (possibly of the form package.module) and a code object read from a Python bytecode file or obtained from the built-in function compile(), load the module. Return a new reference to the module object, or NULL with an exception set if an error occurred. name is removed from sys.modules in error cases, even if name was already in sys.modules o",
+    "scrapedAt": "2026-10-08 19:32:32.782063"
+  },
+  {
     "id": 1224,
     "url": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc",
     "title": "collections.abc — Abstract Base Classes for Containers — Python 3.14.8 documentation",
@@ -8190,26 +8225,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1225,
-    "url": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock"
-  },
-  {
-    "id": 1226,
-    "url": "https://peps.python.org/pep-0703/"
-  },
-  {
-    "id": 1227,
-    "url": "https://docs.python.org/3/library/exceptions.html#NotImplementedError"
-  },
-  {
-    "id": 1228,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#turtle"
-  },
-  {
-    "id": 1229,
-    "url": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child"
   },
   {
     "id": 1230,
@@ -224081,10 +224096,853 @@ window.searchData = [
     "id": 240746,
     "url": "https://github.com/python/cpython/blob/3.14/Doc/library/collections.abc.rst?plain\u003d1",
     "parentUrl": "https://docs.python.org/3/library/collections.abc.html#module-collections.abc"
+  },
+  {
+    "id": 240843,
+    "url": "https://peps.python.org/pep-0703/#improved-specialization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240844,
+    "url": "https://people.kernel.org/joelfernandes/gus-vs-rcu",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240845,
+    "url": "https://launchpad.net/python-safethread",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240846,
+    "url": "https://peps.python.org/pep-0703/#overview-of-cpython-changes",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240847,
+    "url": "https://peps.python.org/pep-0703/#integration-with-deferred-and-biased-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240848,
+    "url": "https://peps.python.org/pep-0703/#gsteinpatch",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240849,
+    "url": "https://peps.python.org/pep-0703/#greg-stein-s-free-threading-patch",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240850,
+    "url": "https://peps.python.org/pep-0703/#rejected-ideas",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240851,
+    "url": "https://openresearch-repository.anu.edu.au/bitstream/1885/33723/2/01_Blackburn_The_DaCapo_Benchmarks:_Java_2006.pdf",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240853,
+    "url": "https://peps.python.org/pep-0703/#specializing-interpreter",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240854,
+    "url": "https://discuss.python.org/t/22606",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240855,
+    "url": "https://go.dev/blog/ismmkeynote",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240856,
+    "url": "https://peps.python.org/pep-0703/#the-gil-makes-deploying-python-ai-models-difficult",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240857,
+    "url": "https://peps.python.org/pep-0703/#build-bots",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240858,
+    "url": "https://peps.python.org/pep-0703/#motivation-summary",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240859,
+    "url": "https://peps.python.org/pep-0703/#related-work",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240860,
+    "url": "https://peps.python.org/pep-0703/#mitigations-for-single-threaded-performance",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240861,
+    "url": "https://peps.python.org/pep-0703/#jython-and-ironpython",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240862,
+    "url": "https://peps.python.org/pep-0703/#reference-counting-type-objects",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240863,
+    "url": "https://peps.python.org/pep-0703/#distribution",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240864,
+    "url": "https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240865,
+    "url": "https://peps.python.org/pep-0703/#pythongil-environment-variable",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240866,
+    "url": "https://peps.python.org/pep-0703/#alternatives",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240867,
+    "url": "https://peps.python.org/pep-0703/#specification",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240868,
+    "url": "https://peps.python.org/pep-0703/#exploitingmemoryjava",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240869,
+    "url": "https://peps.python.org/pep-0703/#integration",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240870,
+    "url": "https://discuss.python.org/t/pep-703-making-the-global-interpreter-lock-optional-in-cpython-acceptance/37075",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240871,
+    "url": "https://peps.python.org/pep-0703/#motivation",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240872,
+    "url": "https://peps.python.org/pep-0703/#torchdeploy",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240873,
+    "url": "https://peps.python.org/pep-0703/#ironpython",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240874,
+    "url": "https://peps.python.org/pep-0703/#why-not-use-pep-683-immortalization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240875,
+    "url": "https://peps.python.org/pep-0703/#the-gil-affects-python-library-usability",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240876,
+    "url": "https://lwn.net/Articles/262464/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240877,
+    "url": "http://hmmer.org/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240878,
+    "url": "https://peps.python.org/pep-0703/#gpu-heavy-workloads-require-multi-core-processing",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240879,
+    "url": "https://peps.python.org/pep-0703/#reference-counting-pseudo-code",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240880,
+    "url": "https://peps.python.org/pep-0703/#why-not-use-a-concurrent-garbage-collector",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240881,
+    "url": "https://peps.python.org/pep-0703/#stop-the-world",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240882,
+    "url": "https://peps.python.org/pep-0703/#heaps",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240884,
+    "url": "https://peps.python.org/pep-0703/#internal-parallelization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240885,
+    "url": "https://peps.python.org/pep-0703/#decapo",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240886,
+    "url": "https://peps.python.org/pep-0703/#pep659",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240887,
+    "url": "https://peps.python.org/pep-0703/#mimalloc-page-reuse",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240888,
+    "url": "https://pillow.readthedocs.io/en/stable/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240890,
+    "url": "https://github.com/python/cpython/pull/19474",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240891,
+    "url": "https://peps.python.org/pep-0703/#typesafe-rcu",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240892,
+    "url": "https://peps.python.org/pep-0703/#copyright",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240893,
+    "url": "https://www.deepmind.com/blog/alphastar-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforcement-learning",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240894,
+    "url": "https://peps.python.org/pep-0703/#py-mod-gil-slot",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240895,
+    "url": "https://peps.python.org/pep-0703/#reference-implementation",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240896,
+    "url": "https://github.com/colesbury/nogil-3.12",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240897,
+    "url": "https://ironpython.net/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240898,
+    "url": "https://peps.python.org/pep-0703/#the-gil-makes-many-types-of-parallelism-difficult-to-express",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240899,
+    "url": "https://pytorch.org/docs/stable/jit.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240900,
+    "url": "https://peps.python.org/pep-0703/#cpythongc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240901,
+    "url": "https://peps.python.org/pep-0703/#tid",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240902,
+    "url": "https://peps.python.org/pep-0703/#optimistic-avoiding-locking-in-dict-and-list-accesses",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240903,
+    "url": "https://peps.python.org/pep-0703/#nogil312",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240904,
+    "url": "https://peps.python.org/pep-0703/#non-generational-garbage-collection",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240905,
+    "url": "https://peps.python.org/pep-0703/#pypy-stm",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240906,
+    "url": "https://peps.python.org/pep-0703/#thread-states",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240907,
+    "url": "https://peps.python.org/pep-0703/#python-build-modes",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240909,
+    "url": "https://peps.python.org/pep-0703/#pythonsafethread",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240910,
+    "url": "https://peps.python.org/pep-0703/#pypystm",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240911,
+    "url": "https://github.com/python/cpython/blob/cd6655a8589e99ae4088b3bed4a692a19ed48779/Modules/gcmodule.c#L1106",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240912,
+    "url": "https://peps.python.org/pep-0703/#releasing-the-gil-in-c-api-extensions",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240913,
+    "url": "https://peps.python.org/pep-0703/#garbage-collection-cycle-collection",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240914,
+    "url": "https://github.com/freebsd/freebsd-src/blob/9408f36627b74a472dc82f7a43320235c0c9055a/sys/kern/subr_smr.c#L44",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240915,
+    "url": "https://peps.python.org/pep-0703/#generations",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240916,
+    "url": "https://peps.python.org/pep-0703/#default-0b00",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240917,
+    "url": "https://peps.python.org/pep-0703/#id20",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240918,
+    "url": "https://peps.python.org/pep-0703/#yuemmwang2019",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240919,
+    "url": "https://www.kernel.org/doc/html/latest/RCU/whatisRCU.html#analogy-with-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240920,
+    "url": "https://peps.python.org/pep-0703/#perfbook",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240921,
+    "url": "https://peps.python.org/pep-0703/#backwards-compatibility",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240922,
+    "url": "https://github.com/colesbury/nogil/blob/f7e45d6bfbbd48c8d5cf851c116b73b85add9fc6/Include/object.h#L428-L455",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240923,
+    "url": "https://peps.python.org/pep-0703/#howto",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240924,
+    "url": "https://peps.python.org/pep-0703/#container-thread-safety",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240925,
+    "url": "https://peps.python.org/pep-0703/#python-safethread",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240926,
+    "url": "https://peps.python.org/pep-0703/#id19",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240927,
+    "url": "https://peps.python.org/pep-0703/#performance",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240928,
+    "url": "https://peps.python.org/pep-0703/#id18",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240930,
+    "url": "https://peps.python.org/pep-0703/#id9",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240931,
+    "url": "https://dl.acm.org/doi/abs/10.1145/1852761.1852768",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240932,
+    "url": "https://peps.python.org/pep-0703/#queued-0b10",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240933,
+    "url": "https://github.com/uploadcare/pillow-simd",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240934,
+    "url": "https://pytorch.org/docs/stable/package.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240935,
+    "url": "https://peps.python.org/pep-0703/#rationale",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240936,
+    "url": "https://peps.python.org/pep-0703/#build-configuration-changes",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240937,
+    "url": "https://ai.facebook.com/blog/nethack-learning-environment-to-advance-deep-reinforcement-learning/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240938,
+    "url": "https://peps.python.org/pep-0703/#id3",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240939,
+    "url": "https://peps.python.org/pep-0703/#id11",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240940,
+    "url": "https://peps.python.org/pep-0703/#id4",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240941,
+    "url": "https://peps.python.org/pep-0703/#id10",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240942,
+    "url": "https://peps.python.org/pep-0703/#gilectomy",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240943,
+    "url": "https://peps.python.org/pep-0703/#acknowledgments",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240944,
+    "url": "https://peps.python.org/pep-0703/#id1",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240945,
+    "url": "https://peps.python.org/pep-0703/#id13",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240946,
+    "url": "https://peps.python.org/pep-0703/#cpython-free-lists",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240947,
+    "url": "https://peps.python.org/pep-0703/#id2",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240948,
+    "url": "https://peps.python.org/pep-0703/#id12",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240949,
+    "url": "https://peps.python.org/pep-0703/#id15",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240950,
+    "url": "https://peps.python.org/pep-0703/#id7",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240951,
+    "url": "https://peps.python.org/pep-0703/#id8",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240952,
+    "url": "https://peps.python.org/pep-0703/#id14",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240953,
+    "url": "https://peps.python.org/pep-0703/#biased-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240954,
+    "url": "https://peps.python.org/pep-0703/#id5",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240955,
+    "url": "https://peps.python.org/pep-0703/#id17",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240956,
+    "url": "https://peps.python.org/pep-0703/#id6",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240957,
+    "url": "https://peps.python.org/pep-0703/#id16",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240958,
+    "url": "https://peps.python.org/pep-0703/#open-issues",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240959,
+    "url": "https://peps.python.org/pep-0703/#jython",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240960,
+    "url": "https://discuss.python.org/t/26503",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240961,
+    "url": "https://peps.python.org/pep-0703/#garbage-collector-modifications-for-deferred-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240962,
+    "url": "https://peps.python.org/pep-0703/#optimistically-avoiding-locking",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240963,
+    "url": "https://peps.python.org/pep-0703/#memory-management",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240964,
+    "url": "https://peps.python.org/pep-0703/#deferred-reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240965,
+    "url": "https://peps.python.org/pep-0703/#golangc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240966,
+    "url": "https://peps.python.org/pep-0703/#rcu",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240967,
+    "url": "https://arxiv.org/abs/2104.00254",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240968,
+    "url": "https://peps.python.org/pep-0703/#id22",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240969,
+    "url": "https://peps.python.org/pep-0703/#id21",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240970,
+    "url": "https://peps.python.org/pep-0703/#pyparallel",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240971,
+    "url": "https://cellprofiler.org/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240972,
+    "url": "https://peps.python.org/pep-0703/#id24",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240973,
+    "url": "https://peps.python.org/pep-0703/#multiprocessing",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240974,
+    "url": "https://peps.python.org/pep-0703/#id23",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240975,
+    "url": "https://peps.python.org/pep-0703/#id26",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240976,
+    "url": "https://peps.python.org/pep-0703/#merged-0b11",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240977,
+    "url": "https://peps.python.org/pep-0703/#python-critical-sections",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240978,
+    "url": "https://arxiv.org/abs/1908.04705",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240979,
+    "url": "https://peps.python.org/pep-0703/#id25",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240980,
+    "url": "https://peps.python.org/pep-0703/#weakrefs-0b01",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240981,
+    "url": "https://peps.python.org/pep-0703/#id28",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240982,
+    "url": "https://peps.python.org/pep-0703/#id27",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240983,
+    "url": "https://peps.python.org/pep-0703/#abstract",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240984,
+    "url": "https://dl.acm.org/doi/abs/10.1145/3243176.3243195",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240985,
+    "url": "https://peps.python.org/pep-0703/#dabeaz",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240986,
+    "url": "https://dose3d.fis.agh.edu.pl/en/projekt-dose-3d-z-programu-team-net-fnp-eng/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240987,
+    "url": "https://peps.python.org/pep-0703/#hotspotgc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240988,
+    "url": "https://peps.python.org/pep-0703/#how-to-teach-this",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240989,
+    "url": "https://peps.python.org/pep-0703/#gus",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240990,
+    "url": "https://peps.python.org/pep-0703/#reference-counting",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240991,
+    "url": "https://peps.python.org/pep-0703/#optimistic-dict-and-list-access-summary",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240992,
+    "url": "https://peps.python.org/pep-0703/#why-not-deprecate-pydict-getitem-in-favor-of-pydict-fetchitem",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240993,
+    "url": "https://peps.python.org/pep-0703/#immortalization",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240994,
+    "url": "https://openai.com/five/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240995,
+    "url": "https://doc.pypy.org/en/latest/stm.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240996,
+    "url": "https://peps.python.org/pep-0703/#references",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240997,
+    "url": "https://peps.python.org/pep-0703/#brc",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240998,
+    "url": "https://dabeaz.blogspot.com/2011/08/inside-look-at-gil-removal-patch-of.html",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 240999,
+    "url": "https://github.com/colesbury/nogil",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241002,
+    "url": "https://www.python.org/ftp/python/contrib-09-Dec-1999/System/threading.tar.gz",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241003,
+    "url": "https://peps.python.org/pep-0703/#borrowed-references",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241005,
+    "url": "http://pyparallel.org/",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241006,
+    "url": "https://peps.python.org/pep-0703/#per-interpreter-gil",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241007,
+    "url": "https://docs.oracle.com/en/java/javase/12/gctuning/hotspot-virtual-machine-garbage-collection-tuning-guide.pdf",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241008,
+    "url": "https://peps.python.org/pep-0703/#mimalloc-changes-for-optimistic-list-and-dict-access",
+    "parentUrl": "https://peps.python.org/pep-0703/"
+  },
+  {
+    "id": 241009,
+    "url": "https://github.com/larryhastings/gilectomy/tree/gilectomy",
+    "parentUrl": "https://peps.python.org/pep-0703/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Operating System Utilities — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/sys.html#c.PyOS_AfterFork_Child"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#turtle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#turtle"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#NotImplementedError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Exceptions — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/exceptions.html#NotImplementedError"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Importing Modules — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/import.html#c.PyImport_ImportModuleNoBlock"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
