@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 860,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring",
+    "title": "sys.monitoring — Execution event monitoring — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Python Runtime Services » sys.monitoring — Execution event monitoring | Theme Auto Light Dark | sys.monitoring — Execution event monitoring¶ Added in version 3.12. Note sys.monitoring is a namespace within the sys module, not an independent module, and import sys.monitoring would fail with a ModuleNotFoundError. Instead, simply import sys and then use sys.monitoring. This namespace provides access to the functions and constants necessary to activate and control event monitoring. As programs execute, events occur that might be of interest to tools that monitor execution. The sys.monitoring namespace provides means to receive callbacks when events of interest occur. The monitoring API consists of three components: Tool identifiers Events Callbacks Tool identifiers¶ A tool identifier is an integer and the associated name. Tool identifiers are used to discourage tools from interfering with each other and to allow multiple tools to operate at the same time. Currently tools are completely independent and cannot be used to monitor each other. This restriction may be lifted in the future. Before registering or activating events, a tool should choose an identifier. Identifiers are integers in the range 0 to 5 inclusive. Registering and using tools¶ sys.monitoring.use_tool_id(tool_id: int, name: str, /) → None¶ Must be called before tool_id can be used. tool_id must be in the range 0 to 5 inclusive. Raises a ValueError if tool_id is in use. sys.monitoring.clear_tool_id(tool_id: int, /) → None¶ Unregister all events and callback functions associated with tool_id. Added in version 3.14. sys.monitoring.free_tool_id(tool_id: int, /) → None¶ Should be called once a tool no longer requires tool_id. Will call clear_tool_id() before releasing tool_id. Changed in version 3.14: Now calls clear_tool_id() before releasing tool_id. Previously, it would not disable global or local events associated with tool_id, nor unregister any callback functions. sys.monitoring.get_tool(tool_id: int, /) → str | None¶ Returns the name of the tool if tool_id is in use, otherwise it returns None. tool_id must be in the range 0 to 5 inclusive. All IDs are treated the same by the VM with regard to events, but the following IDs are pre-defined to make co-operation of tools easier: sys.monitoring.DEBUGGER_ID \u003d 0\nsys.monitoring.COVERAGE_ID \u003d 1\nsys.monitoring.PROFILER_ID \u003d 2\nsys.monitoring.OPTIMIZER_ID \u003d 5\n Events¶ The following events are supported: sys.monitoring.events.BRANCH_LEFT¶ A conditional branch goes left. It is up to the tool to determine how to present “left” and “right” branches. There is no guarantee which branch is “left” and which is “right”, except that it will be consistent for the duration of the program. sys.monitoring.events.BRANCH_RIGHT¶ A conditional branch goes right. sys.monitoring.events.CALL¶ A call in Python code (event occurs before the call). sys.monitoring.events.C_RAISE¶ An exception raised from any callable, except for Python functions (event occurs after the exit). sys.monitoring.events.C_RETURN¶ Return from any callable, except for Python functions (event occurs after the return). sys.monitoring.events.EXCEPTION_HANDLED¶ An exception is handled. sys.monitoring.events.INSTRUCTION¶ A VM instruction is about to be executed. sys.monitoring.events.JUMP¶ An unconditional jump in the control flow graph is made. sys.monitoring.events.LINE¶ An instruction is about to be executed that has a different line number from the preceding instruction. sys.monitoring.events.PY_RESUME¶ Resumption of a Python function (for generator and coroutine functions), except for throw() calls. sys.monitoring.events.PY_RETURN¶ Return from a Python function (occurs immediately before the return, the callee’s frame will be on the stack). sys.monitoring.events.PY_START¶ Start of a Python function (occurs immediately after the call, the callee’s frame will be on the stack) sys.monitoring.events.PY_THROW¶ A Python function is resumed by a throw() call. sys.monitoring.events.PY_UNWIND¶ Exit from a Python function during exception unwinding. This includes exceptions raised directly within the function and that are allowed to continue to propagate. sys.monitoring.events.PY_YIELD¶ Yield from a Python function (occurs immediately before the yield, the callee’s frame will be on the stack). sys.monitoring.events.RAISE¶ An exception is raised, except those that cause a STOP_ITERATION event. sys.monitoring.events.RERAISE¶ An exception is re-raised, for example at the end of a finally block. sys.monitoring.events.STOP_ITERATION¶ An artificial StopIteration is raised; see the STOP_ITERATION event. More events may be added in the future. These events are attributes of the sys.monitoring.events namespace. Each event is represented as a power-of-2 integer constant. To define a set of events, simply bitwise OR the individual events together. For example, to specif",
+    "scrapedAt": "2026-10-08 19:17:19.543073"
+  },
+  {
+    "id": 859,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html",
+    "title": "RFC 5334 - Ogg Media Types",
+    "content": "Light Dark Auto Network Working Group                                       I. Goncalves\nRequest for Comments: 5334                                   S. Pfeiffer\nObsoletes: 3534                                            C. Montgomery\nCategory: Standards Track                                           Xiph\n                                                          September 2008\n\n\n                            Ogg Media Types \n\nStatus of This Memo\n\n   This document specifies an Internet standards track protocol for the\n   Internet community, and requests discussion and suggestions for\n   improvements.  Please refer to the current edition of the \"Internet\n   Official Protocol Standards\" (STD 1) for the standardization state\n   and status of this protocol.  Distribution of this memo is unlimited.\n\nAbstract\n\n   This document describes the registration of media types for the Ogg\n   container format and conformance requirements for implementations of\n   these types.  This document obsoletes RFC 3534.\n\nTable of Contents\n\n   1.     Introduction  . . . . . . . . . . . . . . . . . . . . . . .  2\n   2.     Changes Since RFC 3534  . . . . . . . . . . . . . . . . . .  2\n   3.     Conformance and Document Conventions  . . . . . . . . . . .  3\n   4.     Deployed Media Types and Compatibility  . . . . . . . . . .  3\n   5.     Relation between the Media Types  . . . . . . . . . . . . .  5\n   6.     Encoding Considerations . . . . . . . . . . . . . . . . . .  5\n   7.     Security Considerations . . . . . . . . . . . . . . . . . .  6\n   8.     Interoperability Considerations . . . . . . . . . . . . . .  7\n   9.     IANA Considerations . . . . . . . . . . . . . . . . . . . .  7\n   10.    Ogg Media Types . . . . . . . . . . . . . . . . . . . . . .  7\n   10.1.  application/ogg . . . . . . . . . . . . . . . . . . . . . .  7\n   10.2.  video/ogg . . . . . . . . . . . . . . . . . . . . . . . . .  8\n   10.3.  audio/ogg . . . . . . . . . . . . . . . . . . . . . . . . .  9\n   11.    Acknowledgements  . . . . . . . . . . . . . . . . . . . . . 10\n   12.    Copying Conditions  . . . . . . . . . . . . . . . . . . . . 10\n   13.    References  . . . . . . . . . . . . . . . . . . . . . . . . 11\n   13.1.  Normative References  . . . . . . . . . . . . . . . . . . . 11\n   13.2.  Informative References  . . . . . . . . . . . . . . . . . . 11\n\n\n\n\n\n\n\n\nGoncalves, et al.           Standards Track                     [Page 1] RFC 5334                    Ogg Media Types               September 2008\n\n\n 1.  Introduction \n\n   This document describes media types for Ogg, a data encapsulation\n   format defined by the Xiph.Org Foundation for public use.  Refer to\n   \"Introduction\" in [RFC3533] and \"Overview\" in [Ogg] for background\n   information on this container format.\n\n   Binary data contained in Ogg, such as Vorbis and Theora, has\n   historically been interchanged using the application/ogg media type\n   as defined by [RFC3534].  This document obsoletes [RFC3534] and\n   defines three media types for different types of content in Ogg to\n   reflect this usage in the IANA media type registry, to foster\n   interoperability by defining underspecified aspects, and to provide\n   general security considerations.\n\n   The Ogg container format is known to contain [Theora] or [Dirac]\n   video, [Speex] (narrow-band and wide-band) speech, [Vorbis] or [FLAC]\n   audio, and [CMML] timed text/metadata.  As Ogg encapsulates binary\n   data, it is possible to include any other type of video, audio,\n   image, text, or, generally speaking, any time-continuously sampled\n   data.\n\n   While raw packets from these data sources may be used directly by\n   transport mechanisms that provide their own framing and packet-\n   separation mechanisms (such as UDP datagrams or RTP), Ogg is a\n   solution for stream based storage (such as files) and transport (such\n   as TCP streams or pipes).  The media types defined in this document\n   are needed to correctly identify such content when it is served over\n   HTTP, included in multi-part documents, or used in other places where\n   media types [RFC2045] are used.\n\n 2.  Changes Since RFC 3534 \n\n   o  The type \"application/ogg\" is redefined.\n\n   o  The types \"video/ogg\" and \"audio/ogg\" are defined.\n\n   o  New file extensions are defined.\n\n   o  New Macintosh file type codes are defined.\n\n   o  The codecs parameter is defined for optional use.\n\n   o  The Ogg Skeleton extension becomes a recommended addition for\n      content served under the new types.\n\n\n\n\n\n\nGoncalves, et al.           Standards Track                     [Page 2] RFC 5334                    Ogg Media Types               September 2008\n\n\n 3.  Conformance and Document Conventions \n\n   The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n   \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\n   document are to be interpreted as described in BCP 14, [RFC2119] and\n   indicate requirement levels for compliant implementations.\n   Requirements apply to all imp",
+    "scrapedAt": "2026-10-08 19:17:18.323202"
+  },
+  {
+    "id": 858,
+    "url": "https://github.com/python/cpython/issues/128911",
+    "title": "[C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function · Issue #128911 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} [C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function #128911 New issue Copy link New issue Copy link Closed Closed [C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function#128911 Copy link Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Description vstinner opened on Jan 16, 2025 Issue body actions Feature or enhancement Proposal: Python has an internal _PyImport_GetModuleAttrString(mod_name, attr_name) helper function to import a module and get a module attribute. I propose to make this function public to be able to use it outside Python. UPDATE: Function renamed to PyImport_ImportModuleAttrString(). The function is convenient to use and is used by the following files in Python: Modules/arraymodule.c Modules/cjkcodecs/cjkcodecs.h Modules/_ctypes/callbacks.c Modules/_datetimemodule.c Modules/_decimal/_decimal.c Modules/_elementtree.c Modules/faulthandler.c Modules/_lsprof.c Modules/_operator.c Modules/_pickle.c Modules/posixmodule.c Modules/selectmodule.c Modules/_sqlite/connection.c Modules/_sqlite/module.c Modules/_sre/sre.c Modules/timemodule.c Modules/_zoneinfo.c Objects/abstract.c Objects/fileobject.c Objects/memoryobject.c Parser/pegen.c Parser/tokenizer/file_tokenizer.c Python/import.c Python/pylifecycle.c Has this already been discussed elsewhere? No response given Links to previous discussion of this feature: No response Linked PRs gh-128911: Add PyImport_ImportModuleAttr() function #128912 gh-128911: Add tests on the PyImport C API #128915 [3.13] gh-128911: Add tests on the PyImport C API (#128915) #128960 [3.12] gh-128911: Add tests on the PyImport C API (GH-128915) (GH-128960) #128989 gh-128911: Use PyImport_ImportModuleAttr() function #129657 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels topic-C-APItype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:17:16.753209"
+  },
+  {
+    "id": 857,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:17:14.281982"
+  },
+  {
+    "id": 856,
+    "url": "https://docs.python.org/3/library/functools.html#module-functools",
+    "title": "functools — Higher-order functions and operations on callable objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Functional Programming Modules » functools — Higher-order functions and operations on callable objects | Theme Auto Light Dark | functools — Higher-order functions and operations on callable objects¶ Source code: Lib/functools.py The functools module is for higher-order functions: functions that act on or return other functions. In general, any callable object can be treated as a function for the purposes of this module. The functools module defines the following functions: @functools.cache(user_function)¶ Simple lightweight unbounded function cache. Sometimes called “memoize”. Returns the same as lru_cache(maxsize\u003dNone), creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than @lru_cache with a size limit. For example: @cache\ndef factorial(n):\n    return n * factorial(n-1) if n else 1\n\n\u003e\u003e\u003e factorial(10)   # no previously cached result, makes 11 recursive calls\n3628800\n\u003e\u003e\u003e factorial(5)    # no new calls, just returns the cached result\n120\n\u003e\u003e\u003e factorial(12)   # two new recursive calls, factorial(10) is cached\n479001600\n The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates. It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached. Added in version 3.9. @functools.cached_property(func)¶ Transform a method of a class into a property whose value is computed once and then cached as a normal attribute for the life of the instance. Similar to @property, with the addition of caching. Useful for expensive computed properties of instances that are otherwise effectively immutable. Example: class DataSet:\n\n    def __init__(self, sequence_of_numbers):\n        self._data \u003d tuple(sequence_of_numbers)\n\n    @cached_property\n    def stdev(self):\n        return statistics.stdev(self._data)\n The mechanics of @cached_property are somewhat different from @property. A regular property blocks attribute writes unless a setter is defined. In contrast, a cached_property allows writes. The cached_property decorator only runs on lookups and only when an attribute of the same name doesn’t exist. When it does run, the cached_property writes to the attribute with the same name. Subsequent attribute reads and writes take precedence over the cached_property method and it works like a normal attribute. The cached value can be cleared by deleting the attribute. This allows the cached_property method to run again. The cached_property does not prevent a possible race condition in multi-threaded usage. The getter function could run more than once on the same instance, with the latest run setting the cached value. If the cached property is idempotent or otherwise not harmful to run more than once on an instance, this is fine. If synchronization is needed, implement the necessary locking inside the decorated getter function or around the cached property access. Note, this decorator interferes with the operation of PEP 412 key-sharing dictionaries. This means that instance dictionaries can take more space than usual. Also, this decorator requires that the __dict__ attribute on each instance be a mutable mapping. This means it will not work with some types, such as metaclasses (since the __dict__ attributes on type instances are read-only proxies for the class namespace), and those that specify __slots__ without including __dict__ as one of the defined slots (as such classes don’t provide a __dict__ attribute at all). If a mutable mapping is not available or if space-efficient key sharing is desired, an effect similar to @cached_property can also be achieved by stacking @property on top of @lru_cache. See How do I cache method calls? for more details on how this differs from @cached_property. Added in version 3.8. Changed in version 3.12: Prior to Python 3.12, @cached_property included an undocumented lock to ensure that in multi-threaded usage the getter function was guaranteed to run only once per instance. However, the lock was per-property, not per-instance, which could result in unacceptably high lock contention. In Python 3.12+ this locking is removed. functools.cmp_to_key(func)¶ Transform an old-style comparison function to a key function. Used with tools that accept key functions (such as sorted(), min(), max(), heapq.nlargest(), heapq.nsmallest(), itertools.groupby()). This function is primarily used as a transition tool for programs being converted from Python 2 which supported the use of comparison functions. A comparison function is any callable that accepts two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than. A key function is a",
+    "scrapedAt": "2026-10-08 19:17:12.964754"
+  },
+  {
     "id": 855,
     "url": "https://docs.python.org/3/reference/compound_stmts.html#with",
     "title": "8. Compound statements — Python 3.14.8 documentation",
@@ -5665,26 +5700,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 856,
-    "url": "https://docs.python.org/3/library/functools.html#module-functools"
-  },
-  {
-    "id": 857,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported"
-  },
-  {
-    "id": 858,
-    "url": "https://github.com/python/cpython/issues/128911"
-  },
-  {
-    "id": 859,
-    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html"
-  },
-  {
-    "id": 860,
-    "url": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
   },
   {
     "id": 861,
@@ -147300,10 +147315,755 @@ window.searchData = [
     "id": 116505,
     "url": "https://docs.python.org/3/using/configure.html#free-threading-build",
     "parentUrl": "https://docs.python.org/3/c-api/refcounting.html#c.Py_REFCNT"
+  },
+  {
+    "id": 118119,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128911",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118120,
+    "url": "https://github.com/python/cpython/pull/128960",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118121,
+    "url": "https://github.com/python/cpython/issues/128911#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118122,
+    "url": "https://github.com/python/cpython/issues/128911#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118123,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128911",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118128,
+    "url": "https://github.com/python/cpython/issues/128911#issue-2792492139",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118129,
+    "url": "https://github.com/python/cpython/pull/128915",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118130,
+    "url": "https://github.com/python/cpython/pull/128912",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118131,
+    "url": "https://github.com/python/cpython/pull/128989",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118132,
+    "url": "https://github.com/python/cpython/pull/129657",
+    "parentUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "id": 118133,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5215",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118134,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-12",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118135,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118136,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4288",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118137,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-13",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118138,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3552",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118139,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118140,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Skeleton",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118141,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Codecs",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118142,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118143,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118144,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4281",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118145,
+    "url": "https://datatracker.ietf.org/doc/html/bcp79",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118146,
+    "url": "https://datatracker.ietf.org/person/Silvia.Pfeiffer@csiro.au",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118147,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118148,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Vorbis",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118149,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-11",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118150,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-FLAC",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118151,
+    "url": "https://www.rfc-editor.org/rfc/rfc5334.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118152,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-13.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118153,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-13.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118154,
+    "url": "https://datatracker.ietf.org/doc/html/bcp78",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118155,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-ThRTP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118156,
+    "url": "https://datatracker.ietf.org/doc/html/bcp72",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118158,
+    "url": "http://xiph.org",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118159,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Speex",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118160,
+    "url": "http://theora.org/doc/Theora.pdf",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118161,
+    "url": "https://datatracker.ietf.org/doc/html/draft-goncalves-rfc3534bis-07",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118162,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Theora",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118163,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-SpRTP",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118164,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4648",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118165,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-libogg",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118166,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Ogg",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118167,
+    "url": "http://wiki.xiph.org/index.php/MIMETypesCodecs",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118168,
+    "url": "http://speex.org/docs/manual/speex-manual",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118169,
+    "url": "http://flac.sourceforge.net/format.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118170,
+    "url": "http://www.ietf.org/ipr",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118171,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2045",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118172,
+    "url": "http://xiph.org/vorbis/doc/Vorbis_I_spec.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118173,
+    "url": "http://xiph.org/ogg/doc/libogg",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118174,
+    "url": "https://datatracker.ietf.org/doc/draft-goncalves-rfc3534bis/07/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118175,
+    "url": "http://xiph.org/ogg/doc",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118177,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-10",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118178,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-11",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118179,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118180,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118181,
+    "url": "https://datatracker.ietf.org/doc/html/bcp13",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118182,
+    "url": "https://datatracker.ietf.org/doc/html/bcp14",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118183,
+    "url": "https://datatracker.ietf.org/doc/html/rfc2119",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118184,
+    "url": "https://datatracker.ietf.org/doc/rfc5334/bibtex/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118185,
+    "url": "http://annodex.net/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118186,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118187,
+    "url": "https://www.rfc-editor.org/rfc/rfc5334.txt",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118188,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7845",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118189,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10.1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118190,
+    "url": "https://datatracker.ietf.org/person/monty@xiph.org",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118191,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10.2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118192,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-10.3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118193,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-8",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118194,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118195,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-7",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118196,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-9",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118197,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118198,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118199,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#page-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118200,
+    "url": "http://xiph.org/ogg/doc/skeleton.html",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118201,
+    "url": "https://datatracker.ietf.org/doc/rfc5334/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118202,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-CMML",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118203,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-2",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118204,
+    "url": "http://diracvideo.org/specifications/",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118205,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-1",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118206,
+    "url": "https://datatracker.ietf.org/person/justivo@gmail.com",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118207,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-4",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118208,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-3",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118209,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#ref-Dirac",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118210,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-6",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118211,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3533",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118212,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3534",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118213,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5334.html#section-5",
+    "parentUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "id": 118216,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118218,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-CALL",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118219,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#ancillary-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118221,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#registering-and-using-tools",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118222,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#registering-callback-functions",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118223,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.MISSING",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118227,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-LINE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118229,
+    "url": "https://docs.python.org/3/c-api/monitoring.html#c-api-monitoring",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118230,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-INSTRUCTION",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118233,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_THROW",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118234,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118235,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#tool-identifiers",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118238,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_START",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118239,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#the-stop-iteration-event",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118241,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.get_tool",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118242,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#per-code-object-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118243,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-C_RAISE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118245,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#local-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118247,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#callbacks",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118248,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.DISABLE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118250,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-EXCEPTION_HANDLED",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118252,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-local",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118254,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.get_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118256,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.get_local_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118259,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.use_tool_id",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118260,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#other-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118261,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/sys.monitoring.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118262,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-RAISE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118266,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-JUMP",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118268,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_YIELD",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118270,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-STOP_ITERATION",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118271,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-NO_EVENTS",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118272,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.set_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118273,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#turning-events-on-and-off",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118274,
+    "url": "https://peps.python.org/pep-0380/#use-of-stopiteration-to-return-values",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118275,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-RERAISE",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118276,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_UNWIND",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118279,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.set_local_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118283,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#deprecated-event",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118284,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.restart_events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118285,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#disabling-events",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118287,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#sys.monitoring.register_callback",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118288,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_RETURN",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118289,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#callback-function-arguments",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118290,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-PY_RESUME",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118291,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-C_RETURN",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118292,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#monitoring-event-global",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "id": 118293,
+    "url": "https://docs.python.org/3/library/sys.monitoring.html#setting-events-globally",
+    "parentUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys.monitoring — Execution event monitoring — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "sys.monitoring — Execution event monitoring — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/sys.monitoring.html#module-sys.monitoring"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor-white.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 5334 - Ogg Media Types",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "src": "https://static.ietf.org/dt/12.79.2/ietf/images/ietf-logo-nor.svg",
+    "alt": "IETF Logo",
+    "pageTitle": "RFC 5334 - Ogg Media Types",
+    "pageUrl": "https://datatracker.ietf.org/doc/html/rfc5334.html"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/194129?u\u003dcf52678f5f02f96d9c5bc1b5079d4e6c2e441af4\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@vstinner",
+    "pageTitle": "[C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function · Issue #128911 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "[C API] Add PyImport_ImportModuleAttr(mod_name, attr_name) helper function · Issue #128911 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128911"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#free-threaded-python-is-officially-supported"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#module-functools"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "functools — Higher-order functions and operations on callable objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/functools.html#module-functools"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
