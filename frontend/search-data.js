@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1112,
+    "url": "https://docs.python.org/3/library/gzip.html#module-gzip",
+    "title": "gzip — Support for gzip files — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Data Compression and Archiving » gzip — Support for gzip files | Theme Auto Light Dark | gzip — Support for gzip files¶ Source code: Lib/gzip.py This module provides a simple interface to compress and decompress files just like the GNU programs gzip and gunzip would. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. The data compression is provided by the zlib module. The gzip module provides the GzipFile class, as well as the open(), compress() and decompress() convenience functions. The GzipFile class reads and writes gzip-format files, automatically compressing or decompressing the data so that it looks like an ordinary file object. Note that additional file formats which can be decompressed by the gzip and gunzip programs, such as those produced by compress and pack, are not supported by this module. The module defines the following items: gzip.open(filename, mode\u003d\u0027rb\u0027, compresslevel\u003d9, encoding\u003dNone, errors\u003dNone, newline\u003dNone)¶ Open a gzip-compressed file in binary or text mode, returning a file object. The filename argument can be an actual filename (a str or bytes object), or an existing file object to read from or write to. The mode argument can be any of \u0027r\u0027, \u0027rb\u0027, \u0027a\u0027, \u0027ab\u0027, \u0027w\u0027, \u0027wb\u0027, \u0027x\u0027 or \u0027xb\u0027 for binary mode, or \u0027rt\u0027, \u0027at\u0027, \u0027wt\u0027, or \u0027xt\u0027 for text mode. The default is \u0027rb\u0027. The compresslevel argument is an integer from 0 to 9, as for the GzipFile constructor. For binary mode, this function is equivalent to the GzipFile constructor: GzipFile(filename, mode, compresslevel). In this case, the encoding, errors and newline arguments must not be provided. For text mode, a GzipFile object is created, and wrapped in an io.TextIOWrapper instance with the specified encoding, error handling behavior, and line ending(s). Changed in version 3.3: Added support for filename being a file object, support for text mode, and the encoding, errors and newline arguments. Changed in version 3.4: Added support for the \u0027x\u0027, \u0027xb\u0027 and \u0027xt\u0027 modes. Changed in version 3.6: Accepts a path-like object. exception gzip.BadGzipFile¶ An exception raised for invalid gzip files. It inherits from OSError. EOFError and zlib.error can also be raised for invalid gzip files. Added in version 3.8. class gzip.GzipFile(filename\u003dNone, mode\u003dNone, compresslevel\u003d9, fileobj\u003dNone, mtime\u003dNone)¶ Constructor for the GzipFile class, which simulates most of the methods of a file object, with the exception of the truncate() method. At least one of fileobj and filename must be given a non-trivial value. The new class instance is based on fileobj, which can be a regular file, an io.BytesIO object, or any other object which simulates a file. It defaults to None, in which case filename is opened to provide a file object. When fileobj is not None, the filename argument is only used to be included in the gzip file header, which may include the original filename of the uncompressed file. It defaults to the filename of fileobj, if discernible; otherwise, it defaults to the empty string, and in this case the original filename is not included in the header. The mode argument can be any of \u0027r\u0027, \u0027rb\u0027, \u0027a\u0027, \u0027ab\u0027, \u0027w\u0027, \u0027wb\u0027, \u0027x\u0027, or \u0027xb\u0027, depending on whether the file will be read or written. The default is the mode of fileobj if discernible; otherwise, the default is \u0027rb\u0027. In future Python releases the mode of fileobj will not be used. It is better to always specify mode for writing. Note that the file is always opened in binary mode. To open a compressed file in text mode, use open() (or wrap your GzipFile with an io.TextIOWrapper). The compresslevel argument is an integer from 0 to 9 controlling the level of compression; 1 is fastest and produces the least compression, and 9 is slowest and produces the most compression. 0 is no compression. The default is 9. The optional mtime argument is the timestamp requested by gzip. The time is in Unix format, i.e., seconds since 00:00:00 UTC, January 1, 1970. If mtime is omitted or None, the current time is used. Use mtime \u003d 0 to generate a compressed stream that does not depend on creation time. See below for the mtime attribute that is set when decompressing. Calling a GzipFile object’s close() method does not close fileobj, since you might wish to append more material after the compressed data. This also allows you to pass an io.BytesIO object opened for writing as fileobj, and retrieve the resulting memory buffer using the io.BytesIO object’s getvalue() method. GzipFile supports the io.BufferedIOBase interface, including iteration and the with statement. Only the truncate() method isn’t implemented. GzipFile also provides the following method and attribute: peek(n)¶ Read n uncompressed bytes without advancing the file position. The number ",
+    "scrapedAt": "2026-10-08 19:27:43.424129"
+  },
+  {
+    "id": 1111,
+    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetUnchecked",
+    "title": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Thread states and the global interpreter lock | Theme Auto Light Dark | Thread states and the global interpreter lock¶ Unless on a free-threaded build of CPython, the Python interpreter is generally not thread-safe. In order to support multi-threaded Python programs, there’s a global lock, called the global interpreter lock or GIL, that must be held by a thread before accessing Python objects. Without the lock, even the simplest operations could cause problems in a multi-threaded program: for example, when two threads simultaneously increment the reference count of the same object, the reference count could end up being incremented only once instead of twice. As such, only a thread that holds the GIL may operate on Python objects or invoke Python’s C API. In order to emulate concurrency, the interpreter regularly tries to switch threads between bytecode instructions (see sys.setswitchinterval()). This is why locks are also necessary for thread-safety in pure-Python code. Additionally, the global interpreter lock is released around blocking I/O operations, such as reading or writing to a file. From the C API, this is done by detaching the thread state. The Python interpreter keeps some thread-local information inside a data structure called PyThreadState, known as a thread state. Each thread has a thread-local pointer to a PyThreadState; a thread state referenced by this pointer is considered to be attached. A thread can only have one attached thread state at a time. An attached thread state is typically analogous with holding the GIL, except on free-threaded builds. On builds with the GIL enabled, attaching a thread state will block until the GIL can be acquired. However, even on builds with the GIL disabled, it is still required to have an attached thread state, as the interpreter needs to keep track of which threads may access Python objects. Note Even on the free-threaded build, attaching a thread state may block, as the GIL can be re-enabled or threads might be temporarily suspended (such as during a garbage collection). Generally, there will always be an attached thread state when using Python’s C API, including during embedding and when implementing methods, so it’s uncommon to need to set up a thread state on your own. Only in some specific cases, such as in a Py_BEGIN_ALLOW_THREADS block or in a fresh thread, will the thread not have an attached thread state. If uncertain, check if PyThreadState_GetUnchecked() returns NULL. If it turns out that you do need to create a thread state, call PyThreadState_New() followed by PyThreadState_Swap(), or use the dangerous PyGILState_Ensure() function. Detaching the thread state from extension code¶ Most extension code manipulating the thread state has the following simple structure: Save the thread state in a local variable.\n... Do some blocking I/O operation ...\nRestore the thread state from the local variable.\n This is so common that a pair of macros exists to simplify it: Py_BEGIN_ALLOW_THREADS\n... Do some blocking I/O operation ...\nPy_END_ALLOW_THREADS\n The Py_BEGIN_ALLOW_THREADS macro opens a new block and declares a hidden local variable; the Py_END_ALLOW_THREADS macro closes the block. The block above expands to the following code: PyThreadState *_save;\n\n_save \u003d PyEval_SaveThread();\n... Do some blocking I/O operation ...\nPyEval_RestoreThread(_save);\n Here is how these functions work: The attached thread state implies that the GIL is held for the interpreter. To detach it, PyEval_SaveThread() is called and the result is stored in a local variable. By detaching the thread state, the GIL is released, which allows other threads to attach to the interpreter and execute while the current thread performs blocking I/O. When the I/O operation is complete, the old thread state is reattached by calling PyEval_RestoreThread(), which will wait until the GIL can be acquired. Note Performing blocking I/O is the most common use case for detaching the thread state, but it is also useful to call it over long-running native code that doesn’t need access to Python objects or Python’s C API. For example, the standard zlib and hashlib modules detach the thread state when compressing or hashing data. On a free-threaded build, the GIL is usually out of the question, but detaching the thread state is still required, because the interpreter periodically needs to block all threads to get a consistent view of Python objects without the risk of race conditions. For example, CPython currently suspends all threads for a short period of time while running the garbage collector. Warning Detaching the thread state can lead to unexpected behavior during interpreter finalization. See Cautions regarding runtime finalization for more details. APIs¶ The following macros are normally used without a trailing semicolon; look for example usage in the Python source distribution. Note These ",
+    "scrapedAt": "2026-10-08 19:27:42.17588"
+  },
+  {
+    "id": 1110,
+    "url": "https://docs.python.org/3/reference/datamodel.html#object.__trunc__",
+    "title": "3. Data model — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python Language Reference » 3. Data model | Theme Auto Light Dark | 3. Data model¶ 3.1. Objects, values and types¶ Objects are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. Even code is represented by objects. Every object has an identity, a type and a value. An object’s identity never changes once it has been created; you may think of it as the object’s address in memory. The is operator compares the identity of two objects; the id() function returns an integer representing its identity. CPython implementation detail: For CPython, id(x) is the memory address where x is stored. An object’s type determines the operations that the object supports (e.g., “does it have a length?”) and also defines the possible values for objects of that type. The type() function returns an object’s type (which is an object itself). Like its identity, an object’s type is also unchangeable. [1] The value of some objects can change. Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable. (The value of an immutable container object that contains a reference to a mutable object can change when the latter’s value is changed; however the container is still considered immutable, because the collection of objects it contains cannot be changed. So, immutability is not strictly the same as having an unchangeable value, it is more subtle.) An object’s mutability is determined by its type; for instance, numbers, strings and tuples are immutable, while dictionaries and lists are mutable. Objects are never explicitly destroyed; however, when they become unreachable they may be garbage-collected. An implementation is allowed to postpone garbage collection or omit it altogether — it is a matter of implementation quality how garbage collection is implemented, as long as no objects are collected that are still reachable. CPython implementation detail: CPython currently uses a reference-counting scheme with (optional) delayed detection of cyclically linked garbage, which collects most objects as soon as they become unreachable, but is not guaranteed to collect garbage containing circular references. See the documentation of the gc module for information on controlling the collection of cyclic garbage. Other implementations act differently and CPython may change. Do not depend on immediate finalization of objects when they become unreachable (so you should always close files explicitly). Note that the use of the implementation’s tracing or debugging facilities may keep objects alive that would normally be collectable. Also note that catching an exception with a try…except statement may keep objects alive. Some objects contain references to “external” resources such as open files or windows. It is understood that these resources are freed when the object is garbage-collected, but since garbage collection is not guaranteed to happen, such objects also provide an explicit way to release the external resource, usually a close() method. Programs are strongly recommended to explicitly close such objects. The try…finally statement and the with statement provide convenient ways to do this. Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries. The references are part of a container’s value. In most cases, when we talk about the value of a container, we imply the values, not the identities of the contained objects; however, when we talk about the mutability of a container, only the identities of the immediately contained objects are implied. So, if an immutable container (like a tuple) contains a reference to a mutable object, its value changes if that mutable object is changed. Types affect almost all aspects of object behavior. Even the importance of object identity is affected in some sense: for immutable types, operations that compute new values may actually return a reference to any existing object with the same type and value, while for mutable objects this is not allowed. For example, after a \u003d 1; b \u003d 1, a and b may or may not refer to the same object with the value one, depending on the implementation. This is because int is an immutable type, so the reference to 1 can be reused. This behaviour depends on the implementation used, so should not be relied upon, but is something to be aware of when making use of object identity tests. However, after c \u003d []; d \u003d [], c and d are guaranteed to refer to two different, unique, newly created empty lists. (Note that e \u003d f \u003d [] assigns the same object to both e and f.) 3.2. The standard type hierarchy¶ Below is a list of the types that are built into Python. Extension modules (written in C, Java, or other languages, depending on the implementation) can define additional types. Future versions of Pyth",
+    "scrapedAt": "2026-10-08 19:27:40.863425"
+  },
+  {
+    "id": 1109,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:27:39.559906"
+  },
+  {
+    "id": 1108,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters",
+    "title": "concurrent.interpreters — Multiple interpreters in the same process — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Concurrent Execution » concurrent.interpreters — Multiple interpreters in the same process | Theme Auto Light Dark | concurrent.interpreters — Multiple interpreters in the same process¶ Added in version 3.14. Source code: Lib/concurrent/interpreters The concurrent.interpreters module constructs higher-level interfaces on top of the lower level _interpreters module. The module is primarily meant to provide a basic API for managing interpreters (AKA “subinterpreters”) and running things in them. Running mostly involves switching to an interpreter (in the current thread) and calling a function in that execution context. For concurrency, interpreters themselves (and this module) don’t provide much more than isolation, which on its own isn’t useful. Actual concurrency is available separately through threads – see below. See also InterpreterPoolExecutor Combines threads with interpreters in a familiar interface. Isolating Extension Modules How to update an extension module to support multiple interpreters. PEP 554 PEP 734 PEP 684 Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. Key details¶ Before we dive in further, there are a small number of details to keep in mind about using multiple interpreters: isolated, by default no implicit threads not all PyPI packages support use in multiple interpreters yet Introduction¶ An “interpreter” is effectively the execution context of the Python runtime. It contains all of the state the runtime needs to execute a program. This includes things like the import state and builtins. (Each thread, even if there’s only the main thread, has some extra runtime state, in addition to the current interpreter, related to the current exception and the bytecode eval loop.) The concept and functionality of the interpreter have been a part of Python since version 2.2, but the feature was only available through the C-API and not well known, and the isolation was relatively incomplete until version 3.12. Multiple Interpreters and Isolation¶ A Python implementation may support using multiple interpreters in the same process. CPython has this support. Each interpreter is effectively isolated from the others (with a limited number of carefully managed process-global exceptions to the rule). That isolation is primarily useful as a strong separation between distinct logical components of a program, where you want to have careful control of how those components interact. Note Interpreters in the same process can technically never be strictly isolated from one another since there are few restrictions on memory access within the same process. The Python runtime makes a best effort at isolation but extension modules may easily violate that. Therefore, do not use multiple interpreters in security-sensitive situations, where they shouldn’t have access to each other’s data. Running in an Interpreter¶ Running in a different interpreter involves switching to it in the current thread and then calling some function. The runtime will execute the function using the current interpreter’s state. The concurrent.interpreters module provides a basic API for creating and managing interpreters, as well as the switch-and-call operation. No other threads are automatically started for the operation. There is a helper for that though. There is another dedicated helper for calling the builtin exec() in an interpreter. When exec() (or eval()) are called in an interpreter, they run using the interpreter’s __main__ module as the “globals” namespace. The same is true for functions that aren’t associated with any module. This is the same as how scripts invoked from the command-line run in the __main__ module. Concurrency and Parallelism¶ As noted earlier, interpreters do not provide any concurrency on their own. They strictly represent the isolated execution context the runtime will use in the current thread. That isolation makes them similar to processes, but they still enjoy in-process efficiency, like threads. All that said, interpreters do naturally support certain flavors of concurrency. There’s a powerful side effect of that isolation. It enables a different approach to concurrency than you can take with async or threads. It’s a similar concurrency model to CSP or the actor model, a model which is relatively easy to reason about. You can take advantage of that concurrency model in a single thread, switching back and forth between interpreters, Stackless-style. However, this model is more useful when you combine interpreters with multiple threads. This mostly involves starting a new thread, where you switch to another interpreter and run what you want there. Each actual thread in Python, even if you’re only running in the main thread, has its own current execution context. Multiple threads can use the same interpreter or different on",
+    "scrapedAt": "2026-10-08 19:27:38.295974"
+  },
+  {
     "id": 1106,
     "url": "https://github.com/python/cpython/issues/133350",
     "title": "gh-133349: Enable auto-indent for pdb\u0027s multi-line mode by gaogaotiantian · Pull Request #133350 · python/cpython · GitHub",
@@ -7385,26 +7420,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1108,
-    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
-  },
-  {
-    "id": 1109,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move"
-  },
-  {
-    "id": 1110,
-    "url": "https://docs.python.org/3/reference/datamodel.html#object.__trunc__"
-  },
-  {
-    "id": 1111,
-    "url": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetUnchecked"
-  },
-  {
-    "id": 1112,
-    "url": "https://docs.python.org/3/library/gzip.html#module-gzip"
   },
   {
     "id": 1113,
@@ -199216,10 +199231,316 @@ window.searchData = [
     "id": 195762,
     "url": "https://github.com/python/cpython/pull/133350#ref-commit-9d3594a",
     "parentUrl": "https://github.com/python/cpython/issues/133350"
+  },
+  {
+    "id": 195768,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.ExecutionFailed.excinfo",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195772,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195778,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.close",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195785,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueFullError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195787,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.prepare_main",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195789,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195791,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-isolation",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195794,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.whence",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195796,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.NotShareableError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195797,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.create_queue",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195803,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-object-sharing",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195804,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/concurrent/interpreters",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195806,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.InterpreterNotFoundError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195809,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.get_current",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195810,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.id",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195818,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.list_all",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195820,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Queue.id",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195822,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.call_in_thread",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195823,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.call",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195825,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.create",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195829,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.get_main",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195835,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195839,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.exec",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195841,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.QueueEmptyError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195842,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-call-in-thread",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195845,
+    "url": "https://peps.python.org/pep-0554/",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195847,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/concurrent.interpreters.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195848,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#interp-concurrency",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195849,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.Interpreter.is_running",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 195850,
+    "url": "https://docs.python.org/3/library/concurrent.interpreters.html#concurrent.interpreters.InterpreterError",
+    "parentUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "id": 196753,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.GzipFile.mode",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196754,
+    "url": "https://docs.python.org/3/library/gzip.html#cmdoption-gzip-d",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196759,
+    "url": "https://docs.python.org/3/library/gzip.html#",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196760,
+    "url": "https://docs.python.org/3/library/gzip.html#cmdoption-gzip-best",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196765,
+    "url": "https://docs.python.org/3/library/gzip.html#cmdoption-gzip-fast",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196767,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.GzipFile.mtime",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196772,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.open",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196775,
+    "url": "https://github.com/pycompression/python-isal",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196777,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.GzipFile.peek",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196782,
+    "url": "https://docs.python.org/3/library/zlib.html#zlib.error",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196785,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.compress",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196788,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/gzip.py",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196789,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/gzip.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196795,
+    "url": "https://docs.python.org/3/library/gzip.html#cmdoption-gzip-h",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196800,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.BadGzipFile",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196802,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.decompress",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196803,
+    "url": "https://docs.python.org/3/library/gzip.html#cmdoption-gzip-arg-file",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "id": 196804,
+    "url": "https://docs.python.org/3/library/gzip.html#gzip.GzipFile.name",
+    "parentUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gzip — Support for gzip files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "gzip — Support for gzip files — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/gzip.html#module-gzip"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetUnchecked"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Thread states and the global interpreter lock — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/threads.html#c.PyThreadState_GetUnchecked"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#object.__trunc__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "3. Data model — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/reference/datamodel.html#object.__trunc__"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.move"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.interpreters — Multiple interpreters in the same process — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "concurrent.interpreters — Multiple interpreters in the same process — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/concurrent.interpreters.html#module-concurrent.interpreters"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/13121107?s\u003d80\u0026v\u003d4",
     "alt": "@gaogaotiantian",
