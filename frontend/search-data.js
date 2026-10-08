@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 360,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/",
+    "title": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Skoda Skoda Enyaq iV Skoda Enyaq iV 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Ruim en comfortabel interieur Grote en functionele kofferbak Flinke actieradius Zwakke punten Auto voelt zwaar en log Bediening infotainmentsysteem Beperkte fabrieksgarantie Toon aanbod Toon aanbod Skoda Enyaq iV: dé EV voor Nederlandse gezinnen De eerste volledig elektrische SUV van Skoda, de Enyaq iV, blijkt een schot in de roos. Het model heeft het marktaandeel van Skoda flink weten te vergroten en de Enyaq iV was zowel in 2021 als in 2022 de bestverkochte elektrische auto van Nederland. En dat is natuurlijk niet voor niets. Lees meer Skoda Enyaq iV : een overzicht Bekijk hier de actuele prijzen voor de Skoda Enyaq iV : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Nieuw vanaf:€ 43.449,-* Occasions vanaf:€ 17.399,-* *Laagste prijs op AutoScout24 in de afgelopen maand Skoda Enyaq iV aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Skoda EnyaqiV 60 SOH 93% / 180pk / NAP / Achteruitrij camera € 19.5001 08/2021 141.953 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3421 GVOudewater Skoda EnyaqiV 60 | SOH 91% | Camera | 20\" | LED € 20.8501 07/2021 122.774 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 8356 VSBlokzijl Skoda EnyaqiV 80 Sportline Memory Adaptief Camera € 33.940 07/2022 63.698 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 1688 JHNibbixwoud Skoda EnyaqCoupé iV 80 Bns Ed. + | 96,36% SOH | Canton | Pano € 29.9951 05/2023 139.069 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7821 ABEmmen Skoda EnyaqiV 180PK SOH 91% 3-Zone Ecc Camera Navi Ecc Stoel+ € 19.8951 08/2021 137.182 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5738 AKMariahout Skoda EnyaqIV 80 SPORTLINE (90% SOH) I PANAROMADAK I 360° CAM € 30.9451 11/2021 94.531 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 3443 TJWoerden Skoda EnyaqiV 60 Sportline ✅ Matrix LED ✅ Trekhaak ✅ ACC € 28.8901 11/2021 77.079 km Elektrisch - (kWh/100 km) 2,8 Nieuw Autobedrijf NL 1741 NASchagen Skoda EnyaqiV 80 | Panoramadak | Trekhaak | 12 maanden BOVAG € 26.5001 04/2022 124.416 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 4817 BLBreda Skoda EnyaqiV 60 Ruimte, rust en volledig elektrisch rijplezi € 20.900 09/2021 134.356 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5466 AXVeghel Skoda EnyaqiV 80 Ruime elektrische SUV met luxe assistentie € 30.9001 12/2021 55.971 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5466 AXVeghel Skoda EnyaqiV 80 204PK SOH 92% Camera 3-Zone Ecc 1/2 Leer-Sto € 23.7951 08/2021 140.962 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5738 AKMariahout Skoda EnyaqiV 80 Sportline SOH 93% 204pk / Panoramadak / Acht € 32.0001 06/2022 99.587 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3421 GVOudewater Skoda EnyaqiV 60 SOH 91% Apple Carplay Android Auto Navi Ecc € 20.8951 07/2021 118.178 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5738 AKMariahout Skoda EnyaqCoupé iV 80 RS | SOH: 95,1% | Pano | Memory | Alca € 39.9501 01/2024 49.795 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3861 SHNijkerk Gld Skoda EnyaqiV 60 | SOH 92,6 %| Trekhaak | Comfort pluspakket € 19.5001 05/2021 136.659 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 2401 LJAlphen Aan Den Rijn Skoda EnyaqiV 60 € 20.4001 06/2022 143.768 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7921 VMZuidwolde Skoda EnyaqiV 60 First Edition SOH 93,7% | Warmtepomp | Matri € 22.9501 05/2021 111.545 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 7905 SEHoogeveen Skoda EnyaqiV 60 Founders Edition Black 94,2% soh! | Sportlin € 28.4001 € 29.950,- 11/2021 72.816 km Elektrisch - (kWh/100 km) 2,8 Prijsdaling Autobedrijf NL 8271 RGIjsselmuiden Skoda EnyaqiV 80 204PK Chrystal Face Sport Pakket Trekhaak SO € 22.6901 11/2021 176.070 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 5738 AKMariahout Skoda EnyaqiV 60 SOH 91% / 180pk / Panorama dak / Trekhaak / € 19.5001 06/2021 188.183 km Elektrisch - (kWh/100 km) 2,8 Autobedrijf NL 3421 GVOudewater Skoda Enyaq iV occasions bekijkenSkoda Enyaq iV nieuwe auto\u0027s bekijken Skoda Enyaq iV in Amsterdam bekijkenSkoda Enyaq iV in Rotterdam bekijkenSkoda Enyaq iV in Den Haag bekijkenSkoda Enyaq iV in Utrecht bekijkenSkoda Enyaq iV in Eindhoven bekijkenSkoda Enyaq iV in Groningen bekijken Bouwjaar2027 - 2021 Actuele advertenties573 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2021 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 24.383 en er zijn 201 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2021. Er staan 201 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2027 € 55.195 19 advertenties 2026 € 52.900 145 advertenties 2025 € 39.900 6 advertenties 2024 € 33.950 14 advertenties 2023 € 33.995 58 advertenties 2022 € 26.899 130 advertenties 2021 € 24.383 201 advertenties Meer jaren tonen Goe",
+    "scrapedAt": "2026-10-08 18:59:20.196129"
+  },
+  {
+    "id": 359,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/",
+    "title": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "content": "Ga naar hoofdinhoud Homepage Auto Audi Audi RS Audi RS6 Audi RS6 1 / 4 btnLabelPrevbtnLabelNext Sterke punten Krachtige motor Hoogwaardige technologie Veel ruimte Zwakke punten Hoge aanschafprijs Hoog brandstofverbruik Erg breed Toon aanbod Toon aanbod Audi RS6: de praktische supercar voor het gezin De Audi RS6 is uitgegroeid tot een iconisch model van Audi. Vooral als Audi RS6 Avant spreekt het model tot de verbeelding. Feitelijk is het een praktische supercar voor het hele gezin. Audi RS6 : een overzicht Bekijk hier de actuele prijzen voor de Audi RS6 : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Occasions vanaf:€ 25.950,-* *Laagste prijs op AutoScout24 in de afgelopen maand Audi RS6 aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Audi RS6A6 Avant 4.0 TFSI quattro Pro Line Plus|Keramisch| € 48.950 04/2013 108.872 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2295 RVKwintsheul Audi RS65.0 TFSI V10 Quattro Zwart Audi Exclusive Carbon € 26.950 07/2008 259.956 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7961 EARuinerwold Audi RS6Avant TFSI quattro - RS Dynamic + | ABT Wheels | P € 104.995 03/2021 79.930 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1689 ZSZwaag Audi RS6Avant 4.0 TFSI quattro MTM 1001pk Stage 4 Carbon V € 149.9951 04/2021 46.467 km Benzine - (l/100 km) 2,8 Autobedrijf NL 6003 DHWeert Audi RS6Avant Mansory | 860PK | Pano | HUD | B\u0026O | 360° | € 189.950 09/2023 24.948 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 1689 ARZwaag Audi RS6A6 Avant 4.0 TFSI quattro Pro Line Plus / ABT / So € 37.950 10/2014 178.684 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 4131 NNVianen Audi RS6Avant RS6 quattro perfomance Carbon Alcantara-Heme € 46.950 05/2016 184.951 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7942 LBMeppel Audi RS6A6 Avant 4.0 TFSI Quattro Performance 606PK B\u0026O 3D € 42.900 02/2016 194.715 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 9231 HSSurhuisterveen Audi RS6Avant Quattro Stationwagon | 2003 € 36.950 01/2003 199.966 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5145 NAWaalwijk Audi RS6Avant 600pk TFSI quattro |Urban bodykit|Eventuri i € 104.995 07/2020 122.311 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5626 DKEindhoven Audi RS6Avant 4.0 TFSI RS6 quattro performance | Pano | Ca € 54.900 06/2017 150.964 km Benzine - (l/100 km) 2,8 Autobedrijf NL 9723 HMGroningen Audi RS6Avant 4.0 V8 Quattro | Dynamic+ | Pano | B\u0026O 3D | € 104.850 09/2022 73.610 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8331 TRSteenwijk Audi RS6Avant TFSI Quattro Urban |Keramisch|Pano|PPF|Nardo € 129.950 02/2021 49.821 km Elektro/Benzine - (l/100 km) 2,8 Autobedrijf NL 5262 GJVught Audi RS6Tailor made 1 of 1 - RS2 Hommage Edition Collector € 154.950 11/2021 19.985 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2988 CMRidderkerk Audi RS6Avant 4.0 TFSI 441kW/600pk Aut8 Quattro Performanc € 79.888 € 84.888,- 02/2020 140.985 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 9411 VRBeilen Audi RS6Avant 4.0 TFSI 560pk Quattro Pano Keramisch Dynami € 39.400 11/2013 177.745 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 4264 ATVeen Audi RS6A6 Avant 5.0 TFSI MTM 700PK | Milltek| Camera € 29.940 € 32.940,- 02/2010 185.652 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 8013 PTZwolle Audi RS6EXPORTPRIJS ///Sport C8 / Carbon / Ceramic / Goodw € 69.950 02/2020 105.145 km Benzine - (l/100 km) 2,8 Autobedrijf NL 5741 TTBeek En Donk Audi RS6Avant 4.0 TFSI RS 6 quattro Pro Line Plus |Keramis € 51.950 05/2015 93.539 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1704 SRHeerhugowaard Audi RS6*510PK*CARBON*SOLAR*MTM*VOSSEN*KW*BOSE*NIEUWSTAAT* € 24.990 11/2002 179.999 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7903 BSHoogeveen Audi RS6 occasions bekijkenAudi RS6 nieuwe auto\u0027s bekijken Audi RS6 in Amsterdam bekijkenAudi RS6 in Rotterdam bekijkenAudi RS6 in Den Haag bekijkenAudi RS6 in Utrecht bekijkenAudi RS6 in Eindhoven bekijkenAudi RS6 in Groningen bekijken Bouwjaar2025 - 2003 Actuele advertenties208 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2014 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 41.895 en er zijn 11 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2021. Er staan 32 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2025 € 189.995 11 advertenties 2024 € 169.999 9 advertenties 2023 € 147.849 8 advertenties 2022 € 117.875 12 advertenties 2021 € 104.995 32 advertenties 2020 € 94.900 31 advertenties 2019 € 104.950 8 advertenties 2018 € 68.950 10 advertenties 2017 € 56.890 11 advertenties 2016 € 54.999 18 advertenties 2015 € 47.999 15 advertenties 2014 € 41.895 11 advertenties 2013 € 44.495 7 advertenties 2012 Geen gegevens 0 advertenties 2011 Geen gegevens 0 advertenties 2010 Geen gegevens 0 advertenties 2009 Geen gegevens 0 advertenties 2008 € 34.900 9 advertenties 2007 Geen gegeven",
+    "scrapedAt": "2026-10-08 18:59:18.988456"
+  },
+  {
+    "id": 358,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/",
+    "title": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "content": "Ga naar hoofdinhoud Homepage Nederland Noord-Holland Amsterdam Occasions vinden in Amsterdam Aanbod in jouw omgeving Toon meer Tweedehands auto’s in Amsterdam Volkswagen up! 1.0 move up! BlueMotion - Stoelverwarming Parkeers € 6.950,- 93.990 km 02/2017 44 kW (60 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 101 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1506 SZ ZAANDAM Ford Ka/Ka+ 1.2 Comfort start/stop Airco € 1.450,- 231.521 km 05/2011 51 kW (69 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 115 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2371 BP ROELOFARENDSVEEN Peugeot 308 1.6 THP Première € 5.995,- 119.462 km 05/2014 92 kW (125 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 125 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3812 RJ AMERSFOORT Dacia Sandero 1.6 Stepway € 2.999,- 132.428 km 06/2010 64 kW (87 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 180 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1704 RB HEERHUGOWAARD Renault Megane 1.6-16V Authentique Comfort|AUT|AIRCO|CRUISE|RIJD € 1.750,- 174.756 km 04/2004 83 kW (113 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 184 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3812 RJ AMERSFOORT Skoda Fabia Combi 1.2 TSI Fresh € 1.940,- 283.969 km 03/2013 63 kW (86 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 119 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1841 JJ STOMPETOREN Citroen C1 1.0-12V Selection // Nieuwe APK!!! // Airco // el. € 2.995,- 141.869 km 05/2011 50 kW (68 PK) Gebruikt 3 vorige eigenaren Handgeschakeld Benzine - (l/100 km) 103 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1704 RX HEERHUGOWAARD Ford Focus 1.5 Red Edition|LED|NAVI|PSENSOR|6BAK|STUURVERW|ST € 7.950,- 125.291 km 12/2015 110 kW (150 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 127 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3812 RJ AMERSFOORT Renault Twingo 1.2 Authentique airco keurige auto 135xxx km € 1.750,- 135.736 km 03/2008 43 kW (58 PK) Gebruikt 3 vorige eigenaren Handgeschakeld Benzine - (l/100 km) 130 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2022 EA HAARLEM Volkswagen up! 1.0 move up! BlueMotion - Stoelverwarming Parkeers € 6.950,- 93.990 km 02/2017 44 kW (60 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 101 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1506 SZ ZAANDAM Ford Ka/Ka+ 1.2 Comfort start/stop Airco € 1.450,- 231.521 km 05/2011 51 kW (69 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 115 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-2371 BP ROELOFARENDSVEEN Peugeot 308 1.6 THP Première € 5.995,- 119.462 km 05/2014 92 kW (125 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 125 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-3812 RJ AMERSFOORT Dacia Sandero 1.6 Stepway € 2.999,- 132.428 km 06/2010 64 kW (87 PK) Gebruikt - (Vorige eigenaren) Handgeschakeld Benzine - (l/100 km) 180 g/km (gem.) Meer informatie over het brandstofverbruik en CO2-uitstoot van nieuwe voertuigen kan worden geraadpleegd bij alle verkooppunten en op: www.energielabel.nl Bedrijf, NL-1704 RB HEERHUGOWAARD Renault Megane 1.6-16V Authentique Comfort|AUT|AIRCO|CRUISE|RIJD € 1.750,- 174.756 km 04/2004 83 kW (113 PK) Gebruikt - (Vorige eigenaren) Automatisch Benzine - (l/100 km) 184 g/km (ge",
+    "scrapedAt": "2026-10-08 18:59:17.761987"
+  },
+  {
+    "id": 357,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/",
+    "title": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "content": "Ga naar hoofdinhoud Homepage Auto Volkswagen Volkswagen Up! Volkswagen Up! 1 / 3 btnLabelPrevbtnLabelNext Sterke punten Goede verhouding formaat-binnenruimte Vrij dynamisch en comfortabel Sober maar strak interieurdesign Zwakke punten Basismotoren zijn traag Beperkte bagageruimte Niet de goedkoopste in zijn klasse Toon aanbod Toon aanbod Volkswagen Up!: compacte maar volwassen stadsauto De Volkswagen Up! kwam in 2011 op de markt en bleef tot 2023 in productie. Het was niet de goedkoopste auto in zijn klasse, maar werd wel razend populair dankzij een zeer slim basisontwerp. Hij is compact van buiten maar vrij ruim van binnen en heeft een zeer volwassen rijgedrag. Lees meer Volkswagen Up! : een overzicht Bekijk hier de actuele prijzen voor de Volkswagen Up! : een overzicht en ontdek het beschikbare aanbod op AutoScout24 Lees verder Occasions vanaf:€ 1.495,-* *Laagste prijs op AutoScout24 in de afgelopen maand Volkswagen Up! aanbod Nationaal Amsterdam Rotterdam Den Haag Utrecht Eindhoven Groningen Volkswagen up!1.0 move up! BlueMotion - Stoelverwarming Parkeers € 6.950 02/2017 93.990 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 1506 SZZaandam Volkswagen up!1.0 move up! BlueMotion|Nieuwe APK|Pano dak|Stoelv € 4.750 04/2012 148.812 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7061 DMTerborg Volkswagen up!1.0 high up! BlueMotion | PANORAMA DAK | 16\u0027\u0027 LMV € 7.750 06/2014 108.723 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3846 BWHarderwijk Volkswagen up!1.0 move up! BlueMotion € 6.750 08/2014 76.646 km Benzine - (l/100 km) 2,8 Autobedrijf NL 4905 AAOosterhout Volkswagen up!1.0 BMT move up! AIRCO / BLUETOOTH / DAB+ / ELEK R € 7.999 07/2017 50.081 km Benzine - (l/100 km) 2,8 Autobedrijf NL 8711 HPWorkum Volkswagen up!1.0 | BTW | Bluetooth | Airco € 11.9501 02/2022 33.028 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3751 LTBunschoten-spakenburg Volkswagen up!1.0 move up! | 5 Deurs | Airco | Elektrische ramen € 5.750 11/2012 160.197 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7008 AMDoetinchem Volkswagen up!1.0 BMT join up! | 75PK | Stoelverwarming | Lichtm € 8.8951 10/2018 116.771 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3762 ECSoest Volkswagen up!1.0 MOVE UP! Bluemotion € 5.695 01/2015 190.795 km Benzine 4,10 l/100 km (gem.) 2,8 Nieuw Autobedrijf NL 7141 JLGroenlo Volkswagen up!United Achteruitrijcamera Cruise-control Stoelverw € 12.9001 01/2021 58.210 km Benzine - (l/100 km) 2,8 Autobedrijf NL 3785 LCZwartebroek Volkswagen up!1.0 groove up! BlueMotion / NAVI / CRUISE / STOELV € 3.450 € 3.950,- 10/2012 217.424 km Benzine - (l/100 km) 2,8 Prijsdaling Autobedrijf NL 6229 PBMaastricht Volkswagen up!1.0 Take UP! BlueM. Carplay - all season € 5.950 04/2013 180.116 km Benzine 4,10 l/100 km (gem.) 2,8 Nieuw Autobedrijf NL 7141 JLGroenlo Volkswagen up!1.0 MOVE UP! BLUEM. l NAP l 5DRS l AIRCO l ELEK RA € 6.995 11/2015 113.478 km Benzine 4,10 l/100 km (gem.) 2,8 Autobedrijf NL 7821 APEmmen Volkswagen up!1.0 MOVE UP! CRUISE/STOELVERW/CAMERA/AIRCO € 11.7501 11/2022 79.424 km Benzine 0,00 l/100 km (gem.) 2,8 Autobedrijf NL 7532 SWEnschede Volkswagen up!Comfortline 1.0 (BLUETOOTH,LANE ASSIST,AIRCONDITIO € 7.7401 01/2022 164.714 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2931 SJKrimpen Aan De Lek Volkswagen up!1.0 TSI GTI *Beats | Cruise | Clima | Stoelverwarm € 16.000 03/2021 61.289 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7102 DXWinterswijk Volkswagen up!1.0 BMT High Up! 75PK - AUTOMAAT - 43.000 KM - CRU € 12.990 01/2017 43.373 km Benzine - (l/100 km) 2,8 Autobedrijf NL 1607 MLHem Volkswagen up!1.0 BMT high up! | Airco | Cruise | Parkeersensore € 7.950 07/2018 115.029 km Benzine - (l/100 km) 2,8 Autobedrijf NL 2032 ZGHaarlem Volkswagen up!1,0 BlueMotion Technology € 10.9001 02/2021 62.564 km Benzine - (l/100 km) 2,8 Autobedrijf NL 7471 GGGoor Volkswagen up!1.0 move up! BlueMotion | BLUETOOTH | NAVI | PDC | € 8.450 06/2016 115.119 km Benzine - (l/100 km) 2,8 Nieuw Autobedrijf NL 7891 EVKlazienaveen Volkswagen Up! occasions bekijkenVolkswagen Up! nieuwe auto\u0027s bekijken Volkswagen Up! in Amsterdam bekijkenVolkswagen Up! in Rotterdam bekijkenVolkswagen Up! in Den Haag bekijkenVolkswagen Up! in Utrecht bekijkenVolkswagen Up! in Eindhoven bekijkenVolkswagen Up! in Groningen bekijken Bouwjaar2024 - 2012 Actuele advertenties1.250 Laatste gegevensupdate: 07-10-2026 Prijs en aanbod Auto’s uit het bouwjaar 2012 bieden momenteel de beste balans tussen prijs en aanbod: de gemiddelde vraagprijs is € 4.261 en er zijn 165 beschikbare advertenties. Meeste advertenties Het grootste aanbod vind je momenteel bij auto’s uit bouwjaar 2012. Er staan 165 advertenties op AutoScout24. Gemiddelde prijzen en advertenties per bouwjaar Bouwjaar Gem. prijs Advertenties 2024 € 15.350 5 advertenties 2023 € 13.400 68 advertenties 2022 € 12.990 56 advertenties 2021 € 10.574 100 advertenties 2020 € 9.750 73 advertenties 2019 € 9.081 107 advertenties 2018 € 8.826 121 advertenties 2017 € 7.699 132 advertenties 2016 € 6.869 89 advertenties 2015 € 6.386 100 adverten",
+    "scrapedAt": "2026-10-08 18:59:16.086185"
+  },
+  {
+    "id": 356,
+    "url": "https://www.autoscout24.nl/informeren/advies/",
+    "title": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "content": "Ga naar hoofdinhoud Advies Auto kopen? Tips voor elke stap op AutoScout24 Auto verkopen: tips, waarde bepalen en veilig verkopen Veiligheid bij het kopen en verkopen van een auto Lease Veiligheid bij aankoop van een auto De beste auto\u0027s Autoverzekering Elektrisch rijden Auto onderhoud \u0026 reparaties Autotechnologie Autoverzorging Rijbewijs Wetgeving Auto-abonnement Vakantie met de auto, caravan of camper Kamperen, campers \u0026 caravans Advies: de nieuwste artikelen Onderhoudskosten elektrische auto: wat betaal je? Het onderhoud van een elektrische auto is vaak goedkoper dan dat van een benzineauto. Toch verschillen de kosten per model, leeftijd en gebruik. Ontdek wat je gemiddeld uitgeeft en welke kosten je naast een onderhoudsbeurt kunt verwachten. AutoScout24 · 08-10-2026 · 14 min. Leestijd Lees meer Onderhoudskosten elektrische auto: wat betaal je? Hoe lang gaat de accu van een elektrische auto mee? De accu is een belangrijk onderdeel van een elektrische auto. Maar hoeveel jaar en kilometer gaat hij mee? Ontdek wat capaciteitsverlies betekent, welke factoren de levensduur van een accu beïnvloeden en hoe je de staat laat controleren. AutoScout24 · 08-10-2026 · 16 min. Leestijd Lees meer Hoe lang gaat de accu van een elektrische auto mee? Problemen met je elektrische auto: herkennen en voorkomen Een elektrische auto kan problemen krijgen met de 12V-accu, het laden, de banden, remmen of software. Regelmatige controles helpen om problemen tijdig te herkennen. Ontdek wat je zelf kunt controleren en wanneer je hulp nodig hebt. AutoScout24 · 05-10-2026 · 15 min. Leestijd Lees meer Problemen met je elektrische auto: herkennen en voorkomen Naar boven",
+    "scrapedAt": "2026-10-08 18:59:14.78733"
+  },
+  {
     "id": 355,
     "url": "https://www.autoscout24.nl/auto/porsche/",
     "title": "Alle informatie over het automerk Porsche bij AutoScout24.",
@@ -2465,26 +2500,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 356,
-    "url": "https://www.autoscout24.nl/informeren/advies/"
-  },
-  {
-    "id": 357,
-    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
-  },
-  {
-    "id": 358,
-    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
-  },
-  {
-    "id": 359,
-    "url": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
-  },
-  {
-    "id": 360,
-    "url": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
   },
   {
     "id": 361,
@@ -57655,10 +57670,1468 @@ window.searchData = [
     "id": 21829,
     "url": "https://www.autoscout24.nl/auto/peugeot/peugeot-boxer/",
     "parentUrl": "https://www.autoscout24.nl/auto/porsche/"
+  },
+  {
+    "id": 21830,
+    "url": "https://www.autoscout24.nl/informeren/advies/wetgeving/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21832,
+    "url": "https://www.autoscout24.nl/informeren/advies/auto-onderhoud/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21835,
+    "url": "https://www.autoscout24.nl/informeren/advies/lease/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21836,
+    "url": "https://www.autoscout24.nl/informeren/advies/elektrisch-rijden/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21838,
+    "url": "https://www.autoscout24.nl/informeren/advies/rijbewijs/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21839,
+    "url": "https://www.autoscout24.nl/informeren/advies/auto-abonnement/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21840,
+    "url": "https://www.autoscout24.nl/informeren/advies/autoverzorging/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21841,
+    "url": "https://www.autoscout24.nl/informeren/advies/autovakantie/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21842,
+    "url": "https://www.autoscout24.nl/informeren/advies/autoverzekering/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21843,
+    "url": "https://www.autoscout24.nl/informeren/advies/veiligheid-bij-het-kopen-en-verkopen-van-een-auto/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21844,
+    "url": "https://www.autoscout24.nl/informeren/advies/kamperen/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21845,
+    "url": "https://www.autoscout24.nl/informeren/advies/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21846,
+    "url": "https://www.autoscout24.nl/informeren/advies/veiligheid/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21847,
+    "url": "https://www.autoscout24.nl/informeren/advies/autotechnologie/",
+    "parentUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "id": 21851,
+    "url": "https://www.autoscout24.nl/lst/skoda/citigo",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21853,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21858,
+    "url": "https://www.autoscout24.nl/informeren/autotests/volkswagen/passat/volkswagen-passat-2024-review-hoogtijdagen-voorbij-maar-beter-dan-ooit/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21859,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up!/ve_cross",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21862,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/fox",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21866,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21867,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/kia-ev6-rijdt-sportiever-en-dus-leuker-dan-volkswagen-id-5/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21869,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21870,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/polo-cross",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21871,
+    "url": "https://www.autoscout24.nl/lst/peugeot/208",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21872,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21874,
+    "url": "https://www.autoscout24.nl/lst/seat/mii",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21879,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-scenic-e-tech-electric/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21882,
+    "url": "https://www.autoscout24.nl/lst/renault/modus",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21884,
+    "url": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21885,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/kever",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21889,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/e-up!",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21892,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21893,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/cross-golf",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21894,
+    "url": "https://www.autoscout24.nl/auto/renault/renault-modus/",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21895,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21896,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up!/ve_gti",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21899,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/up",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21903,
+    "url": "https://www.autoscout24.nl/lst/ford/ka-ka+",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21906,
+    "url": "https://www.autoscout24.nl/lst/renault/scenic",
+    "parentUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "id": 21908,
+    "url": "https://www.autoscout24.nl/lst/audi/a4/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21911,
+    "url": "https://www.autoscout24.nl/lst/opel/corsa/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21912,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/waterland/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21914,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/golf-alle/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21915,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/oostzaan/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21916,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/landsmeer/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21917,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/ouder-amstel/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21919,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/ouderkerk-aan-de-amstel/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21920,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/polo/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21921,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/zaandam/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21922,
+    "url": "https://www.autoscout24.nl/lst/audi/a6/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21923,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amstelveen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21925,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/duivendrecht/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21926,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21928,
+    "url": "https://www.autoscout24.nl/lst/audi/a3/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21929,
+    "url": "https://www.autoscout24.nl/lst/bmw/3-serie-alle/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21930,
+    "url": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/diemen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "id": 21932,
+    "url": "https://www.autoscout24.nl/lst/audi/s8",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21934,
+    "url": "https://www.autoscout24.nl/lst/audi/s6",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21937,
+    "url": "https://www.autoscout24.nl/lst/audi/rs6/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21939,
+    "url": "https://www.autoscout24.nl/lst/audi/rs6/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21941,
+    "url": "https://www.autoscout24.nl/lst/audi/rs6/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21943,
+    "url": "https://www.autoscout24.nl/lst/audi/rs6/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21947,
+    "url": "https://www.autoscout24.nl/lst/audi/rs6/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21949,
+    "url": "https://www.autoscout24.nl/lst/audi/rs6/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21957,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21960,
+    "url": "https://www.autoscout24.nl/lst/audi/rs5",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21961,
+    "url": "https://www.autoscout24.nl/lst/audi/rs6",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21963,
+    "url": "https://www.autoscout24.nl/lst/audi/rs4",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21966,
+    "url": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21967,
+    "url": "https://www.autoscout24.nl/auto/bmw/bmw-5-serie/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21970,
+    "url": "https://www.autoscout24.nl/lst/audi/rs7",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21972,
+    "url": "https://www.autoscout24.nl/auto/mercedes-benz/mercedes-benz-e-klasse/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "id": 21980,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/bt_coupe",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21981,
+    "url": "https://www.autoscout24.nl/informeren/autotests/skoda/enyaq/skoda-enyaq-coupe-rs-iv-actieradius-gemeten-bij-100-en-130-km/h/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21983,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/deze-elektrische-auto-s-halen-bij-lange-na-de-officiele-actieradius-niet/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21985,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-elroq/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21986,
+    "url": "https://www.autoscout24.nl/informeren/autotests/vergelijking/test-subaru-solterra-kansloos-op-deze-3-punten-verslaat-hij-de-skoda-enyaq-iv/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21988,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/#main-target",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21989,
+    "url": "https://www.skoda.nl/elektrisch-rijden/opladen",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21990,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/#make-info",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21991,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/cit_2563-den-haag",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21993,
+    "url": "https://www.autoscout24.nl/informeren/autotests/skoda/enyaq/skoda-enyaq-coupe-test-moet-je-hem-kiezen-voor-zijn-grotere-actieradius/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21994,
+    "url": "https://www.autoscout24.nl/lst/byd?atype\u003dC\u0026cy\u003dD%2CA%2CB%2CE%2CF%2CI%2CL%2CNL\u0026damaged_listing\u003dexclude\u0026desc\u003d0\u0026powertype\u003dkw\u0026search_id\u003di92ue8lqe\u0026sort\u003dstandard\u0026ustate\u003dN%2CU",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21996,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/cit_amsterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21997,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-octavia/skoda-octavia-combi/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 21999,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/ot_nieuw",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22000,
+    "url": "https://www.autoscout24.nl/informeren/autotests/skoda/elroq/review-skoda-elroq-rs-2025-kracht-en-comfort-in-balans/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22001,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-yeti/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22002,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/cit_eindhoven",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22007,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/bc_grijs",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22008,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-scala/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22011,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-octavia/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22012,
+    "url": "https://www.autoscout24.nl/informeren/autotests/skoda/enyaq/skoda-enyaq-coupe-rs-iv-3-voordelen-3-nadelen/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22013,
+    "url": "https://www.autoscout24.nl/lst/ford/mustang/ve_mach-e",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22015,
+    "url": "https://www.autoscout24.nl/lst/skoda/elroq",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22016,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/cit_groningen",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22017,
+    "url": "https://www.autoscout24.nl/lst/skoda/kodiaq",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22018,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-octavia/skoda-octavia-rs/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22019,
+    "url": "https://www.autoscout24.nl/auto/skoda/skoda-kodiaq/",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22020,
+    "url": "https://www.autoscout24.nl/lst/volkswagen/id.4",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22022,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/cit_utrecht",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "id": 22023,
+    "url": "https://www.autoscout24.nl/lst/skoda/enyaq/cit_rotterdam",
+    "parentUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5CLUzwmvfeea9CPK46X5Cc/e122e0a92508fd5b78b101bfbcb7b2e0/AS24-skoda_01.jpg?w\u003d1100",
+    "alt": "skoda-enyaq-iv-front",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5CLUzwmvfeea9CPK46X5Cc/e122e0a92508fd5b78b101bfbcb7b2e0/AS24-skoda_01.jpg?w\u003d1100",
+    "alt": "skoda-enyaq-iv-front",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4lzKvXihxfQ7l9PWEQWZAI/b5a33e20f48e20588909303964bdbe72/AS24-skoda_banner.jpg?w\u003d1100",
+    "alt": "skoda-enyaq-iv-side",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4dr7I1XA8MQXo2hCY5pG3Y/33857ac2096c846ed7d46a33f3209329/skoda-enyaq-iv-l-04.jpg?w\u003d1100",
+    "alt": "skoda-enyaq-iv-back",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/6a6d8f07-d484-441b-b194-b62fc627f688_7ca5c115-afd2-4b52-82a5-8e4f3227e79d.jpg/360x270.jpg",
+    "alt": "iV 60 SOH 93% / 180pk / NAP / Achteruitrij camera",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ac9e46a0-8e48-4f20-a871-882e06b98689_0f653f5c-4e46-4232-abb8-4763b0d4ac92.jpg/360x270.jpg",
+    "alt": "iV 60 | SOH 91% | Camera | 20\" | LED",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f622ac3d-2267-4fcc-877a-63ecb5370e28_a25bdd01-2dee-4a48-b512-33c1fab3c1eb.jpg/360x270.jpg",
+    "alt": "iV 80 Sportline Memory Adaptief Camera",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/40077730-940a-4e9f-bf1e-e720b34c5300_254439fc-0026-492c-bf1f-3d5f700bb41b.jpg/360x270.jpg",
+    "alt": "Coupé iV 80 Bns Ed. + | 96,36% SOH | Canton | Pano",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4763fc9a-18d1-4350-b50e-614685f4d064_0ee865c0-96fd-4586-92f6-b8fc66161a1d.jpg/360x270.jpg",
+    "alt": "iV 180PK SOH 91% 3-Zone Ecc Camera Navi Ecc Stoel+",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e5dcfdcb-b82f-468c-bad9-5e228d9569dc_519282fe-5539-4126-9d8b-2dd95dd934e2.jpg/360x270.jpg",
+    "alt": "IV 80 SPORTLINE (90% SOH) I PANAROMADAK I 360° CAM",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0ef0793e-d43c-459a-a040-bd96f94e50ff_b4372ade-3af1-4394-b025-43735ad61461.jpg/360x270.jpg",
+    "alt": "iV 60 Sportline ✅ Matrix LED ✅ Trekhaak ✅ ACC",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4091a696-5c22-4b6e-b5eb-4de3fb0c83e3_725a1c91-0397-4450-b721-27ebf58bd74a.jpg/360x270.jpg",
+    "alt": "iV 80 | Panoramadak | Trekhaak | 12 maanden BOVAG",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bf4ad6ec-0938-4a51-81a0-0ced9fb3c7f6_13f31247-0bd9-4c0c-afbe-12238e9225b0.jpg/360x270.jpg",
+    "alt": "iV 60 Ruimte, rust en volledig elektrisch rijplezi",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f88d2dec-69ac-4f47-ae8f-bd47a8966dd9_5126e0ae-5147-4b3f-92eb-50fa9ddd0f7e.jpg/360x270.jpg",
+    "alt": "iV 80 Ruime elektrische SUV met luxe assistentie",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/efa52050-f27b-46d2-aa62-9e05338243b0_bae7b2ad-c627-49b1-accd-af1fefd77fdc.jpg/360x270.jpg",
+    "alt": "iV 80 204PK SOH 92% Camera 3-Zone Ecc 1/2 Leer-Sto",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/479334b3-35ed-45c8-bf23-94f50ea5724d_cf2b677d-8442-4a36-8c1a-8f94925b35fd.jpg/360x270.jpg",
+    "alt": "iV 80 Sportline SOH 93% 204pk / Panoramadak / Acht",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/623b71fc-de7a-4667-a4d4-dfaa6a41d2fd_14ff0510-89b7-4afd-b27d-a761a09d86b4.jpg/360x270.jpg",
+    "alt": "iV 60 SOH 91% Apple Carplay Android Auto Navi Ecc",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/dc048051-854a-41a8-a7dc-d4facd0ee38c_89d6082e-e353-4588-8691-9ac4161dfe14.jpg/360x270.jpg",
+    "alt": "Coupé iV 80 RS | SOH: 95,1% | Pano | Memory | Alca",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e5b578a9-66ab-4ae7-b32d-dde81809264b_b89161f7-1275-4de0-baa1-866615a1bd87.jpg/360x270.jpg",
+    "alt": "iV 60 | SOH 92,6 %| Trekhaak | Comfort pluspakket",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/00a3b89f-809c-487e-9671-ccb091194ac5_a9fd3fa6-bef4-453c-b965-17790cfd21fa.jpg/360x270.jpg",
+    "alt": "iV 60",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2d202908-6399-48b5-88f3-ec0e75d04548_8e0a392f-ddf4-4818-be54-d5a7f1200b4e.jpg/360x270.jpg",
+    "alt": "iV 60 First Edition SOH 93,7% | Warmtepomp | Matri",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/e55afbd5-d4fb-4ba7-8c33-f9c6bb7406eb_64ce831e-5f4a-441e-a8c0-6d5b715e6e49.jpg/360x270.jpg",
+    "alt": "iV 60 Founders Edition Black 94,2% soh! | Sportlin",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ceb9f51a-6345-4bfe-918d-46b722d44d27_432eea4e-2db5-4915-a541-f48556b8853a.jpg/360x270.jpg",
+    "alt": "iV 80 204PK Chrystal Face Sport Pakket Trekhaak SO",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f63cc1d0-8917-4a8f-9ceb-46a1f5ce7d74_126b899c-24cc-40e3-b538-9a708625249a.jpg/360x270.jpg",
+    "alt": "iV 60 SOH 91% / 180pk / Panorama dak / Trekhaak /",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7MRKL57IwQOObZqcUfumtH/1e99658926639395b5389c89b2e97a04/Skoda_Elroq__1_.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Skoda Elroq",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/78J2shr711dKJrc6M9h7Wg/0ee726be8f128e1f2f68599da3087074/Skoda_Kodiaq_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Skoda Kodiaq",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6yPtLT7dNBCYV3S1P18sb8/e7481e0e25a8987dee13d2bedf375001/volkswagen-id5-2022-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen ID.5",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/53iOJHLv6B8gNno0zy3XYe/b9730228eb4df3b4b1cc9d25717a4ecf/VW_ID.3_1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen ID.3",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7qj9T1CyM6HiZwLb93n3Kt/5c6971b34a922579bcf6303647c1b2ca/skoda-enyaq-coupe-iv-2022-26-2.jpg?w\u003d1100",
+    "alt": "Skoda Enyaq Coupé test - Moet je hem kiezen voor zijn grotere actieradius?",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5D5olmPTFfLnWAMzE9H9HZ/5895ad8767c6e8f230fc36d5853543f7/skoda-enyaq-coupe-2022-1.jpg?w\u003d1100",
+    "alt": "Skoda Enyaq Coupé RS iV: actieradius gemeten bij 100 en 130 km/h",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2QLEpuWJY0vLQN2ec0Lvc1/13c2c9402d9f32b2035a41b71385b5c3/1-volkswagen-id4-1st-edition-2022-1.jpg?w\u003d1100",
+    "alt": "Deze elektrische auto\u0027s halen bij lange na de officiële actieradius niet",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3TbK4p4gGoQDVIleqNXuKB/6b1a2f75a173881b7d9192867ea80c8b/skoda-enyaq-coupe-rs-iv-2023-1.jpg?w\u003d1100",
+    "alt": "Skoda Enyaq Coupé RS iV: 3 voordelen, 3 nadelen",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5fdolrUMZsyX7ISCTrxm28/b243f499ff2feb76ed6c03c1ca0921f5/skoda-enyaq-subaru-solterra-2023-1.jpg?w\u003d1100",
+    "alt": "TEST – Subaru Solterra kansloos? Op deze 3 punten verslaat hij de Skoda Enyaq iV",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6rBCImmfkjpxWAKL4fKeoq/6788fd256e8e828794551d48b03fba67/Skoda_Elroq_RS_1.jpg?w\u003d1100",
+    "alt": "Review – Škoda Elroq RS (2025): kracht en comfort in balans",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Skoda Enyaq iV - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/skoda/skoda-enyaq-iv/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7w5EWndW2cpjvyYaXO8xXN/f61ebed25bc78c65139d2ec703a44ed1/audi-rs6-avant-2020-front.jpg?w\u003d1100",
+    "alt": "audi-rs6-avant-2020-front",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7w5EWndW2cpjvyYaXO8xXN/f61ebed25bc78c65139d2ec703a44ed1/audi-rs6-avant-2020-front.jpg?w\u003d1100",
+    "alt": "audi-rs6-avant-2020-front",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4FZWzwoqqYsXP2aqw9doA6/f3605bcf5d29cccaa6ab947a268d4ae5/audi-rs6-avant-side.jpg?w\u003d1100",
+    "alt": "audi-rs6-avant-side",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3sL2FHPHzEcH8Z2Kb2KdCA/112ddef2dc5fde172e9e031625999608/audi-rs6-avant-front.jpg?w\u003d1100",
+    "alt": "audi-rs6-avant-front",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1dmZK7PjxFSbrIRk2G7EyN/88d71e503549e4347ea5612e55503254/audi-rs6-avant-back.jpg?w\u003d1100",
+    "alt": "audi-rs6-avant-back",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1ec65c0f-04b0-421a-9ebc-08c43944bd52_ff7c0be1-7318-4f3f-9a44-f6b42825801a.jpg/360x270.jpg",
+    "alt": "A6 Avant 4.0 TFSI quattro Pro Line Plus|Keramisch|",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b85d40e6-166a-45b9-bfff-9fb4327c6f7f_ed9d75c6-968e-43cc-bb66-cd50134c8f93.jpg/360x270.jpg",
+    "alt": "5.0 TFSI V10 Quattro Zwart Audi Exclusive Carbon",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/0cadb8e4-dd76-4c2a-87d0-b2e249a6e476_efafe812-132c-42e0-88e1-05ba6fa783b8.jpg/360x270.jpg",
+    "alt": "Avant TFSI quattro - RS Dynamic + | ABT Wheels | P",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/8590abbc-f088-4c79-a8ea-30072facfcba_33c3c483-3c6e-42d3-b87b-c154be5774b4.jpg/360x270.jpg",
+    "alt": "Avant 4.0 TFSI quattro MTM 1001pk Stage 4 Carbon V",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/88133357-02df-4f91-9b48-99c43fe29a5a_52f6e4ab-72ea-4356-995a-0fbf53e91fac.jpg/360x270.jpg",
+    "alt": "Avant Mansory | 860PK | Pano | HUD | B\u0026O | 360° |",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3437e3e9-95c6-4161-b4d6-2a7c07997b86_a6a6a571-69ac-4eda-965c-620a7f7cf4ea.jpg/360x270.jpg",
+    "alt": "A6 Avant 4.0 TFSI quattro Pro Line Plus / ABT / So",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eab7780d-c0eb-4d0c-ab44-e92b10f3b478_094edb8f-14a6-4dca-9998-1452f659c705.jpg/360x270.jpg",
+    "alt": "Avant RS6 quattro perfomance Carbon Alcantara-Heme",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/702aa40a-53f6-4f66-9200-bd5c6b88056f_c557672f-a203-41c2-9491-4808df4c3536.jpg/360x270.jpg",
+    "alt": "A6 Avant 4.0 TFSI Quattro Performance 606PK B\u0026O 3D",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/88b7de18-899a-4ae2-9400-a8f302964179_2794dba5-b0b9-4fd1-8856-58ace6100d31.jpg/360x270.jpg",
+    "alt": "Avant Quattro Stationwagon | 2003",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4742d898-b272-4ed2-b376-08b03b10f01b_7765afb0-d065-4043-93bc-9b5584f090f2.jpg/360x270.jpg",
+    "alt": "Avant 600pk TFSI quattro |Urban bodykit|Eventuri i",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/2b8926b1-c0c5-4db7-9482-a31f9fb4ccb4_c91df199-81e1-4b3e-b4cf-af1f41b48401.jpg/360x270.jpg",
+    "alt": "Avant 4.0 TFSI RS6 quattro performance | Pano | Ca",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/40429049-6abe-4d87-8f67-449fc0aa0ffa_4fbf9d99-77e8-48d9-a75f-f719884f1697.jpg/360x270.jpg",
+    "alt": "Avant 4.0 V8 Quattro | Dynamic+ | Pano | B\u0026O 3D |",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/14dcdb8a-9136-406f-b5e3-5f87f627e4c1_cdce6afb-47e1-4df5-80f8-7ad59bc05421.jpg/360x270.jpg",
+    "alt": "Avant TFSI Quattro Urban |Keramisch|Pano|PPF|Nardo",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/97f783d2-eb2c-4941-82a2-d097bb00c8e9_08b322dc-4f63-4507-9f22-d196adb78920.jpg/360x270.jpg",
+    "alt": "Tailor made 1 of 1 - RS2 Hommage Edition Collector",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ce722006-4b1b-4c81-9cc6-b2f396c9ba7e_b9c1312d-a391-4c70-8fe2-da2c9b385d7c.jpg/360x270.jpg",
+    "alt": "Avant 4.0 TFSI 441kW/600pk Aut8 Quattro Performanc",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/bc945537-a64b-4444-9b48-4d201a889536_385784b5-7f88-454a-8bb8-2447f361c34e.jpg/360x270.jpg",
+    "alt": "Avant 4.0 TFSI 560pk Quattro Pano Keramisch Dynami",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b4035421-5b45-4a59-b621-cba21f185de2_d14f4ffb-2691-4b85-993d-f1dba9bcdf11.jpg/360x270.jpg",
+    "alt": "A6 Avant 5.0 TFSI MTM 700PK | Milltek| Camera",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/9ab839f5-d1bc-410d-9287-62d46259989a_73a5ea60-63cd-40ea-a684-89d2b1ac6edb.jpg/360x270.jpg",
+    "alt": "EXPORTPRIJS ///Sport C8 / Carbon / Ceramic / Goodw",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/eb508408-1403-46ca-bc99-3d642faacdc6_5972c63d-8c05-4559-9703-087b1e82c651.jpg/360x270.jpg",
+    "alt": "Avant 4.0 TFSI RS 6 quattro Pro Line Plus |Keramis",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/a8d919f8-2c7d-4a59-b3e3-73c67f193095_104a13d2-3097-49ad-a931-5347025d1725.jpg/360x270.jpg",
+    "alt": "*510PK*CARBON*SOLAR*MTM*VOSSEN*KW*BOSE*NIEUWSTAAT*",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6y9UHJFyYLCtLZTvYdSydR/131a71978754f46eb5615da92bd30c33/audi-rs6-avant-interior.jpg?w\u003d1100",
+    "alt": "audi-rs6-avant-interior",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6idx05mGmXRWXM7Zh8TP31/88675dc75846cf27090b56954b18ad9f/audi-rs6-avant-seats.jpg?w\u003d1100",
+    "alt": "audi-rs6-avant-seats",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1CoKzAYavxIY64vGpzXV32/29d7b257f5e24941cd03b2bf1023da32/2015-audi-s6-jy-02.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi S6",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4Zb4piEWYKQjh4iTkuxNWY/528c298d4438b45c5cb443a72fdd5e5c/audi-rs4-frontansicht.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi RS4",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2aDVVMJMe72TzaMz4Uxtfl/f5da17ae70e73f319b3c5eca41a7c045/audi-rs5-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi RS5",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7fWNA5MI7DyQqCRXLQ62PV/496a2d07f758a9fccd03a851fd247491/Audi_S8_-_Anteriore__1_.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi S8",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6gNL2rNUw81vOxowKUXywB/41a75e4c69670749224cd5838c733836/audi-rs7-sportback-front.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Audi RS7: betaalbare sportauto",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/012ILYaqYbxYb5iRsLgbKE/d119060df57457deb9caf1a2b1972ba1/audi-q4-etron-2026.jpg?w\u003d1100",
+    "alt": "Audi Q4 e-tron Facelift (2026): Eerste indruk, meer actieradius en nieuwe Digital Stage",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3rZf7ZBcZJTfK9bfHP8ksO/d0aec57170687bc819249f34cfcdbd3e/Audi_A6_Avant_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi A6 Avant e-tron (2025): elektrische stationwagen met premium flair",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6GrNuhCdk6OUcKerAQQRj6/c5b306af8fce1429d7a3c8da9c4d3de1/Audi_Q3_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q3 (2025): compacte SUV met een volwassen karakter",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/74ohGiWKbkJYWEGdrM9Oq1/33e5e1fbcf4782f3f14360ad6e4a66ac/audi-tt-toyota-gr-supra-2023-1.jpg?w\u003d1100",
+    "alt": "TEST Audi TT vs",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/Jjx5gIxNMbtJmblUubHrU/3af2d0e1f13497249344d2e556397cb7/audi-a8-l-2022-8-1.jpg?w\u003d1100",
+    "alt": "Review: zo verpest Mercedes het feestje van de plug-in hybride Audi A8 60 TFSI e",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5gnWDSiDpiVTvxmso92fJo/d0614d95cf5bd31d6b24a64f0b1df330/Audi_Q6_e-tron_1.jpg?w\u003d1100",
+    "alt": "Review – Audi Q6 e-tron (2025): elektrische SUV met sportieve roots",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Audi RS6 - Informatie, prijzen, alternatieven",
+    "pageUrl": "https://www.autoscout24.nl/auto/audi/audi-rs/audi-rs6/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c3e4ab9f-9ef3-41f2-8955-37fa020977b1_21f635d9-23b3-41ab-aa74-8bb04c738d97.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/421bcec4-a4e2-433d-988c-b6be78e12347_d19e63f5-dd86-449e-bef2-f34a72c64855.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f14f5077-fb03-4942-ade1-7289235c9414_9d14cc48-d2bd-4a13-8950-46e2ce93d8fd.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/13eb0d2b-c0d1-4b92-bfec-20588a7d92c5_d3d65bf5-619d-4454-ab6b-63adc6052c9c.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ea37a7ce-db8f-4cdd-9a8c-875303f3e2fb_73882bf4-3c1f-48f1-b125-8dc90e93a945.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c1144861-ebfb-4d6e-a91b-12c21036268c_233629c2-9b31-4577-ac04-74a2c874d11a.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f083353e-2989-4d72-9f42-97e368b3ee89_03467042-f63b-42dc-a8f8-67dbf1e1a697.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d00f3673-b737-440c-b571-69a7b406b80e_7ffd29a1-51eb-45ec-9c44-e0c53d08bd05.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/802e98d7-9f60-4970-8888-f1b86e5c1141_493b7dba-be15-4564-9c41-3eb30d7a847f.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c3e4ab9f-9ef3-41f2-8955-37fa020977b1_21f635d9-23b3-41ab-aa74-8bb04c738d97.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/421bcec4-a4e2-433d-988c-b6be78e12347_d19e63f5-dd86-449e-bef2-f34a72c64855.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f14f5077-fb03-4942-ade1-7289235c9414_9d14cc48-d2bd-4a13-8950-46e2ce93d8fd.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/13eb0d2b-c0d1-4b92-bfec-20588a7d92c5_d3d65bf5-619d-4454-ab6b-63adc6052c9c.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ea37a7ce-db8f-4cdd-9a8c-875303f3e2fb_73882bf4-3c1f-48f1-b125-8dc90e93a945.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c1144861-ebfb-4d6e-a91b-12c21036268c_233629c2-9b31-4577-ac04-74a2c874d11a.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/f083353e-2989-4d72-9f42-97e368b3ee89_03467042-f63b-42dc-a8f8-67dbf1e1a697.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/d00f3673-b737-440c-b571-69a7b406b80e_7ffd29a1-51eb-45ec-9c44-e0c53d08bd05.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/802e98d7-9f60-4970-8888-f1b86e5c1141_493b7dba-be15-4564-9c41-3eb30d7a847f.jpg/420x315.jpg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Occasions Amsterdam: tweedehands auto kopen in Amsterdam",
+    "pageUrl": "https://www.autoscout24.nl/auto/tweedehands-auto/noord-holland/amsterdam/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/47mLiLQtsuSBvQIfSGkxZV/7aebc4f6360c2f235bc2e82b8f4873e2/volkwagen-up-front.jpeg?w\u003d1100",
+    "alt": "volkswagen-up-front",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/47mLiLQtsuSBvQIfSGkxZV/7aebc4f6360c2f235bc2e82b8f4873e2/volkwagen-up-front.jpeg?w\u003d1100",
+    "alt": "volkswagen-up-front",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/49Vkt5eqP7Lay1E5V7BMrD/0acf24d8afeaf59dc4516978d13feedc/volkwagen-up-side.jpeg?w\u003d1100",
+    "alt": "volkswagen-up-side",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4xyU2nPaWfEgIYRd3cQCQp/34ebee5b67375b5c0380fc44017194cc/volkwagen-up-back.jpeg?w\u003d1100",
+    "alt": "volkswagen-up-back",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c3e4ab9f-9ef3-41f2-8955-37fa020977b1_21f635d9-23b3-41ab-aa74-8bb04c738d97.jpg/360x270.jpg",
+    "alt": "1.0 move up! BlueMotion - Stoelverwarming Parkeers",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ec7e4dd2-de7e-49af-8749-defad52d1270_6479fc96-fad7-4188-a4fb-109f12ede718.jpg/360x270.jpg",
+    "alt": "1.0 move up! BlueMotion|Nieuwe APK|Pano dak|Stoelv",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/922d0d55-b0dd-41a0-8d32-2178bff97900_1025fe1c-2242-424f-8530-23b4fc3b03ca.jpg/360x270.jpg",
+    "alt": "1.0 high up! BlueMotion | PANORAMA DAK | 16\u0027\u0027 LMV",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/1b0d0de4-54ce-461f-8bc4-e1a5570f1d3b_e3758582-c65d-4c9c-a447-2dcd6d1feb47.jpg/360x270.jpg",
+    "alt": "1.0 move up! BlueMotion",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/ae2348e8-1058-4264-a396-55f17a360768_85b026bd-05f2-4e97-a074-59d687013dd6.jpg/360x270.jpg",
+    "alt": "1.0 BMT move up! AIRCO / BLUETOOTH / DAB+ / ELEK R",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/4ef50115-225b-4222-8d01-905718487a9e_35b7a162-0269-45d5-9e87-26b98b69e845.jpg/360x270.jpg",
+    "alt": "1.0 | BTW | Bluetooth | Airco",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/43365c25-586f-472e-9233-25fa1c6c5567_feadd975-c352-442d-ae55-311b72e8972f.jpg/360x270.jpg",
+    "alt": "1.0 move up! | 5 Deurs | Airco | Elektrische ramen",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/13517731-4959-4ba0-b724-56a87b319988_0378fa7b-cbcf-4673-86bb-bb8568d1eefa.jpg/360x270.jpg",
+    "alt": "1.0 BMT join up! | 75PK | Stoelverwarming | Lichtm",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/84891b74-4540-46e4-86cf-197bf6f5b5d1_39791642-229c-4957-8f34-a64beb013689.jpg/360x270.jpg",
+    "alt": "1.0 MOVE UP! Bluemotion",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/cb84f352-d6a1-492f-9554-e9ea4bdf231c_0798d051-04ca-4fe5-bdc2-72d52451d64e.jpg/360x270.jpg",
+    "alt": "United Achteruitrijcamera Cruise-control Stoelverw",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3cfb6875-c16c-4d17-bebe-f2553addbd27_e098a108-ffd2-4a5e-87e9-895dcb6e6f37.jpg/360x270.jpg",
+    "alt": "1.0 groove up! BlueMotion / NAVI / CRUISE / STOELV",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/fb4f83bd-a6c7-417d-b444-7b186e97a558_db1701b7-f88e-45c3-8c7c-44f354ac6e87.jpg/360x270.jpg",
+    "alt": "1.0 Take UP! BlueM. Carplay - all season",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/91a5635d-035b-4e2e-be05-c467104df536_e158702d-6a8e-48f4-b071-8c31bfd3f015.jpg/360x270.jpg",
+    "alt": "1.0 MOVE UP! BLUEM. l NAP l 5DRS l AIRCO l ELEK RA",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/100288bc-7bda-4912-a4fb-edfd7032b3f3_03579402-a3a1-4914-8018-c1babc4dc33c.jpg/360x270.jpg",
+    "alt": "1.0 MOVE UP! CRUISE/STOELVERW/CAMERA/AIRCO",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/c060243b-d4c0-4e5a-92cc-429205ebfdab_7a726a5b-0a19-43a3-a17c-b5dc43541cec.jpg/360x270.jpg",
+    "alt": "Comfortline 1.0 (BLUETOOTH,LANE ASSIST,AIRCONDITIO",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/7cdfd95a-d4c5-4bc0-bdc9-fac42055603f_02c7c319-1a8d-41b6-9eaa-8e4dcfd992e9.jpg/360x270.jpg",
+    "alt": "1.0 TSI GTI *Beats | Cruise | Clima | Stoelverwarm",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/62bb1166-767c-45dc-8a42-7eb379d65b3b_9b3a976e-0809-40a0-84c5-f6e96ce8168d.jpg/360x270.jpg",
+    "alt": "1.0 BMT High Up! 75PK - AUTOMAAT - 43.000 KM - CRU",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/382a0c2e-fc9c-475c-9969-b2ad99674642_4528114a-7269-4b83-ab13-c4ba2d3fed2d.jpg/360x270.jpg",
+    "alt": "1.0 BMT high up! | Airco | Cruise | Parkeersensore",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/3c45b7a0-6e9f-4b2e-93d4-c31b8f785203_de559670-4fcc-4664-9b1a-090f1af2fa19.jpg/360x270.jpg",
+    "alt": "1,0 BlueMotion Technology",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://prod.pictures.autoscout24.net/listing-images/b767e3c4-6e20-4a2d-880d-1f9976493e16_bd00311a-cd2f-403b-8384-f5dd2c685a8f.jpg/360x270.jpg",
+    "alt": "1.0 move up! BlueMotion | BLUETOOTH | NAVI | PDC |",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/aWx6gpOLYLd5aX9x682qr/7858f13b6111a435866372c241202cd4/Volkswagen-Polo_GTI-2022-1280-08.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Polo",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/78TEArImfQWZtUQVig8Xeq/c57b4756f3a4f01fed9c78caba3aabef/vw-fox-overview.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Volkswagen Fox",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/43HDCyewieDVDmJkYdHzFu/8be7a9a41d60a4ede108720dbef1f63c/Seat-Mii-Frontview.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Seat Mii",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/70qqmDZJyICnMUoljaFHPY/258eb9c11a180f644f16baedd8d34b6e/skoda-citigo-l-01.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Skoda Citigo",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/TSPBsz2yX29mxmmrLBRGc/fd14cfaf3734c6fef267fe98ee7e0c21/Toyota_Aygo_Frontansicht.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Toyota Aygo",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/26SyJqp2gqMsfaOC9Lpq4W/5b7ffe8e77d85b3381a3191200a9b76c/peugeot-208-side.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Peugeot 208",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/3dINZwdMhcUWv8eilX8fS/38dc2a26a9295b9d0d9e821ba8ca4e01/Renault-Scenic_E-Tech-1.jpg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Renault Scenic E-Tech Electric",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5xr3K24QuiVmnj42nGGRxR/506aabbe63f9a094d8721a2304de7ba8/ford-ka.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Ford Ka",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4oI7IaEqGxYOyqIOHplMjY/8d8e8fad45a002aec1c303c84ca3e56d/renault-modus-front.jpeg?w\u003d608\u0026h\u003d348\u0026fit\u003dfill",
+    "alt": "Renault Modus",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6QrxRIGO4wQohPGqv1ExW3/7a647efa3acc830c9f09a4764411a367/vw-id-polo-2026-titel-tv.jpg?w\u003d1100",
+    "alt": "VW ID",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6x8o0XhH6xvw5Qtmlgkco6/e0652515df6cfdfc8e8ab4bde67506c9/volkswagen-buzz-actieradius-2022-1.jpg?w\u003d1100",
+    "alt": "Volkswagen ID",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5zaYaiVIgyOgjq6tOZ6kEg/0d025176b9ebd32e93afe5cf2237fb4e/volkswagen-id7-2024-review-foto17.jpg?w\u003d1100",
+    "alt": "Review – Volkswagen ID",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5IthSaHSFWCaXR0EyH1Hsf/192e8496637d055e3543f10c760b85bf/volkswagen-passat-2024-review-hoogtijdagen-voorbij-maar-beter-dan-ooit-2024-03.jpg?w\u003d1100",
+    "alt": "Volkswagen Passat (2024) review: hoogtijdagen voorbij, maar beter dan ooit",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/18LVPIXb8GhQdIAYhDaDeQ/db30365ff57775d46063d314b9b9db42/volkswagen-id-4-tiguan-2023-1.jpg?w\u003d1100",
+    "alt": "TEST benzine vs",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/bsi0CDOgabXHelnnUSLbf/12a8eeaf626ddf57be0e2eca6b82170e/kia-ev6-volkswagen-id5-2022-1.jpg?w\u003d1100",
+    "alt": "Kia EV6 rijdt sportiever en dus leuker dan Volkswagen ID",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Alle informatie over de Volkswagen Up! bij AutoScout24",
+    "pageUrl": "https://www.autoscout24.nl/auto/volkswagen/volkswagen-up/"
+  },
+  {
+    "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2FF7O4moYaJ4MvdE2BpzWF/e256e4309e3b4ee3ec5acd16bdc06300/Auto_kopen.jpeg?w\u003d768",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7fbsROV27lqgUHjcBIkbVM/5afcab4283ee053cd4c2a9705c334ac0/Auto_verkopen.jpeg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7jFJehDprGUyRDdjRCIclM/3b01a2b91499e97de9e91a0971b7d10c/veiligeheid_bij_het_kopen_en_verkopen_van_een_auto.jpeg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/6HQl4JjODXlOrf4dBwdvpk/ed4abed3abf6d0306801fcb61e0af437/Leasing_dealership_mirrored.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4su7zqrMwtRQ05g1LKPQ12/3229ef47f09fb9d9a7507b2aa21df8cb/zjx268cg_internetfraude.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/4F9DaTVDhHcM8v2mwywGbS/3850d2663402a6a7f7f5ca939a9e76e6/iStock-1267553069.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1LFchmABdzgr8pfXFNrpC8/cce9e90197c1b10597d3246ff554b638/Versicherung.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5187Wekrjpzc7N6FFoMnlQ/93094717e7d63e86c37b94de36ed2cad/skoda_20kamiqstylesu1b_angularfront.png?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5CODB9pWpGXzDQrOddqFUj/54a860816862afcd596748c9b4a76004/Autopflege.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5dFBAg0xwItoOfuiMLelBE/a4547cfa89702fb6a665c322b3704216/KFZ-Technik.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5CODB9pWpGXzDQrOddqFUj/54a860816862afcd596748c9b4a76004/Autopflege.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2t2txPSffu8o2L07yKbgwT/ac9be953fbf1107a6ee056cce80c66db/iStock-846135666_Probezeit.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1kPSbE8awvvOL1EhoHYM0G/0c2098f3b31caa3e3737d72ebbfde3f6/All_current_traffic_signs_since_2013.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/2fCPBp7TQ2DcYqTdZ6wvGe/9e5763145a9a5d65b6c5946a39f11544/Hero_Image_Goedkoopste_auto-abbo_.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/5Vv0lCydajzhY80tHAjS24/a41455b9dafd0c43f881484950641ce2/Traveling.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/68R69NRFABoiAf5MSIVXCq/41339589d5399c03d703d31690a7a3ea/iStock-1039610584.jpg?w\u003d460",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/o3LKf1OWXQQjqjr6JdKS3/fa4edccfee7177da6cf1f1e3cea128ca/Problemi_accensione_auto_diesel.jpg?w\u003d1100",
+    "alt": "Problemi accensione auto diesel",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/7IO5Y4233eFegAVZlAFvqR/e4807df5367fb7c19b67e0e1464a65a1/Battery_factory.jpg?w\u003d1100",
+    "alt": "Battery factory.jpg",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://cms-assets.autoscout24.com/uaddx06iwzdz/1LygHxzbQW0vFTDBa0hkCf/1e8b0762715118e84b4deaf95dd1a59c/Hoofdfoto_pechverhelping_BMW.jpg?w\u003d1100",
+    "alt": "Hoofdfoto pechverhelping BMW",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
+  {
+    "src": "https://www.autoscout24.nl/assets/as24-header-footer/arrow_top.63c3d37f.svg",
+    "alt": "",
+    "pageTitle": "Informatie over auto\u0027s: AutoScout24 Autothema\u0027s",
+    "pageUrl": "https://www.autoscout24.nl/informeren/advies/"
+  },
   {
     "src": "https://obseu.seroundprince.com/ns/722415346c0d8b5baaf40720537d89a5.html?ch\u003dcheq4ppc",
     "alt": "",
