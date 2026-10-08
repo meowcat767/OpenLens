@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 1239,
+    "url": "https://github.com/python/cpython/issues/108362",
+    "title": "Incremental cycle GC · Issue #108362 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Incremental cycle GC #108362 New issue Copy link New issue Copy link Closed Closed Incremental cycle GC#108362 Copy link Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description markshannon opened on Aug 23, 2023 Issue body actions The current GC is both inefficient and can have very long pause times. The efficiency can be improved by tweaking thresholds or by using fewer generations (see #100403), but that does nothing to shorten pause times. We should use an incremental collector, it can improve efficiency and hugely reduce maximum pause times. See #100403 for more details on the general idea and the algorithm. Linked PRs GH-108362: Incremental GC implementation #108038 GH-108362: Set old space for objects in finalizer list before adding to old space #115084 GH-108362: Revert \"GH-108362: Incremental GC implementation (GH-108038)\" #115132 GH-108362: Incremental GC implementation #116199 GH-108362: Incremental GC implementation #116206 gh-108362: Retarget incremental GC changes to 3.14 #125453 [3.14] gh-108362: Retarget incremental GC changes to 3.14 (GH-125453) #136851 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:33:12.489052"
+  },
+  {
+    "id": 1238,
+    "url": "https://github.com/python/cpython/issues/128398",
+    "title": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Suggest async with when with finds no __enter__/__exit__ #128398 New issue Copy link New issue Copy link Closed Closed Suggest async with when with finds no __enter__/__exit__#128398 Copy link Assignees Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Description gvanrossum opened on Jan 1, 2025 Issue body actions Bug report Bug description: (This is not an asyncio bug! I am just using asyncio.TaskGroup() as an example.) import asyncio\ndef foo():\n    with asyncio.TaskGroup() as g:  # BUG: should be `async with`\n        pass This currently gives an error ending in TypeError: \u0027TaskGroup\u0027 object does not support the context manager protocol (missed __exit__ method)\n That\u0027s not very clear about what\u0027s wrong. Maybe when issuing this TypeError we could check if the object supports __aexit__ and __aenter__, and if so, suggest something like \"maybe try async with ?\". CPython versions tested on: 3.12, 3.13, 3.14 Operating systems tested on: No response Linked PRs gh-128398: improve error message when incorrectly with and async with #132218 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees picnixz Labels interpreter-core(Objects, Python, Grammar, and Parser dirs)(Objects, Python, Grammar, and Parser dirs)type-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:33:09.699075"
+  },
+  {
+    "id": 1237,
+    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongObject",
+    "title": "Integer Objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python/C API reference manual » Concrete Objects Layer » Integer Objects | Theme Auto Light Dark | Integer Objects¶ All integers are implemented as “long” integer objects of arbitrary size. On error, most PyLong_As* APIs return (return type)-1 which cannot be distinguished from a number. Use PyErr_Occurred() to disambiguate. type PyLongObject¶ Part of the Limited API (as an opaque struct). This subtype of PyObject represents a Python integer object. PyTypeObject PyLong_Type¶ Part of the Stable ABI. This instance of PyTypeObject represents the Python integer type. This is the same object as int in the Python layer. int PyLong_Check(PyObject *p)¶ Return true if its argument is a PyLongObject or a subtype of PyLongObject. This function always succeeds. int PyLong_CheckExact(PyObject *p)¶ Return true if its argument is a PyLongObject, but not a subtype of PyLongObject. This function always succeeds. PyObject *PyLong_FromLong(long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from v, or NULL on failure. CPython implementation detail: CPython keeps an array of integer objects for all integers between -5 and 256. When you create an int in that range you actually just get back a reference to the existing object. PyObject *PyLong_FromUnsignedLong(unsigned long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long, or NULL on failure. PyObject *PyLong_FromSsize_t(Py_ssize_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C Py_ssize_t, or NULL on failure. PyObject *PyLong_FromSize_t(size_t v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C size_t, or NULL on failure. PyObject *PyLong_FromLongLong(long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C long long, or NULL on failure. PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from a C unsigned long long, or NULL on failure. PyObject *PyLong_FromInt32(int32_t value)¶ PyObject *PyLong_FromInt64(int64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from a signed C int32_t or int64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromUInt32(uint32_t value)¶ PyObject *PyLong_FromUInt64(uint64_t value)¶ Part of the Stable ABI since version 3.14. Return a new PyLongObject object from an unsigned C uint32_t or uint64_t, or NULL with an exception set on failure. Added in version 3.14. PyObject *PyLong_FromDouble(double v)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject object from the integer part of v, or NULL on failure. PyObject *PyLong_FromString(const char *str, char **pend, int base)¶ Return value: New reference. Part of the Stable ABI. Return a new PyLongObject based on the string value in str, which is interpreted according to the radix in base, or NULL on failure. If pend is non-NULL, *pend will point to the end of str on success or to the first character that could not be processed on error. If base is 0, str is interpreted using the Integer literals definition; in this case, leading zeros in a non-zero decimal number raises a ValueError. If base is not 0, it must be between 2 and 36, inclusive. Leading and trailing whitespace and single underscores after a base specifier and between digits are ignored. If there are no digits or str is not NULL-terminated following the digits and trailing whitespace, ValueError will be raised. See also PyLong_AsNativeBytes() and PyLong_FromNativeBytes() functions can be used to convert a PyLongObject to/from an array of bytes in base 256. PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)¶ Return value: New reference. Convert a sequence of Unicode digits in the string u to a Python integer value. Added in version 3.3. PyObject *PyLong_FromVoidPtr(void *p)¶ Return value: New reference. Part of the Stable ABI. Create a Python integer from the pointer p. The pointer value can be retrieved from the resulting value using PyLong_AsVoidPtr(). PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ Part of the Stable ABI since version 3.14. Create a Python integer from the value contained in the first n_bytes of buffer, interpreted as a two’s-complement signed number. flags are as for PyLong_AsNativeBytes(). Passing -1 will select the native endian that CPython was compiled with and assume that the most-significant bit is a sign bit. Passing Py_ASNATIVEBYTES_UNSIGNED_BUFFER will produce the same result as calling PyLong_FromUnsignedNativeBytes(). Other flags are ignored. Added in version 3.13. PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)¶ P",
+    "scrapedAt": "2026-10-08 19:33:07.453902"
+  },
+  {
+    "id": 1236,
+    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions",
+    "title": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Generic Operating System Services » ctypes — A foreign function library for Python | Theme Auto Light Dark | ctypes — A foreign function library for Python¶ Source code: Lib/ctypes ctypes is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Warning ctypes provides low-level access to native libraries and the process’s memory, bypassing Python’s safety mechanisms and allowing execution of arbitrary native code. Incorrect use can corrupt data and objects, reveal sensitive information, cause crashes, or otherwise compromise the running process. ctypes tutorial¶ Note: Some code samples reference the ctypes c_int type. On platforms where sizeof(long) \u003d\u003d sizeof(int) it is an alias to c_long. So, you should not be confused if c_long is printed if you would expect c_int — they are actually the same type. Loading dynamic link libraries¶ ctypes exports the cdll, and on Windows windll and oledll objects, for loading dynamic link libraries. You load libraries by accessing them as attributes of these objects. cdll loads libraries which export functions using the standard cdecl calling convention, while windll libraries call functions using the stdcall calling convention. oledll also uses the stdcall calling convention, and assumes the functions return a Windows HRESULT error code. The error code is used to automatically raise an OSError exception when the function call fails. Changed in version 3.3: Windows errors used to raise WindowsError, which is now an alias of OSError. Here are some examples for Windows. Note that msvcrt is the MS standard C library containing most standard C functions, and uses the cdecl calling convention: \u003e\u003e\u003e from ctypes import *\n\u003e\u003e\u003e print(windll.kernel32)\n\u003cWinDLL \u0027kernel32\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e print(cdll.msvcrt)\n\u003cCDLL \u0027msvcrt\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d cdll.msvcrt\n\u003e\u003e\u003e\n Windows appends the usual .dll file suffix automatically. Note Accessing the standard C library through cdll.msvcrt will use an outdated version of the library that may be incompatible with the one being used by Python. Where possible, use native Python functionality, or else import and use the msvcrt module. Other systems require the filename including the extension to load a library, so attribute access can not be used to load libraries. Either the LoadLibrary() method of the dll loaders should be used, or you should load the library by creating an instance of CDLL by calling the constructor. For example, on Linux: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.so.6\")\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.so.6\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.so.6\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e\n On macOS: \u003e\u003e\u003e cdll.LoadLibrary(\"libc.dylib\")\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n\u003e\u003e\u003e libc \u003d CDLL(\"libc.dylib\")\n\u003e\u003e\u003e libc\n\u003cCDLL \u0027libc.dylib\u0027, handle ... at ...\u003e\n Accessing functions from loaded dlls¶ Functions are accessed as attributes of dll objects: \u003e\u003e\u003e libc.printf\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.GetModuleHandleA)\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e print(windll.kernel32.MyOwnFunction)\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"ctypes.py\", line 239, in __getattr__\n    func \u003d _StdcallFuncPtr(name, self)\nAttributeError: function \u0027MyOwnFunction\u0027 not found\n\u003e\u003e\u003e\n Note that win32 system dlls like kernel32 and user32 often export ANSI as well as UNICODE versions of a function. The UNICODE version is exported with a W appended to the name, while the ANSI version is exported with an A appended to the name. The win32 GetModuleHandle function, which returns a module handle for a given module name, has the following C prototype, and a macro is used to expose one of them as GetModuleHandle depending on whether UNICODE is defined or not: /* ANSI version */\nHMODULE GetModuleHandleA(LPCSTR lpModuleName);\n/* UNICODE version */\nHMODULE GetModuleHandleW(LPCWSTR lpModuleName);\n windll does not try to select one of them by magic, you must access the version you need by specifying GetModuleHandleA or GetModuleHandleW explicitly, and then call it with bytes or string objects respectively. Sometimes, dlls export functions with names which aren’t valid Python identifiers, like \"??2@YAPAXI@Z\". In this case you have to use getattr() to retrieve the function: \u003e\u003e\u003e getattr(cdll.msvcrt, \"??2@YAPAXI@Z\")\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e\n On Windows, some dlls export functions not by name but by ordinal. These functions can be accessed by indexing the dll object with the ordinal number: \u003e\u003e\u003e cdll.kernel32[1]\n\u003c_FuncPtr object at 0x...\u003e\n\u003e\u003e\u003e cdll.kernel32[0]\nTraceback (most re",
+    "scrapedAt": "2026-10-08 19:33:06.176361"
+  },
+  {
+    "id": 1235,
+    "url": "https://docs.python.org/3/glossary.html#term-generic-type",
+    "title": "Glossary — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Glossary | Theme Auto Light Dark | Glossary¶ \u003e\u003e\u003e¶ The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter. ...¶ Can refer to: The default Python prompt of the interactive shell when entering the code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator. The three dots form of the Ellipsis object. abstract base class¶ Abstract base classes complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module. annotate function¶ A callable that can be called to retrieve the annotations of an object. Annotate functions are usually functions, automatically generated as the __annotate__ attribute of functions, classes, and modules. Annotate functions are a subset of evaluate functions. annotation¶ A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint. Annotations of local variables cannot be accessed at runtime, but annotations of global variables, class attributes, and functions can be retrieved by calling annotationlib.get_annotations() on modules, classes, and functions, respectively. See variable annotation, function annotation, PEP 484, PEP 526, and PEP 649, which describe this functionality. Also see Annotations Best Practices for best practices on working with annotations. argument¶ A value passed to a function (or method) when calling the function. There are two kinds of argument: keyword argument: an argument preceded by an identifier (e.g. name\u003d) in a function call or passed as a value in a dictionary preceded by **. For example, 3 and 5 are both keyword arguments in the following calls to complex(): complex(real\u003d3, imag\u003d5)\ncomplex(**{\u0027real\u0027: 3, \u0027imag\u0027: 5})\n positional argument: an argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *. For example, 3 and 5 are both positional arguments in the following calls: complex(3, 5)\ncomplex(*(3, 5))\n Arguments are assigned to the named local variables in a function body. See the Calls section for the rules governing this assignment. Syntactically, any expression can be used to represent an argument; the evaluated value is assigned to the local variable. See also the parameter glossary entry, the FAQ question on the difference between arguments and parameters, and PEP 362. asynchronous context manager¶ An object which controls the environment seen in an async with statement by defining __aenter__() and __aexit__() methods. Introduced by PEP 492. asynchronous generator¶ Informally used to mean either an asynchronous generator function or an asynchronous generator iterator, depending on context. The formal terms asynchronous generator function and asynchronous generator iterator are uncommon in practice; “asynchronous generator” alone is almost always sufficient. asynchronous generator function¶ A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an async for loop. See PEP 525. An asynchronous generator function may contain await expressions as well as async for, and async with statements. asynchronous generator iterator¶ An object created by an asynchronous generator function. This is an asynchronous iterator which when called using the __anext__() method returns an awaitable object which will execute the body of the asynchronous generator function until the next yield expression. Each yield temporarily suspends processing, remembering the execution state (including local variables and pending try-statements). When the asynchronous generator iterator effectively resumes with another awaitable returned by __anext__(), it picks up where it left off. See PEP 492 and PEP 525. asynchronous iterable¶ An object, that can be used in an async for statement. Must return an asynchronous iterator from its __aiter__() method. Introduced by PEP 492. asynchronous iterator¶ An object that implements the __aiter__() and __anext__() methods. __anext__() must return an awaitable object. async for resolves the awaitables returned by an asynchronous ",
+    "scrapedAt": "2026-10-08 19:33:04.89399"
+  },
+  {
     "id": 1234,
     "url": "https://github.com/python/cpython/issues/131799",
     "title": "gh-127405: Add `ABIFLAGS` to `sysconfig.get_config_vars()` on Windows by XuehaiPan · Pull Request #131799 · python/cpython · GitHub",
@@ -8260,26 +8295,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 1235,
-    "url": "https://docs.python.org/3/glossary.html#term-generic-type"
-  },
-  {
-    "id": 1236,
-    "url": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions"
-  },
-  {
-    "id": 1237,
-    "url": "https://docs.python.org/3/c-api/long.html#c.PyLongObject"
-  },
-  {
-    "id": 1238,
-    "url": "https://github.com/python/cpython/issues/128398"
-  },
-  {
-    "id": 1239,
-    "url": "https://github.com/python/cpython/issues/108362"
   },
   {
     "id": 1240,
@@ -225611,10 +225626,177 @@ window.searchData = [
     "id": 243185,
     "url": "https://github.com/python/cpython/commit/26ae05e95c7c5f1a646e8ec7fa690c0e7b4ab8b9",
     "parentUrl": "https://github.com/python/cpython/issues/131799"
+  },
+  {
+    "id": 243984,
+    "url": "https://github.com/python/cpython/pull/132218",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 243985,
+    "url": "https://github.com/python/cpython/issues/128398#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 243986,
+    "url": "https://github.com/python/cpython/issues/128398#top",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 243988,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/128398",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 243990,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/128398",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 243993,
+    "url": "https://github.com/python/cpython/issues/128398#issue-2765245048",
+    "parentUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "id": 243994,
+    "url": "https://github.com/python/cpython/pull/125453",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 243995,
+    "url": "https://github.com/python/cpython/pull/116199",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 243996,
+    "url": "https://github.com/python/cpython/pull/136851",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 243997,
+    "url": "https://github.com/python/cpython/issues/100403",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244000,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/108362",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244001,
+    "url": "https://github.com/python/cpython/pull/115132",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244002,
+    "url": "https://github.com/python/cpython/pull/116206",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244003,
+    "url": "https://github.com/python/cpython/pull/115084",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244004,
+    "url": "https://github.com/python/cpython/issues/108362#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244005,
+    "url": "https://github.com/python/cpython/issues/108362#top",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244007,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/108362",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244009,
+    "url": "https://github.com/python/cpython/issues/108362#issue-1863115578",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "id": 244010,
+    "url": "https://github.com/python/cpython/pull/108038",
+    "parentUrl": "https://github.com/python/cpython/issues/108362"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://avatars.githubusercontent.com/u/9448417?v\u003d4\u0026size\u003d48",
+    "alt": "@markshannon",
+    "pageTitle": "Incremental cycle GC · Issue #108362 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Incremental cycle GC · Issue #108362 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/108362"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "picnixz",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/2894642?u\u003d3fd95e46e081102446b1ebdf31e1cf3d77406c0b\u0026v\u003d4\u0026size\u003d48",
+    "alt": "@gvanrossum",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/10796600?s\u003d64\u0026v\u003d4",
+    "alt": "@picnixz",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Suggest `async with` when `with` finds no `__enter__`/`__exit__` · Issue #128398 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/128398"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Integer Objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/c-api/long.html#c.PyLongObject"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ctypes — A foreign function library for Python — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ctypes.html#ctypes-bit-fields-in-structures-unions"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-generic-type"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Glossary — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/glossary.html#term-generic-type"
+  },
   {
     "src": "https://avatars.githubusercontent.com/u/16078332?s\u003d80\u0026v\u003d4",
     "alt": "@XuehaiPan",
