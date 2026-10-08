@@ -1,5 +1,40 @@
 window.searchData = [
   {
+    "id": 875,
+    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes",
+    "title": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » File and Directory Access » pathlib — Object-oriented filesystem paths | Theme Auto Light Dark | pathlib — Object-oriented filesystem paths¶ Added in version 3.4. Source code: Lib/pathlib/ This module offers classes representing filesystem paths with semantics appropriate for different operating systems. Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations. If you’ve never used this module before or just aren’t sure which class is right for your task, Path is most likely what you need. It instantiates a concrete path for the platform the code is running on. Pure paths are useful in some special cases; for example: If you want to manipulate Windows paths on a Unix machine (or vice versa). You cannot instantiate a WindowsPath when running on Unix, but you can instantiate PureWindowsPath. You want to make sure that your code only manipulates paths without actually accessing the OS. In this case, instantiating one of the pure classes may be useful since those simply don’t have any OS-accessing operations. See also PEP 428: The pathlib module – object-oriented filesystem paths. See also For low-level path manipulation on strings, you can also use the os.path module. Basic use¶ Importing the main class: \u003e\u003e\u003e from pathlib import Path\n Listing subdirectories: \u003e\u003e\u003e p \u003d Path(\u0027.\u0027)\n\u003e\u003e\u003e [x for x in p.iterdir() if x.is_dir()]\n[PosixPath(\u0027.hg\u0027), PosixPath(\u0027docs\u0027), PosixPath(\u0027dist\u0027),\n PosixPath(\u0027__pycache__\u0027), PosixPath(\u0027build\u0027)]\n Listing Python source files in this directory tree: \u003e\u003e\u003e list(p.glob(\u0027**/*.py\u0027))\n[PosixPath(\u0027test_pathlib.py\u0027), PosixPath(\u0027setup.py\u0027),\n PosixPath(\u0027pathlib.py\u0027), PosixPath(\u0027docs/conf.py\u0027),\n PosixPath(\u0027build/lib/pathlib.py\u0027)]\n Navigating inside a directory tree: \u003e\u003e\u003e p \u003d Path(\u0027/etc\u0027)\n\u003e\u003e\u003e q \u003d p / \u0027init.d\u0027 / \u0027reboot\u0027\n\u003e\u003e\u003e q\nPosixPath(\u0027/etc/init.d/reboot\u0027)\n\u003e\u003e\u003e q.resolve()\nPosixPath(\u0027/etc/rc.d/init.d/halt\u0027)\n Querying path properties: \u003e\u003e\u003e q.exists()\nTrue\n\u003e\u003e\u003e q.is_dir()\nFalse\n Opening a file: \u003e\u003e\u003e with q.open() as f: f.readline()\n...\n\u0027#!/bin/bash\\n\u0027\n Exceptions¶ exception pathlib.UnsupportedOperation¶ An exception inheriting NotImplementedError that is raised when an unsupported operation is called on a path object. Added in version 3.13. Pure paths¶ Pure path objects provide path-handling operations which don’t actually access a filesystem. There are three ways to access these classes, which we also call flavours: class pathlib.PurePath(*pathsegments)¶ A generic class that represents the system’s path flavour (instantiating it creates either a PurePosixPath or a PureWindowsPath): \u003e\u003e\u003e PurePath(\u0027setup.py\u0027)      # Running on a Unix machine\nPurePosixPath(\u0027setup.py\u0027)\n Each element of pathsegments can be either a string representing a path segment, or an object implementing the os.PathLike interface where the __fspath__() method returns a string, such as another path object: \u003e\u003e\u003e PurePath(\u0027foo\u0027, \u0027some/path\u0027, \u0027bar\u0027)\nPurePosixPath(\u0027foo/some/path/bar\u0027)\n\u003e\u003e\u003e PurePath(Path(\u0027foo\u0027), Path(\u0027bar\u0027))\nPurePosixPath(\u0027foo/bar\u0027)\n When pathsegments is empty or consists only of empty strings, the current directory is assumed: \u003e\u003e\u003e PurePath(), PurePath(\u0027\u0027)\n(PurePosixPath(\u0027.\u0027), PurePosixPath(\u0027.\u0027))\n If a segment is an absolute path, all previous segments are ignored (like os.path.join()): \u003e\u003e\u003e PurePath(\u0027/etc\u0027, \u0027/usr\u0027, \u0027lib64\u0027)\nPurePosixPath(\u0027/usr/lib64\u0027)\n\u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027d:bar\u0027)\nPureWindowsPath(\u0027d:bar\u0027)\n On Windows, the drive is not reset when a rooted relative path segment (e.g., r\u0027\\foo\u0027) is encountered: \u003e\u003e\u003e PureWindowsPath(\u0027c:/Windows\u0027, \u0027/Program Files\u0027)\nPureWindowsPath(\u0027c:/Program Files\u0027)\n Spurious slashes and single dots are collapsed, but double dots (\u0027..\u0027) and leading double slashes (\u0027//\u0027) are not, since this would change the meaning of a path for various reasons (e.g. symbolic links, UNC paths): \u003e\u003e\u003e PurePath(\u0027foo//bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027//foo/bar\u0027)\nPurePosixPath(\u0027//foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/./bar\u0027)\nPurePosixPath(\u0027foo/bar\u0027)\n\u003e\u003e\u003e PurePath(\u0027foo/../bar\u0027)\nPurePosixPath(\u0027foo/../bar\u0027)\n (a naïve approach would make PurePosixPath(\u0027foo/../bar\u0027) equivalent to PurePosixPath(\u0027bar\u0027), which is wrong if foo is a symbolic link to another directory) Pure path objects implement the os.PathLike interface, allowing them to be used anywhere the interface is accepted. Changed in version 3.6: Added support for the os.PathLike interface. class pathlib.PurePosixPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents non-Windows filesystem paths: \u003e\u003e\u003e PurePosixPath(\u0027/etc/hosts\u0027)\nPurePosixPath(\u0027/etc/hosts\u0027)\n pathsegments is specified similarly to PurePath. class pathlib.PureWindowsPath(*pathsegments)¶ A subclass of PurePath, this path flavour represents Windows filesystem paths, including UNC paths: \u003e\u003e\u003e PureWindowsPath(\u0027c:/\u0027, \u0027Users\u0027, \u0027Ximénez\u0027)\nPureWindowsPath(\u0027c:/Us",
+    "scrapedAt": "2026-10-08 19:17:55.534322"
+  },
+  {
+    "id": 874,
+    "url": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14",
+    "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » What’s New in Python » What’s new in Python 3.14 | Theme Auto Light Dark | What’s new in Python 3.14¶ Editors: Adam Turner and Hugo van Kemenade This article explains the new features in Python 3.14, compared to 3.13. Python 3.14 was released on 7 October 2025. For full details, see the changelog. See also PEP 745 – Python 3.14 release schedule Summary – Release highlights¶ Python 3.14 is the latest stable release of the Python programming language, with a mix of changes to the language, the implementation, and the standard library. The biggest changes include template string literals, deferred evaluation of annotations, and support for subinterpreters in the standard library. The library changes include significantly improved capabilities for introspection in asyncio, support for Zstandard via a new compression.zstd module, syntax highlighting in the REPL, as well as the usual deprecations and removals, and improvements in user-friendliness and correctness. This article doesn’t attempt to provide a complete specification of all new features, but instead gives a convenient overview. For full details refer to the documentation, such as the Library Reference and Language Reference. To understand the complete implementation and design rationale for a change, refer to the PEP for a particular new feature; but note that PEPs usually are not kept up-to-date once a feature has been fully implemented. See Porting to Python 3.14 for guidance on upgrading from earlier versions of Python. Interpreter improvements: PEP 649 and PEP 749: Deferred evaluation of annotations PEP 734: Multiple interpreters in the standard library PEP 750: Template strings PEP 758: Allow except and except* expressions without brackets PEP 765: Control flow in finally blocks PEP 768: Safe external debugger interface for CPython A new type of interpreter Free-threaded mode improvements Improved error messages Incremental garbage collection Significant improvements in the standard library: PEP 784: Zstandard support in the standard library Asyncio introspection capabilities Concurrent safe warnings control Syntax highlighting in the default interactive shell, and color output in several standard library CLIs C API improvements: PEP 741: Python configuration C API Platform support: PEP 776: Emscripten is now an officially supported platform, at tier 3. Release changes: PEP 779: Free-threaded Python is officially supported PEP 761: PGP signatures have been discontinued for official releases Windows and macOS binary releases now support the experimental just-in-time compiler Binary releases for Android are now provided New features¶ PEP 649 \u0026 PEP 749: Deferred evaluation of annotations¶ The annotations on functions, classes, and modules are no longer evaluated eagerly. Instead, annotations are stored in special-purpose annotate functions and evaluated only when necessary (except if from __future__ import annotations is used). This change is designed to improve performance and usability of annotations in Python in most circumstances. The runtime cost for defining annotations is minimized, but it remains possible to introspect annotations at runtime. It is no longer necessary to enclose annotations in strings if they contain forward references. The new annotationlib module provides tools for inspecting deferred annotations. Annotations may be evaluated in the VALUE format (which evaluates annotations to runtime values, similar to the behavior in earlier Python versions), the FORWARDREF format (which replaces undefined names with special markers), and the STRING format (which returns annotations as strings). This example shows how these formats behave: \u003e\u003e\u003e from annotationlib import get_annotations, Format\n\u003e\u003e\u003e def func(arg: Undefined):\n...     pass\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.VALUE)\nTraceback (most recent call last):\n  ...\nNameError: name \u0027Undefined\u0027 is not defined\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.FORWARDREF)\n{\u0027arg\u0027: ForwardRef(\u0027Undefined\u0027, owner\u003d\u003cfunction func at 0x...\u003e)}\n\u003e\u003e\u003e get_annotations(func, format\u003dFormat.STRING)\n{\u0027arg\u0027: \u0027Undefined\u0027}\n The porting section contains guidance on changes that may be needed due to these changes, though in the majority of cases, code will continue working as-is. (Contributed by Jelle Zijlstra in PEP 749 and gh-119180; PEP 649 was written by Larry Hastings.) See also PEP 649 Deferred Evaluation Of Annotations Using Descriptors PEP 749 Implementing PEP 649 PEP 734: Multiple interpreters in the standard library¶ The CPython runtime supports running multiple copies of Python in the same process simultaneously and has done so for over 20 years. Each of these separate copies is called an ‘interpreter’. However, the feature had been available only through the C-API. That limitation is removed in Python 3.14, with the new concurrent.interpreters module. There are at least two notable reasons why using multiple interpreters has signi",
+    "scrapedAt": "2026-10-08 19:17:54.304424"
+  },
+  {
+    "id": 873,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext",
+    "title": "ssl — TLS/SSL wrapper for socket objects — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » The Python standard library » Networking and Interprocess Communication » ssl — TLS/SSL wrapper for socket objects | Theme Auto Light Dark | ssl — TLS/SSL wrapper for socket objects¶ Source code: Lib/ssl.py This module provides access to Transport Layer Security (often known as “Secure Sockets Layer”) encryption and peer authentication facilities for network sockets, both client-side and server-side. This module uses the OpenSSL library. This is an optional module. If it is missing from your copy of CPython, look for documentation from your distributor (that is, whoever provided Python to you). If you are the distributor, see Requirements for optional modules. Note Some behavior may be platform dependent, since calls are made to the operating system socket APIs. The installed version of OpenSSL may also cause variations in behavior. For example, TLSv1.3 comes with OpenSSL version 1.1.1. Warning Don’t use this module without reading the Security considerations. Doing so may lead to a false sense of security, as the default settings of the ssl module are not necessarily appropriate for your application. Availability: not WASI. This module does not work or is not available on WebAssembly. See WebAssembly platforms for more information. This section documents the objects and functions in the ssl module; for more general information about TLS, SSL, and certificates, the reader is referred to the documents in the “See Also” section at the bottom. This module provides a class, ssl.SSLSocket, which is derived from the socket.socket type, and provides a socket-like wrapper that also encrypts and decrypts the data going over the socket with SSL. It supports additional methods such as getpeercert(), which retrieves the certificate of the other side of the connection, cipher(), which retrieves the cipher being used for the secure connection or get_verified_chain(), get_unverified_chain() which retrieves certificate chain. For more sophisticated applications, the ssl.SSLContext class helps manage settings and certificates, which can then be inherited by SSL sockets created through the SSLContext.wrap_socket() method. Changed in version 3.5.3: Updated to support linking with OpenSSL 1.1.0 Changed in version 3.6: OpenSSL 0.9.8, 1.0.0 and 1.0.1 are deprecated and no longer supported. In the future the ssl module will require at least OpenSSL 1.0.2 or 1.1.0. Changed in version 3.10: PEP 644 has been implemented. The ssl module requires OpenSSL 1.1.1 or newer. Use of deprecated constants and functions result in deprecation warnings. Functions, constants, and exceptions¶ Socket creation¶ Instances of SSLSocket must be created using the SSLContext.wrap_socket() method. The helper function create_default_context() returns a new context with secure default settings. Client socket example with default context and IPv4/IPv6 dual stack: import socket\nimport ssl\n\nhostname \u003d \u0027www.python.org\u0027\ncontext \u003d ssl.create_default_context()\n\nwith socket.create_connection((hostname, 443)) as sock:\n    with context.wrap_socket(sock, server_hostname\u003dhostname) as ssock:\n        print(ssock.version())\n Client socket example with custom context and IPv4: hostname \u003d \u0027www.python.org\u0027\n# PROTOCOL_TLS_CLIENT requires valid cert chain and hostname\ncontext \u003d ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\ncontext.load_verify_locations(\u0027path/to/cabundle.pem\u0027)\n\nwith socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:\n    with context.wrap_socket(sock, server_hostname\u003dhostname) as ssock:\n        print(ssock.version())\n Server socket example listening on localhost IPv4: context \u003d ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)\ncontext.load_cert_chain(\u0027/path/to/certchain.pem\u0027, \u0027/path/to/private.key\u0027)\n\nwith socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:\n    sock.bind((\u0027127.0.0.1\u0027, 8443))\n    sock.listen(5)\n    with context.wrap_socket(sock, server_side\u003dTrue) as ssock:\n        conn, addr \u003d ssock.accept()\n        ...\n Context creation¶ A convenience function helps create SSLContext objects for common purposes. ssl.create_default_context(purpose\u003dPurpose.SERVER_AUTH, *, cafile\u003dNone, capath\u003dNone, cadata\u003dNone)¶ Return a new SSLContext object with default settings for the given purpose. The settings are chosen by the ssl module, and usually represent a higher security level than when calling the SSLContext constructor directly. cafile, capath, cadata represent optional CA certificates to trust for certificate verification, as in SSLContext.load_verify_locations(). If all three are None, this function can choose to trust the system’s default CA certificates instead. The settings are: PROTOCOL_TLS_CLIENT or PROTOCOL_TLS_SERVER, OP_NO_SSLv2, and OP_NO_SSLv3 with high encryption cipher suites without RC4 and without unauthenticated cipher suites. Passing SERVER_AUTH as purpose sets verify_mode to CERT_REQUIRED and either loads CA certificates (when at least one of cafile, capath or cadata ",
+    "scrapedAt": "2026-10-08 19:17:53.024153"
+  },
+  {
+    "id": 872,
+    "url": "https://github.com/python/cpython/issues/125413",
+    "title": "Expose `os.DirEntry` objects from pathlib · Issue #125413 · python/cpython · GitHub",
+    "content": "Skip to content You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} Expose os.DirEntry objects from pathlib #125413 New issue Copy link New issue Copy link Closed Closed Expose os.DirEntry objects from pathlib#125413 Copy link Labels performancePerformance or resource usagePerformance or resource usagestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-pathlibtype-featureA feature request or enhancementA feature request or enhancement Description barneygale opened on Oct 13, 2024 Issue body actions Feature or enhancement I propose we add a new Path.status attribute that stores an os.DirEntry object in paths yielded from Path.iterdir(), or a pathlib-specific type with a similar interface in other paths. This would: Allow users to access to the cached os.DirEntry after calling Path.iterdir(), which is useful for efficiently determining files\u0027 types and often doesn\u0027t involve a system call. Allow users to switch on the type of any path without repeatedly making system calls, or having to resort to S_ISREG(st.st_mode) and other holy incantations. In the pathlib ABCs, allows us to entirely banish PathBase.stat() and the stat_result interface, which is too low-level and local filesystem-specific See discussion: https://discuss.python.org/t/is-there-a-pathlib-equivalent-of-os-scandir/46626 Linked PRs GH-125413: Add pathlib.Path.dir_entry attribute #125419 GH-125413: pathlib.Path.copy(): get common metadata keys only once #125990 GH-125413: Add pathlib.Path.scandir() method #126060 GH-125413: pathlib ABCs: use scandir() to speed up glob() #126261 GH-125413: pathlib ABCs: use scandir() to speed up walk() #126262 GH-125413: pathlib: use scandir() to speed up copy() #126263 GH-125413: Revert addition of pathlib.Path.scandir() method #127377 GH-125413: Add pathlib.Path.info attribute #127730 GH-125413: Move pathlib.Path.copy() implementation alongside Path.info #129856 GH-125413: Add private metadata methods to pathlib.Path.info #129897 GH-125413: Add private pathlib.Path method to write metadata #130238 GH-125413: pathlib ABCs: use caching path.info.exists() when globbing #130422 GH-125413: Fix stale metadata from pathlib.Path.copy() and move() #130424 Reactions are currently unavailable Activity Sign up for free to join this conversation on GitHub. Already have an account? Sign in to comment Metadata Metadata Assignees No one assigned Labels performancePerformance or resource usagePerformance or resource usagestdlibStandard Library Python modules in the Lib/ directoryStandard Library Python modules in the Lib/ directorytopic-pathlibtype-featureA feature request or enhancementA feature request or enhancement Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+    "scrapedAt": "2026-10-08 19:17:51.793828"
+  },
+  {
+    "id": 871,
+    "url": "https://docs.python.org/3/library/stdtypes.html#set",
+    "title": "Built-in Types — Python 3.14.8 documentation",
+    "content": "Navigation index modules | next | previous | Python » 3.14.8 Documentation » Python built-ins reference » Built-in Types | Theme Auto Light Dark | Built-in Types¶ The following sections describe the standard types that are built into the interpreter. The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions. Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None. Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the repr() function or the slightly different str() function). The latter function is implicitly used when an object is written by the print() function. Truth Value Testing¶ Any object can be tested for truth value, for use in an if or while condition or as operand of the Boolean operations below. By default, an object is considered true unless its class defines either a __bool__() method that returns False or a __len__() method that returns zero, when called with the object. [1] If one of the methods raises an exception when called, the exception is propagated and the object does not have a truth value (for example, NotImplemented). Here are most of the built-in objects considered false: constants defined to be false: None and False zero of any numeric type: 0, 0.0, 0j, Decimal(0), Fraction(0, 1) empty sequences and collections: \u0027\u0027, (), [], {}, set(), range(0) Operations and built-in functions that have a Boolean result always return 0 or False for false and 1 or True for true, unless otherwise stated. (Important exception: the Boolean operations or and and always return one of their operands.) Boolean Operations — and, or, not¶ These are the Boolean operations, ordered by ascending priority: Operation Result Notes x or y if x is true, then x, else y (1) x and y if x is false, then x, else y (2) not x if x is false, then True, else False (3) Notes: This is a short-circuit operator, so it only evaluates the second argument if the first one is false. This is a short-circuit operator, so it only evaluates the second argument if the first one is true. not has a lower priority than non-Boolean operators, so not a \u003d\u003d b is interpreted as not (a \u003d\u003d b), and a \u003d\u003d not b is a syntax error. Comparisons¶ There are eight comparison operations in Python. They all have the same priority (which is higher than that of the Boolean operations). Comparisons can be chained arbitrarily; for example, x \u003c y \u003c\u003d z is equivalent to x \u003c y and y \u003c\u003d z, except that y is evaluated only once (but in both cases z is not evaluated at all when x \u003c y is found to be false). This table summarizes the comparison operations: Operation Meaning \u003c strictly less than \u003c\u003d less than or equal \u003e strictly greater than \u003e\u003d greater than or equal \u003d\u003d equal !\u003d not equal is object identity is not negated object identity Unless stated otherwise, objects of different types never compare equal. The \u003d\u003d operator is always defined but for some object types (for example, class objects) is equivalent to is. The \u003c, \u003c\u003d, \u003e and \u003e\u003d operators are only defined where they make sense; for example, they raise a TypeError exception when one of the arguments is a complex number. Non-identical instances of a class normally compare as non-equal unless the class defines the __eq__() method. Instances of a class cannot be ordered with respect to other instances of the same class, or other types of object, unless the class defines enough of the methods __lt__(), __le__(), __gt__(), and __ge__() (in general, __lt__() and __eq__() are sufficient, if you want the conventional meanings of the comparison operators). The behavior of the is and is not operators cannot be customized; also they can be applied to any two objects and never raise an exception. Two more operations with the same syntactic priority, in and not in, are supported by types that are iterable or implement the __contains__() method. Numeric Types — int, float, complex¶ There are three distinct numeric types: integers, floating-point numbers, and complex numbers. In addition, Booleans are a subtype of integers. Integers have unlimited precision. Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info. Complex numbers have a real and imaginary part, which are each a floating-point number. To extract these parts from a complex number z, use z.real and z.imag. (The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.) Numbers are created by numeric literals or as the result of built-in functions and operators. Unadorned integer litera",
+    "scrapedAt": "2026-10-08 19:17:49.20779"
+  },
+  {
     "id": 870,
     "url": "https://docs.python.org/3/whatsnew/3.14.html#zipfile",
     "title": "What’s new in Python 3.14 — Python 3.14.8 documentation",
@@ -5770,26 +5805,6 @@ window.searchData = [
     "id": 1,
     "url": "https://meowcat.site",
     "scrapedAt": "2026-10-08 18:45:24.045334"
-  },
-  {
-    "id": 871,
-    "url": "https://docs.python.org/3/library/stdtypes.html#set"
-  },
-  {
-    "id": 872,
-    "url": "https://github.com/python/cpython/issues/125413"
-  },
-  {
-    "id": 873,
-    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
-  },
-  {
-    "id": 874,
-    "url": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14"
-  },
-  {
-    "id": 875,
-    "url": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
   },
   {
     "id": 876,
@@ -149855,10 +149870,1406 @@ window.searchData = [
     "id": 120697,
     "url": "https://github.com/python/cpython/issues/133036#start-of-content",
     "parentUrl": "https://github.com/python/cpython/issues/133036"
+  },
+  {
+    "id": 122550,
+    "url": "https://github.com/python/cpython/issues/125413#top",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122551,
+    "url": "https://github.com/python/cpython/pull/127377",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122552,
+    "url": "https://github.com/python/cpython/pull/129897",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122553,
+    "url": "https://github.com/python/cpython/pull/130424",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122554,
+    "url": "https://github.com/python/cpython/pull/127730",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122555,
+    "url": "https://github.com/python/cpython/pull/125990",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122556,
+    "url": "https://github.com/python/cpython/pull/126262",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122557,
+    "url": "https://github.com/python/cpython/pull/126263",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122558,
+    "url": "https://github.com/python/cpython/pull/126261",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122559,
+    "url": "https://github.com/python/cpython/pull/126060",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122560,
+    "url": "https://discuss.python.org/t/is-there-a-pathlib-equivalent-of-os-scandir/46626",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122561,
+    "url": "https://github.com/python/cpython/issues/125413#issue-2584224574",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122562,
+    "url": "https://github.com/python/cpython/pull/130422",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122564,
+    "url": "https://github.com/python/cpython/pull/125419",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122565,
+    "url": "https://github.com/python/cpython/pull/129856",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122566,
+    "url": "https://github.com/python/cpython/pull/130238",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122567,
+    "url": "https://github.com/signup?return_to\u003dhttps://github.com/python/cpython/issues/125413",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122572,
+    "url": "https://github.com/python/cpython/issues?q\u003dstate%3Aopen%20label%3A%22topic-pathlib%22",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122573,
+    "url": "https://github.com/login?return_to\u003dhttps://github.com/python/cpython/issues/125413",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122574,
+    "url": "https://github.com/python/cpython/issues/125413#start-of-content",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122575,
+    "url": "https://docs.python.org/3/library/os.html#os.DirEntry",
+    "parentUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "id": 122577,
+    "url": "https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122578,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.pending",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122580,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.setsockopt",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122581,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.session",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122582,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.Purpose.SERVER_AUTH",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122583,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_default_certs",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122584,
+    "url": "https://docs.python.org/3/library/ssl.html#server-side-operation",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122585,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_TLS_SERVER",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122586,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.ALERT_DESCRIPTION_INTERNAL_ERROR",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122587,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl-sockets",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122588,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_ecdh_curve",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122589,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_TLS",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122590,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLErrorNumber",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122591,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.post_handshake_auth",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122592,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.do_handshake",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122593,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.wrap_socket",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122594,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122595,
+    "url": "https://www.iana.org/assignments/tls-parameters/tls-parameters.xml",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122596,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_TLSv1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122597,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.cipher",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122598,
+    "url": "https://docs.python.org/3/library/ssl.html#testing-for-ssl-support",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122599,
+    "url": "https://docs.python.org/3/library/selectors.html#module-selectors",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122600,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.sendfile",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122601,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.verify_mode",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122602,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLCertVerificationError.verify_message",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122603,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLError.library",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122604,
+    "url": "https://en.wikipedia.org/wiki/POODLE",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122605,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5246.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122606,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.sni_callback",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122607,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion.SSLv3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122608,
+    "url": "https://docs.python.org/3/library/ssl.html#verifying-certificates",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122610,
+    "url": "https://docs.python.org/3/library/ssl.html#",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122611,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.enum_certificates",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122612,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSession.timeout",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122613,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.write",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122614,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.recv",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122616,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VERIFY_ALLOW_PROXY_CERTS",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122617,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.settimeout",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122618,
+    "url": "https://docs.python.org/3/library/ssl.html#ca-certificates",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122619,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.CertificateError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122621,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.gettimeout",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122622,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.Options",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122623,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.accept",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122624,
+    "url": "https://docs.openssl.org/master/man3/SSL_CTX_load_verify_locations/",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122625,
+    "url": "https://docs.python.org/3/library/ssl.html#client-side-operation",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122626,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PEM_cert_to_DER_cert",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122627,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_ENABLE_KTLS",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122628,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_RENEGOTIATION",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122629,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_ENABLE_MIDDLEBOX_COMPAT",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122630,
+    "url": "https://datatracker.ietf.org/doc/html/rfc6066.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122631,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_alpn_protocols",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122633,
+    "url": "https://docs.python.org/3/library/ssl.html#self-signed-certificates",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122634,
+    "url": "https://docs.python.org/3/library/ssl.html#functions-constants-and-exceptions",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122635,
+    "url": "https://docs.python.org/3/library/os.html#os.sendfile",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122636,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.shutdown",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122637,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VERIFY_X509_TRUSTED_FIRST",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122639,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.read",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122641,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.getsockopt",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122643,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_psk_client_callback",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122645,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.RAND_add",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122646,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_IGNORE_UNEXPECTED_EOF",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122647,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_psk_server_callback",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122648,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_SSLv3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122649,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_SSLv2",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122650,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.MemoryBIO.read",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122651,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.detach",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122652,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.protocol",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122653,
+    "url": "https://docs.python.org/3/library/ssl.html#notes-on-non-blocking-sockets",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122655,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSyscallError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122656,
+    "url": "https://docs.python.org/3/library/ssl.html#context-creation",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122657,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl-contexts",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122658,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.get_ca_certs",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122659,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.cert_time_to_seconds",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122660,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.shared_ciphers",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122662,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_SINGLE_ECDH_USE",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122663,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSession",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122664,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.wrap_bio",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122665,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.sslsocket_class",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122666,
+    "url": "https://docs.python.org/3/library/ssl.html#manual-settings",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122667,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.MemoryBIO.write_eof",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122668,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.getpeercert",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122669,
+    "url": "https://docs.python.org/3/library/asyncio-stream.html#asyncio-streams",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122670,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.MemoryBIO.pending",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122672,
+    "url": "https://docs.python.org/3/library/ssl.html#id9",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122673,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.CERT_NONE",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122674,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.connect",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122675,
+    "url": "https://docs.python.org/3/library/ssl.html#id8",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122676,
+    "url": "https://docs.python.org/3/library/ssl.html#protocol-versions",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122677,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.maximum_version",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122678,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl-nonblocking",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122679,
+    "url": "https://docs.openssl.org/master/man3/SSL_CTX_get_security_level/",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122680,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VerifyMode",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122681,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VerifyFlags",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122682,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.unwrap",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122683,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.MemoryBIO.write",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122684,
+    "url": "https://docs.python.org/3/library/ssl.html#id5",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122685,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_CIPHER_SERVER_PREFERENCE",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122686,
+    "url": "https://docs.python.org/3/library/ssl.html#id4",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122687,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl-session",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122689,
+    "url": "https://docs.python.org/3/library/ssl.html#id7",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122690,
+    "url": "https://docs.python.org/3/library/ssl.html#id6",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122691,
+    "url": "https://docs.python.org/3/library/ssl.html#id1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122693,
+    "url": "https://docs.python.org/3/library/ssl.html#id3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122694,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.session_reused",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122695,
+    "url": "https://docs.python.org/3/library/ssl.html#id2",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122696,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_TLSv1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122697,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.security_level",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122698,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSession.id",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122699,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLError.reason",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122702,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.CHANNEL_BINDING_TYPES",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122703,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.bind",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122704,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.MemoryBIO",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122705,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLWantWriteError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122706,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.verify_flags",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122707,
+    "url": "https://docs.openssl.org/1.1.1/man3/SSL_CTX_sess_number/",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122708,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_SINGLE_DH_USE",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122709,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion.MINIMUM_SUPPORTED",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122710,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_NEVER_CHECK_COMMON_NAME",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122711,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VERIFY_X509_PARTIAL_CHAIN",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122712,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLEOFError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122715,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_NPN",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122716,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OPENSSL_VERSION_NUMBER",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122717,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VERIFY_CRL_CHECK_LEAF",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122718,
+    "url": "https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122719,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_COMPRESSION",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122720,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion.TLSv1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122721,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.compression",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122722,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.server_side",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122723,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OPENSSL_VERSION",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122724,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_ALPN",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122726,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1750.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122728,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_PSK",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122729,
+    "url": "https://docs.python.org/3/library/ssl.html#tls-1-3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122731,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.getpeername",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122732,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.get_server_certificate",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122733,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.ALERT_DESCRIPTION_HANDSHAKE_FAILURE",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122734,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122735,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5929.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122736,
+    "url": "https://docs.python.org/3/library/ssl.html#certificates",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122737,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VERIFY_DEFAULT",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122738,
+    "url": "https://docs.python.org/3/library/ssl.html#security-considerations",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122739,
+    "url": "https://datatracker.ietf.org/doc/html/rfc4086.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122741,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.get_ciphers",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122742,
+    "url": "https://github.com/python/cpython/blob/3.14/Doc/library/ssl.rst?plain\u003d1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122743,
+    "url": "https://docs.python.org/3/library/ssl.html#certificate-chains",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122745,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.MemoryBIO.eof",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122746,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122747,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.minimum_version",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122748,
+    "url": "https://docs.python.org/3/library/ssl.html#memory-bio-support",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122749,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl-certificates",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122750,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.context",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122751,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OPENSSL_VERSION_INFO",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122752,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.create_default_context",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122753,
+    "url": "https://httpd.apache.org/docs/trunk/en/ssl/ssl_intro.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122754,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_ECDH",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122755,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_ALL",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122756,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.get_verified_chain",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122757,
+    "url": "https://docs.python.org/3/library/ssl.html#certificate-handling",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122760,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_SSLv3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122761,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_SSLv2",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122762,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLCertVerificationError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122763,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLCertVerificationError.verify_code",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122764,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.get_channel_binding",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122765,
+    "url": "https://docs.python.org/3/library/socket.html#socket-objects",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122766,
+    "url": "https://github.com/python/cpython/tree/3.14/Lib/ssl.py",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122767,
+    "url": "https://docs.python.org/3/library/ssl.html#exceptions",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122768,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.sendall",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122769,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.options",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122771,
+    "url": "https://docs.openssl.org/1.1.1/man1/ciphers/#cipher-list-format",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122773,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion.MAXIMUM_SUPPORTED",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122774,
+    "url": "https://docs.python.org/3/library/ssl.html#best-defaults",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122777,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_ciphers",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122778,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.num_tickets",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122780,
+    "url": "https://docs.python.org/3/library/ssl.html#combined-key-and-certificate",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122782,
+    "url": "https://vincent.bernat.ch/en/blog/2011-ssl-perfect-forward-secrecy",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122783,
+    "url": "https://datatracker.ietf.org/doc/html/rfc3280.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122784,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLZeroReturnError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122785,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.CERT_OPTIONAL",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122786,
+    "url": "https://docs.python.org/3/library/socket.html#socket.SOCK_STREAM",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122788,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7525.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122789,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.get_default_verify_paths",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122790,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSession.has_ticket",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122792,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSession.ticket_lifetime_hint",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122793,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_TLS_CLIENT",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122794,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.DER_cert_to_PEM_cert",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122795,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.setblocking",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122796,
+    "url": "https://www.iana.org/assignments/tls-parameters/tls-parameters.xml#tls-parameters-6",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122797,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_TLSv1_1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122799,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_TLSv1_2",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122800,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.Purpose.CLIENT_AUTH",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122801,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VERIFY_X509_STRICT",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122802,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.send",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122803,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.selected_npn_protocol",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122805,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_TLSv1_3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122806,
+    "url": "https://docs.python.org/3/library/smtplib.html#smtplib.SMTP",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122807,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_TLSv1_2",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122809,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_TLSv1_1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122810,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_TLSv1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122812,
+    "url": "https://datatracker.ietf.org/doc/html/rfc7301.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122814,
+    "url": "https://docs.python.org/3/library/ssl.html#random-generation",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122815,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.verify_client_post_handshake",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122816,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_NO_TICKET",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122819,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.version",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122821,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.keylog_filename",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122822,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.enum_crls",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122823,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.VERIFY_CRL_CHECK_CHAIN",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122825,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_dh_params",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122826,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_TLSv1_3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122827,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_TLSv1_1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122828,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.HAS_TLSv1_2",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122830,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.hostname_checks_common_name",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122831,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.fileno",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122832,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSession.time",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122833,
+    "url": "https://docs.python.org/3/library/ssl.html#examples",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122834,
+    "url": "https://docs.python.org/3/library/ssl.html#cipher-selection",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122835,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.session_stats",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122836,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.server_hostname",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122837,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.get_unverified_chain",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122838,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.recv_into",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122839,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_cert_chain",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122840,
+    "url": "https://docs.openssl.org/master/man1/ciphers/",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122841,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.CERT_REQUIRED",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122844,
+    "url": "https://docs.python.org/3/library/ssl.html#constants",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122847,
+    "url": "https://docs.python.org/3/library/ssl.html#socket-creation",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122852,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_servername_callback",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122854,
+    "url": "https://datatracker.ietf.org/doc/html/rfc1422.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122855,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLWantReadError",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122856,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.RAND_bytes",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122857,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_verify_locations",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122858,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion.TLSv1_1",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122859,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion.TLSv1_2",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122860,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.AlertDescription",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122862,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.RAND_status",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122863,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.TLSVersion.TLSv1_3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122864,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.sslobject_class",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122866,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.cert_store_stats",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122867,
+    "url": "https://wiki.mozilla.org/Security/Server_Side_TLS",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122868,
+    "url": "https://docs.python.org/3/library/select.html#select.poll",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122869,
+    "url": "https://datatracker.ietf.org/doc/html/rfc5280.html",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122870,
+    "url": "https://docs.python.org/3/library/ssl.html#multi-processing",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122871,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.OP_LEGACY_SERVER_CONNECT",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122872,
+    "url": "https://docs.python.org/3/library/socket.html#socket.socket.close",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122873,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.PROTOCOL_SSLv3",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122874,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext.set_default_verify_paths",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "id": 122875,
+    "url": "https://docs.python.org/3/library/ssl.html#ssl.SSLSocket.selected_alpn_protocol",
+    "parentUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
   }
 ];
 
 window.imageData = [
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
+  },
+  {
+    "src": "https://docs.python.org/3/_images/pathlib-inheritance.png",
+    "alt": "Inheritance diagram showing the classes available in pathlib. The most basic class is PurePath, which has three direct subclasses: PurePosixPath, PureWindowsPath, and Path. Further to these four classes, there are two classes that use multiple inheritance",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "pathlib — Object-oriented filesystem paths — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/pathlib.html#pathlib.Path.read_bytes"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "What’s new in Python 3.14 — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/whatsnew/3.14.html#porting-to-python-3-14"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ssl — TLS/SSL wrapper for socket objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "ssl — TLS/SSL wrapper for socket objects — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/ssl.html#ssl.SSLContext"
+  },
+  {
+    "src": "https://avatars.githubusercontent.com/u/960340?v\u003d4\u0026size\u003d48",
+    "alt": "@barneygale",
+    "pageTitle": "Expose `os.DirEntry` objects from pathlib · Issue #125413 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "src": "https://github.githubassets.com/assets/github-copilot-app-light-15ad5534265eeacd.svg",
+    "alt": "",
+    "pageTitle": "Expose `os.DirEntry` objects from pathlib · Issue #125413 · python/cpython · GitHub",
+    "pageUrl": "https://github.com/python/cpython/issues/125413"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#set"
+  },
+  {
+    "src": "https://docs.python.org/3/_static/py.svg",
+    "alt": "Python logo",
+    "pageTitle": "Built-in Types — Python 3.14.8 documentation",
+    "pageUrl": "https://docs.python.org/3/library/stdtypes.html#set"
+  },
   {
     "src": "https://docs.python.org/3/_static/py.svg",
     "alt": "Python logo",
